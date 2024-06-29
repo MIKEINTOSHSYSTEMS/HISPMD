@@ -1,0 +1,238 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel DataQuality search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN dq_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dq_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="dq_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="dq_id" data-fieldname="dq_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_dq_id}">
+		{$label DataQuality dq_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_dq_id}
+	</div>
+	<div class="r-search-field">
+		{$dq_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$dq_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END dq_id_fieldblock}
+											
+{BEGIN report_type_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_report_type}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="report_type{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="report_type" data-fieldname="report_type" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_report_type}">
+		{$label DataQuality report_type }	</label>
+	<div class="r-search-option">
+		{$searchtype_report_type}
+	</div>
+	<div class="r-search-field">
+		{$report_type_editcontrol}	</div>
+	<div class="r-search-field">
+		{$report_type_editcontrol1}
+	</div>
+	
+</div>
+
+{END report_type_fieldblock}
+											
+{BEGIN timeliness_percentage_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_timeliness_percentage}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="timeliness_percentage{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="timeliness_percentage" data-fieldname="timeliness_percentage" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_timeliness_percentage}">
+		{$label DataQuality timeliness_percentage }	</label>
+	<div class="r-search-option">
+		{$searchtype_timeliness_percentage}
+	</div>
+	<div class="r-search-field">
+		{$timeliness_percentage_editcontrol}	</div>
+	<div class="r-search-field">
+		{$timeliness_percentage_editcontrol1}
+	</div>
+	
+</div>
+
+{END timeliness_percentage_fieldblock}
+											
+{BEGIN completeness_percentage_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_completeness_percentage}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="completeness_percentage{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="completeness_percentage" data-fieldname="completeness_percentage" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_completeness_percentage}">
+		{$label DataQuality completeness_percentage }	</label>
+	<div class="r-search-option">
+		{$searchtype_completeness_percentage}
+	</div>
+	<div class="r-search-field">
+		{$completeness_percentage_editcontrol}	</div>
+	<div class="r-search-field">
+		{$completeness_percentage_editcontrol1}
+	</div>
+	
+</div>
+
+{END completeness_percentage_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

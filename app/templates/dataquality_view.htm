@@ -1,0 +1,238 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel DataQuality view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN dq_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dq_id}  r-vertical-field" data-fieldname="dq_id" data-signal-error-for="dq_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="dq_id" data-fieldname="dq_id" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_dq_id}">
+		
+		{BEGIN dq_id_label}{$label DataQuality dq_id }{END dq_id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$dq_id_value}	</div>
+
+		
+</div>
+
+
+{END dq_id_fieldblock}
+											
+{BEGIN report_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_report_type}  r-vertical-field" data-fieldname="report_type" data-signal-error-for="report_type{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="report_type" data-fieldname="report_type" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_report_type}">
+		
+		{BEGIN report_type_label}{$label DataQuality report_type }{END report_type_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$report_type_value}	</div>
+
+		
+</div>
+
+
+{END report_type_fieldblock}
+											
+{BEGIN timeliness_percentage_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_timeliness_percentage}  r-vertical-field" data-fieldname="timeliness_percentage" data-signal-error-for="timeliness_percentage{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="timeliness_percentage" data-fieldname="timeliness_percentage" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_timeliness_percentage}">
+		
+		{BEGIN timeliness_percentage_label}{$label DataQuality timeliness_percentage }{END timeliness_percentage_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$timeliness_percentage_value}	</div>
+
+		
+</div>
+
+
+{END timeliness_percentage_fieldblock}
+											
+{BEGIN completeness_percentage_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_completeness_percentage}  r-vertical-field" data-fieldname="completeness_percentage" data-signal-error-for="completeness_percentage{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="completeness_percentage" data-fieldname="completeness_percentage" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_completeness_percentage}">
+		
+		{BEGIN completeness_percentage_label}{$label DataQuality completeness_percentage }{END completeness_percentage_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$completeness_percentage_value}	</div>
+
+		
+</div>
+
+
+{END completeness_percentage_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Close window			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="dataquality_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Edit		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

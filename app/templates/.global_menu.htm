@@ -1,0 +1,298 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-menu"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form r-align-left navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-left navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+													</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+												</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+<table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_grid_0} >
+									<td 
+	
+			 
+	data-cellId="grid_c1" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+		
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="24">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dataquality_list.php"  > 
+							<span class="glyphicon glyphicon-tree-conifer"></span>Data Quality					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Data Quality description	</div>
+	</div>
+
+ 
+		
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="20">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="datause_list.php"  > 
+							<span class="glyphicon glyphicon-fire"></span>Data Use					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Data Use description	</div>
+	</div>
+
+ 
+		
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="26">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="digitalhealth_list.php"  > 
+							<span class="glyphicon glyphicon-hand-right"></span>Digital Health					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Digital Health description	</div>
+	</div>
+
+ 
+		
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="31">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="digitalhealthapps_list.php"  > 
+							<span class="glyphicon glyphicon-leaf"></span>Digital Health Apps					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Digital Health Apps description	</div>
+	</div>
+
+ 
+		
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="31">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="financialresources_list.php"  > 
+							<span class="glyphicon glyphicon-shopping-cart"></span>Financial Resources					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Financial Resources description	</div>
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hisgovernance_list.php"  > 
+							<span class="glyphicon glyphicon-calendar"></span>HISGovernance					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispartners_list.php"  > 
+							<span class="glyphicon glyphicon-camera"></span>HISPartners					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="healthfacilities_list.php"  > 
+							Health Facilities					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="healthunits_list.php"  > 
+							Health Units					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="publications_list.php"  > 
+							Publications					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="regions_list.php"  > 
+							Regions					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="research_list.php"  > 
+							Research					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="workforce_list.php"  > 
+							Workforce					</a>
+	</div>
+
+	</div>
+
+</div>
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+			</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>
