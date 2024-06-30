@@ -3536,6 +3536,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "research" ] = "Research";
 	$projectEntities[ "Workforce" ] = array( "url" => "workforce", "type" => 0 );
 	$projectEntitiesReverse[ "workforce" ] = "Workforce";
+	$projectEntities[ "MFR_REPORTING_REST_View" ] = array( "url" => "mfr_reporting_rest_view", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_reporting_rest_view" ] = "MFR_REPORTING_REST_View";
+	$projectEntities[ "MFR_Reporting" ] = array( "url" => "mfr_reporting", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_reporting" ] = "MFR_Reporting";
 }
 
 function findTable( $table ) {

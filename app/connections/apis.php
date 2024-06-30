@@ -26,6 +26,16 @@ class RestManager
 
 		$connectionsData = array();
 
+		$data = array();
+		$data["connId"] = "hispmdathispmdmerqconsultancyo";
+		$data["connName"] = "MOH_MFR_Report_Dash_API";
+
+		$this->_connectionsIdByName["MOH_MFR_Report_Dash_API"] = "hispmdathispmdmerqconsultancyo";
+
+		$data["url"] = "https://mfr-be.k8s.sandboxaddis.com/api";
+		$data["authType"] = "none";
+				
+	$connectionsData["hispmdathispmdmerqconsultancyo"] = $data;
 		$this->_connectionsData = &$connectionsData;
 	}
 

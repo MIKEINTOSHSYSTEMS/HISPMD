@@ -408,6 +408,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_REPORTING_REST_View")
+		{
+			return false;
+		}
+		if($table=="MFR_Reporting")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -765,6 +773,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Workforce")
+		{
+			return false;
+		}
+		if($table=="MFR_REPORTING_REST_View")
+		{
+			return false;
+		}
+		if($table=="MFR_Reporting")
 		{
 			return false;
 		}

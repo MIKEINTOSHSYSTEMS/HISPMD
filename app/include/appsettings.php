@@ -722,9 +722,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "0_1719685249";
+$projectBuildKey = "6_1719772433";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "0";
+$projectBuildNumber = "6";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -760,6 +760,8 @@ $tableCaptions["English"]["Publications"] = "Publications";
 $tableCaptions["English"]["Regions"] = "Regions";
 $tableCaptions["English"]["Research"] = "Research";
 $tableCaptions["English"]["Workforce"] = "Workforce";
+$tableCaptions["English"]["MFR_REPORTING_REST_View"] = "MFR REPORTING REST View";
+$tableCaptions["English"]["MFR_Reporting"] = "MFR Reporting";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -874,7 +876,7 @@ $resizeImagesOnClient = false;
 $conn = $cman->getDefault()->conn;
 
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 

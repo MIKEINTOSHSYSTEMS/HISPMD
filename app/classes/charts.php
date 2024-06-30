@@ -404,6 +404,10 @@ class Chart
 			return true;
 		if("Workforce" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("MFR_Reporting" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

@@ -37,6 +37,12 @@
 [data-page=".global_menu"][data-itemid="welcome_item12"] > .bs-welcome-header {
   background-color: #CFAE83;
 }
+[data-page=".global_menu"][data-itemid="welcome_item13"] > .bs-welcome-header {
+  background-color: #6B8E23;
+}
+[data-page=".global_menu"][data-itemid="welcome_item14"] > .bs-welcome-header {
+  background-color: #DB7093;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

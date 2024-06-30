@@ -229,6 +229,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("workforce" == $shortTName )
 		return true;
+	if ("mfr_reporting_rest_view" == $shortTName )
+		return true;
+	if ("mfr_reporting" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -396,6 +400,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Workforce";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_REPORTING_REST_View");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_REPORTING_REST_View";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Reporting");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Reporting";
+	}
 	return $arr;
 }
 
@@ -418,6 +440,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Regions";
 	$arr[]="Research";
 	$arr[]="Workforce";
+	$arr[]="MFR_REPORTING_REST_View";
+	$arr[]="MFR_Reporting";
 	return $arr;
 }
 
@@ -1112,6 +1136,18 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Workforce" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_REPORTING_REST_View" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Reporting" )
 	{
 //	default permissions
 		// grant all by default
