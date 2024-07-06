@@ -1,0 +1,12 @@
+.ColorPickerDivSample
+{
+	border: solid 1px #999;
+	border-right: none;
+	width: 100px;
+	height: 10px;
+	font-family: Tahoma, Arial, Verdana, sans serif;
+	font-size: 11px;
+	text-align: center;
+	/* margin: 0px 0px 0px 4px; */
+	/* position: relative; */	
+}

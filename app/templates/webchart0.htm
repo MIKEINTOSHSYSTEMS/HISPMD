@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Chart: Tables</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+		<style>
+			.ui-tabs-panel, .ui-widget-content, .ui-corner-bottom {border:0px solid black}
+			.ui-widget-content, .ui-corner-all {background:none; border 0px solid black; border-radius:0px;}
+			select 			{ line-height: 1.4em; }
+			.buttonborder 	{ margin-right: 10px; }
+		</style>
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath} yui-skin-sam">
+        {$b_includes}
+	{$header}
+    <div class="rnr-page">
+		<div class="rnr-top">
+			<div class="rnr-s-1 {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style2" align=center>
+						Chart: Tables{$chart_title}
+					</div>
+					<div class="style1 rnr-b-wrapper">
+						<div class="rnr-s-fields {$wr_pagestylepath}">
+							<div class="rnr-c rnr-cv">
+								<div class="style1">
+									<table class="fieldGrid">										
+										<tr>
+											<td id="my_tabs">
+												<div id="radio_select_table" class="yui-navset yui-navset-top">
+													<ul class="yui-nav">
+														{BEGIN view_radio_db}
+														<li id=li_db><a href="#tabs-0" id="radio_db">Database tables</a></li>
+														{END view_radio_db}
+														{BEGIN view_radio_project}
+														<li id=li_project><a href="#tabs-0" id="radio_project">Project tables</a></li>
+														{END view_radio_project}
+														<li id=li_custom><a href="#tabs-0" id="radio_custom">SQL query</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td id="tl">
+                                            </td>
+                                        </tr>
+                                        <tr id="tabs-0">
+											<td>
+												<select id="tables" size="12" name="tables" class="inputselect" style="font-size:12px;width:100%"> <!--multiple=""-->
+													{$tables}
+												</select>
+                                            </td>
+                                        </tr>
+                                    </table>
+								</div>
+								<div id="btns" class="style2" align=center>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+									<span id="jumptospan"></span>
+									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+									<span id=add_new_query>
+									<a id="addsql" name="addsql" class="rnr-button" href="#">New query</a>
+									<a id="a_addsql" class="various fancybox.iframe" href="web_query.php?type=webcharts&sql=add&page=create&ie=UTF-8&iframe"></a>
+									</span>
+									<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">SQL Query</a>
+									<a id="sql_query" class="various fancybox.iframe" href="web_query.php?type=webcharts&sql=edit&name=tables&page=edit&ie=UTF-8&iframe"></a>
+									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{$footer}
+        <style>
+{literal}
+	div.action { position: absolute; width: 170px; padding: 0;font-size:11px }
+	td {font-size:11px;}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=5 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Group By</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Type</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Parameters</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Appearance</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Chart Settings</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+		
+		<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>				
+		<div id="alert">
+		</div>
+    </body>
+</html>
+<!-- Proceed to permissions screen -->

@@ -367,6 +367,9 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "Publications", "varname" => "hispmdathispmdmerqconsultancyo__Publications", "altvarname" => "Publications", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "Regions", "varname" => "hispmdathispmdmerqconsultancyo__Regions", "altvarname" => "Regions", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "Research", "varname" => "hispmdathispmdmerqconsultancyo__Research", "altvarname" => "Research", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+			$dalTables[$conn->connId][] = array("name" => "webreport_admin", "varname" => "hispmdathispmdmerqconsultancyo__webreport_admin", "altvarname" => "webreport_admin", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+			$dalTables[$conn->connId][] = array("name" => "webreport_style", "varname" => "hispmdathispmdmerqconsultancyo__webreport_style", "altvarname" => "webreport_style", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+			$dalTables[$conn->connId][] = array("name" => "webreports", "varname" => "hispmdathispmdmerqconsultancyo__webreports", "altvarname" => "webreports", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "Workforce", "varname" => "hispmdathispmdmerqconsultancyo__Workforce", "altvarname" => "Workforce", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		}
 	}

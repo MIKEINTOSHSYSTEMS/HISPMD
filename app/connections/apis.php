@@ -16,6 +16,7 @@ class RestManager
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
+		$connectionsIds["MFR_Status_Reporting"] = "hispmdathispmdmerqconsultancyo";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 
@@ -28,9 +29,9 @@ class RestManager
 
 		$data = array();
 		$data["connId"] = "hispmdathispmdmerqconsultancyo";
-		$data["connName"] = "MOH_MFR_Report_Dash_API";
+		$data["connName"] = "MOH_MFR_Report_Dash_API_Const";
 
-		$this->_connectionsIdByName["MOH_MFR_Report_Dash_API"] = "hispmdathispmdmerqconsultancyo";
+		$this->_connectionsIdByName["MOH_MFR_Report_Dash_API_Const"] = "hispmdathispmdmerqconsultancyo";
 
 		$data["url"] = "https://mfr-be.k8s.sandboxaddis.com/api";
 		$data["authType"] = "none";

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Admin Area</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+		<style>
+			.ui-tabs-panel, .ui-widget-content, .ui-corner-bottom {border:0px solid black}
+			.ui-widget-content, .ui-corner-all {background:none; border 0px solid black; border-radius:0px;};
+		</style>
+		{$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath} yui-skin-sam">
+        {$b_includes}
+	{$header}
+    <div class="rnr-page">
+		<div class="rnr-top">
+			<div class="rnr-s-1 {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style2" align=center>
+						Admin page: Table permissions
+					</div>
+					<div class="style1 rnr-b-wrapper">
+						<div class="rnr-s-fields {$wr_pagestylepath}">
+							<div class="rnr-c rnr-cv">
+								<div class="style1">
+									<table class="fieldGrid">
+										<tr>
+											<td></td>
+											<td colspan=2 id="my_tabs">
+												<div id="radio_select_table" class="yui-navset yui-navset-top">
+													<ul class="yui-nav">
+														<li id=li_db class="selected"><a href="#tabs-0" id="radio_db">Database tables</a></li>
+														<li id=li_project><a href="#tabs-0" id="radio_project">Project tables</a></li>
+														<li id=li_custom><a href="#tabs-0" id="radio_custom">SQL queries</a></li>
+													</ul>
+												</div>
+											</td>
+											<td></td>
+										</tr>
+										<tr id="tabs-0">
+											<td></td>
+											<td>
+												<b>{$group_header}</b>
+											</td>
+											<td>
+												<input type=checkbox id="ch_all">&nbsp;<b>Select/Unselect all</b>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td style="vertical-align:top;">
+												<div id="group_list" style="vertical-align:top;">
+													{$group_list}
+												</div>
+											</td>
+											<td width="100%" style="vertical-align:top;">
+												<div id="table_list" style="vertical-align:top;">
+													{$table_list}
+												</div>
+											</td>
+											<td></td>
+										</tr>
+									</table>
+								</div>
+								<div id="btns" class="style2" align=center>
+									<a id="saveexitbtn" name="saveexitbtn" class="rnr-button" href="#">Save</a>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{$footer}
+	
+	<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+	<div id="alert">
+	</div>
+		
+    </body>
+</html>

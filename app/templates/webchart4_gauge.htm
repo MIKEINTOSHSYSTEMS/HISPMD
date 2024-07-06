@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Chart: Parameters</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath}">
+        {$b_includes}
+	{$header}
+    <div class="rnr-page">
+		<div class="rnr-top">
+			<div class="rnr-s-1 {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style2" align=center>
+						Chart: Parameters{$chart_title}{$chart_table}
+					</div>
+					<div class="style1 rnr-b-wrapper">
+						<div class="rnr-s-fields {$wr_pagestylepath}">
+							<div class="rnr-c rnr-cv">
+								<div class="style1">		
+								<table class="fieldGrid">
+									<tr id="clone" style="display:none">
+										<td></td>
+										<td></td>
+										<td>
+											<select id="" name="" class="inputselect">
+												<option value=""></value>
+												{$dataSeries}
+											</select>
+										</td>
+										<td id="">Label</td>
+										<td id=""><input type="text" value="" id="" {$disable}/></td>
+										<td></td>
+									</tr>
+									<tr id="clone_range" style="display:none">
+										<td></td>
+										<td colspan=4>
+											Range:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Min&nbsp;
+											<input type=text size=3 name="" value="">&nbsp;&nbsp;&nbsp;
+											Max&nbsp;
+											<input type=text size=3 name="" value="">
+										</td>
+										<td></td>
+									</tr>
+									<tr name=tr_color style="display:none">
+										<td></td>
+										<td colspan=4>
+											<table cellpadding=0 cellspacing=0>
+												<tr>
+													<td>Color zone: Min&nbsp;
+													<input type=text size=3 name=gaugeBeginColor value="">
+													&nbsp;&nbsp;&nbsp;Max
+													<input type=text size=3 name=gaugeEndColor value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+													<td><div class="ColorPickerDivSample" name=gaugeColor style="width:50px">Color</div></td>
+													<td><img src="images/selector.png" class="selector"></td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;<input name="minus" type=button value="-" size=2 style="display:none"></td>
+												</tr>
+											</table>
+										</td>
+										<td></td>
+									</tr>
+									<tr id=clone_separator style="display:none">
+										<td></td>
+										<td colspan=4 style="padding:0px;border-bottom:1px gray solid;border-bottom-style:dotted" height=1px width=100%>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan=6></td>
+									</tr>
+									<tr id="ds1">
+										<td></td>
+										<td>
+											Data Series 1
+										</td>
+										<td>
+											<select id="field1" name="field1" class="inputselect">
+												<option value=""></value>
+												{$dataSeries}
+											</select>
+											<img src="images/icon_required.gif" />
+										</td>
+										<td id="label_title_1">Label</td>
+										<td id="label_value_1"><input type="text" value="" id="series_label_1" {$disable}/></td>
+										<td></td>
+									</tr>
+									<tr id="tr_range1">
+										<td></td>
+										<td colspan=4>
+											Range:&nbsp;&nbsp;Min&nbsp;
+											<input type=text size=3 name=gaugeMinValue1 value="">&nbsp;&nbsp;&nbsp;
+											Max&nbsp;
+											<input type=text size=3 name=gaugeMaxValue1 value="">
+										</td>
+										<td></td>
+									</tr>
+									<tr id="tr_separator1" {$separator}>
+										<td></td>
+										<td colspan=4 style="padding:0px;border-bottom:1px gray solid;border-bottom-style:dotted" height=1px width=100%>
+										</td>
+										<td></td>
+									</tr>
+									<tr id="ds">
+										<td></td>
+										<td>Label Field</td>
+										<td colspan=3>
+											<select id="field5" name="field5" class="inputselect">
+												{$label}
+											</select>
+											<img src="images/icon_required.gif" />
+										</td>
+										<td></td>
+									</tr>
+								</table>
+								</div>
+								<div id="btns" class="style2" align=center>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+									<span style="position:absolute;" id="jumptospan"></span>
+									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+									<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">SQL Query</a>
+									<a id="sql_query" href="web_query.php?type=webcharts&name=parameters&ie=UTF-8&iframe"></a>
+									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+									{BEGIN b_is_chart_save}
+									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+									{END b_is_chart_save}															
+									{BEGIN b_is_chart_name}
+									<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+									{END b_is_chart_name}	
+									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+									<a id="preview" class="various fancybox.iframe" href="dchart_preview.php?cname={$chart_name_preview}&ie=UTF-8&iframe"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{$footer}
+
+<div id="groupSelectorDiv">
+	<table width=100% cellpadding=5 cellspacing=0 border=0>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+	</table>
+</div>
+<div id="colorPickerVtd">
+	<table class="tableColorPicker" cellspacing="4" style="border:2px solid gray;"> 
+		<tr class="colorPickerVtdTr"> 
+			<td class="row1cell1">&nbsp;</td>
+			<td class="row1cell2">&nbsp;</td>
+			<td class="row1cell3">&nbsp;</td>
+			<td class="row1cell4">&nbsp;</td>
+			<td class="row1cell5">&nbsp;</td>
+			<td class="row1cell6">&nbsp;</td>
+			<td class="row1cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row2cell1">&nbsp;</td>
+			<td class="row2cell2">&nbsp;</td>
+			<td class="row2cell3">&nbsp;</td>
+			<td class="row2cell4">&nbsp;</td>
+			<td class="row2cell5">&nbsp;</td>
+			<td class="row2cell6">&nbsp;</td>
+			<td class="row2cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row3cell1">&nbsp;</td>
+			<td class="row3cell2">&nbsp;</td>
+			<td class="row3cell3">&nbsp;</td>
+			<td class="row3cell4">&nbsp;</td>
+			<td class="row3cell5">&nbsp;</td>
+			<td class="row3cell6">&nbsp;</td>
+			<td class="row3cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row4cell1">&nbsp;</td>
+			<td class="row4cell2">&nbsp;</td>
+			<td class="row4cell3">&nbsp;</td>
+			<td class="row4cell4">&nbsp;</td>
+			<td class="row4cell5">&nbsp;</td>
+			<td class="row4cell6">&nbsp;</td>
+			<td class="row4cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row5cell1">&nbsp;</td>
+			<td class="row5cell2">&nbsp;</td>
+			<td class="row5cell3">&nbsp;</td>
+			<td class="row5cell4">&nbsp;</td>
+			<td class="row5cell5">&nbsp;</td>
+			<td class="row5cell6">&nbsp;</td>
+			<td class="row5cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row6cell1">&nbsp;</td>
+			<td class="row6cell2">&nbsp;</td>
+			<td class="row6cell3">&nbsp;</td>
+			<td class="row6cell4">&nbsp;</td>
+			<td class="row6cell5">&nbsp;</td>
+			<td class="row6cell6">&nbsp;</td>
+			<td class="row6cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row7cell1">&nbsp;</td>
+			<td class="row7cell2">&nbsp;</td>
+			<td class="row7cell3">&nbsp;</td>
+			<td class="row7cell4">&nbsp;</td>
+			<td class="row7cell5">&nbsp;</td>
+			<td class="row7cell6">&nbsp;</td>
+			<td class="row7cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row8cell1">&nbsp;</td>
+			<td class="row8cell2">&nbsp;</td>
+			<td class="row8cell3">&nbsp;</td>
+			<td class="row8cell4">&nbsp;</td>
+			<td class="row8cell5">&nbsp;</td>
+			<td class="row8cell6">&nbsp;</td>
+			<td class="row8cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row9cell1">&nbsp;</td>
+			<td class="row9cell2">&nbsp;</td>
+			<td class="row9cell3">&nbsp;</td>
+			<td class="row9cell4">&nbsp;</td>
+			<td class="row9cell5">&nbsp;</td>
+			<td class="row9cell6">&nbsp;</td>
+			<td class="row9cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row0cell1">&nbsp;</td>
+			<td class="row0cell2">&nbsp;</td>
+			<td class="row0cell3">&nbsp;</td>
+			<td class="row0cell4">&nbsp;</td>
+			<td class="row0cell5">&nbsp;</td>
+			<td class="row0cell6">&nbsp;</td>
+			<td class="row0cell7">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
+		</tr>
+	</table>
+</div>		
+<style>
+{literal}
+	div.action { position: absolute; width: 170px; padding: 0;font-size:11px }
+	td {font-size:11px;}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=5 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Group By</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Type</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Parameters</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Appearance</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Chart Settings</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+	<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>	
+		<div id="alert">
+		</div>
+    </body>
+</html>

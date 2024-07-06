@@ -1,0 +1,509 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+        <head>
+        <title>{$reportTitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {BEGIN style_block}
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        <style>
+            .report-title		{font:bold 12px arial, verdana, sans serif, helvetica;}
+            table.report		{border-collapse: collapse; border: solid 2px #000;}
+				table.report td	{padding: 2px; border: solid 1px #ccc;}
+            .groupsummary		{border-bottom: solid 1px #000;}
+            td.pagesummary		{background: #ffffbb;}
+            td.globalsummary	{background: #ffefb0;}
+			.page-summary		{border-top: 4px double #333;}
+			select.apply-style	{line-height: 1.4em; width: 90%;}
+			.buttonborder 		{margin-right: 10px;}
+			#wnd_header			{cursor: move;}
+            {BEGIN group_field_colors}
+            td.group{$iteration}		{background: #{$color1};}
+            td.summary{$iteration}		{background: #{$color2};}
+            {END group_field_colors}			
+            {$styleStr}
+        </style>
+		{$includes}
+        {END style_block}
+		
+		<!--[if IE]>
+		<style>
+			.ColorPickerDivSample {height:13px; margin-bottom: 2px; z-index: 150;}
+		</style>
+		<![endif]-->
+    </head>
+
+<body {$onload}  class="{$wr_pagestylepath}">
+	<input type=hidden id=crosstable value="ok">
+	<div class="rnr-s-grid {$wr_pagestylepath}">
+        {BEGIN grid_block}
+<div class="style1 rnr-b-wrapper">
+			<div class="rnr-s-fields {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style1">
+						<table class="fieldGrid">
+							<tr>
+			<td>
+        <table class="report rnr-b-report" width="100%" cellpadding="1" cellspacing="2" align="center" id="legend" {BEGIN legend_disp}style="display: none;"{END legend_disp}>
+	<tr>
+		<td class="group40 class40g class7f class40g7f0u" fieldname="7" groupname="40">&nbsp;</td>
+		<td class="group40 class40g class1f class40g1f0u" fieldname="1" groupname="40">[groupX]</td>
+		<td class="group40 class40g class1f class40g1f0u" fieldname="1" groupname="40">[groupX]</td>
+		<td class="group40 class40g class1f class40g1f0u" fieldname="1" groupname="40">[groupX]</td>
+		<td class="globalsummary class40g class8f class40g8f0u" fieldname=8 groupname="40">Summary</td>
+	</tr>
+	<tr>
+		<td groupname="40" class="group40 class40g class2f class40g2f0u" fieldname=2>[groupY]</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td groupname="40" class="pagesummary class40g class4f class40g4f0u" fieldname=4>[summaryY]</td>
+	</tr>
+	<tr>
+		<td groupname="40" class="group40 class40g class2f class40g2f0u" fieldname=2>[groupY]</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td groupname="40" class="pagesummary class40g class4f class40g4f0u" fieldname=4>[summaryY]</td>
+	</tr>
+	<tr>
+		<td groupname="40" class="group40 class40g class2f class40g2f0u" fieldname=2>[groupY]</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td class="data class0g class0f class0g0f0u" fieldname=0 groupname=0>data</td>
+		<td groupname="40" class="pagesummary class40g class4f class40g4f0u" fieldname=4>[summaryY]</td>
+	</tr>
+	<tr>
+		<td groupname="40" class="globalsummary class40g class5f class40g5f0u" fieldname=5>Summary</td>
+		<td groupname="40" class="pagesummary class40g class3f class40g3f0u" fieldname=3>[summaryX]</td>
+		<td groupname="40" class="pagesummary class40g class3f class40g3f0u" fieldname=3>[summaryX]</td>
+		<td groupname="40" class="pagesummary class40g class3f class40g3f0u" fieldname=3>[summaryX]</td>
+		<td groupname="40" class="pagesummary class40g class6f class40g6f0u" fieldname=6>[total]</td>
+	</tr>
+	</table>
+			</td>
+		</tr>
+</table>		
+					</div>
+				</div>
+			</div>
+	<div id="location" src={$reportName} style="display: none;"></div>
+	</div>
+	{END grid_block}
+</div>	
+{BEGIN editor_block}
+			<div id="example" class="myDialog">
+		<div class="rnr-page">
+			<div class="rnr-top">
+				<div class="rnr-s-1 {$wr_pagestylepath}">
+					<div class="rnr-c rnr-cv">
+						<div class="style2" align=center id="wnd_header">
+							Report: Style Editor
+						</div>
+						<div class="style1 rnr-b-wrapper">
+							<div class="rnr-s-fields {$wr_pagestylepath}">
+								<div class="rnr-c rnr-cv">
+									<div class="style1">
+										<table class="fieldGrid" id="params">
+											<tr>
+												<td>Background</td>
+												<td>Font color</td>
+												<td>Font family</td>
+												<td>Font size</td>
+												<td>Font style</td>
+												<td>Align Layout</td>
+												<td>Padding</td>
+											</tr>
+											<tr>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="picker2" act="background" class="ColorPickerDivSample" style="width: 80px; background: #f0f8ff;" />
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img id="pick" class="selector" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="picker1" act="color" class="ColorPickerDivSample" style="width: 80px; background: #f0f8ff;"/>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selector" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="fontfamily" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
+																	Default
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selectorfamily" src="images/selector.png"/>
+															</td>
+														</tr>
+														<tr style="position: absolute; display: none;z-index:150;" id="fontfamilyselect">
+															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
+																<table style="width: 100%;">
+																	<tr><td class="selectstyle">Default</td></tr>
+																	<tr><td class="selectstyle">Arial</td></tr>
+																	<tr><td class="selectstyle">Comic Sans MS</td></tr>
+																	<tr><td class="selectstyle">Courier New</td></tr>
+																	<tr><td class="selectstyle" nowrap>Times New Roman</td></tr>
+																	<tr><td class="selectstyle">Verdana</td></tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="fontsize" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
+																	Default
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selectorfontsize" src="images/selector.png"/>
+															</td>
+														</tr>
+														<tr style="position: absolute; display: none;z-index:150;" id="fontsizeselect">
+															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
+																<table style="width: 100%;">
+																	<tr><td class="selectstyle">Default</td></tr>
+																	<tr><td class="selectstyle">7px</td></tr>
+																	<tr><td class="selectstyle">8px</td></tr>
+																	<tr><td class="selectstyle">9px</td></tr>
+																	<tr><td class="selectstyle">10px</td></tr>
+																	<tr><td class="selectstyle">11px</td></tr>
+																	<tr><td class="selectstyle">12px</td></tr>
+																	<tr><td class="selectstyle">13px</td></tr>
+																	<tr><td class="selectstyle">14px</td></tr>
+																	<tr><td class="selectstyle">15px</td></tr>
+																	<tr><td class="selectstyle">16px</td></tr>
+																	<tr><td class="selectstyle">17px</td></tr>
+																</table>
+															</td>
+														</tr>
+													</table>																	
+												</td>
+												<td>
+													<input type="checkbox" id="bold" name="bold" value="bold">&nbsp;<label for="bold">Bold</label>&nbsp;<input type="checkbox" id="italic" name="italic" value="italic">&nbsp;<label for="italic">Italic</label>
+												</td>
+												<td style="padding-left: 0px;">
+													<table width="100" align="center" id="aligntable">
+														<tr>
+															<td id="left" onclick="changeact('textAlign','left',this);"><img src="./images/leftalign.jpg"/></td>
+															<td id="center" onclick="changeact('textAlign','center',this);"><img src="./images/centeralign.jpg"/></td>
+															<td id="right" onclick="changeact('textAlign','right',this);"><img src="./images/rightalign.jpg"/></td>
+														</tr>
+													</table>
+												</td>
+												<td id="paddingSet">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="padding" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
+																	2px
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selectorpadding" src="images/selector.png"/>
+															</td>
+														</tr>
+														<tr style="position: absolute; display: none;z-index:150;" id="paddingselect">
+															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
+																<table style="width: 100%;">
+																	<tr><td class="selectstyle">1px</td></tr>
+																	<tr><td class="selectstyle">2px</td></tr>
+																	<tr><td class="selectstyle">3px</td></tr>
+																	<tr><td class="selectstyle">4px</td></tr>
+																	<tr><td class="selectstyle">5px</td></tr>
+																	<tr><td class="selectstyle">6px</td></tr>
+																	<tr><td class="selectstyle">7px</td></tr>
+																	<tr><td class="selectstyle">8px</td></tr>
+																	<tr><td class="selectstyle">9px</td></tr>
+																	<tr><td class="selectstyle">10px</td></tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr id="middlepanel" class="middlepanel">
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width:80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="backgroundColor" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>					
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="color" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="fontFamily" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="fontSize" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="font" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="textAlign" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="padding" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="style2" align=center id="btns">
+										<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+										<span style="position:absolute;" id="jumptospan"></span>
+										<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+										<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+										{BEGIN b_is_report_save}
+										<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+										{END b_is_report_save}	
+										{BEGIN b_is_report_name}
+										<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+										{END b_is_report_name}														
+										<a id="default" name="default" class="rnr-button" href="#">Reset</a>
+										<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+										<a id="preview" class="various fancybox.iframe" href="dreport.php?rname={$report_name_preview}&param=preview&ie=UTF-8&iframe"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+{literal}
+	div.action { position: absolute;  width: 170px; padding: 0; font-size:11px}
+	td {font-size:11px}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=0 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Where Condition</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Group fields</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Totals</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Miscellaneous</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Sort fields</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Style Editor</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;">Report Settings</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row10 style="cursor:pointer;padding:5px;;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row11 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+
+	<div id="alert">
+	</div>
+
+
+	<div id="groupSelectorDiv">
+	<table width=100% cellpadding=5 cellspacing=0 border=0>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+	</table>
+</div>
+<div id="colorPickerVtd">
+	<table class="tableColorPicker" cellspacing="4" style="border:2px solid gray;"> 
+		<tr class="colorPickerVtdTr"> 
+			<td class="row1cell1">&nbsp;</td>
+			<td class="row1cell2">&nbsp;</td>
+			<td class="row1cell3">&nbsp;</td>
+			<td class="row1cell4">&nbsp;</td>
+			<td class="row1cell5">&nbsp;</td>
+			<td class="row1cell6">&nbsp;</td>
+			<td class="row1cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row2cell1">&nbsp;</td>
+			<td class="row2cell2">&nbsp;</td>
+			<td class="row2cell3">&nbsp;</td>
+			<td class="row2cell4">&nbsp;</td>
+			<td class="row2cell5">&nbsp;</td>
+			<td class="row2cell6">&nbsp;</td>
+			<td class="row2cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row3cell1">&nbsp;</td>
+			<td class="row3cell2">&nbsp;</td>
+			<td class="row3cell3">&nbsp;</td>
+			<td class="row3cell4">&nbsp;</td>
+			<td class="row3cell5">&nbsp;</td>
+			<td class="row3cell6">&nbsp;</td>
+			<td class="row3cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row4cell1">&nbsp;</td>
+			<td class="row4cell2">&nbsp;</td>
+			<td class="row4cell3">&nbsp;</td>
+			<td class="row4cell4">&nbsp;</td>
+			<td class="row4cell5">&nbsp;</td>
+			<td class="row4cell6">&nbsp;</td>
+			<td class="row4cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row5cell1">&nbsp;</td>
+			<td class="row5cell2">&nbsp;</td>
+			<td class="row5cell3">&nbsp;</td>
+			<td class="row5cell4">&nbsp;</td>
+			<td class="row5cell5">&nbsp;</td>
+			<td class="row5cell6">&nbsp;</td>
+			<td class="row5cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row6cell1">&nbsp;</td>
+			<td class="row6cell2">&nbsp;</td>
+			<td class="row6cell3">&nbsp;</td>
+			<td class="row6cell4">&nbsp;</td>
+			<td class="row6cell5">&nbsp;</td>
+			<td class="row6cell6">&nbsp;</td>
+			<td class="row6cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row7cell1">&nbsp;</td>
+			<td class="row7cell2">&nbsp;</td>
+			<td class="row7cell3">&nbsp;</td>
+			<td class="row7cell4">&nbsp;</td>
+			<td class="row7cell5">&nbsp;</td>
+			<td class="row7cell6">&nbsp;</td>
+			<td class="row7cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row8cell1">&nbsp;</td>
+			<td class="row8cell2">&nbsp;</td>
+			<td class="row8cell3">&nbsp;</td>
+			<td class="row8cell4">&nbsp;</td>
+			<td class="row8cell5">&nbsp;</td>
+			<td class="row8cell6">&nbsp;</td>
+			<td class="row8cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row9cell1">&nbsp;</td>
+			<td class="row9cell2">&nbsp;</td>
+			<td class="row9cell3">&nbsp;</td>
+			<td class="row9cell4">&nbsp;</td>
+			<td class="row9cell5">&nbsp;</td>
+			<td class="row9cell6">&nbsp;</td>
+			<td class="row9cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row0cell1">&nbsp;</td>
+			<td class="row0cell2">&nbsp;</td>
+			<td class="row0cell3">&nbsp;</td>
+			<td class="row0cell4">&nbsp;</td>
+			<td class="row0cell5">&nbsp;</td>
+			<td class="row0cell6">&nbsp;</td>
+			<td class="row0cell7">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
+		</tr>
+	</table>
+</div>		
+	
+
+	{END editor_block}
+	
+	
+{$bodyend}
+	
+</body>
+</html>

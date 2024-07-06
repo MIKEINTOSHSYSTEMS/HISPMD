@@ -148,6 +148,12 @@ pdfDocument = {
 				
 			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item14}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item15}"},
+				
+				
+			{"text":"","background":"#EDCA00","hidden":"{$item_hide_welcome_item16}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

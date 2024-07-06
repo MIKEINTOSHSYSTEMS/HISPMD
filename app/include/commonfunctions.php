@@ -233,6 +233,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_reporting" == $shortTName )
 		return true;
+	if ("mfr_status_reporting" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -418,6 +420,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR_Reporting";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Status_Reporting");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Status_Reporting";
+	}
 	return $arr;
 }
 
@@ -442,6 +453,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Workforce";
 	$arr[]="MFR_REPORTING_REST_View";
 	$arr[]="MFR_Reporting";
+	$arr[]="MFR_Status_Reporting";
 	return $arr;
 }
 
@@ -1148,6 +1160,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_Reporting" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Status_Reporting" )
 	{
 //	default permissions
 		// grant all by default

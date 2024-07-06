@@ -6,11 +6,11 @@ $tdatamfr_reporting[".OwnerID"] = "";
 $tdatamfr_reporting[".OriginalTable"] = "MFR_Reporting";
 
 
-$tdatamfr_reporting[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_reporting[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_reporting[".originalPagesByType"] = $tdatamfr_reporting[".pagesByType"];
-$tdatamfr_reporting[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_reporting[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_reporting[".originalPages"] = $tdatamfr_reporting[".pages"];
-$tdatamfr_reporting[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_reporting[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_reporting[".originalDefaultPages"] = $tdatamfr_reporting[".defaultPages"];
 
 //	field labels

@@ -3540,6 +3540,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_reporting_rest_view" ] = "MFR_REPORTING_REST_View";
 	$projectEntities[ "MFR_Reporting" ] = array( "url" => "mfr_reporting", "type" => 0 );
 	$projectEntitiesReverse[ "mfr_reporting" ] = "MFR_Reporting";
+	$projectEntities[ "MFR_Status_Reporting" ] = array( "url" => "mfr_status_reporting", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_status_reporting" ] = "MFR_Status_Reporting";
 }
 
 function findTable( $table ) {

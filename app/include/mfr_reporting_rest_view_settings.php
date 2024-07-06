@@ -681,6 +681,7 @@ $tdatamfr_reporting_rest_view[".sqlquery"] = $queryData_mfr_reporting_rest_view;
 
 
 
-$tdatamfr_reporting_rest_view[".hasEvents"] = false;
+include_once(getabspath("include/mfr_reporting_rest_view_events.php"));
+$tdatamfr_reporting_rest_view[".hasEvents"] = true;
 
 ?>

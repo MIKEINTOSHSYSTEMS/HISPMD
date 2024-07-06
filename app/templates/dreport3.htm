@@ -1,0 +1,801 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{$reportTitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {BEGIN style_block}
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        <style>
+			.report	{font-size:11px}
+            .report-title		{font:bold 12px arial, verdana, sans serif, helvetica;}
+            table.report		{border-collapse: collapse; border: solid 2px #000;}
+				table.report td	{padding: 2px; border: solid 1px #ccc;}
+            .groupsummary		{border-bottom: solid 1px #000;}
+            td.pagesummary		{background: #ffffbb;}
+            td.globalsummary	{background: #ffe0b0;}
+			.page-summary		{border-top: 4px double #333;}
+			select.apply-style	{line-height: 1.4em; width: 90%;}
+			.buttonborder 		{margin-right: 10px;}
+			#wnd_header			{cursor: move;}
+            {BEGIN group_field_colors}
+            td.group_{$iteration},
+            td.nbgroup_{$iteration}		{background: #{$color1};}
+            td.header_{$iteration}		{background: #{$color2};}
+            {END group_field_colors}			
+            {$styleStr}
+        </style>
+		{$includes}
+        {END style_block}
+		<style>
+		.rnr-cv{ overflow-y:visible !important; }
+		</style>
+		
+    </head>
+	
+<body {$onload} class="{$wr_pagestylepath}">
+{$header}
+<div class="rnr-page dreport">
+	<div class="rnr-top ">
+			{BEGIN top_menu_block}
+			<div  class="rnr-cw-toplinks rnr-s-2 asbuttons {$wr_pagestylepath}">
+				<div class="rnr-c rnr-ch rnr-c-toplinks">
+					<div class="style1 rnr-bl rnr-b-toplinks_advsearch" >
+						<span class="report-title">{$reportTitle}</span>
+					</div>
+					{BEGIN back_to_menu}
+					<div class="style1 rnr-bl rnr-b-toplinks_print" >
+						<a class="rnr-button" href="webreport.php">Back to menu</a>
+					</div>
+					{END back_to_menu}
+					{BEGIN adv_search_block}
+					<div class="style1 rnr-bl rnr-b-toplinks_advsearch" >
+						<a class="rnr-button" {$searchHref}>Advanced search</a>
+					</div>
+					{END adv_search_block}
+					{BEGIN print_friendly_block}
+					<div class="style1 rnr-bl rnr-b-toplinks_print">
+						<a class="rnr-button" target="_blank" href="dreport.php?mode=print&rname={$reportName}{$searchClause}">Print this page</a>
+					</div>
+					<div class="style1 rnr-bl rnr-b-toplinks_print">
+						<a class="rnr-button" target="_blank" href="dreport.php?mode=print&rname={$reportName}&all=1{$searchClause}">Print whole report</a>
+					</div>
+					<div  class="style1 rnr-bl rnr-b-toplinks_export" >
+						<a href="dreport.php?mode=print&all=1&format=excel&rname={$reportName}{$searchClause}"><img src="images/excel.gif" border="0"></a>
+						<a href="dreport.php?mode=print&all=1&format=word&rname={$reportName}{$searchClause}"><img src="images/word.gif" border="0"></a>
+					</div>
+					{END print_friendly_block}
+					<div class="rnr-hfiller"></div>					
+				</div>
+			</div>
+{END top_menu_block}
+		{BEGIN records_display_block}
+						<div  class="rnr-cw-toplinks rnr-s-2 asbuttons {$wr_pagestylepath}">
+							<div class="rnr-c rnr-ch rnr-c-toplinks">
+								<div class="style1 rnr-bl rnr-b-toplinks_advsearch" >
+									{BEGIN groups_per_page_block}
+									Groups per page:&nbsp;
+									<select
+										onChange="document.location='dreport.php?rname={$reportNamejs}&pagesize='+this.options[this.selectedIndex].value;">
+										<option value="1" {$gpp1_selected}>1</option>
+										<option value="3" {$gpp3_selected}>3</option>
+										<option value="5" {$gpp5_selected}>5</option>
+										<option value="10" {$gpp10_selected}>10</option>
+										<option value="50" {$gpp50_selected}>50</option>
+										<option value="100" {$gpp100_selected}>100</option>
+										<option value="-1" {$gpp0_selected}>All</option>
+									</select>
+									{END groups_per_page_block}
+									{BEGIN records_per_page_block}
+									Records Per Page:&nbsp;
+									<select
+										onChange="document.location='dreport.php?rname={$reportNamejs}&pagesize='+this.options[this.selectedIndex].value;">
+										<option value="10" {$rpp10_selected}>10</option>
+										<option value="20" {$rpp20_selected}>20</option>
+										<option value="50" {$rpp50_selected}>50</option>
+										<option value="100" {$rpp100_selected}>100</option>
+										<option value="500" {$rpp500_selected}>500</option>
+										<option value="-1" {$rpp0_selected}>All</option>
+									</select>
+									{END records_per_page_block}
+								</div>
+							<div class="rnr-hfiller"></div>					
+							</div>
+						</div>
+		{END records_display_block}
+	
+        {BEGIN grid_block}
+			{BEGIN data_block}
+	<div class="rnr-s-grid {$wr_pagestylepath}">
+        <table class="report rnr-b-report" width="100%" cellpadding="1" cellspacing="2" align="center" id="legend" {BEGIN legend_disp}style="display: none;"{END legend_disp}>
+	{BEGIN grid_row}
+		{BEGIN group}
+		<!-- group headers -->
+		{BEGIN newgroup}
+		<tr>
+			<td class="header_{$group_order} class{$groupId4}g class{$groupId4}g0f0u" groupname="{$groupId4}" colspan={$align_testAgr}>
+				{$group_label} <font style="font-weight:900">{$grval}</font>
+			</td>
+		</tr>
+		{BEGIN last_group_block}
+		<tr>
+			{BEGIN not_group_fields_values}
+			<td class="blackshade class40g class{$fieldNum}f class40g{$fieldNum}f0u" groupname="40" fieldname="{$fieldNum}">{$field_label}</td>
+			{END not_group_fields_values}
+		</tr>
+		{END last_group_block}
+		{END newgroup}
+		<!--end group headers-->
+		{END group}
+
+		{BEGIN details_summary_block}
+		<!-- data -->
+		{BEGIN row_data}
+		<tr>
+			{BEGIN not_group_fields_values}
+			<td class="data class25g class{$fieldNum}f class25g{$fieldNum}f0u" groupname="25" fieldname="{$fieldNum}">{$field_value}</td>
+			{END not_group_fields_values}			
+		</tr>
+		{END row_data}
+		<!--end data-->
+		{END details_summary_block}
+
+		<!-------------------------------------  group summary ----------------------------------------->
+		{BEGIN group_summary_block}
+		<tr>
+			{BEGIN group_summary_totals}
+			<td style="font-weight:bold;" groupname="{$groupIdSummary}" class="group_{$group_order} class{$groupIdSummary}g class{$groupIdSummary}g0f0u" colspan={$align_testAgr}>Summary for {$label} {$grval} - {$total_cnt} records total</td>
+			{END group_summary_totals}
+		</tr>
+		<!--sum-->
+		{BEGIN sum_aggregation_block}
+		<tr>
+			{BEGIN group_summary_fields_sum}
+			<td class="group_{$group_order} class{$groupIdSum}g class{$iteration}f class{$groupIdSum}g{$iteration}f0u" groupname="{$groupIdSum}" fieldname="{$iteration}">
+				{BEGIN first_block}
+				Sum
+				{END first_block}
+				{BEGIN sum_field_flag}
+				{$group_total_sum_value}
+				{END sum_field_flag}
+			</td>
+			{END group_summary_fields_sum}
+		</tr>
+		{END sum_aggregation_block}
+		<!--avg-->
+		{BEGIN avg_aggregation_block}
+		<tr>
+			{BEGIN group_summary_fields_avg}
+			<td class="group_{$group_order} class{$groupIdAvg}g class{$iteration}f class{$groupIdAvg}g{$iteration}f0u" groupname="{$groupIdAvg}" fieldname="{$iteration}">
+				{BEGIN first_block}
+				Average
+				{END first_block}
+				{BEGIN avg_field_flag}
+				{$group_total_avg_value}
+				{END avg_field_flag}
+			</td>
+			{END group_summary_fields_avg}
+		</tr>
+		{END avg_aggregation_block}
+		<!--min-->
+		{BEGIN min_aggregation_block}
+		<tr>
+			{BEGIN group_summary_fields_min}
+			<td class="group_{$group_order} class{$groupIdMin}g class{$iteration}f class{$groupIdMin}g{$iteration}f0u" groupname="{$groupIdMin}" fieldname="{$iteration}">
+				{BEGIN first_block}
+				Min
+				{END first_block}
+				{BEGIN min_field_flag}
+				{$group_total_min_value}
+				{END min_field_flag}
+			</td>
+			{END group_summary_fields_min}
+		</tr>
+		{END min_aggregation_block}
+		<!--max-->
+		{BEGIN max_aggregation_block}
+		<tr>
+			{BEGIN group_summary_fields_max}
+			<td class="group_{$group_order} class{$groupIdMax}g class{$iteration}f class{$groupIdMax}g{$iteration}f0u" groupname="{$groupIdMax}" fieldname="{$iteration}">
+				{BEGIN first_block}
+				Max
+				{END first_block}
+				{BEGIN max_field_flag}
+				{$group_total_max_value}
+				{END max_field_flag}
+			</td>
+			{END group_summary_fields_max}
+		</tr>
+		{END max_aggregation_block}
+		<!--end group summary-->
+		{END group_summary_block}
+	<!--end grid row-->
+	{END grid_row}
+
+		{BEGIN summary_footer}
+		<tr class="page-summary">
+			{BEGIN not_group_fields}
+			<td class="blackshade class40g class{$fieldId4}f class40g{$fieldId4}f0u" groupname="40" fieldname="{$fieldId4}">{$label}</td>
+			{END not_group_fields}
+		</tr>
+		{END summary_footer}
+
+		{BEGIN page_summary_block}
+		<!-- page summary-->
+		<tr>
+			<td style="font-weight:bold;" groupname="26" class="pagesummary class26g class26g0f0u" colspan={$align_testAgr}>Page summary {$page_total_cnt} - records total</td>
+		</tr>
+		<!--  sum -->
+		{BEGIN sum_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_sum}
+			<td class="pagesummary class29g class{$fieldId4}f class29g{$fieldId4}f0u" groupname="29" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Sum
+				{END first_field_flag}
+				{BEGIN sum_field_flag}
+				{$page_total_sum}
+				{END sum_field_flag}
+			</td>
+			{END page_summary_fields_sum}
+		</tr>
+		{END sum_aggregation_block}
+		<!--  avg -->
+		{BEGIN avg_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_avg}
+			<td class="pagesummary class30g class{$fieldId4}f class30g{$fieldId4}f0u" groupname="30" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Average
+				{END first_field_flag}
+				{BEGIN avg_field_flag}
+				{$page_total_avg}
+				{END avg_field_flag}
+			</td>
+			{END page_summary_fields_avg}
+		</tr>
+		{END avg_aggregation_block}
+		<!--  min -->
+		{BEGIN min_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_min}
+			<td class="pagesummary class27g class{$fieldId4}f class27g{$fieldId4}f0u" groupname="27" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Min
+				{END first_field_flag}
+				{BEGIN min_field_flag}
+				{$page_total_min}
+				{END min_field_flag}
+			</td>
+			{END page_summary_fields_min}
+		</tr>
+		{END min_aggregation_block}
+		<!--  max -->
+		{BEGIN max_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_max}
+			<td class="pagesummary class28g class{$fieldId4}f class28g{$fieldId4}f0u" groupname="28" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Max
+				{END first_field_flag}
+				{BEGIN max_field_flag}
+				{$page_total_max}
+				{END max_field_flag}
+			</td>
+			{END page_summary_fields_max}
+		</tr>
+		{END max_aggregation_block}
+		<!--end page summary-->
+		{END page_summary_block}
+
+		{BEGIN global_summary_block}
+		<!-- global summary-->
+		<tr>
+			<td style="font-weight:bold;" groupname="31" class="globalsummary class31g class31g0f0u"  colspan={$align_testAgr}>Global summary {$global_total_cnt} - records total</td>
+		</tr>
+		<!-- sum -->
+		{BEGIN sum_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_sum}
+			<td class="globalsummary class34g class{$fieldId4}f class34g{$fieldId4}f0u" groupname="34" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Sum
+				{END first_field_flag}
+				{BEGIN sum_field_flag}
+				{$global_total_sum}
+				{END sum_field_flag}
+			</td>
+			{END page_summary_fields_sum}
+		</tr>
+		{END sum_aggregation_block}
+		<!--  avg -->
+		{BEGIN avg_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_avg}
+			<td class="globalsummary class35g class{$fieldId4}f class35g{$fieldId4}f0u" groupname="35" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Average
+				{END first_field_flag}
+				{BEGIN avg_field_flag}
+				{$global_total_avg}
+				{END avg_field_flag}
+			</td>
+			{END page_summary_fields_avg}
+		</tr>
+		{END avg_aggregation_block}
+		<!--  min -->
+		{BEGIN min_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_min}
+			<td class="globalsummary class32g class{$fieldId4}f class32g{$fieldId4}f0u" groupname="32" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Min
+				{END first_field_flag}
+				{BEGIN min_field_flag}
+				{$global_total_min}
+				{END min_field_flag}
+			</td>
+			{END page_summary_fields_min}
+		</tr>
+		{END min_aggregation_block}
+		<!--  max -->
+		{BEGIN max_aggregation_block}
+		<tr>
+			{BEGIN page_summary_fields_max}
+			<td class="globalsummary class33g class{$fieldId4}f class33g{$fieldId4}f0u" groupname="33" fieldname="{$fieldId}">
+				{BEGIN first_field_flag}
+				Max
+				{END first_field_flag}
+				{BEGIN max_field_flag}
+				{$global_total_max}
+				{END max_field_flag}
+			</td>
+			{END page_summary_fields_max}
+		</tr>
+		{END max_aggregation_block}
+		<!--end page summary-->
+		{END global_summary_block}
+	  </table>
+</div>	
+			{END data_block}
+			{BEGIN message_block}
+		<div class="rnr-cw-message rnr-s-2 asbuttons {$wr_pagestylepath}">
+			<div class="rnr-c rnr-ch rnr-c-message">
+				<div class="style1 rnr-bc rnr-b-message">
+					<span><div class="rnr-message">{$message}</div></span>
+				</div>
+			</div>
+		</div>
+{END message_block}
+		<div id="location" src={$reportName} style="display: none;"></div>
+        {END grid_block}
+        
+		{BEGIN bottom_pagination_block}
+		<div class="rnr-cw-pagination rnr-s-2 asbuttons {$wr_pagestylepath}">
+			<div class="rnr-c rnr-ch rnr-c-pagination">
+				<div class="style1 rnr-bc rnr-b-pagination">
+					{$pagination}
+				</div>
+			</div>
+		</div>
+		{END bottom_pagination_block}
+	</div>	
+</div>
+
+{$footer}
+
+{BEGIN editor_block}
+			<div id="example" class="myDialog">
+		<div class="rnr-page">
+			<div class="rnr-top">
+				<div class="rnr-s-1 {$wr_pagestylepath}">
+					<div class="rnr-c rnr-cv">
+						<div class="style2" align=center id="wnd_header">
+							Report: Style Editor
+						</div>
+						<div class="style1 rnr-b-wrapper">
+							<div class="rnr-s-fields {$wr_pagestylepath}">
+								<div class="rnr-c rnr-cv">
+									<div class="style1">
+										<table class="fieldGrid" id="params">
+											<tr>
+												<td>Background</td>
+												<td>Font color</td>
+												<td>Font family</td>
+												<td>Font size</td>
+												<td>Font style</td>
+												<td>Align Layout</td>
+												<td>Padding</td>
+											</tr>
+											<tr>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="picker2" act="background" class="ColorPickerDivSample" style="width: 80px; background: #f0f8ff;" />
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img id="pick" class="selector" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="picker1" act="color" class="ColorPickerDivSample" style="width: 80px; background: #f0f8ff;"/>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selector" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="fontfamily" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
+																	Default
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selectorfamily" src="images/selector.png"/>
+															</td>
+														</tr>
+														<tr style="position: absolute; display: none;z-index:150;" id="fontfamilyselect">
+															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
+																<table style="width: 100%;">
+																	<tr><td class="selectstyle">Default</td></tr>
+																	<tr><td class="selectstyle">Arial</td></tr>
+																	<tr><td class="selectstyle">Comic Sans MS</td></tr>
+																	<tr><td class="selectstyle">Courier New</td></tr>
+																	<tr><td class="selectstyle" nowrap>Times New Roman</td></tr>
+																	<tr><td class="selectstyle">Verdana</td></tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="fontsize" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
+																	Default
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selectorfontsize" src="images/selector.png"/>
+															</td>
+														</tr>
+														<tr style="position: absolute; display: none;z-index:150;" id="fontsizeselect">
+															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
+																<table style="width: 100%;">
+																	<tr><td class="selectstyle">Default</td></tr>
+																	<tr><td class="selectstyle">7px</td></tr>
+																	<tr><td class="selectstyle">8px</td></tr>
+																	<tr><td class="selectstyle">9px</td></tr>
+																	<tr><td class="selectstyle">10px</td></tr>
+																	<tr><td class="selectstyle">11px</td></tr>
+																	<tr><td class="selectstyle">12px</td></tr>
+																	<tr><td class="selectstyle">13px</td></tr>
+																	<tr><td class="selectstyle">14px</td></tr>
+																	<tr><td class="selectstyle">15px</td></tr>
+																	<tr><td class="selectstyle">16px</td></tr>
+																	<tr><td class="selectstyle">17px</td></tr>
+																</table>
+															</td>
+														</tr>
+													</table>																	
+												</td>
+												<td>
+													<input type="checkbox" id="bold" name="bold" value="bold">&nbsp;<label for="bold">Bold</label>&nbsp;<input type="checkbox" id="italic" name="italic" value="italic">&nbsp;<label for="italic">Italic</label>
+												</td>
+												<td style="padding-left: 0px;">
+													<table width="100" align="center" id="aligntable">
+														<tr>
+															<td id="left" onclick="changeact('textAlign','left',this);"><img src="./images/leftalign.jpg"/></td>
+															<td id="center" onclick="changeact('textAlign','center',this);"><img src="./images/centeralign.jpg"/></td>
+															<td id="right" onclick="changeact('textAlign','right',this);"><img src="./images/rightalign.jpg"/></td>
+														</tr>
+													</table>
+												</td>
+												<td id="paddingSet">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div id="padding" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
+																	2px
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img class="selectorpadding" src="images/selector.png"/>
+															</td>
+														</tr>
+														<tr style="position: absolute; display: none;z-index:150;" id="paddingselect">
+															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
+																<table style="width: 100%;">
+																	<tr><td class="selectstyle">1px</td></tr>
+																	<tr><td class="selectstyle">2px</td></tr>
+																	<tr><td class="selectstyle">3px</td></tr>
+																	<tr><td class="selectstyle">4px</td></tr>
+																	<tr><td class="selectstyle">5px</td></tr>
+																	<tr><td class="selectstyle">6px</td></tr>
+																	<tr><td class="selectstyle">7px</td></tr>
+																	<tr><td class="selectstyle">8px</td></tr>
+																	<tr><td class="selectstyle">9px</td></tr>
+																	<tr><td class="selectstyle">10px</td></tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr id="middlepanel" class="middlepanel">
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width:80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="backgroundColor" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>					
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="color" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="fontFamily" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="fontSize" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="font" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="textAlign" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td align="center">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tr>
+															<td style="padding: 0px 0px 0px 5px;">
+																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
+																	apply to
+																</div>
+															</td>
+															<td style="padding: 2px 0px 0px 0px;">
+																<img act="padding" class="selectorApply" src="images/selector.png"/>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="style2" align=center id="btns">
+										<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+										<span style="position:absolute;" id="jumptospan"></span>
+										<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+										<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+										{BEGIN b_is_report_save}
+										<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+										{END b_is_report_save}	
+										{BEGIN b_is_report_name}
+										<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+										{END b_is_report_name}														
+										<a id="default" name="default" class="rnr-button" href="#">Reset</a>
+										<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+										<a id="preview" class="various fancybox.iframe" href="dreport.php?rname={$report_name_preview}&param=preview&ie=UTF-8&iframe"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+{literal}
+	div.action { position: absolute;  width: 170px; padding: 0; font-size:11px}
+	td {font-size:11px}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=0 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Where Condition</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Group fields</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Totals</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Miscellaneous</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Sort fields</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Style Editor</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;">Report Settings</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row10 style="cursor:pointer;padding:5px;;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row11 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+
+	<div id="alert">
+	</div>
+
+
+	<div id="groupSelectorDiv">
+	<table width=100% cellpadding=5 cellspacing=0 border=0>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+	</table>
+</div>
+<div id="colorPickerVtd">
+	<table class="tableColorPicker" cellspacing="4" style="border:2px solid gray;"> 
+		<tr class="colorPickerVtdTr"> 
+			<td class="row1cell1">&nbsp;</td>
+			<td class="row1cell2">&nbsp;</td>
+			<td class="row1cell3">&nbsp;</td>
+			<td class="row1cell4">&nbsp;</td>
+			<td class="row1cell5">&nbsp;</td>
+			<td class="row1cell6">&nbsp;</td>
+			<td class="row1cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row2cell1">&nbsp;</td>
+			<td class="row2cell2">&nbsp;</td>
+			<td class="row2cell3">&nbsp;</td>
+			<td class="row2cell4">&nbsp;</td>
+			<td class="row2cell5">&nbsp;</td>
+			<td class="row2cell6">&nbsp;</td>
+			<td class="row2cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row3cell1">&nbsp;</td>
+			<td class="row3cell2">&nbsp;</td>
+			<td class="row3cell3">&nbsp;</td>
+			<td class="row3cell4">&nbsp;</td>
+			<td class="row3cell5">&nbsp;</td>
+			<td class="row3cell6">&nbsp;</td>
+			<td class="row3cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row4cell1">&nbsp;</td>
+			<td class="row4cell2">&nbsp;</td>
+			<td class="row4cell3">&nbsp;</td>
+			<td class="row4cell4">&nbsp;</td>
+			<td class="row4cell5">&nbsp;</td>
+			<td class="row4cell6">&nbsp;</td>
+			<td class="row4cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row5cell1">&nbsp;</td>
+			<td class="row5cell2">&nbsp;</td>
+			<td class="row5cell3">&nbsp;</td>
+			<td class="row5cell4">&nbsp;</td>
+			<td class="row5cell5">&nbsp;</td>
+			<td class="row5cell6">&nbsp;</td>
+			<td class="row5cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row6cell1">&nbsp;</td>
+			<td class="row6cell2">&nbsp;</td>
+			<td class="row6cell3">&nbsp;</td>
+			<td class="row6cell4">&nbsp;</td>
+			<td class="row6cell5">&nbsp;</td>
+			<td class="row6cell6">&nbsp;</td>
+			<td class="row6cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row7cell1">&nbsp;</td>
+			<td class="row7cell2">&nbsp;</td>
+			<td class="row7cell3">&nbsp;</td>
+			<td class="row7cell4">&nbsp;</td>
+			<td class="row7cell5">&nbsp;</td>
+			<td class="row7cell6">&nbsp;</td>
+			<td class="row7cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row8cell1">&nbsp;</td>
+			<td class="row8cell2">&nbsp;</td>
+			<td class="row8cell3">&nbsp;</td>
+			<td class="row8cell4">&nbsp;</td>
+			<td class="row8cell5">&nbsp;</td>
+			<td class="row8cell6">&nbsp;</td>
+			<td class="row8cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row9cell1">&nbsp;</td>
+			<td class="row9cell2">&nbsp;</td>
+			<td class="row9cell3">&nbsp;</td>
+			<td class="row9cell4">&nbsp;</td>
+			<td class="row9cell5">&nbsp;</td>
+			<td class="row9cell6">&nbsp;</td>
+			<td class="row9cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row0cell1">&nbsp;</td>
+			<td class="row0cell2">&nbsp;</td>
+			<td class="row0cell3">&nbsp;</td>
+			<td class="row0cell4">&nbsp;</td>
+			<td class="row0cell5">&nbsp;</td>
+			<td class="row0cell6">&nbsp;</td>
+			<td class="row0cell7">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
+		</tr>
+	</table>
+</div>		
+	
+
+{END editor_block}
+
+{$bodyend}
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>{$reportTitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {BEGIN style_block}
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        {END style_block}				
+        <style>
+			.report	{font-size:11px}
+            .report-title		{font:bold 12px arial, verdana, sans serif, helvetica;}
+            table.report		{border-collapse: collapse; border: solid 2px #000;}
+				table.report td	{padding: 2px; border: solid 1px #ccc;}
+            .groupsummary		{border-bottom: solid 1px #000;}
+            td.pagesummary		{background: #ffffbb;}
+            td.globalsummary	{background: #ffe0b0;}
+			.page-summary		{border-top: 4px double #333;}
+			select.apply-style	{line-height: 1.4em; width: 90%;}
+			.buttonborder 		{margin-right: 10px;}
+			#wnd_header			{cursor: move;}
+            {BEGIN group_field_colors}
+            td.group_{$iteration},
+            td.nbgroup_{$iteration}		{background: #{$color1};}
+            td.header_{$iteration}		{background: #{$color2};}
+            {END group_field_colors}			
+            {$styleStr}
+        </style>
+		{$includes}
+    </head>
+	
+<body {$onload} class="{$wr_pagestylepath}">
+<div class="rnr-page dreport">
+	<div class="rnr-top ">
+{$header}
+	<h1>{$reportTitle}</h1>
+	{BEGIN grid_block}
+	<div class="rnr-s-grid {$wr_pagestylepath}">
+	<table class="report rnr-b-report" width="95%" cellpadding="1" cellspacing="0" align="center" id="legend" {BEGIN legend_disp}style="display: none;"{END legend_disp}>
+	{BEGIN grid_row}
+		{BEGIN group}
+		<!--  group headers -->
+		{BEGIN first_newgroup}
+		<!--header-->
+		{BEGIN first_group_block}
+		<tr>{$first_group_html}</tr>
+		{END first_group_block}
+		<!--end header-->
+		<tr>
+		{BEGIN group_headers}
+			{BEGIN true_groups_order_block}
+			<td class="header_{$group2_group_order} class{$groupId2}g class{$group2_group_order}f class{$groupId2}g{$group2_group_order}f{$group2_in_uniq}u" groupname="{$groupId2}" fieldname="{$group2_group_order}" uniqe="{$group2_in_uniq}">
+				<font style="font-weight:900">{$group2_grval}</font>
+				{BEGIN groups_sds_block}<br>{$group2_field_value}
+				{END groups_sds_block}
+			</td>	
+			{END true_groups_order_block}
+			{BEGIN false_groups_order_block}
+			{BEGIN groups_sds_block}
+			<td class="group_{$group2_group_order} class{$groupId2}g class{$group2_group_order}f class{$groupId2}g{$group2_group_order}f{$group2_in_uniq}u" groupname="{$groupId2}" fieldname="{$group2_group_order}" uniqe="{$group2_in_uniq}">{$group2_field_value}</td>
+			{END groups_sds_block}
+			{BEGIN groups_sds_block_else}
+			<td class="group_{$arr2.group_order} class{$groupId2}g class{$group2_group_order}f class{$groupId2}g{$group2_group_order}f{$group2_in_uniq}u" groupname="{$groupId2}" fieldname="{$group2_group_order}" uniqe="{$group2_in_uniq}" style="border:none;">&nbsp;</td>
+			{END groups_sds_block_else}
+			{END false_groups_order_block}
+		{END group_headers}
+		<!-- data -->
+		{BEGIN not_group_fields_values_block}
+			<td class="data class25g class{$fieldNum}f class25g{$fieldNum}f0u" groupname="25" fieldname="{$fieldNum}">{$field_value}</td>
+		{END not_group_fields_values_block}
+		</tr>
+		{END first_newgroup}
+		<!--end new group-->
+		{END group}
+
+		{BEGIN no_newgroup_block}
+		<tr> <!--fixed-->
+			{BEGIN group}
+			<td class="group_{$group_order} class{$groupId2}g class{$group2_group_order}f class{$groupId2}g{$group2_group_order}f{$group2_in_uniq}u" groupname="{$groupId2}" fieldname="{$group2_group_order}" uniqe="{$group2_in_uniq}">{$field_value}</td>
+			{END group}
+			{BEGIN not_group_fields_values}
+			<td class="data class25g class{$fieldNum}f class25g{$fieldNum}f0u" groupname="25" fieldname="{$fieldNum}">{$field_value}</td>
+			{END not_group_fields_values}
+		</tr>
+		{END no_newgroup_block}
+
+		<!-- group summary -->
+		{BEGIN group_summary_block}
+		<tr>
+			{$td_columns}
+			{BEGIN group_summary_totals}
+			<td style="font-weight: bold" class="group_{$group_order} class{$groupIdSummary}g class{$groupIdSummary}g0f0u" groupname="{$groupIdSummary}" colspan={$colspan_expr}>
+				Summary for {$label} {$grval} - {$total_cnt} records total
+			</td>
+			{END group_summary_totals}
+		</tr>
+		<!--sum-->
+		{BEGIN sum_aggregation_block}
+		<tr>
+		{BEGIN group_summary_fields_sum}
+			{BEGIN group_field_flag}
+			<td class="group_{$group_order} class{$groupIdSum}g class{$iteration}f class{$groupIdSum}g{$iteration}f0u" groupname="{$groupIdSum}" fieldname="{$iteration}" style="border-left: solid 1px #ccc;">Sum</td>
+			{END group_field_flag}
+			{BEGIN sum_field_flag}
+			<td class="group_{$group_order} class{$groupIdSum}g class{$iteration}f class{$groupIdSum}g{$iteration}f0u" groupname="{$groupIdSum}" fieldname="{$iteration}">{$group_total_sum_value}</td>
+			{END sum_field_flag}
+			{BEGIN border_flag}
+			<td class="group_{$iteration} class{$groupIdSum}g class{$iteration}f class{$groupIdSum}g{$iteration}f{$group_in_uniq_block}u" groupname="{$groupIdSum}" fieldname="{$iteration}"  uniqe="{$group_in_uniq_block}" style="border-style:none;">&nbsp;</td>
+			{END border_flag}
+			{BEGIN default_flag}
+			<td class="group_{$group_order} class{$groupIdSum}g class{$iteration}f class{$groupIdSum}g{$iteration}f0u" groupname="{$groupIdSum}" fieldname="{$iteration}">&nbsp;</td>
+			{END default_flag}
+		{END group_summary_fields_sum}
+		</tr>
+		{END sum_aggregation_block}
+		<!-- avg-->
+		{BEGIN avg_aggregation_block}
+		<tr>
+		{BEGIN group_summary_fields_avg}
+			{BEGIN group_field_flag}
+			<td class="group_{$group_order} class{$groupIdAvg}g class{$iteration}f class{$groupIdAvg}g{$iteration}f0u" groupname="{$groupIdAvg}" fieldname="{$iteration}" >Average</td>
+			{END group_field_flag}
+			{BEGIN avg_field_flag}
+			<td class="group_{$group_order} class{$groupIdAvg}g class{$iteration}f class{$groupIdAvg}g{$iteration}f0u" groupname="{$groupIdAvg}" fieldname="{$iteration}" >{$group_total_avg_value}</td>
+			{END avg_field_flag}
+			{BEGIN border_flag}
+			<td class="group_{$iteration} class{$groupIdAvg}g class{$iteration}f class{$groupIdAvg}g{$iteration}f{$group_in_uniq_block}u" groupname="{$groupIdAvg}" fieldname="{$iteration}"  uniqe="{$group_in_uniq_block}"  style="border-style:none;">&nbsp;</td>
+			{END border_flag}
+			{BEGIN default_flag}
+			<td class="group_{$group_order} class{$groupIdAvg}g class{$iteration}f class{$groupIdAvg}g{$iteration}f0u" groupname="{$groupIdAvg}" fieldname="{$iteration}" >&nbsp;</td>
+			{END default_flag}
+		{END group_summary_fields_avg}
+		</tr>
+		{END avg_aggregation_block}
+		<!-- min-->
+		{BEGIN min_aggregation_block}
+		<tr>
+		{BEGIN group_summary_fields_min}
+			{BEGIN group_field_flag}
+			<td class="group_{$group_order} class{$groupIdMin}g class{$iteration}f class{$groupIdMin}g{$iteration}f0u" groupname="{$groupIdMin}" fieldname="{$iteration}" >Min</td>
+			{END group_field_flag}
+			{BEGIN min_field_flag}
+			<td class="group_{$group_order} class{$groupIdMin}g class{$iteration}f class{$groupIdMin}g{$iteration}f0u" groupname="{$groupIdMin}" fieldname="{$iteration}" >{$group_total_min_value}</td>
+			{END min_field_flag}
+			{BEGIN border_flag}
+			<td class="group_{$iteration} class{$groupIdMin}g class{$iteration}f class{$groupIdMin}g{$iteration}f{$group_in_uniq_block}u" groupname="{$groupIdMin}" fieldname="{$iteration}"   uniqe="{$group_in_uniq_block}" style="border-style:none;">&nbsp;</td>
+			{END border_flag}
+			{BEGIN default_flag}
+			<td class="group_{$group_order} class{$groupIdMin}g class{$iteration}f class{$groupIdMin}g{$iteration}f0u" groupname="{$groupIdMin}" fieldname="{$iteration}" >&nbsp;</td>
+			{END default_flag}
+		{END group_summary_fields_min}
+		</tr>
+		{END min_aggregation_block}
+		<!--max-->
+		{BEGIN max_aggregation_block}
+		<tr>
+		{BEGIN group_summary_fields_max}
+			{BEGIN group_field_flag}
+			<td class="group_{$group_order} class{$groupIdMax}g class{$iteration}f class{$groupIdMax}g{$iteration}f0u" groupname="{$groupIdMax}" fieldname="{$iteration}">Max</td>
+			{END group_field_flag}
+			{BEGIN max_field_flag}
+			<td class="group_{$group_order} class{$groupIdMax}g class{$iteration}f class{$groupIdMax}g{$iteration}f0u" groupname="{$groupIdMax}" fieldname="{$iteration}">{$group_total_max_value}</td>
+			{END max_field_flag}
+			{BEGIN border_flag}
+			<td class="group_{$iteration} class{$groupIdMax}g class{$iteration}f class{$groupIdMax}g{$iteration}f{$group_in_uniq_block}u" groupname="{$groupIdMax}" fieldname="{$iteration}"  uniqe="{$group_in_uniq_block}" style="border-style:none;">&nbsp;</td>
+			{END border_flag}
+			{BEGIN default_flag}
+			<td class="group_{$group_order} class{$groupIdMax}g class{$iteration}f class{$groupIdMax}g{$iteration}f0u" groupname="{$groupIdMax}" fieldname="{$iteration}">&nbsp;</td>
+			{END default_flag}
+		{END group_summary_fields_max}
+		</tr>
+		{END max_aggregation_block}
+		<!--end group summary-->
+		{END group_summary_block}
+	<!--end grid row-->
+	{END grid_row}
+
+		{BEGIN summary_footer}
+			<tr class="page-summary">
+			{BEGIN page_order_fields}
+				{BEGIN show}
+				<td class="blackshade class40g class{$fieldId}f class40g{$fieldId}f0u" fieldname="{$fieldId}" groupname="40">{$label}</td>
+				{END show}
+			{END page_order_fields}
+			</tr>
+		{END summary_footer}                        
+								
+		{BEGIN page_summary_block}
+		<!-- page summary-->
+		<tr>
+			<td style="font-weight: bold" groupname="26" class="pagesummary class26g class26g0f0u" colspan={$testAgr}>Page summary {$page_total_cnt} - records total</td>
+		</tr>
+		<!--  sum -->
+		{BEGIN sum_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_sum}
+			{BEGIN first_field_flag}
+			<td class="pagesummary class29g class1f class29g1f0u" groupname="29" fieldname="1">Sum</td>
+			{END first_field_flag}
+			{BEGIN sum_field_flag}
+			<td class="pagesummary class29g class{$fieldId}f class29g{$fieldId}f0u" groupname="29" fieldname="{$fieldId}">{$page_total_sum}</td>
+			{END sum_field_flag}
+			{BEGIN default_flag}
+			<td class="pagesummary class29g class{$fieldId}f class29g{$fieldId}f0u" groupname="29" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_sum}
+		</tr>
+		{END sum_aggregation_block}
+		<!--  avg -->
+		{BEGIN avg_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_avg}
+			{BEGIN first_field_flag}
+			<td class="pagesummary class30g class1f class30g1f0u" groupname="30" fieldname="1">Average</td>
+			{END first_field_flag}
+			{BEGIN avg_field_flag}
+			<td class="pagesummary class30g class{$fieldId}f class30g{$fieldId}f0u" groupname="30" fieldname="{$fieldId}">{$page_total_avg}</td>
+			{END avg_field_flag}
+			{BEGIN default_flag}
+			<td class="pagesummary class30g class{$fieldId}f class30g{$fieldId}f0u" groupname="30" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_avg}
+		</tr>
+		{END avg_aggregation_block}
+		<!--  min -->
+		{BEGIN min_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_min}
+			{BEGIN first_field_flag}
+			<td class="pagesummary class27g class1f class27g1f0u" groupname="27" fieldname="1">Min</td>
+			{END first_field_flag}
+			{BEGIN min_field_flag}
+			<td class="pagesummary class27g class{$fieldId}f class27g{$fieldId}f0u" groupname="27" fieldname="{$fieldId}">{$page_total_min}</td>
+			{END min_field_flag}
+			{BEGIN default_flag}
+			<td class="pagesummary class27g class{$fieldId}f class27g{$fieldId}f0u" groupname="27" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_min}
+		</tr>
+		{END min_aggregation_block}
+		<!--  max -->
+		{BEGIN max_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_max}
+			{BEGIN first_field_flag}
+			<td class="pagesummary class28g class1f class28g1f0u" groupname="28" fieldname="1">Max</td>
+			{END first_field_flag}
+			{BEGIN max_field_flag}
+			<td class="pagesummary class28g class{$fieldId}f class28g{$fieldId}f0u" groupname="28" fieldname="{$fieldId}">{$page_total_max}</td>
+			{END max_field_flag}
+			{BEGIN default_flag}
+			<td class="pagesummary class28g class{$fieldId}f class28g{$fieldId}f0u" groupname="28" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_max}
+		</tr>
+		{END max_aggregation_block}
+		<!--END page summary-->
+		{END page_summary_block}
+
+		{BEGIN global_summary_block}
+		<!-- global summary-->
+		<tr>
+			<td style="font-weight: bold" class="globalsummary class31g class31g1f0u" groupname="31" colspan={$testAgr}>Global summary {$global_total_cnt} - records total</td>
+		</tr>
+		<!-- sum -->
+		{BEGIN sum_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_sum}
+			{BEGIN first_field_flag}
+			<td class="globalsummary class34g class1f class34g1f0u" groupname="34" fieldname="1">Sum</td>
+			{END first_field_flag}
+			{BEGIN sum_field_flag}
+			<td class="globalsummary class34g class{$fieldId}f class34g{$fieldId}f0u" groupname="34" fieldname="{$fieldId}">{$global_total_sum}</td>
+			{END sum_field_flag}
+			{BEGIN default_flag}
+			<td class="globalsummary class34g class{$fieldId}f class34g{$fieldId}f0u" groupname="34" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_sum}
+		</tr>
+		{END sum_aggregation_block}
+		<!-- avg -->
+		{BEGIN avg_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_avg}
+			{BEGIN first_field_flag}
+			<td class="globalsummary class35g class1f class35g1f0u" groupname="35" fieldname="1">Average</td>
+			{END first_field_flag}
+			{BEGIN avg_field_flag}
+			<td class="globalsummary class35g class{$fieldId}f class35g{$fieldId}f0u" groupname="35" fieldname="{$fieldId}">{$global_total_avg}</td>
+			{END avg_field_flag}
+			{BEGIN default_flag}
+			<td class="globalsummary class35g class{$fieldId}f class35g{$fieldId}f0u" groupname="35" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_avg}
+		</tr>
+		{END avg_aggregation_block}
+		<!-- min -->
+		{BEGIN min_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_min}
+			{BEGIN first_field_flag}
+			<td class="globalsummary class32g class1f class32g1f0u" groupname="32" fieldname="1">Min</td>
+			{END first_field_flag}
+			{BEGIN min_field_flag}
+			<td class="globalsummary class32g class{$fieldId}f class32g{$fieldId}f0u" groupname="32" fieldname="{$fieldId}">{$global_total_min}</td>
+			{END min_field_flag}
+			{BEGIN default_flag}
+			<td class="globalsummary class32g class{$fieldId}f class32g{$fieldId}f0u" groupname="32" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_min}
+		</tr>
+		{END min_aggregation_block}
+		<!-- max -->
+		{BEGIN max_aggregation_block}
+		<tr>
+		{BEGIN page_summary_fields_max}
+			{BEGIN first_field_flag}
+			<td class="globalsummary class33g class1f class33g1f0u" groupname="33" fieldname="1">Max</td>
+			{END first_field_flag}
+			{BEGIN max_field_flag}
+			<td class="globalsummary class33g class{$fieldId}f class33g{$fieldId}f0u" groupname="33" fieldname="{$fieldId}">{$page_total_max}</td>
+			{END max_field_flag}
+			{BEGIN default_flag}
+			<td class="globalsummary class33g class{$fieldId}f class33g{$fieldId}f0u" groupname="33" fieldname="{$fieldId}">&nbsp;</td>
+			{END default_flag}
+		{END page_summary_fields_max}
+		</tr>
+		{END max_aggregation_block}
+		<!--end global summary-->
+		{END global_summary_block}
+			 </table>
+
+	</div>
+	{END grid_block}
+{$footer}
+</div>
+</div>
+</body>
+</html>

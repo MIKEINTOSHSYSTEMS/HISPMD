@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Report: Tables Relations</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link type="text/css" href="styles/default.css" rel="stylesheet">
+	<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+	<style type="text/css">
+		.list_selectable 	{ width: 100%; overflow: hidden; }
+		.rel-container		{ width: 98%; }
+		#sql_query 			{ display:none; }
+		.sql-container		{ width: 80%; }
+		#cur_table 			{ border: 1px solid #ccc; padding: 2px; overflow: hidden; border-bottom-style: none; }
+		#rel_list			{ min-width: 500px; width: 100%; }
+	</style>
+	<!--[if IE]>
+		<style>
+		.list_selectable 	{ width: 99%; overflow: hidden; }
+		#cur_table 			{ border-bottom-style: solid; }
+		</style>
+	<![endif]-->
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath}">
+        {$b_includes}
+		{$header}
+		<div class="rnr-page">
+			<div class="rnr-top">
+				<div class="rnr-s-1 {$wr_pagestylepath}">
+					<div class="rnr-c rnr-cv">
+						<div class="style2" align=center>
+							Report: Tables Relations{$report_title}{$report_table}
+						</div>
+						<div class="style1 rnr-b-wrapper">
+							<div class="rnr-s-fields {$wr_pagestylepath}">
+								<div class="rnr-c rnr-cv">
+									<div class="style1">
+										<table class="fieldGrid">
+											<tr class="myselector">
+												<td>
+													Left Table
+												</td>
+												<td>
+													<select id="left_tables" class="table_fields" name="left_tables" style="width:150px">
+														<option selected value="-1">Select table</option>
+														<option value="{$table_selected}">{$table_selected}</option>
+														<!--
+														{$tables}
+														-->
+													</select>
+												</td>
+												<td>
+													Right Table
+												</td>
+												<td>
+													<select id="right_tables" class="table_fields" name="right_tables" style="width:150px">
+														<option selected value="-1">Select table</option>
+														{$tables}
+													</select>
+												</td>
+											</tr>
+											<tr class="myselector">
+												<td>
+													Left Field
+												</td>
+												<td>
+													<select id="left_fields_1" class="fld_names" name="left_fields_1" style="width:150px">
+														<!-- autocomplete -->
+													</select>
+												</td>
+												<td>
+													Right Field
+												</td>
+												<td>
+													<select id="right_fields_1" class="fld_names" name="right_fields_1" style="width:150px">
+														<!-- autocomplete -->
+													</select>
+												</td>
+											</tr>
+											<tr class="myselector">
+												<td>
+													Join Type
+												</td>
+												<td>
+													<select id="join_select" name="join_select" style="width:150px">
+														<option selected="" value="INNER JOIN ">Inner Join</option>
+														<option value="LEFT OUTER JOIN ">Left Join</option>
+														<option value="RIGHT OUTER JOIN ">Right Join</option>
+														<option value="FULL OUTER JOIN ">Full Outer Join</option>
+													</select>
+												</td>
+												<td>
+												</td>
+												<td>
+												</td>
+											</tr>
+											<tr>
+												<td colspan=4 align=center>
+													<a id="addrel_btn" name="addrel_btn" class="rnr-button" href="#">Add Relation</a>
+												</td>
+											</tr>
+											<tr>
+												<td align="center" colspan=4>
+													<div class="rel-container"> 
+														<textarea id="cur_table" readonly="true" class="list_selectable" rows="3">
+	SELECT {$fields_table_selected}
+	FROM {$table_selected}
+														</textarea>
+														<br/>
+														<select name="rel_list" id="rel_list" size="10" align="left"></select>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan=4 align=center>
+													<a id="remrel_btn" name="remrel_btn" class="rnr-button" href="#">Remove Relation</a>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="style2" align=center id="btns">
+										<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+										<span style="position:absolute;" id="jumptospan"></span>
+										<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+										<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">SQL Query</a>
+										<a id="sql_query" class="various fancybox.iframe" href="web_query.php?name=table_relations&ie=UTF-8&iframe"></a>
+										<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+										{BEGIN b_is_report_save}
+										<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+										{END b_is_report_save}															
+										{BEGIN b_is_report_name}
+										<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+										{END b_is_report_name}	
+										<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+										<a id="preview" class="various fancybox.iframe" href="dreport.php?rname={$report_name_preview}&param=preview&ie=UTF-8&iframe"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		{$footer}
+        
+        <style>
+{literal}
+	div.action { position: absolute;  width: 170px; padding: 0; font-size:11px}
+	td {font-size:11px}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=0 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Where Condition</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Group fields</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Totals</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Miscellaneous</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Sort fields</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Style Editor</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;">Report Settings</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row10 style="cursor:pointer;padding:5px;;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row11 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+	<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>		
+
+	<div id="alert">
+	</div>
+        
+    </body>
+</html>

@@ -60,6 +60,9 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo__Publications;
 	var $tblhispmdathispmdmerqconsultancyo__Regions;
 	var $tblhispmdathispmdmerqconsultancyo__Research;
+	var $tblhispmdathispmdmerqconsultancyo__webreport_admin;
+	var $tblhispmdathispmdmerqconsultancyo__webreport_style;
+	var $tblhispmdathispmdmerqconsultancyo__webreports;
 	var $tblhispmdathispmdmerqconsultancyo__Workforce;
 	var $lstTables;
 	var $Table = array();
@@ -81,6 +84,9 @@ class tDAL
 		$this->lstTables[] = array("name" => "Publications", "varname" => "hispmdathispmdmerqconsultancyo__Publications", "altvarname" => "Publications", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "Regions", "varname" => "hispmdathispmdmerqconsultancyo__Regions", "altvarname" => "Regions", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "Research", "varname" => "hispmdathispmdmerqconsultancyo__Research", "altvarname" => "Research", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "webreport_admin", "varname" => "hispmdathispmdmerqconsultancyo__webreport_admin", "altvarname" => "webreport_admin", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "webreport_style", "varname" => "hispmdathispmdmerqconsultancyo__webreport_style", "altvarname" => "webreport_style", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "webreports", "varname" => "hispmdathispmdmerqconsultancyo__webreports", "altvarname" => "webreports", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "Workforce", "varname" => "hispmdathispmdmerqconsultancyo__Workforce", "altvarname" => "Workforce", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 	}
 

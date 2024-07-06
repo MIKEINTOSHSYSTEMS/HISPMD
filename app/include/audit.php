@@ -416,6 +416,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_Status_Reporting")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -781,6 +785,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR_Reporting")
+		{
+			return false;
+		}
+		if($table=="MFR_Status_Reporting")
 		{
 			return false;
 		}

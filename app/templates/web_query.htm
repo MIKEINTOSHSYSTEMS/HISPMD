@@ -1,0 +1,90 @@
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="stylesheet" href="include/css/jquery-ui.css" type="text/css">
+	<script type="text/javascript" src="include/js/jquery.min.js"></script>
+	<script type="text/javascript" src="include/js/jquery-ui.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function() {
+		$("#tabs").tabs();
+	});
+</script>
+{$b_includes}
+<style type="text/css">
+	body 	{ font: 12px Verdana, Arial, helvetica, sans-serif; }
+	td, th 	{ font: 11px Verdana, Arial, helvetica, sans-serif; padding: 2px;}
+	th 		{ font-weight: bold; padding: 2px 4px; }
+	li 		{ list-style: none; }
+	.sql_area {
+		text-align: left;
+		border: 1px solid #999;
+		padding: 5px;
+		font-family: Tahoma, sans-serif;
+		font-weight: bold;
+		width: 90%;
+	}
+	.sql_result { border: 1px solid #ccc; }
+		.sql_result th { padding: 5px; background: #4e6d9c; color: #fff; }
+		.sql_result td { padding: 5px; background: #c5d4eb; }
+		
+	#table-container { width: 740px; height: 400px; overflow: auto; }
+</style>
+
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">SQL Query</a></li>
+		<li><a href="#tabs-2" id="view_sql">View results</a></li>
+	</ul>
+	<div id="tabs-1">
+	<div>
+	SQL query name:&nbsp;<input id=sql_name type=text value="{$sql_name}" size=40 style="margin-bottom:10px">
+	</div>
+	<div>
+	<textarea class="sql_area" rows="21" cols="80" id="sql_textarea">{$sql_query}</textarea>		
+	</div>
+	</div>
+	<div id="tabs-2">
+		<div id="table-container">
+		{BEGIN sql_message_block}
+			<p>No records to display</p>
+		{END sql_message_block}
+		{BEGIN sql_result_block}
+		<div>
+			<b>{$total_count}</b> records {BEGIN first_rec}(displaying first 50){END first_rec}
+		</div>
+		<table class="sql_result" cellpadding="1" cellspacing="1" border="0">
+			<tr>
+				<thead>
+					<tr>
+						{$res_head}
+					</tr>
+				</thead>
+				<tbody>
+					{$res_body}
+				</tbody>
+			</tr>
+		</table>
+		{END sql_result_block}
+		{BEGIN sql_error_block}
+			{$sql_error}
+		{END sql_error_block}
+		</div>
+	</div>
+	<div id=check_button>
+		<input style="margin-left:15px" type=checkbox id=go_permiss>&nbsp;Proceed to permissions screen
+	</div>
+	<div align=center style="padding:10px" id="sql_button">
+		<input id="save_sql" type=button value="Save">&nbsp;&nbsp;&nbsp;&nbsp;
+		<input id="cancel_sql" type=button value="Cancel">
+	</div>
+</div>
+
+</div><!-- End demo -->
+<div id="alert">
+</div>
+</body>
+</html>

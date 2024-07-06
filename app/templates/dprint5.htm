@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+        <head>
+        <title>{$reportTitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {BEGIN style_block}
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        {END style_block}				
+                <style>
+			.report	{font-size:12px}
+            .report-title		{font:bold 12px arial, verdana, sans serif, helvetica;}
+            table.report		{border-collapse: collapse; border: solid 2px #000;}
+			table.report td	{padding: 3px; border: solid 1px #ccc;}
+            .groupsummary		{border-bottom: solid 1px #000;}
+            td.pagesummary		{background: #ffffbb;}
+            td.globalsummary	{background: #ffefb0;}
+			.page-summary		{border-top: 4px double #333;}
+			select.apply-style	{line-height: 1.4em; width: 90%;}
+			.buttonborder 		{margin-right: 10px;}
+			#wnd_header			{cursor: move;}
+            {BEGIN group_field_colors}
+            td.group{$iteration}		{background: #{$color1};}
+            td.summary{$iteration}		{background: #{$color2};}
+            {END group_field_colors}			
+            {$styleStr}
+        </style>
+
+		{$includes}
+		
+		{BEGIN editor_style_block}
+		<link rel="stylesheet" href="include/css/jquery-ui.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="include/css/stylesheet.css" type="text/css" media="screen">
+		<!--[if IE]>
+		<link rel="stylesheet" href="include/css/stylesheetIE.css" type="text/css" media="screen">
+		<![endif]-->
+		
+		<script type="text/javascript" src="include/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="include/js/jquery.dimensions.pack.js"></script>
+		<script type="text/javascript" src="include/js/actionscript.js"></script>		
+		<script type="text/javascript" src="include/js/jquery.cookie.js"></script>
+		{END editor_style_block}
+		
+    </head>
+<body {$onload} class="{$wr_pagestylepath}">
+<div class="rnr-page dreport">
+	<div class="rnr-top ">
+	<h1>{$reportTitle}</h1>
+	{BEGIN grid_block}
+	<div class="rnr-s-grid {$wr_pagestylepath}">
+	{$report_cross_header}
+
+	<table class="report rnr-b-report" width="95%" cellpadding="1" cellspacing="0" align="center" id="legend" border=0>
+	<tr>
+		<td >&nbsp;</td>
+		{BEGIN group_header}
+			<td >{$gr_value}</td>
+		{END group_header}
+		{BEGIN td_row_summary}
+		<td class="globalsummary">{$totals}</td>
+		{END td_row_summary}
+	</tr>
+	{BEGIN grid_row}
+		<tr>
+			<td >{$group_y}</td>
+			{BEGIN row_record}
+				<td class="data" id={$id_data}>{$row_value}</td>
+			{END row_record}
+			{BEGIN td_row_summary}
+			<td class="globalsummary" id={$id_row_summary}>{$row_summary}</td>
+			{END td_row_summary}
+		</tr>
+	{END grid_row}
+	<tr>
+		{BEGIN td_col_summary}
+		<td class="pagesummary">{$totals}</td>
+		{BEGIN col_summary}
+			<td class="pagesummary" id={$id_col_summary}>{$col_summary}</td>
+		{END col_summary}
+		{BEGIN td_total_summary}
+		<td class="pagesummary" id="id_total_summary"}>{$total_summary}</td>
+		{END td_total_summary}
+		{END td_col_summary}
+	</tr>
+	 </table>
+	</div>
+	{END grid_block}
+	</div>
+	</div>
+</body>
+</html>

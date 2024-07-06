@@ -625,6 +625,7 @@ $globalSettings["useCookieBanner"] = 0 != 0;
 
 $globalSettings["htmlEmailTemplates"] = array();
 
+$globalSettings["isAddWebRep"] = true;
 
 
 
@@ -688,6 +689,7 @@ $wr_pagestylepath = "OfficeOffice";
 $wr_is_standalone = false;
 $WRAdminPagePassword = "";
 
+$WRAdminPagePassword = "webreports";
 
 
 /**
@@ -722,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "6_1719772433";
+$projectBuildKey = "13_1719772433";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "6";
+$projectBuildNumber = "13";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -762,6 +764,7 @@ $tableCaptions["English"]["Research"] = "Research";
 $tableCaptions["English"]["Workforce"] = "Workforce";
 $tableCaptions["English"]["MFR_REPORTING_REST_View"] = "MFR REPORTING REST View";
 $tableCaptions["English"]["MFR_Reporting"] = "MFR Reporting";
+$tableCaptions["English"]["MFR_Status_Reporting"] = "MFR Status Reporting";
 
 
 $globalEvents = new class_GlobalEvents;

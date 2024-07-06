@@ -257,6 +257,7 @@ class ConnectionManager_Base
 		$connectionsIds["Research"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["Workforce"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Reporting"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Status_Reporting"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
