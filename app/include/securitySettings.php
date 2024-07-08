@@ -1,8 +1,8 @@
 <?php
 $securitySettings_var = array( 'providers' => array(  ),
 'sessionControl' => array( 'lifeTime' => 15,
-'sessionName' => '9sdC7m4gmXT3DBDSItmP',
-'JWTSecret' => 'aBuXhPrq4AzLtNoogUbG' ),
+'sessionName' => 'vYhY941glfjZaFEhRwPO',
+'JWTSecret' => 'aQScpOPUwZ07wi6ArV4o' ),
 'registration' => array( 'passwordValidation' => array( 'strong' => false,
 'minimumLength' => 8,
 'uniqueCharacters' => 4,

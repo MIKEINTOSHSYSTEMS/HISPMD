@@ -49,6 +49,15 @@
 [data-page=".global_menu"][data-itemid="welcome_item18"] > .bs-welcome-header {
   background-color: #9ACD32;
 }
+[data-page=".global_menu"][data-itemid="welcome_item17"] > .bs-welcome-header {
+  background-color: #1E90FF;
+}
+[data-page=".global_menu"][data-itemid="welcome_item19"] > .bs-welcome-header {
+  background-color: #6DA5C8;
+}
+[data-page=".global_menu"][data-itemid="welcome_item20"] > .bs-welcome-header {
+  background-color: #E07878;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

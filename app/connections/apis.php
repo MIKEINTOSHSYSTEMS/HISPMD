@@ -18,6 +18,9 @@ class RestManager
 		$connectionsIds = array();
 		$connectionsIds["MFR_Status_Reporting"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Facilities"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Region_Report"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Woreda_Report"] = "hispmdathispmdmerqconsultancyo";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 

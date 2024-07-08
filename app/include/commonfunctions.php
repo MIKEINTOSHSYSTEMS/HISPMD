@@ -237,6 +237,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_facilities" == $shortTName )
 		return true;
+	if ("mfr_region_report" == $shortTName )
+		return true;
+	if ("mfr_zone_report" == $shortTName )
+		return true;
+	if ("mfr_woreda_report" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -440,6 +446,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR_Facilities";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Region_Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Region_Report";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Zone_Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Zone_Report";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Woreda_Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Woreda_Report";
+	}
 	return $arr;
 }
 
@@ -466,6 +499,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Reporting";
 	$arr[]="MFR_Status_Reporting";
 	$arr[]="MFR_Facilities";
+	$arr[]="MFR_Region_Report";
+	$arr[]="MFR_Zone_Report";
+	$arr[]="MFR_Woreda_Report";
 	return $arr;
 }
 
@@ -1184,6 +1220,24 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_Facilities" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Region_Report" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Zone_Report" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Woreda_Report" )
 	{
 //	default permissions
 		// grant all by default

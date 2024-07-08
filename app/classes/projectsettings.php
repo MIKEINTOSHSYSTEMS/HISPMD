@@ -3544,6 +3544,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_status_reporting" ] = "MFR_Status_Reporting";
 	$projectEntities[ "MFR_Facilities" ] = array( "url" => "mfr_facilities", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_facilities" ] = "MFR_Facilities";
+	$projectEntities[ "MFR_Region_Report" ] = array( "url" => "mfr_region_report", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_region_report" ] = "MFR_Region_Report";
+	$projectEntities[ "MFR_Zone_Report" ] = array( "url" => "mfr_zone_report", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_zone_report" ] = "MFR_Zone_Report";
+	$projectEntities[ "MFR_Woreda_Report" ] = array( "url" => "mfr_woreda_report", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_woreda_report" ] = "MFR_Woreda_Report";
 }
 
 function findTable( $table ) {

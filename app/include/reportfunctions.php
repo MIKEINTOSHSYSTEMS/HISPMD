@@ -505,6 +505,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Region_Report")
+		{
+			return 1;
+		}
+		if($table=="MFR_Zone_Report")
+		{
+			return 1;
+		}
+		if($table=="MFR_Woreda_Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -833,6 +845,18 @@ function getCaptionTable($table)
 	if($table=="MFR_Facilities")
 	{
 		return "MFR Facilities";
+	}
+	if($table=="MFR_Region_Report")
+	{
+		return "MFR Region Report";
+	}
+	if($table=="MFR_Zone_Report")
+	{
+		return "MFR Zone Report";
+	}
+	if($table=="MFR_Woreda_Report")
+	{
+		return "MFR Woreda Report";
 	}
 	return $table;
 }

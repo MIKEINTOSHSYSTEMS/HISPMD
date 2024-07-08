@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "40_1719772433";
+$projectBuildKey = "47_1720450097";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "40";
+$projectBuildNumber = "47";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -766,6 +766,9 @@ $tableCaptions["English"]["MFR_REPORTING_REST_View"] = "MFR REPORTING REST View"
 $tableCaptions["English"]["MFR_Reporting"] = "MFR Reporting";
 $tableCaptions["English"]["MFR_Status_Reporting"] = "MFR Status Reporting";
 $tableCaptions["English"]["MFR_Facilities"] = "MFR Facilities";
+$tableCaptions["English"]["MFR_Region_Report"] = "MFR Region Report";
+$tableCaptions["English"]["MFR_Zone_Report"] = "MFR Zone Report";
+$tableCaptions["English"]["MFR_Woreda_Report"] = "MFR Woreda Report";
 
 
 $globalEvents = new class_GlobalEvents;
