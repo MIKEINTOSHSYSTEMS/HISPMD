@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "47_1720450097";
+$projectBuildKey = "54_1720455027";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "47";
+$projectBuildNumber = "54";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -762,9 +762,8 @@ $tableCaptions["English"]["Publications"] = "Publications";
 $tableCaptions["English"]["Regions"] = "Regions";
 $tableCaptions["English"]["Research"] = "Research";
 $tableCaptions["English"]["Workforce"] = "Workforce";
-$tableCaptions["English"]["MFR_REPORTING_REST_View"] = "MFR REPORTING REST View";
-$tableCaptions["English"]["MFR_Reporting"] = "MFR Reporting";
-$tableCaptions["English"]["MFR_Status_Reporting"] = "MFR Status Reporting";
+$tableCaptions["English"]["MFR_Dashboard_Report"] = "MFR Dashboard Report";
+$tableCaptions["English"]["MFR_Status_Report"] = "MFR Status Report";
 $tableCaptions["English"]["MFR_Facilities"] = "MFR Facilities";
 $tableCaptions["English"]["MFR_Region_Report"] = "MFR Region Report";
 $tableCaptions["English"]["MFR_Zone_Report"] = "MFR Zone Report";

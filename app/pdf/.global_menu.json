@@ -146,9 +146,6 @@ pdfDocument = {
 			{"text":"","background":"#6B8E23","hidden":"{$item_hide_welcome_item13}"},
 				
 				
-			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item14}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_welcome_item15}"},
 				
 				

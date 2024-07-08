@@ -229,11 +229,9 @@ function checkTableName($shortTName )
 		return true;
 	if ("workforce" == $shortTName )
 		return true;
-	if ("mfr_reporting_rest_view" == $shortTName )
+	if ("mfr_dashboard_report" == $shortTName )
 		return true;
-	if ("mfr_reporting" == $shortTName )
-		return true;
-	if ("mfr_status_reporting" == $shortTName )
+	if ("mfr_status_report" == $shortTName )
 		return true;
 	if ("mfr_facilities" == $shortTName )
 		return true;
@@ -412,30 +410,21 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_REPORTING_REST_View");
+		$strPerm = GetUserPermissions("MFR_Dashboard_Report");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="MFR_REPORTING_REST_View";
+		$arr[]="MFR_Dashboard_Report";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Reporting");
+		$strPerm = GetUserPermissions("MFR_Status_Report");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="MFR_Reporting";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Status_Reporting");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Status_Reporting";
+		$arr[]="MFR_Status_Report";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -495,9 +484,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Regions";
 	$arr[]="Research";
 	$arr[]="Workforce";
-	$arr[]="MFR_REPORTING_REST_View";
-	$arr[]="MFR_Reporting";
-	$arr[]="MFR_Status_Reporting";
+	$arr[]="MFR_Dashboard_Report";
+	$arr[]="MFR_Status_Report";
 	$arr[]="MFR_Facilities";
 	$arr[]="MFR_Region_Report";
 	$arr[]="MFR_Zone_Report";
@@ -1201,19 +1189,13 @@ function GetUserPermissionsStatic( $table )
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="MFR_REPORTING_REST_View" )
+	if( $table=="MFR_Dashboard_Report" )
 	{
 //	default permissions
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="MFR_Reporting" )
-	{
-//	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Status_Reporting" )
+	if( $table=="MFR_Status_Report" )
 	{
 //	default permissions
 		// grant all by default

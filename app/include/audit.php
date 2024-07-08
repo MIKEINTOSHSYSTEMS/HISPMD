@@ -408,15 +408,11 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="MFR_REPORTING_REST_View")
+		if($table=="MFR_Dashboard_Report")
 		{
 			return false;
 		}
-		if($table=="MFR_Reporting")
-		{
-			return false;
-		}
-		if($table=="MFR_Status_Reporting")
+		if($table=="MFR_Status_Report")
 		{
 			return false;
 		}
@@ -796,15 +792,11 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="MFR_REPORTING_REST_View")
+		if($table=="MFR_Dashboard_Report")
 		{
 			return false;
 		}
-		if($table=="MFR_Reporting")
-		{
-			return false;
-		}
-		if($table=="MFR_Status_Reporting")
+		if($table=="MFR_Status_Report")
 		{
 			return false;
 		}

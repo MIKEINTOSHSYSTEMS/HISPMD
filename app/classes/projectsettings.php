@@ -3536,12 +3536,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "research" ] = "Research";
 	$projectEntities[ "Workforce" ] = array( "url" => "workforce", "type" => 0 );
 	$projectEntitiesReverse[ "workforce" ] = "Workforce";
-	$projectEntities[ "MFR_REPORTING_REST_View" ] = array( "url" => "mfr_reporting_rest_view", "type" => 7 );
-	$projectEntitiesReverse[ "mfr_reporting_rest_view" ] = "MFR_REPORTING_REST_View";
-	$projectEntities[ "MFR_Reporting" ] = array( "url" => "mfr_reporting", "type" => 0 );
-	$projectEntitiesReverse[ "mfr_reporting" ] = "MFR_Reporting";
-	$projectEntities[ "MFR_Status_Reporting" ] = array( "url" => "mfr_status_reporting", "type" => 7 );
-	$projectEntitiesReverse[ "mfr_status_reporting" ] = "MFR_Status_Reporting";
+	$projectEntities[ "MFR_Dashboard_Report" ] = array( "url" => "mfr_dashboard_report", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_dashboard_report" ] = "MFR_Dashboard_Report";
+	$projectEntities[ "MFR_Status_Report" ] = array( "url" => "mfr_status_report", "type" => 7 );
+	$projectEntitiesReverse[ "mfr_status_report" ] = "MFR_Status_Report";
 	$projectEntities[ "MFR_Facilities" ] = array( "url" => "mfr_facilities", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_facilities" ] = "MFR_Facilities";
 	$projectEntities[ "MFR_Region_Report" ] = array( "url" => "mfr_region_report", "type" => 7 );

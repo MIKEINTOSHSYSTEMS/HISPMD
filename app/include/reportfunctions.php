@@ -489,15 +489,11 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="MFR_REPORTING_REST_View")
+		if($table=="MFR_Dashboard_Report")
 		{
 			return 1;
 		}
-		if($table=="MFR_Reporting")
-		{
-			return 1;
-		}
-		if($table=="MFR_Status_Reporting")
+		if($table=="MFR_Status_Report")
 		{
 			return 1;
 		}
@@ -830,17 +826,13 @@ function getCaptionTable($table)
 	{
 		return "Workforce";
 	}
-	if($table=="MFR_REPORTING_REST_View")
+	if($table=="MFR_Dashboard_Report")
 	{
-		return "MFR REPORTING REST View";
+		return "MFR Dashboard Report";
 	}
-	if($table=="MFR_Reporting")
+	if($table=="MFR_Status_Report")
 	{
-		return "MFR Reporting";
-	}
-	if($table=="MFR_Status_Reporting")
-	{
-		return "MFR Status Reporting";
+		return "MFR Status Report";
 	}
 	if($table=="MFR_Facilities")
 	{
@@ -1874,18 +1866,6 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="Workforce";
-	}
-	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("MFR_Reporting");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="MFR_Reporting";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="MFR_Reporting";
 	}
 	return $arr;
 }

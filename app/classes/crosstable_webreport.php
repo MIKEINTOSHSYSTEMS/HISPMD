@@ -1409,8 +1409,6 @@ class CrossTableWebReport
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("MFR_Reporting" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])

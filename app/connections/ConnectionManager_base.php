@@ -256,8 +256,7 @@ class ConnectionManager_Base
 		$connectionsIds["Regions"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["Research"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["Workforce"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Reporting"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Status_Reporting"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Status_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Facilities"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Region_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";

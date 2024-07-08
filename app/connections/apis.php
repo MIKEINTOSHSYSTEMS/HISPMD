@@ -16,7 +16,7 @@ class RestManager
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["MFR_Status_Reporting"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Status_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Facilities"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Region_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";
