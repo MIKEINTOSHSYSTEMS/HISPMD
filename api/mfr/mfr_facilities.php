@@ -26,13 +26,14 @@ curl_setopt_array($curl, array(
     CURLOPT_HTTPHEADER => array(
         'Content-Type: application/json',
         'Accept-Language: en-US,en;q=0.9',
-        'Content-Type: application/json',
         'Origin: https://mfrv2.moh.gov.et',
         'Pragma: no-cache',
         'Referer: https://mfrv2.moh.gov.et/',
         'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Microsoft Edge";v="126"',
         'sec-ch-ua-mobile: ?0',
-        'sec-ch-ua-platform: "Windows"'
+        'sec-ch-ua-platform: "Windows"',
+        'Content-Type: application/json'
+
     ),
 ));
 

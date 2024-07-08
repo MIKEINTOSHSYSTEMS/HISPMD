@@ -501,6 +501,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Facilities")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -825,6 +829,10 @@ function getCaptionTable($table)
 	if($table=="MFR_Status_Reporting")
 	{
 		return "MFR Status Reporting";
+	}
+	if($table=="MFR_Facilities")
+	{
+		return "MFR Facilities";
 	}
 	return $table;
 }
