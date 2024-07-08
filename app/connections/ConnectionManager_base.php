@@ -261,6 +261,7 @@ class ConnectionManager_Base
 		$connectionsIds["MFR_Region_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Woreda_Report"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Dashboard_Reports_Chart"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

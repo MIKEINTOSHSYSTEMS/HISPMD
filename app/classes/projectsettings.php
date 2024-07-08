@@ -3548,6 +3548,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_zone_report" ] = "MFR_Zone_Report";
 	$projectEntities[ "MFR_Woreda_Report" ] = array( "url" => "mfr_woreda_report", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_woreda_report" ] = "MFR_Woreda_Report";
+	$projectEntities[ "MFR_Dashboard_Reports_Chart" ] = array( "url" => "mfr_dashboard_reports_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_dashboard_reports_chart" ] = "MFR_Dashboard_Reports_Chart";
 }
 
 function findTable( $table ) {

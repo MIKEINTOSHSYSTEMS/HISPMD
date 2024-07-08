@@ -513,6 +513,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Dashboard_Reports_Chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -849,6 +853,10 @@ function getCaptionTable($table)
 	if($table=="MFR_Woreda_Report")
 	{
 		return "MFR Woreda Report";
+	}
+	if($table=="MFR_Dashboard_Reports_Chart")
+	{
+		return "MFR Dashboard Reports Chart";
 	}
 	return $table;
 }

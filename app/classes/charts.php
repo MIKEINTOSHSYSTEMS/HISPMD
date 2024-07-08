@@ -416,6 +416,8 @@ class Chart
 			return true;
 		if("MFR_Region_Report" == $this->chrt_array['tables'][0])
 			return true;
+		if("MFR_Dashboard_Reports" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

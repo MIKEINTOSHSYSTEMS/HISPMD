@@ -241,6 +241,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_woreda_report" == $shortTName )
 		return true;
+	if ("mfr_dashboard_reports_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -462,6 +464,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR_Woreda_Report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Dashboard_Reports_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Dashboard_Reports_Chart";
+	}
 	return $arr;
 }
 
@@ -490,6 +501,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Region_Report";
 	$arr[]="MFR_Zone_Report";
 	$arr[]="MFR_Woreda_Report";
+	$arr[]="MFR_Dashboard_Reports_Chart";
 	return $arr;
 }
 
@@ -533,6 +545,8 @@ function GetFullFieldName($field, $table = "", $addAs = true, $connection = null
  */
 function GetChartType($shorttable)
 {
+	if($shorttable=="mfr_dashboard_reports_chart")
+		return "2DColumn";
 	return "";
 }
 
@@ -1220,6 +1234,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_Woreda_Report" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Dashboard_Reports_Chart" )
 	{
 //	default permissions
 		// grant all by default

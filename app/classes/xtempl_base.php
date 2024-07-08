@@ -137,6 +137,11 @@ class XTempl_Base
 
 		if( !$hideAddedCharts ) //#9607 1. Temporary fix
 		{
+			$this->assign_function("mfr_dashboard_reports_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_dashboard_reports_chart",
+				"table"=>"MFR_Dashboard_Reports_Chart",
+				"ctype"=>"2DColumn"));
 		}
 
 

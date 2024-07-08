@@ -1419,6 +1419,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("MFR_Region_Report" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("MFR_Dashboard_Reports" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

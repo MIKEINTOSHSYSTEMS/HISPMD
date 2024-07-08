@@ -432,6 +432,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_Dashboard_Reports_Chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -813,6 +817,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR_Woreda_Report")
+		{
+			return false;
+		}
+		if($table=="MFR_Dashboard_Reports_Chart")
 		{
 			return false;
 		}
