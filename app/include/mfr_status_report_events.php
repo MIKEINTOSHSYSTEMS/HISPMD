@@ -13,6 +13,8 @@
 	{
 	// fill list of events
 
+		$this->events["BeforeShowList"]=true;
+
 
 	}
 
@@ -56,6 +58,93 @@
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, $pageObject)
+{
+
+		    // Path to the custom PHP file
+    $customScriptPath = __DIR__ . '/../MFROperationalDB.php';
+
+    // Check if the file exists
+    if (file_exists($customScriptPath)) {
+        // Include the custom script
+        include($customScriptPath);
+    } else {
+        echo 'MFROperationalDB script not found.';
+        return;
+    }
+
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowList
+
 		
 		
 		

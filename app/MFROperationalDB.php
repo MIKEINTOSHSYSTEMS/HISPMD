@@ -26,6 +26,7 @@ do {
     $apiUrl = "https://mfr-be.k8s.sandboxaddis.com/api/Report/Counts";
     $ch = curl_init();
 
+    $postData = json_encode(array('pageNumber' => $pageNumber, 'showPerPage' => $showPerPage));
     curl_setopt_array($ch, array(
         CURLOPT_URL => $apiUrl,
         CURLOPT_RETURNTRANSFER => true,
@@ -35,13 +36,13 @@ do {
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => json_encode(array('pageNumber' => $pageNumber, 'showPerPage' => $showPerPage)),
+        CURLOPT_POSTFIELDS => $postData,
         CURLOPT_HTTPHEADER => array(
             'Accept: application/json, text/plain, */*',
             'Accept-Language: en-US,en;q=0.9',
             'sec-ch-ua-platform: "Windows"',
             'Cache-Control: no-cache',
-            'Content-Length: ' . strlen(json_encode(array('pageNumber' => $pageNumber, 'showPerPage' => $showPerPage))),
+            'Content-Length: ' . strlen($postData),
             'Content-Type: application/json',
             'Origin: https://mfrv2.moh.gov.et',
             'Pragma: no-cache',
@@ -60,6 +61,16 @@ do {
     }
 
     $data = json_decode($response, true);
+
+    if ($data === null) {
+        echo 'Error decoding JSON data.';
+        return;
+    }
+
+    if (!isset($data['model'])) {
+        echo 'No model data found in API response.';
+        return;
+    }
 
     // Insert data into MFR_Operational_Status table
     foreach ($data['model'] as $item) {
@@ -80,7 +91,8 @@ do {
 
 } while ($pageNumber <= $pageCount);
 
-echo "Data successfully inserted into MFR_Operational_Status table.";
+//echo "Data successfully inserted into MFR_Operational_Status table.";
 
 $conn->close();
+
 ?>
