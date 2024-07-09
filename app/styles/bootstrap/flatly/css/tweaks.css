@@ -1,0 +1,10 @@
+/* icon underlines */
+
+.glyphicon.glyphicon:not(:hover) {
+	text-decoration: none;
+}
+
+
+.btn.disabled:not(:hover), .btn[disabled]:not(:hover) {
+	color: #aaa;
+}
