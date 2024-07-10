@@ -545,6 +545,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Region_Chart")
+		{
+			return 1;
+		}
+		if($table=="MFR_Zone_Chart")
+		{
+			return 1;
+		}
+		if($table=="MFR_Woreda_Chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -913,6 +925,18 @@ function getCaptionTable($table)
 	if($table=="MFR Geolocation Reports")
 	{
 		return "MFR Geolocation Reports";
+	}
+	if($table=="MFR_Region_Chart")
+	{
+		return "MFR Region Chart";
+	}
+	if($table=="MFR_Zone_Chart")
+	{
+		return "MFR Zone Chart";
+	}
+	if($table=="MFR_Woreda_Chart")
+	{
+		return "MFR Woreda Chart";
 	}
 	return $table;
 }

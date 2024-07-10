@@ -432,6 +432,12 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("MFR_Region" == $this->chrt_array['tables'][0])
+			return true;
+		if("MFR_Zone" == $this->chrt_array['tables'][0])
+			return true;
+		if("MFR_Woreda" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

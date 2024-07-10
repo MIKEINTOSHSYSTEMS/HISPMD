@@ -85,6 +85,24 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
 				],
 	
 		body: [
@@ -104,90 +122,155 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#8FBC8B","hidden":"{$item_hide_welcome_item}"},
+			{"text":"","hidden":"{$item_hide_welcome_group}"},
 				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				
-			{"text":"","background":"#6B8E23","hidden":"{$item_hide_welcome_item1}"},
+			{"text":"","hidden":"{$item_hide_welcome_group1}"},
 				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				
-			{"text":"","background":"#E67349","hidden":"{$item_hide_welcome_item2}"},
+			{"text":"","hidden":"{$item_hide_welcome_group2}"},
 				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				
-			{"text":"","background":"#CD5C5C","hidden":"{$item_hide_welcome_item3}"},
+			{"text":"","hidden":"{$item_hide_welcome_group3}"},
 				
-				
-			{"text":"","background":"#5F9EA0","hidden":"{$item_hide_welcome_item4}"},
-				
-				
-			{"text":"","background":"#7B68EE","hidden":"{$item_hide_welcome_item5}"},
-				
-				
-			{"text":"","background":"#778899","hidden":"{$item_hide_welcome_item6}"},
-				
-				
-			{"text":"","background":"#3CB371","hidden":"{$item_hide_welcome_item7}"},
-				
-				
-			{"text":"","background":"#DAA520","hidden":"{$item_hide_welcome_item8}"},
-				
-				
-			{"text":"","background":"#4169E1","hidden":"{$item_hide_welcome_item9}"},
-				
-				
-			{"text":"","background":"#8FBC8B","hidden":"{$item_hide_welcome_item10}"},
-				
-				
-			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item11}"},
-				
-				
-			{"text":"","background":"#CFAE83","hidden":"{$item_hide_welcome_item12}"},
-				
-				
-			{"text":"","background":"#6B8E23","hidden":"{$item_hide_welcome_item13}"},
-				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				
 			{"text":"","hidden":"{$item_hide_welcome_item15}"},
 				
-				
-			{"text":"","background":"#EDCA00","hidden":"{$item_hide_welcome_item16}"},
-				
-				
-			{"text":"","background":"#9ACD32","hidden":"{$item_hide_welcome_item18}"},
-				
-				
-			{"text":"","background":"#1E90FF","hidden":"{$item_hide_welcome_item17}"},
-				
-				
-			{"text":"","background":"#6DA5C8","hidden":"{$item_hide_welcome_item19}"},
-				
-				
-			{"text":"","background":"#E07878","hidden":"{$item_hide_welcome_item20}"},
-				
-				
-			{"text":"","background":"#6DA5C8","hidden":"{$item_hide_welcome_item14}"},
-				
-				
-			{"text":"","background":"#5F9EA0","hidden":"{$item_hide_welcome_item21}"},
-				
-				
-			{"text":"","background":"#5F9EA0","hidden":"{$item_hide_welcome_item22}"},
-				
-				
-			{"text":"","background":"#CFAE83","hidden":"{$item_hide_welcome_item23}"},
-				
-				
-			{"text":"","background":"#CD5C5C","hidden":"{$item_hide_welcome_item24}"},
-				
-				
-			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item25}"},
-				
-				
-			{"text":"","background":"#DAA520","hidden":"{$item_hide_welcome_item26}"},
-				
-				
-			{"text":"","background":"#B22222","hidden":"{$item_hide_welcome_item27}"},
-				
 		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

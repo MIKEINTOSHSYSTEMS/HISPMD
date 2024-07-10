@@ -3564,6 +3564,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_operational_status_chart" ] = "MFR_Operational_Status_Chart";
 	$projectEntities[ "MFR Geolocation Reports" ] = array( "url" => "mfr_geolocation_reports", "type" => 4 );
 	$projectEntitiesReverse[ "mfr_geolocation_reports" ] = "MFR Geolocation Reports";
+	$projectEntities[ "MFR_Region_Chart" ] = array( "url" => "mfr_region_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_region_chart" ] = "MFR_Region_Chart";
+	$projectEntities[ "MFR_Zone_Chart" ] = array( "url" => "mfr_zone_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_zone_chart" ] = "MFR_Zone_Chart";
+	$projectEntities[ "MFR_Woreda_Chart" ] = array( "url" => "mfr_woreda_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_woreda_chart" ] = "MFR_Woreda_Chart";
 }
 
 function findTable( $table ) {

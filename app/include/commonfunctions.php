@@ -257,6 +257,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_geolocation_reports" == $shortTName )
 		return true;
+	if ("mfr_region_chart" == $shortTName )
+		return true;
+	if ("mfr_zone_chart" == $shortTName )
+		return true;
+	if ("mfr_woreda_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -550,6 +556,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR Geolocation Reports";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Region_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Region_Chart";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Zone_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Zone_Chart";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Woreda_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Woreda_Chart";
+	}
 	return $arr;
 }
 
@@ -586,6 +619,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Woreda";
 	$arr[]="MFR_Operational_Status_Chart";
 	$arr[]="MFR Geolocation Reports";
+	$arr[]="MFR_Region_Chart";
+	$arr[]="MFR_Zone_Chart";
+	$arr[]="MFR_Woreda_Chart";
 	return $arr;
 }
 
@@ -633,6 +669,12 @@ function GetChartType($shorttable)
 		return "2DColumn";
 	if($shorttable=="mfr_operational_status_chart")
 		return "2DBar";
+	if($shorttable=="mfr_region_chart")
+		return "2DColumn";
+	if($shorttable=="mfr_zone_chart")
+		return "Bubble";
+	if($shorttable=="mfr_woreda_chart")
+		return "Bubble";
 	return "";
 }
 
@@ -1368,6 +1410,24 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR Geolocation Reports" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Region_Chart" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Zone_Chart" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Woreda_Chart" )
 	{
 //	default permissions
 		// grant all by default

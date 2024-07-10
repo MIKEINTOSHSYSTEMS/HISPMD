@@ -289,7 +289,16 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	</div>		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -453,6 +462,21 @@
 				<div class="row">
 			 
 				<div 
+	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c7" data-pageid="{$pageid}"	{$cell_above-grid_c7}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
 	class=" r-ori-vert			col-md-6
 	
@@ -472,13 +496,21 @@
 	class=" r-ori-vert			col-md-6
 	
 ">
-			</div>			 
+		 
+		<div data-itemtype="chart" data-itemid="chart" {$item_chart} data-pageid="{$pageid}" data-page="mfr_region_list" >
+{$chart mfr_region_chart 530px}
+</div>
+  		</div>			 
 				<div 
 	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
 	class="r-align-right r-ori-vert			col-md-6
 	
 ">
-			</div>					</div>
+		 
+		<span data-itemtype="map" data-itemid="map" {$item_map} data-pageid="{$pageid}" data-page="mfr_region_list" >
+	{$map MFR_Region_map}
+</span>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>

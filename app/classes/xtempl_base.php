@@ -147,6 +147,21 @@ class XTempl_Base
 				"chartName"=>"mfr_operational_status_chart",
 				"table"=>"MFR_Operational_Status_Chart",
 				"ctype"=>"2DBar"));
+			$this->assign_function("mfr_region_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_region_chart",
+				"table"=>"MFR_Region_Chart",
+				"ctype"=>"2DColumn"));
+			$this->assign_function("mfr_zone_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_zone_chart",
+				"table"=>"MFR_Zone_Chart",
+				"ctype"=>"Bubble"));
+			$this->assign_function("mfr_woreda_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_woreda_chart",
+				"table"=>"MFR_Woreda_Chart",
+				"ctype"=>"Bubble"));
 		}
 
 

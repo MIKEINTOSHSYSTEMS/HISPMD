@@ -464,6 +464,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_Region_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_Zone_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_Woreda_Chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -877,6 +889,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR Geolocation Reports")
+		{
+			return false;
+		}
+		if($table=="MFR_Region_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_Zone_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_Woreda_Chart")
 		{
 			return false;
 		}

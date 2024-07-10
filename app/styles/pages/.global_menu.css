@@ -79,6 +79,15 @@
 [data-page=".global_menu"][data-itemid="welcome_item27"] > .bs-welcome-header {
   background-color: #B22222;
 }
+[data-page=".global_menu"][data-itemid="welcome_item28"] > .bs-welcome-header {
+  background-color: #DAA520;
+}
+[data-page=".global_menu"][data-itemid="welcome_item29"] > .bs-welcome-header {
+  background-color: #4169E1;
+}
+[data-page=".global_menu"][data-itemid="welcome_item30"] > .bs-welcome-header {
+  background-color: #1E90FF;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
