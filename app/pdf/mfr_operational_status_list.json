@@ -134,10 +134,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_filter_panel}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -176,7 +174,7 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c4',
+	cellId: 'c8',
 	col:0,
 	row:0,
 			
@@ -197,7 +195,7 @@ pdfDocument = {
       },
 
 																							{
-	cellId: 'c5',
+	cellId: 'c9',
 	col:0,
 	row:0,
 			
@@ -226,6 +224,38 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$pdf_chart mfr_operational_status_chart 0 0},"hidden":"{$item_hide_chart}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
 		
 			
 	
@@ -241,7 +271,7 @@ pdfDocument = {
       },
 
 																							{
-	cellId: 'c3',
+	cellId: 'c7',
 	col:0,
 	row:0,
 			
@@ -608,6 +638,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'Count',
 				style: 'footcell',
 		
 		
@@ -620,10 +651,17 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{BEGIN Count_fieldfootercolumn}
+			{BEGIN Count_showtotal}
+				{ text: 'Total ' },
+				{"text":{$Count_total},"hidden":"{$item_hide_simple_grid_field6}"}
+			{END Count_showtotal}
+		{END Count_fieldfootercolumn},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Count_align}',
      
       
       },

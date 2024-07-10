@@ -783,6 +783,7 @@ pdfDocument = {
 	cellId: 'footcell_field3',
 	col:0,
 	row:0,
+			fieldName: 'Count',
 				style: 'footcell',
 		
 		
@@ -795,10 +796,17 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{BEGIN Count_fieldfootercolumn}
+			{BEGIN Count_showtotal}
+				{ text: 'Total ' },
+				{"text":{$Count_total},"hidden":"{$item_hide_simple_grid_field8}"}
+			{END Count_showtotal}
+		{END Count_fieldfootercolumn},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Count_align}',
      
       
       },

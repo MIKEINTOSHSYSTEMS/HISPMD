@@ -1,0 +1,1 @@
+<p><u>Health Information Systems Performance Monitoring Dashboard</u> (HISPMD) |<b><i>Version 0.1</i></b> | Ministry of Health. © <script>document.write(new Date().getFullYear())</script> All Rights Reserved. | Designed and Developed By <a href="https://merqconsultancy.org">MERQ Consultancy</a> </p>
