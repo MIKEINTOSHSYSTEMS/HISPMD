@@ -517,6 +517,26 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Dashboard_Reports")
+		{
+			return 1;
+		}
+		if($table=="MFR_Operational_Status")
+		{
+			return 1;
+		}
+		if($table=="MFR_Region")
+		{
+			return 1;
+		}
+		if($table=="MFR_Zone")
+		{
+			return 1;
+		}
+		if($table=="MFR_Woreda")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -857,6 +877,26 @@ function getCaptionTable($table)
 	if($table=="MFR_Dashboard_Reports_Chart")
 	{
 		return "MFR Dashboard Reports Chart";
+	}
+	if($table=="MFR_Dashboard_Reports")
+	{
+		return "MFR Dashboard Reports";
+	}
+	if($table=="MFR_Operational_Status")
+	{
+		return "MFR Operational Status";
+	}
+	if($table=="MFR_Region")
+	{
+		return "MFR Region";
+	}
+	if($table=="MFR_Zone")
+	{
+		return "MFR Zone";
+	}
+	if($table=="MFR_Woreda")
+	{
+		return "MFR Woreda";
 	}
 	return $table;
 }
@@ -1874,6 +1914,66 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="Workforce";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("MFR_Dashboard_Reports");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="MFR_Dashboard_Reports";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="MFR_Dashboard_Reports";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("MFR_Operational_Status");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="MFR_Operational_Status";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="MFR_Operational_Status";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("MFR_Region");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="MFR_Region";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="MFR_Region";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("MFR_Zone");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="MFR_Zone";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="MFR_Zone";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("MFR_Woreda");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="MFR_Woreda";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="MFR_Woreda";
 	}
 	return $arr;
 }

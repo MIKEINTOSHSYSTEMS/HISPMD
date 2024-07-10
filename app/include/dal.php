@@ -58,6 +58,10 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo__HISPartners;
 	var $tblhispmdathispmdmerqconsultancyo__MFR_Dashboard_Reports;
 	var $tblhispmdathispmdmerqconsultancyo__MFR_Facilities;
+	var $tblhispmdathispmdmerqconsultancyo__MFR_Operational_Status;
+	var $tblhispmdathispmdmerqconsultancyo__MFR_Region;
+	var $tblhispmdathispmdmerqconsultancyo__MFR_Woreda;
+	var $tblhispmdathispmdmerqconsultancyo__MFR_Zone;
 	var $tblhispmdathispmdmerqconsultancyo__Publications;
 	var $tblhispmdathispmdmerqconsultancyo__Regions;
 	var $tblhispmdathispmdmerqconsultancyo__Research;
@@ -83,6 +87,10 @@ class tDAL
 		$this->lstTables[] = array("name" => "HISPartners", "varname" => "hispmdathispmdmerqconsultancyo__HISPartners", "altvarname" => "HISPartners", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "MFR_Dashboard_Reports", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Dashboard_Reports", "altvarname" => "MFR_Dashboard_Reports", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "MFR_Facilities", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Facilities", "altvarname" => "MFR_Facilities", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "MFR_Operational_Status", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Operational_Status", "altvarname" => "MFR_Operational_Status", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "MFR_Region", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Region", "altvarname" => "MFR_Region", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "MFR_Woreda", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Woreda", "altvarname" => "MFR_Woreda", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "MFR_Zone", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Zone", "altvarname" => "MFR_Zone", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "Publications", "varname" => "hispmdathispmdmerqconsultancyo__Publications", "altvarname" => "Publications", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "Regions", "varname" => "hispmdathispmdmerqconsultancyo__Regions", "altvarname" => "Regions", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "Research", "varname" => "hispmdathispmdmerqconsultancyo__Research", "altvarname" => "Research", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");

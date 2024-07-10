@@ -104,7 +104,47 @@ pdfDocument = {
 							stack: [
 
 																										
-''
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
 ,
 								
 																										
@@ -137,8 +177,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -168,6 +210,52 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
 		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_map}","stack":[{BEGIN map_MFR_Region_Report_map} {$map MFR_Region_Report_map} {END map_MFR_Region_Report_map}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      

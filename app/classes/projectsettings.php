@@ -3550,6 +3550,16 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_woreda_report" ] = "MFR_Woreda_Report";
 	$projectEntities[ "MFR_Dashboard_Reports_Chart" ] = array( "url" => "mfr_dashboard_reports_chart", "type" => 3 );
 	$projectEntitiesReverse[ "mfr_dashboard_reports_chart" ] = "MFR_Dashboard_Reports_Chart";
+	$projectEntities[ "MFR_Dashboard_Reports" ] = array( "url" => "mfr_dashboard_reports", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_dashboard_reports" ] = "MFR_Dashboard_Reports";
+	$projectEntities[ "MFR_Operational_Status" ] = array( "url" => "mfr_operational_status", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_operational_status" ] = "MFR_Operational_Status";
+	$projectEntities[ "MFR_Region" ] = array( "url" => "mfr_region", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_region" ] = "MFR_Region";
+	$projectEntities[ "MFR_Zone" ] = array( "url" => "mfr_zone", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_zone" ] = "MFR_Zone";
+	$projectEntities[ "MFR_Woreda" ] = array( "url" => "mfr_woreda", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_woreda" ] = "MFR_Woreda";
 }
 
 function findTable( $table ) {

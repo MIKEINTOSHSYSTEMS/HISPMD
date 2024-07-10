@@ -58,6 +58,21 @@
 [data-page=".global_menu"][data-itemid="welcome_item14"] > .bs-welcome-header {
   background-color: #6DA5C8;
 }
+[data-page=".global_menu"][data-itemid="welcome_item21"] > .bs-welcome-header {
+  background-color: #5F9EA0;
+}
+[data-page=".global_menu"][data-itemid="welcome_item22"] > .bs-welcome-header {
+  background-color: #5F9EA0;
+}
+[data-page=".global_menu"][data-itemid="welcome_item23"] > .bs-welcome-header {
+  background-color: #CFAE83;
+}
+[data-page=".global_menu"][data-itemid="welcome_item24"] > .bs-welcome-header {
+  background-color: #CD5C5C;
+}
+[data-page=".global_menu"][data-itemid="welcome_item25"] > .bs-welcome-header {
+  background-color: #008B8B;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

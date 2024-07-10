@@ -436,6 +436,26 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_Dashboard_Reports")
+		{
+			return false;
+		}
+		if($table=="MFR_Operational_Status")
+		{
+			return false;
+		}
+		if($table=="MFR_Region")
+		{
+			return false;
+		}
+		if($table=="MFR_Zone")
+		{
+			return false;
+		}
+		if($table=="MFR_Woreda")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -821,6 +841,26 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR_Dashboard_Reports_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_Dashboard_Reports")
+		{
+			return false;
+		}
+		if($table=="MFR_Operational_Status")
+		{
+			return false;
+		}
+		if($table=="MFR_Region")
+		{
+			return false;
+		}
+		if($table=="MFR_Zone")
+		{
+			return false;
+		}
+		if($table=="MFR_Woreda")
 		{
 			return false;
 		}

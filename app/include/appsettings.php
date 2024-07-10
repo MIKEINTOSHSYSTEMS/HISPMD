@@ -670,7 +670,7 @@ $globalSettings["override"] = array();
 $styleOverrides = array();
 
 
-$globalSettings["mapProvider"]=0;
+$globalSettings["mapProvider"]=1;
 
 $globalSettings["CaptchaSettings"] = array();
 $globalSettings["CaptchaSettings"]["type"] = 0;
@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "72_1720544959";
+$projectBuildKey = "77_1720619772";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "72";
+$projectBuildNumber = "77";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -769,6 +769,11 @@ $tableCaptions["English"]["MFR_Region_Report"] = "MFR Region Report";
 $tableCaptions["English"]["MFR_Zone_Report"] = "MFR Zone Report";
 $tableCaptions["English"]["MFR_Woreda_Report"] = "MFR Woreda Report";
 $tableCaptions["English"]["MFR_Dashboard_Reports_Chart"] = "MFR Dashboard Reports Chart";
+$tableCaptions["English"]["MFR_Dashboard_Reports"] = "MFR Dashboard Reports";
+$tableCaptions["English"]["MFR_Operational_Status"] = "MFR Operational Status";
+$tableCaptions["English"]["MFR_Region"] = "MFR Region";
+$tableCaptions["English"]["MFR_Zone"] = "MFR Zone";
+$tableCaptions["English"]["MFR_Woreda"] = "MFR Woreda";
 
 
 $globalEvents = new class_GlobalEvents;

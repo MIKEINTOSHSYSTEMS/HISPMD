@@ -297,7 +297,16 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	</div>		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -322,7 +331,63 @@
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_region}
+
+	<div class="dropdown filter-field filter-region-container" {BEGIN filter_selected_region} data-selected {END filter_selected_region}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_region}
+			<a href="#" class="filter-clear filter-clear-region" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_region}
+			<span class="r-filter-field">{$label MFR_Region_Report region }				{BEGIN filter_selected_region}:{END filter_selected_region}
+			</span>
+			{BEGIN filter_selected_region}
+			<span class="r-filter-value">{$filtervalue_region}</span>
+			{END filter_selected_region}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_region}
+		<li class=" filter-values filter-values-region  {$visibilityClass_region}">
+			{$region_filter}
+						
+					</li>
+		{END filterCtrlBlock_region}
+
+			{BEGIN filter_button_showmore_region}
+		<li class=" filter-show-more {$collapsedClass_region} {$showMoreBtnClass_region}">
+			<a class="filter-show-more-link filterShowMore_region" href="#">{$show_n_more_region}</a>
+		</li>
+		{END filter_button_showmore_region}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_region}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -401,6 +466,25 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-6
+	
+">
+		 
+		<span data-itemtype="map" data-itemid="map" {$item_map} data-pageid="{$pageid}" data-page="mfr_region_report_list" >
+	{$map MFR_Region_Report_map}
+</span>
+		</div>			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>

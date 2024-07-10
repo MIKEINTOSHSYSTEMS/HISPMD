@@ -322,7 +322,7 @@ navbar-nav
 	
 	
 	{BEGIN item16_menulink}
-	<li class=" {$item16_current}">
+	<li class=" dropdown  {$item16_current}">
 		
 <a {$item16_menulink_attrs} title="{$item16_tooltip}" 
 			data-menu-top
@@ -335,19 +335,26 @@ navbar-nav
 		<span class="r-menu-title">
 		{$item16_icon} {$item16_title}
 		</span>
-			</span>
+				{BEGIN item16_expand_icon}
+		<span class="r-menu-expand-icon 
+				glyphicon glyphicon-triangle-bottom 
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item16_expand_icon}
+	</span>
 	</a>
 
-	</li>
-	{END item16_menulink}
-	
-	
-	{BEGIN item17_menulink}
-	<li class=" {$item17_current}">
 		
+		
+				<ul class="
+					dropdown-menu
+			{$submenu16_class}" 
+			id="submenu16" data-menulevel=2>
+			{BEGIN item17_menulink}
+			<li class=" {$item17_current}">
+				
 <a {$item17_menulink_attrs} title="{$item17_tooltip}" 
-			data-menu-top
-			data-menu-h
+				data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -359,16 +366,15 @@ navbar-nav
 			</span>
 	</a>
 
-	</li>
-	{END item17_menulink}
-	
-	
-	{BEGIN item18_menulink}
-	<li class=" {$item18_current}">
+			</li>
+			{END item17_menulink}
+				
 		
+					{BEGIN item18_menulink}
+			<li class=" {$item18_current}">
+				
 <a {$item18_menulink_attrs} title="{$item18_tooltip}" 
-			data-menu-top
-			data-menu-h
+				data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -380,16 +386,15 @@ navbar-nav
 			</span>
 	</a>
 
-	</li>
-	{END item18_menulink}
-	
-	
-	{BEGIN item19_menulink}
-	<li class=" {$item19_current}">
+			</li>
+			{END item18_menulink}
+				
 		
+					{BEGIN item19_menulink}
+			<li class=" {$item19_current}">
+				
 <a {$item19_menulink_attrs} title="{$item19_tooltip}" 
-			data-menu-top
-			data-menu-h
+				data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -401,16 +406,15 @@ navbar-nav
 			</span>
 	</a>
 
-	</li>
-	{END item19_menulink}
-	
-	
-	{BEGIN item20_menulink}
-	<li class=" {$item20_current}">
+			</li>
+			{END item19_menulink}
+				
 		
+					{BEGIN item20_menulink}
+			<li class=" {$item20_current}">
+				
 <a {$item20_menulink_attrs} title="{$item20_tooltip}" 
-			data-menu-top
-			data-menu-h
+				data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -422,16 +426,15 @@ navbar-nav
 			</span>
 	</a>
 
-	</li>
-	{END item20_menulink}
-	
-	
-	{BEGIN item21_menulink}
-	<li class=" {$item21_current}">
+			</li>
+			{END item20_menulink}
+				
 		
+					{BEGIN item21_menulink}
+			<li class=" {$item21_current}">
+				
 <a {$item21_menulink_attrs} title="{$item21_tooltip}" 
-			data-menu-top
-			data-menu-h
+				data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -443,6 +446,187 @@ navbar-nav
 			</span>
 	</a>
 
+			</li>
+			{END item21_menulink}
+				
+		
+					{BEGIN item22_menulink}
+			<li class=" {$item22_current}">
+				
+<a {$item22_menulink_attrs} title="{$item22_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item22_icon} {$item22_title}
+		</span>
+			</span>
+	</a>
+
+			</li>
+			{END item22_menulink}
+				</ul>
 	</li>
-	{END item21_menulink}
+	{END item16_menulink}
+	
+	
+	{BEGIN item23_menulink}
+	<li class=" dropdown  {$item23_current}">
+		
+<a {$item23_menulink_attrs} title="{$item23_tooltip}" 
+			data-menu-top
+			data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item23_icon} {$item23_title}
+		</span>
+				{BEGIN item23_expand_icon}
+		<span class="r-menu-expand-icon 
+				glyphicon glyphicon-triangle-bottom 
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item23_expand_icon}
+	</span>
+	</a>
+
+		
+		
+				<ul class="
+					dropdown-menu
+			{$submenu23_class}" 
+			id="submenu23" data-menulevel=2>
+			{BEGIN item24_menulink}
+			<li class=" dropdown  {$item24_current}">
+				
+<a {$item24_menulink_attrs} title="{$item24_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item24_icon} {$item24_title}
+		</span>
+				{BEGIN item24_expand_icon}
+		<span class="r-menu-expand-icon 
+							glyphicon glyphicon-triangle-right
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item24_expand_icon}
+	</span>
+	</a>
+
+				
+								<ul class="
+									dropdown-menu
+					{$submenu24_class}" 
+					id="submenu24" data-menulevel=3>
+					{BEGIN item25_menulink}
+						<li class=" {$item25_current}">
+						
+<a {$item25_menulink_attrs} title="{$item25_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item25_icon} {$item25_title}
+		</span>
+			</span>
+	</a>
+
+					</li>
+					{END item25_menulink}
+								
+									{BEGIN item26_menulink}
+						<li class=" {$item26_current}">
+						
+<a {$item26_menulink_attrs} title="{$item26_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item26_icon} {$item26_title}
+		</span>
+			</span>
+	</a>
+
+					</li>
+					{END item26_menulink}
+								
+									{BEGIN item27_menulink}
+						<li class=" {$item27_current}">
+						
+<a {$item27_menulink_attrs} title="{$item27_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item27_icon} {$item27_title}
+		</span>
+			</span>
+	</a>
+
+					</li>
+					{END item27_menulink}
+								
+									{BEGIN item28_menulink}
+						<li class=" {$item28_current}">
+						
+<a {$item28_menulink_attrs} title="{$item28_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item28_icon} {$item28_title}
+		</span>
+			</span>
+	</a>
+
+					</li>
+					{END item28_menulink}
+								
+									{BEGIN item29_menulink}
+						<li class=" {$item29_current}">
+						
+<a {$item29_menulink_attrs} title="{$item29_tooltip}" 
+				data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item29_icon} {$item29_title}
+		</span>
+			</span>
+	</a>
+
+					</li>
+					{END item29_menulink}
+								</ul>
+			</li>
+			{END item24_menulink}
+				</ul>
+	</li>
+	{END item23_menulink}
 </ul>

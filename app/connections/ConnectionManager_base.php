@@ -262,6 +262,11 @@ class ConnectionManager_Base
 		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Woreda_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Dashboard_Reports_Chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Dashboard_Reports"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Operational_Status"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Region"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Zone"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Woreda"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
