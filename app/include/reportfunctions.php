@@ -537,6 +537,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Operational_Status_Chart")
+		{
+			return 1;
+		}
+		if($table=="MFR Geolocation Reports")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -897,6 +905,14 @@ function getCaptionTable($table)
 	if($table=="MFR_Woreda")
 	{
 		return "MFR Woreda";
+	}
+	if($table=="MFR_Operational_Status_Chart")
+	{
+		return "MFR Operational Status Chart";
+	}
+	if($table=="MFR Geolocation Reports")
+	{
+		return "MFR Geolocation Reports";
 	}
 	return $table;
 }

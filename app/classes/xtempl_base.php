@@ -142,6 +142,11 @@ class XTempl_Base
 				"chartName"=>"mfr_dashboard_reports_chart",
 				"table"=>"MFR_Dashboard_Reports_Chart",
 				"ctype"=>"2DColumn"));
+			$this->assign_function("mfr_operational_status_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_operational_status_chart",
+				"table"=>"MFR_Operational_Status_Chart",
+				"ctype"=>"2DBar"));
 		}
 
 

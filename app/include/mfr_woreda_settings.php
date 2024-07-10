@@ -168,7 +168,12 @@ $tdatamfr_woreda[".nPrinterPageScale"] = 100;
 
 $tdatamfr_woreda[".nPrinterSplitRecords"] = 40;
 
-$tdatamfr_woreda[".geocodingEnabled"] = false;
+$tdatamfr_woreda[".geocodingEnabled"] = true;
+$tdatamfr_woreda[".geocodingData"] = array();
+$tdatamfr_woreda[".geocodingData"]["latField"] = "Lat";
+$tdatamfr_woreda[".geocodingData"]["lngField"] = "Lng";
+$tdatamfr_woreda[".geocodingData"]["addressFields"] = array();
+	$tdatamfr_woreda[".geocodingData"]["addressFields"][] = "Woreda";
 
 
 

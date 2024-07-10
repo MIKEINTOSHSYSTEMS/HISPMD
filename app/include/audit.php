@@ -456,6 +456,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_Operational_Status_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR Geolocation Reports")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -861,6 +869,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR_Woreda")
+		{
+			return false;
+		}
+		if($table=="MFR_Operational_Status_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR Geolocation Reports")
 		{
 			return false;
 		}

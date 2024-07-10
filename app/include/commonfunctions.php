@@ -253,6 +253,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_woreda" == $shortTName )
 		return true;
+	if ("mfr_operational_status_chart" == $shortTName )
+		return true;
+	if ("mfr_geolocation_reports" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -528,6 +532,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR_Woreda";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Operational_Status_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Operational_Status_Chart";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR Geolocation Reports");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR Geolocation Reports";
+	}
 	return $arr;
 }
 
@@ -562,6 +584,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Region";
 	$arr[]="MFR_Zone";
 	$arr[]="MFR_Woreda";
+	$arr[]="MFR_Operational_Status_Chart";
+	$arr[]="MFR Geolocation Reports";
 	return $arr;
 }
 
@@ -607,6 +631,8 @@ function GetChartType($shorttable)
 {
 	if($shorttable=="mfr_dashboard_reports_chart")
 		return "2DColumn";
+	if($shorttable=="mfr_operational_status_chart")
+		return "2DBar";
 	return "";
 }
 
@@ -1330,6 +1356,18 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_Woreda" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Operational_Status_Chart" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR Geolocation Reports" )
 	{
 //	default permissions
 		// grant all by default

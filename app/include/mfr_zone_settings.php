@@ -168,7 +168,12 @@ $tdatamfr_zone[".nPrinterPageScale"] = 100;
 
 $tdatamfr_zone[".nPrinterSplitRecords"] = 40;
 
-$tdatamfr_zone[".geocodingEnabled"] = false;
+$tdatamfr_zone[".geocodingEnabled"] = true;
+$tdatamfr_zone[".geocodingData"] = array();
+$tdatamfr_zone[".geocodingData"]["latField"] = "Lat";
+$tdatamfr_zone[".geocodingData"]["lngField"] = "Lng";
+$tdatamfr_zone[".geocodingData"]["addressFields"] = array();
+	$tdatamfr_zone[".geocodingData"]["addressFields"][] = "Zone";
 
 
 
