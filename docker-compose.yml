@@ -1,4 +1,6 @@
+# run "docker-compose up -d --build" to build the whole project and stack
 # run "docker-compose -p hispmd_sys up -d" to run with stack name
+# run "docker-compose -p hispmd_sys down --volumes --rmi all" to destroy the whole stack
 
 version: '3.9'
 
