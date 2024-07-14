@@ -354,6 +354,7 @@ class DB
 		$dalTables[ $conn->connId ] = array();
 		if( "hispmdathispmdmerqconsultancyo" == $conn->connId )
 		{
+			$dalTables[$conn->connId][] = array("name" => "AI_Data_Assistant", "varname" => "hispmdathispmdmerqconsultancyo__AI_Data_Assistant", "altvarname" => "AI_Data_Assistant", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "DataQuality", "varname" => "hispmdathispmdmerqconsultancyo__DataQuality", "altvarname" => "DataQuality", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "DataUse", "varname" => "hispmdathispmdmerqconsultancyo__DataUse", "altvarname" => "DataUse", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "DigitalHealth", "varname" => "hispmdathispmdmerqconsultancyo__DigitalHealth", "altvarname" => "DigitalHealth", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");

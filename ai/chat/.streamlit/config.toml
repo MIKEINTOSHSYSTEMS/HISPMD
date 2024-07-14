@@ -1,0 +1,13 @@
+# .streamlit/config.toml
+
+[theme]
+base = "light"
+primaryColor = "#E694FF"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#black"
+font = "sans-serif"
+
+[server]
+sslCertFile = '/ai/chat/certs/fullchain.pem'
+sslKeyFile = '/ai/chat/certs/privkey.pem'

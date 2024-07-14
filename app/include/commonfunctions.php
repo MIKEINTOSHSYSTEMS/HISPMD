@@ -263,6 +263,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_woreda_chart" == $shortTName )
 		return true;
+	if ("ai_data_assistant" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -583,6 +585,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR_Woreda_Chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AI_Data_Assistant");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AI_Data_Assistant";
+	}
 	return $arr;
 }
 
@@ -622,6 +633,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Region_Chart";
 	$arr[]="MFR_Zone_Chart";
 	$arr[]="MFR_Woreda_Chart";
+	$arr[]="AI_Data_Assistant";
 	return $arr;
 }
 
@@ -1428,6 +1440,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_Woreda_Chart" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AI_Data_Assistant" )
 	{
 //	default permissions
 		// grant all by default

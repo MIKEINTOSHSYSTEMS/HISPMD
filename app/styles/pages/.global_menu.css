@@ -91,6 +91,9 @@
 [data-page=".global_menu"][data-itemid="text"] {
   font-weight: bold;
 }
+[data-page=".global_menu"][data-itemid="welcome_item31"] > .bs-welcome-header {
+  background-color: #D2691E;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

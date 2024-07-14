@@ -1,0 +1,872 @@
+      /* * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+} */
+
+
+      .eryoa {
+
+          padding: 0;
+          margin: 0px;
+          border-bottom: 4px black solid;
+      }
+
+      .header {
+
+          height: 100px;
+          g width: 100%;
+          background-color: rgb(44, 57, 106);
+          margin: 0;
+          top: 0;
+          box-shadow: 0px 0px 11px rgb(44, 57, 106);
+
+      }
+
+      .headerTitle {
+
+          font-size: 27px;
+          color: white;
+          text-align: center;
+          vertical-align: center;
+          padding-top: 20px;
+          font-weight: bold;
+          margin: 0;
+
+      }
+
+      .wrapper {
+
+          width: 100%;
+          height: 85%;
+          flex-direction: column;
+          display: flex;
+          flex-direction: row;
+
+      }
+
+      .graphaFrame {
+
+          position: relative;
+          background-color: black;
+          width: 100%;
+          height: 100%;
+
+      }
+
+      .mufmv {
+
+          background-color: inherit;
+          cursor: pointer;
+
+          text-align: center;
+
+          font-weight: bold;
+
+
+          padding: 15px;
+          width: 100%;
+
+          margin: 0px;
+          position: relative;
+          left: 0px;
+
+          width: 100%;
+
+          border-radius: 0;
+          margin-bottom: 2px;
+      }
+
+      .subButtons {
+
+          background-color: inherit;
+          cursor: pointer;
+          overflow-wrap: break-word;
+
+          font-weight: bold;
+
+          color: white;
+          padding: 15px;
+          width: 100%;
+
+          margin: 0px;
+          position: relative;
+          left: 0px;
+
+          width: 100%;
+
+          border-radius: 0;
+          margin-bottom: 2px;
+      }
+
+
+      .subSubButtons {
+
+          background-color: inherit;
+          cursor: pointer;
+
+
+          font-weight: bold;
+
+          color: white;
+          padding: 15px;
+          width: 100%;
+
+          margin: 0px;
+          position: relative;
+          left: 0px;
+
+          width: 100%;
+
+          border-radius: 0;
+          margin-bottom: 2px;
+      }
+
+      .subCatagory {
+
+          position: relative;
+          left: 20px;
+          display: none;
+
+      }
+
+      .ufjnp {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .qkqxs {
+
+          background-color: inherit;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .bchse {
+
+          position: relative;
+          display: none;
+          left: 40px
+      }
+
+      .murbs {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .bvwhe {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .lcvlv {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .pibij {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .iqpam {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .etfvr {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .eoofh {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .owbtn {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .cynth {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .jsajc {
+
+          background-color: inherit;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .rqntm {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .sgxad {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .rkcbd {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .ywoxe {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .rdgmp {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .vbcoy {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .rcrte {
+
+          background-color: inherit;
+          background-color: white;
+          cursor: pointer;
+          font-weight: bold;
+          color: gray;
+          width: 140;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .tybfe {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .cibjm {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .akmxd {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .awhej {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .qufmk {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .lnnho {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .nblrq {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .mulce {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .yvodi {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .covft {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .xyriu {
+
+          background-color: inherit;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .cwlbn {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+          background-color: rgb(93, 108, 155);
+
+
+      }
+
+      .pexig {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .nbjku {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .drlbd {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .xdisc {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .aetee {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 140;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .exsjs {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .mmkvs {
+
+          background-color: inherit;
+          cursor: pointer;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .mppjq {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .ukupi {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .fwfti {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .yherr {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .usmwm {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .oqitd {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 140;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .jybxg {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .qhfyo {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .xmpiw {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .gcubr {
+
+          background-color: inherit;
+          cursor: pointer;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .cegin {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .tlxpk {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .ymoot {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .osuds {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .vdtso {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .kburt {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 140;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .hmeim {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .glsua {
+
+          background-color: inherit;
+          cursor: pointer;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .lgcra {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .fcysy {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .uvsxu {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .vkkdw {
+
+          background-color: inherit;
+          cursor: pointer;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .qoglk {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .tcaoy {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .bgcmp {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .rtcho {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .vklhe {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .ycwoy {
+
+          background-color: inherit;
+          cursor: pointer;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .schdd {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .wqjyi {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .vnjbp {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .llujb {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }
+
+      .brthl {
+
+          left: 30px;
+          position: relative;
+
+      }
+
+      .xdrdl {
+
+          background-color: inherit;
+          cursor: pointer;
+          background-color: white;
+          width: 200px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+
+      }
+
+      .subCatagory {
+
+          position: relative;
+          display: none;
+          left: 20px
+      }
+
+      .tyswi {
+
+          left: 30px;
+          position: relative;
+          text-decoration: none;
+
+      }
+
+      .oxkia {
+
+          background-color: inherit;
+          background-color: white;
+          color: gray;
+          width: 100;
+          text-align: center;
+          border-radius: 5px
+      }

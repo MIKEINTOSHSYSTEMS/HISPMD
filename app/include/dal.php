@@ -47,6 +47,7 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tblhispmdathispmdmerqconsultancyo__AI_Data_Assistant;
 	var $tblhispmdathispmdmerqconsultancyo__DataQuality;
 	var $tblhispmdathispmdmerqconsultancyo__DataUse;
 	var $tblhispmdathispmdmerqconsultancyo__DigitalHealth;
@@ -76,6 +77,7 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "AI_Data_Assistant", "varname" => "hispmdathispmdmerqconsultancyo__AI_Data_Assistant", "altvarname" => "AI_Data_Assistant", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DataQuality", "varname" => "hispmdathispmdmerqconsultancyo__DataQuality", "altvarname" => "DataQuality", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DataUse", "varname" => "hispmdathispmdmerqconsultancyo__DataUse", "altvarname" => "DataUse", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DigitalHealth", "varname" => "hispmdathispmdmerqconsultancyo__DigitalHealth", "altvarname" => "DigitalHealth", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");

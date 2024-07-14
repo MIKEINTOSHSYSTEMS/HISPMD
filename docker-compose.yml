@@ -1,0 +1,245 @@
+# run "docker-compose -p hispmd_sys up -d" to run with stack name
+
+version: '3.9'
+
+services:
+  php:
+    image: mikeintosh/mikeintosh-hispmd-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hispmd_system
+    volumes:
+      #- ./analytics:/var/www/html/analytics
+      - ./ai:/var/www/html/ai
+      - ./app:/var/www/html/app
+      #- ./assets:/var/www/html/assets
+      #- ./backend:/var/www/html/backend
+      #- ./dist:/var/www/html/dist
+      #- ./docker:/var/www/html/docker
+      #- ./help:/var/www/html/help
+      - ./map_files:/var/www/html/map_files
+      - ./src:/var/www/html/src
+      - ./styles:/var/www/html/styles
+      - ./test:/var/www/html/test
+      - ./vendor:/var/www/html/vendor
+      - ./config:/var/www/html/config
+      #- ./_config.yml:/var/www/html/_config.yml
+      #- ./compareData.html:/var/www/html/compareData.html
+      #- ./demo.php:/var/www/html/demo.php
+      #- ./guide.html:/var/www/html/guide.html
+      - ./index.php:/var/www/html/index.php
+      #- ./main.php:/var/www/html/main.php
+      #- ./postgre.php:/var/www/html/postgre.php
+      #- ./script.js:/var/www/html/script.js
+      #- ./style.css:/var/www/html/style.css
+      - ./server.html:/var/www/html/server.html
+      - ./test.php:/var/www/html/test.php
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      #- ./404.php:/var/www/html/404.php
+      #- ./manifest.json:/var/www/html/manifest.json
+      #- ./pwabuilder-sw.js:/var/www/html/pwabuilder-sw.js
+    #ports:
+      #- "8080:80" #uncomment to expose the php services
+    expose:
+      - "9000"
+    depends_on:
+      - db
+    networks:
+      - hispmdnet
+
+  nginx:
+    image: nginx:latest
+    container_name: hispmd_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./analytics:/var/www/html/analytics
+      - ./ai:/var/www/html/ai
+      - ./app:/var/www/html/app
+      #- ./assets:/var/www/html/assets
+      #- ./backend:/var/www/html/backend
+      #- ./dist:/var/www/html/dist
+      #- ./docker:/var/www/html/docker
+      #- ./help:/var/www/html/help
+      - ./map_files:/var/www/html/map_files
+      - ./src:/var/www/html/src
+      - ./styles:/var/www/html/styles
+      - ./test:/var/www/html/test
+      - ./vendor:/var/www/html/vendor
+      - ./config:/var/www/html/config
+      - ./config/php.ini:/usr/local/etc/php/php.ini
+      #- ./_config.yml:/var/www/html/_config.yml
+      #- ./compareData.html:/var/www/html/compareData.html
+      #- ./demo.php:/var/www/html/demo.php
+      #- ./guide.html:/var/www/html/guide.html
+      - ./.env:/var/www/html/.env
+      - ./index.php:/var/www/html/index.php
+      #- ./main.php:/var/www/html/main.php
+      #- ./postgre.php:/var/www/html/postgre.php
+      #- ./script.js:/var/www/html/script.js
+      #- ./style.css:/var/www/html/style.css
+      - ./server.html:/var/www/html/server.html
+      - ./test.php:/var/www/html/test.php
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      #- ./404.php:/var/www/html/404.php
+      #- ./manifest.json:/var/www/html/manifest.json
+      #- ./pwabuilder-sw.js:/var/www/html/pwabuilder-sw.js
+    depends_on:
+      - php
+    networks:
+      - hispmdnet
+
+
+  metabase:
+    image: metabase/metabase:v0.50.12
+    container_name: hispmd_viz
+    hostname: metabase
+    volumes:
+      - hispmd_vizdata:/dev/random:ro
+    ports:
+      - "4004:3003"
+    environment:
+      MB_DB_FILE: /dev/random/hispmd.db
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: hispmddb
+      MB_DB_PORT: 5432
+      MB_DB_USER: hispmddb
+      MB_DB_PASS: hispmddb
+      MB_DB_HOST: postgres
+      MB_ADMIN_EMAIL: dev@merqconsultancy.org
+      MB_ADMIN_FIRST_NAME: MERQ
+      MB_ADMIN_PASSWORD: hispmdmerqdev0
+    depends_on:
+      - postgres
+    networks:
+      - hispmdnet
+
+  postgres:
+    image: postgres:latest
+    container_name: hispmd_postgres
+    hostname: postgres
+    environment:
+      POSTGRES_DB: hispmddb
+      POSTGRES_USER: hispmddb
+      POSTGRES_PASSWORD: hispmddb
+    volumes:
+      - ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb
+    networks:
+      - hispmdnet
+
+  db:
+    image: mariadb:11.2.4
+    restart: always
+    environment:
+      MYSQL_ROOT_HOST: localhost
+      MYSQL_DATABASE: merqhispmddev
+      MYSQL_ROOT_PASSWORD: merqhispmdadmin
+      MYSQL_USER: merqhispmddev
+      MYSQL_PASSWORD: merqhispmddev
+    volumes:
+      - ./src/hispmd_dev.sql:/docker-entrypoint-initdb.d/hispmd_dev.sql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+    networks:
+      - hispmdnet
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.1
+    restart: always
+    ports:
+      - "3308:80"
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOSTS: db
+      PMA_USER: merqhispmddev
+      PMA_PASSWORD: merqhispmddev
+    networks:
+      - hispmdnet
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - "5434:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dev@merqconsultancy.org
+      PGADMIN_DEFAULT_PASSWORD: merqhispmddev
+    volumes:
+      - hispmd_pgadmindata:/var/lib/pgadmin
+    depends_on:
+      - postgres
+    networks:
+      - hispmdnet
+
+  mongo:
+    image: mongo:nanoserver
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: merqhispmddev
+      MONGO_INITDB_ROOT_PASSWORD: merqhispmddev
+    volumes:
+      - hispmd_mongodata:/data/db
+    networks:
+      - hispmdnet
+
+  mongo-express:
+    image: mongo-express:1.0.2
+    restart: always
+    ports:
+      - "8118:8118"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: merqhispmddev
+      ME_CONFIG_MONGODB_ADMINPASSWORD: merqhispmddev
+      ME_CONFIG_MONGODB_URL: mongodb://merqhispmddev:merqhispmddev@mongo:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: merqhispmduser
+      ME_CONFIG_BASICAUTH_PASSWORD: merqhispmduser
+      ME_CONFIG_SSL_ENABLED: 'false'
+    networks:
+      - hispmdnet
+
+  chat:
+    image: hispd_chatbot  # Specify the Docker image name
+    container_name: hispd_chatbot  # Specify the Docker container name
+    build:
+      context: ./chat
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - ./ai/chat:/ai/chat
+      - ./ai/chat/certs:/ai/chat/certs  # Mount the SSL certificates directory
+      - ./ai/chat/.streamlit/config.toml:/root/.streamlit/config.toml  # Mount the config.toml file
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - SSH_USE=${SSH_USE}
+      - SSH_HOST=${SSH_HOST}
+      - SSH_PORT=${SSH_PORT}
+      - SSH_USER=${SSH_USER}
+      - SSH_PASSWORD=${SSH_PASSWORD}
+      - LOCAL_PORT=${LOCAL_PORT}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    env_file:
+      - .env  # Specify the path to your .env file
+    networks:
+      - hispmdnet
+
+networks:
+  hispmdnet:
+    driver: bridge
+
+volumes:
+  hispmd_vizdata: 
+  hispmd_pgadmindata:
+  hispmd_mongodata:

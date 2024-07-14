@@ -438,6 +438,8 @@ class Chart
 			return true;
 		if("MFR_Woreda" == $this->chrt_array['tables'][0])
 			return true;
+		if("AI_Data_Assistant" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

@@ -1,0 +1,69 @@
+name: Docker Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Ensure submodules are checked out
+          fetch-depth: 0    # Fetch all history for all branches and tags
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log into Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker Image
+        run: |
+          docker build --file Dockerfile --tag mikeintosh/mikeintosh-hispmd-app:latest .
+
+      - name: Push Docker Image
+        run: |
+          docker push mikeintosh/mikeintosh-hispmd-app:latest
+
+  deploy:
+    name: Deploy Docker Container
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Ensure submodules are checked out
+          fetch-depth: 0    # Fetch all history for all branches and tags
+
+      - name: Log into Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Deploy Docker Container
+        run: |
+          docker-compose pull && docker-compose up -d
+
+      # Uncomment the following step to deploy automatically to your server
+      #- name: SSH into Server and Pull Docker Image
+      #  uses: appleboy/ssh-action@master
+      #  with:
+      #    host: ${{ secrets.SERVER_HOST }}
+      #    username: ${{ secrets.SERVER_USERNAME }}
+      #    key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
+      #    script: |
+      #      cd /path/to/project
+      #      docker-compose pull
+      #      docker-compose up -d

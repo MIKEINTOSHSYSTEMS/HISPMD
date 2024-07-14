@@ -3570,6 +3570,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_zone_chart" ] = "MFR_Zone_Chart";
 	$projectEntities[ "MFR_Woreda_Chart" ] = array( "url" => "mfr_woreda_chart", "type" => 3 );
 	$projectEntitiesReverse[ "mfr_woreda_chart" ] = "MFR_Woreda_Chart";
+	$projectEntities[ "AI_Data_Assistant" ] = array( "url" => "ai_data_assistant", "type" => 0 );
+	$projectEntitiesReverse[ "ai_data_assistant" ] = "AI_Data_Assistant";
 }
 
 function findTable( $table ) {

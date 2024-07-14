@@ -28,6 +28,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["MFR_Region_map"] = true;
 		$this->events["MFR_Woreda_map"] = true;
 		$this->events["MFR_Zone_map"] = true;
+		$this->events["MERQ_AI_Data_Assistant_snippet"] = true;
 
 
 
@@ -36,6 +37,21 @@ class class_GlobalEvents extends eventsBase
 //	handlers
 
 //	onscreen events
+	function event_MERQ_AI_Data_Assistant_snippet(&$params)
+	{
+	echo '<IFRAME SRC="https://dup.merqconsultancy.org:8501" WIDTH=100% HEIGHT=700>
+
+If you can see this, your browser does not
+
+understand IFRAME. However, we willl still
+
+<A HREF="../server.html">link</A>
+
+you to the file.
+
+</IFRAME>';
+	;
+}
 
 	function event_MFR_Region_Report_map(&$params)
 	{

@@ -476,6 +476,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="AI_Data_Assistant")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -901,6 +905,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR_Woreda_Chart")
+		{
+			return false;
+		}
+		if($table=="AI_Data_Assistant")
 		{
 			return false;
 		}
