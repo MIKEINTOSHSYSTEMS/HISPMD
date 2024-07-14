@@ -203,7 +203,7 @@ services:
     image: hispd_chatbot  # Specify the Docker image name
     container_name: hispd_chatbot  # Specify the Docker container name
     build:
-      context: ./chat
+      context: ./ai/chat
       dockerfile: Dockerfile
     ports:
       - "8501:8501"
