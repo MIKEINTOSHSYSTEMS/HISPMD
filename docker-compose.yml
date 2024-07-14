@@ -103,7 +103,7 @@ services:
     volumes:
       - hispmd_vizdata:/dev/random:ro
     ports:
-      - "4004:3003"
+      - "4004:3000"
     environment:
       MB_DB_FILE: /dev/random/hispmd.db
       MB_DB_TYPE: postgres
@@ -138,10 +138,10 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_HOST: localhost
-      MYSQL_DATABASE: merqhispmddev
+      MYSQL_DATABASE: hisp_md
       MYSQL_ROOT_PASSWORD: merqhispmdadmin
-      MYSQL_USER: merqhispmddev
-      MYSQL_PASSWORD: merqhispmddev
+      MYSQL_USER: hisp_md
+      MYSQL_PASSWORD: hisp_md
     volumes:
       - ./src/hispmd_dev.sql:/docker-entrypoint-initdb.d/hispmd_dev.sql
       - ./mysql-init:/docker-entrypoint-initdb.d
@@ -205,7 +205,8 @@ services:
     image: hispd_chatbot  # Specify the Docker image name
     container_name: hispd_chatbot  # Specify the Docker container name
     build:
-      context: ./ai/chat
+      #context: ./ai/chat
+      context: .
       dockerfile: Dockerfile
     ports:
       - "8501:8501"
