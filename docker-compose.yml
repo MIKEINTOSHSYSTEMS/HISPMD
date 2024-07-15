@@ -2,27 +2,33 @@ version: '3.9'
 
 services:
   php:
-    image: mikeintosh/mikeintosh-hispmd-app:latest
     build:
       context: .
       dockerfile: Dockerfile
     container_name: hispmd_system
     volumes:
       - ./ai:/var/www/html/ai
+      - ./analytics:/var/www/html/analytics
+      - ./api:/var/www/html/api
       - ./app:/var/www/html/app
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      - ./config:/var/www/html/config
+      - ./.env:/var/www/html/.env
+      - ./index.php:/var/www/html/index.php
+      - ./LICENSE:/var/www/html/LICENSE
       - ./map_files:/var/www/html/map_files
+      - ./mysql-init:/var/www/html/mysql-init
+      - ./README.md:/var/www/html/README.md
+      - ./server.html:/var/www/html/server.html
       - ./src:/var/www/html/src
       - ./styles:/var/www/html/styles
       - ./test:/var/www/html/test
-      - ./vendor:/var/www/html/vendor
-      - ./config:/var/www/html/config
-      - ./index.php:/var/www/html/index.php
-      - ./server.html:/var/www/html/server.html
       - ./test.php:/var/www/html/test.php
-      - ./composer.json:/var/www/html/composer.json
-      - ./composer.lock:/var/www/html/composer.lock
+      - ./vendor:/var/www/html/vendor
     expose:
       - "9000"
+      - "8501"
     depends_on:
       - db
     networks:
@@ -36,20 +42,24 @@ services:
     volumes:
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./ai:/var/www/html/ai
+      - ./analytics:/var/www/html/analytics
+      - ./api:/var/www/html/api
       - ./app:/var/www/html/app
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      - ./config:/var/www/html/config
+      - ./.env:/var/www/html/.env
+      - ./index.php:/var/www/html/index.php
+      - ./LICENSE:/var/www/html/LICENSE
       - ./map_files:/var/www/html/map_files
+      - ./mysql-init:/var/www/html/mysql-init
+      - ./README.md:/var/www/html/README.md
+      - ./server.html:/var/www/html/server.html
       - ./src:/var/www/html/src
       - ./styles:/var/www/html/styles
       - ./test:/var/www/html/test
-      - ./vendor:/var/www/html/vendor
-      - ./config:/var/www/html/config
-      - ./config/php.ini:/usr/local/etc/php/php.ini
-      - ./.env:/var/www/html/.env
-      - ./index.php:/var/www/html/index.php
-      - ./server.html:/var/www/html/server.html
       - ./test.php:/var/www/html/test.php
-      - ./composer.json:/var/www/html/composer.json
-      - ./composer.lock:/var/www/html/composer.lock
+      - ./vendor:/var/www/html/vendor
     depends_on:
       - php
     networks:
@@ -60,11 +70,11 @@ services:
     container_name: hispmd_viz
     hostname: metabase
     volumes:
-      - hispmd_vizdata:/dev/random:ro
+      - hispmd_vizdata:/metabase-data
     ports:
       - "4004:3000"
     environment:
-      MB_DB_FILE: /dev/random/hispmd.db
+      MB_DB_FILE: /metabase-data/hispmd.db
       MB_DB_TYPE: postgres
       MB_DB_DBNAME: hispmddb
       MB_DB_PORT: 5432
@@ -154,53 +164,16 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: merqhispmddev
       ME_CONFIG_MONGODB_ADMINPASSWORD: merqhispmddev
       ME_CONFIG_MONGODB_URL: mongodb://merqhispmddev:merqhispmddev@mongo:27017/
-      ME_CONFIG_BASICAUTH_USERNAME: merqhispmduser
-      ME_CONFIG_BASICAUTH_PASSWORD: merqhispmduser
-      ME_CONFIG_SSL_ENABLED: 'false'
+    depends_on:
+      - mongo
     networks:
       - hispmdnet
 
-  chat:
-    image: hispd_chatbot  # Specify the Docker image name
-    container_name: hispd_chatbot  # Specify the Docker container name
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8501:8501"
-    healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-    volumes:
-      - ./ai/chat:/ai/chat
-      - ./ai/chat/certs:/ai/chat/certs  # Mount the SSL certificates directory
-      - ./ai/chat/.streamlit/config.toml:/root/.streamlit/config.toml  # Mount the config.toml file
-    environment:
-      - PYTHONUNBUFFERED=1
-      - MYSQL_HOST=${MYSQL_HOST}
-      - MYSQL_PORT=${MYSQL_PORT}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - SSH_USE=${SSH_USE}
-      - SSH_HOST=${SSH_HOST}
-      - SSH_PORT=${SSH_PORT}
-      - SSH_USER=${SSH_USER}
-      - SSH_PASSWORD=${SSH_PASSWORD}
-      - LOCAL_PORT=${LOCAL_PORT}
-      - GROQ_API_KEY=${GROQ_API_KEY}
-    env_file:
-      - .env  # Specify the path to your .env file
-    networks:
-      - hispmdnet
+volumes:
+  hispmd_pgadmindata:
+  hispmd_vizdata:
+  hispmd_mongodata:
 
 networks:
   hispmdnet:
     driver: bridge
-
-volumes:
-  hispmd_vizdata: 
-  hispmd_pgadmindata:
-  hispmd_mongodata:
