@@ -649,11 +649,13 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	$tdatamfr_dashboard_reports_chart["Count"] = $fdata;
 		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "Count";
 
+$tdatamfr_dashboard_reports_chart[".groupChart"] = true;
+$tdatamfr_dashboard_reports_chart[".chartLabelInterval"] = 0;
 $tdatamfr_dashboard_reports_chart[".chartLabelField"] = "Name";
 $tdatamfr_dashboard_reports_chart[".chartSeries"] = array();
 $tdatamfr_dashboard_reports_chart[".chartSeries"][] = array(
 	"field" => "Count",
-	"total" => ""
+	"total" => "SUM"
 );
 	$tdatamfr_dashboard_reports_chart[".chartXml"] = '<chart>
 		<attr value="tables">
@@ -675,7 +677,7 @@ $tdatamfr_dashboard_reports_chart[".chartSeries"][] = array(
 
 
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Dashboard Reports Chart").'</attr>
-<attr value="foot">'.xmlencode("By Service Name").'</attr>
+<attr value="foot">'.xmlencode("By Service Name & Type").'</attr>
 <attr value="y_axis_label">'.xmlencode("Count").'</attr>
 
 
