@@ -156,8 +156,8 @@ services:
     environment:
       PMA_ARBITRARY: 1
       PMA_HOSTS: db
-      PMA_USER: merqhispmddev
-      PMA_PASSWORD: merqhispmddev
+      PMA_USER: hisp_md
+      PMA_PASSWORD: hisp_md
     networks:
       - hispmdnet
 
