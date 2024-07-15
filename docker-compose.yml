@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: hispmd_system
     volumes:
-      - ./ai:/var/www/html/ai
+      #- ./ai:/var/www/html/ai
       - ./analytics:/var/www/html/analytics
       - ./api:/var/www/html/api
       - ./app:/var/www/html/app
@@ -28,9 +28,46 @@ services:
       - ./vendor:/var/www/html/vendor
     expose:
       - "9000"
-      - "8501"
+      #- "8501"
     depends_on:
       - db
+    networks:
+      - hispmdnet
+
+  chat:
+    image: hispmd_chatbot  # Specify the Docker image name for Streamlit
+    container_name: hispmd_chatbot  # Specify the Docker container name for Streamlit
+    build:
+      context: .  #/ai/chat
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - ./ai/chat:/ai/chat
+      - ./ai/chat/.env:/ai/chat/.env
+      - ./ai/chat/certs:/ai/chat/certs  # Mount the SSL certificates directory for Streamlit
+      - ./ai/chat/.streamlit/config.toml:/root/.streamlit/config.toml  # Mount the config.toml file for Streamlit
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - SSH_USE=${SSH_USE}
+      - SSH_HOST=${SSH_HOST}
+      - SSH_PORT=${SSH_PORT}
+      - SSH_USER=${SSH_USER}
+      - SSH_PASSWORD=${SSH_PASSWORD}
+      - LOCAL_PORT=${LOCAL_PORT}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    env_file:
+      - .env  # Specify the path to your .env file for Streamlit
     networks:
       - hispmdnet
 
@@ -39,9 +76,10 @@ services:
     container_name: hispmd_nginx
     ports:
       - "8080:80"
+      - "8443:443"
     volumes:
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./ai:/var/www/html/ai
+      #- ./ai:/var/www/html/ai
       - ./analytics:/var/www/html/analytics
       - ./api:/var/www/html/api
       - ./app:/var/www/html/app

@@ -16,6 +16,12 @@ WORKDIR /var/www/html
 # Copy all application source code and directories to the container
 COPY . /var/www/html/
 
+COPY .env /var/www/html/.env
+
+# Copy all app files and directories
+
+COPY ./app /var/www/html/app
+
 # Copy custom nginx configurations
 COPY config/nginx.conf /etc/nginx/conf.d/default.conf
 
@@ -71,8 +77,9 @@ WORKDIR /ai/chat
 COPY ai/chat/requirements.txt .
 RUN pip3 install -r requirements.txt
 
-# Copy the rest of the chatbot application
+# Copy the rest of the chatbot application and env
 COPY ai/chat /ai/chat
+#COPY .env /ai/chat/.env
 
 # Expose the port Streamlit listens on
 EXPOSE 8501
