@@ -48,12 +48,12 @@ import altair as alt
 #    return SQLDatabase.from_uri(db_uri)
 
 # Function to handle SQLInterfaceError: Commands out of sync
-#def run_query(db, query):
-#    try:
-#        result = db.run(query)
-#        return result
-#    except Exception as e:
-#        st.error(f"Error executing query: {str(e)}")
+def run_query(db, query):
+    try:
+        result = db.run(query)
+        return result
+    except Exception as e:
+        st.error(f"Error executing query: {str(e)}")
 
 
 load_dotenv()
@@ -218,7 +218,7 @@ def get_sql_chain(db):
 
     prompt = ChatPromptTemplate.from_template(template)
 
-    llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0.2) #llama3-8b-8192 OR #mixtral-8x7b-32768
+    llm = ChatGroq(model="llama3-8b-8192", temperature=0.2) #llama3-8b-8192 OR #mixtral-8x7b-32768
 
     def get_schema(_):
         return db.get_table_info()
@@ -246,7 +246,7 @@ def get_response(user_query: str, db: SQLDatabase, chat_history: list):
 
     prompt = ChatPromptTemplate.from_template(template)
 
-    llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0.2)
+    llm = ChatGroq(model="llama3-8b-8192", temperature=0.2) #llama3-8b-8192 OR #mixtral-8x7b-32768
 
     chain = (
         RunnablePassthrough.assign(query=sql_chain).assign(
