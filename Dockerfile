@@ -15,6 +15,12 @@ WORKDIR /var/www/html
 # Copy all application source code and directories to the container
 COPY . /var/www/html/
 
+# Copy custom nginx configurations
+COPY config/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy custom php.ini configuration
+COPY config/php.ini /usr/local/etc/php/php.ini
+
 # Install system dependencies and PHP extensions
 RUN apt-get update && \
     apt-get install -y \
@@ -71,23 +77,17 @@ RUN apt-get update && \
     # imap \
     xml \
     gettext \
-    && \
+    #&& \
     # Set permissions after copying files
-    chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html \
-    && chown www-data:www-data /etc/nginx/conf.d/default.conf \
+    #chown -R www-data:www-data /var/www/html \
+    #&& chmod -R 755 /var/www/html \
+    #&& chown www-data:www-data /etc/nginx/conf.d/default.conf \
     && chmod 644 /etc/nginx/conf.d/default.conf \
     && \
     # Clean up unnecessary packages and files
     apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-# Copy custom nginx configurations
-COPY config/nginx.conf /etc/nginx/conf.d/default.conf
-
-# Copy custom php.ini configuration
-COPY config/php.ini /usr/local/etc/php/php.ini
 
 # Set permissions for specific folders
 RUN chown -R www-data:www-data /var/www/html/app/templates_c
