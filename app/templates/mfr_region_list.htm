@@ -129,32 +129,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Region}</span>
 						</div>
 		{END searchCtrlBlock_Region}
-																{BEGIN searchCtrlBlock_Lng}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Lng}" {$filterRow_attrs_Lng}>
-			<label>{$label MFR_Region Lng }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Lng}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Lng}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Lng}</span>
-						</div>
-		{END searchCtrlBlock_Lng}
-																{BEGIN searchCtrlBlock_Lat}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Lat}" {$filterRow_attrs_Lat}>
-			<label>{$label MFR_Region Lat }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Lat}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Lat}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Lat}</span>
-						</div>
-		{END searchCtrlBlock_Lat}
 		
 
 	</div>
@@ -523,13 +497,7 @@
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Region"]:before {
 		content: "{$label MFR_Region Region}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Lat"]:before {
-		content: "{$label MFR_Region Lat}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Lng"]:before {
-		content: "{$label MFR_Region Lng}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Count"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Count"]:before {
 		content: "{$label MFR_Region Count}";
 	}
 	}
@@ -593,56 +561,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Lat_class}	"
-
-			data-field="Lat"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Lat_fieldheadercolumn}
-	{BEGIN Lat_fieldheader}
-	<SPAN {$Lat_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lat" data-fieldname="Lat">
-	{$label MFR_Region Lat }	{$arrow_icon_Lat}
-	</SPAN>
-	{END Lat_fieldheader}
-{END Lat_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Lng_class}	"
-
-			data-field="Lng"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Lng_fieldheadercolumn}
-	{BEGIN Lng_fieldheader}
-	<SPAN {$Lng_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lng" data-fieldname="Lng">
-	{$label MFR_Region Lng }	{$arrow_icon_Lng}
-	</SPAN>
-	{END Lng_fieldheader}
-{END Lng_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
@@ -724,48 +642,6 @@
 {END Region_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Lat_class}	"
-
-			data-field="Lat"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Lat_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lat" data-fieldname="Lat" data-default-width >
-{$Lat_value}
-</span>
-{END Lat_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Lng_class}	"
-
-			data-field="Lng"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Lng_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lng" data-fieldname="Lng" data-default-width >
-{$Lng_value}
-</span>
-{END Lng_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
@@ -830,38 +706,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Lat_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="mfr_region_list"		data-control-cell
-	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Lng_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="mfr_region_list"		data-control-cell
-	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	

@@ -139,7 +139,7 @@ class ConnectionManager extends ConnectionManager_Base
 		
 		//	Don't change any of these lines manually!
 		//	Use 'Server database connections' feature on the Output screen in PHPRunner instead.
-		$data["connInfo"][0] = "localhost";
+		$data["connInfo"][0] = "localhost"; //localhost if you are connecting to the host //192.168.112.7 or 192.168.112.25 if you are connecting to the container services
 		$data["connInfo"][1] = "hisp_md";
 		$data["connInfo"][2] = "hisp_md";
 		$data["connInfo"][3] = "";
