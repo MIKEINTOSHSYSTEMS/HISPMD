@@ -39,7 +39,7 @@ class class_GlobalEvents extends eventsBase
 //	onscreen events
 	function event_MERQ_AI_Data_Assistant_snippet(&$params)
 	{
-	echo '<IFRAME SRC="https://dup.merqconsultancy.org:8501" WIDTH=100% HEIGHT=700>
+	echo '<IFRAME SRC="https://hispmd.merqconsultancy.org:8501" WIDTH=100% HEIGHT=700>
 
 If you can see this, your browser does not
 

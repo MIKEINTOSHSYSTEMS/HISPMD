@@ -6,6 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: hispmd_system
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.20  # Adjust as needed
     volumes:
       - ./analytics:/var/www/html/analytics
       - ./api:/var/www/html/api
@@ -25,19 +28,16 @@ services:
       - ./test:/var/www/html/test
       - ./test.php:/var/www/html/test.php
       - ./vendor:/var/www/html/vendor
-      - /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock  # Mount the MySQL socket file
     expose:
       - "9000"
     depends_on:
-      - db  # Ensure php service starts after db service
+      - db
     environment:
-      MYSQL_HOST: db  # Use service name 'db' for DNS resolution
-      MYSQL_PORT: 3306  # Default MySQL/MariaDB port
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
       MYSQL_USER: hisp_md
       MYSQL_PASSWORD: hisp_md
       MYSQL_DATABASE: hisp_md
-    networks:
-      - hispmdnet
 
   chat:
     build:
@@ -45,6 +45,9 @@ services:
       dockerfile: Dockerfile
     image: hispmd_chatbot
     container_name: hispmd_chatbot
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.21  # Adjust as needed
     ports:
       - "8501:8501"
     healthcheck:
@@ -57,28 +60,15 @@ services:
       - ./ai/chat/.env:/ai/chat/.env
       - ./ai/chat/certs:/ai/chat/certs
       - ./ai/chat/.streamlit/config.toml:/root/.streamlit/config.toml
-    environment:
-      - PYTHONUNBUFFERED=1
-      - MYSQL_HOST=${MYSQL_HOST}
-      - MYSQL_PORT=${MYSQL_PORT}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - SSH_USE=${SSH_USE}
-      - SSH_HOST=${SSH_HOST}
-      - SSH_PORT=${SSH_PORT}
-      - SSH_USER=${SSH_USER}
-      - SSH_PASSWORD=${SSH_PASSWORD}
-      - LOCAL_PORT=${LOCAL_PORT}
-      - GROQ_API_KEY=${GROQ_API_KEY}
     env_file:
       - .env
-    networks:
-      - hispmdnet
 
   nginx:
     image: nginx:latest
     container_name: hispmd_nginx
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.22  # Adjust as needed
     ports:
       - "8080:80"
       - "8443:443"
@@ -104,15 +94,13 @@ services:
       - ./vendor:/var/www/html/vendor
     depends_on:
       - php
-    networks:
-      - hispmdnet
 
   metabase:
     image: metabase/metabase:v0.50.12
     container_name: hispmd_viz
-    hostname: metabase
-    volumes:
-      - hispmd_vizdata:/metabase-data
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.23  # Adjust as needed
     ports:
       - "4004:3000"
     environment:
@@ -128,25 +116,28 @@ services:
       MB_ADMIN_PASSWORD: hispmdmerqdev0
     depends_on:
       - postgres
-    networks:
-      - hispmdnet
+    volumes:
+      - hispmd_vizdata:/metabase-data
 
   postgres:
     image: postgres:latest
     container_name: hispmd_postgres
-    hostname: postgres
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.24  # Adjust as needed
     environment:
       POSTGRES_DB: hispmddb
       POSTGRES_USER: hispmddb
       POSTGRES_PASSWORD: hispmddb
     volumes:
       - ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb
-    networks:
-      - hispmdnet
 
   db:
     image: mariadb:11.2.4
-    restart: always
+    container_name: hispmd_sys-db-1
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.25  # Adjust as needed
     environment:
       MYSQL_ROOT_HOST: localhost
       MYSQL_DATABASE: hisp_md
@@ -156,27 +147,25 @@ services:
     volumes:
       - ./src/hispmd_dev.sql:/docker-entrypoint-initdb.d/hispmd_dev.sql
       - ./mysql-init:/docker-entrypoint-initdb.d
-      #- /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock  # Mount the MySQL socket file if there is no conflict with the host server
-    networks:
-      - hispmdnet
 
   phpmyadmin:
     image: phpmyadmin:5.2.1
-    restart: always
-    ports:
-      - "3308:80"
+    container_name: hispmd_sys-phpmyadmin-1
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.26  # Adjust as needed
     environment:
       PMA_ARBITRARY: 1
       PMA_HOSTS: db
       PMA_USER: hisp_md
       PMA_PASSWORD: hisp_md
-    networks:
-      - hispmdnet
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    ports:
-      - "5434:80"
+    container_name: hispmd_sys-pgadmin-1
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.27  # Adjust as needed
     environment:
       PGADMIN_DEFAULT_EMAIL: dev@merqconsultancy.org
       PGADMIN_DEFAULT_PASSWORD: merqhispmddev
@@ -184,44 +173,42 @@ services:
       - hispmd_pgadmindata:/var/lib/pgadmin
     depends_on:
       - postgres
-    networks:
-      - hispmdnet
 
   mongo:
     image: mongo:latest
-    restart: always
+    container_name: hispmd_sys-mongo-1
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.28  # Adjust as needed
     environment:
       MONGO_INITDB_ROOT_USERNAME: merqhispmddev
       MONGO_INITDB_ROOT_PASSWORD: merqhispmddev
     volumes:
       - hispmd_mongodata:/data/db
-    networks:
-      - hispmdnet
 
   mongo-express:
     image: mongo-express:1.0.2
-    restart: always
-    ports:
-      - "8118:8018"
+    container_name: hispmd_sys-mongo-express-1
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.29  # Adjust as needed
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: merqhispmddev
       ME_CONFIG_MONGODB_ADMINPASSWORD: merqhispmddev
       ME_CONFIG_MONGODB_URL: mongodb://merqhispmddev:merqhispmddev@mongo:27017/
     depends_on:
       - mongo
-    networks:
-      - hispmdnet
 
   grafana:
     image: grafana/grafana-enterprise
     container_name: hispmd_grafana
-    restart: unless-stopped
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.112.30  # Adjust as needed
     ports:
       - "3030:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
-    networks:
-      - hispmdnet
 
 volumes:
   hispmd_pgadmindata:
@@ -232,3 +219,7 @@ volumes:
 networks:
   hispmdnet:
     driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.112.0/24

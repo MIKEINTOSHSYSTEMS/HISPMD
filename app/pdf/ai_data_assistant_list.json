@@ -128,8 +128,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"<p><strong>Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot</strong></p>","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

@@ -61,7 +61,15 @@ Create a `.env` file and define necessary variables like database credentials, A
 ### 2. Build and start the Docker containers
 
 ```bash
-docker-compose up --build
+docker-compose -p hispmd_sys up --build -d
+```
+#### Development Mode
+```bash
+docker-compose -f dev-docker-compose.yml -p hispmd_sys up --build -d
+```
+#### Production Mode
+```bash
+docker-compose -f prod-docker-compose.yml -p hispmd_sys up --build -d
 ```
 
 This command builds the necessary Docker images and starts all defined services.
