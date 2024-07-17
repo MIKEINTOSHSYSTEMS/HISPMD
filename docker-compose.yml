@@ -156,7 +156,7 @@ services:
     volumes:
       - ./src/hispmd_dev.sql:/docker-entrypoint-initdb.d/hispmd_dev.sql
       - ./mysql-init:/docker-entrypoint-initdb.d
-      - /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock  # Mount the MySQL socket file
+      #- /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock  # Mount the MySQL socket file if there is no conflict with the host server
     networks:
       - hispmdnet
 

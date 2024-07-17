@@ -111,88 +111,91 @@ Health checks are implemented for critical services like the chatbot application
 
 ```plaintext
    +-------------------------------------------------------+
-   |                       Docker Host                      |
+   |                       Docker Host                     |
    +-------------------------------------------------------+
-                    |                           |
-                    |                           |
-   +----------------+-------------------+       |       +-------------------+
+                    |                          |
+                    |                          |
+   +----------------+-------------------+      |       +-------------------+
    |          +-------------------+    |       |       |   External APIs   |
    |          |   Grafana         |    |       |       +-------------------+
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |       +-------------------+
-   |                :                 |       |       |   Other Services  |
+   |                :                  |       |       +-------------------+
+   |                :                  |       |       |   Other Services  |
    |          +-------------------+    |       |       +-------------------+
    |          |   Metabase        |    |       |
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |       +-------------------+
-   |                :                 |       |       |   Chatbot         |
+   |                :                  |       |       +-------------------+
+   |                :                  |       |       |   Chatbot         |
    |          +-------------------+    |       |       |   Container       |
    |          |   PHP-FPM         |    |       |       +-------------------+
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |       +-------------------+
-   |                :                 |       |       |   Nginx           |
+   |                :                  |       |       +-------------------+
+   |                :                  |       |       |   Nginx           |
    |          +-------------------+    |       |       |   Container       |
    |          |   PostgreSQL      |    |       |       +-------------------+
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |       +-------------------+
-   |                :                 |       |       |   MariaDB         |
+   |                :                  |       |       +-------------------+
+   |                :                  |       |       |   MariaDB         |
    |          +-------------------+    |       |       |   Container       |
    |          |   MongoDB         |    |       |       +-------------------+
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |       +-------------------+
-   |                :                 |       |       |   phpMyAdmin      |
+   |                :                  |       |       +-------------------+
+   |                :                  |       |       |   phpMyAdmin      |
    |          +-------------------+    |       |       |   Container       |
-   |          |   pgAdmin          |    |       |       +-------------------+
+   |          |   pgAdmin          |   |       |       +-------------------+
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |       +-------------------+
-   |                :                 |       |       |   Mongo Express   |
+   |                :                  |       |       +-------------------+
+   |                :                  |       |       |   Mongo Express   |
    |          +-------------------+    |       |       |   Container       |
    |          |   Chatbot         |    |       |       +-------------------+
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |
-   +----------------+-------------------+-------+-------------------+
-                    |                           |
-                    |                           |
-   +----------------+-------------------+       |
+   |                :                  |       |
+   +----------------+-------------------+-------+--------------------------+
+                    |                          |
+                    |                          |
+   +----------------+-------------------+      |
    |          +-------------------+    |       |
    |          |   nginx           |    |       |
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |
-   |                :                 |       |
+   |                :                  |       |
+   |                :                  |       |
    |          +-------------------+    |       |
    |          |   phpMyAdmin      |    |       |
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |
-   |                :                 |       |
+   |                :                  |       |
+   |                :                  |       |
    |          +-------------------+    |       |
-   |          |   pgAdmin          |    |       |
+   |          |   pgAdmin          |   |       |
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |
-   |                :                 |       |
+   |                :                  |       |
+   |                :                  |       |
    |          +-------------------+    |       |
    |          |   Mongo Express   |    |       |
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                :                 |       |
-   |                :                 |       |
+   |                :                  |       |
+   |                :                  |       |
    |          +-------------------+    |       |
    |          |   Other Services  |    |       |
    |          |   Container       |    |       |
    |          +-------------------+    |       |
-   |                                    |       |
+   |                                   |       |
    +------------------------------------+-------+
 ```
 
-This Markdown document now includes the setup instructions along with the file and folder structure and the Docker application stack diagram. You can copy and paste this updated content into your `README.md` file in your GitHub repository. Adjust the details as per your specific project configurations and requirements.
+Instructions along with the file and folder structure and the Docker application stack diagram.
+Adjust the details as per your specific project configurations and requirements.
+
+Additional instructions and guides including configuration parameters are going to be incorporated here progressively...
 
 ### © 2024 MIKEINTOSH SYSTEMS. All rights reserved.

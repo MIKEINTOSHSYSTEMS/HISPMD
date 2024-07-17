@@ -77,11 +77,7 @@ RUN apt-get update && \
     # imap \
     xml \
     gettext \
-    #&& \
     # Set permissions after copying files
-    #chown -R www-data:www-data /var/www/html \
-    #&& chmod -R 755 /var/www/html \
-    #&& chown www-data:www-data /etc/nginx/conf.d/default.conf \
     && chmod 644 /etc/nginx/conf.d/default.conf \
     && \
     # Clean up unnecessary packages and files
@@ -108,12 +104,21 @@ FROM python:3.9-slim AS python_app
 # Set the working directory for the chatbot
 WORKDIR /ai/chat
 
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy requirements.txt and install Python dependencies
-COPY ai/chat/requirements.txt .
-RUN pip3 install -r requirements.txt && pip3 install sshtunnel
+# Adjust this line to copy from the correct location
+COPY requirements.txt .
+#RUN pip3 install -r requirements.txt && pip3 install sshtunnel
+RUN pip3 install -r requirements.txt
 
 # Copy the rest of the chatbot application
-COPY ai/chat /ai/chat
+COPY . .
 
 # Expose the port Streamlit listens on
 EXPOSE 8501
@@ -130,6 +135,13 @@ FROM php_app AS final_stage
 
 # Copy supervisord configuration
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Install Python and Streamlit in the final stage
+#RUN apt-get update && apt-get install -y python3 python3-pip && pip3 install streamlit sshtunnel
+RUN apt-get update && apt-get install -y python3 python3-pip && pip3 install -r requirements.txt
+
+# Copy the chatbot application files
+COPY ai/chat /ai/chat
 
 # Set permissions for supervisord.conf (if exists)
 RUN if [ -f /etc/supervisor/conf.d/supervisord.conf ]; then \
