@@ -170,6 +170,12 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
+								
+			"%",
+			 
 				],
 	
 		body: [
@@ -288,6 +294,31 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"","hidden":"{$item_hide_welcome_group4}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				'',
 	  ],
   "border": [ false, false, false, false ],
@@ -300,6 +331,34 @@ pdfDocument = {
 						[
 																{
 	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","background":"#E67349","hidden":"{$item_hide_welcome_item33}"},
+				
+				
+			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item32}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c7',
 	col:0,
 	row:0,
 			

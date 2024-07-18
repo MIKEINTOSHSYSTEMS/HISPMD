@@ -561,6 +561,30 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_Indicators")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Organisation_Units")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Analytics")
+		{
+			return 1;
+		}
+		if($table=="DHIS2PeriodsView")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Indicator")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Organisation_Unit")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -945,6 +969,30 @@ function getCaptionTable($table)
 	if($table=="AI_Data_Assistant")
 	{
 		return "AI Data Assistant";
+	}
+	if($table=="DHIS2_Indicators")
+	{
+		return "DHIS2 Indicators";
+	}
+	if($table=="DHIS2_Organisation_Units")
+	{
+		return "DHIS2 Organisation Units";
+	}
+	if($table=="DHIS2_Analytics")
+	{
+		return "DHIS2 Analytics";
+	}
+	if($table=="DHIS2PeriodsView")
+	{
+		return "DHIS2Periods View";
+	}
+	if($table=="DHIS2_Indicator")
+	{
+		return "DHIS2 Indicator";
+	}
+	if($table=="DHIS2_Organisation_Unit")
+	{
+		return "DHIS2 Organisation Unit";
 	}
 	return $table;
 }

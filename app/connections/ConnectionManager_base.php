@@ -272,6 +272,12 @@ class ConnectionManager_Base
 		$connectionsIds["MFR_Zone_Chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Woreda_Chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["AI_Data_Assistant"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["DHIS2_Indicators"] = "xhispmdathispmdmerqconsultancy";
+		$connectionsIds["DHIS2_Organisation_Units"] = "xhispmdathispmdmerqconsultancy";
+		$connectionsIds["DHIS2_Analytics"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2PeriodsView"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Indicator"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Organisation_Unit"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

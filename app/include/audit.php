@@ -480,6 +480,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DHIS2_Indicators")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Organisation_Units")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Analytics")
+		{
+			return false;
+		}
+		if($table=="DHIS2PeriodsView")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Indicator")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Organisation_Unit")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -909,6 +933,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="AI_Data_Assistant")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Indicators")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Organisation_Units")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Analytics")
+		{
+			return false;
+		}
+		if($table=="DHIS2PeriodsView")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Indicator")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Organisation_Unit")
 		{
 			return false;
 		}

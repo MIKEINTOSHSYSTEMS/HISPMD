@@ -1,0 +1,2716 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./moh.png" />		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+			data-panel-bg
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_THIS_WEEK}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_WEEK}" {$filterRow_attrs_THIS_WEEK}>
+			<label>{$label DHIS2PeriodsView THIS_WEEK }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_WEEK}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_WEEK}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_WEEK}</span>
+						</div>
+		{END searchCtrlBlock_THIS_WEEK}
+																{BEGIN searchCtrlBlock_LAST_5_FINANCIAL_YEARS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_5_FINANCIAL_YEARS}" {$filterRow_attrs_LAST_5_FINANCIAL_YEARS}>
+			<label>{$label DHIS2PeriodsView LAST_5_FINANCIAL_YEARS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_5_FINANCIAL_YEARS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_5_FINANCIAL_YEARS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_5_FINANCIAL_YEARS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_5_FINANCIAL_YEARS}
+																{BEGIN searchCtrlBlock_LAST_FINANCIAL_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_FINANCIAL_YEAR}" {$filterRow_attrs_LAST_FINANCIAL_YEAR}>
+			<label>{$label DHIS2PeriodsView LAST_FINANCIAL_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_FINANCIAL_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_FINANCIAL_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_FINANCIAL_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_LAST_FINANCIAL_YEAR}
+																{BEGIN searchCtrlBlock_THIS_FINANCIAL_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_FINANCIAL_YEAR}" {$filterRow_attrs_THIS_FINANCIAL_YEAR}>
+			<label>{$label DHIS2PeriodsView THIS_FINANCIAL_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_FINANCIAL_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_FINANCIAL_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_FINANCIAL_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_THIS_FINANCIAL_YEAR}
+																{BEGIN searchCtrlBlock_LAST_2_SIXMONTHS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_2_SIXMONTHS}" {$filterRow_attrs_LAST_2_SIXMONTHS}>
+			<label>{$label DHIS2PeriodsView LAST_2_SIXMONTHS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_2_SIXMONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_2_SIXMONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_2_SIXMONTHS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_2_SIXMONTHS}
+																{BEGIN searchCtrlBlock_LAST_4_QUARTERS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_4_QUARTERS}" {$filterRow_attrs_LAST_4_QUARTERS}>
+			<label>{$label DHIS2PeriodsView LAST_4_QUARTERS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_4_QUARTERS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_4_QUARTERS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_4_QUARTERS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_4_QUARTERS}
+																{BEGIN searchCtrlBlock_LAST_6_BIMONTHS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_6_BIMONTHS}" {$filterRow_attrs_LAST_6_BIMONTHS}>
+			<label>{$label DHIS2PeriodsView LAST_6_BIMONTHS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_6_BIMONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_6_BIMONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_6_BIMONTHS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_6_BIMONTHS}
+																{BEGIN searchCtrlBlock_LAST_3_MONTHS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_3_MONTHS}" {$filterRow_attrs_LAST_3_MONTHS}>
+			<label>{$label DHIS2PeriodsView LAST_3_MONTHS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_3_MONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_3_MONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_3_MONTHS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_3_MONTHS}
+																{BEGIN searchCtrlBlock_LAST_12_MONTHS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_12_MONTHS}" {$filterRow_attrs_LAST_12_MONTHS}>
+			<label>{$label DHIS2PeriodsView LAST_12_MONTHS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_12_MONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_12_MONTHS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_12_MONTHS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_12_MONTHS}
+																{BEGIN searchCtrlBlock_LAST_5_YEARS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_5_YEARS}" {$filterRow_attrs_LAST_5_YEARS}>
+			<label>{$label DHIS2PeriodsView LAST_5_YEARS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_5_YEARS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_5_YEARS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_5_YEARS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_5_YEARS}
+																{BEGIN searchCtrlBlock_LAST_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_YEAR}" {$filterRow_attrs_LAST_YEAR}>
+			<label>{$label DHIS2PeriodsView LAST_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_LAST_YEAR}
+																{BEGIN searchCtrlBlock_QUARTERS_LAST_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_QUARTERS_LAST_YEAR}" {$filterRow_attrs_QUARTERS_LAST_YEAR}>
+			<label>{$label DHIS2PeriodsView QUARTERS_LAST_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_QUARTERS_LAST_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_QUARTERS_LAST_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_QUARTERS_LAST_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_QUARTERS_LAST_YEAR}
+																{BEGIN searchCtrlBlock_MONTHS_LAST_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_MONTHS_LAST_YEAR}" {$filterRow_attrs_MONTHS_LAST_YEAR}>
+			<label>{$label DHIS2PeriodsView MONTHS_LAST_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_MONTHS_LAST_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_MONTHS_LAST_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_MONTHS_LAST_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_MONTHS_LAST_YEAR}
+																{BEGIN searchCtrlBlock_THIS_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_YEAR}" {$filterRow_attrs_THIS_YEAR}>
+			<label>{$label DHIS2PeriodsView THIS_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_THIS_YEAR}
+																{BEGIN searchCtrlBlock_QUARTERS_THIS_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_QUARTERS_THIS_YEAR}" {$filterRow_attrs_QUARTERS_THIS_YEAR}>
+			<label>{$label DHIS2PeriodsView QUARTERS_THIS_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_QUARTERS_THIS_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_QUARTERS_THIS_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_QUARTERS_THIS_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_QUARTERS_THIS_YEAR}
+																{BEGIN searchCtrlBlock_MONTHS_THIS_YEAR}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_MONTHS_THIS_YEAR}" {$filterRow_attrs_MONTHS_THIS_YEAR}>
+			<label>{$label DHIS2PeriodsView MONTHS_THIS_YEAR }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_MONTHS_THIS_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_MONTHS_THIS_YEAR}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_MONTHS_THIS_YEAR}</span>
+						</div>
+		{END searchCtrlBlock_MONTHS_THIS_YEAR}
+																{BEGIN searchCtrlBlock_LAST_SIX_MONTH}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_SIX_MONTH}" {$filterRow_attrs_LAST_SIX_MONTH}>
+			<label>{$label DHIS2PeriodsView LAST_SIX_MONTH }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_SIX_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_SIX_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_SIX_MONTH}</span>
+						</div>
+		{END searchCtrlBlock_LAST_SIX_MONTH}
+																{BEGIN searchCtrlBlock_THIS_SIX_MONTH}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_SIX_MONTH}" {$filterRow_attrs_THIS_SIX_MONTH}>
+			<label>{$label DHIS2PeriodsView THIS_SIX_MONTH }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_SIX_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_SIX_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_SIX_MONTH}</span>
+						</div>
+		{END searchCtrlBlock_THIS_SIX_MONTH}
+																{BEGIN searchCtrlBlock_LAST_QUARTER}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_QUARTER}" {$filterRow_attrs_LAST_QUARTER}>
+			<label>{$label DHIS2PeriodsView LAST_QUARTER }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_QUARTER}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_QUARTER}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_QUARTER}</span>
+						</div>
+		{END searchCtrlBlock_LAST_QUARTER}
+																{BEGIN searchCtrlBlock_THIS_QUARTER}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_QUARTER}" {$filterRow_attrs_THIS_QUARTER}>
+			<label>{$label DHIS2PeriodsView THIS_QUARTER }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_QUARTER}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_QUARTER}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_QUARTER}</span>
+						</div>
+		{END searchCtrlBlock_THIS_QUARTER}
+																{BEGIN searchCtrlBlock_LAST_BIMONTH}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_BIMONTH}" {$filterRow_attrs_LAST_BIMONTH}>
+			<label>{$label DHIS2PeriodsView LAST_BIMONTH }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_BIMONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_BIMONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_BIMONTH}</span>
+						</div>
+		{END searchCtrlBlock_LAST_BIMONTH}
+																{BEGIN searchCtrlBlock_THIS_BIMONTH}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_BIMONTH}" {$filterRow_attrs_THIS_BIMONTH}>
+			<label>{$label DHIS2PeriodsView THIS_BIMONTH }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_BIMONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_BIMONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_BIMONTH}</span>
+						</div>
+		{END searchCtrlBlock_THIS_BIMONTH}
+																{BEGIN searchCtrlBlock_LAST_MONTH}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_MONTH}" {$filterRow_attrs_LAST_MONTH}>
+			<label>{$label DHIS2PeriodsView LAST_MONTH }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_MONTH}</span>
+						</div>
+		{END searchCtrlBlock_LAST_MONTH}
+																{BEGIN searchCtrlBlock_THIS_MONTH}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_THIS_MONTH}" {$filterRow_attrs_THIS_MONTH}>
+			<label>{$label DHIS2PeriodsView THIS_MONTH }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_THIS_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_THIS_MONTH}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_THIS_MONTH}</span>
+						</div>
+		{END searchCtrlBlock_THIS_MONTH}
+																{BEGIN searchCtrlBlock_LAST_52_WEEKS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_52_WEEKS}" {$filterRow_attrs_LAST_52_WEEKS}>
+			<label>{$label DHIS2PeriodsView LAST_52_WEEKS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_52_WEEKS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_52_WEEKS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_52_WEEKS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_52_WEEKS}
+																{BEGIN searchCtrlBlock_LAST_12_WEEKS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_12_WEEKS}" {$filterRow_attrs_LAST_12_WEEKS}>
+			<label>{$label DHIS2PeriodsView LAST_12_WEEKS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_12_WEEKS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_12_WEEKS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_12_WEEKS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_12_WEEKS}
+																{BEGIN searchCtrlBlock_LAST_4_WEEKS}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_4_WEEKS}" {$filterRow_attrs_LAST_4_WEEKS}>
+			<label>{$label DHIS2PeriodsView LAST_4_WEEKS }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_4_WEEKS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_4_WEEKS}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_4_WEEKS}</span>
+						</div>
+		{END searchCtrlBlock_LAST_4_WEEKS}
+																{BEGIN searchCtrlBlock_LAST_WEEK}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_LAST_WEEK}" {$filterRow_attrs_LAST_WEEK}>
+			<label>{$label DHIS2PeriodsView LAST_WEEK }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_LAST_WEEK}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_LAST_WEEK}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_LAST_WEEK}</span>
+						</div>
+		{END searchCtrlBlock_LAST_WEEK}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="dhis2periodsview_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Advanced search		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Show search panel		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Hide search panel		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Export results		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="dhis2periodsview_import.php{$stateLink_full}"  title="" >
+				
+		Import		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	</div>		
+{END top_block}
+						</div>
+											<div class="r-grid"
+			data-responsive
+	>
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+	<div class="panel panel-default"
+	>
+		<div class="panel-heading">
+							{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Scope:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="dhis2periodsview_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Print all pages							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="dhis2periodsview_print.php?{$crosstable_attrs}">
+				Print this page			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Records Per Page							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Print			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+			</div>
+
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_WEEK"]:before {
+		content: "{$label DHIS2PeriodsView THIS_WEEK}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_WEEK"]:before {
+		content: "{$label DHIS2PeriodsView LAST_WEEK}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_4_WEEKS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_4_WEEKS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_12_WEEKS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_12_WEEKS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_52_WEEKS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_52_WEEKS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_MONTH"]:before {
+		content: "{$label DHIS2PeriodsView THIS_MONTH}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_MONTH"]:before {
+		content: "{$label DHIS2PeriodsView LAST_MONTH}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_BIMONTH"]:before {
+		content: "{$label DHIS2PeriodsView THIS_BIMONTH}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_BIMONTH"]:before {
+		content: "{$label DHIS2PeriodsView LAST_BIMONTH}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_QUARTER"]:before {
+		content: "{$label DHIS2PeriodsView THIS_QUARTER}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_QUARTER"]:before {
+		content: "{$label DHIS2PeriodsView LAST_QUARTER}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_SIX_MONTH"]:before {
+		content: "{$label DHIS2PeriodsView THIS_SIX_MONTH}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_SIX_MONTH"]:before {
+		content: "{$label DHIS2PeriodsView LAST_SIX_MONTH}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MONTHS_THIS_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView MONTHS_THIS_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="QUARTERS_THIS_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView QUARTERS_THIS_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView THIS_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MONTHS_LAST_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView MONTHS_LAST_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="QUARTERS_LAST_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView QUARTERS_LAST_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView LAST_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_5_YEARS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_5_YEARS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_12_MONTHS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_12_MONTHS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_3_MONTHS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_3_MONTHS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_6_BIMONTHS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_6_BIMONTHS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_4_QUARTERS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_4_QUARTERS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_2_SIXMONTHS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_2_SIXMONTHS}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="THIS_FINANCIAL_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView THIS_FINANCIAL_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_FINANCIAL_YEAR"]:before {
+		content: "{$label DHIS2PeriodsView LAST_FINANCIAL_YEAR}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="LAST_5_FINANCIAL_YEARS"]:before {
+		content: "{$label DHIS2PeriodsView LAST_5_FINANCIAL_YEARS}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_details}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_WEEK_class}	"
+
+			data-field="THIS_WEEK"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_WEEK_fieldheadercolumn}
+	{BEGIN THIS_WEEK_fieldheader}
+	<SPAN {$THIS_WEEK_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_WEEK" data-fieldname="THIS_WEEK">
+	{$label DHIS2PeriodsView THIS_WEEK }	{$arrow_icon_THIS_WEEK}
+	</SPAN>
+	{END THIS_WEEK_fieldheader}
+{END THIS_WEEK_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_WEEK_class}	"
+
+			data-field="LAST_WEEK"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_WEEK_fieldheadercolumn}
+	{BEGIN LAST_WEEK_fieldheader}
+	<SPAN {$LAST_WEEK_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_WEEK" data-fieldname="LAST_WEEK">
+	{$label DHIS2PeriodsView LAST_WEEK }	{$arrow_icon_LAST_WEEK}
+	</SPAN>
+	{END LAST_WEEK_fieldheader}
+{END LAST_WEEK_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_4_WEEKS_class}	"
+
+			data-field="LAST_4_WEEKS"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_4_WEEKS_fieldheadercolumn}
+	{BEGIN LAST_4_WEEKS_fieldheader}
+	<SPAN {$LAST_4_WEEKS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_4_WEEKS" data-fieldname="LAST_4_WEEKS">
+	{$label DHIS2PeriodsView LAST_4_WEEKS }	{$arrow_icon_LAST_4_WEEKS}
+	</SPAN>
+	{END LAST_4_WEEKS_fieldheader}
+{END LAST_4_WEEKS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_12_WEEKS_class}	"
+
+			data-field="LAST_12_WEEKS"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_12_WEEKS_fieldheadercolumn}
+	{BEGIN LAST_12_WEEKS_fieldheader}
+	<SPAN {$LAST_12_WEEKS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_12_WEEKS" data-fieldname="LAST_12_WEEKS">
+	{$label DHIS2PeriodsView LAST_12_WEEKS }	{$arrow_icon_LAST_12_WEEKS}
+	</SPAN>
+	{END LAST_12_WEEKS_fieldheader}
+{END LAST_12_WEEKS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_52_WEEKS_class}	"
+
+			data-field="LAST_52_WEEKS"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_52_WEEKS_fieldheadercolumn}
+	{BEGIN LAST_52_WEEKS_fieldheader}
+	<SPAN {$LAST_52_WEEKS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_52_WEEKS" data-fieldname="LAST_52_WEEKS">
+	{$label DHIS2PeriodsView LAST_52_WEEKS }	{$arrow_icon_LAST_52_WEEKS}
+	</SPAN>
+	{END LAST_52_WEEKS_fieldheader}
+{END LAST_52_WEEKS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_MONTH_class}	"
+
+			data-field="THIS_MONTH"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_MONTH_fieldheadercolumn}
+	{BEGIN THIS_MONTH_fieldheader}
+	<SPAN {$THIS_MONTH_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_MONTH" data-fieldname="THIS_MONTH">
+	{$label DHIS2PeriodsView THIS_MONTH }	{$arrow_icon_THIS_MONTH}
+	</SPAN>
+	{END THIS_MONTH_fieldheader}
+{END THIS_MONTH_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_MONTH_class}	"
+
+			data-field="LAST_MONTH"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_MONTH_fieldheadercolumn}
+	{BEGIN LAST_MONTH_fieldheader}
+	<SPAN {$LAST_MONTH_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_MONTH" data-fieldname="LAST_MONTH">
+	{$label DHIS2PeriodsView LAST_MONTH }	{$arrow_icon_LAST_MONTH}
+	</SPAN>
+	{END LAST_MONTH_fieldheader}
+{END LAST_MONTH_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_BIMONTH_class}	"
+
+			data-field="THIS_BIMONTH"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_BIMONTH_fieldheadercolumn}
+	{BEGIN THIS_BIMONTH_fieldheader}
+	<SPAN {$THIS_BIMONTH_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_BIMONTH" data-fieldname="THIS_BIMONTH">
+	{$label DHIS2PeriodsView THIS_BIMONTH }	{$arrow_icon_THIS_BIMONTH}
+	</SPAN>
+	{END THIS_BIMONTH_fieldheader}
+{END THIS_BIMONTH_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_BIMONTH_class}	"
+
+			data-field="LAST_BIMONTH"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_BIMONTH_fieldheadercolumn}
+	{BEGIN LAST_BIMONTH_fieldheader}
+	<SPAN {$LAST_BIMONTH_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_BIMONTH" data-fieldname="LAST_BIMONTH">
+	{$label DHIS2PeriodsView LAST_BIMONTH }	{$arrow_icon_LAST_BIMONTH}
+	</SPAN>
+	{END LAST_BIMONTH_fieldheader}
+{END LAST_BIMONTH_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_QUARTER_class}	"
+
+			data-field="THIS_QUARTER"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_QUARTER_fieldheadercolumn}
+	{BEGIN THIS_QUARTER_fieldheader}
+	<SPAN {$THIS_QUARTER_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_QUARTER" data-fieldname="THIS_QUARTER">
+	{$label DHIS2PeriodsView THIS_QUARTER }	{$arrow_icon_THIS_QUARTER}
+	</SPAN>
+	{END THIS_QUARTER_fieldheader}
+{END THIS_QUARTER_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_QUARTER_class}	"
+
+			data-field="LAST_QUARTER"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_QUARTER_fieldheadercolumn}
+	{BEGIN LAST_QUARTER_fieldheader}
+	<SPAN {$LAST_QUARTER_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_QUARTER" data-fieldname="LAST_QUARTER">
+	{$label DHIS2PeriodsView LAST_QUARTER }	{$arrow_icon_LAST_QUARTER}
+	</SPAN>
+	{END LAST_QUARTER_fieldheader}
+{END LAST_QUARTER_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_SIX_MONTH_class}	"
+
+			data-field="THIS_SIX_MONTH"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_SIX_MONTH_fieldheadercolumn}
+	{BEGIN THIS_SIX_MONTH_fieldheader}
+	<SPAN {$THIS_SIX_MONTH_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_SIX_MONTH" data-fieldname="THIS_SIX_MONTH">
+	{$label DHIS2PeriodsView THIS_SIX_MONTH }	{$arrow_icon_THIS_SIX_MONTH}
+	</SPAN>
+	{END THIS_SIX_MONTH_fieldheader}
+{END THIS_SIX_MONTH_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_SIX_MONTH_class}	"
+
+			data-field="LAST_SIX_MONTH"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_SIX_MONTH_fieldheadercolumn}
+	{BEGIN LAST_SIX_MONTH_fieldheader}
+	<SPAN {$LAST_SIX_MONTH_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_SIX_MONTH" data-fieldname="LAST_SIX_MONTH">
+	{$label DHIS2PeriodsView LAST_SIX_MONTH }	{$arrow_icon_LAST_SIX_MONTH}
+	</SPAN>
+	{END LAST_SIX_MONTH_fieldheader}
+{END LAST_SIX_MONTH_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MONTHS_THIS_YEAR_class}	"
+
+			data-field="MONTHS_THIS_YEAR"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MONTHS_THIS_YEAR_fieldheadercolumn}
+	{BEGIN MONTHS_THIS_YEAR_fieldheader}
+	<SPAN {$MONTHS_THIS_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MONTHS_THIS_YEAR" data-fieldname="MONTHS_THIS_YEAR">
+	{$label DHIS2PeriodsView MONTHS_THIS_YEAR }	{$arrow_icon_MONTHS_THIS_YEAR}
+	</SPAN>
+	{END MONTHS_THIS_YEAR_fieldheader}
+{END MONTHS_THIS_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$QUARTERS_THIS_YEAR_class}	"
+
+			data-field="QUARTERS_THIS_YEAR"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN QUARTERS_THIS_YEAR_fieldheadercolumn}
+	{BEGIN QUARTERS_THIS_YEAR_fieldheader}
+	<SPAN {$QUARTERS_THIS_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="QUARTERS_THIS_YEAR" data-fieldname="QUARTERS_THIS_YEAR">
+	{$label DHIS2PeriodsView QUARTERS_THIS_YEAR }	{$arrow_icon_QUARTERS_THIS_YEAR}
+	</SPAN>
+	{END QUARTERS_THIS_YEAR_fieldheader}
+{END QUARTERS_THIS_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_YEAR_class}	"
+
+			data-field="THIS_YEAR"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_YEAR_fieldheadercolumn}
+	{BEGIN THIS_YEAR_fieldheader}
+	<SPAN {$THIS_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_YEAR" data-fieldname="THIS_YEAR">
+	{$label DHIS2PeriodsView THIS_YEAR }	{$arrow_icon_THIS_YEAR}
+	</SPAN>
+	{END THIS_YEAR_fieldheader}
+{END THIS_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MONTHS_LAST_YEAR_class}	"
+
+			data-field="MONTHS_LAST_YEAR"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MONTHS_LAST_YEAR_fieldheadercolumn}
+	{BEGIN MONTHS_LAST_YEAR_fieldheader}
+	<SPAN {$MONTHS_LAST_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MONTHS_LAST_YEAR" data-fieldname="MONTHS_LAST_YEAR">
+	{$label DHIS2PeriodsView MONTHS_LAST_YEAR }	{$arrow_icon_MONTHS_LAST_YEAR}
+	</SPAN>
+	{END MONTHS_LAST_YEAR_fieldheader}
+{END MONTHS_LAST_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$QUARTERS_LAST_YEAR_class}	"
+
+			data-field="QUARTERS_LAST_YEAR"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN QUARTERS_LAST_YEAR_fieldheadercolumn}
+	{BEGIN QUARTERS_LAST_YEAR_fieldheader}
+	<SPAN {$QUARTERS_LAST_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="QUARTERS_LAST_YEAR" data-fieldname="QUARTERS_LAST_YEAR">
+	{$label DHIS2PeriodsView QUARTERS_LAST_YEAR }	{$arrow_icon_QUARTERS_LAST_YEAR}
+	</SPAN>
+	{END QUARTERS_LAST_YEAR_fieldheader}
+{END QUARTERS_LAST_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_YEAR_class}	"
+
+			data-field="LAST_YEAR"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_YEAR_fieldheadercolumn}
+	{BEGIN LAST_YEAR_fieldheader}
+	<SPAN {$LAST_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_YEAR" data-fieldname="LAST_YEAR">
+	{$label DHIS2PeriodsView LAST_YEAR }	{$arrow_icon_LAST_YEAR}
+	</SPAN>
+	{END LAST_YEAR_fieldheader}
+{END LAST_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_5_YEARS_class}	"
+
+			data-field="LAST_5_YEARS"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_5_YEARS_fieldheadercolumn}
+	{BEGIN LAST_5_YEARS_fieldheader}
+	<SPAN {$LAST_5_YEARS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_5_YEARS" data-fieldname="LAST_5_YEARS">
+	{$label DHIS2PeriodsView LAST_5_YEARS }	{$arrow_icon_LAST_5_YEARS}
+	</SPAN>
+	{END LAST_5_YEARS_fieldheader}
+{END LAST_5_YEARS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_12_MONTHS_class}	"
+
+			data-field="LAST_12_MONTHS"
+	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_12_MONTHS_fieldheadercolumn}
+	{BEGIN LAST_12_MONTHS_fieldheader}
+	<SPAN {$LAST_12_MONTHS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_12_MONTHS" data-fieldname="LAST_12_MONTHS">
+	{$label DHIS2PeriodsView LAST_12_MONTHS }	{$arrow_icon_LAST_12_MONTHS}
+	</SPAN>
+	{END LAST_12_MONTHS_fieldheader}
+{END LAST_12_MONTHS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field20}
+									{BEGIN cellblock_grid_headcell_field21}
+	<th
+	
+	{$cell_grid_headcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_3_MONTHS_class}	"
+
+			data-field="LAST_3_MONTHS"
+	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_3_MONTHS_fieldheadercolumn}
+	{BEGIN LAST_3_MONTHS_fieldheader}
+	<SPAN {$LAST_3_MONTHS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_3_MONTHS" data-fieldname="LAST_3_MONTHS">
+	{$label DHIS2PeriodsView LAST_3_MONTHS }	{$arrow_icon_LAST_3_MONTHS}
+	</SPAN>
+	{END LAST_3_MONTHS_fieldheader}
+{END LAST_3_MONTHS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field21}
+									{BEGIN cellblock_grid_headcell_field22}
+	<th
+	
+	{$cell_grid_headcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_6_BIMONTHS_class}	"
+
+			data-field="LAST_6_BIMONTHS"
+	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_6_BIMONTHS_fieldheadercolumn}
+	{BEGIN LAST_6_BIMONTHS_fieldheader}
+	<SPAN {$LAST_6_BIMONTHS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_6_BIMONTHS" data-fieldname="LAST_6_BIMONTHS">
+	{$label DHIS2PeriodsView LAST_6_BIMONTHS }	{$arrow_icon_LAST_6_BIMONTHS}
+	</SPAN>
+	{END LAST_6_BIMONTHS_fieldheader}
+{END LAST_6_BIMONTHS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_4_QUARTERS_class}	"
+
+			data-field="LAST_4_QUARTERS"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_4_QUARTERS_fieldheadercolumn}
+	{BEGIN LAST_4_QUARTERS_fieldheader}
+	<SPAN {$LAST_4_QUARTERS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_4_QUARTERS" data-fieldname="LAST_4_QUARTERS">
+	{$label DHIS2PeriodsView LAST_4_QUARTERS }	{$arrow_icon_LAST_4_QUARTERS}
+	</SPAN>
+	{END LAST_4_QUARTERS_fieldheader}
+{END LAST_4_QUARTERS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
+	<th
+	
+	{$cell_grid_headcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_2_SIXMONTHS_class}	"
+
+			data-field="LAST_2_SIXMONTHS"
+	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_2_SIXMONTHS_fieldheadercolumn}
+	{BEGIN LAST_2_SIXMONTHS_fieldheader}
+	<SPAN {$LAST_2_SIXMONTHS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_2_SIXMONTHS" data-fieldname="LAST_2_SIXMONTHS">
+	{$label DHIS2PeriodsView LAST_2_SIXMONTHS }	{$arrow_icon_LAST_2_SIXMONTHS}
+	</SPAN>
+	{END LAST_2_SIXMONTHS_fieldheader}
+{END LAST_2_SIXMONTHS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
+	<th
+	
+	{$cell_grid_headcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_FINANCIAL_YEAR_class}	"
+
+			data-field="THIS_FINANCIAL_YEAR"
+	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_FINANCIAL_YEAR_fieldheadercolumn}
+	{BEGIN THIS_FINANCIAL_YEAR_fieldheader}
+	<SPAN {$THIS_FINANCIAL_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_FINANCIAL_YEAR" data-fieldname="THIS_FINANCIAL_YEAR">
+	{$label DHIS2PeriodsView THIS_FINANCIAL_YEAR }	{$arrow_icon_THIS_FINANCIAL_YEAR}
+	</SPAN>
+	{END THIS_FINANCIAL_YEAR_fieldheader}
+{END THIS_FINANCIAL_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
+	<th
+	
+	{$cell_grid_headcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_FINANCIAL_YEAR_class}	"
+
+			data-field="LAST_FINANCIAL_YEAR"
+	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_FINANCIAL_YEAR_fieldheadercolumn}
+	{BEGIN LAST_FINANCIAL_YEAR_fieldheader}
+	<SPAN {$LAST_FINANCIAL_YEAR_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_FINANCIAL_YEAR" data-fieldname="LAST_FINANCIAL_YEAR">
+	{$label DHIS2PeriodsView LAST_FINANCIAL_YEAR }	{$arrow_icon_LAST_FINANCIAL_YEAR}
+	</SPAN>
+	{END LAST_FINANCIAL_YEAR_fieldheader}
+{END LAST_FINANCIAL_YEAR_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
+	<th
+	
+	{$cell_grid_headcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_5_FINANCIAL_YEARS_class}	"
+
+			data-field="LAST_5_FINANCIAL_YEARS"
+	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_5_FINANCIAL_YEARS_fieldheadercolumn}
+	{BEGIN LAST_5_FINANCIAL_YEARS_fieldheader}
+	<SPAN {$LAST_5_FINANCIAL_YEARS_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_5_FINANCIAL_YEARS" data-fieldname="LAST_5_FINANCIAL_YEARS">
+	{$label DHIS2PeriodsView LAST_5_FINANCIAL_YEARS }	{$arrow_icon_LAST_5_FINANCIAL_YEARS}
+	</SPAN>
+	{END LAST_5_FINANCIAL_YEARS_fieldheader}
+{END LAST_5_FINANCIAL_YEARS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field27}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Show details"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	
+	</td>
+	{END cellblock_grid_cell_details}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_WEEK_class}	"
+
+			data-field="THIS_WEEK"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_WEEK_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_WEEK" data-fieldname="THIS_WEEK" data-default-width >
+{$THIS_WEEK_value}
+</span>
+{END THIS_WEEK_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_WEEK_class}	"
+
+			data-field="LAST_WEEK"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_WEEK_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_WEEK" data-fieldname="LAST_WEEK" data-default-width >
+{$LAST_WEEK_value}
+</span>
+{END LAST_WEEK_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_4_WEEKS_class}	"
+
+			data-field="LAST_4_WEEKS"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_4_WEEKS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_4_WEEKS" data-fieldname="LAST_4_WEEKS" data-default-width >
+{$LAST_4_WEEKS_value}
+</span>
+{END LAST_4_WEEKS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_12_WEEKS_class}	"
+
+			data-field="LAST_12_WEEKS"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_12_WEEKS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_12_WEEKS" data-fieldname="LAST_12_WEEKS" data-default-width >
+{$LAST_12_WEEKS_value}
+</span>
+{END LAST_12_WEEKS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_52_WEEKS_class}	"
+
+			data-field="LAST_52_WEEKS"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_52_WEEKS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_52_WEEKS" data-fieldname="LAST_52_WEEKS" data-default-width >
+{$LAST_52_WEEKS_value}
+</span>
+{END LAST_52_WEEKS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_MONTH_class}	"
+
+			data-field="THIS_MONTH"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_MONTH_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_MONTH" data-fieldname="THIS_MONTH" data-default-width >
+{$THIS_MONTH_value}
+</span>
+{END THIS_MONTH_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_MONTH_class}	"
+
+			data-field="LAST_MONTH"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_MONTH_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_MONTH" data-fieldname="LAST_MONTH" data-default-width >
+{$LAST_MONTH_value}
+</span>
+{END LAST_MONTH_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_BIMONTH_class}	"
+
+			data-field="THIS_BIMONTH"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_BIMONTH_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_BIMONTH" data-fieldname="THIS_BIMONTH" data-default-width >
+{$THIS_BIMONTH_value}
+</span>
+{END THIS_BIMONTH_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_BIMONTH_class}	"
+
+			data-field="LAST_BIMONTH"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_BIMONTH_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_BIMONTH" data-fieldname="LAST_BIMONTH" data-default-width >
+{$LAST_BIMONTH_value}
+</span>
+{END LAST_BIMONTH_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_QUARTER_class}	"
+
+			data-field="THIS_QUARTER"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_QUARTER_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_QUARTER" data-fieldname="THIS_QUARTER" data-default-width >
+{$THIS_QUARTER_value}
+</span>
+{END THIS_QUARTER_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_QUARTER_class}	"
+
+			data-field="LAST_QUARTER"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_QUARTER_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_QUARTER" data-fieldname="LAST_QUARTER" data-default-width >
+{$LAST_QUARTER_value}
+</span>
+{END LAST_QUARTER_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_SIX_MONTH_class}	"
+
+			data-field="THIS_SIX_MONTH"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_SIX_MONTH_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_SIX_MONTH" data-fieldname="THIS_SIX_MONTH" data-default-width >
+{$THIS_SIX_MONTH_value}
+</span>
+{END THIS_SIX_MONTH_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_SIX_MONTH_class}	"
+
+			data-field="LAST_SIX_MONTH"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_SIX_MONTH_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_SIX_MONTH" data-fieldname="LAST_SIX_MONTH" data-default-width >
+{$LAST_SIX_MONTH_value}
+</span>
+{END LAST_SIX_MONTH_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MONTHS_THIS_YEAR_class}	"
+
+			data-field="MONTHS_THIS_YEAR"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MONTHS_THIS_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MONTHS_THIS_YEAR" data-fieldname="MONTHS_THIS_YEAR" data-default-width >
+{$MONTHS_THIS_YEAR_value}
+</span>
+{END MONTHS_THIS_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$QUARTERS_THIS_YEAR_class}	"
+
+			data-field="QUARTERS_THIS_YEAR"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN QUARTERS_THIS_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="QUARTERS_THIS_YEAR" data-fieldname="QUARTERS_THIS_YEAR" data-default-width >
+{$QUARTERS_THIS_YEAR_value}
+</span>
+{END QUARTERS_THIS_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_YEAR_class}	"
+
+			data-field="THIS_YEAR"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_YEAR" data-fieldname="THIS_YEAR" data-default-width >
+{$THIS_YEAR_value}
+</span>
+{END THIS_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MONTHS_LAST_YEAR_class}	"
+
+			data-field="MONTHS_LAST_YEAR"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MONTHS_LAST_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MONTHS_LAST_YEAR" data-fieldname="MONTHS_LAST_YEAR" data-default-width >
+{$MONTHS_LAST_YEAR_value}
+</span>
+{END MONTHS_LAST_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$QUARTERS_LAST_YEAR_class}	"
+
+			data-field="QUARTERS_LAST_YEAR"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN QUARTERS_LAST_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="QUARTERS_LAST_YEAR" data-fieldname="QUARTERS_LAST_YEAR" data-default-width >
+{$QUARTERS_LAST_YEAR_value}
+</span>
+{END QUARTERS_LAST_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_YEAR_class}	"
+
+			data-field="LAST_YEAR"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_YEAR" data-fieldname="LAST_YEAR" data-default-width >
+{$LAST_YEAR_value}
+</span>
+{END LAST_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_5_YEARS_class}	"
+
+			data-field="LAST_5_YEARS"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_5_YEARS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_5_YEARS" data-fieldname="LAST_5_YEARS" data-default-width >
+{$LAST_5_YEARS_value}
+</span>
+{END LAST_5_YEARS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_12_MONTHS_class}	"
+
+			data-field="LAST_12_MONTHS"
+	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_12_MONTHS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_12_MONTHS" data-fieldname="LAST_12_MONTHS" data-default-width >
+{$LAST_12_MONTHS_value}
+</span>
+{END LAST_12_MONTHS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field20}
+									{BEGIN cellblock_grid_cell_field21}
+	<td
+	
+	{$cell_grid_cell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_3_MONTHS_class}	"
+
+			data-field="LAST_3_MONTHS"
+	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_3_MONTHS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_3_MONTHS" data-fieldname="LAST_3_MONTHS" data-default-width >
+{$LAST_3_MONTHS_value}
+</span>
+{END LAST_3_MONTHS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field21}
+									{BEGIN cellblock_grid_cell_field22}
+	<td
+	
+	{$cell_grid_cell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_6_BIMONTHS_class}	"
+
+			data-field="LAST_6_BIMONTHS"
+	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_6_BIMONTHS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_6_BIMONTHS" data-fieldname="LAST_6_BIMONTHS" data-default-width >
+{$LAST_6_BIMONTHS_value}
+</span>
+{END LAST_6_BIMONTHS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_4_QUARTERS_class}	"
+
+			data-field="LAST_4_QUARTERS"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_4_QUARTERS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_4_QUARTERS" data-fieldname="LAST_4_QUARTERS" data-default-width >
+{$LAST_4_QUARTERS_value}
+</span>
+{END LAST_4_QUARTERS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
+	<td
+	
+	{$cell_grid_cell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_2_SIXMONTHS_class}	"
+
+			data-field="LAST_2_SIXMONTHS"
+	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_2_SIXMONTHS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_2_SIXMONTHS" data-fieldname="LAST_2_SIXMONTHS" data-default-width >
+{$LAST_2_SIXMONTHS_value}
+</span>
+{END LAST_2_SIXMONTHS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
+	<td
+	
+	{$cell_grid_cell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_FINANCIAL_YEAR_class}	"
+
+			data-field="THIS_FINANCIAL_YEAR"
+	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN THIS_FINANCIAL_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="THIS_FINANCIAL_YEAR" data-fieldname="THIS_FINANCIAL_YEAR" data-default-width >
+{$THIS_FINANCIAL_YEAR_value}
+</span>
+{END THIS_FINANCIAL_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
+	<td
+	
+	{$cell_grid_cell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_FINANCIAL_YEAR_class}	"
+
+			data-field="LAST_FINANCIAL_YEAR"
+	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_FINANCIAL_YEAR_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_FINANCIAL_YEAR" data-fieldname="LAST_FINANCIAL_YEAR" data-default-width >
+{$LAST_FINANCIAL_YEAR_value}
+</span>
+{END LAST_FINANCIAL_YEAR_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
+	<td
+	
+	{$cell_grid_cell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_5_FINANCIAL_YEARS_class}	"
+
+			data-field="LAST_5_FINANCIAL_YEARS"
+	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN LAST_5_FINANCIAL_YEARS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="LAST_5_FINANCIAL_YEARS" data-fieldname="LAST_5_FINANCIAL_YEARS" data-default-width >
+{$LAST_5_FINANCIAL_YEARS_value}
+</span>
+{END LAST_5_FINANCIAL_YEARS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field27}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_WEEK_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_WEEK_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_4_WEEKS_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_12_WEEKS_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_52_WEEKS_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_MONTH_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_MONTH_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_BIMONTH_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_BIMONTH_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_QUARTER_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_QUARTER_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_SIX_MONTH_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_SIX_MONTH_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MONTHS_THIS_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$QUARTERS_THIS_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MONTHS_LAST_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$QUARTERS_LAST_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_5_YEARS_class}	"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+									{BEGIN cellblock_grid_footcell_field20}
+	<td
+	
+	{$cell_grid_footcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_12_MONTHS_class}	"
+
+	
+	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field20}
+									{BEGIN cellblock_grid_footcell_field21}
+	<td
+	
+	{$cell_grid_footcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_3_MONTHS_class}	"
+
+	
+	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field21}
+									{BEGIN cellblock_grid_footcell_field22}
+	<td
+	
+	{$cell_grid_footcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_6_BIMONTHS_class}	"
+
+	
+	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field22}
+									{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_4_QUARTERS_class}	"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+									{BEGIN cellblock_grid_footcell_field24}
+	<td
+	
+	{$cell_grid_footcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_2_SIXMONTHS_class}	"
+
+	
+	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field24}
+									{BEGIN cellblock_grid_footcell_field25}
+	<td
+	
+	{$cell_grid_footcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$THIS_FINANCIAL_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field25}
+									{BEGIN cellblock_grid_footcell_field26}
+	<td
+	
+	{$cell_grid_footcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_FINANCIAL_YEAR_class}	"
+
+	
+	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field26}
+									{BEGIN cellblock_grid_footcell_field27}
+	<td
+	
+	{$cell_grid_footcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$LAST_5_FINANCIAL_YEARS_class}	"
+
+	
+	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2periodsview_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field27}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	
+			{BEGIN below-grid_outerblock}
+		<div class="panel-footer">
+			{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+		</div>
+	{END below-grid_outerblock}
+		</div>
+
+</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

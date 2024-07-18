@@ -21,6 +21,12 @@ class RestManager
 		$connectionsIds["MFR_Region_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Woreda_Report"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["DHIS2_Indicators"] = "xhispmdathispmdmerqconsultancy";
+		$connectionsIds["DHIS2_Organisation_Units"] = "xhispmdathispmdmerqconsultancy";
+		$connectionsIds["DHIS2_Analytics"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2PeriodsView"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Indicator"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Organisation_Unit"] = "devdhis2hispmdathispmdmerqcons";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 
@@ -41,6 +47,30 @@ class RestManager
 		$data["authType"] = "none";
 				
 	$connectionsData["hispmdathispmdmerqconsultancyo"] = $data;
+		$data = array();
+		$data["connId"] = "xhispmdathispmdmerqconsultancy";
+		$data["connName"] = "MOH_DHIS2_Report_Dash_API_Const";
+
+		$this->_connectionsIdByName["MOH_DHIS2_Report_Dash_API_Const"] = "xhispmdathispmdmerqconsultancy";
+
+		$data["url"] = "https://dhis2.merqconsultancy.org";
+		$data["authType"] = "basic";
+			$data["username"] = "admin";
+		$data["password"] = "district";
+			
+	$connectionsData["xhispmdathispmdmerqconsultancy"] = $data;
+		$data = array();
+		$data["connId"] = "devdhis2hispmdathispmdmerqcons";
+		$data["connName"] = "MOH_DHIS2_Analytics_Report_API";
+
+		$this->_connectionsIdByName["MOH_DHIS2_Analytics_Report_API"] = "devdhis2hispmdathispmdmerqcons";
+
+		$data["url"] = "https://hispmd.merqconsultancy.org";
+		$data["authType"] = "basic";
+			$data["username"] = "admin";
+		$data["password"] = "district";
+			
+	$connectionsData["devdhis2hispmdathispmdmerqcons"] = $data;
 		$this->_connectionsData = &$connectionsData;
 	}
 

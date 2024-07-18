@@ -1,0 +1,766 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./moh.png" />		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2PeriodsView search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN THIS_WEEK_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_WEEK}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_WEEK{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="THIS_WEEK" data-fieldname="THIS_WEEK" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_WEEK}">
+		{$label DHIS2PeriodsView THIS_WEEK }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_WEEK}
+	</div>
+	<div class="r-search-field">
+		{$THIS_WEEK_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_WEEK_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_WEEK_fieldblock}
+											
+{BEGIN LAST_WEEK_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_WEEK}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_WEEK{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="LAST_WEEK" data-fieldname="LAST_WEEK" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_WEEK}">
+		{$label DHIS2PeriodsView LAST_WEEK }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_WEEK}
+	</div>
+	<div class="r-search-field">
+		{$LAST_WEEK_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_WEEK_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_WEEK_fieldblock}
+											
+{BEGIN LAST_4_WEEKS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_4_WEEKS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_4_WEEKS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="LAST_4_WEEKS" data-fieldname="LAST_4_WEEKS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_4_WEEKS}">
+		{$label DHIS2PeriodsView LAST_4_WEEKS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_4_WEEKS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_4_WEEKS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_4_WEEKS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_4_WEEKS_fieldblock}
+											
+{BEGIN LAST_12_WEEKS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_12_WEEKS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_12_WEEKS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="LAST_12_WEEKS" data-fieldname="LAST_12_WEEKS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_12_WEEKS}">
+		{$label DHIS2PeriodsView LAST_12_WEEKS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_12_WEEKS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_12_WEEKS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_12_WEEKS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_12_WEEKS_fieldblock}
+											
+{BEGIN LAST_52_WEEKS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_52_WEEKS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_52_WEEKS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="LAST_52_WEEKS" data-fieldname="LAST_52_WEEKS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_52_WEEKS}">
+		{$label DHIS2PeriodsView LAST_52_WEEKS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_52_WEEKS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_52_WEEKS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_52_WEEKS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_52_WEEKS_fieldblock}
+											
+{BEGIN THIS_MONTH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_MONTH}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_MONTH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="THIS_MONTH" data-fieldname="THIS_MONTH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_MONTH}">
+		{$label DHIS2PeriodsView THIS_MONTH }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_MONTH}
+	</div>
+	<div class="r-search-field">
+		{$THIS_MONTH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_MONTH_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_MONTH_fieldblock}
+											
+{BEGIN LAST_MONTH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_MONTH}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_MONTH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="LAST_MONTH" data-fieldname="LAST_MONTH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_MONTH}">
+		{$label DHIS2PeriodsView LAST_MONTH }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_MONTH}
+	</div>
+	<div class="r-search-field">
+		{$LAST_MONTH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_MONTH_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_MONTH_fieldblock}
+											
+{BEGIN THIS_BIMONTH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_BIMONTH}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_BIMONTH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="THIS_BIMONTH" data-fieldname="THIS_BIMONTH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_BIMONTH}">
+		{$label DHIS2PeriodsView THIS_BIMONTH }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_BIMONTH}
+	</div>
+	<div class="r-search-field">
+		{$THIS_BIMONTH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_BIMONTH_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_BIMONTH_fieldblock}
+											
+{BEGIN LAST_BIMONTH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_BIMONTH}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_BIMONTH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="LAST_BIMONTH" data-fieldname="LAST_BIMONTH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_BIMONTH}">
+		{$label DHIS2PeriodsView LAST_BIMONTH }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_BIMONTH}
+	</div>
+	<div class="r-search-field">
+		{$LAST_BIMONTH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_BIMONTH_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_BIMONTH_fieldblock}
+											
+{BEGIN THIS_QUARTER_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_QUARTER}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_QUARTER{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="THIS_QUARTER" data-fieldname="THIS_QUARTER" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_QUARTER}">
+		{$label DHIS2PeriodsView THIS_QUARTER }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_QUARTER}
+	</div>
+	<div class="r-search-field">
+		{$THIS_QUARTER_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_QUARTER_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_QUARTER_fieldblock}
+											
+{BEGIN LAST_QUARTER_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_QUARTER}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_QUARTER{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="LAST_QUARTER" data-fieldname="LAST_QUARTER" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_QUARTER}">
+		{$label DHIS2PeriodsView LAST_QUARTER }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_QUARTER}
+	</div>
+	<div class="r-search-field">
+		{$LAST_QUARTER_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_QUARTER_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_QUARTER_fieldblock}
+											
+{BEGIN THIS_SIX_MONTH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_SIX_MONTH}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_SIX_MONTH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="THIS_SIX_MONTH" data-fieldname="THIS_SIX_MONTH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_SIX_MONTH}">
+		{$label DHIS2PeriodsView THIS_SIX_MONTH }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_SIX_MONTH}
+	</div>
+	<div class="r-search-field">
+		{$THIS_SIX_MONTH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_SIX_MONTH_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_SIX_MONTH_fieldblock}
+											
+{BEGIN LAST_SIX_MONTH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_SIX_MONTH}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_SIX_MONTH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="LAST_SIX_MONTH" data-fieldname="LAST_SIX_MONTH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_SIX_MONTH}">
+		{$label DHIS2PeriodsView LAST_SIX_MONTH }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_SIX_MONTH}
+	</div>
+	<div class="r-search-field">
+		{$LAST_SIX_MONTH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_SIX_MONTH_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_SIX_MONTH_fieldblock}
+											
+{BEGIN MONTHS_THIS_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MONTHS_THIS_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="MONTHS_THIS_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="MONTHS_THIS_YEAR" data-fieldname="MONTHS_THIS_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_MONTHS_THIS_YEAR}">
+		{$label DHIS2PeriodsView MONTHS_THIS_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_MONTHS_THIS_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$MONTHS_THIS_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$MONTHS_THIS_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END MONTHS_THIS_YEAR_fieldblock}
+											
+{BEGIN QUARTERS_THIS_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_QUARTERS_THIS_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="QUARTERS_THIS_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="QUARTERS_THIS_YEAR" data-fieldname="QUARTERS_THIS_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_QUARTERS_THIS_YEAR}">
+		{$label DHIS2PeriodsView QUARTERS_THIS_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_QUARTERS_THIS_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$QUARTERS_THIS_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$QUARTERS_THIS_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END QUARTERS_THIS_YEAR_fieldblock}
+											
+{BEGIN THIS_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="THIS_YEAR" data-fieldname="THIS_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_YEAR}">
+		{$label DHIS2PeriodsView THIS_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$THIS_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_YEAR_fieldblock}
+											
+{BEGIN MONTHS_LAST_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MONTHS_LAST_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="MONTHS_LAST_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="MONTHS_LAST_YEAR" data-fieldname="MONTHS_LAST_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_MONTHS_LAST_YEAR}">
+		{$label DHIS2PeriodsView MONTHS_LAST_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_MONTHS_LAST_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$MONTHS_LAST_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$MONTHS_LAST_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END MONTHS_LAST_YEAR_fieldblock}
+											
+{BEGIN QUARTERS_LAST_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_QUARTERS_LAST_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="QUARTERS_LAST_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="QUARTERS_LAST_YEAR" data-fieldname="QUARTERS_LAST_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_QUARTERS_LAST_YEAR}">
+		{$label DHIS2PeriodsView QUARTERS_LAST_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_QUARTERS_LAST_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$QUARTERS_LAST_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$QUARTERS_LAST_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END QUARTERS_LAST_YEAR_fieldblock}
+											
+{BEGIN LAST_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="LAST_YEAR" data-fieldname="LAST_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_YEAR}">
+		{$label DHIS2PeriodsView LAST_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$LAST_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_YEAR_fieldblock}
+											
+{BEGIN LAST_5_YEARS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_5_YEARS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_5_YEARS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="LAST_5_YEARS" data-fieldname="LAST_5_YEARS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_5_YEARS}">
+		{$label DHIS2PeriodsView LAST_5_YEARS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_5_YEARS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_5_YEARS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_5_YEARS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_5_YEARS_fieldblock}
+											
+{BEGIN LAST_12_MONTHS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_12_MONTHS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_12_MONTHS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="LAST_12_MONTHS" data-fieldname="LAST_12_MONTHS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_12_MONTHS}">
+		{$label DHIS2PeriodsView LAST_12_MONTHS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_12_MONTHS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_12_MONTHS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_12_MONTHS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_12_MONTHS_fieldblock}
+											
+{BEGIN LAST_3_MONTHS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_3_MONTHS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_3_MONTHS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="LAST_3_MONTHS" data-fieldname="LAST_3_MONTHS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_3_MONTHS}">
+		{$label DHIS2PeriodsView LAST_3_MONTHS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_3_MONTHS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_3_MONTHS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_3_MONTHS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_3_MONTHS_fieldblock}
+											
+{BEGIN LAST_6_BIMONTHS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_6_BIMONTHS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_6_BIMONTHS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field22" {$item_integrated_search_field22} data-pageid="{$pageid}" data-field="LAST_6_BIMONTHS" data-fieldname="LAST_6_BIMONTHS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_6_BIMONTHS}">
+		{$label DHIS2PeriodsView LAST_6_BIMONTHS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_6_BIMONTHS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_6_BIMONTHS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_6_BIMONTHS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_6_BIMONTHS_fieldblock}
+											
+{BEGIN LAST_4_QUARTERS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_4_QUARTERS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_4_QUARTERS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field23" {$item_integrated_search_field23} data-pageid="{$pageid}" data-field="LAST_4_QUARTERS" data-fieldname="LAST_4_QUARTERS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_4_QUARTERS}">
+		{$label DHIS2PeriodsView LAST_4_QUARTERS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_4_QUARTERS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_4_QUARTERS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_4_QUARTERS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_4_QUARTERS_fieldblock}
+											
+{BEGIN LAST_2_SIXMONTHS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_2_SIXMONTHS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_2_SIXMONTHS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field24" {$item_integrated_search_field24} data-pageid="{$pageid}" data-field="LAST_2_SIXMONTHS" data-fieldname="LAST_2_SIXMONTHS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_2_SIXMONTHS}">
+		{$label DHIS2PeriodsView LAST_2_SIXMONTHS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_2_SIXMONTHS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_2_SIXMONTHS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_2_SIXMONTHS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_2_SIXMONTHS_fieldblock}
+											
+{BEGIN THIS_FINANCIAL_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_THIS_FINANCIAL_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="THIS_FINANCIAL_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field25" {$item_integrated_search_field25} data-pageid="{$pageid}" data-field="THIS_FINANCIAL_YEAR" data-fieldname="THIS_FINANCIAL_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_THIS_FINANCIAL_YEAR}">
+		{$label DHIS2PeriodsView THIS_FINANCIAL_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_THIS_FINANCIAL_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$THIS_FINANCIAL_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$THIS_FINANCIAL_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END THIS_FINANCIAL_YEAR_fieldblock}
+											
+{BEGIN LAST_FINANCIAL_YEAR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_FINANCIAL_YEAR}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_FINANCIAL_YEAR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field26" {$item_integrated_search_field26} data-pageid="{$pageid}" data-field="LAST_FINANCIAL_YEAR" data-fieldname="LAST_FINANCIAL_YEAR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_FINANCIAL_YEAR}">
+		{$label DHIS2PeriodsView LAST_FINANCIAL_YEAR }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_FINANCIAL_YEAR}
+	</div>
+	<div class="r-search-field">
+		{$LAST_FINANCIAL_YEAR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_FINANCIAL_YEAR_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_FINANCIAL_YEAR_fieldblock}
+											
+{BEGIN LAST_5_FINANCIAL_YEARS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LAST_5_FINANCIAL_YEARS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LAST_5_FINANCIAL_YEARS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field27" {$item_integrated_search_field27} data-pageid="{$pageid}" data-field="LAST_5_FINANCIAL_YEARS" data-fieldname="LAST_5_FINANCIAL_YEARS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LAST_5_FINANCIAL_YEARS}">
+		{$label DHIS2PeriodsView LAST_5_FINANCIAL_YEARS }	</label>
+	<div class="r-search-option">
+		{$searchtype_LAST_5_FINANCIAL_YEARS}
+	</div>
+	<div class="r-search-field">
+		{$LAST_5_FINANCIAL_YEARS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LAST_5_FINANCIAL_YEARS_editcontrol1}
+	</div>
+	
+</div>
+
+{END LAST_5_FINANCIAL_YEARS_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHIS2 Data Fetch</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch and populate indicators
+            $.getJSON('fetch_indicators.php', function(data) {
+                var indicatorSelect = $('#indicator');
+                $.each(data.indicators, function(index, item) {
+                    indicatorSelect.append($('<option>', {
+                        value: item.id,
+                        text: item.displayName
+                    }));
+                });
+            });
+
+            // Fetch and populate organization units
+            $.getJSON('fetch_org_units.php', function(data) {
+                var orgUnitSelect = $('#orgUnit');
+                $.each(data.organisationUnits, function(index, item) {
+                    orgUnitSelect.append($('<option>', {
+                        value: item.id,
+                        text: item.displayName
+                    }));
+                });
+            });
+
+            // Fetch and populate periods
+            $.getJSON('fetch_periods.php', function(data) {
+                var periodSelect = $('#period');
+                $.each(data, function(key, value) {
+                    periodSelect.append($('<option>', {
+                        value: key,
+                        text: value
+                    }));
+                });
+            });
+
+            // Handle form submission
+            $('#fetchDataForm').on('submit', function(event) {
+                event.preventDefault();
+                var indicator = $('#indicator').val();
+                var orgUnit = $('#orgUnit').val();
+                var period = $('#period').val();
+
+                $.getJSON('get_dhis2_analytics.php', { indicator: indicator, orgUnit: orgUnit, period: period }, function(data) {
+                    $('#result').html('<pre>' + JSON.stringify(data, null, 2) + '</pre>');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<h1>DHIS2 Data Fetch</h1>
+
+<form id="fetchDataForm">
+    <label for="indicator">Select Indicator:</label>
+    <select name="indicator" id="indicator" required></select>
+
+    <br><br>
+
+    <label for="orgUnit">Select Organization Unit:</label>
+    <select name="orgUnit" id="orgUnit" required></select>
+
+    <br><br>
+
+    <label for="period">Select Period:</label>
+    <select name="period" id="period" required></select>
+
+    <br><br>
+
+    <button type="submit">Fetch Data</button>
+</form>
+
+<div id="result"></div>
+
+</body>
+</html>

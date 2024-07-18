@@ -673,7 +673,7 @@ require_once( getabspath( "include/mfr_status_report_ops.php" ) );
 
 
 	
-		;
+						;
 
 			
 

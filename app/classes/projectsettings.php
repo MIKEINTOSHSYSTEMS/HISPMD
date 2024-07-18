@@ -3572,6 +3572,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_woreda_chart" ] = "MFR_Woreda_Chart";
 	$projectEntities[ "AI_Data_Assistant" ] = array( "url" => "ai_data_assistant", "type" => 0 );
 	$projectEntitiesReverse[ "ai_data_assistant" ] = "AI_Data_Assistant";
+	$projectEntities[ "DHIS2_Indicators" ] = array( "url" => "dhis2_indicators", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_indicators" ] = "DHIS2_Indicators";
+	$projectEntities[ "DHIS2_Organisation_Units" ] = array( "url" => "dhis2_organisation_units", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_organisation_units" ] = "DHIS2_Organisation_Units";
+	$projectEntities[ "DHIS2_Analytics" ] = array( "url" => "dhis2_analytics1", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_analytics1" ] = "DHIS2_Analytics";
+	$projectEntities[ "DHIS2PeriodsView" ] = array( "url" => "dhis2periodsview", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2periodsview" ] = "DHIS2PeriodsView";
+	$projectEntities[ "DHIS2_Indicator" ] = array( "url" => "dhis2_indicator", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_indicator" ] = "DHIS2_Indicator";
+	$projectEntities[ "DHIS2_Organisation_Unit" ] = array( "url" => "dhis2_organisation_unit", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_organisation_unit" ] = "DHIS2_Organisation_Unit";
 }
 
 function findTable( $table ) {

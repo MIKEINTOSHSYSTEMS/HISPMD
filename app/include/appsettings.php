@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "105_1721238351";
+$projectBuildKey = "116_1721238351";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "105";
+$projectBuildNumber = "116";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -780,6 +780,12 @@ $tableCaptions["English"]["MFR_Region_Chart"] = "MFR Region Chart";
 $tableCaptions["English"]["MFR_Zone_Chart"] = "MFR Zone Chart";
 $tableCaptions["English"]["MFR_Woreda_Chart"] = "MFR Woreda Chart";
 $tableCaptions["English"]["AI_Data_Assistant"] = "AI Data Assistant";
+$tableCaptions["English"]["DHIS2_Indicators"] = "DHIS2 Indicators";
+$tableCaptions["English"]["DHIS2_Organisation_Units"] = "DHIS2 Organisation Units";
+$tableCaptions["English"]["DHIS2_Analytics"] = "DHIS2 Analytics";
+$tableCaptions["English"]["DHIS2PeriodsView"] = "DHIS2Periods View";
+$tableCaptions["English"]["DHIS2_Indicator"] = "DHIS2 Indicator";
+$tableCaptions["English"]["DHIS2_Organisation_Unit"] = "DHIS2 Organisation Unit";
 
 
 $globalEvents = new class_GlobalEvents;
