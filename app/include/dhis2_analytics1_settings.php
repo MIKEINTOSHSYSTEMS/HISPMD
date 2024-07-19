@@ -25,6 +25,18 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsdhis2_analytics1["English"] = array();
 	$placeHoldersdhis2_analytics1["English"] = array();
 	$pageTitlesdhis2_analytics1["English"] = array();
+	$fieldLabelsdhis2_analytics1["English"]["Value"] = "Value";
+	$fieldToolTipsdhis2_analytics1["English"]["Value"] = "";
+	$placeHoldersdhis2_analytics1["English"]["Value"] = "";
+	$fieldLabelsdhis2_analytics1["English"]["dx"] = "Dx";
+	$fieldToolTipsdhis2_analytics1["English"]["dx"] = "";
+	$placeHoldersdhis2_analytics1["English"]["dx"] = "";
+	$fieldLabelsdhis2_analytics1["English"]["ou"] = "Ou";
+	$fieldToolTipsdhis2_analytics1["English"]["ou"] = "";
+	$placeHoldersdhis2_analytics1["English"]["ou"] = "";
+	$fieldLabelsdhis2_analytics1["English"]["pe"] = "Pe";
+	$fieldToolTipsdhis2_analytics1["English"]["pe"] = "";
+	$placeHoldersdhis2_analytics1["English"]["pe"] = "";
 	$fieldLabelsdhis2_analytics1["English"]["Data"] = "Data";
 	$fieldToolTipsdhis2_analytics1["English"]["Data"] = "";
 	$placeHoldersdhis2_analytics1["English"]["Data"] = "";
@@ -34,9 +46,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_analytics1["English"]["Period"] = "Period";
 	$fieldToolTipsdhis2_analytics1["English"]["Period"] = "";
 	$placeHoldersdhis2_analytics1["English"]["Period"] = "";
-	$fieldLabelsdhis2_analytics1["English"]["Value"] = "Value";
-	$fieldToolTipsdhis2_analytics1["English"]["Value"] = "";
-	$placeHoldersdhis2_analytics1["English"]["Value"] = "";
 	if (count($fieldToolTipsdhis2_analytics1["English"]))
 		$tdatadhis2_analytics1[".isUseToolTips"] = true;
 }
@@ -130,7 +139,7 @@ $tdatadhis2_analytics1[".allowShowHideFields"] = true; // temp fix #13449
 $tdatadhis2_analytics1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatadhis2_analytics1[".isUseAjaxSuggest"] = true;
+$tdatadhis2_analytics1[".isUseAjaxSuggest"] = false;
 
 
 
@@ -154,10 +163,12 @@ $tdatadhis2_analytics1[".filterFields"] = array();
 $tdatadhis2_analytics1[".requiredSearchFields"] = array();
 
 $tdatadhis2_analytics1[".googleLikeFields"] = array();
+$tdatadhis2_analytics1[".googleLikeFields"][] = "dx";
+$tdatadhis2_analytics1[".googleLikeFields"][] = "ou";
+$tdatadhis2_analytics1[".googleLikeFields"][] = "pe";
 $tdatadhis2_analytics1[".googleLikeFields"][] = "Data";
 $tdatadhis2_analytics1[".googleLikeFields"][] = "Organisation unit";
 $tdatadhis2_analytics1[".googleLikeFields"][] = "Period";
-$tdatadhis2_analytics1[".googleLikeFields"][] = "Value";
 
 
 
@@ -172,10 +183,10 @@ $tdatadhis2_analytics1[".geocodingEnabled"] = false;
 
 
 
+$tdatadhis2_analytics1[".isDisplayLoading"] = true;
 
 
 
-$tdatadhis2_analytics1[".noRecordsFirstPage"] = true;
 
 
 
@@ -238,14 +249,14 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 
 
-//	Data
+//	dx
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "Data";
-	$fdata["GoodName"] = "Data";
+	$fdata["strName"] = "dx";
+	$fdata["GoodName"] = "dx";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics","Data");
+	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics","dx");
 	$fdata["FieldType"] = 202;
 
 
@@ -253,7 +264,470 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "*/Data";
+		$fdata["strField"] = "dimensions/dx/*";
+
+	
+		$fdata["FullName"] = "dx";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "DHIS2_Indicator";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "displayName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_analytics1["dx"] = $fdata;
+		$tdatadhis2_analytics1[".searchableFields"][] = "dx";
+//	ou
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 2;
+	$fdata["strName"] = "ou";
+	$fdata["GoodName"] = "ou";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics","ou");
+	$fdata["FieldType"] = 202;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "dimensions/ou/*";
+
+	
+		$fdata["FullName"] = "ou";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "DHIS2_Organisation_Unit";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "displayName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_analytics1["ou"] = $fdata;
+		$tdatadhis2_analytics1[".searchableFields"][] = "ou";
+//	pe
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "pe";
+	$fdata["GoodName"] = "pe";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics","pe");
+	$fdata["FieldType"] = 202;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "dimensions/pe/*";
+
+	
+		$fdata["FullName"] = "pe";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_analytics1["pe"] = $fdata;
+		$tdatadhis2_analytics1[".searchableFields"][] = "pe";
+//	Data
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "Data";
+	$fdata["GoodName"] = "Data";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics","Data");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "rows/*/Data";
 
 	
 		$fdata["FullName"] = "Data";
@@ -376,19 +850,19 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 //	Organisation unit
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 2;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "Organisation unit";
 	$fdata["GoodName"] = "Organisation_unit";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics","Organisation_unit");
-	$fdata["FieldType"] = 202;
+	$fdata["FieldType"] = 3;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "*/Organisation unit";
+		$fdata["strField"] = "rows/*/Organisation unit";
 
 	
 		$fdata["FullName"] = "Organisation unit";
@@ -511,7 +985,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 //	Period
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "Period";
 	$fdata["GoodName"] = "Period";
 	$fdata["ownerTable"] = "";
@@ -523,7 +997,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "*/Period";
+		$fdata["strField"] = "rows/*/Period";
 
 	
 		$fdata["FullName"] = "Period";
@@ -535,7 +1009,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Short Date");
 
 	
 	
@@ -566,7 +1040,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Text field");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -616,7 +1090,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -626,7 +1100,8 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "Data";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -646,7 +1121,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 //	Value
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "Value";
 	$fdata["GoodName"] = "Value";
 	$fdata["ownerTable"] = "";
@@ -658,7 +1133,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "*/Value";
+		$fdata["strField"] = "rows/*/Value";
 
 	
 		$fdata["FullName"] = "Value";
@@ -710,8 +1185,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -733,9 +1207,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -815,7 +1287,7 @@ require_once( getabspath( "include/dhis2_analytics1_ops.php" ) );
 	
 						;
 
-				
+							
 
 $tdatadhis2_analytics1[".sqlquery"] = $queryData_dhis2_analytics1;
 

@@ -12,6 +12,7 @@
 	function __construct()
 	{
 	// fill list of events
+		$this->events["selectList"]=true;
 
 
 	}
@@ -76,7 +77,92 @@
 		
 		
 		
-		
+				// List
+function selectList($dataSource, $command)
+{
+
+		$method = "GET";
+$url = "/api/dhis2/analytics/dhis2api.php";
+
+// Replace variables in the URL
+$url = RunnerContext::PrepareRest($url);
+
+// Extract and parse the `q` parameter
+$query = isset($_GET['q']) ? $_GET['q'] : '';
+
+// Initialize parameters
+$indicator = 'gNAXtpqAqW2';
+$orgUnit = 'Rp268JB6Ne4';
+$period = 'LAST_6_BIMONTHS';
+
+// Parse `q` parameter for indicators
+preg_match('/dx~contains~([^)]*)/', $query, $matches);
+if (isset($matches[1])) {
+    $indicator = urldecode($matches[1]);
+}
+
+// Parse `q` parameter for periods
+preg_match('/pe~contains~([^)]*)/', $query, $matches);
+if (isset($matches[1])) {
+    $period = urldecode($matches[1]);
+}
+
+// Parse `q` parameter for organization units
+preg_match('/ou~contains~([^)]*)/', $query, $matches);
+if (isset($matches[1])) {
+    $orgUnit = urldecode($matches[1]);
+}
+
+// Log extracted parameters for debugging
+error_log("Indicator: " . $indicator);
+error_log("Organization Unit: " . $orgUnit);
+error_log("Period: " . $period);
+
+// Construct the API URL with parameters
+if ($indicator && $orgUnit && $period) {
+    $url .= "?action=fetchDataValues&indicator=" . urlencode($indicator) . "&orgUnit=" . urlencode($orgUnit) . "&period=" . urlencode($period);
+} else {
+    http_response_code(400);
+    echo json_encode(['error' => 'Missing required parameters']);
+    exit;
+}
+
+// Log constructed URL for debugging
+error_log("API URL: " . $url);
+
+// Prepare and send the API request
+$body = array();  // No body needed for GET request
+
+$response = $dataSource->getConnection()->requestJson($url, $method, $body, [], []);
+if ($response === false) {
+    $dataSource->setError($dataSource->getConnection()->lastError());
+    error_log("Request failed: " . $dataSource->getConnection()->lastError());
+    return false;
+}
+
+// Log API response for debugging
+error_log("API Response: " . $response);
+
+// Convert API result into recordset
+$rs = $dataSource->resultFromJson($response, true);
+if (!$rs) {
+    error_log("Error processing data");
+    return false;
+}
+
+// Apply search and filter parameters
+$rs = $dataSource->filterResult($rs, $command->filter);
+
+// Apply order parameters
+$rs = $dataSource->reorderResult($command, $rs);
+
+// Apply pagination
+$rs->seekRecord($command->startRecord);
+return $rs;
+
+;
+} // function selectList
+
 		
 		
 		

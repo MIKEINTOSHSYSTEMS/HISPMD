@@ -106,16 +106,25 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Data_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
-			{"text":{$Organisation_unit_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
-			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
 			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$dx_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$ou_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$pe_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Data_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Organisation_unit_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
 		  ],
   "border": [ false, false, false, false ],

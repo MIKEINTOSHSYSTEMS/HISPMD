@@ -54,6 +54,20 @@ function InitLookupLinks()
 			$lookupTableLinks["Regions"]["workforce.region_id"] = array();
 		}
 		$lookupTableLinks["Regions"]["workforce.region_id"]["edit"] = array("table" => "Workforce", "field" => "region_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
+			$lookupTableLinks["DHIS2_Indicator"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.dx"] )) {
+			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.dx"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.dx"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "dx", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "ou", "page" => "edit");
 }
 
 ?>
