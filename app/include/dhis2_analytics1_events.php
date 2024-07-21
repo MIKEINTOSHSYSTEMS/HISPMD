@@ -90,13 +90,13 @@ $url = RunnerContext::PrepareRest($url);
 // Extract and parse the `q` parameter
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
-// Initialize parameters
+// Initialize parameters with default values
 $indicator = 'gNAXtpqAqW2';
 $orgUnit = 'Rp268JB6Ne4';
 $period = 'LAST_6_BIMONTHS';
 
 // Parse `q` parameter for indicators
-preg_match('/dx~contains~([^)]*)/', $query, $matches);
+preg_match('/dx~equals~([^)]*)/', $query, $matches);
 if (isset($matches[1])) {
     $indicator = urldecode($matches[1]);
 }
@@ -105,10 +105,49 @@ if (isset($matches[1])) {
 preg_match('/pe~contains~([^)]*)/', $query, $matches);
 if (isset($matches[1])) {
     $period = urldecode($matches[1]);
+    
+    // Map relative periods to DHIS2 API supported formats
+    $relativePeriods = [
+        'THIS_WEEK' => 'THIS_WEEK',
+        'LAST_WEEK' => 'LAST_WEEK',
+        'LAST_4_WEEKS' => 'LAST_4_WEEKS',
+        'LAST_12_WEEKS' => 'LAST_12_WEEKS',
+        'LAST_52_WEEKS' => 'LAST_52_WEEKS',
+        'THIS_MONTH' => 'THIS_MONTH',
+        'LAST_MONTH' => 'LAST_MONTH',
+        'THIS_BIMONTH' => 'THIS_BIMONTH',
+        'LAST_BIMONTH' => 'LAST_BIMONTH',
+        'THIS_QUARTER' => 'THIS_QUARTER',
+        'LAST_QUARTER' => 'LAST_QUARTER',
+        'THIS_SIX_MONTH' => 'THIS_SIX_MONTH',
+        'LAST_SIX_MONTH' => 'LAST_SIX_MONTH',
+        'MONTHS_THIS_YEAR' => 'MONTHS_THIS_YEAR',
+        'QUARTERS_THIS_YEAR' => 'QUARTERS_THIS_YEAR',
+        'THIS_YEAR' => 'THIS_YEAR',
+        'MONTHS_LAST_YEAR' => 'MONTHS_LAST_YEAR',
+        'QUARTERS_LAST_YEAR' => 'QUARTERS_LAST_YEAR',
+        'LAST_YEAR' => 'LAST_YEAR',
+        'LAST_5_YEARS' => 'LAST_5_YEARS',
+        'LAST_12_MONTHS' => 'LAST_12_MONTHS',
+        'LAST_3_MONTHS' => 'LAST_3_MONTHS',
+        'LAST_6_BIMONTHS' => 'LAST_6_BIMONTHS',
+        'LAST_4_QUARTERS' => 'LAST_4_QUARTERS',
+        'LAST_2_SIXMONTHS' => 'LAST_2_SIXMONTHS',
+        'THIS_FINANCIAL_YEAR' => 'THIS_FINANCIAL_YEAR',
+        'LAST_FINANCIAL_YEAR' => 'LAST_FINANCIAL_YEAR',
+        'LAST_5_FINANCIAL_YEARS' => 'LAST_5_FINANCIAL_YEARS'
+    ];
+
+    if (array_key_exists($period, $relativePeriods)) {
+        $period = $relativePeriods[$period];
+    } else {
+        // If not found, handle as a fixed period or report an error
+        error_log("Unrecognized period format: " . $period);
+    }
 }
 
 // Parse `q` parameter for organization units
-preg_match('/ou~contains~([^)]*)/', $query, $matches);
+preg_match('/ou~equals~([^)]*)/', $query, $matches);
 if (isset($matches[1])) {
     $orgUnit = urldecode($matches[1]);
 }
@@ -130,11 +169,10 @@ if ($indicator && $orgUnit && $period) {
 // Log constructed URL for debugging
 error_log("API URL: " . $url);
 
-// Prepare and send the API request
-$body = array();  // No body needed for GET request
-
-$response = $dataSource->getConnection()->requestJson($url, $method, $body, [], []);
+// Do the API request
+$response = $dataSource->getConnection()->requestJson($url, $method);
 if ($response === false) {
+    // Something went wrong
     $dataSource->setError($dataSource->getConnection()->lastError());
     error_log("Request failed: " . $dataSource->getConnection()->lastError());
     return false;

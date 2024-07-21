@@ -57,6 +57,20 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
 			$lookupTableLinks["DHIS2_Indicator"] = array();
 		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.Data"] )) {
+			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.Data"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.Data"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "Data", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.Organisation unit"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.Organisation unit"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.Organisation unit"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "Organisation unit", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
+			$lookupTableLinks["DHIS2_Indicator"] = array();
+		}
 		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.dx"] )) {
 			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics1.dx"] = array();
 		}

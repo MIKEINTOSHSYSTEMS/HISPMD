@@ -184,72 +184,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN dx_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_dx}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="dx{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="dx" data-fieldname="dx" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_dx}">
-		{$label DHIS2_Analytics dx }	</label>
-	<div class="r-search-option">
-		{$searchtype_dx}
-	</div>
-	<div class="r-search-field">
-		{$dx_editcontrol}	</div>
-	<div class="r-search-field">
-		{$dx_editcontrol1}
-	</div>
-	
-</div>
-
-{END dx_fieldblock}
-											
-{BEGIN ou_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_ou}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="ou{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ou" data-fieldname="ou" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_ou}">
-		{$label DHIS2_Analytics ou }	</label>
-	<div class="r-search-option">
-		{$searchtype_ou}
-	</div>
-	<div class="r-search-field">
-		{$ou_editcontrol}	</div>
-	<div class="r-search-field">
-		{$ou_editcontrol1}
-	</div>
-	
-</div>
-
-{END ou_fieldblock}
-											
-{BEGIN pe_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_pe}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="pe{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="pe" data-fieldname="pe" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_pe}">
-		{$label DHIS2_Analytics pe }	</label>
-	<div class="r-search-option">
-		{$searchtype_pe}
-	</div>
-	<div class="r-search-field">
-		{$pe_editcontrol}	</div>
-	<div class="r-search-field">
-		{$pe_editcontrol1}
-	</div>
-	
-</div>
-
-{END pe_fieldblock}
-											
 {BEGIN Data_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Data}  r-horizontal-field form-horizontal" 	
@@ -315,6 +249,72 @@
 </div>
 
 {END Period_fieldblock}
+											
+{BEGIN dx_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dx}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="dx{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="dx" data-fieldname="dx" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_dx}">
+		{$label DHIS2_Analytics dx }	</label>
+	<div class="r-search-option">
+		{$searchtype_dx}
+	</div>
+	<div class="r-search-field">
+		{$dx_editcontrol}	</div>
+	<div class="r-search-field">
+		{$dx_editcontrol1}
+	</div>
+	
+</div>
+
+{END dx_fieldblock}
+											
+{BEGIN ou_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ou}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ou{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ou" data-fieldname="ou" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ou}">
+		{$label DHIS2_Analytics ou }	</label>
+	<div class="r-search-option">
+		{$searchtype_ou}
+	</div>
+	<div class="r-search-field">
+		{$ou_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ou_editcontrol1}
+	</div>
+	
+</div>
+
+{END ou_fieldblock}
+											
+{BEGIN pe_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pe}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="pe{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="pe" data-fieldname="pe" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_pe}">
+		{$label DHIS2_Analytics pe }	</label>
+	<div class="r-search-option">
+		{$searchtype_pe}
+	</div>
+	<div class="r-search-field">
+		{$pe_editcontrol}	</div>
+	<div class="r-search-field">
+		{$pe_editcontrol1}
+	</div>
+	
+</div>
+
+{END pe_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

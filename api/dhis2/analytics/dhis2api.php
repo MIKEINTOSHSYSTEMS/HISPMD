@@ -42,7 +42,7 @@ function fetchOrgUnits($baseUrl, $username, $password) {
 
 // Fetch Data Values
 function fetchDataValues($baseUrl, $username, $password, $indicator, $orgUnit, $period) {
-    $url = $baseUrl . "/api/analytics.json?dimension=dx:$indicator&dimension=ou:$orgUnit&dimension=pe:$period&displayProperty=NAME&outputIdScheme=ID";
+    $url = $baseUrl . "/api/33/analytics.json?dimension=dx:$indicator&dimension=ou:$orgUnit&dimension=pe:$period&displayProperty=NAME&outputIdScheme=ID";
     return fetchData($url, $username, $password);
 }
 
@@ -89,8 +89,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $period = isset($_GET['period']) ? $_GET['period'] : '';
             if ($indicator && $orgUnit && $period) {
                 $dataValues = fetchDataValues($baseUrl, $username, $password, $indicator, $orgUnit, $period);
-                $parsedData = parseDataValues($dataValues);
-                echo json_encode($parsedData);
+                if ($dataValues) {
+                    $parsedData = parseDataValues($dataValues);
+                    echo json_encode($parsedData);
+                } else {
+                    http_response_code(500);
+                    echo json_encode(['error' => 'Failed to fetch data values']);
+                }
             } else {
                 http_response_code(400);
                 echo json_encode(['error' => 'Missing required parameters']);
