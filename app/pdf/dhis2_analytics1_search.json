@@ -166,12 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Data_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$Organisation_unit_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
 			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				

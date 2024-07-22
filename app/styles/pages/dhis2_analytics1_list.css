@@ -22,6 +22,14 @@
 [data-cellid="grid_footcell_field6"][data-page="dhis2_analytics1_list"][data-cellid="grid_footcell_field6"][data-page="dhis2_analytics1_list"][data-cellid="grid_footcell_field6"][data-page="dhis2_analytics1_list"] {
   white-space: nowrap;
 }
+[data-page="dhis2_analytics1_list"][data-itemid="simple_grid_field3"] {
+  color: #3c7dbc;
+  font-weight: bold;
+}
+[data-page="dhis2_analytics1_list"][data-itemid="simple_grid_field10"] {
+  color: #3c8dbc;
+  font-weight: bold;
+}
 [data-page="dhis2_analytics1_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

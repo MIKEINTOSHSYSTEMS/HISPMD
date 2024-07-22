@@ -194,6 +194,18 @@
 				<div class="row">
 			 
 				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	<p>START&nbsp;HERE by Selecting an Indicator and Then the Organisation Unit and Click on SEARCH</p></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="top_c" data-pageid="{$pageid}"	{$cell_top_c}
 	class=" r-ori-vert			col-md-12
 	
@@ -265,58 +277,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ou}</span>
 						</div>
 		{END searchCtrlBlock_ou}
-																{BEGIN searchCtrlBlock_pe}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_pe}" {$filterRow_attrs_pe}>
-			<label>{$label DHIS2_Analytics pe }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_pe}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_pe}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_pe}</span>
-						</div>
-		{END searchCtrlBlock_pe}
-																{BEGIN searchCtrlBlock_Data}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Data}" {$filterRow_attrs_Data}>
-			<label>{$label DHIS2_Analytics Data }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Data}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Data}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Data}</span>
-						</div>
-		{END searchCtrlBlock_Data}
-																{BEGIN searchCtrlBlock_Organisation_unit}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Organisation_unit}" {$filterRow_attrs_Organisation_unit}>
-			<label>{$label DHIS2_Analytics Organisation_unit }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Organisation_unit}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Organisation_unit}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Organisation_unit}</span>
-						</div>
-		{END searchCtrlBlock_Organisation_unit}
-																{BEGIN searchCtrlBlock_Period}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Period}" {$filterRow_attrs_Period}>
-			<label>{$label DHIS2_Analytics Period }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Period}</span>
-						</div>
-		{END searchCtrlBlock_Period}
 		
 
 	</div>
@@ -328,6 +288,18 @@
 	</div>
 </div>
 <!-- End Search panel content -->
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	After Selecting from the above Available Indicators and Organisation Units, you can use the FILTERS below to narrow down your search results!</span>
 		</div>					</div>
 			</div>		
 {END top_block}
@@ -370,6 +342,7 @@
 
 	<div class="dropdown filter-field filter-dx-container" {BEGIN filter_selected_dx} data-selected {END filter_selected_dx}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-dx" type="checkbox" name="selectAll" {$selectAll_attrs_dx} />
 						{BEGIN clearLink_dx}
 			<a href="#" class="filter-clear filter-clear-dx" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -390,6 +363,7 @@
 						
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_dx}
 
@@ -403,6 +377,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_dx}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_dx}">
+			<a href="#" class="filter-dx-btn-multiselect filter-apply-dx" {$filterbutton_attrs_dx}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_dx}
 			</ul>
 	</div>
 
@@ -417,6 +396,7 @@
 
 	<div class="dropdown filter-field filter-ou-container" {BEGIN filter_selected_ou} data-selected {END filter_selected_ou}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-ou" type="checkbox" name="selectAll" {$selectAll_attrs_ou} />
 						{BEGIN clearLink_ou}
 			<a href="#" class="filter-clear filter-clear-ou" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -437,6 +417,7 @@
 						
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_ou}
 
@@ -450,6 +431,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_ou}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_ou}">
+			<a href="#" class="filter-ou-btn-multiselect filter-apply-ou" {$filterbutton_attrs_ou}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_ou}
 			</ul>
 	</div>
 
@@ -464,6 +450,7 @@
 
 	<div class="dropdown filter-field filter-pe-container" {BEGIN filter_selected_pe} data-selected {END filter_selected_pe}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-pe" type="checkbox" name="selectAll" {$selectAll_attrs_pe} />
 						{BEGIN clearLink_pe}
 			<a href="#" class="filter-clear filter-clear-pe" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -484,6 +471,7 @@
 						
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_pe}
 
@@ -497,10 +485,69 @@
 
 	
 
+			{BEGIN filter_button_multiselect_pe}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_pe}">
+			<a href="#" class="filter-pe-btn-multiselect filter-apply-pe" {$filterbutton_attrs_pe}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_pe}
 			</ul>
 	</div>
 
 {END filter_control_pe}
+
+
+
+
+
+
+{BEGIN filter_control_Period}
+
+	<div class="dropdown filter-field filter-Period-container" {BEGIN filter_selected_Period} data-selected {END filter_selected_Period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-Period" type="checkbox" name="selectAll" {$selectAll_attrs_Period} />
+						{BEGIN clearLink_Period}
+			<a href="#" class="filter-clear filter-clear-Period" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Period}
+			<span class="r-filter-field">{$label DHIS2_Analytics Period }				{BEGIN filter_selected_Period}:{END filter_selected_Period}
+			</span>
+			{BEGIN filter_selected_Period}
+			<span class="r-filter-value">{$filtervalue_Period}</span>
+			{END filter_selected_Period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_Period}
+		<li class=" filter-values filter-values-Period  {$visibilityClass_Period}">
+			{$Period_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_Period}
+
+			{BEGIN filter_button_showmore_Period}
+		<li class=" filter-show-more {$collapsedClass_Period} {$showMoreBtnClass_Period}">
+			<a class="filter-show-more-link filterShowMore_Period" href="#">{$show_n_more_Period}</a>
+		</li>
+		{END filter_button_showmore_Period}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_Period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Period}">
+			<a href="#" class="filter-Period-btn-multiselect filter-apply-Period" {$filterbutton_attrs_Period}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_Period}
+			</ul>
+	</div>
+
+{END filter_control_Period}
 
 
 
@@ -624,16 +671,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dx"]:before {
-		content: "{$label DHIS2_Analytics dx}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ou"]:before {
-		content: "{$label DHIS2_Analytics ou}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="pe"]:before {
-		content: "{$label DHIS2_Analytics pe}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Data"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Data"]:before {
 		content: "{$label DHIS2_Analytics Data}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Organisation_unit"]:before {
@@ -641,6 +679,15 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Period"]:before {
 		content: "{$label DHIS2_Analytics Period}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dx"]:before {
+		content: "{$label DHIS2_Analytics dx}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ou"]:before {
+		content: "{$label DHIS2_Analytics ou}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="pe"]:before {
+		content: "{$label DHIS2_Analytics pe}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Value"]:before {
 		content: "{$label DHIS2_Analytics Value}";
@@ -697,7 +744,7 @@
 	 
 		{BEGIN Value_fieldheadercolumn}
 	{BEGIN Value_fieldheader}
-	<SPAN {$Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value">
+	<SPAN {$Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-page="dhis2_analytics1_list" data-record-id="{$recId}" data-field="Value" data-fieldname="Value">
 	{$label DHIS2_Analytics Value }	{$arrow_icon_Value}
 	</SPAN>
 	{END Value_fieldheader}
@@ -706,17 +753,17 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
-	{$cell_grid_headcell_field}
+	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$dx_class}	"
 
 			data-field="dx"
 	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -730,18 +777,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
 	<th
 	
-	{$cell_grid_headcell_field1}
+	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ou_class}	"
 
 			data-field="ou"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -755,18 +802,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field2}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$pe_class}	"
 
 			data-field="pe"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -780,68 +827,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Data_class}	"
-
-			data-field="Data"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Data_fieldheadercolumn}
-	{BEGIN Data_fieldheader}
-	<SPAN {$Data_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-fieldname="Data">
-	{$label DHIS2_Analytics Data }	{$arrow_icon_Data}
-	</SPAN>
-	{END Data_fieldheader}
-{END Data_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Organisation_unit_class}	"
-
-			data-field="Organisation_unit"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Organisation_unit_fieldheadercolumn}
-	{BEGIN Organisation_unit_fieldheader}
-	<SPAN {$Organisation_unit_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label4" {$item_grid_field_label4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_unit" data-fieldname="Organisation unit">
-	{$label DHIS2_Analytics Organisation_unit }	{$arrow_icon_Organisation_unit}
-	</SPAN>
-	{END Organisation_unit_fieldheader}
-{END Organisation_unit_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Period_class}	"
 
 			data-field="Period"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -855,7 +852,57 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_class}	"
+
+			data-field="Data"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_fieldheadercolumn}
+	{BEGIN Data_fieldheader}
+	<SPAN {$Data_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-fieldname="Data">
+	{$label DHIS2_Analytics Data }	{$arrow_icon_Data}
+	</SPAN>
+	{END Data_fieldheader}
+{END Data_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Organisation_unit_class}	"
+
+			data-field="Organisation_unit"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Organisation_unit_fieldheadercolumn}
+	{BEGIN Organisation_unit_fieldheader}
+	<SPAN {$Organisation_unit_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label4" {$item_grid_field_label4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_unit" data-fieldname="Organisation unit">
+	{$label DHIS2_Analytics Organisation_unit }	{$arrow_icon_Organisation_unit}
+	</SPAN>
+	{END Organisation_unit_fieldheader}
+{END Organisation_unit_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
 							</tr>
 															
 					{END grid_header}
@@ -906,23 +953,23 @@
 
 	 
 		{BEGIN Value_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-page="dhis2_analytics1_list" data-record-id="{$recId}" data-field="Value" data-fieldname="Value" data-default-width >
 {$Value_value}
 </span>
 {END Value_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$dx_class}	"
 
 			data-field="dx"
 	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -932,18 +979,18 @@
 </span>
 {END dx_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field1}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ou_class}	"
 
 			data-field="ou"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -953,18 +1000,18 @@
 </span>
 {END ou_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$pe_class}	"
 
 			data-field="pe"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -974,60 +1021,18 @@
 </span>
 {END pe_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field}
 	<td
 	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Data_class}	"
-
-			data-field="Data"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Data_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-fieldname="Data" data-default-width >
-{$Data_value}
-</span>
-{END Data_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Organisation_unit_class}	"
-
-			data-field="Organisation_unit"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Organisation_unit_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_unit" data-fieldname="Organisation unit" data-default-width >
-{$Organisation_unit_value}
-</span>
-{END Organisation_unit_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Period_class}	"
 
 			data-field="Period"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1037,7 +1042,49 @@
 </span>
 {END Period_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_class}	"
+
+			data-field="Data"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-fieldname="Data" data-default-width >
+{$Data_value}
+</span>
+{END Data_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Organisation_unit_class}	"
+
+			data-field="Organisation_unit"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Organisation_unit_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_unit" data-fieldname="Organisation unit" data-default-width >
+{$Organisation_unit_value}
+</span>
+{END Organisation_unit_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
 							</tr>
 										
 											{END grid_row}
@@ -1079,58 +1126,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$dx_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ou_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$pe_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field4}
 	<td
 	
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Data_class}	"
+		 r-ori-vert		 {$dx_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
@@ -1145,7 +1147,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Organisation_unit_class}	"
+		 r-ori-vert		 {$ou_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
@@ -1160,7 +1162,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_class}	"
+		 r-ori-vert		 {$pe_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
@@ -1169,6 +1171,51 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Period_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Organisation_unit_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>
