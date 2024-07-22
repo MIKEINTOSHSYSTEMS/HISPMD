@@ -30,6 +30,9 @@
   color: #3c8dbc;
   font-weight: bold;
 }
+[data-page="dhis2_analytics1_list"][data-itemid="text2"] {
+  font-weight: bold;
+}
 [data-page="dhis2_analytics1_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

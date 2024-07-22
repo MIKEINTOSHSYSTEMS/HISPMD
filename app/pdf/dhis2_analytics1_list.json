@@ -239,6 +239,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"Filters ","hidden":"{$item_hide_text2}","bold":true,"isHtml":true},
+				
+				
 			{"text":"","hidden":"{$item_hide_filter_panel}"},
 				
 		  ],

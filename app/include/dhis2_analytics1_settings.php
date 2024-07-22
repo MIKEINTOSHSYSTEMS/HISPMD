@@ -627,7 +627,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Text field");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -677,10 +677,17 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
+		$fdata["searchOptionsList"][] = "Equals";
+		$fdata["searchOptionsList"][] = "More than";
+		$fdata["searchOptionsList"][] = "Less than";
+		$fdata["searchOptionsList"][] = "Between";
+		$fdata["searchOptionsList"][] = "Empty";
+		$fdata["searchOptionsList"][] = "NOT Empty";
 // the end of search options settings
 
 
