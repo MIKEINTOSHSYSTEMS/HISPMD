@@ -194,7 +194,7 @@ class RightsPage extends ListPage
 			.", ". $this->connection->addFieldWrappers( "" )
 			.", ". $this->connection->addFieldWrappers( "" )
 			.", ". $this->connection->addFieldWrappers( "" )
-			." from ". $this->connection->addTableWrappers( "" )
+			." from ". $this->connection->addTableWrappers( "ugrights" )
 			." order by ". $this->connection->addFieldWrappers( "" );
 
 		$qResult = $this->connection->query( $sql );
@@ -655,7 +655,7 @@ class RightsPage extends ListPage
 	function updateTablePermissions( $table, $group, $tableRights )
 	{
 		$mask = $tableRights["permissions"];
-		$rightWTableName = $this->connection->addTableWrappers( "" );
+		$rightWTableName = $this->connection->addTableWrappers( "ugrights" );
 		$accessMaskWFieldName = $this->connection->addFieldWrappers( "" );
 		$groupisWFieldName = $this->connection->addFieldWrappers( "" );
 		$pageWFieldName = $this->connection->addFieldWrappers( "" );

@@ -585,6 +585,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_Analytics Chart")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Analytics Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -993,6 +1001,14 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Organisation_Unit")
 	{
 		return "DHIS2 Organisation Unit";
+	}
+	if($table=="DHIS2_Analytics Chart")
+	{
+		return "DHIS2 Analytics Chart";
+	}
+	if($table=="DHIS2_Analytics Report")
+	{
+		return "DHIS2 Analytics Report";
 	}
 	return $table;
 }

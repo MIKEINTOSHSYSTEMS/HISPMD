@@ -1,3 +1,6 @@
+[data-cellid="grid_"][data-page="mfr_geolocation_reports_dashboard"][data-cellid="grid_"][data-page="mfr_geolocation_reports_dashboard"][data-cellid="grid_"][data-page="mfr_geolocation_reports_dashboard"] {
+  width: 800px;
+}
 [data-page="mfr_geolocation_reports_dashboard"][data-itemid="dashboard-item"] {
   height: 500px;
 }
@@ -15,6 +18,24 @@
 }
 [data-page="mfr_geolocation_reports_dashboard"][data-itemid="dashboard-item5"] {
   height: 500px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Region_grid"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Zone_grid"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_grid"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Region_map"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Zone_map"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_map"] {
+  height: 600px;
 }
 [data-page="mfr_geolocation_reports_dashboard"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;

@@ -278,6 +278,8 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2PeriodsView"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Indicator"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Organisation_Unit"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Analytics Chart"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Analytics Report"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

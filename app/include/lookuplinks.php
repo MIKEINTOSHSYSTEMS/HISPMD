@@ -82,6 +82,62 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"] = array();
 		}
 		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "ou", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
+			$lookupTableLinks["DHIS2_Indicator"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_chart.Data"] )) {
+			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_chart.Data"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_chart.Data"]["search"] = array("table" => "DHIS2_Analytics Chart", "field" => "Data", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_chart.Organisation unit"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_chart.Organisation unit"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_chart.Organisation unit"]["search"] = array("table" => "DHIS2_Analytics Chart", "field" => "Organisation unit", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
+			$lookupTableLinks["DHIS2_Indicator"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_chart.dx"] )) {
+			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_chart.dx"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_chart.dx"]["search"] = array("table" => "DHIS2_Analytics Chart", "field" => "dx", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_chart.ou"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_chart.ou"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_chart.ou"]["search"] = array("table" => "DHIS2_Analytics Chart", "field" => "ou", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
+			$lookupTableLinks["DHIS2_Indicator"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_report.Data"] )) {
+			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_report.Data"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_report.Data"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "Data", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.Organisation unit"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.Organisation unit"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.Organisation unit"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "Organisation unit", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
+			$lookupTableLinks["DHIS2_Indicator"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_report.dx"] )) {
+			$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_report.dx"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicator"]["dhis2_analytics_report.dx"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "dx", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "ou", "page" => "search");
 }
 
 ?>

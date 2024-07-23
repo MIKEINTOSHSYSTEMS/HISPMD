@@ -1,0 +1,880 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption DHIS2_Analytics_Report}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel DHIS2_Analytics_Report report}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 7,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+''
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_search_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN dx_newgroup}
+		[
+								{
+				text: '{$jslabel DHIS2_Analytics_Report dx }',
+				style: "blackshade",
+				alignment: '{$dx_align}',
+			},
+											{
+				text: '{$jslabel DHIS2_Analytics_Report ou }',
+				style: "blackshade",
+				alignment: '{$ou_align}',
+			},
+											{
+				text: '{$jslabel DHIS2_Analytics_Report pe }',
+				style: "blackshade",
+				alignment: '{$pe_align}',
+			},
+											{
+				text: '{$jslabel DHIS2_Analytics_Report Period }',
+				style: "blackshade",
+				alignment: '{$Period_align}',
+			},
+																				
+																												{
+				text: '{$jslabel DHIS2_Analytics_Report Data }',
+				style: "blackshade",
+				alignment: '{$Data_align}',
+			},
+											{
+				text: '{$jslabel DHIS2_Analytics_Report Organisation_unit }',
+				style: "blackshade",
+				alignment: '{$Organisation_unit_align}',
+			},
+											{
+				text: '{$jslabel DHIS2_Analytics_Report Value }',
+				style: "blackshade",
+				alignment: '{$Value_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 7,
+					text: {$dx_grval},
+					style: "header_1"
+				},
+																									],
+	{END dx_newgroup}
+	{BEGIN ou_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 6,
+					text: {$ou_grval},
+					style: "header_2"
+				},
+																				],
+	{END ou_newgroup}
+	{BEGIN pe_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+																{
+					colSpan: 5,
+					text: {$pe_grval},
+					style: "header_3"
+				},
+															],
+	{END pe_newgroup}
+	{BEGIN Period_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+												{
+					text: '',
+					style: "group_3"
+				},
+																{
+					colSpan: 4,
+					text: {$Period_grval},
+					style:"header_4"
+				},
+										],
+	{END Period_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_2"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_3"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_4"
+		},
+																		{
+			text: {$Data_value},
+			alignment: '{$Data_align}',
+		},
+							{
+			text: {$Organisation_unit_value},
+			alignment: '{$Organisation_unit_align}',
+		},
+							{
+			text: {$Value_value},
+			alignment: '{$Value_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN Period_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+						{
+				text: "",
+				style: "group_3"
+			},
+					
+																							{
+				colSpan: 4,
+				text: [
+					'Summary for {$jslabel DHIS2_Analytics_Report Period } ', 
+					{$Period_grval},
+					' - ', 
+					{$groupPeriod_total_cnt}, 
+					' records total'
+				],
+				style: 'group_4',
+			},
+																					],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_4"
+			},
+											
+						{
+				text: '',
+				style: "group_4"
+			},
+											
+						{
+				text: '',
+				style: "group_4"
+			},
+											
+						{
+				text: {$groupPeriod_totalValue_sum},
+				style: "group_4",
+				alignment: '{$Value_align}',
+			},
+						],
+	
+	
+	
+	
+	{END Period_endgroup}
+			{BEGIN pe_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+					
+																		{
+				colSpan: 5,
+				text: [
+					'Summary for {$jslabel DHIS2_Analytics_Report pe } ', 
+					{$pe_grval},
+					' - ', 
+					{$grouppe_total_cnt}, 
+					' records total'
+				],
+				style: 'group_3',
+			},
+																										],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: {$grouppe_totalValue_sum},
+				style: "group_3",
+				alignment: '{$Value_align}',
+			},
+						],
+	
+	
+	
+	
+	{END pe_endgroup}
+			{BEGIN ou_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+					
+													{
+				colSpan: 6,
+				text: [
+					'Summary for {$jslabel DHIS2_Analytics_Report ou } ', 
+					{$ou_grval},
+					' - ', 
+					{$groupou_total_cnt}, 
+					' records total'
+				],
+				style: 'group_2',
+			},
+																															],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: {$groupou_totalValue_sum},
+				style: "group_2",
+				alignment: '{$Value_align}',
+			},
+						],
+	
+	
+	
+	
+	{END ou_endgroup}
+			{BEGIN dx_endgroup}
+
+		[
+		
+								{
+				colSpan: 7,
+				text: [
+					'Summary for {$jslabel DHIS2_Analytics_Report dx } ', 
+					{$dx_grval},
+					' - ', 
+					{$groupdx_total_cnt}, 
+					' records total'
+				],
+				style: 'group_1',
+			},
+																																				],
+	
+		[
+								
+						{
+				text: "Sum",
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: {$groupdx_totalValue_sum},
+				style: "group_1",
+				alignment: '{$Value_align}',
+			},
+						],
+	
+	
+	
+	
+	{END dx_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+	[
+		{	
+			text: 'Page summary {$page_total_cnt} - records total',
+			colSpan: 7,
+			style: 'pagesummary',
+		}
+	],
+
+		[
+							{
+			text: [
+			 
+				'Sum ', 
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							{$page_totalValue_sum},
+						],
+			style: 'pagesummary',
+			
+			 
+			alignment: '{$Value_align}',
+					},
+			],
+	
+	
+	
+	
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Global summary {$global_total_cnt} - records total',
+			colSpan: 7,
+			style: 'globalsummary',
+		}
+	],
+
+		[
+							{
+			text: [
+							'Sum ',
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							{$global_totalValue_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Value_align}',
+					},
+			],
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	}

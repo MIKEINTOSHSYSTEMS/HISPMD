@@ -693,13 +693,14 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "Value";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
+		$fdata["descendingOrder"] = true;
+	$fdata["numberOfVisibleItems"] = 10;
 
 		$fdata["filterBy"] = 0;
 
@@ -857,7 +858,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "Value";
 		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
@@ -1021,7 +1022,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "Value";
 		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
@@ -1157,13 +1158,14 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "Value";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
+		$fdata["descendingOrder"] = true;
+	$fdata["numberOfVisibleItems"] = 10;
 
 		$fdata["filterBy"] = 0;
 

@@ -162,6 +162,11 @@ class XTempl_Base
 				"chartName"=>"mfr_woreda_chart",
 				"table"=>"MFR_Woreda_Chart",
 				"ctype"=>"Bubble"));
+			$this->assign_function("dhis2_analytics_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"dhis2_analytics_chart",
+				"table"=>"DHIS2_Analytics Chart",
+				"ctype"=>"Combined"));
 		}
 
 

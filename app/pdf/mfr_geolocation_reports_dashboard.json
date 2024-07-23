@@ -38,17 +38,11 @@ pdfDocument = {
 		
 		
 		widths: [
-								"%", 
-											"%", 
+								800, 
+											800, 
 					 ],	
 		
 			heights: [
-								
-			"%",
-			 
-								
-			"%",
-			 
 								
 			"%",
 			 
@@ -61,10 +55,11 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c6',
+	cellId: '',
 	col:0,
 	row:0,
-			
+				style: 'undefinedcell',
+		
 		
 	//	static colspan/rowspan
 		
@@ -73,182 +68,52 @@ pdfDocument = {
 	
 			"stack": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_MFR_Region_grid}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Zone_grid}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Woreda_grid}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Region_map}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Zone_map}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Woreda_map}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
       
       },
 
-																							{
-	cellId: 'c7',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"Type on the above search field to drill down by Region, Zone or Woreda","hidden":"{$item_hide_text}","isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
+																		{ 
+				cellId: '',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 						[
-																{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item3}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item1}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item4}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item2}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item5}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
+											{ 
+				cellId: '',
+				row:  1,
+				col:  0,
+				text: ''
+			},
+														{ 
+				cellId: '',
+				row:  1,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}

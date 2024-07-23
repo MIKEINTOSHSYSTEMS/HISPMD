@@ -3584,6 +3584,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_indicator" ] = "DHIS2_Indicator";
 	$projectEntities[ "DHIS2_Organisation_Unit" ] = array( "url" => "dhis2_organisation_unit", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_organisation_unit" ] = "DHIS2_Organisation_Unit";
+	$projectEntities[ "DHIS2_Analytics Chart" ] = array( "url" => "dhis2_analytics_chart", "type" => 11 );
+	$projectEntitiesReverse[ "dhis2_analytics_chart" ] = "DHIS2_Analytics Chart";
+	$projectEntities[ "DHIS2_Analytics Report" ] = array( "url" => "dhis2_analytics_report", "type" => 10 );
+	$projectEntitiesReverse[ "dhis2_analytics_report" ] = "DHIS2_Analytics Report";
 }
 
 function findTable( $table ) {

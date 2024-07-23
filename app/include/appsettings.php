@@ -592,7 +592,7 @@ $globalSettings["strFromEmail"] = "";
 /*
 $globalSettings["ADDomain"] = "";
 $globalSettings["ADServer"] = "";
-$globalSettings["ADFollowRefs"] = 0;
+$globalSettings["ADFollowRefs"] = ;
 $globalSettings["ADBaseDN"] = "";
 if( !$globalSettings["ADBaseDN"] ) {
 	$globalSettings["ADBaseDN"] = ldap_Domain2DN( $globalSettings["ADDomain"] );
@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "226_1721238351";
+$projectBuildKey = "242_1721238351";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "226";
+$projectBuildNumber = "242";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -786,6 +786,8 @@ $tableCaptions["English"]["DHIS2_Analytics"] = "DHIS2 Analytics";
 $tableCaptions["English"]["DHIS2PeriodsView"] = "DHIS2Periods View";
 $tableCaptions["English"]["DHIS2_Indicator"] = "DHIS2 Indicator";
 $tableCaptions["English"]["DHIS2_Organisation_Unit"] = "DHIS2 Organisation Unit";
+$tableCaptions["English"]["DHIS2_Analytics_Chart"] = "DHIS2 Analytics Chart";
+$tableCaptions["English"]["DHIS2_Analytics_Report"] = "DHIS2 Analytics Report";
 
 
 $globalEvents = new class_GlobalEvents;

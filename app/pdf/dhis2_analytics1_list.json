@@ -85,9 +85,6 @@ pdfDocument = {
 										{BEGIN col_grid_6}
 					"%",
 					{END col_grid_6}
-										{BEGIN col_grid_7}
-					"%",
-					{END col_grid_7}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -384,35 +381,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_0}
 				[
-																{BEGIN cellblock_grid_headcell_checkbox}
-{
-	cellId: 'headcell_checkbox',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_checkbox_head}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_checkbox}
-																							{BEGIN cellblock_grid_headcell_field3}
+																{BEGIN cellblock_grid_headcell_field3}
 {
 	cellId: 'headcell_field3',
 	col:0,
@@ -624,35 +593,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_cell_checkbox}
-{
-	cellId: 'cell_checkbox',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_checkbox}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_checkbox}
-																							{BEGIN cellblock_grid_cell_field3}
+																{BEGIN cellblock_grid_cell_field3}
 {
 	cellId: 'cell_field3',
 	col:0,
@@ -864,33 +805,7 @@ pdfDocument = {
 					
 				{BEGIN row_grid_2}
 				[
-																{BEGIN cellblock_grid_footcell_checkbox}
-{
-	cellId: 'footcell_checkbox',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_checkbox}
-																							{BEGIN cellblock_grid_footcell_field3}
+																{BEGIN cellblock_grid_footcell_field3}
 {
 	cellId: 'footcell_field3',
 	col:0,

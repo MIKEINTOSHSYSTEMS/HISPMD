@@ -378,13 +378,13 @@
 	
 
 
+			{BEGIN filter_button_apply_dx}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_dx}">
+			<a href="#" class="filter-btn-apply filter-apply-dx" {$filterbutton_attrs_dx}>Apply</a>
+		</li>
+		{END filter_button_apply_dx}
 	
 
-			{BEGIN filter_button_multiselect_dx}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_dx}">
-			<a href="#" class="filter-dx-btn-multiselect filter-apply-dx" {$filterbutton_attrs_dx}>Multiselect</a>
-		</li>
-		{END filter_button_multiselect_dx}
 			</ul>
 	</div>
 
@@ -432,13 +432,13 @@
 	
 
 
+			{BEGIN filter_button_apply_ou}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_ou}">
+			<a href="#" class="filter-btn-apply filter-apply-ou" {$filterbutton_attrs_ou}>Apply</a>
+		</li>
+		{END filter_button_apply_ou}
 	
 
-			{BEGIN filter_button_multiselect_ou}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_ou}">
-			<a href="#" class="filter-ou-btn-multiselect filter-apply-ou" {$filterbutton_attrs_ou}>Multiselect</a>
-		</li>
-		{END filter_button_multiselect_ou}
 			</ul>
 	</div>
 
@@ -486,13 +486,13 @@
 	
 
 
+			{BEGIN filter_button_apply_pe}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_pe}">
+			<a href="#" class="filter-btn-apply filter-apply-pe" {$filterbutton_attrs_pe}>Apply</a>
+		</li>
+		{END filter_button_apply_pe}
 	
 
-			{BEGIN filter_button_multiselect_pe}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_pe}">
-			<a href="#" class="filter-pe-btn-multiselect filter-apply-pe" {$filterbutton_attrs_pe}>Multiselect</a>
-		</li>
-		{END filter_button_multiselect_pe}
 			</ul>
 	</div>
 
@@ -540,13 +540,13 @@
 	
 
 
+			{BEGIN filter_button_apply_Period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Period}">
+			<a href="#" class="filter-btn-apply filter-apply-Period" {$filterbutton_attrs_Period}>Apply</a>
+		</li>
+		{END filter_button_apply_Period}
 	
 
-			{BEGIN filter_button_multiselect_Period}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Period}">
-			<a href="#" class="filter-Period-btn-multiselect filter-apply-Period" {$filterbutton_attrs_Period}>Multiselect</a>
-		</li>
-		{END filter_button_multiselect_Period}
 			</ul>
 	</div>
 
@@ -709,28 +709,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_checkbox}
-	<th
-	
-	{$cell_grid_headcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_analytics1_list"	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkboxheader_attrs}>
-</span>
-{END checkbox_column}
-	
-	</th>
-	{END cellblock_grid_headcell_checkbox}
 									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
@@ -917,30 +895,6 @@
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_checkbox}
-	<td
-	
-	{$cell_grid_cell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkbox_attrs}
-		>
-</span>	
-{END checkbox_column}
-	
-	</td>
-	{END cellblock_grid_cell_checkbox}
 									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
@@ -1099,21 +1053,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_checkbox}
-	<td
-	
-	{$cell_grid_footcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_checkbox}
 									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	
