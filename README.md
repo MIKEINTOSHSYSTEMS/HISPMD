@@ -206,4 +206,4 @@ Adjust the details as per your specific project configurations and requirements.
 
 Additional instructions and guides including configuration parameters are going to be incorporated here progressively...
 
-### © 2024 MIKEINTOSH SYSTEMS. All rights reserved.
+### © 2024 All rights reserved.
