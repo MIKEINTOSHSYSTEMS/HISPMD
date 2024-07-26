@@ -1,1 +1,1 @@
-<LINK rel="shortcut icon" type="image/png" href="./moh.png" />
+<p>Health Information Systems Performance Monitoring Dashboard</p>

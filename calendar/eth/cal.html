@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiopian Calendar Integration</title>
+
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Calendars Plugin -->
+    <script src="./js/jquery.calendars.all.js"></script>
+    <script src="./js/jquery.calendars.ethiopian.min.js"></script>
+    <script src="./js/jquery.calendars.ethiopian-am.min.js"></script>
+
+    <style>
+        #calendar-container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #calendar th,
+        #calendar td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            width: 14.28%;
+        }
+
+        #calendar th {
+            background-color: #f2f2f2;
+        }
+
+        #calendar td {
+            height: 50px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        #current-time {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        (function ($) {
+            'use strict';
+
+            $(document).ready(function () {
+                const ethiopianCalendar = $.calendars.instance('ethiopian', 'am');
+                const ethiopianMonths = [
+                    'መስከረም', 'ጥቅምት', 'ኅዳር', 'ታህሣሥ', 'ጥር',
+                    'የካቲት', 'መጋቢት', 'ሚያዝያ', 'ግንቦት', 'ሰኔ',
+                    'ሐምሌ', 'ነሐሴ', 'ጳጉሜ'
+                ];
+
+                function gregorianToEthiopian(gregorianDate) {
+                    try {
+                        const calendar = $.calendars.instance('ethiopian', 'am');
+                        const gregorianCal = $.calendars.instance('gregorian');
+
+                        const ethiopianDate = calendar.fromGregorian(gregorianDate);
+                        return ethiopianDate;
+                    } catch (error) {
+                        console.error("Error converting Gregorian to Ethiopian date:", error);
+                        return null;
+                    }
+                }
+
+                function generateCalendar(year, month, day) {
+                    try {
+                        const calendarBody = $('#calendar-body');
+                        calendarBody.empty();
+                        $('#month-year').text(`${ethiopianMonths[month - 1]} ${year}`);
+
+                        const firstDayOfMonth = ethiopianCalendar.newDate(year, month, 1).day();
+                        const daysInMonth = (month === 13) ? (ethiopianCalendar.isLeapYear(year) ? 6 : 5) : 30;
+
+                        let date = 1;
+                        for (let i = 0; i < 6; i++) {
+                            const row = $('<tr>');
+                            for (let j = 0; j < 7; j++) {
+                                const cell = $('<td>');
+                                if (i === 0 && j < firstDayOfMonth) {
+                                    cell.text('');
+                                } else if (date > daysInMonth) {
+                                    break;
+                                } else {
+                                    cell.text(date);
+                                    if (date === day) {
+                                        cell.addClass('highlight');
+                                    }
+                                    date++;
+                                }
+                                row.append(cell);
+                            }
+                            calendarBody.append(row);
+                        }
+                    } catch (error) {
+                        console.error("Error generating calendar:", error);
+                    }
+                }
+
+                function initCalendar() {
+                    try {
+                        const now = new Date();
+                        const ethiopianDate = gregorianToEthiopian(now);
+                        if (ethiopianDate) {
+                            let currentYear = ethiopianDate.year();
+                            let currentMonth = ethiopianDate.month();
+                            let currentDay = ethiopianDate.day();
+                            generateCalendar(currentYear, currentMonth, currentDay);
+                            updateTime();
+
+                            $('#prev-month').click(function () {
+                                currentMonth--;
+                                if (currentMonth < 1) {
+                                    currentMonth = 13;
+                                    currentYear--;
+                                }
+                                generateCalendar(currentYear, currentMonth, currentDay);
+                            });
+
+                            $('#next-month').click(function () {
+                                currentMonth++;
+                                if (currentMonth > 13) {
+                                    currentMonth = 1;
+                                    currentYear++;
+                                }
+                                generateCalendar(currentYear, currentMonth, currentDay);
+                            });
+
+                            setInterval(updateTime, 1000);
+                        } else {
+                            console.error("Failed to convert Gregorian date to Ethiopian date.");
+                        }
+                    } catch (error) {
+                        console.error("Error initializing calendar:", error);
+                    }
+                }
+
+                function updateTime() {
+                    const now = new Date();
+                    const hours = now.getHours();
+                    const minutes = now.getMinutes().toString().padStart(2, '0');
+                    const seconds = now.getSeconds().toString().padStart(2, '0');
+                    const timePeriod = getTimePeriod(hours);
+                    $('#current-time').text(`Current time: ${hours}:${minutes}:${seconds} (${timePeriod})`);
+                }
+
+                function getTimePeriod(hour) {
+                    if (hour < 6) return 'Night';
+                    if (hour < 12) return 'Morning';
+                    if (hour < 18) return 'Afternoon';
+                    return 'Evening';
+                }
+
+                initCalendar();
+            });
+        })(jQuery);
+    </script>
+</head>
+
+<body>
+    <div id="calendar-container">
+        <div id="calendar-header">
+            <button id="prev-month">ያለፈው ወር</button>
+            <span id="month-year"></span>
+            <button id="next-month">የሚቀጥለው ወር</button>
+        </div>
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th>እሑድ</th>
+                    <th>ሰኞ</th>
+                    <th>ማክሰኞ</th>
+                    <th>ረቡዕ</th>
+                    <th>ሓሙስ</th>
+                    <th>ዓርብ</th>
+                    <th>ቅዳሜ</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- Calendar days will be generated here -->
+            </tbody>
+        </table>
+        <div id="current-time"></div>
+    </div>
+</body>
+
+</html>
