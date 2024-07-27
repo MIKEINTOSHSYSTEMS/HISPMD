@@ -24,9 +24,10 @@ class RestManager
 		$connectionsIds["DHIS2_Indicators"] = "xhispmdathispmdmerqconsultancy";
 		$connectionsIds["DHIS2_Organisation_Units"] = "xhispmdathispmdmerqconsultancy";
 		$connectionsIds["DHIS2_Analytics"] = "devdhis2hispmdathispmdmerqcons";
-		$connectionsIds["DHIS2PeriodsView"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Indicator"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Organisation_Unit"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reports"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Datasets"] = "devdhis2hispmdathispmdmerqcons";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 

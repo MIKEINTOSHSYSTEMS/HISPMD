@@ -573,10 +573,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="DHIS2PeriodsView")
-		{
-			return 1;
-		}
 		if($table=="DHIS2_Indicator")
 		{
 			return 1;
@@ -590,6 +586,18 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="DHIS2_Analytics Report")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Reports")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Datasets")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Periods")
 		{
 			return 1;
 		}
@@ -990,10 +998,6 @@ function getCaptionTable($table)
 	{
 		return "DHIS2 Analytics";
 	}
-	if($table=="DHIS2PeriodsView")
-	{
-		return "DHIS2Periods View";
-	}
 	if($table=="DHIS2_Indicator")
 	{
 		return "DHIS2 Indicator";
@@ -1009,6 +1013,18 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Analytics Report")
 	{
 		return "DHIS2 Analytics Report";
+	}
+	if($table=="DHIS2_Reports")
+	{
+		return "DHIS2 Reports";
+	}
+	if($table=="DHIS2_Datasets")
+	{
+		return "DHIS2 Datasets";
+	}
+	if($table=="DHIS2_Periods")
+	{
+		return "DHIS2 Periods";
 	}
 	return $table;
 }
@@ -2098,6 +2114,18 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="AI_Data_Assistant";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("DHIS2_Periods");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="DHIS2_Periods";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="DHIS2_Periods";
 	}
 	return $arr;
 }

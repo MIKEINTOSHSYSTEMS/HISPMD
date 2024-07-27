@@ -1,0 +1,160 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel DHIS2_Reports export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Organisation_Unit_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Organisation_Unit_Code_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Organisation_Unit_Description_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Actual_Reports_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Expected_Reports_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Reporting_Rate_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Actual_Reports_On_Time_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Reporting_Rate_On_Time_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "244_1721915534";
+$projectBuildKey = "272_1722087950";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "244";
+$projectBuildNumber = "272";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -783,11 +783,13 @@ $tableCaptions["English"]["AI_Data_Assistant"] = "AI Data Assistant";
 $tableCaptions["English"]["DHIS2_Indicators"] = "DHIS2 Indicators";
 $tableCaptions["English"]["DHIS2_Organisation_Units"] = "DHIS2 Organisation Units";
 $tableCaptions["English"]["DHIS2_Analytics"] = "DHIS2 Analytics";
-$tableCaptions["English"]["DHIS2PeriodsView"] = "DHIS2Periods View";
 $tableCaptions["English"]["DHIS2_Indicator"] = "DHIS2 Indicator";
 $tableCaptions["English"]["DHIS2_Organisation_Unit"] = "DHIS2 Organisation Unit";
 $tableCaptions["English"]["DHIS2_Analytics_Chart"] = "DHIS2 Analytics Chart";
 $tableCaptions["English"]["DHIS2_Analytics_Report"] = "DHIS2 Analytics Report";
+$tableCaptions["English"]["DHIS2_Reports"] = "DHIS2 Reports";
+$tableCaptions["English"]["DHIS2_Datasets"] = "DHIS2 Datasets";
+$tableCaptions["English"]["DHIS2_Periods"] = "DHIS2 Periods";
 
 
 $globalEvents = new class_GlobalEvents;

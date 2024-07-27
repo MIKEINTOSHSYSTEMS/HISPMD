@@ -3578,8 +3578,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_organisation_units" ] = "DHIS2_Organisation_Units";
 	$projectEntities[ "DHIS2_Analytics" ] = array( "url" => "dhis2_analytics1", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_analytics1" ] = "DHIS2_Analytics";
-	$projectEntities[ "DHIS2PeriodsView" ] = array( "url" => "dhis2periodsview", "type" => 7 );
-	$projectEntitiesReverse[ "dhis2periodsview" ] = "DHIS2PeriodsView";
 	$projectEntities[ "DHIS2_Indicator" ] = array( "url" => "dhis2_indicator", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_indicator" ] = "DHIS2_Indicator";
 	$projectEntities[ "DHIS2_Organisation_Unit" ] = array( "url" => "dhis2_organisation_unit", "type" => 7 );
@@ -3588,6 +3586,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_analytics_chart" ] = "DHIS2_Analytics Chart";
 	$projectEntities[ "DHIS2_Analytics Report" ] = array( "url" => "dhis2_analytics_report", "type" => 10 );
 	$projectEntitiesReverse[ "dhis2_analytics_report" ] = "DHIS2_Analytics Report";
+	$projectEntities[ "DHIS2_Reports" ] = array( "url" => "dhis2_reports", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_reports" ] = "DHIS2_Reports";
+	$projectEntities[ "DHIS2_Datasets" ] = array( "url" => "dhis2_datasets", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_datasets" ] = "DHIS2_Datasets";
+	$projectEntities[ "DHIS2_Periods" ] = array( "url" => "dhis2_periods", "type" => 0 );
+	$projectEntitiesReverse[ "dhis2_periods" ] = "DHIS2_Periods";
 }
 
 function findTable( $table ) {

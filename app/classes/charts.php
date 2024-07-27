@@ -450,11 +450,15 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("DHIS2_Analytics" == $this->chrt_array['tables'][0])
+			return true;
+		if("DHIS2_Analytics" == $this->chrt_array['tables'][0])
+			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("DHIS2_Analytics" == $this->chrt_array['tables'][0])
+		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("DHIS2_Analytics" == $this->chrt_array['tables'][0])
+		if("DHIS2_Periods" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

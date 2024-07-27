@@ -138,6 +138,27 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"] = array();
 		}
 		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "ou", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
+			$lookupTableLinks["DHIS2_Datasets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"]["dhis2_reports.Data Set"] )) {
+			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reports.Data Set"] = array();
+		}
+		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reports.Data Set"]["edit"] = array("table" => "DHIS2_Reports", "field" => "Data Set", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
+			$lookupTableLinks["DHIS2_Periods"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_reports.Report Period"] )) {
+			$lookupTableLinks["DHIS2_Periods"]["dhis2_reports.Report Period"] = array();
+		}
+		$lookupTableLinks["DHIS2_Periods"]["dhis2_reports.Report Period"]["edit"] = array("table" => "DHIS2_Reports", "field" => "Report Period", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_reports.Organisation Unit ID"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_reports.Organisation Unit ID"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_reports.Organisation Unit ID"]["edit"] = array("table" => "DHIS2_Reports", "field" => "Organisation Unit ID", "page" => "edit");
 }
 
 ?>

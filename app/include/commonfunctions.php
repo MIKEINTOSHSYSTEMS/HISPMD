@@ -271,8 +271,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("dhis2_analytics1" == $shortTName )
 		return true;
-	if ("dhis2periodsview" == $shortTName )
-		return true;
 	if ("dhis2_indicator" == $shortTName )
 		return true;
 	if ("dhis2_organisation_unit" == $shortTName )
@@ -280,6 +278,12 @@ function checkTableName($shortTName )
 	if ("dhis2_analytics_chart" == $shortTName )
 		return true;
 	if ("dhis2_analytics_report" == $shortTName )
+		return true;
+	if ("dhis2_reports" == $shortTName )
+		return true;
+	if ("dhis2_datasets" == $shortTName )
+		return true;
+	if ("dhis2_periods" == $shortTName )
 		return true;
 	return false;
 }
@@ -639,15 +643,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("DHIS2PeriodsView");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="DHIS2PeriodsView";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("DHIS2_Indicator");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -681,6 +676,33 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Analytics Report";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Reports");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Reports";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Datasets");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Datasets";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Periods");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Periods";
 	}
 	return $arr;
 }
@@ -725,11 +747,13 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_Indicators";
 	$arr[]="DHIS2_Organisation_Units";
 	$arr[]="DHIS2_Analytics";
-	$arr[]="DHIS2PeriodsView";
 	$arr[]="DHIS2_Indicator";
 	$arr[]="DHIS2_Organisation_Unit";
 	$arr[]="DHIS2_Analytics Chart";
 	$arr[]="DHIS2_Analytics Report";
+	$arr[]="DHIS2_Reports";
+	$arr[]="DHIS2_Datasets";
+	$arr[]="DHIS2_Periods";
 	return $arr;
 }
 
@@ -1567,12 +1591,6 @@ function GetUserPermissionsStatic( $table )
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="DHIS2PeriodsView" )
-	{
-//	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="DHIS2_Indicator" )
 	{
 //	default permissions
@@ -1592,6 +1610,24 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_Analytics Report" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Reports" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Datasets" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Periods" )
 	{
 //	default permissions
 		// grant all by default

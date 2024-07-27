@@ -50,6 +50,7 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo__AI_Data_Assistant;
 	var $tblhispmdathispmdmerqconsultancyo__DataQuality;
 	var $tblhispmdathispmdmerqconsultancyo__DataUse;
+	var $tblhispmdathispmdmerqconsultancyo__DHIS2_Periods;
 	var $tblhispmdathispmdmerqconsultancyo__DigitalHealth;
 	var $tblhispmdathispmdmerqconsultancyo__DigitalHealthApps;
 	var $tblhispmdathispmdmerqconsultancyo__FinancialResources;
@@ -80,6 +81,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "AI_Data_Assistant", "varname" => "hispmdathispmdmerqconsultancyo__AI_Data_Assistant", "altvarname" => "AI_Data_Assistant", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DataQuality", "varname" => "hispmdathispmdmerqconsultancyo__DataQuality", "altvarname" => "DataQuality", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DataUse", "varname" => "hispmdathispmdmerqconsultancyo__DataUse", "altvarname" => "DataUse", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "DHIS2_Periods", "varname" => "hispmdathispmdmerqconsultancyo__DHIS2_Periods", "altvarname" => "DHIS2_Periods", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DigitalHealth", "varname" => "hispmdathispmdmerqconsultancyo__DigitalHealth", "altvarname" => "DigitalHealth", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "DigitalHealthApps", "varname" => "hispmdathispmdmerqconsultancyo__DigitalHealthApps", "altvarname" => "DigitalHealthApps", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "FinancialResources", "varname" => "hispmdathispmdmerqconsultancyo__FinancialResources", "altvarname" => "FinancialResources", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");

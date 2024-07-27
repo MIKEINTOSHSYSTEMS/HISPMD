@@ -492,10 +492,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="DHIS2PeriodsView")
-		{
-			return false;
-		}
 		if($table=="DHIS2_Indicator")
 		{
 			return false;
@@ -509,6 +505,18 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="DHIS2_Analytics Report")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Reports")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Datasets")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Periods")
 		{
 			return false;
 		}
@@ -956,10 +964,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="DHIS2PeriodsView")
-		{
-			return false;
-		}
 		if($table=="DHIS2_Indicator")
 		{
 			return false;
@@ -973,6 +977,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="DHIS2_Analytics Report")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Reports")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Datasets")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Periods")
 		{
 			return false;
 		}

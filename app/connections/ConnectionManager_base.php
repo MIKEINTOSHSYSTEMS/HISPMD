@@ -275,11 +275,13 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_Indicators"] = "xhispmdathispmdmerqconsultancy";
 		$connectionsIds["DHIS2_Organisation_Units"] = "xhispmdathispmdmerqconsultancy";
 		$connectionsIds["DHIS2_Analytics"] = "devdhis2hispmdathispmdmerqcons";
-		$connectionsIds["DHIS2PeriodsView"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Indicator"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Organisation_Unit"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Analytics Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Analytics Report"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reports"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Datasets"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Periods"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
