@@ -166,11 +166,33 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN Title_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Title}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Title{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Title" data-fieldname="Title" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Title}">
+		{$label DHIS2_Reports Title }	</label>
+	<div class="r-search-option">
+		{$searchtype_Title}
+	</div>
+	<div class="r-search-field">
+		{$Title_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Title_editcontrol1}
+	</div>
+	
+</div>
+
+{END Title_fieldblock}
+											
 {BEGIN Data_Set_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Data_Set}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="Data_Set{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Data_Set" data-fieldname="Data Set" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Data_Set" data-fieldname="Data Set" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_Data_Set}">
@@ -192,7 +214,7 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Report_Period}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="Report_Period{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Report_Period" data-fieldname="Report Period" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Report_Period" data-fieldname="Report Period" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_Report_Period}">
@@ -214,7 +236,7 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Organisation_Unit_ID}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="Organisation_Unit_ID{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Organisation_Unit_ID" data-fieldname="Organisation Unit ID" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Organisation_Unit_ID" data-fieldname="Organisation Unit ID" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_Organisation_Unit_ID}">
@@ -231,6 +253,182 @@
 </div>
 
 {END Organisation_Unit_ID_fieldblock}
+											
+{BEGIN Organisation_Unit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Organisation_Unit}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Organisation_Unit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Organisation_Unit" data-fieldname="Organisation Unit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Organisation_Unit}">
+		{$label DHIS2_Reports Organisation_Unit }	</label>
+	<div class="r-search-option">
+		{$searchtype_Organisation_Unit}
+	</div>
+	<div class="r-search-field">
+		{$Organisation_Unit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Organisation_Unit_editcontrol1}
+	</div>
+	
+</div>
+
+{END Organisation_Unit_fieldblock}
+											
+{BEGIN Organisation_Unit_Code_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Organisation_Unit_Code}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Organisation_Unit_Code{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Organisation_Unit_Code" data-fieldname="Organisation Unit Code" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Organisation_Unit_Code}">
+		{$label DHIS2_Reports Organisation_Unit_Code }	</label>
+	<div class="r-search-option">
+		{$searchtype_Organisation_Unit_Code}
+	</div>
+	<div class="r-search-field">
+		{$Organisation_Unit_Code_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Organisation_Unit_Code_editcontrol1}
+	</div>
+	
+</div>
+
+{END Organisation_Unit_Code_fieldblock}
+											
+{BEGIN Organisation_Unit_Description_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Organisation_Unit_Description}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Organisation_Unit_Description{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Organisation_Unit_Description" data-fieldname="Organisation Unit Description" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Organisation_Unit_Description}">
+		{$label DHIS2_Reports Organisation_Unit_Description }	</label>
+	<div class="r-search-option">
+		{$searchtype_Organisation_Unit_Description}
+	</div>
+	<div class="r-search-field">
+		{$Organisation_Unit_Description_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Organisation_Unit_Description_editcontrol1}
+	</div>
+	
+</div>
+
+{END Organisation_Unit_Description_fieldblock}
+											
+{BEGIN Actual_Reports_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Actual_Reports}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Actual_Reports{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Actual_Reports" data-fieldname="Actual Reports" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Actual_Reports}">
+		{$label DHIS2_Reports Actual_Reports }	</label>
+	<div class="r-search-option">
+		{$searchtype_Actual_Reports}
+	</div>
+	<div class="r-search-field">
+		{$Actual_Reports_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Actual_Reports_editcontrol1}
+	</div>
+	
+</div>
+
+{END Actual_Reports_fieldblock}
+											
+{BEGIN Expected_Reports_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Expected_Reports}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Expected_Reports{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Expected_Reports" data-fieldname="Expected Reports" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Expected_Reports}">
+		{$label DHIS2_Reports Expected_Reports }	</label>
+	<div class="r-search-option">
+		{$searchtype_Expected_Reports}
+	</div>
+	<div class="r-search-field">
+		{$Expected_Reports_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Expected_Reports_editcontrol1}
+	</div>
+	
+</div>
+
+{END Expected_Reports_fieldblock}
+											
+{BEGIN Reporting_Rate_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Reporting_Rate}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Reporting_Rate{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Reporting_Rate" data-fieldname="Reporting Rate" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Reporting_Rate}">
+		{$label DHIS2_Reports Reporting_Rate }	</label>
+	<div class="r-search-option">
+		{$searchtype_Reporting_Rate}
+	</div>
+	<div class="r-search-field">
+		{$Reporting_Rate_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Reporting_Rate_editcontrol1}
+	</div>
+	
+</div>
+
+{END Reporting_Rate_fieldblock}
+											
+{BEGIN Actual_Reports_On_Time_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Actual_Reports_On_Time}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Actual_Reports_On_Time{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Actual_Reports_On_Time" data-fieldname="Actual Reports On Time" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Actual_Reports_On_Time}">
+		{$label DHIS2_Reports Actual_Reports_On_Time }	</label>
+	<div class="r-search-option">
+		{$searchtype_Actual_Reports_On_Time}
+	</div>
+	<div class="r-search-field">
+		{$Actual_Reports_On_Time_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Actual_Reports_On_Time_editcontrol1}
+	</div>
+	
+</div>
+
+{END Actual_Reports_On_Time_fieldblock}
+											
+{BEGIN Reporting_Rate_On_Time_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Reporting_Rate_On_Time}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Reporting_Rate_On_Time{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Reporting_Rate_On_Time" data-fieldname="Reporting Rate On Time" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Reporting_Rate_On_Time}">
+		{$label DHIS2_Reports Reporting_Rate_On_Time }	</label>
+	<div class="r-search-option">
+		{$searchtype_Reporting_Rate_On_Time}
+	</div>
+	<div class="r-search-field">
+		{$Reporting_Rate_On_Time_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Reporting_Rate_On_Time_editcontrol1}
+	</div>
+	
+</div>
+
+{END Reporting_Rate_On_Time_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

@@ -25,6 +25,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsdhis2_reports["English"] = array();
 	$placeHoldersdhis2_reports["English"] = array();
 	$pageTitlesdhis2_reports["English"] = array();
+	$fieldLabelsdhis2_reports["English"]["Title"] = "Time Frame Period";
+	$fieldToolTipsdhis2_reports["English"]["Title"] = "";
+	$placeHoldersdhis2_reports["English"]["Title"] = "";
+	$fieldLabelsdhis2_reports["English"]["Data_Set"] = "Data Set";
+	$fieldToolTipsdhis2_reports["English"]["Data_Set"] = "";
+	$placeHoldersdhis2_reports["English"]["Data_Set"] = "";
+	$fieldLabelsdhis2_reports["English"]["Report_Period"] = "Report Period";
+	$fieldToolTipsdhis2_reports["English"]["Report_Period"] = "";
+	$placeHoldersdhis2_reports["English"]["Report_Period"] = "";
 	$fieldLabelsdhis2_reports["English"]["Organisation_Unit_ID"] = "Organisation Unit ID";
 	$fieldToolTipsdhis2_reports["English"]["Organisation_Unit_ID"] = "";
 	$placeHoldersdhis2_reports["English"]["Organisation_Unit_ID"] = "";
@@ -52,15 +61,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_reports["English"]["Reporting_Rate_On_Time"] = "Reporting Rate On Time";
 	$fieldToolTipsdhis2_reports["English"]["Reporting_Rate_On_Time"] = "";
 	$placeHoldersdhis2_reports["English"]["Reporting_Rate_On_Time"] = "";
-	$fieldLabelsdhis2_reports["English"]["Data_Set"] = "Data Set";
-	$fieldToolTipsdhis2_reports["English"]["Data_Set"] = "";
-	$placeHoldersdhis2_reports["English"]["Data_Set"] = "";
-	$fieldLabelsdhis2_reports["English"]["Report_Period"] = "Report Period";
-	$fieldToolTipsdhis2_reports["English"]["Report_Period"] = "";
-	$placeHoldersdhis2_reports["English"]["Report_Period"] = "";
-	$fieldLabelsdhis2_reports["English"]["Title"] = "Time Frame Period";
-	$fieldToolTipsdhis2_reports["English"]["Title"] = "";
-	$placeHoldersdhis2_reports["English"]["Title"] = "";
 	if (count($fieldToolTipsdhis2_reports["English"]))
 		$tdatadhis2_reports[".isUseToolTips"] = true;
 }
@@ -178,9 +178,18 @@ $tdatadhis2_reports[".filterFields"] = array();
 $tdatadhis2_reports[".requiredSearchFields"] = array();
 
 $tdatadhis2_reports[".googleLikeFields"] = array();
+$tdatadhis2_reports[".googleLikeFields"][] = "Title";
 $tdatadhis2_reports[".googleLikeFields"][] = "Data Set";
 $tdatadhis2_reports[".googleLikeFields"][] = "Report Period";
 $tdatadhis2_reports[".googleLikeFields"][] = "Organisation Unit ID";
+$tdatadhis2_reports[".googleLikeFields"][] = "Organisation Unit";
+$tdatadhis2_reports[".googleLikeFields"][] = "Organisation Unit Code";
+$tdatadhis2_reports[".googleLikeFields"][] = "Organisation Unit Description";
+$tdatadhis2_reports[".googleLikeFields"][] = "Actual Reports";
+$tdatadhis2_reports[".googleLikeFields"][] = "Expected Reports";
+$tdatadhis2_reports[".googleLikeFields"][] = "Reporting Rate";
+$tdatadhis2_reports[".googleLikeFields"][] = "Actual Reports On Time";
+$tdatadhis2_reports[".googleLikeFields"][] = "Reporting Rate On Time";
 
 
 
@@ -275,7 +284,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Title";
+		$fdata["strField"] = "Data/*/Title";
 
 	
 		$fdata["FullName"] = "Title";
@@ -410,7 +419,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Data Set";
+		$fdata["strField"] = "Data/*/Data Set";
 
 	
 		$fdata["FullName"] = "Data Set";
@@ -572,7 +581,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Report Period";
+		$fdata["strField"] = "Data/*/Report Period";
 
 	
 		$fdata["FullName"] = "Report Period";
@@ -633,7 +642,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "Period_ID";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Period_ID";
+	$edata["DisplayField"] = "Period_Name";
 
 	
 
@@ -700,8 +709,9 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "Actual Reports";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -733,7 +743,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Organisation Unit ID";
+		$fdata["strField"] = "Data/*/Organisation Unit ID";
 
 	
 		$fdata["FullName"] = "Organisation Unit ID";
@@ -895,7 +905,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Organisation Unit";
+		$fdata["strField"] = "Data/*/Organisation Unit";
 
 	
 		$fdata["FullName"] = "Organisation Unit";
@@ -1030,7 +1040,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Organisation Unit Code";
+		$fdata["strField"] = "Data/*/Organisation Unit Code";
 
 	
 		$fdata["FullName"] = "Organisation Unit Code";
@@ -1165,7 +1175,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Organisation Unit Description";
+		$fdata["strField"] = "Data/*/Organisation Unit Description";
 
 	
 		$fdata["FullName"] = "Organisation Unit Description";
@@ -1300,7 +1310,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Actual Reports";
+		$fdata["strField"] = "Data/*/Actual Reports";
 
 	
 		$fdata["FullName"] = "Actual Reports";
@@ -1438,7 +1448,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Expected Reports";
+		$fdata["strField"] = "Data/*/Expected Reports";
 
 	
 		$fdata["FullName"] = "Expected Reports";
@@ -1576,7 +1586,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Reporting Rate";
+		$fdata["strField"] = "Data/*/Reporting Rate";
 
 	
 		$fdata["FullName"] = "Reporting Rate";
@@ -1714,7 +1724,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Actual Reports On Time";
+		$fdata["strField"] = "Data/*/Actual Reports On Time";
 
 	
 		$fdata["FullName"] = "Actual Reports On Time";
@@ -1852,7 +1862,7 @@ $tdatadhis2_reports[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Reporting Rate On Time";
+		$fdata["strField"] = "Data/*/Reporting Rate On Time";
 
 	
 		$fdata["FullName"] = "Reporting Rate On Time";

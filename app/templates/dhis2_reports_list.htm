@@ -211,7 +211,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class=" r-ori-vert			col-md-6
+	class=" r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
@@ -269,19 +269,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Data_Set}</span>
 						</div>
 		{END searchCtrlBlock_Data_Set}
-																{BEGIN searchCtrlBlock_Report_Period}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Report_Period}" {$filterRow_attrs_Report_Period}>
-			<label>{$label DHIS2_Reports Report_Period }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Report_Period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Report_Period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Report_Period}</span>
-						</div>
-		{END searchCtrlBlock_Report_Period}
 																{BEGIN searchCtrlBlock_Organisation_Unit_ID}
 
 
@@ -295,6 +282,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Organisation_Unit_ID}</span>
 						</div>
 		{END searchCtrlBlock_Organisation_Unit_ID}
+																{BEGIN searchCtrlBlock_Report_Period}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Report_Period}" {$filterRow_attrs_Report_Period}>
+			<label>{$label DHIS2_Reports Report_Period }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Report_Period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Report_Period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Report_Period}</span>
+						</div>
+		{END searchCtrlBlock_Report_Period}
 		
 
 	</div>
@@ -307,39 +307,7 @@
 </div>
 <!-- End Search panel content -->
 			{END firstAboveGridCell}	
-	</div>			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
-	class=" r-ori-vert			col-md-6
-	
-">
-		 
-		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
-	<div class="filterPanelContainer {$filterPanelStateClass}" 
-					data-horizontal
-			>
-	<!-- Begin Filter panel content -->
-
-
-
-	<!-- End Filter panel content -->
-	</div>
-</div>		</div>			 
-				<div 
-	data-cellId="above-grid_c5" data-pageid="{$pageid}"	{$cell_above-grid_c5}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
+	</div>					</div>
 			 
 				<div class="row">
 			 
@@ -426,6 +394,191 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
+	class=" r-ori-vert			col-md-6
+	
+">
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_Data_Set}
+
+	<div class="dropdown filter-field filter-Data_Set-container" {BEGIN filter_selected_Data_Set} data-selected {END filter_selected_Data_Set}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-Data_Set" type="checkbox" name="selectAll" {$selectAll_attrs_Data_Set} />
+						{BEGIN clearLink_Data_Set}
+			<a href="#" class="filter-clear filter-clear-Data_Set" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Data_Set}
+			<span class="r-filter-field">{$label DHIS2_Reports Data_Set }				{BEGIN filter_selected_Data_Set}:{END filter_selected_Data_Set}
+			</span>
+			{BEGIN filter_selected_Data_Set}
+			<span class="r-filter-value">{$filtervalue_Data_Set}</span>
+			{END filter_selected_Data_Set}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_Data_Set}
+		<li class=" filter-values filter-values-Data_Set  {$visibilityClass_Data_Set}">
+			{$Data_Set_filter}
+						
+					
+					
+					</li>
+		{END filterCtrlBlock_Data_Set}
+
+			{BEGIN filter_button_showmore_Data_Set}
+		<li class=" filter-show-more {$collapsedClass_Data_Set} {$showMoreBtnClass_Data_Set}">
+			<a class="filter-show-more-link filterShowMore_Data_Set" href="#">{$show_n_more_Data_Set}</a>
+		</li>
+		{END filter_button_showmore_Data_Set}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_Data_Set}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Data_Set}">
+			<a href="#" class="filter-Data_Set-btn-multiselect filter-apply-Data_Set" {$filterbutton_attrs_Data_Set}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_Data_Set}
+			</ul>
+	</div>
+
+{END filter_control_Data_Set}
+
+
+
+
+
+
+{BEGIN filter_control_Organisation_Unit_ID}
+
+	<div class="dropdown filter-field filter-Organisation_Unit_ID-container" {BEGIN filter_selected_Organisation_Unit_ID} data-selected {END filter_selected_Organisation_Unit_ID}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-Organisation_Unit_ID" type="checkbox" name="selectAll" {$selectAll_attrs_Organisation_Unit_ID} />
+						{BEGIN clearLink_Organisation_Unit_ID}
+			<a href="#" class="filter-clear filter-clear-Organisation_Unit_ID" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Organisation_Unit_ID}
+			<span class="r-filter-field">{$label DHIS2_Reports Organisation_Unit_ID }				{BEGIN filter_selected_Organisation_Unit_ID}:{END filter_selected_Organisation_Unit_ID}
+			</span>
+			{BEGIN filter_selected_Organisation_Unit_ID}
+			<span class="r-filter-value">{$filtervalue_Organisation_Unit_ID}</span>
+			{END filter_selected_Organisation_Unit_ID}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_Organisation_Unit_ID}
+		<li class=" filter-values filter-values-Organisation_Unit_ID  {$visibilityClass_Organisation_Unit_ID}">
+			{$Organisation_Unit_ID_filter}
+						
+					
+					
+					</li>
+		{END filterCtrlBlock_Organisation_Unit_ID}
+
+			{BEGIN filter_button_showmore_Organisation_Unit_ID}
+		<li class=" filter-show-more {$collapsedClass_Organisation_Unit_ID} {$showMoreBtnClass_Organisation_Unit_ID}">
+			<a class="filter-show-more-link filterShowMore_Organisation_Unit_ID" href="#">{$show_n_more_Organisation_Unit_ID}</a>
+		</li>
+		{END filter_button_showmore_Organisation_Unit_ID}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_Organisation_Unit_ID}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Organisation_Unit_ID}">
+			<a href="#" class="filter-Organisation_Unit_ID-btn-multiselect filter-apply-Organisation_Unit_ID" {$filterbutton_attrs_Organisation_Unit_ID}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_Organisation_Unit_ID}
+			</ul>
+	</div>
+
+{END filter_control_Organisation_Unit_ID}
+
+
+
+
+
+
+{BEGIN filter_control_Report_Period}
+
+	<div class="dropdown filter-field filter-Report_Period-container" {BEGIN filter_selected_Report_Period} data-selected {END filter_selected_Report_Period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-Report_Period" type="checkbox" name="selectAll" {$selectAll_attrs_Report_Period} />
+						{BEGIN clearLink_Report_Period}
+			<a href="#" class="filter-clear filter-clear-Report_Period" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Report_Period}
+			<span class="r-filter-field">{$label DHIS2_Reports Report_Period }				{BEGIN filter_selected_Report_Period}:{END filter_selected_Report_Period}
+			</span>
+			{BEGIN filter_selected_Report_Period}
+			<span class="r-filter-value">{$filtervalue_Report_Period}</span>
+			{END filter_selected_Report_Period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_Report_Period}
+		<li class=" filter-values filter-values-Report_Period  {$visibilityClass_Report_Period}">
+			{$Report_Period_filter}
+						
+					
+					
+					</li>
+		{END filterCtrlBlock_Report_Period}
+
+			{BEGIN filter_button_showmore_Report_Period}
+		<li class=" filter-show-more {$collapsedClass_Report_Period} {$showMoreBtnClass_Report_Period}">
+			<a class="filter-show-more-link filterShowMore_Report_Period" href="#">{$show_n_more_Report_Period}</a>
+		</li>
+		{END filter_button_showmore_Report_Period}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_Report_Period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Report_Period}">
+			<a href="#" class="filter-Report_Period-btn-multiselect filter-apply-Report_Period" {$filterbutton_attrs_Report_Period}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_Report_Period}
+			</ul>
+	</div>
+
+{END filter_control_Report_Period}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>			 
+				<div 
+	data-cellId="above-grid_c7" data-pageid="{$pageid}"	{$cell_above-grid_c7}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>
@@ -857,7 +1010,7 @@
 
 	 
 		{BEGIN Title_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
 {$Title_value}
 </span>
 {END Title_fieldcolumn}	
@@ -878,7 +1031,7 @@
 
 	 
 		{BEGIN Data_Set_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Set" data-fieldname="Data Set" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Set" data-fieldname="Data Set" data-default-width >
 {$Data_Set_value}
 </span>
 {END Data_Set_fieldcolumn}	
@@ -899,7 +1052,7 @@
 
 	 
 		{BEGIN Report_Period_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Report_Period" data-fieldname="Report Period" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Report_Period" data-fieldname="Report Period" data-default-width >
 {$Report_Period_value}
 </span>
 {END Report_Period_fieldcolumn}	
@@ -920,7 +1073,7 @@
 
 	 
 		{BEGIN Organisation_Unit_ID_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit_ID" data-fieldname="Organisation Unit ID" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit_ID" data-fieldname="Organisation Unit ID" data-default-width >
 {$Organisation_Unit_ID_value}
 </span>
 {END Organisation_Unit_ID_fieldcolumn}	
@@ -941,7 +1094,7 @@
 
 	 
 		{BEGIN Organisation_Unit_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit" data-fieldname="Organisation Unit" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit" data-fieldname="Organisation Unit" data-default-width >
 {$Organisation_Unit_value}
 </span>
 {END Organisation_Unit_fieldcolumn}	
@@ -962,7 +1115,7 @@
 
 	 
 		{BEGIN Organisation_Unit_Code_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit_Code" data-fieldname="Organisation Unit Code" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit_Code" data-fieldname="Organisation Unit Code" data-default-width >
 {$Organisation_Unit_Code_value}
 </span>
 {END Organisation_Unit_Code_fieldcolumn}	
@@ -983,7 +1136,7 @@
 
 	 
 		{BEGIN Organisation_Unit_Description_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit_Description" data-fieldname="Organisation Unit Description" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_Unit_Description" data-fieldname="Organisation Unit Description" data-default-width >
 {$Organisation_Unit_Description_value}
 </span>
 {END Organisation_Unit_Description_fieldcolumn}	
@@ -1004,7 +1157,7 @@
 
 	 
 		{BEGIN Actual_Reports_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Actual_Reports" data-fieldname="Actual Reports" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Actual_Reports" data-fieldname="Actual Reports" data-default-width >
 {$Actual_Reports_value}
 </span>
 {END Actual_Reports_fieldcolumn}	
@@ -1025,7 +1178,7 @@
 
 	 
 		{BEGIN Expected_Reports_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Expected_Reports" data-fieldname="Expected Reports" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Expected_Reports" data-fieldname="Expected Reports" data-default-width >
 {$Expected_Reports_value}
 </span>
 {END Expected_Reports_fieldcolumn}	
@@ -1046,7 +1199,7 @@
 
 	 
 		{BEGIN Reporting_Rate_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporting_Rate" data-fieldname="Reporting Rate" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporting_Rate" data-fieldname="Reporting Rate" data-default-width >
 {$Reporting_Rate_value}
 </span>
 {END Reporting_Rate_fieldcolumn}	
@@ -1067,7 +1220,7 @@
 
 	 
 		{BEGIN Actual_Reports_On_Time_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Actual_Reports_On_Time" data-fieldname="Actual Reports On Time" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Actual_Reports_On_Time" data-fieldname="Actual Reports On Time" data-default-width >
 {$Actual_Reports_On_Time_value}
 </span>
 {END Actual_Reports_On_Time_fieldcolumn}	
@@ -1088,7 +1241,7 @@
 
 	 
 		{BEGIN Reporting_Rate_On_Time_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporting_Rate_On_Time" data-fieldname="Reporting Rate On Time" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporting_Rate_On_Time" data-fieldname="Reporting Rate On Time" data-default-width >
 {$Reporting_Rate_On_Time_value}
 </span>
 {END Reporting_Rate_On_Time_fieldcolumn}	

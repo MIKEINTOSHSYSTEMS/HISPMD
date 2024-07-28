@@ -155,6 +155,7 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -171,74 +172,13 @@ pdfDocument = {
       
       },
 
-																							{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_filter_panel}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 						[
 																{
 	cellId: 'c1',
@@ -284,6 +224,52 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
 		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c7',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      
@@ -738,7 +724,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -767,7 +753,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -796,7 +782,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -825,7 +811,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -854,7 +840,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Organisation_Unit_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+			{"text":{$Organisation_Unit_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -883,7 +869,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Organisation_Unit_Code_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+			{"text":{$Organisation_Unit_Code_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -912,7 +898,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Organisation_Unit_Description_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
+			{"text":{$Organisation_Unit_Description_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -941,7 +927,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Actual_Reports_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
+			{"text":{$Actual_Reports_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -970,7 +956,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Expected_Reports_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+			{"text":{$Expected_Reports_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -999,7 +985,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Reporting_Rate_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
+			{"text":{$Reporting_Rate_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1028,7 +1014,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Actual_Reports_On_Time_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
+			{"text":{$Actual_Reports_On_Time_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1057,7 +1043,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Reporting_Rate_On_Time_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+			{"text":{$Reporting_Rate_On_Time_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
 				
 		  ],
   "border": [ true, true, true, true ],

@@ -91,101 +91,121 @@ $url = RunnerContext::PrepareRest($url);
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize parameters with default values
-$indicators = ['BfMAe6Itzgt'];
-$orgUnits = ['Rp268JB6Ne4', 'dWOAzMcK2Wt'];
-$defaultPeriods = ['LAST_6_BIMONTHS'];
-$validPeriods = [
-    'THIS_WEEK', 'LAST_WEEK', 'LAST_4_WEEKS', 'LAST_12_WEEKS', 'LAST_52_WEEKS', 'THIS_MONTH',
-    'LAST_MONTH', 'THIS_BIMONTH', 'LAST_BIMONTH', 'THIS_QUARTER', 'LAST_QUARTER', 'THIS_SIX_MONTH',
-    'LAST_SIX_MONTH', 'MONTHS_THIS_YEAR', 'QUARTERS_THIS_YEAR', 'THIS_YEAR', 'MONTHS_LAST_YEAR',
-    'QUARTERS_LAST_YEAR', 'LAST_YEAR', 'LAST_5_YEARS', 'LAST_12_MONTHS', 'LAST_3_MONTHS',
-    'LAST_6_BIMONTHS', 'LAST_4_QUARTERS', 'LAST_2_SIXMONTHS', 'THIS_FINANCIAL_YEAR',
-    'LAST_FINANCIAL_YEAR', 'LAST_5_FINANCIAL_YEARS'
+$defaultParams = [
+    'dataSets' => ['BfMAe6Itzgt'], // Default dataset ID
+    'orgUnits' => ['Rp268JB6Ne4'], // Default organisation unit ID
+    'periods' => [
+        'THIS_WEEK', 'LAST_WEEK', 'LAST_4_WEEKS', 'LAST_12_WEEKS', 'LAST_52_WEEKS', 'THIS_MONTH',
+        'LAST_MONTH', 'THIS_BIMONTH', 'LAST_BIMONTH', 'THIS_QUARTER', 'LAST_QUARTER', 'THIS_SIX_MONTH',
+        'LAST_SIX_MONTH', 'MONTHS_THIS_YEAR', 'QUARTERS_THIS_YEAR', 'THIS_YEAR', 'MONTHS_LAST_YEAR',
+        'QUARTERS_LAST_YEAR', 'LAST_YEAR', 'LAST_5_YEARS', 'LAST_12_MONTHS', 'LAST_3_MONTHS',
+        'LAST_6_BIMONTHS', 'LAST_4_QUARTERS', 'LAST_2_SIXMONTHS', 'THIS_FINANCIAL_YEAR',
+        'LAST_FINANCIAL_YEAR', 'LAST_5_FINANCIAL_YEARS'
+    ] // Default periods
 ];
-$periods = $defaultPeriods;
 
-// Parse `q` parameter for indicators
-preg_match('/dx~equals~([^)]*)/', $query, $matches);
-if (isset($matches[1])) {
-    $indicators = array_map('trim', explode(',', urldecode($matches[1])));
-}
+// Helper function to extract and process query parameters
+if (!function_exists('extractQueryParams')) {
+    function extractQueryParams($query, $defaultParams) {
+        $params = $defaultParams;
 
-// Parse `q` parameter for periods
-preg_match('/pe~contains~([^)]*)/', $query, $matches);
-if (isset($matches[1])) {
-    $inputPeriods = array_map('trim', explode(',', urldecode($matches[1])));
-    $periods = array_intersect($inputPeriods, $validPeriods);
-    if (empty($periods)) {
-        $periods = $defaultPeriods;
+        // Extract datasets
+        if (preg_match('/dx~equals~([^)]*)/', $query, $matches)) {
+            $params['dataSets'] = array_map('trim', explode(',', urldecode($matches[1])));
+        }
+
+        // Extract periods
+        if (preg_match('/pe~contains~([^)]*)/', $query, $matches)) {
+            $inputPeriods = array_map('trim', explode(';', urldecode($matches[1])));
+            $params['periods'] = $inputPeriods;
+        }
+
+        // Extract organization units
+        if (preg_match('/ou~equals~([^)]*)/', $query, $matches)) {
+            $params['orgUnits'] = array_map('trim', explode(',', urldecode($matches[1])));
+        }
+
+        return $params;
     }
 }
 
-// Parse `q` parameter for organization units
-preg_match('/ou~equals~([^)]*)/', $query, $matches);
-if (isset($matches[1])) {
-    $orgUnits = array_map('trim', explode(',', urldecode($matches[1])));
-}
+// Extract parameters
+$params = extractQueryParams($query, $defaultParams);
 
 // Map relative periods to DHIS2 API supported formats
-function mapRelativePeriods($periods)
-{
-    $relativePeriods = [
-        'THIS_WEEK' => 'THIS_WEEK',
-        'LAST_WEEK' => 'LAST_WEEK',
-        'LAST_4_WEEKS' => 'LAST_4_WEEKS',
-        'LAST_12_WEEKS' => 'LAST_12_WEEKS',
-        'LAST_52_WEEKS' => 'LAST_52_WEEKS',
-        'THIS_MONTH' => 'THIS_MONTH',
-        'LAST_MONTH' => 'LAST_MONTH',
-        'THIS_BIMONTH' => 'THIS_BIMONTH',
-        'LAST_BIMONTH' => 'LAST_BIMONTH',
-        'THIS_QUARTER' => 'THIS_QUARTER',
-        'LAST_QUARTER' => 'LAST_QUARTER',
-        'THIS_SIX_MONTH' => 'THIS_SIX_MONTH',
-        'LAST_SIX_MONTH' => 'LAST_SIX_MONTH',
-        'MONTHS_THIS_YEAR' => 'MONTHS_THIS_YEAR',
-        'QUARTERS_THIS_YEAR' => 'QUARTERS_THIS_YEAR',
-        'THIS_YEAR' => 'THIS_YEAR',
-        'MONTHS_LAST_YEAR' => 'MONTHS_LAST_YEAR',
-        'QUARTERS_LAST_YEAR' => 'QUARTERS_LAST_YEAR',
-        'LAST_YEAR' => 'LAST_YEAR',
-        'LAST_5_YEARS' => 'LAST_5_YEARS',
-        'LAST_12_MONTHS' => 'LAST_12_MONTHS',
-        'LAST_3_MONTHS' => 'LAST_3_MONTHS',
-        'LAST_6_BIMONTHS' => 'LAST_6_BIMONTHS',
-        'LAST_4_QUARTERS' => 'LAST_4_QUARTERS',
-        'LAST_2_SIXMONTHS' => 'LAST_2_SIXMONTHS',
-        'THIS_FINANCIAL_YEAR' => 'THIS_FINANCIAL_YEAR',
-        'LAST_FINANCIAL_YEAR' => 'LAST_FINANCIAL_YEAR',
-        'LAST_5_FINANCIAL_YEARS' => 'LAST_5_FINANCIAL_YEARS'
-    ];
+if (!function_exists('mapRelativePeriods')) {
+    function mapRelativePeriods($periods) {
+        $relativePeriods = [
+            'THIS_WEEK' => 'THIS_WEEK',
+            'LAST_WEEK' => 'LAST_WEEK',
+            'LAST_4_WEEKS' => 'LAST_4_WEEKS',
+            'LAST_12_WEEKS' => 'LAST_12_WEEKS',
+            'LAST_52_WEEKS' => 'LAST_52_WEEKS',
+            'THIS_MONTH' => 'THIS_MONTH',
+            'LAST_MONTH' => 'LAST_MONTH',
+            'THIS_BIMONTH' => 'THIS_BIMONTH',
+            'LAST_BIMONTH' => 'LAST_BIMONTH',
+            'THIS_QUARTER' => 'THIS_QUARTER',
+            'LAST_QUARTER' => 'LAST_QUARTER',
+            'THIS_SIX_MONTH' => 'THIS_SIX_MONTH',
+            'LAST_SIX_MONTH' => 'LAST_SIX_MONTH',
+            'MONTHS_THIS_YEAR' => 'MONTHS_THIS_YEAR',
+            'QUARTERS_THIS_YEAR' => 'QUARTERS_THIS_YEAR',
+            'THIS_YEAR' => 'THIS_YEAR',
+            'MONTHS_LAST_YEAR' => 'MONTHS_LAST_YEAR',
+            'QUARTERS_LAST_YEAR' => 'QUARTERS_LAST_YEAR',
+            'LAST_YEAR' => 'LAST_YEAR',
+            'LAST_5_YEARS' => 'LAST_5_YEARS',
+            'LAST_12_MONTHS' => 'LAST_12_MONTHS',
+            'LAST_3_MONTHS' => 'LAST_3_MONTHS',
+            'LAST_6_BIMONTHS' => 'LAST_6_BIMONTHS',
+            'LAST_4_QUARTERS' => 'LAST_4_QUARTERS',
+            'LAST_2_SIXMONTHS' => 'LAST_2_SIXMONTHS',
+            'THIS_FINANCIAL_YEAR' => 'THIS_FINANCIAL_YEAR',
+            'LAST_FINANCIAL_YEAR' => 'LAST_FINANCIAL_YEAR',
+            'LAST_5_FINANCIAL_YEARS' => 'LAST_5_FINANCIAL_YEARS'
+        ];
 
-    $mappedPeriods = array_filter($periods, function ($period) use ($relativePeriods) {
-        return array_key_exists($period, $relativePeriods);
-    });
+        $mappedPeriods = [];
+        foreach ($periods as $period) {
+            if (array_key_exists($period, $relativePeriods)) {
+                $mappedPeriods[] = $relativePeriods[$period];
+            } else {
+                error_log("Unrecognized period format: " . $period);
+            }
+        }
 
-    if (count($mappedPeriods) < count($periods)) {
-        error_log("Some periods were unrecognized: " . implode(', ', array_diff($periods, $mappedPeriods)));
+        return $mappedPeriods;
     }
-
-    return $mappedPeriods;
 }
 
-// Map the relative periods to DHIS2 API formats
-$mappedPeriods = mapRelativePeriods($periods);
+// Map periods
+$mappedPeriods = mapRelativePeriods($params['periods']);
 
 // Log extracted parameters for debugging
-error_log("Indicators: " . implode(',', $indicators));
-error_log("Organization Units: " . implode(',', $orgUnits));
-error_log("Periods: " . implode(',', $mappedPeriods));
+error_log("Indicators: " . implode(',', $params['dataSets']));
+error_log("Organization Units: " . implode(',', $params['orgUnits']));
+error_log("Periods: " . implode(';', $mappedPeriods));
 
 // Prepare request body
 $body = [
-    ['name' => 'action', 'value' => 'fetchAnalyticsData', 'location' => 'url', 'skipEmpty' => true],
-    ['name' => 'dataSet', 'value' => implode(';', $indicators), 'location' => 'url', 'skipEmpty' => true],
-    ['name' => 'organisationUnit[]', 'value' => implode(';', $orgUnits), 'location' => 'url', 'skipEmpty' => true],
-    ['name' => 'reportPeriod', 'value' => implode(';', $mappedPeriods), 'location' => 'url', 'skipEmpty' => true]
+    ['name' => 'action', 'value' => 'fetchAnalyticsData', 'location' => 'url', 'skipEmpty' => true]
 ];
+
+// Add datasets to the body
+foreach ($params['dataSets'] as $indicator) {
+    $body[] = ['name' => 'dataSet[]', 'value' => $indicator, 'location' => 'url', 'skipEmpty' => true];
+}
+
+// Add organization units to the body
+foreach ($params['orgUnits'] as $orgUnit) {
+    $body[] = ['name' => 'organisationUnit[]', 'value' => $orgUnit, 'location' => 'url', 'skipEmpty' => true];
+}
+
+// Add report periods to the body
+foreach ($mappedPeriods as $period) {
+    $body[] = ['name' => 'reportPeriod[]', 'value' => $period, 'location' => 'url', 'skipEmpty' => true];
+}
 
 $body = $dataSource->preparePayload($body);
 
@@ -207,31 +227,24 @@ if (!$rs) {
     return false;
 }
 
-// Assuming $rs is an array
+// Process the result set
 $dataRows = [];
 foreach ($rs as $record) {
-    // Assuming the response includes the title information
-    $period = isset($record['period']) ? $record['period'] : '';
-    $title = isset($record['title']) ? $record['title'] : '';  // Extract title if available
-
     $dataRows[] = [
-        'Title' => $title,  // Adding the title column
-        'Data Set' => isset($record[0]) ? $indicators[0] : '',  // Assuming index 0 for Data Set
-        'Report Period' => $period,  // Using the period from the response
-        'Organisation Unit ID' => isset($record[2]) ? $record[2] : '',  // Adjust indices as needed
-        'Organisation Unit' => isset($record[3]) ? $record[3] : '',
-        'Organisation Unit Code' => isset($record[4]) ? $record[4] : '',
-        'Organisation Unit Description' => isset($record[5]) ? $record[5] : '',
-        'Actual Reports' => isset($record[6]) ? $record[6] : '',
-        'Expected Reports' => isset($record[7]) ? $record[7] : '',
-        'Reporting Rate' => isset($record[8]) ? $record[8] : '',
-        'Actual Reports On Time' => isset($record[9]) ? $record[9] : '',
-        'Reporting Rate On Time' => isset($record[10]) ? $record[10] : ''
+        'Title' => isset($record['title']) ? $record['title'] : '',
+        'Data Set' => isset($record['dataSet']) ? $record['dataSet'] : '',
+        'Report Period' => isset($record['period']) ? $record['period'] : '',
+        'Organisation Unit ID' => isset($record['organisationUnitID']) ? $record['organisationUnitID'] : '',
+        'Organisation Unit' => isset($record['organisationUnit']) ? $record['organisationUnit'] : '',
+        'Organisation Unit Code' => isset($record['organisationUnitCode']) ? $record['organisationUnitCode'] : '',
+        'Organisation Unit Description' => isset($record['organisationUnitDescription']) ? $record['organisationUnitDescription'] : '',
+        'Actual Reports' => isset($record['actualReports']) ? $record['actualReports'] : '',
+        'Expected Reports' => isset($record['expectedReports']) ? $record['expectedReports'] : '',
+        'Reporting Rate' => isset($record['reportingRate']) ? $record['reportingRate'] : '',
+        'Actual Reports On Time' => isset($record['actualReportsOnTime']) ? $record['actualReportsOnTime'] : '',
+        'Reporting Rate On Time' => isset($record['reportingRateOnTime']) ? $record['reportingRateOnTime'] : ''
     ];
 }
-
-// Return data in the required format
-//echo json_encode($dataRows);
 
 // Apply search and filter parameters
 $rs = $dataSource->filterResult($rs, $command->filter);

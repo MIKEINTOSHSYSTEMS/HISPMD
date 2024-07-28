@@ -106,40 +106,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$Organisation_Unit_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$Organisation_Unit_Code_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 				
-			{"text":{$Organisation_Unit_Description_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
-			{"text":{$Actual_Reports_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+			{"text":{$Organisation_Unit_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
-			{"text":{$Expected_Reports_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+			{"text":{$Organisation_Unit_Code_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
-			{"text":{$Reporting_Rate_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+			{"text":{$Organisation_Unit_Description_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
 				
-			{"text":{$Actual_Reports_On_Time_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+			{"text":{$Actual_Reports_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
-			{"text":{$Reporting_Rate_On_Time_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+			{"text":{$Expected_Reports_pdfvalue},"hidden":"{$item_hide_export_field8}"},
 				
 				
-			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_export_field}"},
+			{"text":{$Reporting_Rate_pdfvalue},"hidden":"{$item_hide_export_field9}"},
 				
 				
-			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+			{"text":{$Actual_Reports_On_Time_pdfvalue},"hidden":"{$item_hide_export_field10}"},
 				
 				
-			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+			{"text":{$Reporting_Rate_On_Time_pdfvalue},"hidden":"{$item_hide_export_field11}"},
 				
 		  ],
   "border": [ false, false, false, false ],

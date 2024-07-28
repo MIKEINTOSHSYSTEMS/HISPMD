@@ -18,28 +18,43 @@ function fetchData($url, $username, $password) {
     curl_setopt($ch, CURLOPT_USERPWD, $username . ':' . $password);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     $result = curl_exec($ch);
+
+    // Check for cURL errors
     if (curl_errno($ch)) {
         http_response_code(500);
         echo json_encode(['error' => curl_error($ch)]);
         curl_close($ch);
         exit;
     }
+
+    // Check for HTTP status code
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    if ($httpCode != 200) {
+        http_response_code($httpCode);
+        echo json_encode(['error' => 'Unexpected HTTP response code: ' . $httpCode]);
+        curl_close($ch);
+        exit;
+    }
+
     curl_close($ch);
     return json_decode($result, true);
 }
 
 // Fetch Analytics Data
-function fetchAnalyticsData($baseUrl, $username, $password, $dataSet, $orgUnits, $reportPeriod) {
-    $indicators = [
-        "{$dataSet}.ACTUAL_REPORTS",
-        "{$dataSet}.EXPECTED_REPORTS",
-        "{$dataSet}.REPORTING_RATE",
-        "{$dataSet}.ACTUAL_REPORTS_ON_TIME",
-        "{$dataSet}.REPORTING_RATE_ON_TIME"
-    ];
+function fetchAnalyticsData($baseUrl, $username, $password, $dataSets, $orgUnits, $reportPeriods) {
+    $indicators = [];
+    foreach ($dataSets as $dataSet) {
+        $indicators[] = "{$dataSet}.ACTUAL_REPORTS";
+        $indicators[] = "{$dataSet}.EXPECTED_REPORTS";
+        $indicators[] = "{$dataSet}.REPORTING_RATE";
+        $indicators[] = "{$dataSet}.ACTUAL_REPORTS_ON_TIME";
+        $indicators[] = "{$dataSet}.REPORTING_RATE_ON_TIME";
+    }
     $dimensionDx = implode(';', $indicators);
     $dimensionOu = implode(';', $orgUnits);
-    $url = $baseUrl . "/api/analytics.json?dimension=dx:$dimensionDx&dimension=ou:$dimensionOu&filter=pe:$reportPeriod&columns=dx&rows=ou&tableLayout=true&hideEmptyRows=true&displayProperty=SHORTNAME&includeNumDen=false";
+    $dimensionPe = implode(';', $reportPeriods);
+    
+    $url = $baseUrl . "/api/analytics.json?dimension=dx:$dimensionDx&dimension=ou:$dimensionOu&filter=pe:$dimensionPe&columns=dx&rows=ou&tableLayout=true&hideEmptyRows=true&displayProperty=SHORTNAME&includeNumDen=false";
     return fetchData($url, $username, $password);
 }
 
@@ -47,37 +62,54 @@ function fetchAnalyticsData($baseUrl, $username, $password, $dataSet, $orgUnits,
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $action = isset($_GET['action']) ? $_GET['action'] : '';
 
+    // Log the action parameter
+    error_log("Action: " . $action);
+
     switch ($action) {
         case 'fetchAnalyticsData':
-            $dataSet = isset($_GET['dataSet']) ? $_GET['dataSet'] : '';
+            $dataSets = isset($_GET['dataSet']) ? (array) $_GET['dataSet'] : [];
             $orgUnits = isset($_GET['organisationUnit']) ? (array) $_GET['organisationUnit'] : [];
-            $reportPeriod = isset($_GET['reportPeriod']) ? $_GET['reportPeriod'] : '';
-            if ($dataSet && !empty($orgUnits) && $reportPeriod) {
-                $analyticsData = fetchAnalyticsData($baseUrl, $username, $password, $dataSet, $orgUnits, $reportPeriod);
+            $reportPeriods = isset($_GET['reportPeriod']) ? (array) $_GET['reportPeriod'] : [];
+
+            // Log parameters
+            error_log("DataSets: " . print_r($dataSets, true));
+            error_log("OrgUnits: " . print_r($orgUnits, true));
+            error_log("ReportPeriods: " . print_r($reportPeriods, true));
+
+            if (!empty($dataSets) && !empty($orgUnits) && !empty($reportPeriods)) {
+                $analyticsData = fetchAnalyticsData($baseUrl, $username, $password, $dataSets, $orgUnits, $reportPeriods);
                 if ($analyticsData) {
                     // Extract title from response
                     $title = isset($analyticsData['title']) ? $analyticsData['title'] : '';
 
                     // Handle the rows safely
-                    $rows = isset($analyticsData['rows']) && !empty($analyticsData['rows']) ? $analyticsData['rows'][0] : [];
+                    $rows = isset($analyticsData['rows']) ? $analyticsData['rows'] : [];
 
                     // Prepare the output
-                    $output = [
-                        "Title" => $title,
-                        "Data Set" => $dataSet,
-                        "Report Period" => $reportPeriod,  //$title,  // Use title here for the report period
-                        "Organisation Unit ID" => isset($rows[0]) ? $rows[0] : '',
-                        "Organisation Unit" => isset($rows[1]) ? $rows[1] : '',
-                        "Organisation Unit Code" => isset($rows[2]) ? $rows[2] : '',
-                        "Organisation Unit Description" => isset($rows[3]) ? $rows[3] : '',
-                        "Actual Reports" => isset($rows[4]) ? $rows[4] : '',
-                        "Expected Reports" => isset($rows[5]) ? $rows[5] : '',
-                        "Reporting Rate" => isset($rows[6]) ? $rows[6] : '',
-                        "Actual Reports On Time" => isset($rows[7]) ? $rows[7] : '',
-                        "Reporting Rate On Time" => isset($rows[8]) ? $rows[8] : ''
-                    ];
+                    $formattedData = [];
+                    foreach ($rows as $row) {
+                        $formattedData[] = [
+                            "Title" => $title,
+                            "Data Set" => implode(', ', $dataSets),
+                            "Report Period" => implode(', ', $reportPeriods),
+                            "Organisation Unit ID" => isset($row[0]) ? $row[0] : '',
+                            "Organisation Unit" => isset($row[1]) ? $row[1] : '',
+                            "Organisation Unit Code" => isset($row[2]) ? $row[2] : '',
+                            "Organisation Unit Description" => isset($row[3]) ? $row[3] : '',
+                            "Actual Reports" => isset($row[4]) ? $row[4] : '',
+                            "Expected Reports" => isset($row[5]) ? $row[5] : '',
+                            "Reporting Rate" => isset($row[6]) ? $row[6] : '',
+                            "Actual Reports On Time" => isset($row[7]) ? $row[7] : '',
+                            "Reporting Rate On Time" => isset($row[8]) ? $row[8] : ''
+                        ];
+                    }
 
-                    echo json_encode($output, JSON_PRETTY_PRINT);
+                    echo json_encode([
+                        "Title" => $title,
+                        "Data Set" => implode(', ', $dataSets),
+                        "Report Period" => implode(', ', $reportPeriods),
+                        "Data" => $formattedData
+                    ], JSON_PRETTY_PRINT);
                 } else {
                     http_response_code(500);
                     echo json_encode(['error' => 'Failed to fetch analytics data']);

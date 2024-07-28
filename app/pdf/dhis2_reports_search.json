@@ -166,13 +166,40 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+			{"text":{$Data_Set_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$Organisation_Unit_ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$Organisation_Unit_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$Organisation_Unit_Code_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$Organisation_Unit_Description_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$Actual_Reports_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$Expected_Reports_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$Reporting_Rate_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$Actual_Reports_On_Time_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$Reporting_Rate_On_Time_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
 		  ],
   "border": [ false, false, false, false ],
