@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption DHIS2_Analytics}',
+				text: '{$jscaption DHIS2_Reporting_Rate}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel DHIS2_Analytics list}',
+				text: '{$jspagetitlelabel DHIS2_Reporting_Rate list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -88,6 +88,12 @@ pdfDocument = {
 										{BEGIN col_grid_7}
 					"%",
 					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -113,99 +119,7 @@ pdfDocument = {
 							stack: [
 
 																										
-{
-	table: {
-	
-				
-		location: 'top',
-		
-		
-		widths: [
-								"*", 
-					 ],	
-		
-	
-		body: [
-				
-				[
-																{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"<p>START&nbsp;HERE by Selecting an Indicator and Then the Organisation Unit and Click on SEARCH</p>","hidden":"{$item_hide_text1}","isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_search_panel}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"After Selecting from the above Available Indicators and Organisation Units, you can use the FILTERS below to narrow down your search results!","hidden":"{$item_hide_text}","isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-		
-		]
-	}
-}
+''
 ,
 								
 																										
@@ -226,12 +140,13 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c4',
+	cellId: 'c5',
 	col:0,
 	row:0,
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -239,8 +154,101 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Filters ","hidden":"{$item_hide_text2}","bold":true,"isHtml":true},
+			{"text":"START HERE by Selecting an Organisation Unit -> Dataset and then Report Period the and Click on SEARCH","hidden":"{$item_hide_text}","isHtml":true},
 				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c5',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_search_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"After Selecting from the above Available Datasets and Organisation Units, you can use the FILTERS below to narrow down your search results!","hidden":"{$item_hide_text1}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
 				
 			{"text":"","hidden":"{$item_hide_filter_panel}"},
 				
@@ -251,28 +259,13 @@ pdfDocument = {
       
       },
 
-																							{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
+																		{ 
+				cellId: 'c3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 						[
 																{
 	cellId: 'c1',
@@ -325,50 +318,6 @@ pdfDocument = {
       },
 
 											],
-						[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
 		
 		]
 	}
@@ -412,12 +361,12 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_checkbox}
-																							{BEGIN cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'Value',
+			fieldName: 'title',
 				style: 'headcell',
 		
 		
@@ -431,11 +380,98 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Analytics Value }","color":"#3c8dbc","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel DHIS2_Reporting_Rate title }","color":"#04444c","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Value_align}',
+              "alignment": '{$title_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'organisationUnit',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_Reporting_Rate organisationUnit }","color":"#04444c","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$organisationUnit_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'dataSet',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_Reporting_Rate dataSet }","color":"#04444c","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$dataSet_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'reportPeriod',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_Reporting_Rate reportPeriod }","color":"#04444c","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$reportPeriod_align}',
      
       
       },
@@ -446,7 +482,7 @@ pdfDocument = {
 	cellId: 'headcell_field4',
 	col:0,
 	row:0,
-			fieldName: 'dx',
+			fieldName: 'ACTUAL_REPORTS',
 				style: 'headcell',
 		
 		
@@ -460,11 +496,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Analytics dx }","hidden":"{$item_hide_grid_field_label}","bold":true},
+			{"text":"{$jslabel DHIS2_Reporting_Rate ACTUAL_REPORTS }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$dx_align}',
+              "alignment": '{$ACTUAL_REPORTS_align}',
      
       
       },
@@ -475,7 +511,7 @@ pdfDocument = {
 	cellId: 'headcell_field5',
 	col:0,
 	row:0,
-			fieldName: 'ou',
+			fieldName: 'EXPECTED_REPORTS',
 				style: 'headcell',
 		
 		
@@ -489,11 +525,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Analytics ou }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+			{"text":"{$jslabel DHIS2_Reporting_Rate EXPECTED_REPORTS }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ou_align}',
+              "alignment": '{$EXPECTED_REPORTS_align}',
      
       
       },
@@ -504,7 +540,7 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'pe',
+			fieldName: 'REPORTING_RATE',
 				style: 'headcell',
 		
 		
@@ -518,22 +554,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Analytics pe }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+			{"text":"{$jslabel DHIS2_Reporting_Rate REPORTING_RATE }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$pe_align}',
+              "alignment": '{$REPORTING_RATE_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
-			fieldName: 'Period',
+			fieldName: 'ACTUAL_REPORTS_ON_TIME',
 				style: 'headcell',
 		
 		
@@ -547,22 +583,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Analytics Period }","hidden":"{$item_hide_grid_field_label5}","bold":true},
+			{"text":"{$jslabel DHIS2_Reporting_Rate ACTUAL_REPORTS_ON_TIME }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Period_align}',
+              "alignment": '{$ACTUAL_REPORTS_ON_TIME_align}',
      
       
       },
 
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field1',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
-			fieldName: 'Data',
+			fieldName: 'REPORTING_RATE_ON_TIME',
 				style: 'headcell',
 		
 		
@@ -576,45 +612,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Analytics Data }","hidden":"{$item_hide_grid_field_label3}","bold":true},
+			{"text":"{$jslabel DHIS2_Reporting_Rate REPORTING_RATE_ON_TIME }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Data_align}',
+              "alignment": '{$REPORTING_RATE_ON_TIME_align}',
      
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
-	col:0,
-	row:0,
-			fieldName: 'Organisation_unit',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel DHIS2_Analytics Organisation_unit }","hidden":"{$item_hide_grid_field_label4}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Organisation_unit_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field8}
 											],
 				{END row_grid_0}
 		
@@ -652,12 +659,12 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_checkbox}
-																							{BEGIN cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'Value',
+			fieldName: 'title',
 				style: 'bodycell',
 		
 		
@@ -671,11 +678,98 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Value_pdfvalue},"color":"#3c7dbc","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":{$title_pdfvalue},"color":"#04444c","hidden":"{$item_hide_simple_grid_field}","italics":true,"bold":false},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Value_align}',
+              "alignment": '{$title_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'organisationUnit',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$organisationUnit_pdfvalue},"color":"#04444c","hidden":"{$item_hide_grid_field}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$organisationUnit_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'dataSet',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$dataSet_pdfvalue},"color":"#04444c","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$dataSet_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'reportPeriod',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$reportPeriod_pdfvalue},"color":"#04444c","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$reportPeriod_align}',
      
       
       },
@@ -686,7 +780,7 @@ pdfDocument = {
 	cellId: 'cell_field4',
 	col:0,
 	row:0,
-			fieldName: 'dx',
+			fieldName: 'ACTUAL_REPORTS',
 				style: 'bodycell',
 		
 		
@@ -700,11 +794,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$dx_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+			{"text":{$ACTUAL_REPORTS_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$dx_align}',
+              "alignment": '{$ACTUAL_REPORTS_align}',
      
       
       },
@@ -715,7 +809,7 @@ pdfDocument = {
 	cellId: 'cell_field5',
 	col:0,
 	row:0,
-			fieldName: 'ou',
+			fieldName: 'EXPECTED_REPORTS',
 				style: 'bodycell',
 		
 		
@@ -729,11 +823,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ou_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+			{"text":{$EXPECTED_REPORTS_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ou_align}',
+              "alignment": '{$EXPECTED_REPORTS_align}',
      
       
       },
@@ -744,7 +838,7 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
-			fieldName: 'pe',
+			fieldName: 'REPORTING_RATE',
 				style: 'bodycell',
 		
 		
@@ -758,22 +852,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$pe_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+			{"text":{$REPORTING_RATE_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$pe_align}',
+              "alignment": '{$REPORTING_RATE_align}',
      
       
       },
 
 {END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
-			fieldName: 'Period',
+			fieldName: 'ACTUAL_REPORTS_ON_TIME',
 				style: 'bodycell',
 		
 		
@@ -787,22 +881,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_grid_field5}"},
+			{"text":{$ACTUAL_REPORTS_ON_TIME_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Period_align}',
+              "alignment": '{$ACTUAL_REPORTS_ON_TIME_align}',
      
       
       },
 
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field1',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
-			fieldName: 'Data',
+			fieldName: 'REPORTING_RATE_ON_TIME',
 				style: 'bodycell',
 		
 		
@@ -816,45 +910,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Data_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
+			{"text":{$REPORTING_RATE_ON_TIME_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Data_align}',
+              "alignment": '{$REPORTING_RATE_ON_TIME_align}',
      
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
-	col:0,
-	row:0,
-			fieldName: 'Organisation_unit',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Organisation_unit_pdfvalue},"hidden":"{$item_hide_grid_field4}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Organisation_unit_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field8}
 											],
 				{END row_grid_1}
 		
@@ -890,6 +955,84 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_checkbox}
+																							{BEGIN cellblock_grid_footcell_field}
+{
+	cellId: 'footcell_field',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field11}
 																							{BEGIN cellblock_grid_footcell_field3}
 {
 	cellId: 'footcell_field3',
@@ -994,9 +1137,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field6}
-																							{BEGIN cellblock_grid_footcell_field}
+																							{BEGIN cellblock_grid_footcell_field7}
 {
-	cellId: 'footcell_field',
+	cellId: 'footcell_field7',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -1019,10 +1162,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
+{END cellblock_grid_footcell_field7}
+																							{BEGIN cellblock_grid_footcell_field8}
 {
-	cellId: 'footcell_field1',
+	cellId: 'footcell_field8',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -1045,33 +1188,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field1}
-																							{BEGIN cellblock_grid_footcell_field2}
-{
-	cellId: 'footcell_field2',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field2}
+{END cellblock_grid_footcell_field8}
 											],
 				{END row_grid_2}
 		

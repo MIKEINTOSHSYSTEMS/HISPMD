@@ -1463,6 +1463,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("DHIS2_Periods" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

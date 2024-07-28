@@ -3592,6 +3592,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_datasets" ] = "DHIS2_Datasets";
 	$projectEntities[ "DHIS2_Periods" ] = array( "url" => "dhis2_periods", "type" => 0 );
 	$projectEntitiesReverse[ "dhis2_periods" ] = "DHIS2_Periods";
+	$projectEntities[ "DHIS2_Reporting_Rate" ] = array( "url" => "dhis2_reporting_rate", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_reporting_rate" ] = "DHIS2_Reporting_Rate";
 }
 
 function findTable( $table ) {

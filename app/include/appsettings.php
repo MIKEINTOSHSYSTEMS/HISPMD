@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "298_1722087950";
+$projectBuildKey = "309_1722087950";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "298";
+$projectBuildNumber = "309";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -790,6 +790,7 @@ $tableCaptions["English"]["DHIS2_Analytics_Report"] = "DHIS2 Analytics Report";
 $tableCaptions["English"]["DHIS2_Reports"] = "DHIS2 Reports";
 $tableCaptions["English"]["DHIS2_Datasets"] = "DHIS2 Datasets";
 $tableCaptions["English"]["DHIS2_Periods"] = "DHIS2 Periods";
+$tableCaptions["English"]["DHIS2_Reporting_Rate"] = "DHIS2 Reporting Rate";
 
 
 $globalEvents = new class_GlobalEvents;

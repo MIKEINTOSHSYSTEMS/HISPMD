@@ -67,9 +67,10 @@ function fetchAnalyticsData($organisationUnits, $dataSet, $reportPeriod) {
     ];
     foreach ($analyticsData['rows'] as $row) {
         $output['data'][] = [
-            'Organisation Unit' => $analyticsData['metaData']['items'][$row[0]]['name'],
-            'Data Set' => $dataSet,
-            'Report Period' => $reportPeriod,
+            //'organisationUnit' => $analyticsData['metaData']['items'][$row[0]]['name'],
+            'organisationUnit' => $row[0], //$analyticsData['metaData']['items'][$row[0]]['name'],
+            'dataSet' => $dataSet,
+            'reportPeriod' => $reportPeriod,
             'ACTUAL_REPORTS' => $row[4],
             'EXPECTED_REPORTS' => $row[5],
             'REPORTING_RATE' => $row[6],
@@ -94,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             echo json_encode($data);
             break;
         case 'fetchAnalyticsData':
-            $organisationUnits = isset($_GET['organisationUnit']) ? $_GET['organisationUnit'] : [];
+            $organisationUnits = isset($_GET['organisationUnit']) ? $_GET['organisationUnit'] : '';
             $dataSet = isset($_GET['dataSet']) ? $_GET['dataSet'] : '';
             $reportPeriod = isset($_GET['reportPeriod']) ? $_GET['reportPeriod'] : '';
             if (!empty($organisationUnits) && !empty($dataSet) && !empty($reportPeriod)) {
