@@ -123,6 +123,12 @@ pdfDocument = {
 				
 			{"text":{$ou_value},"hidden":"{$item_hide_integrated_search_field4}"},
 				
+				
+			{"text":{$Period_value},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$pe_value},"hidden":"{$item_hide_integrated_search_field1}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

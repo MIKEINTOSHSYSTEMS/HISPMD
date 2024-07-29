@@ -3594,6 +3594,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_periods" ] = "DHIS2_Periods";
 	$projectEntities[ "DHIS2_Reporting_Rate" ] = array( "url" => "dhis2_reporting_rate", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_reporting_rate" ] = "DHIS2_Reporting_Rate";
+	$projectEntities[ "DHIS2_Reporting_Rate_Chart" ] = array( "url" => "dhis2_reporting_rate_chart1", "type" => 11 );
+	$projectEntitiesReverse[ "dhis2_reporting_rate_chart1" ] = "DHIS2_Reporting_Rate_Chart";
+	$projectEntities[ "DHIS2_Reporting_Rate_Report" ] = array( "url" => "dhis2_reporting_rate_report1", "type" => 10 );
+	$projectEntitiesReverse[ "dhis2_reporting_rate_report1" ] = "DHIS2_Reporting_Rate_Report";
 }
 
 function findTable( $table ) {

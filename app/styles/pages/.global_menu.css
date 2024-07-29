@@ -127,6 +127,12 @@
 [data-page=".global_menu"][data-itemid="welcome_item35"] > .bs-welcome-header {
   background-color: #DAA520;
 }
+[data-page=".global_menu"][data-itemid="welcome_item43"] > .bs-welcome-header {
+  background-color: #6DA5C8;
+}
+[data-page=".global_menu"][data-itemid="welcome_item44"] > .bs-welcome-header {
+  background-color: #1E90FF;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

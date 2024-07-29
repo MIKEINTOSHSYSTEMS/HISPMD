@@ -69,22 +69,40 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"","hidden":"{$item_hide_MFR_Region_grid}"},
+			{"text":"","hidden":"{$item_hide_MFR_Region_grid1}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_MFR_Zone_grid}"},
+			{"text":"","hidden":"{$item_hide_MFR_Zone_grid1}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_MFR_Woreda_grid}"},
+			{"text":"","hidden":"{$item_hide_MFR_Woreda_grid1}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_MFR_Region_map}"},
+			{"text":"","hidden":"{$item_hide_MFR_Region_map1}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_MFR_Zone_map}"},
+			{"text":"","hidden":"{$item_hide_MFR_Zone_map1}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_MFR_Woreda_map}"},
+			{"text":"","hidden":"{$item_hide_MFR_Woreda_map1}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Region_grid2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Zone_grid2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Woreda_grid2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Region_map2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Zone_map2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_MFR_Woreda_map2}"},
 				
 		  ],
   "border": [ false, false, false, false ],

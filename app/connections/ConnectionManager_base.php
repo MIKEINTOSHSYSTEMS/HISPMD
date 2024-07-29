@@ -283,6 +283,8 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_Datasets"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Periods"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["DHIS2_Reporting_Rate"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rate_Chart"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rate_Report"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

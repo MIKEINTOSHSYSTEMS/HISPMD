@@ -37,6 +37,42 @@
 [data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_map"] {
   height: 600px;
 }
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Region_grid1"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Zone_grid1"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_grid1"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Region_map1"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Zone_map1"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_map1"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Region_grid2"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Zone_grid2"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_grid2"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Region_map2"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Zone_map2"] {
+  height: 600px;
+}
+[data-page="mfr_geolocation_reports_dashboard"][data-itemid="MFR_Woreda_map2"] {
+  height: 600px;
+}
 [data-page="mfr_geolocation_reports_dashboard"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

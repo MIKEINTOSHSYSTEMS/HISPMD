@@ -605,6 +605,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_Reporting_Rate_Chart")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Reporting_Rate_Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1033,6 +1041,14 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Reporting_Rate")
 	{
 		return "DHIS2 Reporting Rate";
+	}
+	if($table=="DHIS2_Reporting_Rate_Chart")
+	{
+		return "DHIS2 Reporting Rate Chart";
+	}
+	if($table=="DHIS2_Reporting_Rate_Report")
+	{
+		return "DHIS2 Reporting Rate Report";
 	}
 	return $table;
 }

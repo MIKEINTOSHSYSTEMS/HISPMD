@@ -25,22 +25,22 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsdhis2_analytics_report["English"] = array();
 	$placeHoldersdhis2_analytics_report["English"] = array();
 	$pageTitlesdhis2_analytics_report["English"] = array();
-	$fieldLabelsdhis2_analytics_report["English"]["Data"] = "Data";
+	$fieldLabelsdhis2_analytics_report["English"]["Data"] = "Dimension Data";
 	$fieldToolTipsdhis2_analytics_report["English"]["Data"] = "";
 	$placeHoldersdhis2_analytics_report["English"]["Data"] = "";
-	$fieldLabelsdhis2_analytics_report["English"]["Organisation_unit"] = "Organisation Unit";
+	$fieldLabelsdhis2_analytics_report["English"]["Organisation_unit"] = "Dimension Org";
 	$fieldToolTipsdhis2_analytics_report["English"]["Organisation_unit"] = "";
 	$placeHoldersdhis2_analytics_report["English"]["Organisation_unit"] = "";
-	$fieldLabelsdhis2_analytics_report["English"]["Period"] = "Period";
+	$fieldLabelsdhis2_analytics_report["English"]["Period"] = "Fixed Period";
 	$fieldToolTipsdhis2_analytics_report["English"]["Period"] = "";
 	$placeHoldersdhis2_analytics_report["English"]["Period"] = "";
-	$fieldLabelsdhis2_analytics_report["English"]["dx"] = "Dx";
+	$fieldLabelsdhis2_analytics_report["English"]["dx"] = "Indicator";
 	$fieldToolTipsdhis2_analytics_report["English"]["dx"] = "";
 	$placeHoldersdhis2_analytics_report["English"]["dx"] = "";
-	$fieldLabelsdhis2_analytics_report["English"]["ou"] = "Ou";
+	$fieldLabelsdhis2_analytics_report["English"]["ou"] = "Org Unit";
 	$fieldToolTipsdhis2_analytics_report["English"]["ou"] = "";
 	$placeHoldersdhis2_analytics_report["English"]["ou"] = "";
-	$fieldLabelsdhis2_analytics_report["English"]["pe"] = "Pe";
+	$fieldLabelsdhis2_analytics_report["English"]["pe"] = "Relative Period";
 	$fieldToolTipsdhis2_analytics_report["English"]["pe"] = "";
 	$placeHoldersdhis2_analytics_report["English"]["pe"] = "";
 	$fieldLabelsdhis2_analytics_report["English"]["Value"] = "Value";
@@ -701,8 +701,9 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "Value";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -864,8 +865,9 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "Value";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1027,8 +1029,9 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "Value";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1100,7 +1103,7 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1110,6 +1113,34 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "DHIS2_Periods";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "Period_ID";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Period_Name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1124,10 +1155,8 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1153,7 +1182,7 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1162,8 +1191,9 @@ $tdatadhis2_analytics_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "Value";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;

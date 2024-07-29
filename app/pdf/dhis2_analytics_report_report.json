@@ -66,15 +66,13 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
-										"%",
-										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 7,
+							colSpan: 5,
 							border:[false, false,false,false],
 							stack: [
 
@@ -106,6 +104,7 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -122,74 +121,13 @@ pdfDocument = {
       
       },
 
-																							{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_filter_panel}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 						[
 																{
 	cellId: 'c1',
@@ -242,6 +180,38 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}
@@ -256,417 +226,405 @@ pdfDocument = {
 
 
 {BEGIN grid_row}
-	{BEGIN dx_newgroup}
+	{BEGIN dx_firstnewgroup}
 		[
 								{
 				text: '{$jslabel DHIS2_Analytics_Report dx }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$dx_align}',
 			},
 											{
 				text: '{$jslabel DHIS2_Analytics_Report ou }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$ou_align}',
 			},
 											{
 				text: '{$jslabel DHIS2_Analytics_Report pe }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$pe_align}',
 			},
-											{
+															
+																							{
 				text: '{$jslabel DHIS2_Analytics_Report Period }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$Period_align}',
-			},
-																				
-																												{
-				text: '{$jslabel DHIS2_Analytics_Report Data }',
-				style: "blackshade",
-				alignment: '{$Data_align}',
-			},
-											{
-				text: '{$jslabel DHIS2_Analytics_Report Organisation_unit }',
-				style: "blackshade",
-				alignment: '{$Organisation_unit_align}',
 			},
 											{
 				text: '{$jslabel DHIS2_Analytics_Report Value }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$Value_align}',
 			},
 						],
-	
+		
 	[
-													{
-					colSpan: 7,
-					text: {$dx_grval},
-					style: "header_1"
-				},
-																									],
-	{END dx_newgroup}
-	{BEGIN ou_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-																{
-					colSpan: 6,
-					text: {$ou_grval},
-					style: "header_2"
-				},
-																				],
-	{END ou_newgroup}
-	{BEGIN pe_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-												{
-					text: '',
-					style: "group_2"
-				},
-																{
-					colSpan: 5,
-					text: {$pe_grval},
-					style: "header_3"
-				},
-															],
-	{END pe_newgroup}
-	{BEGIN Period_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-												{
-					text: '',
-					style: "group_2"
-				},
-												{
-					text: '',
-					style: "group_3"
-				},
-																{
-					colSpan: 4,
-					text: {$Period_grval},
-					style:"header_4"
-				},
-										],
-	{END Period_newgroup}
-
-	{BEGIN row_data}
-	[
-			{
-			text: [
-									''
-							],
-			style: "group_1"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_2"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_3"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_4"
-		},
-																		{
-			text: {$Data_value},
-			alignment: '{$Data_align}',
-		},
-							{
-			text: {$Organisation_unit_value},
-			alignment: '{$Organisation_unit_align}',
-		},
-							{
-			text: {$Value_value},
-			alignment: '{$Value_align}',
-		},
-				],
-	{END row_data}
-
-
-		{BEGIN Period_endgroup}
-
-		[
 								{
-				text: "",
-				style: "group_1"
-			},
-						{
-				text: "",
-				style: "group_2"
-			},
-						{
-				text: "",
-				style: "group_3"
+				stack: [
+					{$dx_value},
+									],
+				style: "header_1"
 			},
 					
-																							{
-				colSpan: 4,
-				text: [
-					'Summary for {$jslabel DHIS2_Analytics_Report Period } ', 
-					{$Period_grval},
-					' - ', 
-					{$groupPeriod_total_cnt}, 
-					' records total'
-				],
-				style: 'group_4',
+											{
+				stack: [
+					{$ou_value},
+									],
+				style: "header_2"
 			},
-																					],
-	
-		[
-								
-						{
-				text: '',
+					
+											{
+				stack: [
+					{$pe_value},
+									],
+				style: "header_3"
+			},
+					
+							
+																							{
+				text: [
+										{$Period_value}
+									],
+				alignment: '{$Period_align}',
+			},
+											{
+				text: [
+										{$Value_value}
+									],
+				alignment: '{$Value_align}',
+			},
+					
+	],
+	{END dx_firstnewgroup}
+	{BEGIN ou_firstnewgroup}
+		
+	[
+								{
+				text: [
+											''
+									],
 				style: "group_1"
 			},
-											
-						{
-				text: '',
+
+											{
+				stack: [
+					{$ou_value},
+									],
+				style: "header_2"
+			},
+					
+											{
+				stack: [
+					{$pe_value},
+									],
+				style: "header_3"
+			},
+					
+							
+																							{
+				text: [
+										{$Period_value}
+									],
+				alignment: '{$Period_align}',
+			},
+											{
+				text: [
+										{$Value_value}
+									],
+				alignment: '{$Value_align}',
+			},
+					
+	],
+	{END ou_firstnewgroup}
+	{BEGIN pe_firstnewgroup}
+		
+	[
+								{
+				text: [
+											''
+									],
+				style: "group_1"
+			},
+
+											{
+				text: [
+											''
+									],
 				style: "group_2"
 			},
-											
-						{
-				text: '',
-				style: "group_3"
+
+											{
+				stack: [
+					{$pe_value},
+									],
+				style: "header_3"
 			},
-											
-						{
-				text: "Sum",
-				style: "group_4"
+					
+							
+																							{
+				text: [
+										{$Period_value}
+									],
+				alignment: '{$Period_align}',
 			},
-											
-						{
-				text: '',
-				style: "group_4"
+											{
+				text: [
+										{$Value_value}
+									],
+				alignment: '{$Value_align}',
 			},
-											
-						{
-				text: '',
-				style: "group_4"
+					
+	],
+	{END pe_firstnewgroup}
+
+{BEGIN nonewgroup}
+	[
+				{
+						text: '',
+						style: 'group_1',
+		},
+				{
+						text: '',
+						style: 'group_2',
+		},
+				{
+						text: '',
+						style: 'group_3',
+		},
+		
+																							{
+				text: {$Period_value},
+				alignment: '{$Period_align}',
 			},
-											
-						{
-				text: {$groupPeriod_totalValue_sum},
-				style: "group_4",
+											{
+				text: {$Value_value},
 				alignment: '{$Value_align}',
 			},
 						],
-	
-	
-	
-	
-	{END Period_endgroup}
+{END nonewgroup}
+
+
 			{BEGIN pe_endgroup}
 
-		[
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
 								{
-				text: "",
-				style: "group_1"
-			},
-						{
-				text: "",
-				style: "group_2"
-			},
-					
-																		{
-				colSpan: 5,
-				text: [
-					'Summary for {$jslabel DHIS2_Analytics_Report pe } ', 
-					{$pe_grval},
-					' - ', 
-					{$grouppe_total_cnt}, 
-					' records total'
-				],
-				style: 'group_3',
-			},
-																										],
+					text: [''],
+					style: 'group_2',
+				},
+							
+																									{
+					text: ['Summary for {$jslabel DHIS2_Analytics_Report pe } ', 
+						{$pe_grval},
+						' - ', 
+						{$grouppe_total_cnt}, 
+						' records total'
+					],
+					style: 'group_3',
+					colSpan: 3				},
+																							],
+		
+				[
+											{
+					text: [
+													'Sum ',
+											],
+					style: 'group_3',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_3',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_3',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_3',
+
+									},
+											{
+					text: [
+													{$grouppe_totalValue_sum},
+											],
+					style: 'group_3',
+
+										alignment: '{$Value_align}',
+									},
+					],
+		
+		
+		
+			
+
+		{END pe_endgroup}
 	
-		[
-								
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: "Sum",
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: {$grouppe_totalValue_sum},
-				style: "group_3",
-				alignment: '{$Value_align}',
-			},
-						],
-	
-	
-	
-	
-	{END pe_endgroup}
 			{BEGIN ou_endgroup}
 
-		[
-								{
-				text: "",
-				style: "group_1"
-			},
-					
-													{
-				colSpan: 6,
-				text: [
-					'Summary for {$jslabel DHIS2_Analytics_Report ou } ', 
-					{$ou_grval},
-					' - ', 
-					{$groupou_total_cnt}, 
-					' records total'
-				],
-				style: 'group_2',
-			},
-																															],
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
+							
+																		{
+					text: ['Summary for {$jslabel DHIS2_Analytics_Report ou } ', 
+						{$ou_grval},
+						' - ', 
+						{$groupou_total_cnt}, 
+						' records total'
+					],
+					style: 'group_2',
+					colSpan: 4				},
+																														],
+		
+				[
+											{
+					text: [
+													'Sum ',
+											],
+					style: 'group_2',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_2',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_2',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_2',
+
+									},
+											{
+					text: [
+													{$groupou_totalValue_sum},
+											],
+					style: 'group_2',
+
+										alignment: '{$Value_align}',
+									},
+					],
+		
+		
+		
+			
+
+		{END ou_endgroup}
 	
-		[
-								
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: "Sum",
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: {$groupou_totalValue_sum},
-				style: "group_2",
-				alignment: '{$Value_align}',
-			},
-						],
-	
-	
-	
-	
-	{END ou_endgroup}
 			{BEGIN dx_endgroup}
 
-		[
+				[
+			
+											{
+					text: ['Summary for {$jslabel DHIS2_Analytics_Report dx } ', 
+						{$dx_grval},
+						' - ', 
+						{$groupdx_total_cnt}, 
+						' records total'
+					],
+					style: 'group_1',
+					colSpan: 5				},
+																																					],
 		
-								{
-				colSpan: 7,
-				text: [
-					'Summary for {$jslabel DHIS2_Analytics_Report dx } ', 
-					{$dx_grval},
-					' - ', 
-					{$groupdx_total_cnt}, 
-					' records total'
-				],
-				style: 'group_1',
-			},
-																																				],
-	
-		[
-								
-						{
-				text: "Sum",
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: {$groupdx_totalValue_sum},
-				style: "group_1",
-				alignment: '{$Value_align}',
-			},
-						],
-	
-	
-	
-	
-	{END dx_endgroup}
+				[
+											{
+					text: [
+													'Sum ',
+											],
+					style: 'group_1',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_1',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_1',
+
+									},
+											{
+					text: [
+													''	
+											],
+					style: 'group_1',
+
+									},
+											{
+					text: [
+													{$groupdx_totalValue_sum},
+											],
+					style: 'group_1',
+
+										alignment: '{$Value_align}',
+									},
+					],
+		
+		
+		
+			
+
+		{END dx_endgroup}
 	
 {END grid_row}
+
+
+
+		[
+						{
+				text: '{$jslabel DHIS2_Analytics_Report dx }',
+				alignment: '{$dx_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel DHIS2_Analytics_Report ou }',
+				alignment: '{$ou_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel DHIS2_Analytics_Report pe }',
+				alignment: '{$pe_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel DHIS2_Analytics_Report Period }',
+				alignment: '{$Period_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel DHIS2_Analytics_Report Value }',
+				alignment: '{$Value_align}',
+				style: 'blackshade'
+			},
+					],
 
 
 
@@ -677,7 +635,7 @@ pdfDocument = {
 	[
 		{	
 			text: 'Page summary {$page_total_cnt} - records total',
-			colSpan: 7,
+			colSpan: 5,
 			style: 'pagesummary',
 		}
 	],
@@ -687,22 +645,6 @@ pdfDocument = {
 			text: [
 			 
 				'Sum ', 
-						
-							'', 
-						],
-			style: 'pagesummary',
-			
-					},
-							{
-			text: [
-						
-							'', 
-						],
-			style: 'pagesummary',
-			
-					},
-							{
-			text: [
 						
 							'', 
 						],
@@ -754,7 +696,7 @@ pdfDocument = {
 	[
 		{
 			text: 'Global summary {$global_total_cnt} - records total',
-			colSpan: 7,
+			colSpan: 5,
 			style: 'globalsummary',
 		}
 	],
@@ -763,22 +705,6 @@ pdfDocument = {
 							{
 			text: [
 							'Sum ',
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
 			
 							'',
 						],

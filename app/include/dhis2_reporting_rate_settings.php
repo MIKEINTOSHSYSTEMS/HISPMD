@@ -40,13 +40,13 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_reporting_rate["English"]["EXPECTED_REPORTS"] = "EXPECTED REPORTS";
 	$fieldToolTipsdhis2_reporting_rate["English"]["EXPECTED_REPORTS"] = "";
 	$placeHoldersdhis2_reporting_rate["English"]["EXPECTED_REPORTS"] = "";
-	$fieldLabelsdhis2_reporting_rate["English"]["REPORTING_RATE"] = "REPORTING RATE";
+	$fieldLabelsdhis2_reporting_rate["English"]["REPORTING_RATE"] = "REPORTING RATE (%)";
 	$fieldToolTipsdhis2_reporting_rate["English"]["REPORTING_RATE"] = "";
 	$placeHoldersdhis2_reporting_rate["English"]["REPORTING_RATE"] = "";
 	$fieldLabelsdhis2_reporting_rate["English"]["ACTUAL_REPORTS_ON_TIME"] = "ACTUAL REPORTS ON TIME";
 	$fieldToolTipsdhis2_reporting_rate["English"]["ACTUAL_REPORTS_ON_TIME"] = "";
 	$placeHoldersdhis2_reporting_rate["English"]["ACTUAL_REPORTS_ON_TIME"] = "";
-	$fieldLabelsdhis2_reporting_rate["English"]["REPORTING_RATE_ON_TIME"] = "REPORTING RATE ON TIME";
+	$fieldLabelsdhis2_reporting_rate["English"]["REPORTING_RATE_ON_TIME"] = "REPORTING RATE ON TIME (%)";
 	$fieldToolTipsdhis2_reporting_rate["English"]["REPORTING_RATE_ON_TIME"] = "";
 	$placeHoldersdhis2_reporting_rate["English"]["REPORTING_RATE_ON_TIME"] = "";
 	$fieldLabelsdhis2_reporting_rate["English"]["organisationUnit"] = "Organisation Unit";
@@ -186,6 +186,7 @@ $tdatadhis2_reporting_rate[".geocodingEnabled"] = false;
 
 
 
+$tdatadhis2_reporting_rate[".isDisplayLoading"] = true;
 
 
 
@@ -529,8 +530,9 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "ACTUAL_REPORTS";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -887,7 +889,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	$fdata["GoodName"] = "ACTUAL_REPORTS";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Reporting_Rate","ACTUAL_REPORTS");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -906,7 +908,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -915,7 +917,8 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 0;
+
 	
 	
 	
@@ -1025,7 +1028,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	$fdata["GoodName"] = "EXPECTED_REPORTS";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Reporting_Rate","EXPECTED_REPORTS");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -1044,7 +1047,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -1053,7 +1056,8 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 0;
+
 	
 	
 	
@@ -1163,7 +1167,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	$fdata["GoodName"] = "REPORTING_RATE";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Reporting_Rate","REPORTING_RATE");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -1182,7 +1186,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -1191,7 +1195,8 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 2;
+
 	
 	
 	
@@ -1301,7 +1306,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	$fdata["GoodName"] = "ACTUAL_REPORTS_ON_TIME";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Reporting_Rate","ACTUAL_REPORTS_ON_TIME");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -1320,7 +1325,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -1329,7 +1334,8 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 0;
+
 	
 	
 	
@@ -1439,7 +1445,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	$fdata["GoodName"] = "REPORTING_RATE_ON_TIME";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Reporting_Rate","REPORTING_RATE_ON_TIME");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -1458,7 +1464,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -1467,7 +1473,8 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 2;
+
 	
 	
 	

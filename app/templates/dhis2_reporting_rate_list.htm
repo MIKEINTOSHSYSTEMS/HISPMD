@@ -356,6 +356,7 @@
 
 	<div class="dropdown filter-field filter-organisationUnit-container" {BEGIN filter_selected_organisationUnit} data-selected {END filter_selected_organisationUnit}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-organisationUnit" type="checkbox" name="selectAll" {$selectAll_attrs_organisationUnit} />
 						{BEGIN clearLink_organisationUnit}
 			<a href="#" class="filter-clear filter-clear-organisationUnit" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -389,6 +390,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_organisationUnit}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_organisationUnit}">
+			<a href="#" class="filter-organisationUnit-btn-multiselect filter-apply-organisationUnit" {$filterbutton_attrs_organisationUnit}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_organisationUnit}
 			</ul>
 	</div>
 
@@ -641,28 +647,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_checkbox}
-	<th
-	
-	{$cell_grid_headcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rate_list"	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkboxheader_attrs}>
-</span>
-{END checkbox_column}
-	
-	</th>
-	{END cellblock_grid_headcell_checkbox}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -899,30 +883,6 @@
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_checkbox}
-	<td
-	
-	{$cell_grid_cell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkbox_attrs}
-		>
-</span>	
-{END checkbox_column}
-	
-	</td>
-	{END cellblock_grid_cell_checkbox}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -1123,21 +1083,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_checkbox}
-	<td
-	
-	{$cell_grid_footcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_checkbox}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	

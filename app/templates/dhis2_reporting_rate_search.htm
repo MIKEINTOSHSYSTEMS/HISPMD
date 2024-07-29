@@ -78,6 +78,15 @@
 </span>
 			</span>
 		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button1" {$item_expand_menu_button1} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button1" {$item_expand_menu_button1} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="Show menu" class="btn-link   
@@ -231,6 +240,72 @@
 </div>
 
 {END organisationUnit_fieldblock}
+											
+{BEGIN ACTUAL_REPORTS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ACTUAL_REPORTS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ACTUAL_REPORTS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ACTUAL_REPORTS" data-fieldname="ACTUAL_REPORTS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ACTUAL_REPORTS}">
+		{$label DHIS2_Reporting_Rate ACTUAL_REPORTS }	</label>
+	<div class="r-search-option">
+		{$searchtype_ACTUAL_REPORTS}
+	</div>
+	<div class="r-search-field">
+		{$ACTUAL_REPORTS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ACTUAL_REPORTS_editcontrol1}
+	</div>
+	
+</div>
+
+{END ACTUAL_REPORTS_fieldblock}
+											
+{BEGIN EXPECTED_REPORTS_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EXPECTED_REPORTS}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="EXPECTED_REPORTS{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="EXPECTED_REPORTS" data-fieldname="EXPECTED_REPORTS" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_EXPECTED_REPORTS}">
+		{$label DHIS2_Reporting_Rate EXPECTED_REPORTS }	</label>
+	<div class="r-search-option">
+		{$searchtype_EXPECTED_REPORTS}
+	</div>
+	<div class="r-search-field">
+		{$EXPECTED_REPORTS_editcontrol}	</div>
+	<div class="r-search-field">
+		{$EXPECTED_REPORTS_editcontrol1}
+	</div>
+	
+</div>
+
+{END EXPECTED_REPORTS_fieldblock}
+											
+{BEGIN ACTUAL_REPORTS_ON_TIME_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ACTUAL_REPORTS_ON_TIME}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ACTUAL_REPORTS_ON_TIME{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="ACTUAL_REPORTS_ON_TIME" data-fieldname="ACTUAL_REPORTS_ON_TIME" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ACTUAL_REPORTS_ON_TIME}">
+		{$label DHIS2_Reporting_Rate ACTUAL_REPORTS_ON_TIME }	</label>
+	<div class="r-search-option">
+		{$searchtype_ACTUAL_REPORTS_ON_TIME}
+	</div>
+	<div class="r-search-field">
+		{$ACTUAL_REPORTS_ON_TIME_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ACTUAL_REPORTS_ON_TIME_editcontrol1}
+	</div>
+	
+</div>
+
+{END ACTUAL_REPORTS_ON_TIME_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

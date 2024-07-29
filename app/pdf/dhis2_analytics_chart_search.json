@@ -135,9 +135,6 @@ pdfDocument = {
 				
 			{"text":{$pe_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
-				
-			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

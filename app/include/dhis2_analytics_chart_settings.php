@@ -723,7 +723,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 	$fdata["GoodName"] = "dx";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics_Chart","dx");
-	$fdata["FieldType"] = 202;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -887,7 +887,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 	$fdata["GoodName"] = "ou";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics_Chart","ou");
-	$fdata["FieldType"] = 202;
+	$fdata["FieldType"] = 131;
 
 
 	
@@ -1326,6 +1326,14 @@ $tdatadhis2_analytics_chart[".chartSeries"][] = array(
 	"field" => "Value",
 	"total" => ""
 );
+$tdatadhis2_analytics_chart[".chartSeries"][] = array(
+	"field" => "dx",
+	"total" => ""
+);
+$tdatadhis2_analytics_chart[".chartSeries"][] = array(
+	"field" => "ou",
+	"total" => ""
+);
 	$tdatadhis2_analytics_chart[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">DHIS2_Analytics Chart</attr>
@@ -1339,6 +1347,12 @@ $tdatadhis2_analytics_chart[".chartSeries"][] = array(
 			<attr value="name">Value</attr>';
 	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>';
 	$tdatadhis2_analytics_chart[".chartXml"] .= '<attr value="1">
+			<attr value="name">dx</attr>';
+	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>';
+	$tdatadhis2_analytics_chart[".chartXml"] .= '<attr value="2">
+			<attr value="name">ou</attr>';
+	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>';
+	$tdatadhis2_analytics_chart[".chartXml"] .= '<attr value="3">
 		<attr value="name">Period</attr>
 	</attr>';
 	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>
