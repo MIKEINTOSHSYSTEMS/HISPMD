@@ -285,6 +285,7 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_Reporting_Rate"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Report"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rates_Chart"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

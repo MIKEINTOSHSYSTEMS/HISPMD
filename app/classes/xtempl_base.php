@@ -172,6 +172,11 @@ class XTempl_Base
 				"chartName"=>"dhis2_reporting_rate_chart1",
 				"table"=>"DHIS2_Reporting_Rate_Chart",
 				"ctype"=>"Combined"));
+			$this->assign_function("dhis2_reporting_rates_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"dhis2_reporting_rates_chart",
+				"table"=>"DHIS2_Reporting_Rates_Chart",
+				"ctype"=>"Gauge"));
 		}
 
 

@@ -3598,6 +3598,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_reporting_rate_chart1" ] = "DHIS2_Reporting_Rate_Chart";
 	$projectEntities[ "DHIS2_Reporting_Rate_Report" ] = array( "url" => "dhis2_reporting_rate_report1", "type" => 10 );
 	$projectEntitiesReverse[ "dhis2_reporting_rate_report1" ] = "DHIS2_Reporting_Rate_Report";
+	$projectEntities[ "DHIS2_Reporting_Rates_Chart" ] = array( "url" => "dhis2_reporting_rates_chart", "type" => 11 );
+	$projectEntitiesReverse[ "dhis2_reporting_rates_chart" ] = "DHIS2_Reporting_Rates_Chart";
 }
 
 function findTable( $table ) {

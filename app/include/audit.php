@@ -532,6 +532,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DHIS2_Reporting_Rates_Chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1013,6 +1017,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="DHIS2_Reporting_Rate_Report")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Reporting_Rates_Chart")
 		{
 			return false;
 		}

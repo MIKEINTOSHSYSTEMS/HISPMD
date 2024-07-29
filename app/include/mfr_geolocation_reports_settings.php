@@ -508,6 +508,414 @@ $tdatamfr_geolocation_reports[".dashElements"] = array();
 	
 
 	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_grid", "table" => "MFR_Region",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_grid", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_grid", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_map", "table" => "MFR_Region",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_map", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_map", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_grid", "table" => "MFR_Region",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_grid", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_grid", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_map", "table" => "MFR_Region",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_map", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_map", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_grid", "table" => "MFR_Region",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_grid", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_grid", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_map", "table" => "MFR_Region",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_map", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_map", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_grid", "table" => "MFR_Region",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_grid", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_grid", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Region_map", "table" => "MFR_Region",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Zone_map", "table" => "MFR_Zone",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "MFR_Woreda_map", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 6);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
+
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
+
+	$tdatamfr_geolocation_reports[".dashElements"][] = $dbelement;
 */
 $tdatamfr_geolocation_reports[".shortTableName"] = "mfr_geolocation_reports";
 $tdatamfr_geolocation_reports[".entityType"] = 4;

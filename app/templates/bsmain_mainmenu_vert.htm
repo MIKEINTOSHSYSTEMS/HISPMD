@@ -663,14 +663,10 @@ menu-treelike
 
 					</li>
 					{END item29_menulink}
-								</ul>
-			</li>
-			{END item26_menulink}
-				
-		
-					{BEGIN item30_menulink}
-			<li class=" {$item30_current}">
-				
+								
+									{BEGIN item30_menulink}
+						<li class=" {$item30_current}">
+						
 <a {$item30_menulink_attrs} title="{$item30_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -685,8 +681,11 @@ menu-treelike
 			</span>
 	</a>
 
+					</li>
+					{END item30_menulink}
+								</ul>
 			</li>
-			{END item30_menulink}
+			{END item26_menulink}
 				
 		
 					{BEGIN item31_menulink}
@@ -792,33 +791,30 @@ menu-treelike
 
 			</li>
 			{END item35_menulink}
-				</ul>
-	</li>
-	{END item19_menulink}
-	
-	
-	{BEGIN item36_menulink}
-	<li class=" {$item36_current}">
+				
 		
+					{BEGIN item36_menulink}
+			<li class=" {$item36_current}">
+				
 <a {$item36_menulink_attrs} title="{$item36_tooltip}" 
-			data-menu-top
-			data-menu-v
+				data-menu-v
 			data-menu-inline
 	data-menu-link
 >
 	<span class="
 	r-menu-link
-			r-menu-expanded
-	"> 
+		"> 
 		<span class="r-menu-title">
 		{$item36_icon} {$item36_title}
 		</span>
 			</span>
-		<span class="r-menu-collapsed">{$item36_collicon}{$item36_firstcap}</span>
-</a>
+	</a>
 
+			</li>
+			{END item36_menulink}
+				</ul>
 	</li>
-	{END item36_menulink}
+	{END item19_menulink}
 	
 	
 	{BEGIN item37_menulink}
@@ -837,44 +833,47 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item37_icon} {$item37_title}
 		</span>
-				{BEGIN item37_expand_icon}
+			</span>
+		<span class="r-menu-collapsed">{$item37_collicon}{$item37_firstcap}</span>
+</a>
+
+	</li>
+	{END item37_menulink}
+	
+	
+	{BEGIN item38_menulink}
+	<li class=" {$item38_current}">
+		
+<a {$item38_menulink_attrs} title="{$item38_tooltip}" 
+			data-menu-top
+			data-menu-v
+			data-menu-inline
+	data-menu-link
+>
+	<span class="
+	r-menu-link
+			r-menu-expanded
+	"> 
+		<span class="r-menu-title">
+		{$item38_icon} {$item38_title}
+		</span>
+				{BEGIN item38_expand_icon}
 		<span class="r-menu-expand-icon 
 							fa fa-angle-left
 		"></span>
 		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
-		{END item37_expand_icon}
+		{END item38_expand_icon}
 	</span>
-		<span class="r-menu-collapsed">{$item37_collicon}{$item37_firstcap}</span>
+		<span class="r-menu-collapsed">{$item38_collicon}{$item38_firstcap}</span>
 </a>
 
 		
 		
 				<ul class="
 					nav collapse 
-			{$submenu37_class}" 
-			id="submenu37" data-menulevel=2>
-			{BEGIN item38_menulink}
-			<li class=" {$item38_current}">
-				
-<a {$item38_menulink_attrs} title="{$item38_tooltip}" 
-				data-menu-v
-			data-menu-inline
-	data-menu-link
->
-	<span class="
-	r-menu-link
-		"> 
-		<span class="r-menu-title">
-		{$item38_icon} {$item38_title}
-		</span>
-			</span>
-	</a>
-
-			</li>
-			{END item38_menulink}
-				
-		
-					{BEGIN item39_menulink}
+			{$submenu38_class}" 
+			id="submenu38" data-menulevel=2>
+			{BEGIN item39_menulink}
 			<li class=" {$item39_current}">
 				
 <a {$item39_menulink_attrs} title="{$item39_tooltip}" 
@@ -951,23 +950,16 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item42_icon} {$item42_title}
 		</span>
-				{BEGIN item42_expand_icon}
-		<span class="r-menu-expand-icon 
-							fa fa-angle-left
-		"></span>
-		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
-		{END item42_expand_icon}
-	</span>
+			</span>
 	</a>
 
+			</li>
+			{END item42_menulink}
 				
-								<ul class="
-									nav collapse 
-					{$submenu42_class}" 
-					id="submenu42" data-menulevel=3>
+		
 					{BEGIN item43_menulink}
-						<li class=" {$item43_current}">
-						
+			<li class=" {$item43_current}">
+				
 <a {$item43_menulink_attrs} title="{$item43_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -979,13 +971,21 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item43_icon} {$item43_title}
 		</span>
-			</span>
+				{BEGIN item43_expand_icon}
+		<span class="r-menu-expand-icon 
+							fa fa-angle-left
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item43_expand_icon}
+	</span>
 	</a>
 
-					</li>
-					{END item43_menulink}
-								
-									{BEGIN item44_menulink}
+				
+								<ul class="
+									nav collapse 
+					{$submenu43_class}" 
+					id="submenu43" data-menulevel=3>
+					{BEGIN item44_menulink}
 						<li class=" {$item44_current}">
 						
 <a {$item44_menulink_attrs} title="{$item44_tooltip}" 
@@ -1024,14 +1024,10 @@ menu-treelike
 
 					</li>
 					{END item45_menulink}
-								</ul>
-			</li>
-			{END item42_menulink}
-				
-		
-					{BEGIN item46_menulink}
-			<li class=" {$item46_current}">
-				
+								
+									{BEGIN item46_menulink}
+						<li class=" {$item46_current}">
+						
 <a {$item46_menulink_attrs} title="{$item46_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -1046,8 +1042,11 @@ menu-treelike
 			</span>
 	</a>
 
+					</li>
+					{END item46_menulink}
+								</ul>
 			</li>
-			{END item46_menulink}
+			{END item43_menulink}
 				
 		
 					{BEGIN item47_menulink}
@@ -1064,23 +1063,16 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item47_icon} {$item47_title}
 		</span>
-				{BEGIN item47_expand_icon}
-		<span class="r-menu-expand-icon 
-							fa fa-angle-left
-		"></span>
-		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
-		{END item47_expand_icon}
-	</span>
+			</span>
 	</a>
 
+			</li>
+			{END item47_menulink}
 				
-								<ul class="
-									nav collapse 
-					{$submenu47_class}" 
-					id="submenu47" data-menulevel=3>
+		
 					{BEGIN item48_menulink}
-						<li class=" {$item48_current}">
-						
+			<li class=" {$item48_current}">
+				
 <a {$item48_menulink_attrs} title="{$item48_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -1092,13 +1084,21 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item48_icon} {$item48_title}
 		</span>
-			</span>
+				{BEGIN item48_expand_icon}
+		<span class="r-menu-expand-icon 
+							fa fa-angle-left
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item48_expand_icon}
+	</span>
 	</a>
 
-					</li>
-					{END item48_menulink}
-								
-									{BEGIN item49_menulink}
+				
+								<ul class="
+									nav collapse 
+					{$submenu48_class}" 
+					id="submenu48" data-menulevel=3>
+					{BEGIN item49_menulink}
 						<li class=" {$item49_current}">
 						
 <a {$item49_menulink_attrs} title="{$item49_tooltip}" 
@@ -1177,36 +1177,32 @@ menu-treelike
 
 					</li>
 					{END item52_menulink}
-								</ul>
-			</li>
-			{END item47_menulink}
-				</ul>
-	</li>
-	{END item37_menulink}
-	
-	
-	{BEGIN item53_menulink}
-	<li class=" {$item53_current}">
-		
+								
+									{BEGIN item53_menulink}
+						<li class=" {$item53_current}">
+						
 <a {$item53_menulink_attrs} title="{$item53_tooltip}" 
-			data-menu-top
-			data-menu-v
+				data-menu-v
 			data-menu-inline
 	data-menu-link
 >
 	<span class="
 	r-menu-link
-			r-menu-expanded
-	"> 
+		"> 
 		<span class="r-menu-title">
 		{$item53_icon} {$item53_title}
 		</span>
 			</span>
-		<span class="r-menu-collapsed">{$item53_collicon}{$item53_firstcap}</span>
-</a>
+	</a>
 
+					</li>
+					{END item53_menulink}
+								</ul>
+			</li>
+			{END item48_menulink}
+				</ul>
 	</li>
-	{END item53_menulink}
+	{END item38_menulink}
 	
 	
 	{BEGIN item54_menulink}
@@ -1225,33 +1221,27 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item54_icon} {$item54_title}
 		</span>
-				{BEGIN item54_expand_icon}
-		<span class="r-menu-expand-icon 
-							fa fa-angle-left
-		"></span>
-		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
-		{END item54_expand_icon}
-	</span>
+			</span>
 		<span class="r-menu-collapsed">{$item54_collicon}{$item54_firstcap}</span>
 </a>
 
+	</li>
+	{END item54_menulink}
+	
+	
+	{BEGIN item55_menulink}
+	<li class=" {$item55_current}">
 		
-		
-				<ul class="
-					nav collapse 
-			{$submenu54_class}" 
-			id="submenu54" data-menulevel=2>
-			{BEGIN item55_menulink}
-			<li class=" {$item55_current}">
-				
 <a {$item55_menulink_attrs} title="{$item55_tooltip}" 
-				data-menu-v
+			data-menu-top
+			data-menu-v
 			data-menu-inline
 	data-menu-link
 >
 	<span class="
 	r-menu-link
-		"> 
+			r-menu-expanded
+	"> 
 		<span class="r-menu-title">
 		{$item55_icon} {$item55_title}
 		</span>
@@ -1262,16 +1252,18 @@ menu-treelike
 		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
 		{END item55_expand_icon}
 	</span>
-	</a>
+		<span class="r-menu-collapsed">{$item55_collicon}{$item55_firstcap}</span>
+</a>
 
+		
+		
+				<ul class="
+					nav collapse 
+			{$submenu55_class}" 
+			id="submenu55" data-menulevel=2>
+			{BEGIN item56_menulink}
+			<li class=" {$item56_current}">
 				
-								<ul class="
-									nav collapse 
-					{$submenu55_class}" 
-					id="submenu55" data-menulevel=3>
-					{BEGIN item56_menulink}
-						<li class=" {$item56_current}">
-						
 <a {$item56_menulink_attrs} title="{$item56_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -1292,14 +1284,14 @@ menu-treelike
 	</span>
 	</a>
 
+				
+								<ul class="
+									nav collapse 
+					{$submenu56_class}" 
+					id="submenu56" data-menulevel=3>
+					{BEGIN item57_menulink}
+						<li class=" {$item57_current}">
 						
-												<ul class="
-													nav collapse 
-							{$submenu56_class}" 
-							id="submenu56" data-menulevel=4>
-							{BEGIN item57_menulink}
-								<li class=" {$item57_current}">
-								
 <a {$item57_menulink_attrs} title="{$item57_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -1311,13 +1303,21 @@ menu-treelike
 		<span class="r-menu-title">
 		{$item57_icon} {$item57_title}
 		</span>
-			</span>
+				{BEGIN item57_expand_icon}
+		<span class="r-menu-expand-icon 
+							fa fa-angle-left
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item57_expand_icon}
+	</span>
 	</a>
 
-							</li>
-							{END item57_menulink}
-												
-													{BEGIN item58_menulink}
+						
+												<ul class="
+													nav collapse 
+							{$submenu57_class}" 
+							id="submenu57" data-menulevel=4>
+							{BEGIN item58_menulink}
 								<li class=" {$item58_current}">
 								
 <a {$item58_menulink_attrs} title="{$item58_tooltip}" 
@@ -1416,39 +1416,35 @@ menu-treelike
 
 							</li>
 							{END item62_menulink}
-												</ul>
-					</li>
-					{END item56_menulink}
-								</ul>
-			</li>
-			{END item55_menulink}
-				</ul>
-	</li>
-	{END item54_menulink}
-	
-	
-	{BEGIN item63_menulink}
-	<li class=" {$item63_current}">
-		
+												
+													{BEGIN item63_menulink}
+								<li class=" {$item63_current}">
+								
 <a {$item63_menulink_attrs} title="{$item63_tooltip}" 
-			data-menu-top
-			data-menu-v
+				data-menu-v
 			data-menu-inline
 	data-menu-link
 >
 	<span class="
 	r-menu-link
-			r-menu-expanded
-	"> 
+		"> 
 		<span class="r-menu-title">
 		{$item63_icon} {$item63_title}
 		</span>
 			</span>
-		<span class="r-menu-collapsed">{$item63_collicon}{$item63_firstcap}</span>
-</a>
+	</a>
 
+							</li>
+							{END item63_menulink}
+												</ul>
+					</li>
+					{END item57_menulink}
+								</ul>
+			</li>
+			{END item56_menulink}
+				</ul>
 	</li>
-	{END item63_menulink}
+	{END item55_menulink}
 	
 	
 	{BEGIN item64_menulink}
@@ -1497,4 +1493,28 @@ menu-treelike
 
 	</li>
 	{END item65_menulink}
+	
+	
+	{BEGIN item66_menulink}
+	<li class=" {$item66_current}">
+		
+<a {$item66_menulink_attrs} title="{$item66_tooltip}" 
+			data-menu-top
+			data-menu-v
+			data-menu-inline
+	data-menu-link
+>
+	<span class="
+	r-menu-link
+			r-menu-expanded
+	"> 
+		<span class="r-menu-title">
+		{$item66_icon} {$item66_title}
+		</span>
+			</span>
+		<span class="r-menu-collapsed">{$item66_collicon}{$item66_firstcap}</span>
+</a>
+
+	</li>
+	{END item66_menulink}
 </ul>

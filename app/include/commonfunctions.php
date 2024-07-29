@@ -291,6 +291,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("dhis2_reporting_rate_report1" == $shortTName )
 		return true;
+	if ("dhis2_reporting_rates_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -737,6 +739,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Reporting_Rate_Report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Reporting_Rates_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Reporting_Rates_Chart";
+	}
 	return $arr;
 }
 
@@ -790,6 +801,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_Reporting_Rate";
 	$arr[]="DHIS2_Reporting_Rate_Chart";
 	$arr[]="DHIS2_Reporting_Rate_Report";
+	$arr[]="DHIS2_Reporting_Rates_Chart";
 	return $arr;
 }
 
@@ -847,6 +859,8 @@ function GetChartType($shorttable)
 		return "Combined";
 	if($shorttable=="dhis2_reporting_rate_chart1")
 		return "Combined";
+	if($shorttable=="dhis2_reporting_rates_chart")
+		return "Gauge";
 	return "";
 }
 
@@ -1684,6 +1698,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_Reporting_Rate_Report" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Reporting_Rates_Chart" )
 	{
 //	default permissions
 		// grant all by default

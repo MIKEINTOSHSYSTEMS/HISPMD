@@ -69,34 +69,7 @@
 	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
 			 
 							 
-				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
-				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
-	 glyphicon glyphicon-menu-hamburger" href="#" >		
-				
-								</a>
-</span>
-			</span>
-		 
-				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button1" {$item_expand_menu_button1} data-topcell-item-type="expand_menu_button" >
-				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button1" {$item_expand_menu_button1} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
-	 glyphicon glyphicon-menu-hamburger" href="#" >		
-				
-								</a>
-</span>
-			</span>
-		 
-				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button2" {$item_expand_menu_button2} data-topcell-item-type="expand_menu_button" >
-				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button2" {$item_expand_menu_button2} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
-	 glyphicon glyphicon-menu-hamburger" href="#" >		
-				
-								</a>
-</span>
-			</span>
-		 
-				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span class="navbar-form  r-ori-vert navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
@@ -123,7 +96,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Reporting_Rate search}</h2>
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Reporting_Rates_Chart search}</h2>
 		</div>					</div>
 			</div>		
 {END top_block}
@@ -131,18 +104,7 @@
 											<div class="r-above">
 					{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
-	 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-12
-	
-">
-		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
-	</div>					</div>
-			</div>		
+	</div>		
 {END above-grid_block}
 	</div>
 <div class="r-grid">
@@ -184,6 +146,50 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN title_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_title}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="title{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="title" data-fieldname="title" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_title}">
+		{$label DHIS2_Reporting_Rates_Chart title }	</label>
+	<div class="r-search-option">
+		{$searchtype_title}
+	</div>
+	<div class="r-search-field">
+		{$title_editcontrol}	</div>
+	<div class="r-search-field">
+		{$title_editcontrol1}
+	</div>
+	
+</div>
+
+{END title_fieldblock}
+											
+{BEGIN organisationUnit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_organisationUnit}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="organisationUnit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="organisationUnit" data-fieldname="organisationUnit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_organisationUnit}">
+		{$label DHIS2_Reporting_Rates_Chart organisationUnit }	</label>
+	<div class="r-search-option">
+		{$searchtype_organisationUnit}
+	</div>
+	<div class="r-search-field">
+		{$organisationUnit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$organisationUnit_editcontrol1}
+	</div>
+	
+</div>
+
+{END organisationUnit_fieldblock}
+											
 {BEGIN dataSet_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_dataSet}  r-horizontal-field form-horizontal" 	
@@ -192,7 +198,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_dataSet}">
-		{$label DHIS2_Reporting_Rate dataSet }	</label>
+		{$label DHIS2_Reporting_Rates_Chart dataSet }	</label>
 	<div class="r-search-option">
 		{$searchtype_dataSet}
 	</div>
@@ -214,7 +220,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_reportPeriod}">
-		{$label DHIS2_Reporting_Rate reportPeriod }	</label>
+		{$label DHIS2_Reporting_Rates_Chart reportPeriod }	</label>
 	<div class="r-search-option">
 		{$searchtype_reportPeriod}
 	</div>
@@ -228,37 +234,15 @@
 
 {END reportPeriod_fieldblock}
 											
-{BEGIN organisationUnit_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_organisationUnit}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="organisationUnit{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="organisationUnit" data-fieldname="organisationUnit" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_organisationUnit}">
-		{$label DHIS2_Reporting_Rate organisationUnit }	</label>
-	<div class="r-search-option">
-		{$searchtype_organisationUnit}
-	</div>
-	<div class="r-search-field">
-		{$organisationUnit_editcontrol}	</div>
-	<div class="r-search-field">
-		{$organisationUnit_editcontrol1}
-	</div>
-	
-</div>
-
-{END organisationUnit_fieldblock}
-											
 {BEGIN ACTUAL_REPORTS_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_ACTUAL_REPORTS}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="ACTUAL_REPORTS{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ACTUAL_REPORTS" data-fieldname="ACTUAL_REPORTS" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="ACTUAL_REPORTS" data-fieldname="ACTUAL_REPORTS" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_ACTUAL_REPORTS}">
-		{$label DHIS2_Reporting_Rate ACTUAL_REPORTS }	</label>
+		{$label DHIS2_Reporting_Rates_Chart ACTUAL_REPORTS }	</label>
 	<div class="r-search-option">
 		{$searchtype_ACTUAL_REPORTS}
 	</div>
@@ -276,11 +260,11 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_EXPECTED_REPORTS}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="EXPECTED_REPORTS{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="EXPECTED_REPORTS" data-fieldname="EXPECTED_REPORTS" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="EXPECTED_REPORTS" data-fieldname="EXPECTED_REPORTS" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_EXPECTED_REPORTS}">
-		{$label DHIS2_Reporting_Rate EXPECTED_REPORTS }	</label>
+		{$label DHIS2_Reporting_Rates_Chart EXPECTED_REPORTS }	</label>
 	<div class="r-search-option">
 		{$searchtype_EXPECTED_REPORTS}
 	</div>
@@ -294,15 +278,37 @@
 
 {END EXPECTED_REPORTS_fieldblock}
 											
+{BEGIN REPORTING_RATE_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_REPORTING_RATE}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="REPORTING_RATE{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="REPORTING_RATE" data-fieldname="REPORTING_RATE" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_REPORTING_RATE}">
+		{$label DHIS2_Reporting_Rates_Chart REPORTING_RATE }	</label>
+	<div class="r-search-option">
+		{$searchtype_REPORTING_RATE}
+	</div>
+	<div class="r-search-field">
+		{$REPORTING_RATE_editcontrol}	</div>
+	<div class="r-search-field">
+		{$REPORTING_RATE_editcontrol1}
+	</div>
+	
+</div>
+
+{END REPORTING_RATE_fieldblock}
+											
 {BEGIN ACTUAL_REPORTS_ON_TIME_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_ACTUAL_REPORTS_ON_TIME}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="ACTUAL_REPORTS_ON_TIME{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="ACTUAL_REPORTS_ON_TIME" data-fieldname="ACTUAL_REPORTS_ON_TIME" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="ACTUAL_REPORTS_ON_TIME" data-fieldname="ACTUAL_REPORTS_ON_TIME" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_ACTUAL_REPORTS_ON_TIME}">
-		{$label DHIS2_Reporting_Rate ACTUAL_REPORTS_ON_TIME }	</label>
+		{$label DHIS2_Reporting_Rates_Chart ACTUAL_REPORTS_ON_TIME }	</label>
 	<div class="r-search-option">
 		{$searchtype_ACTUAL_REPORTS_ON_TIME}
 	</div>
@@ -315,6 +321,28 @@
 </div>
 
 {END ACTUAL_REPORTS_ON_TIME_fieldblock}
+											
+{BEGIN REPORTING_RATE_ON_TIME_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_REPORTING_RATE_ON_TIME}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="REPORTING_RATE_ON_TIME{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="REPORTING_RATE_ON_TIME" data-fieldname="REPORTING_RATE_ON_TIME" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_REPORTING_RATE_ON_TIME}">
+		{$label DHIS2_Reporting_Rates_Chart REPORTING_RATE_ON_TIME }	</label>
+	<div class="r-search-option">
+		{$searchtype_REPORTING_RATE_ON_TIME}
+	</div>
+	<div class="r-search-field">
+		{$REPORTING_RATE_ON_TIME_editcontrol}	</div>
+	<div class="r-search-field">
+		{$REPORTING_RATE_ON_TIME_editcontrol1}
+	</div>
+	
+</div>
+
+{END REPORTING_RATE_ON_TIME_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
