@@ -1,0 +1,44 @@
+<script>
+    reportTablePlugin.url = "https://play.dhis2.org/demo";
+    reportTablePlugin.username = "admin";
+    reportTablePlugin.password = "district";
+    reportTablePlugin.loadingIndicator = true;
+
+    // Referring to an existing table through the id parameter, render to "report1" div
+
+    var r1 = { el: "report1", id: "R0DVGvXDUNP" };
+
+    // Table configuration, render to "report2" div
+
+    var r2 = {
+        el: "report2",
+        columns: [
+            { dimension: "dx", items: [{ id: "YtbsuPPo010" }, { id: "l6byfWFUGaP" }] }
+        ],
+        rows: [
+            { dimension: "pe", items: [{ id: "LAST_12_MONTHS" }] }
+        ],
+        filters: [
+            { dimension: "ou", items: [{ id: "USER_ORGUNIT" }] }
+        ],
+
+        // All following properties are optional
+        title: "My custom title",
+        showColTotals: false,
+        showRowTotals: false,
+        showColSubTotals: false,
+        showRowSubTotals: false,
+        showDimensionLabels: false,
+        hideEmptyRows: true,
+        skipRounding: true,
+        aggregationType: "AVERAGE",
+        showHierarchy: true,
+        completedOnly: true,
+        displayDensity: "COMFORTABLE",
+        fontSize: "SMALL",
+        digitGroupSeparator: "COMMA",
+        legendSet: { id: "fqs276KXCXi" }
+    };
+
+    reportTablePlugin.load([r1, r2]);
+</script>

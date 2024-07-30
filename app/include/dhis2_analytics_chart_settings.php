@@ -185,7 +185,7 @@ $tdatadhis2_analytics_chart[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatadhis2_analytics_chart[".chartType"] = "Combined";
+$tdatadhis2_analytics_chart[".chartType"] = "2DColumn";
 // end of chart settings
 
 $tdatadhis2_analytics_chart[".isDisplayLoading"] = true;
@@ -723,7 +723,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 	$fdata["GoodName"] = "dx";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics_Chart","dx");
-	$fdata["FieldType"] = 131;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -887,7 +887,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 	$fdata["GoodName"] = "ou";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("DHIS2_Analytics_Chart","ou");
-	$fdata["FieldType"] = 131;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -1326,20 +1326,12 @@ $tdatadhis2_analytics_chart[".chartSeries"][] = array(
 	"field" => "Value",
 	"total" => ""
 );
-$tdatadhis2_analytics_chart[".chartSeries"][] = array(
-	"field" => "dx",
-	"total" => ""
-);
-$tdatadhis2_analytics_chart[".chartSeries"][] = array(
-	"field" => "ou",
-	"total" => ""
-);
 	$tdatadhis2_analytics_chart[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">DHIS2_Analytics Chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">combined</attr>
+			<attr value="type">2d_column</attr>
 		</attr>
 
 		<attr value="parameters">';
@@ -1347,12 +1339,6 @@ $tdatadhis2_analytics_chart[".chartSeries"][] = array(
 			<attr value="name">Value</attr>';
 	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>';
 	$tdatadhis2_analytics_chart[".chartXml"] .= '<attr value="1">
-			<attr value="name">dx</attr>';
-	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_analytics_chart[".chartXml"] .= '<attr value="2">
-			<attr value="name">ou</attr>';
-	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_analytics_chart[".chartXml"] .= '<attr value="3">
 		<attr value="name">Period</attr>
 	</attr>';
 	$tdatadhis2_analytics_chart[".chartXml"] .= '</attr>
@@ -1365,7 +1351,7 @@ $tdatadhis2_analytics_chart[".chartSeries"][] = array(
 
 
 <attr value="slegend">true</attr>
-<attr value="sgrid">false</attr>
+<attr value="sgrid">true</attr>
 <attr value="sname">true</attr>
 <attr value="sval">true</attr>
 <attr value="sanim">true</attr>
@@ -1373,7 +1359,7 @@ $tdatadhis2_analytics_chart[".chartSeries"][] = array(
 <attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
+<attr value="is3d">1</attr>
 <attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>

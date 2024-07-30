@@ -84,37 +84,46 @@ function selectList($dataSource, $command)
 		$method = "GET";
 $url = "/api/dhis2/report/dhis2reportsapi.php";
 
-// Replace variables in the URL
+// Prepare the URL
 $url = RunnerContext::PrepareRest($url);
 
 // Extract and parse the `q` parameter
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
-// Initialize parameters with default values
-//$organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'GvFqTavdpGE','r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r']; // Default organisation units
-$organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'GvFqTavdpGE','r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r']; // Default organisation units
-$dataSets = ['BfMAe6Itzgt']; // Default data sets
-$reportPeriods = ['LAST_6_BIMONTHS']; // Default report periods
+// Default values
+$organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r'];
+$dataSets = ['BfMAe6Itzgt'];
+$reportPeriods = ['LAST_6_BIMONTHS']; // Default report period
 
-// Parse `q` parameter for organisation units
+// Allowed report periods
+$allowedReportPeriods = [
+    'LAST_12_MONTHS', 'LAST_12_WEEKS', 'LAST_2_SIXMONTHS', 'LAST_3_MONTHS', 'LAST_4_QUARTERS',
+    'LAST_4_WEEKS', 'LAST_52_WEEKS', 'LAST_5_FINANCIAL_YEARS', 'LAST_5_YEARS', 'LAST_6_BIMONTHS',
+    'LAST_BIMONTH', 'LAST_FINANCIAL_YEAR', 'LAST_MONTH', 'LAST_QUARTER', 'LAST_SIX_MONTH',
+    'LAST_WEEK', 'LAST_YEAR', 'MONTHS_LAST_YEAR', 'MONTHS_THIS_YEAR', 'QUARTERS_LAST_YEAR',
+    'QUARTERS_THIS_YEAR', 'THIS_BIMONTH', 'THIS_FINANCIAL_YEAR', 'THIS_MONTH', 'THIS_QUARTER',
+    'THIS_SIX_MONTH', 'THIS_WEEK', 'THIS_YEAR'
+];
+
+// Parse `q` parameter for organisation units, data sets, and report periods
 preg_match('/organisationUnit~equals~([^)]*)/', $query, $matches);
 if (isset($matches[1])) {
-    $organisationUnits = explode(',', urldecode($matches[1]));
+    $organisationUnits = array_map('trim', explode(',', urldecode($matches[1])));
 }
-
-// Parse `q` parameter for data sets
 preg_match('/dataSet~equals~([^)]*)/', $query, $matches);
 if (isset($matches[1])) {
-    $dataSets = explode(',', urldecode($matches[1]));
+    $dataSets = array_map('trim', explode(',', urldecode($matches[1])));
 }
-
-// Parse `q` parameter for report periods
 preg_match('/reportPeriod~equals~([^)]*)/', $query, $matches);
 if (isset($matches[1])) {
-    $reportPeriods = explode(',', urldecode($matches[1]));
+    $inputReportPeriods = array_map('trim', explode(',', urldecode($matches[1])));
+    // Validate and filter input report periods
+    $reportPeriods = array_filter($inputReportPeriods, function($period) use ($allowedReportPeriods) {
+        return in_array($period, $allowedReportPeriods);
+    });
 }
 
-// Log extracted parameters for debugging
+// Log extracted parameters
 error_log("Organisation Units: " . implode(',', $organisationUnits));
 error_log("Data Sets: " . implode(',', $dataSets));
 error_log("Report Periods: " . implode(',', $reportPeriods));
@@ -137,19 +146,18 @@ if (!empty($organisationUnits) && !empty($dataSets) && !empty($reportPeriods)) {
     exit;
 }
 
-// Log constructed URL for debugging
+// Log constructed URL
 error_log("API URL: " . $url);
 
-// Do the API request
+// Make the API request
 $response = $dataSource->getConnection()->requestJson($url, $method);
 if ($response === false) {
-    // Something went wrong
     $dataSource->setError($dataSource->getConnection()->lastError());
     error_log("Request failed: " . $dataSource->getConnection()->lastError());
     return false;
 }
 
-// Log API response for debugging
+// Log API response
 error_log("API Response: " . $response);
 
 // Convert API result into recordset
@@ -159,27 +167,7 @@ if (!$rs) {
     return false;
 }
 
-// Map fixed periods back to their relative period names for display
-if (!function_exists('mapFixedPeriodToRelative')) {
-    function mapFixedPeriodToRelative($fixedPeriod) {
-        // Detect relative period format using regex
-        if (preg_match('/^\d{4}B\d{2}$/', $fixedPeriod)) {
-            return 'LAST_6_BIMONTHS';
-        }
-        // Add other regex patterns and mappings as needed
-        else {
-            return $fixedPeriod;
-        }
-    }
-}
-
-// Add the relative periods as a new column in the recordset
-foreach ($rs as &$row) {
-    if (isset($row['Period'])) {
-        $row['Period'] = mapFixedPeriodToRelative($row['Period']);
-    }
-}
-
+// No need to map periods to relative periods; keep original values
 // Apply search and filter parameters
 $rs = $dataSource->filterResult($rs, $command->filter);
 
@@ -189,6 +177,7 @@ $rs = $dataSource->reorderResult($command, $rs);
 // Apply pagination
 $rs->seekRecord($command->startRecord);
 return $rs;
+
 ;
 } // function selectList
 

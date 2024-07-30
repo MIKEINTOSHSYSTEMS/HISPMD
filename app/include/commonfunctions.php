@@ -856,11 +856,11 @@ function GetChartType($shorttable)
 	if($shorttable=="mfr_woreda_chart")
 		return "Bubble";
 	if($shorttable=="dhis2_analytics_chart")
-		return "Combined";
+		return "2DColumn";
 	if($shorttable=="dhis2_reporting_rate_chart1")
-		return "Combined";
+		return "2DColumn";
 	if($shorttable=="dhis2_reporting_rates_chart")
-		return "Gauge";
+		return "Area";
 	return "";
 }
 

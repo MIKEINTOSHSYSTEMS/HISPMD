@@ -188,7 +188,7 @@ $tdatadhis2_reporting_rate_chart1[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatadhis2_reporting_rate_chart1[".chartType"] = "Combined";
+$tdatadhis2_reporting_rate_chart1[".chartType"] = "2DColumn";
 // end of chart settings
 
 $tdatadhis2_reporting_rate_chart1[".isDisplayLoading"] = true;
@@ -1578,7 +1578,7 @@ $tdatadhis2_reporting_rate_chart1[".hideMobileList"] = array();
 	$tdatadhis2_reporting_rate_chart1["REPORTING_RATE_ON_TIME"] = $fdata;
 		$tdatadhis2_reporting_rate_chart1[".searchableFields"][] = "REPORTING_RATE_ON_TIME";
 
-$tdatadhis2_reporting_rate_chart1[".chartLabelField"] = "dataSet";
+$tdatadhis2_reporting_rate_chart1[".chartLabelField"] = "reportPeriod";
 $tdatadhis2_reporting_rate_chart1[".chartSeries"] = array();
 $tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
 	"field" => "EXPECTED_REPORTS",
@@ -1592,20 +1592,12 @@ $tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
 	"field" => "ACTUAL_REPORTS_ON_TIME",
 	"total" => ""
 );
-$tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
-	"field" => "REPORTING_RATE",
-	"total" => ""
-);
-$tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
-	"field" => "REPORTING_RATE_ON_TIME",
-	"total" => ""
-);
 	$tdatadhis2_reporting_rate_chart1[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">DHIS2_Reporting_Rate_Chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">combined</attr>
+			<attr value="type">2d_column</attr>
 		</attr>
 
 		<attr value="parameters">';
@@ -1619,13 +1611,7 @@ $tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
 			<attr value="name">ACTUAL_REPORTS_ON_TIME</attr>';
 	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '</attr>';
 	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '<attr value="3">
-			<attr value="name">REPORTING_RATE</attr>';
-	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '<attr value="4">
-			<attr value="name">REPORTING_RATE_ON_TIME</attr>';
-	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '<attr value="5">
-		<attr value="name">dataSet</attr>
+		<attr value="name">reportPeriod</attr>
 	</attr>';
 	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '</attr>
 			<attr value="appearance">';
@@ -1633,7 +1619,7 @@ $tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
 
 	$tdatadhis2_reporting_rate_chart1[".chartXml"] .= '<attr value="head">'.xmlencode("DHIS2 Reporting Rate Chart by Reporting Period").'</attr>
 <attr value="foot">'.xmlencode("Data Set").'</attr>
-<attr value="y_axis_label">'.xmlencode("Reports").'</attr>
+<attr value="y_axis_label">'.xmlencode("Reporting Periods").'</attr>
 
 
 <attr value="slegend">true</attr>
@@ -1642,10 +1628,10 @@ $tdatadhis2_reporting_rate_chart1[".chartSeries"][] = array(
 <attr value="sval">true</attr>
 <attr value="sanim">true</attr>
 <attr value="sstacked">false</attr>
-<attr value="slog">true</attr>
+<attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
+<attr value="is3d">1</attr>
 <attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>

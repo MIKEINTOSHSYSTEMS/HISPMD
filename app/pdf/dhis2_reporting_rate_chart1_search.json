@@ -126,15 +126,6 @@ pdfDocument = {
 				
 			{"text":{$reportPeriod_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
-				
-			{"text":{$ACTUAL_REPORTS_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
-			{"text":{$EXPECTED_REPORTS_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$ACTUAL_REPORTS_ON_TIME_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

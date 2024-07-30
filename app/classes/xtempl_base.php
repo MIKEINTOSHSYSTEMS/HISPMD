@@ -166,17 +166,17 @@ class XTempl_Base
 			array(
 				"chartName"=>"dhis2_analytics_chart",
 				"table"=>"DHIS2_Analytics Chart",
-				"ctype"=>"Combined"));
+				"ctype"=>"2DColumn"));
 			$this->assign_function("dhis2_reporting_rate_chart1_chart","xt_showchart",
 			array(
 				"chartName"=>"dhis2_reporting_rate_chart1",
 				"table"=>"DHIS2_Reporting_Rate_Chart",
-				"ctype"=>"Combined"));
+				"ctype"=>"2DColumn"));
 			$this->assign_function("dhis2_reporting_rates_chart_chart","xt_showchart",
 			array(
 				"chartName"=>"dhis2_reporting_rates_chart",
 				"table"=>"DHIS2_Reporting_Rates_Chart",
-				"ctype"=>"Gauge"));
+				"ctype"=>"Area"));
 		}
 
 

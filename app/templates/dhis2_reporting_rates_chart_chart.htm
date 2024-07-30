@@ -301,53 +301,6 @@
 
 
 
-{BEGIN filter_control_dataSet}
-
-	<div class="dropdown filter-field filter-dataSet-container" {BEGIN filter_selected_dataSet} data-selected {END filter_selected_dataSet}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_dataSet}
-			<a href="#" class="filter-clear filter-clear-dataSet" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_dataSet}
-			<span class="r-filter-field">{$label DHIS2_Reporting_Rates_Chart dataSet }				{BEGIN filter_selected_dataSet}:{END filter_selected_dataSet}
-			</span>
-			{BEGIN filter_selected_dataSet}
-			<span class="r-filter-value">{$filtervalue_dataSet}</span>
-			{END filter_selected_dataSet}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_dataSet}
-		<li class=" filter-values filter-values-dataSet  {$visibilityClass_dataSet}">
-			{$dataSet_filter}
-						
-					
-					
-					</li>
-		{END filterCtrlBlock_dataSet}
-
-			{BEGIN filter_button_showmore_dataSet}
-		<li class=" filter-show-more {$collapsedClass_dataSet} {$showMoreBtnClass_dataSet}">
-			<a class="filter-show-more-link filterShowMore_dataSet" href="#">{$show_n_more_dataSet}</a>
-		</li>
-		{END filter_button_showmore_dataSet}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_dataSet}
-
-
-
-
-
-
 {BEGIN filter_control_organisationUnit}
 
 	<div class="dropdown filter-field filter-organisationUnit-container" {BEGIN filter_selected_organisationUnit} data-selected {END filter_selected_organisationUnit}>
@@ -389,6 +342,53 @@
 	</div>
 
 {END filter_control_organisationUnit}
+
+
+
+
+
+
+{BEGIN filter_control_dataSet}
+
+	<div class="dropdown filter-field filter-dataSet-container" {BEGIN filter_selected_dataSet} data-selected {END filter_selected_dataSet}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_dataSet}
+			<a href="#" class="filter-clear filter-clear-dataSet" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_dataSet}
+			<span class="r-filter-field">{$label DHIS2_Reporting_Rates_Chart dataSet }				{BEGIN filter_selected_dataSet}:{END filter_selected_dataSet}
+			</span>
+			{BEGIN filter_selected_dataSet}
+			<span class="r-filter-value">{$filtervalue_dataSet}</span>
+			{END filter_selected_dataSet}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_dataSet}
+		<li class=" filter-values filter-values-dataSet  {$visibilityClass_dataSet}">
+			{$dataSet_filter}
+						
+					
+					
+					</li>
+		{END filterCtrlBlock_dataSet}
+
+			{BEGIN filter_button_showmore_dataSet}
+		<li class=" filter-show-more {$collapsedClass_dataSet} {$showMoreBtnClass_dataSet}">
+			<a class="filter-show-more-link filterShowMore_dataSet" href="#">{$show_n_more_dataSet}</a>
+		</li>
+		{END filter_button_showmore_dataSet}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_dataSet}
 
 
 

@@ -334,6 +334,7 @@
 						
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_dx}
 
@@ -385,6 +386,7 @@
 		<li class=" filter-values filter-values-ou  {$visibilityClass_ou}">
 			{$ou_filter}
 						
+					
 					
 					
 					</li>
@@ -440,6 +442,7 @@
 						
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_pe}
 
@@ -462,6 +465,60 @@
 	</div>
 
 {END filter_control_pe}
+
+
+
+
+
+
+{BEGIN filter_control_Period}
+
+	<div class="dropdown filter-field filter-Period-container" {BEGIN filter_selected_Period} data-selected {END filter_selected_Period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-Period" type="checkbox" name="selectAll" {$selectAll_attrs_Period} />
+						{BEGIN clearLink_Period}
+			<a href="#" class="filter-clear filter-clear-Period" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Period}
+			<span class="r-filter-field">{$label DHIS2_Analytics_Chart Period }				{BEGIN filter_selected_Period}:{END filter_selected_Period}
+			</span>
+			{BEGIN filter_selected_Period}
+			<span class="r-filter-value">{$filtervalue_Period}</span>
+			{END filter_selected_Period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_Period}
+		<li class=" filter-values filter-values-Period  {$visibilityClass_Period}">
+			{$Period_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_Period}
+
+			{BEGIN filter_button_showmore_Period}
+		<li class=" filter-show-more {$collapsedClass_Period} {$showMoreBtnClass_Period}">
+			<a class="filter-show-more-link filterShowMore_Period" href="#">{$show_n_more_Period}</a>
+		</li>
+		{END filter_button_showmore_Period}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_Period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Period}">
+			<a href="#" class="filter-Period-btn-multiselect filter-apply-Period" {$filterbutton_attrs_Period}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_Period}
+			</ul>
+	</div>
+
+{END filter_control_Period}
 
 
 

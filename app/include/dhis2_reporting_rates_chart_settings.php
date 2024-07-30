@@ -43,13 +43,13 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_reporting_rates_chart["English"]["EXPECTED_REPORTS"] = "EXPECTED REPORTS";
 	$fieldToolTipsdhis2_reporting_rates_chart["English"]["EXPECTED_REPORTS"] = "";
 	$placeHoldersdhis2_reporting_rates_chart["English"]["EXPECTED_REPORTS"] = "";
-	$fieldLabelsdhis2_reporting_rates_chart["English"]["REPORTING_RATE"] = "REPORTING RATE";
+	$fieldLabelsdhis2_reporting_rates_chart["English"]["REPORTING_RATE"] = "REPORTING RATE (%)";
 	$fieldToolTipsdhis2_reporting_rates_chart["English"]["REPORTING_RATE"] = "";
 	$placeHoldersdhis2_reporting_rates_chart["English"]["REPORTING_RATE"] = "";
 	$fieldLabelsdhis2_reporting_rates_chart["English"]["ACTUAL_REPORTS_ON_TIME"] = "ACTUAL REPORTS ON TIME";
 	$fieldToolTipsdhis2_reporting_rates_chart["English"]["ACTUAL_REPORTS_ON_TIME"] = "";
 	$placeHoldersdhis2_reporting_rates_chart["English"]["ACTUAL_REPORTS_ON_TIME"] = "";
-	$fieldLabelsdhis2_reporting_rates_chart["English"]["REPORTING_RATE_ON_TIME"] = "REPORTING RATE ON TIME";
+	$fieldLabelsdhis2_reporting_rates_chart["English"]["REPORTING_RATE_ON_TIME"] = "REPORTING RATE ON TIME (%)";
 	$fieldToolTipsdhis2_reporting_rates_chart["English"]["REPORTING_RATE_ON_TIME"] = "";
 	$placeHoldersdhis2_reporting_rates_chart["English"]["REPORTING_RATE_ON_TIME"] = "";
 	if (count($fieldToolTipsdhis2_reporting_rates_chart["English"]))
@@ -194,7 +194,7 @@ $tdatadhis2_reporting_rates_chart[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatadhis2_reporting_rates_chart[".chartType"] = "Gauge";
+$tdatadhis2_reporting_rates_chart[".chartType"] = "Area";
 // end of chart settings
 
 $tdatadhis2_reporting_rates_chart[".isDisplayLoading"] = true;
@@ -1580,16 +1580,8 @@ $tdatadhis2_reporting_rates_chart[".hideMobileList"] = array();
 	$tdatadhis2_reporting_rates_chart["REPORTING_RATE_ON_TIME"] = $fdata;
 		$tdatadhis2_reporting_rates_chart[".searchableFields"][] = "REPORTING_RATE_ON_TIME";
 
-$tdatadhis2_reporting_rates_chart[".chartLabelField"] = "dataSet";
+$tdatadhis2_reporting_rates_chart[".chartLabelField"] = "title";
 $tdatadhis2_reporting_rates_chart[".chartSeries"] = array();
-$tdatadhis2_reporting_rates_chart[".chartSeries"][] = array(
-	"field" => "REPORTING_RATE",
-	"total" => ""
-);
-$tdatadhis2_reporting_rates_chart[".chartSeries"][] = array(
-	"field" => "REPORTING_RATE_ON_TIME",
-	"total" => ""
-);
 $tdatadhis2_reporting_rates_chart[".chartSeries"][] = array(
 	"field" => "EXPECTED_REPORTS",
 	"total" => ""
@@ -1598,93 +1590,35 @@ $tdatadhis2_reporting_rates_chart[".chartSeries"][] = array(
 	"field" => "ACTUAL_REPORTS",
 	"total" => ""
 );
-$tdatadhis2_reporting_rates_chart[".chartSeries"][] = array(
-	"field" => "ACTUAL_REPORTS_ON_TIME",
-	"total" => ""
-);
 	$tdatadhis2_reporting_rates_chart[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">DHIS2_Reporting_Rates_Chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">gauge</attr>
+			<attr value="type">area</attr>
 		</attr>
 
 		<attr value="parameters">';
 	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="0">
-			<attr value="name">REPORTING_RATE</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="gaugeMinValue">0</attr>
-			<attr value="gaugeMaxValue">100</attr>
-			<attr value="gaugeColorZone">';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="0">
-			<attr value="gaugeBeginColor">0</attr>
-			<attr value="gaugeEndColor">100</attr>
-			<attr value="gaugeColor">A52A00</attr>
-		</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
+			<attr value="name">EXPECTED_REPORTS</attr>';
 	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
 	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="1">
-			<attr value="name">REPORTING_RATE_ON_TIME</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="gaugeMinValue">0</attr>
-			<attr value="gaugeMaxValue">100</attr>
-			<attr value="gaugeColorZone">';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="0">
-			<attr value="gaugeBeginColor">0</attr>
-			<attr value="gaugeEndColor">100</attr>
-			<attr value="gaugeColor">FFAD5B</attr>
-		</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
+			<attr value="name">ACTUAL_REPORTS</attr>';
 	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
 	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="2">
-			<attr value="name">EXPECTED_REPORTS</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="gaugeMinValue">0</attr>
-			<attr value="gaugeMaxValue"></attr>
-			<attr value="gaugeColorZone">';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="0">
-			<attr value="gaugeBeginColor">0</attr>
-			<attr value="gaugeEndColor"></attr>
-			<attr value="gaugeColor">7FFFD4</attr>
-		</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="3">
-			<attr value="name">ACTUAL_REPORTS</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="gaugeMinValue">0</attr>
-			<attr value="gaugeMaxValue"></attr>
-			<attr value="gaugeColorZone">';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="0">
-			<attr value="gaugeBeginColor">0</attr>
-			<attr value="gaugeEndColor"></attr>
-			<attr value="gaugeColor">0000FF</attr>
-		</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="4">
-			<attr value="name">ACTUAL_REPORTS_ON_TIME</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="gaugeMinValue">0</attr>
-			<attr value="gaugeMaxValue"></attr>
-			<attr value="gaugeColorZone">';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="0">
-			<attr value="gaugeBeginColor">0</attr>
-			<attr value="gaugeEndColor"></attr>
-			<attr value="gaugeColor">7D9EC0</attr>
-		</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="5">
-		<attr value="name">dataSet</attr>
+		<attr value="name">title</attr>
 	</attr>';
 	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>
 			<attr value="appearance">';
 
 
-	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="head">'.xmlencode("DHIS2 Reporting Rate Meter").'</attr>
-<attr value="foot">'.xmlencode("Reporting Rates Gauge").'</attr>
-<attr value="y_axis_label">'.xmlencode("ACTUAL_REPORTS").'</attr>
+	$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="head">'.xmlencode("DHIS2 Reporting Rate Performance").'</attr>
+<attr value="foot">'.xmlencode("Expected Reporting Rates").'</attr>
+<attr value="y_axis_label">'.xmlencode("Reporting Dates").'</attr>
 
 
 <attr value="slegend">true</attr>
-<attr value="sgrid">false</attr>
+<attr value="sgrid">true</attr>
 <attr value="sname">true</attr>
 <attr value="sval">true</attr>
 <attr value="sanim">true</attr>
@@ -1692,12 +1626,11 @@ $tdatadhis2_reporting_rates_chart[".chartSeries"][] = array(
 <attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
+<attr value="is3d">1</attr>
 <attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>
 <attr value="autoupmin">60</attr>';
-$tdatadhis2_reporting_rates_chart[".chartXml"] .= '<attr value="gaugestyle">0</attr>';
 $tdatadhis2_reporting_rates_chart[".chartXml"] .= '</attr>
 
 <attr value="fields">';
