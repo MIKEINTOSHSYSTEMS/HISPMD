@@ -141,7 +141,7 @@ $tdatamfr_zone_chart[".addPageEvents"] = false;
 $tdatamfr_zone_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_zone_chart[".badgeColor"] = "4169E1";
+$tdatamfr_zone_chart[".badgeColor"] = "4169e1";
 
 
 $tdatamfr_zone_chart[".allSearchFields"] = array();
@@ -150,7 +150,6 @@ $tdatamfr_zone_chart[".requiredSearchFields"] = array();
 
 $tdatamfr_zone_chart[".googleLikeFields"] = array();
 $tdatamfr_zone_chart[".googleLikeFields"][] = "Zone";
-$tdatamfr_zone_chart[".googleLikeFields"][] = "Count";
 
 
 
@@ -166,7 +165,7 @@ $tdatamfr_zone_chart[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatamfr_zone_chart[".chartType"] = "Bubble";
+$tdatamfr_zone_chart[".chartType"] = "Area";
 // end of chart settings
 
 
@@ -506,24 +505,25 @@ $tdatamfr_zone_chart[".hideMobileList"] = array();
 	$tdatamfr_zone_chart["Count"] = $fdata;
 		$tdatamfr_zone_chart[".searchableFields"][] = "Count";
 
+$tdatamfr_zone_chart[".groupChart"] = true;
+$tdatamfr_zone_chart[".chartLabelInterval"] = 0;
 $tdatamfr_zone_chart[".chartLabelField"] = "Zone";
 $tdatamfr_zone_chart[".chartSeries"] = array();
 $tdatamfr_zone_chart[".chartSeries"][] = array(
 	"field" => "Count",
-	"total" => ""
+	"total" => "SUM"
 );
 	$tdatamfr_zone_chart[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">MFR_Zone_Chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">bubble</attr>
+			<attr value="type">area</attr>
 		</attr>
 
 		<attr value="parameters">';
 	$tdatamfr_zone_chart[".chartXml"] .= '<attr value="0">
 			<attr value="name">Count</attr>';
-	$tdatamfr_zone_chart[".chartXml"] .= '<attr value="size"></attr>';
 	$tdatamfr_zone_chart[".chartXml"] .= '</attr>';
 	$tdatamfr_zone_chart[".chartXml"] .= '<attr value="1">
 		<attr value="name">Zone</attr>
@@ -533,7 +533,7 @@ $tdatamfr_zone_chart[".chartSeries"][] = array(
 
 
 	$tdatamfr_zone_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Zone Chart").'</attr>
-<attr value="foot">'.xmlencode("Zone").'</attr>
+<attr value="foot">'.xmlencode("Zones").'</attr>
 <attr value="y_axis_label">'.xmlencode("Count").'</attr>
 
 
@@ -547,11 +547,10 @@ $tdatamfr_zone_chart[".chartSeries"][] = array(
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
 <attr value="is3d">0</attr>
-<attr value="isstacked">0</attr>
+<attr value="isstacked">1</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>
 <attr value="autoupmin">60</attr>';
-$tdatamfr_zone_chart[".chartXml"] .= '<attr value="bubbletransp">0</attr>';
 $tdatamfr_zone_chart[".chartXml"] .= '</attr>
 
 <attr value="fields">';
@@ -597,6 +596,26 @@ $masterTablesData["MFR_Zone_Chart"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="MFR_Zone";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MFR_Zone";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mfr_zone";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["MFR_Zone_Chart"][0] = $masterParams;
+				$masterTablesData["MFR_Zone_Chart"][0]["masterKeys"] = array();
+	$masterTablesData["MFR_Zone_Chart"][0]["masterKeys"][]="Zone";
+				$masterTablesData["MFR_Zone_Chart"][0]["masterKeys"][]="Count";
+				$masterTablesData["MFR_Zone_Chart"][0]["detailKeys"] = array();
+	$masterTablesData["MFR_Zone_Chart"][0]["detailKeys"][]="Zone";
+				$masterTablesData["MFR_Zone_Chart"][0]["detailKeys"][]="Count";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

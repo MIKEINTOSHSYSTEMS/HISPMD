@@ -255,8 +255,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_operational_status_chart" == $shortTName )
 		return true;
-	if ("mfr_geolocation_reports" == $shortTName )
-		return true;
 	if ("mfr_region_chart" == $shortTName )
 		return true;
 	if ("mfr_zone_chart" == $shortTName )
@@ -292,6 +290,8 @@ function checkTableName($shortTName )
 	if ("dhis2_reporting_rate_report1" == $shortTName )
 		return true;
 	if ("dhis2_reporting_rates_chart" == $shortTName )
+		return true;
+	if ("mfr_aio_dashboard" == $shortTName )
 		return true;
 	return false;
 }
@@ -579,15 +579,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR Geolocation Reports");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR Geolocation Reports";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("MFR_Region_Chart");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -748,6 +739,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Reporting_Rates_Chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_AIO_Dashboard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_AIO_Dashboard";
+	}
 	return $arr;
 }
 
@@ -783,7 +783,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Zone";
 	$arr[]="MFR_Woreda";
 	$arr[]="MFR_Operational_Status_Chart";
-	$arr[]="MFR Geolocation Reports";
 	$arr[]="MFR_Region_Chart";
 	$arr[]="MFR_Zone_Chart";
 	$arr[]="MFR_Woreda_Chart";
@@ -802,6 +801,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_Reporting_Rate_Chart";
 	$arr[]="DHIS2_Reporting_Rate_Report";
 	$arr[]="DHIS2_Reporting_Rates_Chart";
+	$arr[]="MFR_AIO_Dashboard";
 	return $arr;
 }
 
@@ -850,9 +850,9 @@ function GetChartType($shorttable)
 	if($shorttable=="mfr_operational_status_chart")
 		return "2DBar";
 	if($shorttable=="mfr_region_chart")
-		return "2DColumn";
+		return "2DDoughnut";
 	if($shorttable=="mfr_zone_chart")
-		return "Bubble";
+		return "Area";
 	if($shorttable=="mfr_woreda_chart")
 		return "Bubble";
 	if($shorttable=="dhis2_analytics_chart")
@@ -1595,12 +1595,6 @@ function GetUserPermissionsStatic( $table )
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="MFR Geolocation Reports" )
-	{
-//	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="MFR_Region_Chart" )
 	{
 //	default permissions
@@ -1704,6 +1698,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_Reporting_Rates_Chart" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_AIO_Dashboard" )
 	{
 //	default permissions
 		// grant all by default

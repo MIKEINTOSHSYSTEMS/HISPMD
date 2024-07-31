@@ -3562,8 +3562,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_woreda" ] = "MFR_Woreda";
 	$projectEntities[ "MFR_Operational_Status_Chart" ] = array( "url" => "mfr_operational_status_chart", "type" => 3 );
 	$projectEntitiesReverse[ "mfr_operational_status_chart" ] = "MFR_Operational_Status_Chart";
-	$projectEntities[ "MFR Geolocation Reports" ] = array( "url" => "mfr_geolocation_reports", "type" => 4 );
-	$projectEntitiesReverse[ "mfr_geolocation_reports" ] = "MFR Geolocation Reports";
 	$projectEntities[ "MFR_Region_Chart" ] = array( "url" => "mfr_region_chart", "type" => 3 );
 	$projectEntitiesReverse[ "mfr_region_chart" ] = "MFR_Region_Chart";
 	$projectEntities[ "MFR_Zone_Chart" ] = array( "url" => "mfr_zone_chart", "type" => 3 );
@@ -3600,6 +3598,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_reporting_rate_report1" ] = "DHIS2_Reporting_Rate_Report";
 	$projectEntities[ "DHIS2_Reporting_Rates_Chart" ] = array( "url" => "dhis2_reporting_rates_chart", "type" => 11 );
 	$projectEntitiesReverse[ "dhis2_reporting_rates_chart" ] = "DHIS2_Reporting_Rates_Chart";
+	$projectEntities[ "MFR_AIO_Dashboard" ] = array( "url" => "mfr_aio_dashboard", "type" => 4 );
+	$projectEntitiesReverse[ "mfr_aio_dashboard" ] = "MFR_AIO_Dashboard";
 }
 
 function findTable( $table ) {

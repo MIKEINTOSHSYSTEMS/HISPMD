@@ -541,10 +541,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="MFR Geolocation Reports")
-		{
-			return 1;
-		}
 		if($table=="MFR_Region_Chart")
 		{
 			return 1;
@@ -614,6 +610,10 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="DHIS2_Reporting_Rates_Chart")
+		{
+			return 1;
+		}
+		if($table=="MFR_AIO_Dashboard")
 		{
 			return 1;
 		}
@@ -982,10 +982,6 @@ function getCaptionTable($table)
 	{
 		return "MFR Operational Status Chart";
 	}
-	if($table=="MFR Geolocation Reports")
-	{
-		return "MFR Geolocation Reports";
-	}
 	if($table=="MFR_Region_Chart")
 	{
 		return "MFR Region Chart";
@@ -1057,6 +1053,10 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Reporting_Rates_Chart")
 	{
 		return "DHIS2 Reporting Rates Chart";
+	}
+	if($table=="MFR_AIO_Dashboard")
+	{
+		return "MFR AIO Dashboard";
 	}
 	return $table;
 }

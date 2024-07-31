@@ -168,9 +168,6 @@ pdfDocument = {
 				
 			{"text":{$Zone_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
-				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

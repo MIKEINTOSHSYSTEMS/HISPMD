@@ -86,6 +86,7 @@
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
+			data-single
 				data-fullwidth
 		
 			data-cellId="grid_c3" data-pageid="{$pageid}"
@@ -115,72 +116,6 @@
 </div>
 
 {END Region_fieldblock}
-											
-{BEGIN Lat_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Lat}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Lat{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Lat" data-fieldname="Lat" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Lat}">
-		{$label MFR_Region Lat }	</label>
-	<div class="r-search-option">
-		{$searchtype_Lat}
-	</div>
-	<div class="r-search-field">
-		{$Lat_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Lat_editcontrol1}
-	</div>
-	
-</div>
-
-{END Lat_fieldblock}
-											
-{BEGIN Lng_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Lng}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Lng{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Lng" data-fieldname="Lng" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Lng}">
-		{$label MFR_Region Lng }	</label>
-	<div class="r-search-option">
-		{$searchtype_Lng}
-	</div>
-	<div class="r-search-field">
-		{$Lng_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Lng_editcontrol1}
-	</div>
-	
-</div>
-
-{END Lng_fieldblock}
-											
-{BEGIN Count_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Count}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Count{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Count" data-fieldname="Count" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Count}">
-		{$label MFR_Region Count }	</label>
-	<div class="r-search-option">
-		{$searchtype_Count}
-	</div>
-	<div class="r-search-field">
-		{$Count_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Count_editcontrol1}
-	</div>
-	
-</div>
-
-{END Count_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

@@ -141,7 +141,7 @@ $tdatamfr_woreda_chart[".addPageEvents"] = false;
 $tdatamfr_woreda_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_woreda_chart[".badgeColor"] = "1E90FF";
+$tdatamfr_woreda_chart[".badgeColor"] = "1e90ff";
 
 
 $tdatamfr_woreda_chart[".allSearchFields"] = array();
@@ -150,7 +150,6 @@ $tdatamfr_woreda_chart[".requiredSearchFields"] = array();
 
 $tdatamfr_woreda_chart[".googleLikeFields"] = array();
 $tdatamfr_woreda_chart[".googleLikeFields"][] = "Woreda";
-$tdatamfr_woreda_chart[".googleLikeFields"][] = "Count";
 
 
 
@@ -546,7 +545,7 @@ $tdatamfr_woreda_chart[".chartSeries"][] = array(
 <attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
+<attr value="is3d">1</attr>
 <attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>
@@ -597,6 +596,26 @@ $masterTablesData["MFR_Woreda_Chart"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="MFR_Woreda";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MFR_Woreda";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mfr_woreda";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["MFR_Woreda_Chart"][0] = $masterParams;
+				$masterTablesData["MFR_Woreda_Chart"][0]["masterKeys"] = array();
+	$masterTablesData["MFR_Woreda_Chart"][0]["masterKeys"][]="Woreda";
+				$masterTablesData["MFR_Woreda_Chart"][0]["masterKeys"][]="Count";
+				$masterTablesData["MFR_Woreda_Chart"][0]["detailKeys"] = array();
+	$masterTablesData["MFR_Woreda_Chart"][0]["detailKeys"][]="Woreda";
+				$masterTablesData["MFR_Woreda_Chart"][0]["detailKeys"][]="Count";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

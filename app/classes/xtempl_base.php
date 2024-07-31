@@ -151,12 +151,12 @@ class XTempl_Base
 			array(
 				"chartName"=>"mfr_region_chart",
 				"table"=>"MFR_Region_Chart",
-				"ctype"=>"2DColumn"));
+				"ctype"=>"2DDoughnut"));
 			$this->assign_function("mfr_zone_chart_chart","xt_showchart",
 			array(
 				"chartName"=>"mfr_zone_chart",
 				"table"=>"MFR_Zone_Chart",
-				"ctype"=>"Bubble"));
+				"ctype"=>"Area"));
 			$this->assign_function("mfr_woreda_chart_chart","xt_showchart",
 			array(
 				"chartName"=>"mfr_woreda_chart",

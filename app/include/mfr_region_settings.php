@@ -6,11 +6,11 @@ $tdatamfr_region[".OwnerID"] = "";
 $tdatamfr_region[".OriginalTable"] = "MFR_Region";
 
 
-$tdatamfr_region[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_region[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_region[".originalPagesByType"] = $tdatamfr_region[".pagesByType"];
-$tdatamfr_region[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_region[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_region[".originalPages"] = $tdatamfr_region[".pages"];
-$tdatamfr_region[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_region[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_region[".originalDefaultPages"] = $tdatamfr_region[".defaultPages"];
 
 //	field labels
@@ -155,9 +155,6 @@ $tdatamfr_region[".requiredSearchFields"] = array();
 
 $tdatamfr_region[".googleLikeFields"] = array();
 $tdatamfr_region[".googleLikeFields"][] = "Region";
-$tdatamfr_region[".googleLikeFields"][] = "Lat";
-$tdatamfr_region[".googleLikeFields"][] = "Lng";
-$tdatamfr_region[".googleLikeFields"][] = "Count";
 
 
 
@@ -807,6 +804,41 @@ changeTextControlsToDate( "MFR_Region" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["MFR_Region"] = array();
+//	MFR_Region_Chart
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="MFR_Region_Chart";
+		$detailsParam["dOriginalTable"] = "MFR_Region";
+
+
+
+			$detailsParam["dType"]=PAGE_CHART;
+
+		$detailsParam["dShortTable"] = "mfr_region_chart";
+	$detailsParam["dCaptionTable"] = GetTableCaption("MFR_Region_Chart");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["MFR_Region"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["MFR_Region"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["MFR_Region"][$dIndex]["masterKeys"][]="Region";
+
+	$detailsTablesData["MFR_Region"][$dIndex]["masterKeys"][]="Count";
+
+				$detailsTablesData["MFR_Region"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["MFR_Region"][$dIndex]["detailKeys"][]="Region";
+
+		
+	$detailsTablesData["MFR_Region"][$dIndex]["detailKeys"][]="Count";
 //endif
 
 // tables which are master tables for current table (detail)

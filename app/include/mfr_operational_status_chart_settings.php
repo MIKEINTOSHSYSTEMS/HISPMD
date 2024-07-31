@@ -144,7 +144,7 @@ $tdatamfr_operational_status_chart[".addPageEvents"] = false;
 $tdatamfr_operational_status_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_operational_status_chart[".badgeColor"] = "DAA520";
+$tdatamfr_operational_status_chart[".badgeColor"] = "daa520";
 
 
 $tdatamfr_operational_status_chart[".allSearchFields"] = array();
@@ -742,6 +742,28 @@ $masterTablesData["MFR_Operational_Status_Chart"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="MFR_Operational_Status";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MFR_Operational_Status";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mfr_operational_status";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["MFR_Operational_Status_Chart"][0] = $masterParams;
+				$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"] = array();
+	$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"][]="OperationalStatus";
+				$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"][]="Status";
+				$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"][]="Count";
+				$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"] = array();
+	$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"][]="OperationalStatus";
+				$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"][]="Status";
+				$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"][]="Count";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

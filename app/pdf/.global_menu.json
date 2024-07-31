@@ -43,6 +43,68 @@ pdfDocument = {
 				
 				[
 																{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c5',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br><br><h2><strong>MENU</strong></h2>","hidden":"{$item_hide_text5}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
@@ -176,11 +238,89 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
 				],
 	
 		body: [
 				
 				[
+																{
+	cellId: 'c16',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c17',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<p><strong>INDICATORS</strong></p>","hidden":"{$item_hide_text4}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
 																{
 	cellId: 'c1',
 	col:0,
@@ -196,6 +336,54 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_welcome_group}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c14',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c15',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<p><strong>MFR</strong></p>","hidden":"{$item_hide_text3}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -282,7 +470,78 @@ pdfDocument = {
 											],
 						[
 																{
+	cellId: 'c11',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c12',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
 	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<p><strong>DHIS2</strong></p>","hidden":"{$item_hide_text2}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c10',
 	col:0,
 	row:0,
 			
@@ -319,8 +578,58 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"","hidden":"{$item_hide_welcome_group5}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				'',
 	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c18',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<p><strong><em>NEW MENU</em></strong></p>","hidden":"{$item_hide_text6}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -370,28 +679,31 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","background":"#D2AF80","hidden":"{$item_hide_welcome_item40}"},
-				
-				
-			{"text":"","background":"#CD5C5C","hidden":"{$item_hide_welcome_item41}"},
-				
-				
-			{"text":"","background":"#B22222","hidden":"{$item_hide_welcome_item42}"},
-				
-				
-			{"text":"","background":"#DAA520","hidden":"{$item_hide_welcome_item35}"},
-				
-				
-			{"text":"","background":"#6DA5C8","hidden":"{$item_hide_welcome_item43}"},
-				
-				
-			{"text":"","background":"#1E90FF","hidden":"{$item_hide_welcome_item44}"},
-				
-				
-			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item45}"},
-				
-		  ],
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c13',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

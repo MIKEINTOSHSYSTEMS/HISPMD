@@ -6,11 +6,11 @@ $tdatamfr_operational_status[".OwnerID"] = "";
 $tdatamfr_operational_status[".OriginalTable"] = "MFR_Operational_Status";
 
 
-$tdatamfr_operational_status[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_operational_status[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_operational_status[".originalPagesByType"] = $tdatamfr_operational_status[".pagesByType"];
-$tdatamfr_operational_status[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_operational_status[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_operational_status[".originalPages"] = $tdatamfr_operational_status[".pages"];
-$tdatamfr_operational_status[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_operational_status[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_operational_status[".originalDefaultPages"] = $tdatamfr_operational_status[".defaultPages"];
 
 //	field labels
@@ -153,7 +153,6 @@ $tdatamfr_operational_status[".requiredSearchFields"] = array();
 $tdatamfr_operational_status[".googleLikeFields"] = array();
 $tdatamfr_operational_status[".googleLikeFields"][] = "OperationalStatus";
 $tdatamfr_operational_status[".googleLikeFields"][] = "Status";
-$tdatamfr_operational_status[".googleLikeFields"][] = "Count";
 
 
 
@@ -665,6 +664,46 @@ changeTextControlsToDate( "MFR_Operational_Status" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["MFR_Operational_Status"] = array();
+//	MFR_Operational_Status_Chart
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="MFR_Operational_Status_Chart";
+		$detailsParam["dOriginalTable"] = "MFR_Operational_Status";
+
+
+
+			$detailsParam["dType"]=PAGE_CHART;
+
+		$detailsParam["dShortTable"] = "mfr_operational_status_chart";
+	$detailsParam["dCaptionTable"] = GetTableCaption("MFR_Operational_Status_Chart");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["MFR_Operational_Status"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["MFR_Operational_Status"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["MFR_Operational_Status"][$dIndex]["masterKeys"][]="OperationalStatus";
+
+	$detailsTablesData["MFR_Operational_Status"][$dIndex]["masterKeys"][]="Status";
+
+	$detailsTablesData["MFR_Operational_Status"][$dIndex]["masterKeys"][]="Count";
+
+				$detailsTablesData["MFR_Operational_Status"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["MFR_Operational_Status"][$dIndex]["detailKeys"][]="OperationalStatus";
+
+		
+	$detailsTablesData["MFR_Operational_Status"][$dIndex]["detailKeys"][]="Status";
+
+		
+	$detailsTablesData["MFR_Operational_Status"][$dIndex]["detailKeys"][]="Count";
 //endif
 
 // tables which are master tables for current table (detail)

@@ -6,11 +6,11 @@ $tdatamfr_dashboard_reports[".OwnerID"] = "";
 $tdatamfr_dashboard_reports[".OriginalTable"] = "MFR_Dashboard_Reports";
 
 
-$tdatamfr_dashboard_reports[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_dashboard_reports[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_dashboard_reports[".originalPagesByType"] = $tdatamfr_dashboard_reports[".pagesByType"];
-$tdatamfr_dashboard_reports[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_dashboard_reports[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_dashboard_reports[".originalPages"] = $tdatamfr_dashboard_reports[".pages"];
-$tdatamfr_dashboard_reports[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_dashboard_reports[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_dashboard_reports[".originalDefaultPages"] = $tdatamfr_dashboard_reports[".defaultPages"];
 
 //	field labels
@@ -153,7 +153,6 @@ $tdatamfr_dashboard_reports[".requiredSearchFields"] = array();
 $tdatamfr_dashboard_reports[".googleLikeFields"] = array();
 $tdatamfr_dashboard_reports[".googleLikeFields"][] = "Type";
 $tdatamfr_dashboard_reports[".googleLikeFields"][] = "Name";
-$tdatamfr_dashboard_reports[".googleLikeFields"][] = "Count";
 
 
 
@@ -665,6 +664,46 @@ changeTextControlsToDate( "MFR_Dashboard_Reports" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["MFR_Dashboard_Reports"] = array();
+//	MFR_Dashboard_Reports_Chart
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="MFR_Dashboard_Reports_Chart";
+		$detailsParam["dOriginalTable"] = "MFR_Dashboard_Reports";
+
+
+
+			$detailsParam["dType"]=PAGE_CHART;
+
+		$detailsParam["dShortTable"] = "mfr_dashboard_reports_chart";
+	$detailsParam["dCaptionTable"] = GetTableCaption("MFR_Dashboard_Reports_Chart");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["masterKeys"][]="Type";
+
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["masterKeys"][]="Name";
+
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["masterKeys"][]="Count";
+
+				$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["detailKeys"][]="Type";
+
+		
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["detailKeys"][]="Name";
+
+		
+	$detailsTablesData["MFR_Dashboard_Reports"][$dIndex]["detailKeys"][]="Count";
 //endif
 
 // tables which are master tables for current table (detail)

@@ -76,6 +76,9 @@ pdfDocument = {
 										{BEGIN col_grid_3}
 					"%",
 					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -86,10 +89,13 @@ pdfDocument = {
 													{BEGIN row_grid_1}
 							"%",
 							{END row_grid_1}
-													{END grid_row}
 																								{BEGIN row_grid_2}
 							"%",
 							{END row_grid_2}
+													{END grid_row}
+																								{BEGIN row_grid_3}
+							"%",
+							{END row_grid_3}
 															],
 							
 				body: [
@@ -337,6 +343,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_checkbox}
+																							{BEGIN cellblock_grid_headcell_details}
+{
+	cellId: 'headcell_details',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_details}
 																							{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
@@ -461,6 +493,37 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_checkbox}
+																							{BEGIN cellblock_grid_cell_details}
+{
+	cellId: 'cell_details',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_details}
 																							{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
@@ -550,12 +613,73 @@ pdfDocument = {
 {END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_dpreview}
+{
+	cellId: 'cell_dpreview',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_dpreview}
+			colSpan: {$colspan_grid_cell_dpreview},
+			{END colspan_grid_cell_dpreview}
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_mfr_dashboard_reports_chart}
+			{$displayDetailTable_mfr_dashboard_reports_chart }
+		{END details_mfr_dashboard_reports_chart},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_dpreview}
+																		{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+							],
+				{END row_grid_2}
 		
 		{END grid_record}
 	{END grid_row}
 			
 					
-				{BEGIN row_grid_2}
+				{BEGIN row_grid_3}
 				[
 																{BEGIN cellblock_grid_footcell_checkbox}
 {
@@ -583,6 +707,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_checkbox}
+																							{BEGIN cellblock_grid_footcell_details}
+{
+	cellId: 'footcell_details',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_details}
 																							{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',
@@ -670,7 +820,7 @@ pdfDocument = {
 
 {END cellblock_grid_footcell_field2}
 											],
-				{END row_grid_2}
+				{END row_grid_3}
 		
 				
 									]

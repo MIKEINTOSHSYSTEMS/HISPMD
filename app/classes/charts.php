@@ -430,8 +430,6 @@ class Chart
 			return true;
 		if("MFR_Operational_Status" == $this->chrt_array['tables'][0])
 			return true;
-		if("" == $this->chrt_array['tables'][0])
-			return true;
 		if("MFR_Region" == $this->chrt_array['tables'][0])
 			return true;
 		if("MFR_Zone" == $this->chrt_array['tables'][0])
@@ -467,6 +465,8 @@ class Chart
 		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
 			return true;
 		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

@@ -6,11 +6,11 @@ $tdatamfr_woreda[".OwnerID"] = "";
 $tdatamfr_woreda[".OriginalTable"] = "MFR_Woreda";
 
 
-$tdatamfr_woreda[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_woreda[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_woreda[".originalPagesByType"] = $tdatamfr_woreda[".pagesByType"];
-$tdatamfr_woreda[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_woreda[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_woreda[".originalPages"] = $tdatamfr_woreda[".pages"];
-$tdatamfr_woreda[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_woreda[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_woreda[".originalDefaultPages"] = $tdatamfr_woreda[".defaultPages"];
 
 //	field labels
@@ -155,9 +155,6 @@ $tdatamfr_woreda[".requiredSearchFields"] = array();
 
 $tdatamfr_woreda[".googleLikeFields"] = array();
 $tdatamfr_woreda[".googleLikeFields"][] = "Woreda";
-$tdatamfr_woreda[".googleLikeFields"][] = "Lat";
-$tdatamfr_woreda[".googleLikeFields"][] = "Lng";
-$tdatamfr_woreda[".googleLikeFields"][] = "Count";
 
 
 
@@ -812,6 +809,41 @@ changeTextControlsToDate( "MFR_Woreda" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["MFR_Woreda"] = array();
+//	MFR_Woreda_Chart
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="MFR_Woreda_Chart";
+		$detailsParam["dOriginalTable"] = "MFR_Woreda";
+
+
+
+			$detailsParam["dType"]=PAGE_CHART;
+
+		$detailsParam["dShortTable"] = "mfr_woreda_chart";
+	$detailsParam["dCaptionTable"] = GetTableCaption("MFR_Woreda_Chart");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["MFR_Woreda"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["MFR_Woreda"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["MFR_Woreda"][$dIndex]["masterKeys"][]="Woreda";
+
+	$detailsTablesData["MFR_Woreda"][$dIndex]["masterKeys"][]="Count";
+
+				$detailsTablesData["MFR_Woreda"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["MFR_Woreda"][$dIndex]["detailKeys"][]="Woreda";
+
+		
+	$detailsTablesData["MFR_Woreda"][$dIndex]["detailKeys"][]="Count";
 //endif
 
 // tables which are master tables for current table (detail)

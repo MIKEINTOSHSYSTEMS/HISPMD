@@ -144,7 +144,7 @@ $tdatamfr_dashboard_reports_chart[".addPageEvents"] = false;
 $tdatamfr_dashboard_reports_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_dashboard_reports_chart[".badgeColor"] = "6DA5C8";
+$tdatamfr_dashboard_reports_chart[".badgeColor"] = "6da5c8";
 
 
 $tdatamfr_dashboard_reports_chart[".allSearchFields"] = array();
@@ -745,6 +745,28 @@ $masterTablesData["MFR_Dashboard_Reports_Chart"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="MFR_Dashboard_Reports";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MFR_Dashboard_Reports";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mfr_dashboard_reports";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["MFR_Dashboard_Reports_Chart"][0] = $masterParams;
+				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"] = array();
+	$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"][]="Type";
+				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"][]="Name";
+				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"][]="Count";
+				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"] = array();
+	$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"][]="Type";
+				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"][]="Name";
+				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"][]="Count";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

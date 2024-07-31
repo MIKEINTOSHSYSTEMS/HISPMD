@@ -460,10 +460,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="MFR Geolocation Reports")
-		{
-			return false;
-		}
 		if($table=="MFR_Region_Chart")
 		{
 			return false;
@@ -533,6 +529,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="DHIS2_Reporting_Rates_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_AIO_Dashboard")
 		{
 			return false;
 		}
@@ -948,10 +948,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="MFR Geolocation Reports")
-		{
-			return false;
-		}
 		if($table=="MFR_Region_Chart")
 		{
 			return false;
@@ -1021,6 +1017,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="DHIS2_Reporting_Rates_Chart")
+		{
+			return false;
+		}
+		if($table=="MFR_AIO_Dashboard")
 		{
 			return false;
 		}

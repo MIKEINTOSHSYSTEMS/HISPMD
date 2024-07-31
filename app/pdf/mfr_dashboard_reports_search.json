@@ -171,9 +171,6 @@ pdfDocument = {
 				
 			{"text":{$Name_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
-				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

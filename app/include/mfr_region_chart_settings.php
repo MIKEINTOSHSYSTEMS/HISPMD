@@ -141,7 +141,7 @@ $tdatamfr_region_chart[".addPageEvents"] = false;
 $tdatamfr_region_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_region_chart[".badgeColor"] = "DAA520";
+$tdatamfr_region_chart[".badgeColor"] = "daa520";
 
 
 $tdatamfr_region_chart[".allSearchFields"] = array();
@@ -150,7 +150,6 @@ $tdatamfr_region_chart[".requiredSearchFields"] = array();
 
 $tdatamfr_region_chart[".googleLikeFields"] = array();
 $tdatamfr_region_chart[".googleLikeFields"][] = "Region";
-$tdatamfr_region_chart[".googleLikeFields"][] = "Count";
 
 
 
@@ -166,7 +165,7 @@ $tdatamfr_region_chart[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatamfr_region_chart[".chartType"] = "2DColumn";
+$tdatamfr_region_chart[".chartType"] = "2DDoughnut";
 // end of chart settings
 
 
@@ -506,18 +505,20 @@ $tdatamfr_region_chart[".hideMobileList"] = array();
 	$tdatamfr_region_chart["Count"] = $fdata;
 		$tdatamfr_region_chart[".searchableFields"][] = "Count";
 
+$tdatamfr_region_chart[".groupChart"] = true;
+$tdatamfr_region_chart[".chartLabelInterval"] = 0;
 $tdatamfr_region_chart[".chartLabelField"] = "Region";
 $tdatamfr_region_chart[".chartSeries"] = array();
 $tdatamfr_region_chart[".chartSeries"][] = array(
 	"field" => "Count",
-	"total" => ""
+	"total" => "SUM"
 );
 	$tdatamfr_region_chart[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">MFR_Region_Chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">2d_column</attr>
+			<attr value="type">2d_doughnut</attr>
 		</attr>
 
 		<attr value="parameters">';
@@ -532,7 +533,7 @@ $tdatamfr_region_chart[".chartSeries"][] = array(
 
 
 	$tdatamfr_region_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Region Chart").'</attr>
-<attr value="foot">'.xmlencode("Region").'</attr>
+<attr value="foot">'.xmlencode("Regions").'</attr>
 <attr value="y_axis_label">'.xmlencode("Count").'</attr>
 
 
@@ -545,7 +546,7 @@ $tdatamfr_region_chart[".chartSeries"][] = array(
 <attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
+<attr value="is3d">1</attr>
 <attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>
@@ -595,6 +596,26 @@ $masterTablesData["MFR_Region_Chart"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="MFR_Region";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MFR_Region";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mfr_region";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["MFR_Region_Chart"][0] = $masterParams;
+				$masterTablesData["MFR_Region_Chart"][0]["masterKeys"] = array();
+	$masterTablesData["MFR_Region_Chart"][0]["masterKeys"][]="Region";
+				$masterTablesData["MFR_Region_Chart"][0]["masterKeys"][]="Count";
+				$masterTablesData["MFR_Region_Chart"][0]["detailKeys"] = array();
+	$masterTablesData["MFR_Region_Chart"][0]["detailKeys"][]="Region";
+				$masterTablesData["MFR_Region_Chart"][0]["detailKeys"][]="Count";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
