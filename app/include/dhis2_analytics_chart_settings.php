@@ -1442,7 +1442,7 @@ require_once( getabspath( "include/dhis2_analytics_chart_ops.php" ) );
 
 
 	
-						;
+								;
 
 							
 

@@ -257,6 +257,55 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rates_chart.reportPeriod"] = array();
 		}
 		$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rates_chart.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rates_Chart", "field" => "reportPeriod", "page" => "search");
+		if( !isset( $lookupTableLinks["MFR_Status"] ) ) {
+			$lookupTableLinks["MFR_Status"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Status"]["mfr_facility.statusId"] )) {
+			$lookupTableLinks["MFR_Status"]["mfr_facility.statusId"] = array();
+		}
+		$lookupTableLinks["MFR_Status"]["mfr_facility.statusId"]["edit"] = array("table" => "MFR_Facility", "field" => "statusId", "page" => "edit");
+		if( !isset( $lookupTableLinks["MFR_Operational_Statuses"] ) ) {
+			$lookupTableLinks["MFR_Operational_Statuses"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Operational_Statuses"]["mfr_facility.operationalStatusId"] )) {
+			$lookupTableLinks["MFR_Operational_Statuses"]["mfr_facility.operationalStatusId"] = array();
+		}
+		$lookupTableLinks["MFR_Operational_Statuses"]["mfr_facility.operationalStatusId"]["edit"] = array("table" => "MFR_Facility", "field" => "operationalStatusId", "page" => "edit");
+		if( !isset( $lookupTableLinks["MFR_Facility_Types"] ) ) {
+			$lookupTableLinks["MFR_Facility_Types"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Facility_Types"]["mfr_facility.facilityTypeId"] )) {
+			$lookupTableLinks["MFR_Facility_Types"]["mfr_facility.facilityTypeId"] = array();
+		}
+		$lookupTableLinks["MFR_Facility_Types"]["mfr_facility.facilityTypeId"]["edit"] = array("table" => "MFR_Facility", "field" => "facilityTypeId", "page" => "edit");
+		if( !isset( $lookupTableLinks["MFR_Facility_Types"] ) ) {
+			$lookupTableLinks["MFR_Facility_Types"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Facility_Types"]["mfr_facility.parentFacilityTypeId"] )) {
+			$lookupTableLinks["MFR_Facility_Types"]["mfr_facility.parentFacilityTypeId"] = array();
+		}
+		$lookupTableLinks["MFR_Facility_Types"]["mfr_facility.parentFacilityTypeId"]["edit"] = array("table" => "MFR_Facility", "field" => "parentFacilityTypeId", "page" => "edit");
+		if( !isset( $lookupTableLinks["MFR_Regions"] ) ) {
+			$lookupTableLinks["MFR_Regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Regions"]["mfr_facility.regionId"] )) {
+			$lookupTableLinks["MFR_Regions"]["mfr_facility.regionId"] = array();
+		}
+		$lookupTableLinks["MFR_Regions"]["mfr_facility.regionId"]["edit"] = array("table" => "MFR_Facility", "field" => "regionId", "page" => "edit");
+		if( !isset( $lookupTableLinks["MFR_Zones"] ) ) {
+			$lookupTableLinks["MFR_Zones"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Zones"]["mfr_facility.zoneId"] )) {
+			$lookupTableLinks["MFR_Zones"]["mfr_facility.zoneId"] = array();
+		}
+		$lookupTableLinks["MFR_Zones"]["mfr_facility.zoneId"]["edit"] = array("table" => "MFR_Facility", "field" => "zoneId", "page" => "edit");
+		if( !isset( $lookupTableLinks["MFR_Woredas"] ) ) {
+			$lookupTableLinks["MFR_Woredas"] = array();
+		}
+		if( !isset( $lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"] )) {
+			$lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"] = array();
+		}
+		$lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"]["edit"] = array("table" => "MFR_Facility", "field" => "woredaId", "page" => "edit");
 }
 
 ?>

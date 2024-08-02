@@ -286,6 +286,13 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_Reporting_Rate_Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Report"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rates_Chart"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["MFR_Facility"] = "hispmdathispmdmerqconsultanmfr";
+		$connectionsIds["MFR_Regions"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Zones"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Woredas"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Facility_Types"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Operational_Statuses"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Status"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "374_1722087950";
+$projectBuildKey = "381_1722087950";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "374";
+$projectBuildNumber = "381";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -794,6 +794,13 @@ $tableCaptions["English"]["DHIS2_Reporting_Rate_Chart"] = "DHIS2 Reporting Rate 
 $tableCaptions["English"]["DHIS2_Reporting_Rate_Report"] = "DHIS2 Reporting Rate Report";
 $tableCaptions["English"]["DHIS2_Reporting_Rates_Chart"] = "DHIS2 Reporting Rates Chart";
 $tableCaptions["English"]["MFR_AIO_Dashboard"] = "MFR AIO Dashboard";
+$tableCaptions["English"]["MFR_Facility"] = "MFR Facility";
+$tableCaptions["English"]["MFR_Regions"] = "MFR Regions";
+$tableCaptions["English"]["MFR_Zones"] = "MFR Zones";
+$tableCaptions["English"]["MFR_Woredas"] = "MFR Woredas";
+$tableCaptions["English"]["MFR_Facility_Types"] = "MFR Facility Types";
+$tableCaptions["English"]["MFR_Operational_Statuses"] = "MFR Operational Statuses";
+$tableCaptions["English"]["MFR_Status"] = "MFR Status";
 
 
 $globalEvents = new class_GlobalEvents;

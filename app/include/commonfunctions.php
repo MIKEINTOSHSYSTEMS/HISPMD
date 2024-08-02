@@ -293,6 +293,20 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_aio_dashboard" == $shortTName )
 		return true;
+	if ("mfr_facility" == $shortTName )
+		return true;
+	if ("mfr_regions" == $shortTName )
+		return true;
+	if ("mfr_zones" == $shortTName )
+		return true;
+	if ("mfr_woredas" == $shortTName )
+		return true;
+	if ("mfr_facility_types" == $shortTName )
+		return true;
+	if ("mfr_operational_statuses" == $shortTName )
+		return true;
+	if ("mfr_status" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -748,6 +762,69 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MFR_AIO_Dashboard";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Facility");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Facility";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Regions");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Regions";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Zones");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Zones";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Woredas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Woredas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Facility_Types");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Facility_Types";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Operational_Statuses");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Operational_Statuses";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MFR_Status");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MFR_Status";
+	}
 	return $arr;
 }
 
@@ -802,6 +879,13 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_Reporting_Rate_Report";
 	$arr[]="DHIS2_Reporting_Rates_Chart";
 	$arr[]="MFR_AIO_Dashboard";
+	$arr[]="MFR_Facility";
+	$arr[]="MFR_Regions";
+	$arr[]="MFR_Zones";
+	$arr[]="MFR_Woredas";
+	$arr[]="MFR_Facility_Types";
+	$arr[]="MFR_Operational_Statuses";
+	$arr[]="MFR_Status";
 	return $arr;
 }
 
@@ -1704,6 +1788,48 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_AIO_Dashboard" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Facility" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Regions" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Zones" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Woredas" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Facility_Types" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Operational_Statuses" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MFR_Status" )
 	{
 //	default permissions
 		// grant all by default

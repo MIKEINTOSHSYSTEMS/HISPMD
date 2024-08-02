@@ -559,7 +559,7 @@ $proto0["m_strFrom"] = "FROM AI_Data_Assistant";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-						;
+								;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -667,7 +667,7 @@ $queryData_ai_data_assistant = createSqlQuery_ai_data_assistant();
 
 
 	
-						;
+								;
 
 		
 

@@ -1724,7 +1724,7 @@ require_once( getabspath( "include/dhis2_reporting_rate_chart1_ops.php" ) );
 
 
 	
-						;
+								;
 
 									
 

@@ -29,6 +29,13 @@ class RestManager
 		$connectionsIds["DHIS2_Reports"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Datasets"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["MFR_Facility"] = "hispmdathispmdmerqconsultanmfr";
+		$connectionsIds["MFR_Regions"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Zones"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Woredas"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Facility_Types"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Operational_Statuses"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MFR_Status"] = "hispmdathispmdmerqconsultancyo";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 
@@ -49,6 +56,16 @@ class RestManager
 		$data["authType"] = "none";
 				
 	$connectionsData["hispmdathispmdmerqconsultancyo"] = $data;
+		$data = array();
+		$data["connId"] = "hispmdathispmdmerqconsultanmfr";
+		$data["connName"] = "CUSTMFR_Report_Dash_API_Const";
+
+		$this->_connectionsIdByName["CUSTMFR_Report_Dash_API_Const"] = "hispmdathispmdmerqconsultanmfr";
+
+		$data["url"] = "https://hispmd.merqconsultancy.org/api/mfr";
+		$data["authType"] = "none";
+				
+	$connectionsData["hispmdathispmdmerqconsultanmfr"] = $data;
 		$data = array();
 		$data["connId"] = "xhispmdathispmdmerqconsultancy";
 		$data["connName"] = "MOH_DHIS2_Report_Dash_API_Const";

@@ -617,6 +617,34 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MFR_Facility")
+		{
+			return 1;
+		}
+		if($table=="MFR_Regions")
+		{
+			return 1;
+		}
+		if($table=="MFR_Zones")
+		{
+			return 1;
+		}
+		if($table=="MFR_Woredas")
+		{
+			return 1;
+		}
+		if($table=="MFR_Facility_Types")
+		{
+			return 1;
+		}
+		if($table=="MFR_Operational_Statuses")
+		{
+			return 1;
+		}
+		if($table=="MFR_Status")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1057,6 +1085,34 @@ function getCaptionTable($table)
 	if($table=="MFR_AIO_Dashboard")
 	{
 		return "MFR AIO Dashboard";
+	}
+	if($table=="MFR_Facility")
+	{
+		return "MFR Facility";
+	}
+	if($table=="MFR_Regions")
+	{
+		return "MFR Regions";
+	}
+	if($table=="MFR_Zones")
+	{
+		return "MFR Zones";
+	}
+	if($table=="MFR_Woredas")
+	{
+		return "MFR Woredas";
+	}
+	if($table=="MFR_Facility_Types")
+	{
+		return "MFR Facility Types";
+	}
+	if($table=="MFR_Operational_Statuses")
+	{
+		return "MFR Operational Statuses";
+	}
+	if($table=="MFR_Status")
+	{
+		return "MFR Status";
 	}
 	return $table;
 }

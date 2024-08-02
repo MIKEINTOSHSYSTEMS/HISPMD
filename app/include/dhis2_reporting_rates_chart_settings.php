@@ -1719,7 +1719,7 @@ require_once( getabspath( "include/dhis2_reporting_rates_chart_ops.php" ) );
 
 
 	
-						;
+								;
 
 									
 

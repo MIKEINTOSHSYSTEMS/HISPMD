@@ -136,6 +136,27 @@
 [data-page=".global_menu"][data-itemid="welcome_item45"] > .bs-welcome-header {
   background-color: #DB7093;
 }
+[data-page=".global_menu"][data-itemid="welcome_item46"] > .bs-welcome-header {
+  background-color: #6493EA;
+}
+[data-page=".global_menu"][data-itemid="welcome_item47"] > .bs-welcome-header {
+  background-color: #6B8E23;
+}
+[data-page=".global_menu"][data-itemid="welcome_item48"] > .bs-welcome-header {
+  background-color: #D2AF80;
+}
+[data-page=".global_menu"][data-itemid="welcome_item49"] > .bs-welcome-header {
+  background-color: #DB7093;
+}
+[data-page=".global_menu"][data-itemid="welcome_item50"] > .bs-welcome-header {
+  background-color: #3CB371;
+}
+[data-page=".global_menu"][data-itemid="welcome_item51"] > .bs-welcome-header {
+  background-color: #D2AF80;
+}
+[data-page=".global_menu"][data-itemid="welcome_item52"] > .bs-welcome-header {
+  background-color: #BC8F8F;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

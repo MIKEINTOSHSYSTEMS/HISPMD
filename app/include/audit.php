@@ -536,6 +536,34 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MFR_Facility")
+		{
+			return false;
+		}
+		if($table=="MFR_Regions")
+		{
+			return false;
+		}
+		if($table=="MFR_Zones")
+		{
+			return false;
+		}
+		if($table=="MFR_Woredas")
+		{
+			return false;
+		}
+		if($table=="MFR_Facility_Types")
+		{
+			return false;
+		}
+		if($table=="MFR_Operational_Statuses")
+		{
+			return false;
+		}
+		if($table=="MFR_Status")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1021,6 +1049,34 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="MFR_AIO_Dashboard")
+		{
+			return false;
+		}
+		if($table=="MFR_Facility")
+		{
+			return false;
+		}
+		if($table=="MFR_Regions")
+		{
+			return false;
+		}
+		if($table=="MFR_Zones")
+		{
+			return false;
+		}
+		if($table=="MFR_Woredas")
+		{
+			return false;
+		}
+		if($table=="MFR_Facility_Types")
+		{
+			return false;
+		}
+		if($table=="MFR_Operational_Statuses")
+		{
+			return false;
+		}
+		if($table=="MFR_Status")
 		{
 			return false;
 		}
