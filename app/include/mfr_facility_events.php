@@ -87,14 +87,19 @@ $url = "/mfrapi.php";
 // Replace variables in the URL
 $url = RunnerContext::PrepareRest($url);
 
-// Initialize parameters with initial values
-$statusId = isset($_GET['statusId']) ? urldecode($_GET['statusId']) : '3'; //3
-$operationalStatusId = isset($_GET['operationalStatusId']) ? urldecode($_GET['operationalStatusId']) : '1'; //2
-$facilityTypeId = isset($_GET['facilityTypeId']) ? urldecode($_GET['facilityTypeId']) : '28'; //28
-$parentFacilityTypeId = isset($_GET['parentFacilityTypeId']) ? urldecode($_GET['parentFacilityTypeId']) : '3'; //3
-$regionId = isset($_GET['regionId']) ? urldecode($_GET['regionId']) : '1'; //1
-$zoneId = isset($_GET['zoneId']) ? urldecode($_GET['zoneId']) : '9'; //9
-$woredaId = isset($_GET['woredaId']) ? urldecode($_GET['woredaId']) : '102'; //101
+// Initialize parameters with initial values from query string
+$statusId = isset($_GET['statusId']) ? urldecode($_GET['statusId']) : '3'; // Default to '3'
+$operationalStatusId = isset($_GET['operationalStatusId']) ? urldecode($_GET['operationalStatusId']) : '1'; // Default to '1'
+$facilityTypeId = isset($_GET['facilityTypeId']) ? urldecode($_GET['facilityTypeId']) : '28'; // Default to '28'
+$parentFacilityTypeId = isset($_GET['parentFacilityTypeId']) ? urldecode($_GET['parentFacilityTypeId']) : '3'; // Default to '3'
+$regionId = isset($_GET['regionId']) ? urldecode($_GET['regionId']) : '1'; // Default to '1'
+$zoneId = isset($_GET['zoneId']) ? urldecode($_GET['zoneId']) : '9'; // Default to '9'
+$woredaId = isset($_GET['woredaId']) ? urldecode($_GET['woredaId']) : '102'; // Default to '102'
+
+// Handle comma-separated parameters if they exist
+$indicators = isset($_GET['indicators']) ? explode(',', urldecode($_GET['indicators'])) : [];
+$periods = isset($_GET['periods']) ? explode(',', urldecode($_GET['periods'])) : [];
+$orgUnits = isset($_GET['orgUnits']) ? explode(',', urldecode($_GET['orgUnits'])) : [];
 
 // Construct the URL with query parameters
 $queryParams = [];
@@ -105,6 +110,11 @@ if (!empty($parentFacilityTypeId)) $queryParams[] = "parentFacilityTypeId=" . ur
 if (!empty($regionId)) $queryParams[] = "regionId=" . urlencode($regionId);
 if (!empty($zoneId)) $queryParams[] = "zoneId=" . urlencode($zoneId);
 if (!empty($woredaId)) $queryParams[] = "woredaId=" . urlencode($woredaId);
+
+// Handle additional parameters
+if (!empty($indicators)) $queryParams[] = "indicators=" . urlencode(implode(',', $indicators));
+if (!empty($periods)) $queryParams[] = "periods=" . urlencode(implode(',', $periods));
+if (!empty($orgUnits)) $queryParams[] = "orgUnits=" . urlencode(implode(',', $orgUnits));
 
 // Append query parameters to the URL
 if (!empty($queryParams)) {
