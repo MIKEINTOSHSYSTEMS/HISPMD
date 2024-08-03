@@ -322,7 +322,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility id }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel MFR_Facility id }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -351,7 +351,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility name }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel MFR_Facility name }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -380,7 +380,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility statusId }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel MFR_Facility statusId }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -409,7 +409,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility operationalStatusId }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel MFR_Facility operationalStatusId }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -438,7 +438,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility parentFacilityTypeId }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel MFR_Facility parentFacilityTypeId }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -467,7 +467,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility facilityTypeId }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel MFR_Facility facilityTypeId }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -496,7 +496,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility regionId }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel MFR_Facility regionId }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -525,7 +525,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility zoneId }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel MFR_Facility zoneId }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -554,7 +554,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility woredaId }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+			{"text":"{$jslabel MFR_Facility woredaId }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -583,7 +583,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility pageCount }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel MFR_Facility pageCount }","hidden":"{$item_hide_grid_field_label}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -612,7 +612,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Facility totalCount }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+			{"text":"{$jslabel MFR_Facility totalCount }","hidden":"{$item_hide_grid_field_label1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -939,7 +939,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$pageCount_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
+			{"text":{$pageCount_pdfvalue},"hidden":"{$item_hide_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -968,7 +968,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$totalCount_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+			{"text":{$totalCount_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],

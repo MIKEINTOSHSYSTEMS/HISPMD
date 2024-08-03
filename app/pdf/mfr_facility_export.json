@@ -112,12 +112,6 @@ pdfDocument = {
 			{"text":{$name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$pageCount_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
-			{"text":{$totalCount_pdfvalue},"hidden":"{$item_hide_export_field10}"},
-				
-				
 			{"text":{$statusId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 				
