@@ -617,7 +617,7 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["English"] = "<p><img src=\"https://www.moh.gov.et/sites/default/files/inline-images/moh_1.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
+$globalSettings["ProjectLogo"]["English"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -724,9 +724,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "395_1722696932";
+$projectBuildKey = "407_1722696932";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "395";
+$projectBuildNumber = "407";
 
 $mlang_messages = array();
 $mlang_charsets = array();

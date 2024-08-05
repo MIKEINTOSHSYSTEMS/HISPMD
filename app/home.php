@@ -29,7 +29,7 @@ if (($_SESSION["MyURL"] == "") || (!Security::isGuest())) {
 }
 
 
-require_once('include/xtempl.php');
+require_once('include/xtemplhome.php');
 require_once(getabspath("classes/cipherer.php"));
 
 
@@ -49,7 +49,6 @@ $pageObject->init();
 
 $pageObject->process();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +59,10 @@ $pageObject->process();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+<!--
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+-->
+
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -70,14 +72,16 @@ $pageObject->process();
    
   
   -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/internalmain.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: Bootslander
-  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Template Name: MIKEINTOSH SYSTEMS
+  * Template URL: https://mikeintoshsys.com/bootslander-free-bootstrap-landing-page-template/
   * Updated: Aug 01 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+  * Author: https://mikeintoshsys.com
+  * License: https://mikeintoshsts.com/license/
+  * Contact: michael@mikeintoshsys.com michaelktd@gmail.com mikeintoshsys@gmail.com
+* Call: +251913391985 +251938048182
   ======================================================== -->
 </head>
 
@@ -115,10 +119,10 @@ $pageObject->process();
             -->
             
             
-            <img src="MOH_logo_text_white.png" class="img-fluid animated" alt="">
+            <img src="MOH_logo_text_white.png"  width="50%" height="150px" class="img-fluid animated" alt="">
             <!--
             <img src="MOH_logo_text.png" class="img-fluid animated" alt="">
-            <img src="assets/img/hispmd_landing_hero.png" class="img-fluid animated" alt="">
+            <img src="MOH_logo_text_white.png"  width="50%" height="150px" class="img-fluid animated" alt="">
             -->
             
           </div>
@@ -235,7 +239,7 @@ $pageObject->process();
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>HISPMD is Currently Under Development</h1>
-              <p class="mb-0">If you have any questions or support</p>
+              <b><p class="mb-0">If you have any questions or support</p></b>
               <p>Information Center: <a href="mailto:info@merqconsultancy.org">info@merqconsultancy.org</a></p>
               <p>Tech Support: <a href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
             </div>
@@ -288,24 +292,35 @@ $pageObject->process();
                       <p><b>HISPMD</b></p>
             <div _ngcontent-kyh-c0=""><a _ngcontent-kyh-c0="" class="navbar-brand"><div _ngcontent-kyh-c0=""><h4 _ngcontent-kyh-c0="">ጤና ሚኒስቴር - ኢትዮጵያ</h4></div><div _ngcontent-kyh-c0=""><h5 _ngcontent-kyh-c0="">MINISTRY OF HEALTH - ETHIOPIA</h5></div></a></div>
           </a>
+<br>
+<br>
+<br>
+<br>
+<br>
           <div class="footer-contact pt-3">
-            <p>1234 Sudan Street</p>
-            <p>Addis Ababa, Ethiopia</p>
+
+
+            <p class="mt-3"><strong>Street</strong> <span>1234 Sudan Street</span></p>
+            <p class="mt-3"><strong>Address</strong> <span>Addis Ababa, Ethiopia</span></p>
             <p class="mt-3"><strong>Phone:</strong> <span>+251 115 517 011</span></p>
             <p><strong>Email:</strong> <span>info@moh.gov.et</span></p>
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+<!--
+<div class="social-links d-flex mt-4">          
+-->
+<br>
+          <div>
+            <a href="#"><i class="bi bi-twitter-x"></i> | </a>
+            <a href="#"><i class="bi bi-facebook"></i> | </a>
+            <a href="#"><i class="bi bi-instagram"></i> | </a>
+            <a href="#"><i class="bi bi-linkedin"></i>  </a>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="start.php">Home</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Terms of service</a></li>
@@ -324,8 +339,11 @@ $pageObject->process();
             <li><a href="#">Graphic Design</a></li>
           </ul>
 
+-->
 
-                  <div class="col-lg-4 col-md-12 footer-newsletter">
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4>Our Newsletter</h4>
           <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
@@ -336,7 +354,8 @@ $pageObject->process();
           </form>
         </div>
 
--->
+<!--
+        -->
 
         </div>
 
@@ -361,11 +380,11 @@ $pageObject->process();
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader 
-   
+  <!-- Preloader -->
+<!--
   <div id="preloader"></div>
-  -->
-  
+--> 
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -379,5 +398,12 @@ $pageObject->process();
   <script src="assets/js/main.js"></script>
 
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </html>
