@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+  .r-body-shadow {
+    position: inherit;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #888;
+    opacity: 0.35;
+  }
+}

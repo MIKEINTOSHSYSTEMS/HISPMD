@@ -27,6 +27,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/internalmain.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bootslander
@@ -45,8 +46,12 @@
       <a href="index.php" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
+<!--
+                <div _ngcontent-kyh-c0=""><a _ngcontent-kyh-c0="" class="navbar-brand"><div _ngcontent-kyh-c0=""><h5 _ngcontent-kyh-c0="">ጤና ሚኒስቴር - ኢትዮጵያ</h5></div><div _ngcontent-kyh-c0=""><h5 _ngcontent-kyh-c0="">MINISTRY OF HEALTH - ETHIOPIA</h5></div></a></div>
+
+-->
         <img src="./Moh_Logo.png" alt="Health Information System Performance Monitoring Dashboard (HISPMD)" width="" height="" class="mCS_img_loaded"><h1 class="sitename">HISPMD</h1>
-        <div _ngcontent-kyh-c0=""><a _ngcontent-kyh-c0="" class="navbar-brand"><div _ngcontent-kyh-c0=""><h5 _ngcontent-kyh-c0="">ጤና ሚኒስቴር - ኢትዮጵያ</h5></div><div _ngcontent-kyh-c0=""><h5 _ngcontent-kyh-c0="">MINISTRY OF HEALTH - ETHIOPIA</h5></div></a></div>
+
       </a>
 
       <nav id="navmenu" class="navmenu">
