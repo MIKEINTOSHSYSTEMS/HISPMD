@@ -5149,8 +5149,8 @@ a.thumbnail.active {
   color: #e6e6e6;
 }
 .alert-warning {
-  background-color: #09d9d9; /*#F39C12*/
-  border-color: #07d7d7;
+  background-color: #F39C12;
+  border-color: #F39C12;
   color: #fff;
 }
 .alert-warning hr {
@@ -6867,7 +6867,7 @@ button.close {
 }
 table a:not(.btn),
 .table a:not(.btn) {
-  text-decoration: none; /**underline;**/
+  text-decoration: underline;
 }
 table .dropdown-menu a,
 .table .dropdown-menu a {

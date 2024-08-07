@@ -98,47 +98,7 @@ pdfDocument = {
 							stack: [
 
 																										
-{
-	table: {
-	
-				
-		location: 'top',
-		
-		
-		widths: [
-								"*", 
-					 ],	
-		
-	
-		body: [
-				
-				[
-																{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-		
-		]
-	}
-}
+''
 ,
 								
 																										

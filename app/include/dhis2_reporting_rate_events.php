@@ -91,6 +91,7 @@ $url = RunnerContext::PrepareRest($url);
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize parameters with default values
+//$organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'GvFqTavdpGE','r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r']; // Default organisation units
 $organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'GvFqTavdpGE','r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r']; // Default organisation units
 $dataSets = ['BfMAe6Itzgt']; // Default data sets
 $reportPeriods = ['LAST_6_BIMONTHS']; // Default report periods

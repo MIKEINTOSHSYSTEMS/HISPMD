@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'welcome' => array( 'welcomePageSkip' => true,
-'welcomeItems' => array( 'text7' => array( 'menutItem' => false ),
+'welcomeItems' => array( 'text8' => array( 'menutItem' => false ),
+'text7' => array( 'menutItem' => false ),
 'text5' => array( 'menutItem' => false ),
 'welcome_item15' => array( 'menutItem' => true,
 'group' => false,
@@ -350,7 +351,8 @@
 'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'welcome_item15',
 'welcome_item31',
 'text5',
-'text7' ),
+'text7',
+'text8' ),
 'supertop' => array( 'expand_menu_button',
 'collapse_button',
 'text1',
@@ -382,6 +384,7 @@
 'welcome_item31' => 'above-grid',
 'text5' => 'above-grid',
 'text7' => 'above-grid',
+'text8' => 'above-grid',
 'expand_menu_button' => 'supertop',
 'collapse_button' => 'supertop',
 'text1' => 'supertop',
@@ -409,7 +412,8 @@
 'text4' => 'grid',
 'text6' => 'grid' ),
 'itemLocations' => array(  ),
-'itemVisiblity' => array( 'expand_button' => 5 ) ),
+'itemVisiblity' => array( 'expand_menu_button' => 2,
+'expand_button' => 5 ) ),
 'itemsByType' => array( 'welcome_item' => array( 'welcome_item',
 'welcome_item1',
 'welcome_item2',
@@ -480,7 +484,8 @@
 'text4',
 'text5',
 'text6',
-'text7' ),
+'text7',
+'text8' ),
 'expand_button' => array( 'expand_button' ) ),
 'cellMaps' => array(  ) ),
 'page' => array( 'verticalBar' => true,
@@ -519,10 +524,9 @@ array( 'cell' => 'c3' ) ) ) ),
 'c4' => array( 'model' => 'c1',
 'items' => array( 'text5' ) ),
 'c5' => array( 'model' => 'c1',
-'items' => array(  ) ),
+'items' => array( 'text7' ) ),
 'c6' => array( 'model' => 'c1',
-'items' => array( 'text7' ),
-'width' => '100%' ) ),
+'items' => array( 'text8' ) ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ),
 'supertop' => array( 'modelId' => 'menu-topbar',
@@ -737,11 +741,14 @@ array( 'section' => '',
 'background' => '#CFAE83',
 'linkType' => 0 ),
 'logo' => array( 'type' => 'logo' ),
-'menu' => array( 'type' => 'menu' ),
+'menu' => array( 'type' => 'menu',
+'menuId' => 'main' ),
 'expand_menu_button' => array( 'type' => 'expand_menu_button',
-'mobileDisplay' => 'both' ),
+'mobileDisplay' => '',
+'mobileControl' => '' ),
 'collapse_button' => array( 'type' => 'collapse_button',
-'mobileDisplay' => 'both' ),
+'mobileDisplay' => '',
+'mobileControl' => '' ),
 'welcome_item13' => array( 'type' => 'welcome_item',
 'linkUrl' => '',
 'linkTable' => 'MFR_Dashboard_Report',
@@ -932,7 +939,7 @@ array( 'section' => '',
 'editedByRte' => false,
 'bold' => true ),
 'text1' => array( 'type' => 'text',
-'label' => array( 'text' => '<p><img src="./moh_white.png" alt="Health Information System Performance Monitoring Dashboard (HISPMD)" width="100%" height="30" class="mCS_img_loaded" /></p>',
+'label' => array( 'text' => '<p><img src="./moh_white.png" alt="Health Information System Performance Monitoring Dashboard (HISPMD)" width="100%" height="20px" class="mCS_img_loaded" /></p>',
 'type' => 0 ),
 'editedByRte' => false ),
 'welcome_item31' => array( 'type' => 'welcome_item',
@@ -1150,6 +1157,17 @@ array( 'section' => '',
 'background' => '#BC8F8F',
 'linkType' => 0 ),
 'text7' => array( 'type' => 'text',
+'label' => array( 'text' => '<!--
+<iframe src="./hispmd_menu.php" width="100%" height="700" frameborder="0"></iframe>
+<iframe src="./hispmd_menu.php" width="100%" height="1200px" frameborder="0"></iframe>
+<br>
+-->
+',
+'type' => 0 ),
+'editedByRte' => false,
+'mobileDisplay' => '',
+'mobileControl' => '' ),
+'text8' => array( 'type' => 'text',
 'label' => array( 'text' => '<!DOCTYPE html>
 <html lang="en">
 
@@ -1204,233 +1222,92 @@ array( 'section' => '',
 				<!--
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 				-->
-				<i class="mobile-nav-toggle "></i>
+				<i class="mobile-nav-toggle"></i>
 			</nav>
 
 		</div>
 	</header>
+<main class="main">
 
-	<main class="main">
+  <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
 
-		<!-- Hero Section -->
-		<section id="hero" class="hero section dark-background">
-			<img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
-
-			<div class="container">
-				<div class="row gy-4 justify-content-between">
-					<div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-						<!--
+      <div align="right" class="container">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-4 order-lg-last hero-img aos-init aos-animate" data-aos="zoom-out" data-aos-delay="100">
+            <!--
           <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
             <img src="assets/img/mfr_hero.png" class="img-fluid animated" alt="">
             -->
+            <div align="center">
 
-
-						<img src="MOH_logo_text_white.png" width="50%" height="150px" class="img-fluid animated" alt="">
-						<!--
+<img src="MOH_logo_text_white.png" width="100%" height="100%" class="img-fluid animated" alt="">
+</div>
+            
+            
+            <!--
             <img src="MOH_logo_text.png" class="img-fluid animated" alt="">
-            <img src="MOH_logo_text_white.png"  width="50%" height="150px" class="img-fluid animated" alt="">
+            <img src="assets/img/hispmd_landing_hero.png" class="img-fluid animated" alt="">
             -->
+            
+          </div>
 
-					</div>
-
-					<div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
-						<h1>Welcome to <span>HISPMD</span></h1>
-						<p>Health Information Management Information Systems Dashboard</p>
-
-						<div class="d-flex">
-							<a href="index.htm" class="btn-get-started">Get Started</a>
-							<!--
+          <div class="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-in">
+            <h1>Welcome to <span>HISPMD</span></h1>
+            <p>Health Information Management Information Systems Dashboard</p>
+            
+            <div class="d-flex">
+              
+            <!--
+            <a href="#" class="btn-get-started">Get Started By Selecting Menu Items from the Left</a>
               <a href="#" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Login</span></a>  
             -->
+            
+            </div>
+          </div>
 
-						</div>
-					</div>
+        </div>
+      </div>
 
-				</div>
-			</div>
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
 
-			<svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-				viewBox="0 24 150 28 " preserveAspectRatio="none">
-				<defs>
-					<path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-					</path>
-				</defs>
-				<g class="wave1">
-					<use xlink:href="#wave-path" x="50" y="3"></use>
-				</g>
-				<g class="wave2">
-					<use xlink:href="#wave-path" x="50" y="0"></use>
-				</g>
-				<g class="wave3">
-					<use xlink:href="#wave-path" x="50" y="9"></use>
-				</g>
+        <g class="">
+          
+        </g>
+      </svg>
 
-				<g class="">
-
-				</g>
-			</svg>
-
-		</section><!-- /Hero Section -->
-
-		<!--
-
-    <div align=center>
-      
-
-<h1>Countdown</h1>
-        <div id="flipdown" class="flipdown"></div>
-        <br>
-        <h2>Time remaining until the Launch 🚀</h2>
-        <div class="buttons">
-            <p id="ver"></p>
-        
-    </div>
-
--->
-
-
-
-
-		<!--
-    
-
-
-    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/src/flipdown.min.js"></script>
-    <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            // Get the current date and time
-            const now = new Date();
-
-            // Calculate the target date
-            const targetDate = new Date(now.getFullYear(), now.getMonth() + 3, now.getDate() + 7, now.getHours() + 24);
-
-            // Convert target date to Unix timestamp (in seconds)
-            const targetTimestamp = Math.floor(targetDate.getTime() / 1000);
-
-            // Set up FlipDown
-            const flipdown = new FlipDown(targetTimestamp)
-                // Start the countdown
-                .start()
-                // Do something when the countdown ends
-                .ifEnded(() => {
-                    console.log(\'Development Almost Finished, BETA System Will Launch Soon!\');
-                });
-
-            // Toggle theme
-            setInterval(() => {
-                let body = document.body;
-                body.classList.toggle(\'light-theme\');
-                body.querySelector(\'#flipdown\').classList.toggle(\'flipdown__theme-dark\'); //body.querySelector(\'#flipdown\').classList.toggle(\'flipdown__theme-dark\');
-                body.querySelector(\'#flipdown\').classList.toggle(\'flipdown__theme-light\'); //body.querySelector(\'#flipdown\').classList.toggle(\'flipdown__theme-light\');
-            }, 50000); //5000
-
-            // Display FlipDown version
-            //const ver = document.getElementById(\'ver\');
-            //ver.innerHTML = flipdown.version;
-        });
-    </script>
-
-
-
-
--->
+    </section><!-- /Hero Section -->
 
 
 
 
 
-
-
-		<!-- Page Title -->
-		<!--
-		<div class="page-title dark-background" data-aos="fade">
-			<div class="heading">
-				<div class="container">
-					<div class="row d-flex justify-content-center text-center">
-						<div class="col-lg-8">
-
-							<h1>HISPMD is Currently Under Development</h1>
-							<b>
-								<p class="mb-0">If you have any questions or support</p>
-							</b>
-							<p>Information Center: <a
-									href="mailto:info@merqconsultancy.org">info@merqconsultancy.org</a></p>
-							<p>Tech Support: <a
-									href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			-->
-
-			<!--
-			<nav class="breadcrumbs">
-				<div class="container">
-			
-					<ol>
-						<li><a href="start.php">Home</a></li>
-						<li class="current">Starter Page</li>
-					</ol>
-
-					<br>
-					<br>
-				</div>
-			</nav>
-
-
--->
+  </main>
 
 <!--
-			<div class="row d-flex justify-content-center text-center">
-				<div class="col-lg-8">
-					<h1>HISPMD is Currently Under Development</h1>
-					<b>
-						<p class="mb-0">If you have any questions or support</p>
-					</b>
-					<p>Information Center: <a href="mailto:info@merqconsultancy.org">info@merqconsultancy.org</a></p>
-					<p>Tech Support: <a href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
-				</div>
-			</div>
-
-		</div>
-		-->
-		<!-- End Page Title -->
-
-
-
-		<!-- Starter Section Section -->
-		<section id="starter-section" class="starter-section section">
-
-			<!-- Section Title -->
-			<div class="container section-title" data-aos="fade-up">
-				<h2>Information Section</h2>
-				<div><span>Check Our</span> <span class="description-title">Log Changes Section</span></div>
-			</div><!-- End Section Title -->
-											<h1>HISPMD is Currently Under Development</h1>
-											<b>
-												<p class="mb-0">If you have any questions or support</p>
-											</b>
-											<p>Information Center: <a href="mailto:info@merqconsultancy.org">info@merqconsultancy.org</a></p>
-											<p>Tech Support: <a href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
-
-
-			<div align="right" class="container" data-aos="fade-up">
-				<p>HISPMD Ver0.1 [Curernt] </p>
-				<p>HISPMD Ver1.0.0 Coming Soon...!</p>
-			</div>
-
-
-		</section><!-- /Starter Section Section -->
-
-	</main>
-
-	<footer id="footer" class="footer dark-background">
+		<footer id="footer" class="footer dark-background">
 
 		<div class="container footer-top">
 			<div class="row gy-4">
 				<div class="col-lg-4 col-md-6 footer-about">
 					<a href="index.html" class="logo d-flex align-items-center">
+
+-->
+
+
 						<!--
           <span class="sitename">HISPMD </span>          
           <p><b>Health Information Systems Performance Management Dashboard</b></p>
@@ -1440,7 +1317,9 @@ array( 'section' => '',
 						<br>
 
 
-						<p><b>HISPMD</b></p>
+					
+					<!--
+	<p><b>HISPMD</b></p>
 						<div _ngcontent-kyh-c0=""><a _ngcontent-kyh-c0="" class="navbar-brand">
 								<div _ngcontent-kyh-c0="">
 									<h4 _ngcontent-kyh-c0="">ጤና ሚኒስቴር - ኢትዮጵያ</h4>
@@ -1463,11 +1342,17 @@ array( 'section' => '',
 						<p class="mt-3"><strong>Phone:</strong> <span>+251 115 517 011</span></p>
 						<p><strong>Email:</strong> <span>info@moh.gov.et</span></p>
 					</div>
-					<!--
+
+
+
+
+
 <div class="social-links d-flex mt-4">          
 -->
-					<br>
-					<div>
+
+<!--
+
+	<div>
 						<a href="#"><i class="bi bi-twitter-x"></i> | </a>
 						<a href="#"><i class="bi bi-facebook"></i> | </a>
 						<a href="#"><i class="bi bi-instagram"></i> | </a>
@@ -1487,6 +1372,10 @@ array( 'section' => '',
 				</div>
 
 				<div class="col-lg-2 col-md-3 footer-links">
+
+-->
+					<br>
+				
 					<!--
                   <h4>Our Services</h4>
           <ul>
@@ -1496,25 +1385,6 @@ array( 'section' => '',
             <li><a href="#">Marketing</a></li>
             <li><a href="#">Graphic Design</a></li>
           </ul>
-
--->
-
-				</div>
-
-				<div class="col-lg-4 col-md-12 footer-newsletter">
-					<h4>Our Newsletter</h4>
-					<p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-					<form action="forms/newsletter.php" method="post" class="php-email-form">
-						<div class="newsletter-form"><input type="email" name="email"><input type="submit"
-								value="Subscribe"></div>
-						<div class="loading">Loading</div>
-						<div class="error-message"></div>
-						<div class="sent-message">Your subscription request has been sent. Thank you!</div>
-					</form>
-				</div>
-
-				<!--
-        -->
 
 			</div>
 
@@ -1527,16 +1397,27 @@ array( 'section' => '',
 			<p>© <span>Copyright</span> <strong class="px-1 sitename">Ministry of Health - Ethiopia</strong> <span>All
 					Rights Reserved</span></p>
 			<div class="credits">
+		  
+-->
+
+
+
+
+
 				<!-- All the links in the footer should remain intact. -->
 				<!-- You can delete the links only if you\'ve purchased the pro version. -->
 				<!-- Licensing information: https://bootstrapmade.com/license/ -->
 				<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+				
+
+				<!--
+
 				Designed & Developed by <a href="https://merqconsultancy.org/">MERQ Consultancy</a>
 			</div>
 		</div>
 
 	</footer>
-
+        -->
 	<!-- Scroll Top -->
 	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
 			class="bi bi-arrow-up-short"></i></a>
@@ -1560,15 +1441,16 @@ array( 'section' => '',
 
 
 	<br>
+	<br>
+	<br>
+	<br>
 
 </body>
 
 
 </html>',
 'type' => 0 ),
-'editedByRte' => false,
-'mobileDisplay' => 'both',
-'mobileControl' => 'always' ),
+'editedByRte' => false ),
 'expand_button' => array( 'type' => 'expand_button' ) ),
 'dbProps' => array(  ),
 'version' => 11,
