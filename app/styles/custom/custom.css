@@ -10,3 +10,15 @@
     opacity: 0.35;
   }
 }*/
+
+/*
+table a:not(.btn),
+.table a:not(.btn) {
+  text-decoration: underline;
+}
+*/
+
+table a:not(.btn),
+.table a:not(.btn) {
+  text-decoration: auto;
+}
