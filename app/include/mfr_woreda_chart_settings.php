@@ -641,7 +641,7 @@ $proto0["m_strFrom"] = "FROM MFR_Woreda";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-								;
+																										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -751,7 +751,7 @@ $queryData_mfr_woreda_chart = createSqlQuery_mfr_woreda_chart();
 
 
 	
-								;
+																										;
 
 		
 

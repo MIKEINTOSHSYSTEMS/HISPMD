@@ -129,9 +129,9 @@ class RightsPage extends ListPage
 		$this->groups[-2] = array( "label" => "<"."Default".">" );
 		$this->groups[-3] = array( "label" => "<"."Guest".">" );
 
-		$groupIdField = "";
-		$groupLabelField = "";
-		$groupProviderField = "";
+		$groupIdField = "GroupID";
+		$groupLabelField = "Label";
+		$groupProviderField = "Provider";
 
 		$dataSource = Security::getUgGroupsDatasource();
 		$dc = new DsCommand();
@@ -190,12 +190,12 @@ class RightsPage extends ListPage
 	function getRights()
 	{
 		// It's expected that $this->tName is equal to 'admin_right' so the page's db connection is used #9875
-		$sql = "select ". $this->connection->addFieldWrappers( "" )
-			.", ". $this->connection->addFieldWrappers( "" )
-			.", ". $this->connection->addFieldWrappers( "" )
-			.", ". $this->connection->addFieldWrappers( "" )
-			." from ". $this->connection->addTableWrappers( "ugrights" )
-			." order by ". $this->connection->addFieldWrappers( "" );
+		$sql = "select ". $this->connection->addFieldWrappers( "GroupID" )
+			.", ". $this->connection->addFieldWrappers( "TableName" )
+			.", ". $this->connection->addFieldWrappers( "AccessMask" )
+			.", ". $this->connection->addFieldWrappers( "Page" )
+			." from ". $this->connection->addTableWrappers( "hispmd_ugrights" )
+			." order by ". $this->connection->addFieldWrappers( "GroupID" );
 
 		$qResult = $this->connection->query( $sql );
 		while( $tdata = $qResult->fetchNumeric() )
@@ -655,11 +655,11 @@ class RightsPage extends ListPage
 	function updateTablePermissions( $table, $group, $tableRights )
 	{
 		$mask = $tableRights["permissions"];
-		$rightWTableName = $this->connection->addTableWrappers( "ugrights" );
-		$accessMaskWFieldName = $this->connection->addFieldWrappers( "" );
-		$groupisWFieldName = $this->connection->addFieldWrappers( "" );
-		$pageWFieldName = $this->connection->addFieldWrappers( "" );
-		$tableNameWFieldName = $this->connection->addFieldWrappers( "" );
+		$rightWTableName = $this->connection->addTableWrappers( "hispmd_ugrights" );
+		$accessMaskWFieldName = $this->connection->addFieldWrappers( "AccessMask" );
+		$groupisWFieldName = $this->connection->addFieldWrappers( "GroupID" );
+		$pageWFieldName = $this->connection->addFieldWrappers( "Page" );
+		$tableNameWFieldName = $this->connection->addFieldWrappers( "TableName" );
 		$groupWhere = $groupisWFieldName."=". $group
 			." and ". $tableNameWFieldName ."=". $this->connection->prepareString( $table );
 

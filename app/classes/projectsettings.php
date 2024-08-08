@@ -2972,7 +2972,7 @@ class ProjectSettings
 	public static function getForLogin()
 	{
 		return !!Security::dbProvider()
-			? new ProjectSettings("", PAGE_LIST)
+			? new ProjectSettings("hispmd_users", PAGE_LIST)
 			: null;
 	}
 
@@ -3614,6 +3614,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_operational_statuses" ] = "MFR_Operational_Statuses";
 	$projectEntities[ "MFR_Status" ] = array( "url" => "mfr_status", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_status" ] = "MFR_Status";
+	$projectEntities[ "hispmd_users" ] = array( "url" => "hispmd_users", "type" => 0 );
+	$projectEntitiesReverse[ "hispmd_users" ] = "hispmd_users";
+	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
+	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
+	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
+	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
+	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
+	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 }
 
 function findTable( $table ) {

@@ -20,7 +20,19 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
         $xml = new xml();
 		$arr=array();
         if ( $_POST['web'] == "webreports" ) {
-            			$arr=getReportArray($_POST['name']);
+                        	if (count(GetUserGroups()) > 1)
+	            {
+        	        $arr_reports = array();
+                	$arr_reports = GetReportsList();
+	                foreach ( $arr_reports as $rpt ) {
+        	            if (( $rpt["owner"] != Security::getUserName()|| $rpt["owner"] == "") && $rpt["view"]==0 && $_SESSION['webreports']['settings']['name']==$rpt["name"])
+                	    {
+                        	echo "<p>"."You don't have permissions to view this report"."</p>";
+	                        exit();
+        	            }
+                	}
+	            }
+			$arr=getReportArray($_POST['name']);
 			if(!$arr["table_type"])
 				if($arr["db_based"])
 					$arr["table_type"]="db";
@@ -31,7 +43,19 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
 	    $_SESSION["webobject"]["table_type"]=$_SESSION['webreports']["table_type"];
             $_SESSION["webobject"]["name"]=$_SESSION['webreports']['settings']['name'];
         } else {
-            			$arr=getChartArray($_POST['name']);
+            	            if (count(GetUserGroups()) > 1)
+        	    {
+                	$arr_reports = array();
+	                $arr_reports = GetChartsList();
+        	        foreach ( $arr_reports as $rpt ) {
+                	    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $_SESSION['webcharts']['settings']['name']==$rpt["name"])
+                    	{
+                        	echo "<p>".""."</p>";
+	                        exit();
+        	            }
+                	}
+	            }
+			$arr=getChartArray($_POST['name']);
 			if(!$arr["table_type"])
 				if($arr["db_based"])
 					$arr["table_type"]="db";

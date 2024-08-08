@@ -482,6 +482,14 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("hispmd_users" == $this->chrt_array['tables'][0])
+			return true;
+		if("hispmd_ugrights" == $this->chrt_array['tables'][0])
+			return true;
+		if("hispmd_ugmembers" == $this->chrt_array['tables'][0])
+			return true;
+		if("hispmd_users" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

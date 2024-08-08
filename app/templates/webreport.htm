@@ -31,18 +31,26 @@
 								<div class="style1">
 									<table class="fieldGrid">
 										<tr>
-																							<td>Reports</td>
+																							<td id="stl" style="width:400px">Shared</td>
+												<td id="ptl" style="width:400px">My Reports</td>
 										</tr>
 										<tr>
 																							<td>
+													<div class="div_list_report">{$shared_reports}</div>
+												</td>
+												<td>
 													<div class="div_list_report">{$private_reports}</div>
 												</td>
 										</tr>
 										<tr>
-																						<td>Charts</td>
+																						<td id="stl">Shared</td>
+											<td id="ptl">My Charts</td>
 										</tr>
 										<tr>
 																							<td>
+													<div class="div_list_chart">{$shared_charts}</div>
+												</td>
+												<td>
 													<div class="div_list_chart">{$private_charts}</div>
 												</td>
 										</tr>

@@ -627,6 +627,8 @@ $globalSettings["htmlEmailTemplates"] = array();
 
 $globalSettings["isAddWebRep"] = true;
 
+$globalSettings["createLoginPage"] = true;
+$globalSettings["userGroupCount"] = 1;
 
 
 $globalSettings["apiGoogleMapsCode"] = "";
@@ -696,14 +698,25 @@ $WRAdminPagePassword = "webreports";
  * Legacy variables for pre-10.6 business templates only.
  * DEPRECATED
  */
-$cLoginTable = "";
-$cDisplayNameField = "";
-$cUserNameField	= "";
-$cPasswordField	= "";
-$cUserGroupField = "";
-$cEmailField = "";
-$cUserpicField = "";
+$cLoginTable = "hispmd_users";
+$cDisplayNameField = "fullname";
+$cUserNameField	= "username";
+$cPasswordField	= "password";
+$cUserGroupField = "groupid";
+$cEmailField = "email";
+$cUserpicField = "userpic";
 $loginKeyFields= array();
+$loginKeyFields[] = "ID";
+
+//	legacy use only
+$cKeyFields = $loginKeyFields;
+
+/**
+ * End Legacy csection
+ */
+
+
+$globalSettings["usersDatasourceTable"] = "hispmd_users";
 
 
 $globalSettings["jwtSecret"] = "ezz9sdGVcxc4JrLT3TWr";
@@ -724,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "425_1722696932";
+$projectBuildKey = "433_1722696932";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "425";
+$projectBuildNumber = "433";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -801,6 +814,10 @@ $tableCaptions["English"]["MFR_Woredas"] = "MFR Woredas";
 $tableCaptions["English"]["MFR_Facility_Types"] = "MFR Facility Types";
 $tableCaptions["English"]["MFR_Operational_Statuses"] = "MFR Operational Statuses";
 $tableCaptions["English"]["MFR_Status"] = "MFR Status";
+$tableCaptions["English"]["hispmd_users"] = "Hispmd Users";
+$tableCaptions["English"]["admin_rights"] = "Admin Rights";
+$tableCaptions["English"]["admin_members"] = "Admin Members";
+$tableCaptions["English"]["admin_users"] = "Admin Users";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -913,6 +930,18 @@ $resizeImagesOnClient = false;
 
 // default connection link #9875
 $conn = $cman->getDefault()->conn;
+
+
+//	delete old username & password cookies
+if( $_COOKIE["password"] ) {
+	runner_setcookie("username", "", time() - 1, "", "", false, false);
+	runner_setcookie("password", "", time() - 1, "", "", false, false);
+}
+
+
+$logoutPerformed = false;
+Security::autoLoginAsGuest();
+Security::updateCSRFCookie();
 
 
 $isUseRTEBasic = true;

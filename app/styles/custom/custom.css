@@ -22,3 +22,7 @@ table a:not(.btn),
 .table a:not(.btn) {
   text-decoration: auto;
 }
+
+.r-vbar-page .r-content-col .r-body {
+    padding-top: 0.7px;
+}

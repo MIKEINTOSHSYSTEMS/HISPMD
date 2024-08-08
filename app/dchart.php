@@ -32,6 +32,28 @@ if(is_wr_project())
 
 $sessPrefix = "webchart".postvalue("cname");
 
+	if( !Security::getUserName() )
+	{
+		$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	} elseif ( $chrt_array['settings']['status'] == "private" && $chrt_array['settings']['owner'] != Security::getUserName() ) {
+		echo "<p>"."You don't have permissions to view this chart"."</p>";
+		exit();
+	}
+
+	if (count(GetUserGroups()) > 1)
+	{
+	    $arr_reports = array();
+	    $arr_reports = GetChartsList();
+	    foreach ( $arr_reports as $rpt ) {
+		    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $chrt_array['settings']['name']==$rpt["name"])
+		      {
+		       echo "<p>"."You don't have permissions to view this chart"."</p>";
+		       exit();
+		    }
+	    }
+	}
 
 //	process request data, fill session variables
 if ( !count( $_POST ) && ( count( $_GET ) <= 1 ) )
@@ -124,6 +146,8 @@ include('include/xtempl.php');
 $xt = new Xtempl();
 
 
+	$xt->assign("userid",runner_htmlspecialchars( Security::getUserName() ) );
+	$xt->assign("guest", Security::isGuest() );
 
 if( Security::dynamicPermissions() ) {
 	$xt->assign("admin",@$_SESSION["IsAdmin"]);

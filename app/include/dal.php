@@ -58,6 +58,10 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo__HealthUnits;
 	var $tblhispmdathispmdmerqconsultancyo__HISGovernance;
 	var $tblhispmdathispmdmerqconsultancyo__HISPartners;
+	var $tblhispmdathispmdmerqconsultancyo__hispmd_uggroups;
+	var $tblhispmdathispmdmerqconsultancyo__hispmd_ugmembers;
+	var $tblhispmdathispmdmerqconsultancyo__hispmd_ugrights;
+	var $tblhispmdathispmdmerqconsultancyo__hispmd_users;
 	var $tblhispmdathispmdmerqconsultancyo__MFR_Dashboard_Reports;
 	var $tblhispmdathispmdmerqconsultancyo__MFR_Facilities;
 	var $tblhispmdathispmdmerqconsultancyo__MFR_Operational_Status;
@@ -89,6 +93,10 @@ class tDAL
 		$this->lstTables[] = array("name" => "HealthUnits", "varname" => "hispmdathispmdmerqconsultancyo__HealthUnits", "altvarname" => "HealthUnits", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "HISGovernance", "varname" => "hispmdathispmdmerqconsultancyo__HISGovernance", "altvarname" => "HISGovernance", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "HISPartners", "varname" => "hispmdathispmdmerqconsultancyo__HISPartners", "altvarname" => "HISPartners", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "hispmd_uggroups", "varname" => "hispmdathispmdmerqconsultancyo__hispmd_uggroups", "altvarname" => "hispmd_uggroups", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "hispmd_ugmembers", "varname" => "hispmdathispmdmerqconsultancyo__hispmd_ugmembers", "altvarname" => "hispmd_ugmembers", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "hispmd_ugrights", "varname" => "hispmdathispmdmerqconsultancyo__hispmd_ugrights", "altvarname" => "hispmd_ugrights", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "hispmd_users", "varname" => "hispmdathispmdmerqconsultancyo__hispmd_users", "altvarname" => "hispmd_users", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "MFR_Dashboard_Reports", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Dashboard_Reports", "altvarname" => "MFR_Dashboard_Reports", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "MFR_Facilities", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Facilities", "altvarname" => "MFR_Facilities", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "MFR_Operational_Status", "varname" => "hispmdathispmdmerqconsultancyo__MFR_Operational_Status", "altvarname" => "MFR_Operational_Status", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "", "connName" => "hisp_md at hispmd.merqconsulta");

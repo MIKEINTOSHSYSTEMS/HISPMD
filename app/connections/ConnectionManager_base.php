@@ -293,6 +293,10 @@ class ConnectionManager_Base
 		$connectionsIds["MFR_Facility_Types"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Operational_Statuses"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Status"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["hispmd_users"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

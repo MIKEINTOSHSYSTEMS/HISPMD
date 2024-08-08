@@ -9,6 +9,10 @@ include("include/reportfunctions.php");
 //	security - begin
 
 
+	if(!isLogged() || !postvalue("rname"))
+	{ 
+		return;
+	}
 
 if(!postvalue("rname"))
 	return;
@@ -19,6 +23,19 @@ $rpt_array = getReportArray(postvalue("rname"));
 if (is_wr_project()) 
 	return;
 
+	if ( $rpt_array['settings']['status'] == "private" && $rpt_array['owner'] != Security::getUserName() ) {
+		exit();
+	}
+	if (pre8count(GetUserGroups()) > 1) {
+		$arr_reports = array();
+		$arr_reports = GetReportsList();
+		foreach ( $arr_reports as $rpt ) {
+			if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $rpt_array['settings']['name']==$rpt["name"])
+			{
+				exit();
+			}
+		}
+	}
 
 global $cman;
 $defConnection = $cman->getForWebReports();

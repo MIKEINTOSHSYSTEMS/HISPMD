@@ -10,6 +10,12 @@ include("include/reportfunctions.php");
 if( !isPostRequest() )
 	return;
 
+if( !Security::getUserName() )
+{
+	$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+	header("Location: ".GetTableLink("login", "", "message=expired"));
+	return;
+}
 
 if ( isset( $_POST['str_xml'] ))
 {
@@ -234,6 +240,31 @@ elseif ( isset( $_POST['str_xml'] ) && isset( $_POST['web'] ) && isset( $_POST['
 }
 elseif ( isset( $_POST['del'] ))
 {
+	    if (pre8count(GetUserGroups()) > 1)
+	    {
+        	$arr_reports = array();
+	        if ( $_POST['web'] == "webreports" ){
+        	    $arr_reports = GetReportsList();
+	            $s="report";
+        	    $g=$root['settings']['name'];
+	        }
+        	else {
+	            $arr_reports = GetChartsList();
+        	    $s="chart";
+	            $g=$root['settings']['name'];
+        	}
+
+	        foreach ( $arr_reports as $rpt ) {
+        	    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $g==$rpt["name"])
+	            {
+					if($s=="report")
+						echo "<p>"."You don't have permissions to delete this report"."</p>";
+					else
+						echo "<p>"."You don't have permissions to delete this chart"."</p>";
+                	exit();
+	            }
+        	}
+	    }
     if ( $_POST['web'] == "webreports" ) {
         $opStatus = DeleteReport(postvalue('name'));
     } else {

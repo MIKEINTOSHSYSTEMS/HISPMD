@@ -764,7 +764,7 @@ class ListPage extends RunnerPage
 					//	TODO - delete plugin user
 					$dc = new DsCommand();
 					$dc->filter = DataCondition::FieldEquals( 
-						"", 
+						"UserName", 
 						$user, 
 						0, 
 						Security::caseInsensitiveUsername() ? dsCASE_INSENSITIVE : dsCASE_STRICT 

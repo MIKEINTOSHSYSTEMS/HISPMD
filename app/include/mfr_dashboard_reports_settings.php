@@ -736,7 +736,7 @@ $proto0["m_strFrom"] = "FROM MFR_Dashboard_Reports";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-								;
+																										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -859,7 +859,7 @@ $queryData_mfr_dashboard_reports = createSqlQuery_mfr_dashboard_reports();
 
 
 	
-								;
+																										;
 
 			
 

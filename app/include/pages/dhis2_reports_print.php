@@ -406,6 +406,7 @@
 'fixedAtClient' => false ) ),
 'width' => 12,
 'height' => 3 ) ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array( 'print_pages' => array( 'tag' => 'PRINT_PAGES',

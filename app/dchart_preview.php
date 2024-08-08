@@ -35,6 +35,28 @@ $chrt_array = getChartArray(postvalue("cname"));
 if(is_wr_project())
 	include("include/" . $chrt_array['settings']['short_table_name'] . "_variables.php");
 
+	if(!isLogged())
+	{
+		$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	} elseif ( $chrt_array['settings']['status'] == "private" && $chrt_array['settings']['owner'] != Security::getUserName() ) {
+		echo "<p>"."You don't have permissions to view this chart"."</p>";
+		exit();
+	}
+
+	if (pre8count(GetUserGroups()) > 1)
+	{
+	    $arr_reports = array();
+	    $arr_reports = GetChartsList();
+	    foreach ( $arr_reports as $rpt ) {
+		    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $chrt_array['settings']['name']==$rpt["name"])
+		      {
+		       echo "<p>"."You don't have permissions to view this chart"."</p>";
+		       exit();
+		    }
+	    }
+	}
 $width = 780;
 $height = 570;
 

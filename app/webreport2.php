@@ -6,6 +6,12 @@ header("Expires: Thu, 01 Jan 1970 00:00:01 GMT");
 
 include("include/reportfunctions.php");
 
+	if( !Security::getUserName() )
+	{
+		$_SESSION["MyURL"] = GetTableLink("webreport");
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	}
 
 Reload_Report(postvalue("rname"));
 if (strpos($_SESSION['webreports']['table_relations']['join_tables'], ",") !== false) {

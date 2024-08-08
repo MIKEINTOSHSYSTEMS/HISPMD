@@ -6,6 +6,12 @@ header("Expires: Thu, 01 Jan 1970 00:00:01 GMT");
 
 include("include/reportfunctions.php");
 
+	if( !Security::getUserName() )
+	{
+		$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	}
 if(is_wr_project())
 	include("include/" . GetTableURL( $_SESSION['webcharts']['tables'][0] ) . "_variables.php");
 
@@ -224,9 +230,24 @@ $chart_title = ( isset( $_SESSION['webcharts']['settings']['title'] ) ) ?
 	@$_SESSION['webcharts']['tables'][0].' Chart '.CheckLastID('chart');
 
 
-	$show_status = 'style="display:none;"';
-	$chart_status = 'checked';
-	$b_includes .= '$("#nextbtn").hide();$("#nextprob").hide();';
+	$show_status = 'style="display:line;"';
+	if ( isset( $_SESSION['webcharts']['settings']['status'] ) && $_SESSION['webcharts']['settings']['status'] == "private" ) 
+	{
+		$chart_status = 'checked';
+		$b_includes .= '$("#nextbtn").hide();$("#nextprob").hide();';
+	} 
+	else 
+	{
+		if (count(GetUserGroups()) > 1) 
+		{
+			$chart_status = '';
+		} 
+		else 
+		{
+			$chart_status = '';
+			$b_includes .= '$("#nextbtn").hide();$("#nextprob").hide();';
+		}
+	}
 
 $b_includes .= '
 });

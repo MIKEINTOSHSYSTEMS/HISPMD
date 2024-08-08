@@ -6,6 +6,12 @@ header("Expires: Thu, 01 Jan 1970 00:00:01 GMT");
 
 include("include/reportfunctions.php");
 
+	if( !Security::getUserName() )
+	{
+		$_SESSION["MyURL"] = GetTableLink("webreport");
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	}
 
 
 Reload_Report(postvalue("rname"));
@@ -229,9 +235,24 @@ $report_title = ( isset( $_SESSION['webreports']['settings']['title'] ) ) ?
 	@$_SESSION['webreports']['tables'][0].' Report '.CheckLastID('report');
 
 
-	$show_status = 'style="display:none;"';
-	$report_status = 'checked';
-	$b_includes .= '$("#nextbtn").hide();$("#nextprob").hide();';
+	$show_status = 'style="display:line;"';
+	if ( isset( $_SESSION['webreports']['settings']['status'] ) && $_SESSION['webreports']['settings']['status'] == "private" ) 
+	{
+		$report_status = 'checked';
+		$b_includes .= '$("#nextbtn").hide();$("#nextprob").hide();';
+	} 
+	else 
+	{
+		if (count(GetUserGroups()) > 1) 
+		{
+			$report_status = '';
+		} 
+		else 
+		{
+			$report_status = '';
+			$b_includes .= '$("#nextbtn").hide();';
+		}	
+	}
 
 
 $b_includes .= '

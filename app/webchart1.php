@@ -7,6 +7,12 @@ header("Expires: Thu, 01 Jan 1970 00:00:01 GMT");
 
 include("include/reportfunctions.php");
 
+	if( !Security::getUserName() )
+	{
+		$_SESSION["MyURL"] = GetTableLink("webreport");
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	}
 
 Reload_Chart(postvalue("cname"));
 $arr_tables = DBGetTablesListByGroup("db");

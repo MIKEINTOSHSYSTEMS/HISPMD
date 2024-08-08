@@ -418,7 +418,7 @@ class SecurityPluginAd extends SecurityPlugin {
 		$qResult = $dataSource->getList( new DsCommand() );
 		while( $tdata = $qResult->fetchAssoc() )
 		{
-			$dbgroups[ $tdata[ "" ] ] = true;
+			$dbgroups[ $tdata[ "Label" ] ] = true;
 		}
 
 		$filter = "(member:1.2.840.113556.1.4.1941:=". $distinguishedName .")";

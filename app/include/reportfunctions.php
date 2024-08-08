@@ -70,9 +70,9 @@ function GetUserGroups() {
 			array(-3, "<"."Guest".">")
 		);
 
-		$groupIdField = "";
-		$groupLabelField = "";
-		$groupProviderField = "";
+		$groupIdField = "GroupID";
+		$groupLabelField = "Label";
+		$groupProviderField = "Provider";
 
 		$dataSource = Security::getUgGroupsDatasource();
 		$dc = new DsCommand();
@@ -645,6 +645,22 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="hispmd_users")
+		{
+			return 1;
+		}
+		if($table=="admin_rights")
+		{
+			return 1;
+		}
+		if($table=="admin_members")
+		{
+			return 1;
+		}
+		if($table=="admin_users")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1113,6 +1129,22 @@ function getCaptionTable($table)
 	if($table=="MFR_Status")
 	{
 		return "MFR Status";
+	}
+	if($table=="hispmd_users")
+	{
+		return "Hispmd Users";
+	}
+	if($table=="admin_rights")
+	{
+		return "Admin Rights";
+	}
+	if($table=="admin_members")
+	{
+		return "Admin Members";
+	}
+	if($table=="admin_users")
+	{
+		return "Admin Users";
 	}
 	return $table;
 }
@@ -2214,6 +2246,54 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="DHIS2_Periods";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("hispmd_users");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="hispmd_users";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="hispmd_users";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_rights";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_rights";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_members";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_members";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_users";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_users";
 	}
 	return $arr;
 }

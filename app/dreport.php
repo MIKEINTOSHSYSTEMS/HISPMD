@@ -178,6 +178,25 @@ else
 	$sessPrefix = $tbl;
 
 // Check user permissions
+	if( !Security::getUserName() ) {
+		$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	} elseif ( $rpt_array['settings']['status'] == "private" && $rpt_array['owner'] != Security::getUserName() ) {
+		echo "<p>"."You don't have permissions to view this report"."</p>";
+		exit();
+	}
+	if (pre8count(GetUserGroups()) > 1) {
+		$arr_reports = array();
+		$arr_reports = GetReportsList();
+		foreach ( $arr_reports as $rpt ) {
+			if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $rpt_array['settings']['name']==$rpt["name"])
+			{
+				echo "<p>"."You don't have permissions to view this report"."</p>";
+				exit();
+			}
+		}
+	}
 
 // Replace string values to boolean
 $arr_xml_fields = array('group_fields','totals','sort_fields');
@@ -556,6 +575,8 @@ if( !is_wr_project() ) {
 	$_SESSION[$sessPrefix."_where"] = $rpt_array['where'];
 	$_SESSION[$sessPrefix."_order"] = $rpt_array['order_by'];	
 }
+	$xt->assign("userid",runner_htmlspecialchars( Security::getUserName() ));
+	$xt->assign("guest", Security::isGuest() );
 
 
 /*if( is_wr_db() )

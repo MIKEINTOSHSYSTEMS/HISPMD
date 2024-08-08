@@ -28,6 +28,14 @@ elseif (postvalue("cname"))
 	$sessPrefix = "webchart".postvalue("cname");
 }
 
+	if(!isLogged()) {					
+		$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	} elseif ( $xml_array['settings']['status'] == "private" && $xml_array['owner'] != @$_SESSION["UserID"] ) {
+		echo "<p>"."You don't have permissions to view this report"."</p>";
+		exit();
+	}
 
 if (strpos($xml_array['table_relations']['join_tables'], ",") !== false) {
 	$arr_join_tables = array_slice(explode(",", $xml_array['table_relations']['join_tables']), 0, -1);	

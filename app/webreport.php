@@ -6,7 +6,18 @@ header("Expires: Thu, 01 Jan 1970 00:00:01 GMT");
 
 include("include/reportfunctions.php");
 
-$_SESSION["GroupID"]="";
+if( !Security::getUserName() )
+{
+	$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+	header("Location: ".GetTableLink("login", "", "message=expired"));
+	return;
+}
+
+if(isLoggedAsGuest())
+{
+	$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+}
+
 
 $cMaxTitleLength=30;
 
@@ -358,7 +369,7 @@ foreach ( $arrPrivateReports as $rpt ) {
 	if ( $rpt["status"] == "public" ) {
 		$private_reports .= '<div style="margin-bottom:5px;">';
 		$private_reports .= '<span class="ritem" id="' . $rpt['name'] . '" title="'.runner_htmlspecialchars($rpt['title']).'">';
-				$private_reports .= '&nbsp;';
+				$private_reports .= '<img src="images/unlock16.png" title="'."Public report".'"/>';
 		$private_reports .= ( strlen( $rpt['title'] ) > $cMaxTitleLength+5 ) ? substr( $rpt['title'], 0, $cMaxTitleLength  ) . "..." : $rpt['title'];
 		$private_reports .= '<a class="action view" type="report" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
@@ -369,7 +380,7 @@ foreach ( $arrPrivateReports as $rpt ) {
 	} else {
 		$private_reports .= '<div style="margin-bottom:5px;">';
 		$private_reports .= '<span class="ritem" id="' . $rpt['name'] . '" title="'.runner_htmlspecialchars($rpt['title']).'">';
-				$private_reports .= '&nbsp;';
+				$private_reports .= '<img src="images/lock16.png" title="'."Private report".'"/>';
 		$private_reports .= ( strlen( $rpt['title'] ) > $cMaxTitleLength+5 ) ? substr( $rpt['title'], 0, $cMaxTitleLength  ) . "..." : $rpt['title'];
 		$private_reports .= '<a class="action view" type="report" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
@@ -384,7 +395,7 @@ foreach ( $arrPrivateCharts as $chart ) {
 	if ( $chart["status"] == "public" ) {
 		$private_charts .= '<div style="margin-bottom:5px;">';
 		$private_charts .= '<span class="ritem" id="' . $chart['name'] . '" title="'.runner_htmlspecialchars($chart['title']).'">';
-				$private_charts .= '&nbsp;';
+				$private_charts .= '<img src="images/unlock16.png" title="'."Public chart".'"/>';
 		$private_charts .= ( strlen( $chart['title'] ) > $cMaxTitleLength+5 ) ? substr( $chart['title'], 0, $cMaxTitleLength  ) . "..." : $chart['title'];
 		$private_charts .= '<a class="action view" type="chart" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
@@ -395,7 +406,7 @@ foreach ( $arrPrivateCharts as $chart ) {
 	} else {
 		$private_charts .= '<div style="margin-bottom:5px;">';
 		$private_charts .= '<span class="ritem" id="' . $chart['name'] . '" title="'.runner_htmlspecialchars($chart['title']).'">';
-				$private_charts .= '&nbsp;';
+				$private_charts .= '<img src="images/lock16.png" title="'."Private chart".'"/>';
 		$private_charts .= ( strlen( $chart['title'] ) > $cMaxTitleLength+5 ) ? substr( $chart['title'], 0, $cMaxTitleLength  ) . "..." : $chart['title'];
 		$private_charts .= '<a class="action view" type="chart" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	

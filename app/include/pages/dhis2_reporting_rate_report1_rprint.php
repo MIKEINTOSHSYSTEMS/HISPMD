@@ -63,6 +63,7 @@
 'report_group_field1',
 'report_group_field2' ) ),
 'cellMaps' => array(  ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array( 'print_pages' => array( 'tag' => 'PRINT_PAGES',

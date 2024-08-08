@@ -46,6 +46,7 @@
 'fixedAtClient' => false ) ),
 'width' => 1,
 'height' => 1 ) ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),

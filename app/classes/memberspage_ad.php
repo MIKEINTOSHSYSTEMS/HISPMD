@@ -41,7 +41,7 @@ class MembersPage_AD extends ListPage_Lookup
 		$dataSource = Security::getUgGroupsDatasource();
 		
 		if( !Security::ADonlyLogin() || storageGet( "groups_provider_field" ) ) {
-			$dc->filter = DataCondition::FieldEquals( "", $this->providerCode );
+			$dc->filter = DataCondition::FieldEquals( "Provider", $this->providerCode );
 		}
 		
 		$qResult = $dataSource->getList( $dc );
@@ -49,7 +49,7 @@ class MembersPage_AD extends ListPage_Lookup
 		$members = array();
 		while( $tdata = $qResult->fetchAssoc() )
 		{
-			$members[] = $tdata[ "" ];
+			$members[] = $tdata[ "Label" ];
 		}
 
 		return $members;

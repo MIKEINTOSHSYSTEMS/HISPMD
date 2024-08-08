@@ -8,6 +8,12 @@ include("include/reportfunctions.php");
 if(is_wr_project())
 	include("include/" . GetTableURL( $_SESSION['webcharts']['tables'][0] ) . "_variables.php");
 
+	if( !Security::getUserName() )
+	{
+		$_SESSION["MyURL"]=$_SERVER["SCRIPT_NAME"]."?".$_SERVER["QUERY_STRING"];
+		header("Location: ".GetTableLink("login", "", "message=expired"));
+		return;
+	}
 
 Reload_Chart(postvalue("cname"));
 

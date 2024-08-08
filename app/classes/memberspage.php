@@ -184,9 +184,9 @@ class MembersPage extends ListPage_Simple
 			$this->users[ $userid ][ "provider" ] = $provider["code"];
 
 			if( $this->showDisplayField() ) {
-				$row["displayusername"] = runner_htmlspecialchars( $data[""] );
+				$row["displayusername"] = runner_htmlspecialchars( $data["fullname"] );
 				$row["displayusername_attrs"] = "id=\"cellDisplayName".runner_htmlspecialchars($userid)."\"";
-				$this->users[ $userid ]["displayUserName"] = $data[""];
+				$this->users[ $userid ]["displayUserName"] = $data["fullname"];
 			}
 			if( $this->showEmailField() ) {
 				$row["emailuser"] = runner_htmlspecialchars( $data[Security::emailField()] );
@@ -265,16 +265,16 @@ class MembersPage extends ListPage_Simple
 		$dc = new DsCommand();
 		
 		$dc->order = array();
-		$dc->order[] = array( "column" => "" );
-		$dc->order[] = array( "column" => "" );
+		$dc->order[] = array( "column" => "UserName" );
+		$dc->order[] = array( "column" => "GroupID" );
 		
 		// ugmembers username field may contains username or security plugin user id value
 		$qResult = $dataSource->getList( $dc );
 		while( $tdata = $qResult->fetchAssoc() ) {
-			$provider = $tdata[""];
+			$provider = $tdata["Provider"];
 			$this->members[] = array( 
-				"userId" => $tdata[""], 
-				"groupId" => $tdata[""],
+				"userId" => $tdata["UserName"], 
+				"groupId" => $tdata["GroupID"],
 				"provider" => $provider
 			);
 		}
@@ -288,9 +288,9 @@ class MembersPage extends ListPage_Simple
 		$this->groups[] = array(-1, "<"."Admin".">");
 		$this->groupFullChecked[] = true;
 
-		$groupIdField = "";
-		$groupLabelField = "";
-		$groupProviderField = "";
+		$groupIdField = "GroupID";
+		$groupLabelField = "Label";
+		$groupProviderField = "Provider";
 		
 		$dataSource = Security::getUgGroupsDatasource();
 		$dc = new DsCommand();
@@ -426,22 +426,22 @@ class MembersPage extends ListPage_Simple
 			if( $state == 1 ) {				
 				$dcInsert = new DsCommand();
 				// update
-				$dcInsert->values = array( "" => $user, "" => $group );
+				$dcInsert->values = array( "UserName" => $user, "GroupID" => $group );
 				if( $provider != $dbProvider["code"] ) {
-					$dcInsert->values[ "" ] = $provider;
+					$dcInsert->values[ "Provider" ] = $provider;
 				}
 				$dataSource->insertSingle( $dcInsert );
 			} else {
 				// delete
 				$dcDelete = new DsCommand();
 				$conditions = array( 
-					DataCondition::FieldEquals( "", $group ), 
-					DataCondition::FieldEquals( "", $user, 0, Security::caseInsensitiveUsername() ? dsCASE_INSENSITIVE : dsCASE_STRICT ) 
+					DataCondition::FieldEquals( "GroupID", $group ), 
+					DataCondition::FieldEquals( "UserName", $user, 0, Security::caseInsensitiveUsername() ? dsCASE_INSENSITIVE : dsCASE_STRICT ) 
 				);
 				if( $provider != $dbProvider["code"] ) {
-					$conditions[] = DataCondition::FieldEquals( "", $provider );
+					$conditions[] = DataCondition::FieldEquals( "Provider", $provider );
 				} else if( storageGet( "groups_provider_field" ) ) {
-					$conditions[] = DataCondition::FieldIs( "", dsopEMPTY, "" );					
+					$conditions[] = DataCondition::FieldIs( "Provider", dsopEMPTY, "" );					
 				}
 				$dcDelete->filter = DataCondition::_And( $conditions );
 
