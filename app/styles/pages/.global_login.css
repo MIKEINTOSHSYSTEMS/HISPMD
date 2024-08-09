@@ -1,5 +1,29 @@
+[data-page=".global_login"][data-itemid="username_label"] {
+  font-weight: bold;
+}
+[data-page=".global_login"][data-itemid="password_label"] {
+  font-weight: bold;
+}
+[data-page=".global_login"][data-itemid="login_message"] {
+  font-weight: bold;
+}
+[data-page=".global_login"][data-itemid="guest_login"] > .btn {
+  font-weight: bold;
+}
+[data-page=".global_login"][data-itemid="remember_password"] {
+  font-weight: bold;
+}
 [data-page=".global_login"][data-itemid="login-logo"] {
   font-size: 24px;
+}
+[data-page=".global_login"][data-itemid="login_welcome"] {
+  font-weight: bold;
+}
+[data-page=".global_login"][data-itemid="text"] {
+  font-weight: bold;
+}
+[data-page=".global_login"][data-itemid="text1"] {
+  font-weight: bold;
 }
 [data-page=".global_login"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;

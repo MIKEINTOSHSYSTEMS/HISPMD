@@ -53,7 +53,7 @@ $tdatamfr_dashboard_report[".connId"] = "";
 
 $tdatamfr_dashboard_report[".strOriginalTableName"] = "MFR_Dashboard_Report";
 
-
+	
 
 
 
@@ -246,7 +246,7 @@ $tdatamfr_dashboard_report[".hideMobileList"] = array();
 
 	
 	
-	
+			
 
 		$fdata["strField"] = "model/*/type";
 
@@ -381,7 +381,7 @@ $tdatamfr_dashboard_report[".hideMobileList"] = array();
 
 	
 	
-	
+			
 
 		$fdata["strField"] = "model/*/name";
 
@@ -516,7 +516,7 @@ $tdatamfr_dashboard_report[".hideMobileList"] = array();
 
 	
 	
-	
+			
 
 		$fdata["strField"] = "model/*/count";
 

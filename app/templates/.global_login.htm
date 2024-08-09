@@ -53,7 +53,10 @@
 	class="r-align-right r-ori-vert			col-md-6
 	
 ">
-			</div>					</div>
+		 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-page=".global_login" data-small > 
+	Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)</span>
+		</div>					</div>
 			 
 				<div class="row">
 			 
@@ -63,7 +66,7 @@
 	
 ">
 		 
-		<span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-small >
+		<span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-page=".global_login" data-small >
 Login into your account</span>
 		</div>					</div>
 			</div>		
@@ -91,7 +94,7 @@ Login into your account</span>
 ">
 		 
 		{BEGIN message_block}
-<div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" data-page=".global_login" class="alert {$message_class}" role="alert">
 {$message}
 	</div>
 {END message_block}		</div>					</div>
@@ -107,7 +110,7 @@ Login into your account</span>
 	colspan="2"		 
 	data-cellId="grid_c1" data-pageid="{$pageid}">
  
-<label data-itemtype="username_label" data-itemid="username_label" {$item_username_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="username">
+<label data-itemtype="username_label" data-itemid="username_label" {$item_username_label} data-pageid="{$pageid}" data-page=".global_login" data-small class="r-edit-label control-label" for="username">
 	{BEGIN username_label}Username{END username_label}
 </label> 
 <div class="r-edit-field" data-itemtype="username" data-itemid="username" {$item_username} data-pageid="{$pageid}" >
@@ -120,7 +123,7 @@ Login into your account</span>
 	colspan="2"		 
 	data-cellId="grid_c2" data-pageid="{$pageid}">
  
-<label data-itemtype="password_label" data-itemid="password_label" {$item_password_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="password">
+<label data-itemtype="password_label" data-itemid="password_label" {$item_password_label} data-pageid="{$pageid}" data-page=".global_login" data-small class="r-edit-label control-label" for="password">
 	{BEGIN password_label}Password{END password_label}
 </label> 
 <div class="r-edit-field" data-itemtype="password" data-itemid="password" {$item_password} data-pageid="{$pageid}" >
@@ -133,7 +136,7 @@ Login into your account</span>
 			 
 	data-cellId="grid_c4" data-pageid="{$pageid}">
  
-<div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" >
+<div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" data-page=".global_login" >
 	<label>
 		<input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}> Remember me	</label>
 </div></td>
@@ -143,8 +146,8 @@ Login into your account</span>
 	data-cellId="grid_c6" data-pageid="{$pageid}">
  
 {BEGIN guestlink_block}
-<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-link   
+<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
+	<a type="button" title="" class="btn btn-warning   
 	" {$guestlink_attrs} >
 							Login as Guest			</a>
 </span>
@@ -193,7 +196,7 @@ Login into your account</span>
 			 
 	data-cellId="footer_c" data-pageid="{$pageid}">
  
-<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page=".global_login" data-small > 
 	<p><br></p><a href="../../" target="" rel=""><strong>Go Back to Home Page</strong></a></span>
 </td>
 									<td 

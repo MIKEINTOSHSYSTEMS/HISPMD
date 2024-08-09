@@ -77,8 +77,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)","hidden":"{$item_hide_text1}","bold":true,"isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      
@@ -102,7 +104,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Login into your account","hidden":"{$item_hide_login_welcome}","isHtml":true},
+			{"text":"Login into your account","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -177,7 +179,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_login_message}"},
+			{"text":"","hidden":"{$item_hide_login_message}","bold":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -236,7 +238,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"Username","hidden":"{$item_hide_username_label}","isHtml":true},
+			{"text":"Username","hidden":"{$item_hide_username_label}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_username}"},
@@ -271,7 +273,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"Password","hidden":"{$item_hide_password_label}","isHtml":true},
+			{"text":"Password","hidden":"{$item_hide_password_label}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_password}"},
@@ -305,7 +307,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"","hidden":"{$item_hide_remember_password}"},
+			{"text":"","hidden":"{$item_hide_remember_password}","bold":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -328,7 +330,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_guest_login}"},
+			{"text":"","hidden":"{$item_hide_guest_login}","bold":true},
 				
 		  ],
   "border": [ false, false, false, false ],
