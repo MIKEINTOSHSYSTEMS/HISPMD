@@ -22,6 +22,8 @@ class class_GlobalEvents extends eventsBase
 	function __construct()
 	{
 	// fill list of events
+		$this->events["AfterLogout"]=true;
+
 
 //	onscreen events
 		$this->events["MFR_Region_Report_map"] = true;
@@ -29,12 +31,59 @@ class class_GlobalEvents extends eventsBase
 		$this->events["MFR_Woreda_map"] = true;
 		$this->events["MFR_Zone_map"] = true;
 		$this->events["MERQ_AI_Data_Assistant_snippet"] = true;
+		$this->events["_ethcal_global__snippet"] = true;
+		$this->events["_ethcalgc_global__snippet"] = true;
 
 
 
 		}
 
 //	handlers
+
+		
+		
+		
+		
+		
+		
+		
+		
+				// After Logout
+function AfterLogout($username)
+{
+
+		
+
+//**********  Redirect to another page  ************
+header("Location: login.php");
+exit();
+
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterLogout
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 //	onscreen events
 	function event_MERQ_AI_Data_Assistant_snippet(&$params)
@@ -50,6 +99,38 @@ understand IFRAME. However, we willl still
 you to the file.
 
 </IFRAME>';
+	;
+}
+	function event__ethcal_global__snippet(&$params)
+	{
+	require_once "../calendar/eth/ethcal.php";
+
+// Use the following code to get the result below
+
+$EC = new EthiopianCalendar(date("Y-m-d")); // set current GC date
+//$EC = new EthiopianCalendar(date("YYYY-mm-dd")); // custom date format
+//echo("Ethiopian Calendar");
+echo("ዛሬ ቀኑ");
+$EC->ECDrawCalendar(); // draw Ethiopian Calendar table
+//echo("Gregorian Calendar");
+//echo("Today's Date");
+//$EC->GCDrawCalendar();
+	;
+}
+	function event__ethcalgc_global__snippet(&$params)
+	{
+	require_once "../calendar/eth/ethcal.php";
+
+// Use the following code to get the result below
+
+$EC = new EthiopianCalendar(date("Y-m-d")); // set current GC date
+//$EC = new EthiopianCalendar(date("YYYY-mm-dd")); // custom date format
+//echo("Ethiopian Calendar");
+//echo("ዛሬ ቀኑ");
+//$EC->ECDrawCalendar(); // draw Ethiopian Calendar table
+//echo("Gregorian Calendar");
+echo("Today's Date");
+$EC->GCDrawCalendar();
 	;
 }
 

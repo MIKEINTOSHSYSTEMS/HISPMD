@@ -23,9 +23,11 @@
   font-weight: bold;
 }
 [data-page=".global_login"][data-itemid="text1"] {
+  color: #3a89db;
   font-weight: bold;
 }
 [data-page=".global_login"][data-itemid="page_image_ash8f23hr"] {
+  background-color: #00274c;
   width: 400px;
 }
 

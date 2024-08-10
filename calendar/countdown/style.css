@@ -1,0 +1,57 @@
+@layer demo, countdown;
+
+@layer countdown{
+  .countdown {
+    width: fit-content;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+  }
+  .countdown > .part {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .countdown > .part > .number {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid hsl(0 0% 50% / .5);
+    font-size: 1.5rem;
+    position: relative
+  }
+  .countdown > .part.days { --num: 365 }
+  .countdown > .part.hours { --num: 24 }
+  .countdown > .part:where(.minutes, .seconds) { --num: 60 }
+  .countdown > .part > .number::after{
+    content: "";
+    position: absolute;
+    inset: calc(var(--border-size) * -0.5);
+    border-radius: inherit;
+
+    --degree: calc(360deg / var(--num) * (var(--num) - var(--value,0)));
+    background-image: conic-gradient(var(--accent) var(--degree), transparent calc(var(--degree) + 0.1deg));
+
+    --border-size: 4px;  
+    --mask-image: radial-gradient(100% 100%, transparent calc(50% - var(--border-size)), black calc(50% - var(--border-size) + 1px));
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+  }
+  .countdown > .part > .text {
+    text-align: center;
+    opacity: 0.75
+  }
+}
+@layer demo {
+  * { box-sizing: border-box }
+  body {
+    background-color: #060D1F;
+    color: #FEFEFE;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+  }
+  h2 {
+    margin-top: 4rem;
+  }
+}

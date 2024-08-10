@@ -25,7 +25,7 @@
 					background: white;
 				}
 				.r-pretty-login-page > .r-sideimage {
-					background: #00274c;
+					background: #dee3e7;
 				}
 		</style>
 
@@ -65,10 +65,7 @@
 	class=" r-ori-vert			col-md-12
 	
 ">
-		 
-		<span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-page=".global_login" data-small >
-Login into your account</span>
-		</div>					</div>
+			</div>					</div>
 			</div>		
 {END top_block}
 									{BEGIN above-grid_block}
@@ -77,18 +74,83 @@ Login into your account</span>
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class=" r-ori-vert			col-md-12
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class="r-align-right r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
+	<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+አሁን ሰዓቱ
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <script  src="../../calendar/eth/ethcal.js"></script>
+<!--
+Current Time
+  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
+  <script  src="../../calendar/eth/ethcalgreg.js"></script>
+--></span>
+			{END firstAboveGridCell}	
 	</div>					</div>
 			 
 				<div class="row">
 			 
 				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-small > 
+	<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<!--
+አሁን ሰዓቱ
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <script  src="../../calendar/eth/ethcal.js"></script>
+-->
+Current Time
+  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
+  <script  src="../../calendar/eth/ethcalgreg.js"></script></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-small > 
+	<br><br></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-page=".global_login" data-small >
+Login into your account</span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
 	class=" r-ori-vert			col-md-12
 	
 ">
@@ -147,7 +209,7 @@ Login into your account</span>
  
 {BEGIN guestlink_block}
 <span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
-	<a type="button" title="" class="btn btn-warning   
+	<a type="button" title="" class="btn btn-success   
 	" {$guestlink_attrs} >
 							Login as Guest			</a>
 </span>
@@ -204,6 +266,35 @@ Login into your account</span>
 			 
 	data-cellId="footer_c3" data-pageid="{$pageid}">
 </td>
+							</tr>
+											<tr {$row_footer_2} >
+									<td 
+	class=" r-ori-vert			"
+	colspan="2"		 
+	data-cellId="footer_c6" data-pageid="{$pageid}">
+ 
+<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-small > 
+	<br>
+<br></span>
+</td>
+							</tr>
+											<tr {$row_footer_3} >
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="footer_c4" data-pageid="{$pageid}">
+ 
+<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event _ethcal_global__snippet}
+</span></td>
+									<td 
+	class="r-align-right r-ori-vert			"
+			 
+	data-cellId="footer_c5" data-pageid="{$pageid}">
+ 
+<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event _ethcalgc_global__snippet}
+</span></td>
 							</tr>
 					
 					</tbody>

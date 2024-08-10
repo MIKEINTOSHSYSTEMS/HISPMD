@@ -78,7 +78,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)","hidden":"{$item_hide_text1}","bold":true,"isHtml":true},
+			{"text":"Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)","color":"#3a89db","hidden":"{$item_hide_text1}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -103,10 +103,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"Login into your account","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -143,6 +141,31 @@ pdfDocument = {
 				
 				[
 																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n<!--\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>\n-->","hidden":"{$item_hide_text2}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
 	cellId: 'c2',
 	col:0,
 	row:0,
@@ -155,8 +178,35 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n\n<!--\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n-->\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>","hidden":"{$item_hide_text3}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br><br>","hidden":"{$item_hide_text5}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -166,7 +216,32 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c1',
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Login into your account","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c',
 	col:0,
 	row:0,
 			

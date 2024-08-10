@@ -145,8 +145,8 @@
       </svg>
 
     </section><!-- /Hero Section -->
-
-    <div align=center>
+<!--
+        <div align=center>
       
 
 <h1>Countdown</h1>
@@ -192,11 +192,89 @@
             //ver.innerHTML = flipdown.version;
         });
     </script>
+-->
+<!--HISPMD_COUNTDOWN-->
 
+        <div align=center>
+<style>
+  @layer demo, countdown;
 
+@layer countdown{
+  .countdown {
+    width: fit-content;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+  }
+  .countdown > .part {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .countdown > .part > .number {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid hsl(0 0% 50% / .5);
+    font-size: 1.5rem;
+    position: relative
+  }
+  .countdown > .part.days { --num: 365 }
+  .countdown > .part.hours { --num: 24 }
+  .countdown > .part:where(.minutes, .seconds) { --num: 60 }
+  .countdown > .part > .number::after{
+    content: "";
+    position: absolute;
+    inset: calc(var(--border-size) * -0.5);
+    border-radius: inherit;
 
+    --degree: calc(360deg / var(--num) * (var(--num) - var(--value,0)));
+    background-image: conic-gradient(var(--accent) var(--degree), transparent calc(var(--degree) + 0.1deg));
 
+    --border-size: 4px;  
+    --mask-image: radial-gradient(100% 100%, transparent calc(50% - var(--border-size)), black calc(50% - var(--border-size) + 1px));
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+  }
+  .countdown > .part > .text {
+    text-align: center;
+    opacity: 0.75
+  }
+}
+@layer demo {
+  * { box-sizing: border-box }
+  body {
+    background-color: #060D1F;
+    color: #FEFEFE;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+  }
+  h2 {
+    margin-top: 4rem;
+  }
+}
+  </style>
+  <br>
 
+        <!-- partial:index.partial.html -->
+        <h1>📅</h1> 
+        <h1>Days Remaing Until... </h1>
+        <br>
+        <br>
+<h2>🧪Testing Day</h2>
+<time class="countdown" date-time="2024-09-27 00:00:00" style="--accent: #3a89db"></time>
+<br>
+<br>
+<h2>🚀System Launch Day</h2>
+<time class="countdown" date-time="2024-11-07 00:00:00" style="--accent: green"></time>
+<!-- partial -->
+  <script  src="../../calendar/countdown/script.js"></script>
+
+</div>
+<br>
+
+<!--HISPMD_COUNTDOWN-->
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade">
       <div class="heading">

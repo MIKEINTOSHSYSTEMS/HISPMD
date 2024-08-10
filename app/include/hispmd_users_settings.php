@@ -210,7 +210,7 @@ $tdatahispmd_users[".strOrderBy"] = $tstrOrderBy;
 $tdatahispmd_users[".orderindexes"] = array();
 
 
-$tdatahispmd_users[".sqlHead"] = "SELECT ID,  username,  password,  email,  fullname,  groupid,  active,  ext_security_id,  userpic";
+$tdatahispmd_users[".sqlHead"] = "SELECT ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic";
 $tdatahispmd_users[".sqlFrom"] = "FROM hispmd_users";
 $tdatahispmd_users[".sqlWhereExpr"] = "";
 $tdatahispmd_users[".sqlTail"] = "";
@@ -1372,7 +1372,7 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["GoodName"] = "userpic";
 	$fdata["ownerTable"] = "hispmd_users";
 	$fdata["Label"] = GetFieldLabel("hispmd_users","userpic");
-	$fdata["FieldType"] = 205;
+	$fdata["FieldType"] = 128;
 
 
 	
@@ -1383,7 +1383,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "userpic";
 
-		$fdata["FullName"] = "userpic";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "userpic";
 
 	
 	
@@ -1553,7 +1554,7 @@ function createSqlQuery_hispmd_users()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ID,  username,  password,  email,  fullname,  groupid,  active,  ext_security_id,  userpic";
+$proto0["m_strFieldList"] = "ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic";
 $proto0["m_strFrom"] = "FROM hispmd_users";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";

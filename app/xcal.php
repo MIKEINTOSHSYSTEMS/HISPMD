@@ -1,33 +1,21 @@
-<link rel="stylesheet" href="ethcal.css">
+<!--
+<iframe src="./hispmd_menu.php" width="100%" height="700" frameborder="0"></iframe>
+<iframe src="./hispmd_menu.php" width="100%" height="1200px" frameborder="0"></iframe>
+<br>
+-->
+<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
 
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./ethcal.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-<!--
-
-//Style Paths ./calendar/eth/ethcal.css
-//PHP Paths ./calendar/eth/ethcal.php
-
-Ethiopian Calendar
-<h4>አሁን | Now</h4>
-<font color="#1acc7d"><i><b>አሁን ሰዓቱ</b></i></font>
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-
-  <b><script  src="./ethcal.js"></script></b>
-<font color="#1acc7d"><i><b>Current Time</b></i></font>
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="./ethcalgreg.js"></script>
-
--->
-  <!-- partial -->
 አሁን ሰዓቱ
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="./ethcal.js"></script>
+  <script  src="../../calendar/eth/ethcal.js"></script>
 
 Current Time
   <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="./ethcalgreg.js"></script>
+  <script  src="../../calendar/eth/ethcalgreg.js"></script>
 
 <!--
   <h4>ዛሬ | Today</h4>  
@@ -35,7 +23,7 @@ Current Time
 <br>
 <?php
 
-require_once "ethcal.php";
+require_once "../calendar/eth/ethcal.php";
 
 // Use the following code to get the result below
 
