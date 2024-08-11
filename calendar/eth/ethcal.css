@@ -61,3 +61,28 @@ td.day:hover {
 
 
 }
+.headerclock {
+    position: inherit;
+    /*
+    top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    */
+
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+
+
+}
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ethiopian-calendar,
+.gregorian-calendar {
+    flex: 1;
+}

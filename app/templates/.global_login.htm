@@ -25,7 +25,7 @@
 					background: white;
 				}
 				.r-pretty-login-page > .r-sideimage {
-					background: #dee3e7;
+					background: #f7fbff;
 				}
 		</style>
 
@@ -40,32 +40,26 @@
 			 
 				<div 
 	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
-	class="r-align-left r-ori-vert			col-md-6
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
 		 
 		<span data-itemtype="login-logo" data-itemid="login-logo" {$item_login-logo} data-pageid="{$pageid}" data-page=".global_login" data-small >
 	{$logo}
 </span>
-		</div>			 
-				<div 
-	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-		 
-		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-page=".global_login" data-small > 
-	Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)</span>
 		</div>					</div>
 			 
 				<div class="row">
 			 
 				<div 
 	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
-	class=" r-ori-vert			col-md-12
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
-			</div>					</div>
+		 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-page=".global_login" data-small > 
+	Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)</span>
+		</div>					</div>
 			</div>		
 {END top_block}
 									{BEGIN above-grid_block}
@@ -74,66 +68,18 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="r-align-right r-ori-vert			col-md-12
-	
-">
-		{BEGIN firstAboveGridCell}
-		 
-		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
-	<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
-
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-አሁን ሰዓቱ
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="../../calendar/eth/ethcal.js"></script>
-<!--
-Current Time
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="../../calendar/eth/ethcalgreg.js"></script>
---></span>
-			{END firstAboveGridCell}	
-	</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class="r-align-right r-ori-vert			col-md-12
-	
-">
-		 
-		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-small > 
-	<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
-
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-<!--
-አሁን ሰዓቱ
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="../../calendar/eth/ethcal.js"></script>
--->
-Current Time
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="../../calendar/eth/ethcalgreg.js"></script></span>
-		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class=" r-ori-vert			col-md-12
 	
 ">
+		{BEGIN firstAboveGridCell}
 		 
-		<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-small > 
-	<br><br></span>
-		</div>					</div>
+		{BEGIN message_block}
+<div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" data-page=".global_login" class="alert {$message_class}" role="alert">
+{$message}
+	</div>
+{END message_block}			{END firstAboveGridCell}	
+	</div>					</div>
 			 
 				<div class="row">
 			 
@@ -154,12 +100,7 @@ Login into your account</span>
 	class=" r-ori-vert			col-md-12
 	
 ">
-		 
-		{BEGIN message_block}
-<div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" data-page=".global_login" class="alert {$message_class}" role="alert">
-{$message}
-	</div>
-{END message_block}		</div>					</div>
+			</div>					</div>
 			</div>		
 {END above-grid_block}
 									{BEGIN grid_block}
@@ -209,7 +150,7 @@ Login into your account</span>
  
 {BEGIN guestlink_block}
 <span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
-	<a type="button" title="" class="btn btn-success   
+	<a type="button" title="" class="btn btn-info   
 	" {$guestlink_attrs} >
 							Login as Guest			</a>
 </span>
@@ -283,18 +224,12 @@ Login into your account</span>
 	class=" r-ori-vert			"
 			 
 	data-cellId="footer_c4" data-pageid="{$pageid}">
- 
-<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
-{$event _ethcal_global__snippet}
-</span></td>
+</td>
 									<td 
 	class="r-align-right r-ori-vert			"
 			 
 	data-cellId="footer_c5" data-pageid="{$pageid}">
- 
-<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
-{$event _ethcalgc_global__snippet}
-</span></td>
+</td>
 							</tr>
 					
 					</tbody>

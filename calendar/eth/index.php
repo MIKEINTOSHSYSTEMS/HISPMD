@@ -20,31 +20,43 @@ Ethiopian Calendar
   <script  src="./ethcalgreg.js"></script>
 
 -->
-  <!-- partial -->
-አሁን ሰዓቱ
+  <!-- partial
+   
+  አሁን ሰዓቱ
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
   <script  src="./ethcal.js"></script>
 
 Current Time
   <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
   <script  src="./ethcalgreg.js"></script>
+  -->
+
 
 <!--
   <h4>ዛሬ | Today</h4>  
 -->
 <br>
-<?php
+<div class="calendar-container">
+  <div class="ethiopian-calendar">
+    አሁን ሰዓቱ
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <script  src="./ethcal.js"></script>
+    <h4>ዛሬ ቀኑ</h4>
+    <?php
+    require_once "ethcal.php";
+    $EC = new EthiopianCalendar(date("Y-m-d"));
+    $EC->ECDrawCalendar();
+    ?>
+  </div>
 
-require_once "ethcal.php";
 
-// Use the following code to get the result below
-
-$EC = new EthiopianCalendar(date("Y-m-d")); // set current GC date
-//$EC = new EthiopianCalendar(date("YYYY-mm-dd")); // custom date format
-//echo("Ethiopian Calendar");
-echo("ዛሬ ቀኑ");
-$EC->ECDrawCalendar(); // draw Ethiopian Calendar table
-//echo("Gregorian Calendar");
-echo("Today's Date");
-$EC->GCDrawCalendar();
-?>
+  <div class="gregorian-calendar">
+    Current Time
+  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
+  <script  src="./ethcalgreg.js"></script>
+    <h4>Today's Date</h4>
+    <?php
+    $EC->GCDrawCalendar();
+    ?>
+  </div>
+</div>

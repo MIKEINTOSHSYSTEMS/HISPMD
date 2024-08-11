@@ -108,7 +108,45 @@
             -->
             
           </div>
+<div>
+<script>
+function getGreeting() {
+    var now = new Date();
+    var hour = now.getHours();
 
+    if (hour < 12) {
+        return "እንደምን አደሩ!";
+    } else if (hour < 18) {
+        return "እንደምን ዋሉ!";
+    } else if (hour < 22) {
+        return "አንደምን አመሹ!";
+    } else {
+        return "ደህና እደሩ!";
+    }
+}
+
+document.write(getGreeting());
+  </script>
+<br>
+<script>
+function getGreeting() {
+  var now = new Date();
+  var hour = now.getHours();
+
+  if (hour < 12) {
+    return "Good Morning!";
+  } else if (hour < 18) {
+    return "Good Day!";
+  } else if (hour < 22) {
+    return "Good Evening!";
+  } else {
+    return "Good Night!";
+  }
+}
+
+document.write(getGreeting());
+</script>
+</div>
           <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
             <h1>Welcome to <span>HISPMD</span></h1>
             <p>Health Information Management Information Systems Dashboard</p>

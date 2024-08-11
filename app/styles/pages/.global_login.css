@@ -32,3 +32,8 @@
 }
 
 
+/* Put  your custom CSS code here */
+.r-pretty-login-page[data-image-shadow]:not([data-image-fullsize])>.r-sideimage>.r-image img
+{
+    box-shadow: 0 0 7px 17px #00274c;
+}

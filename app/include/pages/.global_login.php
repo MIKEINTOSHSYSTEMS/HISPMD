@@ -4,10 +4,7 @@
 'searchRequiredFields' => array(  ),
 'searchPanelFields' => array(  ),
 'fieldItems' => array(  ) ),
-'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'text3',
-'text5',
-'text2',
-'login_message',
+'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'login_message',
 'login_welcome' ),
 'top' => array( 'login-logo',
 'text1' ),
@@ -20,15 +17,10 @@
 'footer' => array( 'login_button',
 'continue_login_button',
 'text',
-'snippet',
-'snippet1',
 'text4' ),
 'superbottom' => array(  ) ),
 'formXtTags' => array( 'superbottom' => array(  ) ),
-'itemForms' => array( 'text3' => 'above-grid',
-'text5' => 'above-grid',
-'text2' => 'above-grid',
-'login_message' => 'above-grid',
+'itemForms' => array( 'login_message' => 'above-grid',
 'login_welcome' => 'above-grid',
 'login-logo' => 'top',
 'text1' => 'top',
@@ -41,8 +33,6 @@
 'login_button' => 'footer',
 'continue_login_button' => 'footer',
 'text' => 'footer',
-'snippet' => 'footer',
-'snippet1' => 'footer',
 'text4' => 'footer' ),
 'itemLocations' => array(  ),
 'itemVisiblity' => array(  ) ),
@@ -59,12 +49,7 @@
 'login_welcome' => array( 'login_welcome' ),
 'text' => array( 'text',
 'text1',
-'text2',
-'text3',
-'text4',
-'text5' ),
-'snippet' => array( 'snippet',
-'snippet1' ) ),
+'text4' ) ),
 'cellMaps' => array(  ) ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array(  ),
@@ -83,46 +68,34 @@
 'disabled' => 0,
 'default' => 0,
 'forms' => array( 'above-grid' => array( 'modelId' => 'login-above-grid',
-'grid' => array( array( 'section' => '',
-'cells' => array( array( 'cell' => 'c3',
-'colspan' => 1 ) ) ),
-array( 'cells' => array( array( 'cell' => 'c2',
-'colspan' => 1 ) ),
-'section' => '' ),
-array( 'cells' => array( array( 'cell' => 'c1',
+'grid' => array( array( 'cells' => array( array( 'cell' => 'c1',
 'colspan' => 1 ) ),
 'section' => '' ),
 array( 'section' => '',
 'cells' => array( array( 'cell' => 'c4' ) ) ),
 array( 'section' => '',
 'cells' => array( array( 'cell' => 'c' ) ) ) ),
-'cells' => array( 'c2' => array( 'model' => 'c2',
-'items' => array( 'text3' ),
-'align' => 'right' ),
-'c1' => array( 'model' => 'c1',
-'items' => array( 'text5' ) ),
-'c3' => array( 'model' => 'c2',
-'items' => array( 'text2' ),
-'align' => 'right' ),
-'c' => array( 'model' => 'c1',
+'cells' => array( 'c1' => array( 'model' => 'c1',
 'items' => array( 'login_message' ) ),
+'c' => array( 'model' => 'c1',
+'items' => array(  ) ),
 'c4' => array( 'model' => 'c1',
 'items' => array( 'login_welcome' ) ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ),
 'top' => array( 'modelId' => 'plogin-header',
-'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ),
-array( 'cell' => 'c2' ) ),
+'grid' => array( array( 'cells' => array( array( 'cell' => 'c1',
+'colspan' => 1 ) ),
 'section' => '' ),
 array( 'cells' => array( array( 'cell' => 'c3',
-'colspan' => 2 ) ),
+'colspan' => 1 ) ),
 'section' => '' ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
-'items' => array( 'login-logo' ) ),
-'c2' => array( 'model' => 'c2',
-'items' => array( 'text1' ) ),
+'items' => array( 'login-logo' ),
+'align' => 'center' ),
 'c3' => array( 'model' => 'c3',
-'items' => array(  ) ) ),
+'items' => array( 'text1' ),
+'align' => 'center' ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ),
 'grid' => array( 'modelId' => 'plogin-grid',
@@ -170,9 +143,9 @@ array( 'cell' => 'c5' ) ) ) ),
 'c3' => array( 'model' => 'c2',
 'items' => array(  ) ),
 'c4' => array( 'model' => 'c1',
-'items' => array( 'snippet' ) ),
+'items' => array(  ) ),
 'c5' => array( 'model' => 'c2',
-'items' => array( 'snippet1' ) ),
+'items' => array(  ) ),
 'c6' => array( 'model' => 'c1',
 'items' => array( 'text4' ) ) ),
 'deferredItems' => array(  ),
@@ -192,7 +165,7 @@ array( 'cell' => 'c5' ) ) ) ),
 'bold' => true ),
 'login_button' => array( 'type' => 'login_button' ),
 'guest_login' => array( 'type' => 'guest_login',
-'buttonStyle' => 'success',
+'buttonStyle' => 'info',
 'bold' => true ),
 'remember_password' => array( 'type' => 'remember_password',
 'bold' => true ),
@@ -212,55 +185,9 @@ array( 'cell' => 'c5' ) ) ) ),
 'editedByRte' => false,
 'bold' => true,
 'color' => '#3a89db' ),
-'text2' => array( 'type' => 'text',
-'label' => array( 'text' => '<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
-
-<link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Orbitron\'>
-<link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Aldrich\'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-አሁን ሰዓቱ
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="../../calendar/eth/ethcal.js"></script>
-<!--
-Current Time
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="../../calendar/eth/ethcalgreg.js"></script>
--->',
-'type' => 0 ),
-'editedByRte' => false ),
-'text3' => array( 'type' => 'text',
-'label' => array( 'text' => '<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
-
-<link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Orbitron\'>
-<link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Aldrich\'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-<!--
-አሁን ሰዓቱ
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="../../calendar/eth/ethcal.js"></script>
--->
-Current Time
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="../../calendar/eth/ethcalgreg.js"></script>',
-'type' => 0 ),
-'editedByRte' => false ),
 'text4' => array( 'type' => 'text',
 'label' => array( 'text' => '<br>
 <br>',
-'type' => 0 ),
-'editedByRte' => false ),
-'snippet' => array( 'type' => 'snippet',
-'eventId' => '_ethcal_global__snippet',
-'label' => array( 'text' => '_ethcal_global__snippet',
-'type' => 0 ) ),
-'snippet1' => array( 'type' => 'snippet',
-'eventId' => '_ethcalgc_global__snippet',
-'label' => array( 'text' => '_ethcalgc_global__snippet',
-'type' => 0 ) ),
-'text5' => array( 'type' => 'text',
-'label' => array( 'text' => '<br><br>',
 'type' => 0 ),
 'editedByRte' => false ) ),
 'dbProps' => array(  ),
@@ -272,7 +199,12 @@ Current Time
 'background' => '#00274c',
 'width' => '',
 'height' => '' ),
-'imageBgColor' => '#dee3e7',
+'imageBgColor' => '#f7fbff',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'pageCSS' => '/* Put  your custom CSS code here */
+.r-pretty-login-page[data-image-shadow]:not([data-image-fullsize])>.r-sideimage>.r-image img
+{
+    box-shadow: 0 0 7px 17px #00274c;
+}' );
 		?>
