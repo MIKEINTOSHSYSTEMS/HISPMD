@@ -88,10 +88,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<!--\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"700\" frameborder=\"0\"></iframe>\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"1200px\" frameborder=\"0\"></iframe>\n<br>\n-->\n<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n<!--\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>\n-->\n\n","hidden":"{$item_hide_text7}","isHtml":true},
-				
-				
-			{"text":"{$event _ethcal_global__snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{"text":"<!--\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"700\" frameborder=\"0\"></iframe>\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"1200px\" frameborder=\"0\"></iframe>\n<br>\n-->\n<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n<!--\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n-->\n\n<!--\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>\n-->\n\n","hidden":"{$item_hide_text7}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -114,10 +111,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<!--\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"700\" frameborder=\"0\"></iframe>\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"1200px\" frameborder=\"0\"></iframe>\n<br>\n-->\n<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n<!--\n\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n-->\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>\n","hidden":"{$item_hide_text9}","isHtml":true},
-				
-				
-			{"text":"{$event _ethcalgc_global__snippet}","hidden":"{$item_hide_snippet1}","isHtml":true},
+			{"text":"<!--\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"700\" frameborder=\"0\"></iframe>\n<iframe src=\"./hispmd_menu.php\" width=\"100%\" height=\"1200px\" frameborder=\"0\"></iframe>\n<br>\n-->\n<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n<!--\n\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n-->\n<!--\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>\n-->\n\n","hidden":"{$item_hide_text9}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

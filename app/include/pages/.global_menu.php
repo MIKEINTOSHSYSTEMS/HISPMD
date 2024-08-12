@@ -2,9 +2,7 @@
 			$optionsArray = array( 'welcome' => array( 'welcomePageSkip' => true,
 'welcomeItems' => array( 'text8' => array( 'menutItem' => false ),
 'text7' => array( 'menutItem' => false ),
-'snippet' => array( 'menutItem' => false ),
 'text9' => array( 'menutItem' => false ),
-'snippet1' => array( 'menutItem' => false ),
 'text10' => array( 'menutItem' => false ),
 'text5' => array( 'menutItem' => false ),
 'welcome_item15' => array( 'menutItem' => true,
@@ -358,10 +356,8 @@
 'welcome_item31',
 'text5',
 'text7',
-'snippet',
 'text8',
 'text9',
-'snippet1',
 'text10' ),
 'supertop' => array( 'expand_menu_button',
 'collapse_button',
@@ -396,10 +392,8 @@
 'welcome_item31' => 'above-grid',
 'text5' => 'above-grid',
 'text7' => 'above-grid',
-'snippet' => 'above-grid',
 'text8' => 'above-grid',
 'text9' => 'above-grid',
-'snippet1' => 'above-grid',
 'text10' => 'above-grid',
 'expand_menu_button' => 'supertop',
 'collapse_button' => 'supertop',
@@ -511,8 +505,6 @@
 'userinfo_link' => array( 'userinfo_link' ),
 'logout_link' => array( 'logout_link' ),
 'adminarea_link' => array( 'adminarea_link' ),
-'snippet' => array( 'snippet',
-'snippet1' ),
 'expand_button' => array( 'expand_button' ) ),
 'cellMaps' => array(  ) ),
 'loginForm' => array( 'loginForm' => 0 ),
@@ -556,13 +548,11 @@ array( 'cell' => 'c3' ) ) ) ),
 'items' => array( 'text5' ),
 'align' => 'center' ),
 'c5' => array( 'model' => 'c1',
-'items' => array( 'text7',
-'snippet' ) ),
+'items' => array( 'text7' ) ),
 'c6' => array( 'model' => 'c1',
 'items' => array( 'text8' ) ),
 'c7' => array( 'model' => 'c1',
-'items' => array( 'text9',
-'snippet1' ) ),
+'items' => array( 'text9' ) ),
 'c9' => array( 'model' => 'c1',
 'items' => array( 'text10' ) ) ),
 'deferredItems' => array(  ),
@@ -1207,10 +1197,12 @@ array( 'section' => '',
 <link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Orbitron\'>
 <link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Aldrich\'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+<!--
 አሁን ሰዓቱ
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
   <script  src="../../calendar/eth/ethcal.js"></script>
+-->
+
 <!--
 Current Time
   <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
@@ -1515,140 +1507,6 @@ Current Time
 'userinfo_link' => array( 'type' => 'userinfo_link' ),
 'logout_link' => array( 'type' => 'logout_link' ),
 'adminarea_link' => array( 'type' => 'adminarea_link' ),
-'snippet' => array( 'eventId' => '_ethcal_global__snippet',
-'label' => array( 'text' => '_ethcal_global__snippet',
-'type' => 0 ),
-'type' => 'snippet',
-'customCSS' => '/*
- * 
- */
-
-* {
-    font-family: sans-serif;
-}
-
-table.calendar {
-    text-align: center;
-    background: white;
-    border-collapse: collapse;
-    box-shadow: 0 1px 5px 0 #00000030;
-    margin-bottom: 10px;
-}
-
-table.calendar td {
-    cursor: pointer;
-    min-width: 40px;
-    padding: 5px 0;
-}
-
-table.calendar th {
-    cursor: pointer;
-    min-width: 40px;
-    padding: 5px 0;
-    background: #2196F3;/*#4CAF50;*/
-    color: white;
-}
-
-table.calendar th.rest {
-    color: white;
-    background: #1acc7d/*black;*/
-}
-
-td.today {
-    background: #00274c;
-    color: white;
-}
-
-td.today:hover {
-    background: #70c2f3;
-}
-
-td.day:hover {
-    background: lightgray;
-}
-.clock {
-    position: inherit;
-    /*
-    top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    */
-    
-    color: #00297c;
-    font-size: 20px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-
-
-
-}' ),
-'snippet1' => array( 'eventId' => '_ethcalgc_global__snippet',
-'label' => array( 'text' => '_ethcalgc_global__snippet',
-'type' => 0 ),
-'type' => 'snippet',
-'customCSS' => '/*
- * 
- */
-
-* {
-    font-family: sans-serif;
-}
-
-table.calendar {
-    text-align: center;
-    background: white;
-    border-collapse: collapse;
-    box-shadow: 0 1px 5px 0 #00000030;
-    margin-bottom: 10px;
-}
-
-table.calendar td {
-    cursor: pointer;
-    min-width: 40px;
-    padding: 5px 0;
-}
-
-table.calendar th {
-    cursor: pointer;
-    min-width: 40px;
-    padding: 5px 0;
-    background: #2196F3;/*#4CAF50;*/
-    color: white;
-}
-
-table.calendar th.rest {
-    color: white;
-    background: #1acc7d/*black;*/
-}
-
-td.today {
-    background: #00274c;
-    color: white;
-}
-
-td.today:hover {
-    background: #70c2f3;
-}
-
-td.day:hover {
-    background: lightgray;
-}
-.clock {
-    position: inherit;
-    /*
-    top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    */
-    
-    color: #00297c;
-    font-size: 20px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-
-
-
-}' ),
 'text9' => array( 'type' => 'text',
 'label' => array( 'text' => '<!--
 <iframe src="./hispmd_menu.php" width="100%" height="700" frameborder="0"></iframe>
@@ -1666,9 +1524,12 @@ td.day:hover {
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
   <script  src="../../calendar/eth/ethcal.js"></script>
 -->
+<!--
 Current Time
   <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
   <script  src="../../calendar/eth/ethcalgreg.js"></script>
+-->
+
 ',
 'type' => 0 ),
 'editedByRte' => false ),
