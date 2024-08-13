@@ -3622,6 +3622,22 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
 	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "DHIS2_OrgUnit_Country" ] = array( "url" => "dhis2_orgunit_country", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_country" ] = "DHIS2_OrgUnit_Country";
+	$projectEntities[ "DHIS2_OrgUnit_Regions" ] = array( "url" => "dhis2_orgunit_regions", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_regions" ] = "DHIS2_OrgUnit_Regions";
+	$projectEntities[ "DHIS2_OrgUnit_Zone" ] = array( "url" => "dhis2_orgunit_zone", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_zone" ] = "DHIS2_OrgUnit_Zone";
+	$projectEntities[ "DHIS2_OrgUnit_Woredas" ] = array( "url" => "dhis2_orgunit_woredas", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_woredas" ] = "DHIS2_OrgUnit_Woredas";
+	$projectEntities[ "DHIS2_OrgUnit_Groups" ] = array( "url" => "dhis2_orgunit_groups", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_groups" ] = "DHIS2_OrgUnit_Groups";
+	$projectEntities[ "DHIS2_OrgUnit_Group_Sets" ] = array( "url" => "dhis2_orgunit_group_sets", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_group_sets" ] = "DHIS2_OrgUnit_Group_Sets";
+	$projectEntities[ "DHIS2_AIO_OrgUnit" ] = array( "url" => "dhis2_aio_orgunit", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_aio_orgunit" ] = "DHIS2_AIO_OrgUnit";
+	$projectEntities[ "DHIS2_OrgUnit_Distributions" ] = array( "url" => "dhis2_orgunit_distributions", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunit_distributions" ] = "DHIS2_OrgUnit_Distributions";
 }
 
 function findTable( $table ) {

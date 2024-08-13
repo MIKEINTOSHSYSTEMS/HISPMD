@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "462_1723305847";
+$projectBuildKey = "468_1723305847";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "462";
+$projectBuildNumber = "468";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -818,6 +818,14 @@ $tableCaptions["English"]["hispmd_users"] = "Hispmd Users";
 $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Admin Users";
+$tableCaptions["English"]["DHIS2_OrgUnit_Country"] = "DHIS2 OrgUnit Country";
+$tableCaptions["English"]["DHIS2_OrgUnit_Regions"] = "DHIS2 OrgUnit Regions";
+$tableCaptions["English"]["DHIS2_OrgUnit_Zone"] = "DHIS2 OrgUnit Zone";
+$tableCaptions["English"]["DHIS2_OrgUnit_Woredas"] = "DHIS2 OrgUnit Woredas";
+$tableCaptions["English"]["DHIS2_OrgUnit_Groups"] = "DHIS2 OrgUnit Groups";
+$tableCaptions["English"]["DHIS2_OrgUnit_Group_Sets"] = "DHIS2 OrgUnit Group Sets";
+$tableCaptions["English"]["DHIS2_AIO_OrgUnit"] = "DHIS2 AIO OrgUnit";
+$tableCaptions["English"]["DHIS2_OrgUnit_Distributions"] = "DHIS2 OrgUnit Distributions";
 
 
 $globalEvents = new class_GlobalEvents;

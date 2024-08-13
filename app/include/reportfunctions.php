@@ -661,6 +661,38 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_OrgUnit_Country")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_OrgUnit_Regions")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_OrgUnit_Zone")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_OrgUnit_Woredas")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_OrgUnit_Groups")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_OrgUnit_Group_Sets")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_AIO_OrgUnit")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_OrgUnit_Distributions")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1145,6 +1177,38 @@ function getCaptionTable($table)
 	if($table=="admin_users")
 	{
 		return "Admin Users";
+	}
+	if($table=="DHIS2_OrgUnit_Country")
+	{
+		return "DHIS2 OrgUnit Country";
+	}
+	if($table=="DHIS2_OrgUnit_Regions")
+	{
+		return "DHIS2 OrgUnit Regions";
+	}
+	if($table=="DHIS2_OrgUnit_Zone")
+	{
+		return "DHIS2 OrgUnit Zone";
+	}
+	if($table=="DHIS2_OrgUnit_Woredas")
+	{
+		return "DHIS2 OrgUnit Woredas";
+	}
+	if($table=="DHIS2_OrgUnit_Groups")
+	{
+		return "DHIS2 OrgUnit Groups";
+	}
+	if($table=="DHIS2_OrgUnit_Group_Sets")
+	{
+		return "DHIS2 OrgUnit Group Sets";
+	}
+	if($table=="DHIS2_AIO_OrgUnit")
+	{
+		return "DHIS2 AIO OrgUnit";
+	}
+	if($table=="DHIS2_OrgUnit_Distributions")
+	{
+		return "DHIS2 OrgUnit Distributions";
 	}
 	return $table;
 }

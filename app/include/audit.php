@@ -580,6 +580,38 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DHIS2_OrgUnit_Country")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Regions")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Zone")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Woredas")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Groups")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Group_Sets")
+		{
+			return false;
+		}
+		if($table=="DHIS2_AIO_OrgUnit")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Distributions")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1109,6 +1141,38 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="admin_users")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Country")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Regions")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Zone")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Woredas")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Groups")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Group_Sets")
+		{
+			return false;
+		}
+		if($table=="DHIS2_AIO_OrgUnit")
+		{
+			return false;
+		}
+		if($table=="DHIS2_OrgUnit_Distributions")
 		{
 			return false;
 		}

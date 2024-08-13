@@ -556,7 +556,7 @@ $proto0["m_strFrom"] = "FROM DHIS2_Periods";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-																										;
+																												;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -664,7 +664,7 @@ $queryData_dhis2_periods = createSqlQuery_dhis2_periods();
 
 
 	
-																										;
+																												;
 
 		
 

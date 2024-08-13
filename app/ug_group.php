@@ -71,6 +71,14 @@ $nonAdminTablesArr[] = "MFR_Facility_Types";
 $nonAdminTablesArr[] = "MFR_Operational_Statuses";
 $nonAdminTablesArr[] = "MFR_Status";
 $nonAdminTablesArr[] = "hispmd_users";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Country";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Regions";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Zone";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Woredas";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Groups";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Group_Sets";
+$nonAdminTablesArr[] = "DHIS2_AIO_OrgUnit";
+$nonAdminTablesArr[] = "DHIS2_OrgUnit_Distributions";
 
 $ug_connection = $cman->getForUserGroups();
 

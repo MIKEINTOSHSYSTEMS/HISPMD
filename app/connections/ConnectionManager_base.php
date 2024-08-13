@@ -297,6 +297,14 @@ class ConnectionManager_Base
 		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["DHIS2_OrgUnit_Country"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_OrgUnit_Regions"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_OrgUnit_Zone"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_OrgUnit_Woredas"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_OrgUnit_Groups"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_OrgUnit_Group_Sets"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_AIO_OrgUnit"] = "hispmdathispmdmerqconsultdhis2";
+		$connectionsIds["DHIS2_OrgUnit_Distributions"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

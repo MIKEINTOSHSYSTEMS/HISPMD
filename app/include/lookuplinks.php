@@ -306,6 +306,20 @@ function InitLookupLinks()
 			$lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"] = array();
 		}
 		$lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"]["edit"] = array("table" => "MFR_Facility", "field" => "woredaId", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Units"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_aio_orgunit.name"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_aio_orgunit.name"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_aio_orgunit.name"]["edit"] = array("table" => "DHIS2_AIO_OrgUnit", "field" => "name", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] ) ) {
+			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"] )) {
+			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"] = array();
+		}
+		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"]["edit"] = array("table" => "DHIS2_AIO_OrgUnit", "field" => "column", "page" => "edit");
 }
 
 ?>

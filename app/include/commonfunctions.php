@@ -315,6 +315,22 @@ function checkTableName($shortTName )
 		return true;
 	if ("admin_users" == $shortTName )
 		return true;
+	if ("dhis2_orgunit_country" == $shortTName )
+		return true;
+	if ("dhis2_orgunit_regions" == $shortTName )
+		return true;
+	if ("dhis2_orgunit_zone" == $shortTName )
+		return true;
+	if ("dhis2_orgunit_woredas" == $shortTName )
+		return true;
+	if ("dhis2_orgunit_groups" == $shortTName )
+		return true;
+	if ("dhis2_orgunit_group_sets" == $shortTName )
+		return true;
+	if ("dhis2_aio_orgunit" == $shortTName )
+		return true;
+	if ("dhis2_orgunit_distributions" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -869,6 +885,78 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="admin_users";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Country");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Country";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Regions");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Regions";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Zone");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Zone";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Woredas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Woredas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Groups");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Groups";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Group_Sets");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Group_Sets";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_AIO_OrgUnit");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_AIO_OrgUnit";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Distributions");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnit_Distributions";
+	}
 	return $arr;
 }
 
@@ -934,6 +1022,14 @@ function GetTablesListWithoutSecurity()
 	$arr[]="admin_rights";
 	$arr[]="admin_members";
 	$arr[]="admin_users";
+	$arr[]="DHIS2_OrgUnit_Country";
+	$arr[]="DHIS2_OrgUnit_Regions";
+	$arr[]="DHIS2_OrgUnit_Zone";
+	$arr[]="DHIS2_OrgUnit_Woredas";
+	$arr[]="DHIS2_OrgUnit_Groups";
+	$arr[]="DHIS2_OrgUnit_Group_Sets";
+	$arr[]="DHIS2_AIO_OrgUnit";
+	$arr[]="DHIS2_OrgUnit_Distributions";
 	return $arr;
 }
 
@@ -1853,6 +1949,46 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="admin_users" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Country" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Regions" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Zone" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Woredas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Groups" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Group_Sets" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_AIO_OrgUnit" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnit_Distributions" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
