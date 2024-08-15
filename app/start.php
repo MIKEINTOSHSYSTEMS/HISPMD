@@ -149,7 +149,7 @@ document.write(getGreeting());
 </div>
           <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
             <h1>Welcome to <span>HISPMD</span></h1>
-            <p>Health Information Management Information Systems Dashboard</p>
+            <p>Health Information Systems Performance Monitoring Dashboard</p>
             
             <div class="d-flex">
               <a href="index.htm" class="btn-get-started">Get Started</a>

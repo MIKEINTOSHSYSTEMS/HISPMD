@@ -110,6 +110,18 @@ class RestManager
 		$data["password"] = "district";
 			
 	$connectionsData["devdhis2hispmdathispmdmerqcons"] = $data;
+		$data = array();
+		$data["connId"] = "surveyctohispmdathispmdmerqcon";
+		$data["connName"] = "SURVEYCTO_ETHIOPIA_PRISM_API";
+
+		$this->_connectionsIdByName["SURVEYCTO_ETHIOPIA_PRISM_API"] = "surveyctohispmdathispmdmerqcon";
+
+		$data["url"] = "https://ethiopiaprism.surveycto.com";
+		$data["authType"] = "basic";
+			$data["username"] = "fasil.merqconsultancy.org";
+		$data["password"] = "merq123";
+			
+	$connectionsData["surveyctohispmdathispmdmerqcon"] = $data;
 		$this->_connectionsData = &$connectionsData;
 	}
 
