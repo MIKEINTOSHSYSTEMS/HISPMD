@@ -1,0 +1,151 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel DHIS2_Reporting_Rate export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$title_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$dataSet_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$reportPeriod_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$ACTUAL_REPORTS_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$EXPECTED_REPORTS_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$REPORTING_RATE_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$ACTUAL_REPORTS_ON_TIME_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$REPORTING_RATE_ON_TIME_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$organisationUnit_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{$chart_title}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="include/css/stylesheet.css" type="text/css" media="screen">
+        <script type="text/javascript" src="include/js/jquery.min.js"></script>
+		<script type="text/javascript" src="include/js/chart.js"></script>
+		{$load_flash_player}
+    </head>
+    
+    <body {$onload} class="{$wr_pagestylepath}">
+        {$header}
+		<div class="rnr-page dreport">
+			<div class="rnr-top ">
+								<div class="rnr-cw-toplinks rnr-s-2 asbuttons {$wr_pagestylepath}">
+					<div class="rnr-c rnr-ch rnr-c-toplinks">
+						{BEGIN back_to_menu}
+						<div align=center class="style1 rnr-bl rnr-b-toplinks_print" >
+							<a class="rnr-button" href="webreport.php">Back to menu</a>
+						</div>
+						{END back_to_menu}
+						{BEGIN testAdvSearch}
+						<div align="center" class="style1 rnr-bl rnr-b-toplinks_advsearch" >
+							<a class="rnr-button" href="#" onclick="window.location.{$searchHref}">Advanced search</a>
+						</div>
+						{END testAdvSearch}
+						<div align="center" class="style1 rnr-bl rnr-b-toplinks_export" >
+							<a id=ExpPDF class="rnr-button" href="#" onclick="chart.saveAsPDF();">Export to PDF</a>
+						</div>
+						<div class="rnr-hfiller"></div>					
+					</div>
+				</div>
+
+				<div class="rnr-s-fields {$wr_pagestylepath}">
+					<div class="rnr-c rnr-cv">	
+						<div class="style1">
+										<!--doevent name="ChartOnLoad"-->
+										{BEGIN chart_block}
+										<div class="center_div" id="showchart" style="width:800px;height:600px">{$chart_constructor}</div>
+										{END chart_block}
+						</div> 
+					</div> 		
+				</div>       
+			</div>
+		</div> 
+{$footer}
+    </body>
+</html>

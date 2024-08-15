@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Report: Group fields</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath}">
+        {$b_includes}
+		{$header}
+		<div class="rnr-page">
+			<div class="rnr-top">
+				<div class="rnr-s-1 {$wr_pagestylepath}">
+					<div class="rnr-c rnr-cv">
+						<div class="style2" align=center>
+							Report: Group fields{$report_title}{$report_table}
+						</div>
+						<div class="style1 rnr-b-wrapper">
+							<div class="rnr-s-fields {$wr_pagestylepath}">
+								<div class="rnr-c rnr-cv">
+									<div class="style1">
+										<table class="fieldGrid" id="table_wh">
+											<tr>
+												<td style="text-align:left" colspan=4>
+													<input type=checkbox name=select_cross id=select_cross>&nbsp;Crosstable report
+												</td>
+											</tr>
+											<tr>
+												<td width="35%">Add group fields</th>
+												<td width="35%">Interval type</th>
+												<td width="25%" name="report_col">&nbsp;</th>
+												<td width="5%" name="report_col">Color</th>
+												<td width="30%" name="cross_col" style="display:none">Axis</th>
+												<td name="cross_col" style="display:none"></th>
+											</tr>
+											<tr id=clone style="display:none">
+												<td>
+													<input type="hidden" id="go" name="go" value="1" />
+													<select id="" name="" style="width:180px">
+														<option value=""></option>
+														{$groupFields1}
+													</select>
+												</td>
+												<td>
+													<select id="type" name="type" style="width:180px"> </select>						
+												</td>
+												<td name="report_col">
+													<input type="checkbox" id="ss" name="ss" />&nbsp;Summary
+												</td>
+												<td name="report_col">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tbody>
+															<tr>
+																<td align="right">
+																	<div id="picker" class="ColorPickerDivSample" style="width: 50px;"> </div>
+																</td>
+																<td align="left"><img class="selector" src="images/selector.png" /></td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												<td name="cross_col" style="display:none">
+													<select id=group_type>
+														<option value=x>Axis X</option>
+														<option value=y>Axis Y</option>
+														<option value=all>Both</option>
+													</select>
+												</td>
+												<td name="cross_col" style="display:none">
+													
+												</td>
+											</tr>
+											<tr id=groupfield1>
+												<td>
+													<input type="hidden" id="go1" name="go1" value="1" />
+													<select id="field1" name="field1" style="width:180px">
+														<option value=""></option>
+														{$groupFields1}
+													</select>
+												</td>
+												<td>
+													<select id="type1" name="type1" style="width:180px"> </select>						
+												</td>
+												<td name="report_col"><input type="checkbox" id="ss1" name="ss1" />&nbsp;Summary</td>
+												<td name="report_col">
+													<table cellspacing="0" cellpadding="0" border="0">
+														<tbody>
+															<tr>
+																<td align="right">
+																	<div id="picker1" class="ColorPickerDivSample" style="width: 50px;"> </div>
+																</td>
+																<td align="left"><img class="selector" src="images/selector.png" /></td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												<td name="cross_col" style="display:none">
+													<select id=group_type1 name=group_type1>
+														<option value=x>Axis X</option>
+														<option value=y>Axis Y</option>
+														<option value=all>Both</option>
+													</select>
+												</td>
+												<td name="cross_col" style="display:none">
+													
+												</td>
+											</tr>
+											<tr id=end_of_group_fields style="display:none"><td>---</td></tr>
+											<tr id=groupfield1>
+												<td colspan=4>
+													<table cellpadding="5" cellspacing="5" border="0" width="80%" name="report_col" >
+														<tbody>
+															<tr>
+																<td><input type="checkbox" {$sps} id="sps" name="sps" />&nbsp;Page summary</td>
+																<td><input type="checkbox" {$sds} id="sds" name="sds" />&nbsp;Details and summary</td>
+															</tr>
+															<tr>
+																<td colspan="2"><input type="checkbox" {$sgs} id="sgs" name="sgs" />&nbsp;Global summary</td>
+															</tr>
+														</tbody>
+													</table>			
+													<table cellpadding="5" cellspacing="5" border="0" width="100%" name="cross_col" style="display:none">
+														<tbody>
+															<tr>
+																<td><input type="checkbox" {$sum_x} id="sum_x" name="sum_x" />&nbsp;Horizontal summary</td>
+																<td><input type="checkbox" {$sum_y} id="sum_y" name="sum_y" />&nbsp;Vertical summary</td>
+																<td><input type="checkbox" {$sum_total} id="sum_total" name="sum_total" />&nbsp;Total</td>
+															</tr>
+														</tbody>
+													</table>	
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="style2" align=center id="btns">
+										<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+										<span style="position:absolute;" id="jumptospan"></span>
+										<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+										<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+										{BEGIN b_is_report_save}
+										<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+										{END b_is_report_save}															
+										{BEGIN b_is_report_name}
+										<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+										{END b_is_report_name}
+										<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+										<a id="preview" class="various fancybox.iframe" href="dreport.php?rname={$report_name_preview}&param=preview&ie=UTF-8&iframe"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		{$footer}
+        <div id="groupSelectorDiv">
+	<table width=100% cellpadding=5 cellspacing=0 border=0>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+	</table>
+</div>
+<div id="colorPickerVtd">
+	<table class="tableColorPicker" cellspacing="4" style="border:2px solid gray;"> 
+		<tr class="colorPickerVtdTr"> 
+			<td class="row1cell1">&nbsp;</td>
+			<td class="row1cell2">&nbsp;</td>
+			<td class="row1cell3">&nbsp;</td>
+			<td class="row1cell4">&nbsp;</td>
+			<td class="row1cell5">&nbsp;</td>
+			<td class="row1cell6">&nbsp;</td>
+			<td class="row1cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row2cell1">&nbsp;</td>
+			<td class="row2cell2">&nbsp;</td>
+			<td class="row2cell3">&nbsp;</td>
+			<td class="row2cell4">&nbsp;</td>
+			<td class="row2cell5">&nbsp;</td>
+			<td class="row2cell6">&nbsp;</td>
+			<td class="row2cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row3cell1">&nbsp;</td>
+			<td class="row3cell2">&nbsp;</td>
+			<td class="row3cell3">&nbsp;</td>
+			<td class="row3cell4">&nbsp;</td>
+			<td class="row3cell5">&nbsp;</td>
+			<td class="row3cell6">&nbsp;</td>
+			<td class="row3cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row4cell1">&nbsp;</td>
+			<td class="row4cell2">&nbsp;</td>
+			<td class="row4cell3">&nbsp;</td>
+			<td class="row4cell4">&nbsp;</td>
+			<td class="row4cell5">&nbsp;</td>
+			<td class="row4cell6">&nbsp;</td>
+			<td class="row4cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row5cell1">&nbsp;</td>
+			<td class="row5cell2">&nbsp;</td>
+			<td class="row5cell3">&nbsp;</td>
+			<td class="row5cell4">&nbsp;</td>
+			<td class="row5cell5">&nbsp;</td>
+			<td class="row5cell6">&nbsp;</td>
+			<td class="row5cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row6cell1">&nbsp;</td>
+			<td class="row6cell2">&nbsp;</td>
+			<td class="row6cell3">&nbsp;</td>
+			<td class="row6cell4">&nbsp;</td>
+			<td class="row6cell5">&nbsp;</td>
+			<td class="row6cell6">&nbsp;</td>
+			<td class="row6cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row7cell1">&nbsp;</td>
+			<td class="row7cell2">&nbsp;</td>
+			<td class="row7cell3">&nbsp;</td>
+			<td class="row7cell4">&nbsp;</td>
+			<td class="row7cell5">&nbsp;</td>
+			<td class="row7cell6">&nbsp;</td>
+			<td class="row7cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row8cell1">&nbsp;</td>
+			<td class="row8cell2">&nbsp;</td>
+			<td class="row8cell3">&nbsp;</td>
+			<td class="row8cell4">&nbsp;</td>
+			<td class="row8cell5">&nbsp;</td>
+			<td class="row8cell6">&nbsp;</td>
+			<td class="row8cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row9cell1">&nbsp;</td>
+			<td class="row9cell2">&nbsp;</td>
+			<td class="row9cell3">&nbsp;</td>
+			<td class="row9cell4">&nbsp;</td>
+			<td class="row9cell5">&nbsp;</td>
+			<td class="row9cell6">&nbsp;</td>
+			<td class="row9cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row0cell1">&nbsp;</td>
+			<td class="row0cell2">&nbsp;</td>
+			<td class="row0cell3">&nbsp;</td>
+			<td class="row0cell4">&nbsp;</td>
+			<td class="row0cell5">&nbsp;</td>
+			<td class="row0cell6">&nbsp;</td>
+			<td class="row0cell7">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
+		</tr>
+	</table>
+</div>		
+       
+        <style>
+{literal}
+	div.action { position: absolute;  width: 170px; padding: 0; font-size:11px}
+	td {font-size:11px}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=0 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Where Condition</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Group fields</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Totals</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Miscellaneous</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Sort fields</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Style Editor</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;">Report Settings</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row10 style="cursor:pointer;padding:5px;;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row11 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+        <div id="alert">		
+		</div>
+
+	
+        
+    </body>
+</html>

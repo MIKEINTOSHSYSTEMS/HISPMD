@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Web Reports and Charts</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+		<style>
+			.div_list_report{overflow-y:auto;{$css_height_report}border:1px solid #E2DEDE;}
+			.div_list_chart{overflow-y:auto;{$css_height_chart}border:1px solid #E2DEDE;}
+		</style>
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath}">
+        {$b_includes}
+        
+{$header}
+	<div class="rnr-page">
+		<div class="rnr-top">
+						<div class="rnr-s-1 {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style2"  align=center>
+						Web Reports and Charts
+					</div>
+					<div class="style1 rnr-b-wrapper">
+						<div class="rnr-s-fields {$wr_pagestylepath}">
+							<div class="rnr-c rnr-cv">
+								<div class="style1">
+									{$login_mess}
+								</div>
+								<div class="style1">
+									<table class="fieldGrid">
+										<tr>
+																							<td id="stl" style="width:400px">Shared</td>
+												<td id="ptl" style="width:400px">My Reports</td>
+										</tr>
+										<tr>
+																							<td>
+													<div class="div_list_report">{$shared_reports}</div>
+												</td>
+												<td>
+													<div class="div_list_report">{$private_reports}</div>
+												</td>
+										</tr>
+										<tr>
+																						<td id="stl">Shared</td>
+											<td id="ptl">My Charts</td>
+										</tr>
+										<tr>
+																							<td>
+													<div class="div_list_chart">{$shared_charts}</div>
+												</td>
+												<td>
+													<div class="div_list_chart">{$private_charts}</div>
+												</td>
+										</tr>
+									</table>
+								</div>
+								<div id="sbtns" class="style2"  align=center>
+									{$create_report_chart}
+									{$admin_page}
+									{$users_list_page}
+									{$admin_sql}
+									{$back_to_app}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+							
+{$footer}
+        <iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+		<div id="alert" />
+    </body>
+</html>

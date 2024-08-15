@@ -1,0 +1,9 @@
+.ColorPickerDivSample 	{ border-color: #999 -moz-use-text-color #999 #999; border-style:solid none solid solid; border-width: 1px; font: 8pt; font-family: Tahoma,Verdana,Arial,Helvetica; height:19px; padding:2px 5px; text-align:left; width:100px; }
+#aligntable { width: 100%; }
+#aligntable td 			{ padding: 0px; width: 20px; height: 20px; }
+#aligntable img 			{margin-left:5px;}
+.selector 				{ margin-top:1px;}
+.selectorfamily			{ margin-top:1px;}
+.selectorfontsize		{ margin-top:1px;}
+.selectorpadding		{ margin-top:1px;}
+.selectorApply 			{ margin-top:1px;}

@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+		<title>Chart: Appearance</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath}">
+        {$b_includes}
+	{$header}
+    <div class="rnr-page">
+		<div class="rnr-top">
+			<div class="rnr-s-1 {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style2" align=center>
+						Chart: Appearance{$chart_title}{$chart_table}
+					</div>
+					<div class="style1 rnr-b-wrapper">
+						<div class="rnr-s-fields {$wr_pagestylepath}">
+							<div class="rnr-c rnr-cv">
+								<div class="style1">	
+								<table class="fieldGrid">
+									<tr>
+										<td></td>
+										<td width="150px" style="text-align:left">
+											<input type="checkbox" {$sgrid_checked} id="sgrid" name="sgrid" /> Show grid
+										</td>
+										<td width="150px">
+											<table cellspacing="0" cellpadding="0" border="0">
+												<tbody>
+													<tr>
+														<td align="right">
+															<div id="picker12" class="ColorPickerDivSample" style="width: 115px;">Grid Color</div>
+														</td>
+														<td align="left"><img class="selector" src="images/selector.png" /></td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+										<td width="200px">
+											<input type="checkbox" {$slegend_checked} id="slegend" name="slegend" /> Show legend
+										</td>
+										<td>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<input type="checkbox" {$sname_checked} id="sname" name="sname" /> Show names
+										</td>
+										<td>
+											<table cellspacing="0" cellpadding="0" border="0">
+												<tbody>
+													<tr>
+														<td align="right">
+															<div id="picker5" class="ColorPickerDivSample" style="width: 115px;">Names Color</div>
+														</td>
+														<td align="left"><img class="selector" src="images/selector.png" /></td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+										<td>
+											<input type="checkbox" {$scur_checked} id="scur" name="scur" /> Format as currency
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<input type="checkbox" {$sval_checked} id="sval" name="sval" /> Show values
+										</td>
+										<td>
+											<table cellspacing="0" cellpadding="0" border="0">
+												<tbody>
+													<tr>
+														<td align="right">
+															<div id="picker6" class="ColorPickerDivSample" style="width: 115px;">Values Color</div>
+														</td>
+														<td align="left"><img class="selector" src="images/selector.png" /></td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+										<td>
+											Decimal points&nbsp;&nbsp;<input type="text" value="{$dec_val}" id="dec" name="dec" size="1" />
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+										  <input type="checkbox" {$sanim_checked} id="sanim" name="sanim" /> Use animation
+										</td>
+										<td>
+										{$aqua}
+										</td>
+										<td>
+										{$cview}
+										</td>				
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+										{$chart_is_3d}
+										</td>
+										<td>
+										{$chart_is_stacked}
+										</td>
+										<td>
+										{$line}
+										</td>
+										<td id="td_stacked">
+										{$stacked}
+										</td>
+										<td></td>
+									</tr>
+									<tr {$tr_funnel}>
+										<td></td>
+										{$funnel}
+											Accumulation appearance <select name="accumulstyle" id="accumulstyle">
+											<option value="0">Flat</option>
+											<option value="1">Cone</option>
+											<option value="2">Pyramid</option>
+										  </select>
+										</td>
+										{$funnel}
+											<input type="checkbox" {$accumulinvert_checked} id="accumulinvert" name="accumulinvert" /> Accumulation inverted
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<input type="checkbox" {$autoupdate_checked} id="autoupdate" name="autoupdate" /> Autoupdate
+										</td>
+										<td>
+											Autoupdate interval (min) <input size=2 type="text" id="update_interval" name="update_interval" value="{$update_interval_val}"/>
+										</td>
+										<td colspan=2>
+										{$gauge}
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+										  <input type="checkbox" {$cscroll_checked} id="cscroll" name="cscroll" /> Chart scrolling
+										</td>
+										<td colspan=3>
+											Max bars on screen <input size=2 type="text" id="maxbarscroll" name="maxbarscroll" value="{$maxbarscroll_val}" />
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td style="border:0px" colspan=4>
+											<table cellpadding="5" cellspacing="5" border="0" width="100%">
+												<tbody>
+													<tr>
+														<td style="padding-bottom:5px">
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker7" class="ColorPickerDivSample" style="width: 180px;">Chart Background Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+														<td style="padding-bottom:5px">
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker13" class="ColorPickerDivSample" style="width: 120px;">X-Axis Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>								
+														<td><input type="checkbox" {$slog_checked} id="slog" name="slog" /> Logarithmic Y-Axis</td>
+													</tr>
+													<tr>
+														<td style="padding-bottom:5px">
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker8" class="ColorPickerDivSample" style="width: 180px;">Data Plot Background Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+														<td style="padding-bottom:5px">
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker14" class="ColorPickerDivSample" style="width: 120px;">Y-Axis Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>								
+														<td><input type="checkbox" {$saxes_checked} id="saxes" name="saxes" /> Multiple Y-Axes</td>
+													</tr>
+													<tr>
+														<td style="padding-bottom:5px">
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker9" class="ColorPickerDivSample" style="width: 180px;">Border Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+														<td>
+														</td>				
+														<td>&nbsp;</td>
+													</tr>
+												</tbody>
+											</table>			
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td style="border:0px" colspan=4>
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tbody>
+													<tr>
+														<td style="padding-bottom:5px">Header</td>
+														<td style="padding-bottom:5px"><input type="text" value="{$head_val}" id="head" name="head" style="width: 420px;" /></td>
+														<td style="padding-bottom:5px">
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker10" class="ColorPickerDivSample" style="width: 50px;">Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>									
+														</td>
+													</tr>
+													<tr>
+														<td>Footer</td>
+														<td><input type="text" value="{$foot_val}" id="foot" name="foot" style="width: 420px;" /></td>
+														<td>
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr>
+																		<td align="right">
+																			<div id="picker11" class="ColorPickerDivSample" style="width: 50px;">Color</div>
+																		</td>
+																		<td align="left"><img class="selector" src="images/selector.png" /></td>
+																	</tr>
+																</tbody>
+															</table>									
+														</td>
+													</tr>						
+												</tbody>
+											</table>			
+										</td>
+										<td></td>
+									</tr>
+								</table>
+								</div>
+								<div id="btns" class="style2" align=center>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+									<span style="position:absolute;" id="jumptospan"></span>
+									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+									{BEGIN b_is_chart_save}
+									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+									{END b_is_chart_save}															
+									{BEGIN b_is_chart_name}
+									<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+									{END b_is_chart_name}	
+									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+									<a id="preview" class="various fancybox.iframe" href="dchart_preview.php?cname={$chart_name_preview}&ie=UTF-8&iframe"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{$footer}
+		
+        <div id="groupSelectorDiv">
+	<table width=100% cellpadding=5 cellspacing=0 border=0>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+	</table>
+</div>
+<div id="colorPickerVtd">
+	<table class="tableColorPicker" cellspacing="4" style="border:2px solid gray;"> 
+		<tr class="colorPickerVtdTr"> 
+			<td class="row1cell1">&nbsp;</td>
+			<td class="row1cell2">&nbsp;</td>
+			<td class="row1cell3">&nbsp;</td>
+			<td class="row1cell4">&nbsp;</td>
+			<td class="row1cell5">&nbsp;</td>
+			<td class="row1cell6">&nbsp;</td>
+			<td class="row1cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row2cell1">&nbsp;</td>
+			<td class="row2cell2">&nbsp;</td>
+			<td class="row2cell3">&nbsp;</td>
+			<td class="row2cell4">&nbsp;</td>
+			<td class="row2cell5">&nbsp;</td>
+			<td class="row2cell6">&nbsp;</td>
+			<td class="row2cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row3cell1">&nbsp;</td>
+			<td class="row3cell2">&nbsp;</td>
+			<td class="row3cell3">&nbsp;</td>
+			<td class="row3cell4">&nbsp;</td>
+			<td class="row3cell5">&nbsp;</td>
+			<td class="row3cell6">&nbsp;</td>
+			<td class="row3cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row4cell1">&nbsp;</td>
+			<td class="row4cell2">&nbsp;</td>
+			<td class="row4cell3">&nbsp;</td>
+			<td class="row4cell4">&nbsp;</td>
+			<td class="row4cell5">&nbsp;</td>
+			<td class="row4cell6">&nbsp;</td>
+			<td class="row4cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row5cell1">&nbsp;</td>
+			<td class="row5cell2">&nbsp;</td>
+			<td class="row5cell3">&nbsp;</td>
+			<td class="row5cell4">&nbsp;</td>
+			<td class="row5cell5">&nbsp;</td>
+			<td class="row5cell6">&nbsp;</td>
+			<td class="row5cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row6cell1">&nbsp;</td>
+			<td class="row6cell2">&nbsp;</td>
+			<td class="row6cell3">&nbsp;</td>
+			<td class="row6cell4">&nbsp;</td>
+			<td class="row6cell5">&nbsp;</td>
+			<td class="row6cell6">&nbsp;</td>
+			<td class="row6cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row7cell1">&nbsp;</td>
+			<td class="row7cell2">&nbsp;</td>
+			<td class="row7cell3">&nbsp;</td>
+			<td class="row7cell4">&nbsp;</td>
+			<td class="row7cell5">&nbsp;</td>
+			<td class="row7cell6">&nbsp;</td>
+			<td class="row7cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row8cell1">&nbsp;</td>
+			<td class="row8cell2">&nbsp;</td>
+			<td class="row8cell3">&nbsp;</td>
+			<td class="row8cell4">&nbsp;</td>
+			<td class="row8cell5">&nbsp;</td>
+			<td class="row8cell6">&nbsp;</td>
+			<td class="row8cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row9cell1">&nbsp;</td>
+			<td class="row9cell2">&nbsp;</td>
+			<td class="row9cell3">&nbsp;</td>
+			<td class="row9cell4">&nbsp;</td>
+			<td class="row9cell5">&nbsp;</td>
+			<td class="row9cell6">&nbsp;</td>
+			<td class="row9cell7">&nbsp;</td>
+		</tr>
+		<tr class="colorPickerVtdTr">
+			<td class="row0cell1">&nbsp;</td>
+			<td class="row0cell2">&nbsp;</td>
+			<td class="row0cell3">&nbsp;</td>
+			<td class="row0cell4">&nbsp;</td>
+			<td class="row0cell5">&nbsp;</td>
+			<td class="row0cell6">&nbsp;</td>
+			<td class="row0cell7">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
+		</tr>
+	</table>
+</div>		
+        <style>
+{literal}
+	div.action { position: absolute; width: 170px; padding: 0;font-size:11px }
+	td {font-size:11px;}
+{/literal}
+</style>
+<iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+<div id="menujump" class=action style="display:none;position:absolute;">
+	<table width=100% cellpadding=5 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Group By</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Type</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Parameters</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Appearance</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Chart Settings</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+	</table>
+</div>
+	<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>	
+		<div id="alert">		
+		</div>
+    </body>
+</html>

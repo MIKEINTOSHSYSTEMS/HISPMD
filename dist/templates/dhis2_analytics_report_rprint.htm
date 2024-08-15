@@ -1,0 +1,315 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-rprint" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Analytics_Report rprint}</h2>
+	 
+		{BEGIN printtabheader}
+<span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
+{$printtabheader_text}
+</span>
+{END printtabheader}
+		</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+	.rnr-report {
+		width: 100%;
+	}
+			td.group_1{
+			background-color: #388E8E;
+		}
+		td.nbgroup_1{
+			background-color: #388E8E;
+		}
+		td.header_1 {
+			background-color: #388E8E; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_2{
+			background-color: #ADD8E6;
+		}
+		td.nbgroup_2{
+			background-color: #ADD8E6;
+		}
+		td.header_2 {
+			background-color: #ADD8E6; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+		td.blackshade {
+		font-size: 120%;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	</style>
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+						
+
+
+<table class="table table-condensed table-striped table-hover table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<tbody>
+	{BEGIN grid_row}
+				<!--  group headers -->
+			{BEGIN dx_firstnewgroup}
+				<tr class="group-headers">
+										<td class="blackshade {$fieldclass_dx}">{$label DHIS2_Analytics_Report dx }</td>
+														<td class="blackshade {$fieldclass_ou}">{$label DHIS2_Analytics_Report ou }</td>
+																												
+																								<td class="blackshade {$fieldclass_Period}">{$label DHIS2_Analytics_Report Period }</td>
+														<td class="blackshade {$fieldclass_pe}">{$label DHIS2_Analytics_Report pe }</td>
+														<td class="blackshade {$fieldclass_Value}">{$label DHIS2_Analytics_Report Value }</td>
+									</tr>
+		
+											<tr class="group-spliter-1 group-spliter-2 " {$rowattrs}>
+													<td class="header_1">
+				{$xdx_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field" {$item_report_group_field} data-pageid="{$pageid}" data-field="dx" data-fieldname="dx" >
+{$dx_grval}
+</span>							</td>
+															<td class="header_2">
+				{$xou_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field1" {$item_report_group_field1} data-pageid="{$pageid}" data-field="ou" data-fieldname="ou" >
+{$ou_grval}
+</span>							</td>
+								<!-- data -->
+
+																											<td class="data {$fieldclass_Period}">
+								{$xPeriod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="Period" data-fieldname="Period" >
+{$Period_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_pe}">
+								{$xpe_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="pe" data-fieldname="pe" >
+{$pe_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_Value}">
+								{$xValue_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="Value" data-fieldname="Value" >
+{$Value_value}
+</span>				
+							</td>
+					
+		</tr>
+		{END dx_firstnewgroup}
+			{BEGIN ou_firstnewgroup}
+		
+						<tr class="group-spliter-2 " {$rowattrs}>
+													<td class="group_1">
+									&nbsp;
+							</td>
+															<td class="header_2">
+				{$xou_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field1" {$item_report_group_field1} data-pageid="{$pageid}" data-field="ou" data-fieldname="ou" >
+{$ou_grval}
+</span>							</td>
+								<!-- data -->
+
+																											<td class="data {$fieldclass_Period}">
+								{$xPeriod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="Period" data-fieldname="Period" >
+{$Period_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_pe}">
+								{$xpe_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="pe" data-fieldname="pe" >
+{$pe_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_Value}">
+								{$xValue_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="Value" data-fieldname="Value" >
+{$Value_value}
+</span>				
+							</td>
+					
+		</tr>
+		{END ou_firstnewgroup}
+	
+		{BEGIN nonewgroup}
+		<tr>
+											<td class="group_1">
+					&nbsp;
+					</td>
+											<td class="group_2">
+					&nbsp;
+					</td>
+		
+																										<td class="data {$fieldclass_Period}">
+		{$xPeriod_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="Period" data-fieldname="Period" >
+{$Period_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_pe}">
+		{$xpe_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="pe" data-fieldname="pe" >
+{$pe_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_Value}">
+		{$xValue_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="Value" data-fieldname="Value" >
+{$Value_value}
+</span>		
+		</td>
+							</tr>
+	{END nonewgroup}
+	
+							<!--  group summary -->
+
+	{BEGIN ou_endgroup}
+		<tr class="summaryrow"  >
+										<td class="group_1" style="border-top: none;"></td>
+							
+																	<td  class="group_2" colspan=4 >
+				Summary for&nbsp;{$label DHIS2_Analytics_Report ou }&nbsp;{$ou_grval}
+					- <span class="summary-2" data-type="summary">{$groupou_total_cnt}
+					</span> records total			</td>
+																														</tr>
+
+	
+	
+	
+	
+	{END ou_endgroup}
+									<!--  group summary -->
+
+	{BEGIN dx_endgroup}
+		<tr class="summaryrow"  >
+			
+										<td  class="group_1" colspan=5 >
+				Summary for&nbsp;{$label DHIS2_Analytics_Report dx }&nbsp;{$dx_grval}
+					- <span class="summary-1" data-type="summary">{$groupdx_total_cnt}
+					</span> records total			</td>
+																																					</tr>
+
+	
+	
+	
+	
+	{END dx_endgroup}
+				{END grid_row}
+
+
+			{BEGIN summary_header}
+		<tr class="summary-header">
+						<td class="blackshade {$fieldclass_dx}">{$label DHIS2_Analytics_Report dx }</td>
+						<td class="blackshade {$fieldclass_ou}">{$label DHIS2_Analytics_Report ou }</td>
+						<td class="blackshade {$fieldclass_Period}">{$label DHIS2_Analytics_Report Period }</td>
+						<td class="blackshade {$fieldclass_pe}">{$label DHIS2_Analytics_Report pe }</td>
+						<td class="blackshade {$fieldclass_Value}">{$label DHIS2_Analytics_Report Value }</td>
+					</tr>
+		{END summary_header}
+	
+	
+
+
+    
+    {BEGIN page_summary}
+    <!-- page summary-->
+    <tr class="summaryrow summary-page">
+        <td class="pagesummary" colspan="5">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
+    </tr>
+	
+	
+	
+	    {END page_summary}
+
+	<!-- global summary-->
+	{BEGIN global_summary}
+    <tr class="summaryrow summary-global">
+        <td class="globalsummary" colspan="5">
+            Global summary {$global_total_cnt} - records total        </td>
+    </tr>
+
+	
+	
+	
+		{END global_summary}
+	
+
+	</tbody>
+</table>			</div>
+{END grid_block}									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

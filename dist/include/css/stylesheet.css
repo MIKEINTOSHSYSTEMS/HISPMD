@@ -1,0 +1,78 @@
+#topleft, #topcenter, #topright,
+#middleleft, #middlecenter, #middleright,
+#bottomleft, #bottomcenter, #bottomright 	{ border: 1px solid #000; cursor: pointer; height: 30px; margin: 2px; font-size: 8px; padding: 0; text-align:center; width: 30px; }
+#colorSelector 								{ float: none; }
+
+/* ColorPicker
+------------------------------------------------------- */
+.colorpicker { width: 300px; height: 176px; overflow: hidden; position: absolute; background: url(colorpicker_img/colorpicker_background.png); font-family: Arial, Helvetica, sans-serif; display: none; z-index: 200; }
+#colorPicker { display:none; height:200px; position:absolute; width:300px; z-index:1000; }
+  #colorPicker td {	-moz-user-select:none; cursor:pointer; height:10px; text-align:center; vertical-align:middle; width:15px; }
+.colorPickerVtdTr td{width: 15px; height: 15px; }
+.tableColorPicker {background-color: #aaa;}
+.ColorPickerNoColor {background: none; width: 105px; height: 15px; text-align: center;}
+.row1cell1 {background-color: #FFFFFF;} .row1cell2 {background-color: #EEEEEE;} .row1cell3 {background-color: #CCCCCC;} .row1cell4 {background-color: #C0C0C0;} .row1cell5 {background-color: #ADADAD;} .row1cell6 {background-color: #424242;} .row1cell7 {background-color: #343434;}
+.row2cell1 {background-color: #FFDDFF;} .row2cell2 {background-color: #FFCCCC;} .row2cell3 {background-color: #FF4242;} .row2cell4 {background-color: #FF0000;} .row2cell5 {background-color: #CC0000;} .row2cell6 {background-color: #990000;} .row2cell7 {background-color: #420000;}
+.row3cell1 {background-color: #FFDE99;} .row3cell2 {background-color: #FFCC99;} .row3cell3 {background-color: #FF9942;} .row3cell4 {background-color: #FF9900;} .row3cell5 {background-color: #FF4200;} .row3cell6 {background-color: #CC4200;} .row3cell7 {background-color: #993300;}
+.row4cell1 {background-color: #FFFFDD;} .row4cell2 {background-color: #FFFF99;} .row4cell3 {background-color: #FFFF42;} .row4cell4 {background-color: #FFCC42;} .row4cell5 {background-color: #FFCC33;} .row4cell6 {background-color: #CC9933;} .row4cell7 {background-color: #994233;}
+.row5cell1 {background-color: #FFFFEE;} .row5cell2 {background-color: #FFFFCC;} .row5cell3 {background-color: #FFFF33;} .row5cell4 {background-color: #FFFF00;} .row5cell5 {background-color: #FFCC00;} .row5cell6 {background-color: #999900;} .row5cell7 {background-color: #424200;}
+.row6cell1 {background-color: #99FFCC;} .row6cell2 {background-color: #99FF99;} .row6cell3 {background-color: #42FF99;} .row6cell4 {background-color: #33FF33;} .row6cell5 {background-color: #33CC00;} .row6cell6 {background-color: #009900;} .row6cell7 {background-color: #004200;}
+.row7cell1 {background-color: #DDFFFF;} .row7cell2 {background-color: #99FFFF;} .row7cell3 {background-color: #33FFFF;} .row7cell4 {background-color: #42CCCC;} .row7cell5 {background-color: #00CCCC;} .row7cell6 {background-color: #339999;} .row7cell7 {background-color: #334242;}
+.row8cell1 {background-color: #EEFFFF;} .row8cell2 {background-color: #CCFFFF;} .row8cell3 {background-color: #42FFFF;} .row8cell4 {background-color: #33CCFF;} .row8cell5 {background-color: #3342FF;} .row8cell6 {background-color: #3333FF;} .row8cell7 {background-color: #000099;}
+.row9cell1 {background-color: #CCEEFF;} .row9cell2 {background-color: #CCCCFF;} .row9cell3 {background-color: #9999FF;} .row9cell4 {background-color: #4242CC;} .row9cell5 {background-color: #4233FF;} .row9cell6 {background-color: #4200CC;} .row9cell7 {background-color: #333399;}
+.row0cell1 {background-color: #FFEEFF;} .row0cell2 {background-color: #FFCCFF;} .row0cell3 {background-color: #FF99FF;} .row0cell4 {background-color: #CC42CC;} .row0cell5 {background-color: #CC33CC;} .row0cell6 {background-color: #993399;} .row0cell7 {background-color: #423342;}
+/*
+ *---------------------------------------------- */
+.colorSelector 	{ position: relative; width: 36px; height: 36px; background: url(colorpicker_img/select.png); }
+.colorSelector div { position: absolute; top: 3px; left: 3px; width: 30px; height: 30px; background: url(colorpicker_img/select.png) center; }
+
+#text, #name	{ font: 10px Verdana; text-align: center; }
+#legend			{ width: 100%; }
+	#legend td 	{ cursor: pointer; padding: 1.5pt; border: 1.0pt solid #ccc; }
+
+#params td		{ text-align: center; vertical-align: middle; font-size: 10px; }
+#save			{ cursor: pointer; color: red; text-align: center; border: 2px solid red; width: 100px; }
+#groupSelectorDiv	{ display: none; width: 60px; position: absolute; z-index: 150; border: 1px solid #999; }
+#groupSelectorDiv table { background-color:#F4F7FB;border: solid 1px blue; cursor: pointer;}
+#groupSelectorDiv div	{ background: #F9F9F9; font: 12px; font-family: Tahoma,Verdana,Arial,Helvetica; padding: 0; }
+#groupSelectorDiv td { padding: 1px 0px 1px 3px; }
+.SelectorDiv	{ width: 100px; position: absolute; z-index: 150; }
+.SelectorDiv table { background-color:#F4F7FB;border: solid 1px blue; cursor: pointer; padding: 0;}
+.SelectorDiv table tr:hover{ background-color: #92BEEB; }
+.SelectorDiv table td{ padding: 0px; }
+.SelectorDiv div	{ background: #F9F9F9; font: 8px; font-family: Tahoma,Verdana,Arial,Helvetica; padding: 0; }
+#colorPickerVtd 		{ display: none; position: absolute; z-index: 150; }
+a:focus 		{ outline: none; }
+#panel 			{ display: none; width: 870px; height: 190px; position: absolute; top: 0; left: 0; z-index: 100; }
+.groupSelector    { cursor: pointer; font-size: 15px; }
+#all			{ display: none; }
+.groupSelect	 { cursor: pointer; padding: 3px; font-size: 8pt;  text-align: left; font-family: Tahoma,Verdana,Arial,Helvetica; background: #ddeedd; }
+#paneldark 		{ display: none; background: #000; width: 870px; height: 190px; position: absolute; opacity: 0.4; top: 0; left: 0;  text-align: center; z-index: 20; }
+#panelmaindiv	{ display: none; background: #ddeedd; width: 870px; height: 190px; position: absolute; opacity: 0.8; top: 0; left: 0; z-index: 30; border: 2px solid #45dfe4; }
+#panelclose		{ display: none; background: #fff; width: 20px; height: 15px; position: absolute; opacity: 0.8; top: 2px; left: 852px; z-index: 30; cursor: pointer; }
+.slide 			{ margin: 0; padding: 0; border-top: solid 4px #422410; background: url(images/btn-slide.gif) no-repeat center top; }
+.btn-slide 		{ background: url(images/white-arrow.gif) no-repeat right -50px; text-align: center; width: 144px; height: 31px; padding: 10px 10px 0 0; margin: 0 auto; display: block; font: bold 120%/100% Arial, Helvetica, sans-serif;  color: #fff; text-decoration: none; }
+.active 		{ background-position: right 12px; }
+
+/*
+ *---------------------------------------------- */
+
+body 				{ padding: 10px; background: #E2F2E2; color: #333; }
+.ColorPickerDivSample 	{ border-color: #999 -moz-use-text-color #999 #999; border-style:solid none solid solid; border-width: 1px; font: 8pt; font-family: Tahoma,Verdana,Arial,Helvetica; height:13px; padding:2px 5px; text-align:left; width:100px; }
+.selector 				{ border: 1px solid #999; cursor: pointer; }
+.selectorfamily			{ border: 1px solid #999; cursor: pointer; }
+.selectorfontsize		{ border: 1px solid #999; cursor: pointer; }
+.selectorpadding		{ border: 1px solid #999; cursor: pointer; }
+.selectorApply 			{ border: 1px solid #999; cursor: pointer; }
+.myDialog				{ position: absolute; }
+#fontfamilyselect table td	{ padding: 1px 0px 1px 3px; text-align: left; font-size: 11px; }
+#fontsizeselect table	td	{ padding: 1px 0px 1px 3px; text-align: left; font-size: 11px; }
+#paddingselect table td	{ padding: 1px 0px 1px 3px; text-align: left; font-size: 11px; }
+#fontfamily, #fontsize, #padding { overflow: hidden; }
+#aligntable { width: 100%; }
+#aligntable td 			{ padding: 0px; width: 25px; height: 25px; }
+#aligntable img			{ padding: 0px; }
+
+.languages {
+	padding-bottom: 10px;
+}

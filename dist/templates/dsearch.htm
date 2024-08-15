@@ -1,0 +1,86 @@
+<!doctype html>
+<html {$html_attrs}>
+<head>
+<title>{$reportTitle}: Advanced search page</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link REL="stylesheet" href="styles/default.css" type="text/css">
+<link REL="stylesheet" href="styles/{$wr_pagestylepath}/style.css" type="text/css">
+<link rel="stylesheet" href="include/css/stylesheet.css" type="text/css" media="screen">
+</head>
+<body class="{$wr_pagestylepath}">
+{BEGIN body}
+{$header}
+{BEGIN contents_block}
+		<div class="rnr-page dreport">
+			<div class="rnr-top ">
+				<div class="rnr-s-1 {$wr_pagestylepath}">
+					<div class="rnr-c rnr-cv">
+						<div class="style2" align=center>
+							{$reportTitle} - Advanced search
+						</div>
+						{BEGIN conditions_block}
+						<div  class="rnr-brickcontents style1 rnr-b-srchconditions ">
+							<center>
+							<span class=fieldname>Search for:</span>	
+							<input type="radio" class="rnr-radio-button" id="all_checkbox" name="type" {$all_checkbox}> All conditions
+							&nbsp;&nbsp;&nbsp;
+							<input type="radio" class="rnr-radio-button" id="any_checkbox" name="type" {$any_checkbox}> Any condition
+							</center>
+						</div>
+						{END conditions_block}
+						<div class="style1 rnr-b-wrapper">
+							<div class="rnr-s-fields {$wr_pagestylepath}">
+								<div class="rnr-c rnr-cv">
+									<div class="style1">
+										<table class="fieldGrid">
+											<tr>
+												<td>&nbsp;</td>
+												<td>NOT</td>
+												<td colspan=3>&nbsp; </td>
+											</tr>
+											{BEGIN page_order_fields}
+											<tr class="">
+												<td colspan=5>
+												{$fieldblock}
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													{$label}
+												</td>
+												<td>
+													<input type="checkbox" {$notbox}>
+												</td>
+												<td>{$searchtype}</td>
+												<td>{$editcontrol}</td>
+												<td>
+													<span {$second_id}>{$editcontrol1}</span>
+												</td>
+											</tr>
+											{END page_order_fields}
+										</table>
+									</div>
+									<div id="btns" class="style2" align=center>
+										{BEGIN search_button}
+										<a href="#" class="rnr-button" id="searchButton1" {$searchbutton_attrs}>Search</a>
+										{END search_button}
+										{BEGIN reset_button}
+										<a href="#" class="rnr-button" id="resetButton1" {$resetbutton_attrs}>Reset</a>
+										{END reset_button}
+										{BEGIN back_button}
+										<a href="#" class="rnr-button" id="backButton1" {$backbutton_attrs}>Back to list</a>
+										{END back_button}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{END contents_block}
+{$footer}
+{END body}
+</body>
+</html>

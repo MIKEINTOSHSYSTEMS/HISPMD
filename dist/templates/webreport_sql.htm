@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <head>
+        <title>Admin Area</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="text/css" href="styles/default.css" rel="stylesheet">
+		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
+        {$h_includes}
+    </head>
+    <body class="{$wr_pagestylepath}">
+        {$b_includes}
+	{$header}
+    <div class="rnr-page">
+		<div class="rnr-top">
+			<div class="rnr-s-1 {$wr_pagestylepath}">
+				<div class="rnr-c rnr-cv">
+					<div class="style2" align=center>
+						Admin area: Custom SQL
+					</div>
+					<div class="style1 rnr-b-wrapper">
+						<div class="rnr-s-fields {$wr_pagestylepath}">
+							<div class="rnr-c rnr-cv">
+								<div class="style1">
+									<table class="fieldGrid">		
+										<tr>
+											<td></td>
+											<td align=center>
+													{$sql_list}
+											</td>
+											<td></td>
+										</tr>     
+										<tr>
+											<td></td>
+											<td align="center">
+												<a id="addsql" name="addsql" class="rnr-button" href="#">New query</a>
+												<a id="a_addsql" class="various fancybox.iframe" href="web_query.php?sql=add&check=yes&ie=UTF-8&iframe"></a>
+												<a id="editsql" name="editsql" class="rnr-button" href="#">Edit</a>
+												<a id="a_editsql" class="various fancybox.iframe" href="web_query.php?sql=edit&ie=UTF-8&iframe"></a>
+												<a id="deletesql" name="deletesql" class="rnr-button" href="#">Delete</a>
+												<a id="resultsql" name="resultsql" class="rnr-button" href="#">View results</a>
+												<a id="a_resultsql" class="various fancybox.iframe" href="web_query.php?sql=result&ie=UTF-8&iframe"></a>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align=center>
+													<textarea id="sql_content" style="background-color:white;width:500px;height:60px;text-align:left;font-weight:normal;font-size:10pt;padding:5px;" disabled></textarea>
+											</td>
+											<td></td>
+										</tr>     
+									</table>
+								</div>
+								<div id="btns" class="style2" align=center>
+									<td id="btns" align="center">
+										<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back to menu</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	{$footer}
+		<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
+		<div id="alert">
+		</div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+Import into public.dhis2_periods
+8/15/2024 6:26:44 PM
+
+28 out of 28 records processed successfully.
+28 records added.
+0 records updated.

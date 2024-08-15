@@ -1,0 +1,45 @@
+
+<a {$item##@menu.id##_menulink_attrs} title="{$item##@menu.id##_tooltip}" 
+	##if @top## 
+		data-menu-top
+	##endif##
+	##if @horizontal##
+		data-menu-h
+	##else##
+		data-menu-v
+	##endif##
+	##if @treelike## 
+		data-menu-inline
+	##endif##
+	data-menu-link
+>
+	<span class="
+	r-menu-link
+	##if @top && !@horizontal## 
+		r-menu-expanded
+	##endif##
+	"> 
+		<span class="r-menu-title">
+		{$item##@menu.id##_icon} {$item##@menu.id##_title}
+		</span>
+		##if hasMenuChildren(@menu.id)##
+		{BEGIN item##@menu.id##_expand_icon}
+		<span class="r-menu-expand-icon 
+		##if @horizontal && @top##
+		glyphicon glyphicon-triangle-bottom 
+		##else##
+			##if @treelike##
+		fa fa-angle-left
+			##else##
+		glyphicon glyphicon-triangle-right
+			##endif##
+		##endif##
+		"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item##@menu.id##_expand_icon}
+		##endif##
+	</span>
+	##if @top && !@horizontal##
+	<span class="r-menu-collapsed">{$item##@menu.id##_collicon}{$item##@menu.id##_firstcap}</span>
+	##endif##
+</a>
