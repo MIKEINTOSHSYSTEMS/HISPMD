@@ -719,7 +719,7 @@ $cKeyFields = $loginKeyFields;
 $globalSettings["usersDatasourceTable"] = "public.hispmdusers";
 
 
-$globalSettings["jwtSecret"] = "ezz9sdGVcxc4JrLT3TWr";
+$globalSettings["jwtSecret"] = "DBF7djMrYUhUrssFTEB2";
 
 
 $arrCustomPages = array();
@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "479_1723732478";
+$projectBuildKey = "481_1723732478";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "479";
+$projectBuildNumber = "481";
 
 $mlang_messages = array();
 $mlang_charsets = array();

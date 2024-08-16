@@ -7,6 +7,8 @@
 
 <!--
 <meta http-equiv=refresh content="0;url=./app/menu.php">
+<meta http-equiv=refresh content="0;url=./app/start.php">
+<meta http-equiv=refresh content="0;url=./dist/start.php">
 -->
 <meta http-equiv=refresh content="0;url=./app/start.php">
 <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate, max-age=0" />
