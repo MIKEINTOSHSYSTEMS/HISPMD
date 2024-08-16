@@ -196,6 +196,9 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"text":"","hidden":"{$item_hide_changepassword_link}"},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel _global username }","bold":true},{"text":{$username_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

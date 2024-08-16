@@ -1,0 +1,56 @@
+[data-page=".global_register"][data-itemid="back_to_login"] > .btn {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > * > select {
+  color: #00274c;
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"][data-page=".global_register"][data-itemid="integrated_confirm_password"] > * > * > * > select {
+  color: #00274c;
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="edit_field_label"][data-page=".global_register"][data-itemid="edit_field_label"][data-page=".global_register"][data-itemid="edit_field_label"][data-page=".global_register"][data-itemid="edit_field_label"] {
+  color: #00274c;
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="edit_field_label1"][data-page=".global_register"][data-itemid="edit_field_label1"][data-page=".global_register"][data-itemid="edit_field_label1"][data-page=".global_register"][data-itemid="edit_field_label1"] {
+  color: #00274c;
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="edit_field_label2"][data-page=".global_register"][data-itemid="edit_field_label2"][data-page=".global_register"][data-itemid="edit_field_label2"][data-page=".global_register"][data-itemid="edit_field_label2"] {
+  color: #00274c;
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="text"] {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="text1"] {
+  font-style: italic;
+}
+[data-page=".global_register"][data-itemid="text4"] {
+  color: #3a89db;
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="register_logo1"] {
+  font-size: 24px;
+}
+[data-page=".global_register"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+
+/* Put  your custom CSS code here */
+.r-pretty-login-page[data-image-shadow]:not([data-image-fullsize])>.r-sideimage>.r-image img
+{
+    box-shadow: 0 0 17px 7px #D7D7D7;
+}

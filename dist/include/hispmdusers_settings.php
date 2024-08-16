@@ -37,7 +37,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelshispmdusers["English"]["email"] = "Email";
 	$fieldToolTipshispmdusers["English"]["email"] = "";
 	$placeHoldershispmdusers["English"]["email"] = "";
-	$fieldLabelshispmdusers["English"]["fullname"] = "Fullname";
+	$fieldLabelshispmdusers["English"]["fullname"] = "Full Name";
 	$fieldToolTipshispmdusers["English"]["fullname"] = "";
 	$placeHoldershispmdusers["English"]["fullname"] = "";
 	$fieldLabelshispmdusers["English"]["groupid"] = "Groupid";
@@ -878,7 +878,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -900,7 +901,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

@@ -122,7 +122,7 @@ class RegisterPage extends RunnerPage
 		}
 
 		$sql = "update ". $this->connection->addTableWrappers( Security::loginTable() )
-			." set ". $this->connection->addFieldWrappers( "" )."=1 "
+			." set ". $this->connection->addFieldWrappers( "active" )."=1 "
 			." where " .
 			$this->connection->comparisonSQL(
 				$this->getFieldSQLDecrypt(Security::usernameField()),

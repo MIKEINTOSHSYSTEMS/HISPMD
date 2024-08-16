@@ -4735,6 +4735,8 @@ class RunnerPage
 		$captchaFieldName  = $this->getCaptchaFieldName();
 		if( ( !isset($_SESSION["count_passes_captcha"]) ) or ( $_SESSION["count_passes_captcha"] >= $this->captchaPassesCount ) )
 		{
+			$this->reCaptchaCfg['inputCaptchaId'] = 'value_'.$captchaFieldName.'_' . $this->id;
+			$this->controlsMap['reCaptcha'] = &$this->reCaptchaCfg;
 			$this->xt->assign("captcha_block", true);
 			$this->xt->assign("captcha", $this->getCaptchaHtml($captchaFieldName));
 			$this->xt->assign("captcha_field_name", $captchaFieldName);
@@ -4760,24 +4762,10 @@ class RunnerPage
 
 	function getCaptchaHtml($_captchaFieldName)
 	{
-		$captchaHTML = '<div class="captcha_block">';
+		$captchaHTML = '<div class="captcha_block" style="min-height:78px;">';
 
-		$typeCodeMessage = "Type the code you see above";
-		$path = GetCaptchaPath();
-		$swfPath = GetCaptchaSwfPath();
-
-		$captchaHTML .= '
-			<div style="height:65px;">
-			<object width="210" height="65" data="'.$swfPath.'?path='.$path.'?id='.$this->getCaptchaId().'" type="application/x-shockwave-flash">
-				<param value="'.$swfPath.'?path='.$path.'?id='.$this->getCaptchaId().'" name="movie"/>
-				<param value="opaque" name="wmode"/>
-				<a href="http://www.macromedia.com/go/getflashplayer"><img alt="Download Flash" src=""/></a>
-			</object>
-			</div>';
-			$captchaHTML .= '<div style="white-space: nowrap;">'.$typeCodeMessage.':</div>
-			<span id="edit'.$this->id.'_'.$_captchaFieldName.'_0">
-				<input type="text" value="" class="captcha_value" name="value_'.$_captchaFieldName.'_'.$this->id.'" style="" id="value_'.$_captchaFieldName.'_'.$this->id.'"/>
-				<font color="red">*</font>
+		$captchaHTML .= '<span id="edit'.$this->id.'_'.$_captchaFieldName.'_0">
+				<input type="hidden" value="" class="captcha_value" name="'.$this->reCaptchaCfg['inputCaptchaId'].'" style="" id="'.$this->reCaptchaCfg['inputCaptchaId'].'"/>
 			</span>';
 
 		$captchaHTML.='</div>';

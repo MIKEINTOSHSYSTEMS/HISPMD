@@ -675,9 +675,9 @@ $styleOverrides = array();
 $globalSettings["mapProvider"]=1;
 
 $globalSettings["CaptchaSettings"] = array();
-$globalSettings["CaptchaSettings"]["type"] = 0;
-$globalSettings["CaptchaSettings"]["siteKey"] = "";
-$globalSettings["CaptchaSettings"]["secretKey"] = "";
+$globalSettings["CaptchaSettings"]["type"] = 1;
+$globalSettings["CaptchaSettings"]["siteKey"] = "6LeRAbcpAAAAAPy9LHXavzB-h0Ve7HSt7VY8R6EV";
+$globalSettings["CaptchaSettings"]["secretKey"] = "6LeRAbcpAAAAAJFYeJQ-QO6BGTJvZpOiNgvxDdhH";
 $globalSettings["CaptchaSettings"]["captchaPassesCount"] = "5";
 
 
@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "481_1723732478";
+$projectBuildKey = "488_1723732478";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "481";
+$projectBuildNumber = "488";
 
 $mlang_messages = array();
 $mlang_charsets = array();

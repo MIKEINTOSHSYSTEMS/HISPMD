@@ -136,6 +136,23 @@ Login into your account</span>
 											<tr {$row_grid_2} >
 									<td 
 	class=" r-ori-vert			"
+	colspan="2"		 
+	data-cellId="grid_c3" data-pageid="{$pageid}">
+ 
+
+<div class="r-captcha-container form-group clearfix" data-fieldname="{$captcha_field_name}" data-signal-error-for="{$captcha_field_name}{$id}" >
+	<div class="col-md-offset-3 col-md-6" >
+		{$captcha}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="{$captcha_field_name}">
+		<div class="text-muted" >
+		</div>
+	</div>	
+</div></td>
+							</tr>
+											<tr {$row_grid_3} >
+									<td 
+	class=" r-ori-vert			"
 			 
 	data-cellId="grid_c4" data-pageid="{$pageid}">
  
@@ -147,14 +164,6 @@ Login into your account</span>
 	class="r-align-right r-ori-vert			"
 			 
 	data-cellId="grid_c6" data-pageid="{$pageid}">
- 
-{BEGIN guestlink_block}
-<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
-	<a type="button" title="" class="btn btn-info   
-	" {$guestlink_attrs} >
-							Login as Guest			</a>
-</span>
-{END guestlink_block}
 </td>
 							</tr>
 					
@@ -173,7 +182,7 @@ Login into your account</span>
  
 {BEGIN signin_button}
 <span data-itemtype="login_button" data-itemid="login_button" {$item_login_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
+	<a type="button" title="" class="btn btn-primary  btn-lg 
 	" {$loginlink_attrs} >
 							Sign in			</a>
 </span>
@@ -191,6 +200,14 @@ Login into your account</span>
 	class="r-align-right r-ori-vert			"
 			 
 	data-cellId="footer_c2" data-pageid="{$pageid}">
+ 
+{BEGIN guestlink_block}
+<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
+	<a type="button" title="" class="btn btn-info   
+	" {$guestlink_attrs} >
+							Login as Guest			</a>
+</span>
+{END guestlink_block}
 </td>
 							</tr>
 											<tr {$row_footer_1} >
@@ -238,7 +255,20 @@ Login into your account</span>
 <table class="r-fluid r-form" data-location="superbottom" id="form_superbottom_{$pageid}" data-makeup="pretty-login" {$form_superbottom} data-pageid="{$pageid}" >
 						<tbody>
 			
-		
+								<tr {$row_superbottom_0} >
+									<td 
+	class="r-align-right r-ori-vert			"
+			 
+	data-cellId="superbottom_c1" data-pageid="{$pageid}">
+ 
+<span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-success  btn-lg 
+	" {$registerlink_attrs} href="register.php" >
+							Sign Up			</a>
+</span>
+</td>
+							</tr>
+					
 					</tbody>
 				</table>
 {END superbottom_block}

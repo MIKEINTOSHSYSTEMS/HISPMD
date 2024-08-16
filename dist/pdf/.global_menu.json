@@ -137,11 +137,14 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$pdf_image images/MOH_logo_text_250.png undefined 0},"hidden":"{$item_hide_image}"},
+				
+				
 			{"text":"\t<br>\n\t<br>\n\t<br>\n\t<br>\n\t<br>\n\t<br>\n\t<br>\n\t<br>","hidden":"{$item_hide_text10}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -250,12 +253,6 @@ pdfDocument = {
 					 ],	
 		
 			heights: [
-								
-			"%",
-			 
-								
-			"%",
-			 
 								
 			"%",
 			 
@@ -523,29 +520,6 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c9',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
 	cellId: 'c18',
 	col:0,
 	row:0,
@@ -590,29 +564,6 @@ pdfDocument = {
 			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item32}"},
 				
 		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c7',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

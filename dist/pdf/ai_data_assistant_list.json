@@ -171,7 +171,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot\n\n<br>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot\n\n<br>","color":"#001f3f","hidden":"{$item_hide_text}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -182,6 +182,38 @@ pdfDocument = {
 
 																		{ 
 				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text1}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
 				row:  0,
 				col:  1,
 				text: ''
