@@ -64,9 +64,9 @@ $tdataai_data_assistant[".listAjax"] = false;
 //	temporary
 //$tdataai_data_assistant[".listAjax"] = false;
 
-	$tdataai_data_assistant[".audit"] = false;
+	$tdataai_data_assistant[".audit"] = true;
 
-	$tdataai_data_assistant[".locking"] = false;
+	$tdataai_data_assistant[".locking"] = true;
 
 
 $pages = $tdataai_data_assistant[".defaultPages"];

@@ -70,9 +70,9 @@ $tdatadataquality[".listAjax"] = false;
 //	temporary
 //$tdatadataquality[".listAjax"] = false;
 
-	$tdatadataquality[".audit"] = false;
+	$tdatadataquality[".audit"] = true;
 
-	$tdatadataquality[".locking"] = false;
+	$tdatadataquality[".locking"] = true;
 
 
 $pages = $tdatadataquality[".defaultPages"];

@@ -70,9 +70,9 @@ $tdatadatause[".listAjax"] = false;
 //	temporary
 //$tdatadatause[".listAjax"] = false;
 
-	$tdatadatause[".audit"] = false;
+	$tdatadatause[".audit"] = true;
 
-	$tdatadatause[".locking"] = false;
+	$tdatadatause[".locking"] = true;
 
 
 $pages = $tdatadatause[".defaultPages"];

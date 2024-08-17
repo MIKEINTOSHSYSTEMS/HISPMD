@@ -70,9 +70,9 @@ $tdatahealthunits[".listAjax"] = false;
 //	temporary
 //$tdatahealthunits[".listAjax"] = false;
 
-	$tdatahealthunits[".audit"] = false;
+	$tdatahealthunits[".audit"] = true;
 
-	$tdatahealthunits[".locking"] = false;
+	$tdatahealthunits[".locking"] = true;
 
 
 $pages = $tdatahealthunits[".defaultPages"];

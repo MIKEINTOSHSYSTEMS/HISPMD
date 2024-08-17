@@ -70,9 +70,9 @@ $tdataworkforce[".listAjax"] = false;
 //	temporary
 //$tdataworkforce[".listAjax"] = false;
 
-	$tdataworkforce[".audit"] = false;
+	$tdataworkforce[".audit"] = true;
 
-	$tdataworkforce[".locking"] = false;
+	$tdataworkforce[".locking"] = true;
 
 
 $pages = $tdataworkforce[".defaultPages"];

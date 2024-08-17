@@ -67,9 +67,9 @@ $tdatamfr_operational_status[".listAjax"] = false;
 //	temporary
 //$tdatamfr_operational_status[".listAjax"] = false;
 
-	$tdatamfr_operational_status[".audit"] = false;
+	$tdatamfr_operational_status[".audit"] = true;
 
-	$tdatamfr_operational_status[".locking"] = false;
+	$tdatamfr_operational_status[".locking"] = true;
 
 
 $pages = $tdatamfr_operational_status[".defaultPages"];

@@ -67,9 +67,9 @@ $tdatahisgovernance[".listAjax"] = false;
 //	temporary
 //$tdatahisgovernance[".listAjax"] = false;
 
-	$tdatahisgovernance[".audit"] = false;
+	$tdatahisgovernance[".audit"] = true;
 
-	$tdatahisgovernance[".locking"] = false;
+	$tdatahisgovernance[".locking"] = true;
 
 
 $pages = $tdatahisgovernance[".defaultPages"];

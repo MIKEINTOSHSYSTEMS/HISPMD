@@ -70,9 +70,9 @@ $tdataadmin_rights[".listAjax"] = false;
 //	temporary
 //$tdataadmin_rights[".listAjax"] = false;
 
-	$tdataadmin_rights[".audit"] = false;
+	$tdataadmin_rights[".audit"] = true;
 
-	$tdataadmin_rights[".locking"] = false;
+	$tdataadmin_rights[".locking"] = true;
 
 
 $pages = $tdataadmin_rights[".defaultPages"];

@@ -64,9 +64,9 @@ $tdatadhis2_orgunit_country[".listAjax"] = false;
 //	temporary
 //$tdatadhis2_orgunit_country[".listAjax"] = false;
 
-	$tdatadhis2_orgunit_country[".audit"] = false;
+	$tdatadhis2_orgunit_country[".audit"] = true;
 
-	$tdatadhis2_orgunit_country[".locking"] = false;
+	$tdatadhis2_orgunit_country[".locking"] = true;
 
 
 $pages = $tdatadhis2_orgunit_country[".defaultPages"];

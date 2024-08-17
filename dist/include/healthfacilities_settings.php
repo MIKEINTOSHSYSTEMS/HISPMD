@@ -70,9 +70,9 @@ $tdatahealthfacilities[".listAjax"] = false;
 //	temporary
 //$tdatahealthfacilities[".listAjax"] = false;
 
-	$tdatahealthfacilities[".audit"] = false;
+	$tdatahealthfacilities[".audit"] = true;
 
-	$tdatahealthfacilities[".locking"] = false;
+	$tdatahealthfacilities[".locking"] = true;
 
 
 $pages = $tdatahealthfacilities[".defaultPages"];

@@ -70,9 +70,9 @@ $tdatamfr_region[".listAjax"] = false;
 //	temporary
 //$tdatamfr_region[".listAjax"] = false;
 
-	$tdatamfr_region[".audit"] = false;
+	$tdatamfr_region[".audit"] = true;
 
-	$tdatamfr_region[".locking"] = false;
+	$tdatamfr_region[".locking"] = true;
 
 
 $pages = $tdatamfr_region[".defaultPages"];

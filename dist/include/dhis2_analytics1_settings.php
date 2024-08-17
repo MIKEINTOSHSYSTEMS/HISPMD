@@ -79,9 +79,9 @@ $tdatadhis2_analytics1[".listAjax"] = false;
 //	temporary
 //$tdatadhis2_analytics1[".listAjax"] = false;
 
-	$tdatadhis2_analytics1[".audit"] = false;
+	$tdatadhis2_analytics1[".audit"] = true;
 
-	$tdatadhis2_analytics1[".locking"] = false;
+	$tdatadhis2_analytics1[".locking"] = true;
 
 
 $pages = $tdatadhis2_analytics1[".defaultPages"];
