@@ -53,6 +53,12 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_dhis2_periods;
 	var $tblhispmdathispmdmerqconsultancyo_public_digitalhealth;
 	var $tblhispmdathispmdmerqconsultancyo_public_digitalhealthapps;
+	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_additional_organizational_and_behavioral_assessment;
+	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_facility_level_rhis_performance_diagnostic;
+	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_facility_office_checklist;
+	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_healthpost_level_rhis_performance_diagnostic;
+	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_national_prism_woreda_level_diagnostic;
+	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_organizational_and_behavioral_assessment;
 	var $tblhispmdathispmdmerqconsultancyo_public_financialresources;
 	var $tblhispmdathispmdmerqconsultancyo_public_healthfacilities;
 	var $tblhispmdathispmdmerqconsultancyo_public_healthunits;
@@ -60,6 +66,7 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_hispartners;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd__audit;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd__locking;
+	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_settings;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_uggroups;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_ugmembers;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_ugrights;
@@ -89,6 +96,12 @@ class tDAL
 		$this->lstTables[] = array("name" => "dhis2_periods", "varname" => "hispmdathispmdmerqconsultancyo_public_dhis2_periods", "altvarname" => "dhis2_periods", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "digitalhealth", "varname" => "hispmdathispmdmerqconsultancyo_public_digitalhealth", "altvarname" => "digitalhealth", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "digitalhealthapps", "varname" => "hispmdathispmdmerqconsultancyo_public_digitalhealthapps", "altvarname" => "digitalhealthapps", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "ethprism_additional_organizational_and_behavioral_assessment", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_additional_organizational_and_behavioral_assessment", "altvarname" => "ethprism_additional_organizational_and_behavioral_assessment", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "ethprism_facility_level_rhis_performance_diagnostic", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_facility_level_rhis_performance_diagnostic", "altvarname" => "ethprism_facility_level_rhis_performance_diagnostic", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "ethprism_facility_office_checklist", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_facility_office_checklist", "altvarname" => "ethprism_facility_office_checklist", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "ethprism_healthpost_level_rhis_performance_diagnostic", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_healthpost_level_rhis_performance_diagnostic", "altvarname" => "ethprism_healthpost_level_rhis_performance_diagnostic", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "ethprism_national_prism_woreda_level_diagnostic", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_national_prism_woreda_level_diagnostic", "altvarname" => "ethprism_national_prism_woreda_level_diagnostic", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "ethprism_organizational_and_behavioral_assessment", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_organizational_and_behavioral_assessment", "altvarname" => "ethprism_organizational_and_behavioral_assessment", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "financialresources", "varname" => "hispmdathispmdmerqconsultancyo_public_financialresources", "altvarname" => "financialresources", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "healthfacilities", "varname" => "hispmdathispmdmerqconsultancyo_public_healthfacilities", "altvarname" => "healthfacilities", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "healthunits", "varname" => "hispmdathispmdmerqconsultancyo_public_healthunits", "altvarname" => "healthunits", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
@@ -96,6 +109,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "hispartners", "varname" => "hispmdathispmdmerqconsultancyo_public_hispartners", "altvarname" => "hispartners", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd__audit", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd__audit", "altvarname" => "hispmd__audit", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd__locking", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd__locking", "altvarname" => "hispmd__locking", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "hispmd_settings", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_settings", "altvarname" => "hispmd_settings", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_uggroups", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_uggroups", "altvarname" => "hispmd_uggroups", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_ugmembers", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_ugmembers", "altvarname" => "hispmd_ugmembers", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_ugrights", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_ugrights", "altvarname" => "hispmd_ugrights", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

@@ -3634,6 +3634,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_operational_status_chart" ] = "mfr_operational_status_chart";
 	$projectEntities[ "mfr_region_chart" ] = array( "url" => "mfr_region_chart", "type" => 3 );
 	$projectEntitiesReverse[ "mfr_region_chart" ] = "mfr_region_chart";
+	$projectEntities[ "public.ethprism_additional_organizational_and_behavioral_assessment" ] = array( "url" => "ethprism_additional_organizational_and_behavioral_assessment", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_additional_organizational_and_behavioral_assessment" ] = "public.ethprism_additional_organizational_and_behavioral_assessment";
+	$projectEntities[ "public.ethprism_facility_level_rhis_performance_diagnostic" ] = array( "url" => "ethprism_facility_level_rhis_performance_diagnostic", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_facility_level_rhis_performance_diagnostic" ] = "public.ethprism_facility_level_rhis_performance_diagnostic";
+	$projectEntities[ "public.ethprism_facility_office_checklist" ] = array( "url" => "ethprism_facility_office_checklist", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_facility_office_checklist" ] = "public.ethprism_facility_office_checklist";
+	$projectEntities[ "public.ethprism_healthpost_level_rhis_performance_diagnostic" ] = array( "url" => "ethprism_healthpost_level_rhis_performance_diagnostic", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_healthpost_level_rhis_performance_diagnostic" ] = "public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	$projectEntities[ "public.ethprism_national_prism_woreda_level_diagnostic" ] = array( "url" => "ethprism_national_prism_woreda_level_diagnostic", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_national_prism_woreda_level_diagnostic" ] = "public.ethprism_national_prism_woreda_level_diagnostic";
+	$projectEntities[ "public.ethprism_organizational_and_behavioral_assessment" ] = array( "url" => "ethprism_organizational_and_behavioral_assessment", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_organizational_and_behavioral_assessment" ] = "public.ethprism_organizational_and_behavioral_assessment";
 }
 
 function findTable( $table ) {

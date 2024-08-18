@@ -915,7 +915,7 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 	$mask .= "S";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("mfr_dashboard_reports_chart", " " . "MFR Dashboard Reports Chart");
+$tables[$table] = array("mfr_dashboard_reports_chart", " " . "Mfr Dashboard Reports Chart");
 $table = "mfr_operational_status_chart";
 $mask="";
 if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
@@ -930,6 +930,108 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("mfr_region_chart", " " . "Mfr Region Chart");
+$table = "public.ethprism_additional_organizational_and_behavioral_assessment";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("ethprism_additional_organizational_and_behavioral_assessment", " " . "Ethprism Additional Organizational And Behavioral Assessment");
+$table = "public.ethprism_facility_level_rhis_performance_diagnostic";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("ethprism_facility_level_rhis_performance_diagnostic", " " . "Ethprism Facility Level Rhis Performance Diagnostic");
+$table = "public.ethprism_facility_office_checklist";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("ethprism_facility_office_checklist", " " . "Ethprism Facility Office Checklist");
+$table = "public.ethprism_healthpost_level_rhis_performance_diagnostic";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("ethprism_healthpost_level_rhis_performance_diagnostic", " " . "Ethprism Healthpost Level Rhis Performance Diagnostic");
+$table = "public.ethprism_national_prism_woreda_level_diagnostic";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("ethprism_national_prism_woreda_level_diagnostic", " " . "Ethprism National Prism Woreda Level Diagnostic");
+$table = "public.ethprism_organizational_and_behavioral_assessment";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("ethprism_organizational_and_behavioral_assessment", " " . "Ethprism Organizational And Behavioral Assessment");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

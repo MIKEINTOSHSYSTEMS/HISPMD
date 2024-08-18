@@ -685,6 +685,30 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_facility_office_checklist")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_organizational_and_behavioral_assessment")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1184,7 +1208,7 @@ function getCaptionTable($table)
 	}
 	if($table=="mfr_dashboard_reports_chart")
 	{
-		return "MFR Dashboard Reports Chart";
+		return "Mfr Dashboard Reports Chart";
 	}
 	if($table=="mfr_operational_status_chart")
 	{
@@ -1193,6 +1217,30 @@ function getCaptionTable($table)
 	if($table=="mfr_region_chart")
 	{
 		return "Mfr Region Chart";
+	}
+	if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+	{
+		return "Ethprism Additional Organizational And Behavioral Assessment";
+	}
+	if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+	{
+		return "Ethprism Facility Level Rhis Performance Diagnostic";
+	}
+	if($table=="public.ethprism_facility_office_checklist")
+	{
+		return "Ethprism Facility Office Checklist";
+	}
+	if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+	{
+		return "Ethprism Healthpost Level Rhis Performance Diagnostic";
+	}
+	if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+	{
+		return "Ethprism National Prism Woreda Level Diagnostic";
+	}
+	if($table=="public.ethprism_organizational_and_behavioral_assessment")
+	{
+		return "Ethprism Organizational And Behavioral Assessment";
 	}
 	return $table;
 }
@@ -2342,6 +2390,78 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="admin_users";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_additional_organizational_and_behavioral_assessment");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_additional_organizational_and_behavioral_assessment";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_additional_organizational_and_behavioral_assessment";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_level_rhis_performance_diagnostic");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_facility_level_rhis_performance_diagnostic";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_facility_level_rhis_performance_diagnostic";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_office_checklist");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_facility_office_checklist";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_facility_office_checklist";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_healthpost_level_rhis_performance_diagnostic");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_national_prism_woreda_level_diagnostic");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_national_prism_woreda_level_diagnostic";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_organizational_and_behavioral_assessment");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_organizational_and_behavioral_assessment";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_organizational_and_behavioral_assessment";
 	}
 	return $arr;
 }

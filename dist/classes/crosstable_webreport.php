@@ -1505,6 +1505,18 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.mfr_region" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.ethprism_additional_organizational_and_behavioral_assessment" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_facility_level_rhis_performance_diagnostic" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_facility_office_checklist" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_healthpost_level_rhis_performance_diagnostic" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_national_prism_woreda_level_diagnostic" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_organizational_and_behavioral_assessment" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

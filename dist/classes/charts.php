@@ -502,6 +502,18 @@ class Chart
 			return true;
 		if("public.mfr_region" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.ethprism_additional_organizational_and_behavioral_assessment" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_facility_level_rhis_performance_diagnostic" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_facility_office_checklist" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_healthpost_level_rhis_performance_diagnostic" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_national_prism_woreda_level_diagnostic" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_organizational_and_behavioral_assessment" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

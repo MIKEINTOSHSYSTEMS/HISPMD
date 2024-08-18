@@ -1,0 +1,199 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel public_ethprism_facility_level_rhis_performance_diagnostic export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$CompletionDate_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$SubmissionDate_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$starttime_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$endtime_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$deviceid_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$subscriberid_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$simid_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$devicephonenum_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$username_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$duration_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$caseid_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$FQ104_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$FQ101_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$FQ102_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$FQ103_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$FQ105_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$FQ106_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$FQ107_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$FQ108_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$siteid_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$FQ109_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$FQ110_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
+				
+			{"text":{$FQ111_pdfvalue},"hidden":"{$item_hide_export_field22}"},
+				
+				
+			{"text":{$FQ112_pdfvalue},"hidden":"{$item_hide_export_field24}"},
+				
+				
+			{"text":{$FQ113_pdfvalue},"hidden":"{$item_hide_export_field654}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

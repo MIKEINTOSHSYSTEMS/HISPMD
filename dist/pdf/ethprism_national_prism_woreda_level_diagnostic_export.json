@@ -1,0 +1,184 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel public_ethprism_national_prism_woreda_level_diagnostic export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$SubmissionDate_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$starttime_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$endtime_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$deviceid_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$subscriberid_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$simid_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$devicephonenum_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$username_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$duration_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$caseid_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$DQ104_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$intvwr_vst_DQ101_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$intvwr_vst_DQ102_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$intvwr_vst_DQ102_Other_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$distr_unit_id_DQ105_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$distr_unit_id_DQ106_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$distr_unit_id_DQ106_Other_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$distr_unit_id_DQ108_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$siteid_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$gen_info_DQ109_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

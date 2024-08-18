@@ -658,6 +658,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_office_checklist")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1265,6 +1289,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="mfr_region_chart")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_office_checklist")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_organizational_and_behavioral_assessment")
 		{
 			return false;
 		}

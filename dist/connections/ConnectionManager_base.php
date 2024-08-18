@@ -303,6 +303,12 @@ class ConnectionManager_Base
 		$connectionsIds["mfr_dashboard_reports_chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["mfr_operational_status_chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["mfr_region_chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_additional_organizational_and_behavioral_assessment"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_facility_level_rhis_performance_diagnostic"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_facility_office_checklist"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_healthpost_level_rhis_performance_diagnostic"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_national_prism_woreda_level_diagnostic"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_organizational_and_behavioral_assessment"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

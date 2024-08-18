@@ -1,0 +1,837 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Admin Area		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel public_ethprism_facility_office_checklist search}</h2>
+		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN CompletionDate_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CompletionDate}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="CompletionDate{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="CompletionDate" data-fieldname="CompletionDate" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_CompletionDate}">
+		{$label public_ethprism_facility_office_checklist CompletionDate }	</label>
+	<div class="r-search-option">
+		{$searchtype_CompletionDate}
+	</div>
+	<div class="r-search-field">
+		{$CompletionDate_editcontrol}	</div>
+	<div class="r-search-field">
+		{$CompletionDate_editcontrol1}
+	</div>
+	
+</div>
+
+{END CompletionDate_fieldblock}
+											
+{BEGIN SubmissionDate_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SubmissionDate}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="SubmissionDate{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="SubmissionDate" data-fieldname="SubmissionDate" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SubmissionDate}">
+		{$label public_ethprism_facility_office_checklist SubmissionDate }	</label>
+	<div class="r-search-option">
+		{$searchtype_SubmissionDate}
+	</div>
+	<div class="r-search-field">
+		{$SubmissionDate_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SubmissionDate_editcontrol1}
+	</div>
+	
+</div>
+
+{END SubmissionDate_fieldblock}
+											
+{BEGIN starttime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_starttime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="starttime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="starttime" data-fieldname="starttime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_starttime}">
+		{$label public_ethprism_facility_office_checklist starttime }	</label>
+	<div class="r-search-option">
+		{$searchtype_starttime}
+	</div>
+	<div class="r-search-field">
+		{$starttime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$starttime_editcontrol1}
+	</div>
+	
+</div>
+
+{END starttime_fieldblock}
+											
+{BEGIN endtime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_endtime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="endtime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="endtime" data-fieldname="endtime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_endtime}">
+		{$label public_ethprism_facility_office_checklist endtime }	</label>
+	<div class="r-search-option">
+		{$searchtype_endtime}
+	</div>
+	<div class="r-search-field">
+		{$endtime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$endtime_editcontrol1}
+	</div>
+	
+</div>
+
+{END endtime_fieldblock}
+											
+{BEGIN deviceid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_deviceid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="deviceid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="deviceid" data-fieldname="deviceid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_deviceid}">
+		{$label public_ethprism_facility_office_checklist deviceid }	</label>
+	<div class="r-search-option">
+		{$searchtype_deviceid}
+	</div>
+	<div class="r-search-field">
+		{$deviceid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$deviceid_editcontrol1}
+	</div>
+	
+</div>
+
+{END deviceid_fieldblock}
+											
+{BEGIN subscriberid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_subscriberid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="subscriberid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="subscriberid" data-fieldname="subscriberid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_subscriberid}">
+		{$label public_ethprism_facility_office_checklist subscriberid }	</label>
+	<div class="r-search-option">
+		{$searchtype_subscriberid}
+	</div>
+	<div class="r-search-field">
+		{$subscriberid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$subscriberid_editcontrol1}
+	</div>
+	
+</div>
+
+{END subscriberid_fieldblock}
+											
+{BEGIN simid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_simid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="simid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="simid" data-fieldname="simid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_simid}">
+		{$label public_ethprism_facility_office_checklist simid }	</label>
+	<div class="r-search-option">
+		{$searchtype_simid}
+	</div>
+	<div class="r-search-field">
+		{$simid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$simid_editcontrol1}
+	</div>
+	
+</div>
+
+{END simid_fieldblock}
+											
+{BEGIN devicephonenum_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_devicephonenum}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="devicephonenum{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="devicephonenum" data-fieldname="devicephonenum" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_devicephonenum}">
+		{$label public_ethprism_facility_office_checklist devicephonenum }	</label>
+	<div class="r-search-option">
+		{$searchtype_devicephonenum}
+	</div>
+	<div class="r-search-field">
+		{$devicephonenum_editcontrol}	</div>
+	<div class="r-search-field">
+		{$devicephonenum_editcontrol1}
+	</div>
+	
+</div>
+
+{END devicephonenum_fieldblock}
+											
+{BEGIN username_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_username}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="username{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="username" data-fieldname="username" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_username}">
+		{$label public_ethprism_facility_office_checklist username }	</label>
+	<div class="r-search-option">
+		{$searchtype_username}
+	</div>
+	<div class="r-search-field">
+		{$username_editcontrol}	</div>
+	<div class="r-search-field">
+		{$username_editcontrol1}
+	</div>
+	
+</div>
+
+{END username_fieldblock}
+											
+{BEGIN duration_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_duration}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="duration{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="duration" data-fieldname="duration" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_duration}">
+		{$label public_ethprism_facility_office_checklist duration }	</label>
+	<div class="r-search-option">
+		{$searchtype_duration}
+	</div>
+	<div class="r-search-field">
+		{$duration_editcontrol}	</div>
+	<div class="r-search-field">
+		{$duration_editcontrol1}
+	</div>
+	
+</div>
+
+{END duration_fieldblock}
+											
+{BEGIN caseid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_caseid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="caseid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="caseid" data-fieldname="caseid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_caseid}">
+		{$label public_ethprism_facility_office_checklist caseid }	</label>
+	<div class="r-search-option">
+		{$searchtype_caseid}
+	</div>
+	<div class="r-search-field">
+		{$caseid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$caseid_editcontrol1}
+	</div>
+	
+</div>
+
+{END caseid_fieldblock}
+											
+{BEGIN FOC105_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC105}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC105{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="FOC105" data-fieldname="FOC105" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC105}">
+		{$label public_ethprism_facility_office_checklist FOC105 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC105}
+	</div>
+	<div class="r-search-field">
+		{$FOC105_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC105_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC105_fieldblock}
+											
+{BEGIN FOC101_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC101}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC101{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="FOC101" data-fieldname="FOC101" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC101}">
+		{$label public_ethprism_facility_office_checklist FOC101 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC101}
+	</div>
+	<div class="r-search-field">
+		{$FOC101_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC101_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC101_fieldblock}
+											
+{BEGIN FOC102_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC102}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC102{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="FOC102" data-fieldname="FOC102" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC102}">
+		{$label public_ethprism_facility_office_checklist FOC102 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC102}
+	</div>
+	<div class="r-search-field">
+		{$FOC102_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC102_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC102_fieldblock}
+											
+{BEGIN FOC103_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC103}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC103{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="FOC103" data-fieldname="FOC103" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC103}">
+		{$label public_ethprism_facility_office_checklist FOC103 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC103}
+	</div>
+	<div class="r-search-field">
+		{$FOC103_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC103_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC103_fieldblock}
+											
+{BEGIN FOC104_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC104}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC104{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="FOC104" data-fieldname="FOC104" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC104}">
+		{$label public_ethprism_facility_office_checklist FOC104 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC104}
+	</div>
+	<div class="r-search-field">
+		{$FOC104_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC104_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC104_fieldblock}
+											
+{BEGIN admin_lvl_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_admin_lvl}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="admin_lvl{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="admin_lvl" data-fieldname="admin_lvl" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_admin_lvl}">
+		{$label public_ethprism_facility_office_checklist admin_lvl }	</label>
+	<div class="r-search-option">
+		{$searchtype_admin_lvl}
+	</div>
+	<div class="r-search-field">
+		{$admin_lvl_editcontrol}	</div>
+	<div class="r-search-field">
+		{$admin_lvl_editcontrol1}
+	</div>
+	
+</div>
+
+{END admin_lvl_fieldblock}
+											
+{BEGIN admin_lvl2_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_admin_lvl2}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="admin_lvl2{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="admin_lvl2" data-fieldname="admin_lvl2" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_admin_lvl2}">
+		{$label public_ethprism_facility_office_checklist admin_lvl2 }	</label>
+	<div class="r-search-option">
+		{$searchtype_admin_lvl2}
+	</div>
+	<div class="r-search-field">
+		{$admin_lvl2_editcontrol}	</div>
+	<div class="r-search-field">
+		{$admin_lvl2_editcontrol1}
+	</div>
+	
+</div>
+
+{END admin_lvl2_fieldblock}
+											
+{BEGIN FOC106_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC106}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC106{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="FOC106" data-fieldname="FOC106" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC106}">
+		{$label public_ethprism_facility_office_checklist FOC106 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC106}
+	</div>
+	<div class="r-search-field">
+		{$FOC106_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC106_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC106_fieldblock}
+											
+{BEGIN FOC107_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC107}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC107{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="FOC107" data-fieldname="FOC107" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC107}">
+		{$label public_ethprism_facility_office_checklist FOC107 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC107}
+	</div>
+	<div class="r-search-field">
+		{$FOC107_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC107_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC107_fieldblock}
+											
+{BEGIN FOC108_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC108}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC108{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="FOC108" data-fieldname="FOC108" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC108}">
+		{$label public_ethprism_facility_office_checklist FOC108 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC108}
+	</div>
+	<div class="r-search-field">
+		{$FOC108_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC108_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC108_fieldblock}
+											
+{BEGIN siteid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_siteid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="siteid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field25" {$item_integrated_search_field25} data-pageid="{$pageid}" data-field="siteid" data-fieldname="siteid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_siteid}">
+		{$label public_ethprism_facility_office_checklist siteid }	</label>
+	<div class="r-search-option">
+		{$searchtype_siteid}
+	</div>
+	<div class="r-search-field">
+		{$siteid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$siteid_editcontrol1}
+	</div>
+	
+</div>
+
+{END siteid_fieldblock}
+											
+{BEGIN FOC109f_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC109f}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC109f{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field26" {$item_integrated_search_field26} data-pageid="{$pageid}" data-field="FOC109f" data-fieldname="FOC109f" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC109f}">
+		{$label public_ethprism_facility_office_checklist FOC109f }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC109f}
+	</div>
+	<div class="r-search-field">
+		{$FOC109f_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC109f_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC109f_fieldblock}
+											
+{BEGIN FOC110f_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC110f}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC110f{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field27" {$item_integrated_search_field27} data-pageid="{$pageid}" data-field="FOC110f" data-fieldname="FOC110f" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC110f}">
+		{$label public_ethprism_facility_office_checklist FOC110f }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC110f}
+	</div>
+	<div class="r-search-field">
+		{$FOC110f_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC110f_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC110f_fieldblock}
+											
+{BEGIN FOC111_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FOC111}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FOC111{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field28" {$item_integrated_search_field28} data-pageid="{$pageid}" data-field="FOC111" data-fieldname="FOC111" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FOC111}">
+		{$label public_ethprism_facility_office_checklist FOC111 }	</label>
+	<div class="r-search-option">
+		{$searchtype_FOC111}
+	</div>
+	<div class="r-search-field">
+		{$FOC111_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FOC111_editcontrol1}
+	</div>
+	
+</div>
+
+{END FOC111_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	
+">
+		 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

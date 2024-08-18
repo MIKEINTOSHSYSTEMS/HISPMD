@@ -77,6 +77,12 @@ $nonAdminTablesArr[] = "public.hispmdusers";
 $nonAdminTablesArr[] = "mfr_dashboard_reports_chart";
 $nonAdminTablesArr[] = "mfr_operational_status_chart";
 $nonAdminTablesArr[] = "mfr_region_chart";
+$nonAdminTablesArr[] = "public.ethprism_additional_organizational_and_behavioral_assessment";
+$nonAdminTablesArr[] = "public.ethprism_facility_level_rhis_performance_diagnostic";
+$nonAdminTablesArr[] = "public.ethprism_facility_office_checklist";
+$nonAdminTablesArr[] = "public.ethprism_healthpost_level_rhis_performance_diagnostic";
+$nonAdminTablesArr[] = "public.ethprism_national_prism_woreda_level_diagnostic";
+$nonAdminTablesArr[] = "public.ethprism_organizational_and_behavioral_assessment";
 
 $ug_connection = $cman->getForUserGroups();
 

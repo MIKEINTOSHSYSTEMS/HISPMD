@@ -175,6 +175,24 @@
 [data-page=".global_menu"][data-itemid="welcome_item30"] > .bs-welcome-header {
   background-color: #CFAE83;
 }
+[data-page=".global_menu"][data-itemid="welcome_item31"] > .bs-welcome-header {
+  background-color: #DC143C;
+}
+[data-page=".global_menu"][data-itemid="welcome_item42"] > .bs-welcome-header {
+  background-color: #BC8F8F;
+}
+[data-page=".global_menu"][data-itemid="welcome_item61"] > .bs-welcome-header {
+  background-color: #DAA520;
+}
+[data-page=".global_menu"][data-itemid="welcome_item62"] > .bs-welcome-header {
+  background-color: #CD5C5C;
+}
+[data-page=".global_menu"][data-itemid="welcome_item63"] > .bs-welcome-header {
+  background-color: #1E90FF;
+}
+[data-page=".global_menu"][data-itemid="welcome_item64"] > .bs-welcome-header {
+  background-color: #D2691E;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

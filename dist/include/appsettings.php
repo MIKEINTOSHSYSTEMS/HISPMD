@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "489_1723732478";
+$projectBuildKey = "495_1723900025";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "489";
+$projectBuildNumber = "495";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -821,10 +821,15 @@ $tableCaptions["English"]["public_hispmdusers"] = "Hispmdusers";
 $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Admin Users";
-$tableCaptions["English"]["MFR_Dashboard_Reports_Chart"] = "MFR Dashboard Reports Chart";
 $tableCaptions["English"]["mfr_dashboard_reports_chart"] = "Mfr Dashboard Reports Chart";
 $tableCaptions["English"]["mfr_operational_status_chart"] = "Mfr Operational Status Chart";
 $tableCaptions["English"]["mfr_region_chart"] = "Mfr Region Chart";
+$tableCaptions["English"]["public_ethprism_additional_organizational_and_behavioral_assessment"] = "Ethprism Additional Organizational And Behavioral Assessment";
+$tableCaptions["English"]["public_ethprism_facility_level_rhis_performance_diagnostic"] = "Ethprism Facility Level Rhis Performance Diagnostic";
+$tableCaptions["English"]["public_ethprism_facility_office_checklist"] = "Ethprism Facility Office Checklist";
+$tableCaptions["English"]["public_ethprism_healthpost_level_rhis_performance_diagnostic"] = "Ethprism Healthpost Level Rhis Performance Diagnostic";
+$tableCaptions["English"]["public_ethprism_national_prism_woreda_level_diagnostic"] = "Ethprism National Prism Woreda Level Diagnostic";
+$tableCaptions["English"]["public_ethprism_organizational_and_behavioral_assessment"] = "Ethprism Organizational And Behavioral Assessment";
 
 
 $globalEvents = new class_GlobalEvents;

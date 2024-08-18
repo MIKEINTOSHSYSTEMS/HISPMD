@@ -1,0 +1,199 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel public_ethprism_facility_office_checklist export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$CompletionDate_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$SubmissionDate_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$starttime_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$endtime_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$deviceid_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$subscriberid_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$simid_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$devicephonenum_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$username_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$duration_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$caseid_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$FOC105_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$FOC101_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$FOC102_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$FOC103_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$FOC104_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$admin_lvl_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$admin_lvl2_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$FOC106_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$FOC107_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$FOC108_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
+				
+			{"text":{$siteid_pdfvalue},"hidden":"{$item_hide_export_field25}"},
+				
+				
+			{"text":{$FOC109f_pdfvalue},"hidden":"{$item_hide_export_field26}"},
+				
+				
+			{"text":{$FOC110f_pdfvalue},"hidden":"{$item_hide_export_field27}"},
+				
+				
+			{"text":{$FOC111_pdfvalue},"hidden":"{$item_hide_export_field28}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

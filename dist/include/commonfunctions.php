@@ -327,6 +327,18 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_region_chart" == $shortTName )
 		return true;
+	if ("ethprism_additional_organizational_and_behavioral_assessment" == $shortTName )
+		return true;
+	if ("ethprism_facility_level_rhis_performance_diagnostic" == $shortTName )
+		return true;
+	if ("ethprism_facility_office_checklist" == $shortTName )
+		return true;
+	if ("ethprism_healthpost_level_rhis_performance_diagnostic" == $shortTName )
+		return true;
+	if ("ethprism_national_prism_woreda_level_diagnostic" == $shortTName )
+		return true;
+	if ("ethprism_organizational_and_behavioral_assessment" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -935,6 +947,60 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="mfr_region_chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_additional_organizational_and_behavioral_assessment");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_additional_organizational_and_behavioral_assessment";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_level_rhis_performance_diagnostic");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_facility_level_rhis_performance_diagnostic";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_office_checklist");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_facility_office_checklist";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_healthpost_level_rhis_performance_diagnostic");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_national_prism_woreda_level_diagnostic");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_organizational_and_behavioral_assessment");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_organizational_and_behavioral_assessment";
+	}
 	return $arr;
 }
 
@@ -1006,6 +1072,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="mfr_dashboard_reports_chart";
 	$arr[]="mfr_operational_status_chart";
 	$arr[]="mfr_region_chart";
+	$arr[]="public.ethprism_additional_organizational_and_behavioral_assessment";
+	$arr[]="public.ethprism_facility_level_rhis_performance_diagnostic";
+	$arr[]="public.ethprism_facility_office_checklist";
+	$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
+	$arr[]="public.ethprism_organizational_and_behavioral_assessment";
 	return $arr;
 }
 
@@ -1954,6 +2026,36 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "S".$extraPerm;
+	}
+	if( $table=="public.ethprism_additional_organizational_and_behavioral_assessment" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_facility_level_rhis_performance_diagnostic" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_facility_office_checklist" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_healthpost_level_rhis_performance_diagnostic" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_national_prism_woreda_level_diagnostic" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_organizational_and_behavioral_assessment" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
