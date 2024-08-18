@@ -45,6 +45,9 @@ function JSON_to_table($json_var, $tblName = 'ethprism_organizational_and_behavi
         die("Connection failed: " . pg_last_error());
     }
 
+    // Drop the table if it exists
+    dropTableIfExists($conn, $tblName);
+
     // Extract column names from the first row of the JSON data
     $firstRow = $j_obj[0];
     $columns = array_keys($firstRow);

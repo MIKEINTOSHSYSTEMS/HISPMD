@@ -717,6 +717,15 @@ pdfDocument = {
 				
 			{"text":"","background":"#D2691E","hidden":"{$item_hide_welcome_item64}"},
 				
+				
+			{"text":"","background":"#D2AF80","hidden":"{$item_hide_welcome_item65}"},
+				
+				
+			{"text":"","background":"#CD853F","hidden":"{$item_hide_welcome_item66}"},
+				
+				
+			{"text":"","background":"#7B68EE","hidden":"{$item_hide_welcome_item67}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

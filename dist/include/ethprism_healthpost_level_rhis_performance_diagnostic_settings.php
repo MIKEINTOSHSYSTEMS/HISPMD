@@ -246,6 +246,7 @@ $tdataethprism_healthpost_level_rhis_performance_diagnostic[".geocodingEnabled"]
 
 
 
+$tdataethprism_healthpost_level_rhis_performance_diagnostic[".isDisplayLoading"] = true;
 
 
 

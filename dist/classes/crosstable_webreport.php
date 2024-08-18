@@ -1517,6 +1517,12 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.ethprism_organizational_and_behavioral_assessment" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.hispmd_prism_settings" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd__audit" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

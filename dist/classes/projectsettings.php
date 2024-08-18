@@ -3646,6 +3646,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "ethprism_national_prism_woreda_level_diagnostic" ] = "public.ethprism_national_prism_woreda_level_diagnostic";
 	$projectEntities[ "public.ethprism_organizational_and_behavioral_assessment" ] = array( "url" => "ethprism_organizational_and_behavioral_assessment", "type" => 0 );
 	$projectEntitiesReverse[ "ethprism_organizational_and_behavioral_assessment" ] = "public.ethprism_organizational_and_behavioral_assessment";
+	$projectEntities[ "public.hispmd_prism_settings" ] = array( "url" => "hispmd_prism_settings", "type" => 0 );
+	$projectEntitiesReverse[ "hispmd_prism_settings" ] = "public.hispmd_prism_settings";
+	$projectEntities[ "PRISM Dashboard" ] = array( "url" => "prism_dashboard", "type" => 4 );
+	$projectEntitiesReverse[ "prism_dashboard" ] = "PRISM Dashboard";
+	$projectEntities[ "hispmd_users_audit" ] = array( "url" => "hispmd_users_audit", "type" => 1 );
+	$projectEntitiesReverse[ "hispmd_users_audit" ] = "hispmd_users_audit";
 }
 
 function findTable( $table ) {

@@ -237,6 +237,7 @@ $tdataethprism_national_prism_woreda_level_diagnostic[".geocodingEnabled"] = fal
 
 
 
+$tdataethprism_national_prism_woreda_level_diagnostic[".isDisplayLoading"] = true;
 
 $tdataethprism_national_prism_woreda_level_diagnostic[".isResizeColumns"] = true;
 

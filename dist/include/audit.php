@@ -682,6 +682,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.hispmd_prism_settings")
+		{
+			return false;
+		}
+		if($table=="PRISM Dashboard")
+		{
+			return false;
+		}
+		if($table=="hispmd_users_audit")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1313,6 +1325,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.ethprism_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.hispmd_prism_settings")
+		{
+			return false;
+		}
+		if($table=="PRISM Dashboard")
+		{
+			return false;
+		}
+		if($table=="hispmd_users_audit")
 		{
 			return false;
 		}

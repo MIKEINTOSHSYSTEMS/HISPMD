@@ -4905,7 +4905,7 @@ class RunnerPage
 			return "Nothing to see. Run some search.";
 
 		if( !$this->rowsFound && !$isSearchRun )
-			return "No data yet.";
+			return "HISPMD";//No data yet.
 
 		if( $isSearchRun && !$this->rowsFound )
 			return "No results found.";

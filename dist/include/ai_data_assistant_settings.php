@@ -165,6 +165,7 @@ $tdataai_data_assistant[".geocodingEnabled"] = false;
 
 
 
+$tdataai_data_assistant[".isDisplayLoading"] = true;
 
 
 

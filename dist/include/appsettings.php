@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "495_1723900025";
+$projectBuildKey = "499_1723900025";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "495";
+$projectBuildNumber = "499";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -830,6 +830,9 @@ $tableCaptions["English"]["public_ethprism_facility_office_checklist"] = "Ethpri
 $tableCaptions["English"]["public_ethprism_healthpost_level_rhis_performance_diagnostic"] = "Ethprism Healthpost Level Rhis Performance Diagnostic";
 $tableCaptions["English"]["public_ethprism_national_prism_woreda_level_diagnostic"] = "Ethprism National Prism Woreda Level Diagnostic";
 $tableCaptions["English"]["public_ethprism_organizational_and_behavioral_assessment"] = "Ethprism Organizational And Behavioral Assessment";
+$tableCaptions["English"]["public_hispmd_prism_settings"] = "Hispmd Prism Settings";
+$tableCaptions["English"]["PRISM_Dashboard"] = "PRISM Dashboard";
+$tableCaptions["English"]["hispmd_users_audit"] = "Hispmd Users Audit";
 
 
 $globalEvents = new class_GlobalEvents;

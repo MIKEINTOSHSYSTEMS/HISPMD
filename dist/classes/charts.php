@@ -514,6 +514,12 @@ class Chart
 			return true;
 		if("public.ethprism_organizational_and_behavioral_assessment" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.hispmd_prism_settings" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd__audit" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

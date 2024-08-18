@@ -709,6 +709,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.hispmd_prism_settings")
+		{
+			return 1;
+		}
+		if($table=="PRISM Dashboard")
+		{
+			return 1;
+		}
+		if($table=="hispmd_users_audit")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1241,6 +1253,18 @@ function getCaptionTable($table)
 	if($table=="public.ethprism_organizational_and_behavioral_assessment")
 	{
 		return "Ethprism Organizational And Behavioral Assessment";
+	}
+	if($table=="public.hispmd_prism_settings")
+	{
+		return "Hispmd Prism Settings";
+	}
+	if($table=="PRISM Dashboard")
+	{
+		return "PRISM Dashboard";
+	}
+	if($table=="hispmd_users_audit")
+	{
+		return "Hispmd Users Audit";
 	}
 	return $table;
 }
@@ -2462,6 +2486,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="public.ethprism_organizational_and_behavioral_assessment";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.hispmd_prism_settings");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.hispmd_prism_settings";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.hispmd_prism_settings";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("hispmd_users_audit");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="hispmd_users_audit";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="hispmd_users_audit";
 	}
 	return $arr;
 }

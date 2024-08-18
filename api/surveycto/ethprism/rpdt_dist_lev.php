@@ -55,6 +55,9 @@ function CSV_to_table($csv_var, $tblName = 'ethprism_national_prism_woreda_level
         die("Connection failed: " . pg_last_error());
     }
 
+    // Drop the table if it exists
+    dropTableIfExists($conn, $tblName);
+
     $columnDefinitions = implode(", ", array_map(function($col) {
         return "\"$col\" TEXT";
     }, $sanitized_header));

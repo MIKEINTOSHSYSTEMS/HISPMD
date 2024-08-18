@@ -309,6 +309,8 @@ class ConnectionManager_Base
 		$connectionsIds["public.ethprism_healthpost_level_rhis_performance_diagnostic"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.ethprism_national_prism_woreda_level_diagnostic"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.ethprism_organizational_and_behavioral_assessment"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.hispmd_prism_settings"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["hispmd_users_audit"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

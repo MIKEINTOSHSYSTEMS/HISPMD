@@ -257,6 +257,7 @@ $tdataethprism_facility_office_checklist[".geocodingEnabled"] = false;
 
 
 
+$tdataethprism_facility_office_checklist[".isDisplayLoading"] = true;
 
 $tdataethprism_facility_office_checklist[".isResizeColumns"] = true;
 

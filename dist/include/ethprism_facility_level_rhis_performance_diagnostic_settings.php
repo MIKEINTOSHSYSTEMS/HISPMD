@@ -258,6 +258,7 @@ $tdataethprism_facility_level_rhis_performance_diagnostic[".geocodingEnabled"] =
 
 
 
+$tdataethprism_facility_level_rhis_performance_diagnostic[".isDisplayLoading"] = true;
 
 
 

@@ -339,6 +339,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("ethprism_organizational_and_behavioral_assessment" == $shortTName )
 		return true;
+	if ("hispmd_prism_settings" == $shortTName )
+		return true;
+	if ("prism_dashboard" == $shortTName )
+		return true;
+	if ("hispmd_users_audit" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1001,6 +1007,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.ethprism_organizational_and_behavioral_assessment";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispmd_prism_settings");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispmd_prism_settings";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("PRISM Dashboard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="PRISM Dashboard";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("hispmd_users_audit");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="hispmd_users_audit";
+	}
 	return $arr;
 }
 
@@ -1078,6 +1111,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
 	$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
 	$arr[]="public.ethprism_organizational_and_behavioral_assessment";
+	$arr[]="public.hispmd_prism_settings";
+	$arr[]="PRISM Dashboard";
+	$arr[]="hispmd_users_audit";
 	return $arr;
 }
 
@@ -2053,6 +2089,21 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="public.ethprism_organizational_and_behavioral_assessment" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.hispmd_prism_settings" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="PRISM Dashboard" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="hispmd_users_audit" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
