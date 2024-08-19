@@ -3652,6 +3652,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "prism_dashboard" ] = "PRISM Dashboard";
 	$projectEntities[ "hispmd_users_audit" ] = array( "url" => "hispmd_users_audit", "type" => 1 );
 	$projectEntitiesReverse[ "hispmd_users_audit" ] = "hispmd_users_audit";
+	$projectEntities[ "hispmd_system_settings" ] = array( "url" => "hispmd_system_settings", "type" => 1 );
+	$projectEntitiesReverse[ "hispmd_system_settings" ] = "hispmd_system_settings";
+	$projectEntities[ "hispmd_prism_data_forms" ] = array( "url" => "hispmd_prism_data_forms", "type" => 1 );
+	$projectEntitiesReverse[ "hispmd_prism_data_forms" ] = "hispmd_prism_data_forms";
 }
 
 function findTable( $table ) {

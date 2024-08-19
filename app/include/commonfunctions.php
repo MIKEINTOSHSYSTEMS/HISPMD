@@ -345,6 +345,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("hispmd_users_audit" == $shortTName )
 		return true;
+	if ("hispmd_system_settings" == $shortTName )
+		return true;
+	if ("hispmd_prism_data_forms" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1034,6 +1038,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="hispmd_users_audit";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("hispmd_system_settings");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="hispmd_system_settings";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("hispmd_prism_data_forms");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="hispmd_prism_data_forms";
+	}
 	return $arr;
 }
 
@@ -1114,6 +1136,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.hispmd_prism_settings";
 	$arr[]="PRISM Dashboard";
 	$arr[]="hispmd_users_audit";
+	$arr[]="hispmd_system_settings";
+	$arr[]="hispmd_prism_data_forms";
 	return $arr;
 }
 
@@ -2104,6 +2128,16 @@ function GetUserPermissionsStatic( $table )
 		return "S".$extraPerm;
 	}
 	if( $table=="hispmd_users_audit" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="hispmd_system_settings" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="hispmd_prism_data_forms" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

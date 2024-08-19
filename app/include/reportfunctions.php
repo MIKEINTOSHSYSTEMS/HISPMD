@@ -721,6 +721,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="hispmd_system_settings")
+		{
+			return 1;
+		}
+		if($table=="hispmd_prism_data_forms")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1265,6 +1273,14 @@ function getCaptionTable($table)
 	if($table=="hispmd_users_audit")
 	{
 		return "Hispmd Users Audit";
+	}
+	if($table=="hispmd_system_settings")
+	{
+		return "Hispmd System Settings";
+	}
+	if($table=="hispmd_prism_data_forms")
+	{
+		return "Hispmd Prism Data Forms";
 	}
 	return $table;
 }
@@ -2510,6 +2526,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="hispmd_users_audit";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("hispmd_system_settings");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="hispmd_system_settings";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="hispmd_system_settings";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("hispmd_prism_data_forms");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="hispmd_prism_data_forms";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="hispmd_prism_data_forms";
 	}
 	return $arr;
 }

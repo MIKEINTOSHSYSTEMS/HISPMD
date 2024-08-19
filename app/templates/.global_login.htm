@@ -201,50 +201,42 @@ Login into your account</span>
 			 
 	data-cellId="footer_c2" data-pageid="{$pageid}">
  
-{BEGIN guestlink_block}
-<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
-	<a type="button" title="" class="btn btn-info   
-	" {$guestlink_attrs} >
-							Login as Guest			</a>
+<span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-success  btn-lg 
+	" {$registerlink_attrs} href="register.php" >
+							Sign Up			</a>
 </span>
-{END guestlink_block}
 </td>
 							</tr>
 											<tr {$row_footer_1} >
 									<td 
-	class=" r-ori-vert			"
-			 
+	class="r-align-center r-ori-vert			"
+	colspan="2"		 
 	data-cellId="footer_c" data-pageid="{$pageid}">
  
 <span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page=".global_login" data-small > 
-	<p><br></p><a href="../../" target="" rel=""><strong>Go Back to Home Page</strong></a></span>
-</td>
-									<td 
-	class="r-align-right r-ori-vert			"
-			 
-	data-cellId="footer_c3" data-pageid="{$pageid}">
+	<br><a href="../../" target="" rel=""><strong>Go Back to Home Page</strong></a><br></span>
 </td>
 							</tr>
 											<tr {$row_footer_2} >
 									<td 
-	class=" r-ori-vert			"
+	class="r-align-left r-ori-vert			"
 	colspan="2"		 
 	data-cellId="footer_c6" data-pageid="{$pageid}">
  
-<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-small > 
-	<br><br><br></span>
+<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
+	<br><br><p><strong style="color: rgb(255, 153, 0);"><em>NOTE:</em></strong> To Login as a System Tester with all Functionalities Enabled!</p><p><strong>Please Use </strong><strong style="color: rgb(0, 102, 204);"><u>demo</u> </strong><strong>for both Username and Password!</strong></p><p>Each Testing Session is <strong>15 Minutes</strong>!</p></span>
 </td>
 							</tr>
 											<tr {$row_footer_3} >
 									<td 
-	class=" r-ori-vert			"
-			 
+	class="r-align-left r-ori-vert			"
+	colspan="2"		 
 	data-cellId="footer_c4" data-pageid="{$pageid}">
-</td>
-									<td 
-	class="r-align-right r-ori-vert			"
-			 
-	data-cellId="footer_c5" data-pageid="{$pageid}">
+ 
+<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-page=".global_login" data-small > 
+	<br>This Application is for Internal Use only! 
+It can only be accessed by an <u><b>AUTHORIZED<b><u> personel!<br></span>
 </td>
 							</tr>
 					
@@ -261,11 +253,13 @@ Login into your account</span>
 			 
 	data-cellId="superbottom_c1" data-pageid="{$pageid}">
  
-<span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-success  btn-lg 
-	" {$registerlink_attrs} href="register.php" >
-							Sign Up			</a>
+{BEGIN guestlink_block}
+<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
+	<a type="button" title="" class="btn btn-info   
+	" {$guestlink_attrs} >
+							Login as Guest			</a>
 </span>
+{END guestlink_block}
 </td>
 							</tr>
 					

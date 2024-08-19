@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "499_1723900025";
+$projectBuildKey = "504_1723900025";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "499";
+$projectBuildNumber = "504";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -833,6 +833,8 @@ $tableCaptions["English"]["public_ethprism_organizational_and_behavioral_assessm
 $tableCaptions["English"]["public_hispmd_prism_settings"] = "Hispmd Prism Settings";
 $tableCaptions["English"]["PRISM_Dashboard"] = "PRISM Dashboard";
 $tableCaptions["English"]["hispmd_users_audit"] = "Hispmd Users Audit";
+$tableCaptions["English"]["hispmd_system_settings"] = "Hispmd System Settings";
+$tableCaptions["English"]["hispmd_prism_data_forms"] = "Hispmd Prism Data Forms";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -86,6 +86,8 @@ $nonAdminTablesArr[] = "public.ethprism_organizational_and_behavioral_assessment
 $nonAdminTablesArr[] = "public.hispmd_prism_settings";
 $nonAdminTablesArr[] = "PRISM Dashboard";
 $nonAdminTablesArr[] = "hispmd_users_audit";
+$nonAdminTablesArr[] = "hispmd_system_settings";
+$nonAdminTablesArr[] = "hispmd_prism_data_forms";
 
 $ug_connection = $cman->getForUserGroups();
 

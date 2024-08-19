@@ -694,6 +694,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="hispmd_system_settings")
+		{
+			return false;
+		}
+		if($table=="hispmd_prism_data_forms")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1337,6 +1345,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="hispmd_users_audit")
+		{
+			return false;
+		}
+		if($table=="hispmd_system_settings")
+		{
+			return false;
+		}
+		if($table=="hispmd_prism_data_forms")
 		{
 			return false;
 		}

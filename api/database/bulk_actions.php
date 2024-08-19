@@ -5,7 +5,7 @@
 // $dbUser = 'hispmddb';
 // $dbPassword = 'hispmddb';
 // $dbName = 'hisp_md';
-$backupDir = './backup';
+$backupDir = './backups';
 
 // Check if action and backups are set
 if (isset($_POST['action']) && $_POST['action'] == 'delete' && isset($_POST['backups'])) {
@@ -18,9 +18,9 @@ if (isset($_POST['action']) && $_POST['action'] == 'delete' && isset($_POST['bac
         }
     }
 
-    header("Location: index.php?msg=deleted");
+    header("Location: mb.php?msg=deleted");
     exit();
 }
 
-header("Location: index.php");
+header("Location: mb.php");
 exit();

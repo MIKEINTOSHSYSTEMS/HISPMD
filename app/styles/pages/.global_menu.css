@@ -202,8 +202,20 @@
 [data-page=".global_menu"][data-itemid="welcome_item67"] > .bs-welcome-header {
   background-color: #7B68EE;
 }
+[data-page=".global_menu"][data-itemid="welcome_item68"] > .bs-welcome-header {
+  background-color: #5F9EA0;
+}
+[data-page=".global_menu"][data-itemid="welcome_item69"] > .bs-welcome-header {
+  background-color: #CFAE83;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
 
 
+/* Put  your custom CSS code here */
+
+table a:not(.btn),
+.table a:not(.btn) {
+  text-decoration: none;
+}

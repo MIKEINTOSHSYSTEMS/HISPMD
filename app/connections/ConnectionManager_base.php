@@ -311,6 +311,8 @@ class ConnectionManager_Base
 		$connectionsIds["public.ethprism_organizational_and_behavioral_assessment"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.hispmd_prism_settings"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["hispmd_users_audit"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["hispmd_system_settings"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["hispmd_prism_data_forms"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

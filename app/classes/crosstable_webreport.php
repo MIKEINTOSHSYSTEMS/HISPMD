@@ -1523,6 +1523,10 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.hispmd__audit" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.hispmd_settings" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd_prism_settings" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

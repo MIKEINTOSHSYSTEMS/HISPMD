@@ -175,7 +175,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         </div>
         <h2>Available Backups</h2>
         <p>Total backups: <?php echo $totalBackups; ?></p>
-        <form id="bulkActionForm" method="post" action="bulk_actions.php">
+        <form id="bulkActionForm" method="post" action="bulk_action.php">
             <div class="checkbox-container">
                 <?php foreach ($pagedBackups as $backup): ?>
                 <label>
