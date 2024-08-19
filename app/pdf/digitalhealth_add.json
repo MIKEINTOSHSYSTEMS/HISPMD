@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DigitalHealth add}","hidden":"{$item_hide_add_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_digitalhealth add}","hidden":"{$item_hide_add_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,28 +160,31 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel DigitalHealth site_type }","bold":true},{"text":{$site_type_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_digitalhealth dh_id }","bold":true},{"text":{$dh_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel DigitalHealth dhis2_functional }","bold":true},{"text":{$dhis2_functional_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_digitalhealth site_type }","bold":true},{"text":{$site_type_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel DigitalHealth dhis2_online }","bold":true},{"text":{$dhis2_online_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_digitalhealth dhis2_functional }","bold":true},{"text":{$dhis2_functional_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel DigitalHealth mfr_updated }","bold":true},{"text":{$mfr_updated_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_digitalhealth dhis2_online }","bold":true},{"text":{$dhis2_online_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel DigitalHealth echis_implemented }","bold":true},{"text":{$echis_implemented_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_digitalhealth mfr_updated }","bold":true},{"text":{$mfr_updated_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel DigitalHealth emr_status }","bold":true},{"text":{$emr_status_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_digitalhealth echis_implemented }","bold":true},{"text":{$echis_implemented_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel DigitalHealth ihris_hra_implemented }","bold":true},{"text":{$ihris_hra_implemented_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_digitalhealth emr_status }","bold":true},{"text":{$emr_status_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel DigitalHealth hcmis_implemented }","bold":true},{"text":{$hcmis_implemented_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_digitalhealth ihris_hra_implemented }","bold":true},{"text":{$ihris_hra_implemented_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel public_digitalhealth hcmis_implemented }","bold":true},{"text":{$hcmis_implemented_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DataQuality add}","hidden":"{$item_hide_add_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_dataquality add}","hidden":"{$item_hide_add_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,13 +160,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel DataQuality report_type }","bold":true},{"text":{$report_type_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_dataquality dq_id }","bold":true},{"text":{$dq_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel DataQuality timeliness_percentage }","bold":true},{"text":{$timeliness_percentage_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_dataquality report_type }","bold":true},{"text":{$report_type_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel DataQuality completeness_percentage }","bold":true},{"text":{$completeness_percentage_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_dataquality timeliness_percentage }","bold":true},{"text":{$timeliness_percentage_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_dataquality completeness_percentage }","bold":true},{"text":{$completeness_percentage_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

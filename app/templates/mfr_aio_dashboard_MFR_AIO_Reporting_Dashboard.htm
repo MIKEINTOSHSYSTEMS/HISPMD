@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -163,6 +163,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -218,56 +226,56 @@
 									<td 
 	class=" r-ori-vert			"
 			 
-	data-cellId="grid_c15" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
+	data-cellId="grid_c2" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
  
 <div 
 	data-dashtype="4" 
-	id="dashelement_MFR_Dashboard_Reports_search{$pageid}"
+	id="dashelement_public_mfr_dashboard_reports_search{$pageid}"
 	data-tablocation="above" 
 
 	
 	
-	data-itemtype="dashboard-item" data-itemid="dashboard-item16" {$item_dashboard-item16} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+	data-itemtype="dashboard-item" data-itemid="dashboard-item9" {$item_dashboard-item9} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
 >
-	{$db_MFR_Dashboard_Reports_search}
+	{$db_public_mfr_dashboard_reports_search}
 </div> 
 <div 
 	data-dashtype="0" 
-	id="dashelement_MFR_Dashboard_Reports_grid{$pageid}"
+	id="dashelement_public_mfr_dashboard_reports_grid{$pageid}"
 	data-tablocation="above" 
 
 	
 	
-	data-itemtype="dashboard-item" data-itemid="dashboard-item11" {$item_dashboard-item11} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+	data-itemtype="dashboard-item" data-itemid="dashboard-item10" {$item_dashboard-item10} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
 >
-	{$db_MFR_Dashboard_Reports_grid}
+	{$db_public_mfr_dashboard_reports_grid}
 </div></td>
 									<td 
 	class=" r-ori-vert			"
 			 
-	data-cellId="grid_c16" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
+	data-cellId="grid_c3" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
  
 <div 
 	data-dashtype="4" 
-	id="dashelement_MFR_Operational_Status_search{$pageid}"
+	id="dashelement_public_mfr_operational_status_search{$pageid}"
 	data-tablocation="above" 
 
 	
 	
-	data-itemtype="dashboard-item" data-itemid="dashboard-item17" {$item_dashboard-item17} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+	data-itemtype="dashboard-item" data-itemid="dashboard-item18" {$item_dashboard-item18} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
 >
-	{$db_MFR_Operational_Status_search}
+	{$db_public_mfr_operational_status_search}
 </div> 
 <div 
 	data-dashtype="0" 
-	id="dashelement_MFR_Operational_Status_grid{$pageid}"
+	id="dashelement_public_mfr_operational_status_grid{$pageid}"
 	data-tablocation="above" 
 
 	
 	
-	data-itemtype="dashboard-item" data-itemid="dashboard-item12" {$item_dashboard-item12} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+	data-itemtype="dashboard-item" data-itemid="dashboard-item19" {$item_dashboard-item19} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
 >
-	{$db_MFR_Operational_Status_grid}
+	{$db_public_mfr_operational_status_grid}
 </div></td>
 							</tr>
 											
@@ -278,18 +286,34 @@
 									<td 
 	class=" r-ori-vert			"
 			 
+	data-cellId="grid_c15" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
+</td>
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c16" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
+</td>
+							</tr>
+											
+			<tr 
+			{$row_grid_3} 
+						data-row-width="2"
+						>
+									<td 
+	class=" r-ori-vert			"
+			 
 	data-cellId="grid_c6" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
  
 <div 
 	data-dashtype="1" 
-	id="dashelement_MFR_Dashboard_Reports_Chart_chart{$pageid}"
+	id="dashelement_mfr_dashboard_reports_chart_chart{$pageid}"
 	data-tablocation="above" 
 
 	
 	
-	data-itemtype="dashboard-item" data-itemid="dashboard-item" {$item_dashboard-item} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+	data-itemtype="dashboard-item" data-itemid="dashboard-item11" {$item_dashboard-item11} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
 >
-	{$db_MFR_Dashboard_Reports_Chart_chart}
+	{$db_mfr_dashboard_reports_chart_chart}
 </div></td>
 									<td 
 	class=" r-ori-vert			"
@@ -298,19 +322,19 @@
  
 <div 
 	data-dashtype="1" 
-	id="dashelement_MFR_Operational_Status_Chart_chart{$pageid}"
+	id="dashelement_mfr_operational_status_chart_chart{$pageid}"
 	data-tablocation="above" 
 
 	
 	
-	data-itemtype="dashboard-item" data-itemid="dashboard-item1" {$item_dashboard-item1} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+	data-itemtype="dashboard-item" data-itemid="dashboard-item12" {$item_dashboard-item12} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
 >
-	{$db_MFR_Operational_Status_Chart_chart}
+	{$db_mfr_operational_status_chart_chart}
 </div></td>
 							</tr>
 											
 			<tr 
-			{$row_grid_3} 
+			{$row_grid_4} 
 						data-row-width="2"
 						>
 									<td 
@@ -326,7 +350,67 @@
 							</tr>
 											
 			<tr 
-			{$row_grid_4} 
+			{$row_grid_5} 
+						data-row-width="2"
+						>
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c22" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
+ 
+<div 
+	data-dashtype="4" 
+	id="dashelement_public_mfr_region_search{$pageid}"
+	data-tablocation="above" 
+
+	
+	
+	data-itemtype="dashboard-item" data-itemid="dashboard-item1" {$item_dashboard-item1} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+>
+	{$db_public_mfr_region_search}
+</div> 
+<div 
+	data-dashtype="6" 
+	id="dashelement_public_mfr_region_map{$pageid}"
+	data-tablocation="above" 
+
+	
+	
+	data-itemtype="dashboard-item" data-itemid="dashboard-item" {$item_dashboard-item} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+>
+	{$db_public_mfr_region_map}
+</div></td>
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c23" data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard">
+ 
+<div 
+	data-dashtype="0" 
+	id="dashelement_public_mfr_region_grid{$pageid}"
+	data-tablocation="above" 
+
+	
+	
+	data-itemtype="dashboard-item" data-itemid="dashboard-item16" {$item_dashboard-item16} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+>
+	{$db_public_mfr_region_grid}
+</div> 
+<div 
+	data-dashtype="1" 
+	id="dashelement_mfr_region_chart_chart{$pageid}"
+	data-tablocation="above" 
+
+	
+	
+	data-itemtype="dashboard-item" data-itemid="dashboard-item17" {$item_dashboard-item17} data-pageid="{$pageid}" data-page="mfr_aio_dashboard_MFR_AIO_Reporting_Dashboard" 
+>
+	{$db_mfr_region_chart_chart}
+</div></td>
+							</tr>
+											
+			<tr 
+			{$row_grid_6} 
 						data-row-width="2"
 						>
 									<td 
@@ -386,7 +470,7 @@
 							</tr>
 											
 			<tr 
-			{$row_grid_5} 
+			{$row_grid_7} 
 						data-row-width="2"
 						>
 									<td 
@@ -402,7 +486,7 @@
 							</tr>
 											
 			<tr 
-			{$row_grid_6} 
+			{$row_grid_8} 
 						data-row-width="2"
 						>
 									<td 
@@ -440,7 +524,7 @@
 							</tr>
 											
 			<tr 
-			{$row_grid_7} 
+			{$row_grid_9} 
 						data-row-width="2"
 						>
 									<td 
@@ -478,7 +562,7 @@
 							</tr>
 											
 			<tr 
-			{$row_grid_8} 
+			{$row_grid_10} 
 						data-row-width="2"
 						>
 									<td 

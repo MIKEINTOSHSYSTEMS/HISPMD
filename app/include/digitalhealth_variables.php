@@ -1,8 +1,8 @@
 <?php
-$strTableName="DigitalHealth";
+$strTableName="public.digitalhealth";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="DigitalHealth";
+$strOriginalTableName="public.digitalhealth";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

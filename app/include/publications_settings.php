@@ -3,14 +3,14 @@ $tdatapublications = array();
 $tdatapublications[".searchableFields"] = array();
 $tdatapublications[".ShortName"] = "publications";
 $tdatapublications[".OwnerID"] = "";
-$tdatapublications[".OriginalTable"] = "Publications";
+$tdatapublications[".OriginalTable"] = "public.publications";
 
 
-$tdatapublications[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatapublications[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatapublications[".originalPagesByType"] = $tdatapublications[".pagesByType"];
-$tdatapublications[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatapublications[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatapublications[".originalPages"] = $tdatapublications[".pages"];
-$tdatapublications[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatapublications[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatapublications[".originalDefaultPages"] = $tdatapublications[".defaultPages"];
 
 //	field labels
@@ -51,7 +51,7 @@ $tdatapublications[".entityType"] = 0;
 $tdatapublications[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatapublications[".strOriginalTableName"] = "Publications";
+$tdatapublications[".strOriginalTableName"] = "public.publications";
 
 	
 
@@ -67,9 +67,9 @@ $tdatapublications[".listAjax"] = false;
 //	temporary
 //$tdatapublications[".listAjax"] = false;
 
-	$tdatapublications[".audit"] = false;
+	$tdatapublications[".audit"] = true;
 
-	$tdatapublications[".locking"] = false;
+	$tdatapublications[".locking"] = true;
 
 
 $pages = $tdatapublications[".defaultPages"];
@@ -143,7 +143,7 @@ $tdatapublications[".addPageEvents"] = false;
 $tdatapublications[".isUseTimeForSearch"] = false;
 
 
-$tdatapublications[".badgeColor"] = "4169E1";
+$tdatapublications[".badgeColor"] = "D2691E";
 
 
 $tdatapublications[".allSearchFields"] = array();
@@ -187,8 +187,8 @@ $tdatapublications[".strOrderBy"] = $tstrOrderBy;
 $tdatapublications[".orderindexes"] = array();
 
 
-$tdatapublications[".sqlHead"] = "SELECT publication_id,  	title,  	`level`";
-$tdatapublications[".sqlFrom"] = "FROM Publications";
+$tdatapublications[".sqlHead"] = "SELECT publication_id,  	title,  	\"level\"";
+$tdatapublications[".sqlFrom"] = "FROM \"public\".publications";
 $tdatapublications[".sqlWhereExpr"] = "";
 $tdatapublications[".sqlTail"] = "";
 
@@ -241,13 +241,12 @@ $tdatapublications[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "publication_id";
 	$fdata["GoodName"] = "publication_id";
-	$fdata["ownerTable"] = "Publications";
-	$fdata["Label"] = GetFieldLabel("Publications","publication_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.publications";
+	$fdata["Label"] = GetFieldLabel("public_publications","publication_id");
+	$fdata["FieldType"] = 20;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -382,8 +381,8 @@ $tdatapublications[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "title";
 	$fdata["GoodName"] = "title";
-	$fdata["ownerTable"] = "Publications";
-	$fdata["Label"] = GetFieldLabel("Publications","title");
+	$fdata["ownerTable"] = "public.publications";
+	$fdata["Label"] = GetFieldLabel("public_publications","title");
 	$fdata["FieldType"] = 200;
 
 
@@ -520,9 +519,9 @@ $tdatapublications[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "level";
 	$fdata["GoodName"] = "level";
-	$fdata["ownerTable"] = "Publications";
-	$fdata["Label"] = GetFieldLabel("Publications","level");
-	$fdata["FieldType"] = 129;
+	$fdata["ownerTable"] = "public.publications";
+	$fdata["Label"] = GetFieldLabel("public_publications","level");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -534,7 +533,7 @@ $tdatapublications[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "level";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`level`";
+	$fdata["FullName"] = "\"level\"";
 
 	
 	
@@ -571,7 +570,7 @@ $tdatapublications[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -581,22 +580,6 @@ $tdatapublications[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "National";
-	$edata["LookupValues"][] = "Regional";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -611,8 +594,11 @@ $tdatapublications[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -667,25 +653,25 @@ $tdatapublications[".hideMobileList"] = array();
 		$tdatapublications[".searchableFields"][] = "level";
 
 
-$tables_data["Publications"]=&$tdatapublications;
-$field_labels["Publications"] = &$fieldLabelspublications;
-$fieldToolTips["Publications"] = &$fieldToolTipspublications;
-$placeHolders["Publications"] = &$placeHolderspublications;
-$page_titles["Publications"] = &$pageTitlespublications;
+$tables_data["public.publications"]=&$tdatapublications;
+$field_labels["public_publications"] = &$fieldLabelspublications;
+$fieldToolTips["public_publications"] = &$fieldToolTipspublications;
+$placeHolders["public_publications"] = &$placeHolderspublications;
+$page_titles["public_publications"] = &$pageTitlespublications;
 
 
-changeTextControlsToDate( "Publications" );
+changeTextControlsToDate( "public.publications" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["Publications"] = array();
+$detailsTablesData["public.publications"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["Publications"] = array();
+$masterTablesData["public.publications"] = array();
 
 
 
@@ -709,8 +695,8 @@ function createSqlQuery_publications()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "publication_id,  	title,  	`level`";
-$proto0["m_strFrom"] = "FROM Publications";
+$proto0["m_strFieldList"] = "publication_id,  	title,  	\"level\"";
+$proto0["m_strFrom"] = "FROM \"public\".publications";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -752,12 +738,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "publication_id",
-	"m_strTable" => "Publications",
-	"m_srcTableName" => "Publications"
+	"m_strTable" => "public.publications",
+	"m_srcTableName" => "public.publications"
 ));
 
 $proto6["m_sql"] = "publication_id";
-$proto6["m_srcTableName"] = "Publications";
+$proto6["m_srcTableName"] = "public.publications";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -766,12 +752,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "title",
-	"m_strTable" => "Publications",
-	"m_srcTableName" => "Publications"
+	"m_strTable" => "public.publications",
+	"m_srcTableName" => "public.publications"
 ));
 
 $proto8["m_sql"] = "title";
-$proto8["m_srcTableName"] = "Publications";
+$proto8["m_srcTableName"] = "public.publications";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -780,12 +766,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "level",
-	"m_strTable" => "Publications",
-	"m_srcTableName" => "Publications"
+	"m_strTable" => "public.publications",
+	"m_srcTableName" => "public.publications"
 ));
 
-$proto10["m_sql"] = "`level`";
-$proto10["m_srcTableName"] = "Publications";
+$proto10["m_sql"] = "\"level\"";
+$proto10["m_srcTableName"] = "public.publications";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -795,8 +781,8 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "Publications";
-$proto13["m_srcTableName"] = "Publications";
+$proto13["m_strName"] = "public.publications";
+$proto13["m_srcTableName"] = "public.publications";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "publication_id";
 $proto13["m_columns"][] = "title";
@@ -804,9 +790,9 @@ $proto13["m_columns"][] = "level";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "Publications";
+$proto12["m_sql"] = "\"public\".publications";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "Publications";
+$proto12["m_srcTableName"] = "public.publications";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -828,7 +814,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="Publications";		
+$proto0["m_srcTableName"]="public.publications";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

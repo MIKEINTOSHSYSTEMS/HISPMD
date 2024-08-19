@@ -1,6 +1,5 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'master' => array( 'Regions' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'workforce_id',
 'region_id',
 'adequate_staff',

@@ -3,14 +3,14 @@ $tdatadataquality = array();
 $tdatadataquality[".searchableFields"] = array();
 $tdatadataquality[".ShortName"] = "dataquality";
 $tdatadataquality[".OwnerID"] = "";
-$tdatadataquality[".OriginalTable"] = "DataQuality";
+$tdatadataquality[".OriginalTable"] = "public.dataquality";
 
 
-$tdatadataquality[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadataquality[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatadataquality[".originalPagesByType"] = $tdatadataquality[".pagesByType"];
-$tdatadataquality[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadataquality[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatadataquality[".originalPages"] = $tdatadataquality[".pages"];
-$tdatadataquality[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadataquality[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatadataquality[".originalDefaultPages"] = $tdatadataquality[".defaultPages"];
 
 //	field labels
@@ -54,7 +54,7 @@ $tdatadataquality[".entityType"] = 0;
 $tdatadataquality[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatadataquality[".strOriginalTableName"] = "DataQuality";
+$tdatadataquality[".strOriginalTableName"] = "public.dataquality";
 
 	
 
@@ -70,9 +70,9 @@ $tdatadataquality[".listAjax"] = false;
 //	temporary
 //$tdatadataquality[".listAjax"] = false;
 
-	$tdatadataquality[".audit"] = false;
+	$tdatadataquality[".audit"] = true;
 
-	$tdatadataquality[".locking"] = false;
+	$tdatadataquality[".locking"] = true;
 
 
 $pages = $tdatadataquality[".defaultPages"];
@@ -146,7 +146,7 @@ $tdatadataquality[".addPageEvents"] = false;
 $tdatadataquality[".isUseTimeForSearch"] = false;
 
 
-$tdatadataquality[".badgeColor"] = "8FBC8B";
+$tdatadataquality[".badgeColor"] = "4682B4";
 
 
 $tdatadataquality[".allSearchFields"] = array();
@@ -192,7 +192,7 @@ $tdatadataquality[".orderindexes"] = array();
 
 
 $tdatadataquality[".sqlHead"] = "SELECT dq_id,  	report_type,  	timeliness_percentage,  	completeness_percentage";
-$tdatadataquality[".sqlFrom"] = "FROM DataQuality";
+$tdatadataquality[".sqlFrom"] = "FROM \"public\".dataquality";
 $tdatadataquality[".sqlWhereExpr"] = "";
 $tdatadataquality[".sqlTail"] = "";
 
@@ -245,13 +245,12 @@ $tdatadataquality[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "dq_id";
 	$fdata["GoodName"] = "dq_id";
-	$fdata["ownerTable"] = "DataQuality";
-	$fdata["Label"] = GetFieldLabel("DataQuality","dq_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.dataquality";
+	$fdata["Label"] = GetFieldLabel("public_dataquality","dq_id");
+	$fdata["FieldType"] = 20;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -386,8 +385,8 @@ $tdatadataquality[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "report_type";
 	$fdata["GoodName"] = "report_type";
-	$fdata["ownerTable"] = "DataQuality";
-	$fdata["Label"] = GetFieldLabel("DataQuality","report_type");
+	$fdata["ownerTable"] = "public.dataquality";
+	$fdata["Label"] = GetFieldLabel("public_dataquality","report_type");
 	$fdata["FieldType"] = 200;
 
 
@@ -524,8 +523,8 @@ $tdatadataquality[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "timeliness_percentage";
 	$fdata["GoodName"] = "timeliness_percentage";
-	$fdata["ownerTable"] = "DataQuality";
-	$fdata["Label"] = GetFieldLabel("DataQuality","timeliness_percentage");
+	$fdata["ownerTable"] = "public.dataquality";
+	$fdata["Label"] = GetFieldLabel("public_dataquality","timeliness_percentage");
 	$fdata["FieldType"] = 5;
 
 
@@ -663,8 +662,8 @@ $tdatadataquality[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "completeness_percentage";
 	$fdata["GoodName"] = "completeness_percentage";
-	$fdata["ownerTable"] = "DataQuality";
-	$fdata["Label"] = GetFieldLabel("DataQuality","completeness_percentage");
+	$fdata["ownerTable"] = "public.dataquality";
+	$fdata["Label"] = GetFieldLabel("public_dataquality","completeness_percentage");
 	$fdata["FieldType"] = 5;
 
 
@@ -798,25 +797,25 @@ $tdatadataquality[".hideMobileList"] = array();
 		$tdatadataquality[".searchableFields"][] = "completeness_percentage";
 
 
-$tables_data["DataQuality"]=&$tdatadataquality;
-$field_labels["DataQuality"] = &$fieldLabelsdataquality;
-$fieldToolTips["DataQuality"] = &$fieldToolTipsdataquality;
-$placeHolders["DataQuality"] = &$placeHoldersdataquality;
-$page_titles["DataQuality"] = &$pageTitlesdataquality;
+$tables_data["public.dataquality"]=&$tdatadataquality;
+$field_labels["public_dataquality"] = &$fieldLabelsdataquality;
+$fieldToolTips["public_dataquality"] = &$fieldToolTipsdataquality;
+$placeHolders["public_dataquality"] = &$placeHoldersdataquality;
+$page_titles["public_dataquality"] = &$pageTitlesdataquality;
 
 
-changeTextControlsToDate( "DataQuality" );
+changeTextControlsToDate( "public.dataquality" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["DataQuality"] = array();
+$detailsTablesData["public.dataquality"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["DataQuality"] = array();
+$masterTablesData["public.dataquality"] = array();
 
 
 
@@ -841,7 +840,7 @@ function createSqlQuery_dataquality()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "dq_id,  	report_type,  	timeliness_percentage,  	completeness_percentage";
-$proto0["m_strFrom"] = "FROM DataQuality";
+$proto0["m_strFrom"] = "FROM \"public\".dataquality";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -883,12 +882,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "dq_id",
-	"m_strTable" => "DataQuality",
-	"m_srcTableName" => "DataQuality"
+	"m_strTable" => "public.dataquality",
+	"m_srcTableName" => "public.dataquality"
 ));
 
 $proto6["m_sql"] = "dq_id";
-$proto6["m_srcTableName"] = "DataQuality";
+$proto6["m_srcTableName"] = "public.dataquality";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -897,12 +896,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "report_type",
-	"m_strTable" => "DataQuality",
-	"m_srcTableName" => "DataQuality"
+	"m_strTable" => "public.dataquality",
+	"m_srcTableName" => "public.dataquality"
 ));
 
 $proto8["m_sql"] = "report_type";
-$proto8["m_srcTableName"] = "DataQuality";
+$proto8["m_srcTableName"] = "public.dataquality";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -911,12 +910,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "timeliness_percentage",
-	"m_strTable" => "DataQuality",
-	"m_srcTableName" => "DataQuality"
+	"m_strTable" => "public.dataquality",
+	"m_srcTableName" => "public.dataquality"
 ));
 
 $proto10["m_sql"] = "timeliness_percentage";
-$proto10["m_srcTableName"] = "DataQuality";
+$proto10["m_srcTableName"] = "public.dataquality";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -925,12 +924,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "completeness_percentage",
-	"m_strTable" => "DataQuality",
-	"m_srcTableName" => "DataQuality"
+	"m_strTable" => "public.dataquality",
+	"m_srcTableName" => "public.dataquality"
 ));
 
 $proto12["m_sql"] = "completeness_percentage";
-$proto12["m_srcTableName"] = "DataQuality";
+$proto12["m_srcTableName"] = "public.dataquality";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -940,8 +939,8 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "DataQuality";
-$proto15["m_srcTableName"] = "DataQuality";
+$proto15["m_strName"] = "public.dataquality";
+$proto15["m_srcTableName"] = "public.dataquality";
 $proto15["m_columns"] = array();
 $proto15["m_columns"][] = "dq_id";
 $proto15["m_columns"][] = "report_type";
@@ -950,9 +949,9 @@ $proto15["m_columns"][] = "completeness_percentage";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "DataQuality";
+$proto14["m_sql"] = "\"public\".dataquality";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "DataQuality";
+$proto14["m_srcTableName"] = "public.dataquality";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -974,7 +973,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="DataQuality";		
+$proto0["m_srcTableName"]="public.dataquality";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

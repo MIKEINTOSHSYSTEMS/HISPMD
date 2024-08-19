@@ -3,7 +3,7 @@ $tdataadmin_rights = array();
 $tdataadmin_rights[".searchableFields"] = array();
 $tdataadmin_rights[".ShortName"] = "admin_rights";
 $tdataadmin_rights[".OwnerID"] = "";
-$tdataadmin_rights[".OriginalTable"] = "hispmd_ugrights";
+$tdataadmin_rights[".OriginalTable"] = "public.hispmd_ugrights";
 
 
 $tdataadmin_rights[".pagesByType"] = my_json_decode( "{}" );
@@ -54,7 +54,7 @@ $tdataadmin_rights[".entityType"] = 1;
 $tdataadmin_rights[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdataadmin_rights[".strOriginalTableName"] = "hispmd_ugrights";
+$tdataadmin_rights[".strOriginalTableName"] = "public.hispmd_ugrights";
 
 	
 
@@ -70,9 +70,9 @@ $tdataadmin_rights[".listAjax"] = false;
 //	temporary
 //$tdataadmin_rights[".listAjax"] = false;
 
-	$tdataadmin_rights[".audit"] = false;
+	$tdataadmin_rights[".audit"] = true;
 
-	$tdataadmin_rights[".locking"] = false;
+	$tdataadmin_rights[".locking"] = true;
 
 
 $pages = $tdataadmin_rights[".defaultPages"];
@@ -146,7 +146,7 @@ $tdataadmin_rights[".addPageEvents"] = false;
 $tdataadmin_rights[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_rights[".badgeColor"] = "2F4F4F";
+$tdataadmin_rights[".badgeColor"] = "CD853F";
 
 
 $tdataadmin_rights[".allSearchFields"] = array();
@@ -191,8 +191,8 @@ $tdataadmin_rights[".strOrderBy"] = $tstrOrderBy;
 $tdataadmin_rights[".orderindexes"] = array();
 
 
-$tdataadmin_rights[".sqlHead"] = "SELECT TableName,  	GroupID,  	AccessMask,  	Page";
-$tdataadmin_rights[".sqlFrom"] = "FROM hispmd_ugrights";
+$tdataadmin_rights[".sqlHead"] = "SELECT \"TableName\",  	\"GroupID\",  	\"AccessMask\",  	\"Page\"";
+$tdataadmin_rights[".sqlFrom"] = "FROM \"public\".hispmd_ugrights";
 $tdataadmin_rights[".sqlWhereExpr"] = "";
 $tdataadmin_rights[".sqlTail"] = "";
 
@@ -246,7 +246,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "TableName";
 	$fdata["GoodName"] = "TableName";
-	$fdata["ownerTable"] = "hispmd_ugrights";
+	$fdata["ownerTable"] = "public.hispmd_ugrights";
 	$fdata["Label"] = GetFieldLabel("admin_rights","TableName");
 	$fdata["FieldType"] = 200;
 
@@ -260,7 +260,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "TableName";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "TableName";
+	$fdata["FullName"] = "\"TableName\"";
 
 	
 	
@@ -324,8 +324,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -384,7 +383,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "GroupID";
 	$fdata["GoodName"] = "GroupID";
-	$fdata["ownerTable"] = "hispmd_ugrights";
+	$fdata["ownerTable"] = "public.hispmd_ugrights";
 	$fdata["Label"] = GetFieldLabel("admin_rights","GroupID");
 	$fdata["FieldType"] = 3;
 
@@ -398,7 +397,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "GroupID";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "GroupID";
+	$fdata["FullName"] = "\"GroupID\"";
 
 	
 	
@@ -524,7 +523,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "AccessMask";
 	$fdata["GoodName"] = "AccessMask";
-	$fdata["ownerTable"] = "hispmd_ugrights";
+	$fdata["ownerTable"] = "public.hispmd_ugrights";
 	$fdata["Label"] = GetFieldLabel("admin_rights","AccessMask");
 	$fdata["FieldType"] = 200;
 
@@ -538,7 +537,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "AccessMask";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "AccessMask";
+	$fdata["FullName"] = "\"AccessMask\"";
 
 	
 	
@@ -602,8 +601,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=10";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -662,7 +660,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "Page";
 	$fdata["GoodName"] = "Page";
-	$fdata["ownerTable"] = "hispmd_ugrights";
+	$fdata["ownerTable"] = "public.hispmd_ugrights";
 	$fdata["Label"] = GetFieldLabel("admin_rights","Page");
 	$fdata["FieldType"] = 201;
 
@@ -676,7 +674,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Page";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Page";
+	$fdata["FullName"] = "\"Page\"";
 
 	
 	
@@ -840,8 +838,8 @@ function createSqlQuery_admin_rights()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "TableName,  	GroupID,  	AccessMask,  	Page";
-$proto0["m_strFrom"] = "FROM hispmd_ugrights";
+$proto0["m_strFieldList"] = "\"TableName\",  	\"GroupID\",  	\"AccessMask\",  	\"Page\"";
+$proto0["m_strFrom"] = "FROM \"public\".hispmd_ugrights";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -883,11 +881,11 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "TableName",
-	"m_strTable" => "hispmd_ugrights",
+	"m_strTable" => "public.hispmd_ugrights",
 	"m_srcTableName" => "admin_rights"
 ));
 
-$proto6["m_sql"] = "TableName";
+$proto6["m_sql"] = "\"TableName\"";
 $proto6["m_srcTableName"] = "admin_rights";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -897,11 +895,11 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "GroupID",
-	"m_strTable" => "hispmd_ugrights",
+	"m_strTable" => "public.hispmd_ugrights",
 	"m_srcTableName" => "admin_rights"
 ));
 
-$proto8["m_sql"] = "GroupID";
+$proto8["m_sql"] = "\"GroupID\"";
 $proto8["m_srcTableName"] = "admin_rights";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -911,11 +909,11 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "AccessMask",
-	"m_strTable" => "hispmd_ugrights",
+	"m_strTable" => "public.hispmd_ugrights",
 	"m_srcTableName" => "admin_rights"
 ));
 
-$proto10["m_sql"] = "AccessMask";
+$proto10["m_sql"] = "\"AccessMask\"";
 $proto10["m_srcTableName"] = "admin_rights";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -925,11 +923,11 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Page",
-	"m_strTable" => "hispmd_ugrights",
+	"m_strTable" => "public.hispmd_ugrights",
 	"m_srcTableName" => "admin_rights"
 ));
 
-$proto12["m_sql"] = "Page";
+$proto12["m_sql"] = "\"Page\"";
 $proto12["m_srcTableName"] = "admin_rights";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -940,7 +938,7 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "hispmd_ugrights";
+$proto15["m_strName"] = "public.hispmd_ugrights";
 $proto15["m_srcTableName"] = "admin_rights";
 $proto15["m_columns"] = array();
 $proto15["m_columns"][] = "TableName";
@@ -950,7 +948,7 @@ $proto15["m_columns"][] = "Page";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "hispmd_ugrights";
+$proto14["m_sql"] = "\"public\".hispmd_ugrights";
 $proto14["m_alias"] = "";
 $proto14["m_srcTableName"] = "admin_rights";
 $proto16=array();

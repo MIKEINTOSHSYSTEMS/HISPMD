@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel DataQuality add}</h2>
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dataquality add}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -111,21 +111,42 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN dq_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dq_id}  r-vertical-field" 
+	data-signal-error-for="dq_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="dq_id" data-fieldname="dq_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_dq_id}">
+		{BEGIN dq_id_label}{$label public_dataquality dq_id }{END dq_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$dq_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="dq_id">
+		<div class="text-muted" >
+		{$tooltip public_dataquality dq_id }		</div>
+	</div>
+</div>
+
+
+{END dq_id_fieldblock}
+											
 {BEGIN report_type_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_report_type}  r-vertical-field" 
 	data-signal-error-for="report_type{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="report_type" data-fieldname="report_type" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="report_type" data-fieldname="report_type" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_report_type}">
-		{BEGIN report_type_label}{$label DataQuality report_type }{END report_type_label}
+		{BEGIN report_type_label}{$label public_dataquality report_type }{END report_type_label}
 	</label>
 	<div class="r-edit-field">
 		{$report_type_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="report_type">
 		<div class="text-muted" >
-		{$tooltip DataQuality report_type }		</div>
+		{$tooltip public_dataquality report_type }		</div>
 	</div>
 </div>
 
@@ -137,16 +158,16 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_timeliness_percentage}  r-vertical-field" 
 	data-signal-error-for="timeliness_percentage{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="timeliness_percentage" data-fieldname="timeliness_percentage" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="timeliness_percentage" data-fieldname="timeliness_percentage" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_timeliness_percentage}">
-		{BEGIN timeliness_percentage_label}{$label DataQuality timeliness_percentage }{END timeliness_percentage_label}
+		{BEGIN timeliness_percentage_label}{$label public_dataquality timeliness_percentage }{END timeliness_percentage_label}
 	</label>
 	<div class="r-edit-field">
 		{$timeliness_percentage_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="timeliness_percentage">
 		<div class="text-muted" >
-		{$tooltip DataQuality timeliness_percentage }		</div>
+		{$tooltip public_dataquality timeliness_percentage }		</div>
 	</div>
 </div>
 
@@ -158,16 +179,16 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_completeness_percentage}  r-vertical-field" 
 	data-signal-error-for="completeness_percentage{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="completeness_percentage" data-fieldname="completeness_percentage" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="completeness_percentage" data-fieldname="completeness_percentage" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_completeness_percentage}">
-		{BEGIN completeness_percentage_label}{$label DataQuality completeness_percentage }{END completeness_percentage_label}
+		{BEGIN completeness_percentage_label}{$label public_dataquality completeness_percentage }{END completeness_percentage_label}
 	</label>
 	<div class="r-edit-field">
 		{$completeness_percentage_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="completeness_percentage">
 		<div class="text-muted" >
-		{$tooltip DataQuality completeness_percentage }		</div>
+		{$tooltip public_dataquality completeness_percentage }		</div>
 	</div>
 </div>
 

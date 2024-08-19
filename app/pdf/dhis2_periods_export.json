@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DHIS2_Periods export}","hidden":"{$item_hide_export_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_dhis2_periods export}","hidden":"{$item_hide_export_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -106,10 +106,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Period_ID_pdfvalue},"hidden":"{$item_hide_export_field}"},
+			{"text":{$period_id_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$Period_Name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+			{"text":{$period_name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -3,14 +3,14 @@ $tdatadhis2_periods = array();
 $tdatadhis2_periods[".searchableFields"] = array();
 $tdatadhis2_periods[".ShortName"] = "dhis2_periods";
 $tdatadhis2_periods[".OwnerID"] = "";
-$tdatadhis2_periods[".OriginalTable"] = "DHIS2_Periods";
+$tdatadhis2_periods[".OriginalTable"] = "public.dhis2_periods";
 
 
-$tdatadhis2_periods[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadhis2_periods[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatadhis2_periods[".originalPagesByType"] = $tdatadhis2_periods[".pagesByType"];
-$tdatadhis2_periods[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadhis2_periods[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatadhis2_periods[".originalPages"] = $tdatadhis2_periods[".pages"];
-$tdatadhis2_periods[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadhis2_periods[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatadhis2_periods[".originalDefaultPages"] = $tdatadhis2_periods[".defaultPages"];
 
 //	field labels
@@ -25,12 +25,12 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsdhis2_periods["English"] = array();
 	$placeHoldersdhis2_periods["English"] = array();
 	$pageTitlesdhis2_periods["English"] = array();
-	$fieldLabelsdhis2_periods["English"]["Period_ID"] = "Period ID";
-	$fieldToolTipsdhis2_periods["English"]["Period_ID"] = "";
-	$placeHoldersdhis2_periods["English"]["Period_ID"] = "";
-	$fieldLabelsdhis2_periods["English"]["Period_Name"] = "Period Name";
-	$fieldToolTipsdhis2_periods["English"]["Period_Name"] = "";
-	$placeHoldersdhis2_periods["English"]["Period_Name"] = "";
+	$fieldLabelsdhis2_periods["English"]["period_id"] = "Period Id";
+	$fieldToolTipsdhis2_periods["English"]["period_id"] = "";
+	$placeHoldersdhis2_periods["English"]["period_id"] = "";
+	$fieldLabelsdhis2_periods["English"]["period_name"] = "Period Name";
+	$fieldToolTipsdhis2_periods["English"]["period_name"] = "";
+	$placeHoldersdhis2_periods["English"]["period_name"] = "";
 	if (count($fieldToolTipsdhis2_periods["English"]))
 		$tdatadhis2_periods[".isUseToolTips"] = true;
 }
@@ -48,7 +48,7 @@ $tdatadhis2_periods[".entityType"] = 0;
 $tdatadhis2_periods[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatadhis2_periods[".strOriginalTableName"] = "DHIS2_Periods";
+$tdatadhis2_periods[".strOriginalTableName"] = "public.dhis2_periods";
 
 	
 
@@ -64,9 +64,9 @@ $tdatadhis2_periods[".listAjax"] = false;
 //	temporary
 //$tdatadhis2_periods[".listAjax"] = false;
 
-	$tdatadhis2_periods[".audit"] = false;
+	$tdatadhis2_periods[".audit"] = true;
 
-	$tdatadhis2_periods[".locking"] = false;
+	$tdatadhis2_periods[".locking"] = true;
 
 
 $pages = $tdatadhis2_periods[".defaultPages"];
@@ -140,7 +140,7 @@ $tdatadhis2_periods[".addPageEvents"] = false;
 $tdatadhis2_periods[".isUseTimeForSearch"] = false;
 
 
-$tdatadhis2_periods[".badgeColor"] = "B22222";
+$tdatadhis2_periods[".badgeColor"] = "2F4F4F";
 
 
 $tdatadhis2_periods[".allSearchFields"] = array();
@@ -148,8 +148,8 @@ $tdatadhis2_periods[".filterFields"] = array();
 $tdatadhis2_periods[".requiredSearchFields"] = array();
 
 $tdatadhis2_periods[".googleLikeFields"] = array();
-$tdatadhis2_periods[".googleLikeFields"][] = "Period_ID";
-$tdatadhis2_periods[".googleLikeFields"][] = "Period_Name";
+$tdatadhis2_periods[".googleLikeFields"][] = "period_id";
+$tdatadhis2_periods[".googleLikeFields"][] = "period_name";
 
 
 
@@ -183,8 +183,8 @@ $tdatadhis2_periods[".strOrderBy"] = $tstrOrderBy;
 $tdatadhis2_periods[".orderindexes"] = array();
 
 
-$tdatadhis2_periods[".sqlHead"] = "SELECT Period_ID,  	Period_Name";
-$tdatadhis2_periods[".sqlFrom"] = "FROM DHIS2_Periods";
+$tdatadhis2_periods[".sqlHead"] = "SELECT period_id,  	period_name";
+$tdatadhis2_periods[".sqlFrom"] = "FROM \"public\".dhis2_periods";
 $tdatadhis2_periods[".sqlWhereExpr"] = "";
 $tdatadhis2_periods[".sqlTail"] = "";
 
@@ -222,7 +222,7 @@ $tdatadhis2_periods[".arrGroupsPerPage"] = $arrGPP;
 $tdatadhis2_periods[".highlightSearchResults"] = true;
 
 $tableKeysdhis2_periods = array();
-$tableKeysdhis2_periods[] = "Period_ID";
+$tableKeysdhis2_periods[] = "period_id";
 $tdatadhis2_periods[".Keys"] = $tableKeysdhis2_periods;
 
 
@@ -231,14 +231,14 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 
 
 
-//	Period_ID
+//	period_id
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "Period_ID";
-	$fdata["GoodName"] = "Period_ID";
-	$fdata["ownerTable"] = "DHIS2_Periods";
-	$fdata["Label"] = GetFieldLabel("DHIS2_Periods","Period_ID");
+	$fdata["strName"] = "period_id";
+	$fdata["GoodName"] = "period_id";
+	$fdata["ownerTable"] = "public.dhis2_periods";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_periods","period_id");
 	$fdata["FieldType"] = 200;
 
 
@@ -246,12 +246,12 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Period_ID";
+		$fdata["strField"] = "period_id";
 
-		$fdata["sourceSingle"] = "Period_ID";
+		$fdata["sourceSingle"] = "period_id";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Period_ID";
+	$fdata["FullName"] = "period_id";
 
 	
 	
@@ -367,16 +367,16 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatadhis2_periods["Period_ID"] = $fdata;
-		$tdatadhis2_periods[".searchableFields"][] = "Period_ID";
-//	Period_Name
+	$tdatadhis2_periods["period_id"] = $fdata;
+		$tdatadhis2_periods[".searchableFields"][] = "period_id";
+//	period_name
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "Period_Name";
-	$fdata["GoodName"] = "Period_Name";
-	$fdata["ownerTable"] = "DHIS2_Periods";
-	$fdata["Label"] = GetFieldLabel("DHIS2_Periods","Period_Name");
+	$fdata["strName"] = "period_name";
+	$fdata["GoodName"] = "period_name";
+	$fdata["ownerTable"] = "public.dhis2_periods";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_periods","period_name");
 	$fdata["FieldType"] = 200;
 
 
@@ -384,12 +384,12 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Period_Name";
+		$fdata["strField"] = "period_name";
 
-		$fdata["sourceSingle"] = "Period_Name";
+		$fdata["sourceSingle"] = "period_name";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Period_Name";
+	$fdata["FullName"] = "period_name";
 
 	
 	
@@ -505,29 +505,29 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatadhis2_periods["Period_Name"] = $fdata;
-		$tdatadhis2_periods[".searchableFields"][] = "Period_Name";
+	$tdatadhis2_periods["period_name"] = $fdata;
+		$tdatadhis2_periods[".searchableFields"][] = "period_name";
 
 
-$tables_data["DHIS2_Periods"]=&$tdatadhis2_periods;
-$field_labels["DHIS2_Periods"] = &$fieldLabelsdhis2_periods;
-$fieldToolTips["DHIS2_Periods"] = &$fieldToolTipsdhis2_periods;
-$placeHolders["DHIS2_Periods"] = &$placeHoldersdhis2_periods;
-$page_titles["DHIS2_Periods"] = &$pageTitlesdhis2_periods;
+$tables_data["public.dhis2_periods"]=&$tdatadhis2_periods;
+$field_labels["public_dhis2_periods"] = &$fieldLabelsdhis2_periods;
+$fieldToolTips["public_dhis2_periods"] = &$fieldToolTipsdhis2_periods;
+$placeHolders["public_dhis2_periods"] = &$placeHoldersdhis2_periods;
+$page_titles["public_dhis2_periods"] = &$pageTitlesdhis2_periods;
 
 
-changeTextControlsToDate( "DHIS2_Periods" );
+changeTextControlsToDate( "public.dhis2_periods" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["DHIS2_Periods"] = array();
+$detailsTablesData["public.dhis2_periods"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["DHIS2_Periods"] = array();
+$masterTablesData["public.dhis2_periods"] = array();
 
 
 
@@ -551,8 +551,8 @@ function createSqlQuery_dhis2_periods()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "Period_ID,  	Period_Name";
-$proto0["m_strFrom"] = "FROM DHIS2_Periods";
+$proto0["m_strFieldList"] = "period_id,  	period_name";
+$proto0["m_strFrom"] = "FROM \"public\".dhis2_periods";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -593,13 +593,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Period_ID",
-	"m_strTable" => "DHIS2_Periods",
-	"m_srcTableName" => "DHIS2_Periods"
+	"m_strName" => "period_id",
+	"m_strTable" => "public.dhis2_periods",
+	"m_srcTableName" => "public.dhis2_periods"
 ));
 
-$proto6["m_sql"] = "Period_ID";
-$proto6["m_srcTableName"] = "DHIS2_Periods";
+$proto6["m_sql"] = "period_id";
+$proto6["m_srcTableName"] = "public.dhis2_periods";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -607,13 +607,13 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Period_Name",
-	"m_strTable" => "DHIS2_Periods",
-	"m_srcTableName" => "DHIS2_Periods"
+	"m_strName" => "period_name",
+	"m_strTable" => "public.dhis2_periods",
+	"m_srcTableName" => "public.dhis2_periods"
 ));
 
-$proto8["m_sql"] = "Period_Name";
-$proto8["m_srcTableName"] = "DHIS2_Periods";
+$proto8["m_sql"] = "period_name";
+$proto8["m_srcTableName"] = "public.dhis2_periods";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -623,17 +623,17 @@ $proto0["m_fromlist"] = array();
 												$proto10=array();
 $proto10["m_link"] = "SQLL_MAIN";
 			$proto11=array();
-$proto11["m_strName"] = "DHIS2_Periods";
-$proto11["m_srcTableName"] = "DHIS2_Periods";
+$proto11["m_strName"] = "public.dhis2_periods";
+$proto11["m_srcTableName"] = "public.dhis2_periods";
 $proto11["m_columns"] = array();
-$proto11["m_columns"][] = "Period_ID";
-$proto11["m_columns"][] = "Period_Name";
+$proto11["m_columns"][] = "period_id";
+$proto11["m_columns"][] = "period_name";
 $obj = new SQLTable($proto11);
 
 $proto10["m_table"] = $obj;
-$proto10["m_sql"] = "DHIS2_Periods";
+$proto10["m_sql"] = "\"public\".dhis2_periods";
 $proto10["m_alias"] = "";
-$proto10["m_srcTableName"] = "DHIS2_Periods";
+$proto10["m_srcTableName"] = "public.dhis2_periods";
 $proto12=array();
 $proto12["m_sql"] = "";
 $proto12["m_uniontype"] = "SQLL_UNKNOWN";
@@ -655,7 +655,7 @@ $obj = new SQLFromListItem($proto10);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="DHIS2_Periods";		
+$proto0["m_srcTableName"]="public.dhis2_periods";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

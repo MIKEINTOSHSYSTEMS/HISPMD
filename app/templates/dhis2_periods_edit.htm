@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Periods edit}</h2>
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dhis2_periods edit}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -106,47 +106,47 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Period_ID_fieldblock}
+{BEGIN period_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Period_ID}  r-vertical-field" 
-	data-signal-error-for="Period_ID{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Period_ID" data-fieldname="Period_ID" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_period_id}  r-vertical-field" 
+	data-signal-error-for="period_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Period_ID}">
-		{BEGIN Period_ID_label}{$label DHIS2_Periods Period_ID }{END Period_ID_label}
+	<label class="r-edit-label control-label" for="{$labelfor_period_id}">
+		{BEGIN period_id_label}{$label public_dhis2_periods period_id }{END period_id_label}
 	</label>
 	<div class="r-edit-field">
-		{$Period_ID_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Period_ID">
+		{$period_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="period_id">
 		<div class="text-muted" >
-		{$tooltip DHIS2_Periods Period_ID }		</div>
+		{$tooltip public_dhis2_periods period_id }		</div>
 	</div>
 </div>
 
 
-{END Period_ID_fieldblock}
+{END period_id_fieldblock}
 											
-{BEGIN Period_Name_fieldblock}
+{BEGIN period_name_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Period_Name}  r-vertical-field" 
-	data-signal-error-for="Period_Name{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Period_Name" data-fieldname="Period_Name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_period_name}  r-vertical-field" 
+	data-signal-error-for="period_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="period_name" data-fieldname="period_name" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Period_Name}">
-		{BEGIN Period_Name_label}{$label DHIS2_Periods Period_Name }{END Period_Name_label}
+	<label class="r-edit-label control-label" for="{$labelfor_period_name}">
+		{BEGIN period_name_label}{$label public_dhis2_periods period_name }{END period_name_label}
 	</label>
 	<div class="r-edit-field">
-		{$Period_Name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Period_Name">
+		{$period_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="period_name">
 		<div class="text-muted" >
-		{$tooltip DHIS2_Periods Period_Name }		</div>
+		{$tooltip public_dhis2_periods period_name }		</div>
 	</div>
 </div>
 
 
-{END Period_Name_fieldblock}
+{END period_name_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

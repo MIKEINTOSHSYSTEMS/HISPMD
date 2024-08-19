@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel Publications search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_publications search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -4,7 +4,7 @@ class paramsLogger
 	/**
 	 * @type String
 	 */
-	protected $paramsTableName = "";
+	protected $paramsTableName = "public.hispmd_settings";
 
 	/**
 	 * 1 - saved searches

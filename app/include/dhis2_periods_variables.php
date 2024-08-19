@@ -1,8 +1,8 @@
 <?php
-$strTableName="DHIS2_Periods";
+$strTableName="public.dhis2_periods";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="DHIS2_Periods";
+$strOriginalTableName="public.dhis2_periods";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

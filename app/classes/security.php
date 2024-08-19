@@ -374,7 +374,7 @@ class Security
 		$grConnection = $cman->getForUserGroups();
 
 		$sql = "select ". $grConnection->addFieldWrappers( "Label" )
-			." from ". $grConnection->addTableWrappers( "hispmd_uggroups" ) . " WHERE " . $grConnection->addFieldWrappers( "GroupID" )
+			." from ". $grConnection->addTableWrappers( "public.hispmd_uggroups" ) . " WHERE " . $grConnection->addFieldWrappers( "GroupID" )
 			." in ( " . implode( ",", array_keys( $groupIds ) ) . ")";
 
 		$qResult = $grConnection->query( $sql );
@@ -1160,7 +1160,7 @@ class Security
 			return null;
 		}
 		global $cman;
-		return getDbTableDataSource( "hispmd_ugmembers", $cman->getUserGroupsConnId() );
+		return getDbTableDataSource( "public.hispmd_ugmembers", $cman->getUserGroupsConnId() );
 	}
 
 	/**
@@ -1172,7 +1172,7 @@ class Security
 			return null;
 		}
 		global $cman;
-		return getDbTableDataSource( "hispmd_uggroups", $cman->getUserGroupsConnId() );
+		return getDbTableDataSource( "public.hispmd_uggroups", $cman->getUserGroupsConnId() );
 	}
 
 	/**
@@ -1184,7 +1184,7 @@ class Security
 			return null;
 		}
 		global $cman;
-		return getDbTableDataSource( "hispmd_ugrights", $cman->getUserGroupsConnId() );
+		return getDbTableDataSource( "public.hispmd_ugrights", $cman->getUserGroupsConnId() );
 	}
 
 

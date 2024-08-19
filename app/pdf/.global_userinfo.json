@@ -103,11 +103,47 @@ pdfDocument = {
 			"%",
 						{END row_grid_2}
 			 
+								{BEGIN row_grid_3}
+						
+			"%",
+						{END row_grid_3}
+			 
 				],
 	
 		body: [
 				
 				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_fields_message1}
+{
+	cellId: 'fields_message1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_fields_message1}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
 				[
 																{BEGIN cellblock_grid_fields_message}
 {
@@ -140,8 +176,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields_message}
 											],
-				{END row_grid_0}
-						{BEGIN row_grid_1}
+				{END row_grid_1}
+						{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_fields}
 {
@@ -159,6 +195,9 @@ pdfDocument = {
 	
 			"stack": [
 		
+				
+			{"text":"","hidden":"{$item_hide_changepassword_link}"},
+				
 				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel _global username }","bold":true},{"text":{$username_pdfvalue}}],"margin":[0,0,0,15]},
 				
@@ -180,8 +219,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields}
 											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
+				{END row_grid_2}
+						{BEGIN row_grid_3}
 				[
 																{BEGIN cellblock_grid_buttons}
 {
@@ -214,7 +253,7 @@ pdfDocument = {
 
 {END cellblock_grid_buttons}
 											],
-				{END row_grid_2}
+				{END row_grid_3}
 		
 		]
 	}

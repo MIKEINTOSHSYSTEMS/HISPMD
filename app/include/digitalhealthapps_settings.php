@@ -3,14 +3,14 @@ $tdatadigitalhealthapps = array();
 $tdatadigitalhealthapps[".searchableFields"] = array();
 $tdatadigitalhealthapps[".ShortName"] = "digitalhealthapps";
 $tdatadigitalhealthapps[".OwnerID"] = "";
-$tdatadigitalhealthapps[".OriginalTable"] = "DigitalHealthApps";
+$tdatadigitalhealthapps[".OriginalTable"] = "public.digitalhealthapps";
 
 
-$tdatadigitalhealthapps[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadigitalhealthapps[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatadigitalhealthapps[".originalPagesByType"] = $tdatadigitalhealthapps[".pagesByType"];
-$tdatadigitalhealthapps[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadigitalhealthapps[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatadigitalhealthapps[".originalPages"] = $tdatadigitalhealthapps[".pages"];
-$tdatadigitalhealthapps[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadigitalhealthapps[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatadigitalhealthapps[".originalDefaultPages"] = $tdatadigitalhealthapps[".defaultPages"];
 
 //	field labels
@@ -51,7 +51,7 @@ $tdatadigitalhealthapps[".entityType"] = 0;
 $tdatadigitalhealthapps[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatadigitalhealthapps[".strOriginalTableName"] = "DigitalHealthApps";
+$tdatadigitalhealthapps[".strOriginalTableName"] = "public.digitalhealthapps";
 
 	
 
@@ -67,9 +67,9 @@ $tdatadigitalhealthapps[".listAjax"] = false;
 //	temporary
 //$tdatadigitalhealthapps[".listAjax"] = false;
 
-	$tdatadigitalhealthapps[".audit"] = false;
+	$tdatadigitalhealthapps[".audit"] = true;
 
-	$tdatadigitalhealthapps[".locking"] = false;
+	$tdatadigitalhealthapps[".locking"] = true;
 
 
 $pages = $tdatadigitalhealthapps[".defaultPages"];
@@ -143,7 +143,7 @@ $tdatadigitalhealthapps[".addPageEvents"] = false;
 $tdatadigitalhealthapps[".isUseTimeForSearch"] = false;
 
 
-$tdatadigitalhealthapps[".badgeColor"] = "CD5C5C";
+$tdatadigitalhealthapps[".badgeColor"] = "BC8F8F";
 
 
 $tdatadigitalhealthapps[".allSearchFields"] = array();
@@ -188,7 +188,7 @@ $tdatadigitalhealthapps[".orderindexes"] = array();
 
 
 $tdatadigitalhealthapps[".sqlHead"] = "SELECT app_id,  	name,  	standards_met";
-$tdatadigitalhealthapps[".sqlFrom"] = "FROM DigitalHealthApps";
+$tdatadigitalhealthapps[".sqlFrom"] = "FROM \"public\".digitalhealthapps";
 $tdatadigitalhealthapps[".sqlWhereExpr"] = "";
 $tdatadigitalhealthapps[".sqlTail"] = "";
 
@@ -241,13 +241,12 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "app_id";
 	$fdata["GoodName"] = "app_id";
-	$fdata["ownerTable"] = "DigitalHealthApps";
-	$fdata["Label"] = GetFieldLabel("DigitalHealthApps","app_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.digitalhealthapps";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealthapps","app_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -305,8 +304,7 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -321,16 +319,15 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -382,8 +379,8 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "name";
 	$fdata["GoodName"] = "name";
-	$fdata["ownerTable"] = "DigitalHealthApps";
-	$fdata["Label"] = GetFieldLabel("DigitalHealthApps","name");
+	$fdata["ownerTable"] = "public.digitalhealthapps";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealthapps","name");
 	$fdata["FieldType"] = 200;
 
 
@@ -460,7 +457,7 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
+			$edata["EditParams"].= " maxlength=255";
 
 		$edata["controlWidth"] = 200;
 
@@ -520,9 +517,9 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "standards_met";
 	$fdata["GoodName"] = "standards_met";
-	$fdata["ownerTable"] = "DigitalHealthApps";
-	$fdata["Label"] = GetFieldLabel("DigitalHealthApps","standards_met");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealthapps";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealthapps","standards_met");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -598,15 +595,15 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -654,25 +651,25 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 		$tdatadigitalhealthapps[".searchableFields"][] = "standards_met";
 
 
-$tables_data["DigitalHealthApps"]=&$tdatadigitalhealthapps;
-$field_labels["DigitalHealthApps"] = &$fieldLabelsdigitalhealthapps;
-$fieldToolTips["DigitalHealthApps"] = &$fieldToolTipsdigitalhealthapps;
-$placeHolders["DigitalHealthApps"] = &$placeHoldersdigitalhealthapps;
-$page_titles["DigitalHealthApps"] = &$pageTitlesdigitalhealthapps;
+$tables_data["public.digitalhealthapps"]=&$tdatadigitalhealthapps;
+$field_labels["public_digitalhealthapps"] = &$fieldLabelsdigitalhealthapps;
+$fieldToolTips["public_digitalhealthapps"] = &$fieldToolTipsdigitalhealthapps;
+$placeHolders["public_digitalhealthapps"] = &$placeHoldersdigitalhealthapps;
+$page_titles["public_digitalhealthapps"] = &$pageTitlesdigitalhealthapps;
 
 
-changeTextControlsToDate( "DigitalHealthApps" );
+changeTextControlsToDate( "public.digitalhealthapps" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["DigitalHealthApps"] = array();
+$detailsTablesData["public.digitalhealthapps"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["DigitalHealthApps"] = array();
+$masterTablesData["public.digitalhealthapps"] = array();
 
 
 
@@ -697,7 +694,7 @@ function createSqlQuery_digitalhealthapps()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "app_id,  	name,  	standards_met";
-$proto0["m_strFrom"] = "FROM DigitalHealthApps";
+$proto0["m_strFrom"] = "FROM \"public\".digitalhealthapps";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -739,12 +736,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "app_id",
-	"m_strTable" => "DigitalHealthApps",
-	"m_srcTableName" => "DigitalHealthApps"
+	"m_strTable" => "public.digitalhealthapps",
+	"m_srcTableName" => "public.digitalhealthapps"
 ));
 
 $proto6["m_sql"] = "app_id";
-$proto6["m_srcTableName"] = "DigitalHealthApps";
+$proto6["m_srcTableName"] = "public.digitalhealthapps";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -753,12 +750,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "name",
-	"m_strTable" => "DigitalHealthApps",
-	"m_srcTableName" => "DigitalHealthApps"
+	"m_strTable" => "public.digitalhealthapps",
+	"m_srcTableName" => "public.digitalhealthapps"
 ));
 
 $proto8["m_sql"] = "name";
-$proto8["m_srcTableName"] = "DigitalHealthApps";
+$proto8["m_srcTableName"] = "public.digitalhealthapps";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -767,12 +764,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "standards_met",
-	"m_strTable" => "DigitalHealthApps",
-	"m_srcTableName" => "DigitalHealthApps"
+	"m_strTable" => "public.digitalhealthapps",
+	"m_srcTableName" => "public.digitalhealthapps"
 ));
 
 $proto10["m_sql"] = "standards_met";
-$proto10["m_srcTableName"] = "DigitalHealthApps";
+$proto10["m_srcTableName"] = "public.digitalhealthapps";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -782,8 +779,8 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "DigitalHealthApps";
-$proto13["m_srcTableName"] = "DigitalHealthApps";
+$proto13["m_strName"] = "public.digitalhealthapps";
+$proto13["m_srcTableName"] = "public.digitalhealthapps";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "app_id";
 $proto13["m_columns"][] = "name";
@@ -791,9 +788,9 @@ $proto13["m_columns"][] = "standards_met";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "DigitalHealthApps";
+$proto12["m_sql"] = "\"public\".digitalhealthapps";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "DigitalHealthApps";
+$proto12["m_srcTableName"] = "public.digitalhealthapps";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -815,7 +812,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="DigitalHealthApps";		
+$proto0["m_srcTableName"]="public.digitalhealthapps";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

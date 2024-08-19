@@ -3,14 +3,14 @@ $tdatahispmd_users = array();
 $tdatahispmd_users[".searchableFields"] = array();
 $tdatahispmd_users[".ShortName"] = "hispmd_users";
 $tdatahispmd_users[".OwnerID"] = "";
-$tdatahispmd_users[".OriginalTable"] = "hispmd_users";
+$tdatahispmd_users[".OriginalTable"] = "public.hispmd_users";
 
 
-$tdatahispmd_users[".pagesByType"] = my_json_decode( "{\"search\":[\"search\"]}" );
+$tdatahispmd_users[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahispmd_users[".originalPagesByType"] = $tdatahispmd_users[".pagesByType"];
-$tdatahispmd_users[".pages"] = types2pages( my_json_decode( "{\"search\":[\"search\"]}" ) );
+$tdatahispmd_users[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahispmd_users[".originalPages"] = $tdatahispmd_users[".pages"];
-$tdatahispmd_users[".defaultPages"] = my_json_decode( "{\"search\":\"search\"}" );
+$tdatahispmd_users[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahispmd_users[".originalDefaultPages"] = $tdatahispmd_users[".defaultPages"];
 
 //	field labels
@@ -25,9 +25,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipshispmd_users["English"] = array();
 	$placeHoldershispmd_users["English"] = array();
 	$pageTitleshispmd_users["English"] = array();
-	$fieldLabelshispmd_users["English"]["ID"] = "ID";
-	$fieldToolTipshispmd_users["English"]["ID"] = "";
-	$placeHoldershispmd_users["English"]["ID"] = "";
+	$fieldLabelshispmd_users["English"]["id"] = "Id";
+	$fieldToolTipshispmd_users["English"]["id"] = "";
+	$placeHoldershispmd_users["English"]["id"] = "";
 	$fieldLabelshispmd_users["English"]["username"] = "Username";
 	$fieldToolTipshispmd_users["English"]["username"] = "";
 	$placeHoldershispmd_users["English"]["username"] = "";
@@ -69,7 +69,7 @@ $tdatahispmd_users[".entityType"] = 0;
 $tdatahispmd_users[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatahispmd_users[".strOriginalTableName"] = "hispmd_users";
+$tdatahispmd_users[".strOriginalTableName"] = "public.hispmd_users";
 
 	
 
@@ -161,7 +161,7 @@ $tdatahispmd_users[".addPageEvents"] = false;
 $tdatahispmd_users[".isUseTimeForSearch"] = false;
 
 
-$tdatahispmd_users[".badgeColor"] = "EDCA00";
+$tdatahispmd_users[".badgeColor"] = "8FBC8B";
 
 
 $tdatahispmd_users[".allSearchFields"] = array();
@@ -169,7 +169,7 @@ $tdatahispmd_users[".filterFields"] = array();
 $tdatahispmd_users[".requiredSearchFields"] = array();
 
 $tdatahispmd_users[".googleLikeFields"] = array();
-$tdatahispmd_users[".googleLikeFields"][] = "ID";
+$tdatahispmd_users[".googleLikeFields"][] = "id";
 $tdatahispmd_users[".googleLikeFields"][] = "username";
 $tdatahispmd_users[".googleLikeFields"][] = "password";
 $tdatahispmd_users[".googleLikeFields"][] = "email";
@@ -210,8 +210,8 @@ $tdatahispmd_users[".strOrderBy"] = $tstrOrderBy;
 $tdatahispmd_users[".orderindexes"] = array();
 
 
-$tdatahispmd_users[".sqlHead"] = "SELECT ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic";
-$tdatahispmd_users[".sqlFrom"] = "FROM hispmd_users";
+$tdatahispmd_users[".sqlHead"] = "SELECT id,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic";
+$tdatahispmd_users[".sqlFrom"] = "FROM \"public\".hispmd_users";
 $tdatahispmd_users[".sqlWhereExpr"] = "";
 $tdatahispmd_users[".sqlTail"] = "";
 
@@ -249,7 +249,7 @@ $tdatahispmd_users[".arrGroupsPerPage"] = $arrGPP;
 $tdatahispmd_users[".highlightSearchResults"] = true;
 
 $tableKeyshispmd_users = array();
-$tableKeyshispmd_users[] = "ID";
+$tableKeyshispmd_users[] = "id";
 $tdatahispmd_users[".Keys"] = $tableKeyshispmd_users;
 
 
@@ -258,28 +258,27 @@ $tdatahispmd_users[".hideMobileList"] = array();
 
 
 
-//	ID
+//	id
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "ID";
-	$fdata["GoodName"] = "ID";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","ID");
-	$fdata["FieldType"] = 3;
+	$fdata["strName"] = "id";
+	$fdata["GoodName"] = "id";
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","id");
+	$fdata["FieldType"] = 20;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
-		$fdata["strField"] = "ID";
+		$fdata["strField"] = "id";
 
-		$fdata["sourceSingle"] = "ID";
+		$fdata["sourceSingle"] = "id";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ID";
+	$fdata["FullName"] = "id";
 
 	
 	
@@ -397,16 +396,16 @@ $tdatahispmd_users[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatahispmd_users["ID"] = $fdata;
-		$tdatahispmd_users[".searchableFields"][] = "ID";
+	$tdatahispmd_users["id"] = $fdata;
+		$tdatahispmd_users[".searchableFields"][] = "id";
 //	username
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "username";
 	$fdata["GoodName"] = "username";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","username");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","username");
 	$fdata["FieldType"] = 200;
 
 
@@ -543,8 +542,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "password";
 	$fdata["GoodName"] = "password";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","password");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","password");
 	$fdata["FieldType"] = 200;
 
 
@@ -594,7 +593,7 @@ $tdatahispmd_users[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Password");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -618,7 +617,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	
 	
 	
-	
+			$edata["HTML5InuptType"] = "text";
+
 		$edata["EditParams"] = "";
 			$edata["EditParams"].= " maxlength=255";
 
@@ -680,8 +680,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "email";
 	$fdata["GoodName"] = "email";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","email");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","email");
 	$fdata["FieldType"] = 200;
 
 
@@ -818,8 +818,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "fullname";
 	$fdata["GoodName"] = "fullname";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","fullname");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","fullname");
 	$fdata["FieldType"] = 200;
 
 
@@ -956,8 +956,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 6;
 	$fdata["strName"] = "groupid";
 	$fdata["GoodName"] = "groupid";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","groupid");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","groupid");
 	$fdata["FieldType"] = 200;
 
 
@@ -1094,9 +1094,9 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 7;
 	$fdata["strName"] = "active";
 	$fdata["GoodName"] = "active";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","active");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","active");
+	$fdata["FieldType"] = 20;
 
 
 	
@@ -1232,8 +1232,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 8;
 	$fdata["strName"] = "ext_security_id";
 	$fdata["GoodName"] = "ext_security_id";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","ext_security_id");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","ext_security_id");
 	$fdata["FieldType"] = 200;
 
 
@@ -1370,8 +1370,8 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$fdata["Index"] = 9;
 	$fdata["strName"] = "userpic";
 	$fdata["GoodName"] = "userpic";
-	$fdata["ownerTable"] = "hispmd_users";
-	$fdata["Label"] = GetFieldLabel("hispmd_users","userpic");
+	$fdata["ownerTable"] = "public.hispmd_users";
+	$fdata["Label"] = GetFieldLabel("public_hispmd_users","userpic");
 	$fdata["FieldType"] = 128;
 
 
@@ -1512,25 +1512,25 @@ $tdatahispmd_users[".hideMobileList"] = array();
 	$tdatahispmd_users["userpic"] = $fdata;
 	
 
-$tables_data["hispmd_users"]=&$tdatahispmd_users;
-$field_labels["hispmd_users"] = &$fieldLabelshispmd_users;
-$fieldToolTips["hispmd_users"] = &$fieldToolTipshispmd_users;
-$placeHolders["hispmd_users"] = &$placeHoldershispmd_users;
-$page_titles["hispmd_users"] = &$pageTitleshispmd_users;
+$tables_data["public.hispmd_users"]=&$tdatahispmd_users;
+$field_labels["public_hispmd_users"] = &$fieldLabelshispmd_users;
+$fieldToolTips["public_hispmd_users"] = &$fieldToolTipshispmd_users;
+$placeHolders["public_hispmd_users"] = &$placeHoldershispmd_users;
+$page_titles["public_hispmd_users"] = &$pageTitleshispmd_users;
 
 
-changeTextControlsToDate( "hispmd_users" );
+changeTextControlsToDate( "public.hispmd_users" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["hispmd_users"] = array();
+$detailsTablesData["public.hispmd_users"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["hispmd_users"] = array();
+$masterTablesData["public.hispmd_users"] = array();
 
 
 
@@ -1554,8 +1554,8 @@ function createSqlQuery_hispmd_users()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic";
-$proto0["m_strFrom"] = "FROM hispmd_users";
+$proto0["m_strFieldList"] = "id,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic";
+$proto0["m_strFrom"] = "FROM \"public\".hispmd_users";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1596,13 +1596,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ID",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strName" => "id",
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
-$proto6["m_sql"] = "ID";
-$proto6["m_srcTableName"] = "hispmd_users";
+$proto6["m_sql"] = "id";
+$proto6["m_srcTableName"] = "public.hispmd_users";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -1611,12 +1611,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "username",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto8["m_sql"] = "username";
-$proto8["m_srcTableName"] = "hispmd_users";
+$proto8["m_srcTableName"] = "public.hispmd_users";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -1625,12 +1625,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "password",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto10["m_sql"] = "password";
-$proto10["m_srcTableName"] = "hispmd_users";
+$proto10["m_srcTableName"] = "public.hispmd_users";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -1639,12 +1639,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "email",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto12["m_sql"] = "email";
-$proto12["m_srcTableName"] = "hispmd_users";
+$proto12["m_srcTableName"] = "public.hispmd_users";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -1653,12 +1653,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
 	"m_strName" => "fullname",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto14["m_sql"] = "fullname";
-$proto14["m_srcTableName"] = "hispmd_users";
+$proto14["m_srcTableName"] = "public.hispmd_users";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
 $obj = new SQLFieldListItem($proto14);
@@ -1667,12 +1667,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
 	"m_strName" => "groupid",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto16["m_sql"] = "groupid";
-$proto16["m_srcTableName"] = "hispmd_users";
+$proto16["m_srcTableName"] = "public.hispmd_users";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
 $obj = new SQLFieldListItem($proto16);
@@ -1681,12 +1681,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
 	"m_strName" => "active",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto18["m_sql"] = "active";
-$proto18["m_srcTableName"] = "hispmd_users";
+$proto18["m_srcTableName"] = "public.hispmd_users";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
@@ -1695,12 +1695,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
 	"m_strName" => "ext_security_id",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto20["m_sql"] = "ext_security_id";
-$proto20["m_srcTableName"] = "hispmd_users";
+$proto20["m_srcTableName"] = "public.hispmd_users";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
 $obj = new SQLFieldListItem($proto20);
@@ -1709,12 +1709,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
 	"m_strName" => "userpic",
-	"m_strTable" => "hispmd_users",
-	"m_srcTableName" => "hispmd_users"
+	"m_strTable" => "public.hispmd_users",
+	"m_srcTableName" => "public.hispmd_users"
 ));
 
 $proto22["m_sql"] = "userpic";
-$proto22["m_srcTableName"] = "hispmd_users";
+$proto22["m_srcTableName"] = "public.hispmd_users";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
 $obj = new SQLFieldListItem($proto22);
@@ -1724,10 +1724,10 @@ $proto0["m_fromlist"] = array();
 												$proto24=array();
 $proto24["m_link"] = "SQLL_MAIN";
 			$proto25=array();
-$proto25["m_strName"] = "hispmd_users";
-$proto25["m_srcTableName"] = "hispmd_users";
+$proto25["m_strName"] = "public.hispmd_users";
+$proto25["m_srcTableName"] = "public.hispmd_users";
 $proto25["m_columns"] = array();
-$proto25["m_columns"][] = "ID";
+$proto25["m_columns"][] = "id";
 $proto25["m_columns"][] = "username";
 $proto25["m_columns"][] = "password";
 $proto25["m_columns"][] = "email";
@@ -1739,9 +1739,9 @@ $proto25["m_columns"][] = "userpic";
 $obj = new SQLTable($proto25);
 
 $proto24["m_table"] = $obj;
-$proto24["m_sql"] = "hispmd_users";
+$proto24["m_sql"] = "\"public\".hispmd_users";
 $proto24["m_alias"] = "";
-$proto24["m_srcTableName"] = "hispmd_users";
+$proto24["m_srcTableName"] = "public.hispmd_users";
 $proto26=array();
 $proto26["m_sql"] = "";
 $proto26["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1763,7 +1763,7 @@ $obj = new SQLFromListItem($proto24);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="hispmd_users";		
+$proto0["m_srcTableName"]="public.hispmd_users";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

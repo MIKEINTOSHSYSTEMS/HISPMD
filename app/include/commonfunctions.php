@@ -203,32 +203,6 @@ function checkTableName($shortTName )
 	if (!$shortTName)
 		return false;
 
-	if ("dataquality" == $shortTName )
-		return true;
-	if ("datause" == $shortTName )
-		return true;
-	if ("digitalhealth" == $shortTName )
-		return true;
-	if ("digitalhealthapps" == $shortTName )
-		return true;
-	if ("financialresources" == $shortTName )
-		return true;
-	if ("hisgovernance" == $shortTName )
-		return true;
-	if ("hispartners" == $shortTName )
-		return true;
-	if ("healthfacilities" == $shortTName )
-		return true;
-	if ("healthunits" == $shortTName )
-		return true;
-	if ("publications" == $shortTName )
-		return true;
-	if ("regions" == $shortTName )
-		return true;
-	if ("research" == $shortTName )
-		return true;
-	if ("workforce" == $shortTName )
-		return true;
 	if ("mfr_dashboard_report" == $shortTName )
 		return true;
 	if ("mfr_status_report" == $shortTName )
@@ -240,28 +214,6 @@ function checkTableName($shortTName )
 	if ("mfr_zone_report" == $shortTName )
 		return true;
 	if ("mfr_woreda_report" == $shortTName )
-		return true;
-	if ("mfr_dashboard_reports_chart" == $shortTName )
-		return true;
-	if ("mfr_dashboard_reports" == $shortTName )
-		return true;
-	if ("mfr_operational_status" == $shortTName )
-		return true;
-	if ("mfr_region" == $shortTName )
-		return true;
-	if ("mfr_zone" == $shortTName )
-		return true;
-	if ("mfr_woreda" == $shortTName )
-		return true;
-	if ("mfr_operational_status_chart" == $shortTName )
-		return true;
-	if ("mfr_region_chart" == $shortTName )
-		return true;
-	if ("mfr_zone_chart" == $shortTName )
-		return true;
-	if ("mfr_woreda_chart" == $shortTName )
-		return true;
-	if ("ai_data_assistant" == $shortTName )
 		return true;
 	if ("dhis2_indicators" == $shortTName )
 		return true;
@@ -280,8 +232,6 @@ function checkTableName($shortTName )
 	if ("dhis2_reports" == $shortTName )
 		return true;
 	if ("dhis2_datasets" == $shortTName )
-		return true;
-	if ("dhis2_periods" == $shortTName )
 		return true;
 	if ("dhis2_reporting_rate" == $shortTName )
 		return true;
@@ -307,14 +257,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("mfr_status" == $shortTName )
 		return true;
-	if ("hispmd_users" == $shortTName )
-		return true;
-	if ("admin_rights" == $shortTName )
-		return true;
-	if ("admin_members" == $shortTName )
-		return true;
-	if ("admin_users" == $shortTName )
-		return true;
 	if ("dhis2_orgunit_country" == $shortTName )
 		return true;
 	if ("dhis2_orgunit_regions" == $shortTName )
@@ -330,6 +272,78 @@ function checkTableName($shortTName )
 	if ("dhis2_aio_orgunit" == $shortTName )
 		return true;
 	if ("dhis2_orgunit_distributions" == $shortTName )
+		return true;
+	if ("ai_data_assistant" == $shortTName )
+		return true;
+	if ("dataquality" == $shortTName )
+		return true;
+	if ("datause" == $shortTName )
+		return true;
+	if ("dhis2_periods" == $shortTName )
+		return true;
+	if ("digitalhealth" == $shortTName )
+		return true;
+	if ("digitalhealthapps" == $shortTName )
+		return true;
+	if ("financialresources" == $shortTName )
+		return true;
+	if ("healthfacilities" == $shortTName )
+		return true;
+	if ("healthunits" == $shortTName )
+		return true;
+	if ("hisgovernance" == $shortTName )
+		return true;
+	if ("hispartners" == $shortTName )
+		return true;
+	if ("mfr_dashboard_reports" == $shortTName )
+		return true;
+	if ("mfr_operational_status" == $shortTName )
+		return true;
+	if ("mfr_region" == $shortTName )
+		return true;
+	if ("mfr_woreda" == $shortTName )
+		return true;
+	if ("mfr_zone" == $shortTName )
+		return true;
+	if ("publications" == $shortTName )
+		return true;
+	if ("regions" == $shortTName )
+		return true;
+	if ("research" == $shortTName )
+		return true;
+	if ("workforce" == $shortTName )
+		return true;
+	if ("hispmdusers" == $shortTName )
+		return true;
+	if ("admin_rights" == $shortTName )
+		return true;
+	if ("admin_members" == $shortTName )
+		return true;
+	if ("admin_users" == $shortTName )
+		return true;
+	if ("mfr_dashboard_reports_chart" == $shortTName )
+		return true;
+	if ("mfr_operational_status_chart" == $shortTName )
+		return true;
+	if ("mfr_region_chart" == $shortTName )
+		return true;
+	if ("ethprism_additional_organizational_and_behavioral_assessment" == $shortTName )
+		return true;
+	if ("ethprism_facility_level_rhis_performance_diagnostic" == $shortTName )
+		return true;
+	if ("ethprism_facility_office_checklist" == $shortTName )
+		return true;
+	if ("ethprism_healthpost_level_rhis_performance_diagnostic" == $shortTName )
+		return true;
+	if ("ethprism_national_prism_woreda_level_diagnostic" == $shortTName )
+		return true;
+	if ("ethprism_organizational_and_behavioral_assessment" == $shortTName )
+		return true;
+	if ("hispmd_prism_settings" == $shortTName )
+		return true;
+	if ("prism_dashboard" == $shortTName )
+		return true;
+	if ("hispmd_users_audit" == $shortTName )
 		return true;
 	return false;
 }
@@ -383,123 +397,6 @@ function GetTablesList($pdfMode = false)
 	$checkPermissions = Security::permissionsAvailable();
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("DataQuality");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="DataQuality";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("DataUse");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="DataUse";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("DigitalHealth");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="DigitalHealth";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("DigitalHealthApps");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="DigitalHealthApps";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("FinancialResources");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="FinancialResources";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("HISGovernance");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="HISGovernance";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("HISPartners");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="HISPartners";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("HealthFacilities");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="HealthFacilities";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("HealthUnits");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="HealthUnits";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Publications");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="Publications";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Regions");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="Regions";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Research");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="Research";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Workforce");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="Workforce";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("MFR_Dashboard_Report");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -551,105 +448,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="MFR_Woreda_Report";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Dashboard_Reports_Chart");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Dashboard_Reports_Chart";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Dashboard_Reports");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Dashboard_Reports";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Operational_Status");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Operational_Status";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Region");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Region";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Zone");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Zone";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Woreda");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Woreda";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Operational_Status_Chart");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Operational_Status_Chart";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Region_Chart");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Region_Chart";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Zone_Chart");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Zone_Chart";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("MFR_Woreda_Chart");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="MFR_Woreda_Chart";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("AI_Data_Assistant");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="AI_Data_Assistant";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -731,15 +529,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Datasets";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("DHIS2_Periods");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="DHIS2_Periods";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -851,42 +640,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("hispmd_users");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="hispmd_users";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_rights");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_rights";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_members");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_members";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_users");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_users";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("DHIS2_OrgUnit_Country");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -957,6 +710,330 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_OrgUnit_Distributions";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ai_data_assistant");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ai_data_assistant";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.dataquality");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.dataquality";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.datause");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.datause";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.dhis2_periods");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.dhis2_periods";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.digitalhealth");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.digitalhealth";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.digitalhealthapps");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.digitalhealthapps";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.financialresources");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.financialresources";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.healthfacilities");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.healthfacilities";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.healthunits");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.healthunits";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hisgovernance");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hisgovernance";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispartners");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispartners";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.mfr_dashboard_reports");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.mfr_dashboard_reports";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.mfr_operational_status");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.mfr_operational_status";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.mfr_region");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.mfr_region";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.mfr_woreda");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.mfr_woreda";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.mfr_zone");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.mfr_zone";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.publications");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.publications";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.regions");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.regions";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.research");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.research";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.workforce");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.workforce";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispmdusers");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispmdusers";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_rights";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_members";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_users";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("mfr_dashboard_reports_chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="mfr_dashboard_reports_chart";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("mfr_operational_status_chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="mfr_operational_status_chart";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("mfr_region_chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="mfr_region_chart";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_additional_organizational_and_behavioral_assessment");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_additional_organizational_and_behavioral_assessment";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_level_rhis_performance_diagnostic");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_facility_level_rhis_performance_diagnostic";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_office_checklist");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_facility_office_checklist";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_healthpost_level_rhis_performance_diagnostic");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_national_prism_woreda_level_diagnostic");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.ethprism_organizational_and_behavioral_assessment");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.ethprism_organizational_and_behavioral_assessment";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispmd_prism_settings");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispmd_prism_settings";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("PRISM Dashboard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="PRISM Dashboard";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("hispmd_users_audit");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="hispmd_users_audit";
+	}
 	return $arr;
 }
 
@@ -966,36 +1043,12 @@ function GetTablesList($pdfMode = false)
 function GetTablesListWithoutSecurity()
 {
 	$arr = array();
-	$arr[]="DataQuality";
-	$arr[]="DataUse";
-	$arr[]="DigitalHealth";
-	$arr[]="DigitalHealthApps";
-	$arr[]="FinancialResources";
-	$arr[]="HISGovernance";
-	$arr[]="HISPartners";
-	$arr[]="HealthFacilities";
-	$arr[]="HealthUnits";
-	$arr[]="Publications";
-	$arr[]="Regions";
-	$arr[]="Research";
-	$arr[]="Workforce";
 	$arr[]="MFR_Dashboard_Report";
 	$arr[]="MFR_Status_Report";
 	$arr[]="MFR_Facilities";
 	$arr[]="MFR_Region_Report";
 	$arr[]="MFR_Zone_Report";
 	$arr[]="MFR_Woreda_Report";
-	$arr[]="MFR_Dashboard_Reports_Chart";
-	$arr[]="MFR_Dashboard_Reports";
-	$arr[]="MFR_Operational_Status";
-	$arr[]="MFR_Region";
-	$arr[]="MFR_Zone";
-	$arr[]="MFR_Woreda";
-	$arr[]="MFR_Operational_Status_Chart";
-	$arr[]="MFR_Region_Chart";
-	$arr[]="MFR_Zone_Chart";
-	$arr[]="MFR_Woreda_Chart";
-	$arr[]="AI_Data_Assistant";
 	$arr[]="DHIS2_Indicators";
 	$arr[]="DHIS2_Organisation_Units";
 	$arr[]="DHIS2_Analytics";
@@ -1005,7 +1058,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_Analytics Report";
 	$arr[]="DHIS2_Reports";
 	$arr[]="DHIS2_Datasets";
-	$arr[]="DHIS2_Periods";
 	$arr[]="DHIS2_Reporting_Rate";
 	$arr[]="DHIS2_Reporting_Rate_Chart";
 	$arr[]="DHIS2_Reporting_Rate_Report";
@@ -1018,10 +1070,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MFR_Facility_Types";
 	$arr[]="MFR_Operational_Statuses";
 	$arr[]="MFR_Status";
-	$arr[]="hispmd_users";
-	$arr[]="admin_rights";
-	$arr[]="admin_members";
-	$arr[]="admin_users";
 	$arr[]="DHIS2_OrgUnit_Country";
 	$arr[]="DHIS2_OrgUnit_Regions";
 	$arr[]="DHIS2_OrgUnit_Zone";
@@ -1030,6 +1078,42 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_OrgUnit_Group_Sets";
 	$arr[]="DHIS2_AIO_OrgUnit";
 	$arr[]="DHIS2_OrgUnit_Distributions";
+	$arr[]="public.ai_data_assistant";
+	$arr[]="public.dataquality";
+	$arr[]="public.datause";
+	$arr[]="public.dhis2_periods";
+	$arr[]="public.digitalhealth";
+	$arr[]="public.digitalhealthapps";
+	$arr[]="public.financialresources";
+	$arr[]="public.healthfacilities";
+	$arr[]="public.healthunits";
+	$arr[]="public.hisgovernance";
+	$arr[]="public.hispartners";
+	$arr[]="public.mfr_dashboard_reports";
+	$arr[]="public.mfr_operational_status";
+	$arr[]="public.mfr_region";
+	$arr[]="public.mfr_woreda";
+	$arr[]="public.mfr_zone";
+	$arr[]="public.publications";
+	$arr[]="public.regions";
+	$arr[]="public.research";
+	$arr[]="public.workforce";
+	$arr[]="public.hispmdusers";
+	$arr[]="admin_rights";
+	$arr[]="admin_members";
+	$arr[]="admin_users";
+	$arr[]="mfr_dashboard_reports_chart";
+	$arr[]="mfr_operational_status_chart";
+	$arr[]="mfr_region_chart";
+	$arr[]="public.ethprism_additional_organizational_and_behavioral_assessment";
+	$arr[]="public.ethprism_facility_level_rhis_performance_diagnostic";
+	$arr[]="public.ethprism_facility_office_checklist";
+	$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
+	$arr[]="public.ethprism_organizational_and_behavioral_assessment";
+	$arr[]="public.hispmd_prism_settings";
+	$arr[]="PRISM Dashboard";
+	$arr[]="hispmd_users_audit";
 	return $arr;
 }
 
@@ -1073,22 +1157,18 @@ function GetFullFieldName($field, $table = "", $addAs = true, $connection = null
  */
 function GetChartType($shorttable)
 {
-	if($shorttable=="mfr_dashboard_reports_chart")
-		return "2DColumn";
-	if($shorttable=="mfr_operational_status_chart")
-		return "2DBar";
-	if($shorttable=="mfr_region_chart")
-		return "2DDoughnut";
-	if($shorttable=="mfr_zone_chart")
-		return "Area";
-	if($shorttable=="mfr_woreda_chart")
-		return "Bubble";
 	if($shorttable=="dhis2_analytics_chart")
 		return "2DColumn";
 	if($shorttable=="dhis2_reporting_rate_chart1")
 		return "2DColumn";
 	if($shorttable=="dhis2_reporting_rates_chart")
 		return "Area";
+	if($shorttable=="mfr_dashboard_reports_chart")
+		return "2DColumn";
+	if($shorttable=="mfr_operational_status_chart")
+		return "2DDoughnut";
+	if($shorttable=="mfr_region_chart")
+		return "2DBar";
 	return "";
 }
 
@@ -1673,71 +1753,6 @@ function GetUserPermissionsStatic( $table )
 
 	$sUserGroup = storageGet( "GroupID" );
 	$extraPerm = "";
-	if( $table=="DataQuality" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="DataUse" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="DigitalHealth" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="DigitalHealthApps" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="FinancialResources" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="HISGovernance" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="HISPartners" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="HealthFacilities" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="HealthUnits" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="Publications" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="Regions" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="Research" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="Workforce" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="MFR_Dashboard_Report" )
 	{
 //	default permissions
@@ -1764,61 +1779,6 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MFR_Woreda_Report" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Dashboard_Reports_Chart" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Dashboard_Reports" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Operational_Status" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Region" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Zone" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Woreda" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Operational_Status_Chart" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Region_Chart" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Zone_Chart" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="MFR_Woreda_Chart" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="AI_Data_Assistant" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -1864,11 +1824,6 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_Datasets" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="DHIS2_Periods" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -1933,26 +1888,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="hispmd_users" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="admin_rights" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="admin_members" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="admin_users" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="DHIS2_OrgUnit_Country" )
 	{
 //	default permissions
@@ -1989,6 +1924,186 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_OrgUnit_Distributions" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ai_data_assistant" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.dataquality" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.datause" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.dhis2_periods" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.digitalhealth" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.digitalhealthapps" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.financialresources" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.healthfacilities" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.healthunits" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.hisgovernance" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.hispartners" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.mfr_dashboard_reports" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.mfr_operational_status" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.mfr_region" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.mfr_woreda" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.mfr_zone" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.publications" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.regions" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.research" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.workforce" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.hispmdusers" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_rights" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_members" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_users" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="mfr_dashboard_reports_chart" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="mfr_operational_status_chart" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="mfr_region_chart" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="public.ethprism_additional_organizational_and_behavioral_assessment" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_facility_level_rhis_performance_diagnostic" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_facility_office_checklist" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_healthpost_level_rhis_performance_diagnostic" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_national_prism_woreda_level_diagnostic" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.ethprism_organizational_and_behavioral_assessment" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.hispmd_prism_settings" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="PRISM Dashboard" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="hispmd_users_audit" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -2720,7 +2835,6 @@ function GetFullSiteUrl()
  */
 function GetAuditObject($table="")
 {
-	return NULL;
 
 	$linkAudit = false;
 	if(!$table)
@@ -2735,6 +2849,7 @@ function GetAuditObject($table="")
 	if ($linkAudit)
 	{
 		require_once(getabspath("include/audit.php"));
+		return new AuditTrailTable();
 	}
 	else
 	{
@@ -2747,7 +2862,6 @@ function GetAuditObject($table="")
  */
 function GetLockingObject($table="")
 {
-	return NULL;
 
 	if(!$table)
 	{

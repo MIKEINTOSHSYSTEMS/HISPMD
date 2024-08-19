@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel MFR_Dashboard_Reports export}","hidden":"{$item_hide_export_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_mfr_dashboard_reports export}","hidden":"{$item_hide_export_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -106,13 +106,13 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Type_pdfvalue},"hidden":"{$item_hide_export_field}"},
+			{"text":{$type_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$Name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+			{"text":{$name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+			{"text":{$count_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 		  ],
   "border": [ false, false, false, false ],

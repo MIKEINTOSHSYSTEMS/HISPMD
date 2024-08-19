@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -38,7 +38,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel HealthUnits print}</h2>
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_healthunits print}</h2>
 	 
 		{BEGIN printtabheader}
 <span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
@@ -98,7 +98,7 @@
 		{BEGIN unit_id_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id">
-	{$label HealthUnits unit_id }	</span>
+	{$label public_healthunits unit_id }	</span>
 {END unit_id_fieldheadercolumn}
 
 	
@@ -121,7 +121,7 @@
 		{BEGIN name_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label HealthUnits name }	</span>
+	{$label public_healthunits name }	</span>
 {END name_fieldheadercolumn}
 
 	
@@ -144,7 +144,7 @@
 		{BEGIN type_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="type" data-fieldname="type">
-	{$label HealthUnits type }	</span>
+	{$label public_healthunits type }	</span>
 {END type_fieldheadercolumn}
 
 	
@@ -167,7 +167,7 @@
 		{BEGIN strategic_plan_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="strategic_plan" data-fieldname="strategic_plan">
-	{$label HealthUnits strategic_plan }	</span>
+	{$label public_healthunits strategic_plan }	</span>
 {END strategic_plan_fieldheadercolumn}
 
 	

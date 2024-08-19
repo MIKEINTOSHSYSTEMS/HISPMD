@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption DigitalHealth}',
+				text: '{$jscaption public_digitalhealth}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel DigitalHealth list}',
+				text: '{$jspagetitlelabel public_digitalhealth list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -286,7 +286,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth dh_id }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
+			{"text":"{$jslabel public_digitalhealth dh_id }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -315,7 +315,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth site_type }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel public_digitalhealth site_type }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -344,7 +344,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth dhis2_functional }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel public_digitalhealth dhis2_functional }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -373,7 +373,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth dhis2_online }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel public_digitalhealth dhis2_online }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -402,7 +402,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth mfr_updated }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel public_digitalhealth mfr_updated }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -431,7 +431,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth echis_implemented }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel public_digitalhealth echis_implemented }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -460,7 +460,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth emr_status }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel public_digitalhealth emr_status }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -489,7 +489,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth ihris_hra_implemented }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel public_digitalhealth ihris_hra_implemented }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -518,7 +518,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealth hcmis_implemented }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel public_digitalhealth hcmis_implemented }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

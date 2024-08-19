@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DigitalHealthApps edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_digitalhealthapps edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,10 +160,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel DigitalHealthApps name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_digitalhealthapps app_id }","bold":true},{"text":{$app_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel DigitalHealthApps standards_met }","bold":true},{"text":{$standards_met_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_digitalhealthapps name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_digitalhealthapps standards_met }","bold":true},{"text":{$standards_met_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

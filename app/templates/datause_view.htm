@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel DataUse view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_datause view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -102,7 +102,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_use_id}">
 		
-		{BEGIN use_id_label}{$label DataUse use_id }{END use_id_label}
+		{BEGIN use_id_label}{$label public_datause use_id }{END use_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$use_id_value}	</div>
@@ -121,7 +121,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_institution_type}">
 		
-		{BEGIN institution_type_label}{$label DataUse institution_type }{END institution_type_label}
+		{BEGIN institution_type_label}{$label public_datause institution_type }{END institution_type_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$institution_type_value}	</div>
@@ -140,7 +140,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pmt_active}">
 		
-		{BEGIN pmt_active_label}{$label DataUse pmt_active }{END pmt_active_label}
+		{BEGIN pmt_active_label}{$label public_datause pmt_active }{END pmt_active_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$pmt_active_value}	</div>
@@ -159,7 +159,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_baseline_assessment}">
 		
-		{BEGIN baseline_assessment_label}{$label DataUse baseline_assessment }{END baseline_assessment_label}
+		{BEGIN baseline_assessment_label}{$label public_datause baseline_assessment }{END baseline_assessment_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$baseline_assessment_value}	</div>

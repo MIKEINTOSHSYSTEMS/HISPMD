@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel HISPartners view}","hidden":"{$item_hide_view_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_hispartners view}","hidden":"{$item_hide_view_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,13 +166,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel HISPartners partner_id }","bold":true},{"text":{$partner_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_hispartners partner_id }","bold":true},{"text":{$partner_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel HISPartners name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_hispartners name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel HISPartners aligned_plan }","bold":true},{"text":{$aligned_plan_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_hispartners aligned_plan }","bold":true},{"text":{$aligned_plan_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

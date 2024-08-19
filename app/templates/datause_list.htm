@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_baseline_assessment}" {$filterRow_attrs_baseline_assessment}>
-			<label>{$label DataUse baseline_assessment }</label>
+			<label>{$label public_datause baseline_assessment }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_use_id}" {$filterRow_attrs_use_id}>
-			<label>{$label DataUse use_id }</label>
+			<label>{$label public_datause use_id }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_pmt_active}" {$filterRow_attrs_pmt_active}>
-			<label>{$label DataUse pmt_active }</label>
+			<label>{$label public_datause pmt_active }</label>
 
 							{$delCtrlButt}
 			
@@ -146,7 +146,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_institution_type}" {$filterRow_attrs_institution_type}>
-			<label>{$label DataUse institution_type }</label>
+			<label>{$label public_datause institution_type }</label>
 
 							{$delCtrlButt}
 			
@@ -292,14 +292,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="datause_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -348,6 +340,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -503,16 +503,16 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="use_id"]:before {
-		content: "{$label DataUse use_id}";
+		content: "{$label public_datause use_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="institution_type"]:before {
-		content: "{$label DataUse institution_type}";
+		content: "{$label public_datause institution_type}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="pmt_active"]:before {
-		content: "{$label DataUse pmt_active}";
+		content: "{$label public_datause pmt_active}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="baseline_assessment"]:before {
-		content: "{$label DataUse baseline_assessment}";
+		content: "{$label public_datause baseline_assessment}";
 	}
 	}
 </style>
@@ -583,7 +583,7 @@
 		{BEGIN use_id_fieldheadercolumn}
 	{BEGIN use_id_fieldheader}
 	<SPAN {$use_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="use_id" data-fieldname="use_id">
-	{$label DataUse use_id }	{$arrow_icon_use_id}
+	{$label public_datause use_id }	{$arrow_icon_use_id}
 	</SPAN>
 	{END use_id_fieldheader}
 {END use_id_fieldheadercolumn}
@@ -608,7 +608,7 @@
 		{BEGIN institution_type_fieldheadercolumn}
 	{BEGIN institution_type_fieldheader}
 	<SPAN {$institution_type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="institution_type" data-fieldname="institution_type">
-	{$label DataUse institution_type }	{$arrow_icon_institution_type}
+	{$label public_datause institution_type }	{$arrow_icon_institution_type}
 	</SPAN>
 	{END institution_type_fieldheader}
 {END institution_type_fieldheadercolumn}
@@ -633,7 +633,7 @@
 		{BEGIN pmt_active_fieldheadercolumn}
 	{BEGIN pmt_active_fieldheader}
 	<SPAN {$pmt_active_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="pmt_active" data-fieldname="pmt_active">
-	{$label DataUse pmt_active }	{$arrow_icon_pmt_active}
+	{$label public_datause pmt_active }	{$arrow_icon_pmt_active}
 	</SPAN>
 	{END pmt_active_fieldheader}
 {END pmt_active_fieldheadercolumn}
@@ -658,7 +658,7 @@
 		{BEGIN baseline_assessment_fieldheadercolumn}
 	{BEGIN baseline_assessment_fieldheader}
 	<SPAN {$baseline_assessment_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="baseline_assessment" data-fieldname="baseline_assessment">
-	{$label DataUse baseline_assessment }	{$arrow_icon_baseline_assessment}
+	{$label public_datause baseline_assessment }	{$arrow_icon_baseline_assessment}
 	</SPAN>
 	{END baseline_assessment_fieldheader}
 {END baseline_assessment_fieldheadercolumn}

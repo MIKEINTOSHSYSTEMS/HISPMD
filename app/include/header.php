@@ -7,6 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 <head>
+    <link href="assets/img/mohfavicon.png" rel="icon">
     <style>
             body {
 
@@ -22,7 +23,7 @@
 <body>
   <div class="">
       <div style="display: flex; justify-content: space-between; background-color: #00274c;">
-    <div style="text-align: left; color: white;"> <br /> <strong> 👋 <script>
+    <div style="text-align: left; color: white; font-size: 13px"> <br /> <strong> 👋 <script>
 function getGreeting() {
     var now = new Date();
     var hour = now.getHours();
@@ -59,7 +60,7 @@ function getGreeting() {
 
 document.write(getGreeting());
 </script></strong></div>
-    <div style="text-align: center;"></br><img src="./images/Moh_Logo.png" width="25px" height="25px" /> <span style="color: #FFFFFF;"> <font size="5px"> <strong> ጤና ጥበቃ ሚኒስቴር - ኢትዮጵያ </strong> |  Ministry Of Health - Ethiopia </font> <br />Health Information Systems Performance Monitoring Dashboard (HISPMD)</span></div>
+    <div style="text-align: center;"></br><img src="./images/Moh_Logo.png" width="25px" height="25px" /> <span style="color: #FFFFFF;"> <font size="2px"> <strong> ጤና ጥበቃ ሚኒስቴር - ኢትዮጵያ </strong> |  Ministry Of Health - Ethiopia </font> <br />Health Information Systems Performance Monitoring Dashboard (HISPMD)</span></div>
     <div style="text-align: right; color: #FFF;">
 
 <div id="MyClockDisplay" class="headerclock" onload="showTime()"></div>

@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel FinancialResources view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_financialresources view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -102,7 +102,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_resource_id}">
 		
-		{BEGIN resource_id_label}{$label FinancialResources resource_id }{END resource_id_label}
+		{BEGIN resource_id_label}{$label public_financialresources resource_id }{END resource_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$resource_id_value}	</div>
@@ -121,7 +121,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_year}">
 		
-		{BEGIN year_label}{$label FinancialResources year }{END year_label}
+		{BEGIN year_label}{$label public_financialresources year }{END year_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$year_value}	</div>
@@ -140,7 +140,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_amount}">
 		
-		{BEGIN amount_label}{$label FinancialResources amount }{END amount_label}
+		{BEGIN amount_label}{$label public_financialresources amount }{END amount_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$amount_value}	</div>
@@ -159,7 +159,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_utilized}">
 		
-		{BEGIN utilized_label}{$label FinancialResources utilized }{END utilized_label}
+		{BEGIN utilized_label}{$label public_financialresources utilized }{END utilized_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$utilized_value}	</div>
@@ -178,7 +178,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_region_id}">
 		
-		{BEGIN region_id_label}{$label FinancialResources region_id }{END region_id_label}
+		{BEGIN region_id_label}{$label public_financialresources region_id }{END region_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$region_id_value}	</div>

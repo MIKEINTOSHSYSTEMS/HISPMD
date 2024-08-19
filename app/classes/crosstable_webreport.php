@@ -1381,32 +1381,6 @@ class CrossTableWebReport
 	public function isProjectDB()
 	{			
 		$isDB = false;
-		if("DataQuality" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("DataUse" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("DigitalHealth" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("DigitalHealthApps" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("FinancialResources" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("HISGovernance" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("HISPartners" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("HealthFacilities" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("HealthUnits" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("Publications" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("Regions" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("Research" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("Workforce" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
@@ -1418,28 +1392,6 @@ class CrossTableWebReport
 		if("MFR_Region_Report" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("MFR_Region_Report" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Dashboard_Reports" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Dashboard_Reports" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Operational_Status" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Region" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Zone" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Woreda" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Operational_Status" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Region" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Zone" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("MFR_Woreda" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("AI_Data_Assistant" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
@@ -1459,8 +1411,6 @@ class CrossTableWebReport
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("DHIS2_Periods" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("DHIS2_Reporting_Rate" == $this->xml_array['tables'][0])
@@ -1485,14 +1435,6 @@ class CrossTableWebReport
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("hispmd_users" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("hispmd_ugrights" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("hispmd_ugmembers" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("hispmd_users" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
@@ -1508,6 +1450,78 @@ class CrossTableWebReport
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ai_data_assistant" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.dataquality" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.datause" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.dhis2_periods" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.digitalhealth" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.digitalhealthapps" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.financialresources" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.healthfacilities" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.healthunits" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hisgovernance" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispartners" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_dashboard_reports" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_operational_status" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_region" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_woreda" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_zone" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.publications" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.regions" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.research" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.workforce" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmdusers" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd_ugrights" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd_ugmembers" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmdusers" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_dashboard_reports" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_operational_status" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.mfr_region" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_additional_organizational_and_behavioral_assessment" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_facility_level_rhis_performance_diagnostic" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_facility_office_checklist" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_healthpost_level_rhis_performance_diagnostic" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_national_prism_woreda_level_diagnostic" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.ethprism_organizational_and_behavioral_assessment" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd_prism_settings" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd__audit" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

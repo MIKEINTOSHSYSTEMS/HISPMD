@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -38,7 +38,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Periods print}</h2>
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dhis2_periods print}</h2>
 	 
 		{BEGIN printtabheader}
 <span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
@@ -87,19 +87,19 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
-			data-field="Period_ID"
+			data-field="period_id"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_ID_fieldheadercolumn}
+		{BEGIN period_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period_ID">
-	{$label DHIS2_Periods Period_ID }	</span>
-{END Period_ID_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id">
+	{$label public_dhis2_periods period_id }	</span>
+{END period_id_fieldheadercolumn}
 
 	
 	</th>
@@ -110,19 +110,19 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_Name_class}	"
+		 r-ori-vert		 {$period_name_class}	"
 
-			data-field="Period_Name"
+			data-field="period_name"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_Name_fieldheadercolumn}
+		{BEGIN period_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_Name" data-fieldname="Period_Name">
-	{$label DHIS2_Periods Period_Name }	</span>
-{END Period_Name_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_name" data-fieldname="period_name">
+	{$label public_dhis2_periods period_name }	</span>
+{END period_name_fieldheadercolumn}
 
 	
 	</th>
@@ -144,19 +144,19 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
-			data-field="Period_ID"
+			data-field="period_id"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_ID_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period_ID" data-default-width >
-{$Period_ID_value}
+		{BEGIN period_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id" data-default-width >
+{$period_id_value}
 </span>
-{END Period_ID_fieldcolumn}	
+{END period_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -165,19 +165,19 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_Name_class}	"
+		 r-ori-vert		 {$period_name_class}	"
 
-			data-field="Period_Name"
+			data-field="period_name"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_Name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_Name" data-fieldname="Period_Name" data-default-width >
-{$Period_Name_value}
+		{BEGIN period_name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_name" data-fieldname="period_name" data-default-width >
+{$period_name_value}
 </span>
-{END Period_Name_fieldcolumn}	
+{END period_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 							</tr>
@@ -197,7 +197,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_periods_print"	
@@ -212,7 +212,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_Name_class}	"
+		 r-ori-vert		 {$period_name_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_periods_print"	

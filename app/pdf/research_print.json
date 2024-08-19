@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption Research}',
+				text: '{$jscaption public_research}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel Research print}',
+				text: '{$jspagetitlelabel public_research print}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -127,7 +127,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$jspagetitlelabel Research print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_research print}","hidden":"{$item_hide_print_header}","fontSize":30},
 				
 				
 			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
@@ -220,7 +220,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Research research_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_research research_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -249,7 +249,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Research title }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_research title }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -278,7 +278,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Research conducted }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_research conducted }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

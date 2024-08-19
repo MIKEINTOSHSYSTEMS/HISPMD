@@ -70,9 +70,9 @@ $tdatamfr_woreda_report[".listAjax"] = false;
 //	temporary
 //$tdatamfr_woreda_report[".listAjax"] = false;
 
-	$tdatamfr_woreda_report[".audit"] = false;
+	$tdatamfr_woreda_report[".audit"] = true;
 
-	$tdatamfr_woreda_report[".locking"] = false;
+	$tdatamfr_woreda_report[".locking"] = true;
 
 
 $pages = $tdatamfr_woreda_report[".defaultPages"];

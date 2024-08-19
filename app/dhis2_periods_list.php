@@ -2,7 +2,7 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-$requestTable = "DHIS2_Periods";
+$requestTable = "public.dhis2_periods";
 $requestPage = "list";
 
 require_once("include/dbcommon.php");

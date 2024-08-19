@@ -3,14 +3,14 @@ $tdatahealthunits = array();
 $tdatahealthunits[".searchableFields"] = array();
 $tdatahealthunits[".ShortName"] = "healthunits";
 $tdatahealthunits[".OwnerID"] = "";
-$tdatahealthunits[".OriginalTable"] = "HealthUnits";
+$tdatahealthunits[".OriginalTable"] = "public.healthunits";
 
 
-$tdatahealthunits[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahealthunits[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahealthunits[".originalPagesByType"] = $tdatahealthunits[".pagesByType"];
-$tdatahealthunits[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahealthunits[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahealthunits[".originalPages"] = $tdatahealthunits[".pages"];
-$tdatahealthunits[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatahealthunits[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahealthunits[".originalDefaultPages"] = $tdatahealthunits[".defaultPages"];
 
 //	field labels
@@ -54,7 +54,7 @@ $tdatahealthunits[".entityType"] = 0;
 $tdatahealthunits[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatahealthunits[".strOriginalTableName"] = "HealthUnits";
+$tdatahealthunits[".strOriginalTableName"] = "public.healthunits";
 
 	
 
@@ -70,9 +70,9 @@ $tdatahealthunits[".listAjax"] = false;
 //	temporary
 //$tdatahealthunits[".listAjax"] = false;
 
-	$tdatahealthunits[".audit"] = false;
+	$tdatahealthunits[".audit"] = true;
 
-	$tdatahealthunits[".locking"] = false;
+	$tdatahealthunits[".locking"] = true;
 
 
 $pages = $tdatahealthunits[".defaultPages"];
@@ -146,7 +146,7 @@ $tdatahealthunits[".addPageEvents"] = false;
 $tdatahealthunits[".isUseTimeForSearch"] = false;
 
 
-$tdatahealthunits[".badgeColor"] = "DAA520";
+$tdatahealthunits[".badgeColor"] = "B22222";
 
 
 $tdatahealthunits[".allSearchFields"] = array();
@@ -191,8 +191,8 @@ $tdatahealthunits[".strOrderBy"] = $tstrOrderBy;
 $tdatahealthunits[".orderindexes"] = array();
 
 
-$tdatahealthunits[".sqlHead"] = "SELECT unit_id,  	name,  	`type`,  	strategic_plan";
-$tdatahealthunits[".sqlFrom"] = "FROM HealthUnits";
+$tdatahealthunits[".sqlHead"] = "SELECT unit_id,  	name,  	\"type\",  	strategic_plan";
+$tdatahealthunits[".sqlFrom"] = "FROM \"public\".healthunits";
 $tdatahealthunits[".sqlWhereExpr"] = "";
 $tdatahealthunits[".sqlTail"] = "";
 
@@ -245,13 +245,12 @@ $tdatahealthunits[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "unit_id";
 	$fdata["GoodName"] = "unit_id";
-	$fdata["ownerTable"] = "HealthUnits";
-	$fdata["Label"] = GetFieldLabel("HealthUnits","unit_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.healthunits";
+	$fdata["Label"] = GetFieldLabel("public_healthunits","unit_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -309,8 +308,7 @@ $tdatahealthunits[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -325,16 +323,15 @@ $tdatahealthunits[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -386,8 +383,8 @@ $tdatahealthunits[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "name";
 	$fdata["GoodName"] = "name";
-	$fdata["ownerTable"] = "HealthUnits";
-	$fdata["Label"] = GetFieldLabel("HealthUnits","name");
+	$fdata["ownerTable"] = "public.healthunits";
+	$fdata["Label"] = GetFieldLabel("public_healthunits","name");
 	$fdata["FieldType"] = 200;
 
 
@@ -464,7 +461,7 @@ $tdatahealthunits[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
+			$edata["EditParams"].= " maxlength=255";
 
 		$edata["controlWidth"] = 200;
 
@@ -524,9 +521,9 @@ $tdatahealthunits[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "type";
 	$fdata["GoodName"] = "type";
-	$fdata["ownerTable"] = "HealthUnits";
-	$fdata["Label"] = GetFieldLabel("HealthUnits","type");
-	$fdata["FieldType"] = 129;
+	$fdata["ownerTable"] = "public.healthunits";
+	$fdata["Label"] = GetFieldLabel("public_healthunits","type");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -538,7 +535,7 @@ $tdatahealthunits[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "type";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`type`";
+	$fdata["FullName"] = "\"type\"";
 
 	
 	
@@ -575,7 +572,7 @@ $tdatahealthunits[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -585,23 +582,6 @@ $tdatahealthunits[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "RHB";
-	$edata["LookupValues"][] = "ZHD";
-	$edata["LookupValues"][] = "WorHO";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -616,8 +596,11 @@ $tdatahealthunits[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -676,9 +659,9 @@ $tdatahealthunits[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "strategic_plan";
 	$fdata["GoodName"] = "strategic_plan";
-	$fdata["ownerTable"] = "HealthUnits";
-	$fdata["Label"] = GetFieldLabel("HealthUnits","strategic_plan");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.healthunits";
+	$fdata["Label"] = GetFieldLabel("public_healthunits","strategic_plan");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -754,15 +737,15 @@ $tdatahealthunits[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -810,25 +793,25 @@ $tdatahealthunits[".hideMobileList"] = array();
 		$tdatahealthunits[".searchableFields"][] = "strategic_plan";
 
 
-$tables_data["HealthUnits"]=&$tdatahealthunits;
-$field_labels["HealthUnits"] = &$fieldLabelshealthunits;
-$fieldToolTips["HealthUnits"] = &$fieldToolTipshealthunits;
-$placeHolders["HealthUnits"] = &$placeHoldershealthunits;
-$page_titles["HealthUnits"] = &$pageTitleshealthunits;
+$tables_data["public.healthunits"]=&$tdatahealthunits;
+$field_labels["public_healthunits"] = &$fieldLabelshealthunits;
+$fieldToolTips["public_healthunits"] = &$fieldToolTipshealthunits;
+$placeHolders["public_healthunits"] = &$placeHoldershealthunits;
+$page_titles["public_healthunits"] = &$pageTitleshealthunits;
 
 
-changeTextControlsToDate( "HealthUnits" );
+changeTextControlsToDate( "public.healthunits" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["HealthUnits"] = array();
+$detailsTablesData["public.healthunits"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["HealthUnits"] = array();
+$masterTablesData["public.healthunits"] = array();
 
 
 
@@ -852,8 +835,8 @@ function createSqlQuery_healthunits()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "unit_id,  	name,  	`type`,  	strategic_plan";
-$proto0["m_strFrom"] = "FROM HealthUnits";
+$proto0["m_strFieldList"] = "unit_id,  	name,  	\"type\",  	strategic_plan";
+$proto0["m_strFrom"] = "FROM \"public\".healthunits";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -895,12 +878,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "unit_id",
-	"m_strTable" => "HealthUnits",
-	"m_srcTableName" => "HealthUnits"
+	"m_strTable" => "public.healthunits",
+	"m_srcTableName" => "public.healthunits"
 ));
 
 $proto6["m_sql"] = "unit_id";
-$proto6["m_srcTableName"] = "HealthUnits";
+$proto6["m_srcTableName"] = "public.healthunits";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -909,12 +892,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "name",
-	"m_strTable" => "HealthUnits",
-	"m_srcTableName" => "HealthUnits"
+	"m_strTable" => "public.healthunits",
+	"m_srcTableName" => "public.healthunits"
 ));
 
 $proto8["m_sql"] = "name";
-$proto8["m_srcTableName"] = "HealthUnits";
+$proto8["m_srcTableName"] = "public.healthunits";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -923,12 +906,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "type",
-	"m_strTable" => "HealthUnits",
-	"m_srcTableName" => "HealthUnits"
+	"m_strTable" => "public.healthunits",
+	"m_srcTableName" => "public.healthunits"
 ));
 
-$proto10["m_sql"] = "`type`";
-$proto10["m_srcTableName"] = "HealthUnits";
+$proto10["m_sql"] = "\"type\"";
+$proto10["m_srcTableName"] = "public.healthunits";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -937,12 +920,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "strategic_plan",
-	"m_strTable" => "HealthUnits",
-	"m_srcTableName" => "HealthUnits"
+	"m_strTable" => "public.healthunits",
+	"m_srcTableName" => "public.healthunits"
 ));
 
 $proto12["m_sql"] = "strategic_plan";
-$proto12["m_srcTableName"] = "HealthUnits";
+$proto12["m_srcTableName"] = "public.healthunits";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -952,8 +935,8 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "HealthUnits";
-$proto15["m_srcTableName"] = "HealthUnits";
+$proto15["m_strName"] = "public.healthunits";
+$proto15["m_srcTableName"] = "public.healthunits";
 $proto15["m_columns"] = array();
 $proto15["m_columns"][] = "unit_id";
 $proto15["m_columns"][] = "name";
@@ -962,9 +945,9 @@ $proto15["m_columns"][] = "strategic_plan";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "HealthUnits";
+$proto14["m_sql"] = "\"public\".healthunits";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "HealthUnits";
+$proto14["m_srcTableName"] = "public.healthunits";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -986,7 +969,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="HealthUnits";		
+$proto0["m_srcTableName"]="public.healthunits";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

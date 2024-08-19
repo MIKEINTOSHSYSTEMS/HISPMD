@@ -3,14 +3,14 @@ $tdatahisgovernance = array();
 $tdatahisgovernance[".searchableFields"] = array();
 $tdatahisgovernance[".ShortName"] = "hisgovernance";
 $tdatahisgovernance[".OwnerID"] = "";
-$tdatahisgovernance[".OriginalTable"] = "HISGovernance";
+$tdatahisgovernance[".OriginalTable"] = "public.hisgovernance";
 
 
-$tdatahisgovernance[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahisgovernance[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahisgovernance[".originalPagesByType"] = $tdatahisgovernance[".pagesByType"];
-$tdatahisgovernance[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahisgovernance[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahisgovernance[".originalPages"] = $tdatahisgovernance[".pages"];
-$tdatahisgovernance[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatahisgovernance[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahisgovernance[".originalDefaultPages"] = $tdatahisgovernance[".defaultPages"];
 
 //	field labels
@@ -51,7 +51,7 @@ $tdatahisgovernance[".entityType"] = 0;
 $tdatahisgovernance[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatahisgovernance[".strOriginalTableName"] = "HISGovernance";
+$tdatahisgovernance[".strOriginalTableName"] = "public.hisgovernance";
 
 	
 
@@ -67,9 +67,9 @@ $tdatahisgovernance[".listAjax"] = false;
 //	temporary
 //$tdatahisgovernance[".listAjax"] = false;
 
-	$tdatahisgovernance[".audit"] = false;
+	$tdatahisgovernance[".audit"] = true;
 
-	$tdatahisgovernance[".locking"] = false;
+	$tdatahisgovernance[".locking"] = true;
 
 
 $pages = $tdatahisgovernance[".defaultPages"];
@@ -143,7 +143,7 @@ $tdatahisgovernance[".addPageEvents"] = false;
 $tdatahisgovernance[".isUseTimeForSearch"] = false;
 
 
-$tdatahisgovernance[".badgeColor"] = "7B68EE";
+$tdatahisgovernance[".badgeColor"] = "CD853F";
 
 
 $tdatahisgovernance[".allSearchFields"] = array();
@@ -187,8 +187,8 @@ $tdatahisgovernance[".strOrderBy"] = $tstrOrderBy;
 $tdatahisgovernance[".orderindexes"] = array();
 
 
-$tdatahisgovernance[".sqlHead"] = "SELECT governance_id,  	`level`,  	is_functional";
-$tdatahisgovernance[".sqlFrom"] = "FROM HISGovernance";
+$tdatahisgovernance[".sqlHead"] = "SELECT governance_id,  	\"level\",  	is_functional";
+$tdatahisgovernance[".sqlFrom"] = "FROM \"public\".hisgovernance";
 $tdatahisgovernance[".sqlWhereExpr"] = "";
 $tdatahisgovernance[".sqlTail"] = "";
 
@@ -241,13 +241,12 @@ $tdatahisgovernance[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "governance_id";
 	$fdata["GoodName"] = "governance_id";
-	$fdata["ownerTable"] = "HISGovernance";
-	$fdata["Label"] = GetFieldLabel("HISGovernance","governance_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.hisgovernance";
+	$fdata["Label"] = GetFieldLabel("public_hisgovernance","governance_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -305,8 +304,7 @@ $tdatahisgovernance[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -321,16 +319,15 @@ $tdatahisgovernance[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -382,9 +379,9 @@ $tdatahisgovernance[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "level";
 	$fdata["GoodName"] = "level";
-	$fdata["ownerTable"] = "HISGovernance";
-	$fdata["Label"] = GetFieldLabel("HISGovernance","level");
-	$fdata["FieldType"] = 129;
+	$fdata["ownerTable"] = "public.hisgovernance";
+	$fdata["Label"] = GetFieldLabel("public_hisgovernance","level");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -396,7 +393,7 @@ $tdatahisgovernance[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "level";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`level`";
+	$fdata["FullName"] = "\"level\"";
 
 	
 	
@@ -433,7 +430,7 @@ $tdatahisgovernance[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -443,22 +440,6 @@ $tdatahisgovernance[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "National";
-	$edata["LookupValues"][] = "Regional";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -473,8 +454,11 @@ $tdatahisgovernance[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -533,9 +517,9 @@ $tdatahisgovernance[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "is_functional";
 	$fdata["GoodName"] = "is_functional";
-	$fdata["ownerTable"] = "HISGovernance";
-	$fdata["Label"] = GetFieldLabel("HISGovernance","is_functional");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.hisgovernance";
+	$fdata["Label"] = GetFieldLabel("public_hisgovernance","is_functional");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -611,15 +595,15 @@ $tdatahisgovernance[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -667,25 +651,25 @@ $tdatahisgovernance[".hideMobileList"] = array();
 		$tdatahisgovernance[".searchableFields"][] = "is_functional";
 
 
-$tables_data["HISGovernance"]=&$tdatahisgovernance;
-$field_labels["HISGovernance"] = &$fieldLabelshisgovernance;
-$fieldToolTips["HISGovernance"] = &$fieldToolTipshisgovernance;
-$placeHolders["HISGovernance"] = &$placeHoldershisgovernance;
-$page_titles["HISGovernance"] = &$pageTitleshisgovernance;
+$tables_data["public.hisgovernance"]=&$tdatahisgovernance;
+$field_labels["public_hisgovernance"] = &$fieldLabelshisgovernance;
+$fieldToolTips["public_hisgovernance"] = &$fieldToolTipshisgovernance;
+$placeHolders["public_hisgovernance"] = &$placeHoldershisgovernance;
+$page_titles["public_hisgovernance"] = &$pageTitleshisgovernance;
 
 
-changeTextControlsToDate( "HISGovernance" );
+changeTextControlsToDate( "public.hisgovernance" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["HISGovernance"] = array();
+$detailsTablesData["public.hisgovernance"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["HISGovernance"] = array();
+$masterTablesData["public.hisgovernance"] = array();
 
 
 
@@ -709,8 +693,8 @@ function createSqlQuery_hisgovernance()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "governance_id,  	`level`,  	is_functional";
-$proto0["m_strFrom"] = "FROM HISGovernance";
+$proto0["m_strFieldList"] = "governance_id,  	\"level\",  	is_functional";
+$proto0["m_strFrom"] = "FROM \"public\".hisgovernance";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -752,12 +736,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "governance_id",
-	"m_strTable" => "HISGovernance",
-	"m_srcTableName" => "HISGovernance"
+	"m_strTable" => "public.hisgovernance",
+	"m_srcTableName" => "public.hisgovernance"
 ));
 
 $proto6["m_sql"] = "governance_id";
-$proto6["m_srcTableName"] = "HISGovernance";
+$proto6["m_srcTableName"] = "public.hisgovernance";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -766,12 +750,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "level",
-	"m_strTable" => "HISGovernance",
-	"m_srcTableName" => "HISGovernance"
+	"m_strTable" => "public.hisgovernance",
+	"m_srcTableName" => "public.hisgovernance"
 ));
 
-$proto8["m_sql"] = "`level`";
-$proto8["m_srcTableName"] = "HISGovernance";
+$proto8["m_sql"] = "\"level\"";
+$proto8["m_srcTableName"] = "public.hisgovernance";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -780,12 +764,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "is_functional",
-	"m_strTable" => "HISGovernance",
-	"m_srcTableName" => "HISGovernance"
+	"m_strTable" => "public.hisgovernance",
+	"m_srcTableName" => "public.hisgovernance"
 ));
 
 $proto10["m_sql"] = "is_functional";
-$proto10["m_srcTableName"] = "HISGovernance";
+$proto10["m_srcTableName"] = "public.hisgovernance";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -795,8 +779,8 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "HISGovernance";
-$proto13["m_srcTableName"] = "HISGovernance";
+$proto13["m_strName"] = "public.hisgovernance";
+$proto13["m_srcTableName"] = "public.hisgovernance";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "governance_id";
 $proto13["m_columns"][] = "level";
@@ -804,9 +788,9 @@ $proto13["m_columns"][] = "is_functional";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "HISGovernance";
+$proto12["m_sql"] = "\"public\".hisgovernance";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "HISGovernance";
+$proto12["m_srcTableName"] = "public.hisgovernance";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -828,7 +812,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="HISGovernance";		
+$proto0["m_srcTableName"]="public.hisgovernance";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

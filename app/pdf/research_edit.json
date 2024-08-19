@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel Research edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_research edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,10 +160,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel Research title }","bold":true},{"text":{$title_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_research research_id }","bold":true},{"text":{$research_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel Research conducted }","bold":true},{"text":{$conducted_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_research title }","bold":true},{"text":{$title_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_research conducted }","bold":true},{"text":{$conducted_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

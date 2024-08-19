@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -141,6 +141,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -521,10 +529,12 @@ Current Time
 			 
 				<div 
 	data-cellId="above-grid_c9" data-pageid="{$pageid}"	{$cell_above-grid_c9}
-	class=" r-ori-vert			col-md-12
+	class="r-align-center			col-md-12
 	
 ">
 		 
+		<img src="{$file_url images/MOH_logo_text_250.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
+	 
 		<span data-itemtype="text" data-itemid="text10" {$item_text10} data-pageid="{$pageid}" data-small > 
 		<br>
 	<br>
@@ -574,17 +584,7 @@ Current Time
 	class=" r-ori-vert			col-md-6
 	
 ">
-		 
-		
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item31" {$item_welcome_item31} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="ai_data_assistant_list.php"  > 
-							AI Data Assistant					</a>
-	</div>
-
-	</div>
-
-		</div>					</div>
+			</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -624,138 +624,6 @@ Current Time
 	 
 	</div>
 
-			
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="24">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="dataquality_list.php"  > 
-							<span class="glyphicon glyphicon-tree-conifer"></span>Data Quality					</a>
-	</div>
-
-			
-	<div class="bs-welcome-content">
-		Data Quality description	</div>
-	</div>
-
-			
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="20">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="datause_list.php"  > 
-							<span class="glyphicon glyphicon-fire"></span>Data Use					</a>
-	</div>
-
-			
-	<div class="bs-welcome-content">
-		Data Use description	</div>
-	</div>
-
-			
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="26">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="digitalhealth_list.php"  > 
-							<span class="glyphicon glyphicon-hand-right"></span>Digital Health					</a>
-	</div>
-
-			
-	<div class="bs-welcome-content">
-		Digital Health description	</div>
-	</div>
-
-			
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="31">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="digitalhealthapps_list.php"  > 
-							<span class="glyphicon glyphicon-leaf"></span>Digital Health Apps					</a>
-	</div>
-
-			
-	<div class="bs-welcome-content">
-		Digital Health Apps description	</div>
-	</div>
-
-			
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="31">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="financialresources_list.php"  > 
-							<span class="glyphicon glyphicon-shopping-cart"></span>Financial Resources					</a>
-	</div>
-
-			
-	<div class="bs-welcome-content">
-		Financial Resources description	</div>
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="hisgovernance_list.php"  > 
-							<span class="glyphicon glyphicon-calendar"></span>HISGovernance					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="hispartners_list.php"  > 
-							<span class="glyphicon glyphicon-camera"></span>HISPartners					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="healthfacilities_list.php"  > 
-							Health Facilities					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="healthunits_list.php"  > 
-							Health Units					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="publications_list.php"  > 
-							Publications					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="regions_list.php"  > 
-							Regions					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="workforce_list.php"  > 
-							Workforce					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="research_list.php"  > 
-							Research					</a>
-	</div>
-
-	</div>
-
 <div class="clearfix"></div>
 </div>
 </td>
@@ -786,51 +654,6 @@ Current Time
 	 
 	</div>
 
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item21" {$item_welcome_item21} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_dashboard_reports_list.php"  > 
-							MFR Dashboard Reports					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item22" {$item_welcome_item22} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_operational_status_list.php"  > 
-							MFR Operational Status					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item23" {$item_welcome_item23} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_region_list.php"  > 
-							MFR Region					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item24" {$item_welcome_item24} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_zone_list.php"  > 
-							MFR Zone					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item25" {$item_welcome_item25} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_woreda_list.php"  > 
-							MFR Woreda					</a>
-	</div>
-
-	</div>
-
 <div class="clearfix"></div>
 </div>
 </td>
@@ -854,51 +677,6 @@ Current Time
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_aio_dashboard_dashboard.php"  > 
 							MFR AIO Dashboard					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_dashboard_reports_chart_chart.php"  > 
-							MFR Dashboard Reports Chart					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item26" {$item_welcome_item26} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_operational_status_chart_chart.php"  > 
-							MFR Operational Status Chart					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item28" {$item_welcome_item28} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_region_chart_chart.php"  > 
-							MFR Region Chart					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item29" {$item_welcome_item29} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_zone_chart_chart.php"  > 
-							MFR Zone Chart					</a>
-	</div>
-
-	</div>
-
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item30" {$item_welcome_item30} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="mfr_woreda_chart_chart.php"  > 
-							MFR Woreda Chart					</a>
 	</div>
 
 	</div>
@@ -1050,15 +828,6 @@ Current Time
 
 	</div>
 
-	
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item42" {$item_welcome_item42} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="dhis2_periods_list.php"  > 
-							DHIS2 Periods					</a>
-	</div>
-
-	</div>
-
 <div class="clearfix"></div>
 </div>
 </td>
@@ -1139,15 +908,6 @@ Current Time
 									<td 
 	
 			 
-	data-cellId="grid_c9" data-pageid="{$pageid}">
-<div class="r-welcome-align">
-</div>
-</td>
-							</tr>
-											<tr {$row_grid_10} >
-									<td 
-	
-			 
 	data-cellId="grid_c18" data-pageid="{$pageid}">
 <div class="r-welcome-align">
  
@@ -1156,7 +916,7 @@ Current Time
 </div>
 </td>
 							</tr>
-											<tr {$row_grid_11} >
+											<tr {$row_grid_10} >
 									<td 
 	
 			 
@@ -1185,16 +945,7 @@ Current Time
 </div>
 </td>
 							</tr>
-											<tr {$row_grid_12} >
-									<td 
-	
-			 
-	data-cellId="grid_c7" data-pageid="{$pageid}">
-<div class="r-welcome-align">
-</div>
-</td>
-							</tr>
-											<tr {$row_grid_13} >
+											<tr {$row_grid_11} >
 									<td 
 	
 			 
@@ -1346,6 +1097,326 @@ Current Time
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_distributions_list.php"  > 
 							DHIS2 OrgUnit Distributions					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ai_data_assistant_list.php"  > 
+							Ai Data Assistant					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dataquality_list.php"  > 
+							Dataquality					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="datause_list.php"  > 
+							Datause					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_periods_list.php"  > 
+							DHIS2 Periods					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="digitalhealth_list.php"  > 
+							Digitalhealth					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="digitalhealthapps_list.php"  > 
+							Digitalhealthapps					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="financialresources_list.php"  > 
+							Financialresources					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="healthfacilities_list.php"  > 
+							Healthfacilities					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="healthunits_list.php"  > 
+							Healthunits					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hisgovernance_list.php"  > 
+							Hisgovernance					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispartners_list.php"  > 
+							Hispartners					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_dashboard_reports_list.php"  > 
+							Mfr Dashboard Reports					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_operational_status_list.php"  > 
+							Mfr Operational Status					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item21" {$item_welcome_item21} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_region_list.php"  > 
+							Mfr Region					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item22" {$item_welcome_item22} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_woreda_list.php"  > 
+							Mfr Woreda					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item23" {$item_welcome_item23} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_zone_list.php"  > 
+							Mfr Zone					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item24" {$item_welcome_item24} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="publications_list.php"  > 
+							Publications					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item25" {$item_welcome_item25} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="regions_list.php"  > 
+							Regions					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item26" {$item_welcome_item26} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="research_list.php"  > 
+							Research					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item28" {$item_welcome_item28} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="workforce_list.php"  > 
+							Workforce					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_dashboard_reports_chart_chart.php"  > 
+							Mfr Dashboard Reports Chart					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item29" {$item_welcome_item29} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_operational_status_chart_chart.php"  > 
+							Mfr Operational Status Chart					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item30" {$item_welcome_item30} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_region_chart_chart.php"  > 
+							Mfr Region Chart					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item31" {$item_welcome_item31} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_additional_organizational_and_behavioral_assessment_list.php"  > 
+							Ethprism Additional Organizational And Behavioral Assessment					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item42" {$item_welcome_item42} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_facility_level_rhis_performance_diagnostic_list.php"  > 
+							Ethprism Facility Level Rhis Performance Diagnostic					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item61" {$item_welcome_item61} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_facility_office_checklist_list.php"  > 
+							Ethprism Facility Office Checklist					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item62" {$item_welcome_item62} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_healthpost_level_rhis_performance_diagnostic_list.php"  > 
+							Ethprism Healthpost Level Rhis Performance Diagnostic					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item63" {$item_welcome_item63} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_national_prism_woreda_level_diagnostic_list.php"  > 
+							Ethprism National Prism Woreda Level Diagnostic					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item64" {$item_welcome_item64} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_organizational_and_behavioral_assessment_list.php"  > 
+							Ethprism Organizational And Behavioral Assessment					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item65" {$item_welcome_item65} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_prism_settings_list.php"  > 
+							Hispmd Prism Settings					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item66" {$item_welcome_item66} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="prism_dashboard_dashboard.php"  > 
+							PRISM Dashboard					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item67" {$item_welcome_item67} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_users_audit_list.php"  > 
+							Hispmd Users Audit					</a>
 	</div>
 
 	</div>

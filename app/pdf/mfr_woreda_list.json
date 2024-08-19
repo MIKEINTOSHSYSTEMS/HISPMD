@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption MFR_Woreda}',
+				text: '{$jscaption public_mfr_woreda}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel MFR_Woreda list}',
+				text: '{$jspagetitlelabel public_mfr_woreda list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -76,6 +76,9 @@ pdfDocument = {
 										{BEGIN col_grid_3}
 					"%",
 					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -86,13 +89,10 @@ pdfDocument = {
 													{BEGIN row_grid_1}
 							"%",
 							{END row_grid_1}
+													{END grid_row}
 																								{BEGIN row_grid_2}
 							"%",
 							{END row_grid_2}
-													{END grid_row}
-																								{BEGIN row_grid_3}
-							"%",
-							{END row_grid_3}
 															],
 							
 				body: [
@@ -104,47 +104,7 @@ pdfDocument = {
 							stack: [
 
 																										
-{
-	table: {
-	
-				
-		location: 'top',
-		
-		
-		widths: [
-								"*", 
-					 ],	
-		
-	
-		body: [
-				
-				[
-																{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-		
-		]
-	}
-}
+''
 ,
 								
 																										
@@ -177,10 +137,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_search_panel}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -208,144 +166,6 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c6',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_filter_panel}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c7',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":{$pdf_chart mfr_woreda_chart 0 0},"hidden":"{$item_hide_chart}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"hidden":"{$item_hide_map}","stack":[{BEGIN map_MFR_Woreda_map} {$map MFR_Woreda_map} {END map_MFR_Woreda_map}]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -398,38 +218,12 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_checkbox}
-																							{BEGIN cellblock_grid_headcell_details}
-{
-	cellId: 'headcell_details',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_details}
 																							{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'Woreda',
+			fieldName: 'woreda',
 				style: 'headcell',
 		
 		
@@ -443,11 +237,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Woreda Woreda }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
+			{"text":"{$jslabel public_mfr_woreda woreda }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Woreda_align}',
+              "alignment": '{$woreda_align}',
      
       
       },
@@ -458,7 +252,7 @@ pdfDocument = {
 	cellId: 'headcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Count',
+			fieldName: 'lat',
 				style: 'headcell',
 		
 		
@@ -472,16 +266,74 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Woreda Count }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_mfr_woreda lat }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Count_align}',
+              "alignment": '{$lat_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'lng',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_mfr_woreda lng }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$lng_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'count',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_mfr_woreda count }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$count_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
 											],
 				{END row_grid_0}
 		
@@ -519,43 +371,12 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_checkbox}
-																							{BEGIN cellblock_grid_cell_details}
-{
-	cellId: 'cell_details',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_details}
 																							{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'Woreda',
+			fieldName: 'woreda',
 				style: 'bodycell',
 		
 		
@@ -569,11 +390,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Woreda_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$woreda_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Woreda_align}',
+              "alignment": '{$woreda_align}',
      
       
       },
@@ -584,7 +405,7 @@ pdfDocument = {
 	cellId: 'cell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Count',
+			fieldName: 'lat',
 				style: 'bodycell',
 		
 		
@@ -598,79 +419,82 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+			{"text":{$lat_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Count_align}',
+              "alignment": '{$lat_align}',
      
       
       },
 
 {END cellblock_grid_cell_field1}
-											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_cell_dpreview}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_dpreview',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
+			fieldName: 'lng',
 				style: 'bodycell',
 		
 		
 	//	dynamic colspan/rowspan
 
-					{BEGIN colspan_grid_cell_dpreview}
-			colSpan: {$colspan_grid_cell_dpreview},
-			{END colspan_grid_cell_dpreview}
 		
 						
 	
 	
 	
-			"stack": [
+			"text": [
 		
 				
-			 {BEGIN details_mfr_woreda_chart}
-			{$displayDetailTable_mfr_woreda_chart }
-		{END details_mfr_woreda_chart},
+			{"text":{$lng_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$lng_align}',
      
       
       },
 
-{END cellblock_grid_cell_dpreview}
-																		{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  2,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  3,
-				text: ''
-			},
-							],
-				{END row_grid_2}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'count',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$count_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$count_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+											],
+				{END row_grid_1}
 		
 		{END grid_record}
 	{END grid_row}
 			
 					
-				{BEGIN row_grid_3}
+				{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_footcell_checkbox}
 {
@@ -698,32 +522,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_checkbox}
-																							{BEGIN cellblock_grid_footcell_details}
-{
-	cellId: 'footcell_details',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_details}
 																							{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',
@@ -755,7 +553,6 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Count',
 				style: 'footcell',
 		
 		
@@ -768,24 +565,69 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{BEGIN Count_fieldfootercolumn}
-			{BEGIN Count_showtotal}
-				{ text: 'Total ' },
-				{"text":{$Count_total},"hidden":"{$item_hide_simple_grid_field5}"}
-			{END Count_showtotal}
-		{END Count_fieldfootercolumn},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Count_align}',
+              "alignment": 'left',
      
       
       },
 
 {END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_footcell_field3}
+{
+	cellId: 'footcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field3}
 											],
-				{END row_grid_3}
+				{END row_grid_2}
 		
 				
 									]

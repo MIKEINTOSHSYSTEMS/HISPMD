@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel HealthUnits view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_healthunits view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -102,7 +102,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_unit_id}">
 		
-		{BEGIN unit_id_label}{$label HealthUnits unit_id }{END unit_id_label}
+		{BEGIN unit_id_label}{$label public_healthunits unit_id }{END unit_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$unit_id_value}	</div>
@@ -121,7 +121,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_name}">
 		
-		{BEGIN name_label}{$label HealthUnits name }{END name_label}
+		{BEGIN name_label}{$label public_healthunits name }{END name_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$name_value}	</div>
@@ -140,7 +140,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_type}">
 		
-		{BEGIN type_label}{$label HealthUnits type }{END type_label}
+		{BEGIN type_label}{$label public_healthunits type }{END type_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$type_value}	</div>
@@ -159,7 +159,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_strategic_plan}">
 		
-		{BEGIN strategic_plan_label}{$label HealthUnits strategic_plan }{END strategic_plan_label}
+		{BEGIN strategic_plan_label}{$label public_healthunits strategic_plan }{END strategic_plan_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$strategic_plan_value}	</div>

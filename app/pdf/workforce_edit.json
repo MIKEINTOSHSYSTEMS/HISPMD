@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel Workforce edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_workforce edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,13 +160,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel Workforce region_id }","bold":true},{"text":{$region_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_workforce workforce_id }","bold":true},{"text":{$workforce_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel Workforce adequate_staff }","bold":true},{"text":{$adequate_staff_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_workforce region_id }","bold":true},{"text":{$region_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel Workforce competency_index }","bold":true},{"text":{$competency_index_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_workforce adequate_staff }","bold":true},{"text":{$adequate_staff_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_workforce competency_index }","bold":true},{"text":{$competency_index_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

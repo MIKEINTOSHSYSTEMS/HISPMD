@@ -3,14 +3,14 @@ $tdatafinancialresources = array();
 $tdatafinancialresources[".searchableFields"] = array();
 $tdatafinancialresources[".ShortName"] = "financialresources";
 $tdatafinancialresources[".OwnerID"] = "";
-$tdatafinancialresources[".OriginalTable"] = "FinancialResources";
+$tdatafinancialresources[".OriginalTable"] = "public.financialresources";
 
 
-$tdatafinancialresources[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatafinancialresources[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatafinancialresources[".originalPagesByType"] = $tdatafinancialresources[".pagesByType"];
-$tdatafinancialresources[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatafinancialresources[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatafinancialresources[".originalPages"] = $tdatafinancialresources[".pages"];
-$tdatafinancialresources[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatafinancialresources[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatafinancialresources[".originalDefaultPages"] = $tdatafinancialresources[".defaultPages"];
 
 //	field labels
@@ -57,7 +57,7 @@ $tdatafinancialresources[".entityType"] = 0;
 $tdatafinancialresources[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatafinancialresources[".strOriginalTableName"] = "FinancialResources";
+$tdatafinancialresources[".strOriginalTableName"] = "public.financialresources";
 
 	
 
@@ -73,9 +73,9 @@ $tdatafinancialresources[".listAjax"] = false;
 //	temporary
 //$tdatafinancialresources[".listAjax"] = false;
 
-	$tdatafinancialresources[".audit"] = false;
+	$tdatafinancialresources[".audit"] = true;
 
-	$tdatafinancialresources[".locking"] = false;
+	$tdatafinancialresources[".locking"] = true;
 
 
 $pages = $tdatafinancialresources[".defaultPages"];
@@ -149,7 +149,7 @@ $tdatafinancialresources[".addPageEvents"] = false;
 $tdatafinancialresources[".isUseTimeForSearch"] = false;
 
 
-$tdatafinancialresources[".badgeColor"] = "5F9EA0";
+$tdatafinancialresources[".badgeColor"] = "B22222";
 
 
 $tdatafinancialresources[".allSearchFields"] = array();
@@ -195,8 +195,8 @@ $tdatafinancialresources[".strOrderBy"] = $tstrOrderBy;
 $tdatafinancialresources[".orderindexes"] = array();
 
 
-$tdatafinancialresources[".sqlHead"] = "SELECT resource_id,  	`year`,  	amount,  	utilized,  	region_id";
-$tdatafinancialresources[".sqlFrom"] = "FROM FinancialResources";
+$tdatafinancialresources[".sqlHead"] = "SELECT resource_id,  	\"year\",  	amount,  	utilized,  	region_id";
+$tdatafinancialresources[".sqlFrom"] = "FROM \"public\".financialresources";
 $tdatafinancialresources[".sqlWhereExpr"] = "";
 $tdatafinancialresources[".sqlTail"] = "";
 
@@ -249,13 +249,12 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "resource_id";
 	$fdata["GoodName"] = "resource_id";
-	$fdata["ownerTable"] = "FinancialResources";
-	$fdata["Label"] = GetFieldLabel("FinancialResources","resource_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.financialresources";
+	$fdata["Label"] = GetFieldLabel("public_financialresources","resource_id");
+	$fdata["FieldType"] = 20;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -390,9 +389,9 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "year";
 	$fdata["GoodName"] = "year";
-	$fdata["ownerTable"] = "FinancialResources";
-	$fdata["Label"] = GetFieldLabel("FinancialResources","year");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.financialresources";
+	$fdata["Label"] = GetFieldLabel("public_financialresources","year");
+	$fdata["FieldType"] = 20;
 
 
 	
@@ -404,7 +403,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "year";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`year`";
+	$fdata["FullName"] = "\"year\"";
 
 	
 	
@@ -530,8 +529,8 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "amount";
 	$fdata["GoodName"] = "amount";
-	$fdata["ownerTable"] = "FinancialResources";
-	$fdata["Label"] = GetFieldLabel("FinancialResources","amount");
+	$fdata["ownerTable"] = "public.financialresources";
+	$fdata["Label"] = GetFieldLabel("public_financialresources","amount");
 	$fdata["FieldType"] = 14;
 
 
@@ -669,8 +668,8 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "utilized";
 	$fdata["GoodName"] = "utilized";
-	$fdata["ownerTable"] = "FinancialResources";
-	$fdata["Label"] = GetFieldLabel("FinancialResources","utilized");
+	$fdata["ownerTable"] = "public.financialresources";
+	$fdata["Label"] = GetFieldLabel("public_financialresources","utilized");
 	$fdata["FieldType"] = 14;
 
 
@@ -808,9 +807,9 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "region_id";
 	$fdata["GoodName"] = "region_id";
-	$fdata["ownerTable"] = "FinancialResources";
-	$fdata["Label"] = GetFieldLabel("FinancialResources","region_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.financialresources";
+	$fdata["Label"] = GetFieldLabel("public_financialresources","region_id");
+	$fdata["FieldType"] = 20;
 
 
 	
@@ -859,7 +858,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -869,34 +868,6 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Regions";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "region_id";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "name";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -911,14 +882,17 @@ $tdatafinancialresources[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -967,46 +941,28 @@ $tdatafinancialresources[".hideMobileList"] = array();
 		$tdatafinancialresources[".searchableFields"][] = "region_id";
 
 
-$tables_data["FinancialResources"]=&$tdatafinancialresources;
-$field_labels["FinancialResources"] = &$fieldLabelsfinancialresources;
-$fieldToolTips["FinancialResources"] = &$fieldToolTipsfinancialresources;
-$placeHolders["FinancialResources"] = &$placeHoldersfinancialresources;
-$page_titles["FinancialResources"] = &$pageTitlesfinancialresources;
+$tables_data["public.financialresources"]=&$tdatafinancialresources;
+$field_labels["public_financialresources"] = &$fieldLabelsfinancialresources;
+$fieldToolTips["public_financialresources"] = &$fieldToolTipsfinancialresources;
+$placeHolders["public_financialresources"] = &$placeHoldersfinancialresources;
+$page_titles["public_financialresources"] = &$pageTitlesfinancialresources;
 
 
-changeTextControlsToDate( "FinancialResources" );
+changeTextControlsToDate( "public.financialresources" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["FinancialResources"] = array();
+$detailsTablesData["public.financialresources"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["FinancialResources"] = array();
+$masterTablesData["public.financialresources"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="Regions";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="Regions";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "regions";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["FinancialResources"][0] = $masterParams;
-				$masterTablesData["FinancialResources"][0]["masterKeys"] = array();
-	$masterTablesData["FinancialResources"][0]["masterKeys"][]="region_id";
-				$masterTablesData["FinancialResources"][0]["detailKeys"] = array();
-	$masterTablesData["FinancialResources"][0]["detailKeys"][]="region_id";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1027,8 +983,8 @@ function createSqlQuery_financialresources()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "resource_id,  	`year`,  	amount,  	utilized,  	region_id";
-$proto0["m_strFrom"] = "FROM FinancialResources";
+$proto0["m_strFieldList"] = "resource_id,  	\"year\",  	amount,  	utilized,  	region_id";
+$proto0["m_strFrom"] = "FROM \"public\".financialresources";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1070,12 +1026,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "resource_id",
-	"m_strTable" => "FinancialResources",
-	"m_srcTableName" => "FinancialResources"
+	"m_strTable" => "public.financialresources",
+	"m_srcTableName" => "public.financialresources"
 ));
 
 $proto6["m_sql"] = "resource_id";
-$proto6["m_srcTableName"] = "FinancialResources";
+$proto6["m_srcTableName"] = "public.financialresources";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -1084,12 +1040,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "year",
-	"m_strTable" => "FinancialResources",
-	"m_srcTableName" => "FinancialResources"
+	"m_strTable" => "public.financialresources",
+	"m_srcTableName" => "public.financialresources"
 ));
 
-$proto8["m_sql"] = "`year`";
-$proto8["m_srcTableName"] = "FinancialResources";
+$proto8["m_sql"] = "\"year\"";
+$proto8["m_srcTableName"] = "public.financialresources";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -1098,12 +1054,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "amount",
-	"m_strTable" => "FinancialResources",
-	"m_srcTableName" => "FinancialResources"
+	"m_strTable" => "public.financialresources",
+	"m_srcTableName" => "public.financialresources"
 ));
 
 $proto10["m_sql"] = "amount";
-$proto10["m_srcTableName"] = "FinancialResources";
+$proto10["m_srcTableName"] = "public.financialresources";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -1112,12 +1068,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "utilized",
-	"m_strTable" => "FinancialResources",
-	"m_srcTableName" => "FinancialResources"
+	"m_strTable" => "public.financialresources",
+	"m_srcTableName" => "public.financialresources"
 ));
 
 $proto12["m_sql"] = "utilized";
-$proto12["m_srcTableName"] = "FinancialResources";
+$proto12["m_srcTableName"] = "public.financialresources";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -1126,12 +1082,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
 	"m_strName" => "region_id",
-	"m_strTable" => "FinancialResources",
-	"m_srcTableName" => "FinancialResources"
+	"m_strTable" => "public.financialresources",
+	"m_srcTableName" => "public.financialresources"
 ));
 
 $proto14["m_sql"] = "region_id";
-$proto14["m_srcTableName"] = "FinancialResources";
+$proto14["m_srcTableName"] = "public.financialresources";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
 $obj = new SQLFieldListItem($proto14);
@@ -1141,8 +1097,8 @@ $proto0["m_fromlist"] = array();
 												$proto16=array();
 $proto16["m_link"] = "SQLL_MAIN";
 			$proto17=array();
-$proto17["m_strName"] = "FinancialResources";
-$proto17["m_srcTableName"] = "FinancialResources";
+$proto17["m_strName"] = "public.financialresources";
+$proto17["m_srcTableName"] = "public.financialresources";
 $proto17["m_columns"] = array();
 $proto17["m_columns"][] = "resource_id";
 $proto17["m_columns"][] = "year";
@@ -1152,9 +1108,9 @@ $proto17["m_columns"][] = "region_id";
 $obj = new SQLTable($proto17);
 
 $proto16["m_table"] = $obj;
-$proto16["m_sql"] = "FinancialResources";
+$proto16["m_sql"] = "\"public\".financialresources";
 $proto16["m_alias"] = "";
-$proto16["m_srcTableName"] = "FinancialResources";
+$proto16["m_srcTableName"] = "public.financialresources";
 $proto18=array();
 $proto18["m_sql"] = "";
 $proto18["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1176,7 +1132,7 @@ $obj = new SQLFromListItem($proto16);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="FinancialResources";		
+$proto0["m_srcTableName"]="public.financialresources";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

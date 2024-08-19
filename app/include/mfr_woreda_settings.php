@@ -3,14 +3,14 @@ $tdatamfr_woreda = array();
 $tdatamfr_woreda[".searchableFields"] = array();
 $tdatamfr_woreda[".ShortName"] = "mfr_woreda";
 $tdatamfr_woreda[".OwnerID"] = "";
-$tdatamfr_woreda[".OriginalTable"] = "MFR_Woreda";
+$tdatamfr_woreda[".OriginalTable"] = "public.mfr_woreda";
 
 
-$tdatamfr_woreda[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_woreda[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_woreda[".originalPagesByType"] = $tdatamfr_woreda[".pagesByType"];
-$tdatamfr_woreda[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_woreda[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_woreda[".originalPages"] = $tdatamfr_woreda[".pages"];
-$tdatamfr_woreda[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_woreda[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_woreda[".originalDefaultPages"] = $tdatamfr_woreda[".defaultPages"];
 
 //	field labels
@@ -25,18 +25,18 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmfr_woreda["English"] = array();
 	$placeHoldersmfr_woreda["English"] = array();
 	$pageTitlesmfr_woreda["English"] = array();
-	$fieldLabelsmfr_woreda["English"]["Woreda"] = "Woreda";
-	$fieldToolTipsmfr_woreda["English"]["Woreda"] = "";
-	$placeHoldersmfr_woreda["English"]["Woreda"] = "";
-	$fieldLabelsmfr_woreda["English"]["Lat"] = "Lat";
-	$fieldToolTipsmfr_woreda["English"]["Lat"] = "";
-	$placeHoldersmfr_woreda["English"]["Lat"] = "";
-	$fieldLabelsmfr_woreda["English"]["Lng"] = "Lng";
-	$fieldToolTipsmfr_woreda["English"]["Lng"] = "";
-	$placeHoldersmfr_woreda["English"]["Lng"] = "";
-	$fieldLabelsmfr_woreda["English"]["Count"] = "Count";
-	$fieldToolTipsmfr_woreda["English"]["Count"] = "";
-	$placeHoldersmfr_woreda["English"]["Count"] = "";
+	$fieldLabelsmfr_woreda["English"]["woreda"] = "Woreda";
+	$fieldToolTipsmfr_woreda["English"]["woreda"] = "";
+	$placeHoldersmfr_woreda["English"]["woreda"] = "";
+	$fieldLabelsmfr_woreda["English"]["lat"] = "Lat";
+	$fieldToolTipsmfr_woreda["English"]["lat"] = "";
+	$placeHoldersmfr_woreda["English"]["lat"] = "";
+	$fieldLabelsmfr_woreda["English"]["lng"] = "Lng";
+	$fieldToolTipsmfr_woreda["English"]["lng"] = "";
+	$placeHoldersmfr_woreda["English"]["lng"] = "";
+	$fieldLabelsmfr_woreda["English"]["count"] = "Count";
+	$fieldToolTipsmfr_woreda["English"]["count"] = "";
+	$placeHoldersmfr_woreda["English"]["count"] = "";
 	if (count($fieldToolTipsmfr_woreda["English"]))
 		$tdatamfr_woreda[".isUseToolTips"] = true;
 }
@@ -54,7 +54,7 @@ $tdatamfr_woreda[".entityType"] = 0;
 $tdatamfr_woreda[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatamfr_woreda[".strOriginalTableName"] = "MFR_Woreda";
+$tdatamfr_woreda[".strOriginalTableName"] = "public.mfr_woreda";
 
 	
 
@@ -70,9 +70,9 @@ $tdatamfr_woreda[".listAjax"] = false;
 //	temporary
 //$tdatamfr_woreda[".listAjax"] = false;
 
-	$tdatamfr_woreda[".audit"] = false;
+	$tdatamfr_woreda[".audit"] = true;
 
-	$tdatamfr_woreda[".locking"] = false;
+	$tdatamfr_woreda[".locking"] = true;
 
 
 $pages = $tdatamfr_woreda[".defaultPages"];
@@ -146,7 +146,7 @@ $tdatamfr_woreda[".addPageEvents"] = false;
 $tdatamfr_woreda[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_woreda[".badgeColor"] = "008B8B";
+$tdatamfr_woreda[".badgeColor"] = "CD853F";
 
 
 $tdatamfr_woreda[".allSearchFields"] = array();
@@ -154,7 +154,10 @@ $tdatamfr_woreda[".filterFields"] = array();
 $tdatamfr_woreda[".requiredSearchFields"] = array();
 
 $tdatamfr_woreda[".googleLikeFields"] = array();
-$tdatamfr_woreda[".googleLikeFields"][] = "Woreda";
+$tdatamfr_woreda[".googleLikeFields"][] = "woreda";
+$tdatamfr_woreda[".googleLikeFields"][] = "lat";
+$tdatamfr_woreda[".googleLikeFields"][] = "lng";
+$tdatamfr_woreda[".googleLikeFields"][] = "count";
 
 
 
@@ -165,12 +168,7 @@ $tdatamfr_woreda[".nPrinterPageScale"] = 100;
 
 $tdatamfr_woreda[".nPrinterSplitRecords"] = 40;
 
-$tdatamfr_woreda[".geocodingEnabled"] = true;
-$tdatamfr_woreda[".geocodingData"] = array();
-$tdatamfr_woreda[".geocodingData"]["latField"] = "Lat";
-$tdatamfr_woreda[".geocodingData"]["lngField"] = "Lng";
-$tdatamfr_woreda[".geocodingData"]["addressFields"] = array();
-	$tdatamfr_woreda[".geocodingData"]["addressFields"][] = "Woreda";
+$tdatamfr_woreda[".geocodingEnabled"] = false;
 
 
 
@@ -193,8 +191,8 @@ $tdatamfr_woreda[".strOrderBy"] = $tstrOrderBy;
 $tdatamfr_woreda[".orderindexes"] = array();
 
 
-$tdatamfr_woreda[".sqlHead"] = "SELECT Woreda,  	Lat,  	Lng,  	`Count`";
-$tdatamfr_woreda[".sqlFrom"] = "FROM MFR_Woreda";
+$tdatamfr_woreda[".sqlHead"] = "SELECT woreda,  	lat,  	lng,  	\"count\"";
+$tdatamfr_woreda[".sqlFrom"] = "FROM \"public\".mfr_woreda";
 $tdatamfr_woreda[".sqlWhereExpr"] = "";
 $tdatamfr_woreda[".sqlTail"] = "";
 
@@ -240,14 +238,14 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 
 
 
-//	Woreda
+//	woreda
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "Woreda";
-	$fdata["GoodName"] = "Woreda";
-	$fdata["ownerTable"] = "MFR_Woreda";
-	$fdata["Label"] = GetFieldLabel("MFR_Woreda","Woreda");
+	$fdata["strName"] = "woreda";
+	$fdata["GoodName"] = "woreda";
+	$fdata["ownerTable"] = "public.mfr_woreda";
+	$fdata["Label"] = GetFieldLabel("public_mfr_woreda","woreda");
 	$fdata["FieldType"] = 200;
 
 
@@ -255,12 +253,12 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Woreda";
+		$fdata["strField"] = "woreda";
 
-		$fdata["sourceSingle"] = "Woreda";
+		$fdata["sourceSingle"] = "woreda";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Woreda";
+	$fdata["FullName"] = "woreda";
 
 	
 	
@@ -376,16 +374,16 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_woreda["Woreda"] = $fdata;
-		$tdatamfr_woreda[".searchableFields"][] = "Woreda";
-//	Lat
+	$tdatamfr_woreda["woreda"] = $fdata;
+		$tdatamfr_woreda[".searchableFields"][] = "woreda";
+//	lat
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "Lat";
-	$fdata["GoodName"] = "Lat";
-	$fdata["ownerTable"] = "MFR_Woreda";
-	$fdata["Label"] = GetFieldLabel("MFR_Woreda","Lat");
+	$fdata["strName"] = "lat";
+	$fdata["GoodName"] = "lat";
+	$fdata["ownerTable"] = "public.mfr_woreda";
+	$fdata["Label"] = GetFieldLabel("public_mfr_woreda","lat");
 	$fdata["FieldType"] = 200;
 
 
@@ -393,12 +391,12 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Lat";
+		$fdata["strField"] = "lat";
 
-		$fdata["sourceSingle"] = "Lat";
+		$fdata["sourceSingle"] = "lat";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Lat";
+	$fdata["FullName"] = "lat";
 
 	
 	
@@ -514,16 +512,16 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_woreda["Lat"] = $fdata;
-		$tdatamfr_woreda[".searchableFields"][] = "Lat";
-//	Lng
+	$tdatamfr_woreda["lat"] = $fdata;
+		$tdatamfr_woreda[".searchableFields"][] = "lat";
+//	lng
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "Lng";
-	$fdata["GoodName"] = "Lng";
-	$fdata["ownerTable"] = "MFR_Woreda";
-	$fdata["Label"] = GetFieldLabel("MFR_Woreda","Lng");
+	$fdata["strName"] = "lng";
+	$fdata["GoodName"] = "lng";
+	$fdata["ownerTable"] = "public.mfr_woreda";
+	$fdata["Label"] = GetFieldLabel("public_mfr_woreda","lng");
 	$fdata["FieldType"] = 200;
 
 
@@ -531,12 +529,12 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Lng";
+		$fdata["strField"] = "lng";
 
-		$fdata["sourceSingle"] = "Lng";
+		$fdata["sourceSingle"] = "lng";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Lng";
+	$fdata["FullName"] = "lng";
 
 	
 	
@@ -652,29 +650,29 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_woreda["Lng"] = $fdata;
-		$tdatamfr_woreda[".searchableFields"][] = "Lng";
-//	Count
+	$tdatamfr_woreda["lng"] = $fdata;
+		$tdatamfr_woreda[".searchableFields"][] = "lng";
+//	count
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 4;
-	$fdata["strName"] = "Count";
-	$fdata["GoodName"] = "Count";
-	$fdata["ownerTable"] = "MFR_Woreda";
-	$fdata["Label"] = GetFieldLabel("MFR_Woreda","Count");
-	$fdata["FieldType"] = 3;
+	$fdata["strName"] = "count";
+	$fdata["GoodName"] = "count";
+	$fdata["ownerTable"] = "public.mfr_woreda";
+	$fdata["Label"] = GetFieldLabel("public_mfr_woreda","count");
+	$fdata["FieldType"] = 20;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Count";
+		$fdata["strField"] = "count";
 
-		$fdata["sourceSingle"] = "Count";
+		$fdata["sourceSingle"] = "count";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Count`";
+	$fdata["FullName"] = "\"count\"";
 
 	
 	
@@ -790,64 +788,29 @@ $tdatamfr_woreda[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_woreda["Count"] = $fdata;
-		$tdatamfr_woreda[".searchableFields"][] = "Count";
+	$tdatamfr_woreda["count"] = $fdata;
+		$tdatamfr_woreda[".searchableFields"][] = "count";
 
 
-$tables_data["MFR_Woreda"]=&$tdatamfr_woreda;
-$field_labels["MFR_Woreda"] = &$fieldLabelsmfr_woreda;
-$fieldToolTips["MFR_Woreda"] = &$fieldToolTipsmfr_woreda;
-$placeHolders["MFR_Woreda"] = &$placeHoldersmfr_woreda;
-$page_titles["MFR_Woreda"] = &$pageTitlesmfr_woreda;
+$tables_data["public.mfr_woreda"]=&$tdatamfr_woreda;
+$field_labels["public_mfr_woreda"] = &$fieldLabelsmfr_woreda;
+$fieldToolTips["public_mfr_woreda"] = &$fieldToolTipsmfr_woreda;
+$placeHolders["public_mfr_woreda"] = &$placeHoldersmfr_woreda;
+$page_titles["public_mfr_woreda"] = &$pageTitlesmfr_woreda;
 
 
-changeTextControlsToDate( "MFR_Woreda" );
+changeTextControlsToDate( "public.mfr_woreda" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["MFR_Woreda"] = array();
-//	MFR_Woreda_Chart
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="MFR_Woreda_Chart";
-		$detailsParam["dOriginalTable"] = "MFR_Woreda";
-
-
-
-			$detailsParam["dType"]=PAGE_CHART;
-
-		$detailsParam["dShortTable"] = "mfr_woreda_chart";
-	$detailsParam["dCaptionTable"] = GetTableCaption("MFR_Woreda_Chart");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["MFR_Woreda"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["MFR_Woreda"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["MFR_Woreda"][$dIndex]["masterKeys"][]="Woreda";
-
-	$detailsTablesData["MFR_Woreda"][$dIndex]["masterKeys"][]="Count";
-
-				$detailsTablesData["MFR_Woreda"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["MFR_Woreda"][$dIndex]["detailKeys"][]="Woreda";
-
-		
-	$detailsTablesData["MFR_Woreda"][$dIndex]["detailKeys"][]="Count";
+$detailsTablesData["public.mfr_woreda"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["MFR_Woreda"] = array();
+$masterTablesData["public.mfr_woreda"] = array();
 
 
 
@@ -871,8 +834,8 @@ function createSqlQuery_mfr_woreda()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "Woreda,  	Lat,  	Lng,  	`Count`";
-$proto0["m_strFrom"] = "FROM MFR_Woreda";
+$proto0["m_strFieldList"] = "woreda,  	lat,  	lng,  	\"count\"";
+$proto0["m_strFrom"] = "FROM \"public\".mfr_woreda";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -913,13 +876,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Woreda",
-	"m_strTable" => "MFR_Woreda",
-	"m_srcTableName" => "MFR_Woreda"
+	"m_strName" => "woreda",
+	"m_strTable" => "public.mfr_woreda",
+	"m_srcTableName" => "public.mfr_woreda"
 ));
 
-$proto6["m_sql"] = "Woreda";
-$proto6["m_srcTableName"] = "MFR_Woreda";
+$proto6["m_sql"] = "woreda";
+$proto6["m_srcTableName"] = "public.mfr_woreda";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -927,13 +890,13 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Lat",
-	"m_strTable" => "MFR_Woreda",
-	"m_srcTableName" => "MFR_Woreda"
+	"m_strName" => "lat",
+	"m_strTable" => "public.mfr_woreda",
+	"m_srcTableName" => "public.mfr_woreda"
 ));
 
-$proto8["m_sql"] = "Lat";
-$proto8["m_srcTableName"] = "MFR_Woreda";
+$proto8["m_sql"] = "lat";
+$proto8["m_srcTableName"] = "public.mfr_woreda";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -941,13 +904,13 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Lng",
-	"m_strTable" => "MFR_Woreda",
-	"m_srcTableName" => "MFR_Woreda"
+	"m_strName" => "lng",
+	"m_strTable" => "public.mfr_woreda",
+	"m_srcTableName" => "public.mfr_woreda"
 ));
 
-$proto10["m_sql"] = "Lng";
-$proto10["m_srcTableName"] = "MFR_Woreda";
+$proto10["m_sql"] = "lng";
+$proto10["m_srcTableName"] = "public.mfr_woreda";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -955,13 +918,13 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Count",
-	"m_strTable" => "MFR_Woreda",
-	"m_srcTableName" => "MFR_Woreda"
+	"m_strName" => "count",
+	"m_strTable" => "public.mfr_woreda",
+	"m_srcTableName" => "public.mfr_woreda"
 ));
 
-$proto12["m_sql"] = "`Count`";
-$proto12["m_srcTableName"] = "MFR_Woreda";
+$proto12["m_sql"] = "\"count\"";
+$proto12["m_srcTableName"] = "public.mfr_woreda";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -971,19 +934,19 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "MFR_Woreda";
-$proto15["m_srcTableName"] = "MFR_Woreda";
+$proto15["m_strName"] = "public.mfr_woreda";
+$proto15["m_srcTableName"] = "public.mfr_woreda";
 $proto15["m_columns"] = array();
-$proto15["m_columns"][] = "Woreda";
-$proto15["m_columns"][] = "Lat";
-$proto15["m_columns"][] = "Lng";
-$proto15["m_columns"][] = "Count";
+$proto15["m_columns"][] = "woreda";
+$proto15["m_columns"][] = "lat";
+$proto15["m_columns"][] = "lng";
+$proto15["m_columns"][] = "count";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "MFR_Woreda";
+$proto14["m_sql"] = "\"public\".mfr_woreda";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "MFR_Woreda";
+$proto14["m_srcTableName"] = "public.mfr_woreda";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1005,7 +968,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="MFR_Woreda";		
+$proto0["m_srcTableName"]="public.mfr_woreda";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

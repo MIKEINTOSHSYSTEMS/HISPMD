@@ -3,7 +3,7 @@ $tdatamfr_dashboard_reports_chart = array();
 $tdatamfr_dashboard_reports_chart[".searchableFields"] = array();
 $tdatamfr_dashboard_reports_chart[".ShortName"] = "mfr_dashboard_reports_chart";
 $tdatamfr_dashboard_reports_chart[".OwnerID"] = "";
-$tdatamfr_dashboard_reports_chart[".OriginalTable"] = "MFR_Dashboard_Reports";
+$tdatamfr_dashboard_reports_chart[".OriginalTable"] = "public.mfr_dashboard_reports";
 
 
 $tdatamfr_dashboard_reports_chart[".pagesByType"] = my_json_decode( "{\"chart\":[\"chart\"],\"search\":[\"search\"]}" );
@@ -25,15 +25,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmfr_dashboard_reports_chart["English"] = array();
 	$placeHoldersmfr_dashboard_reports_chart["English"] = array();
 	$pageTitlesmfr_dashboard_reports_chart["English"] = array();
-	$fieldLabelsmfr_dashboard_reports_chart["English"]["Type"] = "Type";
-	$fieldToolTipsmfr_dashboard_reports_chart["English"]["Type"] = "";
-	$placeHoldersmfr_dashboard_reports_chart["English"]["Type"] = "";
-	$fieldLabelsmfr_dashboard_reports_chart["English"]["Name"] = "Name";
-	$fieldToolTipsmfr_dashboard_reports_chart["English"]["Name"] = "";
-	$placeHoldersmfr_dashboard_reports_chart["English"]["Name"] = "";
-	$fieldLabelsmfr_dashboard_reports_chart["English"]["Count"] = "Count";
-	$fieldToolTipsmfr_dashboard_reports_chart["English"]["Count"] = "";
-	$placeHoldersmfr_dashboard_reports_chart["English"]["Count"] = "";
+	$fieldLabelsmfr_dashboard_reports_chart["English"]["type"] = "Type";
+	$fieldToolTipsmfr_dashboard_reports_chart["English"]["type"] = "";
+	$placeHoldersmfr_dashboard_reports_chart["English"]["type"] = "";
+	$fieldLabelsmfr_dashboard_reports_chart["English"]["name"] = "Name";
+	$fieldToolTipsmfr_dashboard_reports_chart["English"]["name"] = "";
+	$placeHoldersmfr_dashboard_reports_chart["English"]["name"] = "";
+	$fieldLabelsmfr_dashboard_reports_chart["English"]["count"] = "Count";
+	$fieldToolTipsmfr_dashboard_reports_chart["English"]["count"] = "";
+	$placeHoldersmfr_dashboard_reports_chart["English"]["count"] = "";
 	if (count($fieldToolTipsmfr_dashboard_reports_chart["English"]))
 		$tdatamfr_dashboard_reports_chart[".isUseToolTips"] = true;
 }
@@ -52,7 +52,7 @@ $tdatamfr_dashboard_reports_chart[".entityType"] = 3;
 $tdatamfr_dashboard_reports_chart[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatamfr_dashboard_reports_chart[".strOriginalTableName"] = "MFR_Dashboard_Reports";
+$tdatamfr_dashboard_reports_chart[".strOriginalTableName"] = "public.mfr_dashboard_reports";
 
 	
 
@@ -144,7 +144,7 @@ $tdatamfr_dashboard_reports_chart[".addPageEvents"] = false;
 $tdatamfr_dashboard_reports_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_dashboard_reports_chart[".badgeColor"] = "6da5c8";
+$tdatamfr_dashboard_reports_chart[".badgeColor"] = "CFAE83";
 
 
 $tdatamfr_dashboard_reports_chart[".allSearchFields"] = array();
@@ -152,9 +152,8 @@ $tdatamfr_dashboard_reports_chart[".filterFields"] = array();
 $tdatamfr_dashboard_reports_chart[".requiredSearchFields"] = array();
 
 $tdatamfr_dashboard_reports_chart[".googleLikeFields"] = array();
-$tdatamfr_dashboard_reports_chart[".googleLikeFields"][] = "Type";
-$tdatamfr_dashboard_reports_chart[".googleLikeFields"][] = "Name";
-$tdatamfr_dashboard_reports_chart[".googleLikeFields"][] = "Count";
+$tdatamfr_dashboard_reports_chart[".googleLikeFields"][] = "type";
+$tdatamfr_dashboard_reports_chart[".googleLikeFields"][] = "name";
 
 
 
@@ -173,7 +172,6 @@ $tdatamfr_dashboard_reports_chart[".geocodingEnabled"] = false;
 $tdatamfr_dashboard_reports_chart[".chartType"] = "2DColumn";
 // end of chart settings
 
-$tdatamfr_dashboard_reports_chart[".isDisplayLoading"] = true;
 
 
 
@@ -187,8 +185,8 @@ $tdatamfr_dashboard_reports_chart[".strOrderBy"] = $tstrOrderBy;
 $tdatamfr_dashboard_reports_chart[".orderindexes"] = array();
 
 
-$tdatamfr_dashboard_reports_chart[".sqlHead"] = "SELECT `Type`,  	Name,  	`Count`";
-$tdatamfr_dashboard_reports_chart[".sqlFrom"] = "FROM MFR_Dashboard_Reports";
+$tdatamfr_dashboard_reports_chart[".sqlHead"] = "SELECT \"type\",  	name,  	\"count\"";
+$tdatamfr_dashboard_reports_chart[".sqlFrom"] = "FROM \"public\".mfr_dashboard_reports";
 $tdatamfr_dashboard_reports_chart[".sqlWhereExpr"] = "";
 $tdatamfr_dashboard_reports_chart[".sqlTail"] = "";
 
@@ -234,14 +232,14 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 
 
 
-//	Type
+//	type
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "Type";
-	$fdata["GoodName"] = "Type";
-	$fdata["ownerTable"] = "MFR_Dashboard_Reports";
-	$fdata["Label"] = GetFieldLabel("MFR_Dashboard_Reports_Chart","Type");
+	$fdata["strName"] = "type";
+	$fdata["GoodName"] = "type";
+	$fdata["ownerTable"] = "public.mfr_dashboard_reports";
+	$fdata["Label"] = GetFieldLabel("mfr_dashboard_reports_chart","type");
 	$fdata["FieldType"] = 200;
 
 
@@ -249,12 +247,12 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Type";
+		$fdata["strField"] = "type";
 
-		$fdata["sourceSingle"] = "Type";
+		$fdata["sourceSingle"] = "type";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Type`";
+	$fdata["FullName"] = "\"type\"";
 
 	
 	
@@ -291,7 +289,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -301,6 +299,34 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.mfr_dashboard_reports";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "type";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "type";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -315,11 +341,8 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -345,7 +368,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -370,16 +393,16 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_dashboard_reports_chart["Type"] = $fdata;
-		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "Type";
-//	Name
+	$tdatamfr_dashboard_reports_chart["type"] = $fdata;
+		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "type";
+//	name
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "Name";
-	$fdata["GoodName"] = "Name";
-	$fdata["ownerTable"] = "MFR_Dashboard_Reports";
-	$fdata["Label"] = GetFieldLabel("MFR_Dashboard_Reports_Chart","Name");
+	$fdata["strName"] = "name";
+	$fdata["GoodName"] = "name";
+	$fdata["ownerTable"] = "public.mfr_dashboard_reports";
+	$fdata["Label"] = GetFieldLabel("mfr_dashboard_reports_chart","name");
 	$fdata["FieldType"] = 200;
 
 
@@ -387,12 +410,12 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Name";
+		$fdata["strField"] = "name";
 
-		$fdata["sourceSingle"] = "Name";
+		$fdata["sourceSingle"] = "name";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Name";
+	$fdata["FullName"] = "name";
 
 	
 	
@@ -429,7 +452,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -439,6 +462,34 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.mfr_dashboard_reports";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "type";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "type";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -453,11 +504,8 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -483,7 +531,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -508,29 +556,29 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_dashboard_reports_chart["Name"] = $fdata;
-		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "Name";
-//	Count
+	$tdatamfr_dashboard_reports_chart["name"] = $fdata;
+		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "name";
+//	count
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "Count";
-	$fdata["GoodName"] = "Count";
-	$fdata["ownerTable"] = "MFR_Dashboard_Reports";
-	$fdata["Label"] = GetFieldLabel("MFR_Dashboard_Reports_Chart","Count");
-	$fdata["FieldType"] = 3;
+	$fdata["strName"] = "count";
+	$fdata["GoodName"] = "count";
+	$fdata["ownerTable"] = "public.mfr_dashboard_reports";
+	$fdata["Label"] = GetFieldLabel("mfr_dashboard_reports_chart","count");
+	$fdata["FieldType"] = 20;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Count";
+		$fdata["strField"] = "count";
 
-		$fdata["sourceSingle"] = "Count";
+		$fdata["sourceSingle"] = "count";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Count`";
+	$fdata["FullName"] = "\"count\"";
 
 	
 	
@@ -646,20 +694,18 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_dashboard_reports_chart["Count"] = $fdata;
-		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "Count";
+	$tdatamfr_dashboard_reports_chart["count"] = $fdata;
+		$tdatamfr_dashboard_reports_chart[".searchableFields"][] = "count";
 
-$tdatamfr_dashboard_reports_chart[".groupChart"] = true;
-$tdatamfr_dashboard_reports_chart[".chartLabelInterval"] = 0;
-$tdatamfr_dashboard_reports_chart[".chartLabelField"] = "Name";
+$tdatamfr_dashboard_reports_chart[".chartLabelField"] = "name";
 $tdatamfr_dashboard_reports_chart[".chartSeries"] = array();
 $tdatamfr_dashboard_reports_chart[".chartSeries"][] = array(
-	"field" => "Count",
-	"total" => "SUM"
+	"field" => "count",
+	"total" => ""
 );
 	$tdatamfr_dashboard_reports_chart[".chartXml"] = '<chart>
 		<attr value="tables">
-			<attr value="0">MFR_Dashboard_Reports_Chart</attr>
+			<attr value="0">mfr_dashboard_reports_chart</attr>
 		</attr>
 		<attr value="chart_type">
 			<attr value="type">2d_column</attr>
@@ -667,18 +713,18 @@ $tdatamfr_dashboard_reports_chart[".chartSeries"][] = array(
 
 		<attr value="parameters">';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="0">
-			<attr value="name">Count</attr>';
+			<attr value="name">count</attr>';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '</attr>';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="1">
-		<attr value="name">Name</attr>
+		<attr value="name">name</attr>
 	</attr>';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '</attr>
 			<attr value="appearance">';
 
 
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Dashboard Reports Chart").'</attr>
-<attr value="foot">'.xmlencode("By Service Name & Type").'</attr>
-<attr value="y_axis_label">'.xmlencode("Count").'</attr>
+<attr value="foot">'.xmlencode("Facility Type Name").'</attr>
+<attr value="y_axis_label">'.xmlencode("count").'</attr>
 
 
 <attr value="slegend">true</attr>
@@ -690,7 +736,7 @@ $tdatamfr_dashboard_reports_chart[".chartSeries"][] = array(
 <attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
+<attr value="is3d">1</attr>
 <attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>
@@ -699,74 +745,52 @@ $tdatamfr_dashboard_reports_chart[".chartXml"] .= '</attr>
 
 <attr value="fields">';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="0">
-		<attr value="name">Type</attr>
-		<attr value="label">'.xmlencode(GetFieldLabel("MFR_Dashboard_Reports_Chart","Type")).'</attr>
+		<attr value="name">type</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("mfr_dashboard_reports_chart","type")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="1">
-		<attr value="name">Name</attr>
-		<attr value="label">'.xmlencode(GetFieldLabel("MFR_Dashboard_Reports_Chart","Name")).'</attr>
+		<attr value="name">name</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("mfr_dashboard_reports_chart","name")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 	$tdatamfr_dashboard_reports_chart[".chartXml"] .= '<attr value="2">
-		<attr value="name">Count</attr>
-		<attr value="label">'.xmlencode(GetFieldLabel("MFR_Dashboard_Reports_Chart","Count")).'</attr>
+		<attr value="name">count</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("mfr_dashboard_reports_chart","count")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 $tdatamfr_dashboard_reports_chart[".chartXml"] .= '</attr>
 
 
 <attr value="settings">
-<attr value="name">MFR_Dashboard_Reports_Chart</attr>
+<attr value="name">mfr_dashboard_reports_chart</attr>
 <attr value="short_table_name">mfr_dashboard_reports_chart</attr>
 </attr>
 
 </chart>';
 
-$tables_data["MFR_Dashboard_Reports_Chart"]=&$tdatamfr_dashboard_reports_chart;
-$field_labels["MFR_Dashboard_Reports_Chart"] = &$fieldLabelsmfr_dashboard_reports_chart;
-$fieldToolTips["MFR_Dashboard_Reports_Chart"] = &$fieldToolTipsmfr_dashboard_reports_chart;
-$placeHolders["MFR_Dashboard_Reports_Chart"] = &$placeHoldersmfr_dashboard_reports_chart;
-$page_titles["MFR_Dashboard_Reports_Chart"] = &$pageTitlesmfr_dashboard_reports_chart;
+$tables_data["mfr_dashboard_reports_chart"]=&$tdatamfr_dashboard_reports_chart;
+$field_labels["mfr_dashboard_reports_chart"] = &$fieldLabelsmfr_dashboard_reports_chart;
+$fieldToolTips["mfr_dashboard_reports_chart"] = &$fieldToolTipsmfr_dashboard_reports_chart;
+$placeHolders["mfr_dashboard_reports_chart"] = &$placeHoldersmfr_dashboard_reports_chart;
+$page_titles["mfr_dashboard_reports_chart"] = &$pageTitlesmfr_dashboard_reports_chart;
 
 
-changeTextControlsToDate( "MFR_Dashboard_Reports_Chart" );
+changeTextControlsToDate( "mfr_dashboard_reports_chart" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["MFR_Dashboard_Reports_Chart"] = array();
+$detailsTablesData["mfr_dashboard_reports_chart"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["MFR_Dashboard_Reports_Chart"] = array();
+$masterTablesData["mfr_dashboard_reports_chart"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="MFR_Dashboard_Reports";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="MFR_Dashboard_Reports";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "mfr_dashboard_reports";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MFR_Dashboard_Reports_Chart"][0] = $masterParams;
-				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"] = array();
-	$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"][]="Type";
-				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"][]="Name";
-				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["masterKeys"][]="Count";
-				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"] = array();
-	$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"][]="Type";
-				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"][]="Name";
-				$masterTablesData["MFR_Dashboard_Reports_Chart"][0]["detailKeys"][]="Count";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -787,8 +811,8 @@ function createSqlQuery_mfr_dashboard_reports_chart()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`Type`,  	Name,  	`Count`";
-$proto0["m_strFrom"] = "FROM MFR_Dashboard_Reports";
+$proto0["m_strFieldList"] = "\"type\",  	name,  	\"count\"";
+$proto0["m_strFrom"] = "FROM \"public\".mfr_dashboard_reports";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -829,13 +853,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Type",
-	"m_strTable" => "MFR_Dashboard_Reports",
-	"m_srcTableName" => "MFR_Dashboard_Reports_Chart"
+	"m_strName" => "type",
+	"m_strTable" => "public.mfr_dashboard_reports",
+	"m_srcTableName" => "mfr_dashboard_reports_chart"
 ));
 
-$proto6["m_sql"] = "`Type`";
-$proto6["m_srcTableName"] = "MFR_Dashboard_Reports_Chart";
+$proto6["m_sql"] = "\"type\"";
+$proto6["m_srcTableName"] = "mfr_dashboard_reports_chart";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -843,13 +867,13 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Name",
-	"m_strTable" => "MFR_Dashboard_Reports",
-	"m_srcTableName" => "MFR_Dashboard_Reports_Chart"
+	"m_strName" => "name",
+	"m_strTable" => "public.mfr_dashboard_reports",
+	"m_srcTableName" => "mfr_dashboard_reports_chart"
 ));
 
-$proto8["m_sql"] = "Name";
-$proto8["m_srcTableName"] = "MFR_Dashboard_Reports_Chart";
+$proto8["m_sql"] = "name";
+$proto8["m_srcTableName"] = "mfr_dashboard_reports_chart";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -857,13 +881,13 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Count",
-	"m_strTable" => "MFR_Dashboard_Reports",
-	"m_srcTableName" => "MFR_Dashboard_Reports_Chart"
+	"m_strName" => "count",
+	"m_strTable" => "public.mfr_dashboard_reports",
+	"m_srcTableName" => "mfr_dashboard_reports_chart"
 ));
 
-$proto10["m_sql"] = "`Count`";
-$proto10["m_srcTableName"] = "MFR_Dashboard_Reports_Chart";
+$proto10["m_sql"] = "\"count\"";
+$proto10["m_srcTableName"] = "mfr_dashboard_reports_chart";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -873,18 +897,18 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "MFR_Dashboard_Reports";
-$proto13["m_srcTableName"] = "MFR_Dashboard_Reports_Chart";
+$proto13["m_strName"] = "public.mfr_dashboard_reports";
+$proto13["m_srcTableName"] = "mfr_dashboard_reports_chart";
 $proto13["m_columns"] = array();
-$proto13["m_columns"][] = "Type";
-$proto13["m_columns"][] = "Name";
-$proto13["m_columns"][] = "Count";
+$proto13["m_columns"][] = "type";
+$proto13["m_columns"][] = "name";
+$proto13["m_columns"][] = "count";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "MFR_Dashboard_Reports";
+$proto12["m_sql"] = "\"public\".mfr_dashboard_reports";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "MFR_Dashboard_Reports_Chart";
+$proto12["m_srcTableName"] = "mfr_dashboard_reports_chart";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -906,7 +930,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="MFR_Dashboard_Reports_Chart";		
+$proto0["m_srcTableName"]="mfr_dashboard_reports_chart";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

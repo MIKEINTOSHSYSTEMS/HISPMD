@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -38,7 +38,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel Workforce print}</h2>
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_workforce print}</h2>
 	 
 		{BEGIN printtabheader}
 <span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
@@ -46,20 +46,6 @@
 </span>
 {END printtabheader}
 		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="top_c4" data-pageid="{$pageid}"	{$cell_top_c4}
-	class=" r-ori-vert			col-md-12
-	
-">
-		 
-		{BEGIN mastertable_block}
-<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
-	{$showmasterfile}
-</div>
-{END mastertable_block}		</div>					</div>
 			</div>		
 {END top_block}
 									{BEGIN above-grid_block}
@@ -69,31 +55,14 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-12
+	class=" r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
 		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
 	{$print_pages_labelprint_pages}
-</span>	 
-		{BEGIN inline_cancel}
-<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
-				
-								</a>
-</span>
-{END inline_cancel}
-	 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
-</span>
-{END inlineadd_link}
-			{END firstAboveGridCell}	
+</span>			{END firstAboveGridCell}	
 	</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -129,7 +98,7 @@
 		{BEGIN workforce_id_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="workforce_id" data-fieldname="workforce_id">
-	{$label Workforce workforce_id }	</span>
+	{$label public_workforce workforce_id }	</span>
 {END workforce_id_fieldheadercolumn}
 
 	
@@ -152,7 +121,7 @@
 		{BEGIN region_id_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
-	{$label Workforce region_id }	</span>
+	{$label public_workforce region_id }	</span>
 {END region_id_fieldheadercolumn}
 
 	
@@ -175,7 +144,7 @@
 		{BEGIN adequate_staff_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adequate_staff" data-fieldname="adequate_staff">
-	{$label Workforce adequate_staff }	</span>
+	{$label public_workforce adequate_staff }	</span>
 {END adequate_staff_fieldheadercolumn}
 
 	
@@ -198,7 +167,7 @@
 		{BEGIN competency_index_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="competency_index" data-fieldname="competency_index">
-	{$label Workforce competency_index }	</span>
+	{$label public_workforce competency_index }	</span>
 {END competency_index_fieldheadercolumn}
 
 	

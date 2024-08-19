@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_completeness_percentage}" {$filterRow_attrs_completeness_percentage}>
-			<label>{$label DataQuality completeness_percentage }</label>
+			<label>{$label public_dataquality completeness_percentage }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_timeliness_percentage}" {$filterRow_attrs_timeliness_percentage}>
-			<label>{$label DataQuality timeliness_percentage }</label>
+			<label>{$label public_dataquality timeliness_percentage }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_report_type}" {$filterRow_attrs_report_type}>
-			<label>{$label DataQuality report_type }</label>
+			<label>{$label public_dataquality report_type }</label>
 
 							{$delCtrlButt}
 			
@@ -146,7 +146,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_dq_id}" {$filterRow_attrs_dq_id}>
-			<label>{$label DataQuality dq_id }</label>
+			<label>{$label public_dataquality dq_id }</label>
 
 							{$delCtrlButt}
 			
@@ -292,14 +292,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="dataquality_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -348,6 +340,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -503,16 +503,16 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dq_id"]:before {
-		content: "{$label DataQuality dq_id}";
+		content: "{$label public_dataquality dq_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="report_type"]:before {
-		content: "{$label DataQuality report_type}";
+		content: "{$label public_dataquality report_type}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="timeliness_percentage"]:before {
-		content: "{$label DataQuality timeliness_percentage}";
+		content: "{$label public_dataquality timeliness_percentage}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="completeness_percentage"]:before {
-		content: "{$label DataQuality completeness_percentage}";
+		content: "{$label public_dataquality completeness_percentage}";
 	}
 	}
 </style>
@@ -583,7 +583,7 @@
 		{BEGIN dq_id_fieldheadercolumn}
 	{BEGIN dq_id_fieldheader}
 	<SPAN {$dq_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dq_id" data-fieldname="dq_id">
-	{$label DataQuality dq_id }	{$arrow_icon_dq_id}
+	{$label public_dataquality dq_id }	{$arrow_icon_dq_id}
 	</SPAN>
 	{END dq_id_fieldheader}
 {END dq_id_fieldheadercolumn}
@@ -608,7 +608,7 @@
 		{BEGIN report_type_fieldheadercolumn}
 	{BEGIN report_type_fieldheader}
 	<SPAN {$report_type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="report_type" data-fieldname="report_type">
-	{$label DataQuality report_type }	{$arrow_icon_report_type}
+	{$label public_dataquality report_type }	{$arrow_icon_report_type}
 	</SPAN>
 	{END report_type_fieldheader}
 {END report_type_fieldheadercolumn}
@@ -633,7 +633,7 @@
 		{BEGIN timeliness_percentage_fieldheadercolumn}
 	{BEGIN timeliness_percentage_fieldheader}
 	<SPAN {$timeliness_percentage_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="timeliness_percentage" data-fieldname="timeliness_percentage">
-	{$label DataQuality timeliness_percentage }	{$arrow_icon_timeliness_percentage}
+	{$label public_dataquality timeliness_percentage }	{$arrow_icon_timeliness_percentage}
 	</SPAN>
 	{END timeliness_percentage_fieldheader}
 {END timeliness_percentage_fieldheadercolumn}
@@ -658,7 +658,7 @@
 		{BEGIN completeness_percentage_fieldheadercolumn}
 	{BEGIN completeness_percentage_fieldheader}
 	<SPAN {$completeness_percentage_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="completeness_percentage" data-fieldname="completeness_percentage">
-	{$label DataQuality completeness_percentage }	{$arrow_icon_completeness_percentage}
+	{$label public_dataquality completeness_percentage }	{$arrow_icon_completeness_percentage}
 	</SPAN>
 	{END completeness_percentage_fieldheader}
 {END completeness_percentage_fieldheadercolumn}

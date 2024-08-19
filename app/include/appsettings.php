@@ -675,9 +675,9 @@ $styleOverrides = array();
 $globalSettings["mapProvider"]=1;
 
 $globalSettings["CaptchaSettings"] = array();
-$globalSettings["CaptchaSettings"]["type"] = 0;
-$globalSettings["CaptchaSettings"]["siteKey"] = "";
-$globalSettings["CaptchaSettings"]["secretKey"] = "";
+$globalSettings["CaptchaSettings"]["type"] = 1;
+$globalSettings["CaptchaSettings"]["siteKey"] = "6LeRAbcpAAAAAPy9LHXavzB-h0Ve7HSt7VY8R6EV";
+$globalSettings["CaptchaSettings"]["secretKey"] = "6LeRAbcpAAAAAJFYeJQ-QO6BGTJvZpOiNgvxDdhH";
 $globalSettings["CaptchaSettings"]["captchaPassesCount"] = "5";
 
 
@@ -698,7 +698,7 @@ $WRAdminPagePassword = "webreports";
  * Legacy variables for pre-10.6 business templates only.
  * DEPRECATED
  */
-$cLoginTable = "hispmd_users";
+$cLoginTable = "public.hispmdusers";
 $cDisplayNameField = "fullname";
 $cUserNameField	= "username";
 $cPasswordField	= "password";
@@ -716,10 +716,10 @@ $cKeyFields = $loginKeyFields;
  */
 
 
-$globalSettings["usersDatasourceTable"] = "hispmd_users";
+$globalSettings["usersDatasourceTable"] = "public.hispmdusers";
 
 
-$globalSettings["jwtSecret"] = "ezz9sdGVcxc4JrLT3TWr";
+$globalSettings["jwtSecret"] = "DBF7djMrYUhUrssFTEB2";
 
 
 $arrCustomPages = array();
@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "469_1723305847";
+$projectBuildKey = "499_1723900025";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "469";
+$projectBuildNumber = "499";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -762,36 +762,12 @@ $menuTreelikeFlags["secondary"] = 1;
 $tableCaptions = array();
 $tableCaptions["English"] = array();
 $tableCaptions["English"][""] = "";
-$tableCaptions["English"]["DataQuality"] = "Data Quality";
-$tableCaptions["English"]["DataUse"] = "Data Use";
-$tableCaptions["English"]["DigitalHealth"] = "Digital Health";
-$tableCaptions["English"]["DigitalHealthApps"] = "Digital Health Apps";
-$tableCaptions["English"]["FinancialResources"] = "Financial Resources";
-$tableCaptions["English"]["HISGovernance"] = "HISGovernance";
-$tableCaptions["English"]["HISPartners"] = "HISPartners";
-$tableCaptions["English"]["HealthFacilities"] = "Health Facilities";
-$tableCaptions["English"]["HealthUnits"] = "Health Units";
-$tableCaptions["English"]["Publications"] = "Publications";
-$tableCaptions["English"]["Regions"] = "Regions";
-$tableCaptions["English"]["Research"] = "Research";
-$tableCaptions["English"]["Workforce"] = "Workforce";
 $tableCaptions["English"]["MFR_Dashboard_Report"] = "MFR Dashboard Report";
 $tableCaptions["English"]["MFR_Status_Report"] = "MFR Status Report";
 $tableCaptions["English"]["MFR_Facilities"] = "MFR Facilities";
 $tableCaptions["English"]["MFR_Region_Report"] = "MFR Region Report";
 $tableCaptions["English"]["MFR_Zone_Report"] = "MFR Zone Report";
 $tableCaptions["English"]["MFR_Woreda_Report"] = "MFR Woreda Report";
-$tableCaptions["English"]["MFR_Dashboard_Reports_Chart"] = "MFR Dashboard Reports Chart";
-$tableCaptions["English"]["MFR_Dashboard_Reports"] = "MFR Dashboard Reports";
-$tableCaptions["English"]["MFR_Operational_Status"] = "MFR Operational Status";
-$tableCaptions["English"]["MFR_Region"] = "MFR Region";
-$tableCaptions["English"]["MFR_Zone"] = "MFR Zone";
-$tableCaptions["English"]["MFR_Woreda"] = "MFR Woreda";
-$tableCaptions["English"]["MFR_Operational_Status_Chart"] = "MFR Operational Status Chart";
-$tableCaptions["English"]["MFR_Region_Chart"] = "MFR Region Chart";
-$tableCaptions["English"]["MFR_Zone_Chart"] = "MFR Zone Chart";
-$tableCaptions["English"]["MFR_Woreda_Chart"] = "MFR Woreda Chart";
-$tableCaptions["English"]["AI_Data_Assistant"] = "AI Data Assistant";
 $tableCaptions["English"]["DHIS2_Indicators"] = "DHIS2 Indicators";
 $tableCaptions["English"]["DHIS2_Organisation_Units"] = "DHIS2 Organisation Units";
 $tableCaptions["English"]["DHIS2_Analytics"] = "DHIS2 Analytics";
@@ -801,12 +777,10 @@ $tableCaptions["English"]["DHIS2_Analytics_Chart"] = "DHIS2 Analytics Chart";
 $tableCaptions["English"]["DHIS2_Analytics_Report"] = "DHIS2 Analytics Report";
 $tableCaptions["English"]["DHIS2_Reports"] = "DHIS2 Reports";
 $tableCaptions["English"]["DHIS2_Datasets"] = "DHIS2 Datasets";
-$tableCaptions["English"]["DHIS2_Periods"] = "DHIS2 Periods";
 $tableCaptions["English"]["DHIS2_Reporting_Rate"] = "DHIS2 Reporting Rate";
 $tableCaptions["English"]["DHIS2_Reporting_Rate_Chart"] = "DHIS2 Reporting Rate Chart";
 $tableCaptions["English"]["DHIS2_Reporting_Rate_Report"] = "DHIS2 Reporting Rate Report";
 $tableCaptions["English"]["DHIS2_Reporting_Rates_Chart"] = "DHIS2 Reporting Rates Chart";
-$tableCaptions["English"]["MFR_AIO_Dashboard"] = "MFR AIO Dashboard";
 $tableCaptions["English"]["MFR_Facility"] = "MFR Facility";
 $tableCaptions["English"]["MFR_Regions"] = "MFR Regions";
 $tableCaptions["English"]["MFR_Zones"] = "MFR Zones";
@@ -814,10 +788,6 @@ $tableCaptions["English"]["MFR_Woredas"] = "MFR Woredas";
 $tableCaptions["English"]["MFR_Facility_Types"] = "MFR Facility Types";
 $tableCaptions["English"]["MFR_Operational_Statuses"] = "MFR Operational Statuses";
 $tableCaptions["English"]["MFR_Status"] = "MFR Status";
-$tableCaptions["English"]["hispmd_users"] = "Hispmd Users";
-$tableCaptions["English"]["admin_rights"] = "Admin Rights";
-$tableCaptions["English"]["admin_members"] = "Admin Members";
-$tableCaptions["English"]["admin_users"] = "Admin Users";
 $tableCaptions["English"]["DHIS2_OrgUnit_Country"] = "DHIS2 OrgUnit Country";
 $tableCaptions["English"]["DHIS2_OrgUnit_Regions"] = "DHIS2 OrgUnit Regions";
 $tableCaptions["English"]["DHIS2_OrgUnit_Zone"] = "DHIS2 OrgUnit Zone";
@@ -826,6 +796,43 @@ $tableCaptions["English"]["DHIS2_OrgUnit_Groups"] = "DHIS2 OrgUnit Groups";
 $tableCaptions["English"]["DHIS2_OrgUnit_Group_Sets"] = "DHIS2 OrgUnit Group Sets";
 $tableCaptions["English"]["DHIS2_AIO_OrgUnit"] = "DHIS2 AIO OrgUnit";
 $tableCaptions["English"]["DHIS2_OrgUnit_Distributions"] = "DHIS2 OrgUnit Distributions";
+$tableCaptions["English"]["public_ai_data_assistant"] = "Ai Data Assistant";
+$tableCaptions["English"]["public_dataquality"] = "Dataquality";
+$tableCaptions["English"]["public_datause"] = "Datause";
+$tableCaptions["English"]["public_dhis2_periods"] = "DHIS2 Periods";
+$tableCaptions["English"]["public_digitalhealth"] = "Digitalhealth";
+$tableCaptions["English"]["public_digitalhealthapps"] = "Digitalhealthapps";
+$tableCaptions["English"]["public_financialresources"] = "Financialresources";
+$tableCaptions["English"]["public_healthfacilities"] = "Healthfacilities";
+$tableCaptions["English"]["public_healthunits"] = "Healthunits";
+$tableCaptions["English"]["public_hisgovernance"] = "Hisgovernance";
+$tableCaptions["English"]["public_hispartners"] = "Hispartners";
+$tableCaptions["English"]["public_mfr_dashboard_reports"] = "Mfr Dashboard Reports";
+$tableCaptions["English"]["public_mfr_operational_status"] = "Mfr Operational Status";
+$tableCaptions["English"]["public_mfr_region"] = "Mfr Region";
+$tableCaptions["English"]["public_mfr_woreda"] = "Mfr Woreda";
+$tableCaptions["English"]["public_mfr_zone"] = "Mfr Zone";
+$tableCaptions["English"]["public_publications"] = "Publications";
+$tableCaptions["English"]["public_regions"] = "Regions";
+$tableCaptions["English"]["public_research"] = "Research";
+$tableCaptions["English"]["public_workforce"] = "Workforce";
+$tableCaptions["English"]["MFR_AIO_Dashboard"] = "MFR AIO Dashboard";
+$tableCaptions["English"]["public_hispmdusers"] = "Hispmdusers";
+$tableCaptions["English"]["admin_rights"] = "Admin Rights";
+$tableCaptions["English"]["admin_members"] = "Admin Members";
+$tableCaptions["English"]["admin_users"] = "Admin Users";
+$tableCaptions["English"]["mfr_dashboard_reports_chart"] = "Mfr Dashboard Reports Chart";
+$tableCaptions["English"]["mfr_operational_status_chart"] = "Mfr Operational Status Chart";
+$tableCaptions["English"]["mfr_region_chart"] = "Mfr Region Chart";
+$tableCaptions["English"]["public_ethprism_additional_organizational_and_behavioral_assessment"] = "Ethprism Additional Organizational And Behavioral Assessment";
+$tableCaptions["English"]["public_ethprism_facility_level_rhis_performance_diagnostic"] = "Ethprism Facility Level Rhis Performance Diagnostic";
+$tableCaptions["English"]["public_ethprism_facility_office_checklist"] = "Ethprism Facility Office Checklist";
+$tableCaptions["English"]["public_ethprism_healthpost_level_rhis_performance_diagnostic"] = "Ethprism Healthpost Level Rhis Performance Diagnostic";
+$tableCaptions["English"]["public_ethprism_national_prism_woreda_level_diagnostic"] = "Ethprism National Prism Woreda Level Diagnostic";
+$tableCaptions["English"]["public_ethprism_organizational_and_behavioral_assessment"] = "Ethprism Organizational And Behavioral Assessment";
+$tableCaptions["English"]["public_hispmd_prism_settings"] = "Hispmd Prism Settings";
+$tableCaptions["English"]["PRISM_Dashboard"] = "PRISM Dashboard";
+$tableCaptions["English"]["hispmd_users_audit"] = "Hispmd Users Audit";
 
 
 $globalEvents = new class_GlobalEvents;

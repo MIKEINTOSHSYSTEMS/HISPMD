@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption DHIS2_Periods}',
+				text: '{$jscaption public_dhis2_periods}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel DHIS2_Periods print}',
+				text: '{$jspagetitlelabel public_dhis2_periods print}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -124,7 +124,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$jspagetitlelabel DHIS2_Periods print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_dhis2_periods print}","hidden":"{$item_hide_print_header}","fontSize":30},
 				
 				
 			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
@@ -203,7 +203,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'Period_ID',
+			fieldName: 'period_id',
 				style: 'headcell',
 		
 		
@@ -217,11 +217,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Periods Period_ID }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+			{"text":"{$jslabel public_dhis2_periods period_id }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Period_ID_align}',
+              "alignment": '{$period_id_align}',
      
       
       },
@@ -232,7 +232,7 @@ pdfDocument = {
 	cellId: 'headcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Period_Name',
+			fieldName: 'period_name',
 				style: 'headcell',
 		
 		
@@ -246,11 +246,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_Periods Period_Name }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_dhis2_periods period_name }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Period_Name_align}',
+              "alignment": '{$period_name_align}',
      
       
       },
@@ -270,7 +270,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'Period_ID',
+			fieldName: 'period_id',
 				style: 'bodycell',
 		
 		
@@ -284,11 +284,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Period_ID_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$period_id_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Period_ID_align}',
+              "alignment": '{$period_id_align}',
      
       
       },
@@ -299,7 +299,7 @@ pdfDocument = {
 	cellId: 'cell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Period_Name',
+			fieldName: 'period_name',
 				style: 'bodycell',
 		
 		
@@ -313,11 +313,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Period_Name_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$period_name_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Period_Name_align}',
+              "alignment": '{$period_name_align}',
      
       
       },

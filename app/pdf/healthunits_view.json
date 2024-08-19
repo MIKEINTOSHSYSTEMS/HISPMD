@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel HealthUnits view}","hidden":"{$item_hide_view_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_healthunits view}","hidden":"{$item_hide_view_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,16 +166,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel HealthUnits unit_id }","bold":true},{"text":{$unit_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_healthunits unit_id }","bold":true},{"text":{$unit_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel HealthUnits name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_healthunits name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel HealthUnits type }","bold":true},{"text":{$type_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_healthunits type }","bold":true},{"text":{$type_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel HealthUnits strategic_plan }","bold":true},{"text":{$strategic_plan_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_healthunits strategic_plan }","bold":true},{"text":{$strategic_plan_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

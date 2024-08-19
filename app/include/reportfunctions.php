@@ -437,58 +437,6 @@ function testAdvSearch($table)
 {
 	if(is_wr_project())
 	{
-		if($table=="DataQuality")
-		{
-			return 1;
-		}
-		if($table=="DataUse")
-		{
-			return 1;
-		}
-		if($table=="DigitalHealth")
-		{
-			return 1;
-		}
-		if($table=="DigitalHealthApps")
-		{
-			return 1;
-		}
-		if($table=="FinancialResources")
-		{
-			return 1;
-		}
-		if($table=="HISGovernance")
-		{
-			return 1;
-		}
-		if($table=="HISPartners")
-		{
-			return 1;
-		}
-		if($table=="HealthFacilities")
-		{
-			return 1;
-		}
-		if($table=="HealthUnits")
-		{
-			return 1;
-		}
-		if($table=="Publications")
-		{
-			return 1;
-		}
-		if($table=="Regions")
-		{
-			return 1;
-		}
-		if($table=="Research")
-		{
-			return 1;
-		}
-		if($table=="Workforce")
-		{
-			return 1;
-		}
 		if($table=="MFR_Dashboard_Report")
 		{
 			return 1;
@@ -510,50 +458,6 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="MFR_Woreda_Report")
-		{
-			return 1;
-		}
-		if($table=="MFR_Dashboard_Reports_Chart")
-		{
-			return 1;
-		}
-		if($table=="MFR_Dashboard_Reports")
-		{
-			return 1;
-		}
-		if($table=="MFR_Operational_Status")
-		{
-			return 1;
-		}
-		if($table=="MFR_Region")
-		{
-			return 1;
-		}
-		if($table=="MFR_Zone")
-		{
-			return 1;
-		}
-		if($table=="MFR_Woreda")
-		{
-			return 1;
-		}
-		if($table=="MFR_Operational_Status_Chart")
-		{
-			return 1;
-		}
-		if($table=="MFR_Region_Chart")
-		{
-			return 1;
-		}
-		if($table=="MFR_Zone_Chart")
-		{
-			return 1;
-		}
-		if($table=="MFR_Woreda_Chart")
-		{
-			return 1;
-		}
-		if($table=="AI_Data_Assistant")
 		{
 			return 1;
 		}
@@ -590,10 +494,6 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="DHIS2_Datasets")
-		{
-			return 1;
-		}
-		if($table=="DHIS2_Periods")
 		{
 			return 1;
 		}
@@ -645,22 +545,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="hispmd_users")
-		{
-			return 1;
-		}
-		if($table=="admin_rights")
-		{
-			return 1;
-		}
-		if($table=="admin_members")
-		{
-			return 1;
-		}
-		if($table=="admin_users")
-		{
-			return 1;
-		}
 		if($table=="DHIS2_OrgUnit_Country")
 		{
 			return 1;
@@ -690,6 +574,150 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="DHIS2_OrgUnit_Distributions")
+		{
+			return 1;
+		}
+		if($table=="public.ai_data_assistant")
+		{
+			return 1;
+		}
+		if($table=="public.dataquality")
+		{
+			return 1;
+		}
+		if($table=="public.datause")
+		{
+			return 1;
+		}
+		if($table=="public.dhis2_periods")
+		{
+			return 1;
+		}
+		if($table=="public.digitalhealth")
+		{
+			return 1;
+		}
+		if($table=="public.digitalhealthapps")
+		{
+			return 1;
+		}
+		if($table=="public.financialresources")
+		{
+			return 1;
+		}
+		if($table=="public.healthfacilities")
+		{
+			return 1;
+		}
+		if($table=="public.healthunits")
+		{
+			return 1;
+		}
+		if($table=="public.hisgovernance")
+		{
+			return 1;
+		}
+		if($table=="public.hispartners")
+		{
+			return 1;
+		}
+		if($table=="public.mfr_dashboard_reports")
+		{
+			return 1;
+		}
+		if($table=="public.mfr_operational_status")
+		{
+			return 1;
+		}
+		if($table=="public.mfr_region")
+		{
+			return 1;
+		}
+		if($table=="public.mfr_woreda")
+		{
+			return 1;
+		}
+		if($table=="public.mfr_zone")
+		{
+			return 1;
+		}
+		if($table=="public.publications")
+		{
+			return 1;
+		}
+		if($table=="public.regions")
+		{
+			return 1;
+		}
+		if($table=="public.research")
+		{
+			return 1;
+		}
+		if($table=="public.workforce")
+		{
+			return 1;
+		}
+		if($table=="public.hispmdusers")
+		{
+			return 1;
+		}
+		if($table=="admin_rights")
+		{
+			return 1;
+		}
+		if($table=="admin_members")
+		{
+			return 1;
+		}
+		if($table=="admin_users")
+		{
+			return 1;
+		}
+		if($table=="mfr_dashboard_reports_chart")
+		{
+			return 1;
+		}
+		if($table=="mfr_operational_status_chart")
+		{
+			return 1;
+		}
+		if($table=="mfr_region_chart")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_facility_office_checklist")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+		{
+			return 1;
+		}
+		if($table=="public.ethprism_organizational_and_behavioral_assessment")
+		{
+			return 1;
+		}
+		if($table=="public.hispmd_prism_settings")
+		{
+			return 1;
+		}
+		if($table=="PRISM Dashboard")
+		{
+			return 1;
+		}
+		if($table=="hispmd_users_audit")
 		{
 			return 1;
 		}
@@ -954,58 +982,6 @@ function getCaptionTable($table)
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-	if($table=="DataQuality")
-	{
-		return "Data Quality";
-	}
-	if($table=="DataUse")
-	{
-		return "Data Use";
-	}
-	if($table=="DigitalHealth")
-	{
-		return "Digital Health";
-	}
-	if($table=="DigitalHealthApps")
-	{
-		return "Digital Health Apps";
-	}
-	if($table=="FinancialResources")
-	{
-		return "Financial Resources";
-	}
-	if($table=="HISGovernance")
-	{
-		return "HISGovernance";
-	}
-	if($table=="HISPartners")
-	{
-		return "HISPartners";
-	}
-	if($table=="HealthFacilities")
-	{
-		return "Health Facilities";
-	}
-	if($table=="HealthUnits")
-	{
-		return "Health Units";
-	}
-	if($table=="Publications")
-	{
-		return "Publications";
-	}
-	if($table=="Regions")
-	{
-		return "Regions";
-	}
-	if($table=="Research")
-	{
-		return "Research";
-	}
-	if($table=="Workforce")
-	{
-		return "Workforce";
-	}
 	if($table=="MFR_Dashboard_Report")
 	{
 		return "MFR Dashboard Report";
@@ -1029,50 +1005,6 @@ function getCaptionTable($table)
 	if($table=="MFR_Woreda_Report")
 	{
 		return "MFR Woreda Report";
-	}
-	if($table=="MFR_Dashboard_Reports_Chart")
-	{
-		return "MFR Dashboard Reports Chart";
-	}
-	if($table=="MFR_Dashboard_Reports")
-	{
-		return "MFR Dashboard Reports";
-	}
-	if($table=="MFR_Operational_Status")
-	{
-		return "MFR Operational Status";
-	}
-	if($table=="MFR_Region")
-	{
-		return "MFR Region";
-	}
-	if($table=="MFR_Zone")
-	{
-		return "MFR Zone";
-	}
-	if($table=="MFR_Woreda")
-	{
-		return "MFR Woreda";
-	}
-	if($table=="MFR_Operational_Status_Chart")
-	{
-		return "MFR Operational Status Chart";
-	}
-	if($table=="MFR_Region_Chart")
-	{
-		return "MFR Region Chart";
-	}
-	if($table=="MFR_Zone_Chart")
-	{
-		return "MFR Zone Chart";
-	}
-	if($table=="MFR_Woreda_Chart")
-	{
-		return "MFR Woreda Chart";
-	}
-	if($table=="AI_Data_Assistant")
-	{
-		return "AI Data Assistant";
 	}
 	if($table=="DHIS2_Indicators")
 	{
@@ -1109,10 +1041,6 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Datasets")
 	{
 		return "DHIS2 Datasets";
-	}
-	if($table=="DHIS2_Periods")
-	{
-		return "DHIS2 Periods";
 	}
 	if($table=="DHIS2_Reporting_Rate")
 	{
@@ -1162,22 +1090,6 @@ function getCaptionTable($table)
 	{
 		return "MFR Status";
 	}
-	if($table=="hispmd_users")
-	{
-		return "Hispmd Users";
-	}
-	if($table=="admin_rights")
-	{
-		return "Admin Rights";
-	}
-	if($table=="admin_members")
-	{
-		return "Admin Members";
-	}
-	if($table=="admin_users")
-	{
-		return "Admin Users";
-	}
 	if($table=="DHIS2_OrgUnit_Country")
 	{
 		return "DHIS2 OrgUnit Country";
@@ -1209,6 +1121,150 @@ function getCaptionTable($table)
 	if($table=="DHIS2_OrgUnit_Distributions")
 	{
 		return "DHIS2 OrgUnit Distributions";
+	}
+	if($table=="public.ai_data_assistant")
+	{
+		return "Ai Data Assistant";
+	}
+	if($table=="public.dataquality")
+	{
+		return "Dataquality";
+	}
+	if($table=="public.datause")
+	{
+		return "Datause";
+	}
+	if($table=="public.dhis2_periods")
+	{
+		return "DHIS2 Periods";
+	}
+	if($table=="public.digitalhealth")
+	{
+		return "Digitalhealth";
+	}
+	if($table=="public.digitalhealthapps")
+	{
+		return "Digitalhealthapps";
+	}
+	if($table=="public.financialresources")
+	{
+		return "Financialresources";
+	}
+	if($table=="public.healthfacilities")
+	{
+		return "Healthfacilities";
+	}
+	if($table=="public.healthunits")
+	{
+		return "Healthunits";
+	}
+	if($table=="public.hisgovernance")
+	{
+		return "Hisgovernance";
+	}
+	if($table=="public.hispartners")
+	{
+		return "Hispartners";
+	}
+	if($table=="public.mfr_dashboard_reports")
+	{
+		return "Mfr Dashboard Reports";
+	}
+	if($table=="public.mfr_operational_status")
+	{
+		return "Mfr Operational Status";
+	}
+	if($table=="public.mfr_region")
+	{
+		return "Mfr Region";
+	}
+	if($table=="public.mfr_woreda")
+	{
+		return "Mfr Woreda";
+	}
+	if($table=="public.mfr_zone")
+	{
+		return "Mfr Zone";
+	}
+	if($table=="public.publications")
+	{
+		return "Publications";
+	}
+	if($table=="public.regions")
+	{
+		return "Regions";
+	}
+	if($table=="public.research")
+	{
+		return "Research";
+	}
+	if($table=="public.workforce")
+	{
+		return "Workforce";
+	}
+	if($table=="public.hispmdusers")
+	{
+		return "Hispmdusers";
+	}
+	if($table=="admin_rights")
+	{
+		return "Admin Rights";
+	}
+	if($table=="admin_members")
+	{
+		return "Admin Members";
+	}
+	if($table=="admin_users")
+	{
+		return "Admin Users";
+	}
+	if($table=="mfr_dashboard_reports_chart")
+	{
+		return "Mfr Dashboard Reports Chart";
+	}
+	if($table=="mfr_operational_status_chart")
+	{
+		return "Mfr Operational Status Chart";
+	}
+	if($table=="mfr_region_chart")
+	{
+		return "Mfr Region Chart";
+	}
+	if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+	{
+		return "Ethprism Additional Organizational And Behavioral Assessment";
+	}
+	if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+	{
+		return "Ethprism Facility Level Rhis Performance Diagnostic";
+	}
+	if($table=="public.ethprism_facility_office_checklist")
+	{
+		return "Ethprism Facility Office Checklist";
+	}
+	if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+	{
+		return "Ethprism Healthpost Level Rhis Performance Diagnostic";
+	}
+	if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+	{
+		return "Ethprism National Prism Woreda Level Diagnostic";
+	}
+	if($table=="public.ethprism_organizational_and_behavioral_assessment")
+	{
+		return "Ethprism Organizational And Behavioral Assessment";
+	}
+	if($table=="public.hispmd_prism_settings")
+	{
+		return "Hispmd Prism Settings";
+	}
+	if($table=="PRISM Dashboard")
+	{
+		return "PRISM Dashboard";
+	}
+	if($table=="hispmd_users_audit")
+	{
+		return "Hispmd Users Audit";
 	}
 	return $table;
 }
@@ -2072,256 +2128,256 @@ function GetTablesListReport()
 	$arr=array();
 	$securityFlag = true;
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("DataQuality");
+		$strPerm = GetUserPermissions("public.ai_data_assistant");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="DataQuality";
+		$value="public.ai_data_assistant";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="DataQuality";
+			$arr[]="public.ai_data_assistant";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("DataUse");
+		$strPerm = GetUserPermissions("public.dataquality");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="DataUse";
+		$value="public.dataquality";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="DataUse";
+			$arr[]="public.dataquality";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("DigitalHealth");
+		$strPerm = GetUserPermissions("public.datause");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="DigitalHealth";
+		$value="public.datause";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="DigitalHealth";
+			$arr[]="public.datause";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("DigitalHealthApps");
+		$strPerm = GetUserPermissions("public.dhis2_periods");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="DigitalHealthApps";
+		$value="public.dhis2_periods";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="DigitalHealthApps";
+			$arr[]="public.dhis2_periods";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("FinancialResources");
+		$strPerm = GetUserPermissions("public.digitalhealth");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="FinancialResources";
+		$value="public.digitalhealth";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="FinancialResources";
+			$arr[]="public.digitalhealth";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("HISGovernance");
+		$strPerm = GetUserPermissions("public.digitalhealthapps");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="HISGovernance";
+		$value="public.digitalhealthapps";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="HISGovernance";
+			$arr[]="public.digitalhealthapps";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("HISPartners");
+		$strPerm = GetUserPermissions("public.financialresources");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="HISPartners";
+		$value="public.financialresources";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="HISPartners";
+			$arr[]="public.financialresources";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("HealthFacilities");
+		$strPerm = GetUserPermissions("public.healthfacilities");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="HealthFacilities";
+		$value="public.healthfacilities";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="HealthFacilities";
+			$arr[]="public.healthfacilities";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("HealthUnits");
+		$strPerm = GetUserPermissions("public.healthunits");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="HealthUnits";
+		$value="public.healthunits";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="HealthUnits";
+			$arr[]="public.healthunits";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("Publications");
+		$strPerm = GetUserPermissions("public.hisgovernance");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="Publications";
+		$value="public.hisgovernance";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="Publications";
+			$arr[]="public.hisgovernance";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("Regions");
+		$strPerm = GetUserPermissions("public.hispartners");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="Regions";
+		$value="public.hispartners";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="Regions";
+			$arr[]="public.hispartners";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("Research");
+		$strPerm = GetUserPermissions("public.mfr_dashboard_reports");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="Research";
+		$value="public.mfr_dashboard_reports";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="Research";
+			$arr[]="public.mfr_dashboard_reports";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("Workforce");
+		$strPerm = GetUserPermissions("public.mfr_operational_status");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="Workforce";
+		$value="public.mfr_operational_status";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="Workforce";
+			$arr[]="public.mfr_operational_status";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("MFR_Dashboard_Reports");
+		$strPerm = GetUserPermissions("public.mfr_region");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="MFR_Dashboard_Reports";
+		$value="public.mfr_region";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="MFR_Dashboard_Reports";
+			$arr[]="public.mfr_region";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("MFR_Operational_Status");
+		$strPerm = GetUserPermissions("public.mfr_woreda");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="MFR_Operational_Status";
+		$value="public.mfr_woreda";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="MFR_Operational_Status";
+			$arr[]="public.mfr_woreda";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("MFR_Region");
+		$strPerm = GetUserPermissions("public.mfr_zone");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="MFR_Region";
+		$value="public.mfr_zone";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="MFR_Region";
+			$arr[]="public.mfr_zone";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("MFR_Zone");
+		$strPerm = GetUserPermissions("public.publications");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="MFR_Zone";
+		$value="public.publications";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="MFR_Zone";
+			$arr[]="public.publications";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("MFR_Woreda");
+		$strPerm = GetUserPermissions("public.regions");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="MFR_Woreda";
+		$value="public.regions";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="MFR_Woreda";
+			$arr[]="public.regions";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("AI_Data_Assistant");
+		$strPerm = GetUserPermissions("public.research");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="AI_Data_Assistant";
+		$value="public.research";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="AI_Data_Assistant";
+			$arr[]="public.research";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("DHIS2_Periods");
+		$strPerm = GetUserPermissions("public.workforce");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="DHIS2_Periods";
+		$value="public.workforce";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="DHIS2_Periods";
+			$arr[]="public.workforce";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("hispmd_users");
+		$strPerm = GetUserPermissions("public.hispmdusers");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
 	if($securityFlag)
 	{
-		$value="hispmd_users";
+		$value="public.hispmdusers";
 		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="hispmd_users";
+			$arr[]="public.hispmdusers";
 	}
 	if( Security::permissionsAvailable() ) {
 		$strPerm = GetUserPermissions("admin_rights");
@@ -2358,6 +2414,102 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="admin_users";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_additional_organizational_and_behavioral_assessment");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_additional_organizational_and_behavioral_assessment";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_additional_organizational_and_behavioral_assessment";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_level_rhis_performance_diagnostic");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_facility_level_rhis_performance_diagnostic";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_facility_level_rhis_performance_diagnostic";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_facility_office_checklist");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_facility_office_checklist";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_facility_office_checklist";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_healthpost_level_rhis_performance_diagnostic");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_national_prism_woreda_level_diagnostic");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_national_prism_woreda_level_diagnostic";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_national_prism_woreda_level_diagnostic";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.ethprism_organizational_and_behavioral_assessment");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.ethprism_organizational_and_behavioral_assessment";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.ethprism_organizational_and_behavioral_assessment";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.hispmd_prism_settings");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.hispmd_prism_settings";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.hispmd_prism_settings";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("hispmd_users_audit");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="hispmd_users_audit";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="hispmd_users_audit";
 	}
 	return $arr;
 }

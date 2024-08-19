@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_aligned_plan}" {$filterRow_attrs_aligned_plan}>
-			<label>{$label HISPartners aligned_plan }</label>
+			<label>{$label public_hispartners aligned_plan }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_partner_id}" {$filterRow_attrs_partner_id}>
-			<label>{$label HISPartners partner_id }</label>
+			<label>{$label public_hispartners partner_id }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
-			<label>{$label HISPartners name }</label>
+			<label>{$label public_hispartners name }</label>
 
 							{$delCtrlButt}
 			
@@ -279,14 +279,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="hispartners_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -335,6 +327,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -490,13 +490,13 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="partner_id"]:before {
-		content: "{$label HISPartners partner_id}";
+		content: "{$label public_hispartners partner_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="name"]:before {
-		content: "{$label HISPartners name}";
+		content: "{$label public_hispartners name}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="aligned_plan"]:before {
-		content: "{$label HISPartners aligned_plan}";
+		content: "{$label public_hispartners aligned_plan}";
 	}
 	}
 </style>
@@ -567,7 +567,7 @@
 		{BEGIN partner_id_fieldheadercolumn}
 	{BEGIN partner_id_fieldheader}
 	<SPAN {$partner_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="partner_id" data-fieldname="partner_id">
-	{$label HISPartners partner_id }	{$arrow_icon_partner_id}
+	{$label public_hispartners partner_id }	{$arrow_icon_partner_id}
 	</SPAN>
 	{END partner_id_fieldheader}
 {END partner_id_fieldheadercolumn}
@@ -592,7 +592,7 @@
 		{BEGIN name_fieldheadercolumn}
 	{BEGIN name_fieldheader}
 	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label HISPartners name }	{$arrow_icon_name}
+	{$label public_hispartners name }	{$arrow_icon_name}
 	</SPAN>
 	{END name_fieldheader}
 {END name_fieldheadercolumn}
@@ -617,7 +617,7 @@
 		{BEGIN aligned_plan_fieldheadercolumn}
 	{BEGIN aligned_plan_fieldheader}
 	<SPAN {$aligned_plan_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="aligned_plan" data-fieldname="aligned_plan">
-	{$label HISPartners aligned_plan }	{$arrow_icon_aligned_plan}
+	{$label public_hispartners aligned_plan }	{$arrow_icon_aligned_plan}
 	</SPAN>
 	{END aligned_plan_fieldheader}
 {END aligned_plan_fieldheadercolumn}

@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel Publications view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_publications view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -102,7 +102,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_publication_id}">
 		
-		{BEGIN publication_id_label}{$label Publications publication_id }{END publication_id_label}
+		{BEGIN publication_id_label}{$label public_publications publication_id }{END publication_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$publication_id_value}	</div>
@@ -121,7 +121,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_title}">
 		
-		{BEGIN title_label}{$label Publications title }{END title_label}
+		{BEGIN title_label}{$label public_publications title }{END title_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$title_value}	</div>
@@ -140,7 +140,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_level}">
 		
-		{BEGIN level_label}{$label Publications level }{END level_label}
+		{BEGIN level_label}{$label public_publications level }{END level_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$level_value}	</div>

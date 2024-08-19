@@ -149,7 +149,7 @@ class ConnectionManager_Base
 	 */
 	public function getForAudit()
 	{
-		return $this->getDefault();
+		return $this->byId( "hispmdathispmdmerqconsultancyo" );
 	}
 
 	/**
@@ -158,7 +158,7 @@ class ConnectionManager_Base
 	 */
 	public function getForLocking()
 	{
-		return $this->getDefault();
+		return $this->byId( "hispmdathispmdmerqconsultancyo" );
 	}
 
 	/**
@@ -243,35 +243,11 @@ class ConnectionManager_Base
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["DataQuality"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["DataUse"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["DigitalHealth"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["DigitalHealthApps"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["FinancialResources"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["HISGovernance"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["HISPartners"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["HealthFacilities"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["HealthUnits"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["Publications"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["Regions"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["Research"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["Workforce"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Status_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Facilities"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Region_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Zone_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Woreda_Report"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Dashboard_Reports_Chart"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Dashboard_Reports"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Operational_Status"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Region"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Zone"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Woreda"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Operational_Status_Chart"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Region_Chart"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Zone_Chart"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["MFR_Woreda_Chart"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["AI_Data_Assistant"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["DHIS2_Indicators"] = "xhispmdathispmdmerqconsultancy";
 		$connectionsIds["DHIS2_Organisation_Units"] = "xhispmdathispmdmerqconsultancy";
 		$connectionsIds["DHIS2_Analytics"] = "devdhis2hispmdathispmdmerqcons";
@@ -281,7 +257,6 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_Analytics Report"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reports"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Datasets"] = "devdhis2hispmdathispmdmerqcons";
-		$connectionsIds["DHIS2_Periods"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["DHIS2_Reporting_Rate"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Report"] = "devdhis2hispmdathispmdmerqcons";
@@ -293,10 +268,6 @@ class ConnectionManager_Base
 		$connectionsIds["MFR_Facility_Types"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Operational_Statuses"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Status"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["hispmd_users"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["DHIS2_OrgUnit_Country"] = "hispmdathispmdmerqconsultdhis2";
 		$connectionsIds["DHIS2_OrgUnit_Regions"] = "hispmdathispmdmerqconsultdhis2";
 		$connectionsIds["DHIS2_OrgUnit_Zone"] = "hispmdathispmdmerqconsultdhis2";
@@ -305,6 +276,41 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_OrgUnit_Group_Sets"] = "hispmdathispmdmerqconsultdhis2";
 		$connectionsIds["DHIS2_AIO_OrgUnit"] = "hispmdathispmdmerqconsultdhis2";
 		$connectionsIds["DHIS2_OrgUnit_Distributions"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["public.ai_data_assistant"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.dataquality"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.datause"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.dhis2_periods"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.digitalhealth"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.digitalhealthapps"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.financialresources"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.healthfacilities"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.healthunits"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.hisgovernance"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.hispartners"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.mfr_dashboard_reports"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.mfr_operational_status"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.mfr_region"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.mfr_woreda"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.mfr_zone"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.publications"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.regions"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.research"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.workforce"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.hispmdusers"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["mfr_dashboard_reports_chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["mfr_operational_status_chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["mfr_region_chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_additional_organizational_and_behavioral_assessment"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_facility_level_rhis_performance_diagnostic"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_facility_office_checklist"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_healthpost_level_rhis_performance_diagnostic"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_national_prism_woreda_level_diagnostic"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.ethprism_organizational_and_behavioral_assessment"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.hispmd_prism_settings"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["hispmd_users_audit"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

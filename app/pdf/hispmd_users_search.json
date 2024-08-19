@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel hispmd_users search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_hispmd_users search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,7 +166,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
 			{"text":{$username_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},

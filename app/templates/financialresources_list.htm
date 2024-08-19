@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_amount}" {$filterRow_attrs_amount}>
-			<label>{$label FinancialResources amount }</label>
+			<label>{$label public_financialresources amount }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_year}" {$filterRow_attrs_year}>
-			<label>{$label FinancialResources year }</label>
+			<label>{$label public_financialresources year }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_utilized}" {$filterRow_attrs_utilized}>
-			<label>{$label FinancialResources utilized }</label>
+			<label>{$label public_financialresources utilized }</label>
 
 							{$delCtrlButt}
 			
@@ -146,7 +146,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_resource_id}" {$filterRow_attrs_resource_id}>
-			<label>{$label FinancialResources resource_id }</label>
+			<label>{$label public_financialresources resource_id }</label>
 
 							{$delCtrlButt}
 			
@@ -159,7 +159,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
-			<label>{$label FinancialResources region_id }</label>
+			<label>{$label public_financialresources region_id }</label>
 
 							{$delCtrlButt}
 			
@@ -305,14 +305,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="financialresources_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -361,6 +353,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -375,21 +375,7 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	 
-				<div class="row">
-			 
-				<div 
-	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
-	class=" r-ori-vert			col-md-12
-	
-">
-		 
-		{BEGIN mastertable_block}
-<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
-	{$showmasterfile}
-</div>
-{END mastertable_block}		</div>					</div>
-			</div>		
+	</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -422,14 +408,6 @@
 							Add new			</a>
 </span>
 {END add_link}
-	 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
-</span>
-{END inlineadd_link}
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
@@ -538,19 +516,19 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="resource_id"]:before {
-		content: "{$label FinancialResources resource_id}";
+		content: "{$label public_financialresources resource_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="year"]:before {
-		content: "{$label FinancialResources year}";
+		content: "{$label public_financialresources year}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="amount"]:before {
-		content: "{$label FinancialResources amount}";
+		content: "{$label public_financialresources amount}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="utilized"]:before {
-		content: "{$label FinancialResources utilized}";
+		content: "{$label public_financialresources utilized}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_id"]:before {
-		content: "{$label FinancialResources region_id}";
+		content: "{$label public_financialresources region_id}";
 	}
 	}
 </style>
@@ -621,7 +599,7 @@
 		{BEGIN resource_id_fieldheadercolumn}
 	{BEGIN resource_id_fieldheader}
 	<SPAN {$resource_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resource_id" data-fieldname="resource_id">
-	{$label FinancialResources resource_id }	{$arrow_icon_resource_id}
+	{$label public_financialresources resource_id }	{$arrow_icon_resource_id}
 	</SPAN>
 	{END resource_id_fieldheader}
 {END resource_id_fieldheadercolumn}
@@ -646,7 +624,7 @@
 		{BEGIN year_fieldheadercolumn}
 	{BEGIN year_fieldheader}
 	<SPAN {$year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year">
-	{$label FinancialResources year }	{$arrow_icon_year}
+	{$label public_financialresources year }	{$arrow_icon_year}
 	</SPAN>
 	{END year_fieldheader}
 {END year_fieldheadercolumn}
@@ -671,7 +649,7 @@
 		{BEGIN amount_fieldheadercolumn}
 	{BEGIN amount_fieldheader}
 	<SPAN {$amount_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="amount" data-fieldname="amount">
-	{$label FinancialResources amount }	{$arrow_icon_amount}
+	{$label public_financialresources amount }	{$arrow_icon_amount}
 	</SPAN>
 	{END amount_fieldheader}
 {END amount_fieldheadercolumn}
@@ -696,7 +674,7 @@
 		{BEGIN utilized_fieldheadercolumn}
 	{BEGIN utilized_fieldheader}
 	<SPAN {$utilized_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="utilized" data-fieldname="utilized">
-	{$label FinancialResources utilized }	{$arrow_icon_utilized}
+	{$label public_financialresources utilized }	{$arrow_icon_utilized}
 	</SPAN>
 	{END utilized_fieldheader}
 {END utilized_fieldheadercolumn}
@@ -721,7 +699,7 @@
 		{BEGIN region_id_fieldheadercolumn}
 	{BEGIN region_id_fieldheader}
 	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
-	{$label FinancialResources region_id }	{$arrow_icon_region_id}
+	{$label public_financialresources region_id }	{$arrow_icon_region_id}
 	</SPAN>
 	{END region_id_fieldheader}
 {END region_id_fieldheadercolumn}
@@ -764,15 +742,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN inline_cancel}
-<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
-				
-								</a>
-</span>
-{END inline_cancel}
 	 
 		{BEGIN view_column}
 {BEGIN view_link}

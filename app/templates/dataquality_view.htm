@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel DataQuality view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dataquality view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -102,7 +102,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_dq_id}">
 		
-		{BEGIN dq_id_label}{$label DataQuality dq_id }{END dq_id_label}
+		{BEGIN dq_id_label}{$label public_dataquality dq_id }{END dq_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$dq_id_value}	</div>
@@ -121,7 +121,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_report_type}">
 		
-		{BEGIN report_type_label}{$label DataQuality report_type }{END report_type_label}
+		{BEGIN report_type_label}{$label public_dataquality report_type }{END report_type_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$report_type_value}	</div>
@@ -140,7 +140,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_timeliness_percentage}">
 		
-		{BEGIN timeliness_percentage_label}{$label DataQuality timeliness_percentage }{END timeliness_percentage_label}
+		{BEGIN timeliness_percentage_label}{$label public_dataquality timeliness_percentage }{END timeliness_percentage_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$timeliness_percentage_value}	</div>
@@ -159,7 +159,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_completeness_percentage}">
 		
-		{BEGIN completeness_percentage_label}{$label DataQuality completeness_percentage }{END completeness_percentage_label}
+		{BEGIN completeness_percentage_label}{$label public_dataquality completeness_percentage }{END completeness_percentage_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$completeness_percentage_value}	</div>

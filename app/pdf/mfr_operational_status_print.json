@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption MFR_Operational_Status}',
+				text: '{$jscaption public_mfr_operational_status}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel MFR_Operational_Status print}',
+				text: '{$jspagetitlelabel public_mfr_operational_status print}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -83,13 +83,10 @@ pdfDocument = {
 													{BEGIN row_grid_1}
 							"%",
 							{END row_grid_1}
+													{END grid_row}
 																								{BEGIN row_grid_2}
 							"%",
 							{END row_grid_2}
-													{END grid_row}
-																								{BEGIN row_grid_3}
-							"%",
-							{END row_grid_3}
 															],
 							
 				body: [
@@ -130,7 +127,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$jspagetitlelabel MFR_Operational_Status print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_mfr_operational_status print}","hidden":"{$item_hide_print_header}","fontSize":30},
 				
 				
 			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
@@ -209,7 +206,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'OperationalStatus',
+			fieldName: 'operationalstatus',
 				style: 'headcell',
 		
 		
@@ -223,11 +220,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Operational_Status OperationalStatus }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_mfr_operational_status operationalstatus }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$OperationalStatus_align}',
+              "alignment": '{$operationalstatus_align}',
      
       
       },
@@ -238,7 +235,7 @@ pdfDocument = {
 	cellId: 'headcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Status',
+			fieldName: 'status',
 				style: 'headcell',
 		
 		
@@ -252,11 +249,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Operational_Status Status }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_mfr_operational_status status }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Status_align}',
+              "alignment": '{$status_align}',
      
       
       },
@@ -267,7 +264,7 @@ pdfDocument = {
 	cellId: 'headcell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Count',
+			fieldName: 'count',
 				style: 'headcell',
 		
 		
@@ -281,11 +278,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MFR_Operational_Status Count }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_mfr_operational_status count }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Count_align}',
+              "alignment": '{$count_align}',
      
       
       },
@@ -305,7 +302,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'OperationalStatus',
+			fieldName: 'operationalstatus',
 				style: 'bodycell',
 		
 		
@@ -319,11 +316,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$OperationalStatus_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$operationalstatus_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$OperationalStatus_align}',
+              "alignment": '{$operationalstatus_align}',
      
       
       },
@@ -334,7 +331,7 @@ pdfDocument = {
 	cellId: 'cell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Status',
+			fieldName: 'status',
 				style: 'bodycell',
 		
 		
@@ -348,11 +345,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Status_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$status_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Status_align}',
+              "alignment": '{$status_align}',
      
       
       },
@@ -363,7 +360,7 @@ pdfDocument = {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Count',
+			fieldName: 'count',
 				style: 'bodycell',
 		
 		
@@ -377,11 +374,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+			{"text":{$count_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Count_align}',
+              "alignment": '{$count_align}',
      
       
       },
@@ -389,61 +386,12 @@ pdfDocument = {
 {END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
-						{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_cell_dpreview}
-{
-	cellId: 'cell_dpreview',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-					{BEGIN colspan_grid_cell_dpreview}
-			colSpan: {$colspan_grid_cell_dpreview},
-			{END colspan_grid_cell_dpreview}
-		
-						
-	
-	
-	
-			"stack": [
-		
-				
-			 {BEGIN details_mfr_operational_status_chart}
-			{$displayDetailTable_mfr_operational_status_chart }
-		{END details_mfr_operational_status_chart},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_dpreview}
-																		{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  2,
-				text: ''
-			},
-							],
-				{END row_grid_2}
 		
 		{END grid_record}
 	{END grid_row}
 			
 					
-				{BEGIN row_grid_3}
+				{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_footcell_field}
 {
@@ -524,7 +472,7 @@ pdfDocument = {
 
 {END cellblock_grid_footcell_field2}
 											],
-				{END row_grid_3}
+				{END row_grid_2}
 		
 				
 									]

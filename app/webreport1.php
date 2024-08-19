@@ -75,8 +75,8 @@ $arr_rel = $_SESSION['webreports']['table_relations'];
 if ( !empty( $arr_rel ) )
 	$arr_relations = array_slice(explode("@END@", $arr_rel["relations"]), 0, -1);
 
-$strLeftWrapper = "`"; // #9875
-$strRightWrapper = "`"; // #9875	
+$strLeftWrapper = "\""; // #9875
+$strRightWrapper = "\""; // #9875	
 	
 $tables = "";
 $b_includes .= "

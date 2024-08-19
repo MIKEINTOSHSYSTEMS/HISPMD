@@ -3,14 +3,14 @@ $tdatahispartners = array();
 $tdatahispartners[".searchableFields"] = array();
 $tdatahispartners[".ShortName"] = "hispartners";
 $tdatahispartners[".OwnerID"] = "";
-$tdatahispartners[".OriginalTable"] = "HISPartners";
+$tdatahispartners[".OriginalTable"] = "public.hispartners";
 
 
-$tdatahispartners[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahispartners[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahispartners[".originalPagesByType"] = $tdatahispartners[".pagesByType"];
-$tdatahispartners[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahispartners[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahispartners[".originalPages"] = $tdatahispartners[".pages"];
-$tdatahispartners[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatahispartners[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahispartners[".originalDefaultPages"] = $tdatahispartners[".defaultPages"];
 
 //	field labels
@@ -51,7 +51,7 @@ $tdatahispartners[".entityType"] = 0;
 $tdatahispartners[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatahispartners[".strOriginalTableName"] = "HISPartners";
+$tdatahispartners[".strOriginalTableName"] = "public.hispartners";
 
 	
 
@@ -67,9 +67,9 @@ $tdatahispartners[".listAjax"] = false;
 //	temporary
 //$tdatahispartners[".listAjax"] = false;
 
-	$tdatahispartners[".audit"] = false;
+	$tdatahispartners[".audit"] = true;
 
-	$tdatahispartners[".locking"] = false;
+	$tdatahispartners[".locking"] = true;
 
 
 $pages = $tdatahispartners[".defaultPages"];
@@ -143,7 +143,7 @@ $tdatahispartners[".addPageEvents"] = false;
 $tdatahispartners[".isUseTimeForSearch"] = false;
 
 
-$tdatahispartners[".badgeColor"] = "778899";
+$tdatahispartners[".badgeColor"] = "DC143C";
 
 
 $tdatahispartners[".allSearchFields"] = array();
@@ -188,7 +188,7 @@ $tdatahispartners[".orderindexes"] = array();
 
 
 $tdatahispartners[".sqlHead"] = "SELECT partner_id,  	name,  	aligned_plan";
-$tdatahispartners[".sqlFrom"] = "FROM HISPartners";
+$tdatahispartners[".sqlFrom"] = "FROM \"public\".hispartners";
 $tdatahispartners[".sqlWhereExpr"] = "";
 $tdatahispartners[".sqlTail"] = "";
 
@@ -241,13 +241,12 @@ $tdatahispartners[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "partner_id";
 	$fdata["GoodName"] = "partner_id";
-	$fdata["ownerTable"] = "HISPartners";
-	$fdata["Label"] = GetFieldLabel("HISPartners","partner_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.hispartners";
+	$fdata["Label"] = GetFieldLabel("public_hispartners","partner_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -305,8 +304,7 @@ $tdatahispartners[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -321,16 +319,15 @@ $tdatahispartners[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -382,8 +379,8 @@ $tdatahispartners[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "name";
 	$fdata["GoodName"] = "name";
-	$fdata["ownerTable"] = "HISPartners";
-	$fdata["Label"] = GetFieldLabel("HISPartners","name");
+	$fdata["ownerTable"] = "public.hispartners";
+	$fdata["Label"] = GetFieldLabel("public_hispartners","name");
 	$fdata["FieldType"] = 200;
 
 
@@ -460,7 +457,7 @@ $tdatahispartners[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
+			$edata["EditParams"].= " maxlength=255";
 
 		$edata["controlWidth"] = 200;
 
@@ -520,9 +517,9 @@ $tdatahispartners[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "aligned_plan";
 	$fdata["GoodName"] = "aligned_plan";
-	$fdata["ownerTable"] = "HISPartners";
-	$fdata["Label"] = GetFieldLabel("HISPartners","aligned_plan");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.hispartners";
+	$fdata["Label"] = GetFieldLabel("public_hispartners","aligned_plan");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -598,15 +595,15 @@ $tdatahispartners[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -654,25 +651,25 @@ $tdatahispartners[".hideMobileList"] = array();
 		$tdatahispartners[".searchableFields"][] = "aligned_plan";
 
 
-$tables_data["HISPartners"]=&$tdatahispartners;
-$field_labels["HISPartners"] = &$fieldLabelshispartners;
-$fieldToolTips["HISPartners"] = &$fieldToolTipshispartners;
-$placeHolders["HISPartners"] = &$placeHoldershispartners;
-$page_titles["HISPartners"] = &$pageTitleshispartners;
+$tables_data["public.hispartners"]=&$tdatahispartners;
+$field_labels["public_hispartners"] = &$fieldLabelshispartners;
+$fieldToolTips["public_hispartners"] = &$fieldToolTipshispartners;
+$placeHolders["public_hispartners"] = &$placeHoldershispartners;
+$page_titles["public_hispartners"] = &$pageTitleshispartners;
 
 
-changeTextControlsToDate( "HISPartners" );
+changeTextControlsToDate( "public.hispartners" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["HISPartners"] = array();
+$detailsTablesData["public.hispartners"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["HISPartners"] = array();
+$masterTablesData["public.hispartners"] = array();
 
 
 
@@ -697,7 +694,7 @@ function createSqlQuery_hispartners()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "partner_id,  	name,  	aligned_plan";
-$proto0["m_strFrom"] = "FROM HISPartners";
+$proto0["m_strFrom"] = "FROM \"public\".hispartners";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -739,12 +736,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "partner_id",
-	"m_strTable" => "HISPartners",
-	"m_srcTableName" => "HISPartners"
+	"m_strTable" => "public.hispartners",
+	"m_srcTableName" => "public.hispartners"
 ));
 
 $proto6["m_sql"] = "partner_id";
-$proto6["m_srcTableName"] = "HISPartners";
+$proto6["m_srcTableName"] = "public.hispartners";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -753,12 +750,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "name",
-	"m_strTable" => "HISPartners",
-	"m_srcTableName" => "HISPartners"
+	"m_strTable" => "public.hispartners",
+	"m_srcTableName" => "public.hispartners"
 ));
 
 $proto8["m_sql"] = "name";
-$proto8["m_srcTableName"] = "HISPartners";
+$proto8["m_srcTableName"] = "public.hispartners";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -767,12 +764,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "aligned_plan",
-	"m_strTable" => "HISPartners",
-	"m_srcTableName" => "HISPartners"
+	"m_strTable" => "public.hispartners",
+	"m_srcTableName" => "public.hispartners"
 ));
 
 $proto10["m_sql"] = "aligned_plan";
-$proto10["m_srcTableName"] = "HISPartners";
+$proto10["m_srcTableName"] = "public.hispartners";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -782,8 +779,8 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "HISPartners";
-$proto13["m_srcTableName"] = "HISPartners";
+$proto13["m_strName"] = "public.hispartners";
+$proto13["m_srcTableName"] = "public.hispartners";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "partner_id";
 $proto13["m_columns"][] = "name";
@@ -791,9 +788,9 @@ $proto13["m_columns"][] = "aligned_plan";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "HISPartners";
+$proto12["m_sql"] = "\"public\".hispartners";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "HISPartners";
+$proto12["m_srcTableName"] = "public.hispartners";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -815,7 +812,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="HISPartners";		
+$proto0["m_srcTableName"]="public.hispartners";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

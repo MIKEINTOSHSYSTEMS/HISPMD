@@ -2676,6 +2676,8 @@ class ListPage extends RunnerPage
 
 	protected static function readMainTableSettingsFromRequest( $table )
 	{
+		if( postvalue("pageType") == "register" && postvalue("table") == "public.hispmdusers" )
+			return new ProjectSettings( "public.hispmdusers", PAGE_REGISTER, "", GLOBAL_PAGES);
 		$mainTableShortName = GetTableURL( postvalue("table") );
 		return getLookupMainTableSettings($table, $mainTableShortName, postvalue("field"));
 	}
@@ -2693,6 +2695,11 @@ class ListPage extends RunnerPage
 			return true;
 
 		//	otherwise check if the page is called from the register page
+		if( $mainTable == "public.hispmdusers" )
+		{
+			if( $lookupMainSettings->appearOnPage( postvalue("field") ) !== FALSE )
+				return true;
+		}
 		return false;
 	}
 

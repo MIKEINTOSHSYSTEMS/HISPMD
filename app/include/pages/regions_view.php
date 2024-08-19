@@ -1,9 +1,5 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'details' => array( 'FinancialResources' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'Workforce' => array( 'displayPreview' => 2,
-'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'region_id',
 'name',
 'his_strategic_plan' ),

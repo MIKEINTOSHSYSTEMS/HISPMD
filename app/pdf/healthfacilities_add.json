@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel HealthFacilities add}","hidden":"{$item_hide_add_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_healthfacilities add}","hidden":"{$item_hide_add_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,13 +160,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel HealthFacilities name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_healthfacilities hf_id }","bold":true},{"text":{$hf_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel HealthFacilities type }","bold":true},{"text":{$type_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_healthfacilities name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel HealthFacilities his_audit_started }","bold":true},{"text":{$his_audit_started_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_healthfacilities type }","bold":true},{"text":{$type_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_healthfacilities his_audit_started }","bold":true},{"text":{$his_audit_started_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

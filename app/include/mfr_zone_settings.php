@@ -3,14 +3,14 @@ $tdatamfr_zone = array();
 $tdatamfr_zone[".searchableFields"] = array();
 $tdatamfr_zone[".ShortName"] = "mfr_zone";
 $tdatamfr_zone[".OwnerID"] = "";
-$tdatamfr_zone[".OriginalTable"] = "MFR_Zone";
+$tdatamfr_zone[".OriginalTable"] = "public.mfr_zone";
 
 
-$tdatamfr_zone[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamfr_zone[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamfr_zone[".originalPagesByType"] = $tdatamfr_zone[".pagesByType"];
-$tdatamfr_zone[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamfr_zone[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamfr_zone[".originalPages"] = $tdatamfr_zone[".pages"];
-$tdatamfr_zone[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamfr_zone[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamfr_zone[".originalDefaultPages"] = $tdatamfr_zone[".defaultPages"];
 
 //	field labels
@@ -25,18 +25,18 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmfr_zone["English"] = array();
 	$placeHoldersmfr_zone["English"] = array();
 	$pageTitlesmfr_zone["English"] = array();
-	$fieldLabelsmfr_zone["English"]["Zone"] = "Zone";
-	$fieldToolTipsmfr_zone["English"]["Zone"] = "";
-	$placeHoldersmfr_zone["English"]["Zone"] = "";
-	$fieldLabelsmfr_zone["English"]["Lat"] = "Lat";
-	$fieldToolTipsmfr_zone["English"]["Lat"] = "";
-	$placeHoldersmfr_zone["English"]["Lat"] = "";
-	$fieldLabelsmfr_zone["English"]["Lng"] = "Lng";
-	$fieldToolTipsmfr_zone["English"]["Lng"] = "";
-	$placeHoldersmfr_zone["English"]["Lng"] = "";
-	$fieldLabelsmfr_zone["English"]["Count"] = "Count";
-	$fieldToolTipsmfr_zone["English"]["Count"] = "";
-	$placeHoldersmfr_zone["English"]["Count"] = "";
+	$fieldLabelsmfr_zone["English"]["zone"] = "Zone";
+	$fieldToolTipsmfr_zone["English"]["zone"] = "";
+	$placeHoldersmfr_zone["English"]["zone"] = "";
+	$fieldLabelsmfr_zone["English"]["lat"] = "Lat";
+	$fieldToolTipsmfr_zone["English"]["lat"] = "";
+	$placeHoldersmfr_zone["English"]["lat"] = "";
+	$fieldLabelsmfr_zone["English"]["lng"] = "Lng";
+	$fieldToolTipsmfr_zone["English"]["lng"] = "";
+	$placeHoldersmfr_zone["English"]["lng"] = "";
+	$fieldLabelsmfr_zone["English"]["count"] = "Count";
+	$fieldToolTipsmfr_zone["English"]["count"] = "";
+	$placeHoldersmfr_zone["English"]["count"] = "";
 	if (count($fieldToolTipsmfr_zone["English"]))
 		$tdatamfr_zone[".isUseToolTips"] = true;
 }
@@ -54,7 +54,7 @@ $tdatamfr_zone[".entityType"] = 0;
 $tdatamfr_zone[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatamfr_zone[".strOriginalTableName"] = "MFR_Zone";
+$tdatamfr_zone[".strOriginalTableName"] = "public.mfr_zone";
 
 	
 
@@ -70,9 +70,9 @@ $tdatamfr_zone[".listAjax"] = false;
 //	temporary
 //$tdatamfr_zone[".listAjax"] = false;
 
-	$tdatamfr_zone[".audit"] = false;
+	$tdatamfr_zone[".audit"] = true;
 
-	$tdatamfr_zone[".locking"] = false;
+	$tdatamfr_zone[".locking"] = true;
 
 
 $pages = $tdatamfr_zone[".defaultPages"];
@@ -146,7 +146,7 @@ $tdatamfr_zone[".addPageEvents"] = false;
 $tdatamfr_zone[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_zone[".badgeColor"] = "CD5C5C";
+$tdatamfr_zone[".badgeColor"] = "CFAE83";
 
 
 $tdatamfr_zone[".allSearchFields"] = array();
@@ -154,7 +154,10 @@ $tdatamfr_zone[".filterFields"] = array();
 $tdatamfr_zone[".requiredSearchFields"] = array();
 
 $tdatamfr_zone[".googleLikeFields"] = array();
-$tdatamfr_zone[".googleLikeFields"][] = "Zone";
+$tdatamfr_zone[".googleLikeFields"][] = "zone";
+$tdatamfr_zone[".googleLikeFields"][] = "lat";
+$tdatamfr_zone[".googleLikeFields"][] = "lng";
+$tdatamfr_zone[".googleLikeFields"][] = "count";
 
 
 
@@ -165,12 +168,7 @@ $tdatamfr_zone[".nPrinterPageScale"] = 100;
 
 $tdatamfr_zone[".nPrinterSplitRecords"] = 40;
 
-$tdatamfr_zone[".geocodingEnabled"] = true;
-$tdatamfr_zone[".geocodingData"] = array();
-$tdatamfr_zone[".geocodingData"]["latField"] = "Lat";
-$tdatamfr_zone[".geocodingData"]["lngField"] = "Lng";
-$tdatamfr_zone[".geocodingData"]["addressFields"] = array();
-	$tdatamfr_zone[".geocodingData"]["addressFields"][] = "Zone";
+$tdatamfr_zone[".geocodingEnabled"] = false;
 
 
 
@@ -193,8 +191,8 @@ $tdatamfr_zone[".strOrderBy"] = $tstrOrderBy;
 $tdatamfr_zone[".orderindexes"] = array();
 
 
-$tdatamfr_zone[".sqlHead"] = "SELECT `Zone`,  	Lat,  	Lng,  	`Count`";
-$tdatamfr_zone[".sqlFrom"] = "FROM MFR_Zone";
+$tdatamfr_zone[".sqlHead"] = "SELECT \"zone\",  	lat,  	lng,  	\"count\"";
+$tdatamfr_zone[".sqlFrom"] = "FROM \"public\".mfr_zone";
 $tdatamfr_zone[".sqlWhereExpr"] = "";
 $tdatamfr_zone[".sqlTail"] = "";
 
@@ -240,14 +238,14 @@ $tdatamfr_zone[".hideMobileList"] = array();
 
 
 
-//	Zone
+//	zone
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "Zone";
-	$fdata["GoodName"] = "Zone";
-	$fdata["ownerTable"] = "MFR_Zone";
-	$fdata["Label"] = GetFieldLabel("MFR_Zone","Zone");
+	$fdata["strName"] = "zone";
+	$fdata["GoodName"] = "zone";
+	$fdata["ownerTable"] = "public.mfr_zone";
+	$fdata["Label"] = GetFieldLabel("public_mfr_zone","zone");
 	$fdata["FieldType"] = 200;
 
 
@@ -255,12 +253,12 @@ $tdatamfr_zone[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Zone";
+		$fdata["strField"] = "zone";
 
-		$fdata["sourceSingle"] = "Zone";
+		$fdata["sourceSingle"] = "zone";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Zone`";
+	$fdata["FullName"] = "\"zone\"";
 
 	
 	
@@ -376,16 +374,16 @@ $tdatamfr_zone[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_zone["Zone"] = $fdata;
-		$tdatamfr_zone[".searchableFields"][] = "Zone";
-//	Lat
+	$tdatamfr_zone["zone"] = $fdata;
+		$tdatamfr_zone[".searchableFields"][] = "zone";
+//	lat
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "Lat";
-	$fdata["GoodName"] = "Lat";
-	$fdata["ownerTable"] = "MFR_Zone";
-	$fdata["Label"] = GetFieldLabel("MFR_Zone","Lat");
+	$fdata["strName"] = "lat";
+	$fdata["GoodName"] = "lat";
+	$fdata["ownerTable"] = "public.mfr_zone";
+	$fdata["Label"] = GetFieldLabel("public_mfr_zone","lat");
 	$fdata["FieldType"] = 200;
 
 
@@ -393,12 +391,12 @@ $tdatamfr_zone[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Lat";
+		$fdata["strField"] = "lat";
 
-		$fdata["sourceSingle"] = "Lat";
+		$fdata["sourceSingle"] = "lat";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Lat";
+	$fdata["FullName"] = "lat";
 
 	
 	
@@ -514,16 +512,16 @@ $tdatamfr_zone[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_zone["Lat"] = $fdata;
-		$tdatamfr_zone[".searchableFields"][] = "Lat";
-//	Lng
+	$tdatamfr_zone["lat"] = $fdata;
+		$tdatamfr_zone[".searchableFields"][] = "lat";
+//	lng
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "Lng";
-	$fdata["GoodName"] = "Lng";
-	$fdata["ownerTable"] = "MFR_Zone";
-	$fdata["Label"] = GetFieldLabel("MFR_Zone","Lng");
+	$fdata["strName"] = "lng";
+	$fdata["GoodName"] = "lng";
+	$fdata["ownerTable"] = "public.mfr_zone";
+	$fdata["Label"] = GetFieldLabel("public_mfr_zone","lng");
 	$fdata["FieldType"] = 200;
 
 
@@ -531,12 +529,12 @@ $tdatamfr_zone[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Lng";
+		$fdata["strField"] = "lng";
 
-		$fdata["sourceSingle"] = "Lng";
+		$fdata["sourceSingle"] = "lng";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Lng";
+	$fdata["FullName"] = "lng";
 
 	
 	
@@ -652,29 +650,29 @@ $tdatamfr_zone[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_zone["Lng"] = $fdata;
-		$tdatamfr_zone[".searchableFields"][] = "Lng";
-//	Count
+	$tdatamfr_zone["lng"] = $fdata;
+		$tdatamfr_zone[".searchableFields"][] = "lng";
+//	count
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 4;
-	$fdata["strName"] = "Count";
-	$fdata["GoodName"] = "Count";
-	$fdata["ownerTable"] = "MFR_Zone";
-	$fdata["Label"] = GetFieldLabel("MFR_Zone","Count");
-	$fdata["FieldType"] = 3;
+	$fdata["strName"] = "count";
+	$fdata["GoodName"] = "count";
+	$fdata["ownerTable"] = "public.mfr_zone";
+	$fdata["Label"] = GetFieldLabel("public_mfr_zone","count");
+	$fdata["FieldType"] = 20;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Count";
+		$fdata["strField"] = "count";
 
-		$fdata["sourceSingle"] = "Count";
+		$fdata["sourceSingle"] = "count";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Count`";
+	$fdata["FullName"] = "\"count\"";
 
 	
 	
@@ -790,64 +788,29 @@ $tdatamfr_zone[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_zone["Count"] = $fdata;
-		$tdatamfr_zone[".searchableFields"][] = "Count";
+	$tdatamfr_zone["count"] = $fdata;
+		$tdatamfr_zone[".searchableFields"][] = "count";
 
 
-$tables_data["MFR_Zone"]=&$tdatamfr_zone;
-$field_labels["MFR_Zone"] = &$fieldLabelsmfr_zone;
-$fieldToolTips["MFR_Zone"] = &$fieldToolTipsmfr_zone;
-$placeHolders["MFR_Zone"] = &$placeHoldersmfr_zone;
-$page_titles["MFR_Zone"] = &$pageTitlesmfr_zone;
+$tables_data["public.mfr_zone"]=&$tdatamfr_zone;
+$field_labels["public_mfr_zone"] = &$fieldLabelsmfr_zone;
+$fieldToolTips["public_mfr_zone"] = &$fieldToolTipsmfr_zone;
+$placeHolders["public_mfr_zone"] = &$placeHoldersmfr_zone;
+$page_titles["public_mfr_zone"] = &$pageTitlesmfr_zone;
 
 
-changeTextControlsToDate( "MFR_Zone" );
+changeTextControlsToDate( "public.mfr_zone" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["MFR_Zone"] = array();
-//	MFR_Zone_Chart
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="MFR_Zone_Chart";
-		$detailsParam["dOriginalTable"] = "MFR_Zone";
-
-
-
-			$detailsParam["dType"]=PAGE_CHART;
-
-		$detailsParam["dShortTable"] = "mfr_zone_chart";
-	$detailsParam["dCaptionTable"] = GetTableCaption("MFR_Zone_Chart");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["MFR_Zone"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["MFR_Zone"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["MFR_Zone"][$dIndex]["masterKeys"][]="Zone";
-
-	$detailsTablesData["MFR_Zone"][$dIndex]["masterKeys"][]="Count";
-
-				$detailsTablesData["MFR_Zone"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["MFR_Zone"][$dIndex]["detailKeys"][]="Zone";
-
-		
-	$detailsTablesData["MFR_Zone"][$dIndex]["detailKeys"][]="Count";
+$detailsTablesData["public.mfr_zone"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["MFR_Zone"] = array();
+$masterTablesData["public.mfr_zone"] = array();
 
 
 
@@ -871,8 +834,8 @@ function createSqlQuery_mfr_zone()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`Zone`,  	Lat,  	Lng,  	`Count`";
-$proto0["m_strFrom"] = "FROM MFR_Zone";
+$proto0["m_strFieldList"] = "\"zone\",  	lat,  	lng,  	\"count\"";
+$proto0["m_strFrom"] = "FROM \"public\".mfr_zone";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -913,13 +876,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Zone",
-	"m_strTable" => "MFR_Zone",
-	"m_srcTableName" => "MFR_Zone"
+	"m_strName" => "zone",
+	"m_strTable" => "public.mfr_zone",
+	"m_srcTableName" => "public.mfr_zone"
 ));
 
-$proto6["m_sql"] = "`Zone`";
-$proto6["m_srcTableName"] = "MFR_Zone";
+$proto6["m_sql"] = "\"zone\"";
+$proto6["m_srcTableName"] = "public.mfr_zone";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -927,13 +890,13 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Lat",
-	"m_strTable" => "MFR_Zone",
-	"m_srcTableName" => "MFR_Zone"
+	"m_strName" => "lat",
+	"m_strTable" => "public.mfr_zone",
+	"m_srcTableName" => "public.mfr_zone"
 ));
 
-$proto8["m_sql"] = "Lat";
-$proto8["m_srcTableName"] = "MFR_Zone";
+$proto8["m_sql"] = "lat";
+$proto8["m_srcTableName"] = "public.mfr_zone";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -941,13 +904,13 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Lng",
-	"m_strTable" => "MFR_Zone",
-	"m_srcTableName" => "MFR_Zone"
+	"m_strName" => "lng",
+	"m_strTable" => "public.mfr_zone",
+	"m_srcTableName" => "public.mfr_zone"
 ));
 
-$proto10["m_sql"] = "Lng";
-$proto10["m_srcTableName"] = "MFR_Zone";
+$proto10["m_sql"] = "lng";
+$proto10["m_srcTableName"] = "public.mfr_zone";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -955,13 +918,13 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Count",
-	"m_strTable" => "MFR_Zone",
-	"m_srcTableName" => "MFR_Zone"
+	"m_strName" => "count",
+	"m_strTable" => "public.mfr_zone",
+	"m_srcTableName" => "public.mfr_zone"
 ));
 
-$proto12["m_sql"] = "`Count`";
-$proto12["m_srcTableName"] = "MFR_Zone";
+$proto12["m_sql"] = "\"count\"";
+$proto12["m_srcTableName"] = "public.mfr_zone";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -971,19 +934,19 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "MFR_Zone";
-$proto15["m_srcTableName"] = "MFR_Zone";
+$proto15["m_strName"] = "public.mfr_zone";
+$proto15["m_srcTableName"] = "public.mfr_zone";
 $proto15["m_columns"] = array();
-$proto15["m_columns"][] = "Zone";
-$proto15["m_columns"][] = "Lat";
-$proto15["m_columns"][] = "Lng";
-$proto15["m_columns"][] = "Count";
+$proto15["m_columns"][] = "zone";
+$proto15["m_columns"][] = "lat";
+$proto15["m_columns"][] = "lng";
+$proto15["m_columns"][] = "count";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "MFR_Zone";
+$proto14["m_sql"] = "\"public\".mfr_zone";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "MFR_Zone";
+$proto14["m_srcTableName"] = "public.mfr_zone";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1005,7 +968,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="MFR_Zone";		
+$proto0["m_srcTableName"]="public.mfr_zone";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

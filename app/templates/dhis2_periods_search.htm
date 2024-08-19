@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -131,6 +131,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -154,7 +162,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Periods search}</h2>
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dhis2_periods search}</h2>
 		</div>					</div>
 			</div>		
 {END top_block}
@@ -215,49 +223,49 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Period_ID_fieldblock}
+{BEGIN period_id_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Period_ID}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Period_ID{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Period_ID" data-fieldname="Period_ID" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_period_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="period_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_Period_ID}">
-		{$label DHIS2_Periods Period_ID }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_period_id}">
+		{$label public_dhis2_periods period_id }	</label>
 	<div class="r-search-option">
-		{$searchtype_Period_ID}
+		{$searchtype_period_id}
 	</div>
 	<div class="r-search-field">
-		{$Period_ID_editcontrol}	</div>
+		{$period_id_editcontrol}	</div>
 	<div class="r-search-field">
-		{$Period_ID_editcontrol1}
+		{$period_id_editcontrol1}
 	</div>
 	
 </div>
 
-{END Period_ID_fieldblock}
+{END period_id_fieldblock}
 											
-{BEGIN Period_Name_fieldblock}
+{BEGIN period_name_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Period_Name}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Period_Name{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Period_Name" data-fieldname="Period_Name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_period_name}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="period_name{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="period_name" data-fieldname="period_name" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_Period_Name}">
-		{$label DHIS2_Periods Period_Name }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_period_name}">
+		{$label public_dhis2_periods period_name }	</label>
 	<div class="r-search-option">
-		{$searchtype_Period_Name}
+		{$searchtype_period_name}
 	</div>
 	<div class="r-search-field">
-		{$Period_Name_editcontrol}	</div>
+		{$period_name_editcontrol}	</div>
 	<div class="r-search-field">
-		{$Period_Name_editcontrol1}
+		{$period_name_editcontrol1}
 	</div>
 	
 </div>
 
-{END Period_Name_fieldblock}
+{END period_name_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

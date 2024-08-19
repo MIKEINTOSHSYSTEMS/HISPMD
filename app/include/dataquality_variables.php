@@ -1,8 +1,8 @@
 <?php
-$strTableName="DataQuality";
+$strTableName="public.dataquality";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="DataQuality";
+$strOriginalTableName="public.dataquality";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

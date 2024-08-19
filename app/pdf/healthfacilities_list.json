@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption HealthFacilities}',
+				text: '{$jscaption public_healthfacilities}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel HealthFacilities list}',
+				text: '{$jspagetitlelabel public_healthfacilities list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -271,7 +271,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HealthFacilities hf_id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_healthfacilities hf_id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -300,7 +300,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HealthFacilities name }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_healthfacilities name }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -329,7 +329,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HealthFacilities type }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel public_healthfacilities type }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -358,7 +358,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HealthFacilities his_audit_started }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel public_healthfacilities his_audit_started }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

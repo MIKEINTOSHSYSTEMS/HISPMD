@@ -1,8 +1,8 @@
 <?php
-$strTableName="MFR_Dashboard_Reports_Chart";
+$strTableName="mfr_dashboard_reports_chart";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="MFR_Dashboard_Reports";
+$strOriginalTableName="public.mfr_dashboard_reports";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption AI_Data_Assistant}',
+				text: '{$jscaption public_ai_data_assistant}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel AI_Data_Assistant list}',
+				text: '{$jspagetitlelabel public_ai_data_assistant list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -125,10 +125,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"<p><strong>Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot</strong></p>","hidden":"{$item_hide_text}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -157,6 +155,102 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot\n\n<br>","color":"#001f3f","hidden":"{$item_hide_text}","bold":true,"isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text1}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$event MERQ_AI_Data_Assistant_snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}
@@ -177,7 +271,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'chatbot',
 				style: 'headcell',
 		
 		
@@ -190,12 +283,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$jslabel AI_Data_Assistant chatbot }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$chatbot_align}',
+              "alignment": 'left',
      
       
       },
@@ -215,7 +306,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'chatbot',
 				style: 'bodycell',
 		
 		
@@ -228,12 +318,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$chatbot_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$chatbot_align}',
+              "alignment": 'left',
      
       
       },
@@ -301,54 +389,6 @@ pdfDocument = {
 		body: [
 				
 				[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"{$event MERQ_AI_Data_Assistant_snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-     
-      
-      },
-
-											],
-						[
 																{
 	cellId: 'c1',
 	col:0,

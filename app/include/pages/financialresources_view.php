@@ -1,6 +1,5 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'master' => array( 'Regions' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'resource_id',
 'year',
 'amount',

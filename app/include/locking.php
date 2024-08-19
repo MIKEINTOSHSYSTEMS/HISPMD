@@ -1,7 +1,7 @@
 <?php
 class oLocking
 {
-	var $lockTableName = "";
+	var $lockTableName = "public.hispmd__locking";
 	var $ConfirmTime=15;
 	var $UnlockTime=30;
 	var $ConfirmAdmin;

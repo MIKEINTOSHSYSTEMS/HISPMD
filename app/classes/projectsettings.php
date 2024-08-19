@@ -2972,7 +2972,7 @@ class ProjectSettings
 	public static function getForLogin()
 	{
 		return !!Security::dbProvider()
-			? new ProjectSettings("hispmd_users", PAGE_LIST)
+			? new ProjectSettings("public.hispmdusers", PAGE_LIST)
 			: null;
 	}
 
@@ -3510,32 +3510,6 @@ function fillProjectEntites()
 	global $projectEntities, $projectEntitiesReverse, $tablesByGoodName, $tablesByUpperCase, $tablesByUpperGoodname;
 	if( count( $projectEntities ) )
 		return;
-	$projectEntities[ "DataQuality" ] = array( "url" => "dataquality", "type" => 0 );
-	$projectEntitiesReverse[ "dataquality" ] = "DataQuality";
-	$projectEntities[ "DataUse" ] = array( "url" => "datause", "type" => 0 );
-	$projectEntitiesReverse[ "datause" ] = "DataUse";
-	$projectEntities[ "DigitalHealth" ] = array( "url" => "digitalhealth", "type" => 0 );
-	$projectEntitiesReverse[ "digitalhealth" ] = "DigitalHealth";
-	$projectEntities[ "DigitalHealthApps" ] = array( "url" => "digitalhealthapps", "type" => 0 );
-	$projectEntitiesReverse[ "digitalhealthapps" ] = "DigitalHealthApps";
-	$projectEntities[ "FinancialResources" ] = array( "url" => "financialresources", "type" => 0 );
-	$projectEntitiesReverse[ "financialresources" ] = "FinancialResources";
-	$projectEntities[ "HISGovernance" ] = array( "url" => "hisgovernance", "type" => 0 );
-	$projectEntitiesReverse[ "hisgovernance" ] = "HISGovernance";
-	$projectEntities[ "HISPartners" ] = array( "url" => "hispartners", "type" => 0 );
-	$projectEntitiesReverse[ "hispartners" ] = "HISPartners";
-	$projectEntities[ "HealthFacilities" ] = array( "url" => "healthfacilities", "type" => 0 );
-	$projectEntitiesReverse[ "healthfacilities" ] = "HealthFacilities";
-	$projectEntities[ "HealthUnits" ] = array( "url" => "healthunits", "type" => 0 );
-	$projectEntitiesReverse[ "healthunits" ] = "HealthUnits";
-	$projectEntities[ "Publications" ] = array( "url" => "publications", "type" => 0 );
-	$projectEntitiesReverse[ "publications" ] = "Publications";
-	$projectEntities[ "Regions" ] = array( "url" => "regions", "type" => 0 );
-	$projectEntitiesReverse[ "regions" ] = "Regions";
-	$projectEntities[ "Research" ] = array( "url" => "research", "type" => 0 );
-	$projectEntitiesReverse[ "research" ] = "Research";
-	$projectEntities[ "Workforce" ] = array( "url" => "workforce", "type" => 0 );
-	$projectEntitiesReverse[ "workforce" ] = "Workforce";
 	$projectEntities[ "MFR_Dashboard_Report" ] = array( "url" => "mfr_dashboard_report", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_dashboard_report" ] = "MFR_Dashboard_Report";
 	$projectEntities[ "MFR_Status_Report" ] = array( "url" => "mfr_status_report", "type" => 7 );
@@ -3548,28 +3522,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_zone_report" ] = "MFR_Zone_Report";
 	$projectEntities[ "MFR_Woreda_Report" ] = array( "url" => "mfr_woreda_report", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_woreda_report" ] = "MFR_Woreda_Report";
-	$projectEntities[ "MFR_Dashboard_Reports_Chart" ] = array( "url" => "mfr_dashboard_reports_chart", "type" => 3 );
-	$projectEntitiesReverse[ "mfr_dashboard_reports_chart" ] = "MFR_Dashboard_Reports_Chart";
-	$projectEntities[ "MFR_Dashboard_Reports" ] = array( "url" => "mfr_dashboard_reports", "type" => 0 );
-	$projectEntitiesReverse[ "mfr_dashboard_reports" ] = "MFR_Dashboard_Reports";
-	$projectEntities[ "MFR_Operational_Status" ] = array( "url" => "mfr_operational_status", "type" => 0 );
-	$projectEntitiesReverse[ "mfr_operational_status" ] = "MFR_Operational_Status";
-	$projectEntities[ "MFR_Region" ] = array( "url" => "mfr_region", "type" => 0 );
-	$projectEntitiesReverse[ "mfr_region" ] = "MFR_Region";
-	$projectEntities[ "MFR_Zone" ] = array( "url" => "mfr_zone", "type" => 0 );
-	$projectEntitiesReverse[ "mfr_zone" ] = "MFR_Zone";
-	$projectEntities[ "MFR_Woreda" ] = array( "url" => "mfr_woreda", "type" => 0 );
-	$projectEntitiesReverse[ "mfr_woreda" ] = "MFR_Woreda";
-	$projectEntities[ "MFR_Operational_Status_Chart" ] = array( "url" => "mfr_operational_status_chart", "type" => 3 );
-	$projectEntitiesReverse[ "mfr_operational_status_chart" ] = "MFR_Operational_Status_Chart";
-	$projectEntities[ "MFR_Region_Chart" ] = array( "url" => "mfr_region_chart", "type" => 3 );
-	$projectEntitiesReverse[ "mfr_region_chart" ] = "MFR_Region_Chart";
-	$projectEntities[ "MFR_Zone_Chart" ] = array( "url" => "mfr_zone_chart", "type" => 3 );
-	$projectEntitiesReverse[ "mfr_zone_chart" ] = "MFR_Zone_Chart";
-	$projectEntities[ "MFR_Woreda_Chart" ] = array( "url" => "mfr_woreda_chart", "type" => 3 );
-	$projectEntitiesReverse[ "mfr_woreda_chart" ] = "MFR_Woreda_Chart";
-	$projectEntities[ "AI_Data_Assistant" ] = array( "url" => "ai_data_assistant", "type" => 0 );
-	$projectEntitiesReverse[ "ai_data_assistant" ] = "AI_Data_Assistant";
 	$projectEntities[ "DHIS2_Indicators" ] = array( "url" => "dhis2_indicators", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_indicators" ] = "DHIS2_Indicators";
 	$projectEntities[ "DHIS2_Organisation_Units" ] = array( "url" => "dhis2_organisation_units", "type" => 7 );
@@ -3588,8 +3540,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_reports" ] = "DHIS2_Reports";
 	$projectEntities[ "DHIS2_Datasets" ] = array( "url" => "dhis2_datasets", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_datasets" ] = "DHIS2_Datasets";
-	$projectEntities[ "DHIS2_Periods" ] = array( "url" => "dhis2_periods", "type" => 0 );
-	$projectEntitiesReverse[ "dhis2_periods" ] = "DHIS2_Periods";
 	$projectEntities[ "DHIS2_Reporting_Rate" ] = array( "url" => "dhis2_reporting_rate", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_reporting_rate" ] = "DHIS2_Reporting_Rate";
 	$projectEntities[ "DHIS2_Reporting_Rate_Chart" ] = array( "url" => "dhis2_reporting_rate_chart1", "type" => 11 );
@@ -3614,14 +3564,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mfr_operational_statuses" ] = "MFR_Operational_Statuses";
 	$projectEntities[ "MFR_Status" ] = array( "url" => "mfr_status", "type" => 7 );
 	$projectEntitiesReverse[ "mfr_status" ] = "MFR_Status";
-	$projectEntities[ "hispmd_users" ] = array( "url" => "hispmd_users", "type" => 0 );
-	$projectEntitiesReverse[ "hispmd_users" ] = "hispmd_users";
-	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
-	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
-	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
-	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
-	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
-	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "DHIS2_OrgUnit_Country" ] = array( "url" => "dhis2_orgunit_country", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_orgunit_country" ] = "DHIS2_OrgUnit_Country";
 	$projectEntities[ "DHIS2_OrgUnit_Regions" ] = array( "url" => "dhis2_orgunit_regions", "type" => 7 );
@@ -3638,6 +3580,78 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_aio_orgunit" ] = "DHIS2_AIO_OrgUnit";
 	$projectEntities[ "DHIS2_OrgUnit_Distributions" ] = array( "url" => "dhis2_orgunit_distributions", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_orgunit_distributions" ] = "DHIS2_OrgUnit_Distributions";
+	$projectEntities[ "public.ai_data_assistant" ] = array( "url" => "ai_data_assistant", "type" => 0 );
+	$projectEntitiesReverse[ "ai_data_assistant" ] = "public.ai_data_assistant";
+	$projectEntities[ "public.dataquality" ] = array( "url" => "dataquality", "type" => 0 );
+	$projectEntitiesReverse[ "dataquality" ] = "public.dataquality";
+	$projectEntities[ "public.datause" ] = array( "url" => "datause", "type" => 0 );
+	$projectEntitiesReverse[ "datause" ] = "public.datause";
+	$projectEntities[ "public.dhis2_periods" ] = array( "url" => "dhis2_periods", "type" => 0 );
+	$projectEntitiesReverse[ "dhis2_periods" ] = "public.dhis2_periods";
+	$projectEntities[ "public.digitalhealth" ] = array( "url" => "digitalhealth", "type" => 0 );
+	$projectEntitiesReverse[ "digitalhealth" ] = "public.digitalhealth";
+	$projectEntities[ "public.digitalhealthapps" ] = array( "url" => "digitalhealthapps", "type" => 0 );
+	$projectEntitiesReverse[ "digitalhealthapps" ] = "public.digitalhealthapps";
+	$projectEntities[ "public.financialresources" ] = array( "url" => "financialresources", "type" => 0 );
+	$projectEntitiesReverse[ "financialresources" ] = "public.financialresources";
+	$projectEntities[ "public.healthfacilities" ] = array( "url" => "healthfacilities", "type" => 0 );
+	$projectEntitiesReverse[ "healthfacilities" ] = "public.healthfacilities";
+	$projectEntities[ "public.healthunits" ] = array( "url" => "healthunits", "type" => 0 );
+	$projectEntitiesReverse[ "healthunits" ] = "public.healthunits";
+	$projectEntities[ "public.hisgovernance" ] = array( "url" => "hisgovernance", "type" => 0 );
+	$projectEntitiesReverse[ "hisgovernance" ] = "public.hisgovernance";
+	$projectEntities[ "public.hispartners" ] = array( "url" => "hispartners", "type" => 0 );
+	$projectEntitiesReverse[ "hispartners" ] = "public.hispartners";
+	$projectEntities[ "public.mfr_dashboard_reports" ] = array( "url" => "mfr_dashboard_reports", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_dashboard_reports" ] = "public.mfr_dashboard_reports";
+	$projectEntities[ "public.mfr_operational_status" ] = array( "url" => "mfr_operational_status", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_operational_status" ] = "public.mfr_operational_status";
+	$projectEntities[ "public.mfr_region" ] = array( "url" => "mfr_region", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_region" ] = "public.mfr_region";
+	$projectEntities[ "public.mfr_woreda" ] = array( "url" => "mfr_woreda", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_woreda" ] = "public.mfr_woreda";
+	$projectEntities[ "public.mfr_zone" ] = array( "url" => "mfr_zone", "type" => 0 );
+	$projectEntitiesReverse[ "mfr_zone" ] = "public.mfr_zone";
+	$projectEntities[ "public.publications" ] = array( "url" => "publications", "type" => 0 );
+	$projectEntitiesReverse[ "publications" ] = "public.publications";
+	$projectEntities[ "public.regions" ] = array( "url" => "regions", "type" => 0 );
+	$projectEntitiesReverse[ "regions" ] = "public.regions";
+	$projectEntities[ "public.research" ] = array( "url" => "research", "type" => 0 );
+	$projectEntitiesReverse[ "research" ] = "public.research";
+	$projectEntities[ "public.workforce" ] = array( "url" => "workforce", "type" => 0 );
+	$projectEntitiesReverse[ "workforce" ] = "public.workforce";
+	$projectEntities[ "public.hispmdusers" ] = array( "url" => "hispmdusers", "type" => 0 );
+	$projectEntitiesReverse[ "hispmdusers" ] = "public.hispmdusers";
+	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
+	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
+	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
+	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
+	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
+	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "mfr_dashboard_reports_chart" ] = array( "url" => "mfr_dashboard_reports_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_dashboard_reports_chart" ] = "mfr_dashboard_reports_chart";
+	$projectEntities[ "mfr_operational_status_chart" ] = array( "url" => "mfr_operational_status_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_operational_status_chart" ] = "mfr_operational_status_chart";
+	$projectEntities[ "mfr_region_chart" ] = array( "url" => "mfr_region_chart", "type" => 3 );
+	$projectEntitiesReverse[ "mfr_region_chart" ] = "mfr_region_chart";
+	$projectEntities[ "public.ethprism_additional_organizational_and_behavioral_assessment" ] = array( "url" => "ethprism_additional_organizational_and_behavioral_assessment", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_additional_organizational_and_behavioral_assessment" ] = "public.ethprism_additional_organizational_and_behavioral_assessment";
+	$projectEntities[ "public.ethprism_facility_level_rhis_performance_diagnostic" ] = array( "url" => "ethprism_facility_level_rhis_performance_diagnostic", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_facility_level_rhis_performance_diagnostic" ] = "public.ethprism_facility_level_rhis_performance_diagnostic";
+	$projectEntities[ "public.ethprism_facility_office_checklist" ] = array( "url" => "ethprism_facility_office_checklist", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_facility_office_checklist" ] = "public.ethprism_facility_office_checklist";
+	$projectEntities[ "public.ethprism_healthpost_level_rhis_performance_diagnostic" ] = array( "url" => "ethprism_healthpost_level_rhis_performance_diagnostic", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_healthpost_level_rhis_performance_diagnostic" ] = "public.ethprism_healthpost_level_rhis_performance_diagnostic";
+	$projectEntities[ "public.ethprism_national_prism_woreda_level_diagnostic" ] = array( "url" => "ethprism_national_prism_woreda_level_diagnostic", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_national_prism_woreda_level_diagnostic" ] = "public.ethprism_national_prism_woreda_level_diagnostic";
+	$projectEntities[ "public.ethprism_organizational_and_behavioral_assessment" ] = array( "url" => "ethprism_organizational_and_behavioral_assessment", "type" => 0 );
+	$projectEntitiesReverse[ "ethprism_organizational_and_behavioral_assessment" ] = "public.ethprism_organizational_and_behavioral_assessment";
+	$projectEntities[ "public.hispmd_prism_settings" ] = array( "url" => "hispmd_prism_settings", "type" => 0 );
+	$projectEntitiesReverse[ "hispmd_prism_settings" ] = "public.hispmd_prism_settings";
+	$projectEntities[ "PRISM Dashboard" ] = array( "url" => "prism_dashboard", "type" => 4 );
+	$projectEntitiesReverse[ "prism_dashboard" ] = "PRISM Dashboard";
+	$projectEntities[ "hispmd_users_audit" ] = array( "url" => "hispmd_users_audit", "type" => 1 );
+	$projectEntitiesReverse[ "hispmd_users_audit" ] = "hispmd_users_audit";
 }
 
 function findTable( $table ) {

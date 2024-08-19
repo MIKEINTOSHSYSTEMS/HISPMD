@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_governance_id}" {$filterRow_attrs_governance_id}>
-			<label>{$label HISGovernance governance_id }</label>
+			<label>{$label public_hisgovernance governance_id }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_level}" {$filterRow_attrs_level}>
-			<label>{$label HISGovernance level }</label>
+			<label>{$label public_hisgovernance level }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_is_functional}" {$filterRow_attrs_is_functional}>
-			<label>{$label HISGovernance is_functional }</label>
+			<label>{$label public_hisgovernance is_functional }</label>
 
 							{$delCtrlButt}
 			
@@ -279,14 +279,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="hisgovernance_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -335,6 +327,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -490,13 +490,13 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="governance_id"]:before {
-		content: "{$label HISGovernance governance_id}";
+		content: "{$label public_hisgovernance governance_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="level"]:before {
-		content: "{$label HISGovernance level}";
+		content: "{$label public_hisgovernance level}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="is_functional"]:before {
-		content: "{$label HISGovernance is_functional}";
+		content: "{$label public_hisgovernance is_functional}";
 	}
 	}
 </style>
@@ -567,7 +567,7 @@
 		{BEGIN governance_id_fieldheadercolumn}
 	{BEGIN governance_id_fieldheader}
 	<SPAN {$governance_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="governance_id" data-fieldname="governance_id">
-	{$label HISGovernance governance_id }	{$arrow_icon_governance_id}
+	{$label public_hisgovernance governance_id }	{$arrow_icon_governance_id}
 	</SPAN>
 	{END governance_id_fieldheader}
 {END governance_id_fieldheadercolumn}
@@ -592,7 +592,7 @@
 		{BEGIN level_fieldheadercolumn}
 	{BEGIN level_fieldheader}
 	<SPAN {$level_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="level" data-fieldname="level">
-	{$label HISGovernance level }	{$arrow_icon_level}
+	{$label public_hisgovernance level }	{$arrow_icon_level}
 	</SPAN>
 	{END level_fieldheader}
 {END level_fieldheadercolumn}
@@ -617,7 +617,7 @@
 		{BEGIN is_functional_fieldheadercolumn}
 	{BEGIN is_functional_fieldheader}
 	<SPAN {$is_functional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="is_functional" data-fieldname="is_functional">
-	{$label HISGovernance is_functional }	{$arrow_icon_is_functional}
+	{$label public_hisgovernance is_functional }	{$arrow_icon_is_functional}
 	</SPAN>
 	{END is_functional_fieldheader}
 {END is_functional_fieldheadercolumn}

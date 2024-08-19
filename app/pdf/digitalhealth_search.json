@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DigitalHealth search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_digitalhealth search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],

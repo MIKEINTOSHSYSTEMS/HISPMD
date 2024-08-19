@@ -3,7 +3,7 @@ $tdatamfr_operational_status_chart = array();
 $tdatamfr_operational_status_chart[".searchableFields"] = array();
 $tdatamfr_operational_status_chart[".ShortName"] = "mfr_operational_status_chart";
 $tdatamfr_operational_status_chart[".OwnerID"] = "";
-$tdatamfr_operational_status_chart[".OriginalTable"] = "MFR_Operational_Status";
+$tdatamfr_operational_status_chart[".OriginalTable"] = "public.mfr_operational_status";
 
 
 $tdatamfr_operational_status_chart[".pagesByType"] = my_json_decode( "{\"chart\":[\"chart\"],\"search\":[\"search\"]}" );
@@ -25,15 +25,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmfr_operational_status_chart["English"] = array();
 	$placeHoldersmfr_operational_status_chart["English"] = array();
 	$pageTitlesmfr_operational_status_chart["English"] = array();
-	$fieldLabelsmfr_operational_status_chart["English"]["OperationalStatus"] = "Operational Status";
-	$fieldToolTipsmfr_operational_status_chart["English"]["OperationalStatus"] = "";
-	$placeHoldersmfr_operational_status_chart["English"]["OperationalStatus"] = "";
-	$fieldLabelsmfr_operational_status_chart["English"]["Status"] = "Status";
-	$fieldToolTipsmfr_operational_status_chart["English"]["Status"] = "";
-	$placeHoldersmfr_operational_status_chart["English"]["Status"] = "";
-	$fieldLabelsmfr_operational_status_chart["English"]["Count"] = "Count";
-	$fieldToolTipsmfr_operational_status_chart["English"]["Count"] = "";
-	$placeHoldersmfr_operational_status_chart["English"]["Count"] = "";
+	$fieldLabelsmfr_operational_status_chart["English"]["operationalstatus"] = "Operationalstatus";
+	$fieldToolTipsmfr_operational_status_chart["English"]["operationalstatus"] = "";
+	$placeHoldersmfr_operational_status_chart["English"]["operationalstatus"] = "";
+	$fieldLabelsmfr_operational_status_chart["English"]["status"] = "Status";
+	$fieldToolTipsmfr_operational_status_chart["English"]["status"] = "";
+	$placeHoldersmfr_operational_status_chart["English"]["status"] = "";
+	$fieldLabelsmfr_operational_status_chart["English"]["count"] = "Count";
+	$fieldToolTipsmfr_operational_status_chart["English"]["count"] = "";
+	$placeHoldersmfr_operational_status_chart["English"]["count"] = "";
 	if (count($fieldToolTipsmfr_operational_status_chart["English"]))
 		$tdatamfr_operational_status_chart[".isUseToolTips"] = true;
 }
@@ -52,7 +52,7 @@ $tdatamfr_operational_status_chart[".entityType"] = 3;
 $tdatamfr_operational_status_chart[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatamfr_operational_status_chart[".strOriginalTableName"] = "MFR_Operational_Status";
+$tdatamfr_operational_status_chart[".strOriginalTableName"] = "public.mfr_operational_status";
 
 	
 
@@ -144,7 +144,7 @@ $tdatamfr_operational_status_chart[".addPageEvents"] = false;
 $tdatamfr_operational_status_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatamfr_operational_status_chart[".badgeColor"] = "daa520";
+$tdatamfr_operational_status_chart[".badgeColor"] = "4169E1";
 
 
 $tdatamfr_operational_status_chart[".allSearchFields"] = array();
@@ -152,9 +152,8 @@ $tdatamfr_operational_status_chart[".filterFields"] = array();
 $tdatamfr_operational_status_chart[".requiredSearchFields"] = array();
 
 $tdatamfr_operational_status_chart[".googleLikeFields"] = array();
-$tdatamfr_operational_status_chart[".googleLikeFields"][] = "OperationalStatus";
-$tdatamfr_operational_status_chart[".googleLikeFields"][] = "Status";
-$tdatamfr_operational_status_chart[".googleLikeFields"][] = "Count";
+$tdatamfr_operational_status_chart[".googleLikeFields"][] = "operationalstatus";
+$tdatamfr_operational_status_chart[".googleLikeFields"][] = "status";
 
 
 
@@ -170,7 +169,7 @@ $tdatamfr_operational_status_chart[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatamfr_operational_status_chart[".chartType"] = "2DBar";
+$tdatamfr_operational_status_chart[".chartType"] = "2DDoughnut";
 // end of chart settings
 
 
@@ -186,8 +185,8 @@ $tdatamfr_operational_status_chart[".strOrderBy"] = $tstrOrderBy;
 $tdatamfr_operational_status_chart[".orderindexes"] = array();
 
 
-$tdatamfr_operational_status_chart[".sqlHead"] = "SELECT OperationalStatus,  	Status,  	`Count`";
-$tdatamfr_operational_status_chart[".sqlFrom"] = "FROM MFR_Operational_Status";
+$tdatamfr_operational_status_chart[".sqlHead"] = "SELECT operationalstatus,  	status,  	\"count\"";
+$tdatamfr_operational_status_chart[".sqlFrom"] = "FROM \"public\".mfr_operational_status";
 $tdatamfr_operational_status_chart[".sqlWhereExpr"] = "";
 $tdatamfr_operational_status_chart[".sqlTail"] = "";
 
@@ -233,14 +232,14 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 
 
 
-//	OperationalStatus
+//	operationalstatus
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "OperationalStatus";
-	$fdata["GoodName"] = "OperationalStatus";
-	$fdata["ownerTable"] = "MFR_Operational_Status";
-	$fdata["Label"] = GetFieldLabel("MFR_Operational_Status_Chart","OperationalStatus");
+	$fdata["strName"] = "operationalstatus";
+	$fdata["GoodName"] = "operationalstatus";
+	$fdata["ownerTable"] = "public.mfr_operational_status";
+	$fdata["Label"] = GetFieldLabel("mfr_operational_status_chart","operationalstatus");
 	$fdata["FieldType"] = 200;
 
 
@@ -248,12 +247,12 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "OperationalStatus";
+		$fdata["strField"] = "operationalstatus";
 
-		$fdata["sourceSingle"] = "OperationalStatus";
+		$fdata["sourceSingle"] = "operationalstatus";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "OperationalStatus";
+	$fdata["FullName"] = "operationalstatus";
 
 	
 	
@@ -290,7 +289,7 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -300,6 +299,34 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.mfr_operational_status";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "operationalstatus";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "operationalstatus";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -314,11 +341,8 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -344,7 +368,7 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -369,16 +393,16 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_operational_status_chart["OperationalStatus"] = $fdata;
-		$tdatamfr_operational_status_chart[".searchableFields"][] = "OperationalStatus";
-//	Status
+	$tdatamfr_operational_status_chart["operationalstatus"] = $fdata;
+		$tdatamfr_operational_status_chart[".searchableFields"][] = "operationalstatus";
+//	status
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "Status";
-	$fdata["GoodName"] = "Status";
-	$fdata["ownerTable"] = "MFR_Operational_Status";
-	$fdata["Label"] = GetFieldLabel("MFR_Operational_Status_Chart","Status");
+	$fdata["strName"] = "status";
+	$fdata["GoodName"] = "status";
+	$fdata["ownerTable"] = "public.mfr_operational_status";
+	$fdata["Label"] = GetFieldLabel("mfr_operational_status_chart","status");
 	$fdata["FieldType"] = 200;
 
 
@@ -386,12 +410,12 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Status";
+		$fdata["strField"] = "status";
 
-		$fdata["sourceSingle"] = "Status";
+		$fdata["sourceSingle"] = "status";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Status";
+	$fdata["FullName"] = "status";
 
 	
 	
@@ -428,7 +452,7 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -438,6 +462,34 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.mfr_operational_status";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "status";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "status";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -452,11 +504,8 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -482,7 +531,7 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -507,29 +556,29 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_operational_status_chart["Status"] = $fdata;
-		$tdatamfr_operational_status_chart[".searchableFields"][] = "Status";
-//	Count
+	$tdatamfr_operational_status_chart["status"] = $fdata;
+		$tdatamfr_operational_status_chart[".searchableFields"][] = "status";
+//	count
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "Count";
-	$fdata["GoodName"] = "Count";
-	$fdata["ownerTable"] = "MFR_Operational_Status";
-	$fdata["Label"] = GetFieldLabel("MFR_Operational_Status_Chart","Count");
-	$fdata["FieldType"] = 3;
+	$fdata["strName"] = "count";
+	$fdata["GoodName"] = "count";
+	$fdata["ownerTable"] = "public.mfr_operational_status";
+	$fdata["Label"] = GetFieldLabel("mfr_operational_status_chart","count");
+	$fdata["FieldType"] = 20;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Count";
+		$fdata["strField"] = "count";
 
-		$fdata["sourceSingle"] = "Count";
+		$fdata["sourceSingle"] = "count";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Count`";
+	$fdata["FullName"] = "\"count\"";
 
 	
 	
@@ -645,37 +694,37 @@ $tdatamfr_operational_status_chart[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamfr_operational_status_chart["Count"] = $fdata;
-		$tdatamfr_operational_status_chart[".searchableFields"][] = "Count";
+	$tdatamfr_operational_status_chart["count"] = $fdata;
+		$tdatamfr_operational_status_chart[".searchableFields"][] = "count";
 
-$tdatamfr_operational_status_chart[".chartLabelField"] = "OperationalStatus";
+$tdatamfr_operational_status_chart[".chartLabelField"] = "operationalstatus";
 $tdatamfr_operational_status_chart[".chartSeries"] = array();
 $tdatamfr_operational_status_chart[".chartSeries"][] = array(
-	"field" => "Count",
+	"field" => "count",
 	"total" => ""
 );
 	$tdatamfr_operational_status_chart[".chartXml"] = '<chart>
 		<attr value="tables">
-			<attr value="0">MFR_Operational_Status_Chart</attr>
+			<attr value="0">mfr_operational_status_chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">2d_bar</attr>
+			<attr value="type">2d_doughnut</attr>
 		</attr>
 
 		<attr value="parameters">';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="0">
-			<attr value="name">Count</attr>';
+			<attr value="name">count</attr>';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '</attr>';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="1">
-		<attr value="name">OperationalStatus</attr>
+		<attr value="name">operationalstatus</attr>
 	</attr>';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '</attr>
 			<attr value="appearance">';
 
 
-	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Operational Status Chart").'</attr>
-<attr value="foot">'.xmlencode("Operational Status").'</attr>
-<attr value="y_axis_label">'.xmlencode("Count").'</attr>
+	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Operational Status").'</attr>
+<attr value="foot">'.xmlencode("Operational Status ").'</attr>
+<attr value="y_axis_label">'.xmlencode("count").'</attr>
 
 
 <attr value="slegend">true</attr>
@@ -687,8 +736,8 @@ $tdatamfr_operational_status_chart[".chartSeries"][] = array(
 <attr value="slog">false</attr>
 <attr value="aqua">0</attr>
 <attr value="cview">0</attr>
-<attr value="is3d">0</attr>
-<attr value="isstacked">1</attr>
+<attr value="is3d">1</attr>
+<attr value="isstacked">0</attr>
 <attr value="linestyle">0</attr>
 <attr value="autoupdate">0</attr>
 <attr value="autoupmin">60</attr>';
@@ -696,74 +745,52 @@ $tdatamfr_operational_status_chart[".chartXml"] .= '</attr>
 
 <attr value="fields">';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="0">
-		<attr value="name">OperationalStatus</attr>
-		<attr value="label">'.xmlencode(GetFieldLabel("MFR_Operational_Status_Chart","OperationalStatus")).'</attr>
+		<attr value="name">operationalstatus</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("mfr_operational_status_chart","operationalstatus")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="1">
-		<attr value="name">Status</attr>
-		<attr value="label">'.xmlencode(GetFieldLabel("MFR_Operational_Status_Chart","Status")).'</attr>
+		<attr value="name">status</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("mfr_operational_status_chart","status")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 	$tdatamfr_operational_status_chart[".chartXml"] .= '<attr value="2">
-		<attr value="name">Count</attr>
-		<attr value="label">'.xmlencode(GetFieldLabel("MFR_Operational_Status_Chart","Count")).'</attr>
+		<attr value="name">count</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("mfr_operational_status_chart","count")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 $tdatamfr_operational_status_chart[".chartXml"] .= '</attr>
 
 
 <attr value="settings">
-<attr value="name">MFR_Operational_Status_Chart</attr>
+<attr value="name">mfr_operational_status_chart</attr>
 <attr value="short_table_name">mfr_operational_status_chart</attr>
 </attr>
 
 </chart>';
 
-$tables_data["MFR_Operational_Status_Chart"]=&$tdatamfr_operational_status_chart;
-$field_labels["MFR_Operational_Status_Chart"] = &$fieldLabelsmfr_operational_status_chart;
-$fieldToolTips["MFR_Operational_Status_Chart"] = &$fieldToolTipsmfr_operational_status_chart;
-$placeHolders["MFR_Operational_Status_Chart"] = &$placeHoldersmfr_operational_status_chart;
-$page_titles["MFR_Operational_Status_Chart"] = &$pageTitlesmfr_operational_status_chart;
+$tables_data["mfr_operational_status_chart"]=&$tdatamfr_operational_status_chart;
+$field_labels["mfr_operational_status_chart"] = &$fieldLabelsmfr_operational_status_chart;
+$fieldToolTips["mfr_operational_status_chart"] = &$fieldToolTipsmfr_operational_status_chart;
+$placeHolders["mfr_operational_status_chart"] = &$placeHoldersmfr_operational_status_chart;
+$page_titles["mfr_operational_status_chart"] = &$pageTitlesmfr_operational_status_chart;
 
 
-changeTextControlsToDate( "MFR_Operational_Status_Chart" );
+changeTextControlsToDate( "mfr_operational_status_chart" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["MFR_Operational_Status_Chart"] = array();
+$detailsTablesData["mfr_operational_status_chart"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["MFR_Operational_Status_Chart"] = array();
+$masterTablesData["mfr_operational_status_chart"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="MFR_Operational_Status";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="MFR_Operational_Status";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "mfr_operational_status";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MFR_Operational_Status_Chart"][0] = $masterParams;
-				$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"] = array();
-	$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"][]="OperationalStatus";
-				$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"][]="Status";
-				$masterTablesData["MFR_Operational_Status_Chart"][0]["masterKeys"][]="Count";
-				$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"] = array();
-	$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"][]="OperationalStatus";
-				$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"][]="Status";
-				$masterTablesData["MFR_Operational_Status_Chart"][0]["detailKeys"][]="Count";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -784,8 +811,8 @@ function createSqlQuery_mfr_operational_status_chart()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "OperationalStatus,  	Status,  	`Count`";
-$proto0["m_strFrom"] = "FROM MFR_Operational_Status";
+$proto0["m_strFieldList"] = "operationalstatus,  	status,  	\"count\"";
+$proto0["m_strFrom"] = "FROM \"public\".mfr_operational_status";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -826,13 +853,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "OperationalStatus",
-	"m_strTable" => "MFR_Operational_Status",
-	"m_srcTableName" => "MFR_Operational_Status_Chart"
+	"m_strName" => "operationalstatus",
+	"m_strTable" => "public.mfr_operational_status",
+	"m_srcTableName" => "mfr_operational_status_chart"
 ));
 
-$proto6["m_sql"] = "OperationalStatus";
-$proto6["m_srcTableName"] = "MFR_Operational_Status_Chart";
+$proto6["m_sql"] = "operationalstatus";
+$proto6["m_srcTableName"] = "mfr_operational_status_chart";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -840,13 +867,13 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Status",
-	"m_strTable" => "MFR_Operational_Status",
-	"m_srcTableName" => "MFR_Operational_Status_Chart"
+	"m_strName" => "status",
+	"m_strTable" => "public.mfr_operational_status",
+	"m_srcTableName" => "mfr_operational_status_chart"
 ));
 
-$proto8["m_sql"] = "Status";
-$proto8["m_srcTableName"] = "MFR_Operational_Status_Chart";
+$proto8["m_sql"] = "status";
+$proto8["m_srcTableName"] = "mfr_operational_status_chart";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -854,13 +881,13 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Count",
-	"m_strTable" => "MFR_Operational_Status",
-	"m_srcTableName" => "MFR_Operational_Status_Chart"
+	"m_strName" => "count",
+	"m_strTable" => "public.mfr_operational_status",
+	"m_srcTableName" => "mfr_operational_status_chart"
 ));
 
-$proto10["m_sql"] = "`Count`";
-$proto10["m_srcTableName"] = "MFR_Operational_Status_Chart";
+$proto10["m_sql"] = "\"count\"";
+$proto10["m_srcTableName"] = "mfr_operational_status_chart";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -870,18 +897,18 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "MFR_Operational_Status";
-$proto13["m_srcTableName"] = "MFR_Operational_Status_Chart";
+$proto13["m_strName"] = "public.mfr_operational_status";
+$proto13["m_srcTableName"] = "mfr_operational_status_chart";
 $proto13["m_columns"] = array();
-$proto13["m_columns"][] = "OperationalStatus";
-$proto13["m_columns"][] = "Status";
-$proto13["m_columns"][] = "Count";
+$proto13["m_columns"][] = "operationalstatus";
+$proto13["m_columns"][] = "status";
+$proto13["m_columns"][] = "count";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "MFR_Operational_Status";
+$proto12["m_sql"] = "\"public\".mfr_operational_status";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "MFR_Operational_Status_Chart";
+$proto12["m_srcTableName"] = "mfr_operational_status_chart";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -903,7 +930,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="MFR_Operational_Status_Chart";		
+$proto0["m_srcTableName"]="mfr_operational_status_chart";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

@@ -3,7 +3,7 @@ $tdataadmin_members = array();
 $tdataadmin_members[".searchableFields"] = array();
 $tdataadmin_members[".ShortName"] = "admin_members";
 $tdataadmin_members[".OwnerID"] = "";
-$tdataadmin_members[".OriginalTable"] = "hispmd_ugmembers";
+$tdataadmin_members[".OriginalTable"] = "public.hispmd_ugmembers";
 
 
 $tdataadmin_members[".pagesByType"] = my_json_decode( "{\"search\":[\"search\"]}" );
@@ -51,7 +51,7 @@ $tdataadmin_members[".entityType"] = 1;
 $tdataadmin_members[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdataadmin_members[".strOriginalTableName"] = "hispmd_ugmembers";
+$tdataadmin_members[".strOriginalTableName"] = "public.hispmd_ugmembers";
 
 	
 
@@ -67,9 +67,9 @@ $tdataadmin_members[".listAjax"] = false;
 //	temporary
 //$tdataadmin_members[".listAjax"] = false;
 
-	$tdataadmin_members[".audit"] = false;
+	$tdataadmin_members[".audit"] = true;
 
-	$tdataadmin_members[".locking"] = false;
+	$tdataadmin_members[".locking"] = true;
 
 
 $pages = $tdataadmin_members[".defaultPages"];
@@ -143,7 +143,7 @@ $tdataadmin_members[".addPageEvents"] = false;
 $tdataadmin_members[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_members[".badgeColor"] = "1E90FF";
+$tdataadmin_members[".badgeColor"] = "CFAE83";
 
 
 $tdataadmin_members[".allSearchFields"] = array();
@@ -187,8 +187,8 @@ $tdataadmin_members[".strOrderBy"] = $tstrOrderBy;
 $tdataadmin_members[".orderindexes"] = array();
 
 
-$tdataadmin_members[".sqlHead"] = "SELECT UserName,  	GroupID,  	Provider";
-$tdataadmin_members[".sqlFrom"] = "FROM hispmd_ugmembers";
+$tdataadmin_members[".sqlHead"] = "SELECT \"UserName\",  	\"GroupID\",  	\"Provider\"";
+$tdataadmin_members[".sqlFrom"] = "FROM \"public\".hispmd_ugmembers";
 $tdataadmin_members[".sqlWhereExpr"] = "";
 $tdataadmin_members[".sqlTail"] = "";
 
@@ -243,7 +243,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "UserName";
 	$fdata["GoodName"] = "UserName";
-	$fdata["ownerTable"] = "hispmd_ugmembers";
+	$fdata["ownerTable"] = "public.hispmd_ugmembers";
 	$fdata["Label"] = GetFieldLabel("admin_members","UserName");
 	$fdata["FieldType"] = 200;
 
@@ -257,7 +257,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "UserName";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "UserName";
+	$fdata["FullName"] = "\"UserName\"";
 
 	
 	
@@ -321,8 +321,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -381,7 +380,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "GroupID";
 	$fdata["GoodName"] = "GroupID";
-	$fdata["ownerTable"] = "hispmd_ugmembers";
+	$fdata["ownerTable"] = "public.hispmd_ugmembers";
 	$fdata["Label"] = GetFieldLabel("admin_members","GroupID");
 	$fdata["FieldType"] = 3;
 
@@ -395,7 +394,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "GroupID";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "GroupID";
+	$fdata["FullName"] = "\"GroupID\"";
 
 	
 	
@@ -521,7 +520,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Provider";
 	$fdata["GoodName"] = "Provider";
-	$fdata["ownerTable"] = "hispmd_ugmembers";
+	$fdata["ownerTable"] = "public.hispmd_ugmembers";
 	$fdata["Label"] = GetFieldLabel("admin_members","Provider");
 	$fdata["FieldType"] = 200;
 
@@ -535,7 +534,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Provider";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Provider";
+	$fdata["FullName"] = "\"Provider\"";
 
 	
 	
@@ -599,8 +598,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=10";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -697,8 +695,8 @@ function createSqlQuery_admin_members()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "UserName,  	GroupID,  	Provider";
-$proto0["m_strFrom"] = "FROM hispmd_ugmembers";
+$proto0["m_strFieldList"] = "\"UserName\",  	\"GroupID\",  	\"Provider\"";
+$proto0["m_strFrom"] = "FROM \"public\".hispmd_ugmembers";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -740,11 +738,11 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "UserName",
-	"m_strTable" => "hispmd_ugmembers",
+	"m_strTable" => "public.hispmd_ugmembers",
 	"m_srcTableName" => "admin_members"
 ));
 
-$proto6["m_sql"] = "UserName";
+$proto6["m_sql"] = "\"UserName\"";
 $proto6["m_srcTableName"] = "admin_members";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -754,11 +752,11 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "GroupID",
-	"m_strTable" => "hispmd_ugmembers",
+	"m_strTable" => "public.hispmd_ugmembers",
 	"m_srcTableName" => "admin_members"
 ));
 
-$proto8["m_sql"] = "GroupID";
+$proto8["m_sql"] = "\"GroupID\"";
 $proto8["m_srcTableName"] = "admin_members";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -768,11 +766,11 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Provider",
-	"m_strTable" => "hispmd_ugmembers",
+	"m_strTable" => "public.hispmd_ugmembers",
 	"m_srcTableName" => "admin_members"
 ));
 
-$proto10["m_sql"] = "Provider";
+$proto10["m_sql"] = "\"Provider\"";
 $proto10["m_srcTableName"] = "admin_members";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -783,7 +781,7 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "hispmd_ugmembers";
+$proto13["m_strName"] = "public.hispmd_ugmembers";
 $proto13["m_srcTableName"] = "admin_members";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "UserName";
@@ -792,7 +790,7 @@ $proto13["m_columns"][] = "Provider";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "hispmd_ugmembers";
+$proto12["m_sql"] = "\"public\".hispmd_ugmembers";
 $proto12["m_alias"] = "";
 $proto12["m_srcTableName"] = "admin_members";
 $proto14=array();

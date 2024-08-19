@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -103,32 +103,32 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Period_ID}
+																		{BEGIN searchCtrlBlock_period_id}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Period_ID}" {$filterRow_attrs_Period_ID}>
-			<label>{$label DHIS2_Periods Period_ID }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Period_ID}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Period_ID}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Period_ID}</span>
-						</div>
-		{END searchCtrlBlock_Period_ID}
-																{BEGIN searchCtrlBlock_Period_Name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Period_Name}" {$filterRow_attrs_Period_Name}>
-			<label>{$label DHIS2_Periods Period_Name }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_period_id}" {$filterRow_attrs_period_id}>
+			<label>{$label public_dhis2_periods period_id }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Period_Name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Period_Name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Period_Name}</span>
+								<span class="rnr-searchtype">{$searchtype_period_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_period_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_period_id}</span>
 						</div>
-		{END searchCtrlBlock_Period_Name}
+		{END searchCtrlBlock_period_id}
+																{BEGIN searchCtrlBlock_period_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_period_name}" {$filterRow_attrs_period_name}>
+			<label>{$label public_dhis2_periods period_name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_period_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_period_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_period_name}</span>
+						</div>
+		{END searchCtrlBlock_period_name}
 		
 
 	</div>
@@ -266,6 +266,14 @@
 		</a>
 	</li>
 {END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="dhis2_periods_import.php{$stateLink_full}"  title="" >
+				
+		Import		
+		</a>
+	</li>
+{END import_link}
 					</ul>
 	</span>
 </span>
@@ -314,6 +322,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -468,11 +484,11 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Period_ID"]:before {
-		content: "{$label DHIS2_Periods Period_ID}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="period_id"]:before {
+		content: "{$label public_dhis2_periods period_id}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Period_Name"]:before {
-		content: "{$label DHIS2_Periods Period_Name}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="period_name"]:before {
+		content: "{$label public_dhis2_periods period_name}";
 	}
 	}
 </style>
@@ -532,21 +548,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
-			data-field="Period_ID"
+			data-field="period_id"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_ID_fieldheadercolumn}
-	{BEGIN Period_ID_fieldheader}
-	<SPAN {$Period_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period_ID">
-	{$label DHIS2_Periods Period_ID }	{$arrow_icon_Period_ID}
+		{BEGIN period_id_fieldheadercolumn}
+	{BEGIN period_id_fieldheader}
+	<SPAN {$period_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id">
+	{$label public_dhis2_periods period_id }	{$arrow_icon_period_id}
 	</SPAN>
-	{END Period_ID_fieldheader}
-{END Period_ID_fieldheadercolumn}
+	{END period_id_fieldheader}
+{END period_id_fieldheadercolumn}
 
 	
 	</th>
@@ -557,21 +573,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_Name_class}	"
+		 r-ori-vert		 {$period_name_class}	"
 
-			data-field="Period_Name"
+			data-field="period_name"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_Name_fieldheadercolumn}
-	{BEGIN Period_Name_fieldheader}
-	<SPAN {$Period_Name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_Name" data-fieldname="Period_Name">
-	{$label DHIS2_Periods Period_Name }	{$arrow_icon_Period_Name}
+		{BEGIN period_name_fieldheadercolumn}
+	{BEGIN period_name_fieldheader}
+	<SPAN {$period_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_name" data-fieldname="period_name">
+	{$label public_dhis2_periods period_name }	{$arrow_icon_period_name}
 	</SPAN>
-	{END Period_Name_fieldheader}
-{END Period_Name_fieldheadercolumn}
+	{END period_name_fieldheader}
+{END period_name_fieldheadercolumn}
 
 	
 	</th>
@@ -655,19 +671,19 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
-			data-field="Period_ID"
+			data-field="period_id"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_ID_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period_ID" data-default-width >
-{$Period_ID_value}
+		{BEGIN period_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id" data-default-width >
+{$period_id_value}
 </span>
-{END Period_ID_fieldcolumn}	
+{END period_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -676,19 +692,19 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_Name_class}	"
+		 r-ori-vert		 {$period_name_class}	"
 
-			data-field="Period_Name"
+			data-field="period_name"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_Name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_Name" data-fieldname="Period_Name" data-default-width >
-{$Period_Name_value}
+		{BEGIN period_name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_name" data-fieldname="period_name" data-default-width >
+{$period_name_value}
 </span>
-{END Period_Name_fieldcolumn}	
+{END period_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 							</tr>
@@ -738,7 +754,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_periods_list"	
@@ -753,7 +769,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_Name_class}	"
+		 r-ori-vert		 {$period_name_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_periods_list"	

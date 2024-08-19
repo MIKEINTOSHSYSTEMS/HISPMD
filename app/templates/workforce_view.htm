@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel Workforce view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_workforce view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -102,7 +102,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_workforce_id}">
 		
-		{BEGIN workforce_id_label}{$label Workforce workforce_id }{END workforce_id_label}
+		{BEGIN workforce_id_label}{$label public_workforce workforce_id }{END workforce_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$workforce_id_value}	</div>
@@ -121,7 +121,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_region_id}">
 		
-		{BEGIN region_id_label}{$label Workforce region_id }{END region_id_label}
+		{BEGIN region_id_label}{$label public_workforce region_id }{END region_id_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$region_id_value}	</div>
@@ -140,7 +140,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_adequate_staff}">
 		
-		{BEGIN adequate_staff_label}{$label Workforce adequate_staff }{END adequate_staff_label}
+		{BEGIN adequate_staff_label}{$label public_workforce adequate_staff }{END adequate_staff_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$adequate_staff_value}	</div>
@@ -159,7 +159,7 @@
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_competency_index}">
 		
-		{BEGIN competency_index_label}{$label Workforce competency_index }{END competency_index_label}
+		{BEGIN competency_index_label}{$label public_workforce competency_index }{END competency_index_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
 		{$competency_index_value}	</div>

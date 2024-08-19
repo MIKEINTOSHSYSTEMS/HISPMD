@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel MFR_Region_Chart search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel mfr_region_chart search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,7 +166,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Region_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$region_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$lat_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$lng_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$count_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],

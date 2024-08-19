@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DHIS2_Periods search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_dhis2_periods search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,10 +166,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Period_ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$period_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$Period_Name_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+			{"text":{$period_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 		  ],
   "border": [ false, false, false, false ],

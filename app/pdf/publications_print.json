@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption Publications}',
+				text: '{$jscaption public_publications}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel Publications print}',
+				text: '{$jspagetitlelabel public_publications print}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -127,7 +127,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$jspagetitlelabel Publications print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_publications print}","hidden":"{$item_hide_print_header}","fontSize":30},
 				
 				
 			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
@@ -220,7 +220,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Publications publication_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_publications publication_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -249,7 +249,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Publications title }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_publications title }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -278,7 +278,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Publications level }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_publications level }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

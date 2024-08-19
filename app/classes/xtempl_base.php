@@ -137,31 +137,6 @@ class XTempl_Base
 
 		if( !$hideAddedCharts ) //#9607 1. Temporary fix
 		{
-			$this->assign_function("mfr_dashboard_reports_chart_chart","xt_showchart",
-			array(
-				"chartName"=>"mfr_dashboard_reports_chart",
-				"table"=>"MFR_Dashboard_Reports_Chart",
-				"ctype"=>"2DColumn"));
-			$this->assign_function("mfr_operational_status_chart_chart","xt_showchart",
-			array(
-				"chartName"=>"mfr_operational_status_chart",
-				"table"=>"MFR_Operational_Status_Chart",
-				"ctype"=>"2DBar"));
-			$this->assign_function("mfr_region_chart_chart","xt_showchart",
-			array(
-				"chartName"=>"mfr_region_chart",
-				"table"=>"MFR_Region_Chart",
-				"ctype"=>"2DDoughnut"));
-			$this->assign_function("mfr_zone_chart_chart","xt_showchart",
-			array(
-				"chartName"=>"mfr_zone_chart",
-				"table"=>"MFR_Zone_Chart",
-				"ctype"=>"Area"));
-			$this->assign_function("mfr_woreda_chart_chart","xt_showchart",
-			array(
-				"chartName"=>"mfr_woreda_chart",
-				"table"=>"MFR_Woreda_Chart",
-				"ctype"=>"Bubble"));
 			$this->assign_function("dhis2_analytics_chart_chart","xt_showchart",
 			array(
 				"chartName"=>"dhis2_analytics_chart",
@@ -177,6 +152,21 @@ class XTempl_Base
 				"chartName"=>"dhis2_reporting_rates_chart",
 				"table"=>"DHIS2_Reporting_Rates_Chart",
 				"ctype"=>"Area"));
+			$this->assign_function("mfr_dashboard_reports_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_dashboard_reports_chart",
+				"table"=>"mfr_dashboard_reports_chart",
+				"ctype"=>"2DColumn"));
+			$this->assign_function("mfr_operational_status_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_operational_status_chart",
+				"table"=>"mfr_operational_status_chart",
+				"ctype"=>"2DDoughnut"));
+			$this->assign_function("mfr_region_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"mfr_region_chart",
+				"table"=>"mfr_region_chart",
+				"ctype"=>"2DBar"));
 		}
 
 

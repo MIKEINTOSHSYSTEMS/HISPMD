@@ -2,7 +2,7 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-$requestTable = "MFR_Zone";
+$requestTable = "public.mfr_zone";
 $requestPage = "list";
 
 require_once("include/dbcommon.php");

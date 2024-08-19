@@ -64,9 +64,9 @@ $tdatadhis2_orgunit_groups[".listAjax"] = false;
 //	temporary
 //$tdatadhis2_orgunit_groups[".listAjax"] = false;
 
-	$tdatadhis2_orgunit_groups[".audit"] = false;
+	$tdatadhis2_orgunit_groups[".audit"] = true;
 
-	$tdatadhis2_orgunit_groups[".locking"] = false;
+	$tdatadhis2_orgunit_groups[".locking"] = true;
 
 
 $pages = $tdatadhis2_orgunit_groups[".defaultPages"];

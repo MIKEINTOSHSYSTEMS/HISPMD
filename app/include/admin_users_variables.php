@@ -2,7 +2,7 @@
 $strTableName="admin_users";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="hispmd_users";
+$strOriginalTableName="public.hispmdusers";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

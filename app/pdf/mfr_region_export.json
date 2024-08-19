@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel MFR_Region export}","hidden":"{$item_hide_export_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_mfr_region export}","hidden":"{$item_hide_export_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -106,10 +106,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Region_pdfvalue},"hidden":"{$item_hide_export_field}"},
+			{"text":{$region_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+			{"text":{$lat_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$lng_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$count_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],

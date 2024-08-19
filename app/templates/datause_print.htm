@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -38,7 +38,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel DataUse print}</h2>
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_datause print}</h2>
 	 
 		{BEGIN printtabheader}
 <span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
@@ -98,7 +98,7 @@
 		{BEGIN use_id_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="use_id" data-fieldname="use_id">
-	{$label DataUse use_id }	</span>
+	{$label public_datause use_id }	</span>
 {END use_id_fieldheadercolumn}
 
 	
@@ -121,7 +121,7 @@
 		{BEGIN institution_type_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="institution_type" data-fieldname="institution_type">
-	{$label DataUse institution_type }	</span>
+	{$label public_datause institution_type }	</span>
 {END institution_type_fieldheadercolumn}
 
 	
@@ -144,7 +144,7 @@
 		{BEGIN pmt_active_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="pmt_active" data-fieldname="pmt_active">
-	{$label DataUse pmt_active }	</span>
+	{$label public_datause pmt_active }	</span>
 {END pmt_active_fieldheadercolumn}
 
 	
@@ -167,7 +167,7 @@
 		{BEGIN baseline_assessment_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="baseline_assessment" data-fieldname="baseline_assessment">
-	{$label DataUse baseline_assessment }	</span>
+	{$label public_datause baseline_assessment }	</span>
 {END baseline_assessment_fieldheadercolumn}
 
 	

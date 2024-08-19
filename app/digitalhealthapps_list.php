@@ -2,7 +2,7 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-$requestTable = "DigitalHealthApps";
+$requestTable = "public.digitalhealthapps";
 $requestPage = "list";
 
 require_once("include/dbcommon.php");

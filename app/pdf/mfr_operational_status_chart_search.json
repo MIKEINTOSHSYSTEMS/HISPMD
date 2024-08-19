@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel MFR_Operational_Status_Chart search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel mfr_operational_status_chart search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,13 +166,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$OperationalStatus_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$operationalstatus_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$Status_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$Count_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+			{"text":{$status_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 		  ],
   "border": [ false, false, false, false ],

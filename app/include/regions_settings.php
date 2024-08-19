@@ -3,14 +3,14 @@ $tdataregions = array();
 $tdataregions[".searchableFields"] = array();
 $tdataregions[".ShortName"] = "regions";
 $tdataregions[".OwnerID"] = "";
-$tdataregions[".OriginalTable"] = "Regions";
+$tdataregions[".OriginalTable"] = "public.regions";
 
 
-$tdataregions[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataregions[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataregions[".originalPagesByType"] = $tdataregions[".pagesByType"];
-$tdataregions[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataregions[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataregions[".originalPages"] = $tdataregions[".pages"];
-$tdataregions[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataregions[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataregions[".originalDefaultPages"] = $tdataregions[".defaultPages"];
 
 //	field labels
@@ -51,7 +51,7 @@ $tdataregions[".entityType"] = 0;
 $tdataregions[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdataregions[".strOriginalTableName"] = "Regions";
+$tdataregions[".strOriginalTableName"] = "public.regions";
 
 	
 
@@ -67,9 +67,9 @@ $tdataregions[".listAjax"] = false;
 //	temporary
 //$tdataregions[".listAjax"] = false;
 
-	$tdataregions[".audit"] = false;
+	$tdataregions[".audit"] = true;
 
-	$tdataregions[".locking"] = false;
+	$tdataregions[".locking"] = true;
 
 
 $pages = $tdataregions[".defaultPages"];
@@ -143,7 +143,7 @@ $tdataregions[".addPageEvents"] = false;
 $tdataregions[".isUseTimeForSearch"] = false;
 
 
-$tdataregions[".badgeColor"] = "8FBC8B";
+$tdataregions[".badgeColor"] = "CD5C5C";
 
 
 $tdataregions[".allSearchFields"] = array();
@@ -188,7 +188,7 @@ $tdataregions[".orderindexes"] = array();
 
 
 $tdataregions[".sqlHead"] = "SELECT region_id,  	name,  	his_strategic_plan";
-$tdataregions[".sqlFrom"] = "FROM Regions";
+$tdataregions[".sqlFrom"] = "FROM \"public\".regions";
 $tdataregions[".sqlWhereExpr"] = "";
 $tdataregions[".sqlTail"] = "";
 
@@ -241,13 +241,12 @@ $tdataregions[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "region_id";
 	$fdata["GoodName"] = "region_id";
-	$fdata["ownerTable"] = "Regions";
-	$fdata["Label"] = GetFieldLabel("Regions","region_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.regions";
+	$fdata["Label"] = GetFieldLabel("public_regions","region_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -305,8 +304,7 @@ $tdataregions[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -321,16 +319,15 @@ $tdataregions[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -382,8 +379,8 @@ $tdataregions[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "name";
 	$fdata["GoodName"] = "name";
-	$fdata["ownerTable"] = "Regions";
-	$fdata["Label"] = GetFieldLabel("Regions","name");
+	$fdata["ownerTable"] = "public.regions";
+	$fdata["Label"] = GetFieldLabel("public_regions","name");
 	$fdata["FieldType"] = 200;
 
 
@@ -460,7 +457,7 @@ $tdataregions[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
+			$edata["EditParams"].= " maxlength=255";
 
 		$edata["controlWidth"] = 200;
 
@@ -520,9 +517,9 @@ $tdataregions[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "his_strategic_plan";
 	$fdata["GoodName"] = "his_strategic_plan";
-	$fdata["ownerTable"] = "Regions";
-	$fdata["Label"] = GetFieldLabel("Regions","his_strategic_plan");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.regions";
+	$fdata["Label"] = GetFieldLabel("public_regions","his_strategic_plan");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -598,15 +595,15 @@ $tdataregions[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -654,85 +651,25 @@ $tdataregions[".hideMobileList"] = array();
 		$tdataregions[".searchableFields"][] = "his_strategic_plan";
 
 
-$tables_data["Regions"]=&$tdataregions;
-$field_labels["Regions"] = &$fieldLabelsregions;
-$fieldToolTips["Regions"] = &$fieldToolTipsregions;
-$placeHolders["Regions"] = &$placeHoldersregions;
-$page_titles["Regions"] = &$pageTitlesregions;
+$tables_data["public.regions"]=&$tdataregions;
+$field_labels["public_regions"] = &$fieldLabelsregions;
+$fieldToolTips["public_regions"] = &$fieldToolTipsregions;
+$placeHolders["public_regions"] = &$placeHoldersregions;
+$page_titles["public_regions"] = &$pageTitlesregions;
 
 
-changeTextControlsToDate( "Regions" );
+changeTextControlsToDate( "public.regions" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["Regions"] = array();
-//	FinancialResources
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="FinancialResources";
-		$detailsParam["dOriginalTable"] = "FinancialResources";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "financialresources";
-	$detailsParam["dCaptionTable"] = GetTableCaption("FinancialResources");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["Regions"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["Regions"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["Regions"][$dIndex]["masterKeys"][]="region_id";
-
-				$detailsTablesData["Regions"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["Regions"][$dIndex]["detailKeys"][]="region_id";
-//	Workforce
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="Workforce";
-		$detailsParam["dOriginalTable"] = "Workforce";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "workforce";
-	$detailsParam["dCaptionTable"] = GetTableCaption("Workforce");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["Regions"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["Regions"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["Regions"][$dIndex]["masterKeys"][]="region_id";
-
-				$detailsTablesData["Regions"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["Regions"][$dIndex]["detailKeys"][]="region_id";
+$detailsTablesData["public.regions"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["Regions"] = array();
+$masterTablesData["public.regions"] = array();
 
 
 
@@ -757,7 +694,7 @@ function createSqlQuery_regions()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "region_id,  	name,  	his_strategic_plan";
-$proto0["m_strFrom"] = "FROM Regions";
+$proto0["m_strFrom"] = "FROM \"public\".regions";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -799,12 +736,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "region_id",
-	"m_strTable" => "Regions",
-	"m_srcTableName" => "Regions"
+	"m_strTable" => "public.regions",
+	"m_srcTableName" => "public.regions"
 ));
 
 $proto6["m_sql"] = "region_id";
-$proto6["m_srcTableName"] = "Regions";
+$proto6["m_srcTableName"] = "public.regions";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -813,12 +750,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "name",
-	"m_strTable" => "Regions",
-	"m_srcTableName" => "Regions"
+	"m_strTable" => "public.regions",
+	"m_srcTableName" => "public.regions"
 ));
 
 $proto8["m_sql"] = "name";
-$proto8["m_srcTableName"] = "Regions";
+$proto8["m_srcTableName"] = "public.regions";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -827,12 +764,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "his_strategic_plan",
-	"m_strTable" => "Regions",
-	"m_srcTableName" => "Regions"
+	"m_strTable" => "public.regions",
+	"m_srcTableName" => "public.regions"
 ));
 
 $proto10["m_sql"] = "his_strategic_plan";
-$proto10["m_srcTableName"] = "Regions";
+$proto10["m_srcTableName"] = "public.regions";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -842,8 +779,8 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "Regions";
-$proto13["m_srcTableName"] = "Regions";
+$proto13["m_strName"] = "public.regions";
+$proto13["m_srcTableName"] = "public.regions";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "region_id";
 $proto13["m_columns"][] = "name";
@@ -851,9 +788,9 @@ $proto13["m_columns"][] = "his_strategic_plan";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "Regions";
+$proto12["m_sql"] = "\"public\".regions";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "Regions";
+$proto12["m_srcTableName"] = "public.regions";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -875,7 +812,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="Regions";		
+$proto0["m_srcTableName"]="public.regions";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

@@ -12,36 +12,6 @@ require_once("classes/advancedsearchcontrol.php");
 require_once("classes/panelsearchcontrol.php");
 
 
-Security::processLogoutRequest();
-
-if( !isLogged() )
-{ 
-	Security::saveRedirectURL();
-	redirectToLogin();
-}
-
-$cname = postvalue("cname");
-$rname = postvalue("rname");
-
-$chrt_array = array();
-$rpt_array = array();
-require_once( "include/reportfunctions.php" );
-if( $rname )
-{
-	$rpt_array = getReportArray( $rname );
-	$accessGranted = @$rpt_array['status'] != "private" || @$rpt_array['owner'] != Security::getUserName();
-}
-else if( $cname )
-{
-	$chrt_array = getChartArray( $cname );
-	$accessGranted = @$chrt_array['status'] != "private" || @$chrt_array['owner'] != Security::getUserName();
-}
-else	
-	$accessGranted = CheckTablePermissions($strTableName, "S");
-if(!$accessGranted)
-{
-	HeaderRedirect("menu");
-}
 
 
 require_once('include/xtempl.php');

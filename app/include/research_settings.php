@@ -3,14 +3,14 @@ $tdataresearch = array();
 $tdataresearch[".searchableFields"] = array();
 $tdataresearch[".ShortName"] = "research";
 $tdataresearch[".OwnerID"] = "";
-$tdataresearch[".OriginalTable"] = "Research";
+$tdataresearch[".OriginalTable"] = "public.research";
 
 
-$tdataresearch[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataresearch[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataresearch[".originalPagesByType"] = $tdataresearch[".pagesByType"];
-$tdataresearch[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataresearch[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataresearch[".originalPages"] = $tdataresearch[".pages"];
-$tdataresearch[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataresearch[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataresearch[".originalDefaultPages"] = $tdataresearch[".defaultPages"];
 
 //	field labels
@@ -51,7 +51,7 @@ $tdataresearch[".entityType"] = 0;
 $tdataresearch[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdataresearch[".strOriginalTableName"] = "Research";
+$tdataresearch[".strOriginalTableName"] = "public.research";
 
 	
 
@@ -67,9 +67,9 @@ $tdataresearch[".listAjax"] = false;
 //	temporary
 //$tdataresearch[".listAjax"] = false;
 
-	$tdataresearch[".audit"] = false;
+	$tdataresearch[".audit"] = true;
 
-	$tdataresearch[".locking"] = false;
+	$tdataresearch[".locking"] = true;
 
 
 $pages = $tdataresearch[".defaultPages"];
@@ -143,7 +143,7 @@ $tdataresearch[".addPageEvents"] = false;
 $tdataresearch[".isUseTimeForSearch"] = false;
 
 
-$tdataresearch[".badgeColor"] = "DB7093";
+$tdataresearch[".badgeColor"] = "778899";
 
 
 $tdataresearch[".allSearchFields"] = array();
@@ -188,7 +188,7 @@ $tdataresearch[".orderindexes"] = array();
 
 
 $tdataresearch[".sqlHead"] = "SELECT research_id,  	title,  	conducted";
-$tdataresearch[".sqlFrom"] = "FROM Research";
+$tdataresearch[".sqlFrom"] = "FROM \"public\".research";
 $tdataresearch[".sqlWhereExpr"] = "";
 $tdataresearch[".sqlTail"] = "";
 
@@ -241,13 +241,12 @@ $tdataresearch[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "research_id";
 	$fdata["GoodName"] = "research_id";
-	$fdata["ownerTable"] = "Research";
-	$fdata["Label"] = GetFieldLabel("Research","research_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.research";
+	$fdata["Label"] = GetFieldLabel("public_research","research_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -305,8 +304,7 @@ $tdataresearch[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -321,16 +319,15 @@ $tdataresearch[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -382,8 +379,8 @@ $tdataresearch[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "title";
 	$fdata["GoodName"] = "title";
-	$fdata["ownerTable"] = "Research";
-	$fdata["Label"] = GetFieldLabel("Research","title");
+	$fdata["ownerTable"] = "public.research";
+	$fdata["Label"] = GetFieldLabel("public_research","title");
 	$fdata["FieldType"] = 200;
 
 
@@ -520,9 +517,9 @@ $tdataresearch[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "conducted";
 	$fdata["GoodName"] = "conducted";
-	$fdata["ownerTable"] = "Research";
-	$fdata["Label"] = GetFieldLabel("Research","conducted");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.research";
+	$fdata["Label"] = GetFieldLabel("public_research","conducted");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -598,15 +595,15 @@ $tdataresearch[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -654,25 +651,25 @@ $tdataresearch[".hideMobileList"] = array();
 		$tdataresearch[".searchableFields"][] = "conducted";
 
 
-$tables_data["Research"]=&$tdataresearch;
-$field_labels["Research"] = &$fieldLabelsresearch;
-$fieldToolTips["Research"] = &$fieldToolTipsresearch;
-$placeHolders["Research"] = &$placeHoldersresearch;
-$page_titles["Research"] = &$pageTitlesresearch;
+$tables_data["public.research"]=&$tdataresearch;
+$field_labels["public_research"] = &$fieldLabelsresearch;
+$fieldToolTips["public_research"] = &$fieldToolTipsresearch;
+$placeHolders["public_research"] = &$placeHoldersresearch;
+$page_titles["public_research"] = &$pageTitlesresearch;
 
 
-changeTextControlsToDate( "Research" );
+changeTextControlsToDate( "public.research" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["Research"] = array();
+$detailsTablesData["public.research"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["Research"] = array();
+$masterTablesData["public.research"] = array();
 
 
 
@@ -697,7 +694,7 @@ function createSqlQuery_research()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "research_id,  	title,  	conducted";
-$proto0["m_strFrom"] = "FROM Research";
+$proto0["m_strFrom"] = "FROM \"public\".research";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -739,12 +736,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "research_id",
-	"m_strTable" => "Research",
-	"m_srcTableName" => "Research"
+	"m_strTable" => "public.research",
+	"m_srcTableName" => "public.research"
 ));
 
 $proto6["m_sql"] = "research_id";
-$proto6["m_srcTableName"] = "Research";
+$proto6["m_srcTableName"] = "public.research";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -753,12 +750,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "title",
-	"m_strTable" => "Research",
-	"m_srcTableName" => "Research"
+	"m_strTable" => "public.research",
+	"m_srcTableName" => "public.research"
 ));
 
 $proto8["m_sql"] = "title";
-$proto8["m_srcTableName"] = "Research";
+$proto8["m_srcTableName"] = "public.research";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -767,12 +764,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "conducted",
-	"m_strTable" => "Research",
-	"m_srcTableName" => "Research"
+	"m_strTable" => "public.research",
+	"m_srcTableName" => "public.research"
 ));
 
 $proto10["m_sql"] = "conducted";
-$proto10["m_srcTableName"] = "Research";
+$proto10["m_srcTableName"] = "public.research";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -782,8 +779,8 @@ $proto0["m_fromlist"] = array();
 												$proto12=array();
 $proto12["m_link"] = "SQLL_MAIN";
 			$proto13=array();
-$proto13["m_strName"] = "Research";
-$proto13["m_srcTableName"] = "Research";
+$proto13["m_strName"] = "public.research";
+$proto13["m_srcTableName"] = "public.research";
 $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "research_id";
 $proto13["m_columns"][] = "title";
@@ -791,9 +788,9 @@ $proto13["m_columns"][] = "conducted";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
-$proto12["m_sql"] = "Research";
+$proto12["m_sql"] = "\"public\".research";
 $proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "Research";
+$proto12["m_srcTableName"] = "public.research";
 $proto14=array();
 $proto14["m_sql"] = "";
 $proto14["m_uniontype"] = "SQLL_UNKNOWN";
@@ -815,7 +812,7 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="Research";		
+$proto0["m_srcTableName"]="public.research";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

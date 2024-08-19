@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_adequate_staff}" {$filterRow_attrs_adequate_staff}>
-			<label>{$label Workforce adequate_staff }</label>
+			<label>{$label public_workforce adequate_staff }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_workforce_id}" {$filterRow_attrs_workforce_id}>
-			<label>{$label Workforce workforce_id }</label>
+			<label>{$label public_workforce workforce_id }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
-			<label>{$label Workforce region_id }</label>
+			<label>{$label public_workforce region_id }</label>
 
 							{$delCtrlButt}
 			
@@ -146,7 +146,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_competency_index}" {$filterRow_attrs_competency_index}>
-			<label>{$label Workforce competency_index }</label>
+			<label>{$label public_workforce competency_index }</label>
 
 							{$delCtrlButt}
 			
@@ -292,14 +292,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="workforce_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -348,6 +340,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -362,21 +362,7 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	 
-				<div class="row">
-			 
-				<div 
-	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
-	class=" r-ori-vert			col-md-12
-	
-">
-		 
-		{BEGIN mastertable_block}
-<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
-	{$showmasterfile}
-</div>
-{END mastertable_block}		</div>					</div>
-			</div>		
+	</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -409,14 +395,6 @@
 							Add new			</a>
 </span>
 {END add_link}
-	 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
-</span>
-{END inlineadd_link}
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
@@ -525,16 +503,16 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="workforce_id"]:before {
-		content: "{$label Workforce workforce_id}";
+		content: "{$label public_workforce workforce_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_id"]:before {
-		content: "{$label Workforce region_id}";
+		content: "{$label public_workforce region_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="adequate_staff"]:before {
-		content: "{$label Workforce adequate_staff}";
+		content: "{$label public_workforce adequate_staff}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="competency_index"]:before {
-		content: "{$label Workforce competency_index}";
+		content: "{$label public_workforce competency_index}";
 	}
 	}
 </style>
@@ -605,7 +583,7 @@
 		{BEGIN workforce_id_fieldheadercolumn}
 	{BEGIN workforce_id_fieldheader}
 	<SPAN {$workforce_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="workforce_id" data-fieldname="workforce_id">
-	{$label Workforce workforce_id }	{$arrow_icon_workforce_id}
+	{$label public_workforce workforce_id }	{$arrow_icon_workforce_id}
 	</SPAN>
 	{END workforce_id_fieldheader}
 {END workforce_id_fieldheadercolumn}
@@ -630,7 +608,7 @@
 		{BEGIN region_id_fieldheadercolumn}
 	{BEGIN region_id_fieldheader}
 	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
-	{$label Workforce region_id }	{$arrow_icon_region_id}
+	{$label public_workforce region_id }	{$arrow_icon_region_id}
 	</SPAN>
 	{END region_id_fieldheader}
 {END region_id_fieldheadercolumn}
@@ -655,7 +633,7 @@
 		{BEGIN adequate_staff_fieldheadercolumn}
 	{BEGIN adequate_staff_fieldheader}
 	<SPAN {$adequate_staff_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adequate_staff" data-fieldname="adequate_staff">
-	{$label Workforce adequate_staff }	{$arrow_icon_adequate_staff}
+	{$label public_workforce adequate_staff }	{$arrow_icon_adequate_staff}
 	</SPAN>
 	{END adequate_staff_fieldheader}
 {END adequate_staff_fieldheadercolumn}
@@ -680,7 +658,7 @@
 		{BEGIN competency_index_fieldheadercolumn}
 	{BEGIN competency_index_fieldheader}
 	<SPAN {$competency_index_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="competency_index" data-fieldname="competency_index">
-	{$label Workforce competency_index }	{$arrow_icon_competency_index}
+	{$label public_workforce competency_index }	{$arrow_icon_competency_index}
 	</SPAN>
 	{END competency_index_fieldheader}
 {END competency_index_fieldheadercolumn}
@@ -723,15 +701,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN inline_cancel}
-<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
-				
-								</a>
-</span>
-{END inline_cancel}
 	 
 		{BEGIN view_column}
 {BEGIN view_link}

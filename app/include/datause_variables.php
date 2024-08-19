@@ -1,8 +1,8 @@
 <?php
-$strTableName="DataUse";
+$strTableName="public.datause";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="DataUse";
+$strOriginalTableName="public.datause";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

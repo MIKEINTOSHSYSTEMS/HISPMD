@@ -3,14 +3,14 @@ $tdatadatause = array();
 $tdatadatause[".searchableFields"] = array();
 $tdatadatause[".ShortName"] = "datause";
 $tdatadatause[".OwnerID"] = "";
-$tdatadatause[".OriginalTable"] = "DataUse";
+$tdatadatause[".OriginalTable"] = "public.datause";
 
 
-$tdatadatause[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadatause[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatadatause[".originalPagesByType"] = $tdatadatause[".pagesByType"];
-$tdatadatause[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadatause[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatadatause[".originalPages"] = $tdatadatause[".pages"];
-$tdatadatause[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadatause[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatadatause[".originalDefaultPages"] = $tdatadatause[".defaultPages"];
 
 //	field labels
@@ -54,7 +54,7 @@ $tdatadatause[".entityType"] = 0;
 $tdatadatause[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatadatause[".strOriginalTableName"] = "DataUse";
+$tdatadatause[".strOriginalTableName"] = "public.datause";
 
 	
 
@@ -70,9 +70,9 @@ $tdatadatause[".listAjax"] = false;
 //	temporary
 //$tdatadatause[".listAjax"] = false;
 
-	$tdatadatause[".audit"] = false;
+	$tdatadatause[".audit"] = true;
 
-	$tdatadatause[".locking"] = false;
+	$tdatadatause[".locking"] = true;
 
 
 $pages = $tdatadatause[".defaultPages"];
@@ -146,7 +146,7 @@ $tdatadatause[".addPageEvents"] = false;
 $tdatadatause[".isUseTimeForSearch"] = false;
 
 
-$tdatadatause[".badgeColor"] = "6B8E23";
+$tdatadatause[".badgeColor"] = "778899";
 
 
 $tdatadatause[".allSearchFields"] = array();
@@ -192,7 +192,7 @@ $tdatadatause[".orderindexes"] = array();
 
 
 $tdatadatause[".sqlHead"] = "SELECT use_id,  	institution_type,  	pmt_active,  	baseline_assessment";
-$tdatadatause[".sqlFrom"] = "FROM DataUse";
+$tdatadatause[".sqlFrom"] = "FROM \"public\".datause";
 $tdatadatause[".sqlWhereExpr"] = "";
 $tdatadatause[".sqlTail"] = "";
 
@@ -245,13 +245,12 @@ $tdatadatause[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "use_id";
 	$fdata["GoodName"] = "use_id";
-	$fdata["ownerTable"] = "DataUse";
-	$fdata["Label"] = GetFieldLabel("DataUse","use_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.datause";
+	$fdata["Label"] = GetFieldLabel("public_datause","use_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -309,8 +308,7 @@ $tdatadatause[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -325,16 +323,15 @@ $tdatadatause[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -386,8 +383,8 @@ $tdatadatause[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "institution_type";
 	$fdata["GoodName"] = "institution_type";
-	$fdata["ownerTable"] = "DataUse";
-	$fdata["Label"] = GetFieldLabel("DataUse","institution_type");
+	$fdata["ownerTable"] = "public.datause";
+	$fdata["Label"] = GetFieldLabel("public_datause","institution_type");
 	$fdata["FieldType"] = 200;
 
 
@@ -464,7 +461,7 @@ $tdatadatause[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
+			$edata["EditParams"].= " maxlength=255";
 
 		$edata["controlWidth"] = 200;
 
@@ -524,9 +521,9 @@ $tdatadatause[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "pmt_active";
 	$fdata["GoodName"] = "pmt_active";
-	$fdata["ownerTable"] = "DataUse";
-	$fdata["Label"] = GetFieldLabel("DataUse","pmt_active");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.datause";
+	$fdata["Label"] = GetFieldLabel("public_datause","pmt_active");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -602,15 +599,15 @@ $tdatadatause[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -662,9 +659,9 @@ $tdatadatause[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "baseline_assessment";
 	$fdata["GoodName"] = "baseline_assessment";
-	$fdata["ownerTable"] = "DataUse";
-	$fdata["Label"] = GetFieldLabel("DataUse","baseline_assessment");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.datause";
+	$fdata["Label"] = GetFieldLabel("public_datause","baseline_assessment");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -740,15 +737,15 @@ $tdatadatause[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -796,25 +793,25 @@ $tdatadatause[".hideMobileList"] = array();
 		$tdatadatause[".searchableFields"][] = "baseline_assessment";
 
 
-$tables_data["DataUse"]=&$tdatadatause;
-$field_labels["DataUse"] = &$fieldLabelsdatause;
-$fieldToolTips["DataUse"] = &$fieldToolTipsdatause;
-$placeHolders["DataUse"] = &$placeHoldersdatause;
-$page_titles["DataUse"] = &$pageTitlesdatause;
+$tables_data["public.datause"]=&$tdatadatause;
+$field_labels["public_datause"] = &$fieldLabelsdatause;
+$fieldToolTips["public_datause"] = &$fieldToolTipsdatause;
+$placeHolders["public_datause"] = &$placeHoldersdatause;
+$page_titles["public_datause"] = &$pageTitlesdatause;
 
 
-changeTextControlsToDate( "DataUse" );
+changeTextControlsToDate( "public.datause" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["DataUse"] = array();
+$detailsTablesData["public.datause"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["DataUse"] = array();
+$masterTablesData["public.datause"] = array();
 
 
 
@@ -839,7 +836,7 @@ function createSqlQuery_datause()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "use_id,  	institution_type,  	pmt_active,  	baseline_assessment";
-$proto0["m_strFrom"] = "FROM DataUse";
+$proto0["m_strFrom"] = "FROM \"public\".datause";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -881,12 +878,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "use_id",
-	"m_strTable" => "DataUse",
-	"m_srcTableName" => "DataUse"
+	"m_strTable" => "public.datause",
+	"m_srcTableName" => "public.datause"
 ));
 
 $proto6["m_sql"] = "use_id";
-$proto6["m_srcTableName"] = "DataUse";
+$proto6["m_srcTableName"] = "public.datause";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -895,12 +892,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "institution_type",
-	"m_strTable" => "DataUse",
-	"m_srcTableName" => "DataUse"
+	"m_strTable" => "public.datause",
+	"m_srcTableName" => "public.datause"
 ));
 
 $proto8["m_sql"] = "institution_type";
-$proto8["m_srcTableName"] = "DataUse";
+$proto8["m_srcTableName"] = "public.datause";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -909,12 +906,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "pmt_active",
-	"m_strTable" => "DataUse",
-	"m_srcTableName" => "DataUse"
+	"m_strTable" => "public.datause",
+	"m_srcTableName" => "public.datause"
 ));
 
 $proto10["m_sql"] = "pmt_active";
-$proto10["m_srcTableName"] = "DataUse";
+$proto10["m_srcTableName"] = "public.datause";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -923,12 +920,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "baseline_assessment",
-	"m_strTable" => "DataUse",
-	"m_srcTableName" => "DataUse"
+	"m_strTable" => "public.datause",
+	"m_srcTableName" => "public.datause"
 ));
 
 $proto12["m_sql"] = "baseline_assessment";
-$proto12["m_srcTableName"] = "DataUse";
+$proto12["m_srcTableName"] = "public.datause";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -938,8 +935,8 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "DataUse";
-$proto15["m_srcTableName"] = "DataUse";
+$proto15["m_strName"] = "public.datause";
+$proto15["m_srcTableName"] = "public.datause";
 $proto15["m_columns"] = array();
 $proto15["m_columns"][] = "use_id";
 $proto15["m_columns"][] = "institution_type";
@@ -948,9 +945,9 @@ $proto15["m_columns"][] = "baseline_assessment";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "DataUse";
+$proto14["m_sql"] = "\"public\".datause";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "DataUse";
+$proto14["m_srcTableName"] = "public.datause";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -972,7 +969,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="DataUse";		
+$proto0["m_srcTableName"]="public.datause";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

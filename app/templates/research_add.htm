@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel Research add}</h2>
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel public_research add}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -111,21 +111,42 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN research_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_research_id}  r-vertical-field" 
+	data-signal-error-for="research_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="research_id" data-fieldname="research_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_research_id}">
+		{BEGIN research_id_label}{$label public_research research_id }{END research_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$research_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="research_id">
+		<div class="text-muted" >
+		{$tooltip public_research research_id }		</div>
+	</div>
+</div>
+
+
+{END research_id_fieldblock}
+											
 {BEGIN title_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_title}  r-vertical-field" 
 	data-signal-error-for="title{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="title" data-fieldname="title" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="title" data-fieldname="title" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_title}">
-		{BEGIN title_label}{$label Research title }{END title_label}
+		{BEGIN title_label}{$label public_research title }{END title_label}
 	</label>
 	<div class="r-edit-field">
 		{$title_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="title">
 		<div class="text-muted" >
-		{$tooltip Research title }		</div>
+		{$tooltip public_research title }		</div>
 	</div>
 </div>
 
@@ -137,16 +158,16 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_conducted}  r-vertical-field" 
 	data-signal-error-for="conducted{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="conducted" data-fieldname="conducted" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="conducted" data-fieldname="conducted" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_conducted}">
-		{BEGIN conducted_label}{$label Research conducted }{END conducted_label}
+		{BEGIN conducted_label}{$label public_research conducted }{END conducted_label}
 	</label>
 	<div class="r-edit-field">
 		{$conducted_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="conducted">
 		<div class="text-muted" >
-		{$tooltip Research conducted }		</div>
+		{$tooltip public_research conducted }		</div>
 	</div>
 </div>
 

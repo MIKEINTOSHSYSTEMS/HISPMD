@@ -40,20 +40,6 @@ function InitLookupLinks()
 
 	$lookupTableLinks = array();
 
-		if( !isset( $lookupTableLinks["Regions"] ) ) {
-			$lookupTableLinks["Regions"] = array();
-		}
-		if( !isset( $lookupTableLinks["Regions"]["financialresources.region_id"] )) {
-			$lookupTableLinks["Regions"]["financialresources.region_id"] = array();
-		}
-		$lookupTableLinks["Regions"]["financialresources.region_id"]["edit"] = array("table" => "FinancialResources", "field" => "region_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["Regions"] ) ) {
-			$lookupTableLinks["Regions"] = array();
-		}
-		if( !isset( $lookupTableLinks["Regions"]["workforce.region_id"] )) {
-			$lookupTableLinks["Regions"]["workforce.region_id"] = array();
-		}
-		$lookupTableLinks["Regions"]["workforce.region_id"]["edit"] = array("table" => "Workforce", "field" => "region_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
 			$lookupTableLinks["DHIS2_Indicator"] = array();
 		}
@@ -82,13 +68,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"] = array();
 		}
 		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "ou", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks[""] ) ) {
+			$lookupTableLinks[""] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_analytics1.pe"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_analytics1.pe"] = array();
+		if( !isset( $lookupTableLinks[""]["dhis2_analytics1.pe"] )) {
+			$lookupTableLinks[""]["dhis2_analytics1.pe"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_analytics1.pe"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "pe", "page" => "edit");
+		$lookupTableLinks[""]["dhis2_analytics1.pe"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "pe", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
 			$lookupTableLinks["DHIS2_Indicator"] = array();
 		}
@@ -145,13 +131,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"] = array();
 		}
 		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics_report.ou"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "ou", "page" => "search");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks[""] ) ) {
+			$lookupTableLinks[""] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_analytics_report.pe"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_analytics_report.pe"] = array();
+		if( !isset( $lookupTableLinks[""]["dhis2_analytics_report.pe"] )) {
+			$lookupTableLinks[""]["dhis2_analytics_report.pe"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_analytics_report.pe"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "pe", "page" => "search");
+		$lookupTableLinks[""]["dhis2_analytics_report.pe"]["search"] = array("table" => "DHIS2_Analytics Report", "field" => "pe", "page" => "search");
 		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
 			$lookupTableLinks["DHIS2_Datasets"] = array();
 		}
@@ -159,13 +145,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reports.Data Set"] = array();
 		}
 		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reports.Data Set"]["edit"] = array("table" => "DHIS2_Reports", "field" => "Data Set", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks[""] ) ) {
+			$lookupTableLinks[""] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_reports.Report Period"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_reports.Report Period"] = array();
+		if( !isset( $lookupTableLinks[""]["dhis2_reports.Report Period"] )) {
+			$lookupTableLinks[""]["dhis2_reports.Report Period"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_reports.Report Period"]["edit"] = array("table" => "DHIS2_Reports", "field" => "Report Period", "page" => "edit");
+		$lookupTableLinks[""]["dhis2_reports.Report Period"]["edit"] = array("table" => "DHIS2_Reports", "field" => "Report Period", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
 			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
 		}
@@ -187,13 +173,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate.dataSet"] = array();
 		}
 		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate.dataSet"]["edit"] = array("table" => "DHIS2_Reporting_Rate", "field" => "dataSet", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate.reportPeriod"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate.reportPeriod"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate.reportPeriod"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate.reportPeriod"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate.reportPeriod"]["edit"] = array("table" => "DHIS2_Reporting_Rate", "field" => "reportPeriod", "page" => "edit");
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate.reportPeriod"]["edit"] = array("table" => "DHIS2_Reporting_Rate", "field" => "reportPeriod", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
 			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
 		}
@@ -208,13 +194,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_chart1.dataSet"] = array();
 		}
 		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_chart1.dataSet"]["search"] = array("table" => "DHIS2_Reporting_Rate_Chart", "field" => "dataSet", "page" => "search");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate_chart1.reportPeriod"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate_chart1.reportPeriod"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_chart1.reportPeriod"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_chart1.reportPeriod"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate_chart1.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rate_Chart", "field" => "reportPeriod", "page" => "search");
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_chart1.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rate_Chart", "field" => "reportPeriod", "page" => "search");
 		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
 			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
 		}
@@ -229,13 +215,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_report1.dataSet"] = array();
 		}
 		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_report1.dataSet"]["search"] = array("table" => "DHIS2_Reporting_Rate_Report", "field" => "dataSet", "page" => "search");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate_report1.reportPeriod"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate_report1.reportPeriod"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_report1.reportPeriod"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_report1.reportPeriod"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rate_report1.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rate_Report", "field" => "reportPeriod", "page" => "search");
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_report1.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rate_Report", "field" => "reportPeriod", "page" => "search");
 		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
 			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
 		}
@@ -250,13 +236,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rates_chart.dataSet"] = array();
 		}
 		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rates_chart.dataSet"]["search"] = array("table" => "DHIS2_Reporting_Rates_Chart", "field" => "dataSet", "page" => "search");
-		if( !isset( $lookupTableLinks["DHIS2_Periods"] ) ) {
-			$lookupTableLinks["DHIS2_Periods"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rates_chart.reportPeriod"] )) {
-			$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rates_chart.reportPeriod"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rates_chart.reportPeriod"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rates_chart.reportPeriod"] = array();
 		}
-		$lookupTableLinks["DHIS2_Periods"]["dhis2_reporting_rates_chart.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rates_Chart", "field" => "reportPeriod", "page" => "search");
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rates_chart.reportPeriod"]["search"] = array("table" => "DHIS2_Reporting_Rates_Chart", "field" => "reportPeriod", "page" => "search");
 		if( !isset( $lookupTableLinks["MFR_Status"] ) ) {
 			$lookupTableLinks["MFR_Status"] = array();
 		}
@@ -320,6 +306,76 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"] = array();
 		}
 		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"]["edit"] = array("table" => "DHIS2_AIO_OrgUnit", "field" => "column", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
+			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports.type"] )) {
+			$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports.type"] = array();
+		}
+		$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports.type"]["edit"] = array("table" => "public.mfr_dashboard_reports", "field" => "type", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
+			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports.name"] )) {
+			$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports.name"] = array();
+		}
+		$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports.name"]["edit"] = array("table" => "public.mfr_dashboard_reports", "field" => "name", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"] ) ) {
+			$lookupTableLinks["public.mfr_operational_status"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status.operationalstatus"] )) {
+			$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status.operationalstatus"] = array();
+		}
+		$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status.operationalstatus"]["edit"] = array("table" => "public.mfr_operational_status", "field" => "operationalstatus", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"] ) ) {
+			$lookupTableLinks["public.mfr_operational_status"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status.status"] )) {
+			$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status.status"] = array();
+		}
+		$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status.status"]["edit"] = array("table" => "public.mfr_operational_status", "field" => "status", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_region"] ) ) {
+			$lookupTableLinks["public.mfr_region"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_region"]["mfr_region.region"] )) {
+			$lookupTableLinks["public.mfr_region"]["mfr_region.region"] = array();
+		}
+		$lookupTableLinks["public.mfr_region"]["mfr_region.region"]["edit"] = array("table" => "public.mfr_region", "field" => "region", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
+			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports_chart.type"] )) {
+			$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports_chart.type"] = array();
+		}
+		$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports_chart.type"]["search"] = array("table" => "mfr_dashboard_reports_chart", "field" => "type", "page" => "search");
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
+			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports_chart.name"] )) {
+			$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports_chart.name"] = array();
+		}
+		$lookupTableLinks["public.mfr_dashboard_reports"]["mfr_dashboard_reports_chart.name"]["search"] = array("table" => "mfr_dashboard_reports_chart", "field" => "name", "page" => "search");
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"] ) ) {
+			$lookupTableLinks["public.mfr_operational_status"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status_chart.operationalstatus"] )) {
+			$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status_chart.operationalstatus"] = array();
+		}
+		$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status_chart.operationalstatus"]["search"] = array("table" => "mfr_operational_status_chart", "field" => "operationalstatus", "page" => "search");
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"] ) ) {
+			$lookupTableLinks["public.mfr_operational_status"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status_chart.status"] )) {
+			$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status_chart.status"] = array();
+		}
+		$lookupTableLinks["public.mfr_operational_status"]["mfr_operational_status_chart.status"]["search"] = array("table" => "mfr_operational_status_chart", "field" => "status", "page" => "search");
+		if( !isset( $lookupTableLinks["public.mfr_region"] ) ) {
+			$lookupTableLinks["public.mfr_region"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"] )) {
+			$lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"] = array();
+		}
+		$lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"]["search"] = array("table" => "mfr_region_chart", "field" => "region", "page" => "search");
 }
 
 ?>

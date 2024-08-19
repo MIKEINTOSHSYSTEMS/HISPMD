@@ -378,32 +378,6 @@ class Chart
 		if( !$this->webchart )
 			return true;
 
-		if("DataQuality" == $this->chrt_array['tables'][0])
-			return true;
-		if("DataUse" == $this->chrt_array['tables'][0])
-			return true;
-		if("DigitalHealth" == $this->chrt_array['tables'][0])
-			return true;
-		if("DigitalHealthApps" == $this->chrt_array['tables'][0])
-			return true;
-		if("FinancialResources" == $this->chrt_array['tables'][0])
-			return true;
-		if("HISGovernance" == $this->chrt_array['tables'][0])
-			return true;
-		if("HISPartners" == $this->chrt_array['tables'][0])
-			return true;
-		if("HealthFacilities" == $this->chrt_array['tables'][0])
-			return true;
-		if("HealthUnits" == $this->chrt_array['tables'][0])
-			return true;
-		if("Publications" == $this->chrt_array['tables'][0])
-			return true;
-		if("Regions" == $this->chrt_array['tables'][0])
-			return true;
-		if("Research" == $this->chrt_array['tables'][0])
-			return true;
-		if("Workforce" == $this->chrt_array['tables'][0])
-			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
@@ -415,28 +389,6 @@ class Chart
 		if("MFR_Region_Report" == $this->chrt_array['tables'][0])
 			return true;
 		if("MFR_Region_Report" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Dashboard_Reports" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Dashboard_Reports" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Operational_Status" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Region" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Zone" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Woreda" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Operational_Status" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Region" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Zone" == $this->chrt_array['tables'][0])
-			return true;
-		if("MFR_Woreda" == $this->chrt_array['tables'][0])
-			return true;
-		if("AI_Data_Assistant" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
@@ -456,8 +408,6 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("DHIS2_Periods" == $this->chrt_array['tables'][0])
-			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
@@ -482,14 +432,6 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("hispmd_users" == $this->chrt_array['tables'][0])
-			return true;
-		if("hispmd_ugrights" == $this->chrt_array['tables'][0])
-			return true;
-		if("hispmd_ugmembers" == $this->chrt_array['tables'][0])
-			return true;
-		if("hispmd_users" == $this->chrt_array['tables'][0])
-			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
@@ -505,6 +447,78 @@ class Chart
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ai_data_assistant" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.dataquality" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.datause" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.dhis2_periods" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.digitalhealth" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.digitalhealthapps" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.financialresources" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.healthfacilities" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.healthunits" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hisgovernance" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispartners" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_dashboard_reports" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_operational_status" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_region" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_woreda" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_zone" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.publications" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.regions" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.research" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.workforce" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmdusers" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd_ugrights" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd_ugmembers" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmdusers" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_dashboard_reports" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_operational_status" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.mfr_region" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_additional_organizational_and_behavioral_assessment" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_facility_level_rhis_performance_diagnostic" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_facility_office_checklist" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_healthpost_level_rhis_performance_diagnostic" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_national_prism_woreda_level_diagnostic" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.ethprism_organizational_and_behavioral_assessment" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd_prism_settings" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd__audit" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

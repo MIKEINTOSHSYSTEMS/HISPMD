@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel HealthUnits export}","hidden":"{$item_hide_export_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_healthunits export}","hidden":"{$item_hide_export_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],

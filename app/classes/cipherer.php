@@ -333,7 +333,7 @@ class RunnerCipherer
 	public static function getForLogin( $loginSet = null )
 	{	
 		if( !!Security::loginTable() ) {
-			return new RunnerCipherer( "hispmd_users", $loginSet);
+			return new RunnerCipherer( "public.hispmdusers", $loginSet);
 		}
 		return new RunnerCipherer( GLOBAL_PAGES, null);
 	}	

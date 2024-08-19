@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,7 +41,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel HISGovernance edit}</h2>
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel public_hisgovernance edit}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -106,21 +106,42 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN governance_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_governance_id}  r-vertical-field" 
+	data-signal-error-for="governance_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="governance_id" data-fieldname="governance_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_governance_id}">
+		{BEGIN governance_id_label}{$label public_hisgovernance governance_id }{END governance_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$governance_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="governance_id">
+		<div class="text-muted" >
+		{$tooltip public_hisgovernance governance_id }		</div>
+	</div>
+</div>
+
+
+{END governance_id_fieldblock}
+											
 {BEGIN level_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_level}  r-vertical-field" 
 	data-signal-error-for="level{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="level" data-fieldname="level" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="level" data-fieldname="level" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_level}">
-		{BEGIN level_label}{$label HISGovernance level }{END level_label}
+		{BEGIN level_label}{$label public_hisgovernance level }{END level_label}
 	</label>
 	<div class="r-edit-field">
 		{$level_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="level">
 		<div class="text-muted" >
-		{$tooltip HISGovernance level }		</div>
+		{$tooltip public_hisgovernance level }		</div>
 	</div>
 </div>
 
@@ -132,16 +153,16 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_is_functional}  r-vertical-field" 
 	data-signal-error-for="is_functional{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="is_functional" data-fieldname="is_functional" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="is_functional" data-fieldname="is_functional" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_is_functional}">
-		{BEGIN is_functional_label}{$label HISGovernance is_functional }{END is_functional_label}
+		{BEGIN is_functional_label}{$label public_hisgovernance is_functional }{END is_functional_label}
 	</label>
 	<div class="r-edit-field">
 		{$is_functional_editcontrol}	</div>
 	<div class="r-edit-tooltip" data-helpfor="is_functional">
 		<div class="text-muted" >
-		{$tooltip HISGovernance is_functional }		</div>
+		{$tooltip public_hisgovernance is_functional }		</div>
 	</div>
 </div>
 

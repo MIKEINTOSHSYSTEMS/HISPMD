@@ -2,7 +2,7 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-$requestTable = "MFR_Dashboard_Reports_Chart";
+$requestTable = "mfr_dashboard_reports_chart";
 $requestPage = "list";
 
 require_once("include/dbcommon.php");

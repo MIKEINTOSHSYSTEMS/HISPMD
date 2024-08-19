@@ -1,7 +1,7 @@
 <?php
 class AuditTrailTable
 {
-	var $logTableName="";
+	var $logTableName="public.hispmd__audit";
 	var $params;
 
 	var $strLogin="login";
@@ -40,6 +40,8 @@ class AuditTrailTable
 		global $auditMaxFieldLength;
 
 		$this->connection = $cman->getForAudit();
+		$this->attLogin=3;
+		$this->timeLogin=5;
 		$userid="";
 		if( Security::getUserName())
 			$userid = Security::getUserName();
@@ -51,18 +53,70 @@ class AuditTrailTable
 
     function LogLogin($pUsername)
     {
+		global $globalEvents;
+		$retval=true;
+		$table=Security::loginTable();
+		$this->params[1]=$pUsername;
+		$arr=array();
+		$this->params=array($_SERVER["REMOTE_ADDR"], Security::getUserName() );
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strLogin, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$this->insert(now(), $this->params[0], $this->params[1], $table, $this->strLogin, "");
+		}
+		return $retval;
     }
 
     function LogLoginFailed($pUsername)
     {
+		global $globalEvents;
+		$retval=true;
+		$table=Security::loginTable();
+		$this->params[1]=$pUsername;
+		$arr=array();
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strFailLogin, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$this->insert(now(), $this->params[0], $this->params[1], $table, $this->strFailLogin, "");
+		}
+		$this->params=array($_SERVER["REMOTE_ADDR"],"");
+		return $retval;
     }
 
     function LogLogout()
     {
+	global $globalEvents;
+	if( Security::getUserName() !="" )
+	{
+		$retval=true;
+		$table=Security::loginTable();
+		$arr=array();
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strLogout, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$this->insert(now(), $this->params[0], $this->params[1], $table, $this->strLogout, "");
+		}
+		return $retval;
+	}
     }
 
     function LogChPassword( $username )
     {
+		global $globalEvents;
+		$retval=true;
+		$table=Security::loginTable();
+		$arr=array();
+		$this->params[ 1 ] = $username;
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strChPass, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$this->insert(now(), $this->params[0], $this->params[1], $table, $this->strChPass, "");
+		}
+		return $retval;
     }
 
     function LogAdd($str_table,$values,$keys)
@@ -356,145 +410,49 @@ class AuditTrailTable
 
 	function logValueEnable($table)
 	{
-		if($table=="DataQuality")
-		{
-			return false;
-		}
-		if($table=="DataUse")
-		{
-			return false;
-		}
-		if($table=="DigitalHealth")
-		{
-			return false;
-		}
-		if($table=="DigitalHealthApps")
-		{
-			return false;
-		}
-		if($table=="FinancialResources")
-		{
-			return false;
-		}
-		if($table=="HISGovernance")
-		{
-			return false;
-		}
-		if($table=="HISPartners")
-		{
-			return false;
-		}
-		if($table=="HealthFacilities")
-		{
-			return false;
-		}
-		if($table=="HealthUnits")
-		{
-			return false;
-		}
-		if($table=="Publications")
-		{
-			return false;
-		}
-		if($table=="Regions")
-		{
-			return false;
-		}
-		if($table=="Research")
-		{
-			return false;
-		}
-		if($table=="Workforce")
-		{
-			return false;
-		}
 		if($table=="MFR_Dashboard_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Status_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Facilities")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Region_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Zone_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Woreda_Report")
 		{
-			return false;
-		}
-		if($table=="MFR_Dashboard_Reports_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Dashboard_Reports")
-		{
-			return false;
-		}
-		if($table=="MFR_Operational_Status")
-		{
-			return false;
-		}
-		if($table=="MFR_Region")
-		{
-			return false;
-		}
-		if($table=="MFR_Zone")
-		{
-			return false;
-		}
-		if($table=="MFR_Woreda")
-		{
-			return false;
-		}
-		if($table=="MFR_Operational_Status_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Region_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Zone_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Woreda_Chart")
-		{
-			return false;
-		}
-		if($table=="AI_Data_Assistant")
-		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Indicators")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Organisation_Units")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Analytics")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Indicator")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Organisation_Unit")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Analytics Chart")
 		{
@@ -506,19 +464,15 @@ class AuditTrailTable
 		}
 		if($table=="DHIS2_Reports")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Datasets")
 		{
-			return false;
-		}
-		if($table=="DHIS2_Periods")
-		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Reporting_Rate")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Reporting_Rate_Chart")
 		{
@@ -538,77 +492,205 @@ class AuditTrailTable
 		}
 		if($table=="MFR_Facility")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Regions")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Zones")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Woredas")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Facility_Types")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Operational_Statuses")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Status")
 		{
-			return false;
-		}
-		if($table=="hispmd_users")
-		{
-			return false;
-		}
-		if($table=="admin_rights")
-		{
-			return false;
-		}
-		if($table=="admin_members")
-		{
-			return false;
-		}
-		if($table=="admin_users")
-		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Country")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Regions")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Zone")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Woredas")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Groups")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Group_Sets")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_AIO_OrgUnit")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Distributions")
+		{
+			return true;
+		}
+		if($table=="public.ai_data_assistant")
+		{
+			return true;
+		}
+		if($table=="public.dataquality")
+		{
+			return true;
+		}
+		if($table=="public.datause")
+		{
+			return true;
+		}
+		if($table=="public.dhis2_periods")
+		{
+			return true;
+		}
+		if($table=="public.digitalhealth")
+		{
+			return true;
+		}
+		if($table=="public.digitalhealthapps")
+		{
+			return true;
+		}
+		if($table=="public.financialresources")
+		{
+			return true;
+		}
+		if($table=="public.healthfacilities")
+		{
+			return true;
+		}
+		if($table=="public.healthunits")
+		{
+			return true;
+		}
+		if($table=="public.hisgovernance")
+		{
+			return true;
+		}
+		if($table=="public.hispartners")
+		{
+			return true;
+		}
+		if($table=="public.mfr_dashboard_reports")
+		{
+			return true;
+		}
+		if($table=="public.mfr_operational_status")
+		{
+			return true;
+		}
+		if($table=="public.mfr_region")
+		{
+			return true;
+		}
+		if($table=="public.mfr_woreda")
+		{
+			return true;
+		}
+		if($table=="public.mfr_zone")
+		{
+			return true;
+		}
+		if($table=="public.publications")
+		{
+			return true;
+		}
+		if($table=="public.regions")
+		{
+			return true;
+		}
+		if($table=="public.research")
+		{
+			return true;
+		}
+		if($table=="public.workforce")
+		{
+			return true;
+		}
+		if($table=="public.hispmdusers")
+		{
+			return true;
+		}
+		if($table=="admin_rights")
+		{
+			return true;
+		}
+		if($table=="admin_members")
+		{
+			return true;
+		}
+		if($table=="admin_users")
+		{
+			return true;
+		}
+		if($table=="mfr_dashboard_reports_chart")
+		{
+			return false;
+		}
+		if($table=="mfr_operational_status_chart")
+		{
+			return false;
+		}
+		if($table=="mfr_region_chart")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_office_checklist")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.hispmd_prism_settings")
+		{
+			return false;
+		}
+		if($table=="PRISM Dashboard")
+		{
+			return false;
+		}
+		if($table=="hispmd_users_audit")
 		{
 			return false;
 		}
@@ -684,18 +766,72 @@ class AuditTrailFile
 
     function LogLogin($pUsername)
     {
-		    }
+				global $globalEvents;
+		$retval=true;
+		$table=Security::loginTable();
+		$this->params[1]=$pUsername;
+		$arr=array();
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strLogin, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$str=format_datetime_custom(db2time(now()),"MMM dd,yyyy").chr(9).format_datetime_custom(db2time(now()),"HH:mm:ss").chr(9).$this->params[0].chr(9).$this->params[1].chr(9).$table.chr(9).$this->strLogin."\r\n";
+			$this->writeToLogFile( $str );
+		}
+		return $retval;
+    }
 
     function LogLoginFailed($pUsername)
     {
-		    }
+				global $globalEvents;
+		$retval=true;
+		$table=Security::loginTable();
+		$this->params[1]=$pUsername;
+		$arr=array();
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strFailLogin, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$str=format_datetime_custom(db2time(now()),"MMM dd,yyyy").chr(9).format_datetime_custom(db2time(now()),"HH:mm:ss").chr(9).$this->params[0].chr(9).$this->params[1].chr(9).$table.chr(9).$this->strFailLogin."\r\n";
+			$this->writeToLogFile( $str );
+		}
+		return $retval;
+    }
 
     function LogLogout()
     {
+		global $globalEvents;
+		if(Security::getUserName() != "" )
+		{
+			$retval=true;
+			$table=Security::loginTable();
+			$arr=array();
+			if($globalEvents->exists("OnAuditLog"))
+				$retval=$globalEvents->OnAuditLog($this->strLogout, $this->params, $table, $arr, $arr, $arr);
+			if($retval)
+			{
+				$str=format_datetime_custom(db2time(now()),"MMM dd,yyyy").chr(9).format_datetime_custom(db2time(now()),"HH:mm:ss").chr(9).$this->params[0].chr(9).$this->params[1].chr(9).$table.chr(9).$this->strLogout."\r\n";
+				$this->writeToLogFile( $str );
+			}
+			return $retval;
+		}
     }
 
     function LogChPassword( $username )
     {
+		global $globalEvents;
+		$retval=true;
+		$table=Security::loginTable();
+		$arr=array();
+		$this->params[ 1 ] = $username;
+		if($globalEvents->exists("OnAuditLog"))
+			$retval=$globalEvents->OnAuditLog($this->strChPass, $this->params, $table, $arr, $arr, $arr);
+		if($retval)
+		{
+			$str=format_datetime_custom(db2time(now()),"MMM dd,yyyy").chr(9).format_datetime_custom(db2time(now()),"HH:mm:ss").chr(9).$this->params[0].chr(9).$this->params[1].chr(9).$table.chr(9).$this->strChPass."\r\n";
+			$this->writeToLogFile( $str );
+		}
+		return $retval;
     }
 
     function LogAdd($str_table,$values,$keys)
@@ -920,145 +1056,49 @@ class AuditTrailFile
 
 	function logValueEnable($table)
 	{
-		if($table=="DataQuality")
-		{
-			return false;
-		}
-		if($table=="DataUse")
-		{
-			return false;
-		}
-		if($table=="DigitalHealth")
-		{
-			return false;
-		}
-		if($table=="DigitalHealthApps")
-		{
-			return false;
-		}
-		if($table=="FinancialResources")
-		{
-			return false;
-		}
-		if($table=="HISGovernance")
-		{
-			return false;
-		}
-		if($table=="HISPartners")
-		{
-			return false;
-		}
-		if($table=="HealthFacilities")
-		{
-			return false;
-		}
-		if($table=="HealthUnits")
-		{
-			return false;
-		}
-		if($table=="Publications")
-		{
-			return false;
-		}
-		if($table=="Regions")
-		{
-			return false;
-		}
-		if($table=="Research")
-		{
-			return false;
-		}
-		if($table=="Workforce")
-		{
-			return false;
-		}
 		if($table=="MFR_Dashboard_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Status_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Facilities")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Region_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Zone_Report")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Woreda_Report")
 		{
-			return false;
-		}
-		if($table=="MFR_Dashboard_Reports_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Dashboard_Reports")
-		{
-			return false;
-		}
-		if($table=="MFR_Operational_Status")
-		{
-			return false;
-		}
-		if($table=="MFR_Region")
-		{
-			return false;
-		}
-		if($table=="MFR_Zone")
-		{
-			return false;
-		}
-		if($table=="MFR_Woreda")
-		{
-			return false;
-		}
-		if($table=="MFR_Operational_Status_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Region_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Zone_Chart")
-		{
-			return false;
-		}
-		if($table=="MFR_Woreda_Chart")
-		{
-			return false;
-		}
-		if($table=="AI_Data_Assistant")
-		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Indicators")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Organisation_Units")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Analytics")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Indicator")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Organisation_Unit")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Analytics Chart")
 		{
@@ -1070,19 +1110,15 @@ class AuditTrailFile
 		}
 		if($table=="DHIS2_Reports")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Datasets")
 		{
-			return false;
-		}
-		if($table=="DHIS2_Periods")
-		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Reporting_Rate")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_Reporting_Rate_Chart")
 		{
@@ -1102,77 +1138,205 @@ class AuditTrailFile
 		}
 		if($table=="MFR_Facility")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Regions")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Zones")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Woredas")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Facility_Types")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Operational_Statuses")
 		{
-			return false;
+			return true;
 		}
 		if($table=="MFR_Status")
 		{
-			return false;
-		}
-		if($table=="hispmd_users")
-		{
-			return false;
-		}
-		if($table=="admin_rights")
-		{
-			return false;
-		}
-		if($table=="admin_members")
-		{
-			return false;
-		}
-		if($table=="admin_users")
-		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Country")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Regions")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Zone")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Woredas")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Groups")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Group_Sets")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_AIO_OrgUnit")
 		{
-			return false;
+			return true;
 		}
 		if($table=="DHIS2_OrgUnit_Distributions")
+		{
+			return true;
+		}
+		if($table=="public.ai_data_assistant")
+		{
+			return true;
+		}
+		if($table=="public.dataquality")
+		{
+			return true;
+		}
+		if($table=="public.datause")
+		{
+			return true;
+		}
+		if($table=="public.dhis2_periods")
+		{
+			return true;
+		}
+		if($table=="public.digitalhealth")
+		{
+			return true;
+		}
+		if($table=="public.digitalhealthapps")
+		{
+			return true;
+		}
+		if($table=="public.financialresources")
+		{
+			return true;
+		}
+		if($table=="public.healthfacilities")
+		{
+			return true;
+		}
+		if($table=="public.healthunits")
+		{
+			return true;
+		}
+		if($table=="public.hisgovernance")
+		{
+			return true;
+		}
+		if($table=="public.hispartners")
+		{
+			return true;
+		}
+		if($table=="public.mfr_dashboard_reports")
+		{
+			return true;
+		}
+		if($table=="public.mfr_operational_status")
+		{
+			return true;
+		}
+		if($table=="public.mfr_region")
+		{
+			return true;
+		}
+		if($table=="public.mfr_woreda")
+		{
+			return true;
+		}
+		if($table=="public.mfr_zone")
+		{
+			return true;
+		}
+		if($table=="public.publications")
+		{
+			return true;
+		}
+		if($table=="public.regions")
+		{
+			return true;
+		}
+		if($table=="public.research")
+		{
+			return true;
+		}
+		if($table=="public.workforce")
+		{
+			return true;
+		}
+		if($table=="public.hispmdusers")
+		{
+			return true;
+		}
+		if($table=="admin_rights")
+		{
+			return true;
+		}
+		if($table=="admin_members")
+		{
+			return true;
+		}
+		if($table=="admin_users")
+		{
+			return true;
+		}
+		if($table=="mfr_dashboard_reports_chart")
+		{
+			return false;
+		}
+		if($table=="mfr_operational_status_chart")
+		{
+			return false;
+		}
+		if($table=="mfr_region_chart")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_facility_office_checklist")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
+		{
+			return false;
+		}
+		if($table=="public.ethprism_organizational_and_behavioral_assessment")
+		{
+			return false;
+		}
+		if($table=="public.hispmd_prism_settings")
+		{
+			return false;
+		}
+		if($table=="PRISM Dashboard")
+		{
+			return false;
+		}
+		if($table=="hispmd_users_audit")
 		{
 			return false;
 		}

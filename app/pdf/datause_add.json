@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DataUse add}","hidden":"{$item_hide_add_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_datause add}","hidden":"{$item_hide_add_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,13 +160,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel DataUse institution_type }","bold":true},{"text":{$institution_type_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_datause use_id }","bold":true},{"text":{$use_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel DataUse pmt_active }","bold":true},{"text":{$pmt_active_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_datause institution_type }","bold":true},{"text":{$institution_type_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel DataUse baseline_assessment }","bold":true},{"text":{$baseline_assessment_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_datause pmt_active }","bold":true},{"text":{$pmt_active_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_datause baseline_assessment }","bold":true},{"text":{$baseline_assessment_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

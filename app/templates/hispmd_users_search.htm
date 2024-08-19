@@ -87,56 +87,7 @@
 </span>
 			</span>
 							 
-							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
-				{BEGIN guestloginbutton}
-<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
-</span>
-{END guestloginbutton}
-			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
-				{BEGIN loggedas_message}
-<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown ">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
-						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-							{BEGIN userinfo_link}
-	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
-				<a  href="userinfo.php"  title="" >
-				
-		User Profile		
-		</a>
-	</li>
-{END userinfo_link}
-							{BEGIN logoutbutton}
-	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$logoutlink_attrs}  title="" >
-				
-		Log out		
-		</a>
-	</li>
-{END logoutbutton}
-							{BEGIN adminarea_link}
-	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
-				<a  href="admin_rights_list.php"  title="" >
-				
-		Admin Area		
-		</a>
-	</li>
-{END adminarea_link}
-					</ul>
-	</span>
-</span>
-{END loggedas_message}
-			</span>
-								</nav>
+													</nav>
 {END supertop_block}
 						{$locking}
 				</div>
@@ -154,7 +105,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel hispmd_users search}</h2>
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel public_hispmd_users search}</h2>
 		</div>					</div>
 			</div>		
 {END top_block}
@@ -215,27 +166,27 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN ID_fieldblock}
+{BEGIN id_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_ID}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="ID{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="ID" data-fieldname="ID" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_ID}">
-		{$label hispmd_users ID }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_id}">
+		{$label public_hispmd_users id }	</label>
 	<div class="r-search-option">
-		{$searchtype_ID}
+		{$searchtype_id}
 	</div>
 	<div class="r-search-field">
-		{$ID_editcontrol}	</div>
+		{$id_editcontrol}	</div>
 	<div class="r-search-field">
-		{$ID_editcontrol1}
+		{$id_editcontrol1}
 	</div>
 	
 </div>
 
-{END ID_fieldblock}
+{END id_fieldblock}
 											
 {BEGIN username_fieldblock}
 
@@ -245,7 +196,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_username}">
-		{$label hispmd_users username }	</label>
+		{$label public_hispmd_users username }	</label>
 	<div class="r-search-option">
 		{$searchtype_username}
 	</div>
@@ -267,7 +218,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_password}">
-		{$label hispmd_users password }	</label>
+		{$label public_hispmd_users password }	</label>
 	<div class="r-search-option">
 		{$searchtype_password}
 	</div>
@@ -289,7 +240,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_email}">
-		{$label hispmd_users email }	</label>
+		{$label public_hispmd_users email }	</label>
 	<div class="r-search-option">
 		{$searchtype_email}
 	</div>
@@ -311,7 +262,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_fullname}">
-		{$label hispmd_users fullname }	</label>
+		{$label public_hispmd_users fullname }	</label>
 	<div class="r-search-option">
 		{$searchtype_fullname}
 	</div>
@@ -333,7 +284,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_groupid}">
-		{$label hispmd_users groupid }	</label>
+		{$label public_hispmd_users groupid }	</label>
 	<div class="r-search-option">
 		{$searchtype_groupid}
 	</div>
@@ -355,7 +306,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_active}">
-		{$label hispmd_users active }	</label>
+		{$label public_hispmd_users active }	</label>
 	<div class="r-search-option">
 		{$searchtype_active}
 	</div>
@@ -377,7 +328,7 @@
 
 
 	<label class="r-search-label control-label" for="{$labelfor_ext_security_id}">
-		{$label hispmd_users ext_security_id }	</label>
+		{$label public_hispmd_users ext_security_id }	</label>
 	<div class="r-search-option">
 		{$searchtype_ext_security_id}
 	</div>

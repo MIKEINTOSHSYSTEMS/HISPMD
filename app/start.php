@@ -9,6 +9,12 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+<!--
+<LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+<link href="assets/img/mohfavicon.png" rel="icon">
+<LINK rel="shortcut icon" type="image/png" href="mohfavicon.png" />
+-->
+
   <!-- Favicons -->
   <link href="assets/img/mohfavicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">

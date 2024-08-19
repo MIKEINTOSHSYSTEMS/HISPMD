@@ -2,7 +2,7 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-$requestTable = "AI_Data_Assistant";
+$requestTable = "public.ai_data_assistant";
 $requestPage = "list";
 
 require_once("include/dbcommon.php");

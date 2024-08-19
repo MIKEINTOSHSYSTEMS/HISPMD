@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -150,6 +150,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -189,10 +197,7 @@
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
-	<p><strong>Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot</strong></p></span>
-			{END firstAboveGridCell}	
+				{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -200,6 +205,44 @@
 	
 ">
 			</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="ai_data_assistant_list" data-small > 
+	Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot
+
+<br></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	<br></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event MERQ_AI_Data_Assistant_snippet}
+</span>		</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>
@@ -209,10 +252,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="chatbot"]:before {
-		content: "{$label AI_Data_Assistant chatbot}";
-	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -232,21 +272,11 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$chatbot_class}	"
+		 r-ori-vert			"
 
-			data-field="chatbot"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
-
-	 
-		{BEGIN chatbot_fieldheadercolumn}
-	{BEGIN chatbot_fieldheader}
-	<SPAN {$chatbot_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="chatbot" data-fieldname="chatbot">
-	{$label AI_Data_Assistant chatbot }	{$arrow_icon_chatbot}
-	</SPAN>
-	{END chatbot_fieldheader}
-{END chatbot_fieldheadercolumn}
 
 	
 	</th>
@@ -268,19 +298,13 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$chatbot_class}	"
+		 r-ori-vert			"
 
-			data-field="chatbot"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-		{BEGIN chatbot_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="chatbot" data-fieldname="chatbot" data-default-width >
-{$chatbot_value}
-</span>
-{END chatbot_fieldcolumn}	
+	
 	</td>
 	{END cellblock_grid_cell_field}
 							</tr>
@@ -300,7 +324,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$chatbot_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ai_data_assistant_list"	
@@ -320,27 +344,6 @@
 			{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
 	 
-				<div class="row">
-			 
-				<div 
-	data-cellId="below-grid_c" data-pageid="{$pageid}"	{$cell_below-grid_c}
-	class="r-align-center r-ori-vert			col-md-12
-	
-">
-		 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
-{$event MERQ_AI_Data_Assistant_snippet}
-</span>		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
-	class="r-align-center r-ori-vert			col-md-12
-	
-">
-			</div>					</div>
-			 
 				<div class="row">
 			 
 				<div 

@@ -119,19 +119,19 @@ class ConnectionManager extends ConnectionManager_Base
 		$connectionsData = array();
 
 		$data = array();
-		$data["dbType"] = 0;
+		$data["dbType"] = 4;
 		$data["connId"] = "hispmdathispmdmerqconsultancyo";
 		$data["connName"] = "hisp_md at hispmd.merqconsulta";
-		$data["connStringType"] = "mysql";
-		$data["connectionString"] = "mysql;localhost;hisp_md;hisp_md;;hisp_md;http://hispmd.merqconsultancy.org/app/phprunner.php;0"; //currently unused
+		$data["connStringType"] = "postgre";
+		$data["connectionString"] = "postgre;192.168.128.4;hispmddb;hispmddb;;hisp_md;https://hispmd.merqconsultancy.org/app/postgre.php;0;"; //currently unused
 
 		$this->_connectionsIdByName["hisp_md at hispmd.merqconsulta"] = "hispmdathispmdmerqconsultancyo";
 
 		$data["connInfo"] = array();
-		$data["ODBCUID"] = "hisp_md";
-		$data["ODBCPWD"] = "hisp_md";
-		$data["leftWrap"] = "`";
-		$data["rightWrap"] = "`";
+		$data["ODBCUID"] = "hispmddb";
+		$data["ODBCPWD"] = "hispmddb";
+		$data["leftWrap"] = "\"";
+		$data["rightWrap"] = "\"";
 
 		$data["DBPath"] = "db"; //currently unused
 		$data["useServerMapPath"] = 1; //currently unused
@@ -139,14 +139,14 @@ class ConnectionManager extends ConnectionManager_Base
 		
 		//	Don't change any of these lines manually!
 		//	Use 'Server database connections' feature on the Output screen in PHPRunner instead.
-		$data["connInfo"][0] = "localhost";
-		$data["connInfo"][1] = "hisp_md";
-		$data["connInfo"][2] = "hisp_md";
+		$data["connInfo"][0] = "192.168.128.4";
+		$data["connInfo"][1] = "hispmddb";
+		$data["connInfo"][2] = "hispmddb";
 		$data["connInfo"][3] = "";
 		$data["connInfo"][4] = "hisp_md";
-		$data["connInfo"][5] = "http://hispmd.merqconsultancy.org/app/phprunner.php"; //currently unused
+		$data["connInfo"][5] = "https://hispmd.merqconsultancy.org/app/postgre.php"; //currently unused
 		$data["connInfo"][6] = "0"; //currently unused
-		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=hisp_md;Pwd=hisp_md;Database=hisp_md;OPTION=3";
+		$data["ODBCString"] = "Driver={PostgreSQL Unicode};Server=192.168.128.4;Database=hisp_md;Uid=hispmddb;Pwd=hispmddb;";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;

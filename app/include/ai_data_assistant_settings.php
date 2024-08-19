@@ -3,7 +3,7 @@ $tdataai_data_assistant = array();
 $tdataai_data_assistant[".searchableFields"] = array();
 $tdataai_data_assistant[".ShortName"] = "ai_data_assistant";
 $tdataai_data_assistant[".OwnerID"] = "";
-$tdataai_data_assistant[".OriginalTable"] = "AI_Data_Assistant";
+$tdataai_data_assistant[".OriginalTable"] = "public.ai_data_assistant";
 
 
 $tdataai_data_assistant[".pagesByType"] = my_json_decode( "{\"list\":[\"list\"],\"search\":[\"search\"]}" );
@@ -25,9 +25,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsai_data_assistant["English"] = array();
 	$placeHoldersai_data_assistant["English"] = array();
 	$pageTitlesai_data_assistant["English"] = array();
-	$fieldLabelsai_data_assistant["English"]["ID"] = "ID";
-	$fieldToolTipsai_data_assistant["English"]["ID"] = "";
-	$placeHoldersai_data_assistant["English"]["ID"] = "";
+	$fieldLabelsai_data_assistant["English"]["id"] = "Id";
+	$fieldToolTipsai_data_assistant["English"]["id"] = "";
+	$placeHoldersai_data_assistant["English"]["id"] = "";
 	$fieldLabelsai_data_assistant["English"]["chatbot"] = "Chatbot";
 	$fieldToolTipsai_data_assistant["English"]["chatbot"] = "";
 	$placeHoldersai_data_assistant["English"]["chatbot"] = "";
@@ -48,7 +48,7 @@ $tdataai_data_assistant[".entityType"] = 0;
 $tdataai_data_assistant[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdataai_data_assistant[".strOriginalTableName"] = "AI_Data_Assistant";
+$tdataai_data_assistant[".strOriginalTableName"] = "public.ai_data_assistant";
 
 	
 
@@ -64,9 +64,9 @@ $tdataai_data_assistant[".listAjax"] = false;
 //	temporary
 //$tdataai_data_assistant[".listAjax"] = false;
 
-	$tdataai_data_assistant[".audit"] = false;
+	$tdataai_data_assistant[".audit"] = true;
 
-	$tdataai_data_assistant[".locking"] = false;
+	$tdataai_data_assistant[".locking"] = true;
 
 
 $pages = $tdataai_data_assistant[".defaultPages"];
@@ -140,7 +140,7 @@ $tdataai_data_assistant[".addPageEvents"] = false;
 $tdataai_data_assistant[".isUseTimeForSearch"] = false;
 
 
-$tdataai_data_assistant[".badgeColor"] = "D2691E";
+$tdataai_data_assistant[".badgeColor"] = "778899";
 
 
 $tdataai_data_assistant[".allSearchFields"] = array();
@@ -148,7 +148,7 @@ $tdataai_data_assistant[".filterFields"] = array();
 $tdataai_data_assistant[".requiredSearchFields"] = array();
 
 $tdataai_data_assistant[".googleLikeFields"] = array();
-$tdataai_data_assistant[".googleLikeFields"][] = "ID";
+$tdataai_data_assistant[".googleLikeFields"][] = "id";
 $tdataai_data_assistant[".googleLikeFields"][] = "chatbot";
 
 
@@ -165,6 +165,7 @@ $tdataai_data_assistant[".geocodingEnabled"] = false;
 
 
 
+$tdataai_data_assistant[".isDisplayLoading"] = true;
 
 
 
@@ -183,8 +184,8 @@ $tdataai_data_assistant[".strOrderBy"] = $tstrOrderBy;
 $tdataai_data_assistant[".orderindexes"] = array();
 
 
-$tdataai_data_assistant[".sqlHead"] = "SELECT ID,  	chatbot";
-$tdataai_data_assistant[".sqlFrom"] = "FROM AI_Data_Assistant";
+$tdataai_data_assistant[".sqlHead"] = "SELECT id,  	chatbot";
+$tdataai_data_assistant[".sqlFrom"] = "FROM \"public\".ai_data_assistant";
 $tdataai_data_assistant[".sqlWhereExpr"] = "";
 $tdataai_data_assistant[".sqlTail"] = "";
 
@@ -222,7 +223,7 @@ $tdataai_data_assistant[".arrGroupsPerPage"] = $arrGPP;
 $tdataai_data_assistant[".highlightSearchResults"] = true;
 
 $tableKeysai_data_assistant = array();
-$tableKeysai_data_assistant[] = "ID";
+$tableKeysai_data_assistant[] = "id";
 $tdataai_data_assistant[".Keys"] = $tableKeysai_data_assistant;
 
 
@@ -231,28 +232,27 @@ $tdataai_data_assistant[".hideMobileList"] = array();
 
 
 
-//	ID
+//	id
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "ID";
-	$fdata["GoodName"] = "ID";
-	$fdata["ownerTable"] = "AI_Data_Assistant";
-	$fdata["Label"] = GetFieldLabel("AI_Data_Assistant","ID");
-	$fdata["FieldType"] = 3;
+	$fdata["strName"] = "id";
+	$fdata["GoodName"] = "id";
+	$fdata["ownerTable"] = "public.ai_data_assistant";
+	$fdata["Label"] = GetFieldLabel("public_ai_data_assistant","id");
+	$fdata["FieldType"] = 20;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
-		$fdata["strField"] = "ID";
+		$fdata["strField"] = "id";
 
-		$fdata["sourceSingle"] = "ID";
+		$fdata["sourceSingle"] = "id";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ID";
+	$fdata["FullName"] = "id";
 
 	
 	
@@ -370,16 +370,16 @@ $tdataai_data_assistant[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataai_data_assistant["ID"] = $fdata;
-		$tdataai_data_assistant[".searchableFields"][] = "ID";
+	$tdataai_data_assistant["id"] = $fdata;
+		$tdataai_data_assistant[".searchableFields"][] = "id";
 //	chatbot
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "chatbot";
 	$fdata["GoodName"] = "chatbot";
-	$fdata["ownerTable"] = "AI_Data_Assistant";
-	$fdata["Label"] = GetFieldLabel("AI_Data_Assistant","chatbot");
+	$fdata["ownerTable"] = "public.ai_data_assistant";
+	$fdata["Label"] = GetFieldLabel("public_ai_data_assistant","chatbot");
 	$fdata["FieldType"] = 200;
 
 
@@ -512,25 +512,25 @@ $tdataai_data_assistant[".hideMobileList"] = array();
 		$tdataai_data_assistant[".searchableFields"][] = "chatbot";
 
 
-$tables_data["AI_Data_Assistant"]=&$tdataai_data_assistant;
-$field_labels["AI_Data_Assistant"] = &$fieldLabelsai_data_assistant;
-$fieldToolTips["AI_Data_Assistant"] = &$fieldToolTipsai_data_assistant;
-$placeHolders["AI_Data_Assistant"] = &$placeHoldersai_data_assistant;
-$page_titles["AI_Data_Assistant"] = &$pageTitlesai_data_assistant;
+$tables_data["public.ai_data_assistant"]=&$tdataai_data_assistant;
+$field_labels["public_ai_data_assistant"] = &$fieldLabelsai_data_assistant;
+$fieldToolTips["public_ai_data_assistant"] = &$fieldToolTipsai_data_assistant;
+$placeHolders["public_ai_data_assistant"] = &$placeHoldersai_data_assistant;
+$page_titles["public_ai_data_assistant"] = &$pageTitlesai_data_assistant;
 
 
-changeTextControlsToDate( "AI_Data_Assistant" );
+changeTextControlsToDate( "public.ai_data_assistant" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["AI_Data_Assistant"] = array();
+$detailsTablesData["public.ai_data_assistant"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["AI_Data_Assistant"] = array();
+$masterTablesData["public.ai_data_assistant"] = array();
 
 
 
@@ -554,8 +554,8 @@ function createSqlQuery_ai_data_assistant()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ID,  	chatbot";
-$proto0["m_strFrom"] = "FROM AI_Data_Assistant";
+$proto0["m_strFieldList"] = "id,  	chatbot";
+$proto0["m_strFrom"] = "FROM \"public\".ai_data_assistant";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -596,13 +596,13 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ID",
-	"m_strTable" => "AI_Data_Assistant",
-	"m_srcTableName" => "AI_Data_Assistant"
+	"m_strName" => "id",
+	"m_strTable" => "public.ai_data_assistant",
+	"m_srcTableName" => "public.ai_data_assistant"
 ));
 
-$proto6["m_sql"] = "ID";
-$proto6["m_srcTableName"] = "AI_Data_Assistant";
+$proto6["m_sql"] = "id";
+$proto6["m_srcTableName"] = "public.ai_data_assistant";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -611,12 +611,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "chatbot",
-	"m_strTable" => "AI_Data_Assistant",
-	"m_srcTableName" => "AI_Data_Assistant"
+	"m_strTable" => "public.ai_data_assistant",
+	"m_srcTableName" => "public.ai_data_assistant"
 ));
 
 $proto8["m_sql"] = "chatbot";
-$proto8["m_srcTableName"] = "AI_Data_Assistant";
+$proto8["m_srcTableName"] = "public.ai_data_assistant";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -626,17 +626,17 @@ $proto0["m_fromlist"] = array();
 												$proto10=array();
 $proto10["m_link"] = "SQLL_MAIN";
 			$proto11=array();
-$proto11["m_strName"] = "AI_Data_Assistant";
-$proto11["m_srcTableName"] = "AI_Data_Assistant";
+$proto11["m_strName"] = "public.ai_data_assistant";
+$proto11["m_srcTableName"] = "public.ai_data_assistant";
 $proto11["m_columns"] = array();
-$proto11["m_columns"][] = "ID";
+$proto11["m_columns"][] = "id";
 $proto11["m_columns"][] = "chatbot";
 $obj = new SQLTable($proto11);
 
 $proto10["m_table"] = $obj;
-$proto10["m_sql"] = "AI_Data_Assistant";
+$proto10["m_sql"] = "\"public\".ai_data_assistant";
 $proto10["m_alias"] = "";
-$proto10["m_srcTableName"] = "AI_Data_Assistant";
+$proto10["m_srcTableName"] = "public.ai_data_assistant";
 $proto12=array();
 $proto12["m_sql"] = "";
 $proto12["m_uniontype"] = "SQLL_UNKNOWN";
@@ -658,7 +658,7 @@ $obj = new SQLFromListItem($proto10);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="AI_Data_Assistant";		
+$proto0["m_srcTableName"]="public.ai_data_assistant";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

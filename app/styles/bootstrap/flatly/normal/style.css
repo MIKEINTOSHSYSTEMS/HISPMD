@@ -7719,8 +7719,8 @@ td::before {
   color: #777777;
 }
 .r-vbar-page .r-left .panel .panel-heading {
-  border-bottom-color: #e6f1f7;
-  background-color: rgba(60, 141, 188, 0.6);
+  border-bottom-color: #dbe9f5;
+  background-color: rgba(51, 122, 183, 0.6);
 }
 .r-vbar-page .r-left .panel .panel-footer {
   border: none;
@@ -8030,8 +8030,8 @@ td::before {
     color: #777777;
   }
   .r-leftbar-top-page > .r-under .r-left .panel .panel-heading {
-    border-bottom-color: #e6f1f7;
-    background-color: rgba(60, 141, 188, 0.6);
+    border-bottom-color: #dbe9f5;
+    background-color: rgba(51, 122, 183, 0.6);
   }
   .r-leftbar-top-page > .r-under .r-left .panel .panel-footer {
     border: none;
@@ -11456,7 +11456,7 @@ However there might have been the case where dropdown showed up where it shouldn
   color: #777777;
 }
 .r-vbar-page .r-left [data-itemtype="filter_panel"] .panel .panel-heading {
-  background-color: rgba(60, 141, 188, 0.6);
+  background-color: rgba(51, 122, 183, 0.6);
   color: white;
   font-size: 15px;
 }
@@ -11833,7 +11833,7 @@ However there might have been the case where dropdown showed up where it shouldn
   background: rgba(0, 0, 0, 0.1);
 }
 .r-left .r-menu li.active.active.active > [data-menu-link] {
-  background: #3c8dbc;
+  background: #337ab7;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px 0px, rgba(0, 0, 0, 0.24) 0px 1px 2px 0px;
   color: white;
 }

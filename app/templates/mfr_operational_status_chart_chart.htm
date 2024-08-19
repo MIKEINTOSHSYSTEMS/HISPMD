@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -103,45 +103,32 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Count}
+																		{BEGIN searchCtrlBlock_status}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Count}" {$filterRow_attrs_Count}>
-			<label>{$label MFR_Operational_Status_Chart Count }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Count}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Count}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Count}</span>
-						</div>
-		{END searchCtrlBlock_Count}
-																{BEGIN searchCtrlBlock_Status}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Status}" {$filterRow_attrs_Status}>
-			<label>{$label MFR_Operational_Status_Chart Status }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_status}" {$filterRow_attrs_status}>
+			<label>{$label mfr_operational_status_chart status }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Status}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Status}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Status}</span>
+								<span class="rnr-searchtype">{$searchtype_status}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_status}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_status}</span>
 						</div>
-		{END searchCtrlBlock_Status}
-																{BEGIN searchCtrlBlock_OperationalStatus}
+		{END searchCtrlBlock_status}
+																{BEGIN searchCtrlBlock_operationalstatus}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_OperationalStatus}" {$filterRow_attrs_OperationalStatus}>
-			<label>{$label MFR_Operational_Status_Chart OperationalStatus }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_operationalstatus}" {$filterRow_attrs_operationalstatus}>
+			<label>{$label mfr_operational_status_chart operationalstatus }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_OperationalStatus}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_OperationalStatus}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_OperationalStatus}</span>
+								<span class="rnr-searchtype">{$searchtype_operationalstatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_operationalstatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_operationalstatus}</span>
 						</div>
-		{END searchCtrlBlock_OperationalStatus}
+		{END searchCtrlBlock_operationalstatus}
 		
 
 	</div>
@@ -154,6 +141,104 @@
 </div>
 <!-- End Search panel content -->
 			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_operationalstatus}
+
+	<div class="panel panel-info filter-field filter-operationalstatus-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_operationalstatus}
+			<a href="#" class="filter-clear filter-clear-operationalstatus" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_operationalstatus}
+			{$label mfr_operational_status_chart operationalstatus }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_operationalstatus}
+		<li class="list-group-item filter-values filter-values-operationalstatus {$collapsedClass_operationalstatus} {$visibilityClass_operationalstatus}">
+			{$operationalstatus_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_operationalstatus}
+
+			{BEGIN filter_button_showmore_operationalstatus}
+		<li class="list-group-item filter-show-more {$collapsedClass_operationalstatus} {$showMoreBtnClass_operationalstatus}">
+			<a class="filter-show-more-link filterShowMore_operationalstatus" href="#">{$show_n_more_operationalstatus}</a>
+		</li>
+		{END filter_button_showmore_operationalstatus}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_operationalstatus}
+
+
+
+
+
+
+{BEGIN filter_control_status}
+
+	<div class="panel panel-info filter-field filter-status-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_status}
+			<a href="#" class="filter-clear filter-clear-status" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_status}
+			{$label mfr_operational_status_chart status }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_status}
+		<li class="list-group-item filter-values filter-values-status {$collapsedClass_status} {$visibilityClass_status}">
+			{$status_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_status}
+
+			{BEGIN filter_button_showmore_status}
+		<li class="list-group-item filter-show-more {$collapsedClass_status} {$showMoreBtnClass_status}">
+			<a class="filter-show-more-link filterShowMore_status" href="#">{$show_n_more_status}</a>
+		</li>
+		{END filter_button_showmore_status}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_status}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
 		
     {END left_block}
 </div>				</div>
@@ -303,6 +388,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -312,26 +405,12 @@
 {END supertop_block}
 						{$locking}
 				</div>
-				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
 					{$header}
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	 
-				<div class="row">
-			 
-				<div 
-	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
-	class=" r-ori-vert			col-md-12
-	
-">
-		 
-		{BEGIN mastertable_block}
-<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
-	{$showmasterfile}
-</div>
-{END mastertable_block}		</div>					</div>
-			</div>		
+	</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -355,110 +434,7 @@
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
-	<div class="filterPanelContainer {$filterPanelStateClass}" 
-					data-horizontal
-			>
-	<!-- Begin Filter panel content -->
-
-
-
-
-
-
-{BEGIN filter_control_OperationalStatus}
-
-	<div class="dropdown filter-field filter-OperationalStatus-container" {BEGIN filter_selected_OperationalStatus} data-selected {END filter_selected_OperationalStatus}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_OperationalStatus}
-			<a href="#" class="filter-clear filter-clear-OperationalStatus" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_OperationalStatus}
-			<span class="r-filter-field">{$label MFR_Operational_Status_Chart OperationalStatus }				{BEGIN filter_selected_OperationalStatus}:{END filter_selected_OperationalStatus}
-			</span>
-			{BEGIN filter_selected_OperationalStatus}
-			<span class="r-filter-value">{$filtervalue_OperationalStatus}</span>
-			{END filter_selected_OperationalStatus}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_OperationalStatus}
-		<li class=" filter-values filter-values-OperationalStatus  {$visibilityClass_OperationalStatus}">
-			{$OperationalStatus_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_OperationalStatus}
-
-			{BEGIN filter_button_showmore_OperationalStatus}
-		<li class=" filter-show-more {$collapsedClass_OperationalStatus} {$showMoreBtnClass_OperationalStatus}">
-			<a class="filter-show-more-link filterShowMore_OperationalStatus" href="#">{$show_n_more_OperationalStatus}</a>
-		</li>
-		{END filter_button_showmore_OperationalStatus}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_OperationalStatus}
-
-
-
-
-
-
-{BEGIN filter_control_Status}
-
-	<div class="dropdown filter-field filter-Status-container" {BEGIN filter_selected_Status} data-selected {END filter_selected_Status}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_Status}
-			<a href="#" class="filter-clear filter-clear-Status" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_Status}
-			<span class="r-filter-field">{$label MFR_Operational_Status_Chart Status }				{BEGIN filter_selected_Status}:{END filter_selected_Status}
-			</span>
-			{BEGIN filter_selected_Status}
-			<span class="r-filter-value">{$filtervalue_Status}</span>
-			{END filter_selected_Status}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_Status}
-		<li class=" filter-values filter-values-Status  {$visibilityClass_Status}">
-			{$Status_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_Status}
-
-			{BEGIN filter_button_showmore_Status}
-		<li class=" filter-show-more {$collapsedClass_Status} {$showMoreBtnClass_Status}">
-			<a class="filter-show-more-link filterShowMore_Status" href="#">{$show_n_more_Status}</a>
-		</li>
-		{END filter_button_showmore_Status}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_Status}
-
-
-
-	<!-- End Filter panel content -->
-	</div>
-</div>			{END firstAboveGridCell}	
+				{END firstAboveGridCell}	
 	</div>					</div>
 			</div>		
 {END above-grid_block}

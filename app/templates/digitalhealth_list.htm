@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_dh_id}" {$filterRow_attrs_dh_id}>
-			<label>{$label DigitalHealth dh_id }</label>
+			<label>{$label public_digitalhealth dh_id }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_site_type}" {$filterRow_attrs_site_type}>
-			<label>{$label DigitalHealth site_type }</label>
+			<label>{$label public_digitalhealth site_type }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_mfr_updated}" {$filterRow_attrs_mfr_updated}>
-			<label>{$label DigitalHealth mfr_updated }</label>
+			<label>{$label public_digitalhealth mfr_updated }</label>
 
 							{$delCtrlButt}
 			
@@ -146,7 +146,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_ihris_hra_implemented}" {$filterRow_attrs_ihris_hra_implemented}>
-			<label>{$label DigitalHealth ihris_hra_implemented }</label>
+			<label>{$label public_digitalhealth ihris_hra_implemented }</label>
 
 							{$delCtrlButt}
 			
@@ -159,7 +159,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_hcmis_implemented}" {$filterRow_attrs_hcmis_implemented}>
-			<label>{$label DigitalHealth hcmis_implemented }</label>
+			<label>{$label public_digitalhealth hcmis_implemented }</label>
 
 							{$delCtrlButt}
 			
@@ -172,7 +172,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_emr_status}" {$filterRow_attrs_emr_status}>
-			<label>{$label DigitalHealth emr_status }</label>
+			<label>{$label public_digitalhealth emr_status }</label>
 
 							{$delCtrlButt}
 			
@@ -185,7 +185,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_echis_implemented}" {$filterRow_attrs_echis_implemented}>
-			<label>{$label DigitalHealth echis_implemented }</label>
+			<label>{$label public_digitalhealth echis_implemented }</label>
 
 							{$delCtrlButt}
 			
@@ -198,7 +198,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_dhis2_online}" {$filterRow_attrs_dhis2_online}>
-			<label>{$label DigitalHealth dhis2_online }</label>
+			<label>{$label public_digitalhealth dhis2_online }</label>
 
 							{$delCtrlButt}
 			
@@ -211,7 +211,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_dhis2_functional}" {$filterRow_attrs_dhis2_functional}>
-			<label>{$label DigitalHealth dhis2_functional }</label>
+			<label>{$label public_digitalhealth dhis2_functional }</label>
 
 							{$delCtrlButt}
 			
@@ -357,14 +357,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="digitalhealth_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -413,6 +405,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -568,31 +568,31 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dh_id"]:before {
-		content: "{$label DigitalHealth dh_id}";
+		content: "{$label public_digitalhealth dh_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="site_type"]:before {
-		content: "{$label DigitalHealth site_type}";
+		content: "{$label public_digitalhealth site_type}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dhis2_functional"]:before {
-		content: "{$label DigitalHealth dhis2_functional}";
+		content: "{$label public_digitalhealth dhis2_functional}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dhis2_online"]:before {
-		content: "{$label DigitalHealth dhis2_online}";
+		content: "{$label public_digitalhealth dhis2_online}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="mfr_updated"]:before {
-		content: "{$label DigitalHealth mfr_updated}";
+		content: "{$label public_digitalhealth mfr_updated}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="echis_implemented"]:before {
-		content: "{$label DigitalHealth echis_implemented}";
+		content: "{$label public_digitalhealth echis_implemented}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="emr_status"]:before {
-		content: "{$label DigitalHealth emr_status}";
+		content: "{$label public_digitalhealth emr_status}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ihris_hra_implemented"]:before {
-		content: "{$label DigitalHealth ihris_hra_implemented}";
+		content: "{$label public_digitalhealth ihris_hra_implemented}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="hcmis_implemented"]:before {
-		content: "{$label DigitalHealth hcmis_implemented}";
+		content: "{$label public_digitalhealth hcmis_implemented}";
 	}
 	}
 </style>
@@ -663,7 +663,7 @@
 		{BEGIN dh_id_fieldheadercolumn}
 	{BEGIN dh_id_fieldheader}
 	<SPAN {$dh_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dh_id" data-fieldname="dh_id">
-	{$label DigitalHealth dh_id }	{$arrow_icon_dh_id}
+	{$label public_digitalhealth dh_id }	{$arrow_icon_dh_id}
 	</SPAN>
 	{END dh_id_fieldheader}
 {END dh_id_fieldheadercolumn}
@@ -688,7 +688,7 @@
 		{BEGIN site_type_fieldheadercolumn}
 	{BEGIN site_type_fieldheader}
 	<SPAN {$site_type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="site_type" data-fieldname="site_type">
-	{$label DigitalHealth site_type }	{$arrow_icon_site_type}
+	{$label public_digitalhealth site_type }	{$arrow_icon_site_type}
 	</SPAN>
 	{END site_type_fieldheader}
 {END site_type_fieldheadercolumn}
@@ -713,7 +713,7 @@
 		{BEGIN dhis2_functional_fieldheadercolumn}
 	{BEGIN dhis2_functional_fieldheader}
 	<SPAN {$dhis2_functional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dhis2_functional" data-fieldname="dhis2_functional">
-	{$label DigitalHealth dhis2_functional }	{$arrow_icon_dhis2_functional}
+	{$label public_digitalhealth dhis2_functional }	{$arrow_icon_dhis2_functional}
 	</SPAN>
 	{END dhis2_functional_fieldheader}
 {END dhis2_functional_fieldheadercolumn}
@@ -738,7 +738,7 @@
 		{BEGIN dhis2_online_fieldheadercolumn}
 	{BEGIN dhis2_online_fieldheader}
 	<SPAN {$dhis2_online_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dhis2_online" data-fieldname="dhis2_online">
-	{$label DigitalHealth dhis2_online }	{$arrow_icon_dhis2_online}
+	{$label public_digitalhealth dhis2_online }	{$arrow_icon_dhis2_online}
 	</SPAN>
 	{END dhis2_online_fieldheader}
 {END dhis2_online_fieldheadercolumn}
@@ -763,7 +763,7 @@
 		{BEGIN mfr_updated_fieldheadercolumn}
 	{BEGIN mfr_updated_fieldheader}
 	<SPAN {$mfr_updated_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mfr_updated" data-fieldname="mfr_updated">
-	{$label DigitalHealth mfr_updated }	{$arrow_icon_mfr_updated}
+	{$label public_digitalhealth mfr_updated }	{$arrow_icon_mfr_updated}
 	</SPAN>
 	{END mfr_updated_fieldheader}
 {END mfr_updated_fieldheadercolumn}
@@ -788,7 +788,7 @@
 		{BEGIN echis_implemented_fieldheadercolumn}
 	{BEGIN echis_implemented_fieldheader}
 	<SPAN {$echis_implemented_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="echis_implemented" data-fieldname="echis_implemented">
-	{$label DigitalHealth echis_implemented }	{$arrow_icon_echis_implemented}
+	{$label public_digitalhealth echis_implemented }	{$arrow_icon_echis_implemented}
 	</SPAN>
 	{END echis_implemented_fieldheader}
 {END echis_implemented_fieldheadercolumn}
@@ -813,7 +813,7 @@
 		{BEGIN emr_status_fieldheadercolumn}
 	{BEGIN emr_status_fieldheader}
 	<SPAN {$emr_status_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="emr_status" data-fieldname="emr_status">
-	{$label DigitalHealth emr_status }	{$arrow_icon_emr_status}
+	{$label public_digitalhealth emr_status }	{$arrow_icon_emr_status}
 	</SPAN>
 	{END emr_status_fieldheader}
 {END emr_status_fieldheadercolumn}
@@ -838,7 +838,7 @@
 		{BEGIN ihris_hra_implemented_fieldheadercolumn}
 	{BEGIN ihris_hra_implemented_fieldheader}
 	<SPAN {$ihris_hra_implemented_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ihris_hra_implemented" data-fieldname="ihris_hra_implemented">
-	{$label DigitalHealth ihris_hra_implemented }	{$arrow_icon_ihris_hra_implemented}
+	{$label public_digitalhealth ihris_hra_implemented }	{$arrow_icon_ihris_hra_implemented}
 	</SPAN>
 	{END ihris_hra_implemented_fieldheader}
 {END ihris_hra_implemented_fieldheadercolumn}
@@ -863,7 +863,7 @@
 		{BEGIN hcmis_implemented_fieldheadercolumn}
 	{BEGIN hcmis_implemented_fieldheader}
 	<SPAN {$hcmis_implemented_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="hcmis_implemented" data-fieldname="hcmis_implemented">
-	{$label DigitalHealth hcmis_implemented }	{$arrow_icon_hcmis_implemented}
+	{$label public_digitalhealth hcmis_implemented }	{$arrow_icon_hcmis_implemented}
 	</SPAN>
 	{END hcmis_implemented_fieldheader}
 {END hcmis_implemented_fieldheadercolumn}

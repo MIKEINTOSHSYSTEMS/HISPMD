@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_hf_id}" {$filterRow_attrs_hf_id}>
-			<label>{$label HealthFacilities hf_id }</label>
+			<label>{$label public_healthfacilities hf_id }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_type}" {$filterRow_attrs_type}>
-			<label>{$label HealthFacilities type }</label>
+			<label>{$label public_healthfacilities type }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
-			<label>{$label HealthFacilities name }</label>
+			<label>{$label public_healthfacilities name }</label>
 
 							{$delCtrlButt}
 			
@@ -146,7 +146,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_his_audit_started}" {$filterRow_attrs_his_audit_started}>
-			<label>{$label HealthFacilities his_audit_started }</label>
+			<label>{$label public_healthfacilities his_audit_started }</label>
 
 							{$delCtrlButt}
 			
@@ -292,14 +292,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="healthfacilities_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -348,6 +340,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -503,16 +503,16 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="hf_id"]:before {
-		content: "{$label HealthFacilities hf_id}";
+		content: "{$label public_healthfacilities hf_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="name"]:before {
-		content: "{$label HealthFacilities name}";
+		content: "{$label public_healthfacilities name}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="type"]:before {
-		content: "{$label HealthFacilities type}";
+		content: "{$label public_healthfacilities type}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="his_audit_started"]:before {
-		content: "{$label HealthFacilities his_audit_started}";
+		content: "{$label public_healthfacilities his_audit_started}";
 	}
 	}
 </style>
@@ -583,7 +583,7 @@
 		{BEGIN hf_id_fieldheadercolumn}
 	{BEGIN hf_id_fieldheader}
 	<SPAN {$hf_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="hf_id" data-fieldname="hf_id">
-	{$label HealthFacilities hf_id }	{$arrow_icon_hf_id}
+	{$label public_healthfacilities hf_id }	{$arrow_icon_hf_id}
 	</SPAN>
 	{END hf_id_fieldheader}
 {END hf_id_fieldheadercolumn}
@@ -608,7 +608,7 @@
 		{BEGIN name_fieldheadercolumn}
 	{BEGIN name_fieldheader}
 	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label HealthFacilities name }	{$arrow_icon_name}
+	{$label public_healthfacilities name }	{$arrow_icon_name}
 	</SPAN>
 	{END name_fieldheader}
 {END name_fieldheadercolumn}
@@ -633,7 +633,7 @@
 		{BEGIN type_fieldheadercolumn}
 	{BEGIN type_fieldheader}
 	<SPAN {$type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="type" data-fieldname="type">
-	{$label HealthFacilities type }	{$arrow_icon_type}
+	{$label public_healthfacilities type }	{$arrow_icon_type}
 	</SPAN>
 	{END type_fieldheader}
 {END type_fieldheadercolumn}
@@ -658,7 +658,7 @@
 		{BEGIN his_audit_started_fieldheadercolumn}
 	{BEGIN his_audit_started_fieldheader}
 	<SPAN {$his_audit_started_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="his_audit_started" data-fieldname="his_audit_started">
-	{$label HealthFacilities his_audit_started }	{$arrow_icon_his_audit_started}
+	{$label public_healthfacilities his_audit_started }	{$arrow_icon_his_audit_started}
 	</SPAN>
 	{END his_audit_started_fieldheader}
 {END his_audit_started_fieldheadercolumn}

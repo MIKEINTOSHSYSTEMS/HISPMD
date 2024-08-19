@@ -85,9 +85,9 @@ $tdatadhis2_reporting_rate[".listAjax"] = false;
 //	temporary
 //$tdatadhis2_reporting_rate[".listAjax"] = false;
 
-	$tdatadhis2_reporting_rate[".audit"] = false;
+	$tdatadhis2_reporting_rate[".audit"] = true;
 
-	$tdatadhis2_reporting_rate[".locking"] = false;
+	$tdatadhis2_reporting_rate[".locking"] = true;
 
 
 $pages = $tdatadhis2_reporting_rate[".defaultPages"];
@@ -782,16 +782,16 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "DHIS2_Periods";
+	$edata["LookupTable"] = "public.dhis2_periods";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
 		
-	$edata["LinkField"] = "Period_ID";
+	$edata["LinkField"] = "period_id";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Period_Name";
+	$edata["DisplayField"] = "period_name";
 
 	
 

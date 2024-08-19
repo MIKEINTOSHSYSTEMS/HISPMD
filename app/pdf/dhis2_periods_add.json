@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel DHIS2_Periods add}","hidden":"{$item_hide_add_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_dhis2_periods add}","hidden":"{$item_hide_add_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,10 +160,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel DHIS2_Periods Period_ID }","bold":true},{"text":{$Period_ID_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_dhis2_periods period_id }","bold":true},{"text":{$period_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel DHIS2_Periods Period_Name }","bold":true},{"text":{$Period_Name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_dhis2_periods period_name }","bold":true},{"text":{$period_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

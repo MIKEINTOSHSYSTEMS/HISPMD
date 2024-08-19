@@ -70,6 +70,12 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
+								
+			"%",
+			 
 				],
 	
 		body: [
@@ -122,7 +128,7 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c15',
+	cellId: 'c2',
 	col:0,
 	row:0,
 			
@@ -135,12 +141,61 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"","hidden":"{$item_hide_dashboard-item16}"},
+			{"text":"","hidden":"{$item_hide_dashboard-item9}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_dashboard-item11}"},
+			{"text":"","hidden":"{$item_hide_dashboard-item10}"},
 				
 		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"","hidden":"{$item_hide_dashboard-item18}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_dashboard-item19}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c15',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -160,13 +215,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item17}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_dashboard-item12}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -189,7 +239,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"","hidden":"{$item_hide_dashboard-item}"},
+			{"text":"","hidden":"{$item_hide_dashboard-item11}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -212,7 +262,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"","hidden":"{$item_hide_dashboard-item1}"},
+			{"text":"","hidden":"{$item_hide_dashboard-item12}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -259,6 +309,60 @@ pdfDocument = {
 		
 				'',
 	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c22',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"","hidden":"{$item_hide_dashboard-item1}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_dashboard-item}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c23',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"","hidden":"{$item_hide_dashboard-item16}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_dashboard-item17}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

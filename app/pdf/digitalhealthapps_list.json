@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption DigitalHealthApps}',
+				text: '{$jscaption public_digitalhealthapps}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel DigitalHealthApps list}',
+				text: '{$jspagetitlelabel public_digitalhealthapps list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -268,7 +268,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealthApps app_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_digitalhealthapps app_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -297,7 +297,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealthApps name }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_digitalhealthapps name }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -326,7 +326,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DigitalHealthApps standards_met }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_digitalhealthapps standards_met }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

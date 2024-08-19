@@ -16,7 +16,7 @@ if( array_key_exists( "secure", $cookieParams ) ) {
 }
 
 //	isolate sessions for projects running on the same site
-@session_name( "pVLkhOH7xqwIcH7oDqNsQ" );
+@session_name( "pHISPMD7xqwIcH7oDqNsQ" );
 
 // Setting the cache limiter to '' will turn off automatic sending of cache headers entirely
 @session_cache_limiter("");

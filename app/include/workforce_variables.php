@@ -1,8 +1,8 @@
 <?php
-$strTableName="Workforce";
+$strTableName="public.workforce";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="Workforce";
+$strOriginalTableName="public.workforce";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

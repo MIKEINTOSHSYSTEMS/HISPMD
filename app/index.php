@@ -1,6 +1,6 @@
 <html>
 <head>
-<LINK rel="shortcut icon" type="image/png" href="mohfavicon.png" />
+
 			
 
 

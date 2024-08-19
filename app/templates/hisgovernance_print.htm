@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -38,7 +38,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel HISGovernance print}</h2>
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_hisgovernance print}</h2>
 	 
 		{BEGIN printtabheader}
 <span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
@@ -98,7 +98,7 @@
 		{BEGIN governance_id_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="governance_id" data-fieldname="governance_id">
-	{$label HISGovernance governance_id }	</span>
+	{$label public_hisgovernance governance_id }	</span>
 {END governance_id_fieldheadercolumn}
 
 	
@@ -121,7 +121,7 @@
 		{BEGIN level_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="level" data-fieldname="level">
-	{$label HISGovernance level }	</span>
+	{$label public_hisgovernance level }	</span>
 {END level_fieldheadercolumn}
 
 	
@@ -144,7 +144,7 @@
 		{BEGIN is_functional_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="is_functional" data-fieldname="is_functional">
-	{$label HISGovernance is_functional }	</span>
+	{$label public_hisgovernance is_functional }	</span>
 {END is_functional_fieldheadercolumn}
 
 	

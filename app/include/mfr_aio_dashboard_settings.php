@@ -21,198 +21,151 @@ $pageTitlesmfr_aio_dashboard = array();
 if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelsmfr_aio_dashboard["English"] = array();
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Dashboard_Reports_Chart_Type"] = "Type";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Dashboard_Reports_Chart_Name"] = "Name";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Dashboard_Reports_Chart_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Operational_Status_Chart_OperationalStatus"] = "Operational Status";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Operational_Status_Chart_Status"] = "Status";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Operational_Status_Chart_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Zone_Chart_Zone"] = "Zone";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Zone_Chart_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Woreda_Chart_Woreda"] = "Woreda";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Woreda_Chart_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Region_Chart_Region"] = "Region";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Region_Chart_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Region_Region"] = "Region";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Region_Lat"] = "Lat";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Region_Lng"] = "Lng";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Region_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Zone_Zone"] = "Zone";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Zone_Lat"] = "Lat";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Zone_Lng"] = "Lng";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Zone_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Woreda_Woreda"] = "Woreda";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Woreda_Lat"] = "Lat";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Woreda_Lng"] = "Lng";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Woreda_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Dashboard_Reports_Type"] = "Type";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Dashboard_Reports_Name"] = "Name";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Dashboard_Reports_Count"] = "Count";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Operational_Status_OperationalStatus"] = "Operational Status";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Operational_Status_Status"] = "Status";
-	$fieldLabelsmfr_aio_dashboard["English"]["MFR_Operational_Status_Count"] = "Count";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_dashboard_reports_type"] = "Type";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_dashboard_reports_name"] = "Name";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_dashboard_reports_count"] = "Count";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_operational_status_operationalstatus"] = "Operationalstatus";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_operational_status_status"] = "Status";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_operational_status_count"] = "Count";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_dashboard_reports_chart_type"] = "Type";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_dashboard_reports_chart_name"] = "Name";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_dashboard_reports_chart_count"] = "Count";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_operational_status_chart_operationalstatus"] = "Operationalstatus";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_operational_status_chart_status"] = "Status";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_operational_status_chart_count"] = "Count";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_region_region"] = "Region";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_region_lat"] = "Lat";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_region_lng"] = "Lng";
+	$fieldLabelsmfr_aio_dashboard["English"]["public_mfr_region_count"] = "Count";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_region_chart_region"] = "Region";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_region_chart_lat"] = "Lat";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_region_chart_lng"] = "Lng";
+	$fieldLabelsmfr_aio_dashboard["English"]["mfr_region_chart_count"] = "Count";
 }
 
 /*
 //	search fields
 $tdatamfr_aio_dashboard[".searchFields"] = array();
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Dashboard_Reports_Chart", "field"=>"Type" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Dashboard_Reports_Chart_Type"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_dashboard_reports", "field"=>"type" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_dashboard_reports_type"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Dashboard_Reports_Chart", "field"=>"Name" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Dashboard_Reports_Chart_Name"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_dashboard_reports", "field"=>"name" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_dashboard_reports_name"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Dashboard_Reports_Chart", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Dashboard_Reports_Chart_Count"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_dashboard_reports", "field"=>"count" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_dashboard_reports_count"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Operational_Status_Chart", "field"=>"OperationalStatus" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Operational_Status_Chart_OperationalStatus"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_operational_status", "field"=>"operationalstatus" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_operational_status_operationalstatus"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Operational_Status_Chart", "field"=>"Status" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Operational_Status_Chart_Status"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_operational_status", "field"=>"status" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_operational_status_status"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Operational_Status_Chart", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Operational_Status_Chart_Count"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_operational_status", "field"=>"count" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_operational_status_count"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Zone_Chart", "field"=>"Zone" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Zone_Chart_Zone"] = $dashField;
+$dashField[] = array( "table"=>"mfr_dashboard_reports_chart", "field"=>"type" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_dashboard_reports_chart_type"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Zone_Chart", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Zone_Chart_Count"] = $dashField;
+$dashField[] = array( "table"=>"mfr_dashboard_reports_chart", "field"=>"name" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_dashboard_reports_chart_name"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Woreda_Chart", "field"=>"Woreda" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Woreda_Chart_Woreda"] = $dashField;
+$dashField[] = array( "table"=>"mfr_dashboard_reports_chart", "field"=>"count" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_dashboard_reports_chart_count"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Woreda_Chart", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Woreda_Chart_Count"] = $dashField;
+$dashField[] = array( "table"=>"mfr_operational_status_chart", "field"=>"operationalstatus" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_operational_status_chart_operationalstatus"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Region_Chart", "field"=>"Region" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Region_Chart_Region"] = $dashField;
+$dashField[] = array( "table"=>"mfr_operational_status_chart", "field"=>"status" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_operational_status_chart_status"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Region_Chart", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Region_Chart_Count"] = $dashField;
+$dashField[] = array( "table"=>"mfr_operational_status_chart", "field"=>"count" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_operational_status_chart_count"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Region", "field"=>"Region" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Region_Region"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_region", "field"=>"region" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_region_region"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Region", "field"=>"Lat" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Region_Lat"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_region", "field"=>"lat" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_region_lat"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Region", "field"=>"Lng" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Region_Lng"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_region", "field"=>"lng" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_region_lng"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Region", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Region_Count"] = $dashField;
+$dashField[] = array( "table"=>"public.mfr_region", "field"=>"count" );
+$tdatamfr_aio_dashboard[".searchFields"]["public_mfr_region_count"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Zone", "field"=>"Zone" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Zone_Zone"] = $dashField;
+$dashField[] = array( "table"=>"mfr_region_chart", "field"=>"region" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_region_chart_region"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Zone", "field"=>"Lat" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Zone_Lat"] = $dashField;
+$dashField[] = array( "table"=>"mfr_region_chart", "field"=>"lat" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_region_chart_lat"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Zone", "field"=>"Lng" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Zone_Lng"] = $dashField;
+$dashField[] = array( "table"=>"mfr_region_chart", "field"=>"lng" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_region_chart_lng"] = $dashField;
 $dashField = array();
-$dashField[] = array( "table"=>"MFR_Zone", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Zone_Count"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Woreda", "field"=>"Woreda" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Woreda_Woreda"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Woreda", "field"=>"Lat" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Woreda_Lat"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Woreda", "field"=>"Lng" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Woreda_Lng"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Woreda", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Woreda_Count"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Dashboard_Reports", "field"=>"Type" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Dashboard_Reports_Type"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Dashboard_Reports", "field"=>"Name" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Dashboard_Reports_Name"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Dashboard_Reports", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Dashboard_Reports_Count"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Operational_Status", "field"=>"OperationalStatus" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Operational_Status_OperationalStatus"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Operational_Status", "field"=>"Status" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Operational_Status_Status"] = $dashField;
-$dashField = array();
-$dashField[] = array( "table"=>"MFR_Operational_Status", "field"=>"Count" );
-$tdatamfr_aio_dashboard[".searchFields"]["MFR_Operational_Status_Count"] = $dashField;
+$dashField[] = array( "table"=>"mfr_region_chart", "field"=>"count" );
+$tdatamfr_aio_dashboard[".searchFields"]["mfr_region_chart_count"] = $dashField;
 
 // all search fields
 $tdatamfr_aio_dashboard[".allSearchFields"] = array();
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Dashboard_Reports_Chart_Type";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Dashboard_Reports_Chart_Name";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Dashboard_Reports_Chart_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Operational_Status_Chart_OperationalStatus";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Operational_Status_Chart_Status";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Operational_Status_Chart_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Zone_Chart_Zone";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Zone_Chart_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Woreda_Chart_Woreda";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Woreda_Chart_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Region_Chart_Region";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Region_Chart_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Region_Region";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Region_Lat";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Region_Lng";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Region_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Zone_Zone";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Zone_Lat";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Zone_Lng";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Zone_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Woreda_Woreda";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Woreda_Lat";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Woreda_Lng";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Woreda_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Dashboard_Reports_Type";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Dashboard_Reports_Name";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Dashboard_Reports_Count";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Operational_Status_OperationalStatus";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Operational_Status_Status";
-$tdatamfr_aio_dashboard[".allSearchFields"][] = "MFR_Operational_Status_Count";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_dashboard_reports_type";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_dashboard_reports_name";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_dashboard_reports_count";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_operational_status_operationalstatus";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_operational_status_status";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_operational_status_count";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_dashboard_reports_chart_type";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_dashboard_reports_chart_name";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_dashboard_reports_chart_count";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_operational_status_chart_operationalstatus";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_operational_status_chart_status";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_operational_status_chart_count";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_region_region";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_region_lat";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_region_lng";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "public_mfr_region_count";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_region_chart_region";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_region_chart_lat";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_region_chart_lng";
+$tdatamfr_aio_dashboard[".allSearchFields"][] = "mfr_region_chart_count";
 
 // good like search fields
 $tdatamfr_aio_dashboard[".googleLikeFields"] = array();
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Dashboard_Reports_Chart_Type";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Dashboard_Reports_Chart_Name";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Operational_Status_Chart_OperationalStatus";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Operational_Status_Chart_Status";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Zone_Chart_Zone";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Woreda_Chart_Woreda";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Region_Chart_Region";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Region_Region";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Zone_Zone";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Woreda_Woreda";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Dashboard_Reports_Type";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Dashboard_Reports_Name";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Operational_Status_OperationalStatus";
-$tdatamfr_aio_dashboard[".googleLikeFields"][] = "MFR_Operational_Status_Status";
+$tdatamfr_aio_dashboard[".googleLikeFields"][] = "public_mfr_dashboard_reports_type";
+$tdatamfr_aio_dashboard[".googleLikeFields"][] = "public_mfr_dashboard_reports_name";
+$tdatamfr_aio_dashboard[".googleLikeFields"][] = "public_mfr_dashboard_reports_count";
 */
 
 /*
 $tdatamfr_aio_dashboard[".dashElements"] = array();
 
-	$dbelement = array( "elementName" => "MFR_Dashboard_Reports_Chart_chart", "table" => "MFR_Dashboard_Reports_Chart",
-		 "pageName" => "","type" => 1);
+	$dbelement = array( "elementName" => "public_mfr_region_map", "table" => "public.mfr_region",
+		 "pageName" => "","type" => 6);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
 		$dbelement["width"] = 800;
 		$dbelement["height"] = 600;
+		$dbelement["zoom"] = "auto";
+	$dbelement["addressF"] = "";
+	$dbelement["latF"] = "";
+	$dbelement["lonF"] = "";
+	$dbelement["descF"] = "";
+	$dbelement["mapMarkerCount"] = 50;
+	$dbelement["isMarkerIconCustom"] = 0;
+			$dbelement["updateMoved"] = true;
 
+	$dbelement["isLocationMarkerIconCustom"] = 0;
+	$dbelement["showCurrentLocation"] = 0;
+	
+
+	// Advanced map options
+	
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Operational_Status_Chart_chart", "table" => "MFR_Operational_Status_Chart",
-		 "pageName" => "","type" => 1);
+	$dbelement = array( "elementName" => "public_mfr_region_search", "table" => "public.mfr_region",
+		 "pageName" => "","type" => 4);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
@@ -285,24 +238,24 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 	
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Dashboard_Reports_grid", "table" => "MFR_Dashboard_Reports",
-		 "pageName" => "","type" => 0);
+	$dbelement = array( "elementName" => "mfr_dashboard_reports_chart_chart", "table" => "mfr_dashboard_reports_chart",
+		 "pageName" => "","type" => 1);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
 		$dbelement["width"] = 800;
 		$dbelement["height"] = 600;
-	
+
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Operational_Status_grid", "table" => "MFR_Operational_Status",
-		 "pageName" => "","type" => 0);
+	$dbelement = array( "elementName" => "mfr_operational_status_chart_chart", "table" => "mfr_operational_status_chart",
+		 "pageName" => "","type" => 1);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
 		$dbelement["width"] = 800;
 		$dbelement["height"] = 600;
-	
+
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "MFR_Region_search", "table" => "MFR_Region",
@@ -335,18 +288,18 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Dashboard_Reports_search", "table" => "MFR_Dashboard_Reports",
-		 "pageName" => "","type" => 4);
+	$dbelement = array( "elementName" => "public_mfr_region_grid", "table" => "public.mfr_region",
+		 "pageName" => "","type" => 0);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
 		$dbelement["width"] = 800;
 		$dbelement["height"] = 600;
-
+	
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Operational_Status_search", "table" => "MFR_Operational_Status",
-		 "pageName" => "","type" => 4);
+	$dbelement = array( "elementName" => "mfr_region_chart_chart", "table" => "mfr_region_chart",
+		 "pageName" => "","type" => 1);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
@@ -366,6 +319,46 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "MFR_Woreda_grid", "table" => "MFR_Woreda",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "public_mfr_dashboard_reports_search", "table" => "public.mfr_dashboard_reports",
+		 "pageName" => "","type" => 4);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+
+
+	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "public_mfr_dashboard_reports_grid", "table" => "public.mfr_dashboard_reports",
+		 "pageName" => "","type" => 0);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+	
+
+	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "public_mfr_operational_status_search", "table" => "public.mfr_operational_status",
+		 "pageName" => "","type" => 4);
+	$dbelement["cellName"] = "";
+
+		$dbelement["reload"] = 60;
+		$dbelement["width"] = 800;
+		$dbelement["height"] = 600;
+
+
+	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "public_mfr_operational_status_grid", "table" => "public.mfr_operational_status",
 		 "pageName" => "","type" => 0);
 	$dbelement["cellName"] = "";
 

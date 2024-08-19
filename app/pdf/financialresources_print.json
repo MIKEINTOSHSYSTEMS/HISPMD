@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption FinancialResources}',
+				text: '{$jscaption public_financialresources}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel FinancialResources print}',
+				text: '{$jspagetitlelabel public_financialresources print}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -133,37 +133,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$jspagetitlelabel FinancialResources print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_financialresources print}","hidden":"{$item_hide_print_header}","fontSize":30},
 				
 				
 			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{BEGIN mastertable_block}
-			{$showmasterfile}
-		{END mastertable_block},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -211,12 +184,6 @@ pdfDocument = {
 				
 			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -259,7 +226,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel FinancialResources resource_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_financialresources resource_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -288,7 +255,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel FinancialResources year }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel public_financialresources year }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -317,7 +284,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel FinancialResources amount }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel public_financialresources amount }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -346,7 +313,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel FinancialResources utilized }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
+			{"text":"{$jslabel public_financialresources utilized }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -375,7 +342,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel FinancialResources region_id }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
+			{"text":"{$jslabel public_financialresources region_id }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption DataQuality}',
+				text: '{$jscaption public_dataquality}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel DataQuality list}',
+				text: '{$jspagetitlelabel public_dataquality list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -271,7 +271,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DataQuality dq_id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_dataquality dq_id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -300,7 +300,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DataQuality report_type }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_dataquality report_type }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -329,7 +329,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DataQuality timeliness_percentage }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel public_dataquality timeliness_percentage }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -358,7 +358,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DataQuality completeness_percentage }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel public_dataquality completeness_percentage }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

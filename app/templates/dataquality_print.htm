@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -38,7 +38,7 @@
 	
 ">
 		 
-		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel DataQuality print}</h2>
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dataquality print}</h2>
 	 
 		{BEGIN printtabheader}
 <span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
@@ -98,7 +98,7 @@
 		{BEGIN dq_id_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dq_id" data-fieldname="dq_id">
-	{$label DataQuality dq_id }	</span>
+	{$label public_dataquality dq_id }	</span>
 {END dq_id_fieldheadercolumn}
 
 	
@@ -121,7 +121,7 @@
 		{BEGIN report_type_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="report_type" data-fieldname="report_type">
-	{$label DataQuality report_type }	</span>
+	{$label public_dataquality report_type }	</span>
 {END report_type_fieldheadercolumn}
 
 	
@@ -144,7 +144,7 @@
 		{BEGIN timeliness_percentage_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="timeliness_percentage" data-fieldname="timeliness_percentage">
-	{$label DataQuality timeliness_percentage }	</span>
+	{$label public_dataquality timeliness_percentage }	</span>
 {END timeliness_percentage_fieldheadercolumn}
 
 	
@@ -167,7 +167,7 @@
 		{BEGIN completeness_percentage_fieldheadercolumn}
  
 	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="completeness_percentage" data-fieldname="completeness_percentage">
-	{$label DataQuality completeness_percentage }	</span>
+	{$label public_dataquality completeness_percentage }	</span>
 {END completeness_percentage_fieldheadercolumn}
 
 	

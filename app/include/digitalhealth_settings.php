@@ -3,14 +3,14 @@ $tdatadigitalhealth = array();
 $tdatadigitalhealth[".searchableFields"] = array();
 $tdatadigitalhealth[".ShortName"] = "digitalhealth";
 $tdatadigitalhealth[".OwnerID"] = "";
-$tdatadigitalhealth[".OriginalTable"] = "DigitalHealth";
+$tdatadigitalhealth[".OriginalTable"] = "public.digitalhealth";
 
 
-$tdatadigitalhealth[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadigitalhealth[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatadigitalhealth[".originalPagesByType"] = $tdatadigitalhealth[".pagesByType"];
-$tdatadigitalhealth[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadigitalhealth[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatadigitalhealth[".originalPages"] = $tdatadigitalhealth[".pages"];
-$tdatadigitalhealth[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadigitalhealth[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatadigitalhealth[".originalDefaultPages"] = $tdatadigitalhealth[".defaultPages"];
 
 //	field labels
@@ -69,7 +69,7 @@ $tdatadigitalhealth[".entityType"] = 0;
 $tdatadigitalhealth[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatadigitalhealth[".strOriginalTableName"] = "DigitalHealth";
+$tdatadigitalhealth[".strOriginalTableName"] = "public.digitalhealth";
 
 	
 
@@ -85,9 +85,9 @@ $tdatadigitalhealth[".listAjax"] = false;
 //	temporary
 //$tdatadigitalhealth[".listAjax"] = false;
 
-	$tdatadigitalhealth[".audit"] = false;
+	$tdatadigitalhealth[".audit"] = true;
 
-	$tdatadigitalhealth[".locking"] = false;
+	$tdatadigitalhealth[".locking"] = true;
 
 
 $pages = $tdatadigitalhealth[".defaultPages"];
@@ -161,7 +161,7 @@ $tdatadigitalhealth[".addPageEvents"] = false;
 $tdatadigitalhealth[".isUseTimeForSearch"] = false;
 
 
-$tdatadigitalhealth[".badgeColor"] = "E67349";
+$tdatadigitalhealth[".badgeColor"] = "BC8F8F";
 
 
 $tdatadigitalhealth[".allSearchFields"] = array();
@@ -212,7 +212,7 @@ $tdatadigitalhealth[".orderindexes"] = array();
 
 
 $tdatadigitalhealth[".sqlHead"] = "SELECT dh_id,  	site_type,  	dhis2_functional,  	dhis2_online,  	mfr_updated,  	echis_implemented,  	emr_status,  	ihris_hra_implemented,  	hcmis_implemented";
-$tdatadigitalhealth[".sqlFrom"] = "FROM DigitalHealth";
+$tdatadigitalhealth[".sqlFrom"] = "FROM \"public\".digitalhealth";
 $tdatadigitalhealth[".sqlWhereExpr"] = "";
 $tdatadigitalhealth[".sqlTail"] = "";
 
@@ -265,13 +265,12 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "dh_id";
 	$fdata["GoodName"] = "dh_id";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","dh_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","dh_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -329,8 +328,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -345,16 +343,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -406,9 +403,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "site_type";
 	$fdata["GoodName"] = "site_type";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","site_type");
-	$fdata["FieldType"] = 129;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","site_type");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -457,7 +454,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -467,23 +464,6 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "District";
-	$edata["LookupValues"][] = "HC";
-	$edata["LookupValues"][] = "Hospital";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -498,8 +478,11 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -558,9 +541,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "dhis2_functional";
 	$fdata["GoodName"] = "dhis2_functional";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","dhis2_functional");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","dhis2_functional");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -636,15 +619,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -696,9 +679,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "dhis2_online";
 	$fdata["GoodName"] = "dhis2_online";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","dhis2_online");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","dhis2_online");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -774,15 +757,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -834,9 +817,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "mfr_updated";
 	$fdata["GoodName"] = "mfr_updated";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","mfr_updated");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","mfr_updated");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -912,15 +895,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -972,9 +955,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 6;
 	$fdata["strName"] = "echis_implemented";
 	$fdata["GoodName"] = "echis_implemented";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","echis_implemented");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","echis_implemented");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -1050,15 +1033,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1110,9 +1093,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 7;
 	$fdata["strName"] = "emr_status";
 	$fdata["GoodName"] = "emr_status";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","emr_status");
-	$fdata["FieldType"] = 129;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","emr_status");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -1161,7 +1144,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1171,22 +1154,6 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "Partial";
-	$edata["LookupValues"][] = "Full";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -1201,8 +1168,11 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1261,9 +1231,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 8;
 	$fdata["strName"] = "ihris_hra_implemented";
 	$fdata["GoodName"] = "ihris_hra_implemented";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","ihris_hra_implemented");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","ihris_hra_implemented");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -1339,15 +1309,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1399,9 +1369,9 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 	$fdata["Index"] = 9;
 	$fdata["strName"] = "hcmis_implemented";
 	$fdata["GoodName"] = "hcmis_implemented";
-	$fdata["ownerTable"] = "DigitalHealth";
-	$fdata["Label"] = GetFieldLabel("DigitalHealth","hcmis_implemented");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.digitalhealth";
+	$fdata["Label"] = GetFieldLabel("public_digitalhealth","hcmis_implemented");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -1477,15 +1447,15 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1533,25 +1503,25 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 		$tdatadigitalhealth[".searchableFields"][] = "hcmis_implemented";
 
 
-$tables_data["DigitalHealth"]=&$tdatadigitalhealth;
-$field_labels["DigitalHealth"] = &$fieldLabelsdigitalhealth;
-$fieldToolTips["DigitalHealth"] = &$fieldToolTipsdigitalhealth;
-$placeHolders["DigitalHealth"] = &$placeHoldersdigitalhealth;
-$page_titles["DigitalHealth"] = &$pageTitlesdigitalhealth;
+$tables_data["public.digitalhealth"]=&$tdatadigitalhealth;
+$field_labels["public_digitalhealth"] = &$fieldLabelsdigitalhealth;
+$fieldToolTips["public_digitalhealth"] = &$fieldToolTipsdigitalhealth;
+$placeHolders["public_digitalhealth"] = &$placeHoldersdigitalhealth;
+$page_titles["public_digitalhealth"] = &$pageTitlesdigitalhealth;
 
 
-changeTextControlsToDate( "DigitalHealth" );
+changeTextControlsToDate( "public.digitalhealth" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["DigitalHealth"] = array();
+$detailsTablesData["public.digitalhealth"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["DigitalHealth"] = array();
+$masterTablesData["public.digitalhealth"] = array();
 
 
 
@@ -1576,7 +1546,7 @@ function createSqlQuery_digitalhealth()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "dh_id,  	site_type,  	dhis2_functional,  	dhis2_online,  	mfr_updated,  	echis_implemented,  	emr_status,  	ihris_hra_implemented,  	hcmis_implemented";
-$proto0["m_strFrom"] = "FROM DigitalHealth";
+$proto0["m_strFrom"] = "FROM \"public\".digitalhealth";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1618,12 +1588,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "dh_id",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto6["m_sql"] = "dh_id";
-$proto6["m_srcTableName"] = "DigitalHealth";
+$proto6["m_srcTableName"] = "public.digitalhealth";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -1632,12 +1602,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "site_type",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto8["m_sql"] = "site_type";
-$proto8["m_srcTableName"] = "DigitalHealth";
+$proto8["m_srcTableName"] = "public.digitalhealth";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -1646,12 +1616,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "dhis2_functional",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto10["m_sql"] = "dhis2_functional";
-$proto10["m_srcTableName"] = "DigitalHealth";
+$proto10["m_srcTableName"] = "public.digitalhealth";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -1660,12 +1630,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "dhis2_online",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto12["m_sql"] = "dhis2_online";
-$proto12["m_srcTableName"] = "DigitalHealth";
+$proto12["m_srcTableName"] = "public.digitalhealth";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -1674,12 +1644,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
 	"m_strName" => "mfr_updated",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto14["m_sql"] = "mfr_updated";
-$proto14["m_srcTableName"] = "DigitalHealth";
+$proto14["m_srcTableName"] = "public.digitalhealth";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
 $obj = new SQLFieldListItem($proto14);
@@ -1688,12 +1658,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
 	"m_strName" => "echis_implemented",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto16["m_sql"] = "echis_implemented";
-$proto16["m_srcTableName"] = "DigitalHealth";
+$proto16["m_srcTableName"] = "public.digitalhealth";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
 $obj = new SQLFieldListItem($proto16);
@@ -1702,12 +1672,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
 	"m_strName" => "emr_status",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto18["m_sql"] = "emr_status";
-$proto18["m_srcTableName"] = "DigitalHealth";
+$proto18["m_srcTableName"] = "public.digitalhealth";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
@@ -1716,12 +1686,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
 	"m_strName" => "ihris_hra_implemented",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto20["m_sql"] = "ihris_hra_implemented";
-$proto20["m_srcTableName"] = "DigitalHealth";
+$proto20["m_srcTableName"] = "public.digitalhealth";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
 $obj = new SQLFieldListItem($proto20);
@@ -1730,12 +1700,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
 	"m_strName" => "hcmis_implemented",
-	"m_strTable" => "DigitalHealth",
-	"m_srcTableName" => "DigitalHealth"
+	"m_strTable" => "public.digitalhealth",
+	"m_srcTableName" => "public.digitalhealth"
 ));
 
 $proto22["m_sql"] = "hcmis_implemented";
-$proto22["m_srcTableName"] = "DigitalHealth";
+$proto22["m_srcTableName"] = "public.digitalhealth";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
 $obj = new SQLFieldListItem($proto22);
@@ -1745,8 +1715,8 @@ $proto0["m_fromlist"] = array();
 												$proto24=array();
 $proto24["m_link"] = "SQLL_MAIN";
 			$proto25=array();
-$proto25["m_strName"] = "DigitalHealth";
-$proto25["m_srcTableName"] = "DigitalHealth";
+$proto25["m_strName"] = "public.digitalhealth";
+$proto25["m_srcTableName"] = "public.digitalhealth";
 $proto25["m_columns"] = array();
 $proto25["m_columns"][] = "dh_id";
 $proto25["m_columns"][] = "site_type";
@@ -1760,9 +1730,9 @@ $proto25["m_columns"][] = "hcmis_implemented";
 $obj = new SQLTable($proto25);
 
 $proto24["m_table"] = $obj;
-$proto24["m_sql"] = "DigitalHealth";
+$proto24["m_sql"] = "\"public\".digitalhealth";
 $proto24["m_alias"] = "";
-$proto24["m_srcTableName"] = "DigitalHealth";
+$proto24["m_srcTableName"] = "public.digitalhealth";
 $proto26=array();
 $proto26["m_sql"] = "";
 $proto26["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1784,7 +1754,7 @@ $obj = new SQLFromListItem($proto24);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="DigitalHealth";		
+$proto0["m_srcTableName"]="public.digitalhealth";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

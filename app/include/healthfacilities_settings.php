@@ -3,14 +3,14 @@ $tdatahealthfacilities = array();
 $tdatahealthfacilities[".searchableFields"] = array();
 $tdatahealthfacilities[".ShortName"] = "healthfacilities";
 $tdatahealthfacilities[".OwnerID"] = "";
-$tdatahealthfacilities[".OriginalTable"] = "HealthFacilities";
+$tdatahealthfacilities[".OriginalTable"] = "public.healthfacilities";
 
 
-$tdatahealthfacilities[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahealthfacilities[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahealthfacilities[".originalPagesByType"] = $tdatahealthfacilities[".pagesByType"];
-$tdatahealthfacilities[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahealthfacilities[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahealthfacilities[".originalPages"] = $tdatahealthfacilities[".pages"];
-$tdatahealthfacilities[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatahealthfacilities[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahealthfacilities[".originalDefaultPages"] = $tdatahealthfacilities[".defaultPages"];
 
 //	field labels
@@ -54,7 +54,7 @@ $tdatahealthfacilities[".entityType"] = 0;
 $tdatahealthfacilities[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatahealthfacilities[".strOriginalTableName"] = "HealthFacilities";
+$tdatahealthfacilities[".strOriginalTableName"] = "public.healthfacilities";
 
 	
 
@@ -70,9 +70,9 @@ $tdatahealthfacilities[".listAjax"] = false;
 //	temporary
 //$tdatahealthfacilities[".listAjax"] = false;
 
-	$tdatahealthfacilities[".audit"] = false;
+	$tdatahealthfacilities[".audit"] = true;
 
-	$tdatahealthfacilities[".locking"] = false;
+	$tdatahealthfacilities[".locking"] = true;
 
 
 $pages = $tdatahealthfacilities[".defaultPages"];
@@ -146,7 +146,7 @@ $tdatahealthfacilities[".addPageEvents"] = false;
 $tdatahealthfacilities[".isUseTimeForSearch"] = false;
 
 
-$tdatahealthfacilities[".badgeColor"] = "3CB371";
+$tdatahealthfacilities[".badgeColor"] = "D2691E";
 
 
 $tdatahealthfacilities[".allSearchFields"] = array();
@@ -191,8 +191,8 @@ $tdatahealthfacilities[".strOrderBy"] = $tstrOrderBy;
 $tdatahealthfacilities[".orderindexes"] = array();
 
 
-$tdatahealthfacilities[".sqlHead"] = "SELECT hf_id,  	name,  	`type`,  	his_audit_started";
-$tdatahealthfacilities[".sqlFrom"] = "FROM HealthFacilities";
+$tdatahealthfacilities[".sqlHead"] = "SELECT hf_id,  	name,  	\"type\",  	his_audit_started";
+$tdatahealthfacilities[".sqlFrom"] = "FROM \"public\".healthfacilities";
 $tdatahealthfacilities[".sqlWhereExpr"] = "";
 $tdatahealthfacilities[".sqlTail"] = "";
 
@@ -245,13 +245,12 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "hf_id";
 	$fdata["GoodName"] = "hf_id";
-	$fdata["ownerTable"] = "HealthFacilities";
-	$fdata["Label"] = GetFieldLabel("HealthFacilities","hf_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.healthfacilities";
+	$fdata["Label"] = GetFieldLabel("public_healthfacilities","hf_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -309,8 +308,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -325,16 +323,15 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -386,8 +383,8 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "name";
 	$fdata["GoodName"] = "name";
-	$fdata["ownerTable"] = "HealthFacilities";
-	$fdata["Label"] = GetFieldLabel("HealthFacilities","name");
+	$fdata["ownerTable"] = "public.healthfacilities";
+	$fdata["Label"] = GetFieldLabel("public_healthfacilities","name");
 	$fdata["FieldType"] = 200;
 
 
@@ -464,7 +461,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
+			$edata["EditParams"].= " maxlength=255";
 
 		$edata["controlWidth"] = 200;
 
@@ -524,9 +521,9 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "type";
 	$fdata["GoodName"] = "type";
-	$fdata["ownerTable"] = "HealthFacilities";
-	$fdata["Label"] = GetFieldLabel("HealthFacilities","type");
-	$fdata["FieldType"] = 129;
+	$fdata["ownerTable"] = "public.healthfacilities";
+	$fdata["Label"] = GetFieldLabel("public_healthfacilities","type");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -538,7 +535,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "type";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`type`";
+	$fdata["FullName"] = "\"type\"";
 
 	
 	
@@ -575,7 +572,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -585,22 +582,6 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "Public";
-	$edata["LookupValues"][] = "Private";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -615,8 +596,11 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -675,9 +659,9 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "his_audit_started";
 	$fdata["GoodName"] = "his_audit_started";
-	$fdata["ownerTable"] = "HealthFacilities";
-	$fdata["Label"] = GetFieldLabel("HealthFacilities","his_audit_started");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.healthfacilities";
+	$fdata["Label"] = GetFieldLabel("public_healthfacilities","his_audit_started");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -753,15 +737,15 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -809,25 +793,25 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 		$tdatahealthfacilities[".searchableFields"][] = "his_audit_started";
 
 
-$tables_data["HealthFacilities"]=&$tdatahealthfacilities;
-$field_labels["HealthFacilities"] = &$fieldLabelshealthfacilities;
-$fieldToolTips["HealthFacilities"] = &$fieldToolTipshealthfacilities;
-$placeHolders["HealthFacilities"] = &$placeHoldershealthfacilities;
-$page_titles["HealthFacilities"] = &$pageTitleshealthfacilities;
+$tables_data["public.healthfacilities"]=&$tdatahealthfacilities;
+$field_labels["public_healthfacilities"] = &$fieldLabelshealthfacilities;
+$fieldToolTips["public_healthfacilities"] = &$fieldToolTipshealthfacilities;
+$placeHolders["public_healthfacilities"] = &$placeHoldershealthfacilities;
+$page_titles["public_healthfacilities"] = &$pageTitleshealthfacilities;
 
 
-changeTextControlsToDate( "HealthFacilities" );
+changeTextControlsToDate( "public.healthfacilities" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["HealthFacilities"] = array();
+$detailsTablesData["public.healthfacilities"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["HealthFacilities"] = array();
+$masterTablesData["public.healthfacilities"] = array();
 
 
 
@@ -851,8 +835,8 @@ function createSqlQuery_healthfacilities()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "hf_id,  	name,  	`type`,  	his_audit_started";
-$proto0["m_strFrom"] = "FROM HealthFacilities";
+$proto0["m_strFieldList"] = "hf_id,  	name,  	\"type\",  	his_audit_started";
+$proto0["m_strFrom"] = "FROM \"public\".healthfacilities";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -894,12 +878,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "hf_id",
-	"m_strTable" => "HealthFacilities",
-	"m_srcTableName" => "HealthFacilities"
+	"m_strTable" => "public.healthfacilities",
+	"m_srcTableName" => "public.healthfacilities"
 ));
 
 $proto6["m_sql"] = "hf_id";
-$proto6["m_srcTableName"] = "HealthFacilities";
+$proto6["m_srcTableName"] = "public.healthfacilities";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -908,12 +892,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "name",
-	"m_strTable" => "HealthFacilities",
-	"m_srcTableName" => "HealthFacilities"
+	"m_strTable" => "public.healthfacilities",
+	"m_srcTableName" => "public.healthfacilities"
 ));
 
 $proto8["m_sql"] = "name";
-$proto8["m_srcTableName"] = "HealthFacilities";
+$proto8["m_srcTableName"] = "public.healthfacilities";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -922,12 +906,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "type",
-	"m_strTable" => "HealthFacilities",
-	"m_srcTableName" => "HealthFacilities"
+	"m_strTable" => "public.healthfacilities",
+	"m_srcTableName" => "public.healthfacilities"
 ));
 
-$proto10["m_sql"] = "`type`";
-$proto10["m_srcTableName"] = "HealthFacilities";
+$proto10["m_sql"] = "\"type\"";
+$proto10["m_srcTableName"] = "public.healthfacilities";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -936,12 +920,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "his_audit_started",
-	"m_strTable" => "HealthFacilities",
-	"m_srcTableName" => "HealthFacilities"
+	"m_strTable" => "public.healthfacilities",
+	"m_srcTableName" => "public.healthfacilities"
 ));
 
 $proto12["m_sql"] = "his_audit_started";
-$proto12["m_srcTableName"] = "HealthFacilities";
+$proto12["m_srcTableName"] = "public.healthfacilities";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -951,8 +935,8 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "HealthFacilities";
-$proto15["m_srcTableName"] = "HealthFacilities";
+$proto15["m_strName"] = "public.healthfacilities";
+$proto15["m_srcTableName"] = "public.healthfacilities";
 $proto15["m_columns"] = array();
 $proto15["m_columns"][] = "hf_id";
 $proto15["m_columns"][] = "name";
@@ -961,9 +945,9 @@ $proto15["m_columns"][] = "his_audit_started";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "HealthFacilities";
+$proto14["m_sql"] = "\"public\".healthfacilities";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "HealthFacilities";
+$proto14["m_srcTableName"] = "public.healthfacilities";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -985,7 +969,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="HealthFacilities";		
+$proto0["m_srcTableName"]="public.healthfacilities";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

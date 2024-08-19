@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel MFR_Woreda search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_mfr_woreda search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,7 +166,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Woreda_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$woreda_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$lat_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$lng_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$count_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -3,14 +3,14 @@ $tdataworkforce = array();
 $tdataworkforce[".searchableFields"] = array();
 $tdataworkforce[".ShortName"] = "workforce";
 $tdataworkforce[".OwnerID"] = "";
-$tdataworkforce[".OriginalTable"] = "Workforce";
+$tdataworkforce[".OriginalTable"] = "public.workforce";
 
 
-$tdataworkforce[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataworkforce[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataworkforce[".originalPagesByType"] = $tdataworkforce[".pagesByType"];
-$tdataworkforce[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataworkforce[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataworkforce[".originalPages"] = $tdataworkforce[".pages"];
-$tdataworkforce[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataworkforce[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataworkforce[".originalDefaultPages"] = $tdataworkforce[".defaultPages"];
 
 //	field labels
@@ -54,7 +54,7 @@ $tdataworkforce[".entityType"] = 0;
 $tdataworkforce[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdataworkforce[".strOriginalTableName"] = "Workforce";
+$tdataworkforce[".strOriginalTableName"] = "public.workforce";
 
 	
 
@@ -70,9 +70,9 @@ $tdataworkforce[".listAjax"] = false;
 //	temporary
 //$tdataworkforce[".listAjax"] = false;
 
-	$tdataworkforce[".audit"] = false;
+	$tdataworkforce[".audit"] = true;
 
-	$tdataworkforce[".locking"] = false;
+	$tdataworkforce[".locking"] = true;
 
 
 $pages = $tdataworkforce[".defaultPages"];
@@ -146,7 +146,7 @@ $tdataworkforce[".addPageEvents"] = false;
 $tdataworkforce[".isUseTimeForSearch"] = false;
 
 
-$tdataworkforce[".badgeColor"] = "CFAE83";
+$tdataworkforce[".badgeColor"] = "4169E1";
 
 
 $tdataworkforce[".allSearchFields"] = array();
@@ -192,7 +192,7 @@ $tdataworkforce[".orderindexes"] = array();
 
 
 $tdataworkforce[".sqlHead"] = "SELECT workforce_id,  	region_id,  	adequate_staff,  	competency_index";
-$tdataworkforce[".sqlFrom"] = "FROM Workforce";
+$tdataworkforce[".sqlFrom"] = "FROM \"public\".workforce";
 $tdataworkforce[".sqlWhereExpr"] = "";
 $tdataworkforce[".sqlTail"] = "";
 
@@ -245,13 +245,12 @@ $tdataworkforce[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "workforce_id";
 	$fdata["GoodName"] = "workforce_id";
-	$fdata["ownerTable"] = "Workforce";
-	$fdata["Label"] = GetFieldLabel("Workforce","workforce_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.workforce";
+	$fdata["Label"] = GetFieldLabel("public_workforce","workforce_id");
+	$fdata["FieldType"] = 200;
 
 
-		$fdata["AutoInc"] = true;
-
+	
 	
 			
 
@@ -309,8 +308,7 @@ $tdataworkforce[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -325,16 +323,15 @@ $tdataworkforce[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -386,9 +383,9 @@ $tdataworkforce[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "region_id";
 	$fdata["GoodName"] = "region_id";
-	$fdata["ownerTable"] = "Workforce";
-	$fdata["Label"] = GetFieldLabel("Workforce","region_id");
-	$fdata["FieldType"] = 3;
+	$fdata["ownerTable"] = "public.workforce";
+	$fdata["Label"] = GetFieldLabel("public_workforce","region_id");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -437,7 +434,7 @@ $tdataworkforce[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -447,34 +444,6 @@ $tdataworkforce[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Regions";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "region_id";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "name";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -489,15 +458,18 @@ $tdataworkforce[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+	
 	
 //	End validation
 
@@ -549,9 +521,9 @@ $tdataworkforce[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "adequate_staff";
 	$fdata["GoodName"] = "adequate_staff";
-	$fdata["ownerTable"] = "Workforce";
-	$fdata["Label"] = GetFieldLabel("Workforce","adequate_staff");
-	$fdata["FieldType"] = 16;
+	$fdata["ownerTable"] = "public.workforce";
+	$fdata["Label"] = GetFieldLabel("public_workforce","adequate_staff");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -627,15 +599,15 @@ $tdataworkforce[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -687,9 +659,9 @@ $tdataworkforce[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "competency_index";
 	$fdata["GoodName"] = "competency_index";
-	$fdata["ownerTable"] = "Workforce";
-	$fdata["Label"] = GetFieldLabel("Workforce","competency_index");
-	$fdata["FieldType"] = 5;
+	$fdata["ownerTable"] = "public.workforce";
+	$fdata["Label"] = GetFieldLabel("public_workforce","competency_index");
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -710,7 +682,7 @@ $tdataworkforce[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -719,8 +691,7 @@ $tdataworkforce[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
+	
 	
 	
 	
@@ -766,15 +737,15 @@ $tdataworkforce[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -822,46 +793,28 @@ $tdataworkforce[".hideMobileList"] = array();
 		$tdataworkforce[".searchableFields"][] = "competency_index";
 
 
-$tables_data["Workforce"]=&$tdataworkforce;
-$field_labels["Workforce"] = &$fieldLabelsworkforce;
-$fieldToolTips["Workforce"] = &$fieldToolTipsworkforce;
-$placeHolders["Workforce"] = &$placeHoldersworkforce;
-$page_titles["Workforce"] = &$pageTitlesworkforce;
+$tables_data["public.workforce"]=&$tdataworkforce;
+$field_labels["public_workforce"] = &$fieldLabelsworkforce;
+$fieldToolTips["public_workforce"] = &$fieldToolTipsworkforce;
+$placeHolders["public_workforce"] = &$placeHoldersworkforce;
+$page_titles["public_workforce"] = &$pageTitlesworkforce;
 
 
-changeTextControlsToDate( "Workforce" );
+changeTextControlsToDate( "public.workforce" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["Workforce"] = array();
+$detailsTablesData["public.workforce"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["Workforce"] = array();
+$masterTablesData["public.workforce"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="Regions";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="Regions";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "regions";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["Workforce"][0] = $masterParams;
-				$masterTablesData["Workforce"][0]["masterKeys"] = array();
-	$masterTablesData["Workforce"][0]["masterKeys"][]="region_id";
-				$masterTablesData["Workforce"][0]["detailKeys"] = array();
-	$masterTablesData["Workforce"][0]["detailKeys"][]="region_id";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -883,7 +836,7 @@ function createSqlQuery_workforce()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "workforce_id,  	region_id,  	adequate_staff,  	competency_index";
-$proto0["m_strFrom"] = "FROM Workforce";
+$proto0["m_strFrom"] = "FROM \"public\".workforce";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -925,12 +878,12 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "workforce_id",
-	"m_strTable" => "Workforce",
-	"m_srcTableName" => "Workforce"
+	"m_strTable" => "public.workforce",
+	"m_srcTableName" => "public.workforce"
 ));
 
 $proto6["m_sql"] = "workforce_id";
-$proto6["m_srcTableName"] = "Workforce";
+$proto6["m_srcTableName"] = "public.workforce";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
@@ -939,12 +892,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "region_id",
-	"m_strTable" => "Workforce",
-	"m_srcTableName" => "Workforce"
+	"m_strTable" => "public.workforce",
+	"m_srcTableName" => "public.workforce"
 ));
 
 $proto8["m_sql"] = "region_id";
-$proto8["m_srcTableName"] = "Workforce";
+$proto8["m_srcTableName"] = "public.workforce";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
@@ -953,12 +906,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "adequate_staff",
-	"m_strTable" => "Workforce",
-	"m_srcTableName" => "Workforce"
+	"m_strTable" => "public.workforce",
+	"m_srcTableName" => "public.workforce"
 ));
 
 $proto10["m_sql"] = "adequate_staff";
-$proto10["m_srcTableName"] = "Workforce";
+$proto10["m_srcTableName"] = "public.workforce";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
@@ -967,12 +920,12 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "competency_index",
-	"m_strTable" => "Workforce",
-	"m_srcTableName" => "Workforce"
+	"m_strTable" => "public.workforce",
+	"m_srcTableName" => "public.workforce"
 ));
 
 $proto12["m_sql"] = "competency_index";
-$proto12["m_srcTableName"] = "Workforce";
+$proto12["m_srcTableName"] = "public.workforce";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
@@ -982,8 +935,8 @@ $proto0["m_fromlist"] = array();
 												$proto14=array();
 $proto14["m_link"] = "SQLL_MAIN";
 			$proto15=array();
-$proto15["m_strName"] = "Workforce";
-$proto15["m_srcTableName"] = "Workforce";
+$proto15["m_strName"] = "public.workforce";
+$proto15["m_srcTableName"] = "public.workforce";
 $proto15["m_columns"] = array();
 $proto15["m_columns"][] = "workforce_id";
 $proto15["m_columns"][] = "region_id";
@@ -992,9 +945,9 @@ $proto15["m_columns"][] = "competency_index";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;
-$proto14["m_sql"] = "Workforce";
+$proto14["m_sql"] = "\"public\".workforce";
 $proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "Workforce";
+$proto14["m_srcTableName"] = "public.workforce";
 $proto16=array();
 $proto16["m_sql"] = "";
 $proto16["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1016,7 +969,7 @@ $obj = new SQLFromListItem($proto14);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-$proto0["m_srcTableName"]="Workforce";		
+$proto0["m_srcTableName"]="public.workforce";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;

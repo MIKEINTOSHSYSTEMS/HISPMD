@@ -10,13 +10,6 @@
 [data-cellid="grid_headcell_checkbox"][data-page="mfr_operational_status_list"][data-cellid="grid_headcell_checkbox"][data-page="mfr_operational_status_list"][data-cellid="grid_headcell_checkbox"][data-page="mfr_operational_status_list"] {
   width: 30px;
 }
-[data-cellid="grid_cell_details"][data-page="mfr_operational_status_list"][data-cellid="grid_cell_details"][data-page="mfr_operational_status_list"][data-cellid="grid_cell_details"][data-page="mfr_operational_status_list"] {
-  white-space: nowrap;
-}
-[data-page="mfr_operational_status_list"][data-itemid="chart"] {
-  width: 100%;
-  height: 530px;
-}
 [data-page="mfr_operational_status_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption Workforce}',
+				text: '{$jscaption public_workforce}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel Workforce list}',
+				text: '{$jspagetitlelabel public_workforce list}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -107,51 +107,7 @@ pdfDocument = {
 							stack: [
 
 																										
-{
-	table: {
-	
-				
-		location: 'top',
-		
-		
-		widths: [
-								"*", 
-					 ],	
-		
-	
-		body: [
-				
-				[
-																{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{BEGIN mastertable_block}
-			{$showmasterfile}
-		{END mastertable_block},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-		
-		]
-	}
-}
+''
 ,
 								
 																										
@@ -186,9 +142,6 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
@@ -318,7 +271,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Workforce workforce_id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_workforce workforce_id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -347,7 +300,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Workforce region_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_workforce region_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -376,7 +329,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Workforce adequate_staff }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel public_workforce adequate_staff }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -405,7 +358,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Workforce competency_index }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel public_workforce competency_index }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -443,9 +396,6 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},

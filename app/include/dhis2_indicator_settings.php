@@ -64,9 +64,9 @@ $tdatadhis2_indicator[".listAjax"] = false;
 //	temporary
 //$tdatadhis2_indicator[".listAjax"] = false;
 
-	$tdatadhis2_indicator[".audit"] = false;
+	$tdatadhis2_indicator[".audit"] = true;
 
-	$tdatadhis2_indicator[".locking"] = false;
+	$tdatadhis2_indicator[".locking"] = true;
 
 
 $pages = $tdatadhis2_indicator[".defaultPages"];

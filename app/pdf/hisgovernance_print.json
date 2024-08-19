@@ -27,12 +27,12 @@ pdfDocument = {
 		{BEGIN body}
 		{BEGIN embedded_grid_caption}
 			{
-				text: '{$jscaption HISGovernance}',
+				text: '{$jscaption public_hisgovernance}',
 			},
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel HISGovernance print}',
+				text: '{$jspagetitlelabel public_hisgovernance print}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -127,7 +127,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$jspagetitlelabel HISGovernance print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_hisgovernance print}","hidden":"{$item_hide_print_header}","fontSize":30},
 				
 				
 			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
@@ -220,7 +220,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HISGovernance governance_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_hisgovernance governance_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -249,7 +249,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HISGovernance level }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_hisgovernance level }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -278,7 +278,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel HISGovernance is_functional }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_hisgovernance is_functional }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

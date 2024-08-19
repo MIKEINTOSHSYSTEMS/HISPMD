@@ -6,7 +6,7 @@
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -107,7 +107,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_app_id}" {$filterRow_attrs_app_id}>
-			<label>{$label DigitalHealthApps app_id }</label>
+			<label>{$label public_digitalhealthapps app_id }</label>
 
 							{$delCtrlButt}
 			
@@ -120,7 +120,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_standards_met}" {$filterRow_attrs_standards_met}>
-			<label>{$label DigitalHealthApps standards_met }</label>
+			<label>{$label public_digitalhealthapps standards_met }</label>
 
 							{$delCtrlButt}
 			
@@ -133,7 +133,7 @@
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
-			<label>{$label DigitalHealthApps name }</label>
+			<label>{$label public_digitalhealthapps name }</label>
 
 							{$delCtrlButt}
 			
@@ -279,14 +279,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="digitalhealthapps_import.php{$stateLink_full}"  title="" >
-				
-		Import		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -335,6 +327,14 @@
 		</a>
 	</li>
 {END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -490,13 +490,13 @@
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="app_id"]:before {
-		content: "{$label DigitalHealthApps app_id}";
+		content: "{$label public_digitalhealthapps app_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="name"]:before {
-		content: "{$label DigitalHealthApps name}";
+		content: "{$label public_digitalhealthapps name}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="standards_met"]:before {
-		content: "{$label DigitalHealthApps standards_met}";
+		content: "{$label public_digitalhealthapps standards_met}";
 	}
 	}
 </style>
@@ -567,7 +567,7 @@
 		{BEGIN app_id_fieldheadercolumn}
 	{BEGIN app_id_fieldheader}
 	<SPAN {$app_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="app_id" data-fieldname="app_id">
-	{$label DigitalHealthApps app_id }	{$arrow_icon_app_id}
+	{$label public_digitalhealthapps app_id }	{$arrow_icon_app_id}
 	</SPAN>
 	{END app_id_fieldheader}
 {END app_id_fieldheadercolumn}
@@ -592,7 +592,7 @@
 		{BEGIN name_fieldheadercolumn}
 	{BEGIN name_fieldheader}
 	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label DigitalHealthApps name }	{$arrow_icon_name}
+	{$label public_digitalhealthapps name }	{$arrow_icon_name}
 	</SPAN>
 	{END name_fieldheader}
 {END name_fieldheadercolumn}
@@ -617,7 +617,7 @@
 		{BEGIN standards_met_fieldheadercolumn}
 	{BEGIN standards_met_fieldheader}
 	<SPAN {$standards_met_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="standards_met" data-fieldname="standards_met">
-	{$label DigitalHealthApps standards_met }	{$arrow_icon_standards_met}
+	{$label public_digitalhealthapps standards_met }	{$arrow_icon_standards_met}
 	</SPAN>
 	{END standards_met_fieldheader}
 {END standards_met_fieldheadercolumn}

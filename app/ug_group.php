@@ -18,36 +18,12 @@ if( !Security::isAdmin() )
 	return;
 }
 $nonAdminTablesArr = array();
-$nonAdminTablesArr[] = "DataQuality";
-$nonAdminTablesArr[] = "DataUse";
-$nonAdminTablesArr[] = "DigitalHealth";
-$nonAdminTablesArr[] = "DigitalHealthApps";
-$nonAdminTablesArr[] = "FinancialResources";
-$nonAdminTablesArr[] = "HISGovernance";
-$nonAdminTablesArr[] = "HISPartners";
-$nonAdminTablesArr[] = "HealthFacilities";
-$nonAdminTablesArr[] = "HealthUnits";
-$nonAdminTablesArr[] = "Publications";
-$nonAdminTablesArr[] = "Regions";
-$nonAdminTablesArr[] = "Research";
-$nonAdminTablesArr[] = "Workforce";
 $nonAdminTablesArr[] = "MFR_Dashboard_Report";
 $nonAdminTablesArr[] = "MFR_Status_Report";
 $nonAdminTablesArr[] = "MFR_Facilities";
 $nonAdminTablesArr[] = "MFR_Region_Report";
 $nonAdminTablesArr[] = "MFR_Zone_Report";
 $nonAdminTablesArr[] = "MFR_Woreda_Report";
-$nonAdminTablesArr[] = "MFR_Dashboard_Reports_Chart";
-$nonAdminTablesArr[] = "MFR_Dashboard_Reports";
-$nonAdminTablesArr[] = "MFR_Operational_Status";
-$nonAdminTablesArr[] = "MFR_Region";
-$nonAdminTablesArr[] = "MFR_Zone";
-$nonAdminTablesArr[] = "MFR_Woreda";
-$nonAdminTablesArr[] = "MFR_Operational_Status_Chart";
-$nonAdminTablesArr[] = "MFR_Region_Chart";
-$nonAdminTablesArr[] = "MFR_Zone_Chart";
-$nonAdminTablesArr[] = "MFR_Woreda_Chart";
-$nonAdminTablesArr[] = "AI_Data_Assistant";
 $nonAdminTablesArr[] = "DHIS2_Indicators";
 $nonAdminTablesArr[] = "DHIS2_Organisation_Units";
 $nonAdminTablesArr[] = "DHIS2_Analytics";
@@ -57,7 +33,6 @@ $nonAdminTablesArr[] = "DHIS2_Analytics Chart";
 $nonAdminTablesArr[] = "DHIS2_Analytics Report";
 $nonAdminTablesArr[] = "DHIS2_Reports";
 $nonAdminTablesArr[] = "DHIS2_Datasets";
-$nonAdminTablesArr[] = "DHIS2_Periods";
 $nonAdminTablesArr[] = "DHIS2_Reporting_Rate";
 $nonAdminTablesArr[] = "DHIS2_Reporting_Rate_Chart";
 $nonAdminTablesArr[] = "DHIS2_Reporting_Rate_Report";
@@ -70,7 +45,6 @@ $nonAdminTablesArr[] = "MFR_Woredas";
 $nonAdminTablesArr[] = "MFR_Facility_Types";
 $nonAdminTablesArr[] = "MFR_Operational_Statuses";
 $nonAdminTablesArr[] = "MFR_Status";
-$nonAdminTablesArr[] = "hispmd_users";
 $nonAdminTablesArr[] = "DHIS2_OrgUnit_Country";
 $nonAdminTablesArr[] = "DHIS2_OrgUnit_Regions";
 $nonAdminTablesArr[] = "DHIS2_OrgUnit_Zone";
@@ -79,6 +53,39 @@ $nonAdminTablesArr[] = "DHIS2_OrgUnit_Groups";
 $nonAdminTablesArr[] = "DHIS2_OrgUnit_Group_Sets";
 $nonAdminTablesArr[] = "DHIS2_AIO_OrgUnit";
 $nonAdminTablesArr[] = "DHIS2_OrgUnit_Distributions";
+$nonAdminTablesArr[] = "public.ai_data_assistant";
+$nonAdminTablesArr[] = "public.dataquality";
+$nonAdminTablesArr[] = "public.datause";
+$nonAdminTablesArr[] = "public.dhis2_periods";
+$nonAdminTablesArr[] = "public.digitalhealth";
+$nonAdminTablesArr[] = "public.digitalhealthapps";
+$nonAdminTablesArr[] = "public.financialresources";
+$nonAdminTablesArr[] = "public.healthfacilities";
+$nonAdminTablesArr[] = "public.healthunits";
+$nonAdminTablesArr[] = "public.hisgovernance";
+$nonAdminTablesArr[] = "public.hispartners";
+$nonAdminTablesArr[] = "public.mfr_dashboard_reports";
+$nonAdminTablesArr[] = "public.mfr_operational_status";
+$nonAdminTablesArr[] = "public.mfr_region";
+$nonAdminTablesArr[] = "public.mfr_woreda";
+$nonAdminTablesArr[] = "public.mfr_zone";
+$nonAdminTablesArr[] = "public.publications";
+$nonAdminTablesArr[] = "public.regions";
+$nonAdminTablesArr[] = "public.research";
+$nonAdminTablesArr[] = "public.workforce";
+$nonAdminTablesArr[] = "public.hispmdusers";
+$nonAdminTablesArr[] = "mfr_dashboard_reports_chart";
+$nonAdminTablesArr[] = "mfr_operational_status_chart";
+$nonAdminTablesArr[] = "mfr_region_chart";
+$nonAdminTablesArr[] = "public.ethprism_additional_organizational_and_behavioral_assessment";
+$nonAdminTablesArr[] = "public.ethprism_facility_level_rhis_performance_diagnostic";
+$nonAdminTablesArr[] = "public.ethprism_facility_office_checklist";
+$nonAdminTablesArr[] = "public.ethprism_healthpost_level_rhis_performance_diagnostic";
+$nonAdminTablesArr[] = "public.ethprism_national_prism_woreda_level_diagnostic";
+$nonAdminTablesArr[] = "public.ethprism_organizational_and_behavioral_assessment";
+$nonAdminTablesArr[] = "public.hispmd_prism_settings";
+$nonAdminTablesArr[] = "PRISM Dashboard";
+$nonAdminTablesArr[] = "hispmd_users_audit";
 
 $ug_connection = $cman->getForUserGroups();
 
@@ -90,7 +97,7 @@ $cbxNames = array('add' => array('mask' => 'A', 'rightName' => 'add')
 	, 'imp' => array('mask' => 'I', 'rightName' => 'import')
 	, 'adm' => array('mask' => 'M'));
 
-$wGroupTableName = $ug_connection->addTableWrappers( "hispmd_uggroups" );
+$wGroupTableName = $ug_connection->addTableWrappers( "public.hispmd_uggroups" );
 	
 switch(postvalue("a"))
 {
@@ -109,7 +116,7 @@ switch(postvalue("a"))
 		$sql = "delete from ". $wGroupTableName ." where ". $ug_connection->addFieldWrappers("GroupID") ."=".(postvalue_number("id"));
 		$ug_connection->exec( $sql );
 		
-		$sql = "delete from ". $ug_connection->addTableWrappers( "hispmd_ugrights" ) 
+		$sql = "delete from ". $ug_connection->addTableWrappers( "public.hispmd_ugrights" ) 
 			." where ". $ug_connection->addFieldWrappers( "GroupID" ) ."=".(postvalue_number("id"));
 		$ug_connection->exec( $sql );
 
@@ -149,7 +156,7 @@ switch(postvalue("a"))
 				$allRights[] = $rightsRow;
 			}
 			
-			$wRightsTableName = $ug_connection->addTableWrappers( "hispmd_ugrights" );
+			$wRightsTableName = $ug_connection->addTableWrappers( "public.hispmd_ugrights" );
 			
 			$delGroupId = 0;
 			$state = my_json_decode( postvalue('state') );

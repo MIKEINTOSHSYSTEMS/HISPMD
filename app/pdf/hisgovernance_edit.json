@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel HISGovernance edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_hisgovernance edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -160,10 +160,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel HISGovernance level }","bold":true},{"text":{$level_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_hisgovernance governance_id }","bold":true},{"text":{$governance_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel HISGovernance is_functional }","bold":true},{"text":{$is_functional_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_hisgovernance level }","bold":true},{"text":{$level_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_hisgovernance is_functional }","bold":true},{"text":{$is_functional_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
