@@ -1527,6 +1527,24 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.hispmd_prism_settings" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.moh_administration_units" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_assessments" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_data_sources" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_facility_types" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_health_facilities" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_indicator_data" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_indicators" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_regions" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_indicator_groups" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

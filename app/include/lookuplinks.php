@@ -376,6 +376,62 @@ function InitLookupLinks()
 			$lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"] = array();
 		}
 		$lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"]["search"] = array("table" => "mfr_region_chart", "field" => "region", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_facility_types"] ) ) {
+			$lookupTableLinks["public.moh_facility_types"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_facility_types"]["moh_health_facilities.facility_type_id"] )) {
+			$lookupTableLinks["public.moh_facility_types"]["moh_health_facilities.facility_type_id"] = array();
+		}
+		$lookupTableLinks["public.moh_facility_types"]["moh_health_facilities.facility_type_id"]["edit"] = array("table" => "public.moh_health_facilities", "field" => "facility_type_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicators"] ) ) {
+			$lookupTableLinks["public.moh_indicators"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicators"]["moh_indicator_data.indicator_id"] )) {
+			$lookupTableLinks["public.moh_indicators"]["moh_indicator_data.indicator_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicators"]["moh_indicator_data.indicator_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "indicator_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
+			$lookupTableLinks["public.moh_data_sources"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_sources"]["moh_indicator_data.data_source_id"] )) {
+			$lookupTableLinks["public.moh_data_sources"]["moh_indicator_data.data_source_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_sources"]["moh_indicator_data.data_source_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "data_source_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
+			$lookupTableLinks["public.moh_assessments"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_assessments"]["moh_indicator_data.assessment_id"] )) {
+			$lookupTableLinks["public.moh_assessments"]["moh_indicator_data.assessment_id"] = array();
+		}
+		$lookupTableLinks["public.moh_assessments"]["moh_indicator_data.assessment_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "assessment_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_regions"] ) ) {
+			$lookupTableLinks["public.moh_regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_regions"]["moh_indicator_data.region_id"] )) {
+			$lookupTableLinks["public.moh_regions"]["moh_indicator_data.region_id"] = array();
+		}
+		$lookupTableLinks["public.moh_regions"]["moh_indicator_data.region_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "region_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_administration_units"] ) ) {
+			$lookupTableLinks["public.moh_administration_units"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_administration_units"]["moh_indicator_data.unit_id"] )) {
+			$lookupTableLinks["public.moh_administration_units"]["moh_indicator_data.unit_id"] = array();
+		}
+		$lookupTableLinks["public.moh_administration_units"]["moh_indicator_data.unit_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "unit_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_health_facilities"] ) ) {
+			$lookupTableLinks["public.moh_health_facilities"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_health_facilities"]["moh_indicator_data.facility_id"] )) {
+			$lookupTableLinks["public.moh_health_facilities"]["moh_indicator_data.facility_id"] = array();
+		}
+		$lookupTableLinks["public.moh_health_facilities"]["moh_indicator_data.facility_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "facility_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
+			$lookupTableLinks["public.moh_indicator_groups"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"] )) {
+			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"]["edit"] = array("table" => "public.moh_indicators", "field" => "indicator_group_id", "page" => "edit");
 }
 
 ?>

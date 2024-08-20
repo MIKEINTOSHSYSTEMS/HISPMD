@@ -732,6 +732,33 @@ pdfDocument = {
 				
 			{"text":"","background":"#CFAE83","hidden":"{$item_hide_welcome_item69}"},
 				
+				
+			{"text":"","background":"#778899","hidden":"{$item_hide_welcome_item70}"},
+				
+				
+			{"text":"","background":"#6DA5C8","hidden":"{$item_hide_welcome_item71}"},
+				
+				
+			{"text":"","background":"#CD853F","hidden":"{$item_hide_welcome_item72}"},
+				
+				
+			{"text":"","background":"#778899","hidden":"{$item_hide_welcome_item73}"},
+				
+				
+			{"text":"","background":"#CD5C5C","hidden":"{$item_hide_welcome_item74}"},
+				
+				
+			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item75}"},
+				
+				
+			{"text":"","background":"#E07878","hidden":"{$item_hide_welcome_item76}"},
+				
+				
+			{"text":"","background":"#E8926F","hidden":"{$item_hide_welcome_item77}"},
+				
+				
+			{"text":"","background":"#00C2C5","hidden":"{$item_hide_welcome_item78}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

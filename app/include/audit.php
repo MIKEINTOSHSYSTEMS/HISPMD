@@ -702,6 +702,42 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.moh_administration_units")
+		{
+			return false;
+		}
+		if($table=="public.moh_assessments")
+		{
+			return false;
+		}
+		if($table=="public.moh_data_sources")
+		{
+			return false;
+		}
+		if($table=="public.moh_facility_types")
+		{
+			return false;
+		}
+		if($table=="public.moh_health_facilities")
+		{
+			return false;
+		}
+		if($table=="public.moh_indicator_data")
+		{
+			return false;
+		}
+		if($table=="public.moh_indicators")
+		{
+			return false;
+		}
+		if($table=="public.moh_regions")
+		{
+			return false;
+		}
+		if($table=="public.moh_indicator_groups")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1353,6 +1389,42 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="hispmd_prism_data_forms")
+		{
+			return false;
+		}
+		if($table=="public.moh_administration_units")
+		{
+			return false;
+		}
+		if($table=="public.moh_assessments")
+		{
+			return false;
+		}
+		if($table=="public.moh_data_sources")
+		{
+			return false;
+		}
+		if($table=="public.moh_facility_types")
+		{
+			return false;
+		}
+		if($table=="public.moh_health_facilities")
+		{
+			return false;
+		}
+		if($table=="public.moh_indicator_data")
+		{
+			return false;
+		}
+		if($table=="public.moh_indicators")
+		{
+			return false;
+		}
+		if($table=="public.moh_regions")
+		{
+			return false;
+		}
+		if($table=="public.moh_indicator_groups")
 		{
 			return false;
 		}

@@ -1,0 +1,6 @@
+Import into public.moh_regions
+8/20/2024 6:01:20 PM
+
+14 out of 14 records processed successfully.
+14 records added.
+0 records updated.

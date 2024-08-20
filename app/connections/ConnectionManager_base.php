@@ -313,6 +313,15 @@ class ConnectionManager_Base
 		$connectionsIds["hispmd_users_audit"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["hispmd_system_settings"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["hispmd_prism_data_forms"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_administration_units"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_assessments"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_data_sources"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_facility_types"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_health_facilities"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_indicator_data"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_indicators"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_regions"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_indicator_groups"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -88,6 +88,15 @@ $nonAdminTablesArr[] = "PRISM Dashboard";
 $nonAdminTablesArr[] = "hispmd_users_audit";
 $nonAdminTablesArr[] = "hispmd_system_settings";
 $nonAdminTablesArr[] = "hispmd_prism_data_forms";
+$nonAdminTablesArr[] = "public.moh_administration_units";
+$nonAdminTablesArr[] = "public.moh_assessments";
+$nonAdminTablesArr[] = "public.moh_data_sources";
+$nonAdminTablesArr[] = "public.moh_facility_types";
+$nonAdminTablesArr[] = "public.moh_health_facilities";
+$nonAdminTablesArr[] = "public.moh_indicator_data";
+$nonAdminTablesArr[] = "public.moh_indicators";
+$nonAdminTablesArr[] = "public.moh_regions";
+$nonAdminTablesArr[] = "public.moh_indicator_groups";
 
 $ug_connection = $cman->getForUserGroups();
 

@@ -3656,6 +3656,24 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "hispmd_system_settings" ] = "hispmd_system_settings";
 	$projectEntities[ "hispmd_prism_data_forms" ] = array( "url" => "hispmd_prism_data_forms", "type" => 1 );
 	$projectEntitiesReverse[ "hispmd_prism_data_forms" ] = "hispmd_prism_data_forms";
+	$projectEntities[ "public.moh_administration_units" ] = array( "url" => "moh_administration_units", "type" => 0 );
+	$projectEntitiesReverse[ "moh_administration_units" ] = "public.moh_administration_units";
+	$projectEntities[ "public.moh_assessments" ] = array( "url" => "moh_assessments", "type" => 0 );
+	$projectEntitiesReverse[ "moh_assessments" ] = "public.moh_assessments";
+	$projectEntities[ "public.moh_data_sources" ] = array( "url" => "moh_data_sources", "type" => 0 );
+	$projectEntitiesReverse[ "moh_data_sources" ] = "public.moh_data_sources";
+	$projectEntities[ "public.moh_facility_types" ] = array( "url" => "moh_facility_types", "type" => 0 );
+	$projectEntitiesReverse[ "moh_facility_types" ] = "public.moh_facility_types";
+	$projectEntities[ "public.moh_health_facilities" ] = array( "url" => "moh_health_facilities", "type" => 0 );
+	$projectEntitiesReverse[ "moh_health_facilities" ] = "public.moh_health_facilities";
+	$projectEntities[ "public.moh_indicator_data" ] = array( "url" => "moh_indicator_data", "type" => 0 );
+	$projectEntitiesReverse[ "moh_indicator_data" ] = "public.moh_indicator_data";
+	$projectEntities[ "public.moh_indicators" ] = array( "url" => "moh_indicators", "type" => 0 );
+	$projectEntitiesReverse[ "moh_indicators" ] = "public.moh_indicators";
+	$projectEntities[ "public.moh_regions" ] = array( "url" => "moh_regions", "type" => 0 );
+	$projectEntitiesReverse[ "moh_regions" ] = "public.moh_regions";
+	$projectEntities[ "public.moh_indicator_groups" ] = array( "url" => "moh_indicator_groups", "type" => 0 );
+	$projectEntitiesReverse[ "moh_indicator_groups" ] = "public.moh_indicator_groups";
 }
 
 function findTable( $table ) {

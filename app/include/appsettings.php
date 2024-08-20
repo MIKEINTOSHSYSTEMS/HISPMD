@@ -737,9 +737,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "505_1723900025";
+$projectBuildKey = "507_1724173108";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "505";
+$projectBuildNumber = "507";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -835,6 +835,15 @@ $tableCaptions["English"]["PRISM_Dashboard"] = "PRISM Dashboard";
 $tableCaptions["English"]["hispmd_users_audit"] = "Hispmd Users Audit";
 $tableCaptions["English"]["hispmd_system_settings"] = "Hispmd System Settings";
 $tableCaptions["English"]["hispmd_prism_data_forms"] = "Hispmd Prism Data Forms";
+$tableCaptions["English"]["public_moh_administration_units"] = "Moh Administration Units";
+$tableCaptions["English"]["public_moh_assessments"] = "Moh Assessments";
+$tableCaptions["English"]["public_moh_data_sources"] = "Moh Data Sources";
+$tableCaptions["English"]["public_moh_facility_types"] = "Moh Facility Types";
+$tableCaptions["English"]["public_moh_health_facilities"] = "Moh Health Facilities";
+$tableCaptions["English"]["public_moh_indicator_data"] = "Moh Indicator Data";
+$tableCaptions["English"]["public_moh_indicators"] = "Moh Indicators";
+$tableCaptions["English"]["public_moh_regions"] = "Moh Regions";
+$tableCaptions["English"]["public_moh_indicator_groups"] = "Moh Indicator Groups";
 
 
 $globalEvents = new class_GlobalEvents;

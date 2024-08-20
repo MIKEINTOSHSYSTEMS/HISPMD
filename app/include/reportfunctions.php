@@ -729,6 +729,42 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.moh_administration_units")
+		{
+			return 1;
+		}
+		if($table=="public.moh_assessments")
+		{
+			return 1;
+		}
+		if($table=="public.moh_data_sources")
+		{
+			return 1;
+		}
+		if($table=="public.moh_facility_types")
+		{
+			return 1;
+		}
+		if($table=="public.moh_health_facilities")
+		{
+			return 1;
+		}
+		if($table=="public.moh_indicator_data")
+		{
+			return 1;
+		}
+		if($table=="public.moh_indicators")
+		{
+			return 1;
+		}
+		if($table=="public.moh_regions")
+		{
+			return 1;
+		}
+		if($table=="public.moh_indicator_groups")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1281,6 +1317,42 @@ function getCaptionTable($table)
 	if($table=="hispmd_prism_data_forms")
 	{
 		return "Hispmd Prism Data Forms";
+	}
+	if($table=="public.moh_administration_units")
+	{
+		return "Moh Administration Units";
+	}
+	if($table=="public.moh_assessments")
+	{
+		return "Moh Assessments";
+	}
+	if($table=="public.moh_data_sources")
+	{
+		return "Moh Data Sources";
+	}
+	if($table=="public.moh_facility_types")
+	{
+		return "Moh Facility Types";
+	}
+	if($table=="public.moh_health_facilities")
+	{
+		return "Moh Health Facilities";
+	}
+	if($table=="public.moh_indicator_data")
+	{
+		return "Moh Indicator Data";
+	}
+	if($table=="public.moh_indicators")
+	{
+		return "Moh Indicators";
+	}
+	if($table=="public.moh_regions")
+	{
+		return "Moh Regions";
+	}
+	if($table=="public.moh_indicator_groups")
+	{
+		return "Moh Indicator Groups";
 	}
 	return $table;
 }
@@ -2550,6 +2622,114 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="hispmd_prism_data_forms";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_administration_units");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_administration_units";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_administration_units";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_assessments");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_assessments";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_assessments";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_data_sources");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_data_sources";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_data_sources";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_facility_types");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_facility_types";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_facility_types";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_health_facilities");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_health_facilities";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_health_facilities";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_indicator_data");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_indicator_data";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_indicator_data";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_indicators");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_indicators";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_indicators";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_regions");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_regions";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_regions";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_indicator_groups");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_indicator_groups";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_indicator_groups";
 	}
 	return $arr;
 }

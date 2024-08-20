@@ -349,6 +349,24 @@ function checkTableName($shortTName )
 		return true;
 	if ("hispmd_prism_data_forms" == $shortTName )
 		return true;
+	if ("moh_administration_units" == $shortTName )
+		return true;
+	if ("moh_assessments" == $shortTName )
+		return true;
+	if ("moh_data_sources" == $shortTName )
+		return true;
+	if ("moh_facility_types" == $shortTName )
+		return true;
+	if ("moh_health_facilities" == $shortTName )
+		return true;
+	if ("moh_indicator_data" == $shortTName )
+		return true;
+	if ("moh_indicators" == $shortTName )
+		return true;
+	if ("moh_regions" == $shortTName )
+		return true;
+	if ("moh_indicator_groups" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1056,6 +1074,87 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="hispmd_prism_data_forms";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_administration_units");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_administration_units";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_assessments");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_assessments";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_data_sources");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_data_sources";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_facility_types");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_facility_types";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_health_facilities");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_health_facilities";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_indicator_data");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_indicator_data";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_indicators");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_indicators";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_regions");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_regions";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_indicator_groups");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_indicator_groups";
+	}
 	return $arr;
 }
 
@@ -1138,6 +1237,15 @@ function GetTablesListWithoutSecurity()
 	$arr[]="hispmd_users_audit";
 	$arr[]="hispmd_system_settings";
 	$arr[]="hispmd_prism_data_forms";
+	$arr[]="public.moh_administration_units";
+	$arr[]="public.moh_assessments";
+	$arr[]="public.moh_data_sources";
+	$arr[]="public.moh_facility_types";
+	$arr[]="public.moh_health_facilities";
+	$arr[]="public.moh_indicator_data";
+	$arr[]="public.moh_indicators";
+	$arr[]="public.moh_regions";
+	$arr[]="public.moh_indicator_groups";
 	return $arr;
 }
 
@@ -2138,6 +2246,51 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="hispmd_prism_data_forms" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_administration_units" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_assessments" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_data_sources" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_facility_types" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_health_facilities" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_indicator_data" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_indicators" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_regions" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_indicator_groups" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

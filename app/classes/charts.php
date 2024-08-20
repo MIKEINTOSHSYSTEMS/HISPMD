@@ -524,6 +524,24 @@ class Chart
 			return true;
 		if("public.hispmd_prism_settings" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.moh_administration_units" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_assessments" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_data_sources" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_facility_types" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_health_facilities" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_indicator_data" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_indicators" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_regions" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_indicator_groups" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

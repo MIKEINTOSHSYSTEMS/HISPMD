@@ -208,6 +208,33 @@
 [data-page=".global_menu"][data-itemid="welcome_item69"] > .bs-welcome-header {
   background-color: #CFAE83;
 }
+[data-page=".global_menu"][data-itemid="welcome_item70"] > .bs-welcome-header {
+  background-color: #778899;
+}
+[data-page=".global_menu"][data-itemid="welcome_item71"] > .bs-welcome-header {
+  background-color: #6DA5C8;
+}
+[data-page=".global_menu"][data-itemid="welcome_item72"] > .bs-welcome-header {
+  background-color: #CD853F;
+}
+[data-page=".global_menu"][data-itemid="welcome_item73"] > .bs-welcome-header {
+  background-color: #778899;
+}
+[data-page=".global_menu"][data-itemid="welcome_item74"] > .bs-welcome-header {
+  background-color: #CD5C5C;
+}
+[data-page=".global_menu"][data-itemid="welcome_item75"] > .bs-welcome-header {
+  background-color: #DB7093;
+}
+[data-page=".global_menu"][data-itemid="welcome_item76"] > .bs-welcome-header {
+  background-color: #E07878;
+}
+[data-page=".global_menu"][data-itemid="welcome_item77"] > .bs-welcome-header {
+  background-color: #E8926F;
+}
+[data-page=".global_menu"][data-itemid="welcome_item78"] > .bs-welcome-header {
+  background-color: #00C2C5;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
