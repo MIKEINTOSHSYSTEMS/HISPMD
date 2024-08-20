@@ -182,7 +182,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<iframe src=\"../api/database/index.php\" width=\"100%\" height=\"700\" frameborder=\"0\"></iframe>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"<iframe src=\"../api/database/index.php\" width=\"100%\" height=\"777\" frameborder=\"0\"></iframe>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
