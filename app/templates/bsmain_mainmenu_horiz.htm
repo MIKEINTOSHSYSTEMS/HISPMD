@@ -2611,20 +2611,12 @@ navbar-nav
 
 					</li>
 					{END item119_menulink}
-								</ul>
-			</li>
-			{END item117_menulink}
-				</ul>
-	</li>
-	{END item103_menulink}
-	
-	
-	{BEGIN item120_menulink}
-	<li class=" {$item120_current}">
-		
+								
+									{BEGIN item120_menulink}
+						<li class=" {$item120_current}">
+						
 <a {$item120_menulink_attrs} title="{$item120_tooltip}" 
-			data-menu-top
-			data-menu-h
+				data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -2636,8 +2628,14 @@ navbar-nav
 			</span>
 	</a>
 
+					</li>
+					{END item120_menulink}
+								</ul>
+			</li>
+			{END item117_menulink}
+				</ul>
 	</li>
-	{END item120_menulink}
+	{END item103_menulink}
 	
 	
 	{BEGIN item121_menulink}
@@ -2680,4 +2678,25 @@ navbar-nav
 
 	</li>
 	{END item122_menulink}
+	
+	
+	{BEGIN item123_menulink}
+	<li class=" {$item123_current}">
+		
+<a {$item123_menulink_attrs} title="{$item123_tooltip}" 
+			data-menu-top
+			data-menu-h
+		data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item123_icon} {$item123_title}
+		</span>
+			</span>
+	</a>
+
+	</li>
+	{END item123_menulink}
 </ul>

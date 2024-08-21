@@ -620,8 +620,10 @@ $globalSettings["ProjectLogo"] = array();
 $globalSettings["ProjectLogo"]["English"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
 
 $globalSettings["CookieBanner"] = array();
+$globalSettings["CookieBanner"]["English"] = "We use cookies and other tracking technologies to improve your browsing experience on our web application, and analyze site traffic.
+By clicking OK, you consent to our use of cookies and other tracking technologies.";
 
-$globalSettings["useCookieBanner"] = 0 != 0;
+$globalSettings["useCookieBanner"] = 1 != 0;
 
 $globalSettings["htmlEmailTemplates"] = array();
 
@@ -630,6 +632,7 @@ $globalSettings["isAddWebRep"] = true;
 $globalSettings["createLoginPage"] = true;
 $globalSettings["userGroupCount"] = 1;
 
+$globalSettings["isSection508"] = true;
 
 $globalSettings["apiGoogleMapsCode"] = "";
 
@@ -737,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "507_1724173108";
+$projectBuildKey = "510_1724266853";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "507";
+$projectBuildNumber = "510";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -844,6 +847,7 @@ $tableCaptions["English"]["public_moh_indicator_data"] = "Moh Indicator Data";
 $tableCaptions["English"]["public_moh_indicators"] = "Moh Indicators";
 $tableCaptions["English"]["public_moh_regions"] = "Moh Regions";
 $tableCaptions["English"]["public_moh_indicator_groups"] = "Moh Indicator Groups";
+$tableCaptions["English"]["public_timetracker"] = "Timetracker";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -952,6 +956,42 @@ $gReadPermissions = true;
 $resizeImagesOnClient = false;
 
 
+// here goes EVENT_INIT_APP event
+
+//**********  Insert a record into another table  ************
+
+// here goes EVENT_INIT_APP event
+$currentDateTimeForDb = localdatetime2db( runner_date_format("m-d-y H:i:s") );
+// receiving AJAX request with the new page URL
+// in timetracker table we create a new record 
+// and return the TrackerID value of the new record
+if( postvalue("pageOpen") != false ){
+		$data = array();
+		$data["pagename"] = postvalue("pageName");
+		$data["timeon"] = $currentDateTimeForDb;
+		$data["userID"] =  Security::getUserName();
+		if(postvalue("recordID") != false){
+			$data["recordID"] = postvalue("recordID");
+		}
+		DB::Insert("timetracker", $data);
+		//return TrackerID
+		echo DB::LastId();
+		exit();
+
+}
+// receiving AJAX request that tell us we are still on the same pageпродолжается
+// we just update the value of timeoff field for the current TrackerID
+if( postvalue("TrackerID") !=false ){
+	$now_datetime = $currentDateTimeForDb;
+	DB::Update("timetracker",array("timeoff"=> $now_datetime ),array("trackerId" => postvalue("TrackerID") ));
+	exit();
+}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+
+;
 
 
 // default connection link #9875

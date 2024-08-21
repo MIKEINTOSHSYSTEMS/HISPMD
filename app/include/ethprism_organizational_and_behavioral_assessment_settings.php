@@ -130,7 +130,7 @@ $tdataethprism_organizational_and_behavioral_assessment[".listAjax"] = false;
 //	temporary
 //$tdataethprism_organizational_and_behavioral_assessment[".listAjax"] = false;
 
-	$tdataethprism_organizational_and_behavioral_assessment[".audit"] = false;
+	$tdataethprism_organizational_and_behavioral_assessment[".audit"] = true;
 
 	$tdataethprism_organizational_and_behavioral_assessment[".locking"] = false;
 

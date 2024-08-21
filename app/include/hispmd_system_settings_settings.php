@@ -79,7 +79,7 @@ $tdatahispmd_system_settings[".listAjax"] = false;
 //	temporary
 //$tdatahispmd_system_settings[".listAjax"] = false;
 
-	$tdatahispmd_system_settings[".audit"] = false;
+	$tdatahispmd_system_settings[".audit"] = true;
 
 	$tdatahispmd_system_settings[".locking"] = false;
 

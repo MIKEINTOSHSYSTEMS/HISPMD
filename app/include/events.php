@@ -25,6 +25,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["AfterLogout"]=true;
 
 
+
+
 //	onscreen events
 		$this->events["MFR_Region_Report_map"] = true;
 		$this->events["MFR_Region_map"] = true;
@@ -65,6 +67,64 @@ exit();
 ;
 } // function AfterLogout
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

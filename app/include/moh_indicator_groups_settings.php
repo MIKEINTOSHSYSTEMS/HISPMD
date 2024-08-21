@@ -64,7 +64,7 @@ $tdatamoh_indicator_groups[".listAjax"] = false;
 //	temporary
 //$tdatamoh_indicator_groups[".listAjax"] = false;
 
-	$tdatamoh_indicator_groups[".audit"] = false;
+	$tdatamoh_indicator_groups[".audit"] = true;
 
 	$tdatamoh_indicator_groups[".locking"] = false;
 

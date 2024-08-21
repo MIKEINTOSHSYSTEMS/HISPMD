@@ -175,7 +175,7 @@ $tdataethprism_additional_organizational_and_behavioral_assessment[".listAjax"] 
 //	temporary
 //$tdataethprism_additional_organizational_and_behavioral_assessment[".listAjax"] = false;
 
-	$tdataethprism_additional_organizational_and_behavioral_assessment[".audit"] = false;
+	$tdataethprism_additional_organizational_and_behavioral_assessment[".audit"] = true;
 
 	$tdataethprism_additional_organizational_and_behavioral_assessment[".locking"] = false;
 

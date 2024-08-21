@@ -1545,6 +1545,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.moh_indicator_groups" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.timetracker" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

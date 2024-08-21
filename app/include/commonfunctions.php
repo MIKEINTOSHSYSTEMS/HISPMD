@@ -367,6 +367,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_indicator_groups" == $shortTName )
 		return true;
+	if ("timetracker" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1155,6 +1157,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.moh_indicator_groups";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.timetracker");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.timetracker";
+	}
 	return $arr;
 }
 
@@ -1246,6 +1257,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_indicators";
 	$arr[]="public.moh_regions";
 	$arr[]="public.moh_indicator_groups";
+	$arr[]="public.timetracker";
 	return $arr;
 }
 
@@ -2291,6 +2303,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="public.moh_indicator_groups" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.timetracker" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -4312,6 +4329,7 @@ function GetBaseScriptsForPage($isDisplayLoading, $additionalScripts = "", $cust
 	$result = "";
 	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/loadfirst.js?39558")."\"></script>";
 
+	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/custom_functions.js?".$projectBuildKey)."\"></script>";
 
 	$result .= $additionalScripts;
 	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/lang/".getLangFileName(mlang_getcurrentlang()).".js?39558")."\"></script>";

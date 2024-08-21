@@ -133,7 +133,7 @@ $tdataethprism_facility_office_checklist[".listAjax"] = false;
 //	temporary
 //$tdataethprism_facility_office_checklist[".listAjax"] = false;
 
-	$tdataethprism_facility_office_checklist[".audit"] = false;
+	$tdataethprism_facility_office_checklist[".audit"] = true;
 
 	$tdataethprism_facility_office_checklist[".locking"] = false;
 

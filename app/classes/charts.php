@@ -542,6 +542,8 @@ class Chart
 			return true;
 		if("public.moh_indicator_groups" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.timetracker" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

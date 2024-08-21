@@ -64,7 +64,7 @@ $tdatamoh_administration_units[".listAjax"] = false;
 //	temporary
 //$tdatamoh_administration_units[".listAjax"] = false;
 
-	$tdatamoh_administration_units[".audit"] = false;
+	$tdatamoh_administration_units[".audit"] = true;
 
 	$tdatamoh_administration_units[".locking"] = false;
 

@@ -64,7 +64,7 @@ $tdatamoh_facility_types[".listAjax"] = false;
 //	temporary
 //$tdatamoh_facility_types[".listAjax"] = false;
 
-	$tdatamoh_facility_types[".audit"] = false;
+	$tdatamoh_facility_types[".audit"] = true;
 
 	$tdatamoh_facility_types[".locking"] = false;
 

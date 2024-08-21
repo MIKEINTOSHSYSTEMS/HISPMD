@@ -660,31 +660,31 @@ class AuditTrailTable
 		}
 		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_facility_office_checklist")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_organizational_and_behavioral_assessment")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.hispmd_prism_settings")
 		{
-			return false;
+			return true;
 		}
 		if($table=="PRISM Dashboard")
 		{
@@ -692,51 +692,55 @@ class AuditTrailTable
 		}
 		if($table=="hispmd_users_audit")
 		{
-			return false;
+			return true;
 		}
 		if($table=="hispmd_system_settings")
 		{
-			return false;
+			return true;
 		}
 		if($table=="hispmd_prism_data_forms")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_administration_units")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_assessments")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_data_sources")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_facility_types")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_health_facilities")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_indicator_data")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_indicators")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_regions")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_indicator_groups")
 		{
-			return false;
+			return true;
+		}
+		if($table=="public.timetracker")
+		{
+			return true;
 		}
 	}
 
@@ -1350,31 +1354,31 @@ class AuditTrailFile
 		}
 		if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_facility_office_checklist")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.ethprism_organizational_and_behavioral_assessment")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.hispmd_prism_settings")
 		{
-			return false;
+			return true;
 		}
 		if($table=="PRISM Dashboard")
 		{
@@ -1382,51 +1386,55 @@ class AuditTrailFile
 		}
 		if($table=="hispmd_users_audit")
 		{
-			return false;
+			return true;
 		}
 		if($table=="hispmd_system_settings")
 		{
-			return false;
+			return true;
 		}
 		if($table=="hispmd_prism_data_forms")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_administration_units")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_assessments")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_data_sources")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_facility_types")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_health_facilities")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_indicator_data")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_indicators")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_regions")
 		{
-			return false;
+			return true;
 		}
 		if($table=="public.moh_indicator_groups")
 		{
-			return false;
+			return true;
+		}
+		if($table=="public.timetracker")
+		{
+			return true;
 		}
 	}
 

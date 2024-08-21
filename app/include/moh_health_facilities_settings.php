@@ -67,7 +67,7 @@ $tdatamoh_health_facilities[".listAjax"] = false;
 //	temporary
 //$tdatamoh_health_facilities[".listAjax"] = false;
 
-	$tdatamoh_health_facilities[".audit"] = false;
+	$tdatamoh_health_facilities[".audit"] = true;
 
 	$tdatamoh_health_facilities[".locking"] = false;
 

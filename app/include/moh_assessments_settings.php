@@ -64,7 +64,7 @@ $tdatamoh_assessments[".listAjax"] = false;
 //	temporary
 //$tdatamoh_assessments[".listAjax"] = false;
 
-	$tdatamoh_assessments[".audit"] = false;
+	$tdatamoh_assessments[".audit"] = true;
 
 	$tdatamoh_assessments[".locking"] = false;
 

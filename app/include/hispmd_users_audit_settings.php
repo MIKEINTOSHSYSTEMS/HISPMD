@@ -79,7 +79,7 @@ $tdatahispmd_users_audit[".listAjax"] = false;
 //	temporary
 //$tdatahispmd_users_audit[".listAjax"] = false;
 
-	$tdatahispmd_users_audit[".audit"] = false;
+	$tdatahispmd_users_audit[".audit"] = true;
 
 	$tdatahispmd_users_audit[".locking"] = false;
 

@@ -64,7 +64,7 @@ $tdatahispmd_prism_settings[".listAjax"] = false;
 //	temporary
 //$tdatahispmd_prism_settings[".listAjax"] = false;
 
-	$tdatahispmd_prism_settings[".audit"] = false;
+	$tdatahispmd_prism_settings[".audit"] = true;
 
 	$tdatahispmd_prism_settings[".locking"] = false;
 

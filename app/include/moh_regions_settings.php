@@ -64,7 +64,7 @@ $tdatamoh_regions[".listAjax"] = false;
 //	temporary
 //$tdatamoh_regions[".listAjax"] = false;
 
-	$tdatamoh_regions[".audit"] = false;
+	$tdatamoh_regions[".audit"] = true;
 
 	$tdatamoh_regions[".locking"] = false;
 

@@ -118,7 +118,7 @@ $tdataethprism_national_prism_woreda_level_diagnostic[".listAjax"] = false;
 //	temporary
 //$tdataethprism_national_prism_woreda_level_diagnostic[".listAjax"] = false;
 
-	$tdataethprism_national_prism_woreda_level_diagnostic[".audit"] = false;
+	$tdataethprism_national_prism_woreda_level_diagnostic[".audit"] = true;
 
 	$tdataethprism_national_prism_woreda_level_diagnostic[".locking"] = false;
 

@@ -125,7 +125,7 @@ $tdataethprism_healthpost_level_rhis_performance_diagnostic[".listAjax"] = false
 //	temporary
 //$tdataethprism_healthpost_level_rhis_performance_diagnostic[".listAjax"] = false;
 
-	$tdataethprism_healthpost_level_rhis_performance_diagnostic[".audit"] = false;
+	$tdataethprism_healthpost_level_rhis_performance_diagnostic[".audit"] = true;
 
 	$tdataethprism_healthpost_level_rhis_performance_diagnostic[".locking"] = false;
 

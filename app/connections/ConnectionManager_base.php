@@ -322,6 +322,7 @@ class ConnectionManager_Base
 		$connectionsIds["public.moh_indicators"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_regions"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_indicator_groups"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.timetracker"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

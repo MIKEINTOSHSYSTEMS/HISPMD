@@ -3674,6 +3674,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "moh_regions" ] = "public.moh_regions";
 	$projectEntities[ "public.moh_indicator_groups" ] = array( "url" => "moh_indicator_groups", "type" => 0 );
 	$projectEntitiesReverse[ "moh_indicator_groups" ] = "public.moh_indicator_groups";
+	$projectEntities[ "public.timetracker" ] = array( "url" => "timetracker", "type" => 0 );
+	$projectEntitiesReverse[ "timetracker" ] = "public.timetracker";
 }
 
 function findTable( $table ) {

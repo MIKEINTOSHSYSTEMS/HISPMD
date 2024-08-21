@@ -134,7 +134,7 @@ $tdataethprism_facility_level_rhis_performance_diagnostic[".listAjax"] = false;
 //	temporary
 //$tdataethprism_facility_level_rhis_performance_diagnostic[".listAjax"] = false;
 
-	$tdataethprism_facility_level_rhis_performance_diagnostic[".audit"] = false;
+	$tdataethprism_facility_level_rhis_performance_diagnostic[".audit"] = true;
 
 	$tdataethprism_facility_level_rhis_performance_diagnostic[".locking"] = false;
 
