@@ -11,3 +11,6 @@
 /app/templates_c/*.txt
 /app/templates_c/*.doc
 /app/templates_c/*.docx
+/mysql-int/hispmd_dev.sql
+/src/hispmddb/
+/src/*.sql

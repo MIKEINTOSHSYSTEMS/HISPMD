@@ -376,6 +376,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"] = array();
 		}
 		$lookupTableLinks["public.mfr_region"]["mfr_region_chart.region"]["search"] = array("table" => "mfr_region_chart", "field" => "region", "page" => "search");
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"] ) ) {
+			$lookupTableLinks["public.mfr_facilities_register"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"]["moh_health_facilities.facility_name"] )) {
+			$lookupTableLinks["public.mfr_facilities_register"]["moh_health_facilities.facility_name"] = array();
+		}
+		$lookupTableLinks["public.mfr_facilities_register"]["moh_health_facilities.facility_name"]["edit"] = array("table" => "public.moh_health_facilities", "field" => "facility_name", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_facility_types"] ) ) {
 			$lookupTableLinks["public.moh_facility_types"] = array();
 		}

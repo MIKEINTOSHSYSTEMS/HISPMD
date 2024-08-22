@@ -26,13 +26,38 @@ if (!file_exists($backupFilePath)) {
     exit;
 }
 
-// Command to execute pg_restore inside the Docker container
-$command = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' pg_restore -h $dbHost -U $dbUser -d $dbName -v /tmp/$backupFile\" < $backupFilePath";
+// Check if the database exists
+$checkDbCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -tAc 'SELECT 1 FROM pg_database WHERE datname = \"$dbName\"'\"";
+exec($checkDbCommand, $output, $return_var);
 
-// Execute the command
-$output = [];
-$return_var = 0;
-exec($command . ' 2>&1', $output, $return_var);
+$databaseExists = trim(implode("\n", $output)) === '1';
+
+
+// Drop all tables and other objects in the public schema
+$dropAllCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -d $dbName -c 'DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA public;'\"";
+exec($dropAllCommand . ' 2>&1', $output, $return_var);
+
+if ($return_var !== 0) {
+    echo "Error dropping schema. Details:\n";
+    echo implode("\n", $output);
+    exit;
+}
+
+
+
+// Copy the backup file to the Docker container
+$copyBackupCommand = "docker cp $backupFilePath $containerName:/tmp/$backupFile";
+exec($copyBackupCommand . ' 2>&1', $output, $return_var);
+
+if ($return_var !== 0) {
+    echo "Error copying backup file to Docker container. Details:\n";
+    echo implode("\n", $output);
+    exit;
+}
+
+// Restore the backup
+$restoreCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' pg_restore -h $dbHost -U $dbUser -d $dbName -v /tmp/$backupFile\"";
+exec($restoreCommand . ' 2>&1', $output, $return_var);
 
 if ($return_var === 0) {
     echo "Backup successfully restored: $backupFilePath";

@@ -55,6 +55,7 @@ RUN apt-get update && \
     intl \
     pdo_mysql \
     pdo_pgsql \
+    pgsql \
     pdo_sqlite \
     soap \
     zip \

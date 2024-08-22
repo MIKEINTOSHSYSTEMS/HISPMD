@@ -29,15 +29,16 @@ services:
     expose:
       - "9000"
     depends_on:
-      - db  # Ensure php service starts after db service
+      - db
     environment:
-      MYSQL_HOST: db  # Use service name 'db' for DNS resolution
-      MYSQL_PORT: 3306  # Default MySQL/MariaDB port
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
       MYSQL_USER: hisp_md
       MYSQL_PASSWORD: hisp_md
       MYSQL_DATABASE: hisp_md
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.10
 
   chat:
     build:
@@ -74,7 +75,8 @@ services:
     env_file:
       - .env
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.5
 
   nginx:
     image: nginx:latest
@@ -105,7 +107,8 @@ services:
     depends_on:
       - php
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.12
 
   metabase:
     image: metabase/metabase:v0.50.12
@@ -129,7 +132,8 @@ services:
     depends_on:
       - postgres
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.9
 
   postgres:
     image: postgres:latest
@@ -140,9 +144,11 @@ services:
       POSTGRES_USER: hispmddb
       POSTGRES_PASSWORD: hispmddb
     volumes:
-      - ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb
+      - ./src/hispmddb:/var/lib/postgresql/data
+      #- ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.4
 
   db:
     image: mariadb:11.2.4
@@ -158,7 +164,8 @@ services:
       - ./mysql-init:/docker-entrypoint-initdb.d
       #- /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock  # Mount the MySQL socket file if there is no conflict with the host server
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.7
 
   phpmyadmin:
     image: phpmyadmin:5.2.1
@@ -171,7 +178,8 @@ services:
       PMA_USER: hisp_md
       PMA_PASSWORD: hisp_md
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.2
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -185,7 +193,8 @@ services:
     depends_on:
       - postgres
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.8
 
   mongo:
     image: mongo:latest
@@ -196,7 +205,8 @@ services:
     volumes:
       - hispmd_mongodata:/data/db
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.6
 
   mongo-express:
     image: mongo-express:1.0.2
@@ -210,7 +220,8 @@ services:
     depends_on:
       - mongo
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.11
 
   grafana:
     image: grafana/grafana-enterprise
@@ -221,7 +232,8 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
     networks:
-      - hispmdnet
+      hispmdnet:
+        ipv4_address: 192.168.128.3
 
 volumes:
   hispmd_pgadmindata:
@@ -232,3 +244,6 @@ volumes:
 networks:
   hispmdnet:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.128.0/24

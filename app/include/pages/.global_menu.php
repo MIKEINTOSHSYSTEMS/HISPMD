@@ -857,11 +857,13 @@ array( 'cell' => 'c3' ) ) ) ),
 'items' => array( 'text5' ),
 'align' => 'center' ),
 'c5' => array( 'model' => 'c1',
-'items' => array( 'text7' ) ),
+'items' => array( 'text7' ),
+'align' => 'center' ),
 'c6' => array( 'model' => 'c1',
 'items' => array( 'text8' ) ),
 'c7' => array( 'model' => 'c1',
-'items' => array( 'text9' ) ),
+'items' => array( 'text9' ),
+'align' => 'center' ),
 'c9' => array( 'model' => 'c1',
 'items' => array( 'image',
 'text10' ),
@@ -1306,27 +1308,17 @@ array( 'section' => '',
 'background' => '#BC8F8F',
 'linkType' => 0 ),
 'text7' => array( 'type' => 'text',
-'label' => array( 'text' => '<!--
-<iframe src="./hispmd_menu.php" width="100%" height="700" frameborder="0"></iframe>
-<iframe src="./hispmd_menu.php" width="100%" height="1200px" frameborder="0"></iframe>
-<br>
--->
-<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
+'label' => array( 'text' => '<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
 
 <link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Orbitron\'>
 <link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Aldrich\'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-<!--
+
 አሁን ሰዓቱ
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
   <script  src="../../calendar/eth/ethcal.js"></script>
--->
 
-<!--
-Current Time
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="../../calendar/eth/ethcalgreg.js"></script>
--->
+<br>
 
 ',
 'type' => 0 ),
@@ -1627,29 +1619,18 @@ Current Time
 'userinfo_link' => array( 'type' => 'userinfo_link' ),
 'logout_link' => array( 'type' => 'logout_link' ),
 'text9' => array( 'type' => 'text',
-'label' => array( 'text' => '<!--
-<iframe src="./hispmd_menu.php" width="100%" height="700" frameborder="0"></iframe>
-<iframe src="./hispmd_menu.php" width="100%" height="1200px" frameborder="0"></iframe>
-<br>
--->
-<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
+'label' => array( 'text' => '<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
 
 <link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Orbitron\'>
 <link rel=\'stylesheet\' href=\'https://fonts.googleapis.com/css?family=Aldrich\'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-<!--
 
-አሁን ሰዓቱ
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="../../calendar/eth/ethcal.js"></script>
--->
-<!--
 Current Time
   <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
   <script  src="../../calendar/eth/ethcalgreg.js"></script>
--->
 
-',
+
+<br>',
 'type' => 0 ),
 'editedByRte' => false ),
 'text10' => array( 'type' => 'text',
