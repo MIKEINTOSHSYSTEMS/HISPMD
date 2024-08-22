@@ -98,6 +98,7 @@ $nonAdminTablesArr[] = "public.moh_indicators";
 $nonAdminTablesArr[] = "public.moh_regions";
 $nonAdminTablesArr[] = "public.moh_indicator_groups";
 $nonAdminTablesArr[] = "public.timetracker";
+$nonAdminTablesArr[] = "public.mfr_facilities_register";
 
 $ug_connection = $cman->getForUserGroups();
 

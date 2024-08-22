@@ -742,6 +742,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="public.mfr_facilities_register")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1435,6 +1439,10 @@ class AuditTrailFile
 		if($table=="public.timetracker")
 		{
 			return true;
+		}
+		if($table=="public.mfr_facilities_register")
+		{
+			return false;
 		}
 	}
 

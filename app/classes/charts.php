@@ -544,6 +544,8 @@ class Chart
 			return true;
 		if("public.timetracker" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.mfr_facilities_register" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

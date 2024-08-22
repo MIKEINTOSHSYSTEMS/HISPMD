@@ -5,3 +5,9 @@
 /ai/pandas-ai
 /api/database/backup
 /api/database/backups
+/app/templates_c/*.csv
+/app/templates_c/*.xls
+/app/templates_c/*.xlsx
+/app/templates_c/*.txt
+/app/templates_c/*.doc
+/app/templates_c/*.docx

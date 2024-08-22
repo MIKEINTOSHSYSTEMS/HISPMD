@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "510_1724266853";
+$projectBuildKey = "511_1724336618";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "510";
+$projectBuildNumber = "511";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -848,6 +848,7 @@ $tableCaptions["English"]["public_moh_indicators"] = "Moh Indicators";
 $tableCaptions["English"]["public_moh_regions"] = "Moh Regions";
 $tableCaptions["English"]["public_moh_indicator_groups"] = "Moh Indicator Groups";
 $tableCaptions["English"]["public_timetracker"] = "Timetracker";
+$tableCaptions["English"]["public_mfr_facilities_register"] = "Mfr Facilities Register";
 
 
 $globalEvents = new class_GlobalEvents;

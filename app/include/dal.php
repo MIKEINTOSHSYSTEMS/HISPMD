@@ -73,6 +73,7 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_ugrights;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmdusers;
 	var $tblhispmdathispmdmerqconsultancyo_public_mfr_dashboard_reports;
+	var $tblhispmdathispmdmerqconsultancyo_public_mfr_facilities_register;
 	var $tblhispmdathispmdmerqconsultancyo_public_mfr_operational_status;
 	var $tblhispmdathispmdmerqconsultancyo_public_mfr_region;
 	var $tblhispmdathispmdmerqconsultancyo_public_mfr_woreda;
@@ -127,6 +128,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "hispmd_ugrights", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_ugrights", "altvarname" => "hispmd_ugrights", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmdusers", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmdusers", "altvarname" => "hispmdusers", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "mfr_dashboard_reports", "varname" => "hispmdathispmdmerqconsultancyo_public_mfr_dashboard_reports", "altvarname" => "mfr_dashboard_reports", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "mfr_facilities_register", "varname" => "hispmdathispmdmerqconsultancyo_public_mfr_facilities_register", "altvarname" => "mfr_facilities_register", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "mfr_operational_status", "varname" => "hispmdathispmdmerqconsultancyo_public_mfr_operational_status", "altvarname" => "mfr_operational_status", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "mfr_region", "varname" => "hispmdathispmdmerqconsultancyo_public_mfr_region", "altvarname" => "mfr_region", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "mfr_woreda", "varname" => "hispmdathispmdmerqconsultancyo_public_mfr_woreda", "altvarname" => "mfr_woreda", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

@@ -369,6 +369,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("timetracker" == $shortTName )
 		return true;
+	if ("mfr_facilities_register" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1166,6 +1168,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.timetracker";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.mfr_facilities_register");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.mfr_facilities_register";
+	}
 	return $arr;
 }
 
@@ -1258,6 +1269,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_regions";
 	$arr[]="public.moh_indicator_groups";
 	$arr[]="public.timetracker";
+	$arr[]="public.mfr_facilities_register";
 	return $arr;
 }
 
@@ -2308,6 +2320,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="public.timetracker" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.mfr_facilities_register" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
