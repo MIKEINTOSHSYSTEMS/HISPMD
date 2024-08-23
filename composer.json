@@ -1,5 +1,25 @@
 {
+    "name": "mikeintoshsystems/hispmd",
+    "type": "library",
+    "description": "HISPMD",
+    "keywords": ["metabase, HISPMD"],
+    "homepage": "https://github.com/mikeintoshsystems/hispmd",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Kifle Teferra",
+            "email": "mikeintoshsys@gmail.com",
+            "homepage": "https://mikeintoshsys.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "vlucas/phpdotenv": "^5.6"
-    }
+        "vlucas/phpdotenv": "^5.6",
+        "lcobucci/jwt": "^5.3"
+    },
+        "autoload": {
+            "psr-4": {
+                "Metabase\\": "analytics"
+            }
+        }
 }

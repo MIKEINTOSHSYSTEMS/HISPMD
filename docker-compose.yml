@@ -16,7 +16,7 @@ services:
       - ./.env:/var/www/html/.env
       - ./index.php:/var/www/html/index.php
       - ./LICENSE:/var/www/html/LICENSE
-      - ./map_files:/var/www/html/map_files
+      - ./maps:/var/www/html/maps
       - ./mysql-init:/var/www/html/mysql-init
       - ./README.md:/var/www/html/README.md
       - ./server.html:/var/www/html/server.html
@@ -115,7 +115,7 @@ services:
     container_name: hispmd_viz
     hostname: metabase
     volumes:
-      - hispmd_vizdata:/metabase-data
+      - ./src/hispmd_vizdata:/metabase-data
     ports:
       - "4004:3000"
     environment:
