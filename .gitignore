@@ -5,6 +5,8 @@
 /ai/pandas-ai
 /api/database/backup
 /api/database/backups
+/maps/geojson/
+/maps/geojson/regions
 /app/templates_c/*.csv
 /app/templates_c/*.xls
 /app/templates_c/*.xlsx
