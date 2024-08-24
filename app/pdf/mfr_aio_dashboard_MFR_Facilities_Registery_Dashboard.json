@@ -71,10 +71,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":"{$event MFR_Facilities_Dashboard_snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -104,7 +102,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"DASHBOARD Under Development","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>MFR Facilities Registery Dashboard</title>\n    <style>\n        html, body {\n            margin: 0;\n            padding: 0;\n            height: 100%;\n            width: 100%;\n        }\n        iframe {\n            border: none;\n            width: 100%;\n            height: 777vh;\n            position: relative;\n            top: 0;\n            left: 0;\n        }\n    </style>\n</head>\n<body>\n    <iframe\n        id=\"metabase-iframe\"\n        src=\"\"\n        allowtransparency></iframe>\n    <script>\n        // Set dashboard ID dynamically\n        var dashboardId = 2; // Replace with dynamic ID if needed\n\n        // Make a request to the PHP server to generate the iframe URL for the selected dashboard ID\n        fetch('../api/meta/base.php?dashboardId=' + dashboardId)\n            .then(response => response.text())\n            .then(iframeUrl => {\n                document.getElementById('metabase-iframe').src = iframeUrl;\n            });\n    </script>\n</body>\n        <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->\n\n</html>\n","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -7,8 +7,7 @@
 'add' => false,
 'view' => false,
 'print' => false ),
-'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'grid' => array( 'snippet',
-'text' ),
+'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'grid' => array( 'text' ),
 'left' => array( 'logo',
 'expand_button',
 'menu' ),
@@ -19,8 +18,7 @@
 'username_button' ),
 'top' => array(  ) ),
 'formXtTags' => array( 'top' => array(  ) ),
-'itemForms' => array( 'snippet' => 'grid',
-'text' => 'grid',
+'itemForms' => array( 'text' => 'grid',
 'logo' => 'left',
 'expand_button' => 'left',
 'menu' => 'left',
@@ -44,7 +42,6 @@
 'logout_link' => array( 'logout_link' ),
 'expand_menu_button' => array( 'expand_menu_button' ),
 'collapse_button' => array( 'collapse_button' ),
-'snippet' => array( 'snippet' ),
 'text' => array( 'text' ),
 'expand_button' => array( 'expand_button' ) ),
 'cellMaps' => array(  ) ),
@@ -142,7 +139,7 @@ array( 'section' => '',
 'cells' => array( array( 'cell' => 'c4' ),
 array( 'cell' => 'c5' ) ) ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
-'items' => array( 'snippet' ) ),
+'items' => array(  ) ),
 'c2' => array( 'model' => 'c1',
 'items' => array( 'text' ),
 'align' => 'center' ),
@@ -197,17 +194,57 @@ array( 'cell' => 'c2' ) ),
 'logout_link' => array( 'type' => 'logout_link' ),
 'expand_menu_button' => array( 'type' => 'expand_menu_button' ),
 'collapse_button' => array( 'type' => 'collapse_button' ),
-'snippet' => array( 'eventId' => 'MFR_Facilities_Dashboard_snippet',
-'label' => array( 'text' => 'MFR_Facilities_Dashboard_snippet',
-'type' => 0 ),
-'type' => 'snippet' ),
 'text' => array( 'type' => 'text',
-'label' => array( 'text' => 'DASHBOARD Under Development',
+'label' => array( 'text' => '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFR Facilities Registery Dashboard</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 777vh;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        id="metabase-iframe"
+        src=""
+        allowtransparency></iframe>
+    <script>
+        // Set dashboard ID dynamically
+        var dashboardId = 2; // Replace with dynamic ID if needed
+
+        // Make a request to the PHP server to generate the iframe URL for the selected dashboard ID
+        fetch(\'../api/meta/base.php?dashboardId=\' + dashboardId)
+            .then(response => response.text())
+            .then(iframeUrl => {
+                document.getElementById(\'metabase-iframe\').src = iframeUrl;
+            });
+    </script>
+</body>
+        <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
+
+</html>
+',
 'type' => 0 ),
 'editedByRte' => false ),
 'expand_button' => array( 'type' => 'expand_button' ) ),
 'dbProps' => array(  ),
 'version' => 11,
+'pageWidth' => 'full',
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
