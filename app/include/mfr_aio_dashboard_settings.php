@@ -6,9 +6,9 @@ require_once(getabspath("classes/cipherer.php"));
 $tdatamfr_aio_dashboard = array();
 $tdatamfr_aio_dashboard[".ShortName"] = "mfr_aio_dashboard";
 
-$tdatamfr_aio_dashboard[".pagesByType"] = my_json_decode( "{\"dashboard\":[\"MFR_AIO_Reporting_Dashboard\"]}" );
+$tdatamfr_aio_dashboard[".pagesByType"] = my_json_decode( "{\"dashboard\":[\"MFR_AIO_Reporting_Dashboard\",\"MFR_Facilities_Registery_Dashboard\"]}" );
 $tdatamfr_aio_dashboard[".originalPagesByType"] = $tdatamfr_aio_dashboard[".pagesByType"];
-$tdatamfr_aio_dashboard[".pages"] = types2pages( my_json_decode( "{\"dashboard\":[\"MFR_AIO_Reporting_Dashboard\"]}" ) );
+$tdatamfr_aio_dashboard[".pages"] = types2pages( my_json_decode( "{\"dashboard\":[\"MFR_AIO_Reporting_Dashboard\",\"MFR_Facilities_Registery_Dashboard\"]}" ) );
 $tdatamfr_aio_dashboard[".originalPages"] = $tdatamfr_aio_dashboard[".pages"];
 $tdatamfr_aio_dashboard[".defaultPages"] = my_json_decode( "{\"dashboard\":\"MFR_AIO_Reporting_Dashboard\"}" );
 $tdatamfr_aio_dashboard[".originalDefaultPages"] = $tdatamfr_aio_dashboard[".defaultPages"];

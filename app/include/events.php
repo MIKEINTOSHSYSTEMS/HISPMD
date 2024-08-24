@@ -35,6 +35,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["MERQ_AI_Data_Assistant_snippet"] = true;
 		$this->events["_ethcal_global__snippet"] = true;
 		$this->events["_ethcalgc_global__snippet"] = true;
+		$this->events["MFR_Facilities_Dashboard_snippet"] = true;
 
 
 
@@ -191,6 +192,11 @@ $EC = new EthiopianCalendar(date("Y-m-d")); // set current GC date
 //echo("Gregorian Calendar");
 echo("Today's Date");
 $EC->GCDrawCalendar();
+	;
+}
+	function event_MFR_Facilities_Dashboard_snippet(&$params)
+	{
+	echo phpinfo();
 	;
 }
 
