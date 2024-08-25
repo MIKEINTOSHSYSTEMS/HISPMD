@@ -69,7 +69,7 @@ $tdatadhis2_orgunit_distributions[".listAjax"] = false;
 
 	$tdatadhis2_orgunit_distributions[".audit"] = true;
 
-	$tdatadhis2_orgunit_distributions[".locking"] = true;
+	$tdatadhis2_orgunit_distributions[".locking"] = false;
 
 
 $pages = $tdatadhis2_orgunit_distributions[".defaultPages"];

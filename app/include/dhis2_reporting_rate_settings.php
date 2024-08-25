@@ -87,7 +87,7 @@ $tdatadhis2_reporting_rate[".listAjax"] = false;
 
 	$tdatadhis2_reporting_rate[".audit"] = true;
 
-	$tdatadhis2_reporting_rate[".locking"] = true;
+	$tdatadhis2_reporting_rate[".locking"] = false;
 
 
 $pages = $tdatadhis2_reporting_rate[".defaultPages"];

@@ -69,7 +69,7 @@ $tdataregions[".listAjax"] = false;
 
 	$tdataregions[".audit"] = true;
 
-	$tdataregions[".locking"] = true;
+	$tdataregions[".locking"] = false;
 
 
 $pages = $tdataregions[".defaultPages"];

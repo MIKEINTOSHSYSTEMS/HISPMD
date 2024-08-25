@@ -69,7 +69,7 @@ $tdatadigitalhealthapps[".listAjax"] = false;
 
 	$tdatadigitalhealthapps[".audit"] = true;
 
-	$tdatadigitalhealthapps[".locking"] = true;
+	$tdatadigitalhealthapps[".locking"] = false;
 
 
 $pages = $tdatadigitalhealthapps[".defaultPages"];

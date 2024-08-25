@@ -661,18 +661,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="admin_rights")
-		{
-			return 1;
-		}
-		if($table=="admin_members")
-		{
-			return 1;
-		}
-		if($table=="admin_users")
-		{
-			return 1;
-		}
 		if($table=="mfr_dashboard_reports_chart")
 		{
 			return 1;
@@ -770,6 +758,22 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="public.mfr_facilities_register")
+		{
+			return 1;
+		}
+		if($table=="admin_rights")
+		{
+			return 1;
+		}
+		if($table=="admin_members")
+		{
+			return 1;
+		}
+		if($table=="admin_users")
+		{
+			return 1;
+		}
+		if($table=="System_Users_Activity_Dashboard")
 		{
 			return 1;
 		}
@@ -1258,18 +1262,6 @@ function getCaptionTable($table)
 	{
 		return "Hispmdusers";
 	}
-	if($table=="admin_rights")
-	{
-		return "Admin Rights";
-	}
-	if($table=="admin_members")
-	{
-		return "Admin Members";
-	}
-	if($table=="admin_users")
-	{
-		return "Admin Users";
-	}
 	if($table=="mfr_dashboard_reports_chart")
 	{
 		return "Mfr Dashboard Reports Chart";
@@ -1369,6 +1361,22 @@ function getCaptionTable($table)
 	if($table=="public.mfr_facilities_register")
 	{
 		return "Mfr Facilities Register";
+	}
+	if($table=="admin_rights")
+	{
+		return "Admin Rights";
+	}
+	if($table=="admin_members")
+	{
+		return "Admin Members";
+	}
+	if($table=="admin_users")
+	{
+		return "Admin Users";
+	}
+	if($table=="System_Users_Activity_Dashboard")
+	{
+		return "System Users Activity Dashboard";
 	}
 	return $table;
 }
@@ -2484,42 +2492,6 @@ function GetTablesListReport()
 			$arr[]="public.hispmdusers";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("admin_rights");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="admin_rights";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="admin_rights";
-	}
-	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("admin_members");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="admin_members";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="admin_members";
-	}
-	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("admin_users");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="admin_users";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="admin_users";
-	}
-	if( Security::permissionsAvailable() ) {
 		$strPerm = GetUserPermissions("public.ethprism_additional_organizational_and_behavioral_assessment");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
@@ -2770,6 +2742,42 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="public.mfr_facilities_register";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_rights";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_rights";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_members";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_members";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_users";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_users";
 	}
 	return $arr;
 }

@@ -72,7 +72,7 @@ $tdatahealthunits[".listAjax"] = false;
 
 	$tdatahealthunits[".audit"] = true;
 
-	$tdatahealthunits[".locking"] = true;
+	$tdatahealthunits[".locking"] = false;
 
 
 $pages = $tdatahealthunits[".defaultPages"];

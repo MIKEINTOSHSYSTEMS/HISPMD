@@ -69,7 +69,7 @@ $tdatahispartners[".listAjax"] = false;
 
 	$tdatahispartners[".audit"] = true;
 
-	$tdatahispartners[".locking"] = true;
+	$tdatahispartners[".locking"] = false;
 
 
 $pages = $tdatahispartners[".defaultPages"];

@@ -66,7 +66,7 @@ $tdatadhis2_orgunit_regions[".listAjax"] = false;
 
 	$tdatadhis2_orgunit_regions[".audit"] = true;
 
-	$tdatadhis2_orgunit_regions[".locking"] = true;
+	$tdatadhis2_orgunit_regions[".locking"] = false;
 
 
 $pages = $tdatadhis2_orgunit_regions[".defaultPages"];

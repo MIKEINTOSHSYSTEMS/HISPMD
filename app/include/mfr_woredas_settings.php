@@ -69,7 +69,7 @@ $tdatamfr_woredas[".listAjax"] = false;
 
 	$tdatamfr_woredas[".audit"] = true;
 
-	$tdatamfr_woredas[".locking"] = true;
+	$tdatamfr_woredas[".locking"] = false;
 
 
 $pages = $tdatamfr_woredas[".defaultPages"];

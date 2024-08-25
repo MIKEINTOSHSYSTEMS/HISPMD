@@ -69,7 +69,7 @@ $tdatamfr_zones[".listAjax"] = false;
 
 	$tdatamfr_zones[".audit"] = true;
 
-	$tdatamfr_zones[".locking"] = true;
+	$tdatamfr_zones[".locking"] = false;
 
 
 $pages = $tdatamfr_zones[".defaultPages"];

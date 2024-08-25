@@ -634,18 +634,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="admin_rights")
-		{
-			return true;
-		}
-		if($table=="admin_members")
-		{
-			return true;
-		}
-		if($table=="admin_users")
-		{
-			return true;
-		}
 		if($table=="mfr_dashboard_reports_chart")
 		{
 			return false;
@@ -743,6 +731,22 @@ class AuditTrailTable
 			return true;
 		}
 		if($table=="public.mfr_facilities_register")
+		{
+			return true;
+		}
+		if($table=="admin_rights")
+		{
+			return true;
+		}
+		if($table=="admin_members")
+		{
+			return true;
+		}
+		if($table=="admin_users")
+		{
+			return true;
+		}
+		if($table=="System_Users_Activity_Dashboard")
 		{
 			return false;
 		}
@@ -1332,18 +1336,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="admin_rights")
-		{
-			return true;
-		}
-		if($table=="admin_members")
-		{
-			return true;
-		}
-		if($table=="admin_users")
-		{
-			return true;
-		}
 		if($table=="mfr_dashboard_reports_chart")
 		{
 			return false;
@@ -1441,6 +1433,22 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="public.mfr_facilities_register")
+		{
+			return true;
+		}
+		if($table=="admin_rights")
+		{
+			return true;
+		}
+		if($table=="admin_members")
+		{
+			return true;
+		}
+		if($table=="admin_users")
+		{
+			return true;
+		}
+		if($table=="System_Users_Activity_Dashboard")
 		{
 			return false;
 		}

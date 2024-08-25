@@ -297,9 +297,6 @@ class ConnectionManager_Base
 		$connectionsIds["public.research"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.workforce"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.hispmdusers"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
-		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["mfr_dashboard_reports_chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["mfr_operational_status_chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["mfr_region_chart"] = "hispmdathispmdmerqconsultancyo";
@@ -324,6 +321,9 @@ class ConnectionManager_Base
 		$connectionsIds["public.moh_indicator_groups"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.timetracker"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.mfr_facilities_register"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

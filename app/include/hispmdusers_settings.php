@@ -87,7 +87,7 @@ $tdatahispmdusers[".listAjax"] = false;
 
 	$tdatahispmdusers[".audit"] = true;
 
-	$tdatahispmdusers[".locking"] = true;
+	$tdatahispmdusers[".locking"] = false;
 
 
 $pages = $tdatahispmdusers[".defaultPages"];

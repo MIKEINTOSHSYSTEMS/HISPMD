@@ -72,7 +72,7 @@ $tdatamfr_region_report[".listAjax"] = false;
 
 	$tdatamfr_region_report[".audit"] = true;
 
-	$tdatamfr_region_report[".locking"] = true;
+	$tdatamfr_region_report[".locking"] = false;
 
 
 $pages = $tdatamfr_region_report[".defaultPages"];

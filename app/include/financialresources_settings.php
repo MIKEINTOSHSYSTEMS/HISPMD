@@ -75,7 +75,7 @@ $tdatafinancialresources[".listAjax"] = false;
 
 	$tdatafinancialresources[".audit"] = true;
 
-	$tdatafinancialresources[".locking"] = true;
+	$tdatafinancialresources[".locking"] = false;
 
 
 $pages = $tdatafinancialresources[".defaultPages"];

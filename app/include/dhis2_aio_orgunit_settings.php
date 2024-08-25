@@ -69,7 +69,7 @@ $tdatadhis2_aio_orgunit[".listAjax"] = false;
 
 	$tdatadhis2_aio_orgunit[".audit"] = true;
 
-	$tdatadhis2_aio_orgunit[".locking"] = true;
+	$tdatadhis2_aio_orgunit[".locking"] = false;
 
 
 $pages = $tdatadhis2_aio_orgunit[".defaultPages"];

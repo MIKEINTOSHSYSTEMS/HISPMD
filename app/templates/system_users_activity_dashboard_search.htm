@@ -1,0 +1,573 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Admin Area		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel System_Users_Activity_Dashboard search}</h2>
+		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN hispmd_users_audit_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="hispmd_users_audit_id" data-fieldname="hispmd_users_audit_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_id}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_id}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_id_fieldblock}
+											
+{BEGIN hispmd_users_audit_datetime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_datetime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_datetime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="hispmd_users_audit_datetime" data-fieldname="hispmd_users_audit_datetime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_datetime}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_datetime }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_datetime}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_datetime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_datetime_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_datetime_fieldblock}
+											
+{BEGIN hispmd_users_audit_ip_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_ip}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_ip{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="hispmd_users_audit_ip" data-fieldname="hispmd_users_audit_ip" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_ip}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_ip }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_ip}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_ip_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_ip_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_ip_fieldblock}
+											
+{BEGIN hispmd_users_audit_user_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_user}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_user{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="hispmd_users_audit_user" data-fieldname="hispmd_users_audit_user" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_user}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_user }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_user}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_user_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_user_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_user_fieldblock}
+											
+{BEGIN hispmd_users_audit_table_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_table}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_table{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="hispmd_users_audit_table" data-fieldname="hispmd_users_audit_table" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_table}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_table }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_table}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_table_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_table_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_table_fieldblock}
+											
+{BEGIN hispmd_users_audit_action_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_action}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_action{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="hispmd_users_audit_action" data-fieldname="hispmd_users_audit_action" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_action}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_action }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_action}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_action_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_action_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_action_fieldblock}
+											
+{BEGIN hispmd_users_audit_description_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hispmd_users_audit_description}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hispmd_users_audit_description{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="hispmd_users_audit_description" data-fieldname="hispmd_users_audit_description" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hispmd_users_audit_description}">
+		{$label System_Users_Activity_Dashboard hispmd_users_audit_description }	</label>
+	<div class="r-search-option">
+		{$searchtype_hispmd_users_audit_description}
+	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_description_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hispmd_users_audit_description_editcontrol1}
+	</div>
+	
+</div>
+
+{END hispmd_users_audit_description_fieldblock}
+											
+{BEGIN public_timetracker_trackerid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_public_timetracker_trackerid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="public_timetracker_trackerid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="public_timetracker_trackerid" data-fieldname="public_timetracker_trackerid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_public_timetracker_trackerid}">
+		{$label System_Users_Activity_Dashboard public_timetracker_trackerid }	</label>
+	<div class="r-search-option">
+		{$searchtype_public_timetracker_trackerid}
+	</div>
+	<div class="r-search-field">
+		{$public_timetracker_trackerid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$public_timetracker_trackerid_editcontrol1}
+	</div>
+	
+</div>
+
+{END public_timetracker_trackerid_fieldblock}
+											
+{BEGIN public_timetracker_pagename_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_public_timetracker_pagename}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="public_timetracker_pagename{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="public_timetracker_pagename" data-fieldname="public_timetracker_pagename" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_public_timetracker_pagename}">
+		{$label System_Users_Activity_Dashboard public_timetracker_pagename }	</label>
+	<div class="r-search-option">
+		{$searchtype_public_timetracker_pagename}
+	</div>
+	<div class="r-search-field">
+		{$public_timetracker_pagename_editcontrol}	</div>
+	<div class="r-search-field">
+		{$public_timetracker_pagename_editcontrol1}
+	</div>
+	
+</div>
+
+{END public_timetracker_pagename_fieldblock}
+											
+{BEGIN public_timetracker_timeon_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_public_timetracker_timeon}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="public_timetracker_timeon{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="public_timetracker_timeon" data-fieldname="public_timetracker_timeon" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_public_timetracker_timeon}">
+		{$label System_Users_Activity_Dashboard public_timetracker_timeon }	</label>
+	<div class="r-search-option">
+		{$searchtype_public_timetracker_timeon}
+	</div>
+	<div class="r-search-field">
+		{$public_timetracker_timeon_editcontrol}	</div>
+	<div class="r-search-field">
+		{$public_timetracker_timeon_editcontrol1}
+	</div>
+	
+</div>
+
+{END public_timetracker_timeon_fieldblock}
+											
+{BEGIN public_timetracker_timeoff_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_public_timetracker_timeoff}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="public_timetracker_timeoff{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="public_timetracker_timeoff" data-fieldname="public_timetracker_timeoff" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_public_timetracker_timeoff}">
+		{$label System_Users_Activity_Dashboard public_timetracker_timeoff }	</label>
+	<div class="r-search-option">
+		{$searchtype_public_timetracker_timeoff}
+	</div>
+	<div class="r-search-field">
+		{$public_timetracker_timeoff_editcontrol}	</div>
+	<div class="r-search-field">
+		{$public_timetracker_timeoff_editcontrol1}
+	</div>
+	
+</div>
+
+{END public_timetracker_timeoff_fieldblock}
+											
+{BEGIN public_timetracker_userid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_public_timetracker_userid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="public_timetracker_userid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="public_timetracker_userid" data-fieldname="public_timetracker_userid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_public_timetracker_userid}">
+		{$label System_Users_Activity_Dashboard public_timetracker_userid }	</label>
+	<div class="r-search-option">
+		{$searchtype_public_timetracker_userid}
+	</div>
+	<div class="r-search-field">
+		{$public_timetracker_userid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$public_timetracker_userid_editcontrol1}
+	</div>
+	
+</div>
+
+{END public_timetracker_userid_fieldblock}
+											
+{BEGIN public_timetracker_recordid_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_public_timetracker_recordid}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="public_timetracker_recordid{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="public_timetracker_recordid" data-fieldname="public_timetracker_recordid" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_public_timetracker_recordid}">
+		{$label System_Users_Activity_Dashboard public_timetracker_recordid }	</label>
+	<div class="r-search-option">
+		{$searchtype_public_timetracker_recordid}
+	</div>
+	<div class="r-search-field">
+		{$public_timetracker_recordid_editcontrol}	</div>
+	<div class="r-search-field">
+		{$public_timetracker_recordid_editcontrol1}
+	</div>
+	
+</div>
+
+{END public_timetracker_recordid_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	
+">
+		 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

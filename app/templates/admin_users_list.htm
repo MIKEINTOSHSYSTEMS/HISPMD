@@ -432,30 +432,11 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class=" r-ori-vert			col-md-6
-	
-">
-		{BEGIN firstAboveGridCell}
-		 
-		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
-	<br></span>
-			{END firstAboveGridCell}	
-	</div>			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class="			col-md-6
 	
 ">
+		{BEGIN firstAboveGridCell}
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
@@ -472,7 +453,8 @@
 							Delete			</a>
 </span>
 {END deleteselected_link}
-		</div>			 
+			{END firstAboveGridCell}	
+	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6

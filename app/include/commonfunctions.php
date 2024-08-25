@@ -315,12 +315,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("hispmdusers" == $shortTName )
 		return true;
-	if ("admin_rights" == $shortTName )
-		return true;
-	if ("admin_members" == $shortTName )
-		return true;
-	if ("admin_users" == $shortTName )
-		return true;
 	if ("mfr_dashboard_reports_chart" == $shortTName )
 		return true;
 	if ("mfr_operational_status_chart" == $shortTName )
@@ -370,6 +364,14 @@ function checkTableName($shortTName )
 	if ("timetracker" == $shortTName )
 		return true;
 	if ("mfr_facilities_register" == $shortTName )
+		return true;
+	if ("admin_rights" == $shortTName )
+		return true;
+	if ("admin_members" == $shortTName )
+		return true;
+	if ("admin_users" == $shortTName )
+		return true;
+	if ("system_users_activity_dashboard" == $shortTName )
 		return true;
 	return false;
 }
@@ -927,33 +929,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_rights");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_rights";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_members");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_members";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_users");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_users";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("mfr_dashboard_reports_chart");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1177,6 +1152,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.mfr_facilities_register";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_rights";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_members";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_users";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("System_Users_Activity_Dashboard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="System_Users_Activity_Dashboard";
+	}
 	return $arr;
 }
 
@@ -1242,9 +1253,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.research";
 	$arr[]="public.workforce";
 	$arr[]="public.hispmdusers";
-	$arr[]="admin_rights";
-	$arr[]="admin_members";
-	$arr[]="admin_users";
 	$arr[]="mfr_dashboard_reports_chart";
 	$arr[]="mfr_operational_status_chart";
 	$arr[]="mfr_region_chart";
@@ -1270,6 +1278,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_indicator_groups";
 	$arr[]="public.timetracker";
 	$arr[]="public.mfr_facilities_register";
+	$arr[]="admin_rights";
+	$arr[]="admin_members";
+	$arr[]="admin_users";
+	$arr[]="System_Users_Activity_Dashboard";
 	return $arr;
 }
 
@@ -2189,21 +2201,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="admin_rights" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="admin_members" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="admin_users" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="mfr_dashboard_reports_chart" )
 	{
 //	default permissions
@@ -2328,6 +2325,26 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_rights" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_members" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_users" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="System_Users_Activity_Dashboard" )
+	{
+//	default permissions
+		return "S".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

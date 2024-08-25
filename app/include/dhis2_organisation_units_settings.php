@@ -66,7 +66,7 @@ $tdatadhis2_organisation_units[".listAjax"] = false;
 
 	$tdatadhis2_organisation_units[".audit"] = true;
 
-	$tdatadhis2_organisation_units[".locking"] = true;
+	$tdatadhis2_organisation_units[".locking"] = false;
 
 
 $pages = $tdatadhis2_organisation_units[".defaultPages"];

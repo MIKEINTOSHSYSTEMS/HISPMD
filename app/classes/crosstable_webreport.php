@@ -1493,12 +1493,6 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.hispmdusers" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("public.hispmd_ugrights" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("public.hispmd_ugmembers" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("public.hispmdusers" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("public.mfr_dashboard_reports" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("public.mfr_operational_status" == $this->xml_array['tables'][0])
@@ -1548,6 +1542,14 @@ class CrossTableWebReport
 		if("public.timetracker" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("public.mfr_facilities_register" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd_ugrights" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmd_ugmembers" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.hispmdusers" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

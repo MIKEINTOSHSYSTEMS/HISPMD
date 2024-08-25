@@ -69,7 +69,7 @@ $tdataresearch[".listAjax"] = false;
 
 	$tdataresearch[".audit"] = true;
 
-	$tdataresearch[".locking"] = true;
+	$tdataresearch[".locking"] = false;
 
 
 $pages = $tdataresearch[".defaultPages"];

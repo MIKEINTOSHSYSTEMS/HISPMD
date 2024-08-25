@@ -72,7 +72,7 @@ $tdatahealthfacilities[".listAjax"] = false;
 
 	$tdatahealthfacilities[".audit"] = true;
 
-	$tdatahealthfacilities[".locking"] = true;
+	$tdatahealthfacilities[".locking"] = false;
 
 
 $pages = $tdatahealthfacilities[".defaultPages"];

@@ -490,12 +490,6 @@ class Chart
 			return true;
 		if("public.hispmdusers" == $this->chrt_array['tables'][0])
 			return true;
-		if("public.hispmd_ugrights" == $this->chrt_array['tables'][0])
-			return true;
-		if("public.hispmd_ugmembers" == $this->chrt_array['tables'][0])
-			return true;
-		if("public.hispmdusers" == $this->chrt_array['tables'][0])
-			return true;
 		if("public.mfr_dashboard_reports" == $this->chrt_array['tables'][0])
 			return true;
 		if("public.mfr_operational_status" == $this->chrt_array['tables'][0])
@@ -545,6 +539,14 @@ class Chart
 		if("public.timetracker" == $this->chrt_array['tables'][0])
 			return true;
 		if("public.mfr_facilities_register" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd_ugrights" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd_ugmembers" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmdusers" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

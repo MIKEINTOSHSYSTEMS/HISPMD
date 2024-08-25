@@ -87,7 +87,7 @@ $tdatadigitalhealth[".listAjax"] = false;
 
 	$tdatadigitalhealth[".audit"] = true;
 
-	$tdatadigitalhealth[".locking"] = true;
+	$tdatadigitalhealth[".locking"] = false;
 
 
 $pages = $tdatadigitalhealth[".defaultPages"];

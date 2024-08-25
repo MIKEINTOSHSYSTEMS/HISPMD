@@ -179,9 +179,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_add}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 		  ],
@@ -522,9 +519,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
 				

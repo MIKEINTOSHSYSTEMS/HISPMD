@@ -87,7 +87,7 @@ $tdataadmin_users[".listAjax"] = false;
 
 	$tdataadmin_users[".audit"] = true;
 
-	$tdataadmin_users[".locking"] = true;
+	$tdataadmin_users[".locking"] = false;
 
 
 $pages = $tdataadmin_users[".defaultPages"];
@@ -161,7 +161,7 @@ $tdataadmin_users[".addPageEvents"] = false;
 $tdataadmin_users[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_users[".badgeColor"] = "8FBC8B";
+$tdataadmin_users[".badgeColor"] = "B22222";
 
 
 $tdataadmin_users[".allSearchFields"] = array();

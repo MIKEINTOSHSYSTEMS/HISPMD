@@ -72,7 +72,7 @@ $tdataworkforce[".listAjax"] = false;
 
 	$tdataworkforce[".audit"] = true;
 
-	$tdataworkforce[".locking"] = true;
+	$tdataworkforce[".locking"] = false;
 
 
 $pages = $tdataworkforce[".defaultPages"];

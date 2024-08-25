@@ -66,7 +66,7 @@ $tdatadhis2_datasets[".listAjax"] = false;
 
 	$tdatadhis2_datasets[".audit"] = true;
 
-	$tdatadhis2_datasets[".locking"] = true;
+	$tdatadhis2_datasets[".locking"] = false;
 
 
 $pages = $tdatadhis2_datasets[".defaultPages"];

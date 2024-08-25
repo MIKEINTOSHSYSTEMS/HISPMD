@@ -705,7 +705,7 @@ $cLoginTable = "public.hispmdusers";
 $cDisplayNameField = "fullname";
 $cUserNameField	= "username";
 $cPasswordField	= "password";
-$cUserGroupField = "groupid";
+$cUserGroupField = "";
 $cEmailField = "email";
 $cUserpicField = "userpic";
 $loginKeyFields= array();
@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "521_1724336618";
+$projectBuildKey = "526_1724604988";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "521";
+$projectBuildNumber = "526";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -821,9 +821,6 @@ $tableCaptions["English"]["public_research"] = "Research";
 $tableCaptions["English"]["public_workforce"] = "Workforce";
 $tableCaptions["English"]["MFR_AIO_Dashboard"] = "MFR AIO Dashboard";
 $tableCaptions["English"]["public_hispmdusers"] = "Hispmdusers";
-$tableCaptions["English"]["admin_rights"] = "Admin Rights";
-$tableCaptions["English"]["admin_members"] = "Admin Members";
-$tableCaptions["English"]["admin_users"] = "Admin Users";
 $tableCaptions["English"]["mfr_dashboard_reports_chart"] = "Mfr Dashboard Reports Chart";
 $tableCaptions["English"]["mfr_operational_status_chart"] = "Mfr Operational Status Chart";
 $tableCaptions["English"]["mfr_region_chart"] = "Mfr Region Chart";
@@ -849,6 +846,10 @@ $tableCaptions["English"]["public_moh_regions"] = "Moh Regions";
 $tableCaptions["English"]["public_moh_indicator_groups"] = "Moh Indicator Groups";
 $tableCaptions["English"]["public_timetracker"] = "Timetracker";
 $tableCaptions["English"]["public_mfr_facilities_register"] = "Mfr Facilities Register";
+$tableCaptions["English"]["admin_rights"] = "Admin Rights";
+$tableCaptions["English"]["admin_members"] = "Admin Members";
+$tableCaptions["English"]["admin_users"] = "Admin Users";
+$tableCaptions["English"]["System_Users_Activity_Dashboard"] = "System Users Activity Dashboard";
 
 
 $globalEvents = new class_GlobalEvents;

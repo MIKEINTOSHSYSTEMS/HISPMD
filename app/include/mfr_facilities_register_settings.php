@@ -85,7 +85,7 @@ $tdatamfr_facilities_register[".listAjax"] = false;
 //	temporary
 //$tdatamfr_facilities_register[".listAjax"] = false;
 
-	$tdatamfr_facilities_register[".audit"] = false;
+	$tdatamfr_facilities_register[".audit"] = true;
 
 	$tdatamfr_facilities_register[".locking"] = false;
 

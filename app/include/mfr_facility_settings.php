@@ -93,7 +93,7 @@ $tdatamfr_facility[".listAjax"] = false;
 
 	$tdatamfr_facility[".audit"] = true;
 
-	$tdatamfr_facility[".locking"] = true;
+	$tdatamfr_facility[".locking"] = false;
 
 
 $pages = $tdatamfr_facility[".defaultPages"];

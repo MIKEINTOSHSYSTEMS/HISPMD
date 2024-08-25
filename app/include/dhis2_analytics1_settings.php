@@ -81,7 +81,7 @@ $tdatadhis2_analytics1[".listAjax"] = false;
 
 	$tdatadhis2_analytics1[".audit"] = true;
 
-	$tdatadhis2_analytics1[".locking"] = true;
+	$tdatadhis2_analytics1[".locking"] = false;
 
 
 $pages = $tdatadhis2_analytics1[".defaultPages"];

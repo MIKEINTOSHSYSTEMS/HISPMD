@@ -66,7 +66,7 @@ $tdatadhis2_orgunit_woredas[".listAjax"] = false;
 
 	$tdatadhis2_orgunit_woredas[".audit"] = true;
 
-	$tdatadhis2_orgunit_woredas[".locking"] = true;
+	$tdatadhis2_orgunit_woredas[".locking"] = false;
 
 
 $pages = $tdatadhis2_orgunit_woredas[".defaultPages"];

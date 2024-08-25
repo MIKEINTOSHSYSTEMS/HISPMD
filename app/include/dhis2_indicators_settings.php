@@ -66,7 +66,7 @@ $tdatadhis2_indicators[".listAjax"] = false;
 
 	$tdatadhis2_indicators[".audit"] = true;
 
-	$tdatadhis2_indicators[".locking"] = true;
+	$tdatadhis2_indicators[".locking"] = false;
 
 
 $pages = $tdatadhis2_indicators[".defaultPages"];

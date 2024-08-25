@@ -69,7 +69,7 @@ $tdatapublications[".listAjax"] = false;
 
 	$tdatapublications[".audit"] = true;
 
-	$tdatapublications[".locking"] = true;
+	$tdatapublications[".locking"] = false;
 
 
 $pages = $tdatapublications[".defaultPages"];

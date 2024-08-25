@@ -3622,12 +3622,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "workforce" ] = "public.workforce";
 	$projectEntities[ "public.hispmdusers" ] = array( "url" => "hispmdusers", "type" => 0 );
 	$projectEntitiesReverse[ "hispmdusers" ] = "public.hispmdusers";
-	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
-	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
-	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
-	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
-	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
-	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "mfr_dashboard_reports_chart" ] = array( "url" => "mfr_dashboard_reports_chart", "type" => 3 );
 	$projectEntitiesReverse[ "mfr_dashboard_reports_chart" ] = "mfr_dashboard_reports_chart";
 	$projectEntities[ "mfr_operational_status_chart" ] = array( "url" => "mfr_operational_status_chart", "type" => 3 );
@@ -3678,6 +3672,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "timetracker" ] = "public.timetracker";
 	$projectEntities[ "public.mfr_facilities_register" ] = array( "url" => "mfr_facilities_register", "type" => 0 );
 	$projectEntitiesReverse[ "mfr_facilities_register" ] = "public.mfr_facilities_register";
+	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
+	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
+	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
+	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
+	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
+	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "System_Users_Activity_Dashboard" ] = array( "url" => "system_users_activity_dashboard", "type" => 4 );
+	$projectEntitiesReverse[ "system_users_activity_dashboard" ] = "System_Users_Activity_Dashboard";
 }
 
 function findTable( $table ) {

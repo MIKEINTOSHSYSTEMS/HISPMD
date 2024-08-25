@@ -69,7 +69,7 @@ $tdatamfr_dashboard_reports[".listAjax"] = false;
 
 	$tdatamfr_dashboard_reports[".audit"] = true;
 
-	$tdatamfr_dashboard_reports[".locking"] = true;
+	$tdatamfr_dashboard_reports[".locking"] = false;
 
 
 $pages = $tdatamfr_dashboard_reports[".defaultPages"];

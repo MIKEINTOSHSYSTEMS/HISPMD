@@ -66,7 +66,7 @@ $tdatadhis2_orgunit_country[".listAjax"] = false;
 
 	$tdatadhis2_orgunit_country[".audit"] = true;
 
-	$tdatadhis2_orgunit_country[".locking"] = true;
+	$tdatadhis2_orgunit_country[".locking"] = false;
 
 
 $pages = $tdatadhis2_orgunit_country[".defaultPages"];

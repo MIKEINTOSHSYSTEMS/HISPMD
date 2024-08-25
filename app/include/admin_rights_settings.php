@@ -72,7 +72,7 @@ $tdataadmin_rights[".listAjax"] = false;
 
 	$tdataadmin_rights[".audit"] = true;
 
-	$tdataadmin_rights[".locking"] = true;
+	$tdataadmin_rights[".locking"] = false;
 
 
 $pages = $tdataadmin_rights[".defaultPages"];
@@ -146,7 +146,7 @@ $tdataadmin_rights[".addPageEvents"] = false;
 $tdataadmin_rights[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_rights[".badgeColor"] = "CD853F";
+$tdataadmin_rights[".badgeColor"] = "DAA520";
 
 
 $tdataadmin_rights[".allSearchFields"] = array();
