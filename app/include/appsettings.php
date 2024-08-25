@@ -992,6 +992,11 @@ if (postvalue("TrackerID") != false) {
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
+if(postvalue("lat") && postvalue("lng")){
+    $_SESSION["geoLatitude"] = postvalue("lat");
+    $_SESSION["geoLongitude"] = postvalue("lng");
+    exit();
+}
 
 ;
 

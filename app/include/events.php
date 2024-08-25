@@ -27,6 +27,9 @@ class class_GlobalEvents extends eventsBase
 
 
 
+		$this->events["BeforeShowMenu"]=true;
+
+
 //	onscreen events
 		$this->events["MFR_Region_Report_map"] = true;
 		$this->events["MFR_Region_map"] = true;
@@ -136,6 +139,75 @@ exit();
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowMenu(&$xt, &$templatefile, $pageObject)
+{
+
+		if($_SESSION["geoLatitude"] && $_SESSION["geoLongitude"])
+    $pageObject->setProxyValue('haveLocation', true);
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowMenu
+
 		
 		
 		
