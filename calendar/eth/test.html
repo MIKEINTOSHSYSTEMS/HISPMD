@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <link rel="stylesheet" href="../../calendar/eth/ethcal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body>
+    <br>
+    <div class="calendar-container">
+        <div class="ethiopian-calendar">
+            አሁን ሰዓቱ
+            <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+            <script src="../../calendar/eth/ethcal.js"></script>
+            <h4>ዛሬ ቀኑ</h4>
+            <?php
+                require_once "../../calendar/eth/ethcal.php";
+                $EC = new EthiopianCalendar(date("Y-m-d"));
+                echo $EC->ECDrawCalendar(); // Echo the result of the function
+            ?>
+        </div>
+
+        <div class="gregorian-calendar">
+            Current Time
+            <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
+            <script src="../../calendar/eth/ethcalgreg.js"></script>
+            <h4>Today's Date</h4>
+            <?php
+                echo $EC->GCDrawCalendar(); // Echo the result of the function
+            ?>
+        </div>
+    </div>
+</body>
+
+</html>

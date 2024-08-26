@@ -10,6 +10,7 @@ services:
       - ./analytics:/var/www/html/analytics
       - ./api:/var/www/html/api
       - ./app:/var/www/html/app
+      - ./calendar:/var/www/html/calendar
       - ./composer.json:/var/www/html/composer.json
       - ./composer.lock:/var/www/html/composer.lock
       - ./config:/var/www/html/config
@@ -89,13 +90,14 @@ services:
       - ./analytics:/var/www/html/analytics
       - ./api:/var/www/html/api
       - ./app:/var/www/html/app
+      - ./calendar:/var/www/html/calendar
       - ./composer.json:/var/www/html/composer.json
       - ./composer.lock:/var/www/html/composer.lock
       - ./config:/var/www/html/config
       - ./.env:/var/www/html/.env
       - ./index.php:/var/www/html/index.php
       - ./LICENSE:/var/www/html/LICENSE
-      - ./map_files:/var/www/html/map_files
+      - ./maps:/var/www/html/maps
       - ./mysql-init:/var/www/html/mysql-init
       - ./README.md:/var/www/html/README.md
       - ./server.html:/var/www/html/server.html
@@ -161,6 +163,7 @@ services:
       MYSQL_PASSWORD: hisp_md
     volumes:
       - ./src/hispmd_dev.sql:/docker-entrypoint-initdb.d/hispmd_dev.sql
+      - ./src/hispmd_matomo.sql:/docker-entrypoint-initdb.d/hispmd_matomo.sql
       - ./mysql-init:/docker-entrypoint-initdb.d
       #- /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock  # Mount the MySQL socket file if there is no conflict with the host server
     networks:
@@ -230,16 +233,43 @@ services:
     ports:
       - "3030:3000"
     volumes:
-      - grafana-storage:/var/lib/grafana
+      - ./src/hispmd_grafana:/var/lib/grafana
     networks:
       hispmdnet:
         ipv4_address: 192.168.128.3
+
+  #hispmd_matomo:
+  #  image: bitnami/matomo:latest
+  #  container_name: hispmd_matomo
+  #  ports:
+  #    - "8910:8080"  # Exposing port 8081 to avoid conflicts
+  #  environment:
+  #    MATOMO_DATABASE_HOST: ${MATOMO_DATABASE_HOST}
+  #    MATOMO_DATABASE_PORT_NUMBER: ${MATOMO_DATABASE_PORT}
+  #    MATOMO_DATABASE_NAME: ${MATOMO_DATABASE_NAME}
+  #    MATOMO_DATABASE_USER: ${MATOMO_DATABASE_USER}
+  #    MATOMO_DATABASE_PASSWORD: ${MATOMO_DATABASE_PASSWORD}
+  #    ALLOW_EMPTY_PASSWORD: "no"
+  #    MATOMO_USERNAME: ${MATOMO_USERNAME}
+  #    MATOMO_PASSWORD: ${MATOMO_PASSWORD}
+  #    MATOMO_EMAIL: ${MATOMO_EMAIL}
+  #    MATOMO_WEBSITE_NAME: ${MATOMO_WEBSITE_NAME}
+  #    MATOMO_WEBSITE_HOST: ${MATOMO_WEBSITE_HOST}
+  #  volumes:
+  #    #- ./src/hispmd_matomo:/bitnami/matomo  # Data persistence volume for Matomo
+  #    - hispmd_matomo:/bitnami/matomo 
+  #  depends_on:
+  #    - db
+  #  networks:
+  #    hispmdnet:
+  #      ipv4_address: 192.168.128.113
 
 volumes:
   hispmd_pgadmindata:
   hispmd_vizdata:
   hispmd_mongodata:
   grafana-storage:
+  #hispmd_matomo:
 
 networks:
   hispmdnet:
