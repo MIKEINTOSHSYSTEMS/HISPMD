@@ -1,4 +1,13 @@
 <?php
+
+$hardcodedPassword = 'hispmd@moh';
+
+if (!isset($_POST['password']) || $_POST['password'] !== $hardcodedPassword) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Invalid password']);
+    exit;
+}
+
 // Database connection details
 $dbHost = '192.168.128.4';
 $dbUser = 'hispmddb';
@@ -15,7 +24,7 @@ if (!is_dir($backupDir)) {
 }
 
 // Backup file name with timestamp
-$backupFile = 'hispmddb_backup_' . date('Ymd_His') . '.sql';
+$backupFile = 'hisp_md_backup_' . date('Ymd_His') . '.sql';
 $backupFilePath = "$backupDir/$backupFile";
 
 // Command to execute pg_dump inside the Docker container
@@ -27,9 +36,18 @@ $return_var = 0;
 exec($command . ' 2>&1', $output, $return_var);
 
 if ($return_var === 0) {
-    echo $backupFile;
+    // Prepare backup details for the response
+    $backupDetails = [
+        'name' => $backupFile,
+        'date' => date('Y-m-d H:i:s'),
+        'size' => filesize($backupFilePath),
+        'path' => $backupFilePath // Ensure this path is correct and accessible
+    ];
+
+    // Send JSON response with success status and redirect URL
+    echo json_encode(['success' => true, 'newBackup' => $backupDetails, 'redirect' => 'mb.php']);
 } else {
     http_response_code(500);
-    echo "Error creating backup. Details:\n" . implode("\n", $output);
+    echo json_encode(['success' => false, 'message' => 'Error creating backup.']);
 }
 ?>

@@ -43,7 +43,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HISPMD MAIN Database Backups</title>
+    <title>Analytics Database Backups</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -161,7 +161,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
 <body>
     <header>
         <div class="container">
-            <h1><i class="fas fa-database"></i> HISPMD MAIN Database Backups</h1>
+            <h1><i class="fas fa-database"></i> HISPMD Matomo Analytics Database Backups</h1>
             <ul>
                 <li><button id="backupButton">Backup Now</button></li>
             </ul>
@@ -173,7 +173,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         </div>
         <h2>Available Backups</h2>
         <p>Total backups: <?php echo $totalBackups; ?></p>
-<form id="bulkActionForm" method="post" action="bulk_action.php">
+<form id="bulkActionForm" method="post" action="analytics_bulk_action.php">
     <div class="checkbox-container" id="backupList">
         <?php foreach ($pagedBackups as $backup): ?>
         <label>
@@ -254,7 +254,7 @@ function confirmRestore(backupFile) {
     if (!password) return false;
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'restore.php', true);
+    xhr.open('POST', 'analytics_restore.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
         const response = JSON.parse(xhr.responseText);
@@ -288,7 +288,7 @@ document.getElementById('backupButton').addEventListener('click', function() {
     progressBar.textContent = 'Starting backup...';
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'backup.php', true);
+    xhr.open('POST', 'analytics_backup.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
         if (xhr.status === 200) {
@@ -316,16 +316,12 @@ document.getElementById('backupButton').addEventListener('click', function() {
                         <td>${newBackup.date}</td>
                         <td>${(newBackup.size / 1024).toFixed(2)} KB</td>
                         <td>
-                            <a href="restore.php?file=${encodeURIComponent(newBackup.name)}" onclick="return confirmRestore();">Restore</a> |
+                            <a href="analytics_restore.php?file=${encodeURIComponent(newBackup.name)}" onclick="return confirmRestore();">Restore</a> |
                             <a href="${newBackup.path}" download onclick="return confirmDownload();">Download</a>
                         </td>
                     </tr>`;
                 backupTable.insertAdjacentHTML('afterbegin', rowHTML);
 
-                // Redirect to index.php
-                setTimeout(() => {
-                    window.location.href = response.redirect;
-                }, 2000); // Delay for UI update
             } else {
                 progressBar.style.width = '100%';
                 progressBar.textContent = 'Backup failed';
@@ -353,7 +349,6 @@ document.getElementById('backupButton').addEventListener('click', function() {
     };
     xhr.send('password=' + encodeURIComponent(password));
 });
-
     </script>
 </body>
 </html>

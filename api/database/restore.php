@@ -1,4 +1,13 @@
 <?php
+$hardcodedPassword = 'hispmd@moh';
+
+// Check password
+if (!isset($_POST['password']) || $_POST['password'] !== $hardcodedPassword) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Invalid password']);
+    exit;
+}
+
 // Database connection details
 $dbHost = '192.168.128.4';
 $dbUser = 'hispmddb';
@@ -12,17 +21,17 @@ $containerName = 'hispmd_postgres';
 $backupDir = './backup';
 
 // Check if file parameter is set
-if (!isset($_GET['file'])) {
-    echo "No file specified.";
+if (!isset($_POST['file'])) {
+    echo json_encode(['success' => false, 'message' => 'No file specified.']);
     exit;
 }
 
-$backupFile = basename($_GET['file']);
+$backupFile = basename($_POST['file']);
 $backupFilePath = "$backupDir/$backupFile";
 
 // Check if file exists
 if (!file_exists($backupFilePath)) {
-    echo "Backup file does not exist.";
+    echo json_encode(['success' => false, 'message' => 'Backup file does not exist.']);
     exit;
 }
 
@@ -30,28 +39,22 @@ if (!file_exists($backupFilePath)) {
 $checkDbCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -tAc 'SELECT 1 FROM pg_database WHERE datname = \"$dbName\"'\"";
 exec($checkDbCommand, $output, $return_var);
 
-$databaseExists = trim(implode("\n", $output)) === '1';
-
 
 // Drop all tables and other objects in the public schema
 $dropAllCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -d $dbName -c 'DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA public;'\"";
 exec($dropAllCommand . ' 2>&1', $output, $return_var);
 
 if ($return_var !== 0) {
-    echo "Error dropping schema. Details:\n";
-    echo implode("\n", $output);
+    echo json_encode(['success' => false, 'message' => 'Error dropping schema. Details: ' . implode("\n", $output)]);
     exit;
 }
-
-
 
 // Copy the backup file to the Docker container
 $copyBackupCommand = "docker cp $backupFilePath $containerName:/tmp/$backupFile";
 exec($copyBackupCommand . ' 2>&1', $output, $return_var);
 
 if ($return_var !== 0) {
-    echo "Error copying backup file to Docker container. Details:\n";
-    echo implode("\n", $output);
+    echo json_encode(['success' => false, 'message' => 'Error copying backup file to Docker container. Details: ' . implode("\n", $output)]);
     exit;
 }
 
@@ -60,9 +63,8 @@ $restoreCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword
 exec($restoreCommand . ' 2>&1', $output, $return_var);
 
 if ($return_var === 0) {
-    echo "Backup successfully restored: $backupFilePath";
+    echo json_encode(['success' => true, 'message' => "Backup successfully restored: $backupFilePath"]);
 } else {
-    echo "Error restoring backup. Details:\n";
-    echo implode("\n", $output);
+    echo json_encode(['success' => false, 'message' => 'Error restoring backup. Details: ' . implode("\n", $output)]);
 }
 ?>

@@ -154,6 +154,7 @@ services:
 
   db:
     image: mariadb:11.2.4
+    container_name: hispmd_mariadb
     restart: always
     environment:
       MYSQL_ROOT_HOST: localhost

@@ -46,7 +46,6 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
     <title>MB Database Backups</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Add your existing CSS styles here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -120,12 +119,11 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
             background: #f2f2f2;
             border: 1px solid #ddd;
             margin-bottom: 20px;
-            display: none; /* Initially hidden */
+            display: none;
         }
         .progress-bar {
             width: 0%;
             height: 30px;
-            background: #3a79db;
             text-align: center;
             color: #ffffff;
             line-height: 30px;
@@ -175,40 +173,40 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         </div>
         <h2>Available Backups</h2>
         <p>Total backups: <?php echo $totalBackups; ?></p>
-        <form id="bulkActionForm" method="post" action="bulk_actions.php">
-            <div class="checkbox-container">
-                <?php foreach ($pagedBackups as $backup): ?>
-                <label>
-                    <input type="checkbox" name="backups[]" value="<?php echo htmlspecialchars($backup['name']); ?>">
-                    <?php echo htmlspecialchars($backup['name']); ?>
-                </label><br>
-                <?php endforeach; ?>
-            </div>
-            <button type="submit" name="action" value="delete" onclick="return confirmDelete();">Delete Selected</button>
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <th><a href="?sort=name&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Backup Name <i class="fas fa-sort"></i></a></th>
-                    <th><a href="?sort=date&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Date <i class="fas fa-sort"></i></a></th>
-                    <th><a href="?sort=size&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Size <i class="fas fa-sort"></i></a></th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($pagedBackups as $backup): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($backup['name']); ?></td>
-                    <td><?php echo date('Y-m-d H:i:s', $backup['date']); ?></td>
-                    <td><?php echo round($backup['size'] / 1024, 2); ?> KB</td>
-                    <td>
-                        <a href="restores.php?file=<?php echo urlencode($backup['name']); ?>" onclick="return confirmRestore();">Restore</a> |
-                        <a href="<?php echo $backupDir . '/' . urlencode($backup['name']); ?>" download onclick="return confirmDownload();">Download</a>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+<form id="bulkActionForm" method="post" action="bulk_actions.php">
+    <div class="checkbox-container" id="backupList">
+        <?php foreach ($pagedBackups as $backup): ?>
+        <label>
+            <input type="checkbox" name="backups[]" value="<?php echo htmlspecialchars($backup['name']); ?>">
+            <?php echo htmlspecialchars($backup['name']); ?>
+        </label><br>
+        <?php endforeach; ?>
+    </div>
+    <button type="submit" name="action" value="delete" onclick="return confirmDelete();">Delete Selected</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th><a href="?sort=name&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Backup Name <i class="fas fa-sort"></i></a></th>
+            <th><a href="?sort=date&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Date <i class="fas fa-sort"></i></a></th>
+            <th><a href="?sort=size&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Size <i class="fas fa-sort"></i></a></th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="backupTable">
+        <?php foreach ($pagedBackups as $backup): ?>
+        <tr>
+            <td><?php echo htmlspecialchars($backup['name']); ?></td>
+            <td><?php echo date('Y-m-d H:i:s', $backup['date']); ?></td>
+            <td><?php echo round($backup['size'] / 1024, 2); ?> KB</td>
+            <td>
+                <a href="#" onclick="return confirmRestore('<?php echo urlencode($backup['name']); ?>');">Restore</a> |
+                <a href="<?php echo $backupDir . '/' . urlencode($backup['name']); ?>" download onclick="return confirmDownload();">Download</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
         <div class="pagination">
             <?php if ($currentPage > 1): ?>
                 <a href="?page=<?php echo $currentPage - 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>">« Prev</a>
@@ -223,6 +221,8 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
 
     </div>
     <script>
+
+        
         function confirmDownload() {
             return confirm('Are you sure you want to download this backup?');
         }
@@ -230,36 +230,130 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         function confirmRestore() {
             return confirm('Are you sure you want to restore this backup?');
         }
+
         function confirmDelete() {
             return confirm('Are you sure you want to DELETE this backup?');
         }
-        document.getElementById('backupButton').addEventListener('click', function() {
-            const progressBar = document.getElementById('progressBar');
-            const progressContainer = document.getElementById('progressContainer');
-           
-            progressContainer.style.display = 'block';
-            progressBar.textContent = 'Starting backup...';
 
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'backups.php', true);
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    progressBar.style.width = '100%';
-                    progressBar.textContent = 'Backup completed';
-                    setTimeout(() => {
-                        progressContainer.style.display = 'none';
-                    }, 2000);
-                } else {
-                    progressBar.style.width = '100%';
-                    progressBar.textContent = 'Backup failed';
-                }
-            };
-            xhr.onerror = function () {
+function confirmDelete() {
+    const password = prompt("Please enter your password to proceed with deleting the selected backups:");
+    if (!password) return false;
+
+    const form = document.getElementById('bulkActionForm');
+    const passwordInput = document.createElement('input');
+    passwordInput.type = 'hidden';
+    passwordInput.name = 'password';
+    passwordInput.value = password;
+    form.appendChild(passwordInput);
+
+    return true;
+}
+
+function confirmRestore(backupFile) {
+    const password = prompt("Please enter your password to proceed with restoring the backup:");
+    if (!password) return false;
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'restores.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        const response = JSON.parse(xhr.responseText);
+        if (xhr.status === 200 && response.success) {
+            alert('Backup restored successfully: ' + backupFile);
+            // Optionally, update the UI to reflect the changes
+            window.location.reload(); // Refresh the page to show the updated backup list
+        } else {
+            alert('Failed to restore backup: ' + response.message);
+        }
+    };
+    xhr.onerror = function () {
+        alert('Error occurred while restoring the backup.');
+    };
+    xhr.send('file=' + encodeURIComponent(backupFile) + '&password=' + encodeURIComponent(password));
+    return false; // Prevent the default link behavior
+}
+
+
+
+document.getElementById('backupButton').addEventListener('click', function() {
+    const password = prompt("Please enter your password to proceed:");
+    if (!password) return;
+
+    const progressBar = document.getElementById('progressBar');
+    const progressContainer = document.getElementById('progressContainer');
+
+    progressContainer.style.display = 'block';
+    progressBar.style.backgroundColor = '#3a79db';
+    progressBar.style.width = '0%';
+    progressBar.textContent = 'Starting backup...';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'backups.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            if (response.success) {
+                progressBar.style.width = '100%';
+                progressBar.textContent = 'Backup completed';
+                progressBar.style.backgroundColor = '#4caf50';
+
+                // Update the backup list
+                const newBackup = response.newBackup;
+                const backupList = document.getElementById('backupList');
+                const backupTable = document.getElementById('backupTable');
+
+                const backupHTML = `
+                    <label>
+                        <input type="checkbox" name="backups[]" value="${newBackup.name}">
+                        ${newBackup.name}
+                    </label><br>`;
+                backupList.insertAdjacentHTML('afterbegin', backupHTML);
+
+                const rowHTML = `
+                    <tr>
+                        <td>${newBackup.name}</td>
+                        <td>${newBackup.date}</td>
+                        <td>${(newBackup.size / 1024).toFixed(2)} KB</td>
+                        <td>
+                            <a href="restore.php?file=${encodeURIComponent(newBackup.name)}" onclick="return confirmRestore();">Restore</a> |
+                            <a href="${newBackup.path}" download onclick="return confirmDownload();">Download</a>
+                        </td>
+                    </tr>`;
+                backupTable.insertAdjacentHTML('afterbegin', rowHTML);
+
+                // Redirect to index.php
+                setTimeout(() => {
+                    window.location.href = response.redirect;
+                }, 2000); // Delay for UI update
+            } else {
                 progressBar.style.width = '100%';
                 progressBar.textContent = 'Backup failed';
-            };
-            xhr.send();
-        });
+                progressBar.style.backgroundColor = '#f44336';
+            }
+            setTimeout(() => {
+                progressContainer.style.display = 'none';
+            }, 2000);
+        } else {
+            progressBar.style.width = '100%';
+            progressBar.textContent = 'Backup failed';
+            progressBar.style.backgroundColor = '#f44336';
+            setTimeout(() => {
+                progressContainer.style.display = 'none';
+            }, 2000);
+        }
+    };
+    xhr.onerror = function () {
+        progressBar.style.width = '100%';
+        progressBar.textContent = 'Backup failed';
+        progressBar.style.backgroundColor = '#f44336';
+        setTimeout(() => {
+            progressContainer.style.display = 'none';
+        }, 2000);
+    };
+    xhr.send('password=' + encodeURIComponent(password));
+});
+
     </script>
 </body>
 </html>
