@@ -1,0 +1,58 @@
+.piwikSelector.expanded .dropdown {
+  background-color: var(--dark);
+  color: var(--light-transparent);
+
+  ul {
+
+    li {
+      color: var(--light-transparent);
+
+      &.widgetpreview-choosen {
+        background-color: var(--darker);
+      }
+
+      & > div {
+        color: var(--light);
+      }
+    }
+  }
+}
+
+#header_message .dropdown {
+  border-color: var(--darker);
+}
+
+.dropdown-content {
+  background-color: var(--darker) !important;
+
+  .divider {
+    background-color: var(--dark);
+  }
+
+  li {
+    color: var(--light) !important;
+
+    &:hover, &.selected {
+      background-color: var(--dark) !important;
+    }
+
+    &.optgroup {
+      border-top-color: var(--darker) !important;
+    }
+
+    .tableIcon.activeIcon {
+      background-color: var(--dark);
+    }
+  }
+}
+
+.tableConfiguration div.configItem:hover {
+  background-color: var(--darker) !important;
+}
+
+
+
+.capabilitiesEdit .addCapability .input-field .select-dropdown {
+  background: var(--dark) !important;
+  box-shadow: 0 0 1px 1px inset var(--darker) !important;
+}
