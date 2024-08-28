@@ -100,6 +100,7 @@ $nonAdminTablesArr[] = "public.moh_indicator_groups";
 $nonAdminTablesArr[] = "public.timetracker";
 $nonAdminTablesArr[] = "public.mfr_facilities_register";
 $nonAdminTablesArr[] = "System_Users_Activity_Dashboard";
+$nonAdminTablesArr[] = "HISPMD_Web_Reports_and_Charts_Builder";
 
 $ug_connection = $cman->getForUserGroups();
 

@@ -1,6 +1,6 @@
 <?php
 $dalTablewebreports = array();
-$dalTablewebreports["rpt_id"] = array("type"=>20,"varname"=>"rpt_id", "name" => "rpt_id", "autoInc" => "0");
+$dalTablewebreports["rpt_id"] = array("type"=>3,"varname"=>"rpt_id", "name" => "rpt_id", "autoInc" => "1");
 $dalTablewebreports["rpt_name"] = array("type"=>200,"varname"=>"rpt_name", "name" => "rpt_name", "autoInc" => "0");
 $dalTablewebreports["rpt_title"] = array("type"=>200,"varname"=>"rpt_title", "name" => "rpt_title", "autoInc" => "0");
 $dalTablewebreports["rpt_cdate"] = array("type"=>135,"varname"=>"rpt_cdate", "name" => "rpt_cdate", "autoInc" => "0");

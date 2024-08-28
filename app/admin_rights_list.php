@@ -1301,6 +1301,13 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("system_users_activity_dashboard", " " . "System Users Activity Dashboard");
+$table = "HISPMD_Web_Reports_and_Charts_Builder";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("hispmd_web_reports_and_charts_builder", " " . "HISPMD Web Reports And Charts Builder");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

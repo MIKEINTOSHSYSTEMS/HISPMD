@@ -373,6 +373,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("system_users_activity_dashboard" == $shortTName )
 		return true;
+	if ("hispmd_web_reports_and_charts_builder" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1188,6 +1190,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="System_Users_Activity_Dashboard";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("HISPMD_Web_Reports_and_Charts_Builder");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="HISPMD_Web_Reports_and_Charts_Builder";
+	}
 	return $arr;
 }
 
@@ -1282,6 +1293,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="admin_members";
 	$arr[]="admin_users";
 	$arr[]="System_Users_Activity_Dashboard";
+	$arr[]="HISPMD_Web_Reports_and_Charts_Builder";
 	return $arr;
 }
 
@@ -2342,6 +2354,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="System_Users_Activity_Dashboard" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="HISPMD_Web_Reports_and_Charts_Builder" )
 	{
 //	default permissions
 		return "S".$extraPerm;

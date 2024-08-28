@@ -750,6 +750,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="HISPMD_Web_Reports_and_Charts_Builder")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1449,6 +1453,10 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="System_Users_Activity_Dashboard")
+		{
+			return false;
+		}
+		if($table=="HISPMD_Web_Reports_and_Charts_Builder")
 		{
 			return false;
 		}

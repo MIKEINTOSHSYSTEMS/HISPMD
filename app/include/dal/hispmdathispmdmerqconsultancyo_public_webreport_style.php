@@ -1,6 +1,6 @@
 <?php
 $dalTablewebreport_style = array();
-$dalTablewebreport_style["report_style_id"] = array("type"=>200,"varname"=>"report_style_id", "name" => "report_style_id", "autoInc" => "0");
+$dalTablewebreport_style["report_style_id"] = array("type"=>3,"varname"=>"report_style_id", "name" => "report_style_id", "autoInc" => "1");
 $dalTablewebreport_style["type"] = array("type"=>200,"varname"=>"type", "name" => "type", "autoInc" => "0");
 $dalTablewebreport_style["field"] = array("type"=>200,"varname"=>"field", "name" => "field", "autoInc" => "0");
 $dalTablewebreport_style["group"] = array("type"=>200,"varname"=>"group", "name" => "group", "autoInc" => "0");

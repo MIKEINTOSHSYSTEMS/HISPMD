@@ -777,6 +777,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="HISPMD_Web_Reports_and_Charts_Builder")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1377,6 +1381,10 @@ function getCaptionTable($table)
 	if($table=="System_Users_Activity_Dashboard")
 	{
 		return "System Users Activity Dashboard";
+	}
+	if($table=="HISPMD_Web_Reports_and_Charts_Builder")
+	{
+		return "HISPMD Web Reports And Charts Builder";
 	}
 	return $table;
 }

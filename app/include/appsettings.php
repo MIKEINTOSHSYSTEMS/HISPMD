@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "529_1724604988";
+$projectBuildKey = "532_1724871597";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "529";
+$projectBuildNumber = "532";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -850,6 +850,7 @@ $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Admin Users";
 $tableCaptions["English"]["System_Users_Activity_Dashboard"] = "System Users Activity Dashboard";
+$tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 
 
 $globalEvents = new class_GlobalEvents;

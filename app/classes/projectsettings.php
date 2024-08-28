@@ -3680,6 +3680,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "System_Users_Activity_Dashboard" ] = array( "url" => "system_users_activity_dashboard", "type" => 4 );
 	$projectEntitiesReverse[ "system_users_activity_dashboard" ] = "System_Users_Activity_Dashboard";
+	$projectEntities[ "HISPMD_Web_Reports_and_Charts_Builder" ] = array( "url" => "hispmd_web_reports_and_charts_builder", "type" => 4 );
+	$projectEntitiesReverse[ "hispmd_web_reports_and_charts_builder" ] = "HISPMD_Web_Reports_and_Charts_Builder";
 }
 
 function findTable( $table ) {
