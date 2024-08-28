@@ -3075,6 +3075,32 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "119";
+	$menuNode["name"] = "HISPMD Analytics Database";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "hispmd_system_settings";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "116";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "analytics_databases";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "HISPMD Analytics Database";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "120";
 	$menuNode["name"] = "Administration";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
@@ -3100,14 +3126,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "120";
+	$menuNode["id"] = "121";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "120";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3126,14 +3152,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "121";
+	$menuNode["id"] = "122";
 	$menuNode["name"] = "Users Audit Logs Dashboard";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "120";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3152,14 +3178,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "122";
+	$menuNode["id"] = "123";
 	$menuNode["name"] = "Users Time Tracker Dashboard";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "120";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3178,14 +3204,40 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "123";
+	$menuNode["id"] = "124";
+	$menuNode["name"] = "Visitors Activity Analytics Dashboard";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "System_Users_Activity_Dashboard";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "120";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("Dashboard");//
+	$menuNode["pageId"] = "Visitors_Activity_Analytics_Dashboard";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-magic";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Visitors Activity Analytics Dashboard";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "125";
 	$menuNode["name"] = "Activity Logs";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "120";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3204,14 +3256,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "124";
+	$menuNode["id"] = "126";
 	$menuNode["name"] = "Users Audit";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_users_audit";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "123";
+	$menuNode["parent"] = "125";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3230,14 +3282,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "125";
+	$menuNode["id"] = "127";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.timetracker";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "123";
+	$menuNode["parent"] = "125";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3256,14 +3308,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "126";
+	$menuNode["id"] = "128";
 	$menuNode["name"] = "System Settings";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_system_settings";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "120";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3282,7 +3334,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "127";
+	$menuNode["id"] = "129";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -3308,7 +3360,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "128";
+	$menuNode["id"] = "130";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -3334,7 +3386,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "129";
+	$menuNode["id"] = "131";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";

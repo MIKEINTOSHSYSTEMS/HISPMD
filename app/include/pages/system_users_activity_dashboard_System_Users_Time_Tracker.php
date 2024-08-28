@@ -193,7 +193,7 @@ array( 'cell' => 'c2' ) ),
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MFR Facilities Registery Dashboard</title>
+    <title>System_Users_Time_Tracker</title>
     <style>
         html, body {
             margin: 0;

@@ -1,1 +1,0 @@
-<?php return unserialize('a:2:{s:8:"lifetime";i:1724763322;s:4:"data";a:0:{}}', ['allowed_classes' => false]);

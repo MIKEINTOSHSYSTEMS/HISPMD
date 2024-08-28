@@ -6,9 +6,9 @@ require_once(getabspath("classes/cipherer.php"));
 $tdatasystem_users_activity_dashboard = array();
 $tdatasystem_users_activity_dashboard[".ShortName"] = "system_users_activity_dashboard";
 
-$tdatasystem_users_activity_dashboard[".pagesByType"] = my_json_decode( "{\"dashboard\":[\"System_Users_Activity_Dashboard\",\"System_Users_Audit_Logs\",\"System_Users_Time_Tracker\"],\"search\":[\"search\"]}" );
+$tdatasystem_users_activity_dashboard[".pagesByType"] = my_json_decode( "{\"dashboard\":[\"System_Users_Activity_Dashboard\",\"System_Users_Audit_Logs\",\"System_Users_Time_Tracker\",\"Visitors_Activity_Analytics_Dashboard\"],\"search\":[\"search\"]}" );
 $tdatasystem_users_activity_dashboard[".originalPagesByType"] = $tdatasystem_users_activity_dashboard[".pagesByType"];
-$tdatasystem_users_activity_dashboard[".pages"] = types2pages( my_json_decode( "{\"dashboard\":[\"System_Users_Activity_Dashboard\",\"System_Users_Audit_Logs\",\"System_Users_Time_Tracker\"],\"search\":[\"search\"]}" ) );
+$tdatasystem_users_activity_dashboard[".pages"] = types2pages( my_json_decode( "{\"dashboard\":[\"System_Users_Activity_Dashboard\",\"System_Users_Audit_Logs\",\"System_Users_Time_Tracker\",\"Visitors_Activity_Analytics_Dashboard\"],\"search\":[\"search\"]}" ) );
 $tdatasystem_users_activity_dashboard[".originalPages"] = $tdatasystem_users_activity_dashboard[".pages"];
 $tdatasystem_users_activity_dashboard[".defaultPages"] = my_json_decode( "{\"dashboard\":\"System_Users_Activity_Dashboard\",\"search\":\"search\"}" );
 $tdatasystem_users_activity_dashboard[".originalDefaultPages"] = $tdatasystem_users_activity_dashboard[".defaultPages"];

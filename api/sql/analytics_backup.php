@@ -21,7 +21,7 @@ if (!is_dir($backupDir)) {
 }
 
 // Backup file name with timestamp
-$backupFile = 'hispmd_matomo_backup_' . date('Ymd_His') . '.sql';
+$backupFile = 'hispmd_analytics_backup_' . date('Ymd_His') . '.sql';
 $backupFilePath = "$backupDir/$backupFile";
 
 // Create a connection

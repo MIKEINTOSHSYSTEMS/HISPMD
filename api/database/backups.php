@@ -24,7 +24,7 @@ if (!is_dir($backupDir)) {
 }
 
 // Backup file name with timestamp
-$backupFile = 'hisp_md_backup_' . date('Ymd_His') . '.sql';
+$backupFile = 'hispmd_mb_backup_' . date('Ymd_His') . '.sql';
 $backupFilePath = "$backupDir/$backupFile";
 
 // Command to execute pg_dump inside the Docker container
