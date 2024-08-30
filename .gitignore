@@ -1,8 +1,8 @@
-/ai/dataline
-/ai/sql_chat
-/ai/hispmd_dataline
+/ai/bot/env
 /ai/chatbot/venv
 /ai/pandas-ai
+/ai/bot/certs
+/ai/chat/certs
 /api/sql/backup
 /api/database/backup
 /api/database/backups
@@ -16,3 +16,4 @@
 /app/templates_c/*.docx
 /mysql-int/hispmd_dev.sql
 /src/hispmddb/
+/analytics/tmp/cache/tracker

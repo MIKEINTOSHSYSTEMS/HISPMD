@@ -1,0 +1,16 @@
+# .streamlit/config.toml
+
+[theme]
+base = "light"
+primaryColor = "#00274c"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#black"
+font = "sans serif"
+
+[server]
+# Comment out or remove SSL configuration if not needed
+sslCertFile = './certs/fullchain.pem'
+sslKeyFile = './certs/privkey.pem'
+port = 8585  # Replace 8585 with your desired port
+#enableCORS = false  # Optional: disable CORS if you are having cross-origin issues
