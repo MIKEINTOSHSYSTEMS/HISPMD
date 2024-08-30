@@ -324,6 +324,7 @@ class ConnectionManager_Base
 		$connectionsIds["admin_rights"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["admin_members"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["admin_users"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.mfr_facilities_register_report"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

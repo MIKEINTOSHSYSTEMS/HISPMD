@@ -1308,6 +1308,15 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("hispmd_web_reports_and_charts_builder", " " . "HISPMD Web Reports And Charts Builder");
+$table = "public.mfr_facilities_register_report";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("public_mfr_facilities_register_report", " " . "Mfr Facilities Register Report");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

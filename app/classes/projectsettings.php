@@ -3682,6 +3682,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "system_users_activity_dashboard" ] = "System_Users_Activity_Dashboard";
 	$projectEntities[ "HISPMD_Web_Reports_and_Charts_Builder" ] = array( "url" => "hispmd_web_reports_and_charts_builder", "type" => 4 );
 	$projectEntitiesReverse[ "hispmd_web_reports_and_charts_builder" ] = "HISPMD_Web_Reports_and_Charts_Builder";
+	$projectEntities[ "public.mfr_facilities_register_report" ] = array( "url" => "public_mfr_facilities_register_report", "type" => 2 );
+	$projectEntitiesReverse[ "public_mfr_facilities_register_report" ] = "public.mfr_facilities_register_report";
 }
 
 function findTable( $table ) {

@@ -1,0 +1,243 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-rprint" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pdflink_block}
+<span data-itemtype="print_pdf" data-itemid="print_pdf" {$item_print_pdf} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	pdflink" data-pdfpage="rprint" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Mfr Facilities Register Report.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="rprint" 
+{$pdflink_attrs} >
+							PDF View			</a>
+</span>
+{END pdflink_block}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel public_mfr_facilities_register_report rprint}</h2>
+	 
+		{BEGIN printtabheader}
+<span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
+{$printtabheader_text}
+</span>
+{END printtabheader}
+		</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+	.rnr-report {
+		width: 100%;
+	}
+			td.group_1{
+			background-color: #90ee90;
+		}
+		td.nbgroup_1{
+			background-color: #90ee90;
+		}
+		td.header_1 {
+			background-color: #90ee90; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_2{
+			background-color: #add8e6;
+		}
+		td.nbgroup_2{
+			background-color: #add8e6;
+		}
+		td.header_2 {
+			background-color: #add8e6; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_3{
+			background-color: #ffb6c1;
+		}
+		td.nbgroup_3{
+			background-color: #ffb6c1;
+		}
+		td.header_3 {
+			background-color: #ffb6c1; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_4{
+			background-color: #fffacd;
+		}
+		td.nbgroup_4{
+			background-color: #fffacd;
+		}
+		td.header_4 {
+			background-color: #fffacd; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+		td.blackshade {
+		font-size: 120%;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	</style>
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+							<table class="r-cross-print" cellpadding="0" cellspacing="0" align="center" border=0>
+	<thead>
+		<tr>
+			<th class="data-label">{$report_cross_type} <span class="data-field"> {$report_cross_field}</span></th>
+			<th class="field-label" colspan="{$group_x_count}">{$group_x_label}</th>
+			{BEGIN cross_totals}
+			<td class="">&nbsp;</td>
+			{END cross_totals}
+		</tr>
+		<tr>
+			<th class="field-label">{$group_y_label}</th>
+			{BEGIN group_header}
+				<th class="x-label">{$gr_value}</th>
+			{END group_header}
+			{BEGIN cross_totals}
+			<td class="x-summary-label">{$totals}</td>
+			{END cross_totals}
+		</tr>
+	</thead>
+	<tbody>
+	{BEGIN grid_row}
+		<tr>
+			<td class="y-label">{$group_y}</td>
+			{BEGIN row_record}
+				<td class="data" id={$id_data}>{$row_value}</td>
+			{END row_record}
+			{BEGIN cross_totals}
+			<td class="summary" id={$id_row_summary}>{$row_summary}</td>
+			{END cross_totals}
+		</tr>
+	{END grid_row}
+		{BEGIN cross_totals}
+		<tr>
+			<td class="y-summary-label">{$totals}</td>
+			{BEGIN col_summary}
+				<td class="summary" id={$id_col_summary}>{$col_summary}</td>
+			{END col_summary}
+			<td class="summary" id="id_total_summary">{$total_summary}</td>
+		</tr>
+		{END cross_totals}
+	</tbody>
+	</table>
+	<div id="location" src={$reportName} style="display: none;"></div>
+			</div>
+{END grid_block}									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

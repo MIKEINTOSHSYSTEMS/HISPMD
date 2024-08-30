@@ -45,6 +45,31 @@ pdfDocument = {
 				
 				[
 																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_search_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
@@ -57,8 +82,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

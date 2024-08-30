@@ -781,6 +781,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.mfr_facilities_register_report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1385,6 +1389,10 @@ function getCaptionTable($table)
 	if($table=="HISPMD_Web_Reports_and_Charts_Builder")
 	{
 		return "HISPMD Web Reports And Charts Builder";
+	}
+	if($table=="public.mfr_facilities_register_report")
+	{
+		return "Mfr Facilities Register Report";
 	}
 	return $table;
 }

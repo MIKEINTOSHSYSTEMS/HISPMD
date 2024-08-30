@@ -1,0 +1,1138 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-report"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="public_mfr_facilities_register_report_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Advanced search		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Show search panel		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Hide search panel		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export_report_excel" data-itemid="export_report_excel" {$item_export_report_excel} data-pageid="{$pageid}" data-small >
+				<a  href="public_mfr_facilities_register_report_print.php?all=1&amp;format=excel{$stateLink}" {$excellink_attrs}  title="" >
+				
+		Export to Excel		
+		</a>
+	</li>
+{END export_link}
+							{BEGIN export_link}
+	<li data-itemtype="export_report_word" data-itemid="export_report_word" {$item_export_report_word} data-pageid="{$pageid}" data-small >
+				<a  href="public_mfr_facilities_register_report_print.php?all=1&amp;format=word{$stateLink}" {$wordlink_attrs}  title="" >
+				
+		Export to Word		
+		</a>
+	</li>
+{END export_link}
+							{BEGIN export_link}
+	<li data-itemtype="export_report_pdf" data-itemid="export_report_pdf" {$item_export_report_pdf} data-pageid="{$pageid}" data-small >
+				<a  data-pdfpage="rprint" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Mfr Facilities Register Report.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="rprint" 
+  title="" >
+				
+		Export to PDF		
+		</a>
+	</li>
+{END export_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notifications			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Admin Area		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
+	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_region}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region}" {$filterRow_attrs_region}>
+			<label>{$label public_mfr_facilities_register_report region }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region}</span>
+						</div>
+		{END searchCtrlBlock_region}
+																{BEGIN searchCtrlBlock_zone}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_zone}" {$filterRow_attrs_zone}>
+			<label>{$label public_mfr_facilities_register_report zone }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_zone}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_zone}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_zone}</span>
+						</div>
+		{END searchCtrlBlock_zone}
+																{BEGIN searchCtrlBlock_woreda}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_woreda}" {$filterRow_attrs_woreda}>
+			<label>{$label public_mfr_facilities_register_report woreda }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_woreda}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_woreda}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_woreda}</span>
+						</div>
+		{END searchCtrlBlock_woreda}
+																{BEGIN searchCtrlBlock_status}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_status}" {$filterRow_attrs_status}>
+			<label>{$label public_mfr_facilities_register_report status }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_status}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_status}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_status}</span>
+						</div>
+		{END searchCtrlBlock_status}
+																{BEGIN searchCtrlBlock_operationalstatus}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_operationalstatus}" {$filterRow_attrs_operationalstatus}>
+			<label>{$label public_mfr_facilities_register_report operationalstatus }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_operationalstatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_operationalstatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_operationalstatus}</span>
+						</div>
+		{END searchCtrlBlock_operationalstatus}
+																{BEGIN searchCtrlBlock_parentfacilitytype}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_parentfacilitytype}" {$filterRow_attrs_parentfacilitytype}>
+			<label>{$label public_mfr_facilities_register_report parentfacilitytype }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_parentfacilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_parentfacilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_parentfacilitytype}</span>
+						</div>
+		{END searchCtrlBlock_parentfacilitytype}
+																{BEGIN searchCtrlBlock_facilitytype}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_facilitytype}" {$filterRow_attrs_facilitytype}>
+			<label>{$label public_mfr_facilities_register_report facilitytype }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_facilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_facilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_facilitytype}</span>
+						</div>
+		{END searchCtrlBlock_facilitytype}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$grpsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Scope:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="public_mfr_facilities_register_report_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Print whole report							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="public_mfr_facilities_register_report_print.php?{$crosstable_attrs}">
+				Print this page			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Groups per page							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Print			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_region}
+
+	<div class="dropdown filter-field filter-region-container" {BEGIN filter_selected_region} data-selected {END filter_selected_region}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_region}
+			<a href="#" class="filter-clear filter-clear-region" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_region}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report region }				{BEGIN filter_selected_region}:{END filter_selected_region}
+			</span>
+			{BEGIN filter_selected_region}
+			<span class="r-filter-value">{$filtervalue_region}</span>
+			{END filter_selected_region}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_region}
+		<li class=" filter-values filter-values-region  {$visibilityClass_region}">
+			{$region_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_region}
+
+			{BEGIN filter_button_showmore_region}
+		<li class=" filter-show-more {$collapsedClass_region} {$showMoreBtnClass_region}">
+			<a class="filter-show-more-link filterShowMore_region" href="#">{$show_n_more_region}</a>
+		</li>
+		{END filter_button_showmore_region}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_region}
+
+
+
+
+
+
+{BEGIN filter_control_zone}
+
+	<div class="dropdown filter-field filter-zone-container" {BEGIN filter_selected_zone} data-selected {END filter_selected_zone}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_zone}
+			<a href="#" class="filter-clear filter-clear-zone" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_zone}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report zone }				{BEGIN filter_selected_zone}:{END filter_selected_zone}
+			</span>
+			{BEGIN filter_selected_zone}
+			<span class="r-filter-value">{$filtervalue_zone}</span>
+			{END filter_selected_zone}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_zone}
+		<li class=" filter-values filter-values-zone  {$visibilityClass_zone}">
+			{$zone_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_zone}
+
+			{BEGIN filter_button_showmore_zone}
+		<li class=" filter-show-more {$collapsedClass_zone} {$showMoreBtnClass_zone}">
+			<a class="filter-show-more-link filterShowMore_zone" href="#">{$show_n_more_zone}</a>
+		</li>
+		{END filter_button_showmore_zone}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_zone}
+
+
+
+
+
+
+{BEGIN filter_control_woreda}
+
+	<div class="dropdown filter-field filter-woreda-container" {BEGIN filter_selected_woreda} data-selected {END filter_selected_woreda}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_woreda}
+			<a href="#" class="filter-clear filter-clear-woreda" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_woreda}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report woreda }				{BEGIN filter_selected_woreda}:{END filter_selected_woreda}
+			</span>
+			{BEGIN filter_selected_woreda}
+			<span class="r-filter-value">{$filtervalue_woreda}</span>
+			{END filter_selected_woreda}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_woreda}
+		<li class=" filter-values filter-values-woreda  {$visibilityClass_woreda}">
+			{$woreda_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_woreda}
+
+			{BEGIN filter_button_showmore_woreda}
+		<li class=" filter-show-more {$collapsedClass_woreda} {$showMoreBtnClass_woreda}">
+			<a class="filter-show-more-link filterShowMore_woreda" href="#">{$show_n_more_woreda}</a>
+		</li>
+		{END filter_button_showmore_woreda}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_woreda}
+
+
+
+
+
+
+{BEGIN filter_control_status}
+
+	<div class="dropdown filter-field filter-status-container" {BEGIN filter_selected_status} data-selected {END filter_selected_status}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_status}
+			<a href="#" class="filter-clear filter-clear-status" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_status}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report status }				{BEGIN filter_selected_status}:{END filter_selected_status}
+			</span>
+			{BEGIN filter_selected_status}
+			<span class="r-filter-value">{$filtervalue_status}</span>
+			{END filter_selected_status}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_status}
+		<li class=" filter-values filter-values-status  {$visibilityClass_status}">
+			{$status_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_status}
+
+			{BEGIN filter_button_showmore_status}
+		<li class=" filter-show-more {$collapsedClass_status} {$showMoreBtnClass_status}">
+			<a class="filter-show-more-link filterShowMore_status" href="#">{$show_n_more_status}</a>
+		</li>
+		{END filter_button_showmore_status}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_status}
+
+
+
+
+
+
+{BEGIN filter_control_operationalstatus}
+
+	<div class="dropdown filter-field filter-operationalstatus-container" {BEGIN filter_selected_operationalstatus} data-selected {END filter_selected_operationalstatus}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_operationalstatus}
+			<a href="#" class="filter-clear filter-clear-operationalstatus" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_operationalstatus}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report operationalstatus }				{BEGIN filter_selected_operationalstatus}:{END filter_selected_operationalstatus}
+			</span>
+			{BEGIN filter_selected_operationalstatus}
+			<span class="r-filter-value">{$filtervalue_operationalstatus}</span>
+			{END filter_selected_operationalstatus}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_operationalstatus}
+		<li class=" filter-values filter-values-operationalstatus  {$visibilityClass_operationalstatus}">
+			{$operationalstatus_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_operationalstatus}
+
+			{BEGIN filter_button_showmore_operationalstatus}
+		<li class=" filter-show-more {$collapsedClass_operationalstatus} {$showMoreBtnClass_operationalstatus}">
+			<a class="filter-show-more-link filterShowMore_operationalstatus" href="#">{$show_n_more_operationalstatus}</a>
+		</li>
+		{END filter_button_showmore_operationalstatus}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_operationalstatus}
+
+
+
+
+
+
+{BEGIN filter_control_parentfacilitytype}
+
+	<div class="dropdown filter-field filter-parentfacilitytype-container" {BEGIN filter_selected_parentfacilitytype} data-selected {END filter_selected_parentfacilitytype}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_parentfacilitytype}
+			<a href="#" class="filter-clear filter-clear-parentfacilitytype" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_parentfacilitytype}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report parentfacilitytype }				{BEGIN filter_selected_parentfacilitytype}:{END filter_selected_parentfacilitytype}
+			</span>
+			{BEGIN filter_selected_parentfacilitytype}
+			<span class="r-filter-value">{$filtervalue_parentfacilitytype}</span>
+			{END filter_selected_parentfacilitytype}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_parentfacilitytype}
+		<li class=" filter-values filter-values-parentfacilitytype  {$visibilityClass_parentfacilitytype}">
+			{$parentfacilitytype_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_parentfacilitytype}
+
+			{BEGIN filter_button_showmore_parentfacilitytype}
+		<li class=" filter-show-more {$collapsedClass_parentfacilitytype} {$showMoreBtnClass_parentfacilitytype}">
+			<a class="filter-show-more-link filterShowMore_parentfacilitytype" href="#">{$show_n_more_parentfacilitytype}</a>
+		</li>
+		{END filter_button_showmore_parentfacilitytype}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_parentfacilitytype}
+
+
+
+
+
+
+{BEGIN filter_control_facilitytype}
+
+	<div class="dropdown filter-field filter-facilitytype-container" {BEGIN filter_selected_facilitytype} data-selected {END filter_selected_facilitytype}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_facilitytype}
+			<a href="#" class="filter-clear filter-clear-facilitytype" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_facilitytype}
+			<span class="r-filter-field">{$label public_mfr_facilities_register_report facilitytype }				{BEGIN filter_selected_facilitytype}:{END filter_selected_facilitytype}
+			</span>
+			{BEGIN filter_selected_facilitytype}
+			<span class="r-filter-value">{$filtervalue_facilitytype}</span>
+			{END filter_selected_facilitytype}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_facilitytype}
+		<li class=" filter-values filter-values-facilitytype  {$visibilityClass_facilitytype}">
+			{$facilitytype_filter}
+						
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_facilitytype}
+
+			{BEGIN filter_button_showmore_facilitytype}
+		<li class=" filter-show-more {$collapsedClass_facilitytype} {$showMoreBtnClass_facilitytype}">
+			<a class="filter-show-more-link filterShowMore_facilitytype" href="#">{$show_n_more_facilitytype}</a>
+		</li>
+		{END filter_button_showmore_facilitytype}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_facilitytype}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+	.rnr-report {
+		width: 100%;
+	}
+			td.group_1{
+			background-color: #90ee90;
+		}
+		td.nbgroup_1{
+			background-color: #90ee90;
+		}
+		td.header_1 {
+			background-color: #90ee90; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_2{
+			background-color: #add8e6;
+		}
+		td.nbgroup_2{
+			background-color: #add8e6;
+		}
+		td.header_2 {
+			background-color: #add8e6; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_3{
+			background-color: #ffb6c1;
+		}
+		td.nbgroup_3{
+			background-color: #ffb6c1;
+		}
+		td.header_3 {
+			background-color: #ffb6c1; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_4{
+			background-color: #fffacd;
+		}
+		td.nbgroup_4{
+			background-color: #fffacd;
+		}
+		td.header_4 {
+			background-color: #fffacd; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+		td.blackshade {
+		font-size: 120%;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	</style>
+
+<div class="rnr-cw-grid rnr-s-2 asbuttons {$pageStyleName}" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+						<table id="crossTable{$id}" class="bs-crosstab table table-striped">
+		<thead>
+			{BEGIN grid_header}
+			<tr>
+				<th class="bs-cross-datasel">
+				<div class="form-inline">
+					{$select_group}
+					{$select_data}
+				</div>
+				</th>
+				<th class="bs-cross-xsel" {$xselcell_attrs}>
+					{$select_group_x}
+				</th>
+				{BEGIN cross_totals}
+				<th class="r-top-cross-row bs-cross-xsel">&nbsp;</th>
+				{END cross_totals}
+			</tr>
+			<tr class="bs-cross-colheaders">
+				<th >{$select_group_y}</th>
+				{BEGIN group_header}
+				<th class="bs-cross-colheadercell {$gr_x_class}">{$gr_value}</th>
+				{END group_header}
+				{BEGIN cross_totals}
+				<th class="bs-cross-colheadercell bs-cross-totalsname" id="totals1_{$id}">{$totals}</th>
+				{END cross_totals}
+			</tr>
+			{END grid_header}
+		</thead>
+		<tbody>		
+	{BEGIN grid_row}
+			<tr>
+				<td class="bs-cross-rowheadercell {$gr_y_class}">{$group_y}</td>
+				{BEGIN row_record}
+					<td  id="{$id_data}_{$id}" class="{$row_value_class}">{$row_value}</td>
+				{END row_record}
+				{BEGIN cross_totals}
+				<td class="bs-cross-rowsummary {$summary_class}" id="{$id_row_summary}_{$id}">{$row_summary}</td>
+				{END cross_totals}
+			</tr>
+	{END grid_row}
+
+		{BEGIN cross_totals}
+			<tr class="bs-cross-colsummary" >
+				<td  class="bs-cross-rowheadercell bs-cross-totalsname" id="totals2_{$id}">{$totals}</td>
+				{BEGIN col_summary}
+					<td id="{$id_col_summary}_{$id}" class="bs-cross-colsummary {$summary_class}">{$col_summary}</td>
+				{END col_summary}
+				<td id="id_total_summary_{$id}" class="bs-cross-totalsummary {$summary_class}">{$total_summary}</td>
+			</tr>
+		{END cross_totals}		
+		</tbody>	
+	</table>		</div>
+	{END grid_block}	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>
