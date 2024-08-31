@@ -112,7 +112,10 @@ class RegisterPage extends RunnerPage
 		}
 
 		$dbPassword = $this->cipherer->DecryptField( Security::passwordField(), $data[0] );
-		$usercode = $username.md5( $dbPassword );
+		if( !$this->cipherer->isFieldEncrypted(Security::passwordField()) )
+			$usercode = $username.$dbPassword;// $dbPassword is already encrypted
+		else
+			$usercode = $username.md5( $dbPassword );
 
 
 		if( $code != md5( $usercode ) )
@@ -322,6 +325,12 @@ class RegisterPage extends RunnerPage
 
 		$passwordHash = md5( $values[Security::passwordField()] );
 		$originalpassword = $values[Security::passwordField()];
+		//	encrypt password
+		if( !$this->cipherer->isFieldEncrypted( $this->passwordFiled ) )
+		{
+			$passwordHash = $this->getPasswordHash( $values[Security::passwordField()] );
+			$values[Security::passwordField()] = $passwordHash;
+		}
 
 		$dc = new DsCommand();
 		$dc->values = &$values;

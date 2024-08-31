@@ -6,11 +6,11 @@ $tdatahispmd_organisations[".OwnerID"] = "";
 $tdatahispmd_organisations[".OriginalTable"] = "public.hispmd_organisations";
 
 
-$tdatahispmd_organisations[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahispmd_organisations[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahispmd_organisations[".originalPagesByType"] = $tdatahispmd_organisations[".pagesByType"];
-$tdatahispmd_organisations[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahispmd_organisations[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahispmd_organisations[".originalPages"] = $tdatahispmd_organisations[".pages"];
-$tdatahispmd_organisations[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatahispmd_organisations[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahispmd_organisations[".originalDefaultPages"] = $tdatahispmd_organisations[".defaultPages"];
 
 //	field labels
@@ -158,7 +158,7 @@ $tdatahispmd_organisations[".addPageEvents"] = false;
 $tdatahispmd_organisations[".isUseTimeForSearch"] = false;
 
 
-$tdatahispmd_organisations[".badgeColor"] = "CFAE83";
+$tdatahispmd_organisations[".badgeColor"] = "00ffff";
 
 
 $tdatahispmd_organisations[".allSearchFields"] = array();
@@ -1381,6 +1381,41 @@ changeTextControlsToDate( "public.hispmd_organisations" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["public.hispmd_organisations"] = array();
+//	public.hispmdusers
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="public.hispmdusers";
+		$detailsParam["dOriginalTable"] = "public.hispmdusers";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "hispmdusers";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_hispmdusers");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.hispmd_organisations"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.hispmd_organisations"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.hispmd_organisations"][$dIndex]["masterKeys"][]="orgid";
+
+	$detailsTablesData["public.hispmd_organisations"][$dIndex]["masterKeys"][]="organisation_name";
+
+				$detailsTablesData["public.hispmd_organisations"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.hispmd_organisations"][$dIndex]["detailKeys"][]="organisation_name";
+
+		
+	$detailsTablesData["public.hispmd_organisations"][$dIndex]["detailKeys"][]="organisation_name";
 //endif
 
 // tables which are master tables for current table (detail)

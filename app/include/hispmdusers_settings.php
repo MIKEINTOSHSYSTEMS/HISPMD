@@ -6,11 +6,11 @@ $tdatahispmdusers[".OwnerID"] = "";
 $tdatahispmdusers[".OriginalTable"] = "public.hispmdusers";
 
 
-$tdatahispmdusers[".pagesByType"] = my_json_decode( "{\"search\":[\"search\"]}" );
+$tdatahispmdusers[".pagesByType"] = my_json_decode( "{\"list\":[\"list1\"],\"search\":[\"search\"]}" );
 $tdatahispmdusers[".originalPagesByType"] = $tdatahispmdusers[".pagesByType"];
-$tdatahispmdusers[".pages"] = types2pages( my_json_decode( "{\"search\":[\"search\"]}" ) );
+$tdatahispmdusers[".pages"] = types2pages( my_json_decode( "{\"list\":[\"list1\"],\"search\":[\"search\"]}" ) );
 $tdatahispmdusers[".originalPages"] = $tdatahispmdusers[".pages"];
-$tdatahispmdusers[".defaultPages"] = my_json_decode( "{\"search\":\"search\"}" );
+$tdatahispmdusers[".defaultPages"] = my_json_decode( "{\"list\":\"list1\",\"search\":\"search\"}" );
 $tdatahispmdusers[".originalDefaultPages"] = $tdatahispmdusers[".defaultPages"];
 
 //	field labels
@@ -182,7 +182,7 @@ $tdatahispmdusers[".addPageEvents"] = false;
 $tdatahispmdusers[".isUseTimeForSearch"] = false;
 
 
-$tdatahispmdusers[".badgeColor"] = "6B8E23";
+$tdatahispmdusers[".badgeColor"] = "00ffff";
 
 
 $tdatahispmdusers[".allSearchFields"] = array();
@@ -238,7 +238,7 @@ $tdatahispmdusers[".strOrderBy"] = $tstrOrderBy;
 $tdatahispmdusers[".orderindexes"] = array();
 
 
-$tdatahispmdusers[".sqlHead"] = "SELECT \"ID\",  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic,  	phone_number,  	first_name,  	middle_name,  	last_name,  	designation,  	organisation_name,  	department";
+$tdatahispmdusers[".sqlHead"] = "SELECT \"ID\",      username,      password,      email,      -- Concatenate first_name, middle_name, and last_name into fullname      CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, '')) AS fullname,      groupid,      active,      ext_security_id,      userpic,      phone_number,      first_name,      middle_name,      last_name,      designation,      organisation_name,      department";
 $tdatahispmdusers[".sqlFrom"] = "FROM \"public\".hispmdusers";
 $tdatahispmdusers[".sqlWhereExpr"] = "";
 $tdatahispmdusers[".sqlTail"] = "";
@@ -496,7 +496,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -518,14 +519,18 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			$edata["validateAs"]["basicValidate"][] = "DenyDuplicated";
+	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "Value %value% already exists", "messageType" => "Text");
+
 	
 //	End validation
 
 	
 			
 	
-	
+		$edata["denyDuplicates"] = true;
+
 	
 	$fdata["EditFormats"]["edit"] = $edata;
 //	End Edit Formats
@@ -769,7 +774,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -791,14 +797,19 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Email");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			$edata["validateAs"]["basicValidate"][] = "DenyDuplicated";
+	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "Value %value% already exists", "messageType" => "Text");
+
 	
 //	End validation
 
 	
 			
 	
-	
+		$edata["denyDuplicates"] = true;
+
 	
 	$fdata["EditFormats"]["edit"] = $edata;
 //	End Edit Formats
@@ -843,9 +854,9 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "fullname";
 	$fdata["GoodName"] = "fullname";
-	$fdata["ownerTable"] = "public.hispmdusers";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("public_hispmdusers","fullname");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 
 
 	
@@ -857,7 +868,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "fullname";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fullname";
+	$fdata["FullName"] = "CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, ''))";
 
 	
 	
@@ -1473,7 +1484,11 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 	
 	
-			$edata["acceptFileTypesHtml"] = "";
+			$edata["acceptFileTypes"] = array();
+			$edata["acceptFileTypes"][] = strtoupper("jpg");
+						$edata["acceptFileTypesHtml"] = ".jpg";
+			$edata["acceptFileTypes"][] = strtoupper("png");
+						$edata["acceptFileTypesHtml"] .= ",.png";
 
 		$edata["maxNumberOfFiles"] = 1;
 
@@ -1494,7 +1509,9 @@ $tdatahispmdusers[".hideMobileList"] = array();
 //	End validation
 
 	
-			
+				$edata["ResizeImage"] = true;
+				$edata["NewSize"] = 600;
+
 	
 	
 	
@@ -1508,7 +1525,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "NOT Empty";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1591,19 +1608,21 @@ $tdatahispmdusers[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Telephone");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
-	
+		$edata["strEditMask"] = "000-000-0000";
+
 	
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1615,18 +1634,16 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1645,7 +1662,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1741,7 +1758,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1764,7 +1782,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1879,7 +1898,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1902,7 +1922,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2017,7 +2038,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2040,7 +2062,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2348,7 +2371,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2368,7 +2392,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2576,6 +2601,26 @@ $masterTablesData["public.hispmdusers"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="public.hispmd_organisations";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="public.hispmd_organisations";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "hispmd_organisations";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["public.hispmdusers"][0] = $masterParams;
+				$masterTablesData["public.hispmdusers"][0]["masterKeys"] = array();
+	$masterTablesData["public.hispmdusers"][0]["masterKeys"][]="orgid";
+				$masterTablesData["public.hispmdusers"][0]["masterKeys"][]="organisation_name";
+				$masterTablesData["public.hispmdusers"][0]["detailKeys"] = array();
+	$masterTablesData["public.hispmdusers"][0]["detailKeys"][]="organisation_name";
+				$masterTablesData["public.hispmdusers"][0]["detailKeys"][]="organisation_name";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -2596,7 +2641,7 @@ function createSqlQuery_hispmdusers()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "\"ID\",  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	userpic,  	phone_number,  	first_name,  	middle_name,  	last_name,  	designation,  	organisation_name,  	department";
+$proto0["m_strFieldList"] = "\"ID\",      username,      password,      email,      -- Concatenate first_name, middle_name, and last_name into fullname      CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, '')) AS fullname,      groupid,      active,      ext_security_id,      userpic,      phone_number,      first_name,      middle_name,      last_name,      designation,      organisation_name,      department";
 $proto0["m_strFrom"] = "FROM \"public\".hispmdusers";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2693,219 +2738,244 @@ $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
-			$obj = new SQLField(array(
-	"m_strName" => "fullname",
-	"m_strTable" => "public.hispmdusers",
-	"m_srcTableName" => "public.hispmdusers"
+			$proto15=array();
+$proto15["m_functiontype"] = "SQLF_CUSTOM";
+$proto15["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "COALESCE(first_name, '')"
 ));
 
-$proto14["m_sql"] = "fullname";
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "' '"
+));
+
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "COALESCE(middle_name, '')"
+));
+
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "' '"
+));
+
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "COALESCE(last_name, '')"
+));
+
+$proto15["m_arguments"][]=$obj;
+$proto15["m_strFunctionName"] = "CONCAT";
+$obj = new SQLFunctionCall($proto15);
+
+$proto14["m_sql"] = "CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, ''))";
 $proto14["m_srcTableName"] = "public.hispmdusers";
 $proto14["m_expr"]=$obj;
-$proto14["m_alias"] = "";
+$proto14["m_alias"] = "fullname";
 $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto16=array();
+						$proto21=array();
 			$obj = new SQLField(array(
 	"m_strName" => "groupid",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto16["m_sql"] = "groupid";
-$proto16["m_srcTableName"] = "public.hispmdusers";
-$proto16["m_expr"]=$obj;
-$proto16["m_alias"] = "";
-$obj = new SQLFieldListItem($proto16);
+$proto21["m_sql"] = "groupid";
+$proto21["m_srcTableName"] = "public.hispmdusers";
+$proto21["m_expr"]=$obj;
+$proto21["m_alias"] = "";
+$obj = new SQLFieldListItem($proto21);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto18=array();
+						$proto23=array();
 			$obj = new SQLField(array(
 	"m_strName" => "active",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto18["m_sql"] = "active";
-$proto18["m_srcTableName"] = "public.hispmdusers";
-$proto18["m_expr"]=$obj;
-$proto18["m_alias"] = "";
-$obj = new SQLFieldListItem($proto18);
+$proto23["m_sql"] = "active";
+$proto23["m_srcTableName"] = "public.hispmdusers";
+$proto23["m_expr"]=$obj;
+$proto23["m_alias"] = "";
+$obj = new SQLFieldListItem($proto23);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto20=array();
+						$proto25=array();
 			$obj = new SQLField(array(
 	"m_strName" => "ext_security_id",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto20["m_sql"] = "ext_security_id";
-$proto20["m_srcTableName"] = "public.hispmdusers";
-$proto20["m_expr"]=$obj;
-$proto20["m_alias"] = "";
-$obj = new SQLFieldListItem($proto20);
+$proto25["m_sql"] = "ext_security_id";
+$proto25["m_srcTableName"] = "public.hispmdusers";
+$proto25["m_expr"]=$obj;
+$proto25["m_alias"] = "";
+$obj = new SQLFieldListItem($proto25);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto22=array();
+						$proto27=array();
 			$obj = new SQLField(array(
 	"m_strName" => "userpic",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto22["m_sql"] = "userpic";
-$proto22["m_srcTableName"] = "public.hispmdusers";
-$proto22["m_expr"]=$obj;
-$proto22["m_alias"] = "";
-$obj = new SQLFieldListItem($proto22);
+$proto27["m_sql"] = "userpic";
+$proto27["m_srcTableName"] = "public.hispmdusers";
+$proto27["m_expr"]=$obj;
+$proto27["m_alias"] = "";
+$obj = new SQLFieldListItem($proto27);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto24=array();
+						$proto29=array();
 			$obj = new SQLField(array(
 	"m_strName" => "phone_number",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto24["m_sql"] = "phone_number";
-$proto24["m_srcTableName"] = "public.hispmdusers";
-$proto24["m_expr"]=$obj;
-$proto24["m_alias"] = "";
-$obj = new SQLFieldListItem($proto24);
+$proto29["m_sql"] = "phone_number";
+$proto29["m_srcTableName"] = "public.hispmdusers";
+$proto29["m_expr"]=$obj;
+$proto29["m_alias"] = "";
+$obj = new SQLFieldListItem($proto29);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto26=array();
+						$proto31=array();
 			$obj = new SQLField(array(
 	"m_strName" => "first_name",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto26["m_sql"] = "first_name";
-$proto26["m_srcTableName"] = "public.hispmdusers";
-$proto26["m_expr"]=$obj;
-$proto26["m_alias"] = "";
-$obj = new SQLFieldListItem($proto26);
+$proto31["m_sql"] = "first_name";
+$proto31["m_srcTableName"] = "public.hispmdusers";
+$proto31["m_expr"]=$obj;
+$proto31["m_alias"] = "";
+$obj = new SQLFieldListItem($proto31);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto28=array();
+						$proto33=array();
 			$obj = new SQLField(array(
 	"m_strName" => "middle_name",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto28["m_sql"] = "middle_name";
-$proto28["m_srcTableName"] = "public.hispmdusers";
-$proto28["m_expr"]=$obj;
-$proto28["m_alias"] = "";
-$obj = new SQLFieldListItem($proto28);
+$proto33["m_sql"] = "middle_name";
+$proto33["m_srcTableName"] = "public.hispmdusers";
+$proto33["m_expr"]=$obj;
+$proto33["m_alias"] = "";
+$obj = new SQLFieldListItem($proto33);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto30=array();
+						$proto35=array();
 			$obj = new SQLField(array(
 	"m_strName" => "last_name",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto30["m_sql"] = "last_name";
-$proto30["m_srcTableName"] = "public.hispmdusers";
-$proto30["m_expr"]=$obj;
-$proto30["m_alias"] = "";
-$obj = new SQLFieldListItem($proto30);
+$proto35["m_sql"] = "last_name";
+$proto35["m_srcTableName"] = "public.hispmdusers";
+$proto35["m_expr"]=$obj;
+$proto35["m_alias"] = "";
+$obj = new SQLFieldListItem($proto35);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto32=array();
+						$proto37=array();
 			$obj = new SQLField(array(
 	"m_strName" => "designation",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto32["m_sql"] = "designation";
-$proto32["m_srcTableName"] = "public.hispmdusers";
-$proto32["m_expr"]=$obj;
-$proto32["m_alias"] = "";
-$obj = new SQLFieldListItem($proto32);
+$proto37["m_sql"] = "designation";
+$proto37["m_srcTableName"] = "public.hispmdusers";
+$proto37["m_expr"]=$obj;
+$proto37["m_alias"] = "";
+$obj = new SQLFieldListItem($proto37);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto34=array();
+						$proto39=array();
 			$obj = new SQLField(array(
 	"m_strName" => "organisation_name",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto34["m_sql"] = "organisation_name";
-$proto34["m_srcTableName"] = "public.hispmdusers";
-$proto34["m_expr"]=$obj;
-$proto34["m_alias"] = "";
-$obj = new SQLFieldListItem($proto34);
+$proto39["m_sql"] = "organisation_name";
+$proto39["m_srcTableName"] = "public.hispmdusers";
+$proto39["m_expr"]=$obj;
+$proto39["m_alias"] = "";
+$obj = new SQLFieldListItem($proto39);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto36=array();
+						$proto41=array();
 			$obj = new SQLField(array(
 	"m_strName" => "department",
 	"m_strTable" => "public.hispmdusers",
 	"m_srcTableName" => "public.hispmdusers"
 ));
 
-$proto36["m_sql"] = "department";
-$proto36["m_srcTableName"] = "public.hispmdusers";
-$proto36["m_expr"]=$obj;
-$proto36["m_alias"] = "";
-$obj = new SQLFieldListItem($proto36);
+$proto41["m_sql"] = "department";
+$proto41["m_srcTableName"] = "public.hispmdusers";
+$proto41["m_expr"]=$obj;
+$proto41["m_alias"] = "";
+$obj = new SQLFieldListItem($proto41);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto38=array();
-$proto38["m_link"] = "SQLL_MAIN";
-			$proto39=array();
-$proto39["m_strName"] = "public.hispmdusers";
-$proto39["m_srcTableName"] = "public.hispmdusers";
-$proto39["m_columns"] = array();
-$proto39["m_columns"][] = "ID";
-$proto39["m_columns"][] = "username";
-$proto39["m_columns"][] = "password";
-$proto39["m_columns"][] = "email";
-$proto39["m_columns"][] = "fullname";
-$proto39["m_columns"][] = "groupid";
-$proto39["m_columns"][] = "active";
-$proto39["m_columns"][] = "ext_security_id";
-$proto39["m_columns"][] = "userpic";
-$proto39["m_columns"][] = "phone_number";
-$proto39["m_columns"][] = "first_name";
-$proto39["m_columns"][] = "middle_name";
-$proto39["m_columns"][] = "last_name";
-$proto39["m_columns"][] = "designation";
-$proto39["m_columns"][] = "organisation_name";
-$proto39["m_columns"][] = "department";
-$obj = new SQLTable($proto39);
+												$proto43=array();
+$proto43["m_link"] = "SQLL_MAIN";
+			$proto44=array();
+$proto44["m_strName"] = "public.hispmdusers";
+$proto44["m_srcTableName"] = "public.hispmdusers";
+$proto44["m_columns"] = array();
+$proto44["m_columns"][] = "ID";
+$proto44["m_columns"][] = "username";
+$proto44["m_columns"][] = "password";
+$proto44["m_columns"][] = "email";
+$proto44["m_columns"][] = "fullname";
+$proto44["m_columns"][] = "groupid";
+$proto44["m_columns"][] = "active";
+$proto44["m_columns"][] = "ext_security_id";
+$proto44["m_columns"][] = "userpic";
+$proto44["m_columns"][] = "phone_number";
+$proto44["m_columns"][] = "first_name";
+$proto44["m_columns"][] = "middle_name";
+$proto44["m_columns"][] = "last_name";
+$proto44["m_columns"][] = "designation";
+$proto44["m_columns"][] = "organisation_name";
+$proto44["m_columns"][] = "department";
+$obj = new SQLTable($proto44);
 
-$proto38["m_table"] = $obj;
-$proto38["m_sql"] = "\"public\".hispmdusers";
-$proto38["m_alias"] = "";
-$proto38["m_srcTableName"] = "public.hispmdusers";
-$proto40=array();
-$proto40["m_sql"] = "";
-$proto40["m_uniontype"] = "SQLL_UNKNOWN";
+$proto43["m_table"] = $obj;
+$proto43["m_sql"] = "\"public\".hispmdusers";
+$proto43["m_alias"] = "";
+$proto43["m_srcTableName"] = "public.hispmdusers";
+$proto45=array();
+$proto45["m_sql"] = "";
+$proto45["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto40["m_column"]=$obj;
-$proto40["m_contained"] = array();
-$proto40["m_strCase"] = "";
-$proto40["m_havingmode"] = false;
-$proto40["m_inBrackets"] = false;
-$proto40["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto40);
+$proto45["m_column"]=$obj;
+$proto45["m_contained"] = array();
+$proto45["m_strCase"] = "";
+$proto45["m_havingmode"] = false;
+$proto45["m_inBrackets"] = false;
+$proto45["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto45);
 
-$proto38["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto38);
+$proto43["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto43);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

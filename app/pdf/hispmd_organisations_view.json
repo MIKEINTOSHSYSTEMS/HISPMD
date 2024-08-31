@@ -189,6 +189,11 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_hispmd_organisations organisation_website }","bold":true},{"text":{$organisation_website_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			 {BEGIN details_hispmdusers}
+			{$displayDetailTable_hispmdusers }
+		{END details_hispmdusers},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

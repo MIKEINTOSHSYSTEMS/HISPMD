@@ -1,5 +1,7 @@
 <?php
-			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'details' => array( 'public.hispmdusers' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'organisation_name',
 'organisation_country',
 'organisation_city',

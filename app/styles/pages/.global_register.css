@@ -1,6 +1,14 @@
 [data-page=".global_register"][data-itemid="back_to_login"] > .btn {
   font-weight: bold;
 }
+[data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"][data-page=".global_register"][data-itemid="integrated_edit_field2"] > * > * > * > select {
+  font-weight: bold;
+}
 [data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > label,
 [data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > input,
 [data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"][data-page=".global_register"][data-itemid="integrated_edit_field3"] > * > * > textarea,
@@ -35,6 +43,57 @@
 }
 [data-page=".global_register"][data-itemid="register_logo1"] {
   font-size: 24px;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"][data-page=".global_register"][data-itemid="integrated_edit_field4"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"][data-page=".global_register"][data-itemid="integrated_edit_field5"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"][data-page=".global_register"][data-itemid="integrated_edit_field6"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"][data-page=".global_register"][data-itemid="integrated_edit_field8"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"][data-page=".global_register"][data-itemid="integrated_edit_field9"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"] > * > label,
+[data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"] > * > * > input,
+[data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"] > * > * > textarea,
+[data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"] > * > * > select,
+[data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"] > * > * > .r-readonly-control,
+[data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"][data-page=".global_register"][data-itemid="integrated_edit_field10"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_register"][data-itemid="edit_field_label3"][data-page=".global_register"][data-itemid="edit_field_label3"][data-page=".global_register"][data-itemid="edit_field_label3"][data-page=".global_register"][data-itemid="edit_field_label3"] {
+  font-weight: bold;
 }
 [data-page=".global_register"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;

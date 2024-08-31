@@ -453,6 +453,20 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"] = array();
 		}
 		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"]["edit"] = array("table" => "public.moh_indicators", "field" => "indicator_group_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.hispmd_uggroups"] ) ) {
+			$lookupTableLinks["public.hispmd_uggroups"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.hispmd_uggroups"]["admin_users.designation"] )) {
+			$lookupTableLinks["public.hispmd_uggroups"]["admin_users.designation"] = array();
+		}
+		$lookupTableLinks["public.hispmd_uggroups"]["admin_users.designation"]["edit"] = array("table" => "admin_users", "field" => "designation", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.hispmd_organisations"] ) ) {
+			$lookupTableLinks["public.hispmd_organisations"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.hispmd_organisations"]["admin_users.organisation_name"] )) {
+			$lookupTableLinks["public.hispmd_organisations"]["admin_users.organisation_name"] = array();
+		}
+		$lookupTableLinks["public.hispmd_organisations"]["admin_users.organisation_name"]["edit"] = array("table" => "admin_users", "field" => "organisation_name", "page" => "edit");
 }
 
 ?>

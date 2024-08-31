@@ -54,11 +54,14 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$pdf_image images/MOH_logo_text_250.png undefined 0},"hidden":"{$item_hide_image}"},
+				
+				
 			{"text":"{$jspagetitlelabel  changepwd}","hidden":"{$item_hide_changepwd_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },

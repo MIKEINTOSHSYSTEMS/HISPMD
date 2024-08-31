@@ -454,12 +454,30 @@
 
 
 {END organisation_website_fieldblock}
-	
-								</td>
+										</td>
 			{END cellblock_grid_c3}
-								</tr>
-			</tbody></table>
-{END grid_block}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_hispmdusers}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_hispmdusers}			
+							<span>
+					{$detailslButtons_hispmdusers}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_hispmdusers}
+		</div>
+	</div>
+</div>
+{END details_hispmdusers}
+	
+				{END grid_block}
 	</div>
 <div class="r-below">
 					{BEGIN below-grid_block}

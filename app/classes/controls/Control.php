@@ -261,6 +261,18 @@ class EditControl
 				if(IsTextType($this->pageObject->pSetEdit->getFieldType($this->field)))
 					$blobfields[] = $this->field;
 			}
+			if($this->field == Security::passwordField() && $this->pageObject->tName == "admin_users")
+			{	
+				$needHashPass = true;
+				if ( $this->pageObject->pageType == PAGE_EDIT )
+				{
+					$oldData = $this->pageObject->getOldRecordData();
+					$needHashPass = $oldData[$this->field] != $this->webValue;
+				}
+
+				if ( $needHashPass )
+					$this->webValue = $this->pageObject->getPasswordHash( $this->webValue );	
+			}
 			$avalues[ $this->field ] = $this->webValue;
 		}
 	}

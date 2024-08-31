@@ -35,6 +35,24 @@ class UserControl extends EditControl
 	
 	function init()
 	{
+	$tName = $this->pageObject->tName;
+	$field = $this->field;
+	if( $this->pageObject->pSet ) {
+		if($this->pageObject->pageType == PAGE_SEARCH && $this->pageObject->pSet->getTableType() == PAGE_DASHBOARD)
+		{
+			$dashFields = $this->pageObject->pSet->getDashboardSearchFields();
+			$tName = $dashFields[$field][0]["table"];
+			$field = $dashFields[$field][0]["field"];
+		}
+	}
+				if($tName=="public.hispmdusers" && $field=="phone_number")
+	{
+		$this->settings["required"] = true;                    // Wether is mandatory
+$this->settings["tooltip"] = "please enter your phone number"; // Information tooltip
+$this->settings["initialCountry"] = "et";               // Country default
+$this->settings["preferredCountries"] = "et";           // Preferred Country;
+		return;
+	}	
 	}
 }
 ?>

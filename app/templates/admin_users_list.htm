@@ -77,256 +77,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_ID}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ID}" {$filterRow_attrs_ID}>
-			<label>{$label admin_users ID }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ID}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ID}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ID}</span>
-						</div>
-		{END searchCtrlBlock_ID}
-																{BEGIN searchCtrlBlock_department}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_department}" {$filterRow_attrs_department}>
-			<label>{$label admin_users department }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_department}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_department}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_department}</span>
-						</div>
-		{END searchCtrlBlock_department}
-																{BEGIN searchCtrlBlock_organisation_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_organisation_name}" {$filterRow_attrs_organisation_name}>
-			<label>{$label admin_users organisation_name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_organisation_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_organisation_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_organisation_name}</span>
-						</div>
-		{END searchCtrlBlock_organisation_name}
-																{BEGIN searchCtrlBlock_designation}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_designation}" {$filterRow_attrs_designation}>
-			<label>{$label admin_users designation }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_designation}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_designation}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_designation}</span>
-						</div>
-		{END searchCtrlBlock_designation}
-																{BEGIN searchCtrlBlock_last_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_last_name}" {$filterRow_attrs_last_name}>
-			<label>{$label admin_users last_name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_last_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_last_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_last_name}</span>
-						</div>
-		{END searchCtrlBlock_last_name}
-																{BEGIN searchCtrlBlock_middle_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_middle_name}" {$filterRow_attrs_middle_name}>
-			<label>{$label admin_users middle_name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_middle_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_middle_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_middle_name}</span>
-						</div>
-		{END searchCtrlBlock_middle_name}
-																{BEGIN searchCtrlBlock_first_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_first_name}" {$filterRow_attrs_first_name}>
-			<label>{$label admin_users first_name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_first_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_first_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_first_name}</span>
-						</div>
-		{END searchCtrlBlock_first_name}
-																{BEGIN searchCtrlBlock_phone_number}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_phone_number}" {$filterRow_attrs_phone_number}>
-			<label>{$label admin_users phone_number }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_phone_number}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_phone_number}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_phone_number}</span>
-						</div>
-		{END searchCtrlBlock_phone_number}
-																{BEGIN searchCtrlBlock_username}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_username}" {$filterRow_attrs_username}>
-			<label>{$label admin_users username }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_username}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_username}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_username}</span>
-						</div>
-		{END searchCtrlBlock_username}
-																{BEGIN searchCtrlBlock_password}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_password}" {$filterRow_attrs_password}>
-			<label>{$label admin_users password }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_password}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_password}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_password}</span>
-						</div>
-		{END searchCtrlBlock_password}
-																{BEGIN searchCtrlBlock_groupid}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_groupid}" {$filterRow_attrs_groupid}>
-			<label>{$label admin_users groupid }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_groupid}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_groupid}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_groupid}</span>
-						</div>
-		{END searchCtrlBlock_groupid}
-																{BEGIN searchCtrlBlock_fullname}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_fullname}" {$filterRow_attrs_fullname}>
-			<label>{$label admin_users fullname }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_fullname}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_fullname}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_fullname}</span>
-						</div>
-		{END searchCtrlBlock_fullname}
-																{BEGIN searchCtrlBlock_ext_security_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ext_security_id}" {$filterRow_attrs_ext_security_id}>
-			<label>{$label admin_users ext_security_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ext_security_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ext_security_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ext_security_id}</span>
-						</div>
-		{END searchCtrlBlock_ext_security_id}
-																{BEGIN searchCtrlBlock_email}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_email}" {$filterRow_attrs_email}>
-			<label>{$label admin_users email }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_email}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_email}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_email}</span>
-						</div>
-		{END searchCtrlBlock_email}
-																{BEGIN searchCtrlBlock_active}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_active}" {$filterRow_attrs_active}>
-			<label>{$label admin_users active }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_active}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_active}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_active}</span>
-						</div>
-		{END searchCtrlBlock_active}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -603,11 +353,268 @@
 				<div class="row">
 			 
 				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
+	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_ID}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ID}" {$filterRow_attrs_ID}>
+			<label>{$label admin_users ID }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ID}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ID}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ID}</span>
+						</div>
+		{END searchCtrlBlock_ID}
+																{BEGIN searchCtrlBlock_department}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_department}" {$filterRow_attrs_department}>
+			<label>{$label admin_users department }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_department}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_department}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_department}</span>
+						</div>
+		{END searchCtrlBlock_department}
+																{BEGIN searchCtrlBlock_organisation_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_organisation_name}" {$filterRow_attrs_organisation_name}>
+			<label>{$label admin_users organisation_name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_organisation_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_organisation_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_organisation_name}</span>
+						</div>
+		{END searchCtrlBlock_organisation_name}
+																{BEGIN searchCtrlBlock_designation}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_designation}" {$filterRow_attrs_designation}>
+			<label>{$label admin_users designation }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_designation}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_designation}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_designation}</span>
+						</div>
+		{END searchCtrlBlock_designation}
+																{BEGIN searchCtrlBlock_last_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_last_name}" {$filterRow_attrs_last_name}>
+			<label>{$label admin_users last_name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_last_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_last_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_last_name}</span>
+						</div>
+		{END searchCtrlBlock_last_name}
+																{BEGIN searchCtrlBlock_middle_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_middle_name}" {$filterRow_attrs_middle_name}>
+			<label>{$label admin_users middle_name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_middle_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_middle_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_middle_name}</span>
+						</div>
+		{END searchCtrlBlock_middle_name}
+																{BEGIN searchCtrlBlock_first_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_first_name}" {$filterRow_attrs_first_name}>
+			<label>{$label admin_users first_name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_first_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_first_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_first_name}</span>
+						</div>
+		{END searchCtrlBlock_first_name}
+																{BEGIN searchCtrlBlock_phone_number}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_phone_number}" {$filterRow_attrs_phone_number}>
+			<label>{$label admin_users phone_number }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_phone_number}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_phone_number}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_phone_number}</span>
+						</div>
+		{END searchCtrlBlock_phone_number}
+																{BEGIN searchCtrlBlock_username}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_username}" {$filterRow_attrs_username}>
+			<label>{$label admin_users username }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_username}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_username}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_username}</span>
+						</div>
+		{END searchCtrlBlock_username}
+																{BEGIN searchCtrlBlock_password}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_password}" {$filterRow_attrs_password}>
+			<label>{$label admin_users password }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_password}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_password}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_password}</span>
+						</div>
+		{END searchCtrlBlock_password}
+																{BEGIN searchCtrlBlock_groupid}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_groupid}" {$filterRow_attrs_groupid}>
+			<label>{$label admin_users groupid }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_groupid}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_groupid}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_groupid}</span>
+						</div>
+		{END searchCtrlBlock_groupid}
+																{BEGIN searchCtrlBlock_fullname}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fullname}" {$filterRow_attrs_fullname}>
+			<label>{$label admin_users fullname }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fullname}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fullname}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fullname}</span>
+						</div>
+		{END searchCtrlBlock_fullname}
+																{BEGIN searchCtrlBlock_ext_security_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ext_security_id}" {$filterRow_attrs_ext_security_id}>
+			<label>{$label admin_users ext_security_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ext_security_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ext_security_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ext_security_id}</span>
+						</div>
+		{END searchCtrlBlock_ext_security_id}
+																{BEGIN searchCtrlBlock_email}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_email}" {$filterRow_attrs_email}>
+			<label>{$label admin_users email }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_email}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_email}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_email}</span>
+						</div>
+		{END searchCtrlBlock_email}
+																{BEGIN searchCtrlBlock_active}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_active}" {$filterRow_attrs_active}>
+			<label>{$label admin_users active }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_active}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_active}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_active}</span>
+						</div>
+		{END searchCtrlBlock_active}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class="			col-md-6
 	
 ">
-		{BEGIN firstAboveGridCell}
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
@@ -624,8 +631,7 @@
 							Delete			</a>
 </span>
 {END deleteselected_link}
-			{END firstAboveGridCell}	
-	</div>			 
+		</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6
@@ -714,6 +720,218 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_designation}
+
+	<div class="dropdown filter-field filter-designation-container" {BEGIN filter_selected_designation} data-selected {END filter_selected_designation}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_designation}
+			<a href="#" class="filter-clear filter-clear-designation" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_designation}
+			<span class="r-filter-field">{$label admin_users designation }				{BEGIN filter_selected_designation}:{END filter_selected_designation}
+			</span>
+			{BEGIN filter_selected_designation}
+			<span class="r-filter-value">{$filtervalue_designation}</span>
+			{END filter_selected_designation}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_designation}
+		<li class=" filter-values filter-values-designation  {$visibilityClass_designation}">
+			{$designation_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_designation}
+
+			{BEGIN filter_button_showmore_designation}
+		<li class=" filter-show-more {$collapsedClass_designation} {$showMoreBtnClass_designation}">
+			<a class="filter-show-more-link filterShowMore_designation" href="#">{$show_n_more_designation}</a>
+		</li>
+		{END filter_button_showmore_designation}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_designation}
+
+
+
+
+
+
+{BEGIN filter_control_active}
+
+	<div class="dropdown filter-field filter-active-container" {BEGIN filter_selected_active} data-selected {END filter_selected_active}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_active}
+			<a href="#" class="filter-clear filter-clear-active" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_active}
+			<span class="r-filter-field">{$label admin_users active }				{BEGIN filter_selected_active}:{END filter_selected_active}
+			</span>
+			{BEGIN filter_selected_active}
+			<span class="r-filter-value">{$filtervalue_active}</span>
+			{END filter_selected_active}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_active}
+		<li class=" filter-values filter-values-active  {$visibilityClass_active}">
+			{$active_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_active}
+
+			{BEGIN filter_button_showmore_active}
+		<li class=" filter-show-more {$collapsedClass_active} {$showMoreBtnClass_active}">
+			<a class="filter-show-more-link filterShowMore_active" href="#">{$show_n_more_active}</a>
+		</li>
+		{END filter_button_showmore_active}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_active}
+
+
+
+
+
+
+{BEGIN filter_control_department}
+
+	<div class="dropdown filter-field filter-department-container" {BEGIN filter_selected_department} data-selected {END filter_selected_department}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_department}
+			<a href="#" class="filter-clear filter-clear-department" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_department}
+			<span class="r-filter-field">{$label admin_users department }				{BEGIN filter_selected_department}:{END filter_selected_department}
+			</span>
+			{BEGIN filter_selected_department}
+			<span class="r-filter-value">{$filtervalue_department}</span>
+			{END filter_selected_department}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_department}
+		<li class=" filter-values filter-values-department  {$visibilityClass_department}">
+			{$department_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_department}
+
+			{BEGIN filter_button_showmore_department}
+		<li class=" filter-show-more {$collapsedClass_department} {$showMoreBtnClass_department}">
+			<a class="filter-show-more-link filterShowMore_department" href="#">{$show_n_more_department}</a>
+		</li>
+		{END filter_button_showmore_department}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_department}
+
+
+
+
+
+
+{BEGIN filter_control_organisation_name}
+
+	<div class="dropdown filter-field filter-organisation_name-container" {BEGIN filter_selected_organisation_name} data-selected {END filter_selected_organisation_name}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_organisation_name}
+			<a href="#" class="filter-clear filter-clear-organisation_name" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_organisation_name}
+			<span class="r-filter-field">{$label admin_users organisation_name }				{BEGIN filter_selected_organisation_name}:{END filter_selected_organisation_name}
+			</span>
+			{BEGIN filter_selected_organisation_name}
+			<span class="r-filter-value">{$filtervalue_organisation_name}</span>
+			{END filter_selected_organisation_name}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_organisation_name}
+		<li class=" filter-values filter-values-organisation_name  {$visibilityClass_organisation_name}">
+			{$organisation_name_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_organisation_name}
+
+			{BEGIN filter_button_showmore_organisation_name}
+		<li class=" filter-show-more {$collapsedClass_organisation_name} {$showMoreBtnClass_organisation_name}">
+			<a class="filter-show-more-link filterShowMore_organisation_name" href="#">{$show_n_more_organisation_name}</a>
+		</li>
+		{END filter_button_showmore_organisation_name}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_organisation_name}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>

@@ -240,13 +240,13 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel _global first_name }","bold":true},{"text":{$first_name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field4}","bold":true,"stack":[{"text":"{$jslabel _global first_name }","bold":true},{"text":{$first_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel _global middle_name }","bold":true},{"text":{$middle_name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field5}","bold":true,"stack":[{"text":"{$jslabel _global middle_name }","bold":true},{"text":{$middle_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel _global last_name }","bold":true},{"text":{$last_name_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","bold":true,"stack":[{"text":"{$jslabel _global last_name }","bold":true},{"text":{$last_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
