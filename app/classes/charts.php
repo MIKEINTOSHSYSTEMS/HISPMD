@@ -552,6 +552,10 @@ class Chart
 			return true;
 		if("public.mfr_facilities_register" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.hispmd_organisations" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.hispmd_uggroups" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

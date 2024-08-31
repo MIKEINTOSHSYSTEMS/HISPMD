@@ -189,6 +189,27 @@ pdfDocument = {
 				
 			{"text":{$ext_security_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
+				
+			{"text":{$phone_number_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$first_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$middle_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$last_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$designation_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$organisation_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$department_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

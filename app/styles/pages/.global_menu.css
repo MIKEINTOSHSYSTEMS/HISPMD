@@ -250,6 +250,9 @@
 [data-page=".global_menu"][data-itemid="welcome_item83"] > .bs-welcome-header {
   background-color: #CD853F;
 }
+[data-page=".global_menu"][data-itemid="welcome_item84"] > .bs-welcome-header {
+  background-color: #CFAE83;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

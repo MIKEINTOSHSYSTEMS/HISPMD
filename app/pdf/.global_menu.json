@@ -774,6 +774,9 @@ pdfDocument = {
 				
 			{"text":"","background":"#CD853F","hidden":"{$item_hide_welcome_item83}"},
 				
+				
+			{"text":"","background":"#CFAE83","hidden":"{$item_hide_welcome_item84}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

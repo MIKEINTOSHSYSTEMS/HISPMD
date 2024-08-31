@@ -638,6 +638,11 @@ $globalSettings["apiGoogleMapsCode"] = "";
 
 $globalSettings["useEmbedMapsAPI"] = 1 != 0;
 
+//password global settings for register page
+$globalSettings["pwdStrong"] = true;
+$globalSettings["pwdLen"] = 8;
+$globalSettings["pwdUnique"] = 4;
+$globalSettings["pwdDigits"] = 2;
 
 
 /**
@@ -740,9 +745,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "539_1725041801";
+$projectBuildKey = "543_1725113405";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "539";
+$projectBuildNumber = "543";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -850,8 +855,10 @@ $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Admin Users";
 $tableCaptions["English"]["System_Users_Activity_Dashboard"] = "System Users Activity Dashboard";
-$tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["public_mfr_facilities_register_report"] = "Mfr Facilities Register Report";
+$tableCaptions["English"]["public_hispmd_organisations"] = "Hispmd Organisations";
+$tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
+$tableCaptions["English"]["public_hispmd_uggroups"] = "Hispmd Uggroups";
 
 
 $globalEvents = new class_GlobalEvents;

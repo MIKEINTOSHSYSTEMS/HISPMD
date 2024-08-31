@@ -341,6 +341,20 @@ function InitLookupLinks()
 			$lookupTableLinks["public.mfr_region"]["mfr_region.region"] = array();
 		}
 		$lookupTableLinks["public.mfr_region"]["mfr_region.region"]["edit"] = array("table" => "public.mfr_region", "field" => "region", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.hispmd_uggroups"] ) ) {
+			$lookupTableLinks["public.hispmd_uggroups"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.hispmd_uggroups"]["hispmdusers.designation"] )) {
+			$lookupTableLinks["public.hispmd_uggroups"]["hispmdusers.designation"] = array();
+		}
+		$lookupTableLinks["public.hispmd_uggroups"]["hispmdusers.designation"]["edit"] = array("table" => "public.hispmdusers", "field" => "designation", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.hispmd_organisations"] ) ) {
+			$lookupTableLinks["public.hispmd_organisations"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.hispmd_organisations"]["hispmdusers.organisation_name"] )) {
+			$lookupTableLinks["public.hispmd_organisations"]["hispmdusers.organisation_name"] = array();
+		}
+		$lookupTableLinks["public.hispmd_organisations"]["hispmdusers.organisation_name"]["edit"] = array("table" => "public.hispmdusers", "field" => "organisation_name", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
 			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
 		}

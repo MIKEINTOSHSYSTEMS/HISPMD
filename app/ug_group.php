@@ -102,6 +102,8 @@ $nonAdminTablesArr[] = "public.mfr_facilities_register";
 $nonAdminTablesArr[] = "System_Users_Activity_Dashboard";
 $nonAdminTablesArr[] = "HISPMD_Web_Reports_and_Charts_Builder";
 $nonAdminTablesArr[] = "public.mfr_facilities_register_report";
+$nonAdminTablesArr[] = "public.hispmd_organisations";
+$nonAdminTablesArr[] = "public.hispmd_uggroups";
 
 $ug_connection = $cman->getForUserGroups();
 

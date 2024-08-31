@@ -785,6 +785,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.hispmd_organisations")
+		{
+			return 1;
+		}
+		if($table=="public.hispmd_uggroups")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1393,6 +1401,14 @@ function getCaptionTable($table)
 	if($table=="public.mfr_facilities_register_report")
 	{
 		return "Mfr Facilities Register Report";
+	}
+	if($table=="public.hispmd_organisations")
+	{
+		return "Hispmd Organisations";
+	}
+	if($table=="public.hispmd_uggroups")
+	{
+		return "Hispmd Uggroups";
 	}
 	return $table;
 }
@@ -2794,6 +2810,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="admin_users";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.hispmd_organisations");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.hispmd_organisations";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.hispmd_organisations";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.hispmd_uggroups");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.hispmd_uggroups";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.hispmd_uggroups";
 	}
 	return $arr;
 }

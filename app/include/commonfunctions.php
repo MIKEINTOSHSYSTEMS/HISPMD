@@ -377,6 +377,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("public_mfr_facilities_register_report" == $shortTName )
 		return true;
+	if ("hispmd_organisations" == $shortTName )
+		return true;
+	if ("hispmd_uggroups" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1210,6 +1214,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.mfr_facilities_register_report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispmd_organisations");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispmd_organisations";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispmd_uggroups");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispmd_uggroups";
+	}
 	return $arr;
 }
 
@@ -1306,6 +1328,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="System_Users_Activity_Dashboard";
 	$arr[]="HISPMD_Web_Reports_and_Charts_Builder";
 	$arr[]="public.mfr_facilities_register_report";
+	$arr[]="public.hispmd_organisations";
+	$arr[]="public.hispmd_uggroups";
 	return $arr;
 }
 
@@ -2379,6 +2403,16 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="public.hispmd_organisations" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.hispmd_uggroups" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

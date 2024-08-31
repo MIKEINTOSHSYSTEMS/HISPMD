@@ -67,6 +67,7 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd__audit;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd__locking;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_noti;
+	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_organisations;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_prism_settings;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_settings;
 	var $tblhispmdathispmdmerqconsultancyo_public_hispmd_uggroups;
@@ -123,6 +124,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "hispmd__audit", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd__audit", "altvarname" => "hispmd__audit", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd__locking", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd__locking", "altvarname" => "hispmd__locking", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_noti", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_noti", "altvarname" => "hispmd_noti", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "hispmd_organisations", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_organisations", "altvarname" => "hispmd_organisations", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_prism_settings", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_prism_settings", "altvarname" => "hispmd_prism_settings", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_settings", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_settings", "altvarname" => "hispmd_settings", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "hispmd_uggroups", "varname" => "hispmdathispmdmerqconsultancyo_public_hispmd_uggroups", "altvarname" => "hispmd_uggroups", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

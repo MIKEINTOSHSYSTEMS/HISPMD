@@ -116,13 +116,16 @@
 		 
 		<ul class="nav nav-pills nav-justified" id="stepnav{$id}"  data-stepcontrol data-itemtype="step_nav" data-itemid="step_nav" {$item_step_nav} data-pageid="{$pageid}">
 			<li role="presentation" data-step="0">
-			<a href="#">Name & Designation</a>
+			<a href="#">Name</a>
 		</li>
 			<li role="presentation" data-step="1">
-			<a href="#">Email & Username</a>
+			<a href="#">Organisation</a>
 		</li>
 			<li role="presentation" data-step="2">
-			<a href="#">Set Password & Confirm</a>
+			<a href="#">Contact</a>
+		</li>
+			<li role="presentation" data-step="3">
+			<a href="#">Credentials</a>
 		</li>
 	</ul>		</div>					</div>
 			</div>		
@@ -152,41 +155,86 @@
 {BEGIN cellblock_grid_c3}
 <td
 	{$cell_grid_c3}
-	class="r-align-center r-ori-vert"
+	class="r-align-center"
 	
-				data-fullwidth
-		
+			
 			data-cellId="grid_c3" data-pageid="{$pageid}"
 		data-v-cell="4"
 		
 >
 	<div edit-form-cell class="clearfix">
-				{BEGIN fullname_fieldblock}
-	<div class="r-edit-label" data-signal-error-for="fullname{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label" {$item_edit_field_label} data-pageid="{$pageid}" data-page=".global_register" data-field="fullname" data-fieldname="fullname" data-before-same-field>
-		<label class="r-edit-label control-label" for="{$labelfor_fullname}">
-			{BEGIN fullname_label}{$label public_hispmdusers fullname }{END fullname_label}
-		</label>
+				
+{BEGIN first_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_first_name}  r-vertical-field" 
+	data-signal-error-for="first_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="first_name" data-fieldname="first_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_first_name}">
+		{BEGIN first_name_label}{$label public_hispmdusers first_name }{END first_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$first_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="first_name">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers first_name }		</div>
 	</div>
-{END fullname_fieldblock}
-											{BEGIN fullname_fieldblock}
-	<div class="r-edit-field" data-signal-error-for="fullname{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="fullname" data-fieldname="fullname" data-before-same-field >
-		{$fullname_editcontrol}	</div>
-{END fullname_fieldblock}
-											{BEGIN fullname_fieldblock}
-	<div class="r-edit-tooltip" data-signal-error-for="fullname{$id}" data-itemtype="edit_field_tooltip" data-itemid="edit_field_tooltip" {$item_edit_field_tooltip} data-pageid="{$pageid}" data-field="fullname" data-fieldname="fullname" >
-		<div data-helpfor="fullname">
-			<div class="text-muted">{$tooltip public_hispmdusers fullname }</div>
-		</div>
+</div>
+
+
+{END first_name_fieldblock}
+											
+{BEGIN middle_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_middle_name}  r-vertical-field" 
+	data-signal-error-for="middle_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="middle_name" data-fieldname="middle_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_middle_name}">
+		{BEGIN middle_name_label}{$label public_hispmdusers middle_name }{END middle_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$middle_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="middle_name">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers middle_name }		</div>
 	</div>
-{END fullname_fieldblock}
+</div>
+
+
+{END middle_name_fieldblock}
+											
+{BEGIN last_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_last_name}  r-vertical-field" 
+	data-signal-error-for="last_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="last_name" data-fieldname="last_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_last_name}">
+		{BEGIN last_name_label}{$label public_hispmdusers last_name }{END last_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$last_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="last_name">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers last_name }		</div>
+	</div>
+</div>
+
+
+{END last_name_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
 								</tr>
 	 
 	 
-														<tr {$row_grid_1} >
-										
+		
+						<tr>
+						
 
 {BEGIN cellblock_grid_c}
 <td
@@ -201,23 +249,181 @@
 		
 >
 	<div edit-form-cell class="clearfix">
-				
-<div class="r-captcha-container form-group clearfix" data-fieldname="{$captcha_field_name}" data-signal-error-for="{$captcha_field_name}{$id}" >
-	<div class="col-md-offset-3 col-md-6" >
-		{$captcha}
-	</div>
-	<div class="col-md-3 help-block" data-helpfor="{$captcha_field_name}">
-		<div class="text-muted" >
-		</div>
-	</div>	
-</div>	
-								</td>
+									</td>
 			{END cellblock_grid_c}
 								</tr>
 			</tbody></table>
 {END grid_block}
 </div>	
 				<div id="step_1_{$id}" class="stepFrame" data-step="1" style="display:none">
+		{BEGIN step4_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="step4" id="form_step4_{$pageid}" data-makeup="pretty-login" {$form_step4} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_step4_0} >
+										
+
+{BEGIN cellblock_step4_c2}
+<td
+	{$cell_step4_c2}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="step4_c2" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN organisation_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_organisation_name}  r-vertical-field" 
+	data-signal-error-for="organisation_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="organisation_name" data-fieldname="organisation_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_organisation_name}">
+		{BEGIN organisation_name_label}{$label public_hispmdusers organisation_name }{END organisation_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$organisation_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="organisation_name">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers organisation_name }		</div>
+	</div>
+</div>
+
+
+{END organisation_name_fieldblock}
+	
+								</td>
+			{END cellblock_step4_c2}
+			 
+																
+
+{BEGIN cellblock_step4_c1}
+<td
+	{$cell_step4_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="step4_c1" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN department_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_department}  r-vertical-field" 
+	data-signal-error-for="department{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="department" data-fieldname="department" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_department}">
+		{BEGIN department_label}{$label public_hispmdusers department }{END department_label}
+	</label>
+	<div class="r-edit-field">
+		{$department_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="department">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers department }		</div>
+	</div>
+</div>
+
+
+{END department_fieldblock}
+	
+								</td>
+			{END cellblock_step4_c1}
+								</tr>
+	 
+	 
+														<tr {$row_step4_1} >
+										
+
+{BEGIN cellblock_step4_c3}
+<td
+	{$cell_step4_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+	ocolspan="2"		data-cellId="step4_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text7" {$item_text7} data-pageid="{$pageid}" data-small > 
+	<br></span>
+											<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-small > 
+	Please choose the role you are signing up or designation you want to assigned to to access the system!</span>
+	
+								</td>
+			{END cellblock_step4_c3}
+								</tr>
+	 
+	 
+														<tr {$row_step4_2} >
+										
+
+{BEGIN cellblock_step4_c4}
+<td
+	{$cell_step4_c4}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+	ocolspan="2"		data-cellId="step4_c4" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN designation_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_designation}  r-vertical-field" 
+	data-signal-error-for="designation{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="designation" data-fieldname="designation" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_designation}">
+		{BEGIN designation_label}{$label public_hispmdusers designation }{END designation_label}
+	</label>
+	<div class="r-edit-field">
+		{$designation_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="designation">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers designation }		</div>
+	</div>
+</div>
+
+
+{END designation_fieldblock}
+	
+								</td>
+			{END cellblock_step4_c4}
+								</tr>
+			</tbody></table>
+{END step4_block}
+</div>	
+				<div id="step_2_{$id}" class="stepFrame" data-step="2" style="display:none">
 		{BEGIN step2_block}
 
 
@@ -230,7 +436,7 @@
 	data-location="step2" id="form_step2_{$pageid}" data-makeup="pretty-login" {$form_step2} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
-		data-form-width="1"
+		data-form-width="2"
 		
 		data-v-width="4"
 	>
@@ -238,14 +444,13 @@
 										<tr {$row_step2_0} >
 										
 
-{BEGIN cellblock_step2_c1}
+{BEGIN cellblock_step2_c2}
 <td
-	{$cell_step2_c1}
+	{$cell_step2_c2}
 	class=" r-ori-vert"
 	
-				data-fullwidth
-		
-			data-cellId="step2_c1" data-pageid="{$pageid}"
+			
+			data-cellId="step2_c2" data-pageid="{$pageid}"
 		data-v-cell=""
 		
 >
@@ -270,51 +475,69 @@
 {END email_fieldblock}
 	
 								</td>
-			{END cellblock_step2_c1}
+			{END cellblock_step2_c2}
+			 
+																
+
+{BEGIN cellblock_step2_c4}
+<td
+	{$cell_step2_c4}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="step2_c4" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN phone_number_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="phone_number{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label3" {$item_edit_field_label3} data-pageid="{$pageid}" data-field="phone_number" data-fieldname="phone_number" data-before-same-field>
+		<label class="r-edit-label control-label" for="{$labelfor_phone_number}">
+			{BEGIN phone_number_label}{$label public_hispmdusers phone_number }{END phone_number_label}
+		</label>
+	</div>
+{END phone_number_fieldblock}
+											{BEGIN phone_number_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="phone_number{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="phone_number" data-fieldname="phone_number" data-before-same-field >
+		{$phone_number_editcontrol}	</div>
+{END phone_number_fieldblock}
+											{BEGIN phone_number_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="phone_number{$id}" data-itemtype="edit_field_tooltip" data-itemid="edit_field_tooltip3" {$item_edit_field_tooltip3} data-pageid="{$pageid}" data-field="phone_number" data-fieldname="phone_number" >
+		<div data-helpfor="phone_number">
+			<div class="text-muted">{$tooltip public_hispmdusers phone_number }</div>
+		</div>
+	</div>
+{END phone_number_fieldblock}
+	
+								</td>
+			{END cellblock_step2_c4}
 								</tr>
 	 
 	 
-														<tr {$row_step2_1} >
-										
+		
+						<tr>
+						
 
 {BEGIN cellblock_step2_c}
 <td
 	{$cell_step2_c}
 	class=" r-ori-vert"
 	
+			data-single
 				data-fullwidth
 		
-			data-cellId="step2_c" data-pageid="{$pageid}"
+	ocolspan="2"		data-cellId="step2_c" data-pageid="{$pageid}"
 		data-v-cell="4"
 		
 >
 	<div edit-form-cell class="clearfix">
-				{BEGIN username_fieldblock}
-	<div class="r-edit-label" data-signal-error-for="username{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label2" {$item_edit_field_label2} data-pageid="{$pageid}" data-page=".global_register" data-field="username" data-fieldname="username" data-before-same-field>
-		<label class="r-edit-label control-label" for="{$labelfor_username}">
-			{BEGIN username_label}{$label public_hispmdusers username }{END username_label}
-		</label>
-	</div>
-{END username_fieldblock}
-											{BEGIN username_fieldblock}
-	<div class="r-edit-field" data-signal-error-for="username{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="username" data-fieldname="username" data-before-same-field >
-		{$username_editcontrol}	</div>
-{END username_fieldblock}
-											{BEGIN username_fieldblock}
-	<div class="r-edit-tooltip" data-signal-error-for="username{$id}" data-itemtype="edit_field_tooltip" data-itemid="edit_field_tooltip2" {$item_edit_field_tooltip2} data-pageid="{$pageid}" data-field="username" data-fieldname="username" >
-		<div data-helpfor="username">
-			<div class="text-muted">{$tooltip public_hispmdusers username }</div>
-		</div>
-	</div>
-{END username_fieldblock}
-	
-								</td>
+									</td>
 			{END cellblock_step2_c}
 								</tr>
 			</tbody></table>
 {END step2_block}
 </div>	
-				<div id="step_2_{$id}" class="stepFrame" data-step="2" style="display:none">
+				<div id="step_3_{$id}" class="stepFrame" data-step="3" style="display:none">
 		{BEGIN step3_block}
 
 
@@ -335,11 +558,79 @@
 										<tr {$row_step3_0} >
 										
 
+{BEGIN cellblock_step3_c5}
+<td
+	{$cell_step3_c5}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="step3_c5" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN username_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_username}  r-vertical-field" 
+	data-signal-error-for="username{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="username" data-fieldname="username" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_username}">
+		{BEGIN username_label}{$label public_hispmdusers username }{END username_label}
+	</label>
+	<div class="r-edit-field">
+		{$username_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="username">
+		<div class="text-muted" >
+		{$tooltip public_hispmdusers username }		</div>
+	</div>
+</div>
+
+
+{END username_fieldblock}
+	
+								</td>
+			{END cellblock_step3_c5}
+								</tr>
+	 
+	 
+														<tr {$row_step3_1} >
+										
+
+{BEGIN cellblock_step3_c7}
+<td
+	{$cell_step3_c7}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="step3_c7" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text6" {$item_text6} data-pageid="{$pageid}" data-small > 
+	<br></span>
+	
+								</td>
+			{END cellblock_step3_c7}
+								</tr>
+	 
+	 
+														<tr {$row_step3_2} >
+										
+
 {BEGIN cellblock_step3_c1}
 <td
 	{$cell_step3_c1}
 	class=" r-ori-vert"
 	
+			data-single
 				data-fullwidth
 		
 			data-cellId="step3_c1" data-pageid="{$pageid}"
@@ -368,7 +659,29 @@
 
 
 {END password_fieldblock}
-											
+	
+								</td>
+			{END cellblock_step3_c1}
+								</tr>
+	 
+	 
+														<tr {$row_step3_3} >
+										
+
+{BEGIN cellblock_step3_c6}
+<td
+	{$cell_step3_c6}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="step3_c6" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN confirm_block}
 
 
@@ -391,7 +704,62 @@
 {END confirm_block}
 	
 								</td>
-			{END cellblock_step3_c1}
+			{END cellblock_step3_c6}
+								</tr>
+	 
+	 
+														<tr {$row_step3_4} >
+										
+
+{BEGIN cellblock_step3_c2}
+<td
+	{$cell_step3_c2}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="step3_c2" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
+	<br></span>
+	
+								</td>
+			{END cellblock_step3_c2}
+								</tr>
+	 
+	 
+														<tr {$row_step3_5} >
+										
+
+{BEGIN cellblock_step3_c4}
+<td
+	{$cell_step3_c4}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="step3_c4" data-pageid="{$pageid}"
+		data-v-cell=""
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+<div class="r-captcha-container form-group clearfix" data-fieldname="{$captcha_field_name}" data-signal-error-for="{$captcha_field_name}{$id}" >
+	<div class="col-md-offset-3 col-md-6" >
+		{$captcha}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="{$captcha_field_name}">
+		<div class="text-muted" >
+		</div>
+	</div>	
+</div>	
+								</td>
+			{END cellblock_step3_c4}
 								</tr>
 			</tbody></table>
 {END step3_block}
@@ -428,11 +796,18 @@ NOTE: This Application is for Internal Use only! It can only be accessed by an a
 											<tr {$row_footer_2} >
 									<td 
 	class=" r-ori-vert			"
+	colspan="2"		 
+	data-cellId="footer_c3" data-pageid="{$pageid}">
+ 
+<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-small > 
+	<br></span>
+</td>
+							</tr>
+											<tr {$row_footer_3} >
+									<td 
+	class=" r-ori-vert			"
 			 
 	data-cellId="footer_c4" data-pageid="{$pageid}">
- 
-<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
-	<br></span>
 </td>
 									<td 
 	class="r-align-right r-ori-vert			"
@@ -440,7 +815,7 @@ NOTE: This Application is for Internal Use only! It can only be accessed by an a
 	data-cellId="footer_c5" data-pageid="{$pageid}">
 </td>
 							</tr>
-											<tr {$row_footer_3} >
+											<tr {$row_footer_4} >
 									<td 
 	class="			"
 			 
