@@ -3137,7 +3137,7 @@ fieldset[disabled] a.btn {
 .btn-default {
   color: #fff;
   background-color: #95a5a6;
-  border-color: #95a5a6;
+  border-color: transparent; /*#95a5a6;*/
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -3147,15 +3147,15 @@ fieldset[disabled] a.btn {
 }
 .btn-default:hover {
   color: #fff;
-  background-color: #798d8f;
-  border-color: #74898a;
+  background-color:#339ab9; /*#798d8f;*/
+  border-color: #337ab7; /*#74898a;*/
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #fff;
-  background-color: #798d8f;
-  border-color: #74898a;
+  background-color: #339ab9; /*#798d8f;*/ 
+  border-color: #347ab7; /*#74898a;*/
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3167,8 +3167,8 @@ fieldset[disabled] a.btn {
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
   color: #fff;
-  background-color: #687b7c;
-  border-color: #566566;
+  background-color: #3a79db;/* #687b7c;*/
+  border-color: #3a89db;/*#566566;*/
 }
 .btn-default:active,
 .btn-default.active,
@@ -7181,7 +7181,7 @@ select.form-control[size="1"] {
   border-color: #d8d8d8;
   background: white;
   color: #2C3E50;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 .bs-admin-header.bs-admin-header:first-child > th {
   background-color: #f8f8f8;
@@ -7246,7 +7246,7 @@ table.indenttables > * > .rightsindent5 > td.rightscell.rightscell.rightscell.ri
     border-color: #2C3E50;
   }
   .navbar.navbar-default .btn-default:not(:hover) {
-    background-color: #95a5a6;
+    background-color: transparent; /*#95a5a6;*/
   }
   .sidebar.sidebar {
     background-color: #ffffff;
@@ -11708,7 +11708,7 @@ However there might have been the case where dropdown showed up where it shouldn
   padding: 8px 16px;
   margin: 0px 8px;
   margin-bottom: 3px;
-  border-radius: 4px;
+  border-radius: 17px;
 }
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-top] .menu-icon,
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-inline] .menu-icon {
