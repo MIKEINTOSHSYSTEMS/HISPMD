@@ -8316,7 +8316,7 @@ td::before {
 .r-user-image > img {
   height: 38px;
   margin: -10px 4px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 [data-itemtype="members_source_filter"] {
   font-weight: normal;

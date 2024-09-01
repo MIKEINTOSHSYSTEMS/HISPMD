@@ -1472,7 +1472,11 @@ $tdataadmin_users[".hideMobileList"] = array();
 	
 	
 	
-			$edata["acceptFileTypesHtml"] = "";
+			$edata["acceptFileTypes"] = array();
+			$edata["acceptFileTypes"][] = strtoupper("jpg");
+						$edata["acceptFileTypesHtml"] = ".jpg";
+			$edata["acceptFileTypes"][] = strtoupper("png");
+						$edata["acceptFileTypesHtml"] .= ",.png";
 
 		$edata["maxNumberOfFiles"] = 1;
 
@@ -1493,7 +1497,9 @@ $tdataadmin_users[".hideMobileList"] = array();
 //	End validation
 
 	
-			
+				$edata["ResizeImage"] = true;
+				$edata["NewSize"] = 600;
+
 	
 	
 	
@@ -1507,7 +1513,7 @@ $tdataadmin_users[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "NOT Empty";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

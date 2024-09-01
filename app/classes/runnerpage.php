@@ -1704,15 +1704,51 @@ class RunnerPage
 
 		$this->xt->assign("security_block", true);
 		// The user might rewrite $_SESSION["UserName"] value with HTML code in an event, so no encoding will be performed while printing this value.
-		$this->xt->assign("username", $_SESSION["UserName"]);
-		if( Security::showUserPic() ) {
-			$this->xt->assign(
-				"userbutton_image",
-				'<span class="r-user-image"><img src="'.GetTableLink(' file', '', 'userpic='. rawurldecode( Security::getUserName() ) ).'"></span>'
-			);
-		} else {
-			$this->xt->assign( "userbutton_icon", true );
-		}
+// Ensure you have a database connection
+
+if (Security::showUserPic()) {
+    // Ensure container table name and field are set properly
+    $tableName = isset($this->container->tName) ? $this->container->tName : "public.hispmdusers"; // Set a default table name from postgres schema (Public)
+    $field = isset($this->field) ? $this->field : "userpic"; // Set a default field
+
+    // Fetch current user data
+    $userData = Security::currentUserData(); // Retrieve current user data from the Login table
+
+    // Check if user data contains the ID
+    if (isset($userData['ID'])) {
+        $userId = $userData['ID']; // Extract user ID from the user data array
+        $userName = $userData['username']; // Extract username from the user data array
+
+        // Construct the dynamic keylink using the fetched user ID
+        $keylink = "&key1=" . rawurlencode($userId); // Set the dynamic keylink with the user ID
+
+        // Construct the src URL dynamically with detailed parameters
+        $src = GetTableLink(
+            "file",
+            "",
+            "filename=userpic.jpg&table=" . rawurlencode($tableName)
+            . "&field=" . rawurlencode($field)
+            . "&nodisp=1"
+            . $keylink
+            . "&fileHash=" . fileAttrHash($keylink, strlen_bin($userName))
+        );
+		//$this->xt->assign("username", $_SESSION["UserName"]); //uncomment if you want to display the users full name 
+        $this->xt->assign(
+            "userbutton_image",
+            '<span class="r-user-image"><img src="' . $src . '"></span>'
+			//'<span class="r-user-image"><img src="' . $src . rawurldecode( Security::getUserName() ) .'"></span>'
+			//'<span class="r-user-image"><img src="' . $src . '"></span>'
+        );
+    } else {
+        // Handle cases where UserID is not found in user data
+        // No output or handling is done if UserID is not present
+        // You can choose to log this scenario if needed
+    }
+} else {
+    $this->xt->assign("userbutton_icon", true);
+}
+
+
 		$this->xt->assign("logoutlink_attrs", 'id="logoutButton'.$this->id.'"');
 
 		$loggedAsGuest = Security::isGuest();
