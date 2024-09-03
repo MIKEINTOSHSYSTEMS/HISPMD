@@ -1,0 +1,98 @@
+# IMPORTANT: Before install Mibew Messenger copy this file to config.yml and
+# fill it with your own settings!
+
+
+# MySQL Database parameters
+database:
+    host: ""
+    port: 3306
+    db: ""
+    login: ""
+    pass: ""
+    tables_prefix: ""
+    use_persistent_connection: false
+
+# Mail
+## This value will be used as sender address in all e-mails Mibew Messenger send.
+mailbox: mibew@yourdomain.com
+
+## Mailer parameters
+mailer:
+    # This value determines what kind of mailer will be used. Possible values
+    # are "mail" and "smtp".
+    #
+    # To use standard PHP mail function just set this option to "mail". No
+    # additional configs are required in this case.
+    #
+    # To use SMTP-based solution set this option "smtp". This approach require
+    # some extra configuration to be done (see below).
+    transport: mail
+
+    # The lines below represents default SMTP mailer configurations. They will
+    # be used only if the "transport" option is set to "smtp".
+    host: localhost
+    port: 25
+    user: user
+    pass: ""
+    # The following option determines what kind of encryption should be used.
+    # false means no encyption at all. Another values once can use are "ssl" and
+    # "tls".
+    encryption: false
+
+# Cache subsystem
+cache:
+    # This value determines where the cached data will be stored. Possible
+    # values are "none", "file_system" and "memcached".
+    #
+    # If "none" is used the caching will be disabled. This option should be used
+    # only if none of the other options works.
+    #
+    # If "file_system" is used the cached data will be stored in files within
+    # the "cache/" directory. Notice, that the file system storage does not work
+    # on NFS systems bucause exclusive file locks are not supported where.
+    #
+    # If "memcached" is used the cached data will be stored in Memcached
+    # storage. Before using this kind of storage make sure PHP's memcached
+    # extension is installed and enabled.
+    storage: file_system
+
+    # The lines below represents default Memcached server configurations. They
+    # will be used only if the "storage" option is set to "memcached".
+    memcached_servers:
+        - host: localhost
+          port: 11211
+          # The "weight" field is optional and can be omitted and it's only positive int number.
+          weight: 1
+          # Actually, one can use any number of memcached servers he wants. Just
+          # add servers description like the one above.
+
+# Locales
+## Native name will be used in this locale
+home_locale: en
+## If user does not provide known lang
+default_locale: en
+
+# A timezone to use. Leave this value empty to use the default timezone from the
+# system settings. For the details about available timezones see
+# http://php.net/manual/en/timezones.php
+timezone: ""
+
+# List of proxy's IP Mibew Messenger should trust. You should set this option
+# if you use Mibew Messenger with a load balancer or behind a proxy.
+trusted_proxies: []
+# Here is an example of what values this option can take:
+# trusted_proxies:
+#     - 127.0.0.1
+#     - ::1
+#     - 10.0.0.0/8
+
+# Plugins
+plugins: []
+
+## Example of plugins configuration
+# plugins:
+#     "VendorName:PluginName":
+#         weight: 100
+#         some_configurable_value: value
+#     "VendorName:AnotherPluginName":
+#         very_important_value: "$3.50"

@@ -1,0 +1,64 @@
+# Disable directory listing
+Options -Indexes
+
+# Follow symbolic links in the directory
+Options +FollowSymLinks
+
+<IfModule mod_negotiation.c>
+    # Forbid apache to guess file extensions
+    Options -MultiViews
+</IfModule>
+
+# Disable mod_security for Apache 1.x
+<IfModule mod_security.c>
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>
+
+# Explicitly set right settings for mod_php 5 for Apache 1.x and 2.x
+<IfModule mod_php5.c>
+    php_flag magic_quotes_gpc			off
+    php_flag magic_quotes_sybase		off
+    php_flag register_globals			off
+    php_flag mbstring.encoding_translation	off
+    php_value mbstring.http_input		pass
+    php_value mbstring.http_output		pass
+    php_flag session.auto_start			off
+</IfModule>
+
+# Redirect requests to the front controller
+<IfModule mod_rewrite.c>
+    # Use the front controller as a default handler
+    DirectoryIndex index.php
+
+    RewriteEngine On
+
+    # Use separate front controller for the system installator
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^install(/(.*))?$ install.php [QSA,L]
+
+    # Rewrite all other requests for files and directories that do not exist to
+    # the main front controller
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # There is no mod_rewrite in the system. For the root Mibew Messenger
+    # directory index_fallback.php should be loaded first to activate
+    # old-fashioned URLs. For all other directories index.php is just a
+    # directory index file.
+    DirectoryIndex index_fallback.php index.php
+</IfModule>
+
+# Deny access to internal system files
+<FilesMatch "\.(yml|po|ini|handlebars|keep)$">
+    Deny from all
+</FilesMatch>
+
+# Deny access to CLI cron worker from the outside
+<Files "cron.php">
+    Deny from all
+</Files>

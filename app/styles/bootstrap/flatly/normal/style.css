@@ -3136,7 +3136,7 @@ fieldset[disabled] a.btn {
 }
 .btn-default {
   color: #fff;
-  background-color: #95a5a6;
+  background-color: transparent; /*#95a5a6;*/
   border-color: transparent; /*#95a5a6;*/
 }
 .btn-default:focus,
@@ -5983,7 +5983,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: #002747c7; /*#000;*/
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -12579,7 +12579,7 @@ span[data-itemid] {
   }
 }
 .r-cookie-banner {
-  background: darkslategray;
+  background: #00274c; /*darkslategray;*/
   color: #ddd;
   position: fixed;
   width: 100%;

@@ -17,3 +17,4 @@
 /mysql-int/hispmd_dev.sql
 /src/hispmddb/
 /analytics/tmp/cache/tracker
+/app/chat/cache

@@ -1,0 +1,2832 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mibew Messenger 3.6.0\n"
+"Report-Msgid-Bugs-To: support@mibew.org\n"
+"POT-Creation-Date: 2023-05-30 21:54+0300\n"
+"PO-Revision-Date: 2023-05-30 21:54+0300\n"
+"Last-Translator: Automatically generated\n"
+"Language: en\n"
+"Language-Team: none\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+
+#: js/source/bans.js:24
+msgid "Are you sure that you want to delete address {0} from the blocked list?"
+msgstr "Are you sure that you want to delete address {0} from the blocked list?"
+
+#: styles/chats/default/templates_src/server_side/_layout.handlebars:6
+#: styles/chats/default/templates_src/server_side/_layout.handlebars:41
+#: styles/pages/default/templates_src/server_side/_layout.handlebars:9
+#: libs/classes/Mibew/Controller/LoginController.php:64
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:49
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:137
+msgid "Mibew Messenger"
+msgstr "Mibew Messenger"
+
+#: styles/chats/default/templates_src/server_side/confirm.handlebars:3
+msgid "Visitor <span class=\"visitor\">{0}</span> is already being assisted by <span class=\"operator\">{1}</span>.<br/> Are you really sure you want to start chatting the visitor?"
+msgstr "Visitor <span class=\"visitor\">{0}</span> is already being assisted by <span class=\"operator\">{1}</span>.<br/> Are you really sure you want to start chatting the visitor?"
+
+#: styles/chats/default/templates_src/server_side/confirm.handlebars:9
+msgid "Yes. I'm sure"
+msgstr "Yes. I'm sure"
+
+#: styles/chats/default/templates_src/server_side/confirm.handlebars:9
+msgid "No. Close the window"
+msgstr "No. Close the window"
+
+#: js/source/groups.js:24
+msgid "Are you sure that you want to delete the group \"{0}\"?"
+msgstr "Are you sure that you want to delete the group \"{0}\"?"
+
+#: styles/chats/default/templates_src/server_side/error.handlebars:2
+#: styles/chats/default/templates_src/server_side/error.handlebars:4
+msgid "Error"
+msgstr "Error"
+
+#: styles/chats/default/templates_src/server_side/error.handlebars:7
+#: styles/chats/default/templates_src/server_side/error.handlebars:8
+#: styles/chats/default/templates_src/server_side/mail.handlebars:5
+#: styles/chats/default/templates_src/server_side/mail.handlebars:6
+#: styles/chats/default/templates_src/server_side/mailsent.handlebars:5
+#: styles/chats/default/templates_src/server_side/mailsent.handlebars:6
+#: styles/chats/default/templates_src/server_side/redirected.handlebars:5
+#: styles/chats/default/templates_src/server_side/redirected.handlebars:6
+#: styles/chats/default/templates_src/client_side/leave_message/sent_description.handlebars:2
+#: styles/chats/default/templates_src/client_side/leave_message/sent_description.handlebars:3
+msgid "Close..."
+msgstr "Close..."
+
+#: styles/chats/default/templates_src/server_side/error.handlebars:14
+msgid "Cannot execute:"
+msgstr "Cannot execute:"
+
+#: libs/chat.php:176
+msgid "Leave your message"
+msgstr "Leave your message"
+
+#: libs/chat.php:225
+msgid "Live support"
+msgstr "Live support"
+
+#: libs/chat.php:413 libs/chat.php:572
+msgid "Guest"
+msgstr "Guest"
+
+#: libs/chat.php:726
+msgid "Visitor accepted invitation from operator {0}"
+msgstr "Visitor accepted invitation from operator {0}"
+
+#: libs/chat.php:736
+#: libs/classes/Mibew/RequestProcessor/ThreadProcessor.php:806
+msgid "Visitor came from page {0}"
+msgstr "Visitor came from page {0}"
+
+#: libs/chat.php:743
+msgid "Thank you for contacting us. We are sorry, but requested operator <strong>{0}</strong> is offline. Another operator will be with you shortly."
+msgstr "Thank you for contacting us. We are sorry, but requested operator <strong>{0}</strong> is offline. Another operator will be with you shortly."
+
+#: libs/chat.php:752
+msgid "Thank you for contacting us. An operator will be with you shortly."
+msgstr "Thank you for contacting us. An operator will be with you shortly."
+
+#: libs/chat.php:761
+#: libs/classes/Mibew/RequestProcessor/ThreadProcessor.php:818
+msgid "Info: {0}"
+msgstr "Info: {0}"
+
+#: styles/chats/default/templates_src/server_side/mail.handlebars:2
+msgid "Send chat history<br/>by mail"
+msgstr "Send chat history<br/>by mail"
+
+#: styles/chats/default/templates_src/server_side/mail.handlebars:15
+msgid "Enter your email:"
+msgstr "Enter your email:"
+
+#: styles/chats/default/templates_src/server_side/mail.handlebars:25
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:54
+msgid "Send"
+msgstr "Send"
+
+#: styles/chats/default/templates_src/server_side/mail.handlebars:31
+#: styles/pages/default/templates_src/server_side/_errors.handlebars:4
+msgid "Correct the mistakes:"
+msgstr "Correct the mistakes:"
+
+#: js/source/operator_permissions.js:25
+msgid "This action is irreversible, proceed anyway?"
+msgstr "This action is irreversible, proceed anyway?"
+
+#: libs/groups.php:138
+msgid "-none-"
+msgstr "-none-"
+
+#: styles/chats/default/templates_src/server_side/mailsent.handlebars:2
+msgid "Sent"
+msgstr "Sent"
+
+#: styles/chats/default/templates_src/server_side/mailsent.handlebars:10
+msgid "A history of your chat was sent to address {0}"
+msgstr "A history of your chat was sent to address {0}"
+
+#: js/source/operators.js:24
+msgid "Are you sure that you want to delete operator \"{0}\"?"
+msgstr "Are you sure that you want to delete operator \"{0}\"?"
+
+#: styles/chats/default/templates_src/server_side/redirect.handlebars:2
+msgid "Redirect to<br/>another operator"
+msgstr "Redirect to<br/>another operator"
+
+#: styles/chats/default/templates_src/server_side/redirect.handlebars:5
+#: styles/chats/default/templates_src/server_side/redirect.handlebars:6
+msgid "Back..."
+msgstr "Back..."
+
+#: styles/chats/default/templates_src/server_side/redirect.handlebars:10
+msgid "Choose:"
+msgstr "Choose:"
+
+#: styles/chats/default/templates_src/server_side/redirect.handlebars:15
+msgid "Operator:"
+msgstr "Operator:"
+
+#: styles/chats/default/templates_src/server_side/redirect.handlebars:23
+msgid "Group:"
+msgstr "Group:"
+
+#: js/source/plugins.js:24
+msgid "Are you sure that you want to uninstall plugin \"{0}\"?"
+msgstr "Are you sure that you want to uninstall plugin \"{0}\"?"
+
+#: libs/invitation.php:127
+msgid "Operator {0} invites visitor at {1} page"
+msgstr "Operator {0} invites visitor at {1} page"
+
+#: libs/invitation.php:135
+msgid "Hello, how can I help you?"
+msgstr "Hello, how can I help you?"
+
+#: libs/invitation.php:220
+msgid "Visitor rejected invitation"
+msgstr "Visitor rejected invitation"
+
+#: libs/invitation.php:302
+msgid "Visitor ignored invitation and it was closed automatically"
+msgstr "Visitor ignored invitation and it was closed automatically"
+
+#: styles/chats/default/templates_src/server_side/redirected.handlebars:2
+msgid "The visitor has been redirected to another operator"
+msgstr "The visitor has been redirected to another operator"
+
+#: libs/operator.php:89
+msgid "System administration: settings, operators management, button generation"
+msgstr "System administration: settings, operators management, button generation"
+
+#: libs/operator.php:90
+msgid "Ability to view system statistics"
+msgstr "Ability to view system statistics"
+
+#: libs/operator.php:91
+msgid "Take over chat thread"
+msgstr "Take over chat thread"
+
+#: libs/operator.php:92
+msgid "View another operator's chat thread"
+msgstr "View another operator's chat thread"
+
+#: libs/operator.php:93
+msgid "Ability to modify profile"
+msgstr "Ability to modify profile"
+
+#: libs/operator.php:626 libs/operator.php:642
+msgid "(online)"
+msgstr "(online)"
+
+#: libs/operator.php:627 libs/operator.php:643
+msgid "(away)"
+msgstr "(away)"
+
+#: libs/pagination.php:156
+msgid "Page {0} of {1}, {2}-{3} from {4}"
+msgstr "Page {0} of {1}, {2}-{3} from {4}"
+
+#: libs/pagination.php:183
+msgid "previous"
+msgstr "previous"
+
+#: libs/pagination.php:205
+msgid "next"
+msgstr "next"
+
+#: styles/chats/default/templates_src/client_side/chat/layout.handlebars:29
+msgid "Powered by:"
+msgstr "Powered by:"
+
+#: styles/chats/default/templates_src/client_side/chat/message_form.handlebars:15
+msgid "Select answer..."
+msgstr "Select answer..."
+
+#: styles/chats/default/templates_src/client_side/chat/message_form.handlebars:22
+msgid "Send message"
+msgstr "Send message"
+
+#: styles/chats/default/templates_src/client_side/chat/message_form.handlebars:22
+msgid "Send ({0})"
+msgstr "Send ({0})"
+
+#: styles/chats/default/templates_src/client_side/leave_message/description.handlebars:2
+#: styles/chats/default/templates_src/client_side/leave_message/description.handlebars:3
+#: styles/chats/default/templates_src/client_side/survey/layout.handlebars:8
+msgid "Close"
+msgstr "Close"
+
+#: styles/chats/default/templates_src/client_side/leave_message/description.handlebars:6
+msgid "Sorry. None of the support team is available at the moment. <br/>Please leave a message and someone will get back to you shortly."
+msgstr "Sorry. None of the support team is available at the moment. <br/>Please leave a message and someone will get back to you shortly."
+
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:11
+#: libs/classes/Mibew/RequestProcessor/ThreadProcessor.php:759
+#: js/source/chat/models/leave_message/leave_message_form.js:66
+#: js/source/chat/models/leave_message/leave_message_form.js:69
+#: libs/classes/Mibew/Controller/Chat/MailController.php:121
+#: libs/classes/Mibew/Controller/Chat/MailController.php:123
+msgid "Your email"
+msgstr "Your email"
+
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:15
+#: js/source/chat/models/leave_message/leave_message_form.js:76
+msgid "Your name"
+msgstr "Your name"
+
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:20
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:15
+msgid "Choose Department:"
+msgstr "Choose Department:"
+
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:30
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:25
+msgid "Department description:"
+msgstr "Department description:"
+
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:37
+#: styles/pages/default/templates_src/server_side/canned_message_edit.handlebars:41
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:60
+#: libs/classes/Mibew/Controller/CannedMessageController.php:217
+#: js/source/chat/models/leave_message/leave_message_form.js:83
+msgid "Message"
+msgstr "Message"
+
+#: styles/chats/default/templates_src/client_side/leave_message/form.handlebars:50
+msgid "Please note that by leaving the message you're explicitly agree with the <a href=\"{0}\" target=\"_blank\">Privacy Policy</a>"
+msgstr "Please note that by leaving the message you're explicitly agree with the <a href=\"{0}\" target=\"_blank\">Privacy Policy</a>"
+
+#: libs/common/datetime.php:77
+msgid "Never"
+msgstr "Never"
+
+#: libs/common/datetime.php:84
+msgid "Today at {0}"
+msgstr "Today at {0}"
+
+#: libs/common/datetime.php:86
+msgid "Yesterday at {0}"
+msgstr "Yesterday at {0}"
+
+#: styles/chats/default/templates_src/client_side/leave_message/sent_description.handlebars:6
+msgid "Thank you for your message. We'll answer your query by email as soon as possible."
+msgstr "Thank you for your message. We'll answer your query by email as soon as possible."
+
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:30
+msgid "Name:"
+msgstr "Name:"
+
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:35
+msgid "Email:"
+msgstr "Email:"
+
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:41
+msgid "Initial Question:"
+msgstr "Initial Question:"
+
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:47
+msgid "Please note that by starting the chat you're explicitly agree with the <a href=\"{0}\" target=\"_blank\">Privacy Policy</a>"
+msgstr "Please note that by starting the chat you're explicitly agree with the <a href=\"{0}\" target=\"_blank\">Privacy Policy</a>"
+
+#: styles/chats/default/templates_src/client_side/survey/form.handlebars:52
+msgid "Start Chat"
+msgstr "Start Chat"
+
+#: js/source/default/utils.js:164
+msgid "OK"
+msgstr "OK"
+
+#: js/source/default/utils.js:165
+msgid "Cancel"
+msgstr "Cancel"
+
+#: styles/chats/default/templates_src/client_side/survey/layout.handlebars:10
+msgid "Thank you for contacting us. Please fill out the form below and click the Start Chat button."
+msgstr "Thank you for contacting us. Please fill out the form below and click the Start Chat button."
+
+#: libs/common/response.php:22
+#: js/source/chat/models/leave_message/leave_message_form.js:66
+#: js/source/chat/models/leave_message/leave_message_form.js:76
+#: js/source/chat/models/leave_message/leave_message_form.js:83
+msgid "Please fill \"{0}\"."
+msgstr "Please fill \"{0}\"."
+
+#: libs/common/response.php:27
+msgid "Error uploading file \"{0}\": {1}."
+msgstr "Error uploading file \"{0}\": {1}."
+
+#: libs/common/response.php:32
+#: js/source/chat/models/leave_message/leave_message_form.js:69
+msgid "Please fill \"{0}\" correctly."
+msgstr "Please fill \"{0}\" correctly."
+
+#: styles/chats/default/templates_src/client_side/chat/controls/close.handlebars:1
+msgid "Close chat"
+msgstr "Close chat"
+
+#: js/source/users/app.js:42
+msgid "Network problems detected. Please refresh the page."
+msgstr "Network problems detected. Please refresh the page."
+
+#: styles/chats/default/templates_src/client_side/chat/controls/history.handlebars:1
+#: libs/classes/Mibew/Controller/HistoryController.php:292
+msgid "Visit history"
+msgstr "Visit history"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/redirect.handlebars:2
+msgid "Redirect visitor to another operator"
+msgstr "Redirect visitor to another operator"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/refresh.handlebars:1
+msgid "Refresh"
+msgstr "Refresh"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/send_mail.handlebars:2
+msgid "Send chat history by e-mail"
+msgstr "Send chat history by e-mail"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/sound.handlebars:2
+msgid "Turn off sound"
+msgstr "Turn off sound"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/sound.handlebars:4
+msgid "Turn on sound"
+msgstr "Turn on sound"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/tracked_path.handlebars:1
+#: libs/classes/Mibew/Controller/HistoryController.php:342
+msgid "Tracked path of visitor"
+msgstr "Tracked path of visitor"
+
+#: libs/classes/Mibew/Thread.php:365
+msgid "Visitor joined chat again"
+msgstr "Visitor joined chat again"
+
+#: libs/classes/Mibew/Thread.php:573
+msgid "Your operator has connection issues. We have moved you to a priorty position in the queue. Sorry for keeping you waiting."
+msgstr "Your operator has connection issues. We have moved you to a priorty position in the queue. Sorry for keeping you waiting."
+
+#: libs/classes/Mibew/Thread.php:600
+msgid "Visitor closed chat window"
+msgstr "Visitor closed chat window"
+
+#: libs/classes/Mibew/Thread.php:761 libs/classes/Mibew/Thread.php:1014
+msgid "Operator <strong>{0}</strong> changed operator <strong>{1}</strong>"
+msgstr "Operator <strong>{0}</strong> changed operator <strong>{1}</strong>"
+
+#: libs/classes/Mibew/Thread.php:768 libs/classes/Mibew/Thread.php:1028
+msgid "Operator {0} is back"
+msgstr "Operator {0} is back"
+
+#: libs/classes/Mibew/Thread.php:929
+msgid "Visitor {0} left the chat"
+msgstr "Visitor {0} left the chat"
+
+#: libs/classes/Mibew/Thread.php:940
+msgid "Operator canceled invitation"
+msgstr "Operator canceled invitation"
+
+#: libs/classes/Mibew/Thread.php:950
+msgid "Operator {0} left the chat"
+msgstr "Operator {0} left the chat"
+
+#: libs/classes/Mibew/Thread.php:1021
+msgid "Operator {0} joined the chat"
+msgstr "Operator {0} joined the chat"
+
+#: libs/classes/Mibew/Thread.php:1072
+msgid "The visitor changed their name <strong>{0}</strong> to <strong>{1}</strong>"
+msgstr "The visitor changed their name <strong>{0}</strong> to <strong>{1}</strong>"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/user_name.handlebars:2
+#: styles/chats/default/templates_src/client_side/chat/controls/user_name.handlebars:11
+msgid "You are"
+msgstr "You are"
+
+#: styles/chats/default/templates_src/client_side/chat/controls/user_name.handlebars:5
+#: styles/chats/default/templates_src/client_side/chat/controls/user_name.handlebars:7
+#: styles/chats/default/templates_src/client_side/chat/controls/user_name.handlebars:8
+msgid "Change name"
+msgstr "Change name"
+
+#: styles/chats/default/templates_src/client_side/chat/status/typing.handlebars:1
+msgid "Remote user is typing..."
+msgstr "Remote user is typing..."
+
+#: styles/pages/default/templates_src/server_side/_layout.handlebars:38
+#: styles/pages/default/templates_src/server_side/_layout.handlebars:40
+msgid "You are <a href=\"{0}\">{1}</a>"
+msgstr "You are <a href=\"{0}\">{1}</a>"
+
+#: styles/pages/default/templates_src/server_side/_layout.handlebars:50
+#: styles/pages/default/templates_src/server_side/login.handlebars:29
+msgid "Login:"
+msgstr "Login:"
+
+#: styles/pages/default/templates_src/server_side/_locales.handlebars:4
+#: styles/pages/default/templates_src/server_side/index.handlebars:209
+msgid "Choose your language"
+msgstr "Choose your language"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:7
+msgid "You are Offline.<br/><a href=\"{0}\">Connect...</a>"
+msgstr "You are Offline.<br/><a href=\"{0}\">Connect...</a>"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:12
+msgid "Main"
+msgstr "Main"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:14
+#: libs/classes/Mibew/Controller/HomeController.php:57
+msgid "Home"
+msgstr "Home"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:15
+#: styles/pages/default/templates_src/server_side/index.handlebars:28
+msgid "Visitors"
+msgstr "Visitors"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:15
+msgid "without menu"
+msgstr "without menu"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:16
+#: styles/pages/default/templates_src/server_side/index.handlebars:38
+#: libs/classes/Mibew/Controller/HistoryController.php:176
+msgid "Chat history"
+msgstr "Chat history"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:18
+#: styles/pages/default/templates_src/server_side/index.handlebars:49
+#: libs/classes/Mibew/Controller/StatisticsController.php:102
+msgid "Statistics"
+msgstr "Statistics"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:21
+#: styles/pages/default/templates_src/server_side/index.handlebars:61
+msgid "Blocked visitors"
+msgstr "Blocked visitors"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:27
+msgid "Administration"
+msgstr "Administration"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:29
+#: libs/classes/Mibew/Controller/CannedMessageController.php:104
+#: styles/pages/default/templates_src/server_side/index.handlebars:73
+msgid "Canned Messages"
+msgstr "Canned Messages"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:30
+#: styles/pages/default/templates_src/server_side/index.handlebars:83
+msgid "Button code"
+msgstr "Button code"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:31
+#: styles/pages/default/templates_src/server_side/groups.handlebars:63
+#: styles/pages/default/templates_src/server_side/index.handlebars:93
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:86
+msgid "Operators"
+msgstr "Operators"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:32
+#: styles/pages/default/templates_src/server_side/index.handlebars:103
+#: libs/classes/Mibew/Controller/Group/ManagementController.php:79
+#: libs/classes/Mibew/Controller/Operator/AbstractController.php:53
+msgid "Groups"
+msgstr "Groups"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:33
+#: styles/pages/default/templates_src/server_side/index.handlebars:113
+msgid "Settings"
+msgstr "Settings"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:34
+#: styles/pages/default/templates_src/server_side/index.handlebars:123
+#: libs/classes/Mibew/Controller/PluginController.php:48
+msgid "Plugins"
+msgstr "Plugins"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:35
+#: styles/pages/default/templates_src/server_side/index.handlebars:133
+msgid "Styles"
+msgstr "Styles"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:36
+msgid "Localize"
+msgstr "Localize"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:37
+#: styles/pages/default/templates_src/server_side/index.handlebars:153
+#: libs/classes/Mibew/Controller/MailTemplateController.php:61
+#: libs/classes/Mibew/Controller/MailTemplateController.php:103
+msgid "Mail templates"
+msgstr "Mail templates"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:42
+msgid "Other"
+msgstr "Other"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:44
+#: libs/classes/Mibew/Controller/AboutController.php:46
+#: styles/pages/default/templates_src/server_side/index.handlebars:188
+msgid "About"
+msgstr "About"
+
+#: styles/pages/default/templates_src/server_side/_menu.handlebars:45
+#: styles/pages/default/templates_src/server_side/index.handlebars:198
+msgid "Exit"
+msgstr "Exit"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:12
+msgid "About Mibew Messenger"
+msgstr "About Mibew Messenger"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:13
+msgid "Mibew Messenger is an open-source live support application licensed under the terms of the Apache License 2.0."
+msgstr "Mibew Messenger is an open-source live support application licensed under the terms of the Apache License 2.0."
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:14
+msgid "Copyright &copy; {0} Contributors of the Mibew Messenger project."
+msgstr "Copyright &copy; {0} Contributors of the Mibew Messenger project."
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:15
+msgid "For more information visit the official site of the project: <a href=\"https://mibew.org/\">https://mibew.org/</a>"
+msgstr "For more information visit the official site of the project: <a href=\"https://mibew.org/\">https://mibew.org/</a>"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:20
+msgid "System information"
+msgstr "System information"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:21
+msgid "You are using:"
+msgstr "You are using:"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:26
+msgid "Installed localizations:"
+msgstr "Installed localizations:"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:33
+msgid "Environment:"
+msgstr "Environment:"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:38
+msgid "Available updates"
+msgstr "Available updates"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:46
+#: styles/pages/default/templates_src/server_side/translation_export.handlebars:35
+msgid "Download"
+msgstr "Download"
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:52
+msgid "There are no available updates."
+msgstr "There are no available updates."
+
+#: styles/pages/default/templates_src/server_side/about.handlebars:54
+msgid "Check for available updates"
+msgstr "Check for available updates"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:4
+msgid "Address {0} is blocked for a specified number of days."
+msgstr "Address {0} is blocked for a specified number of days."
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:8
+#: styles/pages/default/templates_src/server_side/bans.handlebars:5
+msgid "Here you can block malicious visitors that affect your work with spam messages."
+msgstr "Here you can block malicious visitors that affect your work with spam messages."
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:16
+msgid "You opened this window for \"{0}\" thread. <i>Address</i> field is already filled. Select a number of days and click <i>Send</i>."
+msgstr "You opened this window for \"{0}\" thread. <i>Address</i> field is already filled. Select a number of days and click <i>Send</i>."
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:35
+#: styles/pages/default/templates_src/server_side/bans.handlebars:22
+#: libs/classes/Mibew/Controller/BanController.php:193
+msgid "Visitor's Address"
+msgstr "Visitor's Address"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:39
+msgid "Ex: 127.0.0.1 or example.com"
+msgstr "Ex: 127.0.0.1 or example.com"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:44
+#: libs/classes/Mibew/Controller/BanController.php:197
+msgid "Days"
+msgstr "Days"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:48
+msgid "Numbers of days this address is blocked"
+msgstr "Numbers of days this address is blocked"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:53
+#: styles/pages/default/templates_src/server_side/bans.handlebars:24
+#: libs/classes/Mibew/Controller/BanController.php:201
+msgid "Comment"
+msgstr "Comment"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:57
+msgid "Reason for block"
+msgstr "Reason for block"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:62
+#: styles/pages/default/templates_src/server_side/canned_message_edit.handlebars:48
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:141
+#: styles/pages/default/templates_src/server_side/group_members.handlebars:40
+#: styles/pages/default/templates_src/server_side/install_password.handlebars:28
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:67
+#: styles/pages/default/templates_src/server_side/mail_template_edit.handlebars:41
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:64
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:104
+#: styles/pages/default/templates_src/server_side/operator_groups.handlebars:44
+#: styles/pages/default/templates_src/server_side/operator_permissions.handlebars:40
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:156
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:227
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:136
+#: styles/pages/default/templates_src/server_side/translation_edit.handlebars:40
+msgid "Save"
+msgstr "Save"
+
+#: styles/pages/default/templates_src/server_side/ban.handlebars:73
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:153
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:79
+#: styles/pages/default/templates_src/server_side/mail_template_edit.handlebars:55
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:117
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:170
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:149
+msgid "mandatory fields"
+msgstr "mandatory fields"
+
+#: styles/pages/default/templates_src/server_side/bans.handlebars:14
+#: styles/pages/default/templates_src/server_side/bans.handlebars:15
+msgid "Add address"
+msgstr "Add address"
+
+#: styles/pages/default/templates_src/server_side/bans.handlebars:23
+msgid "Till"
+msgstr "Till"
+
+#: styles/pages/default/templates_src/server_side/bans.handlebars:25
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:19
+msgid "Edit"
+msgstr "Edit"
+
+#: styles/pages/default/templates_src/server_side/bans.handlebars:44
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:77
+#: styles/pages/default/templates_src/server_side/groups.handlebars:113
+#: styles/pages/default/templates_src/server_side/operators.handlebars:106
+msgid "remove"
+msgstr "remove"
+
+#: styles/pages/default/templates_src/server_side/bans.handlebars:47
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:76
+#: styles/pages/default/templates_src/server_side/locales.handlebars:60
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:71
+msgid "edit"
+msgstr "edit"
+
+#: styles/pages/default/templates_src/server_side/bans.handlebars:53
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:82
+#: styles/pages/default/templates_src/server_side/groups.handlebars:120
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:67
+msgid "No elements"
+msgstr "No elements"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:5
+msgid "You can generate HTML code to place at your site here."
+msgstr "You can generate HTML code to place at your site here."
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:21
+msgid "Code for language"
+msgstr "Code for language"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:32
+msgid "Chat window style"
+msgstr "Chat window style"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:44
+msgid "Generating code type"
+msgstr "Generating code type"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:55
+msgid "Use windows (even for modern browsers)"
+msgstr "Use windows (even for modern browsers)"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:64
+msgid "Choose image"
+msgstr "Choose image"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:78
+msgid "Disable tracking"
+msgstr "Disable tracking"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:86
+msgid "Invitation style"
+msgstr "Invitation style"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:96
+msgid "Silent invitations"
+msgstr "Silent invitations"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:106
+msgid "Code for group"
+msgstr "Code for group"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:118
+msgid "Include host name into the code"
+msgstr "Include host name into the code"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:126
+msgid "Use secure links (https)"
+msgstr "Use secure links (https)"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:136
+msgid "Compatibility with mod_security (modsecurity.org), turn on only if you have problems with it"
+msgstr "Compatibility with mod_security (modsecurity.org), turn on only if you have problems with it"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:143
+msgid "HTML code"
+msgstr "HTML code"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:147
+msgid "<strong>Caution!</strong> Please don't change<br/> the code manually because<br/> we don't guarantee that<br/> it will work!"
+msgstr "<strong>Caution!</strong> Please don't change<br/> the code manually because<br/> we don't guarantee that<br/> it will work!"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:148
+msgid "Copy button code"
+msgstr "Copy button code"
+
+#: styles/pages/default/templates_src/server_side/button_code.handlebars:153
+msgid "Example"
+msgstr "Example"
+
+#: libs/classes/Mibew/Controller/AboutController.php:109
+msgid "{0} plugin"
+msgstr "{0} plugin"
+
+#: styles/pages/default/templates_src/server_side/canned_message_edit.handlebars:4
+msgid "Saved"
+msgstr "Saved"
+
+#: styles/pages/default/templates_src/server_side/canned_message_edit.handlebars:8
+msgid "Edit an existing message."
+msgstr "Edit an existing message."
+
+#: styles/pages/default/templates_src/server_side/canned_message_edit.handlebars:10
+msgid "Add new message."
+msgstr "Add new message."
+
+#: styles/pages/default/templates_src/server_side/canned_message_edit.handlebars:34
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:59
+#: libs/classes/Mibew/Controller/CannedMessageController.php:212
+msgid "Title"
+msgstr "Title"
+
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:5
+#: styles/pages/default/templates_src/server_side/index.handlebars:75
+msgid "Edit messages that you frequently type into the chat."
+msgstr "Edit messages that you frequently type into the chat."
+
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:20
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:28
+#: styles/pages/default/templates_src/server_side/translation_export.handlebars:25
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:29
+#: styles/pages/default/templates_src/server_side/translations.handlebars:20
+msgid "For language:"
+msgstr "For language:"
+
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:29
+msgid "For group:"
+msgstr "For group:"
+
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:51
+msgid "Add message..."
+msgstr "Add message..."
+
+#: styles/pages/default/templates_src/server_side/canned_messages.handlebars:61
+#: styles/pages/default/templates_src/server_side/locales.handlebars:37
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:54
+msgid "Modify"
+msgstr "Modify"
+
+#: libs/classes/Mibew/Controller/BanController.php:58
+msgid "Ban List"
+msgstr "Ban List"
+
+#: libs/classes/Mibew/Controller/BanController.php:158
+#: libs/classes/Mibew/Controller/BanController.php:242
+msgid "Block address"
+msgstr "Block address"
+
+#: libs/classes/Mibew/Controller/BanController.php:214
+msgid "The specified address is already in use. Click <a href=\"{1}\">here</a> if you want to edit it."
+msgstr "The specified address is already in use. Click <a href=\"{1}\">here</a> if you want to edit it."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:6
+msgid "On this page you can edit group details."
+msgstr "On this page you can edit group details."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:8
+msgid "Create new group here."
+msgstr "Create new group here."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:17
+#: styles/pages/default/templates_src/server_side/group_members.handlebars:13
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:13
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:11
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:17
+#: styles/pages/default/templates_src/server_side/operator_groups.handlebars:13
+#: styles/pages/default/templates_src/server_side/operator_permissions.handlebars:13
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:13
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:13
+msgid "Changes saved"
+msgstr "Changes saved"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:34
+#: styles/pages/default/templates_src/server_side/groups.handlebars:60
+#: styles/pages/default/templates_src/server_side/history.handlebars:56
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:11
+#: styles/pages/default/templates_src/server_side/history_user.handlebars:11
+#: styles/pages/default/templates_src/server_side/locales.handlebars:36
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:76
+#: styles/pages/default/templates_src/server_side/operators.handlebars:61
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:15
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:4
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:4
+#: libs/classes/Mibew/Controller/Group/ManagementController.php:69
+#: libs/classes/Mibew/Controller/Group/SettingsController.php:135
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:77
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:132
+msgid "Name"
+msgstr "Name"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:38
+msgid "Name to identify the group."
+msgstr "Name to identify the group."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:43
+#: styles/pages/default/templates_src/server_side/groups.handlebars:61
+msgid "Description"
+msgstr "Description"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:47
+msgid "Description of the group."
+msgstr "Description of the group."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:52
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:78
+msgid "International name"
+msgstr "International name"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:56
+msgid "Name in English."
+msgstr "Name in English."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:61
+msgid "International description"
+msgstr "International description"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:65
+msgid "Description in English."
+msgstr "Description in English."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:70
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:45
+#: libs/classes/Mibew/Controller/Group/SettingsController.php:139
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:150
+msgid "E-mail"
+msgstr "E-mail"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:74
+msgid "Group email for notifications. Leave empty to use the default address."
+msgstr "Group email for notifications. Leave empty to use the default address."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:79
+#: styles/pages/default/templates_src/server_side/groups.handlebars:64
+#: libs/classes/Mibew/Controller/Group/ManagementController.php:71
+#: libs/classes/Mibew/Controller/Group/SettingsController.php:143
+msgid "Weight"
+msgstr "Weight"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:83
+msgid "Groups with lower weight display higher in groups list. Group weight is a positive integer value."
+msgstr "Groups with lower weight display higher in groups list. Group weight is a positive integer value."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:88
+msgid "Parent group"
+msgstr "Parent group"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:96
+msgid "Groups can be organized in a hierarchical structure"
+msgstr "Groups can be organized in a hierarchical structure"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:101
+msgid "The fields that located below are extra fields. These fields are only available for the top level groups and override corresponding system settings if specified."
+msgstr "The fields that located below are extra fields. These fields are only available for the top level groups and override corresponding system settings if specified."
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:104
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:53
+msgid "Company title"
+msgstr "Company title"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:108
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:57
+msgid "Enter your company title"
+msgstr "Enter your company title"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:113
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:117
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:62
+msgid "Title in the chat window"
+msgstr "Title in the chat window"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:122
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:71
+msgid "Your company logo"
+msgstr "Your company logo"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:126
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:75
+msgid "Enter http address of your company logo"
+msgstr "Enter http address of your company logo"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:131
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:80
+msgid "URL of your website"
+msgstr "URL of your website"
+
+#: styles/pages/default/templates_src/server_side/group_edit.handlebars:135
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:84
+msgid "Destination for your company name or logo link"
+msgstr "Destination for your company name or logo link"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:63
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:70
+msgid "-from general settings-"
+msgstr "-from general settings-"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:80
+#: libs/classes/Mibew/Controller/CannedMessageController.php:68
+msgid "No such group"
+msgstr "No such group"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:154
+msgid "Click to chat"
+msgstr "Click to chat"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:168
+msgid "button"
+msgstr "button"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:169
+msgid "operator code field"
+msgstr "operator code field"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:170
+msgid "text link"
+msgstr "text link"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:189
+msgid "Button HTML code generation"
+msgstr "Button HTML code generation"
+
+#: libs/classes/Mibew/Controller/ButtonCodeController.php:210
+#: libs/classes/Mibew/Controller/CannedMessageController.php:80
+msgid "-all operators-"
+msgstr "-all operators-"
+
+#: styles/pages/default/templates_src/server_side/group_members.handlebars:5
+msgid "View and edit the member list."
+msgstr "View and edit the member list."
+
+#: libs/classes/Mibew/Controller/ButtonController.php:52
+msgid "Visitor navigated to {0}"
+msgstr "Visitor navigated to {0}"
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:5
+msgid "This page displays a list of groups. Each group can have separate button and canned responses."
+msgstr "This page displays a list of groups. Each group can have separate button and canned responses."
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:20
+#: styles/pages/default/templates_src/server_side/operators.handlebars:20
+#: styles/pages/default/templates_src/server_side/translations.handlebars:29
+msgid "Sort by:"
+msgstr "Sort by:"
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:29
+#: styles/pages/default/templates_src/server_side/operators.handlebars:29
+msgid "Sort direction:"
+msgstr "Sort direction:"
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:50
+#: styles/pages/default/templates_src/server_side/groups.handlebars:51
+msgid "Create new group"
+msgstr "Create new group"
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:62
+#: styles/pages/default/templates_src/server_side/operators.handlebars:62
+#: libs/classes/Mibew/Controller/Group/ManagementController.php:70
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:79
+msgid "Last active"
+msgstr "Last active"
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:91
+#: styles/pages/default/templates_src/server_side/operators.handlebars:86
+msgid "Online"
+msgstr "Online"
+
+#: styles/pages/default/templates_src/server_side/groups.handlebars:93
+#: styles/pages/default/templates_src/server_side/operators.handlebars:88
+#: styles/pages/default/templates_src/client_side/users/agent.handlebars:1
+#: styles/pages/default/templates_src/client_side/users/status_panel.handlebars:1
+msgid "Away"
+msgstr "Away"
+
+#: libs/classes/Mibew/Controller/CannedMessageController.php:158
+msgid "No such message"
+msgstr "No such message"
+
+#: libs/classes/Mibew/Controller/CannedMessageController.php:187
+#: styles/pages/default/templates_src/server_side/install_done.handlebars:12
+msgid "New Message"
+msgstr "New Message"
+
+#: libs/classes/Mibew/Controller/CannedMessageController.php:188
+msgid "Edit Message"
+msgstr "Edit Message"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:5
+msgid "Search the chat history for a specified user, an operator or a specified phrase in messages."
+msgstr "Search the chat history for a specified user, an operator or a specified phrase in messages."
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:19
+msgid "User name, operator name or message text search:"
+msgstr "User name, operator name or message text search:"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:25
+msgid "Search:"
+msgstr "Search:"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:27
+msgid "everywhere"
+msgstr "everywhere"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:28
+msgid "in messages"
+msgstr "in messages"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:29
+msgid "by operator"
+msgstr "by operator"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:30
+msgid "by visitor"
+msgstr "by visitor"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:34
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:56
+msgid "Search"
+msgstr "Search"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:37
+msgid "Search in system messages"
+msgstr "Search in system messages"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:57
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:19
+#: styles/pages/default/templates_src/server_side/history_user.handlebars:12
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:6
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:6
+msgid "Visitor's address"
+msgstr "Visitor's address"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:58
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:46
+#: styles/pages/default/templates_src/server_side/history_user.handlebars:13
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:150
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:8
+msgid "Operator"
+msgstr "Operator"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:59
+msgid "Visitor's messages"
+msgstr "Visitor's messages"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:60
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:55
+#: styles/pages/default/templates_src/server_side/history_user.handlebars:14
+msgid "Time in chat"
+msgstr "Time in chat"
+
+#: styles/pages/default/templates_src/server_side/history.handlebars:94
+#: styles/pages/default/templates_src/server_side/history_user.handlebars:31
+#: styles/pages/default/templates_src/server_side/translations.handlebars:74
+msgid "Found 0 elements"
+msgstr "Found 0 elements"
+
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:3
+msgid "This page displays chat details and content."
+msgstr "This page displays chat details and content."
+
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:27
+msgid "Browser"
+msgstr "Browser"
+
+#: styles/pages/default/templates_src/server_side/history_thread.handlebars:36
+msgid "Group"
+msgstr "Group"
+
+#: styles/pages/default/templates_src/server_side/history_user.handlebars:3
+msgid "You can find the chat history of your visitors here."
+msgstr "You can find the chat history of your visitors here."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:12
+msgid "Please run the <a href=\"{0}\">Update wizard</a> to adjust your database."
+msgstr "Please run the <a href=\"{0}\">Update wizard</a> to adjust your database."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:18
+msgid "You are Offline. <a href=\"{0}\">Connect...</a>"
+msgstr "You are Offline. <a href=\"{0}\">Connect...</a>"
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:30
+msgid "You can find awaiting visitors."
+msgstr "You can find awaiting visitors."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:40
+msgid "Search the dialogs history."
+msgstr "Search the dialogs history."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:51
+msgid "From this page you can generate a variety of usage reports."
+msgstr "From this page you can generate a variety of usage reports."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:63
+msgid "Here you can block malicious visitors."
+msgstr "Here you can block malicious visitors."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:85
+msgid "Button HTML code generation."
+msgstr "Button HTML code generation."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:95
+msgid "Create or delete company operators. Manage their permissions."
+msgstr "Create or delete company operators. Manage their permissions."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:105
+msgid "Department or skill based groups."
+msgstr "Department or skill based groups."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:115
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:5
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:5
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:5
+msgid "Specify options affecting chat window and common system behavior."
+msgstr "Specify options affecting chat window and common system behavior."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:125
+msgid "Manage plugins."
+msgstr "Manage plugins."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:135
+msgid "Manage styles."
+msgstr "Manage styles."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:143
+#: libs/classes/Mibew/Controller/Localization/AbstractController.php:42
+#: libs/classes/Mibew/Controller/Localization/TranslationController.php:106
+#: libs/classes/Mibew/Controller/Localization/TranslationController.php:146
+#: libs/classes/Mibew/Controller/Localization/TranslationController.php:196
+msgid "Translations"
+msgstr "Translations"
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:145
+msgid "Manage translations."
+msgstr "Manage translations."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:155
+msgid "Manage mail templates."
+msgstr "Manage mail templates."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:165
+msgid "Profile"
+msgstr "Profile"
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:167
+msgid "You can change your personal information on this page."
+msgstr "You can change your personal information on this page."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:177
+msgid "Language"
+msgstr "Language"
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:179
+msgid "Change locale."
+msgstr "Change locale."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:190
+msgid "View about page."
+msgstr "View about page."
+
+#: styles/pages/default/templates_src/server_side/index.handlebars:200
+msgid "Log out of the system."
+msgstr "Log out of the system."
+
+#: libs/classes/Mibew/Controller/HistoryController.php:219
+msgid "Chat log"
+msgstr "Chat log"
+
+#: styles/pages/default/templates_src/server_side/install_done.handlebars:4
+msgid "Application installed successfully."
+msgstr "Application installed successfully."
+
+#: styles/pages/default/templates_src/server_side/install_done.handlebars:9
+msgid "Click to check the sound"
+msgstr "Click to check the sound"
+
+#: styles/pages/default/templates_src/server_side/install_done.handlebars:11
+msgid "New Visitor"
+msgstr "New Visitor"
+
+#: styles/pages/default/templates_src/server_side/install_done.handlebars:13
+msgid "Invitation"
+msgstr "Invitation"
+
+#: styles/pages/default/templates_src/server_side/install_done.handlebars:16
+msgid "For security reasons you should remove install.php file from your server."
+msgstr "For security reasons you should remove install.php file from your server."
+
+#: styles/pages/default/templates_src/server_side/install_err.handlebars:5
+msgid "Resolve the problem and try again. Press <a>back</a> to return to the wizard."
+msgstr "Resolve the problem and try again. Press <a>back</a> to return to the wizard."
+
+#: libs/classes/Mibew/Controller/InstallController.php:62
+msgid "The system is already installed!"
+msgstr "The system is already installed!"
+
+#: libs/classes/Mibew/Controller/InstallController.php:107
+msgid "Check database connection"
+msgstr "Check database connection"
+
+#: libs/classes/Mibew/Controller/InstallController.php:140
+msgid "Create necessary tables"
+msgstr "Create necessary tables"
+
+#: libs/classes/Mibew/Controller/InstallController.php:172
+msgid "Set administrator password"
+msgstr "Set administrator password"
+
+#: libs/classes/Mibew/Controller/InstallController.php:218
+#: styles/pages/default/templates_src/server_side/install_password.handlebars:12
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:181
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:55
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:43
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:158
+msgid "Password"
+msgstr "Password"
+
+#: libs/classes/Mibew/Controller/InstallController.php:221
+#: styles/pages/default/templates_src/server_side/install_password.handlebars:20
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:66
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:51
+msgid "Confirmation"
+msgstr "Confirmation"
+
+#: libs/classes/Mibew/Controller/InstallController.php:224
+msgid "Passwords do not match."
+msgstr "Passwords do not match."
+
+#: libs/classes/Mibew/Controller/InstallController.php:243
+msgid "Password is set."
+msgstr "Password is set."
+
+#: libs/classes/Mibew/Controller/InstallController.php:249
+msgid "Import locales"
+msgstr "Import locales"
+
+#: libs/classes/Mibew/Controller/InstallController.php:281
+msgid "Check sound and lock the installation"
+msgstr "Check sound and lock the installation"
+
+#: libs/classes/Mibew/Controller/InstallController.php:320
+msgid "You can login to using <a href=\"{0}\">this</a> link."
+msgstr "You can login to using <a href=\"{0}\">this</a> link."
+
+#: libs/classes/Mibew/Controller/InstallController.php:350
+msgid "Installation"
+msgstr "Installation"
+
+#: libs/classes/Mibew/Controller/InstallController.php:378
+msgid "Problem"
+msgstr "Problem"
+
+#: styles/pages/default/templates_src/server_side/install_password.handlebars:6
+msgid "Type a password for the first administrator"
+msgstr "Type a password for the first administrator"
+
+#: styles/pages/default/templates_src/server_side/install_step.handlebars:7
+msgid "Follow the wizard to setup your database."
+msgstr "Follow the wizard to setup your database."
+
+#: styles/pages/default/templates_src/server_side/install_step.handlebars:22
+msgid "Completed:"
+msgstr "Completed:"
+
+#: styles/pages/default/templates_src/server_side/install_step.handlebars:36
+msgid "Next step:"
+msgstr "Next step:"
+
+#: styles/pages/default/templates_src/server_side/install_step.handlebars:60
+msgid "Software license agreement"
+msgstr "Software license agreement"
+
+#: libs/classes/Mibew/Controller/LoginController.php:63
+#: styles/pages/default/templates_src/server_side/login.handlebars:17
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:36
+#: styles/pages/default/templates_src/server_side/operators.handlebars:60
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:76
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:143
+msgid "Login"
+msgstr "Login"
+
+#: libs/classes/Mibew/Controller/LoginController.php:110
+msgid "Your account is temporarily blocked. Please contact system administrator."
+msgstr "Your account is temporarily blocked. Please contact system administrator."
+
+#: libs/classes/Mibew/Controller/LoginController.php:112
+msgid "Entered login/password is incorrect"
+msgstr "Entered login/password is incorrect"
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:5
+msgid "Edit locale settings."
+msgstr "Edit locale settings."
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:31
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:210
+msgid "Time locale"
+msgstr "Time locale"
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:35
+msgid "This value will be passed to PHP's setlocale function to localize words in date/time string."
+msgstr "This value will be passed to PHP's setlocale function to localize words in date/time string."
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:40
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:214
+msgid "Date format (full)"
+msgstr "Date format (full)"
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:44
+msgid "This value will be used with PHP's strftime to format date with time."
+msgstr "This value will be used with PHP's strftime to format date with time."
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:49
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:218
+msgid "Date format (date)"
+msgstr "Date format (date)"
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:53
+msgid "This value will be used with PHP's strftime to format date only."
+msgstr "This value will be used with PHP's strftime to format date only."
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:58
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:222
+msgid "Date format (time)"
+msgstr "Date format (time)"
+
+#: styles/pages/default/templates_src/server_side/locale_edit.handlebars:62
+msgid "This value will be used with PHP's strftime to format time only."
+msgstr "This value will be used with PHP's strftime to format time only."
+
+#: js/source/users/collection_views/threads_collection.js:203
+msgid "A new visitor is waiting for an answer."
+msgstr "A new visitor is waiting for an answer."
+
+#: styles/pages/default/templates_src/server_side/locales.handlebars:5
+msgid "On this page you can configure locales which are used in the system"
+msgstr "On this page you can configure locales which are used in the system"
+
+#: styles/pages/default/templates_src/server_side/locales.handlebars:35
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:94
+msgid "Code"
+msgstr "Code"
+
+#: styles/pages/default/templates_src/server_side/locales.handlebars:54
+#: styles/pages/default/templates_src/server_side/operators.handlebars:98
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:43
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:45
+msgid "enable"
+msgstr "enable"
+
+#: styles/pages/default/templates_src/server_side/locales.handlebars:56
+#: styles/pages/default/templates_src/server_side/operators.handlebars:100
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:37
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:39
+msgid "disable"
+msgstr "disable"
+
+#: libs/classes/Mibew/Controller/MailTemplateController.php:129
+#: styles/pages/default/templates_src/server_side/mail_template_edit.handlebars:25
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:52
+msgid "Mail subject"
+msgstr "Mail subject"
+
+#: libs/classes/Mibew/Controller/MailTemplateController.php:134
+#: styles/pages/default/templates_src/server_side/mail_template_edit.handlebars:33
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:53
+msgid "Mail body"
+msgstr "Mail body"
+
+#: styles/pages/default/templates_src/server_side/login.handlebars:8
+msgid "Mibew Messenger is an open-source live support application."
+msgstr "Mibew Messenger is an open-source live support application."
+
+#: styles/pages/default/templates_src/server_side/login.handlebars:21
+msgid "Please enter your username and password to access administrative tools. See your visitors and browse the history."
+msgstr "Please enter your username and password to access administrative tools. See your visitors and browse the history."
+
+#: styles/pages/default/templates_src/server_side/login.handlebars:37
+msgid "Password:"
+msgstr "Password:"
+
+#: styles/pages/default/templates_src/server_side/login.handlebars:49
+msgid "Remember"
+msgstr "Remember"
+
+#: styles/pages/default/templates_src/server_side/login.handlebars:56
+msgid "Enter"
+msgstr "Enter"
+
+#: styles/pages/default/templates_src/server_side/login.handlebars:59
+msgid "Forgot your password?"
+msgstr "Forgot your password?"
+
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:48
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:27
+msgid "Trouble Accessing Your Account?"
+msgstr "Trouble Accessing Your Account?"
+
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:70
+msgid "No such Operator"
+msgstr "No such Operator"
+
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:136
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:30
+msgid "Change your password"
+msgstr "Change your password"
+
+#: libs/classes/Mibew/Controller/PasswordRecoveryController.php:185
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:162
+msgid "Entered passwords do not match"
+msgstr "Entered passwords do not match"
+
+#: styles/pages/default/templates_src/server_side/mail_template_edit.handlebars:5
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:5
+msgid "On this page you can edit mail templates which are used in the system."
+msgstr "On this page you can edit mail templates which are used in the system."
+
+#: libs/classes/Mibew/Controller/PluginController.php:78
+msgid "Plugin \"{0}\" cannot be enabled."
+msgstr "Plugin \"{0}\" cannot be enabled."
+
+#: libs/classes/Mibew/Controller/PluginController.php:117
+msgid "Plugin \"{0}\" cannot be disabled."
+msgstr "Plugin \"{0}\" cannot be disabled."
+
+#: libs/classes/Mibew/Controller/PluginController.php:156
+msgid "Plugin \"{0}\" cannot be uninstalled."
+msgstr "Plugin \"{0}\" cannot be uninstalled."
+
+#: libs/classes/Mibew/Controller/PluginController.php:190
+msgid "Plugin \"{0}\" cannot be updated."
+msgstr "Plugin \"{0}\" cannot be updated."
+
+#: libs/classes/Mibew/Controller/PluginController.php:241
+msgid "disabled"
+msgstr "disabled"
+
+#: libs/classes/Mibew/Controller/PluginController.php:246
+msgid "working"
+msgstr "working"
+
+#: libs/classes/Mibew/Controller/PluginController.php:252
+msgid "needs update"
+msgstr "needs update"
+
+#: libs/classes/Mibew/Controller/PluginController.php:258
+msgid "not initialized"
+msgstr "not initialized"
+
+#: styles/pages/default/templates_src/server_side/mail_templates.handlebars:51
+msgid "Machine name"
+msgstr "Machine name"
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:5
+msgid "You can upload your photo only as JPG, GIF, PNG or TIF image files."
+msgstr "You can upload your photo only as JPG, GIF, PNG or TIF image files."
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:29
+msgid "Current avatar image"
+msgstr "Current avatar image"
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:31
+msgid "cannot load avatar"
+msgstr "cannot load avatar"
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:34
+msgid "Remove avatar"
+msgstr "Remove avatar"
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:38
+msgid "Your avatar image."
+msgstr "Your avatar image."
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:54
+msgid "Upload avatar"
+msgstr "Upload avatar"
+
+#: styles/pages/default/templates_src/server_side/operator_avatar.handlebars:59
+msgid "Choose the avatar file to upload.<br/>The picture size should not exceed 100x100 px."
+msgstr "Choose the avatar file to upload.<br/>The picture size should not exceed 100x100 px."
+
+#: js/source/users/model_views/queued_thread.js:122
+msgid "In queue"
+msgstr "In queue"
+
+#: js/source/users/model_views/queued_thread.js:125
+msgid "Waiting for operator"
+msgstr "Waiting for operator"
+
+#: js/source/users/model_views/queued_thread.js:128
+msgid "In chat"
+msgstr "In chat"
+
+#: js/source/users/model_views/queued_thread.js:131
+msgid "Closed"
+msgstr "Closed"
+
+#: js/source/users/model_views/queued_thread.js:134
+msgid "Loading"
+msgstr "Loading"
+
+#: js/source/users/model_views/queued_thread.js:145
+#: js/source/users/model_views/visitor.js:122
+msgid "No geolocation data available. We recommend you to install Mibew:GeoIp and Mibew:OpenStreetMap (or Mibew:GoogleMaps) plugins."
+msgstr "No geolocation data available. We recommend you to install Mibew:GeoIp and Mibew:OpenStreetMap (or Mibew:GoogleMaps) plugins."
+
+#: libs/classes/Mibew/Controller/StatisticsController.php:66
+msgid "From this page you can generate a variety of usage reports. Last time statistics was calculated {0}. You can calculate it <a href=\"{1}\" target=\"_blank\">manually</a>."
+msgstr "From this page you can generate a variety of usage reports. Last time statistics was calculated {0}. You can calculate it <a href=\"{1}\" target=\"_blank\">manually</a>."
+
+#: libs/classes/Mibew/Controller/StatisticsController.php:81
+msgid "You have selected From date after Till date"
+msgstr "You have selected From date after Till date"
+
+#: libs/classes/Mibew/Controller/StatisticsController.php:123
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:76
+msgid "Usage statistics for each date"
+msgstr "Usage statistics for each date"
+
+#: libs/classes/Mibew/Controller/StatisticsController.php:127
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:146
+msgid "Threads by operator"
+msgstr "Threads by operator"
+
+#: libs/classes/Mibew/Controller/StatisticsController.php:132
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:192
+msgid "Chat threads by page"
+msgstr "Chat threads by page"
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:6
+msgid "Edit general operator settings."
+msgstr "Edit general operator settings."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:8
+msgid "You can create a new operator here."
+msgstr "You can create a new operator here."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:40
+msgid "Login can consist of small Latin letters and underscore."
+msgstr "Login can consist of small Latin letters and underscore."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:49
+msgid "For notifications and password retrieval."
+msgstr "For notifications and password retrieval."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:60
+msgid "Enter a new password or leave the field empty to keep the previous one."
+msgstr "Enter a new password or leave the field empty to keep the previous one."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:71
+msgid "Confirm new password."
+msgstr "Confirm new password."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:80
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:89
+msgid "This name will be seen by your visitors."
+msgstr "This name will be seen by your visitors."
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:85
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:136
+msgid "International name (Latin)"
+msgstr "International name (Latin)"
+
+#: styles/pages/default/templates_src/server_side/operator_edit.handlebars:98
+msgid "Use to start chat with determined operator"
+msgstr "Use to start chat with determined operator"
+
+#: libs/classes/Mibew/Controller/StyleController.php:61
+msgid "Site style"
+msgstr "Site style"
+
+#: libs/classes/Mibew/Controller/StyleController.php:83
+msgid "Operator pages themes preview"
+msgstr "Operator pages themes preview"
+
+#: libs/classes/Mibew/Controller/StyleController.php:87
+msgid "Chat themes preview"
+msgstr "Chat themes preview"
+
+#: libs/classes/Mibew/Controller/StyleController.php:92
+msgid "Invitation themes preview"
+msgstr "Invitation themes preview"
+
+#: styles/pages/default/templates_src/server_side/operator_groups.handlebars:5
+msgid "Choose groups according to operator skills."
+msgstr "Choose groups according to operator skills."
+
+#: styles/pages/default/templates_src/server_side/operator_groups.handlebars:36
+msgid "&lt;no description&gt;"
+msgstr "&lt;no description&gt;"
+
+#: js/source/users/model_views/visitor.js:82
+msgid "Unable to invite user: groups are enabled, and you don't belong to any of them."
+msgstr "Unable to invite user: groups are enabled, and you don't belong to any of them."
+
+#: libs/classes/Mibew/Controller/UpdateController.php:55
+#: libs/classes/Mibew/Controller/UpdateController.php:76
+msgid "Update"
+msgstr "Update"
+
+#: styles/pages/default/templates_src/server_side/operator_permissions.handlebars:5
+msgid "Change restrictions and available features for this operator."
+msgstr "Change restrictions and available features for this operator."
+
+#: libs/classes/Mibew/Controller/UsersController.php:52
+msgid "List of visitors waiting"
+msgstr "List of visitors waiting"
+
+#: styles/pages/default/templates_src/server_side/operators.handlebars:5
+msgid "This page displays a list of company operators."
+msgstr "This page displays a list of company operators."
+
+#: styles/pages/default/templates_src/server_side/operators.handlebars:50
+#: styles/pages/default/templates_src/server_side/operators.handlebars:51
+msgid "Add operator..."
+msgstr "Add operator..."
+
+#: libs/classes/Mibew/Controller/WidgetController.php:157
+msgid "Answer"
+msgstr "Answer"
+
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:10
+msgid "Password retrieval"
+msgstr "Password retrieval"
+
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:14
+msgid "We've sent the instructions to your email. Please check it."
+msgstr "We've sent the instructions to your email. Please check it."
+
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:17
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:65
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:80
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:84
+msgid "Back to login"
+msgstr "Back to login"
+
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:31
+msgid "You cannot retrieve your password, but you can set a new one by following a link sent to you by email."
+msgstr "You cannot retrieve your password, but you can set a new one by following a link sent to you by email."
+
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:36
+msgid "Login or E-mail:"
+msgstr "Login or E-mail:"
+
+#: styles/pages/default/templates_src/server_side/password_recovery.handlebars:53
+msgid "Reset password"
+msgstr "Reset password"
+
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:10
+msgid "Your password has been changed."
+msgstr "Your password has been changed."
+
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:14
+msgid "Login using your new password."
+msgstr "Login using your new password."
+
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:17
+msgid "Proceed to login"
+msgstr "Proceed to login"
+
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:34
+msgid "Please choose a password to use with your account."
+msgstr "Please choose a password to use with your account."
+
+#: styles/pages/default/templates_src/server_side/password_recovery_reset.handlebars:68
+msgid "Change"
+msgstr "Change"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:5
+msgid "Here you can manage plugins. Notice that plugins are configured via the main config file."
+msgstr "Here you can manage plugins. Notice that plugins are configured via the main config file."
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:16
+msgid "Version"
+msgstr "Version"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:17
+msgid "Dependencies"
+msgstr "Dependencies"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:18
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:7
+msgid "State"
+msgstr "State"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:39
+msgid "Disable all the dependencies first"
+msgstr "Disable all the dependencies first"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:45
+msgid "Enable all the dependencies first"
+msgstr "Enable all the dependencies first"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:49
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:51
+msgid "uninstall"
+msgstr "uninstall"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:51
+msgid "Uninstall all the dependencies first"
+msgstr "Uninstall all the dependencies first"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:57
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:59
+msgid "update"
+msgstr "update"
+
+#: styles/pages/default/templates_src/server_side/plugins.handlebars:59
+msgid "Update all the dependencies first"
+msgstr "Update all the dependencies first"
+
+#: js/source/chat/model_views/controls/close.js:52
+msgid "Are you sure that you want to leave the chat?"
+msgstr "Are you sure that you want to leave the chat?"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:31
+msgid "Email"
+msgstr "Email"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:35
+msgid "Enter an email to receive system messages"
+msgstr "Enter an email to receive system messages"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:40
+msgid "Language of the messages left by visitors"
+msgstr "Language of the messages left by visitors"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:48
+msgid "Language of the messages that could be left by visitors when operators aren't available"
+msgstr "Language of the messages that could be left by visitors when operators aren't available"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:66
+msgid "Name of your company for example."
+msgstr "Name of your company for example."
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:89
+msgid "Visitor's identifier"
+msgstr "Visitor's identifier"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:93
+msgid "How to build visitor's identifying string from {name}, {id} or {addr}. Default: {name}"
+msgstr "How to build visitor's identifying string from {name}, {id} or {addr}. Default: {name}"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:98
+msgid "Cron security key"
+msgstr "Cron security key"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:102
+msgid "To run cron use link <a href=\"{0}\">{0}</a>."
+msgstr "To run cron use link <a href=\"{0}\">{0}</a>."
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:107
+msgid "Select a style for your operator pages"
+msgstr "Select a style for your operator pages"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:115
+msgid "A preview for each style is available <a href=\"{0}\">here</a>"
+msgstr "A preview for each style is available <a href=\"{0}\">here</a>"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:120
+msgid "Select a style for your chat windows"
+msgstr "Select a style for your chat windows"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:128
+msgid "A preview all pages for each style is available <a href=\"{0}\">here</a>"
+msgstr "A preview all pages for each style is available <a href=\"{0}\">here</a>"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:134
+msgid "Select a style for your invitation"
+msgstr "Select a style for your invitation"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:142
+msgid "A preview for invitation style is available <a href=\"{0}\">here</a>"
+msgstr "A preview for invitation style is available <a href=\"{0}\">here</a>"
+
+#: styles/pages/default/templates_src/server_side/settings_common.handlebars:148
+msgid "Send messages with:"
+msgstr "Send messages with:"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:13
+msgid "Features activated"
+msgstr "Features activated"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:18
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:18
+msgid "<a href=\"{0}\">Regenerate the chat button</a> for options to take effect"
+msgstr "<a href=\"{0}\">Regenerate the chat button</a> for options to take effect"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:37
+msgid "Allows users to change their names"
+msgstr "Allows users to change their names"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:41
+msgid "Turn off to hide edit box from chat window"
+msgstr "Turn off to hide edit box from chat window"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:46
+msgid "Allows users to send chat history by email"
+msgstr "Allows users to send chat history by email"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:50
+msgid "Turn off to disable user's ability to send chat history by email"
+msgstr "Turn off to disable user's ability to send chat history by email"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:54
+msgid "Force visitor to enter a verification code when sending chat history by email"
+msgstr "Force visitor to enter a verification code when sending chat history by email"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:58
+msgid "Protection against spam (captcha) in the pop-up form to send chat history by email"
+msgstr "Protection against spam (captcha) in the pop-up form to send chat history by email"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:64
+msgid "Allow secure connections (SSL)"
+msgstr "Allow secure connections (SSL)"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:68
+msgid "Please note that your web server should be configured to support https requests."
+msgstr "Please note that your web server should be configured to support https requests."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:72
+msgid "Force all chats to be secure"
+msgstr "Force all chats to be secure"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:76
+msgid "Show chats only through https connection"
+msgstr "Show chats only through https connection"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:82
+msgid "Enable \"Groups\""
+msgstr "Enable \"Groups\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:86
+msgid "Use it to have separate queues for different questions."
+msgstr "Use it to have separate queues for different questions."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:90
+msgid "Enable \"Groups Isolation\""
+msgstr "Enable \"Groups Isolation\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:94
+msgid "Use it to completely isolate groups from each other."
+msgstr "Use it to completely isolate groups from each other."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:100
+msgid "Enable \"Statistics\""
+msgstr "Enable \"Statistics\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:104
+msgid "Adds a page with messenger usage reports."
+msgstr "Adds a page with messenger usage reports."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:109
+msgid "Enable \"Tracking and inviting\""
+msgstr "Enable \"Tracking and inviting\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:113
+msgid "Enable tracking of visitors' activity on your site and ability to invite visitors to chat."
+msgstr "Enable tracking of visitors' activity on your site and ability to invite visitors to chat."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:117
+msgid "Track operators"
+msgstr "Track operators"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:121
+msgid "Allow tracking system to treat operators as normal visitors and add show in the visitors on site list."
+msgstr "Allow tracking system to treat operators as normal visitors and add show in the visitors on site list."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:127
+msgid "Enable feature \"Malicious Visitors\""
+msgstr "Enable feature \"Malicious Visitors\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:131
+msgid "Using it you can block attacks from specific IPs"
+msgstr "Using it you can block attacks from specific IPs"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:136
+msgid "Enable \"Pre-chat survey\""
+msgstr "Enable \"Pre-chat survey\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:140
+msgid "Forces the user to fill out a special form to start a chat."
+msgstr "Forces the user to fill out a special form to start a chat."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:144
+msgid "Ask for visitor's email"
+msgstr "Ask for visitor's email"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:148
+msgid "Show/hide email field in the survey"
+msgstr "Show/hide email field in the survey"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:153
+msgid "Allows a visitor to choose department/group"
+msgstr "Allows a visitor to choose department/group"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:157
+msgid "Show/hide department selection field in the survey"
+msgstr "Show/hide department selection field in the survey"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:162
+msgid "Show initial question field"
+msgstr "Show initial question field"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:166
+msgid "Show/hide initial question field in the survey"
+msgstr "Show/hide initial question field in the survey"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:171
+msgid "Enable \"Privacy policy\""
+msgstr "Enable \"Privacy policy\""
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:175
+msgid "Display a notice with the link to privacy policy on the survey page"
+msgstr "Display a notice with the link to privacy policy on the survey page"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:179
+msgid "Privacy policy"
+msgstr "Privacy policy"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:183
+msgid "Enter a URL of your privacy policy"
+msgstr "Enter a URL of your privacy policy"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:190
+msgid "Enable \"Popup dialog notification of the new visitor\"."
+msgstr "Enable \"Popup dialog notification of the new visitor\"."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:194
+msgid "Small dialog appears to attract your attention."
+msgstr "Small dialog appears to attract your attention."
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:199
+msgid "Show online operators on \"List of awaiting visitors\" page"
+msgstr "Show online operators on \"List of awaiting visitors\" page"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:203
+msgid "Can slow down the update rate of the list"
+msgstr "Can slow down the update rate of the list"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:208
+msgid "Force visitor to enter a verification code when leaving message"
+msgstr "Force visitor to enter a verification code when leaving message"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:212
+msgid "Protection against automated spam (captcha)"
+msgstr "Protection against automated spam (captcha)"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:217
+msgid "Check updates automatically"
+msgstr "Check updates automatically"
+
+#: styles/pages/default/templates_src/server_side/settings_features.handlebars:221
+msgid "System will check updates for the core and plugins automatically using cron"
+msgstr "System will check updates for the core and plugins automatically using cron"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:35
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:115
+msgid "Operator online time threshold"
+msgstr "Operator online time threshold"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:39
+msgid "Set the number of seconds to show an operator as online. Default is 30 seconds."
+msgstr "Set the number of seconds to show an operator as online. Default is 30 seconds."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:44
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:120
+msgid "Connection timeout for messaging window"
+msgstr "Connection timeout for messaging window"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:48
+msgid "Set the number of seconds after the last ping to consider the chat window still connected. Default is 30 seconds."
+msgstr "Set the number of seconds after the last ping to consider the chat window still connected. Default is 30 seconds."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:53
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:125
+msgid "Operator's console refresh time"
+msgstr "Operator's console refresh time"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:57
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:66
+msgid "Specify the poll interval in seconds. Default is 2 seconds."
+msgstr "Specify the poll interval in seconds. Default is 2 seconds."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:62
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:130
+msgid "Chat refresh time"
+msgstr "Chat refresh time"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:71
+msgid "Max number of threads from one address"
+msgstr "Max number of threads from one address"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:75
+msgid "0 allows any number of connections"
+msgstr "0 allows any number of connections"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:80
+msgid "Thread lifetime"
+msgstr "Thread lifetime"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:84
+msgid "Specify the lifetime of the thread after closing the dialog box in seconds. Default is 600 seconds. Set 0 for unlimited thread lifetime."
+msgstr "Specify the lifetime of the thread after closing the dialog box in seconds. Default is 600 seconds. Set 0 for unlimited thread lifetime."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:90
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:146
+msgid "Tracking refresh time"
+msgstr "Tracking refresh time"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:94
+msgid "Specify the poll interval in seconds. Default is 10 seconds."
+msgstr "Specify the poll interval in seconds. Default is 10 seconds."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:99
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:155
+msgid "Limit for tracked visitors list"
+msgstr "Limit for tracked visitors list"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:103
+msgid "Specify the number of items to display in tracked visitors list. Default is 20. Set 0 for all visitors (not recommended)."
+msgstr "Specify the number of items to display in tracked visitors list. Default is 20. Set 0 for all visitors (not recommended)."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:108
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:160
+msgid "Invitation lifetime"
+msgstr "Invitation lifetime"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:112
+msgid "Specify the lifetime of invitation in seconds. Default is 60 seconds."
+msgstr "Specify the lifetime of invitation in seconds. Default is 60 seconds."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:117
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:165
+msgid "Track lifetime"
+msgstr "Track lifetime"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:121
+msgid "Specify the lifetime of old visitor's tracks in seconds. Default is 600 seconds."
+msgstr "Specify the lifetime of old visitor's tracks in seconds. Default is 600 seconds."
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:127
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:171
+msgid "Maximum size of uploaded files"
+msgstr "Maximum size of uploaded files"
+
+#: styles/pages/default/templates_src/server_side/settings_performance.handlebars:131
+msgid "The upper limit of uploaded files (avatars) in bytes. Default is 100000 bytes."
+msgstr "The upper limit of uploaded files (avatars) in bytes. Default is 100000 bytes."
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:6
+msgid "Beware that statistics is aggregated up to yesterday."
+msgstr "Beware that statistics is aggregated up to yesterday."
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:25
+msgid "Select dates"
+msgstr "Select dates"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:28
+msgid "From:"
+msgstr "From:"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:42
+msgid "Till:"
+msgstr "Till:"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:82
+msgid "Date"
+msgstr "Date"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:83
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:198
+msgid "Chat threads"
+msgstr "Chat threads"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:84
+msgid "Missed threads"
+msgstr "Missed threads"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:85
+msgid "Messages from operators"
+msgstr "Messages from operators"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:86
+msgid "Messages from visitors"
+msgstr "Messages from visitors"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:87
+msgid "Average waiting time (in seconds)"
+msgstr "Average waiting time (in seconds)"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:88
+msgid "Average chat time (in seconds)"
+msgstr "Average chat time (in seconds)"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:90
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:155
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:200
+msgid "Invitations sent"
+msgstr "Invitations sent"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:91
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:156
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:201
+msgid "Invitations accepted"
+msgstr "Invitations accepted"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:92
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:157
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:202
+msgid "Invitations rejected"
+msgstr "Invitations rejected"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:93
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:158
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:203
+msgid "Invitations ignored"
+msgstr "Invitations ignored"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:117
+msgid "Total:"
+msgstr "Total:"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:134
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:180
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:224
+msgid "Not enough data"
+msgstr "Not enough data"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:151
+msgid "Chat Threads"
+msgstr "Chat Threads"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:152
+msgid "Messages"
+msgstr "Messages"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:153
+msgid "Average message length (in chars)"
+msgstr "Average message length (in chars)"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:196
+msgid "Page"
+msgstr "Page"
+
+#: styles/pages/default/templates_src/server_side/statistics.handlebars:197
+msgid "View times"
+msgstr "View times"
+
+#: styles/pages/default/templates_src/server_side/style_preview.handlebars:5
+msgid "You can view the list of themes you currently have installed here."
+msgstr "You can view the list of themes you currently have installed here."
+
+#: styles/pages/default/templates_src/server_side/style_preview.handlebars:22
+msgid "Choose style"
+msgstr "Choose style"
+
+#: styles/pages/default/templates_src/server_side/tracked.handlebars:3
+msgid "This page displays tracked history of visitor's activity on site."
+msgstr "This page displays tracked history of visitor's activity on site."
+
+#: styles/pages/default/templates_src/server_side/tracked.handlebars:10
+msgid "Visitor came from"
+msgstr "Visitor came from"
+
+#: styles/pages/default/templates_src/server_side/tracked.handlebars:17
+msgid "direct visit"
+msgstr "direct visit"
+
+#: styles/pages/default/templates_src/server_side/tracked.handlebars:27
+msgid "Visit time"
+msgstr "Visit time"
+
+#: styles/pages/default/templates_src/server_side/tracked.handlebars:28
+msgid "Visited page"
+msgstr "Visited page"
+
+#: styles/pages/default/templates_src/server_side/translation_edit.handlebars:4
+msgid "Your translation is saved."
+msgstr "Your translation is saved."
+
+#: styles/pages/default/templates_src/server_side/translation_edit.handlebars:8
+msgid "Enter your translation."
+msgstr "Enter your translation."
+
+#: styles/pages/default/templates_src/server_side/translation_edit.handlebars:26
+#: styles/pages/default/templates_src/server_side/translations.handlebars:56
+#: libs/classes/Mibew/Controller/Localization/TranslationController.php:102
+msgid "Source string"
+msgstr "Source string"
+
+#: styles/pages/default/templates_src/server_side/translation_export.handlebars:5
+msgid "On this page you can download translations."
+msgstr "On this page you can download translations."
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:5
+msgid "On this page you can upload a custom translation file."
+msgstr "On this page you can upload a custom translation file."
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:13
+msgid "Translation imported"
+msgstr "Translation imported"
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:39
+msgid "Override existing translations"
+msgstr "Override existing translations"
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:43
+msgid "Replaces translated strings in the database with values from the imported file."
+msgstr "Replaces translated strings in the database with values from the imported file."
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:49
+msgid "Upload translation"
+msgstr "Upload translation"
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:54
+msgid "Choose the translation file to upload."
+msgstr "Choose the translation file to upload."
+
+#: styles/pages/default/templates_src/server_side/translation_import.handlebars:59
+msgid "Upload"
+msgstr "Upload"
+
+#: styles/pages/default/templates_src/server_side/translations.handlebars:5
+msgid "If you don't agree with the translation please send us an update."
+msgstr "If you don't agree with the translation please send us an update."
+
+#: styles/pages/default/templates_src/server_side/update_intro.handlebars:3
+#: styles/pages/default/templates_src/server_side/update_progress.handlebars:7
+msgid "Follow the wizard to update your database."
+msgstr "Follow the wizard to update your database."
+
+#: styles/pages/default/templates_src/server_side/update_intro.handlebars:15
+msgid "Backup the database"
+msgstr "Backup the database"
+
+#: styles/pages/default/templates_src/server_side/update_intro.handlebars:16
+msgid "Backup the code"
+msgstr "Backup the code"
+
+#: styles/pages/default/templates_src/server_side/update_intro.handlebars:17
+msgid "Replace all files with ones from the new version"
+msgstr "Replace all files with ones from the new version"
+
+#: styles/pages/default/templates_src/server_side/update_intro.handlebars:18
+msgid "Update configs file if needed"
+msgstr "Update configs file if needed"
+
+#: styles/pages/default/templates_src/server_side/update_intro.handlebars:19
+msgid "Run the <a href=\"{0}\">update wizard</a>"
+msgstr "Run the <a href=\"{0}\">update wizard</a>"
+
+#: styles/pages/default/templates_src/server_side/update_progress.handlebars:20
+msgid "Progress:"
+msgstr "Progress:"
+
+#: styles/pages/default/templates_src/server_side/update_progress.handlebars:33
+msgid "Update failed."
+msgstr "Update failed."
+
+#: styles/pages/default/templates_src/server_side/update_progress.handlebars:34
+msgid "You can try to restore database from the backup and run the update wizard again."
+msgstr "You can try to restore database from the backup and run the update wizard again."
+
+#: styles/pages/default/templates_src/server_side/update_progress.handlebars:36
+msgid "Application successfully updated."
+msgstr "Application successfully updated."
+
+#: styles/pages/default/templates_src/server_side/update_progress.handlebars:36
+msgid "Go to <a href=\"{0}\">home page</a>"
+msgstr "Go to <a href=\"{0}\">home page</a>"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:125
+msgid "PHP version {0}"
+msgstr "PHP version {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:132
+msgid "All necessary PHP extensions are loaded"
+msgstr "All necessary PHP extensions are loaded"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:137
+msgid "Directories permissions are correct"
+msgstr "Directories permissions are correct"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:165
+msgid "You are connected to MySQL server version {0}"
+msgstr "You are connected to MySQL server version {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:188
+msgid "The tables are alredy in place but outdated. Run the updater to fix it."
+msgstr "The tables are alredy in place but outdated. Run the updater to fix it."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:194
+msgid "Tables structure is up to date."
+msgstr "Tables structure is up to date."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:203
+msgid "Tables are created."
+msgstr "Tables are created."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:208
+msgid "Tables are pre popluated with necessary info."
+msgstr "Tables are pre popluated with necessary info."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:242
+msgid "Cannot set password. Error: {0}"
+msgstr "Cannot set password. Error: {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:270
+msgid "Locales are imported."
+msgstr "Locales are imported."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:275
+msgid "Locales content is imported."
+msgstr "Locales content is imported."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:332
+msgid "Cannot create tables. Error: {0}"
+msgstr "Cannot create tables. Error: {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:386
+msgid "Cannot create the first administrator. Error {0}"
+msgstr "Cannot create the first administrator. Error {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:411
+msgid "Cannot initialize chat revision sequence. Error {0}"
+msgstr "Cannot initialize chat revision sequence. Error {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:439
+msgid "Cannot store database structure version. Error {0}"
+msgstr "Cannot store database structure version. Error {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:479
+msgid "Cannot store instance ID. Error {0}"
+msgstr "Cannot store instance ID. Error {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:514
+msgid "PHP version is {0}, but Mibew Messenger works with {1} and later versions."
+msgstr "PHP version is {0}, but Mibew Messenger works with {1} and later versions."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:539
+msgid "PHP {0} extension is not loaded"
+msgstr "PHP {0} extension is not loaded"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:558
+msgid "Cache directory \"{0}\" is not writable."
+msgstr "Cache directory \"{0}\" is not writable."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:568
+msgid "Avatars directory \"{0}\" is not writable."
+msgstr "Avatars directory \"{0}\" is not writable."
+
+#: libs/classes/Mibew/Maintenance/Installer.php:725
+msgid "Cannot import locales. Error: {0}"
+msgstr "Cannot import locales. Error: {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:774
+msgid "Cannot import locales content. Error: {0}"
+msgstr "Cannot import locales content. Error: {0}"
+
+#: libs/classes/Mibew/Maintenance/Installer.php:805
+msgid "Could not connect. Please check server settings in config.yml. Error: {0}"
+msgstr "Could not connect. Please check server settings in config.yml. Error: {0}"
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:11
+msgid "Show menu"
+msgstr "Show menu"
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:11
+msgid "Hide menu"
+msgstr "Hide menu"
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:14
+msgid "This page displays a list of visitors who are waiting."
+msgstr "This page displays a list of visitors who are waiting."
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:16
+msgid "To answer the visitor click their name in the list."
+msgstr "To answer the visitor click their name in the list."
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:26
+msgid "Visitors on site"
+msgstr "Visitors on site"
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:27
+msgid "The table below represents a list of visitors ready to chat on your site."
+msgstr "The table below represents a list of visitors ready to chat on your site."
+
+#: styles/pages/default/templates_src/server_side/users.handlebars:29
+msgid "To invite the visitor to chat click on his/her name in the list."
+msgstr "To invite the visitor to chat click on his/her name in the list."
+
+#: styles/pages/default/templates_src/client_side/users/agent.handlebars:1
+#: styles/pages/default/templates_src/client_side/users/status_panel.handlebars:1
+msgid "Up to date"
+msgstr "Up to date"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:105
+msgid "The current version ({0}) is unknown or wrongly formatted"
+msgstr "The current version ({0}) is unknown or wrongly formatted"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:113
+msgid "The database is already up to date"
+msgstr "The database is already up to date"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:120
+msgid "You can update the system only from {0} and later versions. The current version is {1}"
+msgstr "You can update the system only from {0} and later versions. The current version is {1}"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:140
+msgid "Cannot update to {0}"
+msgstr "Cannot update to {0}"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:151
+msgid "Updated to {0}"
+msgstr "Updated to {0}"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:159
+msgid "Update failed: {0}"
+msgstr "Update failed: {0}"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:193
+msgid "Could not retrieve database instance. Error: {0}"
+msgstr "Could not retrieve database instance. Error: {0}"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:256
+msgid "Cannot store new version number"
+msgstr "Cannot store new version number"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:309
+#: libs/classes/Mibew/Maintenance/Updater.php:409
+msgid "Cannot update content: {0}"
+msgstr "Cannot update content: {0}"
+
+#: libs/classes/Mibew/Maintenance/Updater.php:364
+#: libs/classes/Mibew/Maintenance/Updater.php:435
+#: libs/classes/Mibew/Maintenance/Updater.php:461
+#: libs/classes/Mibew/Maintenance/Updater.php:489
+msgid "Cannot update tables: {0}"
+msgstr "Cannot update tables: {0}"
+
+#: styles/pages/default/templates_src/client_side/users/no_threads.handlebars:1
+msgid "The list of visitors waiting is empty"
+msgstr "The list of visitors waiting is empty"
+
+#: styles/pages/default/templates_src/client_side/users/no_visitors.handlebars:1
+msgid "There are no visitors ready to chat on your site at present time"
+msgstr "There are no visitors ready to chat on your site at present time"
+
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:2
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:8
+msgid "Click to chat with the visitor"
+msgstr "Click to chat with the visitor"
+
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:2
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:11
+msgid "Watch the chat"
+msgstr "Watch the chat"
+
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:2
+msgid "[spam]"
+msgstr "[spam]"
+
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:14
+#: styles/pages/default/templates_src/client_side/users/visitor.handlebars:6
+msgid "Tracked visitor's path"
+msgstr "Tracked visitor's path"
+
+#: styles/pages/default/templates_src/client_side/users/queued_thread.handlebars:17
+msgid "Ban this visitor"
+msgstr "Ban this visitor"
+
+#: styles/pages/default/templates_src/client_side/users/status_panel.handlebars:1
+msgid "Set status as \"Available\""
+msgstr "Set status as \"Available\""
+
+#: styles/pages/default/templates_src/client_side/users/status_panel.handlebars:1
+msgid "Set status as \"Away\""
+msgstr "Set status as \"Away\""
+
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:5
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:5
+msgid "Actions"
+msgstr "Actions"
+
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:9
+msgid "Total time"
+msgstr "Total time"
+
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:10
+msgid "Waiting time"
+msgstr "Waiting time"
+
+#: styles/pages/default/templates_src/client_side/users/threads_collection.handlebars:11
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:12
+msgid "Misc"
+msgstr "Misc"
+
+#: styles/pages/default/templates_src/client_side/users/visitor.handlebars:2
+msgid "Invite to chat"
+msgstr "Invite to chat"
+
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:7
+msgid "First seen"
+msgstr "First seen"
+
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:8
+msgid "Last seen"
+msgstr "Last seen"
+
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:9
+msgid "Invited by"
+msgstr "Invited by"
+
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:10
+msgid "Invitation time"
+msgstr "Invitation time"
+
+#: styles/pages/default/templates_src/client_side/users/visitors_collection.handlebars:11
+msgid "Invitations / Chats"
+msgstr "Invitations / Chats"
+
+#: libs/classes/Mibew/RequestProcessor/ThreadProcessor.php:684
+#: libs/classes/Mibew/RequestProcessor/ThreadProcessor.php:812
+msgid "E-Mail: {0}"
+msgstr "E-Mail: {0}"
+
+#: libs/classes/Mibew/RequestProcessor/ThreadProcessor.php:744
+#: js/source/chat/models/leave_message/leave_message_form.js:91
+msgid "The letters you typed don't match the letters that were shown in the picture."
+msgstr "The letters you typed don't match the letters that were shown in the picture."
+
+#: js/source/chat/models/survey/survey_form.js:72
+msgid "Name is required."
+msgstr "Name is required."
+
+#: js/source/chat/models/survey/survey_form.js:81
+msgid "Wrong email address."
+msgstr "Wrong email address."
+
+#: libs/classes/Mibew/Controller/Chat/OperatorChatController.php:101
+msgid "Wrong thread"
+msgstr "Wrong thread"
+
+#: libs/classes/Mibew/Controller/Chat/OperatorChatController.php:112
+msgid "Cannot take over"
+msgstr "Cannot take over"
+
+#: libs/classes/Mibew/Controller/Chat/OperatorChatController.php:127
+msgid "Change operator"
+msgstr "Change operator"
+
+#: libs/classes/Mibew/Controller/Chat/OperatorChatController.php:137
+msgid "Cannot take thread"
+msgstr "Cannot take thread"
+
+#: libs/classes/Mibew/Controller/Chat/OperatorChatController.php:140
+msgid "Cannot view threads"
+msgstr "Cannot view threads"
+
+#: libs/classes/Mibew/Controller/Chat/RedirectController.php:118
+msgid "The visitor has been placed in a priorty queue of the group {0}."
+msgstr "The visitor has been placed in a priorty queue of the group {0}."
+
+#: libs/classes/Mibew/Controller/Chat/RedirectController.php:122
+#: libs/classes/Mibew/Controller/Chat/RedirectController.php:141
+msgid "You are not chatting with the visitor."
+msgstr "You are not chatting with the visitor."
+
+#: libs/classes/Mibew/Controller/Chat/RedirectController.php:137
+msgid "The visitor has been placed in the priorty queue of the operator {0}."
+msgstr "The visitor has been placed in the priorty queue of the operator {0}."
+
+#: libs/classes/Mibew/Controller/Chat/RedirectController.php:183
+#: libs/classes/Mibew/Controller/Chat/RedirectController.php:237
+msgid "Operator {0} redirected you to another operator. Please wait a while."
+msgstr "Operator {0} redirected you to another operator. Please wait a while."
+
+#: libs/classes/Mibew/Controller/Group/AbstractController.php:45
+#: libs/classes/Mibew/Controller/Operator/AbstractController.php:45
+#: libs/classes/Mibew/Controller/Settings/AbstractController.php:47
+msgid "General"
+msgstr "General"
+
+#: libs/classes/Mibew/Controller/Group/AbstractController.php:49
+#: libs/classes/Mibew/Controller/Group/MembersController.php:78
+msgid "Members"
+msgstr "Members"
+
+#: libs/classes/Mibew/Controller/Group/ManagementController.php:74
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:82
+msgid "descending"
+msgstr "descending"
+
+#: libs/classes/Mibew/Controller/Group/ManagementController.php:75
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:83
+msgid "ascending"
+msgstr "ascending"
+
+#: libs/classes/Mibew/Controller/Group/SettingsController.php:93
+msgid "Group details"
+msgstr "Group details"
+
+#: libs/classes/Mibew/Controller/Group/SettingsController.php:157
+msgid "Please choose another name because a group with that name already exists."
+msgstr "Please choose another name because a group with that name already exists."
+
+#: libs/classes/Mibew/Controller/Localization/AbstractController.php:48
+#: libs/classes/Mibew/Controller/Localization/TranslationImportController.php:68
+msgid "Translations import"
+msgstr "Translations import"
+
+#: libs/classes/Mibew/Controller/Localization/AbstractController.php:54
+#: libs/classes/Mibew/Controller/Localization/TranslationExportController.php:60
+msgid "Translations export"
+msgstr "Translations export"
+
+#: libs/classes/Mibew/Controller/Localization/AbstractController.php:61
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:58
+msgid "Locales"
+msgstr "Locales"
+
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:120
+msgid "Cannot disable all locales."
+msgstr "Cannot disable all locales."
+
+#: libs/classes/Mibew/Controller/Localization/LocaleController.php:175
+msgid "Locale details"
+msgstr "Locale details"
+
+#: libs/classes/Mibew/Controller/Localization/TranslationController.php:103
+#: libs/classes/Mibew/Controller/Localization/TranslationController.php:180
+msgid "Translation"
+msgstr "Translation"
+
+#: libs/classes/Mibew/Controller/Localization/TranslationImportController.php:105
+#: libs/classes/Mibew/Controller/Operator/AvatarController.php:110
+msgid "Uploaded file size exceeded"
+msgstr "Uploaded file size exceeded"
+
+#: libs/classes/Mibew/Controller/Localization/TranslationImportController.php:107
+#: libs/classes/Mibew/Controller/Operator/AvatarController.php:112
+msgid "Invalid file type"
+msgstr "Invalid file type"
+
+#: libs/classes/Mibew/Controller/Localization/TranslationImportController.php:110
+#: libs/classes/Mibew/Controller/Operator/AvatarController.php:130
+msgid "No file selected"
+msgstr "No file selected"
+
+#: libs/classes/Mibew/Controller/Operator/AbstractController.php:49
+msgid "Photo"
+msgstr "Photo"
+
+#: libs/classes/Mibew/Controller/Operator/AbstractController.php:57
+#: libs/classes/Mibew/Controller/Operator/PermissionsController.php:79
+msgid "Permissions"
+msgstr "Permissions"
+
+#: libs/classes/Mibew/Controller/Operator/AvatarController.php:62
+#: libs/classes/Mibew/Controller/Operator/GroupsController.php:63
+#: libs/classes/Mibew/Controller/Operator/PermissionsController.php:61
+msgid "-not found-"
+msgstr "-not found-"
+
+#: libs/classes/Mibew/Controller/Operator/AvatarController.php:64
+msgid "Upload photo"
+msgstr "Upload photo"
+
+#: libs/classes/Mibew/Controller/Operator/AvatarController.php:126
+msgid "Error moving file"
+msgstr "Error moving file"
+
+#: libs/classes/Mibew/Controller/Operator/GroupsController.php:83
+msgid "Operator groups"
+msgstr "Operator groups"
+
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:112
+msgid "Cannot remove self."
+msgstr "Cannot remove self."
+
+#: libs/classes/Mibew/Controller/Operator/ManagementController.php:151
+msgid "Cannot disable self."
+msgstr "Cannot disable self."
+
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:63
+msgid "No Password set for the Administrator"
+msgstr "No Password set for the Administrator"
+
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:99
+msgid "Operator details"
+msgstr "Operator details"
+
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:145
+msgid "Login should contain only latin characters, numbers and underscore symbol."
+msgstr "Login should contain only latin characters, numbers and underscore symbol."
+
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:154
+msgid "Code should contain only latin characters, numbers and underscore symbol."
+msgstr "Code should contain only latin characters, numbers and underscore symbol."
+
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:171
+msgid "Please choose another login because an operator with that login is already registered in the system."
+msgstr "Please choose another login because an operator with that login is already registered in the system."
+
+#: libs/classes/Mibew/Controller/Operator/ProfileController.php:184
+msgid "Please choose another email because an operator with that email is already registered in the system."
+msgstr "Please choose another email because an operator with that email is already registered in the system."
+
+#: libs/classes/Mibew/Controller/Settings/AbstractController.php:51
+msgid "Optional Services"
+msgstr "Optional Services"
+
+#: libs/classes/Mibew/Controller/Settings/AbstractController.php:55
+msgid "Performance"
+msgstr "Performance"
+
+#: libs/classes/Mibew/Controller/Settings/CommonController.php:104
+#: libs/classes/Mibew/Controller/Settings/FeaturesController.php:59
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:87
+msgid "Messenger settings"
+msgstr "Messenger settings"
+
+#: libs/classes/Mibew/Controller/Settings/CommonController.php:150
+msgid "Enter a valid email address"
+msgstr "Enter a valid email address"
+
+#: libs/classes/Mibew/Controller/Settings/CommonController.php:154
+msgid "Use only Latin letters(upper and lower case) and numbers in cron key."
+msgstr "Use only Latin letters(upper and lower case) and numbers in cron key."
+
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:135
+msgid "\"Max number of threads\" field should be a number"
+msgstr "\"Max number of threads\" field should be a number"
+
+#: libs/classes/Mibew/Controller/Settings/PerformanceController.php:140
+msgid "\"Thread lifetime\" field should be a number"
+msgstr "\"Thread lifetime\" field should be a number"

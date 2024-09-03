@@ -1,0 +1,6 @@
+mibew_geoip_data:
+    path: /operator/history/geoip
+    defaults:
+        _controller: Mibew\Mibew\Plugin\OpenStreetMapHistory\Controller\GeoIPDataController::getGeoIPData
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    methods: [POST]

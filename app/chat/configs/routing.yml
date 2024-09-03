@@ -1,0 +1,829 @@
+# Chat actions
+chat_thread_update:
+    path: /thread/update
+    defaults:
+        _controller: Mibew\Controller\Chat\ThreadController::updateAction
+
+## Operator's chat
+chat_operator:
+    path: /operator/chat/{thread_id}/{token}
+    defaults:
+        _controller: Mibew\Controller\Chat\OperatorChatController::indexAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+
+chat_operator_redirect:
+    path: /operator/chat/{thread_id}/{token}/redirect
+    defaults:
+        _controller: Mibew\Controller\Chat\RedirectController::redirectAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+
+chat_operator_start:
+    path: /operator/chat/{thread_id}
+    defaults:
+        _controller: Mibew\Controller\Chat\OperatorChatController::startAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        thread_id: \d{1,10}
+
+chat_operator_redirection_links:
+    path: /operator/chat/{thread_id}/{token}/redirection-links
+    defaults:
+        _controller: Mibew\Controller\Chat\RedirectController::showRedirectionLinksAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+
+## User's chat
+chat_user:
+    path: /chat/{thread_id}/{token}
+    defaults:
+        _controller: Mibew\Controller\Chat\UserChatController::indexAction
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+
+chat_user_check:
+    path: /chat/{thread_id}/{token}/check
+    defaults:
+        _controller: Mibew\Controller\Chat\UserChatController::checkAction
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+
+chat_user_invitation:
+    path: /chat/invitation
+    defaults:
+        _controller: Mibew\Controller\Chat\UserChatController::invitationAction
+
+chat_user_mail:
+    path: /chat/{thread_id}/{token}/mail
+    defaults:
+        _controller: Mibew\Controller\Chat\MailController::showFormAction
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+    methods: [GET]
+
+chat_user_mail_send:
+    path: /chat/{thread_id}/{token}/mail
+    defaults:
+        _controller: Mibew\Controller\Chat\MailController::submitFormAction
+    requirements:
+        thread_id: \d{1,10}
+        token: \d{1,10}
+    methods: [POST]
+
+chat_user_popup_style:
+    path: /chat/style/popup/{style}
+    defaults:
+        _controller: Mibew\Controller\Chat\StyleController::loadPopupStyleAction
+        style: ""
+    requirements:
+        style: "[0-9A-Za-z_]*"
+
+chat_user_popup_style_force_secure:
+    path: /chat/style/popup/{style}/force_secure
+    defaults:
+        _controller: Mibew\Controller\Chat\StyleController::loadPopupStyleAction
+        style: ""
+        force_secure: on
+    requirements:
+        style: "[0-9A-Za-z_]*"
+
+chat_user_start:
+    path: /chat
+    defaults:
+        _controller: Mibew\Controller\Chat\UserChatController::startAction
+
+chat_user_cookie_set_permission:
+    path: /chat/cookies-set-permission
+    defaults:
+        _controller: Mibew\Controller\Chat\UserChatController::cookieSetPermissionAction
+
+# Pages that are available for all users
+button:
+    path: /b
+    defaults: { _controller: Mibew\Controller\ButtonController::indexAction }
+
+captcha:
+    path: /captcha
+    defaults: { _controller: Mibew\Controller\CaptchaController::drawAction }
+
+cron:
+    path: /cron
+    defaults: { _controller: Mibew\Controller\CronController::runAction }
+
+# A set of localization constants for the client side applications is generated
+# dynamically
+js_translation:
+    path: /locales/{locale}/translation.js
+    defaults:
+        _controller: Mibew\Controller\Localization\JsTranslationController::indexAction
+
+widget_gateway:
+    path: /widget
+    defaults: { _controller: Mibew\Controller\WidgetController::indexAction }
+
+# Operators' pages
+
+## About page
+about:
+    path: /operator/about
+    defaults:
+        _controller: Mibew\Controller\AboutController::indexAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+## Banned visitors
+ban_add:
+    path: /operator/ban/add
+    defaults:
+        _controller: Mibew\Controller\BanController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    methods: [GET]
+
+ban_add_save:
+    path: /operator/ban/add
+    defaults:
+        _controller: Mibew\Controller\BanController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    methods: [POST]
+
+ban_delete:
+    path: /operator/ban/{ban_id}/delete
+    defaults:
+        _controller: Mibew\Controller\BanController::deleteAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        ban_id: \d{1,10}
+
+ban_edit:
+    path: /operator/ban/{ban_id}/edit
+    defaults:
+        _controller: Mibew\Controller\BanController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        ban_id: \d{1,10}
+    methods: [GET]
+
+ban_edit_save:
+    path: /operator/ban/{ban_id}/edit
+    defaults:
+        _controller: Mibew\Controller\BanController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        ban_id: \d{1,10}
+    methods: [POST]
+
+bans:
+    path: /operator/ban
+    defaults:
+        _controller: Mibew\Controller\BanController::indexAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+## Button code
+button_code:
+    path: /operator/button-code
+    defaults:
+        _controller: Mibew\Controller\ButtonCodeController::generateAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Canned messages
+canned_message_add:
+    path: /operator/canned-message/add
+    defaults:
+        _controller: Mibew\Controller\CannedMessageController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+canned_message_add_save:
+    path: /operator/canned-message/add
+    defaults:
+        _controller: Mibew\Controller\CannedMessageController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+canned_message_delete:
+    path: /operator/canned-message/{message_id}/delete
+    defaults:
+        _controller: Mibew\Controller\CannedMessageController::deleteAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        message_id: \d{1,10}
+
+canned_message_edit:
+    path: /operator/canned-message/{message_id}/edit
+    defaults:
+        _controller: Mibew\Controller\CannedMessageController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        message_id: \d{1,10}
+    methods: [GET]
+
+canned_message_edit_save:
+    path: /operator/canned-message/{message_id}/edit
+    defaults:
+        _controller: Mibew\Controller\CannedMessageController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        message_id: \d{1,10}
+    methods: [POST]
+
+canned_messages:
+    path: /operator/canned-message
+    defaults:
+        _controller: Mibew\Controller\CannedMessageController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Groups
+group_add:
+    path: /operator/group/add
+    defaults:
+        _controller: Mibew\Controller\Group\SettingsController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+group_add_save:
+    path: /operator/group/add
+    defaults:
+        _controller: Mibew\Controller\Group\SettingsController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+group_delete:
+    path: /operator/group/{group_id}/delete
+    defaults:
+        _controller: Mibew\Controller\Group\ManagementController::deleteAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        group_id: \d{1,10}
+
+group_edit:
+    path: /operator/group/{group_id}/edit
+    defaults:
+        _controller: Mibew\Controller\Group\SettingsController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        group_id: \d{1,10}
+    methods: [GET]
+
+group_edit_save:
+    path: /operator/group/{group_id}/edit
+    defaults:
+        _controller: Mibew\Controller\Group\SettingsController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        group_id: \d{1,10}
+    methods: [POST]
+
+group_members:
+    path: /operator/group/{group_id}/members
+    defaults:
+        _controller: Mibew\Controller\Group\MembersController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        group_id: \d{1,10}
+    methods: [GET]
+
+group_members_save:
+    path: /operator/group/{group_id}/members
+    defaults:
+        _controller: Mibew\Controller\Group\MembersController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        group_id: \d{1,10}
+    methods: [POST]
+
+groups:
+    path: /operator/group
+    defaults:
+        _controller: Mibew\Controller\Group\ManagementController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## History
+history:
+    path: /operator/history
+    defaults:
+        _controller: Mibew\Controller\HistoryController::indexAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+history_thread:
+    path: /operator/history/thread/{thread_id}
+    defaults:
+        _controller: Mibew\Controller\HistoryController::threadAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        thread_id: \d{1,10}
+
+history_user:
+    path: /operator/history/user/{user_id}
+    defaults:
+        _controller: Mibew\Controller\HistoryController::userAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+    requirements:
+        user_id: .{0,63}
+
+history_user_track:
+    path: /operator/history/user-track
+    defaults:
+        _controller: Mibew\Controller\HistoryController::userTrackAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+## Home
+home:
+    path: /
+    defaults:
+        _controller: Mibew\Controller\HomeController::redirectAction
+
+home_operator:
+    path: /operator
+    defaults:
+        _controller: Mibew\Controller\HomeController::dashboardAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+## Invitations
+invite:
+    path: /operator/invite
+    defaults:
+        _controller: Mibew\Controller\InvitationController::inviteAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+## Locales
+locale_disable:
+    path: /operator/locale/{locale}/disable
+    defaults:
+        _controller: Mibew\Controller\Localization\LocaleController::disableAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        locale: "[a-z\\-]{2,5}"
+
+locale_edit:
+    path: /operator/locale/{locale}/edit
+    defaults:
+        _controller: Mibew\Controller\Localization\LocaleController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        locale: "[a-z\\-]{2,5}"
+    methods: [GET]
+
+locale_edit_save:
+    path: /operator/locale/{locale}/edit
+    defaults:
+        _controller: Mibew\Controller\Localization\LocaleController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        locale: "[a-z\\-]{2,5}"
+    methods: [POST]
+
+locale_enable:
+    path: /operator/locale/{locale}/enable
+    defaults:
+        _controller: Mibew\Controller\Localization\LocaleController::enableAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        locale: "[a-z\\-]{2,5}"
+
+locales:
+    path: /operator/locale
+    defaults:
+        _controller: Mibew\Controller\Localization\LocaleController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Log in
+login:
+    path: /operator/login
+    defaults:
+        _controller: Mibew\Controller\LoginController::showFormAction
+    methods: [GET]
+
+login_submit:
+    path: /operator/login
+    defaults:
+        _controller: Mibew\Controller\LoginController::submitFormAction
+    methods: [POST]
+
+## Log out
+logout:
+    path: /operator/logout
+    defaults:
+        _controller: Mibew\Controller\LogoutController::logoutAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+## Mail templates
+mail_template_edit:
+    path: /operator/mail-template/{name}/edit
+    defaults:
+        _controller: Mibew\Controller\MailTemplateController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+    requirements:
+        name: "[A-Za-z0-9_]+"
+
+mail_template_edit_save:
+    path: /operator/mail-template/{name}/edit
+    defaults:
+        _controller: Mibew\Controller\MailTemplateController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+    requirements:
+        name: "[A-Za-z0-9_]+"
+
+mail_templates:
+    path: /operator/mail-template
+    defaults:
+        _controller: Mibew\Controller\MailTemplateController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Operators
+operator_add:
+    path: /operator/operator/add
+    defaults:
+        _controller: Mibew\Controller\Operator\ProfileController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+operator_add_save:
+    path: /operator/operator/add
+    defaults:
+        _controller: Mibew\Controller\Operator\ProfileController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+operator_avatar:
+    path: /operator/operator/{operator_id}/avatar
+    defaults:
+        _controller: Mibew\Controller\Operator\AvatarController::showFormAction
+        _access_check: Mibew\AccessControl\Check\OperatorViewCheck
+    requirements:
+        operator_id: \d{1,10}
+    methods: [GET]
+
+operator_avatar_delete:
+    path: /operator/operator/{operator_id}/avatar/delete
+    defaults:
+        _controller: Mibew\Controller\Operator\AvatarController::deleteAction
+        _access_check: Mibew\AccessControl\Check\OperatorEditCheck
+    requirements:
+        operator_id: \d{1,10}
+
+operator_avatar_save:
+    path: /operator/operator/{operator_id}/avatar
+    defaults:
+        _controller: Mibew\Controller\Operator\AvatarController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\OperatorEditCheck
+    requirements:
+        operator_id: \d{1,10}
+    methods: [POST]
+
+operator_edit:
+    path: /operator/operator/{operator_id}/edit
+    defaults:
+        _controller: Mibew\Controller\Operator\ProfileController::showFormAction
+        _access_check: Mibew\AccessControl\Check\OperatorViewCheck
+    requirements:
+        operator_id: \d{1,10}
+    methods: [GET]
+
+operator_edit_save:
+    path: /operator/operator/{operator_id}/edit
+    defaults:
+        _controller: Mibew\Controller\Operator\ProfileController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\OperatorEditCheck
+    requirements:
+        operator_id: \d{1,10}
+    methods: [POST]
+
+operator_enable:
+    path: /operator/operator/{operator_id}/enable
+    defaults:
+        _controller: Mibew\Controller\Operator\ManagementController::enableAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        operator_id: \d{1,10}
+
+operator_delete:
+    path: /operator/operator/{operator_id}/delete
+    defaults:
+        _controller: Mibew\Controller\Operator\ManagementController::deleteAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        operator_id: \d{1,10}
+
+operator_disable:
+    path: /operator/operator/{operator_id}/disable
+    defaults:
+        _controller: Mibew\Controller\Operator\ManagementController::disableAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        operator_id: \d{1,10}
+
+operator_groups:
+    path: /operator/operator/{operator_id}/groups
+    defaults:
+        _controller: Mibew\Controller\Operator\GroupsController::showFormAction
+        _access_check: Mibew\AccessControl\Check\OperatorViewCheck
+    requirements:
+        operator_id: \d{1,10}
+    methods: [GET]
+
+operator_groups_save:
+    path: /operator/operator/{operator_id}/groups
+    defaults:
+        _controller: Mibew\Controller\Operator\GroupsController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        operator_id: \d{1,10}
+    methods: [POST]
+
+operator_permissions:
+    path: /operator/operator/{operator_id}/permissions
+    defaults:
+        _controller: Mibew\Controller\Operator\PermissionsController::showFormAction
+        _access_check: Mibew\AccessControl\Check\OperatorViewCheck
+    requirements:
+        operator_id: \d{1,10}
+    methods: [GET]
+
+operator_permissions_save:
+    path: /operator/operator/{operator_id}/permissions
+    defaults:
+        _controller: Mibew\Controller\Operator\PermissionsController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        operator_id: \d{1,10}
+    methods: [POST]
+
+operators:
+    path: /operator/operator
+    defaults:
+        _controller: Mibew\Controller\Operator\ManagementController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Password recovery
+password_recovery:
+    path: /operator/password-recovery
+    defaults:
+        _controller: Mibew\Controller\PasswordRecoveryController::indexAction
+
+password_recovery_reset:
+    path: /operator/password-recovery/reset
+    defaults:
+        _controller: Mibew\Controller\PasswordRecoveryController::resetAction
+
+## Plugins
+plugin_enable:
+    path: /operator/plugin/{plugin_name}/enable
+    defaults:
+        _controller: Mibew\Controller\PluginController::enableAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+plugin_disable:
+    path: /operator/plugin/{plugin_name}/disable
+    defaults:
+        _controller: Mibew\Controller\PluginController::disableAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+plugin_uninstall:
+    path: /operator/plugin/{plugin_name}/uninstall
+    defaults:
+        _controller: Mibew\Controller\PluginController::uninstallAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+plugin_update:
+    path: /operator/plugin/{plugin_name}/update
+    defaults:
+        _controller: Mibew\Controller\PluginController::updateAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+plugins:
+    path: /operator/plugin
+    defaults:
+        _controller: Mibew\Controller\PluginController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Settings
+settings_common:
+    path: /operator/settings
+    defaults:
+        _controller: Mibew\Controller\Settings\CommonController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+settings_common_save:
+    path: /operator/settings
+    defaults:
+        _controller: Mibew\Controller\Settings\CommonController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+settings_features:
+    path: /operator/settings/features
+    defaults:
+        _controller: Mibew\Controller\Settings\FeaturesController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+settings_features_save:
+    path: /operator/settings/features
+    defaults:
+        _controller: Mibew\Controller\Settings\FeaturesController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+settings_performance:
+    path: /operator/settings/performance
+    defaults:
+        _controller: Mibew\Controller\Settings\PerformanceController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+settings_performance_save:
+    path: /operator/settings/performance
+    defaults:
+        _controller: Mibew\Controller\Settings\PerformanceController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+## Statistics
+statistics:
+    path: /operator/statistics/{type}
+    defaults:
+        type: "by-date"
+        _controller: Mibew\Controller\StatisticsController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_VIEWSTATISTICS]
+    requirements:
+        type: by-date|by-operator|by-page
+
+## Styles
+style_preview:
+    path: /operator/style/{type}/preview
+    defaults:
+        _controller: Mibew\Controller\StyleController::previewAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        type: chat|invitation|page
+
+## Translation
+translation_edit:
+    path: /operator/translation/{string_id}/edit
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationController::showEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        string_id: "\\d{1,10}"
+    methods: [GET]
+
+translation_edit_save:
+    path: /operator/translation/{string_id}/edit
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationController::submitEditFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    requirements:
+        string_id: "\\d{1,10}"
+    methods: [POST]
+
+translation_export:
+    path: /operator/translation/export
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationExportController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+translation_export_process:
+    path: /operator/translation/export
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationExportController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+translation_import:
+    path: /operator/translation/import
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationImportController::showFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [GET]
+
+translation_import_process:
+    path: /operator/translation/import
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationImportController::submitFormAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+    methods: [POST]
+
+translations:
+    path: /operator/translation
+    defaults:
+        _controller: Mibew\Controller\Localization\TranslationController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Updates
+update:
+    path: /update
+    defaults:
+        _controller: Mibew\Controller\UpdateController::indexAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+update_run:
+    path: /update/run
+    defaults:
+        _controller: Mibew\Controller\UpdateController::runUpdateAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+update_check:
+    path: /update/check
+    defaults:
+        _controller: Mibew\Controller\UpdateController::checkUpdatesAction
+        _access_check: Mibew\AccessControl\Check\PermissionsCheck
+        _access_permissions: [CAN_ADMINISTRATE]
+
+## Users (visitors avaiting page)
+users:
+    path: /operator/users
+    defaults:
+        _controller: Mibew\Controller\UsersController::indexAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+users_update:
+    path: /operator/users/update
+    defaults:
+        _controller: Mibew\Controller\UsersController::updateAction
+        _access_check: Mibew\AccessControl\Check\LoggedInCheck
+
+# System routes and includes
+
+# The following route is a fake and is used only to load plugins routes. It can
+# have any unique name.
+_include_pluign_routes:
+    # Resource name has no meaning and can be any value.
+    resource: .
+    # The type actually indicates that plugins routes should be included.
+    type: plugin
+
+# Remove trailing slashes. This route is the last one because previous rotes can
+# (but definitely should not) have trailing slashes.
+remove_trailing_slash:
+    path: /{url}
+    defaults:
+        _controller: Mibew\Controller\RedirectController::removeTrailingSlashAction
+    requirements:
+        url: .*/$
+    methods: [GET]
