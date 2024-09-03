@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel public_mfr_facilities_register_report search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel public_mfr_facilities_register_chart search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,28 +166,25 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$status_value},"hidden":"{$item_hide_integrated_search_field2}"},
+			{"text":{$status_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
-			{"text":{$operationalstatus_value},"hidden":"{$item_hide_integrated_search_field3}"},
+			{"text":{$operationalstatus_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
-			{"text":{$facilitytype_value},"hidden":"{$item_hide_integrated_search_field4}"},
+			{"text":{$facilitytype_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
 				
 				
-			{"text":{$parentfacilitytype_value},"hidden":"{$item_hide_integrated_search_field5}"},
+			{"text":{$parentfacilitytype_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"text":{$region_value},"hidden":"{$item_hide_integrated_search_field6}"},
+			{"text":{$region_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$zone_value},"hidden":"{$item_hide_integrated_search_field7}"},
+			{"text":{$zone_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
-			{"text":{$woreda_value},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
-			{"text":{$count_value},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$woreda_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 		  ],
   "border": [ false, false, false, false ],

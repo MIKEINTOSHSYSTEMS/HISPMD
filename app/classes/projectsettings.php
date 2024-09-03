@@ -3688,6 +3688,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "hispmd_organisations" ] = "public.hispmd_organisations";
 	$projectEntities[ "public.hispmd_uggroups" ] = array( "url" => "hispmd_uggroups", "type" => 0 );
 	$projectEntitiesReverse[ "hispmd_uggroups" ] = "public.hispmd_uggroups";
+	$projectEntities[ "public.mfr_facilities_register_chart" ] = array( "url" => "public_mfr_facilities_register_chart", "type" => 3 );
+	$projectEntitiesReverse[ "public_mfr_facilities_register_chart" ] = "public.mfr_facilities_register_chart";
 }
 
 function findTable( $table ) {

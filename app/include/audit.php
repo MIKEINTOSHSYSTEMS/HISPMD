@@ -766,6 +766,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.mfr_facilities_register_chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1481,6 +1485,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.hispmd_uggroups")
+		{
+			return false;
+		}
+		if($table=="public.mfr_facilities_register_chart")
 		{
 			return false;
 		}

@@ -793,6 +793,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.mfr_facilities_register_chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1409,6 +1413,10 @@ function getCaptionTable($table)
 	if($table=="public.hispmd_uggroups")
 	{
 		return "Hispmd Uggroups";
+	}
+	if($table=="public.mfr_facilities_register_chart")
+	{
+		return "Mfr Facilities Register Chart";
 	}
 	return $table;
 }

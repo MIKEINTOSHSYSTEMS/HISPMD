@@ -167,6 +167,11 @@ class XTempl_Base
 				"chartName"=>"mfr_region_chart",
 				"table"=>"mfr_region_chart",
 				"ctype"=>"2DBar"));
+			$this->assign_function("public_mfr_facilities_register_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"public_mfr_facilities_register_chart",
+				"table"=>"public.mfr_facilities_register_chart",
+				"ctype"=>"2DColumn"));
 		}
 
 

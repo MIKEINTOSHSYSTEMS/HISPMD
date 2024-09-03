@@ -100,13 +100,34 @@ pdfDocument = {
 			bold: true
 		},
 		/* new style styles */
-		header_parentfacilitytype: {
+		header_operationalstatus: {
 			fillColor: '#fffacd',
 			fontSize: 15,
 			bold: true
 		},
-		group_parentfacilitytype: {
+		group_operationalstatus: {
 			fillColor: '#fffacd'
+		},
+
+			group_5: {
+			fillColor: '#7fffd4'
+		},
+		nbgroup_5: {
+			fillColor: '#7fffd4'
+		},
+		header_5: {
+			fillColor: '#7fffd4',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_parentfacilitytype: {
+			fillColor: '#7fffd4',
+			fontSize: 15,
+			bold: true
+		},
+		group_parentfacilitytype: {
+			fillColor: '#7fffd4'
 		},
 
 		
@@ -169,18 +190,13 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 11,
+							colSpan: 6,
 							border:[false, false,false,false],
 							stack: [
 
@@ -310,7 +326,7 @@ pdfDocument = {
 
 																[
 	{
-		colSpan: 11,
+		colSpan: 6,
 		border: [ false, false, false, false ],
 		stack: [
 			{

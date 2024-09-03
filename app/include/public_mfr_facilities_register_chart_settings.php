@@ -1,205 +1,196 @@
 <?php
-$tdatapublic_mfr_facilities_register_report = array();
-$tdatapublic_mfr_facilities_register_report[".searchableFields"] = array();
-$tdatapublic_mfr_facilities_register_report[".ShortName"] = "public_mfr_facilities_register_report";
-$tdatapublic_mfr_facilities_register_report[".OwnerID"] = "";
-$tdatapublic_mfr_facilities_register_report[".OriginalTable"] = "public.mfr_facilities_register";
+$tdatapublic_mfr_facilities_register_chart = array();
+$tdatapublic_mfr_facilities_register_chart[".searchableFields"] = array();
+$tdatapublic_mfr_facilities_register_chart[".ShortName"] = "public_mfr_facilities_register_chart";
+$tdatapublic_mfr_facilities_register_chart[".OwnerID"] = "";
+$tdatapublic_mfr_facilities_register_chart[".OriginalTable"] = "public.mfr_facilities_register";
 
 
-$tdatapublic_mfr_facilities_register_report[".pagesByType"] = my_json_decode( "{\"report\":[\"report\"],\"rprint\":[\"rprint\"],\"search\":[\"search\"]}" );
-$tdatapublic_mfr_facilities_register_report[".originalPagesByType"] = $tdatapublic_mfr_facilities_register_report[".pagesByType"];
-$tdatapublic_mfr_facilities_register_report[".pages"] = types2pages( my_json_decode( "{\"report\":[\"report\"],\"rprint\":[\"rprint\"],\"search\":[\"search\"]}" ) );
-$tdatapublic_mfr_facilities_register_report[".originalPages"] = $tdatapublic_mfr_facilities_register_report[".pages"];
-$tdatapublic_mfr_facilities_register_report[".defaultPages"] = my_json_decode( "{\"report\":\"report\",\"rprint\":\"rprint\",\"search\":\"search\"}" );
-$tdatapublic_mfr_facilities_register_report[".originalDefaultPages"] = $tdatapublic_mfr_facilities_register_report[".defaultPages"];
+$tdatapublic_mfr_facilities_register_chart[".pagesByType"] = my_json_decode( "{\"chart\":[\"chart\"],\"search\":[\"search\"]}" );
+$tdatapublic_mfr_facilities_register_chart[".originalPagesByType"] = $tdatapublic_mfr_facilities_register_chart[".pagesByType"];
+$tdatapublic_mfr_facilities_register_chart[".pages"] = types2pages( my_json_decode( "{\"chart\":[\"chart\"],\"search\":[\"search\"]}" ) );
+$tdatapublic_mfr_facilities_register_chart[".originalPages"] = $tdatapublic_mfr_facilities_register_chart[".pages"];
+$tdatapublic_mfr_facilities_register_chart[".defaultPages"] = my_json_decode( "{\"chart\":\"chart\",\"search\":\"search\"}" );
+$tdatapublic_mfr_facilities_register_chart[".originalDefaultPages"] = $tdatapublic_mfr_facilities_register_chart[".defaultPages"];
 
 //	field labels
-$fieldLabelspublic_mfr_facilities_register_report = array();
-$fieldToolTipspublic_mfr_facilities_register_report = array();
-$pageTitlespublic_mfr_facilities_register_report = array();
-$placeHolderspublic_mfr_facilities_register_report = array();
+$fieldLabelspublic_mfr_facilities_register_chart = array();
+$fieldToolTipspublic_mfr_facilities_register_chart = array();
+$pageTitlespublic_mfr_facilities_register_chart = array();
+$placeHolderspublic_mfr_facilities_register_chart = array();
 
 if(mlang_getcurrentlang()=="English")
 {
-	$fieldLabelspublic_mfr_facilities_register_report["English"] = array();
-	$fieldToolTipspublic_mfr_facilities_register_report["English"] = array();
-	$placeHolderspublic_mfr_facilities_register_report["English"] = array();
-	$pageTitlespublic_mfr_facilities_register_report["English"] = array();
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["status"] = "Status";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["status"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["status"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["operationalstatus"] = "Operationalstatus";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["operationalstatus"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["operationalstatus"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["facilitytype"] = "Facilitytype";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["facilitytype"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["facilitytype"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["parentfacilitytype"] = "Parentfacilitytype";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["parentfacilitytype"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["parentfacilitytype"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["region"] = "Region";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["region"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["region"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["zone"] = "Zone";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["zone"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["zone"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["woreda"] = "Woreda";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["woreda"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["woreda"] = "";
-	$fieldLabelspublic_mfr_facilities_register_report["English"]["count"] = "Count";
-	$fieldToolTipspublic_mfr_facilities_register_report["English"]["count"] = "";
-	$placeHolderspublic_mfr_facilities_register_report["English"]["count"] = "";
-	if (count($fieldToolTipspublic_mfr_facilities_register_report["English"]))
-		$tdatapublic_mfr_facilities_register_report[".isUseToolTips"] = true;
+	$fieldLabelspublic_mfr_facilities_register_chart["English"] = array();
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"] = array();
+	$placeHolderspublic_mfr_facilities_register_chart["English"] = array();
+	$pageTitlespublic_mfr_facilities_register_chart["English"] = array();
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["status"] = "Status";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["status"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["status"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["operationalstatus"] = "Operationalstatus";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["operationalstatus"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["operationalstatus"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["facilitytype"] = "Facilitytype";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["facilitytype"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["facilitytype"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["parentfacilitytype"] = "Parentfacilitytype";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["parentfacilitytype"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["parentfacilitytype"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["region"] = "Region";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["region"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["region"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["zone"] = "Zone";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["zone"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["zone"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["woreda"] = "Woreda";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["woreda"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["woreda"] = "";
+	$fieldLabelspublic_mfr_facilities_register_chart["English"]["COUNT___"] = "COUNT(*)";
+	$fieldToolTipspublic_mfr_facilities_register_chart["English"]["COUNT___"] = "";
+	$placeHolderspublic_mfr_facilities_register_chart["English"]["COUNT___"] = "";
+	if (count($fieldToolTipspublic_mfr_facilities_register_chart["English"]))
+		$tdatapublic_mfr_facilities_register_chart[".isUseToolTips"] = true;
 }
 
 
-	$tdatapublic_mfr_facilities_register_report[".NCSearch"] = true;
+	$tdatapublic_mfr_facilities_register_chart[".NCSearch"] = true;
+
+	$tdatapublic_mfr_facilities_register_chart[".ChartRefreshTime"] = 0;
 
 
+$tdatapublic_mfr_facilities_register_chart[".shortTableName"] = "public_mfr_facilities_register_chart";
+$tdatapublic_mfr_facilities_register_chart[".nSecOptions"] = 0;
 
-$tdatapublic_mfr_facilities_register_report[".shortTableName"] = "public_mfr_facilities_register_report";
-$tdatapublic_mfr_facilities_register_report[".nSecOptions"] = 0;
-
-$tdatapublic_mfr_facilities_register_report[".mainTableOwnerID"] = "";
-$tdatapublic_mfr_facilities_register_report[".entityType"] = 2;
-$tdatapublic_mfr_facilities_register_report[".connId"] = "hispmdathispmdmerqconsultancyo";
+$tdatapublic_mfr_facilities_register_chart[".mainTableOwnerID"] = "";
+$tdatapublic_mfr_facilities_register_chart[".entityType"] = 3;
+$tdatapublic_mfr_facilities_register_chart[".connId"] = "hispmdathispmdmerqconsultancyo";
 
 
-$tdatapublic_mfr_facilities_register_report[".strOriginalTableName"] = "public.mfr_facilities_register";
+$tdatapublic_mfr_facilities_register_chart[".strOriginalTableName"] = "public.mfr_facilities_register";
 
 	
 
 
 
-$tdatapublic_mfr_facilities_register_report[".showAddInPopup"] = false;
+$tdatapublic_mfr_facilities_register_chart[".showAddInPopup"] = false;
 
-$tdatapublic_mfr_facilities_register_report[".showEditInPopup"] = false;
+$tdatapublic_mfr_facilities_register_chart[".showEditInPopup"] = false;
 
-$tdatapublic_mfr_facilities_register_report[".showViewInPopup"] = false;
+$tdatapublic_mfr_facilities_register_chart[".showViewInPopup"] = false;
 
-$tdatapublic_mfr_facilities_register_report[".listAjax"] = false;
+$tdatapublic_mfr_facilities_register_chart[".listAjax"] = false;
 //	temporary
-//$tdatapublic_mfr_facilities_register_report[".listAjax"] = false;
+//$tdatapublic_mfr_facilities_register_chart[".listAjax"] = false;
 
-	$tdatapublic_mfr_facilities_register_report[".audit"] = false;
+	$tdatapublic_mfr_facilities_register_chart[".audit"] = false;
 
-	$tdatapublic_mfr_facilities_register_report[".locking"] = false;
+	$tdatapublic_mfr_facilities_register_chart[".locking"] = false;
 
 
-$pages = $tdatapublic_mfr_facilities_register_report[".defaultPages"];
+$pages = $tdatapublic_mfr_facilities_register_chart[".defaultPages"];
 
 if( $pages[PAGE_EDIT] ) {
-	$tdatapublic_mfr_facilities_register_report[".edit"] = true;
-	$tdatapublic_mfr_facilities_register_report[".afterEditAction"] = 1;
-	$tdatapublic_mfr_facilities_register_report[".closePopupAfterEdit"] = 1;
-	$tdatapublic_mfr_facilities_register_report[".afterEditActionDetTable"] = "";
+	$tdatapublic_mfr_facilities_register_chart[".edit"] = true;
+	$tdatapublic_mfr_facilities_register_chart[".afterEditAction"] = 1;
+	$tdatapublic_mfr_facilities_register_chart[".closePopupAfterEdit"] = 1;
+	$tdatapublic_mfr_facilities_register_chart[".afterEditActionDetTable"] = "";
 }
 
 if( $pages[PAGE_ADD] ) {
-$tdatapublic_mfr_facilities_register_report[".add"] = true;
-$tdatapublic_mfr_facilities_register_report[".afterAddAction"] = 1;
-$tdatapublic_mfr_facilities_register_report[".closePopupAfterAdd"] = 1;
-$tdatapublic_mfr_facilities_register_report[".afterAddActionDetTable"] = "";
+$tdatapublic_mfr_facilities_register_chart[".add"] = true;
+$tdatapublic_mfr_facilities_register_chart[".afterAddAction"] = 1;
+$tdatapublic_mfr_facilities_register_chart[".closePopupAfterAdd"] = 1;
+$tdatapublic_mfr_facilities_register_chart[".afterAddActionDetTable"] = "";
 }
 
 if( $pages[PAGE_LIST] ) {
-	$tdatapublic_mfr_facilities_register_report[".list"] = true;
+	$tdatapublic_mfr_facilities_register_chart[".list"] = true;
 }
 
 
 
-$tdatapublic_mfr_facilities_register_report[".strSortControlSettingsJSON"] = "";
+$tdatapublic_mfr_facilities_register_chart[".strSortControlSettingsJSON"] = "";
 
 
 
 
 if( $pages[PAGE_VIEW] ) {
-$tdatapublic_mfr_facilities_register_report[".view"] = true;
+$tdatapublic_mfr_facilities_register_chart[".view"] = true;
 }
 
 if( $pages[PAGE_IMPORT] ) {
-$tdatapublic_mfr_facilities_register_report[".import"] = true;
+$tdatapublic_mfr_facilities_register_chart[".import"] = true;
 }
 
 if( $pages[PAGE_EXPORT] ) {
-$tdatapublic_mfr_facilities_register_report[".exportTo"] = true;
+$tdatapublic_mfr_facilities_register_chart[".exportTo"] = true;
 }
 
 if( $pages[PAGE_PRINT] ) {
-$tdatapublic_mfr_facilities_register_report[".printFriendly"] = true;
+$tdatapublic_mfr_facilities_register_chart[".printFriendly"] = true;
 }
 
 
 
-$tdatapublic_mfr_facilities_register_report[".showSimpleSearchOptions"] = true; // temp fix #13449
+$tdatapublic_mfr_facilities_register_chart[".showSimpleSearchOptions"] = true; // temp fix #13449
 
 // Allow Show/Hide Fields in GRID
-$tdatapublic_mfr_facilities_register_report[".allowShowHideFields"] = true; // temp fix #13449
+$tdatapublic_mfr_facilities_register_chart[".allowShowHideFields"] = true; // temp fix #13449
 //
 
 // Allow Fields Reordering in GRID
-$tdatapublic_mfr_facilities_register_report[".allowFieldsReordering"] = true; // temp fix #13449
+$tdatapublic_mfr_facilities_register_chart[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatapublic_mfr_facilities_register_report[".isUseAjaxSuggest"] = true;
+$tdatapublic_mfr_facilities_register_chart[".isUseAjaxSuggest"] = true;
 
 
 
 
 
-$tdatapublic_mfr_facilities_register_report[".ajaxCodeSnippetAdded"] = false;
+$tdatapublic_mfr_facilities_register_chart[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapublic_mfr_facilities_register_report[".buttonsAdded"] = false;
+$tdatapublic_mfr_facilities_register_chart[".buttonsAdded"] = false;
 
-$tdatapublic_mfr_facilities_register_report[".addPageEvents"] = false;
+$tdatapublic_mfr_facilities_register_chart[".addPageEvents"] = false;
 
 // use timepicker for search panel
-$tdatapublic_mfr_facilities_register_report[".isUseTimeForSearch"] = false;
+$tdatapublic_mfr_facilities_register_chart[".isUseTimeForSearch"] = false;
 
 
-$tdatapublic_mfr_facilities_register_report[".badgeColor"] = "CD853F";
+$tdatapublic_mfr_facilities_register_chart[".badgeColor"] = "00C2C5";
 
 
-$tdatapublic_mfr_facilities_register_report[".allSearchFields"] = array();
-$tdatapublic_mfr_facilities_register_report[".filterFields"] = array();
-$tdatapublic_mfr_facilities_register_report[".requiredSearchFields"] = array();
+$tdatapublic_mfr_facilities_register_chart[".allSearchFields"] = array();
+$tdatapublic_mfr_facilities_register_chart[".filterFields"] = array();
+$tdatapublic_mfr_facilities_register_chart[".requiredSearchFields"] = array();
 
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"] = array();
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "status";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "operationalstatus";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "facilitytype";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "parentfacilitytype";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "region";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "zone";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "woreda";
-$tdatapublic_mfr_facilities_register_report[".googleLikeFields"][] = "count";
-
-
-
-$tdatapublic_mfr_facilities_register_report[".tableType"] = "report";
-
-$tdatapublic_mfr_facilities_register_report[".printerPageOrientation"] = 0;
-$tdatapublic_mfr_facilities_register_report[".nPrinterPageScale"] = 100;
-
-$tdatapublic_mfr_facilities_register_report[".nPrinterSplitRecords"] = 40;
-
-$tdatapublic_mfr_facilities_register_report[".geocodingEnabled"] = false;
-
-//report settings
-
-$tdatapublic_mfr_facilities_register_report[".reportPrintGroupsPerPage"] = 5;
-$tdatapublic_mfr_facilities_register_report[".reportPrintRecordsPerPage"] = 40;
-
-$tdatapublic_mfr_facilities_register_report[".pageSizeGroups"] = 5;
-$tdatapublic_mfr_facilities_register_report[".pageSizeRecords"] = 20;
-
-
-//end of report settings
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"] = array();
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "status";
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "operationalstatus";
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "facilitytype";
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "parentfacilitytype";
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "region";
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "zone";
+$tdatapublic_mfr_facilities_register_chart[".googleLikeFields"][] = "woreda";
 
 
 
-$tdatapublic_mfr_facilities_register_report[".isDisplayLoading"] = true;
+$tdatapublic_mfr_facilities_register_chart[".tableType"] = "chart";
+
+$tdatapublic_mfr_facilities_register_chart[".printerPageOrientation"] = 0;
+$tdatapublic_mfr_facilities_register_chart[".nPrinterPageScale"] = 100;
+
+$tdatapublic_mfr_facilities_register_chart[".nPrinterSplitRecords"] = 40;
+
+$tdatapublic_mfr_facilities_register_chart[".geocodingEnabled"] = false;
+
+
+
+// chart settings
+$tdatapublic_mfr_facilities_register_chart[".chartType"] = "2DColumn";
+// end of chart settings
 
 
 
@@ -207,30 +198,17 @@ $tdatapublic_mfr_facilities_register_report[".isDisplayLoading"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY status, operationalstatus, facilitytype, parentfacilitytype, region, \"zone\", woreda";
-$tdatapublic_mfr_facilities_register_report[".strOrderBy"] = $tstrOrderBy;
 
-$tdatapublic_mfr_facilities_register_report[".orderindexes"] = array();
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(1, (1 ? "ASC" : "DESC"), "status");
+$tstrOrderBy = "";
+$tdatapublic_mfr_facilities_register_chart[".strOrderBy"] = $tstrOrderBy;
 
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "operationalstatus");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "facilitytype");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "parentfacilitytype");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(5, (1 ? "ASC" : "DESC"), "region");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(6, (1 ? "ASC" : "DESC"), "\"zone\"");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(7, (1 ? "ASC" : "DESC"), "woreda");
+$tdatapublic_mfr_facilities_register_chart[".orderindexes"] = array();
 
 
-
-$tdatapublic_mfr_facilities_register_report[".sqlHead"] = "SELECT status AS status,  operationalstatus AS operationalstatus,  facilitytype AS facilitytype,  parentfacilitytype AS parentfacilitytype,  region AS region,  \"zone\" AS \"zone\",  woreda AS woreda,  COUNT(*)";
-$tdatapublic_mfr_facilities_register_report[".sqlFrom"] = "FROM \"public\".mfr_facilities_register";
-$tdatapublic_mfr_facilities_register_report[".sqlWhereExpr"] = "";
-$tdatapublic_mfr_facilities_register_report[".sqlTail"] = "";
+$tdatapublic_mfr_facilities_register_chart[".sqlHead"] = "SELECT status AS status,  operationalstatus AS operationalstatus,  facilitytype AS facilitytype,  parentfacilitytype AS parentfacilitytype,  region AS region,  \"zone\" AS \"zone\",  woreda AS woreda,  COUNT(*) AS \"COUNT(*)\"";
+$tdatapublic_mfr_facilities_register_chart[".sqlFrom"] = "FROM \"public\".mfr_facilities_register";
+$tdatapublic_mfr_facilities_register_chart[".sqlWhereExpr"] = "";
+$tdatapublic_mfr_facilities_register_chart[".sqlTail"] = "";
 
 
 
@@ -250,7 +228,7 @@ $arrRPP[] = 50;
 $arrRPP[] = 100;
 $arrRPP[] = 500;
 $arrRPP[] = -1;
-$tdatapublic_mfr_facilities_register_report[".arrRecsPerPage"] = $arrRPP;
+$tdatapublic_mfr_facilities_register_chart[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields
 $arrGPP = array();
@@ -261,15 +239,15 @@ $arrGPP[] = 10;
 $arrGPP[] = 50;
 $arrGPP[] = 100;
 $arrGPP[] = -1;
-$tdatapublic_mfr_facilities_register_report[".arrGroupsPerPage"] = $arrGPP;
+$tdatapublic_mfr_facilities_register_chart[".arrGroupsPerPage"] = $arrGPP;
 
-$tdatapublic_mfr_facilities_register_report[".highlightSearchResults"] = true;
+$tdatapublic_mfr_facilities_register_chart[".highlightSearchResults"] = true;
 
-$tableKeyspublic_mfr_facilities_register_report = array();
-$tdatapublic_mfr_facilities_register_report[".Keys"] = $tableKeyspublic_mfr_facilities_register_report;
+$tableKeyspublic_mfr_facilities_register_chart = array();
+$tdatapublic_mfr_facilities_register_chart[".Keys"] = $tableKeyspublic_mfr_facilities_register_chart;
 
 
-$tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
+$tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 
 
@@ -281,7 +259,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "status";
 	$fdata["GoodName"] = "status";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","status");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","status");
 	$fdata["FieldType"] = 201;
 
 
@@ -325,7 +303,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -412,8 +390,8 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["status"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "status";
+	$tdatapublic_mfr_facilities_register_chart["status"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "status";
 //	operationalstatus
 //	Custom field settings
 	$fdata = array();
@@ -421,7 +399,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "operationalstatus";
 	$fdata["GoodName"] = "operationalstatus";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","operationalstatus");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","operationalstatus");
 	$fdata["FieldType"] = 201;
 
 
@@ -465,7 +443,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -552,8 +530,8 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["operationalstatus"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "operationalstatus";
+	$tdatapublic_mfr_facilities_register_chart["operationalstatus"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "operationalstatus";
 //	facilitytype
 //	Custom field settings
 	$fdata = array();
@@ -561,7 +539,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "facilitytype";
 	$fdata["GoodName"] = "facilitytype";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","facilitytype");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","facilitytype");
 	$fdata["FieldType"] = 201;
 
 
@@ -605,7 +583,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -692,8 +670,8 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["facilitytype"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "facilitytype";
+	$tdatapublic_mfr_facilities_register_chart["facilitytype"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "facilitytype";
 //	parentfacilitytype
 //	Custom field settings
 	$fdata = array();
@@ -701,7 +679,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "parentfacilitytype";
 	$fdata["GoodName"] = "parentfacilitytype";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","parentfacilitytype");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","parentfacilitytype");
 	$fdata["FieldType"] = 201;
 
 
@@ -745,7 +723,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -832,8 +810,8 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["parentfacilitytype"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "parentfacilitytype";
+	$tdatapublic_mfr_facilities_register_chart["parentfacilitytype"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "parentfacilitytype";
 //	region
 //	Custom field settings
 	$fdata = array();
@@ -841,7 +819,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "region";
 	$fdata["GoodName"] = "region";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","region");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","region");
 	$fdata["FieldType"] = 201;
 
 
@@ -885,7 +863,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -972,8 +950,8 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["region"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "region";
+	$tdatapublic_mfr_facilities_register_chart["region"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "region";
 //	zone
 //	Custom field settings
 	$fdata = array();
@@ -981,7 +959,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "zone";
 	$fdata["GoodName"] = "zone";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","zone");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","zone");
 	$fdata["FieldType"] = 201;
 
 
@@ -1025,7 +1003,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -1112,8 +1090,8 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["zone"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "zone";
+	$tdatapublic_mfr_facilities_register_chart["zone"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "zone";
 //	woreda
 //	Custom field settings
 	$fdata = array();
@@ -1121,7 +1099,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	$fdata["strName"] = "woreda";
 	$fdata["GoodName"] = "woreda";
 	$fdata["ownerTable"] = "public.mfr_facilities_register";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","woreda");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","woreda");
 	$fdata["FieldType"] = 201;
 
 
@@ -1165,7 +1143,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -1252,16 +1230,16 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["woreda"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "woreda";
-//	count
+	$tdatapublic_mfr_facilities_register_chart["woreda"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "woreda";
+//	COUNT(*)
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 8;
-	$fdata["strName"] = "count";
-	$fdata["GoodName"] = "count";
+	$fdata["strName"] = "COUNT(*)";
+	$fdata["GoodName"] = "COUNT___";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_report","count");
+	$fdata["Label"] = GetFieldLabel("public_mfr_facilities_register_chart","COUNT___");
 	$fdata["FieldType"] = 20;
 
 
@@ -1269,7 +1247,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "count";
+		$fdata["strField"] = "COUNT(*)";
 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1304,7 +1282,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["report"] = $vdata;
+	$fdata["ViewFormats"]["chart"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -1391,29 +1369,127 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapublic_mfr_facilities_register_report["count"] = $fdata;
-		$tdatapublic_mfr_facilities_register_report[".searchableFields"][] = "count";
+	$tdatapublic_mfr_facilities_register_chart["COUNT(*)"] = $fdata;
+		$tdatapublic_mfr_facilities_register_chart[".searchableFields"][] = "COUNT(*)";
+
+$tdatapublic_mfr_facilities_register_chart[".groupChart"] = true;
+$tdatapublic_mfr_facilities_register_chart[".chartLabelInterval"] = 0;
+$tdatapublic_mfr_facilities_register_chart[".chartLabelField"] = "region";
+$tdatapublic_mfr_facilities_register_chart[".chartSeries"] = array();
+$tdatapublic_mfr_facilities_register_chart[".chartSeries"][] = array(
+	"field" => "COUNT(*)",
+	"total" => "SUM"
+);
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] = '<chart>
+		<attr value="tables">
+			<attr value="0">public.mfr_facilities_register_chart</attr>
+		</attr>
+		<attr value="chart_type">
+			<attr value="type">2d_column</attr>
+		</attr>
+
+		<attr value="parameters">';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="0">
+			<attr value="name">COUNT(*)</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="1">
+		<attr value="name">region</attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '</attr>
+			<attr value="appearance">';
 
 
-$tables_data["public.mfr_facilities_register_report"]=&$tdatapublic_mfr_facilities_register_report;
-$field_labels["public_mfr_facilities_register_report"] = &$fieldLabelspublic_mfr_facilities_register_report;
-$fieldToolTips["public_mfr_facilities_register_report"] = &$fieldToolTipspublic_mfr_facilities_register_report;
-$placeHolders["public_mfr_facilities_register_report"] = &$placeHolderspublic_mfr_facilities_register_report;
-$page_titles["public_mfr_facilities_register_report"] = &$pageTitlespublic_mfr_facilities_register_report;
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="head">'.xmlencode("MFR Facilities By Region").'</attr>
+<attr value="foot">'.xmlencode("Regions").'</attr>
+<attr value="y_axis_label">'.xmlencode("id").'</attr>
 
 
-changeTextControlsToDate( "public.mfr_facilities_register_report" );
+<attr value="slegend">true</attr>
+<attr value="sgrid">false</attr>
+<attr value="sname">true</attr>
+<attr value="sval">true</attr>
+<attr value="sanim">true</attr>
+<attr value="sstacked">false</attr>
+<attr value="slog">false</attr>
+<attr value="aqua">0</attr>
+<attr value="cview">0</attr>
+<attr value="is3d">1</attr>
+<attr value="isstacked">1</attr>
+<attr value="linestyle">0</attr>
+<attr value="autoupdate">0</attr>
+<attr value="autoupmin">60</attr>';
+$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '</attr>
+
+<attr value="fields">';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="0">
+		<attr value="name">status</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","status")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="1">
+		<attr value="name">operationalstatus</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","operationalstatus")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="2">
+		<attr value="name">facilitytype</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","facilitytype")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="3">
+		<attr value="name">parentfacilitytype</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","parentfacilitytype")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="4">
+		<attr value="name">region</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","region")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="5">
+		<attr value="name">zone</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","zone")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="6">
+		<attr value="name">woreda</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","woreda")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '<attr value="7">
+		<attr value="name">COUNT(*)</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("public_mfr_facilities_register_chart","COUNT___")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+$tdatapublic_mfr_facilities_register_chart[".chartXml"] .= '</attr>
+
+
+<attr value="settings">
+<attr value="name">public.mfr_facilities_register_chart</attr>
+<attr value="short_table_name">public_mfr_facilities_register_chart</attr>
+</attr>
+
+</chart>';
+
+$tables_data["public.mfr_facilities_register_chart"]=&$tdatapublic_mfr_facilities_register_chart;
+$field_labels["public_mfr_facilities_register_chart"] = &$fieldLabelspublic_mfr_facilities_register_chart;
+$fieldToolTips["public_mfr_facilities_register_chart"] = &$fieldToolTipspublic_mfr_facilities_register_chart;
+$placeHolders["public_mfr_facilities_register_chart"] = &$placeHolderspublic_mfr_facilities_register_chart;
+$page_titles["public_mfr_facilities_register_chart"] = &$pageTitlespublic_mfr_facilities_register_chart;
+
+
+changeTextControlsToDate( "public.mfr_facilities_register_chart" );
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 
 //if !@TABLE.bReportCrossTab
 
-$detailsTablesData["public.mfr_facilities_register_report"] = array();
+$detailsTablesData["public.mfr_facilities_register_chart"] = array();
 //endif
 
 // tables which are master tables for current table (detail)
-$masterTablesData["public.mfr_facilities_register_report"] = array();
+$masterTablesData["public.mfr_facilities_register_chart"] = array();
 
 
 
@@ -1433,14 +1509,14 @@ require_once(getabspath("classes/sql.php"));
 
 
 
-function createSqlQuery_public_mfr_facilities_register_report()
+function createSqlQuery_public_mfr_facilities_register_chart()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "status AS status,  operationalstatus AS operationalstatus,  facilitytype AS facilitytype,  parentfacilitytype AS parentfacilitytype,  region AS region,  \"zone\" AS \"zone\",  woreda AS woreda,  COUNT(*)";
+$proto0["m_strFieldList"] = "status AS status,  operationalstatus AS operationalstatus,  facilitytype AS facilitytype,  parentfacilitytype AS parentfacilitytype,  region AS region,  \"zone\" AS \"zone\",  woreda AS woreda,  COUNT(*) AS \"COUNT(*)\"";
 $proto0["m_strFrom"] = "FROM \"public\".mfr_facilities_register";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY status, operationalstatus, facilitytype, parentfacilitytype, region, \"zone\", woreda";
+$proto0["m_strOrderBy"] = "";
 	
 																												;
 			$proto0["cipherer"] = null;
@@ -1481,11 +1557,11 @@ $proto0["m_fieldlist"] = array();
 			$obj = new SQLField(array(
 	"m_strName" => "status",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto6["m_sql"] = "status";
-$proto6["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto6["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "status";
 $obj = new SQLFieldListItem($proto6);
@@ -1495,11 +1571,11 @@ $proto0["m_fieldlist"][]=$obj;
 			$obj = new SQLField(array(
 	"m_strName" => "operationalstatus",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto8["m_sql"] = "operationalstatus";
-$proto8["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto8["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "operationalstatus";
 $obj = new SQLFieldListItem($proto8);
@@ -1509,11 +1585,11 @@ $proto0["m_fieldlist"][]=$obj;
 			$obj = new SQLField(array(
 	"m_strName" => "facilitytype",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto10["m_sql"] = "facilitytype";
-$proto10["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto10["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "facilitytype";
 $obj = new SQLFieldListItem($proto10);
@@ -1523,11 +1599,11 @@ $proto0["m_fieldlist"][]=$obj;
 			$obj = new SQLField(array(
 	"m_strName" => "parentfacilitytype",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto12["m_sql"] = "parentfacilitytype";
-$proto12["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto12["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "parentfacilitytype";
 $obj = new SQLFieldListItem($proto12);
@@ -1537,11 +1613,11 @@ $proto0["m_fieldlist"][]=$obj;
 			$obj = new SQLField(array(
 	"m_strName" => "region",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto14["m_sql"] = "region";
-$proto14["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto14["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "region";
 $obj = new SQLFieldListItem($proto14);
@@ -1551,11 +1627,11 @@ $proto0["m_fieldlist"][]=$obj;
 			$obj = new SQLField(array(
 	"m_strName" => "zone",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto16["m_sql"] = "\"zone\"";
-$proto16["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto16["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "zone";
 $obj = new SQLFieldListItem($proto16);
@@ -1565,11 +1641,11 @@ $proto0["m_fieldlist"][]=$obj;
 			$obj = new SQLField(array(
 	"m_strName" => "woreda",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto18["m_sql"] = "woreda";
-$proto18["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto18["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "woreda";
 $obj = new SQLFieldListItem($proto18);
@@ -1588,9 +1664,9 @@ $proto21["m_strFunctionName"] = "COUNT";
 $obj = new SQLFunctionCall($proto21);
 
 $proto20["m_sql"] = "COUNT(*)";
-$proto20["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto20["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto20["m_expr"]=$obj;
-$proto20["m_alias"] = "";
+$proto20["m_alias"] = "COUNT(*)";
 $obj = new SQLFieldListItem($proto20);
 
 $proto0["m_fieldlist"][]=$obj;
@@ -1599,7 +1675,7 @@ $proto0["m_fromlist"] = array();
 $proto23["m_link"] = "SQLL_MAIN";
 			$proto24=array();
 $proto24["m_strName"] = "public.mfr_facilities_register";
-$proto24["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto24["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto24["m_columns"] = array();
 $proto24["m_columns"][] = "id";
 $proto24["m_columns"][] = "name";
@@ -1615,7 +1691,7 @@ $obj = new SQLTable($proto24);
 $proto23["m_table"] = $obj;
 $proto23["m_sql"] = "\"public\".mfr_facilities_register";
 $proto23["m_alias"] = "";
-$proto23["m_srcTableName"] = "public.mfr_facilities_register_report";
+$proto23["m_srcTableName"] = "public.mfr_facilities_register_chart";
 $proto25=array();
 $proto25["m_sql"] = "";
 $proto25["m_uniontype"] = "SQLL_UNKNOWN";
@@ -1640,7 +1716,7 @@ $proto0["m_groupby"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "status",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto27["m_column"]=$obj;
@@ -1651,7 +1727,7 @@ $proto0["m_groupby"][]=$obj;
 						$obj = new SQLField(array(
 	"m_strName" => "operationalstatus",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto29["m_column"]=$obj;
@@ -1662,7 +1738,7 @@ $proto0["m_groupby"][]=$obj;
 						$obj = new SQLField(array(
 	"m_strName" => "facilitytype",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto31["m_column"]=$obj;
@@ -1673,7 +1749,7 @@ $proto0["m_groupby"][]=$obj;
 						$obj = new SQLField(array(
 	"m_strName" => "parentfacilitytype",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto33["m_column"]=$obj;
@@ -1684,7 +1760,7 @@ $proto0["m_groupby"][]=$obj;
 						$obj = new SQLField(array(
 	"m_strName" => "region",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto35["m_column"]=$obj;
@@ -1695,7 +1771,7 @@ $proto0["m_groupby"][]=$obj;
 						$obj = new SQLField(array(
 	"m_strName" => "zone",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto37["m_column"]=$obj;
@@ -1706,7 +1782,7 @@ $proto0["m_groupby"][]=$obj;
 						$obj = new SQLField(array(
 	"m_strName" => "woreda",
 	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
+	"m_srcTableName" => "public.mfr_facilities_register_chart"
 ));
 
 $proto39["m_column"]=$obj;
@@ -1714,103 +1790,12 @@ $obj = new SQLGroupByItem($proto39);
 
 $proto0["m_groupby"][]=$obj;
 $proto0["m_orderby"] = array();
-												$proto41=array();
-						$obj = new SQLField(array(
-	"m_strName" => "status",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto41["m_column"]=$obj;
-$proto41["m_bAsc"] = 1;
-$proto41["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto41);
-
-$proto0["m_orderby"][]=$obj;					
-												$proto43=array();
-						$obj = new SQLField(array(
-	"m_strName" => "operationalstatus",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto43["m_column"]=$obj;
-$proto43["m_bAsc"] = 1;
-$proto43["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto43);
-
-$proto0["m_orderby"][]=$obj;					
-												$proto45=array();
-						$obj = new SQLField(array(
-	"m_strName" => "facilitytype",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto45["m_column"]=$obj;
-$proto45["m_bAsc"] = 1;
-$proto45["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto45);
-
-$proto0["m_orderby"][]=$obj;					
-												$proto47=array();
-						$obj = new SQLField(array(
-	"m_strName" => "parentfacilitytype",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto47["m_column"]=$obj;
-$proto47["m_bAsc"] = 1;
-$proto47["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto47);
-
-$proto0["m_orderby"][]=$obj;					
-												$proto49=array();
-						$obj = new SQLField(array(
-	"m_strName" => "region",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto49["m_column"]=$obj;
-$proto49["m_bAsc"] = 1;
-$proto49["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto49);
-
-$proto0["m_orderby"][]=$obj;					
-												$proto51=array();
-						$obj = new SQLField(array(
-	"m_strName" => "zone",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto51["m_column"]=$obj;
-$proto51["m_bAsc"] = 1;
-$proto51["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto51);
-
-$proto0["m_orderby"][]=$obj;					
-												$proto53=array();
-						$obj = new SQLField(array(
-	"m_strName" => "woreda",
-	"m_strTable" => "public.mfr_facilities_register",
-	"m_srcTableName" => "public.mfr_facilities_register_report"
-));
-
-$proto53["m_column"]=$obj;
-$proto53["m_bAsc"] = 1;
-$proto53["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto53);
-
-$proto0["m_orderby"][]=$obj;					
-$proto0["m_srcTableName"]="public.mfr_facilities_register_report";		
+$proto0["m_srcTableName"]="public.mfr_facilities_register_chart";		
 $obj = new SQLQuery($proto0);
 
 	return $obj;
 }
-$queryData_public_mfr_facilities_register_report = createSqlQuery_public_mfr_facilities_register_report();
+$queryData_public_mfr_facilities_register_chart = createSqlQuery_public_mfr_facilities_register_chart();
 
 
 	
@@ -1818,10 +1803,10 @@ $queryData_public_mfr_facilities_register_report = createSqlQuery_public_mfr_fac
 
 								
 
-$tdatapublic_mfr_facilities_register_report[".sqlquery"] = $queryData_public_mfr_facilities_register_report;
+$tdatapublic_mfr_facilities_register_chart[".sqlquery"] = $queryData_public_mfr_facilities_register_chart;
 
 
 
-$tdatapublic_mfr_facilities_register_report[".hasEvents"] = false;
+$tdatapublic_mfr_facilities_register_chart[".hasEvents"] = false;
 
 ?>
