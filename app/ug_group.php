@@ -105,6 +105,7 @@ $nonAdminTablesArr[] = "public.mfr_facilities_register_report";
 $nonAdminTablesArr[] = "public.hispmd_organisations";
 $nonAdminTablesArr[] = "public.hispmd_uggroups";
 $nonAdminTablesArr[] = "public.mfr_facilities_register_chart";
+$nonAdminTablesArr[] = "public.moh_data_scope";
 
 $ug_connection = $cman->getForUserGroups();
 

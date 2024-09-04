@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'public.moh_health_facilities' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'public.moh_indicator_data' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'facility_type_id',
 'facility_type_name' ),

@@ -82,6 +82,7 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_mfr_zone;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_administration_units;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_assessments;
+	var $tblhispmdathispmdmerqconsultancyo_public_moh_data_scope;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_data_sources;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_facility_types;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_health_facilities;
@@ -139,6 +140,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "mfr_zone", "varname" => "hispmdathispmdmerqconsultancyo_public_mfr_zone", "altvarname" => "mfr_zone", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_administration_units", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_administration_units", "altvarname" => "moh_administration_units", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_assessments", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_assessments", "altvarname" => "moh_assessments", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "moh_data_scope", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_data_scope", "altvarname" => "moh_data_scope", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_data_sources", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_data_sources", "altvarname" => "moh_data_sources", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_facility_types", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_facility_types", "altvarname" => "moh_facility_types", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_health_facilities", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_health_facilities", "altvarname" => "moh_health_facilities", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

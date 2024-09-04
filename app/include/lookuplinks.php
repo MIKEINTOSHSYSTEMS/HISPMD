@@ -439,13 +439,20 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_administration_units"]["moh_indicator_data.unit_id"] = array();
 		}
 		$lookupTableLinks["public.moh_administration_units"]["moh_indicator_data.unit_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "unit_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["public.moh_health_facilities"] ) ) {
-			$lookupTableLinks["public.moh_health_facilities"] = array();
+		if( !isset( $lookupTableLinks["public.moh_facility_types"] ) ) {
+			$lookupTableLinks["public.moh_facility_types"] = array();
 		}
-		if( !isset( $lookupTableLinks["public.moh_health_facilities"]["moh_indicator_data.facility_id"] )) {
-			$lookupTableLinks["public.moh_health_facilities"]["moh_indicator_data.facility_id"] = array();
+		if( !isset( $lookupTableLinks["public.moh_facility_types"]["moh_indicator_data.facility_type_id"] )) {
+			$lookupTableLinks["public.moh_facility_types"]["moh_indicator_data.facility_type_id"] = array();
 		}
-		$lookupTableLinks["public.moh_health_facilities"]["moh_indicator_data.facility_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "facility_id", "page" => "edit");
+		$lookupTableLinks["public.moh_facility_types"]["moh_indicator_data.facility_type_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "facility_type_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_data_scope"] ) ) {
+			$lookupTableLinks["public.moh_data_scope"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_scope"]["moh_indicator_data.scope_id"] )) {
+			$lookupTableLinks["public.moh_data_scope"]["moh_indicator_data.scope_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_scope"]["moh_indicator_data.scope_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "scope_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
 			$lookupTableLinks["public.moh_indicator_groups"] = array();
 		}

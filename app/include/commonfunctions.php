@@ -383,6 +383,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("public_mfr_facilities_register_chart" == $shortTName )
 		return true;
+	if ("moh_data_scope" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1243,6 +1245,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.mfr_facilities_register_chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_data_scope");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_data_scope";
+	}
 	return $arr;
 }
 
@@ -1342,6 +1353,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.hispmd_organisations";
 	$arr[]="public.hispmd_uggroups";
 	$arr[]="public.mfr_facilities_register_chart";
+	$arr[]="public.moh_data_scope";
 	return $arr;
 }
 
@@ -2432,6 +2444,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "S".$extraPerm;
+	}
+	if( $table=="public.moh_data_scope" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

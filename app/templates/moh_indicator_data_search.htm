@@ -391,6 +391,28 @@
 
 {END assessment_id_fieldblock}
 											
+{BEGIN scope_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_scope_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="scope_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_scope_id}">
+		{$label public_moh_indicator_data scope_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_scope_id}
+	</div>
+	<div class="r-search-field">
+		{$scope_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$scope_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END scope_id_fieldblock}
+											
 {BEGIN region_id_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_region_id}  r-horizontal-field form-horizontal" 	
@@ -435,27 +457,71 @@
 
 {END unit_id_fieldblock}
 											
-{BEGIN facility_id_fieldblock}
+{BEGIN facility_type_id_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_facility_id}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="facility_id{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="facility_id" data-fieldname="facility_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_facility_type_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="facility_type_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_facility_id}">
-		{$label public_moh_indicator_data facility_id }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_facility_type_id}">
+		{$label public_moh_indicator_data facility_type_id }	</label>
 	<div class="r-search-option">
-		{$searchtype_facility_id}
+		{$searchtype_facility_type_id}
 	</div>
 	<div class="r-search-field">
-		{$facility_id_editcontrol}	</div>
+		{$facility_type_id_editcontrol}	</div>
 	<div class="r-search-field">
-		{$facility_id_editcontrol1}
+		{$facility_type_id_editcontrol1}
 	</div>
 	
 </div>
 
-{END facility_id_fieldblock}
+{END facility_type_id_fieldblock}
+											
+{BEGIN gender_sex_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_gender_sex}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="gender_sex{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_gender_sex}">
+		{$label public_moh_indicator_data gender_sex }	</label>
+	<div class="r-search-option">
+		{$searchtype_gender_sex}
+	</div>
+	<div class="r-search-field">
+		{$gender_sex_editcontrol}	</div>
+	<div class="r-search-field">
+		{$gender_sex_editcontrol1}
+	</div>
+	
+</div>
+
+{END gender_sex_fieldblock}
+											
+{BEGIN year_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_year}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="year{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_year}">
+		{$label public_moh_indicator_data year }	</label>
+	<div class="r-search-option">
+		{$searchtype_year}
+	</div>
+	<div class="r-search-field">
+		{$year_editcontrol}	</div>
+	<div class="r-search-field">
+		{$year_editcontrol1}
+	</div>
+	
+</div>
+
+{END year_fieldblock}
 											
 {BEGIN value_fieldblock}
 
@@ -479,27 +545,27 @@
 
 {END value_fieldblock}
 											
-{BEGIN year_fieldblock}
+{BEGIN data_representation_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_year}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="year{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_representation}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="data_representation{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_year}">
-		{$label public_moh_indicator_data year }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_data_representation}">
+		{$label public_moh_indicator_data data_representation }	</label>
 	<div class="r-search-option">
-		{$searchtype_year}
+		{$searchtype_data_representation}
 	</div>
 	<div class="r-search-field">
-		{$year_editcontrol}	</div>
+		{$data_representation_editcontrol}	</div>
 	<div class="r-search-field">
-		{$year_editcontrol1}
+		{$data_representation_editcontrol1}
 	</div>
 	
 </div>
 
-{END year_fieldblock}
+{END data_representation_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

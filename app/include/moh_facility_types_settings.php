@@ -559,6 +559,36 @@ $detailsTablesData["public.moh_facility_types"] = array();
 				$detailsTablesData["public.moh_facility_types"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.moh_facility_types"][$dIndex]["detailKeys"][]="facility_type_id";
+//	public.moh_indicator_data
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="public.moh_indicator_data";
+		$detailsParam["dOriginalTable"] = "public.moh_indicator_data";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "moh_indicator_data";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_moh_indicator_data");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.moh_facility_types"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.moh_facility_types"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.moh_facility_types"][$dIndex]["masterKeys"][]="facility_type_id";
+
+				$detailsTablesData["public.moh_facility_types"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.moh_facility_types"][$dIndex]["detailKeys"][]="facility_type_id";
 //endif
 
 // tables which are master tables for current table (detail)

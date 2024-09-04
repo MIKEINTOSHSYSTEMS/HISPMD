@@ -77,178 +77,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_assessment_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_assessment_id}" {$filterRow_attrs_assessment_id}>
-			<label>{$label public_moh_indicator_data assessment_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_assessment_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_assessment_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_assessment_id}</span>
-						</div>
-		{END searchCtrlBlock_assessment_id}
-																{BEGIN searchCtrlBlock_year}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_year}" {$filterRow_attrs_year}>
-			<label>{$label public_moh_indicator_data year }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_year}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_year}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_year}</span>
-						</div>
-		{END searchCtrlBlock_year}
-																{BEGIN searchCtrlBlock_value}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_value}" {$filterRow_attrs_value}>
-			<label>{$label public_moh_indicator_data value }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_value}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_value}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_value}</span>
-						</div>
-		{END searchCtrlBlock_value}
-																{BEGIN searchCtrlBlock_unit_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_unit_id}" {$filterRow_attrs_unit_id}>
-			<label>{$label public_moh_indicator_data unit_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_unit_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_unit_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_unit_id}</span>
-						</div>
-		{END searchCtrlBlock_unit_id}
-																{BEGIN searchCtrlBlock_region_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
-			<label>{$label public_moh_indicator_data region_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_region_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
-						</div>
-		{END searchCtrlBlock_region_id}
-																{BEGIN searchCtrlBlock_indicator_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
-			<label>{$label public_moh_indicator_data indicator_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_indicator_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_indicator_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
-						</div>
-		{END searchCtrlBlock_indicator_id}
-																{BEGIN searchCtrlBlock_facility_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_facility_id}" {$filterRow_attrs_facility_id}>
-			<label>{$label public_moh_indicator_data facility_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_facility_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_facility_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_facility_id}</span>
-						</div>
-		{END searchCtrlBlock_facility_id}
-																{BEGIN searchCtrlBlock_data_source_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_data_source_id}" {$filterRow_attrs_data_source_id}>
-			<label>{$label public_moh_indicator_data data_source_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_data_source_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_data_source_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
-						</div>
-		{END searchCtrlBlock_data_source_id}
-																{BEGIN searchCtrlBlock_data_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_data_id}" {$filterRow_attrs_data_id}>
-			<label>{$label public_moh_indicator_data data_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_data_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_data_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_data_id}</span>
-						</div>
-		{END searchCtrlBlock_data_id}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -549,11 +377,203 @@
 				<div class="row">
 			 
 				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
+	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_indicator_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
+			<label>{$label public_moh_indicator_data indicator_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_id}
+																{BEGIN searchCtrlBlock_data_representation}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_representation}" {$filterRow_attrs_data_representation}>
+			<label>{$label public_moh_indicator_data data_representation }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_representation}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_representation}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_representation}</span>
+						</div>
+		{END searchCtrlBlock_data_representation}
+																{BEGIN searchCtrlBlock_data_source_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_source_id}" {$filterRow_attrs_data_source_id}>
+			<label>{$label public_moh_indicator_data data_source_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
+						</div>
+		{END searchCtrlBlock_data_source_id}
+																{BEGIN searchCtrlBlock_assessment_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_assessment_id}" {$filterRow_attrs_assessment_id}>
+			<label>{$label public_moh_indicator_data assessment_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_assessment_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_assessment_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_assessment_id}</span>
+						</div>
+		{END searchCtrlBlock_assessment_id}
+																{BEGIN searchCtrlBlock_scope_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_scope_id}" {$filterRow_attrs_scope_id}>
+			<label>{$label public_moh_indicator_data scope_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_scope_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_scope_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_scope_id}</span>
+						</div>
+		{END searchCtrlBlock_scope_id}
+																{BEGIN searchCtrlBlock_region_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
+			<label>{$label public_moh_indicator_data region_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
+						</div>
+		{END searchCtrlBlock_region_id}
+																{BEGIN searchCtrlBlock_unit_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_unit_id}" {$filterRow_attrs_unit_id}>
+			<label>{$label public_moh_indicator_data unit_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_unit_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_unit_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_unit_id}</span>
+						</div>
+		{END searchCtrlBlock_unit_id}
+																{BEGIN searchCtrlBlock_facility_type_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_facility_type_id}" {$filterRow_attrs_facility_type_id}>
+			<label>{$label public_moh_indicator_data facility_type_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_facility_type_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_facility_type_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_facility_type_id}</span>
+						</div>
+		{END searchCtrlBlock_facility_type_id}
+																{BEGIN searchCtrlBlock_gender_sex}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_gender_sex}" {$filterRow_attrs_gender_sex}>
+			<label>{$label public_moh_indicator_data gender_sex }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_gender_sex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_gender_sex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_gender_sex}</span>
+						</div>
+		{END searchCtrlBlock_gender_sex}
+																{BEGIN searchCtrlBlock_year}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_year}" {$filterRow_attrs_year}>
+			<label>{$label public_moh_indicator_data year }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_year}</span>
+						</div>
+		{END searchCtrlBlock_year}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class="			col-md-6
 	
 ">
-		{BEGIN firstAboveGridCell}
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
@@ -578,8 +598,7 @@
 							Delete			</a>
 </span>
 {END deleteselected_link}
-			{END firstAboveGridCell}	
-	</div>			 
+		</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6
@@ -668,6 +687,503 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_indicator_id}
+
+	<div class="dropdown filter-field filter-indicator_id-container" {BEGIN filter_selected_indicator_id} data-selected {END filter_selected_indicator_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_indicator_id}
+			<a href="#" class="filter-clear filter-clear-indicator_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_indicator_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data indicator_id }				{BEGIN filter_selected_indicator_id}:{END filter_selected_indicator_id}
+			</span>
+			{BEGIN filter_selected_indicator_id}
+			<span class="r-filter-value">{$filtervalue_indicator_id}</span>
+			{END filter_selected_indicator_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_indicator_id}
+		<li class=" filter-values filter-values-indicator_id  {$visibilityClass_indicator_id}">
+			{$indicator_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_indicator_id}
+
+			{BEGIN filter_button_showmore_indicator_id}
+		<li class=" filter-show-more {$collapsedClass_indicator_id} {$showMoreBtnClass_indicator_id}">
+			<a class="filter-show-more-link filterShowMore_indicator_id" href="#">{$show_n_more_indicator_id}</a>
+		</li>
+		{END filter_button_showmore_indicator_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_indicator_id}
+
+
+
+
+
+
+{BEGIN filter_control_data_source_id}
+
+	<div class="dropdown filter-field filter-data_source_id-container" {BEGIN filter_selected_data_source_id} data-selected {END filter_selected_data_source_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_data_source_id}
+			<a href="#" class="filter-clear filter-clear-data_source_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_data_source_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data data_source_id }				{BEGIN filter_selected_data_source_id}:{END filter_selected_data_source_id}
+			</span>
+			{BEGIN filter_selected_data_source_id}
+			<span class="r-filter-value">{$filtervalue_data_source_id}</span>
+			{END filter_selected_data_source_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_data_source_id}
+		<li class=" filter-values filter-values-data_source_id  {$visibilityClass_data_source_id}">
+			{$data_source_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_data_source_id}
+
+			{BEGIN filter_button_showmore_data_source_id}
+		<li class=" filter-show-more {$collapsedClass_data_source_id} {$showMoreBtnClass_data_source_id}">
+			<a class="filter-show-more-link filterShowMore_data_source_id" href="#">{$show_n_more_data_source_id}</a>
+		</li>
+		{END filter_button_showmore_data_source_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_data_source_id}
+
+
+
+
+
+
+{BEGIN filter_control_assessment_id}
+
+	<div class="dropdown filter-field filter-assessment_id-container" {BEGIN filter_selected_assessment_id} data-selected {END filter_selected_assessment_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_assessment_id}
+			<a href="#" class="filter-clear filter-clear-assessment_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_assessment_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data assessment_id }				{BEGIN filter_selected_assessment_id}:{END filter_selected_assessment_id}
+			</span>
+			{BEGIN filter_selected_assessment_id}
+			<span class="r-filter-value">{$filtervalue_assessment_id}</span>
+			{END filter_selected_assessment_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_assessment_id}
+		<li class=" filter-values filter-values-assessment_id  {$visibilityClass_assessment_id}">
+			{$assessment_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_assessment_id}
+
+			{BEGIN filter_button_showmore_assessment_id}
+		<li class=" filter-show-more {$collapsedClass_assessment_id} {$showMoreBtnClass_assessment_id}">
+			<a class="filter-show-more-link filterShowMore_assessment_id" href="#">{$show_n_more_assessment_id}</a>
+		</li>
+		{END filter_button_showmore_assessment_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_assessment_id}
+
+
+
+
+
+
+{BEGIN filter_control_scope_id}
+
+	<div class="dropdown filter-field filter-scope_id-container" {BEGIN filter_selected_scope_id} data-selected {END filter_selected_scope_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_scope_id}
+			<a href="#" class="filter-clear filter-clear-scope_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_scope_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data scope_id }				{BEGIN filter_selected_scope_id}:{END filter_selected_scope_id}
+			</span>
+			{BEGIN filter_selected_scope_id}
+			<span class="r-filter-value">{$filtervalue_scope_id}</span>
+			{END filter_selected_scope_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_scope_id}
+		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
+			{$scope_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_scope_id}
+
+			{BEGIN filter_button_showmore_scope_id}
+		<li class=" filter-show-more {$collapsedClass_scope_id} {$showMoreBtnClass_scope_id}">
+			<a class="filter-show-more-link filterShowMore_scope_id" href="#">{$show_n_more_scope_id}</a>
+		</li>
+		{END filter_button_showmore_scope_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_scope_id}
+
+
+
+
+
+
+{BEGIN filter_control_region_id}
+
+	<div class="dropdown filter-field filter-region_id-container" {BEGIN filter_selected_region_id} data-selected {END filter_selected_region_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_region_id}
+			<a href="#" class="filter-clear filter-clear-region_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_region_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data region_id }				{BEGIN filter_selected_region_id}:{END filter_selected_region_id}
+			</span>
+			{BEGIN filter_selected_region_id}
+			<span class="r-filter-value">{$filtervalue_region_id}</span>
+			{END filter_selected_region_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_region_id}
+		<li class=" filter-values filter-values-region_id  {$visibilityClass_region_id}">
+			{$region_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_region_id}
+
+			{BEGIN filter_button_showmore_region_id}
+		<li class=" filter-show-more {$collapsedClass_region_id} {$showMoreBtnClass_region_id}">
+			<a class="filter-show-more-link filterShowMore_region_id" href="#">{$show_n_more_region_id}</a>
+		</li>
+		{END filter_button_showmore_region_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_region_id}
+
+
+
+
+
+
+{BEGIN filter_control_unit_id}
+
+	<div class="dropdown filter-field filter-unit_id-container" {BEGIN filter_selected_unit_id} data-selected {END filter_selected_unit_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_unit_id}
+			<a href="#" class="filter-clear filter-clear-unit_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_unit_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data unit_id }				{BEGIN filter_selected_unit_id}:{END filter_selected_unit_id}
+			</span>
+			{BEGIN filter_selected_unit_id}
+			<span class="r-filter-value">{$filtervalue_unit_id}</span>
+			{END filter_selected_unit_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_unit_id}
+		<li class=" filter-values filter-values-unit_id  {$visibilityClass_unit_id}">
+			{$unit_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_unit_id}
+
+			{BEGIN filter_button_showmore_unit_id}
+		<li class=" filter-show-more {$collapsedClass_unit_id} {$showMoreBtnClass_unit_id}">
+			<a class="filter-show-more-link filterShowMore_unit_id" href="#">{$show_n_more_unit_id}</a>
+		</li>
+		{END filter_button_showmore_unit_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_unit_id}
+
+
+
+
+
+
+{BEGIN filter_control_facility_type_id}
+
+	<div class="dropdown filter-field filter-facility_type_id-container" {BEGIN filter_selected_facility_type_id} data-selected {END filter_selected_facility_type_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_facility_type_id}
+			<a href="#" class="filter-clear filter-clear-facility_type_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_facility_type_id}
+			<span class="r-filter-field">{$label public_moh_indicator_data facility_type_id }				{BEGIN filter_selected_facility_type_id}:{END filter_selected_facility_type_id}
+			</span>
+			{BEGIN filter_selected_facility_type_id}
+			<span class="r-filter-value">{$filtervalue_facility_type_id}</span>
+			{END filter_selected_facility_type_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_facility_type_id}
+		<li class=" filter-values filter-values-facility_type_id  {$visibilityClass_facility_type_id}">
+			{$facility_type_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_facility_type_id}
+
+			{BEGIN filter_button_showmore_facility_type_id}
+		<li class=" filter-show-more {$collapsedClass_facility_type_id} {$showMoreBtnClass_facility_type_id}">
+			<a class="filter-show-more-link filterShowMore_facility_type_id" href="#">{$show_n_more_facility_type_id}</a>
+		</li>
+		{END filter_button_showmore_facility_type_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_facility_type_id}
+
+
+
+
+
+
+{BEGIN filter_control_gender_sex}
+
+	<div class="dropdown filter-field filter-gender_sex-container" {BEGIN filter_selected_gender_sex} data-selected {END filter_selected_gender_sex}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_gender_sex}
+			<a href="#" class="filter-clear filter-clear-gender_sex" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_gender_sex}
+			<span class="r-filter-field">{$label public_moh_indicator_data gender_sex }				{BEGIN filter_selected_gender_sex}:{END filter_selected_gender_sex}
+			</span>
+			{BEGIN filter_selected_gender_sex}
+			<span class="r-filter-value">{$filtervalue_gender_sex}</span>
+			{END filter_selected_gender_sex}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_gender_sex}
+		<li class=" filter-values filter-values-gender_sex  {$visibilityClass_gender_sex}">
+			{$gender_sex_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_gender_sex}
+
+			{BEGIN filter_button_showmore_gender_sex}
+		<li class=" filter-show-more {$collapsedClass_gender_sex} {$showMoreBtnClass_gender_sex}">
+			<a class="filter-show-more-link filterShowMore_gender_sex" href="#">{$show_n_more_gender_sex}</a>
+		</li>
+		{END filter_button_showmore_gender_sex}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_gender_sex}
+
+
+
+
+
+
+{BEGIN filter_control_year}
+
+	<div class="dropdown filter-field filter-year-container" {BEGIN filter_selected_year} data-selected {END filter_selected_year}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_year}
+			<a href="#" class="filter-clear filter-clear-year" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_year}
+			<span class="r-filter-field">{$label public_moh_indicator_data year }				{BEGIN filter_selected_year}:{END filter_selected_year}
+			</span>
+			{BEGIN filter_selected_year}
+			<span class="r-filter-value">{$filtervalue_year}</span>
+			{END filter_selected_year}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_year}
+		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
+			{$year_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_year}
+
+			{BEGIN filter_button_showmore_year}
+		<li class=" filter-show-more {$collapsedClass_year} {$showMoreBtnClass_year}">
+			<a class="filter-show-more-link filterShowMore_year" href="#">{$show_n_more_year}</a>
+		</li>
+		{END filter_button_showmore_year}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_year}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>
@@ -695,14 +1211,23 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="unit_id"]:before {
 		content: "{$label public_moh_indicator_data unit_id}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="facility_id"]:before {
-		content: "{$label public_moh_indicator_data facility_id}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="facility_type_id"]:before {
+		content: "{$label public_moh_indicator_data facility_type_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="value"]:before {
 		content: "{$label public_moh_indicator_data value}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="year"]:before {
 		content: "{$label public_moh_indicator_data year}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="scope_id"]:before {
+		content: "{$label public_moh_indicator_data scope_id}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="gender_sex"]:before {
+		content: "{$label public_moh_indicator_data gender_sex}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="data_representation"]:before {
+		content: "{$label public_moh_indicator_data data_representation}";
 	}
 	}
 </style>
@@ -772,7 +1297,7 @@
 	 
 		{BEGIN data_id_fieldheadercolumn}
 	{BEGIN data_id_fieldheader}
-	<SPAN {$data_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_id" data-fieldname="data_id">
+	<SPAN {$data_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_id" data-fieldname="data_id">
 	{$label public_moh_indicator_data data_id }	{$arrow_icon_data_id}
 	</SPAN>
 	{END data_id_fieldheader}
@@ -797,7 +1322,7 @@
 	 
 		{BEGIN indicator_id_fieldheadercolumn}
 	{BEGIN indicator_id_fieldheader}
-	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
+	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
 	{$label public_moh_indicator_data indicator_id }	{$arrow_icon_indicator_id}
 	</SPAN>
 	{END indicator_id_fieldheader}
@@ -822,7 +1347,7 @@
 	 
 		{BEGIN data_source_id_fieldheadercolumn}
 	{BEGIN data_source_id_fieldheader}
-	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
+	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
 	{$label public_moh_indicator_data data_source_id }	{$arrow_icon_data_source_id}
 	</SPAN>
 	{END data_source_id_fieldheader}
@@ -847,7 +1372,7 @@
 	 
 		{BEGIN assessment_id_fieldheadercolumn}
 	{BEGIN assessment_id_fieldheader}
-	<SPAN {$assessment_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="assessment_id" data-fieldname="assessment_id">
+	<SPAN {$assessment_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="assessment_id" data-fieldname="assessment_id">
 	{$label public_moh_indicator_data assessment_id }	{$arrow_icon_assessment_id}
 	</SPAN>
 	{END assessment_id_fieldheader}
@@ -862,21 +1387,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_id_class}	"
+		 r-ori-vert		 {$scope_id_class}	"
 
-			data-field="region_id"
+			data-field="scope_id"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN region_id_fieldheadercolumn}
-	{BEGIN region_id_fieldheader}
-	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
-	{$label public_moh_indicator_data region_id }	{$arrow_icon_region_id}
+		{BEGIN scope_id_fieldheadercolumn}
+	{BEGIN scope_id_fieldheader}
+	<SPAN {$scope_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="scope_id" data-fieldname="scope_id">
+	{$label public_moh_indicator_data scope_id }	{$arrow_icon_scope_id}
 	</SPAN>
-	{END region_id_fieldheader}
-{END region_id_fieldheadercolumn}
+	{END scope_id_fieldheader}
+{END scope_id_fieldheadercolumn}
 
 	
 	</th>
@@ -887,21 +1412,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$unit_id_class}	"
+		 r-ori-vert		 {$region_id_class}	"
 
-			data-field="unit_id"
+			data-field="region_id"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN unit_id_fieldheadercolumn}
-	{BEGIN unit_id_fieldheader}
-	<SPAN {$unit_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id">
-	{$label public_moh_indicator_data unit_id }	{$arrow_icon_unit_id}
+		{BEGIN region_id_fieldheadercolumn}
+	{BEGIN region_id_fieldheader}
+	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
+	{$label public_moh_indicator_data region_id }	{$arrow_icon_region_id}
 	</SPAN>
-	{END unit_id_fieldheader}
-{END unit_id_fieldheadercolumn}
+	{END region_id_fieldheader}
+{END region_id_fieldheadercolumn}
 
 	
 	</th>
@@ -912,21 +1437,21 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_id_class}	"
+		 r-ori-vert		 {$unit_id_class}	"
 
-			data-field="facility_id"
+			data-field="unit_id"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN facility_id_fieldheadercolumn}
-	{BEGIN facility_id_fieldheader}
-	<SPAN {$facility_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_id" data-fieldname="facility_id">
-	{$label public_moh_indicator_data facility_id }	{$arrow_icon_facility_id}
+		{BEGIN unit_id_fieldheadercolumn}
+	{BEGIN unit_id_fieldheader}
+	<SPAN {$unit_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id">
+	{$label public_moh_indicator_data unit_id }	{$arrow_icon_unit_id}
 	</SPAN>
-	{END facility_id_fieldheader}
-{END facility_id_fieldheadercolumn}
+	{END unit_id_fieldheader}
+{END unit_id_fieldheadercolumn}
 
 	
 	</th>
@@ -937,21 +1462,21 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$value_class}	"
+		 r-ori-vert		 {$facility_type_id_class}	"
 
-			data-field="value"
+			data-field="facility_type_id"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN value_fieldheadercolumn}
-	{BEGIN value_fieldheader}
-	<SPAN {$value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
-	{$label public_moh_indicator_data value }	{$arrow_icon_value}
+		{BEGIN facility_type_id_fieldheadercolumn}
+	{BEGIN facility_type_id_fieldheader}
+	<SPAN {$facility_type_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type_id" data-fieldname="facility_type_id">
+	{$label public_moh_indicator_data facility_type_id }	{$arrow_icon_facility_type_id}
 	</SPAN>
-	{END value_fieldheader}
-{END value_fieldheadercolumn}
+	{END facility_type_id_fieldheader}
+{END facility_type_id_fieldheadercolumn}
 
 	
 	</th>
@@ -962,17 +1487,42 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$year_class}	"
+		 r-ori-vert		 {$gender_sex_class}	"
 
-			data-field="year"
+			data-field="gender_sex"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN gender_sex_fieldheadercolumn}
+	{BEGIN gender_sex_fieldheader}
+	<SPAN {$gender_sex_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gender_sex" data-fieldname="gender_sex">
+	{$label public_moh_indicator_data gender_sex }	{$arrow_icon_gender_sex}
+	</SPAN>
+	{END gender_sex_fieldheader}
+{END gender_sex_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$year_class}	"
+
+			data-field="year"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN year_fieldheadercolumn}
 	{BEGIN year_fieldheader}
-	<SPAN {$year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year">
+	<SPAN {$year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year">
 	{$label public_moh_indicator_data year }	{$arrow_icon_year}
 	</SPAN>
 	{END year_fieldheader}
@@ -980,7 +1530,57 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$value_class}	"
+
+			data-field="value"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN value_fieldheadercolumn}
+	{BEGIN value_fieldheader}
+	<SPAN {$value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
+	{$label public_moh_indicator_data value }	{$arrow_icon_value}
+	</SPAN>
+	{END value_fieldheader}
+{END value_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$data_representation_class}	"
+
+			data-field="data_representation"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN data_representation_fieldheadercolumn}
+	{BEGIN data_representation_fieldheader}
+	<SPAN {$data_representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_representation" data-fieldname="data_representation">
+	{$label public_moh_indicator_data data_representation }	{$arrow_icon_data_representation}
+	</SPAN>
+	{END data_representation_fieldheader}
+{END data_representation_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
 							</tr>
 															
 					{END grid_header}
@@ -1153,11 +1753,32 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$scope_id_class}	"
+
+			data-field="scope_id"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN scope_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="scope_id" data-fieldname="scope_id" data-default-width >
+{$scope_id_value}
+</span>
+{END scope_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$region_id_class}	"
 
 			data-field="region_id"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1167,18 +1788,18 @@
 </span>
 {END region_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$unit_id_class}	"
 
 			data-field="unit_id"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1188,27 +1809,6 @@
 </span>
 {END unit_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$facility_id_class}	"
-
-			data-field="facility_id"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN facility_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_id" data-fieldname="facility_id" data-default-width >
-{$facility_id_value}
-</span>
-{END facility_id_fieldcolumn}	
-	</td>
 	{END cellblock_grid_cell_field6}
 									{BEGIN cellblock_grid_cell_field7}
 	<td
@@ -1216,19 +1816,19 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$value_class}	"
+		 r-ori-vert		 {$facility_type_id_class}	"
 
-			data-field="value"
+			data-field="facility_type_id"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN value_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value" data-default-width >
-{$value_value}
+		{BEGIN facility_type_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type_id" data-fieldname="facility_type_id" data-default-width >
+{$facility_type_id_value}
 </span>
-{END value_fieldcolumn}	
+{END facility_type_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
 									{BEGIN cellblock_grid_cell_field8}
@@ -1237,11 +1837,32 @@
 	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$gender_sex_class}	"
+
+			data-field="gender_sex"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN gender_sex_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gender_sex" data-fieldname="gender_sex" data-default-width >
+{$gender_sex_value}
+</span>
+{END gender_sex_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$year_class}	"
 
 			data-field="year"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1251,7 +1872,49 @@
 </span>
 {END year_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$value_class}	"
+
+			data-field="value"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN value_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value" data-default-width >
+{$value_value}
+</span>
+{END value_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$data_representation_class}	"
+
+			data-field="data_representation"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN data_representation_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_representation" data-fieldname="data_representation" data-default-width >
+{$data_representation_value}
+</span>
+{END data_representation_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
 							</tr>
 										
 											{END grid_row}
@@ -1359,7 +2022,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_id_class}	"
+		 r-ori-vert		 {$scope_id_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -1374,7 +2037,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$unit_id_class}	"
+		 r-ori-vert		 {$region_id_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -1389,7 +2052,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_id_class}	"
+		 r-ori-vert		 {$unit_id_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -1404,7 +2067,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$value_class}	"
+		 r-ori-vert		 {$facility_type_id_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -1419,7 +2082,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$year_class}	"
+		 r-ori-vert		 {$gender_sex_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -1428,6 +2091,51 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$year_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$value_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$data_representation_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
 							</tr>
 					
 					</tfoot>

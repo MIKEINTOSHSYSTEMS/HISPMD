@@ -3690,6 +3690,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "hispmd_uggroups" ] = "public.hispmd_uggroups";
 	$projectEntities[ "public.mfr_facilities_register_chart" ] = array( "url" => "public_mfr_facilities_register_chart", "type" => 3 );
 	$projectEntitiesReverse[ "public_mfr_facilities_register_chart" ] = "public.mfr_facilities_register_chart";
+	$projectEntities[ "public.moh_data_scope" ] = array( "url" => "moh_data_scope", "type" => 0 );
+	$projectEntitiesReverse[ "moh_data_scope" ] = "public.moh_data_scope";
 }
 
 function findTable( $table ) {

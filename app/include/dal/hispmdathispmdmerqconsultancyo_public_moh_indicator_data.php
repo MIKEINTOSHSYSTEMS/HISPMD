@@ -6,9 +6,12 @@ $dalTablemoh_indicator_data["data_source_id"] = array("type"=>3,"varname"=>"data
 $dalTablemoh_indicator_data["assessment_id"] = array("type"=>3,"varname"=>"assessment_id", "name" => "assessment_id", "autoInc" => "0");
 $dalTablemoh_indicator_data["region_id"] = array("type"=>3,"varname"=>"region_id", "name" => "region_id", "autoInc" => "0");
 $dalTablemoh_indicator_data["unit_id"] = array("type"=>3,"varname"=>"unit_id", "name" => "unit_id", "autoInc" => "0");
-$dalTablemoh_indicator_data["facility_id"] = array("type"=>3,"varname"=>"facility_id", "name" => "facility_id", "autoInc" => "0");
+$dalTablemoh_indicator_data["facility_type_id"] = array("type"=>3,"varname"=>"facility_type_id", "name" => "facility_type_id", "autoInc" => "0");
 $dalTablemoh_indicator_data["value"] = array("type"=>14,"varname"=>"fldvalue", "name" => "value", "autoInc" => "0");
 $dalTablemoh_indicator_data["year"] = array("type"=>3,"varname"=>"year", "name" => "year", "autoInc" => "0");
+$dalTablemoh_indicator_data["scope_id"] = array("type"=>3,"varname"=>"scope_id", "name" => "scope_id", "autoInc" => "0");
+$dalTablemoh_indicator_data["gender_sex"] = array("type"=>200,"varname"=>"gender_sex", "name" => "gender_sex", "autoInc" => "0");
+$dalTablemoh_indicator_data["data_representation"] = array("type"=>200,"varname"=>"data_representation", "name" => "data_representation", "autoInc" => "0");
 $dalTablemoh_indicator_data["data_id"]["key"]=true;
 
 $dal_info["hispmdathispmdmerqconsultancyo_public_moh_indicator_data"] = &$dalTablemoh_indicator_data;

@@ -118,19 +118,28 @@ pdfDocument = {
 			{"text":{$assessment_id_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
+			{"text":{$scope_id_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
 			{"text":{$region_id_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
 			{"text":{$unit_id_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
-			{"text":{$facility_id_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+			{"text":{$facility_type_id_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$gender_sex_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$year_pdfvalue},"hidden":"{$item_hide_export_field8}"},
 				
 				
 			{"text":{$value_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
-			{"text":{$year_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+			{"text":{$data_representation_pdfvalue},"hidden":"{$item_hide_export_field11}"},
 				
 		  ],
   "border": [ false, false, false, false ],

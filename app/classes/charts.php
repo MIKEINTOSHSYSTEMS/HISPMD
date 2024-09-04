@@ -558,6 +558,8 @@ class Chart
 			return true;
 		if("public.mfr_facilities_register" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.moh_data_scope" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

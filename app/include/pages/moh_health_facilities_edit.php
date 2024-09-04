@@ -1,7 +1,5 @@
 <?php
-			$optionsArray = array( 'details' => array( 'public.moh_indicator_data' => array( 'displayPreview' => 2,
-'previewPageId' => '' ) ),
-'master' => array( 'public.moh_facility_types' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'public.moh_facility_types' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'facility_name',
 'facility_type_id' ),

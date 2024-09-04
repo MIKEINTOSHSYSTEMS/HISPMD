@@ -355,6 +355,11 @@ pdfDocument = {
 			{$displayDetailTable_moh_health_facilities }
 		{END details_moh_health_facilities},
 				
+				
+			 {BEGIN details_moh_indicator_data}
+			{$displayDetailTable_moh_indicator_data }
+		{END details_moh_indicator_data},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

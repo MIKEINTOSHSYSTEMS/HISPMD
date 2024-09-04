@@ -770,6 +770,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.moh_data_scope")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1489,6 +1493,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.mfr_facilities_register_chart")
+		{
+			return false;
+		}
+		if($table=="public.moh_data_scope")
 		{
 			return false;
 		}
