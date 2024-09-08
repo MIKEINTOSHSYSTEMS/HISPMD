@@ -29,6 +29,8 @@ class class_GlobalEvents extends eventsBase
 
 		$this->events["BeforeShowMenu"]=true;
 
+		$this->events["BeforeRegister"]=true;
+
 
 //	onscreen events
 		$this->events["MFR_Region_Report_map"] = true;
@@ -39,6 +41,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["_ethcal_global__snippet"] = true;
 		$this->events["_ethcalgc_global__snippet"] = true;
 		$this->events["MFR_Facilities_Dashboard_snippet"] = true;
+		$this->events["_global__snippet"] = true;
 
 
 
@@ -218,6 +221,50 @@ function BeforeShowMenu(&$xt, &$templatefile, $pageObject)
 		
 		
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before registration
+function BeforeRegister(&$userdata, &$message, $pageObject)
+{
+
+		
+
+// Place event code here.
+$apikey = getPasswordHash($userdata["id"].$userdata["username"]);
+$userdata["apikey"] = $apikey;
+$_SESSION["apikey"] = $apikey;
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeRegister
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
 //	onscreen events
 	function event_MERQ_AI_Data_Assistant_snippet(&$params)
 	{
@@ -269,6 +316,12 @@ $EC->GCDrawCalendar();
 	function event_MFR_Facilities_Dashboard_snippet(&$params)
 	{
 	echo phpinfo();
+	;
+}
+	function event__global__snippet(&$params)
+	{
+	// Put your code here.
+echo "Your API Key is: ".$_SESSION["apikey"];
 	;
 }
 

@@ -749,9 +749,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "557_1725475267";
+$projectBuildKey = "565_1725810242";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "557";
+$projectBuildNumber = "565";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -948,6 +948,10 @@ if(mlang_getcurrentlang()=="English")
 $globalSettings["showDetailedError"] = true;
 
 
+$globalSettings["restCreate"] = true;
+$globalSettings["restAuth"] = REST_APIKEY;
+$globalSettings["APIkey"] = "";
+$globalSettings["APIkeyField"] = "apikey";
 
 $globalSettings["mapMarkerCount"] = 50;
 

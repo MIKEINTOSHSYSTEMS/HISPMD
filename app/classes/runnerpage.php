@@ -1726,7 +1726,7 @@ if (Security::showUserPic()) {
         $src = GetTableLink(
             "file",
             "",
-            "filename=userpic.jpg&table=" . rawurlencode($tableName)
+            "filename=file.jpg&table=" . rawurlencode($tableName)
             . "&field=" . rawurlencode($field)
             . "&nodisp=1"
             . $keylink

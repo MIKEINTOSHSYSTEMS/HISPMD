@@ -2888,6 +2888,9 @@ $proto39["m_columns"][] = "last_name";
 $proto39["m_columns"][] = "designation";
 $proto39["m_columns"][] = "organisation_name";
 $proto39["m_columns"][] = "department";
+$proto39["m_columns"][] = "reset_token";
+$proto39["m_columns"][] = "reset_date";
+$proto39["m_columns"][] = "apikey";
 $obj = new SQLTable($proto39);
 
 $proto38["m_table"] = $obj;
@@ -2926,7 +2929,7 @@ $queryData_admin_users = createSqlQuery_admin_users();
 	
 																												;
 
-																																																				
+																																																						
 
 $tdataadmin_users[".sqlquery"] = $queryData_admin_users;
 

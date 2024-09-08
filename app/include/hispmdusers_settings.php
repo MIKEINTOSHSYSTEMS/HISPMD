@@ -79,6 +79,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelshispmdusers["English"]["reset_date"] = "Reset Date";
 	$fieldToolTipshispmdusers["English"]["reset_date"] = "";
 	$placeHoldershispmdusers["English"]["reset_date"] = "";
+	$fieldLabelshispmdusers["English"]["apikey"] = "Apikey";
+	$fieldToolTipshispmdusers["English"]["apikey"] = "";
+	$placeHoldershispmdusers["English"]["apikey"] = "";
 	if (count($fieldToolTipshispmdusers["English"]))
 		$tdatahispmdusers[".isUseToolTips"] = true;
 }
@@ -244,7 +247,7 @@ $tdatahispmdusers[".strOrderBy"] = $tstrOrderBy;
 $tdatahispmdusers[".orderindexes"] = array();
 
 
-$tdatahispmdusers[".sqlHead"] = "SELECT \"ID\",  username,  password,  email,  CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, '')) AS fullname,  groupid,  active,  ext_security_id,  userpic,  phone_number,  first_name,  middle_name,  last_name,  designation,  organisation_name,  department,  reset_token,  reset_date";
+$tdatahispmdusers[".sqlHead"] = "SELECT \"ID\",  username,  password,  email,  CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, '')) AS fullname,  groupid,  active,  ext_security_id,  userpic,  phone_number,  first_name,  middle_name,  last_name,  designation,  organisation_name,  department,  reset_token,  reset_date,  apikey";
 $tdatahispmdusers[".sqlFrom"] = "FROM \"public\".hispmdusers";
 $tdatahispmdusers[".sqlWhereExpr"] = "";
 $tdatahispmdusers[".sqlTail"] = "";
@@ -1325,7 +1328,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1349,10 +1352,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2591,7 +2592,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$fdata["GoodName"] = "reset_token";
 	$fdata["ownerTable"] = "public.hispmdusers";
 	$fdata["Label"] = GetFieldLabel("public_hispmdusers","reset_token");
-	$fdata["FieldType"] = 202;
+	$fdata["FieldType"] = 201;
 
 
 	
@@ -2602,7 +2603,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "reset_token";
 
-		$fdata["FullName"] = "reset_token";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "reset_token";
 
 	
 	
@@ -2639,7 +2641,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2657,16 +2659,16 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
-	
-			$edata["HTML5InuptType"] = "text";
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
 
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2677,7 +2679,10 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 			
 	
 	
@@ -2738,7 +2743,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "reset_date";
 
-		$fdata["FullName"] = "reset_date";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "reset_date";
 
 	
 	
@@ -2856,6 +2862,141 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 	$tdatahispmdusers["reset_date"] = $fdata;
 		$tdatahispmdusers[".searchableFields"][] = "reset_date";
+//	apikey
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "apikey";
+	$fdata["GoodName"] = "apikey";
+	$fdata["ownerTable"] = "public.hispmdusers";
+	$fdata["Label"] = GetFieldLabel("public_hispmdusers","apikey");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "apikey";
+
+		$fdata["sourceSingle"] = "apikey";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "apikey";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatahispmdusers["apikey"] = $fdata;
+		$tdatahispmdusers[".searchableFields"][] = "apikey";
 
 
 $tables_data["public.hispmdusers"]=&$tdatahispmdusers;
@@ -2920,7 +3061,7 @@ function createSqlQuery_hispmdusers()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "\"ID\",  username,  password,  email,  CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, '')) AS fullname,  groupid,  active,  ext_security_id,  userpic,  phone_number,  first_name,  middle_name,  last_name,  designation,  organisation_name,  department,  reset_token,  reset_date";
+$proto0["m_strFieldList"] = "\"ID\",  username,  password,  email,  CONCAT(COALESCE(first_name, ''), ' ', COALESCE(middle_name, ''), ' ', COALESCE(last_name, '')) AS fullname,  groupid,  active,  ext_security_id,  userpic,  phone_number,  first_name,  middle_name,  last_name,  designation,  organisation_name,  department,  reset_token,  reset_date,  apikey";
 $proto0["m_strFrom"] = "FROM \"public\".hispmdusers";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3237,54 +3378,69 @@ $proto45["m_alias"] = "";
 $obj = new SQLFieldListItem($proto45);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto47=array();
-$proto47["m_link"] = "SQLL_MAIN";
-			$proto48=array();
-$proto48["m_strName"] = "public.hispmdusers";
-$proto48["m_srcTableName"] = "public.hispmdusers";
-$proto48["m_columns"] = array();
-$proto48["m_columns"][] = "ID";
-$proto48["m_columns"][] = "username";
-$proto48["m_columns"][] = "password";
-$proto48["m_columns"][] = "email";
-$proto48["m_columns"][] = "fullname";
-$proto48["m_columns"][] = "groupid";
-$proto48["m_columns"][] = "active";
-$proto48["m_columns"][] = "ext_security_id";
-$proto48["m_columns"][] = "userpic";
-$proto48["m_columns"][] = "phone_number";
-$proto48["m_columns"][] = "first_name";
-$proto48["m_columns"][] = "middle_name";
-$proto48["m_columns"][] = "last_name";
-$proto48["m_columns"][] = "designation";
-$proto48["m_columns"][] = "organisation_name";
-$proto48["m_columns"][] = "department";
-$proto48["m_columns"][] = "reset_token";
-$proto48["m_columns"][] = "reset_date";
-$obj = new SQLTable($proto48);
+						$proto47=array();
+			$obj = new SQLField(array(
+	"m_strName" => "apikey",
+	"m_strTable" => "public.hispmdusers",
+	"m_srcTableName" => "public.hispmdusers"
+));
 
-$proto47["m_table"] = $obj;
-$proto47["m_sql"] = "\"public\".hispmdusers";
-$proto47["m_alias"] = "";
+$proto47["m_sql"] = "apikey";
 $proto47["m_srcTableName"] = "public.hispmdusers";
-$proto49=array();
-$proto49["m_sql"] = "";
-$proto49["m_uniontype"] = "SQLL_UNKNOWN";
+$proto47["m_expr"]=$obj;
+$proto47["m_alias"] = "";
+$obj = new SQLFieldListItem($proto47);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto49=array();
+$proto49["m_link"] = "SQLL_MAIN";
+			$proto50=array();
+$proto50["m_strName"] = "public.hispmdusers";
+$proto50["m_srcTableName"] = "public.hispmdusers";
+$proto50["m_columns"] = array();
+$proto50["m_columns"][] = "ID";
+$proto50["m_columns"][] = "username";
+$proto50["m_columns"][] = "password";
+$proto50["m_columns"][] = "email";
+$proto50["m_columns"][] = "fullname";
+$proto50["m_columns"][] = "groupid";
+$proto50["m_columns"][] = "active";
+$proto50["m_columns"][] = "ext_security_id";
+$proto50["m_columns"][] = "userpic";
+$proto50["m_columns"][] = "phone_number";
+$proto50["m_columns"][] = "first_name";
+$proto50["m_columns"][] = "middle_name";
+$proto50["m_columns"][] = "last_name";
+$proto50["m_columns"][] = "designation";
+$proto50["m_columns"][] = "organisation_name";
+$proto50["m_columns"][] = "department";
+$proto50["m_columns"][] = "reset_token";
+$proto50["m_columns"][] = "reset_date";
+$proto50["m_columns"][] = "apikey";
+$obj = new SQLTable($proto50);
+
+$proto49["m_table"] = $obj;
+$proto49["m_sql"] = "\"public\".hispmdusers";
+$proto49["m_alias"] = "";
+$proto49["m_srcTableName"] = "public.hispmdusers";
+$proto51=array();
+$proto51["m_sql"] = "";
+$proto51["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto49["m_column"]=$obj;
-$proto49["m_contained"] = array();
-$proto49["m_strCase"] = "";
-$proto49["m_havingmode"] = false;
-$proto49["m_inBrackets"] = false;
-$proto49["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto49);
+$proto51["m_column"]=$obj;
+$proto51["m_contained"] = array();
+$proto51["m_strCase"] = "";
+$proto51["m_havingmode"] = false;
+$proto51["m_inBrackets"] = false;
+$proto51["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto51);
 
-$proto47["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto47);
+$proto49["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto49);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -3300,7 +3456,7 @@ $queryData_hispmdusers = createSqlQuery_hispmdusers();
 	
 																												;
 
-																		
+																			
 
 $tdatahispmdusers[".sqlquery"] = $queryData_hispmdusers;
 

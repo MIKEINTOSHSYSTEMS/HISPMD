@@ -289,11 +289,39 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
 				],
 	
 		body: [
 				
 				[
+																{
+	cellId: 'c19',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text11}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
 																{
 	cellId: 'c17',
 	col:0,

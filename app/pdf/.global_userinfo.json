@@ -631,6 +631,97 @@ pdfDocument = {
 		},
 		margin: [0,0,0,15],
 	},
+ 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section3',
+			widths: ['*'],
+			body: [
+				[{text: 'Keys', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section3_0}
+									"*", 
+								{END col_section3_0}
+															{BEGIN col_section3_1}
+									"*", 
+								{END col_section3_1}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section3_0}
+				[
+																{BEGIN cellblock_section3_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","bold":true,"stack":[{"text":"{$jslabel _global apikey }","bold":true},{"text":{$apikey_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section3_c}
+																							{BEGIN cellblock_section3_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field12}","bold":true,"stack":[{"text":"{$jslabel _global ext_security_id }","bold":true},{"text":{$ext_security_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section3_c1}
+											],
+				{END row_section3_0}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
 				
 		  ],
   "border": [ false, false, false, false ],

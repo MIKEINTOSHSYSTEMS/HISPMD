@@ -210,6 +210,9 @@ pdfDocument = {
 				
 			{"text":{$department_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
 				
+				
+			{"text":{$reset_token_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

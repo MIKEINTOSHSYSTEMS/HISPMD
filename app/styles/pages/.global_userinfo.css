@@ -7,6 +7,25 @@
 [data-page=".global_userinfo"][data-itemid="user_fields_title"] {
   font-size: 24px;
 }
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field3"][data-page=".global_userinfo"][data-itemid="integrated_edit_field3"][data-page=".global_userinfo"][data-itemid="integrated_edit_field3"][data-page=".global_userinfo"][data-itemid="integrated_edit_field3"] {
+  width: 50%;
+}
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"] > * > label,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > input,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > textarea,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > select,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > .r-readonly-control,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"][data-page=".global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > label,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > input,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > textarea,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > select,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > .r-readonly-control,
+[data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > * > select {
+  font-weight: bold;
+}
 [data-page=".global_userinfo"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
