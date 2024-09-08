@@ -581,13 +581,13 @@ $globalSettings["nEncryptPasswordMethod"] = "0";
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
 
-$globalSettings["useCustomSMTPSettings"] = false;
+$globalSettings["useCustomSMTPSettings"] = true;
 
-$globalSettings["strSMTPUser"] = "";
-$globalSettings["strSMTPServer"] = "localhost";
-$globalSettings["strSMTPPort"] = "25";
-$globalSettings["strSMTPPassword"] = "";
-$globalSettings["strFromEmail"] = "";
+$globalSettings["strSMTPUser"] = "hispmd@cloud.merqconsultancy.org";
+$globalSettings["strSMTPServer"] = "cloud.merqconsultancy.org";
+$globalSettings["strSMTPPort"] = "587";
+$globalSettings["strSMTPPassword"] = "hispmd@cloud";
+$globalSettings["strFromEmail"] = "hispmd@cloud.merqconsultancy.org";
 
 //
 
@@ -728,6 +728,8 @@ $cKeyFields = $loginKeyFields;
 
 $globalSettings["usersDatasourceTable"] = "public.hispmdusers";
 
+$globalSettings["userRequireActivation"] = true;
+$globalSettings["userActivationField"] = "active";
 
 $globalSettings["jwtSecret"] = "DBF7djMrYUhUrssFTEB2";
 
@@ -747,9 +749,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "556_1725475267";
+$projectBuildKey = "557_1725475267";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "556";
+$projectBuildNumber = "557";
 
 $mlang_messages = array();
 $mlang_charsets = array();

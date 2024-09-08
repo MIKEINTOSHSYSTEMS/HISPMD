@@ -54,14 +54,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$pdf_image images/MOH_logo_text_250.png undefined 0},"hidden":"{$item_hide_image}"},
-				
-				
-			{"text":"{$jspagetitlelabel  register_success}","hidden":"{$item_hide_register_success_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel  remind_success}","hidden":"{$item_hide_remind_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'center',
+              "alignment": 'left',
      
       
       },
@@ -73,55 +70,7 @@ pdfDocument = {
 }
 ,
 		
-								
-{
-	table: {
-	
 				
-		location: 'above-grid',
-		
-		
-		widths: [
-								"*", 
-					 ],	
-		
-	
-		body: [
-				
-				[
-																{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"text":"An email has been sent to %email% containing further instructions. Click on the link provided in the email to complete the registration.","hidden":"{$item_hide_register_activate_message}","isHtml":true},
-				
-				
-			{"text":"Thank you. Your account has been activated.","hidden":"{$item_hide_register_activated_message}","isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-     
-      
-      },
-
-											],
-		
-		]
-	}
-}
-,
-		
 								
 {
 	table: {
@@ -144,7 +93,7 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c2',
+	cellId: 'c1',
 	col:0,
 	row:0,
 			
@@ -157,10 +106,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":""},
-				
-				
-			{"text":""},
+			{"text":"Login and password were sent to your email address.","hidden":"{$item_hide_remind_success_message}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

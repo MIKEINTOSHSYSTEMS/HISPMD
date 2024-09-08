@@ -93,7 +93,11 @@
 		{BEGIN message_block}
 <div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" data-page=".global_login" class="alert {$message_class}" role="alert">
 {$message}
-	</div>
+		{BEGIN resend_activation_button}
+	<br>
+	<button class="btn btn-sm btn-default" {$resend_activation_button_attrs} id="resendActivation{$id}">Resend email</button>
+	{END resend_activation_button}
+</div>
 {END message_block}			{END firstAboveGridCell}	
 	</div>					</div>
 			 
@@ -213,7 +217,7 @@ Login into your account</span>
 {END continue_button}
 </td>
 									<td 
-	class="r-align-left r-ori-vert			"
+	class="r-align-left			"
 			 
 	data-cellId="footer_c2" data-pageid="{$pageid}">
  
@@ -221,6 +225,12 @@ Login into your account</span>
 	<a type="button" title="" class="btn btn-success  btn-lg 
 	" {$registerlink_attrs} href="register.php" >
 							Sign Up			</a>
+</span>
+ 
+<span data-itemtype="login_remind" data-itemid="login_remind" {$item_login_remind} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" {$forgotpasswordlink_attrs} href="remind.php" >
+							Forgot password?			</a>
 </span>
 </td>
 							</tr>

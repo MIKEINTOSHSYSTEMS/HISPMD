@@ -16,6 +16,8 @@ $dalTablehispmdusers["last_name"] = array("type"=>200,"varname"=>"last_name", "n
 $dalTablehispmdusers["designation"] = array("type"=>200,"varname"=>"designation", "name" => "designation", "autoInc" => "0");
 $dalTablehispmdusers["organisation_name"] = array("type"=>200,"varname"=>"organisation_name", "name" => "organisation_name", "autoInc" => "0");
 $dalTablehispmdusers["department"] = array("type"=>200,"varname"=>"department", "name" => "department", "autoInc" => "0");
+$dalTablehispmdusers["reset_token"] = array("type"=>201,"varname"=>"reset_token", "name" => "reset_token", "autoInc" => "0");
+$dalTablehispmdusers["reset_date"] = array("type"=>135,"varname"=>"reset_date", "name" => "reset_date", "autoInc" => "0");
 $dalTablehispmdusers["ID"]["key"]=true;
 
 $dal_info["hispmdathispmdmerqconsultancyo_public_hispmdusers"] = &$dalTablehispmdusers;

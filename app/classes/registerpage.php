@@ -195,7 +195,8 @@ class RegisterPage extends RunnerPage
 			$this->registerSuccess = $this->registerNewUser();
 			$this->doAfterRegistrationEvent();
 
-				if( !$this->registerSuccess && $this->mode == REGISTER_POPUP )
+				$this->notifyUserAndAdmin();
+			if( !$this->registerSuccess && $this->mode == REGISTER_POPUP )
 			{
 				$returnJSON = array();
 				$returnJSON['success'] = false;
@@ -270,8 +271,72 @@ class RegisterPage extends RunnerPage
 			$globalEvents->AfterUnsuccessfulRegistration( $this->regValues, $this->message, $this );
 	}
 
+	/**
+	 * Send emails to a new registered user or/and to admin-user
+	 */
+	protected function notifyUserAndAdmin()
+	{
+		if( !$this->registerSuccess )
+			return;
 
+		$sentMailResults = $this->sendUserRegisterMessage();
 
+		if( !@$sentMailResults["mailed"] )
+		{
+			$this->message.= " ".$sentMailResults["message"];
+			if ( $this->sendActivationLink )
+				$this->sendActivationLinkFailedMessage = $sentMailResults["message"];
+		}
+
+		$sentMailResults1 = $this->sendAdminRegisterMessage();
+		if( !@$sentMailResults1["mailed"] )
+			$this->message.= " ".$sentMailResults1["message"];
+	}
+
+	/**
+	 * Send an email to a new registered user
+	 * @return Array
+	 */
+	protected function sendUserRegisterMessage()
+	{
+		$data = array();
+		if( GetGlobalData("userRequireActivation") ) {
+			$data["activateurl"] = $this->getUserActivationUrl( $this->regValues[Security::usernameField()], $this->prepActivationCode );
+		}
+
+		foreach( $this->pSet->getPageFields() as $uf ) {
+			$data[ GoodFieldName( $uf . "_value" ) ] = $this->regValues[ $uf ];
+		}
+
+		$strEmail = $this->strEmail;
+		if( ( $pos = strpos($this->strEmail,"\r") ) !== FALSE || ($pos = strpos( $this->strEmail, "\n") ) !== FALSE )
+			$strEmail = substr( $this->strEmail, 0, $pos );
+
+		$data["email_value"] = $strEmail;
+
+		$html = isEmailTemplateUseHTML("userregister");
+		return RunnerPage::sendEmailByTemplate($strEmail, "userregister", $data, $html);
+	}
+
+	/**
+	 * Send an email to admin-user
+	 * @return Array
+	 */
+	protected function sendAdminRegisterMessage()
+	{
+		$data = array();
+		if( GetGlobalData("userRequireActivation")	)
+			$data["activateurl"] = $this->getUserActivationUrl( $this->regValues[Security::usernameField()], $this->prepActivationCode );
+
+		foreach( $this->pSet->getPageFields() as $uf ) {
+			$data[ GoodFieldName( $uf . "_value" ) ] = $this->regValues[ $uf ];
+		}
+
+		$strEmail = "admin@merqconsultancy.org";
+
+		$html = isEmailTemplateUseHTML("adminregister");
+		return RunnerPage::sendEmailByTemplate($strEmail, "adminregister", $data, $html);
+	}
 
 	/**
 	 *

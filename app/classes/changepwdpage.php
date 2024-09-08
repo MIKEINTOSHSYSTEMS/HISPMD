@@ -97,7 +97,7 @@ class ChangePasswordPage extends RunnerPage
 	 * @return DsCondition
 	 */
 	protected function getTokenCondition() {
-		return DataCondition::FieldEquals( "˂Create new˃", $this->token );
+		return DataCondition::FieldEquals( "reset_token", $this->token );
 	}
 
 	/**
@@ -127,8 +127,8 @@ class ChangePasswordPage extends RunnerPage
 		$values = array();
 		$values[ $this->passwordField ] = $newpass;
 		if( $this->token ) {
-			$values[ "˂Create new˃" ] = "";
-			$values[ "˂Create new˃" ] = NULL;
+			$values[ "reset_token" ] = "";
+			$values[ "reset_date" ] = NULL;
 			if( GetGlobalData( "userRequireActivation" ) ) {
 				$values[  GetGlobalData( "userActivationField" ) ] = "1";
 			}
@@ -454,7 +454,7 @@ class ChangePasswordPage extends RunnerPage
 		
 		$data = $this->cipherer->DecryptFetchedArray( $qResult->fetchAssoc() );
 		if( $data )
-			return secondsPassedFrom( $data["˂Create new˃"] ) < 86400;
+			return secondsPassedFrom( $data["reset_date"] ) < 86400;
 
 		return false;
 	}

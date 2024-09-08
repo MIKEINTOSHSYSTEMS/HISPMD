@@ -1,0 +1,18 @@
+Notification on registering
+
+User registered at %url%
+
+ID: %ID_value%
+Username: %username_value%
+Email: %email_value%
+Full Name: %fullname_value%
+Groupid: %groupid_value%
+Ext Security Id: %ext_security_id_value%
+Userpic: %userpic_value%
+Phone Number: %phone_number_value%
+First Name: %first_name_value%
+Middle Name: %middle_name_value%
+Last Name: %last_name_value%
+Designation: %designation_value%
+Organisation Name: %organisation_name_value%
+Department: %department_value%
