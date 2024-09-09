@@ -91,9 +91,9 @@ $url = RunnerContext::PrepareRest($url);
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize parameters with default values
-$organisationUnits = ['ImspTQPwCqd', 'at6UHUQatSo']; // Default organisation units
-$ougs = ['Bpx0589u8y0']; // Default organisation unit groups
-$columns = ['Bpx0589u8y0']; // Default columns
+$organisationUnits = ['b3aCK1PTn5S', 'yY9BLUUegel', 'UFtGyqJMEZh', 'GvFqTavdpGE','yb9NKGA8uqt', 'Fccw8uMlJHN', 'tDoLtk2ylu4', 'G9hDiPNoB7d', 'moBiwh9h5Ce', 'b9nYedsL8te', 'XU2wpLlX4Vk', 'xNUoZIrGKxQ', 'PCKGSJoNHXi', 'a2QIIR2UXcd', 'HIlnt7Qj8do', 'Gmw0DJLXGtx']; // Default organisation units
+$ougs = ['saIPeABoPMH']; // Default organisation unit groups // Using Facility Type
+$columns = ['saIPeABoPMH']; // Default columns
 
 // Parse `q` parameter for organisation units
 preg_match('/organisationUnit~equals~([^)]*)/', $query, $matches);

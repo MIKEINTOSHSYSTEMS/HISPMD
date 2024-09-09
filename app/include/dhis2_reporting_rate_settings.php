@@ -457,7 +457,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 	$edata["LookupTable"] = "DHIS2_Organisation_Unit";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 2;
 
 	
 		
@@ -477,8 +477,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 

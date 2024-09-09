@@ -25,10 +25,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsdhis2_aio_orgunit["English"] = array();
 	$placeHoldersdhis2_aio_orgunit["English"] = array();
 	$pageTitlesdhis2_aio_orgunit["English"] = array();
-	$fieldLabelsdhis2_aio_orgunit["English"]["name"] = "Name";
+	$fieldLabelsdhis2_aio_orgunit["English"]["name"] = "Organisation Units";
 	$fieldToolTipsdhis2_aio_orgunit["English"]["name"] = "";
 	$placeHoldersdhis2_aio_orgunit["English"]["name"] = "";
-	$fieldLabelsdhis2_aio_orgunit["English"]["column"] = "Column";
+	$fieldLabelsdhis2_aio_orgunit["English"]["column"] = "Organisation Unit Group Sets";
 	$fieldToolTipsdhis2_aio_orgunit["English"]["column"] = "";
 	$placeHoldersdhis2_aio_orgunit["English"]["column"] = "";
 	$fieldLabelsdhis2_aio_orgunit["English"]["rows"] = "Rows";

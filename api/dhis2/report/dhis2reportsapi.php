@@ -5,8 +5,8 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
-$apiUrl = "https://dhis2.merqconsultancy.org/api/";
-$auth = base64_encode("admin:district");
+$apiUrl = "https://dhis.moh.gov.et/api/"; //"https://dhis2.merqconsultancy.org/api/";
+$auth = base64_encode("michaelk:Dhis2_12345");
 
 function fetchData($url) {
     global $auth;

@@ -306,6 +306,20 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"] = array();
 		}
 		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"]["edit"] = array("table" => "DHIS2_AIO_OrgUnit", "field" => "column", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Units"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_orgunit_distributions.name"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_orgunit_distributions.name"] = array();
+		}
+		$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_orgunit_distributions.name"]["edit"] = array("table" => "DHIS2_OrgUnit_Distributions", "field" => "name", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] ) ) {
+			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.column"] )) {
+			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.column"] = array();
+		}
+		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.column"]["edit"] = array("table" => "DHIS2_OrgUnit_Distributions", "field" => "column", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
 			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
 		}

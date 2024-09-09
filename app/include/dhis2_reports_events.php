@@ -92,8 +92,8 @@ $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize parameters with default values
 $defaultParams = [
-    'dataSets' => ['BfMAe6Itzgt'], // Default dataset ID
-    'orgUnits' => ['Rp268JB6Ne4'], // Default organisation unit ID
+    'dataSets' => ['Mit66Ie5u6x'], // Default dataset ID
+    'orgUnits' => ['b3aCK1PTn5S'], // Default organisation unit ID
     'periods' => [
         'THIS_WEEK', 'LAST_WEEK', 'LAST_4_WEEKS', 'LAST_12_WEEKS', 'LAST_52_WEEKS', 'THIS_MONTH',
         'LAST_MONTH', 'THIS_BIMONTH', 'LAST_BIMONTH', 'THIS_QUARTER', 'LAST_QUARTER', 'THIS_SIX_MONTH',

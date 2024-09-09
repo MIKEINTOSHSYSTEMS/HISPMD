@@ -80,10 +80,10 @@ class RestManager
 
 		$this->_connectionsIdByName["MOH_DHIS2_Report_Dash_API_Const"] = "xhispmdathispmdmerqconsultancy";
 
-		$data["url"] = "https://dhis2.merqconsultancy.org";
+		$data["url"] = "https://dhis.moh.gov.et";
 		$data["authType"] = "basic";
-			$data["username"] = "admin";
-		$data["password"] = "district";
+			$data["username"] = "michaelk";
+		$data["password"] = "Dhis2_12345";
 			
 	$connectionsData["xhispmdathispmdmerqconsultancy"] = $data;
 		$data = array();
@@ -92,10 +92,10 @@ class RestManager
 
 		$this->_connectionsIdByName["MOH_DHIS2_Report_OrgU_API_Const"] = "hispmdathispmdmerqconsultdhis2";
 
-		$data["url"] = "https://dhis2.merqconsultancy.org";
+		$data["url"] = "https://dhis.moh.gov.et";
 		$data["authType"] = "basic";
-			$data["username"] = "admin";
-		$data["password"] = "district";
+			$data["username"] = "michaelk";
+		$data["password"] = "Dhis2_12345";
 			
 	$connectionsData["hispmdathispmdmerqconsultdhis2"] = $data;
 		$data = array();
@@ -106,8 +106,8 @@ class RestManager
 
 		$data["url"] = "https://hispmd.merqconsultancy.org";
 		$data["authType"] = "basic";
-			$data["username"] = "admin";
-		$data["password"] = "district";
+			$data["username"] = "michaelk";
+		$data["password"] = "Dhis2_12345";
 			
 	$connectionsData["devdhis2hispmdathispmdmerqcons"] = $data;
 		$data = array();

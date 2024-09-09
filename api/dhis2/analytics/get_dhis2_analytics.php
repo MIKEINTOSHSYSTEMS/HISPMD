@@ -1,9 +1,9 @@
 <?php
 
 // DHIS2 credentials and base URL
-$baseUrl = 'https://dhis2.merqconsultancy.org';
-$username = 'admin';
-$password = 'district';
+$baseUrl = 'https://dhis.moh.gov.et';//'https://dhis2.merqconsultancy.org';
+$username = 'michaelk';
+$password = 'Dhis2_12345';
 
 // Fetch Data function
 function fetchData($url, $username, $password) {

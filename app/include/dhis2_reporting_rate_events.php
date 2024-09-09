@@ -92,8 +92,8 @@ $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize parameters with default values
 //$organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'GvFqTavdpGE','r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r']; // Default organisation units
-$organisationUnits = ['Rp268JB6Ne4', 'GvFqTavdpGE', 'GvFqTavdpGE','r5WWF9WDzoa', 'PD1fqyvJssC', 'U2QkKSeyL5r']; // Default organisation units
-$dataSets = ['BfMAe6Itzgt']; // Default data sets
+$organisationUnits = ['b3aCK1PTn5S', 'yY9BLUUegel', 'UFtGyqJMEZh', 'GvFqTavdpGE','yb9NKGA8uqt', 'Fccw8uMlJHN', 'tDoLtk2ylu4', 'G9hDiPNoB7d', 'moBiwh9h5Ce', 'b9nYedsL8te', 'XU2wpLlX4Vk', 'xNUoZIrGKxQ', 'PCKGSJoNHXi', 'a2QIIR2UXcd', 'HIlnt7Qj8do', 'Gmw0DJLXGtx']; // Default organisation units
+$dataSets = ['Mit66Ie5u6x']; // Default data sets
 $reportPeriods = ['LAST_6_BIMONTHS']; // Default report periods
 
 // Parse `q` parameter for organisation units

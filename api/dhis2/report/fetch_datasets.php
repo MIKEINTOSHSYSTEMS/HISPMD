@@ -1,7 +1,7 @@
 <?php
-$baseUrl = 'https://dhis2.merqconsultancy.org';
-$username = 'admin';
-$password = 'district';
+$baseUrl = 'https://dhis.moh.gov.et';//'https://dhis2.merqconsultancy.org';
+$username = 'michaelk';
+$password = 'Dhis2_12345';
 
 function fetchIndicators($baseUrl, $username, $password) {
     $url = $baseUrl . '/api/dataSets.json?fields=id,displayName&paging=false';
