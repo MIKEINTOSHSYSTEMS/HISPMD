@@ -1107,18 +1107,17 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
-	$edata["LookupTable"] = "";
-	$edata["LookupConnId"] = "";
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_periods";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
 		
-	$edata["LinkField"] = "Period_ID";
+	$edata["LinkField"] = "period_id";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Period_Name";
+	$edata["DisplayField"] = "period_name";
 
 	
 
@@ -1128,8 +1127,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	

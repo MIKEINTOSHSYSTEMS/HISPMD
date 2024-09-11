@@ -1,14 +1,21 @@
 [data-cellid="grid_footcell_field"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field"][data-page="dhis2_orgunit_distributions_list"] {
   white-space: nowrap;
 }
-[data-cellid="grid_footcell_field1"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field1"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field1"][data-page="dhis2_orgunit_distributions_list"] {
-  white-space: nowrap;
-}
 [data-cellid="grid_footcell_field2"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field2"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field2"][data-page="dhis2_orgunit_distributions_list"] {
   white-space: nowrap;
 }
 [data-cellid="grid_headcell_checkbox"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_headcell_checkbox"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_headcell_checkbox"][data-page="dhis2_orgunit_distributions_list"] {
   width: 30px;
+}
+[data-cellid="grid_footcell_field3"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field3"][data-page="dhis2_orgunit_distributions_list"][data-cellid="grid_footcell_field3"][data-page="dhis2_orgunit_distributions_list"] {
+  white-space: nowrap;
+}
+[data-page="dhis2_orgunit_distributions_list"][data-itemid="simple_grid_field"] {
+  color: #00294c;
+  font-weight: bold;
+}
+[data-page="dhis2_orgunit_distributions_list"][data-itemid="simple_grid_field1"] {
+  color: #00294c;
 }
 [data-page="dhis2_orgunit_distributions_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;

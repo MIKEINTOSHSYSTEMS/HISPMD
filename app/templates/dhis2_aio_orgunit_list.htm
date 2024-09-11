@@ -393,33 +393,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
-			<label>{$label DHIS2_AIO_OrgUnit name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_name}</span>
-						</div>
-		{END searchCtrlBlock_name}
-																{BEGIN searchCtrlBlock_column}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_column}" {$filterRow_attrs_column}>
-			<label>{$label DHIS2_AIO_OrgUnit column }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_column}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_column}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_column}</span>
-						</div>
-		{END searchCtrlBlock_column}
-		
+				
 
 	</div>
 
@@ -526,98 +500,6 @@
 
 
 
-
-
-
-{BEGIN filter_control_name}
-
-	<div class="dropdown filter-field filter-name-container" {BEGIN filter_selected_name} data-selected {END filter_selected_name}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_name}
-			<a href="#" class="filter-clear filter-clear-name" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_name}
-			<span class="r-filter-field">{$label DHIS2_AIO_OrgUnit name }				{BEGIN filter_selected_name}:{END filter_selected_name}
-			</span>
-			{BEGIN filter_selected_name}
-			<span class="r-filter-value">{$filtervalue_name}</span>
-			{END filter_selected_name}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_name}
-		<li class=" filter-values filter-values-name  {$visibilityClass_name}">
-			{$name_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_name}
-
-			{BEGIN filter_button_showmore_name}
-		<li class=" filter-show-more {$collapsedClass_name} {$showMoreBtnClass_name}">
-			<a class="filter-show-more-link filterShowMore_name" href="#">{$show_n_more_name}</a>
-		</li>
-		{END filter_button_showmore_name}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_name}
-
-
-
-
-
-
-{BEGIN filter_control_column}
-
-	<div class="dropdown filter-field filter-column-container" {BEGIN filter_selected_column} data-selected {END filter_selected_column}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_column}
-			<a href="#" class="filter-clear filter-clear-column" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_column}
-			<span class="r-filter-field">{$label DHIS2_AIO_OrgUnit column }				{BEGIN filter_selected_column}:{END filter_selected_column}
-			</span>
-			{BEGIN filter_selected_column}
-			<span class="r-filter-value">{$filtervalue_column}</span>
-			{END filter_selected_column}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_column}
-		<li class=" filter-values filter-values-column  {$visibilityClass_column}">
-			{$column_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_column}
-
-			{BEGIN filter_button_showmore_column}
-		<li class=" filter-show-more {$collapsedClass_column} {$showMoreBtnClass_column}">
-			<a class="filter-show-more-link filterShowMore_column" href="#">{$show_n_more_column}</a>
-		</li>
-		{END filter_button_showmore_column}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_column}
-
-
-
 	<!-- End Filter panel content -->
 	</div>
 </div>		</div>			 
@@ -636,13 +518,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="name"]:before {
-		content: "{$label DHIS2_AIO_OrgUnit name}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="column"]:before {
-		content: "{$label DHIS2_AIO_OrgUnit column}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rows"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rows"]:before {
 		content: "{$label DHIS2_AIO_OrgUnit rows}";
 	}
 	}
@@ -681,56 +557,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$name_class}	"
-
-			data-field="name"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN name_fieldheadercolumn}
-	{BEGIN name_fieldheader}
-	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label DHIS2_AIO_OrgUnit name }	{$arrow_icon_name}
-	</SPAN>
-	{END name_fieldheader}
-{END name_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$column_class}	"
-
-			data-field="column"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN column_fieldheadercolumn}
-	{BEGIN column_fieldheader}
-	<SPAN {$column_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="column" data-fieldname="column">
-	{$label DHIS2_AIO_OrgUnit column }	{$arrow_icon_column}
-	</SPAN>
-	{END column_fieldheader}
-{END column_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
 									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
@@ -791,48 +617,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$name_class}	"
-
-			data-field="name"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name" data-default-width >
-{$name_value}
-</span>
-{END name_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$column_class}	"
-
-			data-field="column"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN column_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="column" data-fieldname="column" data-default-width >
-{$column_value}
-</span>
-{END column_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
@@ -880,36 +664,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$name_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_aio_orgunit_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$column_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_aio_orgunit_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 									{BEGIN cellblock_grid_footcell_field2}
 	<td
 	

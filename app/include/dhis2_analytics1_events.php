@@ -91,16 +91,15 @@ $url = RunnerContext::PrepareRest($url);
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize parameters with default values
-$indicators = ['gNAXtpqAqW2', 'dy1a1mseGR7'];
-$orgUnits = ['Rp268JB6Ne4', 'dWOAzMcK2Wt'];
-$periods = [
-    'THIS_WEEK', 'LAST_WEEK', 'LAST_4_WEEKS', 'LAST_12_WEEKS', 'LAST_52_WEEKS', 'THIS_MONTH', 
-    'LAST_MONTH', 'THIS_BIMONTH', 'LAST_BIMONTH', 'THIS_QUARTER', 'LAST_QUARTER', 'THIS_SIX_MONTH', 
-    'LAST_SIX_MONTH', 'MONTHS_THIS_YEAR', 'QUARTERS_THIS_YEAR', 'THIS_YEAR', 'MONTHS_LAST_YEAR', 
-    'QUARTERS_LAST_YEAR', 'LAST_YEAR', 'LAST_5_YEARS', 'LAST_12_MONTHS', 'LAST_3_MONTHS', 
-    'LAST_6_BIMONTHS', 'LAST_4_QUARTERS', 'LAST_2_SIXMONTHS', 'THIS_FINANCIAL_YEAR', 
-    'LAST_FINANCIAL_YEAR', 'LAST_5_FINANCIAL_YEARS'
-];
+$indicators = ['q7Y6AB89bRA', 'zZtCuXH67wu'];
+$orgUnits = ['b3aCK1PTn5S', 'yY9BLUUegel', 'UFtGyqJMEZh', 'GvFqTavdpGE','yb9NKGA8uqt', 'Fccw8uMlJHN', 'tDoLtk2ylu4', 'G9hDiPNoB7d', 'moBiwh9h5Ce', 'b9nYedsL8te', 'XU2wpLlX4Vk', 'xNUoZIrGKxQ', 'PCKGSJoNHXi', 'a2QIIR2UXcd', 'HIlnt7Qj8do', 'Gmw0DJLXGtx'];
+$periods = ['LAST_12_MONTHS'];
+//    ['THIS_WEEK', 'LAST_WEEK', 'LAST_4_WEEKS', 'LAST_12_WEEKS', 'LAST_52_WEEKS', 'THIS_MONTH', 
+//    'LAST_MONTH', 'THIS_BIMONTH', 'LAST_BIMONTH', 'THIS_QUARTER', 'LAST_QUARTER', 'THIS_SIX_MONTH', 
+//    'LAST_SIX_MONTH', 'MONTHS_THIS_YEAR', 'QUARTERS_THIS_YEAR', 'THIS_YEAR', 'MONTHS_LAST_YEAR', 
+//    'QUARTERS_LAST_YEAR', 'LAST_YEAR', 'LAST_5_YEARS', 'LAST_12_MONTHS', 'LAST_3_MONTHS', 
+//    'LAST_6_BIMONTHS', 'LAST_4_QUARTERS', 'LAST_2_SIXMONTHS', 'THIS_FINANCIAL_YEAR', 
+//    'LAST_FINANCIAL_YEAR', 'LAST_5_FINANCIAL_YEARS'];
 
 // Parse `q` parameter for indicators
 preg_match('/dx~equals~([^)]*)/', $query, $matches);

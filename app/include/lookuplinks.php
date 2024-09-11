@@ -68,13 +68,13 @@ function InitLookupLinks()
 			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"] = array();
 		}
 		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_analytics1.ou"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "ou", "page" => "edit");
-		if( !isset( $lookupTableLinks[""] ) ) {
-			$lookupTableLinks[""] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
 		}
-		if( !isset( $lookupTableLinks[""]["dhis2_analytics1.pe"] )) {
-			$lookupTableLinks[""]["dhis2_analytics1.pe"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_analytics1.pe"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_analytics1.pe"] = array();
 		}
-		$lookupTableLinks[""]["dhis2_analytics1.pe"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "pe", "page" => "edit");
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_analytics1.pe"]["edit"] = array("table" => "DHIS2_Analytics", "field" => "pe", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Indicator"] ) ) {
 			$lookupTableLinks["DHIS2_Indicator"] = array();
 		}
@@ -292,34 +292,20 @@ function InitLookupLinks()
 			$lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"] = array();
 		}
 		$lookupTableLinks["MFR_Woredas"]["mfr_facility.woredaId"]["edit"] = array("table" => "MFR_Facility", "field" => "woredaId", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"] ) ) {
-			$lookupTableLinks["DHIS2_Organisation_Units"] = array();
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"] ) ) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_aio_orgunit.name"] )) {
-			$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_aio_orgunit.name"] = array();
+		if( !isset( $lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_orgunit_distributions.ou"] )) {
+			$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_orgunit_distributions.ou"] = array();
 		}
-		$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_aio_orgunit.name"]["edit"] = array("table" => "DHIS2_AIO_OrgUnit", "field" => "name", "page" => "edit");
+		$lookupTableLinks["DHIS2_Organisation_Unit"]["dhis2_orgunit_distributions.ou"]["edit"] = array("table" => "DHIS2_OrgUnit_Distributions", "field" => "ou", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] ) ) {
 			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"] )) {
-			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"] = array();
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.ougs"] )) {
+			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.ougs"] = array();
 		}
-		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_aio_orgunit.column"]["edit"] = array("table" => "DHIS2_AIO_OrgUnit", "field" => "column", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"] ) ) {
-			$lookupTableLinks["DHIS2_Organisation_Units"] = array();
-		}
-		if( !isset( $lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_orgunit_distributions.name"] )) {
-			$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_orgunit_distributions.name"] = array();
-		}
-		$lookupTableLinks["DHIS2_Organisation_Units"]["dhis2_orgunit_distributions.name"]["edit"] = array("table" => "DHIS2_OrgUnit_Distributions", "field" => "name", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] ) ) {
-			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"] = array();
-		}
-		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.column"] )) {
-			$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.column"] = array();
-		}
-		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.column"]["edit"] = array("table" => "DHIS2_OrgUnit_Distributions", "field" => "column", "page" => "edit");
+		$lookupTableLinks["DHIS2_OrgUnit_Group_Sets"]["dhis2_orgunit_distributions.ougs"]["edit"] = array("table" => "DHIS2_OrgUnit_Distributions", "field" => "ougs", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.mfr_dashboard_reports"] ) ) {
 			$lookupTableLinks["public.mfr_dashboard_reports"] = array();
 		}

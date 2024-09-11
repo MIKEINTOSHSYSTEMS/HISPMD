@@ -335,6 +335,15 @@
 	class=" r-ori-vert			col-md-12
 	
 ">
+			</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c" data-pageid="{$pageid}"	{$cell_top_c}
+	class=" r-ori-vert			col-md-12
+	
+">
 		 
 		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
 	<p>START&nbsp;HERE by Selecting an Indicator and Then the Organisation Unit and Click on SEARCH</p></span>
@@ -343,7 +352,7 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="top_c" data-pageid="{$pageid}"	{$cell_top_c}
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
 	class=" r-ori-vert			col-md-12
 	
 ">
@@ -414,6 +423,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ou}</span>
 						</div>
 		{END searchCtrlBlock_ou}
+																{BEGIN searchCtrlBlock_pe}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_pe}" {$filterRow_attrs_pe}>
+			<label>{$label DHIS2_Analytics pe }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_pe}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_pe}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_pe}</span>
+						</div>
+		{END searchCtrlBlock_pe}
 		
 
 	</div>
@@ -425,18 +447,6 @@
 	</div>
 </div>
 <!-- End Search panel content -->
-		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
-	class=" r-ori-vert			col-md-12
-	
-">
-		 
-		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
-	After Selecting from the above Available Indicators and Organisation Units, you can use the FILTERS below to narrow down your search results!</span>
 		</div>					</div>
 			</div>		
 {END top_block}
@@ -459,10 +469,109 @@
 			 
 				<div 
 	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	After Selecting from the above Available Indicators and Organisation Units, you can use the FILTERS below to narrow down your search results!</span>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Scope:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="dhis2_analytics1_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Print all pages							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="dhis2_analytics1_print.php?{$crosstable_attrs}">
+				Print this page			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Records Per Page							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Print			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="			col-md-12
+	
+">
 		 
 		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-page="dhis2_analytics1_list" data-small > 
 	Filters </span>
@@ -693,115 +802,7 @@
 
 	<!-- End Filter panel content -->
 	</div>
-</div>			{END firstAboveGridCell}	
-	</div>			 
-				<div 
-	data-cellId="above-grid_c5" data-pageid="{$pageid}"	{$cell_above-grid_c5}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
-	
-">
-			</div>			 
-				<div 
-	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class="r-align-right			col-md-6
-	
-">
-		 
-		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
-{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
-		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
-		{$recsPerPage}
-</span>	 
-		{BEGIN print_friendly}
-<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-print"></span>
-				<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu pull-right">
-										 
-				 
-					<li class="container-fluid 
-										">
-									<div id="print_friendly_scope{$id}">
-	<div class="row">
-		<div class="col-md-4">
-			Scope:		</div>
-
-			 
-		{BEGIN print_friendly_all}
-		<div class="col-md-8">
-			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="dhis2_analytics1_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									Print all pages							</label>
-		</div>
-		{END print_friendly_all}
-		</div>
-		<div class="row">
-		<div class="col-md-4">&nbsp;</div>
-		<div class="col-md-8">
-			<label for="printPage{$id}">
-				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="dhis2_analytics1_print.php?{$crosstable_attrs}">
-				Print this page			</label>
-		</div>
-	</div>
-		
-	</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-										">
-									<div>
-	<label for="printPerPage{$id}">
-					Records Per Page							
-	</label>
-	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
-</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-					 text-center 					">
-									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" id="print_friendly_button{$id}" >
-							Print			</a>
-</span>
-				 
-					</li>
-															</ul>
-</span>
-{END print_friendly}
-		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class=" r-ori-vert			col-md-6
-	
-">
-			</div>			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
+</div>		</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>

@@ -277,77 +277,34 @@
 
  
 	 
-												<table 
+		
+					<table 
 	data-body-align="left"
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
 		data-form-width="1"
 		
-		data-v-width="6"
+		data-v-width="1"
 	>
 	<tbody>
-										<tr {$row_grid_0} >
-										
+						<tr>
+						
 
 {BEGIN cellblock_grid_c3}
 <td
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
+			data-single
 				data-fullwidth
 		
 			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="6"
+		data-v-cell="1"
 		
 >
 	<div edit-form-cell class="clearfix">
-				
-{BEGIN name_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_name}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="name{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="name" data-fieldname="name" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_name}">
-		{$label DHIS2_AIO_OrgUnit name }	</label>
-	<div class="r-search-option">
-		{$searchtype_name}
-	</div>
-	<div class="r-search-field">
-		{$name_editcontrol}	</div>
-	<div class="r-search-field">
-		{$name_editcontrol1}
-	</div>
-	
-</div>
-
-{END name_fieldblock}
-											
-{BEGIN column_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_column}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="column{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="column" data-fieldname="column" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_column}">
-		{$label DHIS2_AIO_OrgUnit column }	</label>
-	<div class="r-search-option">
-		{$searchtype_column}
-	</div>
-	<div class="r-search-field">
-		{$column_editcontrol}	</div>
-	<div class="r-search-field">
-		{$column_editcontrol1}
-	</div>
-	
-</div>
-
-{END column_fieldblock}
-	
-								</td>
+									</td>
 			{END cellblock_grid_c3}
 								</tr>
 			</tbody></table>

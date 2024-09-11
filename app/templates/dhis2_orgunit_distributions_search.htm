@@ -303,49 +303,71 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN name_fieldblock}
+{BEGIN ougs_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_name}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="name{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="name" data-fieldname="name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ougs}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ougs{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ougs" data-fieldname="ougs" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_name}">
-		{$label DHIS2_OrgUnit_Distributions name }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_ougs}">
+		{$label DHIS2_OrgUnit_Distributions ougs }	</label>
 	<div class="r-search-option">
-		{$searchtype_name}
+		{$searchtype_ougs}
 	</div>
 	<div class="r-search-field">
-		{$name_editcontrol}	</div>
+		{$ougs_editcontrol}	</div>
 	<div class="r-search-field">
-		{$name_editcontrol1}
+		{$ougs_editcontrol1}
 	</div>
 	
 </div>
 
-{END name_fieldblock}
+{END ougs_fieldblock}
 											
-{BEGIN column_fieldblock}
+{BEGIN ou_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_column}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="column{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="column" data-fieldname="column" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ou}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ou{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="ou" data-fieldname="ou" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_column}">
-		{$label DHIS2_OrgUnit_Distributions column }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_ou}">
+		{$label DHIS2_OrgUnit_Distributions ou }	</label>
 	<div class="r-search-option">
-		{$searchtype_column}
+		{$searchtype_ou}
 	</div>
 	<div class="r-search-field">
-		{$column_editcontrol}	</div>
+		{$ou_editcontrol}	</div>
 	<div class="r-search-field">
-		{$column_editcontrol1}
+		{$ou_editcontrol1}
 	</div>
 	
 </div>
 
-{END column_fieldblock}
+{END ou_fieldblock}
+											
+{BEGIN ougsDisplayName_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ougsDisplayName}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ougsDisplayName{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="ougsDisplayName" data-fieldname="ougsDisplayName" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ougsDisplayName}">
+		{$label DHIS2_OrgUnit_Distributions ougsDisplayName }	</label>
+	<div class="r-search-option">
+		{$searchtype_ougsDisplayName}
+	</div>
+	<div class="r-search-field">
+		{$ougsDisplayName_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ougsDisplayName_editcontrol1}
+	</div>
+	
+</div>
+
+{END ougsDisplayName_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

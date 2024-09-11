@@ -128,6 +128,7 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -144,28 +145,13 @@ pdfDocument = {
       
       },
 
-																							{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 						[
 																{
 	cellId: 'c1',
@@ -180,10 +166,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_filter_panel}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -220,6 +204,38 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}
@@ -268,7 +284,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'name',
+			fieldName: 'ou',
 				style: 'headcell',
 		
 		
@@ -282,51 +298,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_OrgUnit_Distributions name }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel DHIS2_OrgUnit_Distributions ou }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$name_align}',
+              "alignment": '{$ou_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'column',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel DHIS2_OrgUnit_Distributions column }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$column_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
 																							{BEGIN cellblock_grid_headcell_field2}
 {
 	cellId: 'headcell_field2',
 	col:0,
 	row:0,
-			fieldName: 'rows',
+			fieldName: 'ougsDisplayName',
 				style: 'headcell',
 		
 		
@@ -340,16 +327,45 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel DHIS2_OrgUnit_Distributions rows }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel DHIS2_OrgUnit_Distributions ougsDisplayName }","hidden":"{$item_hide_grid_field_label}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$rows_align}',
+              "alignment": '{$ougsDisplayName_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'count',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_OrgUnit_Distributions count }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$count_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
 											],
 				{END row_grid_0}
 		
@@ -392,7 +408,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'name',
+			fieldName: 'ou',
 				style: 'bodycell',
 		
 		
@@ -406,51 +422,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$name_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$ou_pdfvalue},"color":"#00294c","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$name_align}',
+              "alignment": '{$ou_align}',
      
       
       },
 
 {END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'column',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$column_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$column_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
 																							{BEGIN cellblock_grid_cell_field2}
 {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
-			fieldName: 'rows',
+			fieldName: 'ougsDisplayName',
 				style: 'bodycell',
 		
 		
@@ -464,16 +451,45 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$rows_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+			{"text":{$ougsDisplayName_pdfvalue},"hidden":"{$item_hide_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$rows_align}',
+              "alignment": '{$ougsDisplayName_align}',
      
       
       },
 
 {END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'count',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$count_pdfvalue},"color":"#00294c","hidden":"{$item_hide_simple_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$count_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
 											],
 				{END row_grid_1}
 		
@@ -535,32 +551,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
-{
-	cellId: 'footcell_field1',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field1}
 																							{BEGIN cellblock_grid_footcell_field2}
 {
 	cellId: 'footcell_field2',
@@ -587,6 +577,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_footcell_field3}
+{
+	cellId: 'footcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field3}
 											],
 				{END row_grid_2}
 		

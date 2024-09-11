@@ -348,7 +348,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class=" r-ori-vert			col-md-6
+	class=" r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
@@ -393,32 +393,32 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_name}
+																		{BEGIN searchCtrlBlock_ou}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
-			<label>{$label DHIS2_OrgUnit_Distributions name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_name}</span>
-						</div>
-		{END searchCtrlBlock_name}
-																{BEGIN searchCtrlBlock_column}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_column}" {$filterRow_attrs_column}>
-			<label>{$label DHIS2_OrgUnit_Distributions column }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_ou}" {$filterRow_attrs_ou}>
+			<label>{$label DHIS2_OrgUnit_Distributions ou }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_column}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_column}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_column}</span>
+								<span class="rnr-searchtype">{$searchtype_ou}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ou}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ou}</span>
 						</div>
-		{END searchCtrlBlock_column}
+		{END searchCtrlBlock_ou}
+																{BEGIN searchCtrlBlock_ougs}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ougs}" {$filterRow_attrs_ougs}>
+			<label>{$label DHIS2_OrgUnit_Distributions ougs }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ougs}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ougs}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ougs}</span>
+						</div>
+		{END searchCtrlBlock_ougs}
 		
 
 	</div>
@@ -431,13 +431,7 @@
 </div>
 <!-- End Search panel content -->
 			{END firstAboveGridCell}	
-	</div>			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
+	</div>					</div>
 			 
 				<div class="row">
 			 
@@ -446,110 +440,7 @@
 	class=" r-ori-vert			col-md-6
 	
 ">
-		 
-		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
-	<div class="filterPanelContainer {$filterPanelStateClass}" 
-					data-horizontal
-			>
-	<!-- Begin Filter panel content -->
-
-
-
-
-
-
-{BEGIN filter_control_name}
-
-	<div class="dropdown filter-field filter-name-container" {BEGIN filter_selected_name} data-selected {END filter_selected_name}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_name}
-			<a href="#" class="filter-clear filter-clear-name" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_name}
-			<span class="r-filter-field">{$label DHIS2_OrgUnit_Distributions name }				{BEGIN filter_selected_name}:{END filter_selected_name}
-			</span>
-			{BEGIN filter_selected_name}
-			<span class="r-filter-value">{$filtervalue_name}</span>
-			{END filter_selected_name}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_name}
-		<li class=" filter-values filter-values-name  {$visibilityClass_name}">
-			{$name_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_name}
-
-			{BEGIN filter_button_showmore_name}
-		<li class=" filter-show-more {$collapsedClass_name} {$showMoreBtnClass_name}">
-			<a class="filter-show-more-link filterShowMore_name" href="#">{$show_n_more_name}</a>
-		</li>
-		{END filter_button_showmore_name}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_name}
-
-
-
-
-
-
-{BEGIN filter_control_column}
-
-	<div class="dropdown filter-field filter-column-container" {BEGIN filter_selected_column} data-selected {END filter_selected_column}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_column}
-			<a href="#" class="filter-clear filter-clear-column" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_column}
-			<span class="r-filter-field">{$label DHIS2_OrgUnit_Distributions column }				{BEGIN filter_selected_column}:{END filter_selected_column}
-			</span>
-			{BEGIN filter_selected_column}
-			<span class="r-filter-value">{$filtervalue_column}</span>
-			{END filter_selected_column}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_column}
-		<li class=" filter-values filter-values-column  {$visibilityClass_column}">
-			{$column_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_column}
-
-			{BEGIN filter_button_showmore_column}
-		<li class=" filter-show-more {$collapsedClass_column} {$showMoreBtnClass_column}">
-			<a class="filter-show-more-link filterShowMore_column" href="#">{$show_n_more_column}</a>
-		</li>
-		{END filter_button_showmore_column}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_column}
-
-
-
-	<!-- End Filter panel content -->
-	</div>
-</div>		</div>			 
+			</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6
@@ -627,6 +518,118 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_ou}
+
+	<div class="dropdown filter-field filter-ou-container" {BEGIN filter_selected_ou} data-selected {END filter_selected_ou}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_ou}
+			<a href="#" class="filter-clear filter-clear-ou" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_ou}
+			<span class="r-filter-field">{$label DHIS2_OrgUnit_Distributions ou }				{BEGIN filter_selected_ou}:{END filter_selected_ou}
+			</span>
+			{BEGIN filter_selected_ou}
+			<span class="r-filter-value">{$filtervalue_ou}</span>
+			{END filter_selected_ou}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_ou}
+		<li class=" filter-values filter-values-ou  {$visibilityClass_ou}">
+			{$ou_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_ou}
+
+			{BEGIN filter_button_showmore_ou}
+		<li class=" filter-show-more {$collapsedClass_ou} {$showMoreBtnClass_ou}">
+			<a class="filter-show-more-link filterShowMore_ou" href="#">{$show_n_more_ou}</a>
+		</li>
+		{END filter_button_showmore_ou}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_ou}
+
+
+
+
+
+
+{BEGIN filter_control_ougsDisplayName}
+
+	<div class="dropdown filter-field filter-ougsDisplayName-container" {BEGIN filter_selected_ougsDisplayName} data-selected {END filter_selected_ougsDisplayName}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_ougsDisplayName}
+			<a href="#" class="filter-clear filter-clear-ougsDisplayName" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_ougsDisplayName}
+			<span class="r-filter-field">{$label DHIS2_OrgUnit_Distributions ougsDisplayName }				{BEGIN filter_selected_ougsDisplayName}:{END filter_selected_ougsDisplayName}
+			</span>
+			{BEGIN filter_selected_ougsDisplayName}
+			<span class="r-filter-value">{$filtervalue_ougsDisplayName}</span>
+			{END filter_selected_ougsDisplayName}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_ougsDisplayName}
+		<li class=" filter-values filter-values-ougsDisplayName  {$visibilityClass_ougsDisplayName}">
+			{$ougsDisplayName_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_ougsDisplayName}
+
+			{BEGIN filter_button_showmore_ougsDisplayName}
+		<li class=" filter-show-more {$collapsedClass_ougsDisplayName} {$showMoreBtnClass_ougsDisplayName}">
+			<a class="filter-show-more-link filterShowMore_ougsDisplayName" href="#">{$show_n_more_ougsDisplayName}</a>
+		</li>
+		{END filter_button_showmore_ougsDisplayName}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_ougsDisplayName}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>					</div>
 			</div>		
 {END above-grid_block}
 			</div>
@@ -636,14 +639,14 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="name"]:before {
-		content: "{$label DHIS2_OrgUnit_Distributions name}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ou"]:before {
+		content: "{$label DHIS2_OrgUnit_Distributions ou}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="column"]:before {
-		content: "{$label DHIS2_OrgUnit_Distributions column}";
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ougsDisplayName"]:before {
+		content: "{$label DHIS2_OrgUnit_Distributions ougsDisplayName}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rows"]:before {
-		content: "{$label DHIS2_OrgUnit_Distributions rows}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="count"]:before {
+		content: "{$label DHIS2_OrgUnit_Distributions count}";
 	}
 	}
 </style>
@@ -687,75 +690,75 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$name_class}	"
+		 r-ori-vert		 {$ou_class}	"
 
-			data-field="name"
+			data-field="ou"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN name_fieldheadercolumn}
-	{BEGIN name_fieldheader}
-	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label DHIS2_OrgUnit_Distributions name }	{$arrow_icon_name}
+		{BEGIN ou_fieldheadercolumn}
+	{BEGIN ou_fieldheader}
+	<SPAN {$ou_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ou" data-fieldname="ou">
+	{$label DHIS2_OrgUnit_Distributions ou }	{$arrow_icon_ou}
 	</SPAN>
-	{END name_fieldheader}
-{END name_fieldheadercolumn}
+	{END ou_fieldheader}
+{END ou_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$column_class}	"
-
-			data-field="column"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN column_fieldheadercolumn}
-	{BEGIN column_fieldheader}
-	<SPAN {$column_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="column" data-fieldname="column">
-	{$label DHIS2_OrgUnit_Distributions column }	{$arrow_icon_column}
-	</SPAN>
-	{END column_fieldheader}
-{END column_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
 									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$rows_class}	"
+		 r-ori-vert		 {$ougsDisplayName_class}	"
 
-			data-field="rows"
+			data-field="ougsDisplayName"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN rows_fieldheadercolumn}
-	{BEGIN rows_fieldheader}
-	<SPAN {$rows_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rows" data-fieldname="rows">
-	{$label DHIS2_OrgUnit_Distributions rows }	{$arrow_icon_rows}
+		{BEGIN ougsDisplayName_fieldheadercolumn}
+	{BEGIN ougsDisplayName_fieldheader}
+	<SPAN {$ougsDisplayName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ougsDisplayName" data-fieldname="ougsDisplayName">
+	{$label DHIS2_OrgUnit_Distributions ougsDisplayName }	{$arrow_icon_ougsDisplayName}
 	</SPAN>
-	{END rows_fieldheader}
-{END rows_fieldheadercolumn}
+	{END ougsDisplayName_fieldheader}
+{END ougsDisplayName_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$count_class}	"
+
+			data-field="count"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN count_fieldheadercolumn}
+	{BEGIN count_fieldheader}
+	<SPAN {$count_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="count" data-fieldname="count">
+	{$label DHIS2_OrgUnit_Distributions count }	{$arrow_icon_count}
+	</SPAN>
+	{END count_fieldheader}
+{END count_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -797,63 +800,63 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$name_class}	"
+		 r-ori-vert		 {$ou_class}	"
 
-			data-field="name"
+			data-field="ou"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name" data-default-width >
-{$name_value}
+		{BEGIN ou_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-page="dhis2_orgunit_distributions_list" data-record-id="{$recId}" data-field="ou" data-fieldname="ou" data-default-width >
+{$ou_value}
 </span>
-{END name_fieldcolumn}	
+{END ou_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$column_class}	"
-
-			data-field="column"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN column_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="column" data-fieldname="column" data-default-width >
-{$column_value}
-</span>
-{END column_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$rows_class}	"
+		 r-ori-vert		 {$ougsDisplayName_class}	"
 
-			data-field="rows"
+			data-field="ougsDisplayName"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN rows_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rows" data-fieldname="rows" data-default-width >
-{$rows_value}
+		{BEGIN ougsDisplayName_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ougsDisplayName" data-fieldname="ougsDisplayName" data-default-width >
+{$ougsDisplayName_value}
 </span>
-{END rows_fieldcolumn}	
+{END ougsDisplayName_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$count_class}	"
+
+			data-field="count"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN count_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-page="dhis2_orgunit_distributions_list" data-record-id="{$recId}" data-field="count" data-fieldname="count" data-default-width >
+{$count_value}
+</span>
+{END count_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -886,7 +889,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$name_class}	"
+		 r-ori-vert		 {$ou_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_orgunit_distributions_list"	
@@ -895,28 +898,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$column_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_orgunit_distributions_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 									{BEGIN cellblock_grid_footcell_field2}
 	<td
 	
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$rows_class}	"
+		 r-ori-vert		 {$ougsDisplayName_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_orgunit_distributions_list"	
@@ -925,6 +913,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$count_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_orgunit_distributions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

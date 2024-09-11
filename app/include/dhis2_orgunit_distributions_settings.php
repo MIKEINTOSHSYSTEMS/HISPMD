@@ -25,15 +25,18 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsdhis2_orgunit_distributions["English"] = array();
 	$placeHoldersdhis2_orgunit_distributions["English"] = array();
 	$pageTitlesdhis2_orgunit_distributions["English"] = array();
-	$fieldLabelsdhis2_orgunit_distributions["English"]["name"] = "Name";
-	$fieldToolTipsdhis2_orgunit_distributions["English"]["name"] = "";
-	$placeHoldersdhis2_orgunit_distributions["English"]["name"] = "";
-	$fieldLabelsdhis2_orgunit_distributions["English"]["column"] = "Column";
-	$fieldToolTipsdhis2_orgunit_distributions["English"]["column"] = "";
-	$placeHoldersdhis2_orgunit_distributions["English"]["column"] = "";
-	$fieldLabelsdhis2_orgunit_distributions["English"]["rows"] = "Rows";
-	$fieldToolTipsdhis2_orgunit_distributions["English"]["rows"] = "";
-	$placeHoldersdhis2_orgunit_distributions["English"]["rows"] = "";
+	$fieldLabelsdhis2_orgunit_distributions["English"]["ougs"] = "Organisation Unit Group Sets";
+	$fieldToolTipsdhis2_orgunit_distributions["English"]["ougs"] = "";
+	$placeHoldersdhis2_orgunit_distributions["English"]["ougs"] = "";
+	$fieldLabelsdhis2_orgunit_distributions["English"]["ou"] = "Organisation Unit";
+	$fieldToolTipsdhis2_orgunit_distributions["English"]["ou"] = "";
+	$placeHoldersdhis2_orgunit_distributions["English"]["ou"] = "";
+	$fieldLabelsdhis2_orgunit_distributions["English"]["count"] = "Count";
+	$fieldToolTipsdhis2_orgunit_distributions["English"]["count"] = "";
+	$placeHoldersdhis2_orgunit_distributions["English"]["count"] = "";
+	$fieldLabelsdhis2_orgunit_distributions["English"]["ougsDisplayName"] = "Organisation Unit Group";
+	$fieldToolTipsdhis2_orgunit_distributions["English"]["ougsDisplayName"] = "";
+	$placeHoldersdhis2_orgunit_distributions["English"]["ougsDisplayName"] = "";
 	if (count($fieldToolTipsdhis2_orgunit_distributions["English"]))
 		$tdatadhis2_orgunit_distributions[".isUseToolTips"] = true;
 }
@@ -151,8 +154,9 @@ $tdatadhis2_orgunit_distributions[".filterFields"] = array();
 $tdatadhis2_orgunit_distributions[".requiredSearchFields"] = array();
 
 $tdatadhis2_orgunit_distributions[".googleLikeFields"] = array();
-$tdatadhis2_orgunit_distributions[".googleLikeFields"][] = "name";
-$tdatadhis2_orgunit_distributions[".googleLikeFields"][] = "column";
+$tdatadhis2_orgunit_distributions[".googleLikeFields"][] = "ou";
+$tdatadhis2_orgunit_distributions[".googleLikeFields"][] = "ougs";
+$tdatadhis2_orgunit_distributions[".googleLikeFields"][] = "ougsDisplayName";
 
 
 
@@ -232,14 +236,14 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 
 
 
-//	name
+//	ou
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "name";
-	$fdata["GoodName"] = "name";
+	$fdata["strName"] = "ou";
+	$fdata["GoodName"] = "ou";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","name");
+	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","ou");
 	$fdata["FieldType"] = 202;
 
 
@@ -247,10 +251,10 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "headers/*/name";
+		$fdata["strField"] = "*/ou";
 
 	
-		$fdata["FullName"] = "name";
+		$fdata["FullName"] = "ou";
 
 	
 	
@@ -299,7 +303,7 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "DHIS2_Organisation_Units";
+	$edata["LookupTable"] = "DHIS2_Organisation_Unit";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -391,16 +395,16 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatadhis2_orgunit_distributions["name"] = $fdata;
-		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "name";
-//	column
+	$tdatadhis2_orgunit_distributions["ou"] = $fdata;
+		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "ou";
+//	ougs
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "column";
-	$fdata["GoodName"] = "column";
+	$fdata["strName"] = "ougs";
+	$fdata["GoodName"] = "ougs";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","column");
+	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","ougs");
 	$fdata["FieldType"] = 202;
 
 
@@ -408,10 +412,10 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "headers/*/column";
+		$fdata["strField"] = "*/ougs";
 
 	
-		$fdata["FullName"] = "column";
+		$fdata["FullName"] = "ougs";
 
 	
 	
@@ -552,16 +556,16 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatadhis2_orgunit_distributions["column"] = $fdata;
-		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "column";
-//	rows
+	$tdatadhis2_orgunit_distributions["ougs"] = $fdata;
+		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "ougs";
+//	ougsDisplayName
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "rows";
-	$fdata["GoodName"] = "rows";
+	$fdata["strName"] = "ougsDisplayName";
+	$fdata["GoodName"] = "ougsDisplayName";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","rows");
+	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","ougsDisplayName");
 	$fdata["FieldType"] = 202;
 
 
@@ -569,10 +573,10 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "rows/*/*";
+		$fdata["strField"] = "*/ougsDisplayName";
 
 	
-		$fdata["FullName"] = "rows";
+		$fdata["FullName"] = "ougsDisplayName";
 
 	
 	
@@ -687,8 +691,146 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatadhis2_orgunit_distributions["rows"] = $fdata;
-		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "rows";
+	$tdatadhis2_orgunit_distributions["ougsDisplayName"] = $fdata;
+		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "ougsDisplayName";
+//	count
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "count";
+	$fdata["GoodName"] = "count";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("DHIS2_OrgUnit_Distributions","count");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "*/count";
+
+	
+		$fdata["FullName"] = "count";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_orgunit_distributions["count"] = $fdata;
+		$tdatadhis2_orgunit_distributions[".searchableFields"][] = "count";
 
 
 $tables_data["DHIS2_OrgUnit_Distributions"]=&$tdatadhis2_orgunit_distributions;
@@ -723,7 +865,7 @@ require_once( getabspath( "include/dhis2_orgunit_distributions_ops.php" ) );
 	
 																												;
 
-			
+				
 
 $tdatadhis2_orgunit_distributions[".sqlquery"] = $queryData_dhis2_orgunit_distributions;
 

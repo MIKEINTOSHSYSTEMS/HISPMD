@@ -166,10 +166,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$name_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$ougs_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"text":{$column_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+			{"text":{$ou_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$ougsDisplayName_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],

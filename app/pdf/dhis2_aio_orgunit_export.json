@@ -106,12 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$name_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
-			{"text":{$column_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
 			{"text":{$rows_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 		  ],
