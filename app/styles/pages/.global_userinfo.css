@@ -4,6 +4,10 @@
 [data-cellid="grid_fields_message2"][data-page=".global_userinfo"][data-cellid="grid_fields_message2"][data-page=".global_userinfo"][data-cellid="grid_fields_message2"][data-page=".global_userinfo"] {
   font-weight: bold;
 }
+[data-cellid="grid_fields_message3"][data-page=".global_userinfo"][data-cellid="grid_fields_message3"][data-page=".global_userinfo"][data-cellid="grid_fields_message3"][data-page=".global_userinfo"] {
+  color: #00293c;
+  font-weight: bold;
+}
 [data-page=".global_userinfo"][data-itemid="user_fields_title"] {
   font-size: 24px;
 }

@@ -463,6 +463,13 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["public.hispmd_uggroups"] ) ) {
 			$lookupTableLinks["public.hispmd_uggroups"] = array();
 		}
+		if( !isset( $lookupTableLinks["public.hispmd_uggroups"]["admin_users.groupid"] )) {
+			$lookupTableLinks["public.hispmd_uggroups"]["admin_users.groupid"] = array();
+		}
+		$lookupTableLinks["public.hispmd_uggroups"]["admin_users.groupid"]["edit"] = array("table" => "admin_users", "field" => "groupid", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.hispmd_uggroups"] ) ) {
+			$lookupTableLinks["public.hispmd_uggroups"] = array();
+		}
 		if( !isset( $lookupTableLinks["public.hispmd_uggroups"]["admin_users.designation"] )) {
 			$lookupTableLinks["public.hispmd_uggroups"]["admin_users.designation"] = array();
 		}

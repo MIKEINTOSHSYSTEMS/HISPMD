@@ -1517,7 +1517,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 	
 				$edata["ResizeImage"] = true;
-				$edata["NewSize"] = 600;
+				$edata["NewSize"] = 150;
 
 	
 	

@@ -52,7 +52,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -69,91 +68,8 @@ pdfDocument = {
       
       },
 
-																		{ 
-				cellId: 'c',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
-						[
-																{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel _global userpic }","hidden":"{$item_hide_edit_field_label}","bold":true},
-				
-				
-			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_integrated_edit_field3}"},
-				
-				
-			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_edit_field_tooltip}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
 																							{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
 	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel _global fullname }","bold":true},{"text":{$fullname_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c5',
 	col:0,
 	row:0,
 			
@@ -189,10 +105,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"@","hidden":"{$item_hide_text1}","isHtml":true},
+			{"text":"Hello 👋🏽 @","hidden":"{$item_hide_text1}","isHtml":true},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel _global username }","bold":true},{"text":{$username_pdfvalue}}],"margin":[0,0,0,15]},
+			{"text":[{"text":"{$jslabel _global username }","bold":true}," ",{$username_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -214,8 +130,64 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":[{"text":"{$jslabel _global fullname }","bold":true}," ",{$fullname_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field1}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel _global userpic }","hidden":"{$item_hide_edit_field_label}","bold":true},
+				
+				
+			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_integrated_edit_field3}"},
+				
+				
+			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_edit_field_tooltip}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":[{"text":"{$jslabel _global designation }","bold":true}," ",{$designation_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field10}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -298,14 +270,15 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel _global designation }","bold":true},{"text":{$designation_pdfvalue}}],"margin":[0,0,0,15]},
+			{"text":"Personal Information","hidden":"{$item_hide_text2}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+        color: '#00293c',      "alignment": 'center',
      
       
-      },
+         bold: true,
+   },
 
 {END cellblock_grid_fields_message3}
 											],
