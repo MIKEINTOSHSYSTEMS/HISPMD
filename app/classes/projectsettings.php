@@ -3692,6 +3692,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "public_mfr_facilities_register_chart" ] = "public.mfr_facilities_register_chart";
 	$projectEntities[ "public.moh_data_scope" ] = array( "url" => "moh_data_scope", "type" => 0 );
 	$projectEntitiesReverse[ "moh_data_scope" ] = "public.moh_data_scope";
+	$projectEntities[ "HISPMD_MOH_Indicators_Dashboard" ] = array( "url" => "hispmd_moh_indicators_dashboard", "type" => 4 );
+	$projectEntitiesReverse[ "hispmd_moh_indicators_dashboard" ] = "HISPMD_MOH_Indicators_Dashboard";
+	$projectEntities[ "MOH_Indicators_Data_Report" ] = array( "url" => "moh_indicators_data_report", "type" => 2 );
+	$projectEntitiesReverse[ "moh_indicators_data_report" ] = "MOH_Indicators_Data_Report";
 }
 
 function findTable( $table ) {

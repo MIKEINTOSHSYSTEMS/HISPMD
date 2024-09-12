@@ -1,0 +1,697 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#E6E6FA'
+		},
+		nbgroup_1: {
+			fillColor: '#E6E6FA'
+		},
+		header_1: {
+			fillColor: '#E6E6FA',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_indicator_id: {
+			fillColor: '#E6E6FA',
+			fontSize: 15,
+			bold: true
+		},
+		group_indicator_id: {
+			fillColor: '#E6E6FA'
+		},
+
+			group_2: {
+			fillColor: '#ADD8E6'
+		},
+		nbgroup_2: {
+			fillColor: '#ADD8E6'
+		},
+		header_2: {
+			fillColor: '#ADD8E6',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_scope_id: {
+			fillColor: '#ADD8E6',
+			fontSize: 15,
+			bold: true
+		},
+		group_scope_id: {
+			fillColor: '#ADD8E6'
+		},
+
+			group_3: {
+			fillColor: '#AFEEEE'
+		},
+		nbgroup_3: {
+			fillColor: '#AFEEEE'
+		},
+		header_3: {
+			fillColor: '#AFEEEE',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_facility_type_id: {
+			fillColor: '#AFEEEE',
+			fontSize: 15,
+			bold: true
+		},
+		group_facility_type_id: {
+			fillColor: '#AFEEEE'
+		},
+
+			group_4: {
+			fillColor: '#C0FFFF'
+		},
+		nbgroup_4: {
+			fillColor: '#C0FFFF'
+		},
+		header_4: {
+			fillColor: '#C0FFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_year: {
+			fillColor: '#C0FFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_year: {
+			fillColor: '#C0FFFF'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption MOH_Indicators_Data_Report}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel MOH_Indicators_Data_Report rprint}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 11,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel MOH_Indicators_Data_Report rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN indicator_id_newgroup}
+		[
+								{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_id }',
+				style: "blackshade",
+				alignment: '{$indicator_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
+				style: "blackshade",
+				alignment: '{$scope_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
+				style: "blackshade",
+				alignment: '{$facility_type_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report year }',
+				style: "blackshade",
+				alignment: '{$year_align}',
+			},
+																																								
+																												{
+				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
+				style: "blackshade",
+				alignment: '{$data_source_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report assessment_id }',
+				style: "blackshade",
+				alignment: '{$assessment_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report region_id }',
+				style: "blackshade",
+				alignment: '{$region_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report unit_id }',
+				style: "blackshade",
+				alignment: '{$unit_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report value }',
+				style: "blackshade",
+				alignment: '{$value_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report gender_sex }',
+				style: "blackshade",
+				alignment: '{$gender_sex_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
+				style: "blackshade",
+				alignment: '{$data_representation_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 11,
+					text: {$indicator_id_grval},
+					style: "header_1"
+				},
+																									],
+	{END indicator_id_newgroup}
+	{BEGIN scope_id_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 10,
+					text: {$scope_id_grval},
+					style: "header_2"
+				},
+																				],
+	{END scope_id_newgroup}
+	{BEGIN facility_type_id_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+																{
+					colSpan: 9,
+					text: {$facility_type_id_grval},
+					style: "header_3"
+				},
+															],
+	{END facility_type_id_newgroup}
+	{BEGIN year_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+												{
+					text: '',
+					style: "group_3"
+				},
+																{
+					colSpan: 8,
+					text: {$year_grval},
+					style:"header_4"
+				},
+										],
+	{END year_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_2"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_3"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_4"
+		},
+																		{
+			text: {$data_source_id_value},
+			alignment: '{$data_source_id_align}',
+		},
+							{
+			text: {$assessment_id_value},
+			alignment: '{$assessment_id_align}',
+		},
+							{
+			text: {$region_id_value},
+			alignment: '{$region_id_align}',
+		},
+							{
+			text: {$unit_id_value},
+			alignment: '{$unit_id_align}',
+		},
+							{
+			text: {$value_value},
+			alignment: '{$value_align}',
+		},
+							{
+			text: {$gender_sex_value},
+			alignment: '{$gender_sex_align}',
+		},
+							{
+			text: {$data_representation_value},
+			alignment: '{$data_representation_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN year_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+						{
+				text: "",
+				style: "group_3"
+			},
+					
+																							{
+				colSpan: 8,
+				text: [
+					'Summary for {$jslabel MOH_Indicators_Data_Report year } ', 
+					{$year_grval},
+					' - ', 
+					{$groupyear_total_cnt}, 
+					' records total'
+				],
+				style: 'group_4',
+			},
+																																									],
+	
+	
+	
+	
+	
+	{END year_endgroup}
+			{BEGIN facility_type_id_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+					
+																		{
+				colSpan: 9,
+				text: [
+					'Summary for {$jslabel MOH_Indicators_Data_Report facility_type_id } ', 
+					{$facility_type_id_grval},
+					' - ', 
+					{$groupfacility_type_id_total_cnt}, 
+					' records total'
+				],
+				style: 'group_3',
+			},
+																																														],
+	
+	
+	
+	
+	
+	{END facility_type_id_endgroup}
+			{BEGIN scope_id_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+					
+													{
+				colSpan: 10,
+				text: [
+					'Summary for {$jslabel MOH_Indicators_Data_Report scope_id } ', 
+					{$scope_id_grval},
+					' - ', 
+					{$groupscope_id_total_cnt}, 
+					' records total'
+				],
+				style: 'group_2',
+			},
+																																																			],
+	
+	
+	
+	
+	
+	{END scope_id_endgroup}
+			{BEGIN indicator_id_endgroup}
+
+		[
+		
+								{
+				colSpan: 11,
+				text: [
+					'Summary for {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
+					{$indicator_id_grval},
+					' - ', 
+					{$groupindicator_id_total_cnt}, 
+					' records total'
+				],
+				style: 'group_1',
+			},
+																																																								],
+	
+	
+	
+	
+	
+	{END indicator_id_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+	[
+		{	
+			text: 'Page summary {$page_total_cnt} - records total',
+			colSpan: 11,
+			style: 'pagesummary',
+		}
+	],
+
+	
+	
+	
+	
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Global summary {$global_total_cnt} - records total',
+			colSpan: 11,
+			style: 'globalsummary',
+		}
+	],
+
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	}

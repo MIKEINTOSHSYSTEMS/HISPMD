@@ -749,9 +749,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "583_1725810242";
+$projectBuildKey = "585_1725810242";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "583";
+$projectBuildNumber = "585";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -865,6 +865,8 @@ $tableCaptions["English"]["public_hispmd_uggroups"] = "Hispmd Uggroups";
 $tableCaptions["English"]["public_mfr_facilities_register_chart"] = "Mfr Facilities Register Chart";
 $tableCaptions["English"]["public_moh_data_scope"] = "Moh Data Scope";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
+$tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["English"]["MOH_Indicators_Data_Report"] = "MOH Indicators Data Report";
 
 
 $globalEvents = new class_GlobalEvents;

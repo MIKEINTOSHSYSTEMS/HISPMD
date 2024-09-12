@@ -1428,7 +1428,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -1460,7 +1460,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1472,7 +1473,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -1483,7 +1484,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

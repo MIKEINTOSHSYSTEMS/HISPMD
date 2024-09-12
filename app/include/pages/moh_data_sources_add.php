@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'public.moh_indicator_data' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'MOH_Indicators_Data_Report' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'data_source_name' ),

@@ -774,6 +774,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="HISPMD_MOH_Indicators_Dashboard")
+		{
+			return false;
+		}
+		if($table=="MOH_Indicators_Data_Report")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1497,6 +1505,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.moh_data_scope")
+		{
+			return false;
+		}
+		if($table=="HISPMD_MOH_Indicators_Dashboard")
+		{
+			return false;
+		}
+		if($table=="MOH_Indicators_Data_Report")
 		{
 			return false;
 		}

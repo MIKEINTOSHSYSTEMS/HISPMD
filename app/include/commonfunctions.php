@@ -385,6 +385,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_data_scope" == $shortTName )
 		return true;
+	if ("hispmd_moh_indicators_dashboard" == $shortTName )
+		return true;
+	if ("moh_indicators_data_report" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1254,6 +1258,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.moh_data_scope";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("HISPMD_MOH_Indicators_Dashboard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="HISPMD_MOH_Indicators_Dashboard";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MOH_Indicators_Data_Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MOH_Indicators_Data_Report";
+	}
 	return $arr;
 }
 
@@ -1354,6 +1376,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.hispmd_uggroups";
 	$arr[]="public.mfr_facilities_register_chart";
 	$arr[]="public.moh_data_scope";
+	$arr[]="HISPMD_MOH_Indicators_Dashboard";
+	$arr[]="MOH_Indicators_Data_Report";
 	return $arr;
 }
 
@@ -2449,6 +2473,16 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="HISPMD_MOH_Indicators_Dashboard" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="MOH_Indicators_Data_Report" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

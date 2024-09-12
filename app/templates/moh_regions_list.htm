@@ -544,7 +544,7 @@
 					Moh Indicator Data				</label>
 			</div>
 			{END print_details_moh_indicator_data}
-						</div>
+														</div>
 </div>
 {END print_details}
 				 
@@ -795,23 +795,54 @@
 	>
 
 	 
-			 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Show details"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
 		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$moh_indicator_data_link_attrs} 
-			class="{$dtables_link_class} details-badge badge moh_indicator_data_badge" 
-			title="Show details"
-						
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$moh_indicator_data_cntspan_class}" {$moh_indicator_data_childnumber_attr}>
-				{$moh_indicator_data_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
+		
+	{BEGIN moh_indicator_data_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$moh_indicator_data_link_attrs} data-short-details="moh_indicator_data"
+		class="{$moh_indicator_data_dlink_class}" 
+		title="{$caption public_moh_indicator_data }"			>
+								
+									{BEGIN moh_indicator_data_childcount}
+				<span class="details-badge badge moh_indicator_data_badge" {$moh_indicator_data_childnumber_attr}>
+					{$moh_indicator_data_childnumber}				
+				</span>
+				{END moh_indicator_data_childcount}
+						</a>
+	</span>
+	{END moh_indicator_data_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN _dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$_link_attrs} data-short-details=""
+		class="{$_dlink_class}" 
+		title="{$caption public_moh_indicator_data_view }"			>
+								
+									{BEGIN _childcount}
+				<span class="details-badge badge _badge" {$_childnumber_attr}>
+					{$_childnumber}				
+				</span>
+				{END _childcount}
+						</a>
+	</span>
+	{END _dtable_link}
+
 
 	
 	</td>
@@ -868,22 +899,25 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="moh_indicator_data"
-			data-details-moh_indicator_data	>
+				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="moh_indicator_data,"
+			data-details-moh_indicator_data			data-details-	>
 		<span data-details-inside data-short-table="moh_indicator_data">
+			</span>
+		<span data-details-inside data-short-table="">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'public.moh_indicator_data' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'MOH_Indicators_Data_Report' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'public.moh_indicator_groups' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'indicator_id',

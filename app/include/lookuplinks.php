@@ -481,6 +481,55 @@ function InitLookupLinks()
 			$lookupTableLinks["public.hispmd_organisations"]["admin_users.organisation_name"] = array();
 		}
 		$lookupTableLinks["public.hispmd_organisations"]["admin_users.organisation_name"]["edit"] = array("table" => "admin_users", "field" => "organisation_name", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicators"] ) ) {
+			$lookupTableLinks["public.moh_indicators"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicators"]["moh_indicators_data_report.indicator_id"] )) {
+			$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_report.indicator_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_report.indicator_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "indicator_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
+			$lookupTableLinks["public.moh_data_sources"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_report.data_source_id"] )) {
+			$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_report.data_source_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_report.data_source_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "data_source_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
+			$lookupTableLinks["public.moh_assessments"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_assessments"]["moh_indicators_data_report.assessment_id"] )) {
+			$lookupTableLinks["public.moh_assessments"]["moh_indicators_data_report.assessment_id"] = array();
+		}
+		$lookupTableLinks["public.moh_assessments"]["moh_indicators_data_report.assessment_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "assessment_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_regions"] ) ) {
+			$lookupTableLinks["public.moh_regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_regions"]["moh_indicators_data_report.region_id"] )) {
+			$lookupTableLinks["public.moh_regions"]["moh_indicators_data_report.region_id"] = array();
+		}
+		$lookupTableLinks["public.moh_regions"]["moh_indicators_data_report.region_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "region_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_administration_units"] ) ) {
+			$lookupTableLinks["public.moh_administration_units"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_administration_units"]["moh_indicators_data_report.unit_id"] )) {
+			$lookupTableLinks["public.moh_administration_units"]["moh_indicators_data_report.unit_id"] = array();
+		}
+		$lookupTableLinks["public.moh_administration_units"]["moh_indicators_data_report.unit_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "unit_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_facility_types"] ) ) {
+			$lookupTableLinks["public.moh_facility_types"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_report.facility_type_id"] )) {
+			$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_report.facility_type_id"] = array();
+		}
+		$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_report.facility_type_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "facility_type_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_data_scope"] ) ) {
+			$lookupTableLinks["public.moh_data_scope"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"] )) {
+			$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "scope_id", "page" => "search");
 }
 
 ?>

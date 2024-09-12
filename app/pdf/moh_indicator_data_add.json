@@ -461,7 +461,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel public_moh_indicator_data data_representation }","bold":true},{"text":{$data_representation_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -488,7 +488,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel public_moh_indicator_data data_representation }","bold":true},{"text":{$data_representation_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

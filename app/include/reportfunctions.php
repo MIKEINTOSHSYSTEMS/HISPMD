@@ -801,6 +801,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="HISPMD_MOH_Indicators_Dashboard")
+		{
+			return 1;
+		}
+		if($table=="MOH_Indicators_Data_Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1425,6 +1433,14 @@ function getCaptionTable($table)
 	if($table=="public.moh_data_scope")
 	{
 		return "Moh Data Scope";
+	}
+	if($table=="HISPMD_MOH_Indicators_Dashboard")
+	{
+		return "HISPMD MOH Indicators Dashboard";
+	}
+	if($table=="MOH_Indicators_Data_Report")
+	{
+		return "MOH Indicators Data Report";
 	}
 	return $table;
 }

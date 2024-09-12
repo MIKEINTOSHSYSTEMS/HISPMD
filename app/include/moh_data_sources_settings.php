@@ -559,6 +559,36 @@ $detailsTablesData["public.moh_data_sources"] = array();
 				$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"][]="data_source_id";
+//	MOH_Indicators_Data_Report
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="MOH_Indicators_Data_Report";
+		$detailsParam["dOriginalTable"] = "public.moh_indicator_data";
+
+
+
+		$detailsParam["dType"]=PAGE_REPORT;
+	
+		$detailsParam["dShortTable"] = "moh_indicators_data_report";
+	$detailsParam["dCaptionTable"] = GetTableCaption("MOH_Indicators_Data_Report");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.moh_data_sources"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.moh_data_sources"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.moh_data_sources"][$dIndex]["masterKeys"][]="data_source_id";
+
+				$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"][]="data_source_id";
 //endif
 
 // tables which are master tables for current table (detail)
