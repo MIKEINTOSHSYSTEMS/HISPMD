@@ -1,0 +1,1239 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-chart"   
+			data-panel-bg
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="moh_indicators_data_chart_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Advanced search		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Show search panel		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Hide search panel		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notifications			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Admin Area		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-grid"
+	>
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+	<div class="panel panel-default"
+	>
+		<div class="panel-heading">
+							{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
+	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_indicator_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
+			<label>{$label MOH_Indicators_data_Chart indicator_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_id}
+																{BEGIN searchCtrlBlock_scope_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_scope_id}" {$filterRow_attrs_scope_id}>
+			<label>{$label MOH_Indicators_data_Chart scope_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_scope_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_scope_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_scope_id}</span>
+						</div>
+		{END searchCtrlBlock_scope_id}
+																{BEGIN searchCtrlBlock_region_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
+			<label>{$label MOH_Indicators_data_Chart region_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
+						</div>
+		{END searchCtrlBlock_region_id}
+																{BEGIN searchCtrlBlock_year}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_year}" {$filterRow_attrs_year}>
+			<label>{$label MOH_Indicators_data_Chart year }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_year}</span>
+						</div>
+		{END searchCtrlBlock_year}
+																{BEGIN searchCtrlBlock_facility_type_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_facility_type_id}" {$filterRow_attrs_facility_type_id}>
+			<label>{$label MOH_Indicators_data_Chart facility_type_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_facility_type_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_facility_type_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_facility_type_id}</span>
+						</div>
+		{END searchCtrlBlock_facility_type_id}
+																{BEGIN searchCtrlBlock_assessment_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_assessment_id}" {$filterRow_attrs_assessment_id}>
+			<label>{$label MOH_Indicators_data_Chart assessment_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_assessment_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_assessment_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_assessment_id}</span>
+						</div>
+		{END searchCtrlBlock_assessment_id}
+																{BEGIN searchCtrlBlock_data_source_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_source_id}" {$filterRow_attrs_data_source_id}>
+			<label>{$label MOH_Indicators_data_Chart data_source_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
+						</div>
+		{END searchCtrlBlock_data_source_id}
+																{BEGIN searchCtrlBlock_unit_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_unit_id}" {$filterRow_attrs_unit_id}>
+			<label>{$label MOH_Indicators_data_Chart unit_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_unit_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_unit_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_unit_id}</span>
+						</div>
+		{END searchCtrlBlock_unit_id}
+																{BEGIN searchCtrlBlock_gender_sex}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_gender_sex}" {$filterRow_attrs_gender_sex}>
+			<label>{$label MOH_Indicators_data_Chart gender_sex }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_gender_sex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_gender_sex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_gender_sex}</span>
+						</div>
+		{END searchCtrlBlock_gender_sex}
+																{BEGIN searchCtrlBlock_value}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_value}" {$filterRow_attrs_value}>
+			<label>{$label MOH_Indicators_data_Chart value }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_value}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_value}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_value}</span>
+						</div>
+		{END searchCtrlBlock_value}
+																{BEGIN searchCtrlBlock_data_representation}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_representation}" {$filterRow_attrs_data_representation}>
+			<label>{$label MOH_Indicators_data_Chart data_representation }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_representation}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_representation}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_representation}</span>
+						</div>
+		{END searchCtrlBlock_data_representation}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	Filters</span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_indicator_id}
+
+	<div class="dropdown filter-field filter-indicator_id-container" {BEGIN filter_selected_indicator_id} data-selected {END filter_selected_indicator_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-indicator_id" type="checkbox" name="selectAll" {$selectAll_attrs_indicator_id} />
+						{BEGIN clearLink_indicator_id}
+			<a href="#" class="filter-clear filter-clear-indicator_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_indicator_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart indicator_id }				{BEGIN filter_selected_indicator_id}:{END filter_selected_indicator_id}
+			</span>
+			{BEGIN filter_selected_indicator_id}
+			<span class="r-filter-value">{$filtervalue_indicator_id}</span>
+			{END filter_selected_indicator_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_indicator_id}
+		<li class=" filter-values filter-values-indicator_id  {$visibilityClass_indicator_id}">
+			{$indicator_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_indicator_id}
+
+			{BEGIN filter_button_showmore_indicator_id}
+		<li class=" filter-show-more {$collapsedClass_indicator_id} {$showMoreBtnClass_indicator_id}">
+			<a class="filter-show-more-link filterShowMore_indicator_id" href="#">{$show_n_more_indicator_id}</a>
+		</li>
+		{END filter_button_showmore_indicator_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_indicator_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_indicator_id}">
+			<a href="#" class="filter-indicator_id-btn-multiselect filter-apply-indicator_id" {$filterbutton_attrs_indicator_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_indicator_id}
+			</ul>
+	</div>
+
+{END filter_control_indicator_id}
+
+
+
+
+
+
+{BEGIN filter_control_data_representation}
+
+	<div class="dropdown filter-field filter-data_representation-container" {BEGIN filter_selected_data_representation} data-selected {END filter_selected_data_representation}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-data_representation" type="checkbox" name="selectAll" {$selectAll_attrs_data_representation} />
+						{BEGIN clearLink_data_representation}
+			<a href="#" class="filter-clear filter-clear-data_representation" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_data_representation}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart data_representation }				{BEGIN filter_selected_data_representation}:{END filter_selected_data_representation}
+			</span>
+			{BEGIN filter_selected_data_representation}
+			<span class="r-filter-value">{$filtervalue_data_representation}</span>
+			{END filter_selected_data_representation}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_data_representation}
+		<li class=" filter-values filter-values-data_representation  {$visibilityClass_data_representation}">
+			{$data_representation_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_data_representation}
+
+			{BEGIN filter_button_showmore_data_representation}
+		<li class=" filter-show-more {$collapsedClass_data_representation} {$showMoreBtnClass_data_representation}">
+			<a class="filter-show-more-link filterShowMore_data_representation" href="#">{$show_n_more_data_representation}</a>
+		</li>
+		{END filter_button_showmore_data_representation}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_data_representation}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_data_representation}">
+			<a href="#" class="filter-data_representation-btn-multiselect filter-apply-data_representation" {$filterbutton_attrs_data_representation}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_data_representation}
+			</ul>
+	</div>
+
+{END filter_control_data_representation}
+
+
+
+
+
+
+{BEGIN filter_control_scope_id}
+
+	<div class="dropdown filter-field filter-scope_id-container" {BEGIN filter_selected_scope_id} data-selected {END filter_selected_scope_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-scope_id" type="checkbox" name="selectAll" {$selectAll_attrs_scope_id} />
+						{BEGIN clearLink_scope_id}
+			<a href="#" class="filter-clear filter-clear-scope_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_scope_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart scope_id }				{BEGIN filter_selected_scope_id}:{END filter_selected_scope_id}
+			</span>
+			{BEGIN filter_selected_scope_id}
+			<span class="r-filter-value">{$filtervalue_scope_id}</span>
+			{END filter_selected_scope_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_scope_id}
+		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
+			{$scope_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_scope_id}
+
+			{BEGIN filter_button_showmore_scope_id}
+		<li class=" filter-show-more {$collapsedClass_scope_id} {$showMoreBtnClass_scope_id}">
+			<a class="filter-show-more-link filterShowMore_scope_id" href="#">{$show_n_more_scope_id}</a>
+		</li>
+		{END filter_button_showmore_scope_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_scope_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_scope_id}">
+			<a href="#" class="filter-scope_id-btn-multiselect filter-apply-scope_id" {$filterbutton_attrs_scope_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_scope_id}
+			</ul>
+	</div>
+
+{END filter_control_scope_id}
+
+
+
+
+
+
+{BEGIN filter_control_region_id}
+
+	<div class="dropdown filter-field filter-region_id-container" {BEGIN filter_selected_region_id} data-selected {END filter_selected_region_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-region_id" type="checkbox" name="selectAll" {$selectAll_attrs_region_id} />
+						{BEGIN clearLink_region_id}
+			<a href="#" class="filter-clear filter-clear-region_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_region_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart region_id }				{BEGIN filter_selected_region_id}:{END filter_selected_region_id}
+			</span>
+			{BEGIN filter_selected_region_id}
+			<span class="r-filter-value">{$filtervalue_region_id}</span>
+			{END filter_selected_region_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_region_id}
+		<li class=" filter-values filter-values-region_id  {$visibilityClass_region_id}">
+			{$region_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_region_id}
+
+			{BEGIN filter_button_showmore_region_id}
+		<li class=" filter-show-more {$collapsedClass_region_id} {$showMoreBtnClass_region_id}">
+			<a class="filter-show-more-link filterShowMore_region_id" href="#">{$show_n_more_region_id}</a>
+		</li>
+		{END filter_button_showmore_region_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_region_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_region_id}">
+			<a href="#" class="filter-region_id-btn-multiselect filter-apply-region_id" {$filterbutton_attrs_region_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_region_id}
+			</ul>
+	</div>
+
+{END filter_control_region_id}
+
+
+
+
+
+
+{BEGIN filter_control_year}
+
+	<div class="dropdown filter-field filter-year-container" {BEGIN filter_selected_year} data-selected {END filter_selected_year}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-year" type="checkbox" name="selectAll" {$selectAll_attrs_year} />
+						{BEGIN clearLink_year}
+			<a href="#" class="filter-clear filter-clear-year" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_year}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart year }				{BEGIN filter_selected_year}:{END filter_selected_year}
+			</span>
+			{BEGIN filter_selected_year}
+			<span class="r-filter-value">{$filtervalue_year}</span>
+			{END filter_selected_year}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_year}
+		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
+			{$year_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_year}
+
+			{BEGIN filter_button_showmore_year}
+		<li class=" filter-show-more {$collapsedClass_year} {$showMoreBtnClass_year}">
+			<a class="filter-show-more-link filterShowMore_year" href="#">{$show_n_more_year}</a>
+		</li>
+		{END filter_button_showmore_year}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_year}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_year}">
+			<a href="#" class="filter-year-btn-multiselect filter-apply-year" {$filterbutton_attrs_year}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_year}
+			</ul>
+	</div>
+
+{END filter_control_year}
+
+
+
+
+
+
+{BEGIN filter_control_facility_type_id}
+
+	<div class="dropdown filter-field filter-facility_type_id-container" {BEGIN filter_selected_facility_type_id} data-selected {END filter_selected_facility_type_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-facility_type_id" type="checkbox" name="selectAll" {$selectAll_attrs_facility_type_id} />
+						{BEGIN clearLink_facility_type_id}
+			<a href="#" class="filter-clear filter-clear-facility_type_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_facility_type_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart facility_type_id }				{BEGIN filter_selected_facility_type_id}:{END filter_selected_facility_type_id}
+			</span>
+			{BEGIN filter_selected_facility_type_id}
+			<span class="r-filter-value">{$filtervalue_facility_type_id}</span>
+			{END filter_selected_facility_type_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_facility_type_id}
+		<li class=" filter-values filter-values-facility_type_id  {$visibilityClass_facility_type_id}">
+			{$facility_type_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_facility_type_id}
+
+			{BEGIN filter_button_showmore_facility_type_id}
+		<li class=" filter-show-more {$collapsedClass_facility_type_id} {$showMoreBtnClass_facility_type_id}">
+			<a class="filter-show-more-link filterShowMore_facility_type_id" href="#">{$show_n_more_facility_type_id}</a>
+		</li>
+		{END filter_button_showmore_facility_type_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_facility_type_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_facility_type_id}">
+			<a href="#" class="filter-facility_type_id-btn-multiselect filter-apply-facility_type_id" {$filterbutton_attrs_facility_type_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_facility_type_id}
+			</ul>
+	</div>
+
+{END filter_control_facility_type_id}
+
+
+
+
+
+
+{BEGIN filter_control_assessment_id}
+
+	<div class="dropdown filter-field filter-assessment_id-container" {BEGIN filter_selected_assessment_id} data-selected {END filter_selected_assessment_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-assessment_id" type="checkbox" name="selectAll" {$selectAll_attrs_assessment_id} />
+						{BEGIN clearLink_assessment_id}
+			<a href="#" class="filter-clear filter-clear-assessment_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_assessment_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart assessment_id }				{BEGIN filter_selected_assessment_id}:{END filter_selected_assessment_id}
+			</span>
+			{BEGIN filter_selected_assessment_id}
+			<span class="r-filter-value">{$filtervalue_assessment_id}</span>
+			{END filter_selected_assessment_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_assessment_id}
+		<li class=" filter-values filter-values-assessment_id  {$visibilityClass_assessment_id}">
+			{$assessment_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_assessment_id}
+
+			{BEGIN filter_button_showmore_assessment_id}
+		<li class=" filter-show-more {$collapsedClass_assessment_id} {$showMoreBtnClass_assessment_id}">
+			<a class="filter-show-more-link filterShowMore_assessment_id" href="#">{$show_n_more_assessment_id}</a>
+		</li>
+		{END filter_button_showmore_assessment_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_assessment_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_assessment_id}">
+			<a href="#" class="filter-assessment_id-btn-multiselect filter-apply-assessment_id" {$filterbutton_attrs_assessment_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_assessment_id}
+			</ul>
+	</div>
+
+{END filter_control_assessment_id}
+
+
+
+
+
+
+{BEGIN filter_control_data_source_id}
+
+	<div class="dropdown filter-field filter-data_source_id-container" {BEGIN filter_selected_data_source_id} data-selected {END filter_selected_data_source_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-data_source_id" type="checkbox" name="selectAll" {$selectAll_attrs_data_source_id} />
+						{BEGIN clearLink_data_source_id}
+			<a href="#" class="filter-clear filter-clear-data_source_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_data_source_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart data_source_id }				{BEGIN filter_selected_data_source_id}:{END filter_selected_data_source_id}
+			</span>
+			{BEGIN filter_selected_data_source_id}
+			<span class="r-filter-value">{$filtervalue_data_source_id}</span>
+			{END filter_selected_data_source_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_data_source_id}
+		<li class=" filter-values filter-values-data_source_id  {$visibilityClass_data_source_id}">
+			{$data_source_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_data_source_id}
+
+			{BEGIN filter_button_showmore_data_source_id}
+		<li class=" filter-show-more {$collapsedClass_data_source_id} {$showMoreBtnClass_data_source_id}">
+			<a class="filter-show-more-link filterShowMore_data_source_id" href="#">{$show_n_more_data_source_id}</a>
+		</li>
+		{END filter_button_showmore_data_source_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_data_source_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_data_source_id}">
+			<a href="#" class="filter-data_source_id-btn-multiselect filter-apply-data_source_id" {$filterbutton_attrs_data_source_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_data_source_id}
+			</ul>
+	</div>
+
+{END filter_control_data_source_id}
+
+
+
+
+
+
+{BEGIN filter_control_unit_id}
+
+	<div class="dropdown filter-field filter-unit_id-container" {BEGIN filter_selected_unit_id} data-selected {END filter_selected_unit_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-unit_id" type="checkbox" name="selectAll" {$selectAll_attrs_unit_id} />
+						{BEGIN clearLink_unit_id}
+			<a href="#" class="filter-clear filter-clear-unit_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_unit_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart unit_id }				{BEGIN filter_selected_unit_id}:{END filter_selected_unit_id}
+			</span>
+			{BEGIN filter_selected_unit_id}
+			<span class="r-filter-value">{$filtervalue_unit_id}</span>
+			{END filter_selected_unit_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_unit_id}
+		<li class=" filter-values filter-values-unit_id  {$visibilityClass_unit_id}">
+			{$unit_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_unit_id}
+
+			{BEGIN filter_button_showmore_unit_id}
+		<li class=" filter-show-more {$collapsedClass_unit_id} {$showMoreBtnClass_unit_id}">
+			<a class="filter-show-more-link filterShowMore_unit_id" href="#">{$show_n_more_unit_id}</a>
+		</li>
+		{END filter_button_showmore_unit_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_unit_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_unit_id}">
+			<a href="#" class="filter-unit_id-btn-multiselect filter-apply-unit_id" {$filterbutton_attrs_unit_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_unit_id}
+			</ul>
+	</div>
+
+{END filter_control_unit_id}
+
+
+
+
+
+
+{BEGIN filter_control_gender_sex}
+
+	<div class="dropdown filter-field filter-gender_sex-container" {BEGIN filter_selected_gender_sex} data-selected {END filter_selected_gender_sex}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-gender_sex" type="checkbox" name="selectAll" {$selectAll_attrs_gender_sex} />
+						{BEGIN clearLink_gender_sex}
+			<a href="#" class="filter-clear filter-clear-gender_sex" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_gender_sex}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart gender_sex }				{BEGIN filter_selected_gender_sex}:{END filter_selected_gender_sex}
+			</span>
+			{BEGIN filter_selected_gender_sex}
+			<span class="r-filter-value">{$filtervalue_gender_sex}</span>
+			{END filter_selected_gender_sex}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_gender_sex}
+		<li class=" filter-values filter-values-gender_sex  {$visibilityClass_gender_sex}">
+			{$gender_sex_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_gender_sex}
+
+			{BEGIN filter_button_showmore_gender_sex}
+		<li class=" filter-show-more {$collapsedClass_gender_sex} {$showMoreBtnClass_gender_sex}">
+			<a class="filter-show-more-link filterShowMore_gender_sex" href="#">{$show_n_more_gender_sex}</a>
+		</li>
+		{END filter_button_showmore_gender_sex}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_gender_sex}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_gender_sex}">
+			<a href="#" class="filter-gender_sex-btn-multiselect filter-apply-gender_sex" {$filterbutton_attrs_gender_sex}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_gender_sex}
+			</ul>
+	</div>
+
+{END filter_control_gender_sex}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>					</div>
+			</div>		
+{END above-grid_block}
+			</div>
+
+					{BEGIN grid_block}
+	{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}<table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_grid_0} >
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c1" data-pageid="{$pageid}">
+ 
+<div data-itemtype="chart" data-itemid="chart" {$item_chart} data-pageid="{$pageid}" data-page="moh_indicators_data_chart_chart" >
+{$chart moh_indicators_data_chart 530px}
+</div>
+  </td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END grid_block}
+	
+			{BEGIN below-grid_outerblock}
+		<div class="panel-footer">
+			{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END below-grid_block}
+		</div>
+	{END below-grid_outerblock}
+		</div>
+
+</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

@@ -711,6 +711,7 @@
 
 	<div class="dropdown filter-field filter-indicator_id-container" {BEGIN filter_selected_indicator_id} data-selected {END filter_selected_indicator_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-indicator_id" type="checkbox" name="selectAll" {$selectAll_attrs_indicator_id} />
 						{BEGIN clearLink_indicator_id}
 			<a href="#" class="filter-clear filter-clear-indicator_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -737,6 +738,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_indicator_id}
 
@@ -750,6 +752,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_indicator_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_indicator_id}">
+			<a href="#" class="filter-indicator_id-btn-multiselect filter-apply-indicator_id" {$filterbutton_attrs_indicator_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_indicator_id}
 			</ul>
 	</div>
 
@@ -760,10 +767,71 @@
 
 
 
+{BEGIN filter_control_data_representation}
+
+	<div class="dropdown filter-field filter-data_representation-container" {BEGIN filter_selected_data_representation} data-selected {END filter_selected_data_representation}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-data_representation" type="checkbox" name="selectAll" {$selectAll_attrs_data_representation} />
+						{BEGIN clearLink_data_representation}
+			<a href="#" class="filter-clear filter-clear-data_representation" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_data_representation}
+			<span class="r-filter-field">{$label public_moh_indicator_data data_representation }				{BEGIN filter_selected_data_representation}:{END filter_selected_data_representation}
+			</span>
+			{BEGIN filter_selected_data_representation}
+			<span class="r-filter-value">{$filtervalue_data_representation}</span>
+			{END filter_selected_data_representation}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_data_representation}
+		<li class=" filter-values filter-values-data_representation  {$visibilityClass_data_representation}">
+			{$data_representation_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_data_representation}
+
+			{BEGIN filter_button_showmore_data_representation}
+		<li class=" filter-show-more {$collapsedClass_data_representation} {$showMoreBtnClass_data_representation}">
+			<a class="filter-show-more-link filterShowMore_data_representation" href="#">{$show_n_more_data_representation}</a>
+		</li>
+		{END filter_button_showmore_data_representation}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_data_representation}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_data_representation}">
+			<a href="#" class="filter-data_representation-btn-multiselect filter-apply-data_representation" {$filterbutton_attrs_data_representation}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_data_representation}
+			</ul>
+	</div>
+
+{END filter_control_data_representation}
+
+
+
+
+
+
 {BEGIN filter_control_data_source_id}
 
 	<div class="dropdown filter-field filter-data_source_id-container" {BEGIN filter_selected_data_source_id} data-selected {END filter_selected_data_source_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-data_source_id" type="checkbox" name="selectAll" {$selectAll_attrs_data_source_id} />
 						{BEGIN clearLink_data_source_id}
 			<a href="#" class="filter-clear filter-clear-data_source_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -790,6 +858,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_data_source_id}
 
@@ -803,6 +872,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_data_source_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_data_source_id}">
+			<a href="#" class="filter-data_source_id-btn-multiselect filter-apply-data_source_id" {$filterbutton_attrs_data_source_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_data_source_id}
 			</ul>
 	</div>
 
@@ -817,6 +891,7 @@
 
 	<div class="dropdown filter-field filter-assessment_id-container" {BEGIN filter_selected_assessment_id} data-selected {END filter_selected_assessment_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-assessment_id" type="checkbox" name="selectAll" {$selectAll_attrs_assessment_id} />
 						{BEGIN clearLink_assessment_id}
 			<a href="#" class="filter-clear filter-clear-assessment_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -843,6 +918,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_assessment_id}
 
@@ -856,6 +932,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_assessment_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_assessment_id}">
+			<a href="#" class="filter-assessment_id-btn-multiselect filter-apply-assessment_id" {$filterbutton_attrs_assessment_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_assessment_id}
 			</ul>
 	</div>
 
@@ -870,6 +951,7 @@
 
 	<div class="dropdown filter-field filter-scope_id-container" {BEGIN filter_selected_scope_id} data-selected {END filter_selected_scope_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-scope_id" type="checkbox" name="selectAll" {$selectAll_attrs_scope_id} />
 						{BEGIN clearLink_scope_id}
 			<a href="#" class="filter-clear filter-clear-scope_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -896,6 +978,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_scope_id}
 
@@ -909,6 +992,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_scope_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_scope_id}">
+			<a href="#" class="filter-scope_id-btn-multiselect filter-apply-scope_id" {$filterbutton_attrs_scope_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_scope_id}
 			</ul>
 	</div>
 
@@ -923,6 +1011,7 @@
 
 	<div class="dropdown filter-field filter-region_id-container" {BEGIN filter_selected_region_id} data-selected {END filter_selected_region_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-region_id" type="checkbox" name="selectAll" {$selectAll_attrs_region_id} />
 						{BEGIN clearLink_region_id}
 			<a href="#" class="filter-clear filter-clear-region_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -949,6 +1038,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_region_id}
 
@@ -962,6 +1052,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_region_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_region_id}">
+			<a href="#" class="filter-region_id-btn-multiselect filter-apply-region_id" {$filterbutton_attrs_region_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_region_id}
 			</ul>
 	</div>
 
@@ -976,6 +1071,7 @@
 
 	<div class="dropdown filter-field filter-unit_id-container" {BEGIN filter_selected_unit_id} data-selected {END filter_selected_unit_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-unit_id" type="checkbox" name="selectAll" {$selectAll_attrs_unit_id} />
 						{BEGIN clearLink_unit_id}
 			<a href="#" class="filter-clear filter-clear-unit_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1002,6 +1098,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_unit_id}
 
@@ -1015,6 +1112,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_unit_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_unit_id}">
+			<a href="#" class="filter-unit_id-btn-multiselect filter-apply-unit_id" {$filterbutton_attrs_unit_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_unit_id}
 			</ul>
 	</div>
 
@@ -1029,6 +1131,7 @@
 
 	<div class="dropdown filter-field filter-facility_type_id-container" {BEGIN filter_selected_facility_type_id} data-selected {END filter_selected_facility_type_id}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-facility_type_id" type="checkbox" name="selectAll" {$selectAll_attrs_facility_type_id} />
 						{BEGIN clearLink_facility_type_id}
 			<a href="#" class="filter-clear filter-clear-facility_type_id" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1055,6 +1158,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_facility_type_id}
 
@@ -1068,6 +1172,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_facility_type_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_facility_type_id}">
+			<a href="#" class="filter-facility_type_id-btn-multiselect filter-apply-facility_type_id" {$filterbutton_attrs_facility_type_id}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_facility_type_id}
 			</ul>
 	</div>
 
@@ -1082,6 +1191,7 @@
 
 	<div class="dropdown filter-field filter-gender_sex-container" {BEGIN filter_selected_gender_sex} data-selected {END filter_selected_gender_sex}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-gender_sex" type="checkbox" name="selectAll" {$selectAll_attrs_gender_sex} />
 						{BEGIN clearLink_gender_sex}
 			<a href="#" class="filter-clear filter-clear-gender_sex" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1108,6 +1218,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_gender_sex}
 
@@ -1121,6 +1232,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_gender_sex}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_gender_sex}">
+			<a href="#" class="filter-gender_sex-btn-multiselect filter-apply-gender_sex" {$filterbutton_attrs_gender_sex}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_gender_sex}
 			</ul>
 	</div>
 
@@ -1135,6 +1251,7 @@
 
 	<div class="dropdown filter-field filter-year-container" {BEGIN filter_selected_year} data-selected {END filter_selected_year}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-year" type="checkbox" name="selectAll" {$selectAll_attrs_year} />
 						{BEGIN clearLink_year}
 			<a href="#" class="filter-clear filter-clear-year" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1161,6 +1278,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_year}
 
@@ -1174,6 +1292,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_year}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_year}">
+			<a href="#" class="filter-year-btn-multiselect filter-apply-year" {$filterbutton_attrs_year}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_year}
 			</ul>
 	</div>
 

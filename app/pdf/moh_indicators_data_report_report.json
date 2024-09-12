@@ -276,301 +276,597 @@ pdfDocument = {
 
 
 {BEGIN grid_row}
-	{BEGIN indicator_id_newgroup}
+	{BEGIN indicator_id_firstnewgroup}
 		[
 								{
 				text: '{$jslabel MOH_Indicators_Data_Report indicator_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$indicator_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$scope_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$facility_type_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report year }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$year_align}',
 			},
 																																								
 																												{
 				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$data_source_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report assessment_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$assessment_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report region_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$region_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report unit_id }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$unit_id_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report gender_sex }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$gender_sex_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report value }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$value_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
-				style: "blackshade",
+				style: 'blackshade',
 				alignment: '{$data_representation_align}',
 			},
 						],
-	
+		
 	[
-													{
-					colSpan: 11,
-					text: {$indicator_id_grval},
-					style: "header_1"
-				},
-																									],
-	{END indicator_id_newgroup}
-	{BEGIN scope_id_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-																{
-					colSpan: 10,
-					text: {$scope_id_grval},
-					style: "header_2"
-				},
-																				],
-	{END scope_id_newgroup}
-	{BEGIN facility_type_id_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-												{
-					text: '',
-					style: "group_2"
-				},
-																{
-					colSpan: 9,
-					text: {$facility_type_id_grval},
-					style: "header_3"
-				},
-															],
-	{END facility_type_id_newgroup}
-	{BEGIN year_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-												{
-					text: '',
-					style: "group_2"
-				},
-												{
-					text: '',
-					style: "group_3"
-				},
-																{
-					colSpan: 8,
-					text: {$year_grval},
-					style:"header_4"
-				},
-										],
-	{END year_newgroup}
-
-	{BEGIN row_data}
-	[
-			{
-			text: [
-									''
-							],
-			style: "group_1"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_2"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_3"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_4"
-		},
-																		{
-			text: {$data_source_id_value},
-			alignment: '{$data_source_id_align}',
-		},
-							{
-			text: {$assessment_id_value},
-			alignment: '{$assessment_id_align}',
-		},
-							{
-			text: {$region_id_value},
-			alignment: '{$region_id_align}',
-		},
-							{
-			text: {$unit_id_value},
-			alignment: '{$unit_id_align}',
-		},
-							{
-			text: {$gender_sex_value},
-			alignment: '{$gender_sex_align}',
-		},
-							{
-			text: {$value_value},
-			alignment: '{$value_align}',
-		},
-							{
-			text: {$data_representation_value},
-			alignment: '{$data_representation_align}',
-		},
-				],
-	{END row_data}
-
-
-		{BEGIN year_endgroup}
-
-		[
 								{
-				text: "",
+				stack: [
+					{$indicator_id_value},
+									],
+				style: "header_1"
+			},
+					
+											{
+				stack: [
+					{$scope_id_value},
+									],
+				style: "header_2"
+			},
+					
+											{
+				stack: [
+					{$facility_type_id_value},
+									],
+				style: "header_3"
+			},
+					
+											{
+				stack: [
+					{$year_value},
+									],
+				style: "header_4"
+			},
+					
+							
+																												{
+				text: [
+										{$data_source_id_value}
+									],
+				alignment: '{$data_source_id_align}',
+			},
+											{
+				text: [
+										{$assessment_id_value}
+									],
+				alignment: '{$assessment_id_align}',
+			},
+											{
+				text: [
+										{$region_id_value}
+									],
+				alignment: '{$region_id_align}',
+			},
+											{
+				text: [
+										{$unit_id_value}
+									],
+				alignment: '{$unit_id_align}',
+			},
+											{
+				text: [
+										{$gender_sex_value}
+									],
+				alignment: '{$gender_sex_align}',
+			},
+											{
+				text: [
+										{$value_value}
+									],
+				alignment: '{$value_align}',
+			},
+											{
+				text: [
+										{$data_representation_value}
+									],
+				alignment: '{$data_representation_align}',
+			},
+					
+	],
+	{END indicator_id_firstnewgroup}
+	{BEGIN scope_id_firstnewgroup}
+		
+	[
+								{
+				text: [
+											''
+									],
 				style: "group_1"
 			},
-						{
-				text: "",
+
+											{
+				stack: [
+					{$scope_id_value},
+									],
+				style: "header_2"
+			},
+					
+											{
+				stack: [
+					{$facility_type_id_value},
+									],
+				style: "header_3"
+			},
+					
+											{
+				stack: [
+					{$year_value},
+									],
+				style: "header_4"
+			},
+					
+							
+																												{
+				text: [
+										{$data_source_id_value}
+									],
+				alignment: '{$data_source_id_align}',
+			},
+											{
+				text: [
+										{$assessment_id_value}
+									],
+				alignment: '{$assessment_id_align}',
+			},
+											{
+				text: [
+										{$region_id_value}
+									],
+				alignment: '{$region_id_align}',
+			},
+											{
+				text: [
+										{$unit_id_value}
+									],
+				alignment: '{$unit_id_align}',
+			},
+											{
+				text: [
+										{$gender_sex_value}
+									],
+				alignment: '{$gender_sex_align}',
+			},
+											{
+				text: [
+										{$value_value}
+									],
+				alignment: '{$value_align}',
+			},
+											{
+				text: [
+										{$data_representation_value}
+									],
+				alignment: '{$data_representation_align}',
+			},
+					
+	],
+	{END scope_id_firstnewgroup}
+	{BEGIN facility_type_id_firstnewgroup}
+		
+	[
+								{
+				text: [
+											''
+									],
+				style: "group_1"
+			},
+
+											{
+				text: [
+											''
+									],
 				style: "group_2"
 			},
-						{
-				text: "",
+
+											{
+				stack: [
+					{$facility_type_id_value},
+									],
+				style: "header_3"
+			},
+					
+											{
+				stack: [
+					{$year_value},
+									],
+				style: "header_4"
+			},
+					
+							
+																												{
+				text: [
+										{$data_source_id_value}
+									],
+				alignment: '{$data_source_id_align}',
+			},
+											{
+				text: [
+										{$assessment_id_value}
+									],
+				alignment: '{$assessment_id_align}',
+			},
+											{
+				text: [
+										{$region_id_value}
+									],
+				alignment: '{$region_id_align}',
+			},
+											{
+				text: [
+										{$unit_id_value}
+									],
+				alignment: '{$unit_id_align}',
+			},
+											{
+				text: [
+										{$gender_sex_value}
+									],
+				alignment: '{$gender_sex_align}',
+			},
+											{
+				text: [
+										{$value_value}
+									],
+				alignment: '{$value_align}',
+			},
+											{
+				text: [
+										{$data_representation_value}
+									],
+				alignment: '{$data_representation_align}',
+			},
+					
+	],
+	{END facility_type_id_firstnewgroup}
+	{BEGIN year_firstnewgroup}
+		
+	[
+								{
+				text: [
+											''
+									],
+				style: "group_1"
+			},
+
+											{
+				text: [
+											''
+									],
+				style: "group_2"
+			},
+
+											{
+				text: [
+											''
+									],
 				style: "group_3"
 			},
-					
-																							{
-				colSpan: 8,
-				text: [
-					'Summary for {$jslabel MOH_Indicators_Data_Report year } ', 
-					{$year_grval},
-					' - ', 
-					{$groupyear_total_cnt}, 
-					' records total'
-				],
-				style: 'group_4',
+
+											{
+				stack: [
+					{$year_value},
+									],
+				style: "header_4"
 			},
-																																									],
+					
+							
+																												{
+				text: [
+										{$data_source_id_value}
+									],
+				alignment: '{$data_source_id_align}',
+			},
+											{
+				text: [
+										{$assessment_id_value}
+									],
+				alignment: '{$assessment_id_align}',
+			},
+											{
+				text: [
+										{$region_id_value}
+									],
+				alignment: '{$region_id_align}',
+			},
+											{
+				text: [
+										{$unit_id_value}
+									],
+				alignment: '{$unit_id_align}',
+			},
+											{
+				text: [
+										{$gender_sex_value}
+									],
+				alignment: '{$gender_sex_align}',
+			},
+											{
+				text: [
+										{$value_value}
+									],
+				alignment: '{$value_align}',
+			},
+											{
+				text: [
+										{$data_representation_value}
+									],
+				alignment: '{$data_representation_align}',
+			},
+					
+	],
+	{END year_firstnewgroup}
+
+{BEGIN nonewgroup}
+	[
+				{
+						text: '',
+						style: 'group_1',
+		},
+				{
+						text: '',
+						style: 'group_2',
+		},
+				{
+						text: '',
+						style: 'group_3',
+		},
+				{
+						text: '',
+						style: 'group_4',
+		},
+		
+																												{
+				text: {$data_source_id_value},
+				alignment: '{$data_source_id_align}',
+			},
+											{
+				text: {$assessment_id_value},
+				alignment: '{$assessment_id_align}',
+			},
+											{
+				text: {$region_id_value},
+				alignment: '{$region_id_align}',
+			},
+											{
+				text: {$unit_id_value},
+				alignment: '{$unit_id_align}',
+			},
+											{
+				text: {$gender_sex_value},
+				alignment: '{$gender_sex_align}',
+			},
+											{
+				text: {$value_value},
+				alignment: '{$value_align}',
+			},
+											{
+				text: {$data_representation_value},
+				alignment: '{$data_representation_align}',
+			},
+						],
+{END nonewgroup}
+
+
+			{BEGIN year_endgroup}
+
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
+								{
+					text: [''],
+					style: 'group_2',
+				},
+								{
+					text: [''],
+					style: 'group_3',
+				},
+							
+																																{
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report year } ', 
+						{$year_grval},
+						' - ', 
+						{$groupyear_total_cnt}, 
+						' records total'
+					],
+					style: 'group_4',
+					colSpan: 8				},
+																																																										],
+		
+		
+		
+		
+			
+
+		{END year_endgroup}
 	
-	
-	
-	
-	
-	{END year_endgroup}
 			{BEGIN facility_type_id_endgroup}
 
-		[
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
 								{
-				text: "",
-				style: "group_1"
-			},
-						{
-				text: "",
-				style: "group_2"
-			},
-					
-																		{
-				colSpan: 9,
-				text: [
-					'Summary for {$jslabel MOH_Indicators_Data_Report facility_type_id } ', 
-					{$facility_type_id_grval},
-					' - ', 
-					{$groupfacility_type_id_total_cnt}, 
-					' records total'
-				],
-				style: 'group_3',
-			},
-																																														],
+					text: [''],
+					style: 'group_2',
+				},
+							
+																									{
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report facility_type_id } ', 
+						{$facility_type_id_grval},
+						' - ', 
+						{$groupfacility_type_id_total_cnt}, 
+						' records total'
+					],
+					style: 'group_3',
+					colSpan: 9				},
+																																																																	],
+		
+		
+		
+		
+			
+
+		{END facility_type_id_endgroup}
 	
-	
-	
-	
-	
-	{END facility_type_id_endgroup}
 			{BEGIN scope_id_endgroup}
 
-		[
-								{
-				text: "",
-				style: "group_1"
-			},
-					
-													{
-				colSpan: 10,
-				text: [
-					'Summary for {$jslabel MOH_Indicators_Data_Report scope_id } ', 
-					{$scope_id_grval},
-					' - ', 
-					{$groupscope_id_total_cnt}, 
-					' records total'
-				],
-				style: 'group_2',
-			},
-																																																			],
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
+							
+																		{
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report scope_id } ', 
+						{$scope_id_grval},
+						' - ', 
+						{$groupscope_id_total_cnt}, 
+						' records total'
+					],
+					style: 'group_2',
+					colSpan: 10				},
+																																																																								],
+		
+		
+		
+		
+			
+
+		{END scope_id_endgroup}
 	
-	
-	
-	
-	
-	{END scope_id_endgroup}
 			{BEGIN indicator_id_endgroup}
 
-		[
+				[
+			
+											{
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
+						{$indicator_id_grval},
+						' - ', 
+						{$groupindicator_id_total_cnt}, 
+						' records total'
+					],
+					style: 'group_1',
+					colSpan: 11				},
+																																																																															],
 		
-								{
-				colSpan: 11,
-				text: [
-					'Summary for {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
-					{$indicator_id_grval},
-					' - ', 
-					{$groupindicator_id_total_cnt}, 
-					' records total'
-				],
-				style: 'group_1',
-			},
-																																																								],
-	
-	
-	
-	
-	
-	{END indicator_id_endgroup}
+		
+		
+		
+			
+
+		{END indicator_id_endgroup}
 	
 {END grid_row}
+
+
+
+		[
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_id }',
+				alignment: '{$indicator_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
+				alignment: '{$scope_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
+				alignment: '{$facility_type_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report year }',
+				alignment: '{$year_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
+				alignment: '{$data_source_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report assessment_id }',
+				alignment: '{$assessment_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report region_id }',
+				alignment: '{$region_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report unit_id }',
+				alignment: '{$unit_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report gender_sex }',
+				alignment: '{$gender_sex_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report value }',
+				alignment: '{$value_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
+				alignment: '{$data_representation_align}',
+				style: 'blackshade'
+			},
+					],
 
 
 

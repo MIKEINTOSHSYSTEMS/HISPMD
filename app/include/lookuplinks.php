@@ -530,6 +530,55 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"] = array();
 		}
 		$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "scope_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_indicators"] ) ) {
+			$lookupTableLinks["public.moh_indicators"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"] )) {
+			$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "indicator_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
+			$lookupTableLinks["public.moh_data_sources"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"] )) {
+			$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "data_source_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
+			$lookupTableLinks["public.moh_assessments"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_assessments"]["moh_indicators_data_chart.assessment_id"] )) {
+			$lookupTableLinks["public.moh_assessments"]["moh_indicators_data_chart.assessment_id"] = array();
+		}
+		$lookupTableLinks["public.moh_assessments"]["moh_indicators_data_chart.assessment_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "assessment_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_regions"] ) ) {
+			$lookupTableLinks["public.moh_regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_regions"]["moh_indicators_data_chart.region_id"] )) {
+			$lookupTableLinks["public.moh_regions"]["moh_indicators_data_chart.region_id"] = array();
+		}
+		$lookupTableLinks["public.moh_regions"]["moh_indicators_data_chart.region_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "region_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_administration_units"] ) ) {
+			$lookupTableLinks["public.moh_administration_units"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_administration_units"]["moh_indicators_data_chart.unit_id"] )) {
+			$lookupTableLinks["public.moh_administration_units"]["moh_indicators_data_chart.unit_id"] = array();
+		}
+		$lookupTableLinks["public.moh_administration_units"]["moh_indicators_data_chart.unit_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "unit_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_facility_types"] ) ) {
+			$lookupTableLinks["public.moh_facility_types"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"] )) {
+			$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"] = array();
+		}
+		$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "facility_type_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_data_scope"] ) ) {
+			$lookupTableLinks["public.moh_data_scope"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_chart.scope_id"] )) {
+			$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_chart.scope_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_chart.scope_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "scope_id", "page" => "search");
 }
 
 ?>

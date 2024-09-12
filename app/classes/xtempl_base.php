@@ -172,6 +172,11 @@ class XTempl_Base
 				"chartName"=>"public_mfr_facilities_register_chart",
 				"table"=>"public.mfr_facilities_register_chart",
 				"ctype"=>"2DColumn"));
+			$this->assign_function("moh_indicators_data_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"moh_indicators_data_chart",
+				"table"=>"MOH_Indicators_data_Chart",
+				"ctype"=>"2DColumn"));
 		}
 
 

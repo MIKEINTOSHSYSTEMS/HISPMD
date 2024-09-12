@@ -108,6 +108,7 @@ $nonAdminTablesArr[] = "public.mfr_facilities_register_chart";
 $nonAdminTablesArr[] = "public.moh_data_scope";
 $nonAdminTablesArr[] = "HISPMD_MOH_Indicators_Dashboard";
 $nonAdminTablesArr[] = "MOH_Indicators_Data_Report";
+$nonAdminTablesArr[] = "MOH_Indicators_data_Chart";
 
 $ug_connection = $cman->getForUserGroups();
 

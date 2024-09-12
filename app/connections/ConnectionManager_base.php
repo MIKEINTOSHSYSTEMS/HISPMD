@@ -330,6 +330,7 @@ class ConnectionManager_Base
 		$connectionsIds["public.mfr_facilities_register_chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_data_scope"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MOH_Indicators_Data_Report"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["MOH_Indicators_data_Chart"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

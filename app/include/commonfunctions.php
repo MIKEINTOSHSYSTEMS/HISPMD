@@ -389,6 +389,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_indicators_data_report" == $shortTName )
 		return true;
+	if ("moh_indicators_data_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1276,6 +1278,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MOH_Indicators_Data_Report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MOH_Indicators_data_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MOH_Indicators_data_Chart";
+	}
 	return $arr;
 }
 
@@ -1378,6 +1389,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_data_scope";
 	$arr[]="HISPMD_MOH_Indicators_Dashboard";
 	$arr[]="MOH_Indicators_Data_Report";
+	$arr[]="MOH_Indicators_data_Chart";
 	return $arr;
 }
 
@@ -1434,6 +1446,8 @@ function GetChartType($shorttable)
 	if($shorttable=="mfr_region_chart")
 		return "2DBar";
 	if($shorttable=="public_mfr_facilities_register_chart")
+		return "2DColumn";
+	if($shorttable=="moh_indicators_data_chart")
 		return "2DColumn";
 	return "";
 }
@@ -2483,6 +2497,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="MOH_Indicators_data_Chart" )
+	{
+//	default permissions
+		return "S".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

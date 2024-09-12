@@ -3696,6 +3696,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "hispmd_moh_indicators_dashboard" ] = "HISPMD_MOH_Indicators_Dashboard";
 	$projectEntities[ "MOH_Indicators_Data_Report" ] = array( "url" => "moh_indicators_data_report", "type" => 2 );
 	$projectEntitiesReverse[ "moh_indicators_data_report" ] = "MOH_Indicators_Data_Report";
+	$projectEntities[ "MOH_Indicators_data_Chart" ] = array( "url" => "moh_indicators_data_chart", "type" => 3 );
+	$projectEntitiesReverse[ "moh_indicators_data_chart" ] = "MOH_Indicators_data_Chart";
 }
 
 function findTable( $table ) {

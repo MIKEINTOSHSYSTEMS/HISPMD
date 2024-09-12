@@ -28,22 +28,22 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_report["English"]["data_id"] = "Data Id";
 	$fieldToolTipsmoh_indicators_data_report["English"]["data_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["data_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["indicator_id"] = "Indicator Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["indicator_id"] = "Indicator";
 	$fieldToolTipsmoh_indicators_data_report["English"]["indicator_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["indicator_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["data_source_id"] = "Data Source Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["data_source_id"] = "Data Source";
 	$fieldToolTipsmoh_indicators_data_report["English"]["data_source_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["data_source_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["assessment_id"] = "Assessment Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["assessment_id"] = "Assessment";
 	$fieldToolTipsmoh_indicators_data_report["English"]["assessment_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["assessment_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["region_id"] = "Region Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["region_id"] = "Region";
 	$fieldToolTipsmoh_indicators_data_report["English"]["region_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["region_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["unit_id"] = "Unit Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["unit_id"] = "Unit";
 	$fieldToolTipsmoh_indicators_data_report["English"]["unit_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["unit_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["facility_type_id"] = "Facility Type Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["facility_type_id"] = "Facility Type";
 	$fieldToolTipsmoh_indicators_data_report["English"]["facility_type_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["facility_type_id"] = "";
 	$fieldLabelsmoh_indicators_data_report["English"]["value"] = "Value";
@@ -52,10 +52,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_report["English"]["year"] = "Year";
 	$fieldToolTipsmoh_indicators_data_report["English"]["year"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["year"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["scope_id"] = "Scope Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["scope_id"] = "Scope";
 	$fieldToolTipsmoh_indicators_data_report["English"]["scope_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["scope_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["gender_sex"] = "Gender Sex";
+	$fieldLabelsmoh_indicators_data_report["English"]["gender_sex"] = "Gender/Sex";
 	$fieldToolTipsmoh_indicators_data_report["English"]["gender_sex"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["gender_sex"] = "";
 	$fieldLabelsmoh_indicators_data_report["English"]["data_representation"] = "Data Representation";
@@ -563,8 +563,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -726,8 +727,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -889,8 +891,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1052,8 +1055,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1215,8 +1219,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1378,8 +1383,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1657,8 +1663,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1820,8 +1827,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1971,8 +1979,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2122,8 +2131,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
