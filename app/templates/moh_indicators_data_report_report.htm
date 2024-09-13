@@ -419,6 +419,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
 						</div>
 		{END searchCtrlBlock_indicator_id}
+																{BEGIN searchCtrlBlock_indicator_group_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_group_id}" {$filterRow_attrs_indicator_group_id}>
+			<label>{$label MOH_Indicators_Data_Report indicator_group_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_group_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_group_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_group_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_group_id}
 																{BEGIN searchCtrlBlock_scope_id}
 
 
@@ -1359,7 +1372,7 @@
 														<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
 														<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
 														<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
-																																																								
+																																																															
 																																						<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
 														<td class="blackshade {$fieldclass_assessment_id}">{$label MOH_Indicators_Data_Report assessment_id }</td>
 														<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
@@ -1367,6 +1380,7 @@
 														<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
 														<td class="blackshade {$fieldclass_value}">{$label MOH_Indicators_Data_Report value }</td>
 														<td class="blackshade {$fieldclass_data_representation}">{$label MOH_Indicators_Data_Report data_representation }</td>
+														<td class="blackshade {$fieldclass_indicator_group_id}">{$label MOH_Indicators_Data_Report indicator_group_id }</td>
 									</tr>
 		
 																					<tr class="group-spliter-1 group-spliter-2 group-spliter-3 group-spliter-4 " {$rowattrs}>
@@ -1432,6 +1446,12 @@
 								{$xdata_representation_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field11" {$item_report_grid_field11} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
 {$data_representation_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_indicator_group_id}">
+								{$xindicator_group_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
+{$indicator_group_id_value}
 </span>				
 							</td>
 					
@@ -1502,6 +1522,12 @@
 {$data_representation_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_indicator_group_id}">
+								{$xindicator_group_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
+{$indicator_group_id_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END scope_id_firstnewgroup}
@@ -1568,6 +1594,12 @@
 {$data_representation_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_indicator_group_id}">
+								{$xindicator_group_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
+{$indicator_group_id_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END facility_type_id_firstnewgroup}
@@ -1632,6 +1664,12 @@
 {$data_representation_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_indicator_group_id}">
+								{$xindicator_group_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
+{$indicator_group_id_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END year_firstnewgroup}
@@ -1693,6 +1731,12 @@
 {$data_representation_value}
 </span>		
 		</td>
+													<td class="data {$fieldclass_indicator_group_id}">
+		{$xindicator_group_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
+{$indicator_group_id_value}
+</span>		
+		</td>
 							</tr>
 	{END nonewgroup}
 	
@@ -1704,11 +1748,11 @@
 							<td class="group_2" style="border-top: none;"></td>
 							<td class="group_3" style="border-top: none;"></td>
 							
-																															<td  class="group_4" colspan=8 >
+																															<td  class="group_4" colspan=9 >
 				Summary for&nbsp;{$label MOH_Indicators_Data_Report year }&nbsp;{$year_grval}
 					- <span class="summary-4" data-type="summary">{$groupyear_total_cnt}
 					</span> records total			</td>
-																																																										</tr>
+																																																																	</tr>
 
 	
 	
@@ -1722,11 +1766,11 @@
 										<td class="group_1" style="border-top: none;"></td>
 							<td class="group_2" style="border-top: none;"></td>
 							
-																								<td  class="group_3" colspan=9 >
+																								<td  class="group_3" colspan=10 >
 				Summary for&nbsp;{$label MOH_Indicators_Data_Report facility_type_id }&nbsp;{$facility_type_id_grval}
 					- <span class="summary-3" data-type="summary">{$groupfacility_type_id_total_cnt}
 					</span> records total			</td>
-																																																																	</tr>
+																																																																								</tr>
 
 	
 	
@@ -1739,11 +1783,11 @@
 		<tr class="summaryrow"  >
 										<td class="group_1" style="border-top: none;"></td>
 							
-																	<td  class="group_2" colspan=10 >
+																	<td  class="group_2" colspan=11 >
 				Summary for&nbsp;{$label MOH_Indicators_Data_Report scope_id }&nbsp;{$scope_id_grval}
 					- <span class="summary-2" data-type="summary">{$groupscope_id_total_cnt}
 					</span> records total			</td>
-																																																																								</tr>
+																																																																															</tr>
 
 	
 	
@@ -1755,11 +1799,11 @@
 	{BEGIN indicator_id_endgroup}
 		<tr class="summaryrow"  >
 			
-										<td  class="group_1" colspan=11 >
+										<td  class="group_1" colspan=12 >
 				Summary for&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
 					- <span class="summary-1" data-type="summary">{$groupindicator_id_total_cnt}
 					</span> records total			</td>
-																																																																															</tr>
+																																																																																						</tr>
 
 	
 	
@@ -1782,6 +1826,7 @@
 						<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
 						<td class="blackshade {$fieldclass_value}">{$label MOH_Indicators_Data_Report value }</td>
 						<td class="blackshade {$fieldclass_data_representation}">{$label MOH_Indicators_Data_Report data_representation }</td>
+						<td class="blackshade {$fieldclass_indicator_group_id}">{$label MOH_Indicators_Data_Report indicator_group_id }</td>
 					</tr>
 		{END summary_header}
 	
@@ -1792,7 +1837,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="11">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
+        <td class="pagesummary" colspan="12">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
     </tr>
 	
 	
@@ -1802,7 +1847,7 @@
 	<!-- global summary-->
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
-        <td class="globalsummary" colspan="11">
+        <td class="globalsummary" colspan="12">
             Global summary {$global_total_cnt} - records total        </td>
     </tr>
 

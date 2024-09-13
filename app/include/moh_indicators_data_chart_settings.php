@@ -2641,6 +2641,7 @@ $proto31["m_columns"][] = "year";
 $proto31["m_columns"][] = "scope_id";
 $proto31["m_columns"][] = "gender_sex";
 $proto31["m_columns"][] = "data_representation";
+$proto31["m_columns"][] = "indicator_group_id";
 $obj = new SQLTable($proto31);
 
 $proto30["m_table"] = $obj;

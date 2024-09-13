@@ -61,6 +61,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicator_data["English"]["data_representation"] = "Data Representation";
 	$fieldToolTipsmoh_indicator_data["English"]["data_representation"] = "";
 	$placeHoldersmoh_indicator_data["English"]["data_representation"] = "";
+	$fieldLabelsmoh_indicator_data["English"]["indicator_group_id"] = "Indicator Group";
+	$fieldToolTipsmoh_indicator_data["English"]["indicator_group_id"] = "";
+	$placeHoldersmoh_indicator_data["English"]["indicator_group_id"] = "";
 	if (count($fieldToolTipsmoh_indicator_data["English"]))
 		$tdatamoh_indicator_data[".isUseToolTips"] = true;
 }
@@ -190,6 +193,7 @@ $tdatamoh_indicator_data[".googleLikeFields"][] = "year";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "scope_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "gender_sex";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "data_representation";
+$tdatamoh_indicator_data[".googleLikeFields"][] = "indicator_group_id";
 
 
 
@@ -223,7 +227,7 @@ $tdatamoh_indicator_data[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_indicator_data[".orderindexes"] = array();
 
 
-$tdatamoh_indicator_data[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation";
+$tdatamoh_indicator_data[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id";
 $tdatamoh_indicator_data[".sqlFrom"] = "FROM \"public\".moh_indicator_data";
 $tdatamoh_indicator_data[".sqlWhereExpr"] = "";
 $tdatamoh_indicator_data[".sqlTail"] = "";
@@ -498,18 +502,23 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "indicator_group_id", "lookup" => "indicator_group_id" );
+
 	
 	
 
 	
-	
+		$edata["Multiselect"] = true;
+
 		$edata["SelectSize"] = 1;
 
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -529,7 +538,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -673,7 +683,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -693,7 +704,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -837,7 +849,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -857,7 +870,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1323,7 +1337,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 
 	
-	
+		$edata["Multiselect"] = true;
+
 		$edata["SelectSize"] = 1;
 
 // End Lookup Settings
@@ -1606,7 +1621,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1629,7 +1645,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1773,7 +1790,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1793,7 +1811,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2077,7 +2096,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2097,7 +2117,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2144,6 +2165,175 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 	$tdatamoh_indicator_data["data_representation"] = $fdata;
 		$tdatamoh_indicator_data[".searchableFields"][] = "data_representation";
+//	indicator_group_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "indicator_group_id";
+	$fdata["GoodName"] = "indicator_group_id";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("public_moh_indicator_data","indicator_group_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_group_id";
+
+		$fdata["sourceSingle"] = "indicator_group_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_group_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_groups";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "indicator_group_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "indicator_group_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "indicator_id";
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicator_data["indicator_group_id"] = $fdata;
+		$tdatamoh_indicator_data[".searchableFields"][] = "indicator_group_id";
 
 
 $tables_data["public.moh_indicator_data"]=&$tdatamoh_indicator_data;
@@ -2294,6 +2484,24 @@ $masterTablesData["public.moh_indicator_data"] = array();
 	$masterTablesData["public.moh_indicator_data"][6]["detailKeys"][]="scope_id";
 		
 	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="public.moh_indicator_groups";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="public.moh_indicator_groups";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "moh_indicator_groups";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["public.moh_indicator_data"][7] = $masterParams;
+				$masterTablesData["public.moh_indicator_data"][7]["masterKeys"] = array();
+	$masterTablesData["public.moh_indicator_data"][7]["masterKeys"][]="indicator_group_id";
+				$masterTablesData["public.moh_indicator_data"][7]["detailKeys"] = array();
+	$masterTablesData["public.moh_indicator_data"][7]["detailKeys"][]="indicator_group_id";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -2314,7 +2522,7 @@ function createSqlQuery_moh_indicator_data()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation";
+$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id";
 $proto0["m_strFrom"] = "FROM \"public\".moh_indicator_data";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2522,48 +2730,63 @@ $proto28["m_alias"] = "";
 $obj = new SQLFieldListItem($proto28);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto30=array();
-$proto30["m_link"] = "SQLL_MAIN";
-			$proto31=array();
-$proto31["m_strName"] = "public.moh_indicator_data";
-$proto31["m_srcTableName"] = "public.moh_indicator_data";
-$proto31["m_columns"] = array();
-$proto31["m_columns"][] = "data_id";
-$proto31["m_columns"][] = "indicator_id";
-$proto31["m_columns"][] = "data_source_id";
-$proto31["m_columns"][] = "assessment_id";
-$proto31["m_columns"][] = "region_id";
-$proto31["m_columns"][] = "unit_id";
-$proto31["m_columns"][] = "facility_type_id";
-$proto31["m_columns"][] = "value";
-$proto31["m_columns"][] = "year";
-$proto31["m_columns"][] = "scope_id";
-$proto31["m_columns"][] = "gender_sex";
-$proto31["m_columns"][] = "data_representation";
-$obj = new SQLTable($proto31);
+						$proto30=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_group_id",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "public.moh_indicator_data"
+));
 
-$proto30["m_table"] = $obj;
-$proto30["m_sql"] = "\"public\".moh_indicator_data";
-$proto30["m_alias"] = "";
+$proto30["m_sql"] = "indicator_group_id";
 $proto30["m_srcTableName"] = "public.moh_indicator_data";
-$proto32=array();
-$proto32["m_sql"] = "";
-$proto32["m_uniontype"] = "SQLL_UNKNOWN";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto32=array();
+$proto32["m_link"] = "SQLL_MAIN";
+			$proto33=array();
+$proto33["m_strName"] = "public.moh_indicator_data";
+$proto33["m_srcTableName"] = "public.moh_indicator_data";
+$proto33["m_columns"] = array();
+$proto33["m_columns"][] = "data_id";
+$proto33["m_columns"][] = "indicator_id";
+$proto33["m_columns"][] = "data_source_id";
+$proto33["m_columns"][] = "assessment_id";
+$proto33["m_columns"][] = "region_id";
+$proto33["m_columns"][] = "unit_id";
+$proto33["m_columns"][] = "facility_type_id";
+$proto33["m_columns"][] = "value";
+$proto33["m_columns"][] = "year";
+$proto33["m_columns"][] = "scope_id";
+$proto33["m_columns"][] = "gender_sex";
+$proto33["m_columns"][] = "data_representation";
+$proto33["m_columns"][] = "indicator_group_id";
+$obj = new SQLTable($proto33);
+
+$proto32["m_table"] = $obj;
+$proto32["m_sql"] = "\"public\".moh_indicator_data";
+$proto32["m_alias"] = "";
+$proto32["m_srcTableName"] = "public.moh_indicator_data";
+$proto34=array();
+$proto34["m_sql"] = "";
+$proto34["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto32["m_column"]=$obj;
-$proto32["m_contained"] = array();
-$proto32["m_strCase"] = "";
-$proto32["m_havingmode"] = false;
-$proto32["m_inBrackets"] = false;
-$proto32["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto32);
+$proto34["m_column"]=$obj;
+$proto34["m_contained"] = array();
+$proto34["m_strCase"] = "";
+$proto34["m_havingmode"] = false;
+$proto34["m_inBrackets"] = false;
+$proto34["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto34);
 
-$proto30["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto30);
+$proto32["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto32);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2579,7 +2802,7 @@ $queryData_moh_indicator_data = createSqlQuery_moh_indicator_data();
 	
 																												;
 
-												
+													
 
 $tdatamoh_indicator_data[".sqlquery"] = $queryData_moh_indicator_data;
 

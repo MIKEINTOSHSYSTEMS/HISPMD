@@ -307,6 +307,45 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN indicator_group_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_group_id}  r-vertical-field" 
+	data-signal-error-for="indicator_group_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_indicator_group_id}">
+		{BEGIN indicator_group_id_label}{$label public_moh_indicator_data indicator_group_id }{END indicator_group_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$indicator_group_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="indicator_group_id">
+		<div class="text-muted" >
+		{$tooltip public_moh_indicator_data indicator_group_id }		</div>
+	</div>
+</div>
+
+
+{END indicator_group_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN indicator_id_fieldblock}
 
 
@@ -329,18 +368,18 @@
 {END indicator_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c3}
+			{END cellblock_grid_c}
 			 
 																
 
-{BEGIN cellblock_grid_c}
+{BEGIN cellblock_grid_c4}
 <td
-	{$cell_grid_c}
+	{$cell_grid_c4}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c" data-pageid="{$pageid}"
+			data-cellId="grid_c4" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -368,18 +407,39 @@
 {END data_source_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c}
-			 
-																
+			{END cellblock_grid_c4}
+								</tr>
+	 
+	 
+		
+						<tr>
+						
 
-{BEGIN cellblock_grid_c4}
+{BEGIN cellblock_grid_c11}
 <td
-	{$cell_grid_c4}
+	{$cell_grid_c11}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c4" data-pageid="{$pageid}"
+			data-cellId="grid_c11" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c11}
+			 
+																
+
+{BEGIN cellblock_grid_c12}
+<td
+	{$cell_grid_c12}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c12" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -407,21 +467,18 @@
 {END assessment_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c4}
-								</tr>
-	 
-	 
-														<tr {$row_grid_1} >
-										
+			{END cellblock_grid_c12}
+			 
+																
 
-{BEGIN cellblock_grid_c11}
+{BEGIN cellblock_grid_c13}
 <td
-	{$cell_grid_c11}
+	{$cell_grid_c13}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c11" data-pageid="{$pageid}"
+			data-cellId="grid_c13" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -449,18 +506,21 @@
 {END scope_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c11}
-			 
-																
+			{END cellblock_grid_c13}
+								</tr>
+	 
+	 
+														<tr {$row_grid_2} >
+										
 
-{BEGIN cellblock_grid_c12}
+{BEGIN cellblock_grid_c8}
 <td
-	{$cell_grid_c12}
+	{$cell_grid_c8}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c12" data-pageid="{$pageid}"
+			data-cellId="grid_c8" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -488,60 +548,18 @@
 {END region_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c12}
+			{END cellblock_grid_c8}
 			 
 																
 
-{BEGIN cellblock_grid_c13}
+{BEGIN cellblock_grid_c9}
 <td
-	{$cell_grid_c13}
+	{$cell_grid_c9}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c13" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-				
-{BEGIN unit_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_unit_id}  r-vertical-field" 
-	data-signal-error-for="unit_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_unit_id}">
-		{BEGIN unit_id_label}{$label public_moh_indicator_data unit_id }{END unit_id_label}
-	</label>
-	<div class="r-edit-field">
-		{$unit_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="unit_id">
-		<div class="text-muted" >
-		{$tooltip public_moh_indicator_data unit_id }		</div>
-	</div>
-</div>
-
-
-{END unit_id_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c13}
-								</tr>
-	 
-	 
-														<tr {$row_grid_2} >
-										
-
-{BEGIN cellblock_grid_c8}
-<td
-	{$cell_grid_c8}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c8" data-pageid="{$pageid}"
+			data-cellId="grid_c9" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -569,18 +587,78 @@
 {END facility_type_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c8}
+			{END cellblock_grid_c9}
 			 
 																
 
-{BEGIN cellblock_grid_c9}
+{BEGIN cellblock_grid_c10}
 <td
-	{$cell_grid_c9}
+	{$cell_grid_c10}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c9" data-pageid="{$pageid}"
+			data-cellId="grid_c10" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN unit_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_unit_id}  r-vertical-field" 
+	data-signal-error-for="unit_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_unit_id}">
+		{BEGIN unit_id_label}{$label public_moh_indicator_data unit_id }{END unit_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$unit_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="unit_id">
+		<div class="text-muted" >
+		{$tooltip public_moh_indicator_data unit_id }		</div>
+	</div>
+</div>
+
+
+{END unit_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c10}
+								</tr>
+	 
+	 
+		
+						<tr>
+						
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c5}
+			 
+																
+
+{BEGIN cellblock_grid_c6}
+<td
+	{$cell_grid_c6}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c6" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -608,39 +686,18 @@
 {END gender_sex_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c9}
+			{END cellblock_grid_c6}
 			 
-		
-							
+																
 
-{BEGIN cellblock_grid_c10}
+{BEGIN cellblock_grid_c7}
 <td
-	{$cell_grid_c10}
+	{$cell_grid_c7}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c10" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-									</td>
-			{END cellblock_grid_c10}
-								</tr>
-	 
-	 
-														<tr {$row_grid_3} >
-										
-
-{BEGIN cellblock_grid_c5}
-<td
-	{$cell_grid_c5}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c5" data-pageid="{$pageid}"
+			data-cellId="grid_c7" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -668,57 +725,39 @@
 {END year_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c5}
-			 
-																
+			{END cellblock_grid_c7}
+								</tr>
+	 
+	 
+		
+						<tr>
+						
 
-{BEGIN cellblock_grid_c6}
+{BEGIN cellblock_grid_c14}
 <td
-	{$cell_grid_c6}
+	{$cell_grid_c14}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c6" data-pageid="{$pageid}"
+			data-cellId="grid_c14" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
 	<div edit-form-cell class="clearfix">
-				
-{BEGIN value_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_value}  r-vertical-field" 
-	data-signal-error-for="value{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_value}">
-		{BEGIN value_label}{$label public_moh_indicator_data value }{END value_label}
-	</label>
-	<div class="r-edit-field">
-		{$value_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="value">
-		<div class="text-muted" >
-		{$tooltip public_moh_indicator_data value }		</div>
-	</div>
-</div>
-
-
-{END value_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c6}
+									</td>
+			{END cellblock_grid_c14}
 			 
 																
 
-{BEGIN cellblock_grid_c7}
+{BEGIN cellblock_grid_c15}
 <td
-	{$cell_grid_c7}
+	{$cell_grid_c15}
 	class=" r-ori-vert"
 	
 			data-single
 			
-			data-cellId="grid_c7" data-pageid="{$pageid}"
+			data-cellId="grid_c15" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -746,7 +785,46 @@
 {END data_representation_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c7}
+			{END cellblock_grid_c15}
+			 
+																
+
+{BEGIN cellblock_grid_c16}
+<td
+	{$cell_grid_c16}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c16" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN value_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_value}  r-vertical-field" 
+	data-signal-error-for="value{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_value}">
+		{BEGIN value_label}{$label public_moh_indicator_data value }{END value_label}
+	</label>
+	<div class="r-edit-field">
+		{$value_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="value">
+		<div class="text-muted" >
+		{$tooltip public_moh_indicator_data value }		</div>
+	</div>
+</div>
+
+
+{END value_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c16}
 								</tr>
 			</tbody></table>
 {END grid_block}

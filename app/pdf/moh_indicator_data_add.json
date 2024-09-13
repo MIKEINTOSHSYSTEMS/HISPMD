@@ -158,6 +158,11 @@ pdfDocument = {
 			"%",
 						{END row_grid_3}
 			 
+								{BEGIN row_grid_4}
+						
+			"%",
+						{END row_grid_4}
+			 
 				],
 	
 		body: [
@@ -181,7 +186,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_id }","bold":true},{"text":{$indicator_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_group_id }","bold":true},{"text":{$indicator_group_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -208,7 +213,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_moh_indicator_data data_source_id }","bold":true},{"text":{$data_source_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_id }","bold":true},{"text":{$indicator_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -235,7 +240,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_moh_indicator_data assessment_id }","bold":true},{"text":{$assessment_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_moh_indicator_data data_source_id }","bold":true},{"text":{$data_source_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -265,10 +270,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel public_moh_indicator_data scope_id }","bold":true},{"text":{$scope_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -293,7 +296,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_moh_indicator_data region_id }","bold":true},{"text":{$region_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_moh_indicator_data assessment_id }","bold":true},{"text":{$assessment_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -320,7 +323,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_moh_indicator_data unit_id }","bold":true},{"text":{$unit_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel public_moh_indicator_data scope_id }","bold":true},{"text":{$scope_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -351,7 +354,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_moh_indicator_data facility_type_id }","bold":true},{"text":{$facility_type_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_moh_indicator_data region_id }","bold":true},{"text":{$region_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -378,7 +381,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel public_moh_indicator_data gender_sex }","bold":true},{"text":{$gender_sex_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_moh_indicator_data facility_type_id }","bold":true},{"text":{$facility_type_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -405,7 +408,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_moh_indicator_data year }","bold":true},{"text":{$year_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_moh_indicator_data unit_id }","bold":true},{"text":{$unit_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -461,7 +464,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel public_moh_indicator_data data_representation }","bold":true},{"text":{$data_representation_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel public_moh_indicator_data gender_sex }","bold":true},{"text":{$gender_sex_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -488,7 +491,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_moh_indicator_data year }","bold":true},{"text":{$year_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -500,6 +503,89 @@ pdfDocument = {
 {END cellblock_grid_c7}
 											],
 				{END row_grid_3}
+						{BEGIN row_grid_4}
+				[
+																{BEGIN cellblock_grid_c14}
+{
+	cellId: 'c14',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c14}
+																							{BEGIN cellblock_grid_c15}
+{
+	cellId: 'c15',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel public_moh_indicator_data data_representation }","bold":true},{"text":{$data_representation_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c15}
+																							{BEGIN cellblock_grid_c16}
+{
+	cellId: 'c16',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c16}
+											],
+				{END row_grid_4}
 		
 		]
 	}

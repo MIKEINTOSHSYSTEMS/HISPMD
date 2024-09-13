@@ -456,6 +456,13 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
 			$lookupTableLinks["public.moh_indicator_groups"] = array();
 		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"]["moh_indicator_data.indicator_group_id"] )) {
+			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicator_data.indicator_group_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicator_data.indicator_group_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "indicator_group_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
+			$lookupTableLinks["public.moh_indicator_groups"] = array();
+		}
 		if( !isset( $lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"] )) {
 			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"] = array();
 		}

@@ -72,13 +72,14 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
+										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 11,
+							colSpan: 12,
 							border:[false, false,false,false],
 							stack: [
 
@@ -298,7 +299,7 @@ pdfDocument = {
 				style: 'blackshade',
 				alignment: '{$year_align}',
 			},
-																																								
+																																													
 																												{
 				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
 				style: 'blackshade',
@@ -333,6 +334,11 @@ pdfDocument = {
 				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
 				style: 'blackshade',
 				alignment: '{$data_representation_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_group_id }',
+				style: 'blackshade',
+				alignment: '{$indicator_group_id_align}',
 			},
 						],
 		
@@ -407,6 +413,12 @@ pdfDocument = {
 										{$data_representation_value}
 									],
 				alignment: '{$data_representation_align}',
+			},
+											{
+				text: [
+										{$indicator_group_id_value}
+									],
+				alignment: '{$indicator_group_id_align}',
 			},
 					
 	],
@@ -485,6 +497,12 @@ pdfDocument = {
 									],
 				alignment: '{$data_representation_align}',
 			},
+											{
+				text: [
+										{$indicator_group_id_value}
+									],
+				alignment: '{$indicator_group_id_align}',
+			},
 					
 	],
 	{END scope_id_firstnewgroup}
@@ -561,6 +579,12 @@ pdfDocument = {
 										{$data_representation_value}
 									],
 				alignment: '{$data_representation_align}',
+			},
+											{
+				text: [
+										{$indicator_group_id_value}
+									],
+				alignment: '{$indicator_group_id_align}',
 			},
 					
 	],
@@ -639,6 +663,12 @@ pdfDocument = {
 									],
 				alignment: '{$data_representation_align}',
 			},
+											{
+				text: [
+										{$indicator_group_id_value}
+									],
+				alignment: '{$indicator_group_id_align}',
+			},
 					
 	],
 	{END year_firstnewgroup}
@@ -690,6 +720,10 @@ pdfDocument = {
 				text: {$data_representation_value},
 				alignment: '{$data_representation_align}',
 			},
+											{
+				text: {$indicator_group_id_value},
+				alignment: '{$indicator_group_id_align}',
+			},
 						],
 {END nonewgroup}
 
@@ -718,8 +752,8 @@ pdfDocument = {
 						' records total'
 					],
 					style: 'group_4',
-					colSpan: 8				},
-																																																										],
+					colSpan: 9				},
+																																																																	],
 		
 		
 		
@@ -748,8 +782,8 @@ pdfDocument = {
 						' records total'
 					],
 					style: 'group_3',
-					colSpan: 9				},
-																																																																	],
+					colSpan: 10				},
+																																																																								],
 		
 		
 		
@@ -774,8 +808,8 @@ pdfDocument = {
 						' records total'
 					],
 					style: 'group_2',
-					colSpan: 10				},
-																																																																								],
+					colSpan: 11				},
+																																																																															],
 		
 		
 		
@@ -796,8 +830,8 @@ pdfDocument = {
 						' records total'
 					],
 					style: 'group_1',
-					colSpan: 11				},
-																																																																															],
+					colSpan: 12				},
+																																																																																						],
 		
 		
 		
@@ -866,6 +900,11 @@ pdfDocument = {
 				alignment: '{$data_representation_align}',
 				style: 'blackshade'
 			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_group_id }',
+				alignment: '{$indicator_group_id_align}',
+				style: 'blackshade'
+			},
 					],
 
 
@@ -877,7 +916,7 @@ pdfDocument = {
 	[
 		{	
 			text: 'Page summary {$page_total_cnt} - records total',
-			colSpan: 11,
+			colSpan: 12,
 			style: 'pagesummary',
 		}
 	],
@@ -892,7 +931,7 @@ pdfDocument = {
 	[
 		{
 			text: 'Global summary {$global_total_cnt} - records total',
-			colSpan: 11,
+			colSpan: 12,
 			style: 'globalsummary',
 		}
 	],
