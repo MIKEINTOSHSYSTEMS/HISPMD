@@ -201,6 +201,9 @@ pdfDocument = {
 				
 			{"text":{$data_representation_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
+				
+			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

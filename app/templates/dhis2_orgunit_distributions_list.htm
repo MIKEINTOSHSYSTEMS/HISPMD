@@ -542,6 +542,7 @@
 
 	<div class="dropdown filter-field filter-ou-container" {BEGIN filter_selected_ou} data-selected {END filter_selected_ou}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-ou" type="checkbox" name="selectAll" {$selectAll_attrs_ou} />
 						{BEGIN clearLink_ou}
 			<a href="#" class="filter-clear filter-clear-ou" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -574,6 +575,11 @@
 
 	
 
+			{BEGIN filter_button_multiselect_ou}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_ou}">
+			<a href="#" class="filter-ou-btn-multiselect filter-apply-ou" {$filterbutton_attrs_ou}>Multiselect</a>
+		</li>
+		{END filter_button_multiselect_ou}
 			</ul>
 	</div>
 

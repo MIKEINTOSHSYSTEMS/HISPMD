@@ -537,6 +537,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"] = array();
 		}
 		$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_report.scope_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "scope_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
+			$lookupTableLinks["public.moh_indicator_groups"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_report.indicator_group_id"] )) {
+			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_report.indicator_group_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_report.indicator_group_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "indicator_group_id", "page" => "search");
 		if( !isset( $lookupTableLinks["public.moh_indicators"] ) ) {
 			$lookupTableLinks["public.moh_indicators"] = array();
 		}
@@ -586,6 +593,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_chart.scope_id"] = array();
 		}
 		$lookupTableLinks["public.moh_data_scope"]["moh_indicators_data_chart.scope_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "scope_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
+			$lookupTableLinks["public.moh_indicator_groups"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_chart.indicator_group_id"] )) {
+			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_chart.indicator_group_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_chart.indicator_group_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "indicator_group_id", "page" => "search");
 }
 
 ?>

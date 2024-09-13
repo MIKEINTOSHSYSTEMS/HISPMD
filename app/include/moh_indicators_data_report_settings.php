@@ -61,7 +61,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_report["English"]["data_representation"] = "Data Representation";
 	$fieldToolTipsmoh_indicators_data_report["English"]["data_representation"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["data_representation"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["indicator_group_id"] = "Indicator Group Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["indicator_group_id"] = "Indicator Group";
 	$fieldToolTipsmoh_indicators_data_report["English"]["indicator_group_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["indicator_group_id"] = "";
 	if (count($fieldToolTipsmoh_indicators_data_report["English"]))
@@ -508,12 +508,16 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "indicator_group_id", "lookup" => "indicator_group_id" );
+
 	
 	
 
 	
-	
+		$edata["Multiselect"] = true;
+
 		$edata["SelectSize"] = 1;
 
 // End Lookup Settings
@@ -2211,7 +2215,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2221,6 +2225,38 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_groups";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "indicator_group_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "indicator_group_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "indicator_id";
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2235,17 +2271,14 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -2265,7 +2298,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

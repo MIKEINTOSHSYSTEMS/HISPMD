@@ -390,7 +390,20 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_indicator_id}
+																		{BEGIN searchCtrlBlock_indicator_group_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_group_id}" {$filterRow_attrs_indicator_group_id}>
+			<label>{$label MOH_Indicators_data_Chart indicator_group_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_group_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_group_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_group_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_group_id}
+																{BEGIN searchCtrlBlock_indicator_id}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
@@ -578,6 +591,61 @@
 
 
 
+{BEGIN filter_control_indicator_group_id}
+
+	<div class="dropdown filter-field filter-indicator_group_id-container" {BEGIN filter_selected_indicator_group_id} data-selected {END filter_selected_indicator_group_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_indicator_group_id}
+			<a href="#" class="filter-clear filter-clear-indicator_group_id" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_indicator_group_id}
+			<span class="r-filter-field">{$label MOH_Indicators_data_Chart indicator_group_id }				{BEGIN filter_selected_indicator_group_id}:{END filter_selected_indicator_group_id}
+			</span>
+			{BEGIN filter_selected_indicator_group_id}
+			<span class="r-filter-value">{$filtervalue_indicator_group_id}</span>
+			{END filter_selected_indicator_group_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_indicator_group_id}
+		<li class=" filter-values filter-values-indicator_group_id  {$visibilityClass_indicator_group_id}">
+			{$indicator_group_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_indicator_group_id}
+
+			{BEGIN filter_button_showmore_indicator_group_id}
+		<li class=" filter-show-more {$collapsedClass_indicator_group_id} {$showMoreBtnClass_indicator_group_id}">
+			<a class="filter-show-more-link filterShowMore_indicator_group_id" href="#">{$show_n_more_indicator_group_id}</a>
+		</li>
+		{END filter_button_showmore_indicator_group_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_indicator_group_id}
+
+
+
+
+
+
 {BEGIN filter_control_indicator_id}
 
 	<div class="dropdown filter-field filter-indicator_id-container" {BEGIN filter_selected_indicator_id} data-selected {END filter_selected_indicator_id}>
@@ -601,6 +669,7 @@
 		<li class=" filter-values filter-values-indicator_id  {$visibilityClass_indicator_id}">
 			{$indicator_id_filter}
 						
+					
 					
 					
 					
@@ -670,6 +739,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_data_representation}
 
@@ -721,6 +791,7 @@
 		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
 			{$scope_id_filter}
 						
+					
 					
 					
 					
@@ -790,6 +861,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_region_id}
 
@@ -841,6 +913,7 @@
 		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
 			{$year_filter}
 						
+					
 					
 					
 					
@@ -910,6 +983,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_facility_type_id}
 
@@ -961,6 +1035,7 @@
 		<li class=" filter-values filter-values-assessment_id  {$visibilityClass_assessment_id}">
 			{$assessment_id_filter}
 						
+					
 					
 					
 					
@@ -1030,6 +1105,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_data_source_id}
 
@@ -1090,6 +1166,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_unit_id}
 
@@ -1141,6 +1218,7 @@
 		<li class=" filter-values filter-values-gender_sex  {$visibilityClass_gender_sex}">
 			{$gender_sex_filter}
 						
+					
 					
 					
 					

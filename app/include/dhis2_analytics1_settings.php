@@ -945,9 +945,10 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "DHIS2_Organisation_Unit";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
+		$edata["listPageId"] = "list";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 2;
 
 	
 		
@@ -967,8 +968,7 @@ $tdatadhis2_analytics1[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 

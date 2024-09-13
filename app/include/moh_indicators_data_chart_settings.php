@@ -61,6 +61,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_chart["English"]["data_representation"] = "Data Representation";
 	$fieldToolTipsmoh_indicators_data_chart["English"]["data_representation"] = "";
 	$placeHoldersmoh_indicators_data_chart["English"]["data_representation"] = "";
+	$fieldLabelsmoh_indicators_data_chart["English"]["indicator_group_id"] = "Indicator Group";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["indicator_group_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["indicator_group_id"] = "";
 	if (count($fieldToolTipsmoh_indicators_data_chart["English"]))
 		$tdatamoh_indicators_data_chart[".isUseToolTips"] = true;
 }
@@ -191,6 +194,7 @@ $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "year";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "scope_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "gender_sex";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "data_representation";
+$tdatamoh_indicators_data_chart[".googleLikeFields"][] = "indicator_group_id";
 
 
 
@@ -225,7 +229,7 @@ $tdatamoh_indicators_data_chart[".orderindexes"] = array();
 
 
 
-$tdatamoh_indicators_data_chart[".sqlHead"] = "SELECT data_id,  indicator_id,  data_source_id,  assessment_id,  region_id,  unit_id,  facility_type_id,  \"value\",  \"year\",  scope_id,  gender_sex,  data_representation";
+$tdatamoh_indicators_data_chart[".sqlHead"] = "SELECT data_id,  indicator_id,  data_source_id,  assessment_id,  region_id,  unit_id,  facility_type_id,  \"value\",  \"year\",  scope_id,  gender_sex,  data_representation,  indicator_group_id";
 $tdatamoh_indicators_data_chart[".sqlFrom"] = "FROM \"public\".moh_indicator_data";
 $tdatamoh_indicators_data_chart[".sqlWhereExpr"] = "";
 $tdatamoh_indicators_data_chart[".sqlTail"] = "";
@@ -500,12 +504,16 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "indicator_group_id", "lookup" => "indicator_group_id" );
+
 	
 	
 
 	
-	
+		$edata["Multiselect"] = true;
+
 		$edata["SelectSize"] = 1;
 
 // End Lookup Settings
@@ -2146,6 +2154,173 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 	$tdatamoh_indicators_data_chart["data_representation"] = $fdata;
 		$tdatamoh_indicators_data_chart[".searchableFields"][] = "data_representation";
+//	indicator_group_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "indicator_group_id";
+	$fdata["GoodName"] = "indicator_group_id";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("MOH_Indicators_data_Chart","indicator_group_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_group_id";
+
+		$fdata["sourceSingle"] = "indicator_group_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_group_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["chart"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_groups";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "indicator_group_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "indicator_group_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "indicator_id";
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators_data_chart["indicator_group_id"] = $fdata;
+		$tdatamoh_indicators_data_chart[".searchableFields"][] = "indicator_group_id";
 
 $tdatamoh_indicators_data_chart[".chartLabelField"] = "year";
 $tdatamoh_indicators_data_chart[".chartSeries"] = array();
@@ -2252,6 +2427,11 @@ $tdatamoh_indicators_data_chart[".chartXml"] .= '</attr>
 	$tdatamoh_indicators_data_chart[".chartXml"] .= '<attr value="11">
 		<attr value="name">data_representation</attr>
 		<attr value="label">'.xmlencode(GetFieldLabel("MOH_Indicators_data_Chart","data_representation")).'</attr>
+		<attr value="search"></attr>
+	</attr>';
+	$tdatamoh_indicators_data_chart[".chartXml"] .= '<attr value="12">
+		<attr value="name">indicator_group_id</attr>
+		<attr value="label">'.xmlencode(GetFieldLabel("MOH_Indicators_data_Chart","indicator_group_id")).'</attr>
 		<attr value="search"></attr>
 	</attr>';
 $tdatamoh_indicators_data_chart[".chartXml"] .= '</attr>
@@ -2414,7 +2594,7 @@ function createSqlQuery_moh_indicators_data_chart()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "data_id,  indicator_id,  data_source_id,  assessment_id,  region_id,  unit_id,  facility_type_id,  \"value\",  \"year\",  scope_id,  gender_sex,  data_representation";
+$proto0["m_strFieldList"] = "data_id,  indicator_id,  data_source_id,  assessment_id,  region_id,  unit_id,  facility_type_id,  \"value\",  \"year\",  scope_id,  gender_sex,  data_representation,  indicator_group_id";
 $proto0["m_strFrom"] = "FROM \"public\".moh_indicator_data";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY \"year\"";
@@ -2622,66 +2802,69 @@ $proto28["m_alias"] = "";
 $obj = new SQLFieldListItem($proto28);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto30=array();
-$proto30["m_link"] = "SQLL_MAIN";
-			$proto31=array();
-$proto31["m_strName"] = "public.moh_indicator_data";
-$proto31["m_srcTableName"] = "MOH_Indicators_data_Chart";
-$proto31["m_columns"] = array();
-$proto31["m_columns"][] = "data_id";
-$proto31["m_columns"][] = "indicator_id";
-$proto31["m_columns"][] = "data_source_id";
-$proto31["m_columns"][] = "assessment_id";
-$proto31["m_columns"][] = "region_id";
-$proto31["m_columns"][] = "unit_id";
-$proto31["m_columns"][] = "facility_type_id";
-$proto31["m_columns"][] = "value";
-$proto31["m_columns"][] = "year";
-$proto31["m_columns"][] = "scope_id";
-$proto31["m_columns"][] = "gender_sex";
-$proto31["m_columns"][] = "data_representation";
-$proto31["m_columns"][] = "indicator_group_id";
-$obj = new SQLTable($proto31);
-
-$proto30["m_table"] = $obj;
-$proto30["m_sql"] = "\"public\".moh_indicator_data";
-$proto30["m_alias"] = "";
-$proto30["m_srcTableName"] = "MOH_Indicators_data_Chart";
-$proto32=array();
-$proto32["m_sql"] = "";
-$proto32["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
-));
-
-$proto32["m_column"]=$obj;
-$proto32["m_contained"] = array();
-$proto32["m_strCase"] = "";
-$proto32["m_havingmode"] = false;
-$proto32["m_inBrackets"] = false;
-$proto32["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto32);
-
-$proto30["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto30);
-
-$proto0["m_fromlist"][]=$obj;
-$proto0["m_groupby"] = array();
-												$proto34=array();
-						$obj = new SQLField(array(
-	"m_strName" => "data_id",
+						$proto30=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_group_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
 
-$proto34["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto34);
+$proto30["m_sql"] = "indicator_group_id";
+$proto30["m_srcTableName"] = "MOH_Indicators_data_Chart";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
 
-$proto0["m_groupby"][]=$obj;
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto32=array();
+$proto32["m_link"] = "SQLL_MAIN";
+			$proto33=array();
+$proto33["m_strName"] = "public.moh_indicator_data";
+$proto33["m_srcTableName"] = "MOH_Indicators_data_Chart";
+$proto33["m_columns"] = array();
+$proto33["m_columns"][] = "data_id";
+$proto33["m_columns"][] = "indicator_id";
+$proto33["m_columns"][] = "data_source_id";
+$proto33["m_columns"][] = "assessment_id";
+$proto33["m_columns"][] = "region_id";
+$proto33["m_columns"][] = "unit_id";
+$proto33["m_columns"][] = "facility_type_id";
+$proto33["m_columns"][] = "value";
+$proto33["m_columns"][] = "year";
+$proto33["m_columns"][] = "scope_id";
+$proto33["m_columns"][] = "gender_sex";
+$proto33["m_columns"][] = "data_representation";
+$proto33["m_columns"][] = "indicator_group_id";
+$obj = new SQLTable($proto33);
+
+$proto32["m_table"] = $obj;
+$proto32["m_sql"] = "\"public\".moh_indicator_data";
+$proto32["m_alias"] = "";
+$proto32["m_srcTableName"] = "MOH_Indicators_data_Chart";
+$proto34=array();
+$proto34["m_sql"] = "";
+$proto34["m_uniontype"] = "SQLL_UNKNOWN";
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
+));
+
+$proto34["m_column"]=$obj;
+$proto34["m_contained"] = array();
+$proto34["m_strCase"] = "";
+$proto34["m_havingmode"] = false;
+$proto34["m_inBrackets"] = false;
+$proto34["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto34);
+
+$proto32["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto32);
+
+$proto0["m_fromlist"][]=$obj;
+$proto0["m_groupby"] = array();
 												$proto36=array();
 						$obj = new SQLField(array(
-	"m_strName" => "indicator_id",
+	"m_strName" => "data_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2692,7 +2875,7 @@ $obj = new SQLGroupByItem($proto36);
 $proto0["m_groupby"][]=$obj;
 												$proto38=array();
 						$obj = new SQLField(array(
-	"m_strName" => "data_source_id",
+	"m_strName" => "indicator_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2703,7 +2886,7 @@ $obj = new SQLGroupByItem($proto38);
 $proto0["m_groupby"][]=$obj;
 												$proto40=array();
 						$obj = new SQLField(array(
-	"m_strName" => "assessment_id",
+	"m_strName" => "data_source_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2714,7 +2897,7 @@ $obj = new SQLGroupByItem($proto40);
 $proto0["m_groupby"][]=$obj;
 												$proto42=array();
 						$obj = new SQLField(array(
-	"m_strName" => "region_id",
+	"m_strName" => "assessment_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2725,7 +2908,7 @@ $obj = new SQLGroupByItem($proto42);
 $proto0["m_groupby"][]=$obj;
 												$proto44=array();
 						$obj = new SQLField(array(
-	"m_strName" => "unit_id",
+	"m_strName" => "region_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2736,7 +2919,7 @@ $obj = new SQLGroupByItem($proto44);
 $proto0["m_groupby"][]=$obj;
 												$proto46=array();
 						$obj = new SQLField(array(
-	"m_strName" => "facility_type_id",
+	"m_strName" => "unit_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2747,7 +2930,7 @@ $obj = new SQLGroupByItem($proto46);
 $proto0["m_groupby"][]=$obj;
 												$proto48=array();
 						$obj = new SQLField(array(
-	"m_strName" => "value",
+	"m_strName" => "facility_type_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2758,7 +2941,7 @@ $obj = new SQLGroupByItem($proto48);
 $proto0["m_groupby"][]=$obj;
 												$proto50=array();
 						$obj = new SQLField(array(
-	"m_strName" => "year",
+	"m_strName" => "value",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2769,7 +2952,7 @@ $obj = new SQLGroupByItem($proto50);
 $proto0["m_groupby"][]=$obj;
 												$proto52=array();
 						$obj = new SQLField(array(
-	"m_strName" => "scope_id",
+	"m_strName" => "year",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2780,7 +2963,7 @@ $obj = new SQLGroupByItem($proto52);
 $proto0["m_groupby"][]=$obj;
 												$proto54=array();
 						$obj = new SQLField(array(
-	"m_strName" => "gender_sex",
+	"m_strName" => "scope_id",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2791,7 +2974,7 @@ $obj = new SQLGroupByItem($proto54);
 $proto0["m_groupby"][]=$obj;
 												$proto56=array();
 						$obj = new SQLField(array(
-	"m_strName" => "data_representation",
+	"m_strName" => "gender_sex",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
@@ -2800,18 +2983,40 @@ $proto56["m_column"]=$obj;
 $obj = new SQLGroupByItem($proto56);
 
 $proto0["m_groupby"][]=$obj;
-$proto0["m_orderby"] = array();
 												$proto58=array();
+						$obj = new SQLField(array(
+	"m_strName" => "data_representation",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_data_Chart"
+));
+
+$proto58["m_column"]=$obj;
+$obj = new SQLGroupByItem($proto58);
+
+$proto0["m_groupby"][]=$obj;
+												$proto60=array();
+						$obj = new SQLField(array(
+	"m_strName" => "indicator_group_id",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_data_Chart"
+));
+
+$proto60["m_column"]=$obj;
+$obj = new SQLGroupByItem($proto60);
+
+$proto0["m_groupby"][]=$obj;
+$proto0["m_orderby"] = array();
+												$proto62=array();
 						$obj = new SQLField(array(
 	"m_strName" => "year",
 	"m_strTable" => "public.moh_indicator_data",
 	"m_srcTableName" => "MOH_Indicators_data_Chart"
 ));
 
-$proto58["m_column"]=$obj;
-$proto58["m_bAsc"] = 1;
-$proto58["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto58);
+$proto62["m_column"]=$obj;
+$proto62["m_bAsc"] = 1;
+$proto62["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto62);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="MOH_Indicators_data_Chart";		
@@ -2825,7 +3030,7 @@ $queryData_moh_indicators_data_chart = createSqlQuery_moh_indicators_data_chart(
 	
 																												;
 
-												
+													
 
 $tdatamoh_indicators_data_chart[".sqlquery"] = $queryData_moh_indicators_data_chart;
 

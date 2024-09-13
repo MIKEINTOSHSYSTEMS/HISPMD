@@ -304,9 +304,10 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "DHIS2_Organisation_Unit";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
+		$edata["listPageId"] = "list";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 2;
 
 	
 		
@@ -326,8 +327,7 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
@@ -379,8 +379,9 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "count";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
