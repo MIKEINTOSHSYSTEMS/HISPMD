@@ -29,41 +29,42 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmoh_indicator_data["English"]["data_id"] = "";
 	$placeHoldersmoh_indicator_data["English"]["data_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["indicator_id"] = "Indicator";
-	$fieldToolTipsmoh_indicator_data["English"]["indicator_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["indicator_id"] = "Select the indicator category or indicator group to see the list of indicators by group";
 	$placeHoldersmoh_indicator_data["English"]["indicator_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["data_source_id"] = "Data Source";
-	$fieldToolTipsmoh_indicator_data["English"]["data_source_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["data_source_id"] = "Where is the data from";
 	$placeHoldersmoh_indicator_data["English"]["data_source_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["assessment_id"] = "Assessment Type";
-	$fieldToolTipsmoh_indicator_data["English"]["assessment_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["assessment_id"] = "What type of Assessment is it";
 	$placeHoldersmoh_indicator_data["English"]["assessment_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["region_id"] = "Region";
-	$fieldToolTipsmoh_indicator_data["English"]["region_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["region_id"] = "If the data is regional then select the region the data belongs to";
 	$placeHoldersmoh_indicator_data["English"]["region_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["unit_id"] = "Health Administration Level";
-	$fieldToolTipsmoh_indicator_data["English"]["unit_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["unit_id"] = "Will determine the data if it is in Woreda or Zonal Level";
 	$placeHoldersmoh_indicator_data["English"]["unit_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["value"] = "Value";
 	$fieldToolTipsmoh_indicator_data["English"]["value"] = "";
 	$placeHoldersmoh_indicator_data["English"]["value"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["year"] = "Year";
-	$fieldToolTipsmoh_indicator_data["English"]["year"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["year"] = "Enter the year of the data period that was fetched for";
 	$placeHoldersmoh_indicator_data["English"]["year"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["facility_type_id"] = "Facility Type";
-	$fieldToolTipsmoh_indicator_data["English"]["facility_type_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["facility_type_id"] = "Select the facility type you are entering data for";
 	$placeHoldersmoh_indicator_data["English"]["facility_type_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["scope_id"] = "Scope";
-	$fieldToolTipsmoh_indicator_data["English"]["scope_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["scope_id"] = "Please select scope if its National or Regional Level";
 	$placeHoldersmoh_indicator_data["English"]["scope_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["gender_sex"] = "Gender/Sex";
-	$fieldToolTipsmoh_indicator_data["English"]["gender_sex"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["gender_sex"] = "Select Sex/Gender here to enter data by category and if applicable";
 	$placeHoldersmoh_indicator_data["English"]["gender_sex"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["data_representation"] = "Data Representation";
-	$fieldToolTipsmoh_indicator_data["English"]["data_representation"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["data_representation"] = "Select if it is represented in number or percent If Is the data in quantity or proportion";
 	$placeHoldersmoh_indicator_data["English"]["data_representation"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["indicator_group_id"] = "Indicator Group";
-	$fieldToolTipsmoh_indicator_data["English"]["indicator_group_id"] = "";
+	$fieldToolTipsmoh_indicator_data["English"]["indicator_group_id"] = "Select the indicator Group to see the list of indicators";
 	$placeHoldersmoh_indicator_data["English"]["indicator_group_id"] = "";
+	$pageTitlesmoh_indicator_data["English"]["add"] = "MOH Indicator Data, Add new";
 	if (count($fieldToolTipsmoh_indicator_data["English"]))
 		$tdatamoh_indicator_data[".isUseToolTips"] = true;
 }
@@ -167,7 +168,7 @@ $tdatamoh_indicator_data[".ajaxCodeSnippetAdded"] = false;
 
 $tdatamoh_indicator_data[".buttonsAdded"] = false;
 
-$tdatamoh_indicator_data[".addPageEvents"] = false;
+$tdatamoh_indicator_data[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatamoh_indicator_data[".isUseTimeForSearch"] = false;
@@ -1015,7 +1016,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1035,7 +1037,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1634,10 +1637,11 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=4";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2808,6 +2812,7 @@ $tdatamoh_indicator_data[".sqlquery"] = $queryData_moh_indicator_data;
 
 
 
-$tdatamoh_indicator_data[".hasEvents"] = false;
+include_once(getabspath("include/moh_indicator_data_events.php"));
+$tdatamoh_indicator_data[".hasEvents"] = true;
 
 ?>

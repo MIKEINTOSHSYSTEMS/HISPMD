@@ -1,3 +1,8 @@
+[data-page="moh_indicator_data_add"][data-itemid="text"] {
+  color: #007777;
+  text-decoration: underline;
+  font-weight: bold;
+}
 [data-page="moh_indicator_data_add"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

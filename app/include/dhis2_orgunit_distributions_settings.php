@@ -307,7 +307,7 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 		$edata["listPageId"] = "list";
 		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 2;
+		$edata["LCType"] = 0;
 
 	
 		
@@ -327,7 +327,8 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["SelectSize"] = 1;
+
 // End Lookup Settings
 
 
