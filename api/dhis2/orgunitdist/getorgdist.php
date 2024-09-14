@@ -6,10 +6,10 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
-// DHIS2 credentials and base URL
-$baseUrl = 'https://dhis.moh.gov.et';
-$username = 'michaelk';
-$password = 'Dhis2_12345';
+// DHIS2 credentials and base URL from environment variables for security
+$baseUrl = getenv('DHIS2_BASE_URL') ?: 'https://dhis.moh.gov.et';
+$username = getenv('DHIS2_USERNAME') ?: 'michaelk';
+$password = getenv('DHIS2_PASSWORD') ?: 'Dhis2_12345';
 
 // Fetch Data function
 function fetchData($url, $username, $password) {
@@ -19,13 +19,26 @@ function fetchData($url, $username, $password) {
     curl_setopt($ch, CURLOPT_USERPWD, $username . ':' . $password);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // For testing purposes, not recommended for production
+    
     $result = curl_exec($ch);
+
+    // Handle curl errors
     if (curl_errno($ch)) {
         http_response_code(500);
-        echo json_encode(['error' => curl_error($ch)]);
+        echo json_encode(['error' => 'cURL error: ' . curl_error($ch)]);
         curl_close($ch);
         exit;
     }
+
+    // Handle HTTP status codes from DHIS2 API
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    if ($httpCode >= 400) {
+        http_response_code($httpCode);
+        echo json_encode(['error' => 'API returned error with status code ' . $httpCode]);
+        curl_close($ch);
+        exit;
+    }
+
     curl_close($ch);
     return json_decode($result, true);
 }
@@ -85,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         case 'fetchOrgUnitAnalytics':
             $orgUnits = isset($_GET['orgUnits']) ? $_GET['orgUnits'] : '';
             $ougs = isset($_GET['ougs']) ? $_GET['ougs'] : '';
+            $searchQuery = isset($_GET['searchQuery']) ? $_GET['searchQuery'] : '';
             
             if (!empty($orgUnits) && !empty($ougs)) {
                 // Convert string parameters to arrays

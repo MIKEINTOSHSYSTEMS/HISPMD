@@ -12,6 +12,7 @@
 	function __construct()
 	{
 	// fill list of events
+		$this->events["selectList"]=true;
 
 
 	}
@@ -76,7 +77,77 @@
 		
 		
 		
-		
+				// List
+function selectList($dataSource, $command)
+{
+
+		$method = "GET";
+$url = "/api/dhis2/orgunitdist/getorgdist.php?";
+
+// Replace variables in the URL
+$url = RunnerContext::PrepareRest($url);
+
+// Prepare default values
+$defaultOrgUnits = 'b3aCK1PTn5S,yY9BLUUegel,UFtGyqJMEZh,yb9NKGA8uqt,Fccw8uMlJHN,tDoLtk2ylu4,G9hDiPNoB7d,moBiwh9h5Ce,b9nYedsL8te,XU2wpLlX4Vk,xNUoZIrGKxQ,PCKGSJoNHXi,a2QIIR2UXcd.HIlnt7Qj8do,Gmw0DJLXGtx';
+$defaultOugs = 'saIPeABoPMH';
+
+// Parse `q` parameter from URL
+$query = isset($_GET['q']) ? $_GET['q'] : '';
+
+// Initialize variables
+$orgUnits = explode(',', $defaultOrgUnits);
+$ougs = explode(',', $defaultOugs);
+
+// Extract parameters using regex
+preg_match('/ou~equals~([^)]*)/', $query, $matches);
+if (isset($matches[1])) {
+    $orgUnits = explode(',', urldecode($matches[1]));
+}
+
+preg_match('/ougs~equals~([^)]*)/', $query, $matches);
+if (isset($matches[1])) {
+    $ougs = explode(',', urldecode($matches[1]));
+}
+
+// Prepare request body
+$body = array();
+$body[] = array("name" => "action", "value" => "fetchOrgUnitAnalytics", "location" => "url", "skipEmpty" => true);
+$body[] = array("name" => "orgUnits", "value" => implode(',', $orgUnits), "location" => "url", "skipEmpty" => true);
+$body[] = array("name" => "ougs", "value" => implode(',', $ougs), "location" => "url", "skipEmpty" => true);
+$body = $dataSource->preparePayload($body);
+
+// Do the API request
+$response = $dataSource->getConnection()->requestJson($url, $method, $body["form"], $body["header"], $body["url"]);
+if ($response === false) {
+    // Something went wrong
+    $dataSource->setError($dataSource->getConnection()->lastError());
+    echo json_encode(['error' => 'Failed to fetch data from API', 'details' => $dataSource->getConnection()->lastError()]);
+    exit;
+}
+
+// Log response for debugging
+error_log("API Response: " . json_encode($response));
+
+// Convert API result into recordset
+$rs = $dataSource->resultFromJson($response, true);
+if (!$rs) {
+    echo json_encode(['error' => 'Error converting data']);
+    exit;
+}
+
+// Apply search and filter parameters. Comment out this line if filtering is done by REST API provider
+$rs = $dataSource->filterResult($rs, $command->filter);
+
+// Apply order parameters
+$rs = $dataSource->reorderResult($command, $rs);
+
+// Apply pagination
+$rs->seekRecord($command->startRecord);
+return $rs;
+
+;
+} // function selectList
+
 		
 		
 		

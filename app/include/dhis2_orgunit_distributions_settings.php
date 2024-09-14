@@ -373,8 +373,12 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Equals";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
+		$fdata["searchOptionsList"][] = "Equals";
+		$fdata["searchOptionsList"][] = "Empty";
+		$fdata["searchOptionsList"][] = "NOT Empty";
 // the end of search options settings
 
 
@@ -535,8 +539,12 @@ $tdatadhis2_orgunit_distributions[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Equals";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
+		$fdata["searchOptionsList"][] = "Equals";
+		$fdata["searchOptionsList"][] = "Empty";
+		$fdata["searchOptionsList"][] = "NOT Empty";
 // the end of search options settings
 
 
