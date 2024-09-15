@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$data_id_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$indicator_id_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				

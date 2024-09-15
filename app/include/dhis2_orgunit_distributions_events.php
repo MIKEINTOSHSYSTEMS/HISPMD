@@ -87,16 +87,16 @@ $url = "/api/dhis2/orgunitdist/getorgdist.php?";
 // Replace variables in the URL
 $url = RunnerContext::PrepareRest($url);
 
-// Prepare default values
-$defaultOrgUnits = 'b3aCK1PTn5S,yY9BLUUegel,UFtGyqJMEZh,yb9NKGA8uqt,Fccw8uMlJHN,tDoLtk2ylu4,G9hDiPNoB7d,moBiwh9h5Ce,b9nYedsL8te,XU2wpLlX4Vk,xNUoZIrGKxQ,PCKGSJoNHXi,a2QIIR2UXcd.HIlnt7Qj8do,Gmw0DJLXGtx';
-$defaultOugs = 'saIPeABoPMH';
+// Prepare default values as arrays
+$defaultOrgUnits = ['b3aCK1PTn5S', 'yY9BLUUegel', 'UFtGyqJMEZh', 'yb9NKGA8uqt', 'Fccw8uMlJHN', 'tDoLtk2ylu4', 'G9hDiPNoB7d', 'moBiwh9h5Ce', 'b9nYedsL8te', 'XU2wpLlX4Vk', 'xNUoZIrGKxQ', 'PCKGSJoNHXi', 'a2QIIR2UXcd', 'HIlnt7Qj8do', 'Gmw0DJLXGtx'];
+$defaultOugs = ['saIPeABoPMH'];
 
-// Parse `q` parameter from URL
+// Parse q parameter from URL
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Initialize variables
-$orgUnits = explode(',', $defaultOrgUnits);
-$ougs = explode(',', $defaultOugs);
+$orgUnits = $defaultOrgUnits;
+$ougs = $defaultOugs;
 
 // Extract parameters using regex
 preg_match('/ou~equals~([^)]*)/', $query, $matches);

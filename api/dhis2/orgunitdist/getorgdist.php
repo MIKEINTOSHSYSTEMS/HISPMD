@@ -43,6 +43,20 @@ function fetchData($url, $username, $password) {
     return json_decode($result, true);
 }
 
+// Fetch all Organisation Units
+function fetchAllOrganisationUnits($baseUrl, $username, $password) {
+    $url = $baseUrl . "/api/organisationUnits?paging=false"; // Fetch all organisation units
+    $data = fetchData($url, $username, $password);
+    
+    $orgUnits = [];
+    if (isset($data['organisationUnits'])) {
+        foreach ($data['organisationUnits'] as $unit) {
+            $orgUnits[] = $unit['id'];
+        }
+    }
+    return $orgUnits;
+}
+
 // Fetch Organisation Unit Groups and create a mapping of IDs to Display Names
 function fetchOrganisationUnitGroups($baseUrl, $username, $password) {
     $url = $baseUrl . "/api/organisationUnitGroups?paging=false";
@@ -59,8 +73,8 @@ function fetchOrganisationUnitGroups($baseUrl, $username, $password) {
 
 // Fetch Organisation Unit Analytics
 function fetchOrgUnitAnalytics($baseUrl, $username, $password, $orgUnits, $ougs) {
-    $orgUnitsStr = implode(';', $orgUnits);
-    $ougsStr = implode(';', $ougs);
+    $orgUnitsStr = implode(';', $orgUnits); // Handle orgUnits as an array
+    $ougsStr = implode(';', $ougs); // Handle ougs as an array
     $url = $baseUrl . "/api/33/orgUnitAnalytics?ou=$orgUnitsStr&ougs=$ougsStr";
     return fetchData($url, $username, $password);
 }
@@ -96,20 +110,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     switch ($action) {
         case 'fetchOrgUnitAnalytics':
-            $orgUnits = isset($_GET['orgUnits']) ? $_GET['orgUnits'] : '';
-            $ougs = isset($_GET['ougs']) ? $_GET['ougs'] : '';
-            $searchQuery = isset($_GET['searchQuery']) ? $_GET['searchQuery'] : '';
+            // Fetch all Organisation Units if none provided in request
+            $orgUnits = isset($_GET['orgUnits']) ? explode(',', $_GET['orgUnits']) : fetchAllOrganisationUnits($baseUrl, $username, $password);
+            $ougs = isset($_GET['ougs']) ? explode(',', $_GET['ougs']) : []; // Expect comma-separated values for ougs
             
             if (!empty($orgUnits) && !empty($ougs)) {
-                // Convert string parameters to arrays
-                $orgUnitsArray = explode(',', $orgUnits);
-                $ougsArray = explode(',', $ougs);
-
                 // Fetch Organisation Unit Groups and create mapping
                 $ougsMapping = fetchOrganisationUnitGroups($baseUrl, $username, $password);
 
                 // Fetch Organisation Unit Analytics data
-                $data = fetchOrgUnitAnalytics($baseUrl, $username, $password, $orgUnitsArray, $ougsArray);
+                $data = fetchOrgUnitAnalytics($baseUrl, $username, $password, $orgUnits, $ougs);
                 
                 // Transform data to include display names
                 $transformedData = transformData($data, $ougsMapping);
