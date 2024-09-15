@@ -14,6 +14,8 @@
 	// fill list of events
 
 
+		$this->events["AfterAdd"]=true;
+
 
 	}
 
@@ -100,6 +102,88 @@
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record added
+function AfterAdd(&$values, &$keys, $inline, $pageObject)
+{
+
+		
+addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) ); 
+ 
+
+//addNotification( $values["ProductName"], "New Product", "fa-envelope", 
+//GetTableLink( "products", "view", "editid1=".$keys["ProductID"]) ); 
+
+//addNotification( "New Indicator Data Added: ".$values["indicator_id"] , "Indicator", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) );  
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterAdd
+
 		
 		
 		
