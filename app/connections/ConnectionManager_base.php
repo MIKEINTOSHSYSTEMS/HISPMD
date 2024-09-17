@@ -331,6 +331,7 @@ class ConnectionManager_Base
 		$connectionsIds["public.moh_data_scope"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MOH_Indicators_Data_Report"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MOH_Indicators_data_Chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["DHIS2_OrgUnits_Distribution"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

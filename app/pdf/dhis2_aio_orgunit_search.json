@@ -165,8 +165,13 @@ pdfDocument = {
 	
 			"stack": [
 		
-				'',
-	  ],
+				
+			{"text":{$column_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$name_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

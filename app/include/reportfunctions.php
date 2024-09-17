@@ -813,6 +813,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_OrgUnits_Distribution")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1449,6 +1453,10 @@ function getCaptionTable($table)
 	if($table=="MOH_Indicators_data_Chart")
 	{
 		return "MOH Indicators Data Chart";
+	}
+	if($table=="DHIS2_OrgUnits_Distribution")
+	{
+		return "DHIS2 OrgUnits Distribution";
 	}
 	return $table;
 }

@@ -1596,7 +1596,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "DHIS2_OrgUnit_Distributions";
+	$menuNode["table"] = "DHIS2_OrgUnits_Distribution";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "61";
@@ -1612,7 +1612,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Distributions";
+	$menuNode["title"] = "DHIS2 OrgUnits Distribution";
 
 
 
@@ -1775,6 +1775,32 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "69";
+	$menuNode["name"] = "-------";
+	$menuNode["href"] = "";
+	$menuNode["type"] = "Separator";
+	$menuNode["table"] = "";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "61";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "None";
+	$menuNode["pageType"] = strtolower("");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "-------";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "70";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1800,7 +1826,33 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "70";
+	$menuNode["id"] = "71";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "DHIS2_OrgUnit_Distributions";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "61";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "DHIS2 OrgUnit Distributions";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "72";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -1826,14 +1878,40 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "71";
+	$menuNode["id"] = "73";
+	$menuNode["name"] = "DHIS2 OrgUnit Attributes";
+	$menuNode["href"] = "";
+	$menuNode["type"] = "Group";
+	$menuNode["table"] = "";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "48";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "None";
+	$menuNode["pageType"] = strtolower("");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "DHIS2 OrgUnit Attributes";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "74";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "DHIS2_Reports";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "48";
+	$menuNode["parent"] = "73";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -1852,14 +1930,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "72";
+	$menuNode["id"] = "75";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "DHIS2_Indicator";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "48";
+	$menuNode["parent"] = "73";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -1878,14 +1956,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "73";
+	$menuNode["id"] = "76";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "DHIS2_Datasets";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "48";
+	$menuNode["parent"] = "73";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -1904,14 +1982,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "74";
+	$menuNode["id"] = "77";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "DHIS2_Organisation_Unit";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "48";
+	$menuNode["parent"] = "73";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -1930,14 +2008,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "75";
+	$menuNode["id"] = "78";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.dhis2_periods";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "48";
+	$menuNode["parent"] = "73";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -1956,7 +2034,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "76";
+	$menuNode["id"] = "79";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -1982,7 +2060,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "77";
+	$menuNode["id"] = "80";
 	$menuNode["name"] = "PRISM";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
@@ -2008,14 +2086,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "78";
+	$menuNode["id"] = "81";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2034,14 +2112,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "79";
+	$menuNode["id"] = "82";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "PRISM Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -2060,14 +2138,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "80";
+	$menuNode["id"] = "83";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2086,14 +2164,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "81";
+	$menuNode["id"] = "84";
 	$menuNode["name"] = "National PRISM Woreda Level Diagnostic";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.ethprism_national_prism_woreda_level_diagnostic";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2112,14 +2190,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "82";
+	$menuNode["id"] = "85";
 	$menuNode["name"] = "Facility Level RHIS Performance Diagnostic";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.ethprism_facility_level_rhis_performance_diagnostic";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2138,14 +2216,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "83";
+	$menuNode["id"] = "86";
 	$menuNode["name"] = "Healthpost Level RHIS Performance Diagnostic";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.ethprism_healthpost_level_rhis_performance_diagnostic";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2164,14 +2242,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "84";
+	$menuNode["id"] = "87";
 	$menuNode["name"] = "Facility Office Checklist";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.ethprism_facility_office_checklist";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2190,14 +2268,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "85";
+	$menuNode["id"] = "88";
 	$menuNode["name"] = "Organizational and Behavioral Assessment";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.ethprism_organizational_and_behavioral_assessment";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2216,14 +2294,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "86";
+	$menuNode["id"] = "89";
 	$menuNode["name"] = "Additional Organizational and Behavioral Assessment";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.ethprism_additional_organizational_and_behavioral_assessment";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2242,14 +2320,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "87";
+	$menuNode["id"] = "90";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2268,14 +2346,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "88";
+	$menuNode["id"] = "91";
 	$menuNode["name"] = "PRISM Printable Forms";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "77";
+	$menuNode["parent"] = "80";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2294,14 +2372,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "89";
+	$menuNode["id"] = "92";
 	$menuNode["name"] = "PRISM Data Forms";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_prism_data_forms";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "88";
+	$menuNode["parent"] = "91";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2320,7 +2398,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "90";
+	$menuNode["id"] = "93";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -2346,7 +2424,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "91";
+	$menuNode["id"] = "94";
 	$menuNode["name"] = "MFR";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
@@ -2372,14 +2450,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "92";
+	$menuNode["id"] = "95";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_AIO_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -2398,14 +2476,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "93";
+	$menuNode["id"] = "96";
 	$menuNode["name"] = "MFR Registery Dashboard";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_AIO_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -2424,14 +2502,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "94";
+	$menuNode["id"] = "97";
 	$menuNode["name"] = "MFR Pivot Report";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_facilities_register_report";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Report");//
@@ -2450,14 +2528,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "95";
+	$menuNode["id"] = "98";
 	$menuNode["name"] = "MFR Dashboard Reports";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_dashboard_reports";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2476,14 +2554,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "96";
+	$menuNode["id"] = "99";
 	$menuNode["name"] = "MFR Operational Status";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_operational_status";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2502,14 +2580,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "97";
+	$menuNode["id"] = "100";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2528,14 +2606,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "98";
+	$menuNode["id"] = "101";
 	$menuNode["name"] = "MFR Facility";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2554,14 +2632,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "99";
+	$menuNode["id"] = "102";
 	$menuNode["name"] = "MFR Facilities Register";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_facilities_register";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2580,14 +2658,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "100";
+	$menuNode["id"] = "103";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Regions";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2606,14 +2684,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "101";
+	$menuNode["id"] = "104";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Zones";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2632,14 +2710,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "102";
+	$menuNode["id"] = "105";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Woredas";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2658,14 +2736,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "103";
+	$menuNode["id"] = "106";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Facility_Types";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2684,14 +2762,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "104";
+	$menuNode["id"] = "107";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Status";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2710,14 +2788,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "105";
+	$menuNode["id"] = "108";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Operational_Statuses";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "98";
+	$menuNode["parent"] = "101";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2736,14 +2814,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "106";
+	$menuNode["id"] = "109";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2762,14 +2840,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "107";
+	$menuNode["id"] = "110";
 	$menuNode["name"] = "MFR Geolocation";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2788,14 +2866,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "108";
+	$menuNode["id"] = "111";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_region";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "107";
+	$menuNode["parent"] = "110";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2814,14 +2892,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "109";
+	$menuNode["id"] = "112";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_zone";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "107";
+	$menuNode["parent"] = "110";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2840,14 +2918,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "110";
+	$menuNode["id"] = "113";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_woreda";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "107";
+	$menuNode["parent"] = "110";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -2866,14 +2944,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "111";
+	$menuNode["id"] = "114";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2892,14 +2970,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "112";
+	$menuNode["id"] = "115";
 	$menuNode["name"] = "MFR Charts";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "91";
+	$menuNode["parent"] = "94";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -2918,14 +2996,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "113";
+	$menuNode["id"] = "116";
 	$menuNode["name"] = "MFR Facilities Register Chart";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.mfr_facilities_register_chart";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "112";
+	$menuNode["parent"] = "115";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Chart");//
@@ -2944,14 +3022,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "114";
+	$menuNode["id"] = "117";
 	$menuNode["name"] = "MFR Dashboard Reports Chart";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "mfr_dashboard_reports_chart";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "112";
+	$menuNode["parent"] = "115";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Chart");//
@@ -2970,14 +3048,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "115";
+	$menuNode["id"] = "118";
 	$menuNode["name"] = "MFR Operational Status Chart";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "mfr_operational_status_chart";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "112";
+	$menuNode["parent"] = "115";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Chart");//
@@ -2996,14 +3074,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "116";
+	$menuNode["id"] = "119";
 	$menuNode["name"] = "MFR Region Chart";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "mfr_region_chart";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "112";
+	$menuNode["parent"] = "115";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Chart");//
@@ -3022,7 +3100,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "117";
+	$menuNode["id"] = "120";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -3048,7 +3126,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "118";
+	$menuNode["id"] = "121";
 	$menuNode["name"] = "System Setting";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
@@ -3074,14 +3152,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "119";
+	$menuNode["id"] = "122";
 	$menuNode["name"] = "Data Reports Update";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "118";
+	$menuNode["parent"] = "121";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3100,14 +3178,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "120";
+	$menuNode["id"] = "123";
 	$menuNode["name"] = "MFR Reports Update";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "122";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3126,14 +3204,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "121";
+	$menuNode["id"] = "124";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Dashboard_Report";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3152,14 +3230,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "122";
+	$menuNode["id"] = "125";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Status_Report";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3178,14 +3256,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "123";
+	$menuNode["id"] = "126";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Region_Report";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3204,14 +3282,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "124";
+	$menuNode["id"] = "127";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Zone_Report";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3230,14 +3308,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "125";
+	$menuNode["id"] = "128";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Woreda_Report";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3256,14 +3334,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "126";
+	$menuNode["id"] = "129";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Facilities";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3282,14 +3360,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "127";
+	$menuNode["id"] = "130";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "MFR_Facility";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "120";
+	$menuNode["parent"] = "123";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3308,14 +3386,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "128";
+	$menuNode["id"] = "131";
 	$menuNode["name"] = "PRISM Data Update";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "119";
+	$menuNode["parent"] = "122";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3334,14 +3412,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "129";
+	$menuNode["id"] = "132";
 	$menuNode["name"] = "PRISM Settings";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.hispmd_prism_settings";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "128";
+	$menuNode["parent"] = "131";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3360,14 +3438,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "130";
+	$menuNode["id"] = "133";
 	$menuNode["name"] = "Database Management";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "118";
+	$menuNode["parent"] = "121";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3386,14 +3464,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "131";
+	$menuNode["id"] = "134";
 	$menuNode["name"] = "HISPMD Main Database";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_system_settings";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "130";
+	$menuNode["parent"] = "133";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3412,14 +3490,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "132";
+	$menuNode["id"] = "135";
 	$menuNode["name"] = "HISPMD MB Database";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_system_settings";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "130";
+	$menuNode["parent"] = "133";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3438,14 +3516,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "133";
+	$menuNode["id"] = "136";
 	$menuNode["name"] = "HISPMD Analytics Database";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_system_settings";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "130";
+	$menuNode["parent"] = "133";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3464,14 +3542,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "134";
+	$menuNode["id"] = "137";
 	$menuNode["name"] = "Administration";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "118";
+	$menuNode["parent"] = "121";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3490,14 +3568,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "135";
+	$menuNode["id"] = "138";
 	$menuNode["name"] = "HISPMD Organisations";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.hispmd_organisations";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3516,14 +3594,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "136";
+	$menuNode["id"] = "139";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3542,14 +3620,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "137";
+	$menuNode["id"] = "140";
 	$menuNode["name"] = "Users Audit Logs Dashboard";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3568,14 +3646,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "138";
+	$menuNode["id"] = "141";
 	$menuNode["name"] = "Users Time Tracker Dashboard";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3594,14 +3672,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "139";
+	$menuNode["id"] = "142";
 	$menuNode["name"] = "Visitors Activity Analytics Dashboard";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "System_Users_Activity_Dashboard";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("Dashboard");//
@@ -3620,14 +3698,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "140";
+	$menuNode["id"] = "143";
 	$menuNode["name"] = "Activity Logs";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
@@ -3646,14 +3724,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "141";
+	$menuNode["id"] = "144";
 	$menuNode["name"] = "Users Audit";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_users_audit";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "140";
+	$menuNode["parent"] = "143";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3672,14 +3750,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "142";
+	$menuNode["id"] = "145";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.timetracker";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "140";
+	$menuNode["parent"] = "143";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3698,14 +3776,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "143";
+	$menuNode["id"] = "146";
 	$menuNode["name"] = "System Settings";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "hispmd_system_settings";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "134";
+	$menuNode["parent"] = "137";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
@@ -3724,7 +3802,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "144";
+	$menuNode["id"] = "147";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -3750,7 +3828,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "145";
+	$menuNode["id"] = "148";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -3776,7 +3854,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "146";
+	$menuNode["id"] = "149";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";

@@ -393,7 +393,33 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-				
+																		{BEGIN searchCtrlBlock_column}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_column}" {$filterRow_attrs_column}>
+			<label>{$label DHIS2_AIO_OrgUnit column }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_column}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_column}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_column}</span>
+						</div>
+		{END searchCtrlBlock_column}
+																{BEGIN searchCtrlBlock_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
+			<label>{$label DHIS2_AIO_OrgUnit name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_name}</span>
+						</div>
+		{END searchCtrlBlock_name}
+		
 
 	</div>
 
@@ -518,7 +544,13 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rows"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="column"]:before {
+		content: "{$label DHIS2_AIO_OrgUnit column}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="name"]:before {
+		content: "{$label DHIS2_AIO_OrgUnit name}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rows"]:before {
 		content: "{$label DHIS2_AIO_OrgUnit rows}";
 	}
 	}
@@ -582,6 +614,56 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$column_class}	"
+
+			data-field="column"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN column_fieldheadercolumn}
+	{BEGIN column_fieldheader}
+	<SPAN {$column_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="column" data-fieldname="column">
+	{$label DHIS2_AIO_OrgUnit column }	{$arrow_icon_column}
+	</SPAN>
+	{END column_fieldheader}
+{END column_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$name_class}	"
+
+			data-field="name"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN name_fieldheadercolumn}
+	{BEGIN name_fieldheader}
+	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
+	{$label DHIS2_AIO_OrgUnit name }	{$arrow_icon_name}
+	</SPAN>
+	{END name_fieldheader}
+{END name_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -638,6 +720,48 @@
 {END rows_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$column_class}	"
+
+			data-field="column"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN column_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="column" data-fieldname="column" data-default-width >
+{$column_value}
+</span>
+{END column_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$name_class}	"
+
+			data-field="name"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name" data-default-width >
+{$name_value}
+</span>
+{END name_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -679,6 +803,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$column_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_aio_orgunit_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$name_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_aio_orgunit_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

@@ -28,6 +28,12 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_aio_orgunit["English"]["rows"] = "Rows";
 	$fieldToolTipsdhis2_aio_orgunit["English"]["rows"] = "";
 	$placeHoldersdhis2_aio_orgunit["English"]["rows"] = "";
+	$fieldLabelsdhis2_aio_orgunit["English"]["column"] = "Organisation Unit Group Sets";
+	$fieldToolTipsdhis2_aio_orgunit["English"]["column"] = "";
+	$placeHoldersdhis2_aio_orgunit["English"]["column"] = "";
+	$fieldLabelsdhis2_aio_orgunit["English"]["name"] = "Organisation Units";
+	$fieldToolTipsdhis2_aio_orgunit["English"]["name"] = "";
+	$placeHoldersdhis2_aio_orgunit["English"]["name"] = "";
 	if (count($fieldToolTipsdhis2_aio_orgunit["English"]))
 		$tdatadhis2_aio_orgunit[".isUseToolTips"] = true;
 }
@@ -144,6 +150,9 @@ $tdatadhis2_aio_orgunit[".allSearchFields"] = array();
 $tdatadhis2_aio_orgunit[".filterFields"] = array();
 $tdatadhis2_aio_orgunit[".requiredSearchFields"] = array();
 
+$tdatadhis2_aio_orgunit[".googleLikeFields"] = array();
+$tdatadhis2_aio_orgunit[".googleLikeFields"][] = "column";
+$tdatadhis2_aio_orgunit[".googleLikeFields"][] = "name";
 
 
 
@@ -225,10 +234,332 @@ $tdatadhis2_aio_orgunit[".hideMobileList"] = array();
 
 
 
-//	rows
+//	column
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
+	$fdata["strName"] = "column";
+	$fdata["GoodName"] = "column";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("DHIS2_AIO_OrgUnit","column");
+	$fdata["FieldType"] = 202;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "headers/*/column";
+
+	
+		$fdata["FullName"] = "column";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "DHIS2_OrgUnit_Group_Sets";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "displayName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_aio_orgunit["column"] = $fdata;
+		$tdatadhis2_aio_orgunit[".searchableFields"][] = "column";
+//	name
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 2;
+	$fdata["strName"] = "name";
+	$fdata["GoodName"] = "name";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("DHIS2_AIO_OrgUnit","name");
+	$fdata["FieldType"] = 202;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "headers/*/name";
+
+	
+		$fdata["FullName"] = "name";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "DHIS2_Organisation_Units";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "displayName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_aio_orgunit["name"] = $fdata;
+		$tdatadhis2_aio_orgunit[".searchableFields"][] = "name";
+//	rows
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "rows";
 	$fdata["GoodName"] = "rows";
 	$fdata["ownerTable"] = "";
@@ -394,7 +725,7 @@ require_once( getabspath( "include/dhis2_aio_orgunit_ops.php" ) );
 	
 																												;
 
-	
+			
 
 $tdatadhis2_aio_orgunit[".sqlquery"] = $queryData_dhis2_aio_orgunit;
 

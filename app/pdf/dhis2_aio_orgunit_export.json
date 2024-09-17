@@ -108,6 +108,12 @@ pdfDocument = {
 				
 			{"text":{$rows_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
+				
+			{"text":{$column_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -3698,6 +3698,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "moh_indicators_data_report" ] = "MOH_Indicators_Data_Report";
 	$projectEntities[ "MOH_Indicators_data_Chart" ] = array( "url" => "moh_indicators_data_chart", "type" => 3 );
 	$projectEntitiesReverse[ "moh_indicators_data_chart" ] = "MOH_Indicators_data_Chart";
+	$projectEntities[ "DHIS2_OrgUnits_Distribution" ] = array( "url" => "dhis2_orgunits_distribution", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_orgunits_distribution" ] = "DHIS2_OrgUnits_Distribution";
 }
 
 function findTable( $table ) {

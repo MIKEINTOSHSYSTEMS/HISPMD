@@ -749,9 +749,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "606_1726248133";
+$projectBuildKey = "610_1726248133";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "606";
+$projectBuildNumber = "610";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -868,6 +868,7 @@ $tableCaptions["English"]["MOH_Indicators_Data_Report"] = "MOH Indicators Data R
 $tableCaptions["English"]["MOH_Indicators_data_Chart"] = "MOH Indicators Data Chart";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["English"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits Distribution";
 
 
 $globalEvents = new class_GlobalEvents;

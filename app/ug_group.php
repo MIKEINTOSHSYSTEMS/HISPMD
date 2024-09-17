@@ -109,6 +109,7 @@ $nonAdminTablesArr[] = "public.moh_data_scope";
 $nonAdminTablesArr[] = "HISPMD_MOH_Indicators_Dashboard";
 $nonAdminTablesArr[] = "MOH_Indicators_Data_Report";
 $nonAdminTablesArr[] = "MOH_Indicators_data_Chart";
+$nonAdminTablesArr[] = "DHIS2_OrgUnits_Distribution";
 
 $ug_connection = $cman->getForUserGroups();
 

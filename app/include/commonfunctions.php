@@ -391,6 +391,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_indicators_data_chart" == $shortTName )
 		return true;
+	if ("dhis2_orgunits_distribution" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1287,6 +1289,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MOH_Indicators_data_Chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_OrgUnits_Distribution");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_OrgUnits_Distribution";
+	}
 	return $arr;
 }
 
@@ -1390,6 +1401,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="HISPMD_MOH_Indicators_Dashboard";
 	$arr[]="MOH_Indicators_Data_Report";
 	$arr[]="MOH_Indicators_data_Chart";
+	$arr[]="DHIS2_OrgUnits_Distribution";
 	return $arr;
 }
 
@@ -2502,6 +2514,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "S".$extraPerm;
+	}
+	if( $table=="DHIS2_OrgUnits_Distribution" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
