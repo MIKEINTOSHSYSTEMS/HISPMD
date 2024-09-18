@@ -16,6 +16,8 @@
 
 		$this->events["AfterAdd"]=true;
 
+		$this->events["AfterEdit"]=true;
+
 
 	}
 
@@ -171,14 +173,29 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
 		
-addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) ); 
- 
 //addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) ); 
 
 //addNotification( $values["ProductName"], "New Product", "fa-envelope", 
 //GetTableLink( "products", "view", "editid1=".$keys["ProductID"]) ); 
 
 //addNotification( "New Indicator Data Added: ".$values["indicator_id"] , "Indicator", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) );  
+
+//    addNotification(
+//        "New Data added: " . $values["data_id"],  
+//        "New Record Added",
+//        "fa-envelope",
+//        makePageLink("moh_indicator_data", "view", $keys)
+//    );
+
+//addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) ); 
+
+
+addNotification( "New Indicator Data Value added: ".$values["value"], " Indicator Data", "fa-envelope", 
+GetTableLink( "moh_indicator_data", "view", "editid1=".$keys["data_id"]));
+
+
+
+
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -191,6 +208,84 @@ addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-e
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record updated
+function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
+{
+
+		// Adjust "name" to the primary field you want to highlight
+
+addNotification( "Indicator Data Value Updated To: ".$values["value"], " Indicator Data", "fa-edit", 
+GetTableLink( "moh_indicator_data", "view", "editid1=".$keys["data_id"]));
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterEdit
+
 		
 		
 		

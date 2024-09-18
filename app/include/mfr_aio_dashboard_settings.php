@@ -198,26 +198,6 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Zone_Chart_chart", "table" => "MFR_Zone_Chart",
-		 "pageName" => "","type" => 1);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Woreda_Chart_chart", "table" => "MFR_Woreda_Chart",
-		 "pageName" => "","type" => 1);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "MFR_Region_Chart_chart", "table" => "MFR_Region_Chart",
 		 "pageName" => "","type" => 1);
 	$dbelement["cellName"] = "";
@@ -226,40 +206,6 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 		$dbelement["width"] = 800;
 		$dbelement["height"] = 600;
 
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Region_map", "table" => "MFR_Region",
-		 "pageName" => "","type" => 6);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-		$dbelement["zoom"] = "auto";
-	$dbelement["addressF"] = "";
-	$dbelement["latF"] = "";
-	$dbelement["lonF"] = "";
-	$dbelement["descF"] = "";
-	$dbelement["mapMarkerCount"] = 50;
-	$dbelement["isMarkerIconCustom"] = 0;
-			$dbelement["updateMoved"] = true;
-
-	$dbelement["isLocationMarkerIconCustom"] = 0;
-	$dbelement["showCurrentLocation"] = 0;
-	
-
-	// Advanced map options
-	
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Region_grid", "table" => "MFR_Region",
-		 "pageName" => "","type" => 0);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-	
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "mfr_dashboard_reports_chart_chart", "table" => "mfr_dashboard_reports_chart",
@@ -274,36 +220,6 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "mfr_operational_status_chart_chart", "table" => "mfr_operational_status_chart",
 		 "pageName" => "","type" => 1);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Region_search", "table" => "MFR_Region",
-		 "pageName" => "","type" => 4);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Zone_search", "table" => "MFR_Zone",
-		 "pageName" => "","type" => 4);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Woreda_search", "table" => "MFR_Woreda",
-		 "pageName" => "","type" => 4);
 	$dbelement["cellName"] = "";
 
 		$dbelement["reload"] = 60;
@@ -330,26 +246,6 @@ $tdatamfr_aio_dashboard[".dashElements"] = array();
 		$dbelement["width"] = 800;
 		$dbelement["height"] = 600;
 
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Zone_grid", "table" => "MFR_Zone",
-		 "pageName" => "","type" => 0);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-	
-
-	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
-	$dbelement = array( "elementName" => "MFR_Woreda_grid", "table" => "MFR_Woreda",
-		 "pageName" => "","type" => 0);
-	$dbelement["cellName"] = "";
-
-		$dbelement["reload"] = 60;
-		$dbelement["width"] = 800;
-		$dbelement["height"] = 600;
-	
 
 	$tdatamfr_aio_dashboard[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "public_mfr_dashboard_reports_search", "table" => "public.mfr_dashboard_reports",
