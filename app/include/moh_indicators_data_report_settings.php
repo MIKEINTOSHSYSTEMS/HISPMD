@@ -67,6 +67,54 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_indicators_data_report["English"]))
 		$tdatamoh_indicators_data_report[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmoh_indicators_data_report["Amharic"] = array();
+	$fieldToolTipsmoh_indicators_data_report["Amharic"] = array();
+	$placeHoldersmoh_indicators_data_report["Amharic"] = array();
+	$pageTitlesmoh_indicators_data_report["Amharic"] = array();
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["data_id"] = "የውሂብ መለያ";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["data_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["data_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["indicator_id"] = "አመልካች";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["indicator_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["indicator_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["data_source_id"] = "የውሂብ ምንጭ";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["data_source_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["data_source_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["assessment_id"] = "ግምገማ";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["assessment_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["assessment_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["region_id"] = "ክልል";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["region_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["region_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["unit_id"] = "ክፍል";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["unit_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["unit_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["facility_type_id"] = "የመገልገያ አይነት";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["facility_type_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["facility_type_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["value"] = "የውሂብ እሴት";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["value"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["value"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["year"] = "አመት";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["year"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["year"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["scope_id"] = "ወሰን";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["scope_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["scope_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["gender_sex"] = "ጾታ";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["gender_sex"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["gender_sex"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["data_representation"] = "የመረጃው ዓይነት";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["data_representation"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["data_representation"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["indicator_group_id"] = "አመላካች ቡድን";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["indicator_group_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["indicator_group_id"] = "";
+	if (count($fieldToolTipsmoh_indicators_data_report["Amharic"]))
+		$tdatamoh_indicators_data_report[".isUseToolTips"] = true;
+}
 
 
 	$tdatamoh_indicators_data_report[".NCSearch"] = true;

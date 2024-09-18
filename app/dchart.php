@@ -38,7 +38,7 @@ $sessPrefix = "webchart".postvalue("cname");
 		header("Location: ".GetTableLink("login", "", "message=expired"));
 		return;
 	} elseif ( $chrt_array['settings']['status'] == "private" && $chrt_array['settings']['owner'] != Security::getUserName() ) {
-		echo "<p>"."You don't have permissions to view this chart"."</p>";
+		echo "<p>".mlang_message("WR_CHART_VIEW_PERMISS")."</p>";
 		exit();
 	}
 
@@ -49,7 +49,7 @@ $sessPrefix = "webchart".postvalue("cname");
 	    foreach ( $arr_reports as $rpt ) {
 		    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $chrt_array['settings']['name']==$rpt["name"])
 		      {
-		       echo "<p>"."You don't have permissions to view this chart"."</p>";
+		       echo "<p>".mlang_message("WR_CHART_VIEW_PERMISS")."</p>";
 		       exit();
 		    }
 	    }
@@ -153,6 +153,8 @@ if( Security::dynamicPermissions() ) {
 	$xt->assign("admin",@$_SESSION["IsAdmin"]);
 }
 
+if( $cname )	
+	SetLangVars($xt,"dchart","","cname=".$cname);
 
 //$chartPreview = "&chartPreview=true";
 $chartPreview = "";
@@ -201,7 +203,7 @@ $load_flash_player = '
 		if (!svgSupported)
 		{
 			str = "<center>";
-			str += "'."".'<br /><br />";
+			str += "'.mlang_message("WR_A�OBE9").'<br /><br />";
 			str += "<a href=\"http://www.adobe.com/go/getflashplayer\"><img border=\"0\" src=\"http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\" /></a><br />";
 			str += "</center>";		
 		}

@@ -137,6 +137,7 @@ function getFilenameFromURI( $uri )
 function getLangFileName($langName)
 {
 	$langArr = array();
+	$langArr["Amharic"] = "Amharic";
 	$langArr["English"] = "English";
 	return $langArr[$langName];
 }
@@ -3365,6 +3366,7 @@ function SetLangVars($xt, $prefix, $pageName = "", $extraparams = "")
 
 	$xt->assign($currentLang . "LANGLINK_ACTIVE", true);
 
+	$xt->assign("AmharicLANGLINK", "Amharic" != $currentLang);
 	$xt->assign("EnglishLANGLINK", "English" != $currentLang);
 
 	if( isEnableSection508() )
@@ -3530,18 +3532,18 @@ function mlang_getlanglist()
 function getMountNames()
 {
 	$mounts = array();
-		$mounts[1] = "January";
-	$mounts[2] = "February";
-	$mounts[3] = "March";
-	$mounts[4] = "April";
-	$mounts[5] = "May";
-	$mounts[6] = "June";
-	$mounts[7] = "July";
-	$mounts[8] = "August";
-	$mounts[9] = "September";
-	$mounts[10] = "October";
-	$mounts[11] = "November";
-	$mounts[12] = "December";
+		$mounts[1] = mlang_message("MONTH_JAN");
+	$mounts[2] = mlang_message("MONTH_FEB");
+	$mounts[3] = mlang_message("MONTH_MAR");
+	$mounts[4] = mlang_message("MONTH_APR");
+	$mounts[5] = mlang_message("MONTH_MAY");
+	$mounts[6] = mlang_message("MONTH_JUN");
+	$mounts[7] = mlang_message("MONTH_JUL");
+	$mounts[8] = mlang_message("MONTH_AUG");
+	$mounts[9] = mlang_message("MONTH_SEP");
+	$mounts[10] = mlang_message("MONTH_OCT");
+	$mounts[11] = mlang_message("MONTH_NOV");
+	$mounts[12] = mlang_message("MONTH_DEC");
 
 	return $mounts;
 }
@@ -4747,6 +4749,7 @@ function getDefaultLanguage()
 	if( strlen(@$_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
 	{
 		$arrWizardLang = array();
+		$arrWizardLang[] = "Amharic";
 		$arrWizardLang[] = "English";
 		$arrLang = array();
 		$arrLang["af"] = "Afrikaans";
@@ -5063,8 +5066,8 @@ function verifyRecaptchaResponse( $response ) {
 	$verifyUrl = "https://www.google.com/recaptcha/api/siteverify?";
 
 	$errors = array();
-	$errors["missing-input-response"] = "Invalid security code.";
-	$errors["invalid-input-response"] = "Invalid security code.";
+	$errors["missing-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+	$errors["invalid-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
 	$errors["missing-input-secret"] = "The secret parameter is missing";
 	$errors["invalid-input-secret"] = "The secret parameter is invalid or malformed";
 	$errors["bad-request"] = "The request is invalid or malformed";

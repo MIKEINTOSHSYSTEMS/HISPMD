@@ -43,6 +43,30 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsfinancialresources["English"]))
 		$tdatafinancialresources[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsfinancialresources["Amharic"] = array();
+	$fieldToolTipsfinancialresources["Amharic"] = array();
+	$placeHoldersfinancialresources["Amharic"] = array();
+	$pageTitlesfinancialresources["Amharic"] = array();
+	$fieldLabelsfinancialresources["Amharic"]["resource_id"] = "የመርጃ መለያ";
+	$fieldToolTipsfinancialresources["Amharic"]["resource_id"] = "";
+	$placeHoldersfinancialresources["Amharic"]["resource_id"] = "";
+	$fieldLabelsfinancialresources["Amharic"]["year"] = "አመት";
+	$fieldToolTipsfinancialresources["Amharic"]["year"] = "";
+	$placeHoldersfinancialresources["Amharic"]["year"] = "";
+	$fieldLabelsfinancialresources["Amharic"]["amount"] = "መጠን";
+	$fieldToolTipsfinancialresources["Amharic"]["amount"] = "";
+	$placeHoldersfinancialresources["Amharic"]["amount"] = "";
+	$fieldLabelsfinancialresources["Amharic"]["utilized"] = "ጥቅም ላይ ውሏል";
+	$fieldToolTipsfinancialresources["Amharic"]["utilized"] = "";
+	$placeHoldersfinancialresources["Amharic"]["utilized"] = "";
+	$fieldLabelsfinancialresources["Amharic"]["region_id"] = "የክልል መለያ";
+	$fieldToolTipsfinancialresources["Amharic"]["region_id"] = "";
+	$placeHoldersfinancialresources["Amharic"]["region_id"] = "";
+	if (count($fieldToolTipsfinancialresources["Amharic"]))
+		$tdatafinancialresources[".isUseToolTips"] = true;
+}
 
 
 	$tdatafinancialresources[".NCSearch"] = true;

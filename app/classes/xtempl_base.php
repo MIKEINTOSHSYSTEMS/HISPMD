@@ -182,6 +182,7 @@ class XTempl_Base
 
 		$mlang_charsets=array();
 		
+$mlang_charsets["Amharic"]="Windows-1252";
 $mlang_charsets["English"]="Windows-1252";;
 		$this->charsets = &$mlang_charsets;
 

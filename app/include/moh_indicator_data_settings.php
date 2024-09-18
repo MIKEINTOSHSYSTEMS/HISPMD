@@ -68,6 +68,55 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_indicator_data["English"]))
 		$tdatamoh_indicator_data[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmoh_indicator_data["Amharic"] = array();
+	$fieldToolTipsmoh_indicator_data["Amharic"] = array();
+	$placeHoldersmoh_indicator_data["Amharic"] = array();
+	$pageTitlesmoh_indicator_data["Amharic"] = array();
+	$fieldLabelsmoh_indicator_data["Amharic"]["data_id"] = "የውሂብ መለያ";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["data_id"] = "";
+	$placeHoldersmoh_indicator_data["Amharic"]["data_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["indicator_id"] = "አመልካች";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["indicator_id"] = "የአመላካቾችን ዝርዝር በቡድን ለማየት የጠቋሚውን ምድብ ወይም አመልካች ቡድን ይምረጡ";
+	$placeHoldersmoh_indicator_data["Amharic"]["indicator_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["data_source_id"] = "የውሂብ ምንጭ";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["data_source_id"] = "መረጃው ከየት ነው።";
+	$placeHoldersmoh_indicator_data["Amharic"]["data_source_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["assessment_id"] = "የግምገማ አይነት";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["assessment_id"] = "ምን አይነት ግምገማ ነው።";
+	$placeHoldersmoh_indicator_data["Amharic"]["assessment_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["region_id"] = "ክልል";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["region_id"] = "ውሂቡ ክልላዊ ከሆነ ውሂቡ ያለበትን ክልል ይምረጡ";
+	$placeHoldersmoh_indicator_data["Amharic"]["region_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["unit_id"] = "የጤና አስተዳደር ደረጃ";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["unit_id"] = "መረጃው በወረዳ ወይም በዞን ደረጃ ከሆነ ይወስናል";
+	$placeHoldersmoh_indicator_data["Amharic"]["unit_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["facility_type_id"] = "የመገልገያ አይነት";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["facility_type_id"] = "ውሂብ የሚያስገቡለትን የመገልገያ አይነት ይምረጡ";
+	$placeHoldersmoh_indicator_data["Amharic"]["facility_type_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["value"] = "የውሂብ እሴት";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["value"] = "";
+	$placeHoldersmoh_indicator_data["Amharic"]["value"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["year"] = "አመት";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["year"] = "የመጣበትን የውሂብ ክፍለ ጊዜ አመት አስገባ";
+	$placeHoldersmoh_indicator_data["Amharic"]["year"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["scope_id"] = "ወሰን";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["scope_id"] = "እባክዎ ብሄራዊ ወይም ክልላዊ ደረጃ ከሆነ ወሰን ይምረጡ";
+	$placeHoldersmoh_indicator_data["Amharic"]["scope_id"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["gender_sex"] = "ጾታ";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["gender_sex"] = "መረጃን በምድብ ለማስገባት እዚህ ሴክስ/ጾታን ይምረጡ እና አስፈላጊ ከሆነ";
+	$placeHoldersmoh_indicator_data["Amharic"]["gender_sex"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["data_representation"] = "የመረጃው ዓይነት";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["data_representation"] = "በቁጥር ወይም በመቶ የሚወከለው ከሆነ ውሂቡ በብዛት ወይም በመጠን ከሆነ ይምረጡ";
+	$placeHoldersmoh_indicator_data["Amharic"]["data_representation"] = "";
+	$fieldLabelsmoh_indicator_data["Amharic"]["indicator_group_id"] = "አመላካች ቡድን";
+	$fieldToolTipsmoh_indicator_data["Amharic"]["indicator_group_id"] = "የአመላካቾችን ዝርዝር ለማየት ጠቋሚውን ቡድን ይምረጡ";
+	$placeHoldersmoh_indicator_data["Amharic"]["indicator_group_id"] = "";
+	$pageTitlesmoh_indicator_data["Amharic"]["add"] = "MOH አመልካች ውሂብ፣ አዲስ ያክሉ";
+	if (count($fieldToolTipsmoh_indicator_data["Amharic"]))
+		$tdatamoh_indicator_data[".isUseToolTips"] = true;
+}
 
 
 	$tdatamoh_indicator_data[".NCSearch"] = true;

@@ -690,7 +690,7 @@
 	data-itemtype="integrated_confirm_password" data-itemid="integrated_confirm_password" {$item_integrated_confirm_password} data-pageid="{$pageid}" data-page=".global_register" data-field="confirm_aoel3cx" data-fieldname="confirm_aoel3cx" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_confirm_aoel3cx_confirm}">
-		{BEGIN confirm_label}Confirm password{END confirm_label}
+		{BEGIN confirm_label}{mlang_message CONFIRM_PASSWORD}{END confirm_label}
 	</label>
 	<div class="r-edit-field">
 		{$confirm_editcontrol1}	</div>
@@ -825,21 +825,21 @@ NOTE: This Application is for Internal Use only! It can only be accessed by an a
 <span data-itemtype="next_step" data-itemid="next_step" {$item_next_step} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" id="nextstep{$id}" >
-							Next			</a>
+							{mlang_message NEXT_STEP}			</a>
 </span>
 {END nextStepButton}
  
 <span data-itemtype="register_save" data-itemid="register_save" {$item_register_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$submit_attrs} >
-							Register			</a>
+							{mlang_message REGISTER}			</a>
 </span>
  
 <span data-itemtype="back_to_login" data-itemid="back_to_login" {$item_back_to_login} data-pageid="{$pageid}" data-page=".global_register" data-small data-button-item>
 	<a type="button" title="If you already have an account you can login!" class="btn btn-success   
 	" href="login.php" {$backlink_attrs} >
 					<span class="glyphicon glyphicon-log-in"></span>
-							Back to login page			</a>
+							{mlang_message BACK_TO_LOGIN}			</a>
 </span>
 </td>
 									<td 
@@ -850,7 +850,7 @@ NOTE: This Application is for Internal Use only! It can only be accessed by an a
 <span data-itemtype="register_reset" data-itemid="register_reset" {$item_register_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$resetbutton_attrs} >
-							Reset			</a>
+							{mlang_message RESET}			</a>
 </span>
 </td>
 							</tr>

@@ -52,6 +52,39 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmd_organisations["English"]))
 		$tdatahispmd_organisations[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshispmd_organisations["Amharic"] = array();
+	$fieldToolTipshispmd_organisations["Amharic"] = array();
+	$placeHoldershispmd_organisations["Amharic"] = array();
+	$pageTitleshispmd_organisations["Amharic"] = array();
+	$fieldLabelshispmd_organisations["Amharic"]["orgid"] = "ኦርጂድ";
+	$fieldToolTipshispmd_organisations["Amharic"]["orgid"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["orgid"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_name"] = "የድርጅት ስም";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_name"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_name"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_country"] = "ድርጅት አገር";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_country"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_country"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_city"] = "ድርጅት ከተማ";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_city"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_city"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_address"] = "የድርጅት አድራሻ";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_address"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_address"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_phone"] = "የድርጅት ስልክ";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_phone"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_phone"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_email"] = "ድርጅት ኢሜይል";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_email"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_email"] = "";
+	$fieldLabelshispmd_organisations["Amharic"]["organisation_website"] = "የድርጅት ድር ጣቢያ";
+	$fieldToolTipshispmd_organisations["Amharic"]["organisation_website"] = "";
+	$placeHoldershispmd_organisations["Amharic"]["organisation_website"] = "";
+	if (count($fieldToolTipshispmd_organisations["Amharic"]))
+		$tdatahispmd_organisations[".isUseToolTips"] = true;
+}
 
 
 	$tdatahispmd_organisations[".NCSearch"] = true;

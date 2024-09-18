@@ -49,6 +49,36 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_analytics1["English"]))
 		$tdatadhis2_analytics1[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsdhis2_analytics1["Amharic"] = array();
+	$fieldToolTipsdhis2_analytics1["Amharic"] = array();
+	$placeHoldersdhis2_analytics1["Amharic"] = array();
+	$pageTitlesdhis2_analytics1["Amharic"] = array();
+	$fieldLabelsdhis2_analytics1["Amharic"]["Data"] = "የልኬት ውሂብ";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["Data"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["Data"] = "";
+	$fieldLabelsdhis2_analytics1["Amharic"]["Organisation_unit"] = "Dimension Org";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["Organisation_unit"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["Organisation_unit"] = "";
+	$fieldLabelsdhis2_analytics1["Amharic"]["Period"] = "ቋሚ ጊዜ";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["Period"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["Period"] = "";
+	$fieldLabelsdhis2_analytics1["Amharic"]["dx"] = "አመልካች";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["dx"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["dx"] = "";
+	$fieldLabelsdhis2_analytics1["Amharic"]["ou"] = "ኦርግ ክፍል";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["ou"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["ou"] = "";
+	$fieldLabelsdhis2_analytics1["Amharic"]["pe"] = "አንጻራዊ ጊዜ";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["pe"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["pe"] = "";
+	$fieldLabelsdhis2_analytics1["Amharic"]["Value"] = "የውሂብ እሴት";
+	$fieldToolTipsdhis2_analytics1["Amharic"]["Value"] = "";
+	$placeHoldersdhis2_analytics1["Amharic"]["Value"] = "";
+	if (count($fieldToolTipsdhis2_analytics1["Amharic"]))
+		$tdatadhis2_analytics1[".isUseToolTips"] = true;
+}
 
 
 	$tdatadhis2_analytics1[".NCSearch"] = true;

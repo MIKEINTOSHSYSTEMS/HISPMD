@@ -657,12 +657,12 @@ class Chart
 			return "";
 
 		if( !$this->searchClauseObj )
-			return "No data yet.";
+			return mlang_message("NO_DATA_YET");
 
 		if( $this->searchClauseObj->isSearchFunctionalityActivated() )
-			return "No results found.";
+			return mlang_message("NO_RECORDS");
 
-		return "No data yet.";
+		return mlang_message("NO_DATA_YET");
 	}
 
 	/**

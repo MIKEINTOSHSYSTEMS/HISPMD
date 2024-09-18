@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_orgunits_distribution["English"]))
 		$tdatadhis2_orgunits_distribution[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsdhis2_orgunits_distribution["Amharic"] = array();
+	$fieldToolTipsdhis2_orgunits_distribution["Amharic"] = array();
+	$placeHoldersdhis2_orgunits_distribution["Amharic"] = array();
+	$pageTitlesdhis2_orgunits_distribution["Amharic"] = array();
+	$fieldLabelsdhis2_orgunits_distribution["Amharic"]["ou"] = "የአስተዳደር ክፍል";
+	$fieldToolTipsdhis2_orgunits_distribution["Amharic"]["ou"] = "";
+	$placeHoldersdhis2_orgunits_distribution["Amharic"]["ou"] = "";
+	$fieldLabelsdhis2_orgunits_distribution["Amharic"]["ougs"] = "የአስተዳደር ክፍል ቡድን ስብስብ";
+	$fieldToolTipsdhis2_orgunits_distribution["Amharic"]["ougs"] = "";
+	$placeHoldersdhis2_orgunits_distribution["Amharic"]["ougs"] = "";
+	$fieldLabelsdhis2_orgunits_distribution["Amharic"]["group"] = "ቡድን";
+	$fieldToolTipsdhis2_orgunits_distribution["Amharic"]["group"] = "";
+	$placeHoldersdhis2_orgunits_distribution["Amharic"]["group"] = "";
+	$fieldLabelsdhis2_orgunits_distribution["Amharic"]["count"] = "ቁጠር";
+	$fieldToolTipsdhis2_orgunits_distribution["Amharic"]["count"] = "";
+	$placeHoldersdhis2_orgunits_distribution["Amharic"]["count"] = "";
+	if (count($fieldToolTipsdhis2_orgunits_distribution["Amharic"]))
+		$tdatadhis2_orgunits_distribution[".isUseToolTips"] = true;
+}
 
 
 	$tdatadhis2_orgunits_distribution[".NCSearch"] = true;

@@ -429,7 +429,7 @@ class ViewHTMLField extends ViewControl
 			$dataField = 'data-fieldlabel="'.runner_htmlspecialchars( $label ).'"';
 			
 			$link = ' <a href="javascript:void(0);" data-gridlink data-query="'.GetTableLink("fulltext").'?'.$params.'" '.$dataField.'>'
-				."More".'&nbsp;...</a>';
+				.mlang_message("MORE").'&nbsp;...</a>';
 			$processedValue.= $link;			
 		}
 			

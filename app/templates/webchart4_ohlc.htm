@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
     <head>
-        <title>Chart: Parameters</title>
+        <title>{mlang_message WR_CH_PARAM}</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link type="text/css" href="styles/default.css" rel="stylesheet">
 		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 			<div class="rnr-s-1 {$wr_pagestylepath}">
 				<div class="rnr-c rnr-cv">
 					<div class="style2" align=center>
-						Chart: Parameters{$chart_title}{$chart_table}
+						{mlang_message WR_CH_PARAM}{$chart_title}{$chart_table}
 					</div>
 					<div class="style1 rnr-b-wrapper">
 						<div class="rnr-s-fields {$wr_pagestylepath}">
@@ -30,14 +30,14 @@
 									</tr>
 									<tr id=clone1 style="display:none">
 										<td></td>
-										<td>open</td>
+										<td>{mlang_message WR_OHLC_OPEN}</td>
 										<td>
 											<select id="" name="" class="inputselect">
 												<option value=""></option>
 												{$dataSeries}
 											</select>
 										</td>
-										<td>close</td>
+										<td>{mlang_message WR_OHLC_CLOSE}</td>
 										<td>
 											<select id="" name="" class="inputselect">
 												<option value=""></option>
@@ -48,14 +48,14 @@
 									</tr>
 									<tr id=clone2 style="display:none">
 										<td></td>
-										<td>high</td>
+										<td>{mlang_message WR_OHLC_HIGH}</td>
 										<td>
 											<select id="" name="" class="inputselect">
 												<option value=""></option>
 												{$dataSeries}
 											</select>
 										</td>
-										<td>low</td>
+										<td>{mlang_message WR_OHLC_LOW}</td>
 										<td>
 											<select id="" name="" class="inputselect">
 												<option value=""></option>
@@ -66,7 +66,7 @@
 									</tr>
 									<tr id=clone3 style="display:none">
 										<td></td>
-										<td id=""></td>
+										<td id="">{mlang_message LABEL}</td>
 										<td id=""><input type="text" value="" id="" {$disable}/></td>
 										<td colspan=4>
 											<table cellpadding=5 cellspacing=0 border=0>
@@ -98,18 +98,18 @@
 									</tr>
 									<tr id="ds1">
 										<td></td>
-										<td colspan=5>Data Series 1</td>
+										<td colspan=5>{mlang_message WR_DATA_SERIES} 1</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>open</td>
+										<td>{mlang_message WR_OHLC_OPEN}</td>
 										<td>
 											<select id="field_open1" name="field_open1" class="inputselect">
 												<option value=""></option>
 												{$dataSeries}
 											</select>
 										</td>
-										<td>close</td>
+										<td>{mlang_message WR_OHLC_CLOSE}</td>
 										<td>
 											<select id="field_close1" name="field_close1" class="inputselect">
 												<option value=""></option>
@@ -120,14 +120,14 @@
 									</tr>
 									<tr>
 										<td></td>
-										<td>high</td>
+										<td>{mlang_message WR_OHLC_HIGH}</td>
 										<td>
 											<select id="field_high1" name="field_high1" class="inputselect">
 												<option value=""></option>
 												{$dataSeries}
 											</select>
 										</td>
-										<td>low</td>
+										<td>{mlang_message WR_OHLC_LOW}</td>
 										<td>
 											<select id="field_low1" name="field_low1" class="inputselect">
 												<option value=""></option>
@@ -138,7 +138,7 @@
 									</tr>
 									<tr>
 										<td></td>
-										<td id="label_title_1">Label</td>
+										<td id="label_title_1">{mlang_message WR_LABEL}</td>
 										<td id="label_value_1"><input type="text" value="" id="series_label_1" {$disable}/></td>
 										<td colspan=2>
 											<table cellpadding=5 cellspacing=0 border=0>
@@ -164,7 +164,7 @@
 									</tr>
 									<tr id="ds">
 										<td></td>
-										<td>Label Field</td>
+										<td>{mlang_message WR_LABEL_FIELD}</td>
 										<td colspan=3>
 											<select id="field" name="field" class="inputselect">
 												{$label}
@@ -176,19 +176,19 @@
 								</table>
 								</div>
 								<div id="btns" class="style2" align=center>
-									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">{mlang_message BACK}</a>
 									<span style="position:absolute;" id="jumptospan"></span>
-									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
-									<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">SQL Query</a>
+									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">{mlang_message WR_JUMP_TO}</a>
+									<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">{mlang_message WR_SQL_QUERY}</a>
 									<a id="sql_query" href="web_query.php?type=webcharts&name=parameters&ie=UTF-8&iframe"></a>
-									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">{mlang_message NEXT}</a>
 									{BEGIN b_is_chart_save}
-									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">{mlang_message WR_SAVE_AS}</a>
 									{END b_is_chart_save}															
 									{BEGIN b_is_chart_name}
-									<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+									<a id="savebtn" name="savebtn" class="rnr-button" href="#">{mlang_message SAVE}</a>
 									{END b_is_chart_name}	
-									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">{mlang_message WR_PREVIEW}</a>
 									<a id="preview" class="various fancybox.iframe" href="dchart_preview.php?cname={$chart_name_preview}&ie=UTF-8&iframe"></a>
 								</div>
 							</div>
@@ -202,9 +202,9 @@
 
 	<div id="groupSelectorDiv">
 	<table width=100% cellpadding=5 cellspacing=0 border=0>
-		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
-		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
-		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">{mlang_message WR_GROUP}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">{mlang_message WR_FIELD}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">{mlang_message SEARCH_ALL}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
 	</table>
 </div>
 <div id="colorPickerVtd">
@@ -300,7 +300,7 @@
 			<td class="row0cell7">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">{mlang_message WR_NO_COLOR}</td>
 		</tr>
 	</table>
 </div>		
@@ -313,16 +313,16 @@
 <iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
 <div id="menujump" class=action style="display:none;position:absolute;">
 	<table width=100% cellpadding=5 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
-		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
-		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
-		<tr><td id=row2 style="cursor:pointer;padding:5px;">Group By</td></tr>
-		<tr><td id=row3 style="cursor:pointer;padding:5px;">Type</td></tr>
-		<tr><td id=row4 style="cursor:pointer;padding:5px;">Parameters</td></tr>
-		<tr><td id=row5 style="cursor:pointer;padding:5px;">Appearance</td></tr>
-		<tr><td id=row6 style="cursor:pointer;padding:5px;">Chart Settings</td></tr>
-		<tr><td id=row7 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
-		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
-		<tr><td id=row9 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">{mlang_message AA_TABLES}</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">{mlang_message WR_JUMP_RELAT}</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">{mlang_message WR_GROUP_BY}</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">{mlang_message WR_TYPE}</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">{mlang_message WR_PARAM}</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">{mlang_message WR_APPEARANCE}</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">{mlang_message WR_CHART_SETT}</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">{mlang_message WR_DYNAM_PERMISSIONS}</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">{mlang_message WR_BACK_TO_MENU}</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">{mlang_message WR_BACK_TO_APPL}</td></tr>
 	</table>
 </div>
 	<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>	

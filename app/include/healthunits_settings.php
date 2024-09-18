@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshealthunits["English"]))
 		$tdatahealthunits[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshealthunits["Amharic"] = array();
+	$fieldToolTipshealthunits["Amharic"] = array();
+	$placeHoldershealthunits["Amharic"] = array();
+	$pageTitleshealthunits["Amharic"] = array();
+	$fieldLabelshealthunits["Amharic"]["unit_id"] = "የክፍል መለያ";
+	$fieldToolTipshealthunits["Amharic"]["unit_id"] = "";
+	$placeHoldershealthunits["Amharic"]["unit_id"] = "";
+	$fieldLabelshealthunits["Amharic"]["name"] = "ስም";
+	$fieldToolTipshealthunits["Amharic"]["name"] = "";
+	$placeHoldershealthunits["Amharic"]["name"] = "";
+	$fieldLabelshealthunits["Amharic"]["type"] = "ዓይነት";
+	$fieldToolTipshealthunits["Amharic"]["type"] = "";
+	$placeHoldershealthunits["Amharic"]["type"] = "";
+	$fieldLabelshealthunits["Amharic"]["strategic_plan"] = "ስልታዊ እቅድ";
+	$fieldToolTipshealthunits["Amharic"]["strategic_plan"] = "";
+	$placeHoldershealthunits["Amharic"]["strategic_plan"] = "";
+	if (count($fieldToolTipshealthunits["Amharic"]))
+		$tdatahealthunits[".isUseToolTips"] = true;
+}
 
 
 	$tdatahealthunits[".NCSearch"] = true;

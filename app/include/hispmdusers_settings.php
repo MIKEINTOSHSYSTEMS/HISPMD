@@ -85,6 +85,72 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmdusers["English"]))
 		$tdatahispmdusers[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshispmdusers["Amharic"] = array();
+	$fieldToolTipshispmdusers["Amharic"] = array();
+	$placeHoldershispmdusers["Amharic"] = array();
+	$pageTitleshispmdusers["Amharic"] = array();
+	$fieldLabelshispmdusers["Amharic"]["ID"] = "መለያ";
+	$fieldToolTipshispmdusers["Amharic"]["ID"] = "";
+	$placeHoldershispmdusers["Amharic"]["ID"] = "";
+	$fieldLabelshispmdusers["Amharic"]["username"] = "የተጠቃሚ ስም";
+	$fieldToolTipshispmdusers["Amharic"]["username"] = "";
+	$placeHoldershispmdusers["Amharic"]["username"] = "";
+	$fieldLabelshispmdusers["Amharic"]["password"] = "የይለፍ ቃል";
+	$fieldToolTipshispmdusers["Amharic"]["password"] = "";
+	$placeHoldershispmdusers["Amharic"]["password"] = "";
+	$fieldLabelshispmdusers["Amharic"]["email"] = "ኢሜይል";
+	$fieldToolTipshispmdusers["Amharic"]["email"] = "";
+	$placeHoldershispmdusers["Amharic"]["email"] = "";
+	$fieldLabelshispmdusers["Amharic"]["fullname"] = "ሙሉ ስም";
+	$fieldToolTipshispmdusers["Amharic"]["fullname"] = "";
+	$placeHoldershispmdusers["Amharic"]["fullname"] = "";
+	$fieldLabelshispmdusers["Amharic"]["groupid"] = "ተቧድኖ";
+	$fieldToolTipshispmdusers["Amharic"]["groupid"] = "";
+	$placeHoldershispmdusers["Amharic"]["groupid"] = "";
+	$fieldLabelshispmdusers["Amharic"]["active"] = "ንቁ";
+	$fieldToolTipshispmdusers["Amharic"]["active"] = "";
+	$placeHoldershispmdusers["Amharic"]["active"] = "";
+	$fieldLabelshispmdusers["Amharic"]["ext_security_id"] = "የኤክስት ደህንነት መለያ";
+	$fieldToolTipshispmdusers["Amharic"]["ext_security_id"] = "";
+	$placeHoldershispmdusers["Amharic"]["ext_security_id"] = "";
+	$fieldLabelshispmdusers["Amharic"]["userpic"] = "ተጠቃሚ";
+	$fieldToolTipshispmdusers["Amharic"]["userpic"] = "";
+	$placeHoldershispmdusers["Amharic"]["userpic"] = "";
+	$fieldLabelshispmdusers["Amharic"]["phone_number"] = "ስልክ ቁጥር";
+	$fieldToolTipshispmdusers["Amharic"]["phone_number"] = "";
+	$placeHoldershispmdusers["Amharic"]["phone_number"] = "";
+	$fieldLabelshispmdusers["Amharic"]["first_name"] = "የመጀመሪያ ስም";
+	$fieldToolTipshispmdusers["Amharic"]["first_name"] = "";
+	$placeHoldershispmdusers["Amharic"]["first_name"] = "";
+	$fieldLabelshispmdusers["Amharic"]["middle_name"] = "መካከለኛ ስም";
+	$fieldToolTipshispmdusers["Amharic"]["middle_name"] = "";
+	$placeHoldershispmdusers["Amharic"]["middle_name"] = "";
+	$fieldLabelshispmdusers["Amharic"]["last_name"] = "የአያት ስም";
+	$fieldToolTipshispmdusers["Amharic"]["last_name"] = "";
+	$placeHoldershispmdusers["Amharic"]["last_name"] = "";
+	$fieldLabelshispmdusers["Amharic"]["designation"] = "ስያሜ";
+	$fieldToolTipshispmdusers["Amharic"]["designation"] = "";
+	$placeHoldershispmdusers["Amharic"]["designation"] = "";
+	$fieldLabelshispmdusers["Amharic"]["organisation_name"] = "የድርጅት ስም";
+	$fieldToolTipshispmdusers["Amharic"]["organisation_name"] = "";
+	$placeHoldershispmdusers["Amharic"]["organisation_name"] = "";
+	$fieldLabelshispmdusers["Amharic"]["department"] = "መምሪያ";
+	$fieldToolTipshispmdusers["Amharic"]["department"] = "";
+	$placeHoldershispmdusers["Amharic"]["department"] = "";
+	$fieldLabelshispmdusers["Amharic"]["reset_token"] = "ማስመሰያ ዳግም አስጀምር";
+	$fieldToolTipshispmdusers["Amharic"]["reset_token"] = "";
+	$placeHoldershispmdusers["Amharic"]["reset_token"] = "";
+	$fieldLabelshispmdusers["Amharic"]["reset_date"] = "ቀን ዳግም ማስጀመር";
+	$fieldToolTipshispmdusers["Amharic"]["reset_date"] = "";
+	$placeHoldershispmdusers["Amharic"]["reset_date"] = "";
+	$fieldLabelshispmdusers["Amharic"]["apikey"] = "አፒኪ";
+	$fieldToolTipshispmdusers["Amharic"]["apikey"] = "";
+	$placeHoldershispmdusers["Amharic"]["apikey"] = "";
+	if (count($fieldToolTipshispmdusers["Amharic"]))
+		$tdatahispmdusers[".isUseToolTips"] = true;
+}
 
 
 	$tdatahispmdusers[".NCSearch"] = true;

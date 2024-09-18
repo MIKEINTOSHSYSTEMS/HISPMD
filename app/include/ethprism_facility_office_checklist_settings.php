@@ -103,6 +103,90 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsethprism_facility_office_checklist["English"]))
 		$tdataethprism_facility_office_checklist[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsethprism_facility_office_checklist["Amharic"] = array();
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"] = array();
+	$placeHoldersethprism_facility_office_checklist["Amharic"] = array();
+	$pageTitlesethprism_facility_office_checklist["Amharic"] = array();
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["CompletionDate"] = "Completion Date";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["CompletionDate"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["CompletionDate"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["SubmissionDate"] = "Submission Date";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["SubmissionDate"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["SubmissionDate"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["starttime"] = "Starttime";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["starttime"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["starttime"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["endtime"] = "Endtime";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["endtime"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["endtime"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["deviceid"] = "Deviceid";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["deviceid"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["deviceid"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["subscriberid"] = "Subscriberid";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["subscriberid"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["subscriberid"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["simid"] = "Simid";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["simid"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["simid"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["devicephonenum"] = "Devicephonenum";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["devicephonenum"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["devicephonenum"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["username"] = "Username";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["username"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["username"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["duration"] = "Duration";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["duration"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["duration"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["caseid"] = "Caseid";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["caseid"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["caseid"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC105"] = "FOC105";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC105"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC105"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC101"] = "FOC101";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC101"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC101"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC102"] = "FOC102";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC102"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC102"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC103"] = "FOC103";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC103"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC103"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC104"] = "FOC104";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC104"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC104"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["admin_lvl"] = "Admin Lvl";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["admin_lvl"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["admin_lvl"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["admin_lvl2"] = "Admin Lvl2";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["admin_lvl2"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["admin_lvl2"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC106"] = "FOC106";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC106"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC106"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC107"] = "FOC107";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC107"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC107"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC108"] = "FOC108";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC108"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC108"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["siteid"] = "Siteid";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["siteid"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["siteid"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC109f"] = "FOC109f";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC109f"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC109f"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC110f"] = "FOC110f";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC110f"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC110f"] = "";
+	$fieldLabelsethprism_facility_office_checklist["Amharic"]["FOC111"] = "FOC111";
+	$fieldToolTipsethprism_facility_office_checklist["Amharic"]["FOC111"] = "";
+	$placeHoldersethprism_facility_office_checklist["Amharic"]["FOC111"] = "";
+	if (count($fieldToolTipsethprism_facility_office_checklist["Amharic"]))
+		$tdataethprism_facility_office_checklist[".isUseToolTips"] = true;
+}
 
 
 	$tdataethprism_facility_office_checklist[".NCSearch"] = true;

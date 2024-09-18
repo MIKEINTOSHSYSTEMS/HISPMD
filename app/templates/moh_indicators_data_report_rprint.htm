@@ -630,9 +630,9 @@
 							<td class="group_4" style="border-top: none;"></td>
 							
 																																						<td  class="group_5" colspan=8 >
-				Summary for&nbsp;{$label MOH_Indicators_Data_Report year }&nbsp;{$year_grval}
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report year }&nbsp;{$year_grval}
 					- <span class="summary-5" data-type="summary">{$groupyear_total_cnt}
-					</span> records total			</td>
+					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																										</tr>
 
 	
@@ -649,9 +649,9 @@
 							<td class="group_3" style="border-top: none;"></td>
 							
 																															<td  class="group_4" colspan=9 >
-				Summary for&nbsp;{$label MOH_Indicators_Data_Report facility_type_id }&nbsp;{$facility_type_id_grval}
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report facility_type_id }&nbsp;{$facility_type_id_grval}
 					- <span class="summary-4" data-type="summary">{$groupfacility_type_id_total_cnt}
-					</span> records total			</td>
+					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																																	</tr>
 
 	
@@ -667,9 +667,9 @@
 							<td class="group_2" style="border-top: none;"></td>
 							
 																								<td  class="group_3" colspan=10 >
-				Summary for&nbsp;{$label MOH_Indicators_Data_Report scope_id }&nbsp;{$scope_id_grval}
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report scope_id }&nbsp;{$scope_id_grval}
 					- <span class="summary-3" data-type="summary">{$groupscope_id_total_cnt}
-					</span> records total			</td>
+					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																																								</tr>
 
 	
@@ -684,9 +684,9 @@
 										<td class="group_1" style="border-top: none;"></td>
 							
 																	<td  class="group_2" colspan=11 >
-				Summary for&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
 					- <span class="summary-2" data-type="summary">{$groupindicator_id_total_cnt}
-					</span> records total			</td>
+					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																																															</tr>
 
 	
@@ -700,9 +700,9 @@
 		<tr class="summaryrow"  >
 			
 										<td  class="group_1" colspan=12 >
-				Summary for&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
 					- <span class="summary-1" data-type="summary">{$groupindicator_group_id_total_cnt}
-					</span> records total			</td>
+					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																																																						</tr>
 
 	
@@ -737,7 +737,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="12">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
+        <td class="pagesummary" colspan="12">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 	
 	
@@ -748,7 +748,7 @@
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
         <td class="globalsummary" colspan="12">
-            Global summary {$global_total_cnt} - records total        </td>
+            {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 
 	

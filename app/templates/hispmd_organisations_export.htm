@@ -75,18 +75,18 @@
 	<div class="row">
 		<div class="col-md-4 col-sm-4">
 			<div class="radio bs-desktop-right">
-				Data range			</div>
+				{mlang_message DATA_RANGE}			</div>
 		</div>
 		<div class="col-md-8 col-sm-8">
 			<div class="radio">
 				<label>
 					<input type="radio" name="records" value="all" checked="checked" {$allpageradio_attrs}>
-					All records				</label>
+					{mlang_message ALL_RECORDS}				</label>
 			</div>
 			<div class="radio">
 				<label>
 					<input type="radio" name="records" value="page" {$pageradio_attrs}>
-					Current page only				</label>
+					{mlang_message CURRENT_PAGE}				</label>
 			</div>
 		</div>
   </div>
@@ -95,18 +95,18 @@
 	<div class="row">
 		<div class="col-sm-4 col-md-4">
 			<div class="radio bs-desktop-right">
-				Data format			</div>
+				{mlang_message TEXT_FORMATTING}			</div>
 		</div>
 		<div class="col-sm-8 col-md-8">
 			<div class="radio">
 			  <label>
 				<input type="radio" name="txtformatting" value="formatted" checked>
-				formatted values			  </label>
+				{mlang_message FORMATTED_VALUES}			  </label>
 			</div>
 			<div class="radio">
 			  <label>
 				<input type="radio" name="txtformatting" value="raw">
-				raw values			  </label>
+				{mlang_message RAW_VALUES}			  </label>
 			</div>
 		</div>
 	</div>
@@ -114,7 +114,7 @@
 	<div class="row">
 		<div class="col-sm-4 col-md-4">
 			<div class="radio bs-desktop-right">
-				Output format			</div>
+				{mlang_message OUTPUT_FORMAT}			</div>
 		</div>
 		<div class="col-md-8 col-sm-8">
 			
@@ -135,7 +135,7 @@
 					<div class="radio">
 			  <label>
 				<input TYPE="radio" NAME="type" VALUE="csv"  {$csvradio_attrs}>
-				<span> <img src="images/csv.gif" align="absmiddle" alt=" ">&nbsp;CSV (comma separated values)</span>
+				<span> <img src="images/csv.gif" align="absmiddle" alt=" ">&nbsp;{mlang_message CSV}</span>
 			  </label>
 			</div>
 						
@@ -164,14 +164,14 @@
 		<span data-itemtype="export_export" data-itemid="export_export" {$item_export_export} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$exportlink_attrs} >
-							Export			</a>
+							{mlang_message EXPORT}			</a>
 </span>
 	 
 		{BEGIN cancel_button}
 <span data-itemtype="export_cancel" data-itemid="export_cancel" {$item_export_cancel} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="cancelButton{$id}" href="#" >
-							Cancel			</a>
+							{mlang_message CANCEL}			</a>
 </span>
 {END cancel_button}
 		</div>					</div>

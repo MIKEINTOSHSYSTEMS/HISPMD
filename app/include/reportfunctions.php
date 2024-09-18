@@ -65,9 +65,9 @@ function GetUserGroups() {
 	}
 	if( Security::dynamicPermissions() ) {
 		$arr = array(
-			array(-1, "<"."Admin".">"),
-			array(-2, "<"."Default".">"),
-			array(-3, "<"."Guest".">")
+			array(-1, "<".mlang_message("AA_GROUP_ADMIN").">"),
+			array(-2, "<".mlang_message("AA_GROUP_DEFAULT").">"),
+			array(-3, "<".mlang_message("AA_GROUP_GUEST").">")
 		);
 
 		$groupIdField = "GroupID";
@@ -1080,383 +1080,383 @@ function getCaptionTable($table)
 		$table=$strTableName;
 	if($table=="MFR_Dashboard_Report")
 	{
-		return "MFR Dashboard Report";
+		return GetTableCaption("MFR_Dashboard_Report");
 	}
 	if($table=="MFR_Status_Report")
 	{
-		return "MFR Status Report";
+		return GetTableCaption("MFR_Status_Report");
 	}
 	if($table=="MFR_Facilities")
 	{
-		return "MFR Facilities";
+		return GetTableCaption("MFR_Facilities");
 	}
 	if($table=="MFR_Region_Report")
 	{
-		return "MFR Region Report";
+		return GetTableCaption("MFR_Region_Report");
 	}
 	if($table=="MFR_Zone_Report")
 	{
-		return "MFR Zone Report";
+		return GetTableCaption("MFR_Zone_Report");
 	}
 	if($table=="MFR_Woreda_Report")
 	{
-		return "MFR Woreda Report";
+		return GetTableCaption("MFR_Woreda_Report");
 	}
 	if($table=="DHIS2_Indicators")
 	{
-		return "DHIS2 Indicators";
+		return GetTableCaption("DHIS2_Indicators");
 	}
 	if($table=="DHIS2_Organisation_Units")
 	{
-		return "DHIS2 Organisation Units";
+		return GetTableCaption("DHIS2_Organisation_Units");
 	}
 	if($table=="DHIS2_Analytics")
 	{
-		return "DHIS2 Analytics";
+		return GetTableCaption("DHIS2_Analytics");
 	}
 	if($table=="DHIS2_Indicator")
 	{
-		return "DHIS2 Indicator";
+		return GetTableCaption("DHIS2_Indicator");
 	}
 	if($table=="DHIS2_Organisation_Unit")
 	{
-		return "DHIS2 Organisation Unit";
+		return GetTableCaption("DHIS2_Organisation_Unit");
 	}
 	if($table=="DHIS2_Analytics Chart")
 	{
-		return "DHIS2 Analytics Chart";
+		return GetTableCaption("DHIS2_Analytics_Chart");
 	}
 	if($table=="DHIS2_Analytics Report")
 	{
-		return "DHIS2 Analytics Report";
+		return GetTableCaption("DHIS2_Analytics_Report");
 	}
 	if($table=="DHIS2_Reports")
 	{
-		return "DHIS2 Reports";
+		return GetTableCaption("DHIS2_Reports");
 	}
 	if($table=="DHIS2_Datasets")
 	{
-		return "DHIS2 Datasets";
+		return GetTableCaption("DHIS2_Datasets");
 	}
 	if($table=="DHIS2_Reporting_Rate")
 	{
-		return "DHIS2 Reporting Rate";
+		return GetTableCaption("DHIS2_Reporting_Rate");
 	}
 	if($table=="DHIS2_Reporting_Rate_Chart")
 	{
-		return "DHIS2 Reporting Rate Chart";
+		return GetTableCaption("DHIS2_Reporting_Rate_Chart");
 	}
 	if($table=="DHIS2_Reporting_Rate_Report")
 	{
-		return "DHIS2 Reporting Rate Report";
+		return GetTableCaption("DHIS2_Reporting_Rate_Report");
 	}
 	if($table=="DHIS2_Reporting_Rates_Chart")
 	{
-		return "DHIS2 Reporting Rates Chart";
+		return GetTableCaption("DHIS2_Reporting_Rates_Chart");
 	}
 	if($table=="MFR_AIO_Dashboard")
 	{
-		return "MFR AIO Dashboard";
+		return GetTableCaption("MFR_AIO_Dashboard");
 	}
 	if($table=="MFR_Facility")
 	{
-		return "MFR Facility";
+		return GetTableCaption("MFR_Facility");
 	}
 	if($table=="MFR_Regions")
 	{
-		return "MFR Regions";
+		return GetTableCaption("MFR_Regions");
 	}
 	if($table=="MFR_Zones")
 	{
-		return "MFR Zones";
+		return GetTableCaption("MFR_Zones");
 	}
 	if($table=="MFR_Woredas")
 	{
-		return "MFR Woredas";
+		return GetTableCaption("MFR_Woredas");
 	}
 	if($table=="MFR_Facility_Types")
 	{
-		return "MFR Facility Types";
+		return GetTableCaption("MFR_Facility_Types");
 	}
 	if($table=="MFR_Operational_Statuses")
 	{
-		return "MFR Operational Statuses";
+		return GetTableCaption("MFR_Operational_Statuses");
 	}
 	if($table=="MFR_Status")
 	{
-		return "MFR Status";
+		return GetTableCaption("MFR_Status");
 	}
 	if($table=="DHIS2_OrgUnit_Country")
 	{
-		return "DHIS2 OrgUnit Country";
+		return GetTableCaption("DHIS2_OrgUnit_Country");
 	}
 	if($table=="DHIS2_OrgUnit_Regions")
 	{
-		return "DHIS2 OrgUnit Regions";
+		return GetTableCaption("DHIS2_OrgUnit_Regions");
 	}
 	if($table=="DHIS2_OrgUnit_Zone")
 	{
-		return "DHIS2 OrgUnit Zone";
+		return GetTableCaption("DHIS2_OrgUnit_Zone");
 	}
 	if($table=="DHIS2_OrgUnit_Woredas")
 	{
-		return "DHIS2 OrgUnit Woredas";
+		return GetTableCaption("DHIS2_OrgUnit_Woredas");
 	}
 	if($table=="DHIS2_OrgUnit_Groups")
 	{
-		return "DHIS2 OrgUnit Groups";
+		return GetTableCaption("DHIS2_OrgUnit_Groups");
 	}
 	if($table=="DHIS2_OrgUnit_Group_Sets")
 	{
-		return "DHIS2 OrgUnit Group Sets";
+		return GetTableCaption("DHIS2_OrgUnit_Group_Sets");
 	}
 	if($table=="DHIS2_AIO_OrgUnit")
 	{
-		return "DHIS2 AIO OrgUnit";
+		return GetTableCaption("DHIS2_AIO_OrgUnit");
 	}
 	if($table=="DHIS2_OrgUnit_Distributions")
 	{
-		return "DHIS2 OrgUnit Distributions";
+		return GetTableCaption("DHIS2_OrgUnit_Distributions");
 	}
 	if($table=="public.ai_data_assistant")
 	{
-		return "Ai Data Assistant";
+		return GetTableCaption("public_ai_data_assistant");
 	}
 	if($table=="public.dataquality")
 	{
-		return "Dataquality";
+		return GetTableCaption("public_dataquality");
 	}
 	if($table=="public.datause")
 	{
-		return "Datause";
+		return GetTableCaption("public_datause");
 	}
 	if($table=="public.dhis2_periods")
 	{
-		return "DHIS2 Periods";
+		return GetTableCaption("public_dhis2_periods");
 	}
 	if($table=="public.digitalhealth")
 	{
-		return "Digitalhealth";
+		return GetTableCaption("public_digitalhealth");
 	}
 	if($table=="public.digitalhealthapps")
 	{
-		return "Digitalhealthapps";
+		return GetTableCaption("public_digitalhealthapps");
 	}
 	if($table=="public.financialresources")
 	{
-		return "Financialresources";
+		return GetTableCaption("public_financialresources");
 	}
 	if($table=="public.healthfacilities")
 	{
-		return "Healthfacilities";
+		return GetTableCaption("public_healthfacilities");
 	}
 	if($table=="public.healthunits")
 	{
-		return "Healthunits";
+		return GetTableCaption("public_healthunits");
 	}
 	if($table=="public.hisgovernance")
 	{
-		return "Hisgovernance";
+		return GetTableCaption("public_hisgovernance");
 	}
 	if($table=="public.hispartners")
 	{
-		return "Hispartners";
+		return GetTableCaption("public_hispartners");
 	}
 	if($table=="public.mfr_dashboard_reports")
 	{
-		return "Mfr Dashboard Reports";
+		return GetTableCaption("public_mfr_dashboard_reports");
 	}
 	if($table=="public.mfr_operational_status")
 	{
-		return "Mfr Operational Status";
+		return GetTableCaption("public_mfr_operational_status");
 	}
 	if($table=="public.mfr_region")
 	{
-		return "Mfr Region";
+		return GetTableCaption("public_mfr_region");
 	}
 	if($table=="public.mfr_woreda")
 	{
-		return "Mfr Woreda";
+		return GetTableCaption("public_mfr_woreda");
 	}
 	if($table=="public.mfr_zone")
 	{
-		return "Mfr Zone";
+		return GetTableCaption("public_mfr_zone");
 	}
 	if($table=="public.publications")
 	{
-		return "Publications";
+		return GetTableCaption("public_publications");
 	}
 	if($table=="public.regions")
 	{
-		return "Regions";
+		return GetTableCaption("public_regions");
 	}
 	if($table=="public.research")
 	{
-		return "Research";
+		return GetTableCaption("public_research");
 	}
 	if($table=="public.workforce")
 	{
-		return "Workforce";
+		return GetTableCaption("public_workforce");
 	}
 	if($table=="public.hispmdusers")
 	{
-		return "Hispmdusers";
+		return GetTableCaption("public_hispmdusers");
 	}
 	if($table=="mfr_dashboard_reports_chart")
 	{
-		return "Mfr Dashboard Reports Chart";
+		return GetTableCaption("mfr_dashboard_reports_chart");
 	}
 	if($table=="mfr_operational_status_chart")
 	{
-		return "Mfr Operational Status Chart";
+		return GetTableCaption("mfr_operational_status_chart");
 	}
 	if($table=="mfr_region_chart")
 	{
-		return "Mfr Region Chart";
+		return GetTableCaption("mfr_region_chart");
 	}
 	if($table=="public.ethprism_additional_organizational_and_behavioral_assessment")
 	{
-		return "Ethprism Additional Organizational And Behavioral Assessment";
+		return GetTableCaption("public_ethprism_additional_organizational_and_behavioral_assessment");
 	}
 	if($table=="public.ethprism_facility_level_rhis_performance_diagnostic")
 	{
-		return "Ethprism Facility Level Rhis Performance Diagnostic";
+		return GetTableCaption("public_ethprism_facility_level_rhis_performance_diagnostic");
 	}
 	if($table=="public.ethprism_facility_office_checklist")
 	{
-		return "Ethprism Facility Office Checklist";
+		return GetTableCaption("public_ethprism_facility_office_checklist");
 	}
 	if($table=="public.ethprism_healthpost_level_rhis_performance_diagnostic")
 	{
-		return "Ethprism Healthpost Level Rhis Performance Diagnostic";
+		return GetTableCaption("public_ethprism_healthpost_level_rhis_performance_diagnostic");
 	}
 	if($table=="public.ethprism_national_prism_woreda_level_diagnostic")
 	{
-		return "Ethprism National Prism Woreda Level Diagnostic";
+		return GetTableCaption("public_ethprism_national_prism_woreda_level_diagnostic");
 	}
 	if($table=="public.ethprism_organizational_and_behavioral_assessment")
 	{
-		return "Ethprism Organizational And Behavioral Assessment";
+		return GetTableCaption("public_ethprism_organizational_and_behavioral_assessment");
 	}
 	if($table=="public.hispmd_prism_settings")
 	{
-		return "Hispmd Prism Settings";
+		return GetTableCaption("public_hispmd_prism_settings");
 	}
 	if($table=="PRISM Dashboard")
 	{
-		return "PRISM Dashboard";
+		return GetTableCaption("PRISM_Dashboard");
 	}
 	if($table=="hispmd_users_audit")
 	{
-		return "Hispmd Users Audit";
+		return GetTableCaption("hispmd_users_audit");
 	}
 	if($table=="hispmd_system_settings")
 	{
-		return "Hispmd System Settings";
+		return GetTableCaption("hispmd_system_settings");
 	}
 	if($table=="hispmd_prism_data_forms")
 	{
-		return "Hispmd Prism Data Forms";
+		return GetTableCaption("hispmd_prism_data_forms");
 	}
 	if($table=="public.moh_administration_units")
 	{
-		return "Moh Administration Units";
+		return GetTableCaption("public_moh_administration_units");
 	}
 	if($table=="public.moh_assessments")
 	{
-		return "Moh Assessments";
+		return GetTableCaption("public_moh_assessments");
 	}
 	if($table=="public.moh_data_sources")
 	{
-		return "Moh Data Sources";
+		return GetTableCaption("public_moh_data_sources");
 	}
 	if($table=="public.moh_facility_types")
 	{
-		return "Moh Facility Types";
+		return GetTableCaption("public_moh_facility_types");
 	}
 	if($table=="public.moh_health_facilities")
 	{
-		return "Moh Health Facilities";
+		return GetTableCaption("public_moh_health_facilities");
 	}
 	if($table=="public.moh_indicator_data")
 	{
-		return "Moh Indicator Data";
+		return GetTableCaption("public_moh_indicator_data");
 	}
 	if($table=="public.moh_indicators")
 	{
-		return "Moh Indicators";
+		return GetTableCaption("public_moh_indicators");
 	}
 	if($table=="public.moh_regions")
 	{
-		return "Moh Regions";
+		return GetTableCaption("public_moh_regions");
 	}
 	if($table=="public.moh_indicator_groups")
 	{
-		return "Moh Indicator Groups";
+		return GetTableCaption("public_moh_indicator_groups");
 	}
 	if($table=="public.timetracker")
 	{
-		return "Timetracker";
+		return GetTableCaption("public_timetracker");
 	}
 	if($table=="public.mfr_facilities_register")
 	{
-		return "Mfr Facilities Register";
+		return GetTableCaption("public_mfr_facilities_register");
 	}
 	if($table=="admin_rights")
 	{
-		return "Admin Rights";
+		return GetTableCaption("admin_rights");
 	}
 	if($table=="admin_members")
 	{
-		return "Admin Members";
+		return GetTableCaption("admin_members");
 	}
 	if($table=="admin_users")
 	{
-		return "Admin Users";
+		return GetTableCaption("admin_users");
 	}
 	if($table=="System_Users_Activity_Dashboard")
 	{
-		return "System Users Activity Dashboard";
+		return GetTableCaption("System_Users_Activity_Dashboard");
 	}
 	if($table=="HISPMD_Web_Reports_and_Charts_Builder")
 	{
-		return "HISPMD Web Reports And Charts Builder";
+		return GetTableCaption("HISPMD_Web_Reports_and_Charts_Builder");
 	}
 	if($table=="public.mfr_facilities_register_report")
 	{
-		return "Mfr Facilities Register Report";
+		return GetTableCaption("public_mfr_facilities_register_report");
 	}
 	if($table=="public.hispmd_organisations")
 	{
-		return "Hispmd Organisations";
+		return GetTableCaption("public_hispmd_organisations");
 	}
 	if($table=="public.hispmd_uggroups")
 	{
-		return "Hispmd Uggroups";
+		return GetTableCaption("public_hispmd_uggroups");
 	}
 	if($table=="public.mfr_facilities_register_chart")
 	{
-		return "Mfr Facilities Register Chart";
+		return GetTableCaption("public_mfr_facilities_register_chart");
 	}
 	if($table=="public.moh_data_scope")
 	{
-		return "Moh Data Scope";
+		return GetTableCaption("public_moh_data_scope");
 	}
 	if($table=="HISPMD_MOH_Indicators_Dashboard")
 	{
-		return "HISPMD MOH Indicators Dashboard";
+		return GetTableCaption("HISPMD_MOH_Indicators_Dashboard");
 	}
 	if($table=="MOH_Indicators_Data_Report")
 	{
-		return "MOH Indicators Data Report";
+		return GetTableCaption("MOH_Indicators_Data_Report");
 	}
 	if($table=="MOH_Indicators_data_Chart")
 	{
-		return "MOH Indicators Data Chart";
+		return GetTableCaption("MOH_Indicators_data_Chart");
 	}
 	if($table=="DHIS2_OrgUnits_Distribution")
 	{
-		return "DHIS2 OrgUnits Distribution";
+		return GetTableCaption("DHIS2_OrgUnits_Distribution");
 	}
 	return $table;
 }
@@ -1678,21 +1678,21 @@ function GetAdvSearchOptions($table,$field)
 	$options=array();
 	if($format==EDIT_FORMAT_DATE)
 	{
-		$options[]=array("type"=>"Equals","label"=>"Equals");
-		$options[]=array("type"=>"More than ...","label"=>"More than");
-		$options[]=array("type"=>"Less than ...","label"=>"Less than");
-		$options[]=array("type"=>"Equal or more than ...","label"=>"Equal or more than");
-		$options[]=array("type"=>"Equal or less than ...","label"=>"Equal or less than");
-		$options[]=array("type"=>"Between","label"=>"Between");
-		$options[]=array("type"=>"Empty","label"=>"Empty");
+		$options[]=array("type"=>"Equals","label"=>mlang_message("EQUALS"));
+		$options[]=array("type"=>"More than ...","label"=>mlang_message("MORE_THAN"));
+		$options[]=array("type"=>"Less than ...","label"=>mlang_message("LESS_THAN"));
+		$options[]=array("type"=>"Equal or more than ...","label"=>mlang_message("EQUAL_OR_MORE"));
+		$options[]=array("type"=>"Equal or less than ...","label"=>mlang_message("EQUAL_OR_LESS"));
+		$options[]=array("type"=>"Between","label"=>mlang_message("BETWEEN"));
+		$options[]=array("type"=>"Empty","label"=>mlang_message("EMPTY"));
 	}
 	elseif($format==EDIT_FORMAT_LOOKUP_WIZARD)
 	{
 		$pSet = new ProjectSettings($table, PAGE_REPORT);
 		if($pSet->multiSelect($field))
-			$options[]=array("type"=>"Contains","label"=>"Contains");
+			$options[]=array("type"=>"Contains","label"=>mlang_message("CONTAINS"));
 		else
-			$options[]=array("type"=>"Equals","label"=>"Equals");
+			$options[]=array("type"=>"Equals","label"=>mlang_message("EQUALS"));
 	}
 	elseif($format==EDIT_FORMAT_TEXT_FIELD
 	|| $format==EDIT_FORMAT_TEXT_AREA
@@ -1700,19 +1700,19 @@ function GetAdvSearchOptions($table,$field)
 	|| $format==EDIT_FORMAT_HIDDEN
 	|| $format==EDIT_FORMAT_READONLY	)
 	{
-		$options[]=array("type"=>"Contains","label"=>"Contains");
-		$options[]=array("type"=>"Equals","label"=>"Equals");
-		$options[]=array("type"=>"Starts with ...","label"=>"Starts with");
-		$options[]=array("type"=>"More than ...","label"=>"More than");
-		$options[]=array("type"=>"Less than ...","label"=>"Less than");
-		$options[]=array("type"=>"Equal or more than ...","label"=>"Equal or more than");
-		$options[]=array("type"=>"Equal or less than ...","label"=>"Equal or less than");
-		$options[]=array("type"=>"Between","label"=>"Between");
-		$options[]=array("type"=>"Empty","label"=>"Empty");
+		$options[]=array("type"=>"Contains","label"=>mlang_message("CONTAINS"));
+		$options[]=array("type"=>"Equals","label"=>mlang_message("EQUALS"));
+		$options[]=array("type"=>"Starts with ...","label"=>mlang_message("STARTS_WITH"));
+		$options[]=array("type"=>"More than ...","label"=>mlang_message("MORE_THAN"));
+		$options[]=array("type"=>"Less than ...","label"=>mlang_message("LESS_THAN"));
+		$options[]=array("type"=>"Equal or more than ...","label"=>mlang_message("EQUAL_OR_MORE"));
+		$options[]=array("type"=>"Equal or less than ...","label"=>mlang_message("EQUAL_OR_LESS"));
+		$options[]=array("type"=>"Between","label"=>mlang_message("BETWEEN"));
+		$options[]=array("type"=>"Empty","label"=>mlang_message("EMPTY"));
 	}
 	else
 	{
-		$options[]=array("type"=>"Equals","label"=>"Equals");
+		$options[]=array("type"=>"Equals","label"=>mlang_message("EQUALS"));
 }
 	return $options;
 }
@@ -1869,7 +1869,7 @@ title: '".jsreplace($strLabel)."',
 	}
 	);
 	return false;
-	\">&nbsp;"."More"."...</a>";
+	\">&nbsp;".mlang_message("MORE")."...</a>";
 	return $shortening.$link.$textbox;
 }
 

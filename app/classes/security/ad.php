@@ -213,7 +213,7 @@ class SecurityPluginAd extends SecurityPlugin {
 		$filter = $this->getLoginFilter( $loginUsername );
 		$entries = $this->ldapObj->runner_ldap_getData( $filter, $this->ldapBaseDN, $this->ldapLoginAttrs );
 		if( !$entries ) {
-			$this->error = "Invalid Login"; //"Invalid Login";
+			$this->error = mlang_message("INVALID_LOGIN"); //"Invalid Login";
 			return false;
 		}
 

@@ -183,7 +183,7 @@ else
 		header("Location: ".GetTableLink("login", "", "message=expired"));
 		return;
 	} elseif ( $rpt_array['settings']['status'] == "private" && $rpt_array['owner'] != Security::getUserName() ) {
-		echo "<p>"."You don't have permissions to view this report"."</p>";
+		echo "<p>".mlang_message("WR_REPORT_NO_PERMISS")."</p>";
 		exit();
 	}
 	if (pre8count(GetUserGroups()) > 1) {
@@ -192,7 +192,7 @@ else
 		foreach ( $arr_reports as $rpt ) {
 			if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $rpt_array['settings']['name']==$rpt["name"])
 			{
-				echo "<p>"."You don't have permissions to view this report"."</p>";
+				echo "<p>".mlang_message("WR_REPORT_NO_PERMISS")."</p>";
 				exit();
 			}
 		}
@@ -945,7 +945,7 @@ if($cross_table!="true")
 						{
 							if(is_wr_custom())
 							{
-								$value = "LONG BINARY DATA - CANNOT BE DISPLAYED";
+								$value = mlang_message("LONG_BINARY");
 							}
 							else
 							{
@@ -2289,7 +2289,7 @@ if( $grid_row["data"] )
 else
 {
 	$xt->assign("message_block", true);
-	$xt->assign("message","No results found.");
+	$xt->assign("message",mlang_message("NO_RECORDS"));
 }
 $xt->assign("top_menu_block", true);
 $strSQL=$_SESSION[$sessPrefix."_sql"];
@@ -2390,6 +2390,18 @@ if($_SESSION["back_to_menu"])
 else
 	$xt->assign("back_to_menu", false);
 
+$param = "";
+if( $rname )
+	$param = "rname=".$rname;
+if( postvalue("edit")=="style" )
+{
+	if($param)
+		$param.= "&edit=style";
+	else
+		$param.= "edit=style";
+}
+
+SetLangVars($xt,"dreport","",$param);
 
 if(!$editmode)
 {

@@ -59,7 +59,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Profile","hidden":"{$item_hide_user_fields_title}","fontSize":24,"isHtml":true},
+			{"text":"{mlang_message PROFILE}","hidden":"{$item_hide_user_fields_title}","fontSize":24,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

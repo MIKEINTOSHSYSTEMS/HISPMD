@@ -26,7 +26,7 @@ if (@$_SESSION['webreports']['settings']['title'] != "") {
 	$title=@$_SESSION['webreports']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,25)."...";
-	$xt->assign("report_title",", "."Title".": ".$title);
+	$xt->assign("report_title",", ".mlang_message("WR_TITLE").": ".$title);
 } else {
 	$xt->assign("report_title","");
 }
@@ -35,7 +35,7 @@ if (@$_SESSION['webreports']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,25)."...";
 
-	$xt->assign("report_table",", "."Table".": ".$stable);
+	$xt->assign("report_table",", ".mlang_message("WR_TABLE").": ".$stable);
 } else {
 	$xt->assign("report_table","");
 }
@@ -282,7 +282,7 @@ $b_includes .= '
 						if(id=="savebtn")
 						{
 							$("#alert")
-								.html("<p>'."Report Saved".'</p>")
+								.html("<p>'.mlang_message("WR_REPORT_SAVED").'</p>")
 								.dialog("option", "close", function(){
 									window.location = "'.GetTableLink("webreport").'";
 								})
@@ -295,7 +295,7 @@ $b_includes .= '
 					}
 				},
 				error: function() {
-					$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
+					$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
 				}
 			});
 		}

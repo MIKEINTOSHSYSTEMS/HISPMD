@@ -80,10 +80,10 @@
 ">
 		 
 		<span data-itemtype="session_expired_message" data-itemid="session_expired_message" {$item_session_expired_message} data-pageid="{$pageid}" data-page=".global_session_expired" data-small >
-Do you want to continue your session?</span>
+{mlang_message SESSION_EXPIRED_TITLE}</span>
 	 
 		<span data-itemtype="session_expired_comment" data-itemid="session_expired_comment" {$item_session_expired_comment} data-pageid="{$pageid}" > 
-	For security reasons, your session will time out in %seconds% seconds unless you continue</span>
+	{mlang_message SESSION_EXPIRED_COMMENT}</span>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -102,12 +102,12 @@ Do you want to continue your session?</span>
 								<span data-itemtype="expired_stay" data-itemid="expired_stay" {$item_expired_stay} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="stayLogged{$id}" >
-							Continue session			</a>
+							{mlang_message SESSION_EXPIRED_CONTINUE}			</a>
 </span>
 								<span data-itemtype="expired_logout" data-itemid="expired_logout" {$item_expired_logout} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="logout{$id}" >
-							Log out			</a>
+							{mlang_message LOG_OUT}			</a>
 </span>
 					</div>
 		</td>

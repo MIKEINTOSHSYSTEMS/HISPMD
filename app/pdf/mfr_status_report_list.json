@@ -158,7 +158,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -536,7 +536,7 @@ pdfDocument = {
 				
 			{BEGIN count_fieldfootercolumn}
 			{BEGIN count_showtotal}
-				{ text: 'Total ' },
+				{ text: '{mlang_message TOTAL} ' },
 				{"text":{$count_total},"hidden":"{$item_hide_simple_grid_field6}"}
 			{END count_showtotal}
 		{END count_fieldfootercolumn},

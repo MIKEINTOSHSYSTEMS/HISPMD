@@ -24,7 +24,7 @@ if (@$_SESSION['webcharts']['settings']['title'] != "") {
 	$title=@$_SESSION['webcharts']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,0,25)."...";
-	$xt->assign("chart_title",", "."Title".": ".$title);
+	$xt->assign("chart_title",", ".mlang_message("WR_TITLE").": ".$title);
 } else {
 	$xt->assign("chart_title","");
 }
@@ -33,7 +33,7 @@ if (@$_SESSION['webcharts']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,0,25)."...";
 
-	$xt->assign("chart_table",", "."Table".": ".$stable);
+	$xt->assign("chart_table",", ".mlang_message("WR_TABLE").": ".$stable);
 } else {
 	$xt->assign("chart_table","");
 }
@@ -310,7 +310,7 @@ $b_includes .= '
 						if( id == "savebtn")
 						{
 							$("#alert")
-								.html("<p>'."Chart Saved".'</p>")
+								.html("<p>'.mlang_message("WR_CHART_SAVED").'</p>")
 								.dialog("option", "close", function(){
 									window.location = "'.GetTableLink("webreport").'";
 								})
@@ -321,11 +321,11 @@ $b_includes .= '
 							$("#preview").click();
 						}
 					} else {
-						$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
+						$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
 					}
 				},
 				error: function() {
-					$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
+					$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
 				}
 			});
 		}

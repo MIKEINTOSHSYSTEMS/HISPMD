@@ -27,7 +27,7 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
 	                foreach ( $arr_reports as $rpt ) {
         	            if (( $rpt["owner"] != Security::getUserName()|| $rpt["owner"] == "") && $rpt["view"]==0 && $_SESSION['webreports']['settings']['name']==$rpt["name"])
                 	    {
-                        	echo "<p>"."You don't have permissions to view this report"."</p>";
+                        	echo "<p>".mlang_message("WR_REPORT_NO_PERMISS")."</p>";
 	                        exit();
         	            }
                 	}
@@ -50,7 +50,7 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
         	        foreach ( $arr_reports as $rpt ) {
                 	    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $_SESSION['webcharts']['settings']['name']==$rpt["name"])
                     	{
-                        	echo "<p>".""."</p>";
+                        	echo "<p>".mlang_message("WR_CHART_NO_PERMISS")."</p>";
 	                        exit();
         	            }
                 	}

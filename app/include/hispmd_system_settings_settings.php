@@ -49,6 +49,36 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmd_system_settings["English"]))
 		$tdatahispmd_system_settings[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshispmd_system_settings["Amharic"] = array();
+	$fieldToolTipshispmd_system_settings["Amharic"] = array();
+	$placeHoldershispmd_system_settings["Amharic"] = array();
+	$pageTitleshispmd_system_settings["Amharic"] = array();
+	$fieldLabelshispmd_system_settings["Amharic"]["ID"] = "ID";
+	$fieldToolTipshispmd_system_settings["Amharic"]["ID"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["ID"] = "";
+	$fieldLabelshispmd_system_settings["Amharic"]["TYPE"] = "TYPE";
+	$fieldToolTipshispmd_system_settings["Amharic"]["TYPE"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["TYPE"] = "";
+	$fieldLabelshispmd_system_settings["Amharic"]["NAME"] = "NAME";
+	$fieldToolTipshispmd_system_settings["Amharic"]["NAME"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["NAME"] = "";
+	$fieldLabelshispmd_system_settings["Amharic"]["USERNAME"] = "USERNAME";
+	$fieldToolTipshispmd_system_settings["Amharic"]["USERNAME"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["USERNAME"] = "";
+	$fieldLabelshispmd_system_settings["Amharic"]["COOKIE"] = "COOKIE";
+	$fieldToolTipshispmd_system_settings["Amharic"]["COOKIE"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["COOKIE"] = "";
+	$fieldLabelshispmd_system_settings["Amharic"]["SEARCH"] = "SEARCH";
+	$fieldToolTipshispmd_system_settings["Amharic"]["SEARCH"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["SEARCH"] = "";
+	$fieldLabelshispmd_system_settings["Amharic"]["TABLENAME"] = "TABLENAME";
+	$fieldToolTipshispmd_system_settings["Amharic"]["TABLENAME"] = "";
+	$placeHoldershispmd_system_settings["Amharic"]["TABLENAME"] = "";
+	if (count($fieldToolTipshispmd_system_settings["Amharic"]))
+		$tdatahispmd_system_settings[".isUseToolTips"] = true;
+}
 
 
 	$tdatahispmd_system_settings[".NCSearch"] = true;

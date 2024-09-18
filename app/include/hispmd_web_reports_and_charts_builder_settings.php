@@ -22,6 +22,10 @@ if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelshispmd_web_reports_and_charts_builder["English"] = array();
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshispmd_web_reports_and_charts_builder["Amharic"] = array();
+}
 
 /*
 //	search fields

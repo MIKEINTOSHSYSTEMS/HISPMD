@@ -208,7 +208,7 @@ class MembersPage_AD extends ListPage_Lookup
 	
 	function noRecordsMessage() {
 		if( $this->pSet->hideAdGroupsUntilSearch() && !$this->isSearchFunctionalityActivated() ) {
-			return "Nothing to see. Run some search.";
+			return mlang_message("NOTHING_TO_SEE");
 		}
 
 		return parent::noRecordsMessage();

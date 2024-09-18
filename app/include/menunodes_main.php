@@ -130,7 +130,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MOH Indicators Data Chart";
+	$menuNode["title"] = GetTableCaption("MOH_Indicators_data_Chart");
 
 
 
@@ -182,7 +182,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MOH Indicators Data Report";
+	$menuNode["title"] = GetTableCaption("MOH_Indicators_Data_Report");
 
 
 
@@ -650,7 +650,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Hisgovernance";
+	$menuNode["title"] = GetTableCaption("public_hisgovernance");
 
 
 
@@ -676,7 +676,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Hispartners";
+	$menuNode["title"] = GetTableCaption("public_hispartners");
 
 
 
@@ -702,7 +702,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Healthfacilities";
+	$menuNode["title"] = GetTableCaption("public_healthfacilities");
 
 
 
@@ -728,7 +728,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Healthunits";
+	$menuNode["title"] = GetTableCaption("public_healthunits");
 
 
 
@@ -754,7 +754,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Workforce";
+	$menuNode["title"] = GetTableCaption("public_workforce");
 
 
 
@@ -806,7 +806,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Datause";
+	$menuNode["title"] = GetTableCaption("public_datause");
 
 
 
@@ -832,7 +832,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Publications";
+	$menuNode["title"] = GetTableCaption("public_publications");
 
 
 
@@ -858,7 +858,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Research";
+	$menuNode["title"] = GetTableCaption("public_research");
 
 
 
@@ -910,7 +910,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Dataquality";
+	$menuNode["title"] = GetTableCaption("public_dataquality");
 
 
 
@@ -962,7 +962,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Digitalhealth";
+	$menuNode["title"] = GetTableCaption("public_digitalhealth");
 
 
 
@@ -988,7 +988,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Digitalhealthapps";
+	$menuNode["title"] = GetTableCaption("public_digitalhealthapps");
 
 
 
@@ -1040,7 +1040,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Regions";
+	$menuNode["title"] = GetTableCaption("public_regions");
 
 
 
@@ -1092,7 +1092,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Financialresources";
+	$menuNode["title"] = GetTableCaption("public_financialresources");
 
 
 
@@ -1170,7 +1170,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Web Reports";
+	$menuNode["title"] = mlang_message("WEBREPORTS_SHORT");
 
 
 
@@ -1326,7 +1326,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Analytics";
+	$menuNode["title"] = GetTableCaption("DHIS2_Analytics");
 
 
 
@@ -1352,7 +1352,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Analytics Chart";
+	$menuNode["title"] = GetTableCaption("DHIS2_Analytics_Chart");
 
 
 
@@ -1378,7 +1378,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Analytics Report";
+	$menuNode["title"] = GetTableCaption("DHIS2_Analytics_Report");
 
 
 
@@ -1456,7 +1456,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Reporting Rate";
+	$menuNode["title"] = GetTableCaption("DHIS2_Reporting_Rate");
 
 
 
@@ -1482,7 +1482,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Reporting Rate Chart";
+	$menuNode["title"] = GetTableCaption("DHIS2_Reporting_Rate_Chart");
 
 
 
@@ -1508,7 +1508,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Reporting Rate Report";
+	$menuNode["title"] = GetTableCaption("DHIS2_Reporting_Rate_Report");
 
 
 
@@ -1534,7 +1534,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Reporting Rates Chart";
+	$menuNode["title"] = GetTableCaption("DHIS2_Reporting_Rates_Chart");
 
 
 
@@ -1612,7 +1612,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnits Distribution";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnits_Distribution");
 
 
 
@@ -1638,7 +1638,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Country";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Country");
 
 
 
@@ -1664,7 +1664,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Regions";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Regions");
 
 
 
@@ -1690,7 +1690,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Zone";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Zone");
 
 
 
@@ -1716,7 +1716,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Woredas";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Woredas");
 
 
 
@@ -1742,7 +1742,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Groups";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Groups");
 
 
 
@@ -1768,7 +1768,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Group Sets";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Group_Sets");
 
 
 
@@ -1820,7 +1820,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 AIO OrgUnit";
+	$menuNode["title"] = GetTableCaption("DHIS2_AIO_OrgUnit");
 
 
 
@@ -1846,7 +1846,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 OrgUnit Distributions";
+	$menuNode["title"] = GetTableCaption("DHIS2_OrgUnit_Distributions");
 
 
 
@@ -1924,7 +1924,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Reports";
+	$menuNode["title"] = GetTableCaption("DHIS2_Reports");
 
 
 
@@ -1950,7 +1950,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Indicator";
+	$menuNode["title"] = GetTableCaption("DHIS2_Indicator");
 
 
 
@@ -1976,7 +1976,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Datasets";
+	$menuNode["title"] = GetTableCaption("DHIS2_Datasets");
 
 
 
@@ -2002,7 +2002,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Organisation Unit";
+	$menuNode["title"] = GetTableCaption("DHIS2_Organisation_Unit");
 
 
 
@@ -2028,7 +2028,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "DHIS2 Periods";
+	$menuNode["title"] = GetTableCaption("public_dhis2_periods");
 
 
 
@@ -2132,7 +2132,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "PRISM Dashboard";
+	$menuNode["title"] = GetTableCaption("PRISM_Dashboard");
 
 
 
@@ -2470,7 +2470,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR AIO Dashboard";
+	$menuNode["title"] = GetTableCaption("MFR_AIO_Dashboard");
 
 
 
@@ -2678,7 +2678,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Regions";
+	$menuNode["title"] = GetTableCaption("MFR_Regions");
 
 
 
@@ -2704,7 +2704,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Zones";
+	$menuNode["title"] = GetTableCaption("MFR_Zones");
 
 
 
@@ -2730,7 +2730,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Woredas";
+	$menuNode["title"] = GetTableCaption("MFR_Woredas");
 
 
 
@@ -2756,7 +2756,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Facility Types";
+	$menuNode["title"] = GetTableCaption("MFR_Facility_Types");
 
 
 
@@ -2782,7 +2782,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Status";
+	$menuNode["title"] = GetTableCaption("MFR_Status");
 
 
 
@@ -2808,7 +2808,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Operational Statuses";
+	$menuNode["title"] = GetTableCaption("MFR_Operational_Statuses");
 
 
 
@@ -2886,7 +2886,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Mfr Region";
+	$menuNode["title"] = GetTableCaption("public_mfr_region");
 
 
 
@@ -2912,7 +2912,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Mfr Zone";
+	$menuNode["title"] = GetTableCaption("public_mfr_zone");
 
 
 
@@ -2938,7 +2938,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Mfr Woreda";
+	$menuNode["title"] = GetTableCaption("public_mfr_woreda");
 
 
 
@@ -3224,7 +3224,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Dashboard Report";
+	$menuNode["title"] = GetTableCaption("MFR_Dashboard_Report");
 
 
 
@@ -3250,7 +3250,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Status Report";
+	$menuNode["title"] = GetTableCaption("MFR_Status_Report");
 
 
 
@@ -3276,7 +3276,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Region Report";
+	$menuNode["title"] = GetTableCaption("MFR_Region_Report");
 
 
 
@@ -3302,7 +3302,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Zone Report";
+	$menuNode["title"] = GetTableCaption("MFR_Zone_Report");
 
 
 
@@ -3328,7 +3328,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Woreda Report";
+	$menuNode["title"] = GetTableCaption("MFR_Woreda_Report");
 
 
 
@@ -3354,7 +3354,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Facilities";
+	$menuNode["title"] = GetTableCaption("MFR_Facilities");
 
 
 
@@ -3380,7 +3380,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MFR Facility";
+	$menuNode["title"] = GetTableCaption("MFR_Facility");
 
 
 
@@ -3614,7 +3614,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "System Users Activity Dashboard";
+	$menuNode["title"] = GetTableCaption("System_Users_Activity_Dashboard");
 
 
 
@@ -3770,7 +3770,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Timetracker";
+	$menuNode["title"] = GetTableCaption("public_timetracker");
 
 
 
@@ -3848,7 +3848,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Ai Data Assistant";
+	$menuNode["title"] = GetTableCaption("public_ai_data_assistant");
 
 
 

@@ -34,7 +34,7 @@ class DiskFileSystem extends RunnerFileSystem {
 			return null;
 		}
 		if(!makeSurePathExists( $path )) {
-			$this->errorMessage = "Upload folder doesn't exist";
+			$this->errorMessage = mlang_message("ERROR_NO_UPLOAD_FOLDER");
 			return null;
 		}
 	
@@ -60,7 +60,7 @@ class DiskFileSystem extends RunnerFileSystem {
 			return null;
 		}
 		if(!makeSurePathExists( $path )) {
-			$this->errorMessage = "Upload folder doesn't exist";
+			$this->errorMessage = mlang_message("ERROR_NO_UPLOAD_FOLDER");
 			return null;
 		}
 	

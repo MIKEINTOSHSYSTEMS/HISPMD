@@ -28,7 +28,7 @@ $xml = new xml();
 
 if (!postvalue('str_xml'))
 {
-	echo "Error: Script didn't get data. Try once again.";
+	echo mlang_message("WR_ERROR_DATA");
 	exit(0);
 }
 

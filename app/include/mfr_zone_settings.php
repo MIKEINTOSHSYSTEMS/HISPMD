@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_zone["English"]))
 		$tdatamfr_zone[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmfr_zone["Amharic"] = array();
+	$fieldToolTipsmfr_zone["Amharic"] = array();
+	$placeHoldersmfr_zone["Amharic"] = array();
+	$pageTitlesmfr_zone["Amharic"] = array();
+	$fieldLabelsmfr_zone["Amharic"]["zone"] = "ዞን";
+	$fieldToolTipsmfr_zone["Amharic"]["zone"] = "";
+	$placeHoldersmfr_zone["Amharic"]["zone"] = "";
+	$fieldLabelsmfr_zone["Amharic"]["lat"] = "ላቲ";
+	$fieldToolTipsmfr_zone["Amharic"]["lat"] = "";
+	$placeHoldersmfr_zone["Amharic"]["lat"] = "";
+	$fieldLabelsmfr_zone["Amharic"]["lng"] = "Lng";
+	$fieldToolTipsmfr_zone["Amharic"]["lng"] = "";
+	$placeHoldersmfr_zone["Amharic"]["lng"] = "";
+	$fieldLabelsmfr_zone["Amharic"]["count"] = "ቁጠር";
+	$fieldToolTipsmfr_zone["Amharic"]["count"] = "";
+	$placeHoldersmfr_zone["Amharic"]["count"] = "";
+	if (count($fieldToolTipsmfr_zone["Amharic"]))
+		$tdatamfr_zone[".isUseToolTips"] = true;
+}
 
 
 	$tdatamfr_zone[".NCSearch"] = true;

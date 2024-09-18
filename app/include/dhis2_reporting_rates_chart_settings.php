@@ -55,6 +55,42 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_reporting_rates_chart["English"]))
 		$tdatadhis2_reporting_rates_chart[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"] = array();
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"] = array();
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"] = array();
+	$pageTitlesdhis2_reporting_rates_chart["Amharic"] = array();
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["title"] = "ርዕስ";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["title"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["title"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["organisationUnit"] = "የድርጅት ክፍል";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["organisationUnit"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["organisationUnit"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["dataSet"] = "የውሂብ ስብስብ";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["dataSet"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["dataSet"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["reportPeriod"] = "የሪፖርት ጊዜ";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["reportPeriod"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["reportPeriod"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["ACTUAL_REPORTS"] = "ትክክለኛ ሪፖርቶች";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["ACTUAL_REPORTS"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["ACTUAL_REPORTS"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["EXPECTED_REPORTS"] = "የሚጠበቁ ሪፖርቶች";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["EXPECTED_REPORTS"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["EXPECTED_REPORTS"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["REPORTING_RATE"] = "የሪፖርት ደረጃ (%)";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["REPORTING_RATE"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["REPORTING_RATE"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["ACTUAL_REPORTS_ON_TIME"] = "ትክክለኛ ሪፖርቶች በሰዓቱ";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["ACTUAL_REPORTS_ON_TIME"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["ACTUAL_REPORTS_ON_TIME"] = "";
+	$fieldLabelsdhis2_reporting_rates_chart["Amharic"]["REPORTING_RATE_ON_TIME"] = "የሪፖርት መጠን በሰዓቱ (%)";
+	$fieldToolTipsdhis2_reporting_rates_chart["Amharic"]["REPORTING_RATE_ON_TIME"] = "";
+	$placeHoldersdhis2_reporting_rates_chart["Amharic"]["REPORTING_RATE_ON_TIME"] = "";
+	if (count($fieldToolTipsdhis2_reporting_rates_chart["Amharic"]))
+		$tdatadhis2_reporting_rates_chart[".isUseToolTips"] = true;
+}
 
 
 	$tdatadhis2_reporting_rates_chart[".NCSearch"] = true;

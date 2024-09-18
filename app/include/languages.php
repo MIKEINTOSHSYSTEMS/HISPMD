@@ -1,6 +1,8 @@
 <?php
 
 $langfile="";
+if(mlang_getcurrentlang() == "Amharic")
+	$langfile="Amharic.php";
 if(mlang_getcurrentlang() == "English")
 	$langfile="English.php";
 

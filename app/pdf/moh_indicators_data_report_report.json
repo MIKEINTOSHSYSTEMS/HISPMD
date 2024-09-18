@@ -215,7 +215,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -837,11 +837,11 @@ pdfDocument = {
 				},
 							
 																																							{
-					text: ['Summary for {$jslabel MOH_Indicators_Data_Report year } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report year } ', 
 						{$year_grval},
 						' - ', 
 						{$groupyear_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_5',
 					colSpan: 8				},
@@ -871,11 +871,11 @@ pdfDocument = {
 				},
 							
 																																{
-					text: ['Summary for {$jslabel MOH_Indicators_Data_Report facility_type_id } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report facility_type_id } ', 
 						{$facility_type_id_grval},
 						' - ', 
 						{$groupfacility_type_id_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_4',
 					colSpan: 9				},
@@ -901,11 +901,11 @@ pdfDocument = {
 				},
 							
 																									{
-					text: ['Summary for {$jslabel MOH_Indicators_Data_Report scope_id } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report scope_id } ', 
 						{$scope_id_grval},
 						' - ', 
 						{$groupscope_id_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_3',
 					colSpan: 10				},
@@ -927,11 +927,11 @@ pdfDocument = {
 				},
 							
 																		{
-					text: ['Summary for {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
 						{$indicator_id_grval},
 						' - ', 
 						{$groupindicator_id_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_2',
 					colSpan: 11				},
@@ -949,11 +949,11 @@ pdfDocument = {
 				[
 			
 											{
-					text: ['Summary for {$jslabel MOH_Indicators_Data_Report indicator_group_id } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report indicator_group_id } ', 
 						{$indicator_group_id_grval},
 						' - ', 
 						{$groupindicator_group_id_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_1',
 					colSpan: 12				},
@@ -1041,7 +1041,7 @@ pdfDocument = {
 
 	[
 		{	
-			text: 'Page summary {$page_total_cnt} - records total',
+			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
 			colSpan: 12,
 			style: 'pagesummary',
 		}
@@ -1056,7 +1056,7 @@ pdfDocument = {
 {BEGIN global_summary}
 	[
 		{
-			text: 'Global summary {$global_total_cnt} - records total',
+			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
 			colSpan: 12,
 			style: 'globalsummary',
 		}

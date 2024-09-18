@@ -26,7 +26,7 @@ class ListPage_DPPopup extends ListPage_DPInline
 	
 		$returnJSON["success"] = true;
 		$returnJSON["counter"] = postvalue("counter");
-		$detFoundMessage = "Details found";
+		$detFoundMessage = mlang_message("DETAILS_FOUND");
 		$returnJSON["body"] = "<span>" . $detFoundMessage . ": <strong>" . $this->numRowsFromSQL . "</strong></span>" .$this->xt->fetch_loaded("grid_block");
 		
 		echo printJSON($returnJSON);

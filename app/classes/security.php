@@ -229,7 +229,7 @@ class Security
 	 */
 	public static function sendPermissionError( $message = '' )
 	{
-		echo printJSON(array("success" => false, "message" => "You don't have permissions to access this table" . " " .$message ) );
+		echo printJSON(array("success" => false, "message" => mlang_message("NO_PERMISSIONS") . " " .$message ) );
 		exit();
 	}
 
@@ -1396,7 +1396,7 @@ class Security
 		if( $userId == "" ) {
 			$userId = "Guest";
 			$accessLevel = ACCESS_LEVEL_GUEST;
-			$displayName = "Guest";
+			$displayName = mlang_message("AA_GROUP_GUEST");
 		}
 		if( $displayName == "" ) {
 			$displayName = $userId;

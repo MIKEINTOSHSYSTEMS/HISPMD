@@ -1,7 +1,7 @@
 <!doctype html>
 <html {$html_attrs}>
 <head>
-<title>{$reportTitle}: Advanced search page</title>
+<title>{$reportTitle}: {mlang_message ADV_SEARCH}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link REL="stylesheet" href="styles/default.css" type="text/css">
 <link REL="stylesheet" href="styles/{$wr_pagestylepath}/style.css" type="text/css">
@@ -16,15 +16,15 @@
 				<div class="rnr-s-1 {$wr_pagestylepath}">
 					<div class="rnr-c rnr-cv">
 						<div class="style2" align=center>
-							{$reportTitle} - Advanced search
+							{$reportTitle} - {mlang_message ADVANCED_SEARCH}
 						</div>
 						{BEGIN conditions_block}
 						<div  class="rnr-brickcontents style1 rnr-b-srchconditions ">
 							<center>
-							<span class=fieldname>Search for:</span>	
-							<input type="radio" class="rnr-radio-button" id="all_checkbox" name="type" {$all_checkbox}> All conditions
+							<span class=fieldname>{mlang_message SEARCH_FOR}:</span>	
+							<input type="radio" class="rnr-radio-button" id="all_checkbox" name="type" {$all_checkbox}> {mlang_message ALL_CONDITIONS}
 							&nbsp;&nbsp;&nbsp;
-							<input type="radio" class="rnr-radio-button" id="any_checkbox" name="type" {$any_checkbox}> Any condition
+							<input type="radio" class="rnr-radio-button" id="any_checkbox" name="type" {$any_checkbox}> {mlang_message ANY_CONDITION}
 							</center>
 						</div>
 						{END conditions_block}
@@ -35,7 +35,7 @@
 										<table class="fieldGrid">
 											<tr>
 												<td>&nbsp;</td>
-												<td>NOT</td>
+												<td>{mlang_message SEARCH_NOT}</td>
 												<td colspan=3>&nbsp; </td>
 											</tr>
 											{BEGIN page_order_fields}
@@ -63,13 +63,13 @@
 									</div>
 									<div id="btns" class="style2" align=center>
 										{BEGIN search_button}
-										<a href="#" class="rnr-button" id="searchButton1" {$searchbutton_attrs}>Search</a>
+										<a href="#" class="rnr-button" id="searchButton1" {$searchbutton_attrs}>{mlang_message SEARCH}</a>
 										{END search_button}
 										{BEGIN reset_button}
-										<a href="#" class="rnr-button" id="resetButton1" {$resetbutton_attrs}>Reset</a>
+										<a href="#" class="rnr-button" id="resetButton1" {$resetbutton_attrs}>{mlang_message RESET}</a>
 										{END reset_button}
 										{BEGIN back_button}
-										<a href="#" class="rnr-button" id="backButton1" {$backbutton_attrs}>Back to list</a>
+										<a href="#" class="rnr-button" id="backButton1" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</a>
 										{END back_button}
 								</div>
 							</div>

@@ -88,7 +88,7 @@ $b_includes .= '$("#backbtn").click(function(){
 	});
 	$("#deletesql").click(function(){
 		$("#sql_list").change();
-		mess="<p>'."Do you really want to delete custom query %s ?".'</p>";
+		mess="<p>'.mlang_message("WR_DELETE_QUERY").'</p>";
 		mess=mess.replace("%s",$("#sql_list option:selected").text());
 		$("#alert")
 			.html(mess)
@@ -111,7 +111,7 @@ $b_includes .= '$("#backbtn").click(function(){
 							}
 						},
 						error: function() {
-							$("#alert").html("<p>'."Try again later".'</p>").dialog("open");
+							$("#alert").html("<p>'.mlang_message("WR_TRY_LATER").'</p>").dialog("open");
 						}
 					});				
 				}

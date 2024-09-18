@@ -107,7 +107,7 @@ class SearchPanelSimple {
 		$srchPanelAttrs = $this->searchClauseObj->getSrchPanelAttrs();
 		// assign the 'Show/Hide options' button 
 		$showHideOpt_mess = $srchPanelAttrs['ctrlTypeComboStatus'] ? 
-			"Hide options" : "Show options";		
+			mlang_message("SEARCH_HIDE_OPTIONS_BUTTON") : mlang_message("SEARCH_SHOW_OPTIONS_BUTTON");		
 		$this->xt->assign("showHideOpt_mess", $showHideOpt_mess);
 		$this->xt->assign("showHideCtrlsOpt_attrs", 'style="display: none;"');
 		

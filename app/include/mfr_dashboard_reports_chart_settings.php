@@ -37,6 +37,24 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_dashboard_reports_chart["English"]))
 		$tdatamfr_dashboard_reports_chart[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmfr_dashboard_reports_chart["Amharic"] = array();
+	$fieldToolTipsmfr_dashboard_reports_chart["Amharic"] = array();
+	$placeHoldersmfr_dashboard_reports_chart["Amharic"] = array();
+	$pageTitlesmfr_dashboard_reports_chart["Amharic"] = array();
+	$fieldLabelsmfr_dashboard_reports_chart["Amharic"]["type"] = "ዓይነት";
+	$fieldToolTipsmfr_dashboard_reports_chart["Amharic"]["type"] = "";
+	$placeHoldersmfr_dashboard_reports_chart["Amharic"]["type"] = "";
+	$fieldLabelsmfr_dashboard_reports_chart["Amharic"]["name"] = "ስም";
+	$fieldToolTipsmfr_dashboard_reports_chart["Amharic"]["name"] = "";
+	$placeHoldersmfr_dashboard_reports_chart["Amharic"]["name"] = "";
+	$fieldLabelsmfr_dashboard_reports_chart["Amharic"]["count"] = "ቁጠር";
+	$fieldToolTipsmfr_dashboard_reports_chart["Amharic"]["count"] = "";
+	$placeHoldersmfr_dashboard_reports_chart["Amharic"]["count"] = "";
+	if (count($fieldToolTipsmfr_dashboard_reports_chart["Amharic"]))
+		$tdatamfr_dashboard_reports_chart[".isUseToolTips"] = true;
+}
 
 
 	$tdatamfr_dashboard_reports_chart[".NCSearch"] = true;

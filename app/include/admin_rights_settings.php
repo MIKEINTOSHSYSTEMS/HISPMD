@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsadmin_rights["English"]))
 		$tdataadmin_rights[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsadmin_rights["Amharic"] = array();
+	$fieldToolTipsadmin_rights["Amharic"] = array();
+	$placeHoldersadmin_rights["Amharic"] = array();
+	$pageTitlesadmin_rights["Amharic"] = array();
+	$fieldLabelsadmin_rights["Amharic"]["TableName"] = "Table Name";
+	$fieldToolTipsadmin_rights["Amharic"]["TableName"] = "";
+	$placeHoldersadmin_rights["Amharic"]["TableName"] = "";
+	$fieldLabelsadmin_rights["Amharic"]["GroupID"] = "Group ID";
+	$fieldToolTipsadmin_rights["Amharic"]["GroupID"] = "";
+	$placeHoldersadmin_rights["Amharic"]["GroupID"] = "";
+	$fieldLabelsadmin_rights["Amharic"]["AccessMask"] = "Access Mask";
+	$fieldToolTipsadmin_rights["Amharic"]["AccessMask"] = "";
+	$placeHoldersadmin_rights["Amharic"]["AccessMask"] = "";
+	$fieldLabelsadmin_rights["Amharic"]["Page"] = "Page";
+	$fieldToolTipsadmin_rights["Amharic"]["Page"] = "";
+	$placeHoldersadmin_rights["Amharic"]["Page"] = "";
+	if (count($fieldToolTipsadmin_rights["Amharic"]))
+		$tdataadmin_rights[".isUseToolTips"] = true;
+}
 
 
 	$tdataadmin_rights[".NCSearch"] = true;

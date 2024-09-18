@@ -251,7 +251,7 @@ class SearchControl
 		$text = '<span class="glyphicon glyphicon-remove"></span>';
 		
 		$html = '<a id = "'.$this->getDelButtonId($fName, $recId).'" ctrlId="'.$recId.'" fName="'.GoodFieldName($fName)
-			.'" class="searchPanelButton" href="#" title="'."Delete control".'">' . $text . '</a>';
+			.'" class="searchPanelButton" href="#" title="'.mlang_message("DELETE_CONTROL").'">' . $text . '</a>';
 		return $html;
 	}
 	
@@ -352,12 +352,12 @@ class SearchControl
 	 * get markup of simple search type control 
 	 */
 	public static function getSimpleSearchTypeCombo( $selOpt, $not, $id ) {
-		$options = "<option value=\"Contains\" ".( $selOpt == "Contains" && !$not ? "selected" : "" ).">"."Contains"."</option>";
-		$options.= "<option value=\"Equals\" ".( $selOpt == "Equals" && !$not ? "selected" : "" ).">"."Equals"."</option>";
-		$options.= "<option value=\"Starts with\" ".( $selOpt == "Starts with" && !$not ? "selected" : "" ).">"."Starts with"."</option>";
-		$options.= "<option value=\"More than\" ".( $selOpt == "More than" && !$not ? "selected" : "" ).">"."More than"."</option>";
-		$options.= "<option value=\"Less than\" ".( $selOpt == "Less than" && !$not ? "selected" : "" ).">"."Less than"."</option>";
-		$options.= "<option value=\"Empty\" ".( $selOpt == "Empty" && !$not ? "selected" : "" ).">"."Empty"."</option>";
+		$options = "<option value=\"Contains\" ".( $selOpt == "Contains" && !$not ? "selected" : "" ).">".mlang_message("CONTAINS")."</option>";
+		$options.= "<option value=\"Equals\" ".( $selOpt == "Equals" && !$not ? "selected" : "" ).">".mlang_message("EQUALS")."</option>";
+		$options.= "<option value=\"Starts with\" ".( $selOpt == "Starts with" && !$not ? "selected" : "" ).">".mlang_message("STARTS_WITH")."</option>";
+		$options.= "<option value=\"More than\" ".( $selOpt == "More than" && !$not ? "selected" : "" ).">".mlang_message("MORE_THAN")."</option>";
+		$options.= "<option value=\"Less than\" ".( $selOpt == "Less than" && !$not ? "selected" : "" ).">".mlang_message("LESS_THAN")."</option>";
+		$options.= "<option value=\"Empty\" ".( $selOpt == "Empty" && !$not ? "selected" : "" ).">".mlang_message("EMPTY")."</option>";
 		
 		return '<select class="form-control" id="simpleSrchTypeCombo'. $id .'" name="simpleSrchTypeCombo'. $id .'" size="1">' 
 			. $options . "</select>";
@@ -369,7 +369,7 @@ class SearchControl
 	public static function simpleSearchFieldCombo( $fNamesArr, $googleLikeFields, $selOpt, $tName, $id ) {
 		$options = "";
 		if( $googleLikeFields )
-			$options = '<option value="" >'."Any field".'</option>';
+			$options = '<option value="" >'.mlang_message("ANY_FIELD").'</option>';
 		
 		foreach( $fNamesArr as $fName ) {
 			$fLabel = GetFieldLabel( GoodFieldName( $tName ), GoodFieldName( $fName ) );

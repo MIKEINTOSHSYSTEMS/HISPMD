@@ -103,6 +103,90 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["English"]))
 		$tdataethprism_facility_level_rhis_performance_diagnostic[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"] = array();
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"] = array();
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"] = array();
+	$pageTitlesethprism_facility_level_rhis_performance_diagnostic["Amharic"] = array();
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["CompletionDate"] = "Completion Date";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["CompletionDate"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["CompletionDate"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["SubmissionDate"] = "Submission Date";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["SubmissionDate"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["SubmissionDate"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["starttime"] = "Starttime";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["starttime"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["starttime"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["endtime"] = "Endtime";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["endtime"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["endtime"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["deviceid"] = "Deviceid";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["deviceid"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["deviceid"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["subscriberid"] = "Subscriberid";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["subscriberid"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["subscriberid"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["simid"] = "Simid";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["simid"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["simid"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["devicephonenum"] = "Devicephonenum";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["devicephonenum"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["devicephonenum"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["username"] = "Username";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["username"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["username"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["duration"] = "Duration";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["duration"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["duration"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["caseid"] = "Caseid";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["caseid"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["caseid"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ104"] = "FQ104";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ104"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ104"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ101"] = "FQ101";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ101"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ101"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ102"] = "FQ102";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ102"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ102"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ103"] = "FQ103";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ103"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ103"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ105"] = "FQ105";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ105"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ105"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ106"] = "FQ106";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ106"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ106"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ107"] = "FQ107";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ107"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ107"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ108"] = "FQ108";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ108"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ108"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["siteid"] = "Siteid";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["siteid"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["siteid"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ109"] = "FQ109";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ109"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ109"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ110"] = "FQ110";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ110"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ110"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ111"] = "FQ111";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ111"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ111"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ112"] = "FQ112";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ112"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ112"] = "";
+	$fieldLabelsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ113"] = "FQ113";
+	$fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ113"] = "";
+	$placeHoldersethprism_facility_level_rhis_performance_diagnostic["Amharic"]["FQ113"] = "";
+	if (count($fieldToolTipsethprism_facility_level_rhis_performance_diagnostic["Amharic"]))
+		$tdataethprism_facility_level_rhis_performance_diagnostic[".isUseToolTips"] = true;
+}
 
 
 	$tdataethprism_facility_level_rhis_performance_diagnostic[".NCSearch"] = true;

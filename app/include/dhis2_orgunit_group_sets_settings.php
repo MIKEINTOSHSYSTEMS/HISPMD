@@ -34,6 +34,21 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_orgunit_group_sets["English"]))
 		$tdatadhis2_orgunit_group_sets[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsdhis2_orgunit_group_sets["Amharic"] = array();
+	$fieldToolTipsdhis2_orgunit_group_sets["Amharic"] = array();
+	$placeHoldersdhis2_orgunit_group_sets["Amharic"] = array();
+	$pageTitlesdhis2_orgunit_group_sets["Amharic"] = array();
+	$fieldLabelsdhis2_orgunit_group_sets["Amharic"]["displayName"] = "የማሳያ ስም";
+	$fieldToolTipsdhis2_orgunit_group_sets["Amharic"]["displayName"] = "";
+	$placeHoldersdhis2_orgunit_group_sets["Amharic"]["displayName"] = "";
+	$fieldLabelsdhis2_orgunit_group_sets["Amharic"]["id"] = "መለያ";
+	$fieldToolTipsdhis2_orgunit_group_sets["Amharic"]["id"] = "";
+	$placeHoldersdhis2_orgunit_group_sets["Amharic"]["id"] = "";
+	if (count($fieldToolTipsdhis2_orgunit_group_sets["Amharic"]))
+		$tdatadhis2_orgunit_group_sets[".isUseToolTips"] = true;
+}
 
 
 	$tdatadhis2_orgunit_group_sets[".NCSearch"] = true;

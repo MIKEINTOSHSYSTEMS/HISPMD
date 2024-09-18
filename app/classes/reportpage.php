@@ -780,8 +780,8 @@ class ReportPage extends RunnerPage
 
 			if($counterstart != 1)
 			{
-				$pagination.= $this->getPaginationLink(1, "First").$advSeparator;
-				$pagination.= $this->getPaginationLink($counterstart - 1, "Previous").$separator;
+				$pagination.= $this->getPaginationLink(1, mlang_message("FIRST")).$advSeparator;
+				$pagination.= $this->getPaginationLink($counterstart - 1, mlang_message("PREVIOUS")).$separator;
 			}
 
 			$pageLinks = "";
@@ -795,8 +795,8 @@ class ReportPage extends RunnerPage
 
 			if($counterend != $this->maxPages)
 			{
-				$pagination.= $separator . $this->getPaginationLink($counterend + 1, "Next") . $advSeparator;
-				$pagination.= $separator . $this->getPaginationLink($this->maxPages, "Last");
+				$pagination.= $separator . $this->getPaginationLink($counterend + 1, mlang_message("NEXT")) . $advSeparator;
+				$pagination.= $separator . $this->getPaginationLink($this->maxPages, mlang_message("LAST"));
 			}
 
 			$pagination = '<nav><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
@@ -972,7 +972,7 @@ class ReportPage extends RunnerPage
 	public function createPerPage()
 	{
 		$classString = 'class="form-control"';
-		$allMessage = "All";
+		$allMessage = mlang_message("ALL");
 
 		$rpp = "<select ".$classString." id=\"recordspp".$this->id."\">";
 

@@ -62,7 +62,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Expand" class="btn btn-link   
+	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -87,7 +87,7 @@
 							 
 				<span class="navbar-form r-align-left navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +96,7 @@
 		 
 				<span class="navbar-form r-align-left navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -123,7 +123,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				Notifications			</span>
+				{mlang_message NOTIFICATIONS}			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -178,12 +178,35 @@
 </div>
 			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="fa fa-language"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								{BEGIN AmharicLANGLINK}
+	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
+		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
+		አማርኛ</a></li>
+	{END AmharicLANGLINK}
+	{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
 				{BEGIN guestloginbutton}
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -201,7 +224,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		User Profile		
+		{mlang_message USERINFO}		
 		</a>
 	</li>
 {END userinfo_link}
@@ -209,7 +232,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -217,7 +240,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		Admin Area		
+		{mlang_message AA_ADMINAREA}		
 		</a>
 	</li>
 {END adminarea_link}
@@ -225,7 +248,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		Change password		
+		{mlang_message CHANGE_PASSWORD}		
 		</a>
 	</li>
 {END changepwd_link}
@@ -629,12 +652,12 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="webreport.php"  > 
-							Web Reports					</a>
+							{mlang_message WEBREPORTS_SHORT}					</a>
 	</div>
 
 			
 	<div class="bs-welcome-content">
-		Web Reports and Charts	</div>
+		{mlang_message WEBREPORTS_LONG}	</div>
 	</div>
 
 		</div>			 
@@ -747,7 +770,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item27" {$item_welcome_item27} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_aio_dashboard_dashboard.php"  > 
-							MFR AIO Dashboard					</a>
+							{$caption MFR_AIO_Dashboard}					</a>
 	</div>
 
 	</div>
@@ -774,7 +797,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_dashboard_report_list.php"  > 
-							MFR Dashboard Report					</a>
+							{$caption MFR_Dashboard_Report}					</a>
 	</div>
 
 	</div>
@@ -783,7 +806,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_status_report_list.php"  > 
-							MFR Status Report					</a>
+							{$caption MFR_Status_Report}					</a>
 	</div>
 
 	</div>
@@ -792,7 +815,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_region_report_list.php"  > 
-							MFR Region Report					</a>
+							{$caption MFR_Region_Report}					</a>
 	</div>
 
 	</div>
@@ -801,7 +824,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_zone_report_list.php"  > 
-							MFR Zone Report					</a>
+							{$caption MFR_Zone_Report}					</a>
 	</div>
 
 	</div>
@@ -810,7 +833,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item20" {$item_welcome_item20} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_woreda_report_list.php"  > 
-							MFR Woreda Report					</a>
+							{$caption MFR_Woreda_Report}					</a>
 	</div>
 
 	</div>
@@ -819,7 +842,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_facilities_list.php"  > 
-							MFR Facilities					</a>
+							{$caption MFR_Facilities}					</a>
 	</div>
 
 	</div>
@@ -858,7 +881,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item34" {$item_welcome_item34} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_analytics1_list.php"  > 
-							DHIS2 Analytics					</a>
+							{$caption DHIS2_Analytics}					</a>
 	</div>
 
 	</div>
@@ -867,7 +890,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item38" {$item_welcome_item38} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_analytics_chart_chart.php"  > 
-							DHIS2 Analytics Chart					</a>
+							{$caption DHIS2_Analytics_Chart}					</a>
 	</div>
 
 	</div>
@@ -876,7 +899,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item39" {$item_welcome_item39} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_analytics_report_report.php"  > 
-							DHIS2 Analytics Report					</a>
+							{$caption DHIS2_Analytics_Report}					</a>
 	</div>
 
 	</div>
@@ -885,7 +908,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item36" {$item_welcome_item36} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_indicator_list.php"  > 
-							DHIS2 Indicator					</a>
+							{$caption DHIS2_Indicator}					</a>
 	</div>
 
 	</div>
@@ -894,7 +917,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item37" {$item_welcome_item37} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_organisation_unit_list.php"  > 
-							DHIS2 Organisation Unit					</a>
+							{$caption DHIS2_Organisation_Unit}					</a>
 	</div>
 
 	</div>
@@ -921,7 +944,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item35" {$item_welcome_item35} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_reporting_rate_list.php"  > 
-							DHIS2 Reporting Rate					</a>
+							{$caption DHIS2_Reporting_Rate}					</a>
 	</div>
 
 	</div>
@@ -930,7 +953,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item44" {$item_welcome_item44} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_reporting_rate_report1_report.php"  > 
-							DHIS2 Reporting Rate Report					</a>
+							{$caption DHIS2_Reporting_Rate_Report}					</a>
 	</div>
 
 	</div>
@@ -939,7 +962,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item43" {$item_welcome_item43} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_reporting_rate_chart1_chart.php"  > 
-							DHIS2 Reporting Rate Chart					</a>
+							{$caption DHIS2_Reporting_Rate_Chart}					</a>
 	</div>
 
 	</div>
@@ -948,7 +971,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item45" {$item_welcome_item45} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_reporting_rates_chart_chart.php"  > 
-							DHIS2 Reporting Rates Chart					</a>
+							{$caption DHIS2_Reporting_Rates_Chart}					</a>
 	</div>
 
 	</div>
@@ -957,7 +980,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item41" {$item_welcome_item41} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_datasets_list.php"  > 
-							DHIS2 Datasets					</a>
+							{$caption DHIS2_Datasets}					</a>
 	</div>
 
 	</div>
@@ -966,7 +989,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item40" {$item_welcome_item40} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_reports_list.php"  > 
-							DHIS2 Reports					</a>
+							{$caption DHIS2_Reports}					</a>
 	</div>
 
 	</div>
@@ -998,7 +1021,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item33" {$item_welcome_item33} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_organisation_units_list.php"  > 
-							DHIS2 Organisation Units					</a>
+							{$caption DHIS2_Organisation_Units}					</a>
 	</div>
 
 	</div>
@@ -1008,7 +1031,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item32" {$item_welcome_item32} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_indicators_list.php"  > 
-							DHIS2 Indicators					</a>
+							{$caption DHIS2_Indicators}					</a>
 	</div>
 
 	</div>
@@ -1027,7 +1050,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item46" {$item_welcome_item46} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_facility_list.php"  > 
-							MFR Facility					</a>
+							{$caption MFR_Facility}					</a>
 	</div>
 
 	</div>
@@ -1037,7 +1060,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item47" {$item_welcome_item47} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_regions_list.php"  > 
-							MFR Regions					</a>
+							{$caption MFR_Regions}					</a>
 	</div>
 
 	</div>
@@ -1047,7 +1070,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item48" {$item_welcome_item48} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_zones_list.php"  > 
-							MFR Zones					</a>
+							{$caption MFR_Zones}					</a>
 	</div>
 
 	</div>
@@ -1057,7 +1080,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item49" {$item_welcome_item49} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_woredas_list.php"  > 
-							MFR Woredas					</a>
+							{$caption MFR_Woredas}					</a>
 	</div>
 
 	</div>
@@ -1067,7 +1090,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item50" {$item_welcome_item50} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_facility_types_list.php"  > 
-							MFR Facility Types					</a>
+							{$caption MFR_Facility_Types}					</a>
 	</div>
 
 	</div>
@@ -1077,7 +1100,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item51" {$item_welcome_item51} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_operational_statuses_list.php"  > 
-							MFR Operational Statuses					</a>
+							{$caption MFR_Operational_Statuses}					</a>
 	</div>
 
 	</div>
@@ -1087,7 +1110,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item52" {$item_welcome_item52} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_status_list.php"  > 
-							MFR Status					</a>
+							{$caption MFR_Status}					</a>
 	</div>
 
 	</div>
@@ -1097,7 +1120,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item53" {$item_welcome_item53} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_country_list.php"  > 
-							DHIS2 OrgUnit Country					</a>
+							{$caption DHIS2_OrgUnit_Country}					</a>
 	</div>
 
 	</div>
@@ -1107,7 +1130,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item54" {$item_welcome_item54} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_regions_list.php"  > 
-							DHIS2 OrgUnit Regions					</a>
+							{$caption DHIS2_OrgUnit_Regions}					</a>
 	</div>
 
 	</div>
@@ -1117,7 +1140,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item55" {$item_welcome_item55} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_zone_list.php"  > 
-							DHIS2 OrgUnit Zone					</a>
+							{$caption DHIS2_OrgUnit_Zone}					</a>
 	</div>
 
 	</div>
@@ -1127,7 +1150,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item56" {$item_welcome_item56} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_woredas_list.php"  > 
-							DHIS2 OrgUnit Woredas					</a>
+							{$caption DHIS2_OrgUnit_Woredas}					</a>
 	</div>
 
 	</div>
@@ -1137,7 +1160,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item57" {$item_welcome_item57} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_groups_list.php"  > 
-							DHIS2 OrgUnit Groups					</a>
+							{$caption DHIS2_OrgUnit_Groups}					</a>
 	</div>
 
 	</div>
@@ -1147,7 +1170,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item58" {$item_welcome_item58} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_group_sets_list.php"  > 
-							DHIS2 OrgUnit Group Sets					</a>
+							{$caption DHIS2_OrgUnit_Group_Sets}					</a>
 	</div>
 
 	</div>
@@ -1157,7 +1180,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item59" {$item_welcome_item59} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_aio_orgunit_list.php"  > 
-							DHIS2 AIO OrgUnit					</a>
+							{$caption DHIS2_AIO_OrgUnit}					</a>
 	</div>
 
 	</div>
@@ -1167,7 +1190,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item60" {$item_welcome_item60} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunit_distributions_list.php"  > 
-							DHIS2 OrgUnit Distributions					</a>
+							{$caption DHIS2_OrgUnit_Distributions}					</a>
 	</div>
 
 	</div>
@@ -1177,7 +1200,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ai_data_assistant_list.php"  > 
-							Ai Data Assistant					</a>
+							{$caption public_ai_data_assistant}					</a>
 	</div>
 
 	</div>
@@ -1187,7 +1210,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dataquality_list.php"  > 
-							Dataquality					</a>
+							{$caption public_dataquality}					</a>
 	</div>
 
 	</div>
@@ -1197,7 +1220,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="datause_list.php"  > 
-							Datause					</a>
+							{$caption public_datause}					</a>
 	</div>
 
 	</div>
@@ -1207,7 +1230,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_periods_list.php"  > 
-							DHIS2 Periods					</a>
+							{$caption public_dhis2_periods}					</a>
 	</div>
 
 	</div>
@@ -1217,7 +1240,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="digitalhealth_list.php"  > 
-							Digitalhealth					</a>
+							{$caption public_digitalhealth}					</a>
 	</div>
 
 	</div>
@@ -1227,7 +1250,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="digitalhealthapps_list.php"  > 
-							Digitalhealthapps					</a>
+							{$caption public_digitalhealthapps}					</a>
 	</div>
 
 	</div>
@@ -1237,7 +1260,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="financialresources_list.php"  > 
-							Financialresources					</a>
+							{$caption public_financialresources}					</a>
 	</div>
 
 	</div>
@@ -1247,7 +1270,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="healthfacilities_list.php"  > 
-							Healthfacilities					</a>
+							{$caption public_healthfacilities}					</a>
 	</div>
 
 	</div>
@@ -1257,7 +1280,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="healthunits_list.php"  > 
-							Healthunits					</a>
+							{$caption public_healthunits}					</a>
 	</div>
 
 	</div>
@@ -1267,7 +1290,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hisgovernance_list.php"  > 
-							Hisgovernance					</a>
+							{$caption public_hisgovernance}					</a>
 	</div>
 
 	</div>
@@ -1277,7 +1300,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispartners_list.php"  > 
-							Hispartners					</a>
+							{$caption public_hispartners}					</a>
 	</div>
 
 	</div>
@@ -1287,7 +1310,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_dashboard_reports_list.php"  > 
-							Mfr Dashboard Reports					</a>
+							{$caption public_mfr_dashboard_reports}					</a>
 	</div>
 
 	</div>
@@ -1297,7 +1320,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_operational_status_list.php"  > 
-							Mfr Operational Status					</a>
+							{$caption public_mfr_operational_status}					</a>
 	</div>
 
 	</div>
@@ -1307,7 +1330,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item21" {$item_welcome_item21} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_region_list.php"  > 
-							Mfr Region					</a>
+							{$caption public_mfr_region}					</a>
 	</div>
 
 	</div>
@@ -1317,7 +1340,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item22" {$item_welcome_item22} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_woreda_list.php"  > 
-							Mfr Woreda					</a>
+							{$caption public_mfr_woreda}					</a>
 	</div>
 
 	</div>
@@ -1327,7 +1350,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item23" {$item_welcome_item23} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_zone_list.php"  > 
-							Mfr Zone					</a>
+							{$caption public_mfr_zone}					</a>
 	</div>
 
 	</div>
@@ -1337,7 +1360,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item24" {$item_welcome_item24} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="publications_list.php"  > 
-							Publications					</a>
+							{$caption public_publications}					</a>
 	</div>
 
 	</div>
@@ -1347,7 +1370,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item25" {$item_welcome_item25} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="regions_list.php"  > 
-							Regions					</a>
+							{$caption public_regions}					</a>
 	</div>
 
 	</div>
@@ -1357,7 +1380,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item26" {$item_welcome_item26} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="research_list.php"  > 
-							Research					</a>
+							{$caption public_research}					</a>
 	</div>
 
 	</div>
@@ -1367,7 +1390,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item28" {$item_welcome_item28} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="workforce_list.php"  > 
-							Workforce					</a>
+							{$caption public_workforce}					</a>
 	</div>
 
 	</div>
@@ -1377,7 +1400,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_dashboard_reports_chart_chart.php"  > 
-							Mfr Dashboard Reports Chart					</a>
+							{$caption mfr_dashboard_reports_chart}					</a>
 	</div>
 
 	</div>
@@ -1387,7 +1410,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item29" {$item_welcome_item29} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_operational_status_chart_chart.php"  > 
-							Mfr Operational Status Chart					</a>
+							{$caption mfr_operational_status_chart}					</a>
 	</div>
 
 	</div>
@@ -1397,7 +1420,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item30" {$item_welcome_item30} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_region_chart_chart.php"  > 
-							Mfr Region Chart					</a>
+							{$caption mfr_region_chart}					</a>
 	</div>
 
 	</div>
@@ -1407,7 +1430,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item31" {$item_welcome_item31} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ethprism_additional_organizational_and_behavioral_assessment_list.php"  > 
-							Ethprism Additional Organizational And Behavioral Assessment					</a>
+							{$caption public_ethprism_additional_organizational_and_behavioral_assessment}					</a>
 	</div>
 
 	</div>
@@ -1417,7 +1440,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item42" {$item_welcome_item42} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ethprism_facility_level_rhis_performance_diagnostic_list.php"  > 
-							Ethprism Facility Level Rhis Performance Diagnostic					</a>
+							{$caption public_ethprism_facility_level_rhis_performance_diagnostic}					</a>
 	</div>
 
 	</div>
@@ -1427,7 +1450,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item61" {$item_welcome_item61} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ethprism_facility_office_checklist_list.php"  > 
-							Ethprism Facility Office Checklist					</a>
+							{$caption public_ethprism_facility_office_checklist}					</a>
 	</div>
 
 	</div>
@@ -1437,7 +1460,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item62" {$item_welcome_item62} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ethprism_healthpost_level_rhis_performance_diagnostic_list.php"  > 
-							Ethprism Healthpost Level Rhis Performance Diagnostic					</a>
+							{$caption public_ethprism_healthpost_level_rhis_performance_diagnostic}					</a>
 	</div>
 
 	</div>
@@ -1447,7 +1470,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item63" {$item_welcome_item63} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ethprism_national_prism_woreda_level_diagnostic_list.php"  > 
-							Ethprism National Prism Woreda Level Diagnostic					</a>
+							{$caption public_ethprism_national_prism_woreda_level_diagnostic}					</a>
 	</div>
 
 	</div>
@@ -1457,7 +1480,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item64" {$item_welcome_item64} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="ethprism_organizational_and_behavioral_assessment_list.php"  > 
-							Ethprism Organizational And Behavioral Assessment					</a>
+							{$caption public_ethprism_organizational_and_behavioral_assessment}					</a>
 	</div>
 
 	</div>
@@ -1467,7 +1490,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item65" {$item_welcome_item65} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_prism_settings_list.php"  > 
-							Hispmd Prism Settings					</a>
+							{$caption public_hispmd_prism_settings}					</a>
 	</div>
 
 	</div>
@@ -1477,7 +1500,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item66" {$item_welcome_item66} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="prism_dashboard_dashboard.php"  > 
-							PRISM Dashboard					</a>
+							{$caption PRISM_Dashboard}					</a>
 	</div>
 
 	</div>
@@ -1487,7 +1510,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item67" {$item_welcome_item67} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_users_audit_list.php"  > 
-							Hispmd Users Audit					</a>
+							{$caption hispmd_users_audit}					</a>
 	</div>
 
 	</div>
@@ -1497,7 +1520,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item68" {$item_welcome_item68} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_system_settings_list.php"  > 
-							Hispmd System Settings					</a>
+							{$caption hispmd_system_settings}					</a>
 	</div>
 
 	</div>
@@ -1507,7 +1530,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item69" {$item_welcome_item69} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_prism_data_forms_list.php"  > 
-							Hispmd Prism Data Forms					</a>
+							{$caption hispmd_prism_data_forms}					</a>
 	</div>
 
 	</div>
@@ -1517,7 +1540,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item70" {$item_welcome_item70} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_administration_units_list.php"  > 
-							Moh Administration Units					</a>
+							{$caption public_moh_administration_units}					</a>
 	</div>
 
 	</div>
@@ -1527,7 +1550,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item71" {$item_welcome_item71} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_assessments_list.php"  > 
-							Moh Assessments					</a>
+							{$caption public_moh_assessments}					</a>
 	</div>
 
 	</div>
@@ -1537,7 +1560,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item72" {$item_welcome_item72} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_data_sources_list.php"  > 
-							Moh Data Sources					</a>
+							{$caption public_moh_data_sources}					</a>
 	</div>
 
 	</div>
@@ -1547,7 +1570,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item73" {$item_welcome_item73} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_facility_types_list.php"  > 
-							Moh Facility Types					</a>
+							{$caption public_moh_facility_types}					</a>
 	</div>
 
 	</div>
@@ -1557,7 +1580,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item74" {$item_welcome_item74} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_health_facilities_list.php"  > 
-							Moh Health Facilities					</a>
+							{$caption public_moh_health_facilities}					</a>
 	</div>
 
 	</div>
@@ -1567,7 +1590,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item75" {$item_welcome_item75} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_indicator_data_list.php"  > 
-							Moh Indicator Data					</a>
+							{$caption public_moh_indicator_data}					</a>
 	</div>
 
 	</div>
@@ -1577,7 +1600,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item76" {$item_welcome_item76} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_indicators_list.php"  > 
-							Moh Indicators					</a>
+							{$caption public_moh_indicators}					</a>
 	</div>
 
 	</div>
@@ -1587,7 +1610,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item77" {$item_welcome_item77} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_regions_list.php"  > 
-							Moh Regions					</a>
+							{$caption public_moh_regions}					</a>
 	</div>
 
 	</div>
@@ -1597,7 +1620,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item78" {$item_welcome_item78} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_indicator_groups_list.php"  > 
-							Moh Indicator Groups					</a>
+							{$caption public_moh_indicator_groups}					</a>
 	</div>
 
 	</div>
@@ -1607,7 +1630,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item79" {$item_welcome_item79} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="timetracker_list.php"  > 
-							Timetracker					</a>
+							{$caption public_timetracker}					</a>
 	</div>
 
 	</div>
@@ -1617,7 +1640,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item80" {$item_welcome_item80} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="mfr_facilities_register_list.php"  > 
-							Mfr Facilities Register					</a>
+							{$caption public_mfr_facilities_register}					</a>
 	</div>
 
 	</div>
@@ -1627,7 +1650,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item81" {$item_welcome_item81} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="system_users_activity_dashboard_dashboard.php"  > 
-							System Users Activity Dashboard					</a>
+							{$caption System_Users_Activity_Dashboard}					</a>
 	</div>
 
 	</div>
@@ -1637,7 +1660,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item82" {$item_welcome_item82} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_web_reports_and_charts_builder_dashboard.php"  > 
-							HISPMD Web Reports And Charts Builder					</a>
+							{$caption HISPMD_Web_Reports_and_Charts_Builder}					</a>
 	</div>
 
 	</div>
@@ -1647,7 +1670,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item83" {$item_welcome_item83} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="public_mfr_facilities_register_report_report.php"  > 
-							Mfr Facilities Register Report					</a>
+							{$caption public_mfr_facilities_register_report}					</a>
 	</div>
 
 	</div>
@@ -1657,7 +1680,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item84" {$item_welcome_item84} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_organisations_list.php"  > 
-							Hispmd Organisations					</a>
+							{$caption public_hispmd_organisations}					</a>
 	</div>
 
 	</div>
@@ -1667,7 +1690,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item85" {$item_welcome_item85} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="public_mfr_facilities_register_chart_chart.php"  > 
-							Mfr Facilities Register Chart					</a>
+							{$caption public_mfr_facilities_register_chart}					</a>
 	</div>
 
 	</div>
@@ -1677,7 +1700,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item86" {$item_welcome_item86} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_data_scope_list.php"  > 
-							Moh Data Scope					</a>
+							{$caption public_moh_data_scope}					</a>
 	</div>
 
 	</div>
@@ -1687,7 +1710,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item87" {$item_welcome_item87} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="hispmd_moh_indicators_dashboard_dashboard.php"  > 
-							HISPMD MOH Indicators Dashboard					</a>
+							{$caption HISPMD_MOH_Indicators_Dashboard}					</a>
 	</div>
 
 	</div>
@@ -1697,7 +1720,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item88" {$item_welcome_item88} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_indicators_data_report_report.php"  > 
-							MOH Indicators Data Report					</a>
+							{$caption MOH_Indicators_Data_Report}					</a>
 	</div>
 
 	</div>
@@ -1707,7 +1730,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item89" {$item_welcome_item89} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="moh_indicators_data_chart_chart.php"  > 
-							MOH Indicators Data Chart					</a>
+							{$caption MOH_Indicators_data_Chart}					</a>
 	</div>
 
 	</div>
@@ -1717,7 +1740,7 @@ Current Time
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item90" {$item_welcome_item90} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="dhis2_orgunits_distribution_list.php"  > 
-							DHIS2 OrgUnits Distribution					</a>
+							{$caption DHIS2_OrgUnits_Distribution}					</a>
 	</div>
 
 	</div>

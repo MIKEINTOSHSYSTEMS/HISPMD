@@ -173,6 +173,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 		
 addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) ); 
  
+//addNotification( "New Data Added: ".$values["data_id"] , "Indicator Data", "fa-envelope", makePageLink( "moh_indicator_data", "view", $keys) ); 
 
 //addNotification( $values["ProductName"], "New Product", "fa-envelope", 
 //GetTableLink( "products", "view", "editid1=".$keys["ProductID"]) ); 

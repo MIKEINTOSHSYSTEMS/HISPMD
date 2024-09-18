@@ -79,6 +79,12 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
+								
+			"%",
+			 
 				],
 	
 		body: [
@@ -144,10 +150,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":"<iframe\n    src=\"https://viz.hispmd.merqconsultancy.org/public/dashboard/d918846e-4cd4-4909-837e-73c99e8f85d8\"\n    frameborder=\"0\"\n    width=\"100%\"\n    height=\"100%\"\n    allowtransparency\n></iframe>","hidden":"{$item_hide_text1}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
      
@@ -647,6 +651,82 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c25',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c26',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"{$custom _IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_}","hidden":"{$item_hide_text1}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c9',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}

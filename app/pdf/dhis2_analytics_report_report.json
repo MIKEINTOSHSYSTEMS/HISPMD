@@ -132,7 +132,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -337,11 +337,11 @@ pdfDocument = {
 				},
 							
 																		{
-					text: ['Summary for {$jslabel DHIS2_Analytics_Report ou } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel DHIS2_Analytics_Report ou } ', 
 						{$ou_grval},
 						' - ', 
 						{$groupou_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_2',
 					colSpan: 4				},
@@ -359,11 +359,11 @@ pdfDocument = {
 				[
 			
 											{
-					text: ['Summary for {$jslabel DHIS2_Analytics_Report dx } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel DHIS2_Analytics_Report dx } ', 
 						{$dx_grval},
 						' - ', 
 						{$groupdx_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_1',
 					colSpan: 5				},
@@ -416,7 +416,7 @@ pdfDocument = {
 
 	[
 		{	
-			text: 'Page summary {$page_total_cnt} - records total',
+			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
 			colSpan: 5,
 			style: 'pagesummary',
 		}
@@ -431,7 +431,7 @@ pdfDocument = {
 {BEGIN global_summary}
 	[
 		{
-			text: 'Global summary {$global_total_cnt} - records total',
+			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
 			colSpan: 5,
 			style: 'globalsummary',
 		}

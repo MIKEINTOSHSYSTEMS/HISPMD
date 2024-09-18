@@ -240,7 +240,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -561,11 +561,11 @@ pdfDocument = {
 				},
 							
 																									{
-					text: ['Summary for {$jslabel DHIS2_Reporting_Rate_Report reportPeriod } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel DHIS2_Reporting_Rate_Report reportPeriod } ', 
 						{$reportPeriod_grval},
 						' - ', 
 						{$groupreportPeriod_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_3',
 					colSpan: 7				},
@@ -587,11 +587,11 @@ pdfDocument = {
 				},
 							
 																		{
-					text: ['Summary for {$jslabel DHIS2_Reporting_Rate_Report dataSet } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel DHIS2_Reporting_Rate_Report dataSet } ', 
 						{$dataSet_grval},
 						' - ', 
 						{$groupdataSet_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_2',
 					colSpan: 8				},
@@ -609,11 +609,11 @@ pdfDocument = {
 				[
 			
 											{
-					text: ['Summary for {$jslabel DHIS2_Reporting_Rate_Report organisationUnit } ', 
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel DHIS2_Reporting_Rate_Report organisationUnit } ', 
 						{$organisationUnit_grval},
 						' - ', 
 						{$grouporganisationUnit_total_cnt}, 
-						' records total'
+						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_1',
 					colSpan: 9				},
@@ -686,7 +686,7 @@ pdfDocument = {
 
 	[
 		{	
-			text: 'Page summary {$page_total_cnt} - records total',
+			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
 			colSpan: 9,
 			style: 'pagesummary',
 		}
@@ -701,7 +701,7 @@ pdfDocument = {
 {BEGIN global_summary}
 	[
 		{
-			text: 'Global summary {$global_total_cnt} - records total',
+			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
 			colSpan: 9,
 			style: 'globalsummary',
 		}

@@ -35,6 +35,23 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelssystem_users_activity_dashboard["English"]["public_timetracker_userid"] = "Userid";
 	$fieldLabelssystem_users_activity_dashboard["English"]["public_timetracker_recordid"] = "Recordid";
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelssystem_users_activity_dashboard["Amharic"] = array();
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_id"] = "Id";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_datetime"] = "Datetime";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_ip"] = "Ip";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_user"] = "User";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_table"] = "Table";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_action"] = "Action";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["hispmd_users_audit_description"] = "Description";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["public_timetracker_trackerid"] = "Trackerid";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["public_timetracker_pagename"] = "Pagename";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["public_timetracker_timeon"] = "Timeon";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["public_timetracker_timeoff"] = "Timeoff";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["public_timetracker_userid"] = "Userid";
+	$fieldLabelssystem_users_activity_dashboard["Amharic"]["public_timetracker_recordid"] = "Recordid";
+}
 
 /*
 //	search fields

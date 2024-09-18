@@ -27,7 +27,7 @@ class ViewDatabaseAudioField extends ViewAudioFileField
 	 */
 	public function getExportValue(&$data, $keylink = "", $html = false )
 	{
-		return "LONG BINARY DATA - CANNOT BE DISPLAYED";
+		return mlang_message("LONG_BINARY");
 	}
 
 	protected function getFileURLs( &$data, $keylink )

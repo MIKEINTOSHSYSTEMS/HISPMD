@@ -37,6 +37,24 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispartners["English"]))
 		$tdatahispartners[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshispartners["Amharic"] = array();
+	$fieldToolTipshispartners["Amharic"] = array();
+	$placeHoldershispartners["Amharic"] = array();
+	$pageTitleshispartners["Amharic"] = array();
+	$fieldLabelshispartners["Amharic"]["partner_id"] = "የአጋር መለያ";
+	$fieldToolTipshispartners["Amharic"]["partner_id"] = "";
+	$placeHoldershispartners["Amharic"]["partner_id"] = "";
+	$fieldLabelshispartners["Amharic"]["name"] = "ስም";
+	$fieldToolTipshispartners["Amharic"]["name"] = "";
+	$placeHoldershispartners["Amharic"]["name"] = "";
+	$fieldLabelshispartners["Amharic"]["aligned_plan"] = "የተጣጣመ እቅድ";
+	$fieldToolTipshispartners["Amharic"]["aligned_plan"] = "";
+	$placeHoldershispartners["Amharic"]["aligned_plan"] = "";
+	if (count($fieldToolTipshispartners["Amharic"]))
+		$tdatahispartners[".isUseToolTips"] = true;
+}
 
 
 	$tdatahispartners[".NCSearch"] = true;

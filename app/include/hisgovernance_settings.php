@@ -37,6 +37,24 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshisgovernance["English"]))
 		$tdatahisgovernance[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelshisgovernance["Amharic"] = array();
+	$fieldToolTipshisgovernance["Amharic"] = array();
+	$placeHoldershisgovernance["Amharic"] = array();
+	$pageTitleshisgovernance["Amharic"] = array();
+	$fieldLabelshisgovernance["Amharic"]["governance_id"] = "የአስተዳደር መለያ";
+	$fieldToolTipshisgovernance["Amharic"]["governance_id"] = "";
+	$placeHoldershisgovernance["Amharic"]["governance_id"] = "";
+	$fieldLabelshisgovernance["Amharic"]["level"] = "ደረጃ";
+	$fieldToolTipshisgovernance["Amharic"]["level"] = "";
+	$placeHoldershisgovernance["Amharic"]["level"] = "";
+	$fieldLabelshisgovernance["Amharic"]["is_functional"] = "ተግባራዊ ነው።";
+	$fieldToolTipshisgovernance["Amharic"]["is_functional"] = "";
+	$placeHoldershisgovernance["Amharic"]["is_functional"] = "";
+	if (count($fieldToolTipshisgovernance["Amharic"]))
+		$tdatahisgovernance[".isUseToolTips"] = true;
+}
 
 
 	$tdatahisgovernance[".NCSearch"] = true;

@@ -37,6 +37,24 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_operational_status_chart["English"]))
 		$tdatamfr_operational_status_chart[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmfr_operational_status_chart["Amharic"] = array();
+	$fieldToolTipsmfr_operational_status_chart["Amharic"] = array();
+	$placeHoldersmfr_operational_status_chart["Amharic"] = array();
+	$pageTitlesmfr_operational_status_chart["Amharic"] = array();
+	$fieldLabelsmfr_operational_status_chart["Amharic"]["operationalstatus"] = "የአሠራር ሁኔታ";
+	$fieldToolTipsmfr_operational_status_chart["Amharic"]["operationalstatus"] = "";
+	$placeHoldersmfr_operational_status_chart["Amharic"]["operationalstatus"] = "";
+	$fieldLabelsmfr_operational_status_chart["Amharic"]["status"] = "ሁኔታ";
+	$fieldToolTipsmfr_operational_status_chart["Amharic"]["status"] = "";
+	$placeHoldersmfr_operational_status_chart["Amharic"]["status"] = "";
+	$fieldLabelsmfr_operational_status_chart["Amharic"]["count"] = "ቁጠር";
+	$fieldToolTipsmfr_operational_status_chart["Amharic"]["count"] = "";
+	$placeHoldersmfr_operational_status_chart["Amharic"]["count"] = "";
+	if (count($fieldToolTipsmfr_operational_status_chart["Amharic"]))
+		$tdatamfr_operational_status_chart[".isUseToolTips"] = true;
+}
 
 
 	$tdatamfr_operational_status_chart[".NCSearch"] = true;

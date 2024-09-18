@@ -34,6 +34,7 @@ pdfDocument = {
 		
 		widths: [
 								"*", 
+											"*", 
 					 ],	
 		
 	
@@ -47,6 +48,7 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -54,11 +56,63 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>","hidden":"{$item_hide_login-logo}","fontSize":24,"isHtml":true},
+			{"text":"{$logo}","hidden":"{$item_hide_login-logo}","fontSize":24,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_lang_selector}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
      
       
       },
@@ -72,6 +126,7 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -88,7 +143,13 @@ pdfDocument = {
       
       },
 
-											],
+																		{ 
+				cellId: 'c3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}
@@ -150,7 +211,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Login into your account","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
+			{"text":"{mlang_message LOGIN_SUBTITLE}","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -235,7 +296,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"Username","hidden":"{$item_hide_username_label}","bold":true,"isHtml":true},
+			{"text":"{mlang_message USERNAME}","hidden":"{$item_hide_username_label}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_username}"},
@@ -270,7 +331,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"Password","hidden":"{$item_hide_password_label}","bold":true,"isHtml":true},
+			{"text":"{mlang_message PASSWORD}","hidden":"{$item_hide_password_label}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_password}"},

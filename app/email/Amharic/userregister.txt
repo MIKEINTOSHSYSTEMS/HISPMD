@@ -1,0 +1,23 @@
+Notification on registering
+
+You have registered as a user at %url%
+
+Click this link to confirm your account and finish the registration:
+%activateurl%
+If you are unable to click on the link, copy and paste it into your browser window.
+
+መለያ: %ID_value%
+የተጠቃሚ ስም: %username_value%
+ኢሜይል: %email_value%
+ሙሉ ስም: %fullname_value%
+ተቧድኖ: %groupid_value%
+የኤክስት ደህንነት መለያ: %ext_security_id_value%
+ተጠቃሚ: %userpic_value%
+ስልክ ቁጥር: %phone_number_value%
+የመጀመሪያ ስም: %first_name_value%
+መካከለኛ ስም: %middle_name_value%
+የአያት ስም: %last_name_value%
+ስያሜ: %designation_value%
+የድርጅት ስም: %organisation_name_value%
+መምሪያ: %department_value%
+አፒኪ: %apikey_value%

@@ -155,7 +155,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Enter username or email:","hidden":"{$item_hide_username_email_label}","isHtml":true},
+			{"text":"{mlang_message USERNAME_EMAIL}","hidden":"{$item_hide_username_email_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

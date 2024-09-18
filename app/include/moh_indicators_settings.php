@@ -43,6 +43,30 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_indicators["English"]))
 		$tdatamoh_indicators[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmoh_indicators["Amharic"] = array();
+	$fieldToolTipsmoh_indicators["Amharic"] = array();
+	$placeHoldersmoh_indicators["Amharic"] = array();
+	$pageTitlesmoh_indicators["Amharic"] = array();
+	$fieldLabelsmoh_indicators["Amharic"]["indicator_id"] = "የአመልካች መለያ";
+	$fieldToolTipsmoh_indicators["Amharic"]["indicator_id"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["indicator_id"] = "";
+	$fieldLabelsmoh_indicators["Amharic"]["indicator_name"] = "የአመልካች ስም";
+	$fieldToolTipsmoh_indicators["Amharic"]["indicator_name"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["indicator_name"] = "";
+	$fieldLabelsmoh_indicators["Amharic"]["baseline"] = "መነሻ መስመር";
+	$fieldToolTipsmoh_indicators["Amharic"]["baseline"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["baseline"] = "";
+	$fieldLabelsmoh_indicators["Amharic"]["target"] = "ዒላማ";
+	$fieldToolTipsmoh_indicators["Amharic"]["target"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["target"] = "";
+	$fieldLabelsmoh_indicators["Amharic"]["indicator_group_id"] = "የአመልካች ቡድን መለያ";
+	$fieldToolTipsmoh_indicators["Amharic"]["indicator_group_id"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["indicator_group_id"] = "";
+	if (count($fieldToolTipsmoh_indicators["Amharic"]))
+		$tdatamoh_indicators[".isUseToolTips"] = true;
+}
 
 
 	$tdatamoh_indicators[".NCSearch"] = true;

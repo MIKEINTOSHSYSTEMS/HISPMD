@@ -55,6 +55,42 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_facilities["English"]))
 		$tdatamfr_facilities[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmfr_facilities["Amharic"] = array();
+	$fieldToolTipsmfr_facilities["Amharic"] = array();
+	$placeHoldersmfr_facilities["Amharic"] = array();
+	$pageTitlesmfr_facilities["Amharic"] = array();
+	$fieldLabelsmfr_facilities["Amharic"]["id"] = "መለያ";
+	$fieldToolTipsmfr_facilities["Amharic"]["id"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["id"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["name"] = "ስም";
+	$fieldToolTipsmfr_facilities["Amharic"]["name"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["name"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["status"] = "ሁኔታ";
+	$fieldToolTipsmfr_facilities["Amharic"]["status"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["status"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["operationalStatus"] = "የአሠራር ሁኔታ";
+	$fieldToolTipsmfr_facilities["Amharic"]["operationalStatus"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["operationalStatus"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["facilityType"] = "የመገልገያ አይነት";
+	$fieldToolTipsmfr_facilities["Amharic"]["facilityType"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["facilityType"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["parentFacilityType"] = "የወላጅ መገልገያ ዓይነት";
+	$fieldToolTipsmfr_facilities["Amharic"]["parentFacilityType"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["parentFacilityType"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["region"] = "ክልል";
+	$fieldToolTipsmfr_facilities["Amharic"]["region"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["region"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["zone"] = "ዞን";
+	$fieldToolTipsmfr_facilities["Amharic"]["zone"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["zone"] = "";
+	$fieldLabelsmfr_facilities["Amharic"]["woreda"] = "ወረዳ";
+	$fieldToolTipsmfr_facilities["Amharic"]["woreda"] = "";
+	$placeHoldersmfr_facilities["Amharic"]["woreda"] = "";
+	if (count($fieldToolTipsmfr_facilities["Amharic"]))
+		$tdatamfr_facilities[".isUseToolTips"] = true;
+}
 
 
 	$tdatamfr_facilities[".NCSearch"] = true;

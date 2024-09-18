@@ -24,7 +24,7 @@ if (@$_SESSION['webreports']['settings']['title'] != "") {
 	$title=@$_SESSION['webreports']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,25)."...";
-	$xt->assign("report_title",", "."Title".": ".$title);
+	$xt->assign("report_title",", ".mlang_message("WR_TITLE").": ".$title);
 } else {
 	$xt->assign("report_title","");
 }
@@ -33,7 +33,7 @@ if (@$_SESSION['webreports']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,25)."...";
 
-	$xt->assign("report_table",", "."Table".": ".$stable);
+	$xt->assign("report_table",", ".mlang_message("WR_TABLE").": ".$stable);
 } else {
 	$xt->assign("report_table","");
 }
@@ -207,11 +207,11 @@ $(document).ready(function(){
 			leftFieldSelector = "select[id^=left_fields_]";
 		
 		if ( tbl_left == -1 ) {
-			$("#alert").html("<p>'."Select left table".'</p>").dialog("open");
+			$("#alert").html("<p>'.mlang_message("WR_LEFT_TABLE").'</p>").dialog("open");
 			return;
 		}
 		if ( tbl_right == -1 ) {
-			$("#alert").html("<p>'."Select right table".'</p>").dialog("open");
+			$("#alert").html("<p>'.mlang_message("WR_RIGHT_TABLE").'</p>").dialog("open");
 			return;
 		}
 		// add check if field is selected
@@ -230,7 +230,7 @@ $(document).ready(function(){
 		});
 		rel_txt = rel_txt.substr(0,rel_txt.length-5);
 		if (relation_stack[rel_txt] != undefined) {
-			$("#alert").html("<p>'."The relation with selected parameters already exists".'</p>").dialog("open");
+			$("#alert").html("<p>'.mlang_message("WR_EXISTS_RELATION").'</p>").dialog("open");
 			return;
 		}		
 		
@@ -296,7 +296,7 @@ $(document).ready(function(){
 			relation_stack[val] = undefined;
 			$(rel).remove();
 		} else {
-			$("#alert").html("<p>'."Select relation you want to remove".'</p>").dialog("open");
+			$("#alert").html("<p>'.mlang_message("WR_REMOVE_RELATION").'</p>").dialog("open");
 			return;
 		}
 	});
@@ -409,7 +409,7 @@ $b_includes .= '
 						if( id == "savebtn" )
 						{
 							$("#alert")
-								.html("<p>'."Report Saved".'</p>")
+								.html("<p>'.mlang_message("WR_REPORT_SAVED").'</p>")
 								.dialog("option", "close", function(){
 									window.location = "'.GetTableLink("webreport").'";
 								})
@@ -422,7 +422,7 @@ $b_includes .= '
 					}
 				},
 				error: function() {
-					$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
+					$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
 				}
 			});
 		}

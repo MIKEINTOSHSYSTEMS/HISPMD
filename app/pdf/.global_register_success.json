@@ -103,10 +103,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"An email has been sent to %email% containing further instructions. Click on the link provided in the email to complete the registration.","hidden":"{$item_hide_register_activate_message}","isHtml":true},
+			{"text":"{mlang_message REGISTER_ACTIVATE}","hidden":"{$item_hide_register_activate_message}","isHtml":true},
 				
 				
-			{"text":"Thank you. Your account has been activated.","hidden":"{$item_hide_register_activated_message}","isHtml":true},
+			{"text":"{mlang_message REGISTER_ACTIVATED}","hidden":"{$item_hide_register_activated_message}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

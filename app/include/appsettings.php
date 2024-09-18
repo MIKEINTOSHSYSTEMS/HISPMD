@@ -48,7 +48,59 @@ include(getabspath('classes/pdlayout.php'));
 
 //	custom labels
 $custom_labels = array();
-$custom_labels["English"] = array();
+$custom_labels["Amharic"] = array();
+	$custom_labels["Amharic"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<iframe
+    src=\"https://viz.hispmd.merqconsultancy.org/public/dashboard/d918846e-4cd4-4909-837e-73c99e8f85d8\"
+    frameborder=\"0\"
+    width=\"100%\"
+    height=\"100%\"
+    allowtransparency
+></iframe>";
+	$custom_labels["English"] = array();
+		$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>MFR Facilities Registery Dashboard</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 777vh;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        id=\"metabase-iframe\"
+        src=\"\"
+        allowtransparency></iframe>
+    <script>
+        // Set dashboard ID dynamically
+        var dashboardId = 2; // Replace with dynamic ID if needed
+
+        // Make a request to the PHP server to generate the iframe URL for the selected dashboard ID
+        fetch('../api/meta/base.php?dashboardId=' + dashboardId)
+            .then(response => response.text())
+            .then(iframeUrl => {
+                document.getElementById('metabase-iframe').src = iframeUrl;
+            });
+    </script>
+</body>
+        <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
+
+</html>
+";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -619,9 +671,13 @@ $globalSettings["LandingURL"] = "menu.php?page=menu";
 $globalSettings["LandingPageId"] = "menu";
 
 $globalSettings["ProjectLogo"] = array();
+$globalSettings["ProjectLogo"]["Amharic"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
 $globalSettings["ProjectLogo"]["English"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
 
 $globalSettings["CookieBanner"] = array();
+$globalSettings["CookieBanner"]["Amharic"] = "በእኛ የድር መተግበሪያ ላይ የእርስዎን የአሰሳ ተሞክሮ ለማሻሻል እና የጣቢያ ትራፊክን ለመተንተን ኩኪዎችን እና ሌሎች የመከታተያ ቴክኖሎጂዎችን እንጠቀማለን። 
+እሺን/OK ጠቅ በማድረግ ኩኪዎችን እና ሌሎች የመከታተያ ቴክኖሎጂዎችን እንድንጠቀም ተስማምተሃል።
+";
 $globalSettings["CookieBanner"]["English"] = "We use cookies and other tracking technologies to improve your browsing experience on our web application, and analyze site traffic.
 By clicking OK, you consent to our use of cookies and other tracking technologies.";
 
@@ -749,9 +805,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "610_1726248133";
+$projectBuildKey = "611_1726248133";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "610";
+$projectBuildNumber = "611";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -869,6 +925,103 @@ $tableCaptions["English"]["MOH_Indicators_data_Chart"] = "MOH Indicators Data Ch
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["English"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits Distribution";
+$tableCaptions["Amharic"] = array();
+$tableCaptions["Amharic"][""] = "";
+$tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
+$tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
+$tableCaptions["Amharic"]["MFR_Facilities"] = "MFR መገልገያዎች";
+$tableCaptions["Amharic"]["MFR_Region_Report"] = "MFR ክልል ሪፖርት";
+$tableCaptions["Amharic"]["MFR_Zone_Report"] = "MFR ዞን ሪፖርት";
+$tableCaptions["Amharic"]["MFR_Woreda_Report"] = "MFR ወረዳ ሪፖርት";
+$tableCaptions["Amharic"]["DHIS2_Indicators"] = "የ DHIS2 አመላካቾች";
+$tableCaptions["Amharic"]["DHIS2_Organisation_Units"] = "DHIS2 ድርጅት ክፍሎች";
+$tableCaptions["Amharic"]["DHIS2_Analytics"] = "DHIS2 ትንታኔ";
+$tableCaptions["Amharic"]["DHIS2_Indicator"] = "የ DHIS2 አመልካች";
+$tableCaptions["Amharic"]["DHIS2_Organisation_Unit"] = "DHIS2 ድርጅት ክፍል";
+$tableCaptions["Amharic"]["DHIS2_Analytics_Chart"] = "DHIS2 ትንታኔ ገበታ";
+$tableCaptions["Amharic"]["DHIS2_Analytics_Report"] = "DHIS2 ትንታኔ ሪፖርት";
+$tableCaptions["Amharic"]["DHIS2_Reports"] = "DHIS2 ሪፖርቶች";
+$tableCaptions["Amharic"]["DHIS2_Datasets"] = "DHIS2 የውሂብ ስብስቦች";
+$tableCaptions["Amharic"]["DHIS2_Reporting_Rate"] = "DHIS2 ሪፖርት የማድረግ መጠን";
+$tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Chart"] = "DHIS2 የሪፖርት ደረጃ ገበታ";
+$tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Report"] = "DHIS2 የሪፖርት ደረጃ ሪፖርት";
+$tableCaptions["Amharic"]["DHIS2_Reporting_Rates_Chart"] = "DHIS2 ሪፖርት ማድረጊያ ተመኖች ገበታ";
+$tableCaptions["Amharic"]["MFR_AIO_Dashboard"] = "MFR AIO ዳሽቦርድ";
+$tableCaptions["Amharic"]["MFR_Facility"] = "MFR ተቋም";
+$tableCaptions["Amharic"]["MFR_Regions"] = "MFR ክልሎች";
+$tableCaptions["Amharic"]["MFR_Zones"] = "MFR ዞኖች";
+$tableCaptions["Amharic"]["MFR_Woredas"] = "MFR ወረዳዎች";
+$tableCaptions["Amharic"]["MFR_Facility_Types"] = "የ MFR መገልገያ ዓይነቶች";
+$tableCaptions["Amharic"]["MFR_Operational_Statuses"] = "MFR የአሠራር ሁኔታዎች";
+$tableCaptions["Amharic"]["MFR_Status"] = "MFR ሁኔታ";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Country"] = "DHIS2 OrgUnit አገር";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Regions"] = "DHIS2 OrgUnit ክልሎች";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Zone"] = "DHIS2 OrgUnit ዞን";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Woredas"] = "DHIS2 OrgUnit ወረዳዎች";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Groups"] = "DHIS2 OrgUnit ቡድኖች";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Group_Sets"] = "DHIS2 OrgUnit ቡድን ስብስቦች";
+$tableCaptions["Amharic"]["DHIS2_AIO_OrgUnit"] = "DHIS2 AIO OrgUnit";
+$tableCaptions["Amharic"]["DHIS2_OrgUnit_Distributions"] = "DHIS2 OrgUnit ስርጭቶች";
+$tableCaptions["Amharic"]["public_ai_data_assistant"] = "Ai የውሂብ ረዳት";
+$tableCaptions["Amharic"]["public_dataquality"] = "የውሂብ ጥራት";
+$tableCaptions["Amharic"]["public_datause"] = "የውሂብ አጠቃቀም";
+$tableCaptions["Amharic"]["public_dhis2_periods"] = "DHIS2 ወቅቶች";
+$tableCaptions["Amharic"]["public_digitalhealth"] = "ዲጂታል ጤና";
+$tableCaptions["Amharic"]["public_digitalhealthapps"] = "Digitalhealthapps";
+$tableCaptions["Amharic"]["public_financialresources"] = "የፋይናንስ ምንጮች";
+$tableCaptions["Amharic"]["public_healthfacilities"] = "የጤና ተቋማት";
+$tableCaptions["Amharic"]["public_healthunits"] = "የጤና ክፍሎች";
+$tableCaptions["Amharic"]["public_hisgovernance"] = "የሱ አስተዳደር";
+$tableCaptions["Amharic"]["public_hispartners"] = "የትዳር አጋሮች";
+$tableCaptions["Amharic"]["public_mfr_dashboard_reports"] = "Mfr ዳሽቦርድ ሪፖርቶች";
+$tableCaptions["Amharic"]["public_mfr_operational_status"] = "Mfr የስራ ሁኔታ";
+$tableCaptions["Amharic"]["public_mfr_region"] = "Mfr ክልል";
+$tableCaptions["Amharic"]["public_mfr_woreda"] = "ምፍር ወረዳ";
+$tableCaptions["Amharic"]["public_mfr_zone"] = "Mfr ዞን";
+$tableCaptions["Amharic"]["public_publications"] = "ህትመቶች";
+$tableCaptions["Amharic"]["public_regions"] = "ክልሎች";
+$tableCaptions["Amharic"]["public_research"] = "ምርምር";
+$tableCaptions["Amharic"]["public_workforce"] = "የሰው ኃይል";
+$tableCaptions["Amharic"]["public_hispmdusers"] = "Hispmduserer";
+$tableCaptions["Amharic"]["mfr_dashboard_reports_chart"] = "Mfr ዳሽቦርድ ሪፖርቶች ገበታ";
+$tableCaptions["Amharic"]["mfr_operational_status_chart"] = "Mfr የስራ ሁኔታ ገበታ";
+$tableCaptions["Amharic"]["mfr_region_chart"] = "Mfr ክልል ገበታ";
+$tableCaptions["Amharic"]["public_ethprism_additional_organizational_and_behavioral_assessment"] = "Ethprism Additional Organizational And Behavioral Assessment";
+$tableCaptions["Amharic"]["public_ethprism_facility_level_rhis_performance_diagnostic"] = "Ethprism Facility Level Rhis Performance Diagnostic";
+$tableCaptions["Amharic"]["public_ethprism_facility_office_checklist"] = "Ethprism Facility Office Checklist";
+$tableCaptions["Amharic"]["public_ethprism_healthpost_level_rhis_performance_diagnostic"] = "Ethprism Healthpost Level Rhis Performance Diagnostic";
+$tableCaptions["Amharic"]["public_ethprism_national_prism_woreda_level_diagnostic"] = "Ethprism National Prism Woreda Level Diagnostic";
+$tableCaptions["Amharic"]["public_ethprism_organizational_and_behavioral_assessment"] = "Ethprism Organizational And Behavioral Assessment";
+$tableCaptions["Amharic"]["public_hispmd_prism_settings"] = "Hispmd Prism Settings";
+$tableCaptions["Amharic"]["PRISM_Dashboard"] = "PRISM Dashboard";
+$tableCaptions["Amharic"]["hispmd_users_audit"] = "Hispmd Users Audit";
+$tableCaptions["Amharic"]["hispmd_system_settings"] = "Hispmd System Settings";
+$tableCaptions["Amharic"]["hispmd_prism_data_forms"] = "Hispmd Prism Data Forms";
+$tableCaptions["Amharic"]["public_moh_administration_units"] = "MOH አስተዳደር ክፍሎች";
+$tableCaptions["Amharic"]["public_moh_assessments"] = "Moh ግምገማዎች";
+$tableCaptions["Amharic"]["public_moh_data_sources"] = "Moh የውሂብ ምንጮች";
+$tableCaptions["Amharic"]["public_moh_facility_types"] = "Moh ፋሲሊቲ አይነቶች";
+$tableCaptions["Amharic"]["public_moh_health_facilities"] = "Moh የጤና ተቋማት";
+$tableCaptions["Amharic"]["public_moh_indicator_data"] = "የMOH አመልካች ውሂብ";
+$tableCaptions["Amharic"]["public_moh_indicators"] = "MOH አመላካቾች";
+$tableCaptions["Amharic"]["public_moh_regions"] = "MOH ክልሎች";
+$tableCaptions["Amharic"]["public_moh_indicator_groups"] = "MOH አመላካች ቡድኖች";
+$tableCaptions["Amharic"]["public_timetracker"] = "የሰዓት ቆጣሪ";
+$tableCaptions["Amharic"]["public_mfr_facilities_register"] = "Mfr መገልገያዎች ይመዝገቡ";
+$tableCaptions["Amharic"]["admin_rights"] = "Admin Rights";
+$tableCaptions["Amharic"]["admin_members"] = "Admin Members";
+$tableCaptions["Amharic"]["admin_users"] = "Admin Users";
+$tableCaptions["Amharic"]["System_Users_Activity_Dashboard"] = "System Users Activity Dashboard";
+$tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD ድር ሪፖርቶች እና ገበታዎች ገንቢ";
+$tableCaptions["Amharic"]["public_mfr_facilities_register_report"] = "Mfr መገልገያዎች ይመዝገቡ ሪፖርት";
+$tableCaptions["Amharic"]["public_hispmd_organisations"] = "Hispmd ድርጅቶች";
+$tableCaptions["Amharic"]["public_hispmd_uggroups"] = "Hispmd Uggroups";
+$tableCaptions["Amharic"]["public_mfr_facilities_register_chart"] = "Mfr መገልገያዎች መመዝገቢያ ገበታ";
+$tableCaptions["Amharic"]["public_moh_data_scope"] = "የMoh ውሂብ ወሰን";
+$tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH ጠቋሚዎች ዳሽቦርድ";
+$tableCaptions["Amharic"]["MOH_Indicators_Data_Report"] = "MOH ጠቋሚዎች ውሂብ ሪፖርት";
+$tableCaptions["Amharic"]["MOH_Indicators_data_Chart"] = "MOH አመልካቾች የውሂብ ገበታ";
+$tableCaptions["Amharic"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits ስርጭት";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -947,6 +1100,20 @@ $mediaType = $mediaType ? $mediaType : 0;
 $page_titles[GLOBAL_PAGES_SHORT] = array();
 if(mlang_getcurrentlang()=="English")
 {
+}
+if(mlang_getcurrentlang()=="Amharic")
+{
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"] = array();
+	$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["changepwd"] = "የይለፍ ቃል ቀይር";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["changepwd_success"] = "የይለፍ ቃል ተቀይሯል";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["login"] = "ይግቡ";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["menu"] = "ሜኑ";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["register"] = "ይመዝገቡ";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["register_success"] = "ምዝገባው ተሳክቷል!";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["remind"] = "የይለፍ ቃል አስታዋሽ";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["remind_success"] = "የይለፍ ቃል አስታዋሽ በተሳካ ሁኔታ ተቀናብሯል";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["session_expired"] = "ክፍለ-ጊዜው_አልቋል";
+				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["userinfo"] = "የተጠቃሚ መገለጫ";
 }
 
 $globalSettings["showDetailedError"] = true;

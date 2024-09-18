@@ -148,7 +148,7 @@ class LoginPage_AD extends LoginPage
 				return true;
 			}
 
-			$this->message = "Invalid Login";//"Invalid Login";
+			$this->message = mlang_message("INVALID_LOGIN");//"Invalid Login";
 		}
 		else
 		{

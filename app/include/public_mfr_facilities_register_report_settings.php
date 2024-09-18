@@ -52,6 +52,39 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipspublic_mfr_facilities_register_report["English"]))
 		$tdatapublic_mfr_facilities_register_report[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"] = array();
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"] = array();
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"] = array();
+	$pageTitlespublic_mfr_facilities_register_report["Amharic"] = array();
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["status"] = "ሁኔታ";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["status"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["status"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["operationalstatus"] = "የአሠራር ሁኔታ";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["operationalstatus"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["operationalstatus"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["facilitytype"] = "የመገልገያ አይነት";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["facilitytype"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["facilitytype"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["parentfacilitytype"] = "የወላጅነት አይነት";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["parentfacilitytype"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["parentfacilitytype"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["region"] = "ክልል";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["region"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["region"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["zone"] = "ዞን";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["zone"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["zone"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["woreda"] = "ወረዳ";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["woreda"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["woreda"] = "";
+	$fieldLabelspublic_mfr_facilities_register_report["Amharic"]["count"] = "ቁጠር";
+	$fieldToolTipspublic_mfr_facilities_register_report["Amharic"]["count"] = "";
+	$placeHolderspublic_mfr_facilities_register_report["Amharic"]["count"] = "";
+	if (count($fieldToolTipspublic_mfr_facilities_register_report["Amharic"]))
+		$tdatapublic_mfr_facilities_register_report[".isUseToolTips"] = true;
+}
 
 
 	$tdatapublic_mfr_facilities_register_report[".NCSearch"] = true;

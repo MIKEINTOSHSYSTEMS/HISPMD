@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
     <head>
-        <title>Chart: Tables Relations</title>
+        <title>{mlang_message WR_CHART_RELATION}</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <link type="text/css" href="styles/default.css" rel="stylesheet">
 	<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 			<div class="rnr-s-1 {$wr_pagestylepath}">
 				<div class="rnr-c rnr-cv">
 					<div class="style2" align=center>
-						Chart: Tables Relations{$chart_title}{$chart_table}
+						{mlang_message WR_CHART_RELATION}{$chart_title}{$chart_table}
 					</div>
 					<div class="style1 rnr-b-wrapper">
 						<div class="rnr-s-fields {$wr_pagestylepath}">
@@ -36,11 +36,11 @@
 										</tr>
 										<tr class="reportchart-editfields">
 											<td>
-												Left Table
+												{mlang_message WR_LEFTTABLE}
 											</td>
 											<td>
 												<select id="left_tables" class="table_fields" name="left_tables" style="width:150px">
-													<option selected value="-1">Select table</option>
+													<option selected value="-1">{mlang_message WR_SELECT_TABLE}</option>
 													<option value="{$table_selected}">{$table_selected}</option>
 													<!--
 													{$tables}
@@ -48,18 +48,18 @@
 												</select>
 											</td>
 											<td>
-												Right Table
+												{mlang_message WR_RIGHTTABLE}
 											</td>
 											<td>
 												<select id="right_tables" class="table_fields" name="right_tables" style="width:150px">
-													<option selected value="-1">Select table</option>
+													<option selected value="-1">{mlang_message WR_SELECT_TABLE}</option>
 													{$tables}
 												</select>
 											</td>
 										</tr>
 										<tr class="reportchart-editfields">
 											<td>
-												Left Field
+												{mlang_message WR_LEFTFIELD}
 											</td>
 											<td>
 												<select id="left_fields_1" class="fld_names" name="left_fields_1" style="width:150px">
@@ -67,7 +67,7 @@
 												</select>
 											</td>
 											<td>
-												Right Field
+												{mlang_message WR_RIGHTFIELD}
 											</td>
 											<td>
 												<select id="right_fields_1" class="fld_names" name="right_fields_1" style="width:150px">
@@ -77,7 +77,7 @@
 										</tr>
 										<tr class="reportchart-editfields">
 											<td>
-												Join Type
+												{mlang_message WR_JOIN_TYPE}
 											</td>
 											<td>
 												<select id="join_select" name="join_select" style="width:150px">
@@ -94,7 +94,7 @@
 										</tr>
 										<tr class="reportchart-editfields">
 											<td colspan=4 align=center>
-												<a id="addrel_btn" name="addrel_btn" class="rnr-button" href="#">Add Relation</a>
+												<a id="addrel_btn" name="addrel_btn" class="rnr-button" href="#">{mlang_message WR_ADD_RELAT}</a>
 											</td>
 										</tr>
 										<tr class="reportchart-editfields">
@@ -111,25 +111,25 @@
 										</tr>
 										<tr class="reportchart-editfields">
 											<td colspan=4 align=center>
-												<a id="remrel_btn" name="remrel_btn" class="rnr-button" href="#">Remove Relation</a>
+												<a id="remrel_btn" name="remrel_btn" class="rnr-button" href="#">{mlang_message WR_REMOVE_RELAT}</a>
 											</td>
 										</tr>
 									</table>
 								</div>
 								<div id="btns" class="style2" align=center>
-									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">{mlang_message BACK}</a>
 									<span style="position:absolute;" id="jumptospan"></span>
-									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
-									<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">SQL Query</a>
+									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">{mlang_message WR_JUMP_TO}</a>
+									<a id="sqlbtn" name="sqlbtn" class="rnr-button" href="#">{mlang_message WR_SQL_QUERY}</a>
 									<a id="sql_query" class="various fancybox.iframe" href="web_query.php?type=webcharts&name=table_relations&ie=UTF-8&iframe"></a>
-									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
+									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">{mlang_message NEXT}</a>
 									{BEGIN b_is_chart_save}
-									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
+									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">{mlang_message WR_SAVE_AS}</a>
 									{END b_is_chart_save}															
 									{BEGIN b_is_chart_name}
-									<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
+									<a id="savebtn" name="savebtn" class="rnr-button" href="#">{mlang_message SAVE}</a>
 									{END b_is_chart_name}	
-									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
+									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">{mlang_message WR_PREVIEW}</a>
 									<a id="preview" class="various fancybox.iframe" href="dchart_preview.php?cname={$chart_name_preview}&ie=UTF-8&iframe"></a>
 								</div>
 							</div>
@@ -150,16 +150,16 @@
 <iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
 <div id="menujump" class=action style="display:none;position:absolute;">
 	<table width=100% cellpadding=5 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
-		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
-		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
-		<tr><td id=row2 style="cursor:pointer;padding:5px;">Group By</td></tr>
-		<tr><td id=row3 style="cursor:pointer;padding:5px;">Type</td></tr>
-		<tr><td id=row4 style="cursor:pointer;padding:5px;">Parameters</td></tr>
-		<tr><td id=row5 style="cursor:pointer;padding:5px;">Appearance</td></tr>
-		<tr><td id=row6 style="cursor:pointer;padding:5px;">Chart Settings</td></tr>
-		<tr><td id=row7 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
-		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
-		<tr><td id=row9 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">{mlang_message AA_TABLES}</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">{mlang_message WR_JUMP_RELAT}</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">{mlang_message WR_GROUP_BY}</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">{mlang_message WR_TYPE}</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">{mlang_message WR_PARAM}</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">{mlang_message WR_APPEARANCE}</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">{mlang_message WR_CHART_SETT}</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">{mlang_message WR_DYNAM_PERMISSIONS}</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">{mlang_message WR_BACK_TO_MENU}</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">{mlang_message WR_BACK_TO_APPL}</td></tr>
 	</table>
 </div>
 		

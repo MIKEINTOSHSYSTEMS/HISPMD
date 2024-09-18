@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdataquality["English"]))
 		$tdatadataquality[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsdataquality["Amharic"] = array();
+	$fieldToolTipsdataquality["Amharic"] = array();
+	$placeHoldersdataquality["Amharic"] = array();
+	$pageTitlesdataquality["Amharic"] = array();
+	$fieldLabelsdataquality["Amharic"]["dq_id"] = "Dq መለያ";
+	$fieldToolTipsdataquality["Amharic"]["dq_id"] = "";
+	$placeHoldersdataquality["Amharic"]["dq_id"] = "";
+	$fieldLabelsdataquality["Amharic"]["report_type"] = "የሪፖርት አይነት";
+	$fieldToolTipsdataquality["Amharic"]["report_type"] = "";
+	$placeHoldersdataquality["Amharic"]["report_type"] = "";
+	$fieldLabelsdataquality["Amharic"]["timeliness_percentage"] = "ወቅታዊነት መቶኛ";
+	$fieldToolTipsdataquality["Amharic"]["timeliness_percentage"] = "";
+	$placeHoldersdataquality["Amharic"]["timeliness_percentage"] = "";
+	$fieldLabelsdataquality["Amharic"]["completeness_percentage"] = "የሙሉነት መቶኛ";
+	$fieldToolTipsdataquality["Amharic"]["completeness_percentage"] = "";
+	$placeHoldersdataquality["Amharic"]["completeness_percentage"] = "";
+	if (count($fieldToolTipsdataquality["Amharic"]))
+		$tdatadataquality[".isUseToolTips"] = true;
+}
 
 
 	$tdatadataquality[".NCSearch"] = true;

@@ -105,7 +105,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"Do you want to continue your session?","color":"#55768e","hidden":"{$item_hide_session_expired_message}","fontSize":22,"isHtml":true},
+			{"text":"{mlang_message SESSION_EXPIRED_TITLE}","color":"#55768e","hidden":"{$item_hide_session_expired_message}","fontSize":22,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_session_expired_comment}"},

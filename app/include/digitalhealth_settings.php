@@ -55,6 +55,42 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdigitalhealth["English"]))
 		$tdatadigitalhealth[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsdigitalhealth["Amharic"] = array();
+	$fieldToolTipsdigitalhealth["Amharic"] = array();
+	$placeHoldersdigitalhealth["Amharic"] = array();
+	$pageTitlesdigitalhealth["Amharic"] = array();
+	$fieldLabelsdigitalhealth["Amharic"]["dh_id"] = "ዲኤች መለያ";
+	$fieldToolTipsdigitalhealth["Amharic"]["dh_id"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["dh_id"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["site_type"] = "የጣቢያ አይነት";
+	$fieldToolTipsdigitalhealth["Amharic"]["site_type"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["site_type"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["dhis2_functional"] = "Dhis2 ተግባራዊ";
+	$fieldToolTipsdigitalhealth["Amharic"]["dhis2_functional"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["dhis2_functional"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["dhis2_online"] = "Dhis2 መስመር ላይ";
+	$fieldToolTipsdigitalhealth["Amharic"]["dhis2_online"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["dhis2_online"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["mfr_updated"] = "Mfr ተዘምኗል";
+	$fieldToolTipsdigitalhealth["Amharic"]["mfr_updated"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["mfr_updated"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["echis_implemented"] = "ኢቺስ ተተግብሯል።";
+	$fieldToolTipsdigitalhealth["Amharic"]["echis_implemented"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["echis_implemented"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["emr_status"] = "ኤመር ሁኔታ";
+	$fieldToolTipsdigitalhealth["Amharic"]["emr_status"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["emr_status"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["ihris_hra_implemented"] = "Ihris Hra ተተግብሯል";
+	$fieldToolTipsdigitalhealth["Amharic"]["ihris_hra_implemented"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["ihris_hra_implemented"] = "";
+	$fieldLabelsdigitalhealth["Amharic"]["hcmis_implemented"] = "Hcmis ተተግብሯል";
+	$fieldToolTipsdigitalhealth["Amharic"]["hcmis_implemented"] = "";
+	$placeHoldersdigitalhealth["Amharic"]["hcmis_implemented"] = "";
+	if (count($fieldToolTipsdigitalhealth["Amharic"]))
+		$tdatadigitalhealth[".isUseToolTips"] = true;
+}
 
 
 	$tdatadigitalhealth[".NCSearch"] = true;

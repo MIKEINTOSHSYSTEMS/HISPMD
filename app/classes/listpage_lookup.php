@@ -282,7 +282,7 @@ class ListPage_Lookup extends ListPage_Embed
 	 * build simple search control
 	 */
 	protected function assignSearchControl() {
-		$searchforAttrs = 'placeholder="'. "search".'"';
+		$searchforAttrs = 'placeholder="'. mlang_message("SEARCH_TIP").'"';
 		
 		$params = $this->searchClauseObj->getSearchGlobalParams();
 		if( $this->searchClauseObj->searchStarted() ) {

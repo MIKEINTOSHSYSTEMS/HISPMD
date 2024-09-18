@@ -34,6 +34,21 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_facility_types["English"]))
 		$tdatamoh_facility_types[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Amharic")
+{
+	$fieldLabelsmoh_facility_types["Amharic"] = array();
+	$fieldToolTipsmoh_facility_types["Amharic"] = array();
+	$placeHoldersmoh_facility_types["Amharic"] = array();
+	$pageTitlesmoh_facility_types["Amharic"] = array();
+	$fieldLabelsmoh_facility_types["Amharic"]["facility_type_id"] = "የመገልገያ አይነት መለያ";
+	$fieldToolTipsmoh_facility_types["Amharic"]["facility_type_id"] = "";
+	$placeHoldersmoh_facility_types["Amharic"]["facility_type_id"] = "";
+	$fieldLabelsmoh_facility_types["Amharic"]["facility_type_name"] = "የመገልገያ አይነት ስም";
+	$fieldToolTipsmoh_facility_types["Amharic"]["facility_type_name"] = "";
+	$placeHoldersmoh_facility_types["Amharic"]["facility_type_name"] = "";
+	if (count($fieldToolTipsmoh_facility_types["Amharic"]))
+		$tdatamoh_facility_types[".isUseToolTips"] = true;
+}
 
 
 	$tdatamoh_facility_types[".NCSearch"] = true;
