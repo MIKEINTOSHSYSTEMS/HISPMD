@@ -227,17 +227,15 @@ $tdatakbcomments[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "order by created_date desc";
+$tstrOrderBy = "";
 $tdatakbcomments[".strOrderBy"] = $tstrOrderBy;
 
 $tdatakbcomments[".orderindexes"] = array();
-	$tdatakbcomments[".orderindexes"][] = array(3, (0 ? "ASC" : "DESC"), "created_date");
 
 
-
-$tdatakbcomments[".sqlHead"] = "SELECT name, 	moderated, 	created_date, 	ArticleID, 	\"comment\", 	CommentID, 	email";
-$tdatakbcomments[".sqlFrom"] = "FROM kbcomments";
-$tdatakbcomments[".sqlWhereExpr"] = "moderated = 1";
+$tdatakbcomments[".sqlHead"] = "SELECT name,  	moderated,  	created_date,  	\"ArticleID\",  	\"comment\",  	\"CommentID\",  	email";
+$tdatakbcomments[".sqlFrom"] = "FROM \"public\".kbcomments";
+$tdatakbcomments[".sqlWhereExpr"] = "";
 $tdatakbcomments[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -725,7 +723,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -1004,7 +1002,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CommentID";
+	$fdata["FullName"] = "\"CommentID\"";
 
 	
 	
@@ -1344,25 +1342,23 @@ function createSqlQuery_kbcomments()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "name, 	moderated, 	created_date, 	ArticleID, 	\"comment\", 	CommentID, 	email";
-$proto0["m_strFrom"] = "FROM kbcomments";
-$proto0["m_strWhere"] = "moderated = 1";
-$proto0["m_strOrderBy"] = "order by created_date desc";
+$proto0["m_strFieldList"] = "name,  	moderated,  	created_date,  	\"ArticleID\",  	\"comment\",  	\"CommentID\",  	email";
+$proto0["m_strFrom"] = "FROM \"public\".kbcomments";
+$proto0["m_strWhere"] = "";
+$proto0["m_strOrderBy"] = "";
 	
 																												;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "moderated = 1";
+$proto2["m_sql"] = "";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "moderated",
-	"m_strTable" => "kbcomments",
-	"m_srcTableName" => "kbcomments"
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "= 1";
+$proto2["m_strCase"] = "";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;
@@ -1435,7 +1431,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbcomments"
 ));
 
-$proto12["m_sql"] = "ArticleID";
+$proto12["m_sql"] = "\"ArticleID\"";
 $proto12["m_srcTableName"] = "kbcomments";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1463,7 +1459,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbcomments"
 ));
 
-$proto16["m_sql"] = "CommentID";
+$proto16["m_sql"] = "\"CommentID\"";
 $proto16["m_srcTableName"] = "kbcomments";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -1501,7 +1497,7 @@ $proto21["m_columns"][] = "email";
 $obj = new SQLTable($proto21);
 
 $proto20["m_table"] = $obj;
-$proto20["m_sql"] = "kbcomments";
+$proto20["m_sql"] = "\"public\".kbcomments";
 $proto20["m_alias"] = "";
 $proto20["m_srcTableName"] = "kbcomments";
 $proto22=array();
@@ -1525,19 +1521,6 @@ $obj = new SQLFromListItem($proto20);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto24=array();
-						$obj = new SQLField(array(
-	"m_strName" => "created_date",
-	"m_strTable" => "public.kbcomments",
-	"m_srcTableName" => "kbcomments"
-));
-
-$proto24["m_column"]=$obj;
-$proto24["m_bAsc"] = 0;
-$proto24["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto24);
-
-$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="kbcomments";		
 $obj = new SQLQuery($proto0);
 

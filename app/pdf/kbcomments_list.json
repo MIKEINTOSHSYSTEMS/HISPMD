@@ -70,6 +70,9 @@ pdfDocument = {
 										{BEGIN col_grid_1}
 					"%",
 					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -111,7 +114,7 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c1',
+	cellId: 'c',
 	col:0,
 	row:0,
 			
@@ -124,7 +127,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_breadcrumb}"},
+			{"text":"","hidden":"{$item_hide_search_panel}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -136,7 +139,7 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c3',
+	cellId: 'c2',
 	col:0,
 	row:0,
 			
@@ -197,6 +200,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"","hidden":"{$item_hide_add}"},
+				
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
@@ -275,6 +281,34 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_icons}
+																							{BEGIN cellblock_grid_headcell_checkbox}
+{
+	cellId: 'headcell_checkbox',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_checkbox_head}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_checkbox}
 																							{BEGIN cellblock_grid_headcell_field3}
 {
 	cellId: 'headcell_field3',
@@ -338,6 +372,34 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_icons}
+																							{BEGIN cellblock_grid_cell_checkbox}
+{
+	cellId: 'cell_checkbox',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_checkbox}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_checkbox}
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
@@ -411,6 +473,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_icons}
+																							{BEGIN cellblock_grid_footcell_checkbox}
+{
+	cellId: 'footcell_checkbox',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_checkbox}
 																							{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',

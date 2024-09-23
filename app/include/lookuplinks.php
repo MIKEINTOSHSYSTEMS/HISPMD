@@ -628,6 +628,13 @@ function InitLookupLinks()
 			$lookupTableLinks["faicons"]["kbcategories.faicon"] = array();
 		}
 		$lookupTableLinks["faicons"]["kbcategories.faicon"]["edit"] = array("table" => "kbcategories", "field" => "faicon", "page" => "edit");
+		if( !isset( $lookupTableLinks["kbcategories"] ) ) {
+			$lookupTableLinks["kbcategories"] = array();
+		}
+		if( !isset( $lookupTableLinks["kbcategories"]["main.Category"] )) {
+			$lookupTableLinks["kbcategories"]["main.Category"] = array();
+		}
+		$lookupTableLinks["kbcategories"]["main.Category"]["edit"] = array("table" => "main", "field" => "Category", "page" => "edit");
 		if( !isset( $lookupTableLinks["kbarticles"] ) ) {
 			$lookupTableLinks["kbarticles"] = array();
 		}

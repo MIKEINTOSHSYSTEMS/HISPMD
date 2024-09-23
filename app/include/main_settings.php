@@ -262,16 +262,16 @@ $tdatamain[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY Category";
+$tstrOrderBy = "ORDER BY \"Category\"";
 $tdatamain[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamain[".orderindexes"] = array();
-	$tdatamain[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "Category");
+	$tdatamain[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "\"Category\"");
 
 
 
-$tdatamain[".sqlHead"] = "select ArticleID, ArticleID AS ArticleID2, ArticleID AS ArticleIDedit, Category, DateCreated, Problem, Solution, Title, Views, ArticleID AS helpfullblock, likecount, dislikecount";
-$tdatamain[".sqlFrom"] = "FROM kbarticles";
+$tdatamain[".sqlHead"] = "select \"ArticleID\", \"ArticleID\" AS \"ArticleID2\", \"ArticleID\" AS \"ArticleIDedit\", \"Category\", \"DateCreated\", \"Problem\", \"Solution\", \"Title\", \"Views\", \"ArticleID\" AS \"helpfullblock\", \"likecount\", \"dislikecount\"";
+$tdatamain[".sqlFrom"] = "FROM \"kbarticles\"";
 $tdatamain[".sqlWhereExpr"] = "";
 $tdatamain[".sqlTail"] = "";
 
@@ -338,7 +338,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -477,7 +477,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -616,7 +616,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -754,7 +754,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Category";
+	$fdata["FullName"] = "\"Category\"";
 
 	
 	
@@ -900,7 +900,7 @@ $tdatamain[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -910,6 +910,34 @@ $tdatamain[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "kbcategories";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CategoryID";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Category";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -924,11 +952,8 @@ $tdatamain[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1090,7 +1115,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "DateCreated";
+	$fdata["FullName"] = "\"DateCreated\"";
 
 	
 	
@@ -1227,7 +1252,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Problem";
+	$fdata["FullName"] = "\"Problem\"";
 
 	
 	
@@ -1365,7 +1390,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Solution";
+	$fdata["FullName"] = "\"Solution\"";
 
 	
 	
@@ -1503,7 +1528,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Title";
+	$fdata["FullName"] = "\"Title\"";
 
 	
 	
@@ -1797,7 +1822,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Views";
+	$fdata["FullName"] = "\"Views\"";
 
 	
 	
@@ -2090,7 +2115,7 @@ $tdatamain[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -2229,7 +2254,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "likecount";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "likecount";
+	$fdata["FullName"] = "\"likecount\"";
 
 	
 	
@@ -2367,7 +2392,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "dislikecount";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "dislikecount";
+	$fdata["FullName"] = "\"dislikecount\"";
 
 	
 	
@@ -2559,10 +2584,10 @@ function createSqlQuery_main()
 {
 $proto0=array();
 $proto0["m_strHead"] = "select";
-$proto0["m_strFieldList"] = "ArticleID, ArticleID AS ArticleID2, ArticleID AS ArticleIDedit, Category, DateCreated, Problem, Solution, Title, Views, ArticleID AS helpfullblock, likecount, dislikecount";
-$proto0["m_strFrom"] = "FROM kbarticles";
+$proto0["m_strFieldList"] = "\"ArticleID\", \"ArticleID\" AS \"ArticleID2\", \"ArticleID\" AS \"ArticleIDedit\", \"Category\", \"DateCreated\", \"Problem\", \"Solution\", \"Title\", \"Views\", \"ArticleID\" AS \"helpfullblock\", \"likecount\", \"dislikecount\"";
+$proto0["m_strFrom"] = "FROM \"kbarticles\"";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY Category";
+$proto0["m_strOrderBy"] = "ORDER BY \"Category\"";
 	
 																												;
 			$proto0["cipherer"] = null;
@@ -2606,7 +2631,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "main"
 ));
 
-$proto6["m_sql"] = "ArticleID";
+$proto6["m_sql"] = "\"ArticleID\"";
 $proto6["m_srcTableName"] = "main";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -2620,7 +2645,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto8["m_sql"] = "ArticleID";
+$proto8["m_sql"] = "\"ArticleID\"";
 $proto8["m_srcTableName"] = "main";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "ArticleID2";
@@ -2634,7 +2659,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto10["m_sql"] = "ArticleID";
+$proto10["m_sql"] = "\"ArticleID\"";
 $proto10["m_srcTableName"] = "main";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "ArticleIDedit";
@@ -2648,7 +2673,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto12["m_sql"] = "Category";
+$proto12["m_sql"] = "\"Category\"";
 $proto12["m_srcTableName"] = "main";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -2662,7 +2687,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto14["m_sql"] = "DateCreated";
+$proto14["m_sql"] = "\"DateCreated\"";
 $proto14["m_srcTableName"] = "main";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -2676,7 +2701,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto16["m_sql"] = "Problem";
+$proto16["m_sql"] = "\"Problem\"";
 $proto16["m_srcTableName"] = "main";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -2690,7 +2715,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto18["m_sql"] = "Solution";
+$proto18["m_sql"] = "\"Solution\"";
 $proto18["m_srcTableName"] = "main";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -2704,7 +2729,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto20["m_sql"] = "Title";
+$proto20["m_sql"] = "\"Title\"";
 $proto20["m_srcTableName"] = "main";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -2718,7 +2743,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto22["m_sql"] = "Views";
+$proto22["m_sql"] = "\"Views\"";
 $proto22["m_srcTableName"] = "main";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -2732,7 +2757,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto24["m_sql"] = "ArticleID";
+$proto24["m_sql"] = "\"ArticleID\"";
 $proto24["m_srcTableName"] = "main";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "helpfullblock";
@@ -2746,7 +2771,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto26["m_sql"] = "likecount";
+$proto26["m_sql"] = "\"likecount\"";
 $proto26["m_srcTableName"] = "main";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
@@ -2760,7 +2785,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "main"
 ));
 
-$proto28["m_sql"] = "dislikecount";
+$proto28["m_sql"] = "\"dislikecount\"";
 $proto28["m_srcTableName"] = "main";
 $proto28["m_expr"]=$obj;
 $proto28["m_alias"] = "";
@@ -2786,7 +2811,7 @@ $proto31["m_columns"][] = "dislikecount";
 $obj = new SQLTable($proto31);
 
 $proto30["m_table"] = $obj;
-$proto30["m_sql"] = "kbarticles";
+$proto30["m_sql"] = "\"kbarticles\"";
 $proto30["m_alias"] = "";
 $proto30["m_srcTableName"] = "main";
 $proto32=array();

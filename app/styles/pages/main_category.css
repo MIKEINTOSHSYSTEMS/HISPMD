@@ -1,12 +1,30 @@
+[data-cellid="above-grid_c5"][data-page="main_category"][data-cellid="above-grid_c5"][data-page="main_category"][data-cellid="above-grid_c5"][data-page="main_category"] {
+  background-color: #e7fdfe;
+  color: #0075d9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+[data-page="main_category"][data-itemid="text"] {
+  background-color: #0075d9;
+  color: #0075d9;
+  font-weight: normal;
+}
+[data-page="main_category"][data-itemid="text1"] {
+  color: #00293c;
+  font-weight: bold;
+}
 [data-page="main_category"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
 
 /* Put  your custom CSS code here */
 
-[data-cellid="top_c2"][data-page="main_category"][data-cellid="top_c2"][data-page="main_category"][data-cellid="top_c2"][data-page="main_category"] {
-  border-bottom: 1px solid #e2e2e2;
+[data-page="main_category"][data-itemid="category_title"] {
+    font-family: "Montserrat",sans-serif;
+    color: #1b1b1b;
+        font-size: 20px;
 }
+
 /* Put  your custom CSS code here */
 
 [data-page="main_category"][data-itemid="simple_grid_field6"] a {
@@ -23,13 +41,5 @@
     color: #ffffff;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-/* Put  your custom CSS code here */
-
-[data-page="main_category"][data-itemid="category_title"] {
-    font-family: "Montserrat",sans-serif;
-    color: #1b1b1b;
-        font-size: 20px;
 }
 

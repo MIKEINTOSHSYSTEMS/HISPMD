@@ -212,7 +212,7 @@ $tdatakbcategories[".strOrderBy"] = $tstrOrderBy;
 $tdatakbcategories[".orderindexes"] = array();
 
 
-$tdatakbcategories[".sqlHead"] = "SELECT Category, 	CategoryID, 	Description, 	faicon";
+$tdatakbcategories[".sqlHead"] = "SELECT \"Category\", 	\"CategoryID\", 	\"Description\", 	\"faicon\"";
 $tdatakbcategories[".sqlFrom"] = "FROM kbcategories";
 $tdatakbcategories[".sqlWhereExpr"] = "";
 $tdatakbcategories[".sqlTail"] = "";
@@ -279,7 +279,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Category";
+	$fdata["FullName"] = "\"Category\"";
 
 	
 	
@@ -417,7 +417,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CategoryID";
+	$fdata["FullName"] = "\"CategoryID\"";
 
 	
 	
@@ -557,7 +557,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Description";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Description";
+	$fdata["FullName"] = "\"Description\"";
 
 	
 	
@@ -697,7 +697,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "faicon";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "faicon";
+	$fdata["FullName"] = "\"faicon\"";
 
 	
 	
@@ -913,7 +913,7 @@ function createSqlQuery_kbcategories()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "Category, 	CategoryID, 	Description, 	faicon";
+$proto0["m_strFieldList"] = "\"Category\", 	\"CategoryID\", 	\"Description\", 	\"faicon\"";
 $proto0["m_strFrom"] = "FROM kbcategories";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -960,7 +960,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "kbcategories"
 ));
 
-$proto6["m_sql"] = "Category";
+$proto6["m_sql"] = "\"Category\"";
 $proto6["m_srcTableName"] = "kbcategories";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -974,7 +974,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbcategories"
 ));
 
-$proto8["m_sql"] = "CategoryID";
+$proto8["m_sql"] = "\"CategoryID\"";
 $proto8["m_srcTableName"] = "kbcategories";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -988,7 +988,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbcategories"
 ));
 
-$proto10["m_sql"] = "Description";
+$proto10["m_sql"] = "\"Description\"";
 $proto10["m_srcTableName"] = "kbcategories";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1002,7 +1002,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbcategories"
 ));
 
-$proto12["m_sql"] = "faicon";
+$proto12["m_sql"] = "\"faicon\"";
 $proto12["m_srcTableName"] = "kbcategories";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";

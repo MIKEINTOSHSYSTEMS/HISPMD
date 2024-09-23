@@ -249,7 +249,7 @@ $tdatakbarticles[".strOrderBy"] = $tstrOrderBy;
 $tdatakbarticles[".orderindexes"] = array();
 
 
-$tdatakbarticles[".sqlHead"] = "SELECT ArticleID, ArticleID AS ArticleID2, ArticleID AS ArticleIDedit, Category, DateCreated, Problem, Solution, Title, Views";
+$tdatakbarticles[".sqlHead"] = "SELECT \"ArticleID\", \"ArticleID\" AS \"ArticleID2\", \"ArticleID\" AS \"ArticleIDedit\", \"Category\", \"DateCreated\", \"Problem\", \"Solution\", \"Title\", \"Views\"";
 $tdatakbarticles[".sqlFrom"] = "FROM kbarticles";
 $tdatakbarticles[".sqlWhereExpr"] = "";
 $tdatakbarticles[".sqlTail"] = "";
@@ -317,7 +317,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -456,7 +456,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -595,7 +595,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -733,7 +733,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Category";
+	$fdata["FullName"] = "\"Category\"";
 
 	
 	
@@ -789,7 +789,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		
-	$edata["LinkField"] = "Category";
+	$edata["LinkField"] = "CategoryID";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Category";
 
@@ -895,7 +895,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "DateCreated";
+	$fdata["FullName"] = "\"DateCreated\"";
 
 	
 	
@@ -1032,7 +1032,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Problem";
+	$fdata["FullName"] = "\"Problem\"";
 
 	
 	
@@ -1171,7 +1171,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Solution";
+	$fdata["FullName"] = "\"Solution\"";
 
 	
 	
@@ -1310,7 +1310,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Title";
+	$fdata["FullName"] = "\"Title\"";
 
 	
 	
@@ -1624,7 +1624,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Views";
+	$fdata["FullName"] = "\"Views\"";
 
 	
 	
@@ -1834,7 +1834,7 @@ function createSqlQuery_kbarticles()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ArticleID, ArticleID AS ArticleID2, ArticleID AS ArticleIDedit, Category, DateCreated, Problem, Solution, Title, Views";
+$proto0["m_strFieldList"] = "\"ArticleID\", \"ArticleID\" AS \"ArticleID2\", \"ArticleID\" AS \"ArticleIDedit\", \"Category\", \"DateCreated\", \"Problem\", \"Solution\", \"Title\", \"Views\"";
 $proto0["m_strFrom"] = "FROM kbarticles";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1881,7 +1881,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto6["m_sql"] = "ArticleID";
+$proto6["m_sql"] = "\"ArticleID\"";
 $proto6["m_srcTableName"] = "kbarticles";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1895,7 +1895,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto8["m_sql"] = "ArticleID";
+$proto8["m_sql"] = "\"ArticleID\"";
 $proto8["m_srcTableName"] = "kbarticles";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "ArticleID2";
@@ -1909,7 +1909,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto10["m_sql"] = "ArticleID";
+$proto10["m_sql"] = "\"ArticleID\"";
 $proto10["m_srcTableName"] = "kbarticles";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "ArticleIDedit";
@@ -1923,7 +1923,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto12["m_sql"] = "Category";
+$proto12["m_sql"] = "\"Category\"";
 $proto12["m_srcTableName"] = "kbarticles";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1937,7 +1937,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto14["m_sql"] = "DateCreated";
+$proto14["m_sql"] = "\"DateCreated\"";
 $proto14["m_srcTableName"] = "kbarticles";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -1951,7 +1951,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto16["m_sql"] = "Problem";
+$proto16["m_sql"] = "\"Problem\"";
 $proto16["m_srcTableName"] = "kbarticles";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -1965,7 +1965,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto18["m_sql"] = "Solution";
+$proto18["m_sql"] = "\"Solution\"";
 $proto18["m_srcTableName"] = "kbarticles";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -1979,7 +1979,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto20["m_sql"] = "Title";
+$proto20["m_sql"] = "\"Title\"";
 $proto20["m_srcTableName"] = "kbarticles";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -1993,7 +1993,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "kbarticles"
 ));
 
-$proto22["m_sql"] = "Views";
+$proto22["m_sql"] = "\"Views\"";
 $proto22["m_srcTableName"] = "kbarticles";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";

@@ -138,6 +138,9 @@ pdfDocument = {
 				
 			{"text":""},
 				
+				
+			{"text":"{$jspagetitlelabel main masterlist}","hidden":"{$item_hide_masterlist_header}","fontSize":30},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

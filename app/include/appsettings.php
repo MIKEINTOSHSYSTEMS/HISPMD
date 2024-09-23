@@ -56,6 +56,20 @@ $custom_labels["Amharic"] = array();
     height=\"100%\"
     allowtransparency
 ></iframe>";
+		$custom_labels["Amharic"]['_BR_'] = "<br>";
+		$custom_labels["Amharic"]['_BR___BR___BR_'] = "<br>
+ምን እንረዳዎ?
+<br>
+<br>
+<br>
+";
+		$custom_labels["Amharic"]['HOW_CAN_WE_HELP_YOU_'] = "የእውቀት ማዕከል";
+		$custom_labels["Amharic"]['_BR__'] = "<br>
+ምን እንረዳዎ?
+<br>
+<br>
+<br>";
+		$custom_labels["Amharic"]['KNOWLEDGE_BASE'] = "የእውቀት ማዕከል";
 	$custom_labels["English"] = array();
 		$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
 <html lang=\"en\">
@@ -101,6 +115,23 @@ $custom_labels["Amharic"] = array();
 
 </html>
 ";
+		$custom_labels["English"]['_BR_'] = "<br>
+<br>
+<br>
+";
+		$custom_labels["English"]['_BR___BR___BR_'] = "<br>
+How can we help you?
+<br>
+<br>
+<br>
+";
+		$custom_labels["English"]['HOW_CAN_WE_HELP_YOU_'] = "Knowledge Base";
+		$custom_labels["English"]['_BR__'] = "<br>
+How can we help you?
+<br>
+<br>
+<br>";
+		$custom_labels["English"]['KNOWLEDGE_BASE'] = "Knowledge Base";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -805,9 +836,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "616_1727107544";
+$projectBuildKey = "619_1727107544";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "616";
+$projectBuildNumber = "619";
 
 $mlang_messages = array();
 $mlang_charsets = array();

@@ -53,8 +53,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$jspagetitlelabel main view}","hidden":"{$item_hide_view_header}","fontSize":30},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -171,6 +173,11 @@ pdfDocument = {
 			"%",
 						{END row_grid_6}
 			 
+								{BEGIN row_grid_7}
+						
+			"%",
+						{END row_grid_7}
+			 
 				],
 	
 		body: [
@@ -193,10 +200,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_breadcrumb}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -349,6 +354,37 @@ pdfDocument = {
 				{END row_grid_4}
 						{BEGIN row_grid_5}
 				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_5}
+						{BEGIN row_grid_6}
+				[
 																{BEGIN cellblock_grid_c}
 {
 	cellId: 'c',
@@ -377,8 +413,8 @@ pdfDocument = {
 
 {END cellblock_grid_c}
 											],
-				{END row_grid_5}
-						{BEGIN row_grid_6}
+				{END row_grid_6}
+						{BEGIN row_grid_7}
 				[
 																{BEGIN cellblock_grid_c2}
 {
@@ -410,7 +446,7 @@ pdfDocument = {
 
 {END cellblock_grid_c2}
 											],
-				{END row_grid_6}
+				{END row_grid_7}
 		
 		]
 	}
