@@ -1,0 +1,2 @@
+GROQ_API_KEY=""
+DATABASE_URL="postgresql://db_user:db_password@db_IP_address:db_port_number/db_name"
