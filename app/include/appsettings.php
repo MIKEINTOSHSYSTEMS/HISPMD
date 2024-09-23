@@ -805,9 +805,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "614_1726248133";
+$projectBuildKey = "615_1727102789";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "614";
+$projectBuildNumber = "615";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -922,9 +922,10 @@ $tableCaptions["English"]["public_mfr_facilities_register_chart"] = "Mfr Facilit
 $tableCaptions["English"]["public_moh_data_scope"] = "Moh Data Scope";
 $tableCaptions["English"]["MOH_Indicators_Data_Report"] = "MOH Indicators Data Report";
 $tableCaptions["English"]["MOH_Indicators_data_Chart"] = "MOH Indicators Data Chart";
+$tableCaptions["English"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits Distribution";
+$tableCaptions["English"]["public_chat_history"] = "Chat History";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
-$tableCaptions["English"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits Distribution";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"][""] = "";
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
@@ -1012,16 +1013,17 @@ $tableCaptions["Amharic"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Amharic"]["admin_members"] = "Admin Members";
 $tableCaptions["Amharic"]["admin_users"] = "Admin Users";
 $tableCaptions["Amharic"]["System_Users_Activity_Dashboard"] = "System Users Activity Dashboard";
-$tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD ድር ሪፖርቶች እና ገበታዎች ገንቢ";
 $tableCaptions["Amharic"]["public_mfr_facilities_register_report"] = "Mfr መገልገያዎች ይመዝገቡ ሪፖርት";
 $tableCaptions["Amharic"]["public_hispmd_organisations"] = "Hispmd ድርጅቶች";
 $tableCaptions["Amharic"]["public_hispmd_uggroups"] = "Hispmd Uggroups";
 $tableCaptions["Amharic"]["public_mfr_facilities_register_chart"] = "Mfr መገልገያዎች መመዝገቢያ ገበታ";
 $tableCaptions["Amharic"]["public_moh_data_scope"] = "የMoh ውሂብ ወሰን";
-$tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH ጠቋሚዎች ዳሽቦርድ";
 $tableCaptions["Amharic"]["MOH_Indicators_Data_Report"] = "MOH ጠቋሚዎች ውሂብ ሪፖርት";
 $tableCaptions["Amharic"]["MOH_Indicators_data_Chart"] = "MOH አመልካቾች የውሂብ ገበታ";
 $tableCaptions["Amharic"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits ስርጭት";
+$tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
+$tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["Amharic"]["public_chat_history"] = "Chat History";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -48,6 +48,7 @@ function DBLookup($sql)
 class tDAL
 {
 	var $tblhispmdathispmdmerqconsultancyo_public_ai_data_assistant;
+	var $tblhispmdathispmdmerqconsultancyo_public_chat_history;
 	var $tblhispmdathispmdmerqconsultancyo_public_dataquality;
 	var $tblhispmdathispmdmerqconsultancyo_public_datause;
 	var $tblhispmdathispmdmerqconsultancyo_public_dhis2_periods;
@@ -106,6 +107,7 @@ class tDAL
 		if($this->lstTables)
 			return;
 		$this->lstTables[] = array("name" => "ai_data_assistant", "varname" => "hispmdathispmdmerqconsultancyo_public_ai_data_assistant", "altvarname" => "ai_data_assistant", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "chat_history", "varname" => "hispmdathispmdmerqconsultancyo_public_chat_history", "altvarname" => "chat_history", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "dataquality", "varname" => "hispmdathispmdmerqconsultancyo_public_dataquality", "altvarname" => "dataquality", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "datause", "varname" => "hispmdathispmdmerqconsultancyo_public_datause", "altvarname" => "datause", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "dhis2_periods", "varname" => "hispmdathispmdmerqconsultancyo_public_dhis2_periods", "altvarname" => "dhis2_periods", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

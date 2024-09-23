@@ -790,6 +790,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.chat_history")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1529,6 +1533,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="DHIS2_OrgUnits_Distribution")
+		{
+			return false;
+		}
+		if($table=="public.chat_history")
 		{
 			return false;
 		}

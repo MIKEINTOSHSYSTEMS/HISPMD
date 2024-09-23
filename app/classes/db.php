@@ -355,6 +355,7 @@ class DB
 		if( "hispmdathispmdmerqconsultancyo" == $conn->connId )
 		{
 			$dalTables[$conn->connId][] = array("name" => "ai_data_assistant", "varname" => "hispmdathispmdmerqconsultancyo_public_ai_data_assistant", "altvarname" => "ai_data_assistant", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+			$dalTables[$conn->connId][] = array("name" => "chat_history", "varname" => "hispmdathispmdmerqconsultancyo_public_chat_history", "altvarname" => "chat_history", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "dataquality", "varname" => "hispmdathispmdmerqconsultancyo_public_dataquality", "altvarname" => "dataquality", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "datause", "varname" => "hispmdathispmdmerqconsultancyo_public_datause", "altvarname" => "datause", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 			$dalTables[$conn->connId][] = array("name" => "dhis2_periods", "varname" => "hispmdathispmdmerqconsultancyo_public_dhis2_periods", "altvarname" => "dhis2_periods", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

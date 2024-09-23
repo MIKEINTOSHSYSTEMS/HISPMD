@@ -817,6 +817,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.chat_history")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1457,6 +1461,10 @@ function getCaptionTable($table)
 	if($table=="DHIS2_OrgUnits_Distribution")
 	{
 		return GetTableCaption("DHIS2_OrgUnits_Distribution");
+	}
+	if($table=="public.chat_history")
+	{
+		return GetTableCaption("public_chat_history");
 	}
 	return $table;
 }
@@ -2894,6 +2902,18 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="public.moh_data_scope";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.chat_history");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.chat_history";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.chat_history";
 	}
 	return $arr;
 }

@@ -568,6 +568,8 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.chat_history" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

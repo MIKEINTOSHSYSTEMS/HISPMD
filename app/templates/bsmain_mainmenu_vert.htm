@@ -3334,13 +3334,10 @@ menu-treelike
 
 							</li>
 							{END item145_menulink}
-												</ul>
-					</li>
-					{END item143_menulink}
+												
+													{BEGIN item146_menulink}
+								<li class=" {$item146_current}">
 								
-									{BEGIN item146_menulink}
-						<li class=" {$item146_current}">
-						
 <a {$item146_menulink_attrs} title="{$item146_tooltip}" 
 				data-menu-v
 			data-menu-inline
@@ -3355,38 +3352,37 @@ menu-treelike
 			</span>
 	</a>
 
+							</li>
+							{END item146_menulink}
+												</ul>
 					</li>
-					{END item146_menulink}
+					{END item143_menulink}
+								
+									{BEGIN item147_menulink}
+						<li class=" {$item147_current}">
+						
+<a {$item147_menulink_attrs} title="{$item147_tooltip}" 
+				data-menu-v
+			data-menu-inline
+	data-menu-link
+>
+	<span class="
+	r-menu-link
+		"> 
+		<span class="r-menu-title">
+		{$item147_icon} {$item147_title}
+		</span>
+			</span>
+	</a>
+
+					</li>
+					{END item147_menulink}
 								</ul>
 			</li>
 			{END item137_menulink}
 				</ul>
 	</li>
 	{END item121_menulink}
-	
-	
-	{BEGIN item147_menulink}
-	<li class=" {$item147_current}">
-		
-<a {$item147_menulink_attrs} title="{$item147_tooltip}" 
-			data-menu-top
-			data-menu-v
-			data-menu-inline
-	data-menu-link
->
-	<span class="
-	r-menu-link
-			r-menu-expanded
-	"> 
-		<span class="r-menu-title">
-		{$item147_icon} {$item147_title}
-		</span>
-			</span>
-		<span class="r-menu-collapsed">{$item147_collicon}{$item147_firstcap}</span>
-</a>
-
-	</li>
-	{END item147_menulink}
 	
 	
 	{BEGIN item148_menulink}
@@ -3435,4 +3431,28 @@ menu-treelike
 
 	</li>
 	{END item149_menulink}
+	
+	
+	{BEGIN item150_menulink}
+	<li class=" {$item150_current}">
+		
+<a {$item150_menulink_attrs} title="{$item150_tooltip}" 
+			data-menu-top
+			data-menu-v
+			data-menu-inline
+	data-menu-link
+>
+	<span class="
+	r-menu-link
+			r-menu-expanded
+	"> 
+		<span class="r-menu-title">
+		{$item150_icon} {$item150_title}
+		</span>
+			</span>
+		<span class="r-menu-collapsed">{$item150_collicon}{$item150_firstcap}</span>
+</a>
+
+	</li>
+	{END item150_menulink}
 </ul>

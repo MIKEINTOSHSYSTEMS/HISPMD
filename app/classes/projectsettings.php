@@ -3700,6 +3700,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "moh_indicators_data_chart" ] = "MOH_Indicators_data_Chart";
 	$projectEntities[ "DHIS2_OrgUnits_Distribution" ] = array( "url" => "dhis2_orgunits_distribution", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_orgunits_distribution" ] = "DHIS2_OrgUnits_Distribution";
+	$projectEntities[ "public.chat_history" ] = array( "url" => "chat_history", "type" => 0 );
+	$projectEntitiesReverse[ "chat_history" ] = "public.chat_history";
 }
 
 function findTable( $table ) {
