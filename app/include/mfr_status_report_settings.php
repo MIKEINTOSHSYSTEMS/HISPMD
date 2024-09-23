@@ -149,7 +149,7 @@ $tdatamfr_status_report[".isUseAjaxSuggest"] = false;
 
 
 
-
+			
 
 $tdatamfr_status_report[".ajaxCodeSnippetAdded"] = false;
 

@@ -54,7 +54,7 @@ $tdatahispmd_moh_indicators_dashboard[".hasEvents"] = false;
 $tdatahispmd_moh_indicators_dashboard[".tableType"] = "dashboard";
 
 
-
+	
 $tdatahispmd_moh_indicators_dashboard[".addPageEvents"] = false;
 
 $tdatahispmd_moh_indicators_dashboard[".isUseAjaxSuggest"] = true;

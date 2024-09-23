@@ -1,0 +1,148 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel main export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Category_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Views_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$DateCreated_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Problem_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Solution_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$ArticleIDedit_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$helpfullblock_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

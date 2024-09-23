@@ -149,7 +149,7 @@ $tdataresearch[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdataresearch[".ajaxCodeSnippetAdded"] = false;
 

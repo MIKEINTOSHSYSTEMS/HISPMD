@@ -150,7 +150,7 @@ $tdatamfr_dashboard_reports_chart[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatamfr_dashboard_reports_chart[".ajaxCodeSnippetAdded"] = false;
 

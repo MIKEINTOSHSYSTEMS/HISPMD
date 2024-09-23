@@ -821,6 +821,34 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="kbarticles")
+		{
+			return 1;
+		}
+		if($table=="kbcategories")
+		{
+			return 1;
+		}
+		if($table=="kbcomments")
+		{
+			return 1;
+		}
+		if($table=="kbusers")
+		{
+			return 1;
+		}
+		if($table=="main")
+		{
+			return 1;
+		}
+		if($table=="faicons")
+		{
+			return 1;
+		}
+		if($table=="admin_comments")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1465,6 +1493,34 @@ function getCaptionTable($table)
 	if($table=="public.chat_history")
 	{
 		return GetTableCaption("public_chat_history");
+	}
+	if($table=="kbarticles")
+	{
+		return GetTableCaption("kbarticles");
+	}
+	if($table=="kbcategories")
+	{
+		return GetTableCaption("kbcategories");
+	}
+	if($table=="kbcomments")
+	{
+		return GetTableCaption("kbcomments");
+	}
+	if($table=="kbusers")
+	{
+		return GetTableCaption("kbusers");
+	}
+	if($table=="main")
+	{
+		return GetTableCaption("main");
+	}
+	if($table=="faicons")
+	{
+		return GetTableCaption("faicons");
+	}
+	if($table=="admin_comments")
+	{
+		return GetTableCaption("admin_comments");
 	}
 	return $table;
 }
@@ -2914,6 +2970,90 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="public.chat_history";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("kbarticles");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="kbarticles";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="kbarticles";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("kbcategories");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="kbcategories";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="kbcategories";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("kbcomments");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="kbcomments";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="kbcomments";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("kbusers");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="kbusers";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="kbusers";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("main");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="main";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="main";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("faicons");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="faicons";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="faicons";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("admin_comments");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="admin_comments";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="admin_comments";
 	}
 	return $arr;
 }

@@ -54,7 +54,7 @@ $tdatahispmd_web_reports_and_charts_builder[".hasEvents"] = false;
 $tdatahispmd_web_reports_and_charts_builder[".tableType"] = "dashboard";
 
 
-
+	
 $tdatahispmd_web_reports_and_charts_builder[".addPageEvents"] = false;
 
 $tdatahispmd_web_reports_and_charts_builder[".isUseAjaxSuggest"] = true;

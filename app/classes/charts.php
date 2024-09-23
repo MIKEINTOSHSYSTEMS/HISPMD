@@ -570,6 +570,20 @@ class Chart
 			return true;
 		if("public.chat_history" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.kbarticles" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.kbcategories" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.kbcomments" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.kbusers" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.kbarticles" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.faicons" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.kbcomments" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

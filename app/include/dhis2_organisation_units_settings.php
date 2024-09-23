@@ -143,7 +143,7 @@ $tdatadhis2_organisation_units[".isUseAjaxSuggest"] = false;
 
 
 
-
+			
 
 $tdatadhis2_organisation_units[".ajaxCodeSnippetAdded"] = false;
 

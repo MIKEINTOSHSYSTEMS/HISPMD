@@ -186,7 +186,7 @@ $tdatadhis2_reporting_rates_chart[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatadhis2_reporting_rates_chart[".ajaxCodeSnippetAdded"] = false;
 

@@ -1343,7 +1343,11 @@ class Security
 		}
 		if( $securityType == stAD && !$provider["useDbGroups"] ) {
 			$userId = Security::getUserName();
+						storageSet( "OwnerID", $userId );
+			storageSet( "_kbcomments_OwnerID", $userId );
 		} else {
+						storageSet( "OwnerID", $data["username"] );
+			storageSet( "_kbcomments_OwnerID", $data["username"] );
 		}
 	}
 

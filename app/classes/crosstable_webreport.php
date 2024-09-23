@@ -1573,6 +1573,20 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.chat_history" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.kbarticles" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.kbcategories" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.kbcomments" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.kbusers" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.kbarticles" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.faicons" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.kbcomments" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

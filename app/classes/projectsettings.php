@@ -3702,6 +3702,20 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_orgunits_distribution" ] = "DHIS2_OrgUnits_Distribution";
 	$projectEntities[ "public.chat_history" ] = array( "url" => "chat_history", "type" => 0 );
 	$projectEntitiesReverse[ "chat_history" ] = "public.chat_history";
+	$projectEntities[ "kbarticles" ] = array( "url" => "kbarticles", "type" => 1 );
+	$projectEntitiesReverse[ "kbarticles" ] = "kbarticles";
+	$projectEntities[ "kbcategories" ] = array( "url" => "kbcategories", "type" => 1 );
+	$projectEntitiesReverse[ "kbcategories" ] = "kbcategories";
+	$projectEntities[ "kbcomments" ] = array( "url" => "kbcomments", "type" => 1 );
+	$projectEntitiesReverse[ "kbcomments" ] = "kbcomments";
+	$projectEntities[ "kbusers" ] = array( "url" => "kbusers", "type" => 1 );
+	$projectEntitiesReverse[ "kbusers" ] = "kbusers";
+	$projectEntities[ "main" ] = array( "url" => "main", "type" => 1 );
+	$projectEntitiesReverse[ "main" ] = "main";
+	$projectEntities[ "faicons" ] = array( "url" => "faicons", "type" => 1 );
+	$projectEntitiesReverse[ "faicons" ] = "faicons";
+	$projectEntities[ "admin_comments" ] = array( "url" => "admin_comments", "type" => 1 );
+	$projectEntitiesReverse[ "admin_comments" ] = "admin_comments";
 }
 
 function findTable( $table ) {

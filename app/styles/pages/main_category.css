@@ -1,0 +1,35 @@
+[data-page="main_category"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="top_c2"][data-page="main_category"][data-cellid="top_c2"][data-page="main_category"][data-cellid="top_c2"][data-page="main_category"] {
+  border-bottom: 1px solid #e2e2e2;
+}
+/* Put  your custom CSS code here */
+
+[data-page="main_category"][data-itemid="simple_grid_field6"] a {
+  font-size: 18px;
+}
+[data-page="main_category"][data-itemid="simple_grid_field6"] a:before{
+    margin-right:5px;
+}
+
+[data-page="main_category"][data-itemid="text"] {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="main_category"][data-itemid="category_title"] {
+    font-family: "Montserrat",sans-serif;
+    color: #1b1b1b;
+        font-size: 20px;
+}
+

@@ -180,7 +180,7 @@ $tdatapublic_mfr_facilities_register_chart[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatapublic_mfr_facilities_register_chart[".ajaxCodeSnippetAdded"] = false;
 

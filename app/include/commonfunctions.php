@@ -396,6 +396,20 @@ function checkTableName($shortTName )
 		return true;
 	if ("chat_history" == $shortTName )
 		return true;
+	if ("kbarticles" == $shortTName )
+		return true;
+	if ("kbcategories" == $shortTName )
+		return true;
+	if ("kbcomments" == $shortTName )
+		return true;
+	if ("kbusers" == $shortTName )
+		return true;
+	if ("main" == $shortTName )
+		return true;
+	if ("faicons" == $shortTName )
+		return true;
+	if ("admin_comments" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1310,6 +1324,69 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.chat_history";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("kbarticles");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="kbarticles";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("kbcategories");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="kbcategories";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("kbcomments");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="kbcomments";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("kbusers");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="kbusers";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("main");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="main";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("faicons");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="faicons";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_comments");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_comments";
+	}
 	return $arr;
 }
 
@@ -1415,6 +1492,13 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MOH_Indicators_data_Chart";
 	$arr[]="DHIS2_OrgUnits_Distribution";
 	$arr[]="public.chat_history";
+	$arr[]="kbarticles";
+	$arr[]="kbcategories";
+	$arr[]="kbcomments";
+	$arr[]="kbusers";
+	$arr[]="main";
+	$arr[]="faicons";
+	$arr[]="admin_comments";
 	return $arr;
 }
 
@@ -2537,6 +2621,41 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="kbarticles" )
+	{
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="kbcategories" )
+	{
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="kbcomments" )
+	{
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="kbusers" )
+	{
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="main" )
+	{
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="faicons" )
+	{
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="admin_comments" )
+	{
+//	default permissions
+		return "".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

@@ -333,6 +333,13 @@ class ConnectionManager_Base
 		$connectionsIds["MOH_Indicators_data_Chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["DHIS2_OrgUnits_Distribution"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["public.chat_history"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["kbarticles"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["kbcategories"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["kbcomments"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["kbusers"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["main"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["faicons"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["admin_comments"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

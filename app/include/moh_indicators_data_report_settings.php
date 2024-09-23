@@ -209,7 +209,7 @@ $tdatamoh_indicators_data_report[".isUseAjaxSuggest"] = true;
 
 
 
-
+																					
 
 $tdatamoh_indicators_data_report[".ajaxCodeSnippetAdded"] = false;
 

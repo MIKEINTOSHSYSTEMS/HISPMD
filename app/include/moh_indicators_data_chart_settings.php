@@ -210,7 +210,7 @@ $tdatamoh_indicators_data_chart[".isUseAjaxSuggest"] = true;
 
 
 
-
+																					
 
 $tdatamoh_indicators_data_chart[".ajaxCodeSnippetAdded"] = false;
 

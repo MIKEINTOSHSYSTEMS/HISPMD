@@ -301,7 +301,7 @@ $tdatamfr_aio_dashboard[".hasEvents"] = false;
 $tdatamfr_aio_dashboard[".tableType"] = "dashboard";
 
 
-
+	
 $tdatamfr_aio_dashboard[".addPageEvents"] = false;
 
 $tdatamfr_aio_dashboard[".isUseAjaxSuggest"] = true;

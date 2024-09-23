@@ -1,0 +1,268 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel kbarticles search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Category_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Category}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Category{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Category" data-fieldname="Category" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Category}">
+		{$label kbarticles Category }	</label>
+	<div class="r-search-option">
+		{$searchtype_Category}
+	</div>
+	<div class="r-search-field">
+		{$Category_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Category_editcontrol1}
+	</div>
+	
+</div>
+
+{END Category_fieldblock}
+											
+{BEGIN Title_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Title}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Title{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Title" data-fieldname="Title" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Title}">
+		{$label kbarticles Title }	</label>
+	<div class="r-search-option">
+		{$searchtype_Title}
+	</div>
+	<div class="r-search-field">
+		{$Title_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Title_editcontrol1}
+	</div>
+	
+</div>
+
+{END Title_fieldblock}
+											
+{BEGIN DateCreated_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DateCreated}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="DateCreated{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="DateCreated" data-fieldname="DateCreated" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_DateCreated}">
+		{$label kbarticles DateCreated }	</label>
+	<div class="r-search-option">
+		{$searchtype_DateCreated}
+	</div>
+	<div class="r-search-field">
+		{$DateCreated_editcontrol}	</div>
+	<div class="r-search-field">
+		{$DateCreated_editcontrol1}
+	</div>
+	
+</div>
+
+{END DateCreated_fieldblock}
+											
+{BEGIN Problem_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Problem}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Problem{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Problem" data-fieldname="Problem" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Problem}">
+		{$label kbarticles Problem }	</label>
+	<div class="r-search-option">
+		{$searchtype_Problem}
+	</div>
+	<div class="r-search-field">
+		{$Problem_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Problem_editcontrol1}
+	</div>
+	
+</div>
+
+{END Problem_fieldblock}
+											
+{BEGIN Solution_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Solution}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Solution{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Solution" data-fieldname="Solution" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Solution}">
+		{$label kbarticles Solution }	</label>
+	<div class="r-search-option">
+		{$searchtype_Solution}
+	</div>
+	<div class="r-search-field">
+		{$Solution_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Solution_editcontrol1}
+	</div>
+	
+</div>
+
+{END Solution_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							{mlang_message SEARCH}			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							{mlang_message RESET}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -143,7 +143,7 @@ $tdataai_data_assistant[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdataai_data_assistant[".ajaxCodeSnippetAdded"] = false;
 

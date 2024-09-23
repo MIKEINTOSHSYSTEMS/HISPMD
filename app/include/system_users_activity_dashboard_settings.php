@@ -183,7 +183,7 @@ $tdatasystem_users_activity_dashboard[".hasEvents"] = false;
 $tdatasystem_users_activity_dashboard[".tableType"] = "dashboard";
 
 
-
+	
 $tdatasystem_users_activity_dashboard[".addPageEvents"] = false;
 
 $tdatasystem_users_activity_dashboard[".isUseAjaxSuggest"] = true;

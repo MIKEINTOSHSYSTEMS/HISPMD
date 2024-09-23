@@ -111,6 +111,13 @@ $nonAdminTablesArr[] = "MOH_Indicators_Data_Report";
 $nonAdminTablesArr[] = "MOH_Indicators_data_Chart";
 $nonAdminTablesArr[] = "DHIS2_OrgUnits_Distribution";
 $nonAdminTablesArr[] = "public.chat_history";
+$nonAdminTablesArr[] = "kbarticles";
+$nonAdminTablesArr[] = "kbcategories";
+$nonAdminTablesArr[] = "kbcomments";
+$nonAdminTablesArr[] = "kbusers";
+$nonAdminTablesArr[] = "main";
+$nonAdminTablesArr[] = "faicons";
+$nonAdminTablesArr[] = "admin_comments";
 
 $ug_connection = $cman->getForUserGroups();
 

@@ -251,7 +251,7 @@ $tdataethprism_national_prism_woreda_level_diagnostic[".isUseAjaxSuggest"] = tru
 
 
 
-
+			
 
 $tdataethprism_national_prism_woreda_level_diagnostic[".ajaxCodeSnippetAdded"] = false;
 

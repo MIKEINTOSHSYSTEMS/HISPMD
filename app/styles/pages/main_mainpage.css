@@ -1,0 +1,16 @@
+[data-page="main_mainpage"][data-itemid="simple_grid_field2"] {
+  font-weight: bold;
+}
+[data-page="main_mainpage"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+[data-page="main_mainpage"][data-itemid="text"] {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+

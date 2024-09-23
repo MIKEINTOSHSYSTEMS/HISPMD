@@ -203,7 +203,7 @@ $tdatadhis2_reports[".isUseAjaxSuggest"] = false;
 
 
 
-
+			
 
 $tdatadhis2_reports[".ajaxCodeSnippetAdded"] = false;
 

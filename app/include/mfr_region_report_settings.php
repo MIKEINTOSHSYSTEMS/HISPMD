@@ -155,7 +155,7 @@ $tdatamfr_region_report[".isUseAjaxSuggest"] = false;
 
 
 
-
+			
 
 $tdatamfr_region_report[".ajaxCodeSnippetAdded"] = false;
 

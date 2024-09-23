@@ -1,0 +1,20 @@
+[data-page="faicons_list"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+.r-record-body{
+    cursor:pointer;
+}
+.r-record-body .panel:hover{
+    border:1px solid black;
+}
+[data-page="faicons_list"][data-itemid="simple_grid_field1"] {
+  color: red;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="faicons_list"][data-itemid="grid_field"] {
+  font-size:8px;
+}
+

@@ -264,7 +264,7 @@ $tdataethprism_healthpost_level_rhis_performance_diagnostic[".isUseAjaxSuggest"]
 
 
 
-
+			
 
 $tdataethprism_healthpost_level_rhis_performance_diagnostic[".ajaxCodeSnippetAdded"] = false;
 

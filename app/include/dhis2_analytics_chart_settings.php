@@ -174,7 +174,7 @@ $tdatadhis2_analytics_chart[".isUseAjaxSuggest"] = false;
 
 
 
-
+			
 
 $tdatadhis2_analytics_chart[".ajaxCodeSnippetAdded"] = false;
 

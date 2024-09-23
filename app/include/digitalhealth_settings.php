@@ -185,7 +185,7 @@ $tdatadigitalhealth[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatadigitalhealth[".ajaxCodeSnippetAdded"] = false;
 

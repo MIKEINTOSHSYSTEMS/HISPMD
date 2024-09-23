@@ -988,6 +988,152 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="kbarticles" && $field=="ArticleID")
+	{
+		$value = "<a target='_blank' href='".GetTableLink("main","export")."?a=export&amp;selection[]=".$data["ArticleID"]."'>Export article</a>";;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="ArticleID2")
+	{
+		$value = "<a target='_blank' href='".GetTableLink("main","print")."?selection[]=".$data["ArticleID"]."'>Printer-friendly version</a>";;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="ArticleIDedit")
+	{
+		$value = "<a href='".GetTableLink("kbarticles","edit")."?editid1=".$value."'>Edit</a>";
+;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="Title" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="Title" && $ptype=="list")
+	{
+		$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="Title" && $ptype=="export")
+	{
+		$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="Title" && $ptype=="masterlist")
+	{
+		$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="kbarticles" && $field=="Title" && $ptype=="masterprint")
+	{
+		$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="kbcategories" && $field=="faicon")
+	{
+		$value = "<span class='fa ".$value."'></span>";
+		return $value;
+	}
+				if($table=="main" && $field=="ArticleID")
+	{
+		$value = "<a target='_blank' href='".GetTableLink("main","export")."?a=export&amp;selection[]=".$data["ArticleID"]."'>Export article</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="ArticleID2")
+	{
+		$value = "<a target='_blank' href='".GetTableLink("main","print")."?selection[]=".$data["ArticleID"]."'>Printer-friendly version</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="ArticleIDedit")
+	{
+		$value = "<a href='".GetTableLink("kbarticles","edit")."?editid1=".$value."'>Edit</a>";
+;
+		return $value;
+	}
+				if($table=="main" && $field=="Category" && $ptype=="view")
+	{
+		$value="<a href='".GetTableLink("main","list")."?page=list1&q=(Category~equals~".$value.")'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="Category" && $ptype=="list")
+	{
+		$value="<a href='".GetTableLink("main","list")."?page=category&q=(Category~equals~".$value.")'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="Category" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="main" && $field=="Category" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="main" && $field=="Category" && $ptype=="masterlist")
+	{
+		$value="<a href='".GetTableLink("main","list")."?page=list1&q=(Category~equals~".$value.")'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="Category" && $ptype=="masterprint")
+	{
+		$value="<a href='".GetTableLink("main","list")."?page=list1&q=(Category~equals~".$value.")'>".$value."</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="Title" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="main" && $field=="Title" && $ptype=="list")
+	{
+		//$value = "<a class='fa fa-angle-double-right' href='".GetTableLink("kbcomments","list")."?mastertable=main&masterkey1=".$data["ArticleID"]."'>".$value."</a>";
+
+$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'><span class='fa fa-angle-double-right' style='margin-right:3px;'></span>".$value."</a>";;
+		return $value;
+	}
+				if($table=="main" && $field=="Views" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="main" && $field=="Views" && $ptype=="list")
+	{
+		$value = "(Views: ".$value.")";;
+		return $value;
+	}
+				if($table=="main" && $field=="Views" && $ptype=="print")
+	{
+		$value = "(View: ".$value.")";;
+		return $value;
+	}
+				if($table=="main" && $field=="Views" && $ptype=="export")
+	{
+		$value = "(View: ".$value.")";;
+		return $value;
+	}
+				if($table=="main" && $field=="helpfullblock")
+	{
+		
+$value = "<span class='helpfultext'>Was this article helpful?</span>";
+$value.="<span class='buttons'>";
+$value.="<span data-column='likecount' class='yes fa fa-thumbs-up'>Yes (<i>".$data["likecount"]."</i>)</span>";
+$value.="<span data-column='dislikecount' class='no fa fa-thumbs-down'>No (<i>".$data["dislikecount"]."</i>)</span>";
+$value.="<span class='feedback fa fa-comment'>Add Comment</span>";
+$value.="</span>";
+$value.="<span class='thankyou'>Thank you for your feedback!</span>";;
+		return $value;
+	}
+				if($table=="faicons" && $field=="id")
+	{
+		$value = $data["icon"];;
+		return $value;
+	}
+				if($table=="faicons" && $field=="icon")
+	{
+		$value = "<span class='fa ".$data["icon"]."'></span>";;
+		return $value;
+	}
 	return $value;
 }
 
@@ -1023,6 +1169,14 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="kbcomments" && $field=="moderated")
+	{
+		return 0;
+	}
+				if($table=="admin_comments" && $field=="moderated")
+	{
+		return 0;
+	}
 	return "";
 }
 

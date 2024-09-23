@@ -1083,7 +1083,7 @@ $tdataprism_dashboard[".hasEvents"] = false;
 $tdataprism_dashboard[".tableType"] = "dashboard";
 
 
-
+	
 $tdataprism_dashboard[".addPageEvents"] = false;
 
 $tdataprism_dashboard[".isUseAjaxSuggest"] = true;

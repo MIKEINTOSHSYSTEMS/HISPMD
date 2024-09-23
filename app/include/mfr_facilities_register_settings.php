@@ -185,7 +185,7 @@ $tdatamfr_facilities_register[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatamfr_facilities_register[".ajaxCodeSnippetAdded"] = false;
 

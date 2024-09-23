@@ -155,7 +155,7 @@ $tdatahealthfacilities[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatahealthfacilities[".ajaxCodeSnippetAdded"] = false;
 

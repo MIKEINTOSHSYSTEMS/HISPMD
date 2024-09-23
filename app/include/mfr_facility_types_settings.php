@@ -167,7 +167,7 @@ $tdatamfr_facility_types[".isUseAjaxSuggest"] = false;
 
 
 
-
+			
 
 $tdatamfr_facility_types[".ajaxCodeSnippetAdded"] = false;
 

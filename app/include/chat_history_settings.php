@@ -143,7 +143,7 @@ $tdatachat_history[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatachat_history[".ajaxCodeSnippetAdded"] = false;
 

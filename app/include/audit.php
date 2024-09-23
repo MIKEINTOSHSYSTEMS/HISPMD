@@ -794,6 +794,34 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="kbarticles")
+		{
+			return false;
+		}
+		if($table=="kbcategories")
+		{
+			return false;
+		}
+		if($table=="kbcomments")
+		{
+			return false;
+		}
+		if($table=="kbusers")
+		{
+			return false;
+		}
+		if($table=="main")
+		{
+			return false;
+		}
+		if($table=="faicons")
+		{
+			return false;
+		}
+		if($table=="admin_comments")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1537,6 +1565,34 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.chat_history")
+		{
+			return false;
+		}
+		if($table=="kbarticles")
+		{
+			return false;
+		}
+		if($table=="kbcategories")
+		{
+			return false;
+		}
+		if($table=="kbcomments")
+		{
+			return false;
+		}
+		if($table=="kbusers")
+		{
+			return false;
+		}
+		if($table=="main")
+		{
+			return false;
+		}
+		if($table=="faicons")
+		{
+			return false;
+		}
+		if($table=="admin_comments")
 		{
 			return false;
 		}

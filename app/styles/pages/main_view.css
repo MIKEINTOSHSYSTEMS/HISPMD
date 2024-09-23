@@ -1,0 +1,66 @@
+[data-cellid="grid_c4"][data-page="main_view"][data-cellid="grid_c4"][data-page="main_view"][data-cellid="grid_c4"][data-page="main_view"] {
+  padding-top: 20px;
+}
+[data-page="main_view"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="above-grid_c1"][data-page="main_view"][data-cellid="above-grid_c1"][data-page="main_view"][data-cellid="above-grid_c1"][data-page="main_view"] {
+  margin-bottom:50px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_c1"][data-page="main_view"][data-cellid="grid_c1"][data-page="main_view"][data-cellid="grid_c1"][data-page="main_view"] {
+    border-bottom: 1px solid #e2e2e2;
+}
+/* Put  your custom CSS code here */
+
+[data-page="main_view"][data-itemid="integrated_edit_field6"] {
+      font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #1b1b1b;
+    margin-bottom: 40px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="main_view"][data-itemid="details_preview"] td{
+ border-top: none;
+}
+
+[data-page="main_view"][data-itemid="details_preview"] .panel-heading{
+    background:transparent;
+    border: none;
+    padding-left: 20px;
+
+}
+[data-page="main_view"][data-itemid="details_preview"] .panel-title{
+    font-family: "Montserrat",sans-serif;
+    color: #1b1b1b;
+    font-weight: bold;
+    
+}
+
+[data-page="main_view"][data-itemid="details_preview"] .r-gridrow{
+    border-bottom: 1px solid #e2e2e2;
+}
+
+[data-page="main_view"][data-itemid="details_preview"] [data-field="comment"]{
+    margin:10px 0 10px 0;
+    display:block;
+}
+[data-page="main_view"][data-itemid="details_preview"] [data-field="email"]
+{
+    font-style: italic;
+    color: #1b1b1b;
+}
+
+
+[data-page="main_view"][data-itemid="details_preview"] .panel.panel-info{
+    border:none;
+    box-shadow:none;
+}

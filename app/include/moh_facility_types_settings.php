@@ -143,7 +143,7 @@ $tdatamoh_facility_types[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatamoh_facility_types[".ajaxCodeSnippetAdded"] = false;
 

@@ -282,7 +282,7 @@ $tdataethprism_facility_level_rhis_performance_diagnostic[".isUseAjaxSuggest"] =
 
 
 
-
+			
 
 $tdataethprism_facility_level_rhis_performance_diagnostic[".ajaxCodeSnippetAdded"] = false;
 

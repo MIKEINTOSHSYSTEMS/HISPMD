@@ -614,6 +614,27 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_chart.indicator_group_id"] = array();
 		}
 		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_chart.indicator_group_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "indicator_group_id", "page" => "search");
+		if( !isset( $lookupTableLinks["kbcategories"] ) ) {
+			$lookupTableLinks["kbcategories"] = array();
+		}
+		if( !isset( $lookupTableLinks["kbcategories"]["kbarticles.Category"] )) {
+			$lookupTableLinks["kbcategories"]["kbarticles.Category"] = array();
+		}
+		$lookupTableLinks["kbcategories"]["kbarticles.Category"]["edit"] = array("table" => "kbarticles", "field" => "Category", "page" => "edit");
+		if( !isset( $lookupTableLinks["faicons"] ) ) {
+			$lookupTableLinks["faicons"] = array();
+		}
+		if( !isset( $lookupTableLinks["faicons"]["kbcategories.faicon"] )) {
+			$lookupTableLinks["faicons"]["kbcategories.faicon"] = array();
+		}
+		$lookupTableLinks["faicons"]["kbcategories.faicon"]["edit"] = array("table" => "kbcategories", "field" => "faicon", "page" => "edit");
+		if( !isset( $lookupTableLinks["kbarticles"] ) ) {
+			$lookupTableLinks["kbarticles"] = array();
+		}
+		if( !isset( $lookupTableLinks["kbarticles"]["admin_comments.ArticleID"] )) {
+			$lookupTableLinks["kbarticles"]["admin_comments.ArticleID"] = array();
+		}
+		$lookupTableLinks["kbarticles"]["admin_comments.ArticleID"]["edit"] = array("table" => "admin_comments", "field" => "ArticleID", "page" => "edit");
 }
 
 ?>

@@ -156,7 +156,7 @@ $tdatamfr_region_chart[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatamfr_region_chart[".ajaxCodeSnippetAdded"] = false;
 

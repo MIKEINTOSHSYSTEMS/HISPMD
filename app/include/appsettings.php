@@ -805,9 +805,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "615_1727102789";
+$projectBuildKey = "616_1727107544";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "615";
+$projectBuildNumber = "616";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -829,7 +829,6 @@ $menuTreelikeFlags["secondary"] = 1;
 // table captions
 $tableCaptions = array();
 $tableCaptions["English"] = array();
-$tableCaptions["English"][""] = "";
 $tableCaptions["English"]["MFR_Dashboard_Report"] = "MFR Dashboard Report";
 $tableCaptions["English"]["MFR_Status_Report"] = "MFR Status Report";
 $tableCaptions["English"]["MFR_Facilities"] = "MFR Facilities";
@@ -926,8 +925,15 @@ $tableCaptions["English"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits Distr
 $tableCaptions["English"]["public_chat_history"] = "Chat History";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["English"][""] = "";
+$tableCaptions["English"]["kbarticles"] = "Articles";
+$tableCaptions["English"]["kbcategories"] = "Categories";
+$tableCaptions["English"]["kbcomments"] = "Comments";
+$tableCaptions["English"]["kbusers"] = "Users";
+$tableCaptions["English"]["main"] = "";
+$tableCaptions["English"]["faicons"] = "Faicons";
+$tableCaptions["English"]["admin_comments"] = "Admin Comments";
 $tableCaptions["Amharic"] = array();
-$tableCaptions["Amharic"][""] = "";
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Facilities"] = "MFR መገልገያዎች";
@@ -1024,6 +1030,14 @@ $tableCaptions["Amharic"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits ስ�
 $tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["Amharic"]["public_chat_history"] = "Chat History";
+$tableCaptions["Amharic"][""] = "";
+$tableCaptions["Amharic"]["kbarticles"] = "Articles";
+$tableCaptions["Amharic"]["kbcategories"] = "Categories";
+$tableCaptions["Amharic"]["kbcomments"] = "Comments";
+$tableCaptions["Amharic"]["kbusers"] = "Users";
+$tableCaptions["Amharic"]["main"] = "";
+$tableCaptions["Amharic"]["faicons"] = "Faicons";
+$tableCaptions["Amharic"]["admin_comments"] = "Admin Comments";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -1105,17 +1119,6 @@ if(mlang_getcurrentlang()=="English")
 }
 if(mlang_getcurrentlang()=="Amharic")
 {
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"] = array();
-	$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["changepwd"] = "የይለፍ ቃል ቀይር";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["changepwd_success"] = "የይለፍ ቃል ተቀይሯል";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["login"] = "ይግቡ";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["menu"] = "ሜኑ";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["register"] = "ይመዝገቡ";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["register_success"] = "ምዝገባው ተሳክቷል!";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["remind"] = "የይለፍ ቃል አስታዋሽ";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["remind_success"] = "የይለፍ ቃል አስታዋሽ በተሳካ ሁኔታ ተቀናብሯል";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["session_expired"] = "ክፍለ-ጊዜው_አልቋል";
-				$page_titles[GLOBAL_PAGES_SHORT]["Amharic"]["userinfo"] = "የተጠቃሚ መገለጫ";
 }
 
 $globalSettings["showDetailedError"] = true;

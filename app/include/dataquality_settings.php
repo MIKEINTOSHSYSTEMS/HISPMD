@@ -155,7 +155,7 @@ $tdatadataquality[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatadataquality[".ajaxCodeSnippetAdded"] = false;
 
