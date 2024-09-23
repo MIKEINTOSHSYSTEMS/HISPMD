@@ -18,6 +18,8 @@
 /app/templates_c/*.docx
 /mysql-int/hispmd_dev.sql
 /src/hispmddb/
+/app/modules/kb
+/app/modules/hd
 /build
 /analytics/tmp/cache/tracker
 /analytics/tmp/cache/tracker/eagercache-511-tracker.php
