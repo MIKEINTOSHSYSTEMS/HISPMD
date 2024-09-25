@@ -360,16 +360,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_checkbox}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

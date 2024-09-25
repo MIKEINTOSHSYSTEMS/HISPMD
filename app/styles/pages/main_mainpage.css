@@ -1,10 +1,34 @@
-[data-page="main_mainpage"][data-itemid="text1"] {
-  font-style: italic;
+[data-cellid="above-grid_c4"][data-page="main_mainpage"][data-cellid="above-grid_c4"][data-page="main_mainpage"][data-cellid="above-grid_c4"][data-page="main_mainpage"] {
+  background-color: #e7fdfe;
+  color: #ffffff;
   text-decoration: underline;
   font-weight: bold;
+  font-size: 30px;
+}
+[data-cellid="above-grid_c"][data-page="main_mainpage"][data-cellid="above-grid_c"][data-page="main_mainpage"][data-cellid="above-grid_c"][data-page="main_mainpage"] {
+  font-weight: bold;
+}
+[data-page="main_mainpage"][data-itemid="text3"] {
+  font-weight: bold;
+}
+[data-page="main_mainpage"][data-itemid="text1"] {
+  background-color: #0075d9;
+  color: #ffffff;
+  font-weight: normal;
+}
+[data-page="main_mainpage"][data-itemid="simple_grid_field6"] {
+  color: #00293c;
+  font-weight: bold;
+  font-size: 17px;
 }
 [data-page="main_mainpage"][data-itemid="simple_grid_field2"] {
   font-weight: bold;
+}
+[data-page="main_mainpage"][data-itemid="simple_grid_field7"] {
+  font-style: italic;
+}
+[data-page="main_mainpage"][data-itemid="simple_search"] {
+  page-break-after: always;
 }
 [data-page="main_mainpage"][data-itemid="text4"] {
   color: #00293c;

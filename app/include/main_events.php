@@ -16,8 +16,6 @@
 
 		$this->events["BeforeShowList"]=true;
 
-		$this->events["BeforeProcessList"]=true;
-
 
 
 
@@ -93,7 +91,8 @@ $xt->assign( "breadcrumb", true );
 $xt->assign("crumb_home_link",GetTableLink("main","list"));
 
 $breadcrumb = array();
-$breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&f=(Category~equals~".rawurlencode($values["Category"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["Category"]);
+//$breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&f=(Category~equals~".rawurlencode($values["Category"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["Category"]);
+$breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&q=(Category~equals~".rawurlencode($values["CategoryID"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["CategoryID"]);
 $breadcrumb[1] = array("crumb_attrs" => "", "crumb_title_span" => true,"crumb_title" => $values["Title"]);
 $xt->assign_loopsection("crumb", $breadcrumb);
 ;
@@ -174,7 +173,10 @@ $xt->assign( "stylename",$stylename );
 unset($_SESSION["category"]);
 if( $pageObject->pageName === "category" ){
 	$find = array();
-	preg_match_all("/\(Category~equals~(.+)\)/U",postvalue("f"),$find);
+	//preg_match_all("/\(Category~equals~(.+)\)/U",postvalue("q"),$find);
+	//preg_match_all("/\(Category~contains~($values[CategoryID])\)/U",postvalue("f"),$find);
+	//preg_match_all("/\(Category~contains~(".rawurlencode($values["CategoryID"]).")\)/U",postvalue("f"),$find);
+	preg_match_all("/\(Category~contains~(.+)\)/U",postvalue("f"),$find);
 	if( count( $find[1] ) > 0 && count( $find[1][0] ) ){
 		$breadcrumb = array();
 		$breadcrumb[] = array("crumb_attrs" => "", "crumb_title_span" => true,"crumb_title" => $find[1][0]);
@@ -186,78 +188,6 @@ if( $pageObject->pageName === "category" ){
 ;
 } // function BeforeShowList
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-				// List page: Before process
-function BeforeProcessList($pageObject)
-{
-
-		
-;
-} // function BeforeProcessList
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		

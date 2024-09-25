@@ -303,7 +303,7 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	data-cellId="above-grid_c4" data-pageid="{$pageid}" data-page="main_mainpage"	{$cell_above-grid_c4}
 	class="r-align-center r-ori-vert			col-md-12
 	
 ">
@@ -318,23 +318,17 @@
 			 
 				<div 
 	data-cellId="above-grid_c7" data-pageid="{$pageid}"	{$cell_above-grid_c7}
-	class="r-align-center r-ori-vert			col-md-12
+	class="r-align-center			col-md-12
 	
 ">
 		 
 		<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-page="main_mainpage" data-small > 
 	{$custom _BR___BR___BR_}</span>
-		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c5" data-pageid="{$pageid}"	{$cell_above-grid_c5}
-	class=" r-ori-vert			col-md-6
-	
-">
-		 
-		<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event category_select}
+</span>	 
+		<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" data-page="main_mainpage" class="form-group">
 
 <div  class="input-group">
 {BEGIN searchform_text}
@@ -355,129 +349,44 @@
 	</span>
 </div>
 		
-</span>		</div>			 
-				<div 
-	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-		 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
-{$event category_select}
 </span>		</div>					</div>
 			 
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
+	class="r-align-left r-ori-vert			col-md-12
 	
 ">
 		 
 		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
 	Categories</span>
-	 
-		<span data-itemtype="snippet" data-itemid="category_list" {$item_category_list} data-pageid="{$pageid}" >
-{$event catefory_list}
-</span>		</div>			 
-				<div 
-	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class="r-align-right			col-md-6
-	
-">
-		 
-		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
-{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
-		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
-		{$recsPerPage}
-</span>	 
-		{BEGIN print_friendly}
-<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-print"></span>
-				<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu pull-right">
-										 
-				 
-					<li class="container-fluid 
-										">
-									<div id="print_friendly_scope{$id}">
-	<div class="row">
-		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
-
-			 
-		{BEGIN print_friendly_all}
-		<div class="col-md-8">
-			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="main_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_ALL_PAGES}							</label>
-		</div>
-		{END print_friendly_all}
-		</div>
-		<div class="row">
-		<div class="col-md-4">&nbsp;</div>
-		<div class="col-md-8">
-			<label for="printPage{$id}">
-				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="main_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
-		</div>
-	</div>
-		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			{mlang_message PPANEL_SELECTED}			</label>
-		</div>
-	</div>
-	</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-										">
-									<div>
-	<label for="printPerPage{$id}">
-					{mlang_message RECORDS_PP}							
-	</label>
-	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
-</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-					 text-center 					">
-									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
-</span>
-				 
-					</li>
-															</ul>
-</span>
-{END print_friendly}
 		</div>					</div>
 			 
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class="r-align-center r-ori-vert			col-md-12
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
 	
 ">
 		 
-		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-small > 
+		<span data-itemtype="snippet" data-itemid="category_list" {$item_category_list} data-pageid="{$pageid}" >
+{$event catefory_list}
+</span>		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}" data-page="main_mainpage"	{$cell_above-grid_c}
+	class="r-align-center			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	<br></span>
+	 
+		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-page="main_mainpage" data-small > 
 	Popular Articles</span>
 		</div>					</div>
 			</div>		
@@ -493,7 +402,7 @@
 {BEGIN grid_block}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}<div data-vcolumns=4 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+{END message_block}<div data-vcolumns=2 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
 {BEGIN grid_row}
 	{BEGIN grid_record}
 	{BEGIN grid_vrecord}
@@ -508,39 +417,18 @@
 										<tr>
 						 
 							<td 
-	class="			"
+	class="r-align-center r-ori-vert				{$Title_class}
+			"
 			 
+		data-field=""
+	 
 	data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
  
-{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkbox_attrs}
-		>
-</span>	
-{END checkbox_column}
- 
-{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="main_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
-				
-								</a>
+{BEGIN Title_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="main_mainpage" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
+{$Title_value}
 </span>
-{END edit_link}
-{END edit_column}
- 
-{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
-	 glyphicon glyphicon-search" href="main_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
-</td>
+{END Title_fieldcolumn}</td>
 											</tr>
 									 
 									 
@@ -560,24 +448,16 @@
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert				{$Title_class}
-			"
+	class="r-align-center r-ori-vert			"
 			 
-		data-field=""
-	 
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
- 
-{BEGIN Title_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
-{$Title_value}
-</span>
-{END Title_fieldcolumn}</td>
+</td>
 											</tr>
 									 
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert				{$Category_class}
+	class="r-align-left r-ori-vert				{$Category_class}
 			"
 			 
 		data-field=""
@@ -594,7 +474,7 @@
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert				{$Views_class}
+	class="r-align-right r-ori-vert				{$Views_class}
 			"
 			 
 		data-field=""
@@ -602,7 +482,7 @@
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}">
  
 {BEGIN Views_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Views" data-fieldname="Views" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-page="main_mainpage" data-record-id="{$recId}" data-field="Views" data-fieldname="Views" data-default-width >
 {$Views_value}
 </span>
 {END Views_fieldcolumn}</td>

@@ -53,10 +53,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$jspagetitlelabel main view}","hidden":"{$item_hide_view_header}","fontSize":30},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -177,6 +175,16 @@ pdfDocument = {
 						
 			"%",
 						{END row_grid_7}
+			 
+								{BEGIN row_grid_8}
+						
+			"%",
+						{END row_grid_8}
+			 
+								{BEGIN row_grid_9}
+						
+			"%",
+						{END row_grid_9}
 			 
 				],
 	
@@ -318,6 +326,37 @@ pdfDocument = {
 				{END row_grid_3}
 						{BEGIN row_grid_4}
 				[
+																{BEGIN cellblock_grid_c6}
+{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text1}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c6}
+											],
+				{END row_grid_4}
+						{BEGIN row_grid_5}
+				[
 																{BEGIN cellblock_grid_c4}
 {
 	cellId: 'c4',
@@ -351,8 +390,8 @@ pdfDocument = {
 
 {END cellblock_grid_c4}
 											],
-				{END row_grid_4}
-						{BEGIN row_grid_5}
+				{END row_grid_5}
+						{BEGIN row_grid_6}
 				[
 																{BEGIN cellblock_grid_c3}
 {
@@ -371,7 +410,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"<br>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"<br><br>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -382,8 +421,8 @@ pdfDocument = {
 
 {END cellblock_grid_c3}
 											],
-				{END row_grid_5}
-						{BEGIN row_grid_6}
+				{END row_grid_6}
+						{BEGIN row_grid_7}
 				[
 																{BEGIN cellblock_grid_c}
 {
@@ -413,8 +452,39 @@ pdfDocument = {
 
 {END cellblock_grid_c}
 											],
-				{END row_grid_6}
-						{BEGIN row_grid_7}
+				{END row_grid_7}
+						{BEGIN row_grid_8}
+				[
+																{BEGIN cellblock_grid_c5}
+{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text2}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c5}
+											],
+				{END row_grid_8}
+						{BEGIN row_grid_9}
 				[
 																{BEGIN cellblock_grid_c2}
 {
@@ -446,7 +516,7 @@ pdfDocument = {
 
 {END cellblock_grid_c2}
 											],
-				{END row_grid_7}
+				{END row_grid_9}
 		
 		]
 	}

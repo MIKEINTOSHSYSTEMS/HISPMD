@@ -87,47 +87,6 @@
 
 
 
-
-
-
-{BEGIN filter_control_Category}
-
-	<div class="panel panel-info filter-field filter-Category-container">
-		<div class="panel-heading filter-expander">
-													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
-
-		
-			{BEGIN clearLink_Category}
-			<a href="#" class="filter-clear filter-clear-Category" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_Category}
-			{$label kbcategories Category }		</div>
-		<ul class="list-group">
-					{BEGIN filterCtrlBlock_Category}
-		<li class="list-group-item filter-values filter-values-Category {$collapsedClass_Category} {$visibilityClass_Category}">
-			{$Category_filter}
-						
-					</li>
-		{END filterCtrlBlock_Category}
-
-			{BEGIN filter_button_showmore_Category}
-		<li class="list-group-item filter-show-more {$collapsedClass_Category} {$showMoreBtnClass_Category}">
-			<a class="filter-show-more-link filterShowMore_Category" href="#">{$show_n_more_Category}</a>
-		</li>
-		{END filter_button_showmore_Category}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_Category}
-
-
-
 	<!-- End Filter panel content -->
 	</div>
 </div>			</div>
@@ -210,7 +169,15 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>					</ul>
+							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>							{BEGIN editselected_link}
+	<li data-itemtype="edit_selected" data-itemid="edit_selected" {$item_edit_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$editselectedlink_attrs} {$editselectedlink_span}  title="" >
+				
+		{mlang_message EDIT_SELECTED}		
+		</a>
+	</li>
+{END editselected_link}
+					</ul>
 	</span>
 </span>
 			</span>
@@ -328,14 +295,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-							{BEGIN editselected_link}
-	<li data-itemtype="edit_selected" data-itemid="edit_selected" {$item_edit_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$editselectedlink_attrs} {$editselectedlink_span}  title="" >
-				
-		{mlang_message EDIT_SELECTED}		
-		</a>
-	</li>
-{END editselected_link}
 							{BEGIN deleteselected_link}
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >

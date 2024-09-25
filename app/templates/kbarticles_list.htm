@@ -379,71 +379,19 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Title}
+																		{BEGIN searchCtrlBlock_ArticleIDedit}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Title}" {$filterRow_attrs_Title}>
-			<label>{$label kbarticles Title }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Title}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Title}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Title}</span>
-						</div>
-		{END searchCtrlBlock_Title}
-																{BEGIN searchCtrlBlock_Solution}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Solution}" {$filterRow_attrs_Solution}>
-			<label>{$label kbarticles Solution }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_ArticleIDedit}" {$filterRow_attrs_ArticleIDedit}>
+			<label>{$label kbarticles ArticleIDedit }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Solution}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Solution}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Solution}</span>
+								<span class="rnr-searchtype">{$searchtype_ArticleIDedit}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ArticleIDedit}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ArticleIDedit}</span>
 						</div>
-		{END searchCtrlBlock_Solution}
-																{BEGIN searchCtrlBlock_Problem}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Problem}" {$filterRow_attrs_Problem}>
-			<label>{$label kbarticles Problem }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Problem}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Problem}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Problem}</span>
-						</div>
-		{END searchCtrlBlock_Problem}
-																{BEGIN searchCtrlBlock_DateCreated}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_DateCreated}" {$filterRow_attrs_DateCreated}>
-			<label>{$label kbarticles DateCreated }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_DateCreated}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_DateCreated}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_DateCreated}</span>
-						</div>
-		{END searchCtrlBlock_DateCreated}
-																{BEGIN searchCtrlBlock_Category}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Category}" {$filterRow_attrs_Category}>
-			<label>{$label kbarticles Category }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Category}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Category}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Category}</span>
-						</div>
-		{END searchCtrlBlock_Category}
+		{END searchCtrlBlock_ArticleIDedit}
 		
 
 	</div>
@@ -471,98 +419,6 @@
 					data-horizontal
 			>
 	<!-- Begin Filter panel content -->
-
-
-
-
-
-
-{BEGIN filter_control_DateCreated}
-
-	<div class="dropdown filter-field filter-DateCreated-container" {BEGIN filter_selected_DateCreated} data-selected {END filter_selected_DateCreated}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_DateCreated}
-			<a href="#" class="filter-clear filter-clear-DateCreated" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_DateCreated}
-			<span class="r-filter-field">{$label kbarticles DateCreated }				{BEGIN filter_selected_DateCreated}:{END filter_selected_DateCreated}
-			</span>
-			{BEGIN filter_selected_DateCreated}
-			<span class="r-filter-value">{$filtervalue_DateCreated}</span>
-			{END filter_selected_DateCreated}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_DateCreated}
-		<li class=" filter-values filter-values-DateCreated  {$visibilityClass_DateCreated}">
-			{$DateCreated_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_DateCreated}
-
-			{BEGIN filter_button_showmore_DateCreated}
-		<li class=" filter-show-more {$collapsedClass_DateCreated} {$showMoreBtnClass_DateCreated}">
-			<a class="filter-show-more-link filterShowMore_DateCreated" href="#">{$show_n_more_DateCreated}</a>
-		</li>
-		{END filter_button_showmore_DateCreated}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_DateCreated}
-
-
-
-
-
-
-{BEGIN filter_control_Category}
-
-	<div class="dropdown filter-field filter-Category-container" {BEGIN filter_selected_Category} data-selected {END filter_selected_Category}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_Category}
-			<a href="#" class="filter-clear filter-clear-Category" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_Category}
-			<span class="r-filter-field">{$label kbarticles Category }				{BEGIN filter_selected_Category}:{END filter_selected_Category}
-			</span>
-			{BEGIN filter_selected_Category}
-			<span class="r-filter-value">{$filtervalue_Category}</span>
-			{END filter_selected_Category}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_Category}
-		<li class=" filter-values filter-values-Category  {$visibilityClass_Category}">
-			{$Category_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_Category}
-
-			{BEGIN filter_button_showmore_Category}
-		<li class=" filter-show-more {$collapsedClass_Category} {$showMoreBtnClass_Category}">
-			<a class="filter-show-more-link filterShowMore_Category" href="#">{$show_n_more_Category}</a>
-		</li>
-		{END filter_button_showmore_Category}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_Category}
 
 
 
@@ -655,16 +511,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-						[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DateCreated"]:before {
-		content: "{$label kbarticles DateCreated}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Problem"]:before {
+							[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Problem"]:before {
 		content: "{$label kbarticles Problem}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Solution"]:before {
-		content: "{$label kbarticles Solution}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Title"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Title"]:before {
 		content: "{$label kbarticles Title}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Views"]:before {
@@ -795,54 +645,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DateCreated_class}	"
-
-			data-field="DateCreated"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DateCreated_fieldheadercolumn}
-	{BEGIN DateCreated_fieldheader}
-	<SPAN {$DateCreated_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DateCreated" data-fieldname="DateCreated">
-	{$label kbarticles DateCreated }	{$arrow_icon_DateCreated}
-	</SPAN>
-	{END DateCreated_fieldheader}
-{END DateCreated_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Solution_class}	"
-
-			data-field="Solution"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Solution_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Solution" data-fieldname="Solution">
-	{$label kbarticles Solution }	</span>
-{END Solution_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
 							</tr>
 																				
 					{END grid_header}
@@ -875,48 +677,6 @@
 {END Category_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_icons1}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DateCreated_class}	"
-
-			data-field="DateCreated"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DateCreated_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DateCreated" data-fieldname="DateCreated" data-default-width >
-{$DateCreated_value}
-</span>
-{END DateCreated_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Solution_class}	"
-
-			data-field="Solution"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Solution_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Solution" data-fieldname="Solution" data-default-width >
-{$Solution_value}
-</span>
-{END Solution_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1045,36 +805,6 @@
 {END Views_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_cell_field6}
 							</tr>
 										
 											{END grid_row}
@@ -1161,36 +891,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DateCreated_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="kbarticles_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Solution_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="kbarticles_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

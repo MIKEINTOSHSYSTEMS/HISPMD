@@ -63,15 +63,13 @@ pdfDocument = {
 				widths: [
 														"*",
 										"*",
-										"*",
-										"*",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 4,
+							colSpan: 2,
 							border:[false, false,false,false],
 							stack: [
 
@@ -89,7 +87,6 @@ pdfDocument = {
 		
 		widths: [
 								"*", 
-											"*", 
 					 ],	
 		
 	
@@ -103,7 +100,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -111,22 +107,19 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom KNOWLEDGE_BASE}","hidden":"{$item_hide_text1}","italics":true,"decoration":"underline","bold":true,"isHtml":true},
+			{"text":"{$custom KNOWLEDGE_BASE}","color":"#ffffff","background":"#0075d9","hidden":"{$item_hide_text1}","bold":false,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'center',
+      fillColor: '#e7fdfe',  color: '#ffffff',      "alignment": 'center',
      
       
-      },
+         decoration: 'underline',
+      fontSize: 30,
+      bold: true,
+   },
 
-																		{ 
-				cellId: 'c4',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
 						[
 																{
 	cellId: 'c7',
@@ -135,7 +128,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -145,6 +137,12 @@ pdfDocument = {
 				
 			{"text":"{$custom _BR___BR___BR_}","color":"#00293c","hidden":"{$item_hide_text4}","bold":true,"isHtml":true},
 				
+				
+			{"text":"{$event category_select}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":"","pageBreak":"after","hidden":"{$item_hide_simple_search}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
@@ -152,38 +150,9 @@ pdfDocument = {
       
       },
 
-																		{ 
-				cellId: 'c7',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
 						[
 																{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_simple_search}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
 	cellId: 'c6',
 	col:0,
 	row:0,
@@ -197,11 +166,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event category_select}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{"text":"Categories","hidden":"{$item_hide_text2}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'right',
+              "alignment": 'left',
      
       
       },
@@ -222,43 +191,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Categories","hidden":"{$item_hide_text2}","isHtml":true},
-				
-				
 			{"text":"{$event catefory_list}","hidden":"{$item_hide_category_list}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
-				
-				
-			{"text":"","hidden":"{$item_hide_page_size}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_print_panel}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
      
       
       },
@@ -272,7 +209,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -280,22 +216,20 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Popular Articles","hidden":"{$item_hide_text3}","isHtml":true},
+			{"text":"<br>","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
+			{"text":"Popular Articles","hidden":"{$item_hide_text3}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
      
       
-      },
+         bold: true,
+   },
 
-																		{ 
-				cellId: 'c',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
 		
 		]
 	}
@@ -354,6 +288,7 @@ pdfDocument = {
 	cellId: 'cell_top',
 	col:0,
 	row:0,
+			fieldName: 'Title',
 				style: 'headcell',
 		
 		
@@ -367,17 +302,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_grid_checkbox}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
+			{"text":{$Title_pdfvalue},"color":"#00293c","hidden":"{$item_hide_simple_grid_field6}","fontSize":17,"bold":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -392,7 +321,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'Title',
 				style: 'bodycell',
 		
 		
@@ -405,12 +333,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$Title_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$Title_align}',
+              "alignment": 'center',
      
       
       },
@@ -443,7 +369,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$Category_align}',
+              "alignment": 'left',
      
       
       },
@@ -472,11 +398,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Views_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+			{"text":{$Views_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}","italics":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$Views_align}',
+              "alignment": 'right',
      
       
       },
@@ -506,7 +432,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },

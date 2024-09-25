@@ -59,9 +59,7 @@ $custom_labels["Amharic"] = array();
 		$custom_labels["Amharic"]['_BR_'] = "<br>";
 		$custom_labels["Amharic"]['_BR___BR___BR_'] = "<br>
 ምን እንረዳዎ?
-<br>
-<br>
-<br>
+
 ";
 		$custom_labels["Amharic"]['HOW_CAN_WE_HELP_YOU_'] = "የእውቀት ማዕከል";
 		$custom_labels["Amharic"]['_BR__'] = "<br>
@@ -120,11 +118,7 @@ $custom_labels["Amharic"] = array();
 <br>
 ";
 		$custom_labels["English"]['_BR___BR___BR_'] = "<br>
-How can we help you?
-<br>
-<br>
-<br>
-";
+How can we help you?";
 		$custom_labels["English"]['HOW_CAN_WE_HELP_YOU_'] = "Knowledge Base";
 		$custom_labels["English"]['_BR__'] = "<br>
 How can we help you?
@@ -836,9 +830,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "619_1727107544";
+$projectBuildKey = "625_1727107544";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "619";
+$projectBuildNumber = "625";
 
 $mlang_messages = array();
 $mlang_charsets = array();

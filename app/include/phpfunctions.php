@@ -1057,7 +1057,9 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	}
 				if($table=="main" && $field=="Category" && $ptype=="list")
 	{
-		$value="<a href='".GetTableLink("main","list")."?page=category&q=(Category~equals~".$value.")'>".$value."</a>";;
+		//$value="<a href='".GetTableLink("main","list")."?page=category&q=(Category~equals~".$value.")'>".$value."</a>";;
+		//$value="<a href='".GetTableLink("main","list")."?page=main&q=(Category~equals~".$value.")'>".$value."</a>";;
+		$value="<a href='".GetTableLink("main","list")."?page=list&q=(Category~contains~".$value.")'>".$value."</a>";;
 		return $value;
 	}
 				if($table=="main" && $field=="Category" && $ptype=="print")
@@ -1115,11 +1117,11 @@ $value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"].
 				if($table=="main" && $field=="helpfullblock")
 	{
 		
-$value = "<span class='helpfultext'>Was this article helpful?</span>";
+$value = "<span class='helpfultext'>Was this article helpful?</span> <br>";
 $value.="<span class='buttons'>";
-$value.="<span data-column='likecount' class='yes fa fa-thumbs-up'>Yes (<i>".$data["likecount"]."</i>)</span>";
-$value.="<span data-column='dislikecount' class='no fa fa-thumbs-down'>No (<i>".$data["dislikecount"]."</i>)</span>";
-$value.="<span class='feedback fa fa-comment'>Add Comment</span>";
+$value.="<span data-column='likecount' class='yes fa fa-thumbs-up'> Yes (<i>".$data["likecount"]."</i>)</span>";
+$value.="<span data-column='dislikecount' class='no fa fa-thumbs-down'> No (<i>".$data["dislikecount"]."</i>)</span>";
+$value.="<br> <span class='feedback fa fa-comment'>Add Comment</span>";
 $value.="</span>";
 $value.="<span class='thankyou'>Thank you for your feedback!</span>";;
 		return $value;
