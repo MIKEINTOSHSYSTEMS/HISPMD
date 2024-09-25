@@ -373,7 +373,10 @@
 	class=" r-ori-vert			col-md-6
 	
 ">
-			</div>			 
+		 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event catefory_list}
+</span>		</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6
@@ -487,7 +490,7 @@
 {BEGIN grid_block}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}<div data-vcolumns=1 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+{END message_block}<div data-vcolumns=4 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
 {BEGIN grid_row}
 	{BEGIN grid_record}
 	{BEGIN grid_vrecord}
@@ -502,10 +505,18 @@
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert			"
+	class="r-align-center r-ori-vert				{$Title_class}
+			"
 			 
+		data-field=""
+	 
 	data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
-</td>
+ 
+{BEGIN Title_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="main_category" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
+{$Title_value}
+</span>
+{END Title_fieldcolumn}</td>
 											</tr>
 									 
 									 
@@ -525,18 +536,10 @@
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert				{$Title_class}
-			"
+	class=" r-ori-vert			"
 			 
-		data-field=""
-	 
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
- 
-{BEGIN Title_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="main_category" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
-{$Title_value}
-</span>
-{END Title_fieldcolumn}</td>
+</td>
 											</tr>
 									 
 										<tr>

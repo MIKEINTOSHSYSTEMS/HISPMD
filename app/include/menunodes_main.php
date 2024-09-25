@@ -3907,7 +3907,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "151";
-	$menuNode["name"] = "KnowledgeBase";
+	$menuNode["name"] = "Knowledge Base & Guides";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
@@ -3920,13 +3920,13 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-book";
-	$menuNode["iconType"] = "3";
+	$menuNode["icon"] = "glyphicon-book";
+	$menuNode["iconType"] = "2";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "KnowledgeBase";
+	$menuNode["title"] = "Knowledge Base & Guides";
 
 
 
@@ -3943,12 +3943,12 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "mainpage";
+	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-book";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "2";
+	$menuNode["icon"] = "fa-book";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
@@ -3959,32 +3959,6 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "153";
-	$menuNode["name"] = "Main";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "main";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "151";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Main";
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "154";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -3998,8 +3972,8 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
+	$menuNode["icon"] = "fa-newspaper-o";
+	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
@@ -4010,7 +3984,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "155";
+	$menuNode["id"] = "154";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -4024,8 +3998,8 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-camera";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "fa-pagelines";
+	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
@@ -4036,7 +4010,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "156";
+	$menuNode["id"] = "155";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -4050,8 +4024,8 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-fire";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "fa-users";
+	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
@@ -4062,7 +4036,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "157";
+	$menuNode["id"] = "156";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -4076,13 +4050,39 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-camera";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "fa-comment-o";
+	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
 	$menuNode["title"] = GetTableCaption("admin_comments");
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "157";
+	$menuNode["name"] = "-------";
+	$menuNode["href"] = "";
+	$menuNode["type"] = "Separator";
+	$menuNode["table"] = "";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "None";
+	$menuNode["pageType"] = strtolower("");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "-------";
 
 
 

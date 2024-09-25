@@ -63,13 +63,15 @@ pdfDocument = {
 				widths: [
 														"*",
 										"*",
+										"*",
+										"*",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 2,
+							colSpan: 4,
 							border:[false, false,false,false],
 							stack: [
 
@@ -138,10 +140,10 @@ pdfDocument = {
 			{"text":"{$custom _BR___BR___BR_}","color":"#00293c","hidden":"{$item_hide_text4}","bold":true,"isHtml":true},
 				
 				
-			{"text":"{$event category_select}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
-				
 			{"text":"","pageBreak":"after","hidden":"{$item_hide_simple_search}"},
+				
+				
+			{"text":"{$event category_select}","hidden":"{$item_hide_snippet}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

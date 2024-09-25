@@ -332,14 +332,23 @@ echo "Your API Key is: ".$_SESSION["apikey"];
 }
 	function event_catefory_list(&$params)
 	{
-	//$main_link = GetTableLink("main","list")."?page=category&";
-	$main_link = GetTableLink("main","list")."?page=category&";
+		//$main_link = GetTableLink("main","list")."?page=category&";
+	$main_link = GetTableLink("main","list")."?page=list&";
 $category_rs = DB::Select("kbcategories");
 while($category = $category_rs->fetchAssoc() ){
 	//$link = $main_link."f=(Category~equals~".rawurlencode($category["Category"]).")";
 	$link = $main_link."q=(Category~equals~".rawurlencode($category["CategoryID"]).")";
 	echo "<div class='category'><a href='".$link."'><i class='fa ".$category["faicon"]."'></i><span>".$category["Category"]."</span><span>".$category["Description"]."</span></a></div>";
 }
+
+
+
+//$main_link = GetTableLink("main","list")."?page=category&";
+//$category_rs = DB::Select("kbcategories");
+//while($category = $category_rs->fetchAssoc() ){
+//	$link = $main_link."f=(Category~equals~".rawurlencode($category["Category"]).")";
+//	echo "<div class='category'><a href='".$link."'><i class='fa ".$category["faicon"]."'></i><span>".$category["Category"]."</span><span>".$category["Description"]."</span></a></div>";
+//}
 
 	;
 }

@@ -1057,9 +1057,10 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	}
 				if($table=="main" && $field=="Category" && $ptype=="list")
 	{
-		//$value="<a href='".GetTableLink("main","list")."?page=category&q=(Category~equals~".$value.")'>".$value."</a>";;
+				//$value="<a href='".GetTableLink("main","list")."?page=category&q=(Category~equals~".$value.")'>".$value."</a>";;
 		//$value="<a href='".GetTableLink("main","list")."?page=main&q=(Category~equals~".$value.")'>".$value."</a>";;
 		$value="<a href='".GetTableLink("main","list")."?page=list&q=(Category~contains~".$value.")'>".$value."</a>";;
+		return $value;;
 		return $value;
 	}
 				if($table=="main" && $field=="Category" && $ptype=="print")

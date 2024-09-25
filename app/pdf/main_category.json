@@ -62,13 +62,16 @@ pdfDocument = {
 
 				widths: [
 														"*",
+										"*",
+										"*",
+										"*",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 1,
+							colSpan: 4,
 							border:[false, false,false,false],
 							stack: [
 
@@ -220,8 +223,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event catefory_list}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -348,38 +353,8 @@ pdfDocument = {
 	cellId: 'cell_top',
 	col:0,
 	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_top}
-											],
-				{END row_grid_0}
-						{BEGIN row_grid_1}
-				[
-																{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
 			fieldName: 'Title',
-				style: 'bodycell',
+				style: 'headcell',
 		
 		
 	//	dynamic colspan/rowspan
@@ -396,7 +371,37 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$Title_align}',
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_top}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
      
       
       },

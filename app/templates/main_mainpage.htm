@@ -325,9 +325,6 @@
 		<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-page="main_mainpage" data-small > 
 	{$custom _BR___BR___BR_}</span>
 	 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
-{$event category_select}
-</span>	 
 		<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" data-page="main_mainpage" class="form-group">
 
 <div  class="input-group">
@@ -349,6 +346,9 @@
 	</span>
 </div>
 		
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event category_select}
 </span>		</div>					</div>
 			 
 				<div class="row">
@@ -402,7 +402,7 @@
 {BEGIN grid_block}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}<div data-vcolumns=2 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+{END message_block}<div data-vcolumns=4 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
 {BEGIN grid_row}
 	{BEGIN grid_record}
 	{BEGIN grid_vrecord}

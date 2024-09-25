@@ -91,8 +91,7 @@ $xt->assign( "breadcrumb", true );
 $xt->assign("crumb_home_link",GetTableLink("main","list"));
 
 $breadcrumb = array();
-//$breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&f=(Category~equals~".rawurlencode($values["Category"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["Category"]);
-$breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&q=(Category~equals~".rawurlencode($values["CategoryID"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["CategoryID"]);
+$breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&f=(Category~equals~".rawurlencode($values["Category"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["Category"]);
 $breadcrumb[1] = array("crumb_attrs" => "", "crumb_title_span" => true,"crumb_title" => $values["Title"]);
 $xt->assign_loopsection("crumb", $breadcrumb);
 ;
@@ -165,7 +164,7 @@ $xt->assign_loopsection("crumb", $breadcrumb);
 function BeforeShowList(&$xt, &$templatefile, $pageObject)
 {
 
-		$stylename = "main ".$pageObject->pageName;
+				$stylename = "main ".$pageObject->pageName;
 if ( Security::isLoggedIn() )
 	$stylename.=" LoggedIn";
 $xt->assign( "stylename",$stylename );
@@ -185,6 +184,28 @@ if( $pageObject->pageName === "category" ){
 	}
 
 }
+
+
+
+
+
+//$stylename = "main ".$pageObject->pageName;
+//if ( Security::isLoggedIn() )
+//	$stylename.=" LoggedIn";
+//$xt->assign( "stylename",$stylename );
+
+//unset($_SESSION["category"]);
+//if( $pageObject->pageName === "category" ){
+//	$find = array();
+//	preg_match_all("/\(Category~equals~(.+)\)/U",postvalue("f"),$find);
+//	if( count( $find[1] ) > 0 && count( $find[1][0] ) ){
+//		$breadcrumb = array();
+//		$breadcrumb[] = array("crumb_attrs" => "", "crumb_title_span" => true,"crumb_title" => $find[1][0]);
+//		$xt->assign_loopsection("crumb", $breadcrumb);
+//		$_SESSION["category"] = $find[1][0];
+//	}
+
+//}
 ;
 } // function BeforeShowList
 
