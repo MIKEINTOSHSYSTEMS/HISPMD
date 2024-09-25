@@ -333,7 +333,7 @@ echo "Your API Key is: ".$_SESSION["apikey"];
 	function event_catefory_list(&$params)
 	{
 	//$main_link = GetTableLink("main","list")."?page=category&";
-	$main_link = GetTableLink("main","list")."?page=list&";
+	$main_link = GetTableLink("main","list")."?page=category&";
 $category_rs = DB::Select("kbcategories");
 while($category = $category_rs->fetchAssoc() ){
 	//$link = $main_link."f=(Category~equals~".rawurlencode($category["Category"]).")";
