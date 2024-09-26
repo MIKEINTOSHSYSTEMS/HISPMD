@@ -1172,9 +1172,17 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="kbcomments" && $field=="name")
+	{
+		return $_SESSION["UserName"];
+	}
 				if($table=="kbcomments" && $field=="moderated")
 	{
 		return 0;
+	}
+				if($table=="kbcomments" && $field=="email")
+	{
+		return $_SESSION["UserID"];
 	}
 				if($table=="admin_comments" && $field=="moderated")
 	{

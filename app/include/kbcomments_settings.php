@@ -6,11 +6,11 @@ $tdatakbcomments[".OwnerID"] = "access";
 $tdatakbcomments[".OriginalTable"] = "public.kbcomments";
 
 
-$tdatakbcomments[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"]}" );
+$tdatakbcomments[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"],\"search\":[\"search\"]}" );
 $tdatakbcomments[".originalPagesByType"] = $tdatakbcomments[".pagesByType"];
-$tdatakbcomments[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"]}" ) );
+$tdatakbcomments[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"],\"search\":[\"search\"]}" ) );
 $tdatakbcomments[".originalPages"] = $tdatakbcomments[".pages"];
-$tdatakbcomments[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"list\":\"list\"}" );
+$tdatakbcomments[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"list\":\"list\",\"search\":\"search\"}" );
 $tdatakbcomments[".originalDefaultPages"] = $tdatakbcomments[".defaultPages"];
 
 //	field labels
@@ -349,7 +349,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -374,19 +374,15 @@ $tdatakbcomments[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+							
 	
 //	End validation
 
@@ -405,7 +401,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -869,7 +865,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -885,8 +881,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -912,7 +907,8 @@ $tdatakbcomments[".hideMobileList"] = array();
 		$edata["IsRequired"] = true;
 
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypesHtml"] = "";
 
@@ -1190,8 +1186,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -1206,17 +1201,14 @@ $tdatakbcomments[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=250";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Email");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -1235,7 +1227,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
