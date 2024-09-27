@@ -329,8 +329,8 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class="r-align-center			col-md-12
 	
 ">
 		 
@@ -355,13 +355,7 @@
 	</span>
 </div>
 		
-</span>		</div>			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-		 
+</span>	 
 		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
 {$event category_select}
 </span>		</div>					</div>
@@ -370,113 +364,25 @@
 			 
 				<div 
 	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class=" r-ori-vert			col-md-6
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
 		 
-		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-page="main_category" >
 {$event catefory_list}
-</span>		</div>			 
-				<div 
-	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class="r-align-right			col-md-6
-	
-">
-		 
-		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
-{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
-		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
-		{$recsPerPage}
-</span>	 
-		{BEGIN print_friendly}
-<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-print"></span>
-				<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu pull-right">
-										 
-				 
-					<li class="container-fluid 
-										">
-									<div id="print_friendly_scope{$id}">
-	<div class="row">
-		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
-
-			 
-		{BEGIN print_friendly_all}
-		<div class="col-md-8">
-			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="main_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_ALL_PAGES}							</label>
-		</div>
-		{END print_friendly_all}
-		</div>
-		<div class="row">
-		<div class="col-md-4">&nbsp;</div>
-		<div class="col-md-8">
-			<label for="printPage{$id}">
-				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="main_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
-		</div>
-	</div>
-		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			{mlang_message PPANEL_SELECTED}			</label>
-		</div>
-	</div>
-	</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-										">
-									<div>
-	<label for="printPerPage{$id}">
-					{mlang_message RECORDS_PP}							
-	</label>
-	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
-</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-					 text-center 					">
-									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
-</span>
-				 
-					</li>
-															</ul>
-</span>
-{END print_friendly}
-		</div>					</div>
+</span>		</div>					</div>
 			 
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
-	class=" r-ori-vert			col-md-12
+	data-cellId="above-grid_c4" data-pageid="{$pageid}" data-page="main_category"	{$cell_above-grid_c4}
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
 		 
-		<span data-itemtype="snippet" data-itemid="category_title" {$item_category_title} data-pageid="{$pageid}" data-page="main_category" >
-{$event category_title}
-</span>		</div>					</div>
+		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-page="main_category" data-small > 
+	{$custom MOST_VISITED_CONTENTS}</span>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -539,13 +445,16 @@
 	class=" r-ori-vert			"
 			 
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
-</td>
+ 
+<span data-itemtype="snippet" data-itemid="category_title" {$item_category_title} data-pageid="{$pageid}" data-page="main_category" data-record-id="{$recId}" >
+{$event category_title}
+</span></td>
 											</tr>
 									 
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert				{$Problem_class}
+	class="r-align-center r-ori-vert				{$Problem_class}
 			"
 			 
 		data-field=""
@@ -562,7 +471,7 @@
 										<tr>
 						 
 							<td 
-	class=" r-ori-vert				{$Views_class}
+	class="r-align-right r-ori-vert				{$Views_class}
 			"
 			 
 		data-field=""

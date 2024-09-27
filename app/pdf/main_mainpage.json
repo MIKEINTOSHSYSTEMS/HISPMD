@@ -172,7 +172,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -197,7 +197,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -290,7 +290,6 @@ pdfDocument = {
 	cellId: 'cell_top',
 	col:0,
 	row:0,
-			fieldName: 'Title',
 				style: 'headcell',
 		
 		
@@ -303,10 +302,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$Title_pdfvalue},"color":"#00293c","hidden":"{$item_hide_simple_grid_field6}","fontSize":17,"bold":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
      
@@ -323,6 +320,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
+			fieldName: 'Title',
 				style: 'bodycell',
 		
 		
@@ -335,8 +333,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":{$Title_pdfvalue},"color":"#00293c","hidden":"{$item_hide_simple_grid_field6}","fontSize":17,"bold":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
      

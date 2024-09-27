@@ -3998,9 +3998,9 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-pagelines";
+	$menuNode["icon"] = "fa-object-ungroup";
 	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "2";
+	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
@@ -4026,7 +4026,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNode["icon"] = "fa-users";
 	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "2";
+	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
@@ -4050,9 +4050,9 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-comment-o";
+	$menuNode["icon"] = "fa-commenting";
 	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "2";
+	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 

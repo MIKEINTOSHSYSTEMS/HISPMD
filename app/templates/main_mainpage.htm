@@ -355,7 +355,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
-	class="r-align-left r-ori-vert			col-md-12
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
 		 
@@ -367,7 +367,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-12
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
 		 
@@ -417,18 +417,10 @@
 										<tr>
 						 
 							<td 
-	class="r-align-center r-ori-vert				{$Title_class}
-			"
+	class="r-align-center r-ori-vert			"
 			 
-		data-field=""
-	 
 	data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
- 
-{BEGIN Title_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="main_mainpage" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
-{$Title_value}
-</span>
-{END Title_fieldcolumn}</td>
+</td>
 											</tr>
 									 
 									 
@@ -448,10 +440,18 @@
 										<tr>
 						 
 							<td 
-	class="r-align-center r-ori-vert			"
+	class="r-align-center r-ori-vert				{$Title_class}
+			"
 			 
+		data-field=""
+	 
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
-</td>
+ 
+{BEGIN Title_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="main_mainpage" data-record-id="{$recId}" data-field="Title" data-fieldname="Title" data-default-width >
+{$Title_value}
+</span>
+{END Title_fieldcolumn}</td>
 											</tr>
 									 
 										<tr>

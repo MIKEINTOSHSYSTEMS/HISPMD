@@ -4,6 +4,18 @@
   text-decoration: underline;
   font-weight: bold;
 }
+[data-cellid="above-grid_c4"][data-page="main_category"][data-cellid="above-grid_c4"][data-page="main_category"][data-cellid="above-grid_c4"][data-page="main_category"] {
+  page-break-before: always;
+}
+[data-page="main_category"][data-itemid="category_title"] {
+  font-style: italic;
+  font-weight: bold;
+}
+[data-page="main_category"][data-itemid="simple_grid_field6"] {
+  color: #0097d3;
+  font-weight: bold;
+  font-size: 19px;
+}
 [data-page="main_category"][data-itemid="text"] {
   background-color: #0075d9;
   color: #0075d9;
@@ -11,6 +23,16 @@
 }
 [data-page="main_category"][data-itemid="text1"] {
   color: #00293c;
+  font-weight: bold;
+  font-size: 21px;
+}
+[data-page="main_category"][data-itemid="snippet1"] {
+  color: #0079d3;
+  font-weight: bold;
+  page-break-after: always;
+}
+[data-page="main_category"][data-itemid="text2"] {
+  font-style: italic;
   font-weight: bold;
 }
 [data-page="main_category"][data-itemid="page_image_ash8f23hr"] {
