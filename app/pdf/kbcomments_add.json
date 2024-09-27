@@ -134,7 +134,7 @@ pdfDocument = {
 			heights: [
 								{BEGIN row_grid_0}
 						
-			"%",
+			"50%",
 						{END row_grid_0}
 			 
 				],

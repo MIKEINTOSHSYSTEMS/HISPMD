@@ -419,13 +419,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$name_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+			{"text":{$name_pdfvalue},"color":"#0079ff","hidden":"{$item_hide_grid_field}","bold":true},
 				
 				
-			{"text":{$email_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+			{"text":{$email_pdfvalue},"hidden":"{$item_hide_grid_field1}","bold":true},
 				
 				
-			{"text":{$comment_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+			{"text":{$comment_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}","italics":true},
+				
+				
+			{"text":"@","hidden":"{$item_hide_text}","isHtml":true},
 				
 				
 			{"text":{$created_date_pdfvalue},"hidden":"{$item_hide_grid_field2}"},

@@ -46,6 +46,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelskbcomments["English"]["created_date"] = "Created Date";
 	$fieldToolTipskbcomments["English"]["created_date"] = "";
 	$placeHolderskbcomments["English"]["created_date"] = "";
+	$pageTitleskbcomments["English"]["add"] = "Comments, Add new comment";
 	if (count($fieldToolTipskbcomments["English"]))
 		$tdatakbcomments[".isUseToolTips"] = true;
 }
@@ -76,6 +77,7 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelskbcomments["Amharic"]["created_date"] = "Created Date";
 	$fieldToolTipskbcomments["Amharic"]["created_date"] = "";
 	$placeHolderskbcomments["Amharic"]["created_date"] = "";
+	$pageTitleskbcomments["Amharic"]["add"] = "Comments, Add new comment";
 	if (count($fieldToolTipskbcomments["Amharic"]))
 		$tdatakbcomments[".isUseToolTips"] = true;
 }
@@ -917,7 +919,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 	
 	
 	
-				$edata["nRows"] = 100;
+				$edata["nRows"] = 300;
 			$edata["nCols"] = 200;
 
 	

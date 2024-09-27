@@ -1117,14 +1117,17 @@ $value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"].
 	}
 				if($table=="main" && $field=="helpfullblock")
 	{
-		
-$value = "<span class='helpfultext'>Was this article helpful?</span> <br>";
+		$value = "<span class='helpfultext'><b>Was this article helpful?<b></span> <br>";
+$value.="<span><br> <br></span>";
 $value.="<span class='buttons'>";
-$value.="<span data-column='likecount' class='yes fa fa-thumbs-up'> Yes (<i>".$data["likecount"]."</i>)</span>";
-$value.="<span data-column='dislikecount' class='no fa fa-thumbs-down'> No (<i>".$data["dislikecount"]."</i>)</span>";
-$value.="<br> <span class='feedback fa fa-comment'>Add Comment</span>";
+$value.="<i class='btn btn-primary'><span data-column='likecount' class='yes fa fa-thumbs-up'> Yes (<i>".$data["likecount"]."</i>)</span></i>";
+$value.="<i class='btn btn-default'><span data-column='dislikecount' class='no fa fa-thumbs-down'> No (<i>".$data["dislikecount"]."</i>)</span></i>";
+$value.="<span><br></span>";
+$value.="<br> <i class='btn btn-info'><span class='feedback fa fa-comment'>Add Comment</span></i>";
 $value.="</span>";
-$value.="<span class='thankyou'>Thank you for your feedback!</span>";;
+$value.="<span><br> <br></span>";
+//$value.="<span class='thankyou'>Thank you for your feedback!</span>";
+;
 		return $value;
 	}
 				if($table=="faicons" && $field=="id")

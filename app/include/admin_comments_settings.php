@@ -215,6 +215,7 @@ $tdataadmin_comments[".geocodingEnabled"] = false;
 
 
 
+$tdataadmin_comments[".isDisplayLoading"] = true;
 
 
 
@@ -235,7 +236,7 @@ $tdataadmin_comments[".orderindexes"] = array();
 
 
 
-$tdataadmin_comments[".sqlHead"] = "SELECT name, 	moderated, 	created_date, 	ArticleID, 	\"comment\", 	CommentID, 	email";
+$tdataadmin_comments[".sqlHead"] = "SELECT \"name\", 	\"moderated\", 	\"created_date\", 	\"ArticleID\", 	\"comment\", 	\"CommentID\", 	\"email\"";
 $tdataadmin_comments[".sqlFrom"] = "FROM kbcomments";
 $tdataadmin_comments[".sqlWhereExpr"] = "";
 $tdataadmin_comments[".sqlTail"] = "";
@@ -322,7 +323,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "name";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "name";
+	$fdata["FullName"] = "\"name\"";
 
 	
 	
@@ -460,7 +461,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "moderated";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "moderated";
+	$fdata["FullName"] = "\"moderated\"";
 
 	
 	
@@ -557,7 +558,8 @@ $tdataadmin_comments[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "moderated";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -594,7 +596,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "created_date";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "created_date";
+	$fdata["FullName"] = "\"created_date\"";
 
 	
 	
@@ -731,7 +733,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ArticleID";
+	$fdata["FullName"] = "\"ArticleID\"";
 
 	
 	
@@ -902,7 +904,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -918,8 +920,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -944,7 +945,8 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypesHtml"] = "";
 
@@ -996,7 +998,8 @@ $tdataadmin_comments[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "moderated";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1033,7 +1036,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CommentID";
+	$fdata["FullName"] = "\"CommentID\"";
 
 	
 	
@@ -1172,7 +1175,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "email";
+	$fdata["FullName"] = "\"email\"";
 
 	
 	
@@ -1334,7 +1337,7 @@ function createSqlQuery_admin_comments()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "name, 	moderated, 	created_date, 	ArticleID, 	\"comment\", 	CommentID, 	email";
+$proto0["m_strFieldList"] = "\"name\", 	\"moderated\", 	\"created_date\", 	\"ArticleID\", 	\"comment\", 	\"CommentID\", 	\"email\"";
 $proto0["m_strFrom"] = "FROM kbcomments";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "order by created_date desc";
@@ -1381,7 +1384,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "admin_comments"
 ));
 
-$proto6["m_sql"] = "name";
+$proto6["m_sql"] = "\"name\"";
 $proto6["m_srcTableName"] = "admin_comments";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1395,7 +1398,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "admin_comments"
 ));
 
-$proto8["m_sql"] = "moderated";
+$proto8["m_sql"] = "\"moderated\"";
 $proto8["m_srcTableName"] = "admin_comments";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1409,7 +1412,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "admin_comments"
 ));
 
-$proto10["m_sql"] = "created_date";
+$proto10["m_sql"] = "\"created_date\"";
 $proto10["m_srcTableName"] = "admin_comments";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1423,7 +1426,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "admin_comments"
 ));
 
-$proto12["m_sql"] = "ArticleID";
+$proto12["m_sql"] = "\"ArticleID\"";
 $proto12["m_srcTableName"] = "admin_comments";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1451,7 +1454,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "admin_comments"
 ));
 
-$proto16["m_sql"] = "CommentID";
+$proto16["m_sql"] = "\"CommentID\"";
 $proto16["m_srcTableName"] = "admin_comments";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -1465,7 +1468,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "admin_comments"
 ));
 
-$proto18["m_sql"] = "email";
+$proto18["m_sql"] = "\"email\"";
 $proto18["m_srcTableName"] = "admin_comments";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";

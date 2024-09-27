@@ -217,7 +217,9 @@ function BeforeShowList(&$xt, &$templatefile, $pageObject)
 $message= "<span name=\"notfound_message".$pageObject->id."\">".$message."</span>";
 $xt->assign("message",$message);
 $xt->assign( "message_class", "alert-warning");
-$xt->assign("message_block",true);
+$xt->assign("message_block",false);
+//$xt->assign("message_block",true);
+
 ;
 } // function BeforeShowList
 
