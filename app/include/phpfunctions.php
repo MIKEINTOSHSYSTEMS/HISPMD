@@ -1092,7 +1092,9 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	{
 		//$value = "<a class='fa fa-angle-double-right' href='".GetTableLink("kbcomments","list")."?mastertable=main&masterkey1=".$data["ArticleID"]."'>".$value."</a>";
 
-$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'><span class='fa fa-angle-double-right' style='margin-right:3px;'></span>".$value."</a>";;
+//$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'><span class='fa fa-angle-double-right' style='margin-right:3px;'></span>".$value."</a>";
+
+$value = "<a href='".GetTableLink("main","view")."?editid1=".$data["ArticleID"]."'><span class='fa fa-arrow-right' style='margin-right:3px;'></span>".$value."</a>";;
 		return $value;
 	}
 				if($table=="main" && $field=="Views" && $ptype=="view")

@@ -332,15 +332,99 @@ echo "Your API Key is: ".$_SESSION["apikey"];
 }
 	function event_catefory_list(&$params)
 	{
-		//$main_link = GetTableLink("main","list")."?page=category&";
-	$main_link = GetTableLink("main","list")."?page=list&";
+			//$main_link = GetTableLink("main","list")."?page=category&";
+$main_link = GetTableLink("main", "list") . "?page=list&";
 $category_rs = DB::Select("kbcategories");
-while($category = $category_rs->fetchAssoc() ){
-	//$link = $main_link."f=(Category~equals~".rawurlencode($category["Category"]).")";
-	$link = $main_link."q=(Category~equals~".rawurlencode($category["CategoryID"]).")";
-	echo "<div class='category'><a href='".$link."'><i class='fa ".$category["faicon"]."'></i><span>".$category["Category"]."</span><span>".$category["Description"]."</span></a></div>";
-}
 
+// Inline CSS
+echo "
+<style>
+    /* Center the category container */
+    .category-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; /* Centers the container horizontally */
+        padding: 20px;
+        width: 100%; /* Ensures the container takes up full width */
+    }
+
+    /* Style each category card */
+    .category-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centers content vertically */
+        align-items: center; /* Centers content horizontally */
+        padding: 20px;
+    }
+
+    /* Style the links */
+    .category-card a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centers content vertically */
+        align-items: center; /* Centers content horizontally */
+        height: 100%;
+    }
+
+    /* Icon styling */
+    .card-icon {
+        font-size: 48px;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+
+    /* Center the text content */
+    .card-content {
+        text-align: center;
+    }
+
+    .category-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .category-description {
+        font-size: 14px;
+        color: #777;
+        margin-top: 10px;
+    }
+
+    /* Add hover effect */
+    .category-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+</style>
+";
+
+// HTML output
+echo "<div class='category-container'>"; // Add a wrapper div for the categories
+while ($category = $category_rs->fetchAssoc()) {
+    $link = $main_link . "q=(Category~equals~" . rawurlencode($category["CategoryID"]) . ")";
+    echo "<div class='category-card'>
+            <a href='" . $link . "'>
+                <div class='card-icon'>
+                    <i class='fa " . $category["faicon"] . "'></i>
+                </div>
+                <div class='card-content'>
+                    <span class='category-name'>" . $category["Category"] . "</span><br>
+                    <span class='category-description'>" . $category["Description"] . "</span>
+                </div>
+            </a>
+          </div>";
+}
+echo "</div>"; // Close the wrapper div
 
 
 //$main_link = GetTableLink("main","list")."?page=category&";
