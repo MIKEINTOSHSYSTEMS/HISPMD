@@ -709,6 +709,8 @@ By clicking OK, you consent to our use of cookies and other tracking technologie
 $globalSettings["useCookieBanner"] = 1 != 0;
 
 $globalSettings["htmlEmailTemplates"] = array();
+$globalSettings["htmlEmailTemplates"]["English"] = array();
+$globalSettings["htmlEmailTemplates"]["English"]["twofactoremail"] = true;
 
 $globalSettings["isAddWebRep"] = true;
 
@@ -830,9 +832,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "638_1727107544";
+$projectBuildKey = "639_1727107544";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "638";
+$projectBuildNumber = "639";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1148,6 +1150,8 @@ if(mlang_getcurrentlang()=="Amharic")
 
 $globalSettings["showDetailedError"] = true;
 
+$globalSettings["smsCodeLength"] = 6;
+$globalSettings["smsMaskLength"] = 4;
 
 $globalSettings["restCreate"] = true;
 $globalSettings["restAuth"] = REST_APIKEY;

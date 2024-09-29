@@ -418,6 +418,84 @@
 										<tr {$row_grid_0} >
 										
 
+{BEGIN cellblock_grid_2factor_label}
+<td
+	{$cell_grid_2factor_label}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_2factor_label" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="twofactor_label" data-itemid="twofactor_label" {$item_twofactor_label} data-pageid="{$pageid}" data-page=".global_userinfo" data-small >
+{mlang_message TWO_FACTOR_TITLE}</span>
+											<span data-itemtype="twofactor_comment" data-itemid="twofactor_comment" {$item_twofactor_comment} data-pageid="{$pageid}" data-small >
+{mlang_message TWO_FACTOR_COMMENT}</span>
+											<span data-itemtype="twofactor_setup_comment" data-itemid="twofactor_setup_comment" {$item_twofactor_setup_comment} data-pageid="{$pageid}" data-small >
+{mlang_message TWO_FACTOR_SETUP_COMMENT}</span>
+	
+								</td>
+			{END cellblock_grid_2factor_label}
+								</tr>
+	 
+	 
+														<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_2factor}
+<td
+	{$cell_grid_2factor}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_2factor" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<div data-itemtype="twofactor_settings" data-itemid="twofactor_settings" {$item_twofactor_settings} data-pageid="{$pageid}">
+<div class="checkbox r-2fa-enable">
+	<label>
+	<input type="checkbox" name="twofactor_enable" {$twof_enable_attrs}> {mlang_message TWO_FACTOR_ENABLE}	</label>
+</div>
+<div class="r-2fa-method">
+	<div class="form-inline">
+		<div class="radio">
+			<label>
+			<input type="radio" name="twof_method" value="totp" {$twof_totp_attrs} > {mlang_message TWO_FACTOR_METHOD_APP}			</label>
+		</div>
+		<div data-2fsettings="totp">
+			<button class="btn btn-default btn-sm" id="twof-generate-qr{$id}">{mlang_message TWO_FACTOR_RESET_TOTP}</button>
+		</div>
+	</div>
+</div>
+<div class="r-2fa-method">
+	<div class="form-inline">
+		<div class="radio">
+			<label>
+			<input type="radio" name="twof_method" value="email" {$twof_email_attrs}> {mlang_message TWO_FACTOR_METHOD_EMAIL}			</label>
+		</div>
+		<div class="form-group" data-2fsettings="email">
+			<input type="text" id="twof_email{$id}" class="form-control" placeholder="{mlang_message TWO_FACTOR_PARAM_EMAIL}" value="{$twof_email_value}">
+		</div>	
+	</div>
+</div>
+<div class="r-2fa-save">
+	<button class="btn btn-default" id="twof-save{$id}" {$twof_save_attrs} >{mlang_message TWO_FACTOR_SAVE}</button>
+</div>
+<div class="r-2fa-message"></div>
+</div>	
+								</td>
+			{END cellblock_grid_2factor}
+								</tr>
+	 
+	 
+														<tr {$row_grid_2} >
+										
+
 {BEGIN cellblock_grid_fields_message3}
 <td
 	{$cell_grid_fields_message3}
@@ -916,7 +994,7 @@
 		data-v-width="2"
 	>
 	<tbody>
-										<tr {$row_grid_2} >
+										<tr {$row_grid_4} >
 										
 
 {BEGIN cellblock_grid_fields_message1}
@@ -939,7 +1017,7 @@
 								</tr>
 	 
 	 
-														<tr {$row_grid_3} >
+														<tr {$row_grid_5} >
 										
 
 {BEGIN cellblock_grid_fields_message}
@@ -964,7 +1042,7 @@
 								</tr>
 	 
 	 
-														<tr {$row_grid_4} >
+														<tr {$row_grid_6} >
 										
 
 {BEGIN cellblock_grid_fields}
@@ -992,7 +1070,7 @@
 								</tr>
 	 
 	 
-														<tr {$row_grid_5} >
+														<tr {$row_grid_7} >
 										
 
 {BEGIN cellblock_grid_buttons}

@@ -17,3 +17,5 @@ User registered at %url%
 የድርጅት ስም: %organisation_name_value%
 መምሪያ: %department_value%
 አፒኪ: %apikey_value%
+Two Factor: %two_factor_value%
+Totp: %totp_value%

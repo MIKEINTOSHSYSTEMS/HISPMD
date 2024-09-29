@@ -21,3 +21,5 @@ If you are unable to click on the link, copy and paste it into your browser wind
 የድርጅት ስም: %organisation_name_value%
 መምሪያ: %department_value%
 አፒኪ: %apikey_value%
+Two Factor: %two_factor_value%
+Totp: %totp_value%

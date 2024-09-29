@@ -1,0 +1,4 @@
+Verification code
+
+Your verification code for %url% is:
+%code%

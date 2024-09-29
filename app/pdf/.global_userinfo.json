@@ -247,11 +247,89 @@ pdfDocument = {
 			"%",
 						{END row_grid_5}
 			 
+								{BEGIN row_grid_6}
+						
+			"%",
+						{END row_grid_6}
+			 
+								{BEGIN row_grid_7}
+						
+			"%",
+						{END row_grid_7}
+			 
 				],
 	
 		body: [
 				
 				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_2factor_label}
+{
+	cellId: '2factor_label',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"{mlang_message TWO_FACTOR_TITLE}","hidden":"{$item_hide_twofactor_label}","fontSize":24,"isHtml":true},
+				
+				
+			{"text":"{mlang_message TWO_FACTOR_COMMENT}","hidden":"{$item_hide_twofactor_comment}","isHtml":true},
+				
+				
+			{"text":"{mlang_message TWO_FACTOR_SETUP_COMMENT}","hidden":"{$item_hide_twofactor_setup_comment}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_2factor_label}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_2factor}
+{
+	cellId: '2factor',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"","hidden":"{$item_hide_twofactor_settings}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_2factor}
+											],
+				{END row_grid_1}
+						{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_fields_message3}
 {
@@ -282,8 +360,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields_message3}
 											],
-				{END row_grid_0}
-						{BEGIN row_grid_1}
+				{END row_grid_2}
+						{BEGIN row_grid_3}
 				[
 																{BEGIN cellblock_grid_fields_message2}
 {
@@ -706,8 +784,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields_message2}
 											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
+				{END row_grid_3}
+						{BEGIN row_grid_4}
 				[
 																{BEGIN cellblock_grid_fields_message1}
 {
@@ -737,8 +815,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields_message1}
 											],
-				{END row_grid_2}
-						{BEGIN row_grid_3}
+				{END row_grid_4}
+						{BEGIN row_grid_5}
 				[
 																{BEGIN cellblock_grid_fields_message}
 {
@@ -768,8 +846,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields_message}
 											],
-				{END row_grid_3}
-						{BEGIN row_grid_4}
+				{END row_grid_5}
+						{BEGIN row_grid_6}
 				[
 																{BEGIN cellblock_grid_fields}
 {
@@ -799,8 +877,8 @@ pdfDocument = {
 
 {END cellblock_grid_fields}
 											],
-				{END row_grid_4}
-						{BEGIN row_grid_5}
+				{END row_grid_6}
+						{BEGIN row_grid_7}
 				[
 																{BEGIN cellblock_grid_buttons}
 {
@@ -833,7 +911,7 @@ pdfDocument = {
 
 {END cellblock_grid_buttons}
 											],
-				{END row_grid_5}
+				{END row_grid_7}
 		
 		]
 	}

@@ -173,6 +173,31 @@ pdfDocument = {
 				
 				[
 																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_twofactor_message}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
@@ -368,6 +393,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_captcha}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_auth_code}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -398,6 +426,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_remember_password}","bold":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_remember_machine}"},
 				
 		  ],
   "border": [ false, false, false, false ],

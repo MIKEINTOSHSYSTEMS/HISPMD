@@ -21,3 +21,5 @@ Designation: %designation_value%
 Organisation Name: %organisation_name_value%
 Department: %department_value%
 Apikey: %apikey_value%
+Two Factor: %two_factor_value%
+Totp: %totp_value%

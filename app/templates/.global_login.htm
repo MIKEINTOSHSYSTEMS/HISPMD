@@ -120,11 +120,25 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class=" r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
+		 
+		<div class="alert alert-success" data-itemtype="twofactor_message" data-itemid="twofactor_message" {$item_twofactor_message} data-pageid="{$pageid}" > 
+	{$twofactor_message}
+</div>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
 		 
 		{BEGIN message_block}
 <div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" data-page=".global_login" class="alert {$message_class}" role="alert">
@@ -134,8 +148,7 @@
 	<button class="btn btn-sm btn-default" {$resend_activation_button_attrs} id="resendActivation{$id}">{mlang_message RESEND_EMAIL}</button>
 	{END resend_activation_button}
 </div>
-{END message_block}			{END firstAboveGridCell}	
-	</div>					</div>
+{END message_block}		</div>					</div>
 			 
 				<div class="row">
 			 
@@ -204,7 +217,11 @@
 		<div class="text-muted" >
 		</div>
 	</div>	
-</div></td>
+</div> 
+<div class="r-edit-field" data-itemtype="auth_code" data-itemid="auth_code" {$item_auth_code} data-pageid="{$pageid}" id="userCodeField{$id}" >
+	<input class="form-control" id="userCode{$id}" type="text">
+</div>
+	</td>
 							</tr>
 											<tr {$row_grid_3} >
 									<td 
@@ -215,6 +232,10 @@
 <div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" data-page=".global_login" >
 	<label>
 		<input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}> {mlang_message REMEMBER_ME}	</label>
+</div> 
+<div class="checkbox r-edit-field" data-itemtype="remember_machine" data-itemid="remember_machine" {$item_remember_machine} data-pageid="{$pageid}" >
+	<label>
+		<input type="checkbox" id="remember_machine{$id}" name="remember_machine" value="1" {$remembermachine_attrs}> {mlang_message REMEMBER_MACHINE}	</label>
 </div></td>
 									<td 
 	class="r-align-right r-ori-vert			"
@@ -251,6 +272,18 @@
 							{mlang_message CONTINUE}			</a>
 </span>
 {END continue_button}
+ 
+<span data-itemtype="verify_button" data-itemid="verify_button" {$item_verify_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="verifyCode{$id}" {$verifyButtonClass} >
+							{mlang_message VERIFY}			</a>
+</span>
+ 
+<span data-itemtype="resend_button" data-itemid="resend_button" {$item_resend_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resendCode{$id}" {$resendButtonClass} >
+							{mlang_message RESENT_CODE}			</a>
+</span>
 </td>
 									<td 
 	class="r-align-left			"

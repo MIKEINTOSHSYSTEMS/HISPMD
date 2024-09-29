@@ -30,6 +30,9 @@
 [data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"][data-page=".global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > * > select {
   font-weight: bold;
 }
+[data-page=".global_userinfo"][data-itemid="twofactor_label"] {
+  font-size: 24px;
+}
 [data-page=".global_userinfo"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

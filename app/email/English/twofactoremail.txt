@@ -1,0 +1,5 @@
+Verification code
+
+<p>
+Your verification code for&nbsp;<a href="%url%">%url%</a>&nbsp;is:&nbsp;<b>%code%</b>
+</p>
