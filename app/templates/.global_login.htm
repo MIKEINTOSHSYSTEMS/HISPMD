@@ -68,42 +68,6 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="top_c" data-pageid="{$pageid}"	{$cell_top_c}
-	class="r-align-left r-ori-vert			col-md-6
-	
-">
-			</div>			 
-				<div 
-	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-		 
-		{BEGIN languages_block}
-<span class="pull-right btn-group">	
-		<button class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		<span class="glyphicon glyphicon-globe"></span>
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu">
-	{BEGIN AmharicLANGLINK}
-		<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-			{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-			አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-		<li><a href="#" data-lang="English" class="rnr-langlink">
-			{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-			English</a></li>
-	{END EnglishLANGLINK}
-	</ul>
-	</span>
-{END languages_block}
-		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
 	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
 	class="r-align-center r-ori-vert			col-md-12
 	
@@ -306,11 +270,37 @@
 											<tr {$row_footer_1} >
 									<td 
 	class="r-align-center r-ori-vert			"
-	colspan="2"		 
+			 
 	data-cellId="footer_c" data-pageid="{$pageid}">
  
 <span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page=".global_login" data-small > 
 	<br><a href="../../" target="" rel=""><strong>Go Back to Home Page</strong></a><br></span>
+</td>
+									<td 
+	class="r-align-center r-ori-vert			"
+			 
+	data-cellId="footer_c3" data-pageid="{$pageid}">
+ 
+{BEGIN languages_block}
+<span class="pull-right btn-group">	
+		<button class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-globe"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+	{BEGIN AmharicLANGLINK}
+		<li><a href="#" data-lang="Amharic" class="rnr-langlink">
+			{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
+			አማርኛ</a></li>
+	{END AmharicLANGLINK}
+	{BEGIN EnglishLANGLINK}
+		<li><a href="#" data-lang="English" class="rnr-langlink">
+			{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+			English</a></li>
+	{END EnglishLANGLINK}
+	</ul>
+	</span>
+{END languages_block}
 </td>
 							</tr>
 											<tr {$row_footer_2} >

@@ -46,12 +46,13 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c',
+	cellId: 'c1',
 	col:0,
 	row:0,
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
@@ -63,33 +64,50 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
 
-																							{
-	cellId: 'c2',
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c',
 	col:0,
 	row:0,
 			
 		
 	//	static colspan/rowspan
+					colSpan: 2,
 		
 			
 	
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"<br>","hidden":"{$item_hide_text3}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
 
-											],
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 						[
 																{
 	cellId: 'c6',
@@ -105,10 +123,13 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Hello 👋🏽 @","hidden":"{$item_hide_text1}","isHtml":true},
+			{"text":"{$jslabel _global userpic }","hidden":"{$item_hide_edit_field_label}","bold":true},
 				
 				
-			{"text":[{"text":"{$jslabel _global username }","bold":true}," ",{$username_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field}"},
+			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_integrated_edit_field3}"},
+				
+				
+			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_edit_field_tooltip}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -156,20 +177,18 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel _global userpic }","hidden":"{$item_hide_edit_field_label}","bold":true},
+			{"text":"Hello 👋🏽 @","hidden":"{$item_hide_text1}","isHtml":true},
 				
 				
-			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_integrated_edit_field3}"},
-				
-				
-			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_edit_field_tooltip}"},
+			{"text":[{"text":"{$jslabel _global username }","bold":true}," ",{$username_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
       
-      },
+         bold: true,
+   },
 
 																							{
 	cellId: 'c5',
@@ -214,6 +233,9 @@ pdfDocument = {
 									{BEGIN col_grid_0}
 						"*", 
 							{END col_grid_0}
+												{BEGIN col_grid_1}
+						"*", 
+							{END col_grid_1}
 					 ],	
 		
 			heights: [
@@ -272,6 +294,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_2factor_label}
+			colSpan: {$colspan_grid_2factor_label},
+			{END colspan_grid_2factor_label}
 		
 						
 	
@@ -280,29 +305,29 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{mlang_message TWO_FACTOR_TITLE}","hidden":"{$item_hide_twofactor_label}","fontSize":24,"isHtml":true},
-				
-				
-			{"text":"{mlang_message TWO_FACTOR_COMMENT}","hidden":"{$item_hide_twofactor_comment}","isHtml":true},
-				
-				
-			{"text":"{mlang_message TWO_FACTOR_SETUP_COMMENT}","hidden":"{$item_hide_twofactor_setup_comment}","isHtml":true},
+			{"text":"<br>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_2factor_label}
-											],
+																		{ 
+				cellId: '2factor_label',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_0}
 						{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_2factor}
+																{BEGIN cellblock_grid_2factor_label2}
 {
-	cellId: '2factor',
+	cellId: '2factor_label2',
 	col:0,
 	row:0,
 			
@@ -317,23 +342,19 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"","hidden":"{$item_hide_twofactor_settings}"},
+			{"text":"Personal Information","color":"#00293c","hidden":"{$item_hide_text2}","fontSize":21,"bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+        color: '#00293c',      "alignment": 'center',
      
       
       },
 
-{END cellblock_grid_2factor}
-											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_fields_message3}
+{END cellblock_grid_2factor_label2}
+																							{BEGIN cellblock_grid_2factor_label3}
 {
-	cellId: 'fields_message3',
+	cellId: '2factor_label3',
 	col:0,
 	row:0,
 			
@@ -348,7 +369,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"Personal Information","hidden":"{$item_hide_text2}","isHtml":true},
+			{"text":"Security","color":"#00293c","hidden":"{$item_hide_text4}","fontSize":21,"bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -358,14 +379,14 @@ pdfDocument = {
          bold: true,
    },
 
-{END cellblock_grid_fields_message3}
+{END cellblock_grid_2factor_label3}
 											],
-				{END row_grid_2}
-						{BEGIN row_grid_3}
+				{END row_grid_1}
+						{BEGIN row_grid_2}
 				[
-																{BEGIN cellblock_grid_fields_message2}
+																{BEGIN cellblock_grid_2factor_label4}
 {
-	cellId: 'fields_message2',
+	cellId: '2factor_label4',
 	col:0,
 	row:0,
 			
@@ -682,6 +703,130 @@ pdfDocument = {
 		},
 		margin: [0,0,0,15],
 	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+         bold: true,
+   },
+
+{END cellblock_grid_2factor_label4}
+																							{BEGIN cellblock_grid_2factor_label1}
+{
+	cellId: '2factor_label1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section5',
+			widths: ['*'],
+			body: [
+				[{text: '2FA', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section5_0}
+									"*", 
+								{END col_section5_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section5_0}
+				[
+																{BEGIN cellblock_section5_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"{mlang_message TWO_FACTOR_TITLE}","hidden":"{$item_hide_twofactor_label}","fontSize":24,"isHtml":true},
+				
+				
+			{"text":"{mlang_message TWO_FACTOR_COMMENT}","hidden":"{$item_hide_twofactor_comment}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_section5_c}
+											],
+				{END row_section5_0}
+						{BEGIN row_section5_1}
+				[
+																{BEGIN cellblock_section5_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"{mlang_message TWO_FACTOR_SETUP_COMMENT}","hidden":"{$item_hide_twofactor_setup_comment}","isHtml":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_twofactor_settings}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section5_c1}
+											],
+				{END row_section5_1}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
  
 		{
 		layout: 'panel',
@@ -691,7 +836,7 @@ pdfDocument = {
 			location: 'section3',
 			widths: ['*'],
 			body: [
-				[{text: 'Keys', style: 'tableHeader'}],
+				[{text: 'Password', style: 'tableHeader'}],
 				[{
 					table: {
 						tableForm: true,
@@ -699,18 +844,76 @@ pdfDocument = {
 															{BEGIN col_section3_0}
 									"*", 
 								{END col_section3_0}
-															{BEGIN col_section3_1}
-									"*", 
-								{END col_section3_1}
 							 						
 						],
 						body: [
 								
 				{BEGIN row_section3_0}
 				[
-																{BEGIN cellblock_section3_c}
+																{BEGIN cellblock_section3_c1}
 {
-	cellId: 'c',
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":"","hidden":"{$item_hide_changepassword_link}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_section3_c1}
+											],
+				{END row_section3_0}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+ 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section6',
+			widths: ['*'],
+			body: [
+				[{text: 'Keys', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section6_0}
+									"*", 
+								{END col_section6_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section6_0}
+				[
+																{BEGIN cellblock_section6_c1}
+{
+	cellId: 'c1',
 	col:0,
 	row:0,
 			
@@ -734,10 +937,14 @@ pdfDocument = {
       
       },
 
-{END cellblock_section3_c}
-																							{BEGIN cellblock_section3_c1}
+{END cellblock_section6_c1}
+											],
+				{END row_section6_0}
+						{BEGIN row_section6_1}
+				[
+																{BEGIN cellblock_section6_c2}
 {
-	cellId: 'c1',
+	cellId: 'c2',
 	col:0,
 	row:0,
 			
@@ -761,9 +968,9 @@ pdfDocument = {
       
       },
 
-{END cellblock_section3_c1}
+{END cellblock_section6_c2}
 											],
-				{END row_section3_0}
+				{END row_section6_1}
 		
 						]
 					}
@@ -776,26 +983,29 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'center',
+              "alignment": 'left',
      
       
          bold: true,
    },
 
-{END cellblock_grid_fields_message2}
+{END cellblock_grid_2factor_label1}
 											],
-				{END row_grid_3}
-						{BEGIN row_grid_4}
+				{END row_grid_2}
+						{BEGIN row_grid_3}
 				[
-																{BEGIN cellblock_grid_fields_message1}
+																{BEGIN cellblock_grid_2factor}
 {
-	cellId: 'fields_message1',
+	cellId: '2factor',
 	col:0,
 	row:0,
 			
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_2factor}
+			colSpan: {$colspan_grid_2factor},
+			{END colspan_grid_2factor}
 		
 						
 	
@@ -803,18 +1013,61 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":"<br>","hidden":"{$item_hide_text}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
       
       },
 
-{END cellblock_grid_fields_message1}
-											],
+{END cellblock_grid_2factor}
+																		{ 
+				cellId: '2factor',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_grid_3}
+						{BEGIN row_grid_4}
+				[
+																{BEGIN cellblock_grid_fields_message3}
+{
+	cellId: 'fields_message3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_fields_message3}
+			colSpan: {$colspan_grid_fields_message3},
+			{END colspan_grid_fields_message3}
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+        color: '#00293c',      "alignment": 'center',
+     
+      
+         bold: true,
+   },
+
+{END cellblock_grid_fields_message3}
+																		{ 
+				cellId: 'fields_message3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_4}
 						{BEGIN row_grid_5}
 				[
@@ -827,6 +1080,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_fields_message}
+			colSpan: {$colspan_grid_fields_message},
+			{END colspan_grid_fields_message}
 		
 						
 	
@@ -839,13 +1095,19 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_fields_message}
-											],
+																		{ 
+				cellId: 'fields_message',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_5}
 						{BEGIN row_grid_6}
 				[
@@ -858,6 +1120,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_fields}
+			colSpan: {$colspan_grid_fields},
+			{END colspan_grid_fields}
 		
 						
 	
@@ -865,10 +1130,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":"","hidden":"{$item_hide_changepassword_link}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -876,7 +1139,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_fields}
-											],
+																		{ 
+				cellId: 'fields',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_6}
 						{BEGIN row_grid_7}
 				[
@@ -889,6 +1158,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_buttons}
+			colSpan: {$colspan_grid_buttons},
+			{END colspan_grid_buttons}
 		
 						
 	
@@ -910,7 +1182,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_buttons}
-											],
+																		{ 
+				cellId: 'buttons',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_7}
 		
 		]

@@ -34,7 +34,6 @@ pdfDocument = {
 		
 		widths: [
 								"*", 
-											"*", 
 					 ],	
 		
 	
@@ -48,7 +47,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -65,58 +63,6 @@ pdfDocument = {
       
       },
 
-																		{ 
-				cellId: 'c1',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
-						[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_lang_selector}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
 											],
 						[
 																{
@@ -126,7 +72,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -143,13 +88,7 @@ pdfDocument = {
       
       },
 
-																		{ 
-				cellId: 'c3',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
 		
 		]
 	}

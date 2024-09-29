@@ -68,6 +68,8 @@ $custom_labels["Amharic"] = array();
 <br>";
 		$custom_labels["Amharic"]['KNOWLEDGE_BASE'] = "የእውቀት ማዕከል";
 		$custom_labels["Amharic"]['MOST_VISITED_CONTENTS'] = "በብዛት የተጎበኙ ይዘቶች";
+		$custom_labels["Amharic"]['NAME'] = "Name";
+		$custom_labels["Amharic"]['ORGANISATION_AND_DEPARTMENT'] = "Organisation and Department";
 	$custom_labels["English"] = array();
 		$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
 <html lang=\"en\">
@@ -126,6 +128,8 @@ How can we help you?
 <br>";
 		$custom_labels["English"]['KNOWLEDGE_BASE'] = "Knowledge Base";
 		$custom_labels["English"]['MOST_VISITED_CONTENTS'] = "Most Visited Contents";
+		$custom_labels["English"]['NAME'] = "Your Name";
+		$custom_labels["English"]['ORGANISATION_AND_DEPARTMENT'] = "Your Organisation and Department";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -832,9 +836,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "639_1727107544";
+$projectBuildKey = "640_1727107544";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "639";
+$projectBuildNumber = "640";
 
 $mlang_messages = array();
 $mlang_charsets = array();
