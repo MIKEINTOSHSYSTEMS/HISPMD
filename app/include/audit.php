@@ -822,6 +822,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.hispmd_noti_view")
+		{
+			return false;
+		}
+		if($table=="public.faicons")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1593,6 +1601,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="admin_comments")
+		{
+			return false;
+		}
+		if($table=="public.hispmd_noti_view")
+		{
+			return false;
+		}
+		if($table=="public.faicons")
 		{
 			return false;
 		}

@@ -340,6 +340,8 @@ class ConnectionManager_Base
 		$connectionsIds["main"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["faicons"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["admin_comments"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.hispmd_noti_view"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.faicons"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

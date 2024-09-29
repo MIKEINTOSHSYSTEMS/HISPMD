@@ -292,6 +292,9 @@
 [data-page=".global_menu"][data-itemid="welcome_item97"] > .bs-welcome-header {
   background-color: #3CB371;
 }
+[data-page=".global_menu"][data-itemid="welcome_item98"] > .bs-welcome-header {
+  background-color: #CD853F;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

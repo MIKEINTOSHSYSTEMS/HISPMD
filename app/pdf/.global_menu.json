@@ -246,6 +246,9 @@ pdfDocument = {
 								
 			"%",
 			 
+								
+			"%",
+			 
 				],
 	
 		body: [
@@ -441,6 +444,31 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_welcome_group6}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c8',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","background":"#CD853F","hidden":"{$item_hide_welcome_item98}"},
 				
 		  ],
   "border": [ false, false, false, false ],

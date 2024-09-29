@@ -118,6 +118,8 @@ $nonAdminTablesArr[] = "kbusers";
 $nonAdminTablesArr[] = "main";
 $nonAdminTablesArr[] = "faicons";
 $nonAdminTablesArr[] = "admin_comments";
+$nonAdminTablesArr[] = "public.hispmd_noti_view";
+$nonAdminTablesArr[] = "public.faicons";
 
 $ug_connection = $cman->getForUserGroups();
 

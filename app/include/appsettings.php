@@ -836,9 +836,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "640_1727107544";
+$projectBuildKey = "642_1727107544";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "640";
+$projectBuildNumber = "642";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -964,6 +964,8 @@ $tableCaptions["English"]["kbusers"] = "Users";
 $tableCaptions["English"]["main"] = "";
 $tableCaptions["English"]["faicons"] = "Faicons";
 $tableCaptions["English"]["admin_comments"] = "Admin Comments";
+$tableCaptions["English"]["public_hispmd_noti_view"] = "Hispmd Noti View";
+$tableCaptions["English"]["public_faicons"] = "Faicons";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1069,6 +1071,8 @@ $tableCaptions["Amharic"]["kbusers"] = "Users";
 $tableCaptions["Amharic"]["main"] = "";
 $tableCaptions["Amharic"]["faicons"] = "Faicons";
 $tableCaptions["Amharic"]["admin_comments"] = "Admin Comments";
+$tableCaptions["Amharic"]["public_hispmd_noti_view"] = "Hispmd Noti View";
+$tableCaptions["Amharic"]["public_faicons"] = "Faicons";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -584,6 +584,10 @@ class Chart
 			return true;
 		if("public.kbcomments" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.hispmd_noti" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.faicons" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

@@ -1,0 +1,157 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel public_hispmd_noti_view export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$id_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$message_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$user_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$provider_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$title_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$url_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$icon_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$created_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$expire_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$type_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$group_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

@@ -3716,6 +3716,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "faicons" ] = "faicons";
 	$projectEntities[ "admin_comments" ] = array( "url" => "admin_comments", "type" => 1 );
 	$projectEntitiesReverse[ "admin_comments" ] = "admin_comments";
+	$projectEntities[ "public.hispmd_noti_view" ] = array( "url" => "hispmd_noti_view", "type" => 1 );
+	$projectEntitiesReverse[ "hispmd_noti_view" ] = "public.hispmd_noti_view";
+	$projectEntities[ "public.faicons" ] = array( "url" => "faicons1", "type" => 0 );
+	$projectEntitiesReverse[ "faicons1" ] = "public.faicons";
 }
 
 function findTable( $table ) {

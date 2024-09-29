@@ -410,6 +410,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("admin_comments" == $shortTName )
 		return true;
+	if ("hispmd_noti_view" == $shortTName )
+		return true;
+	if ("faicons1" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1387,6 +1391,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="admin_comments";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.hispmd_noti_view");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.hispmd_noti_view";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.faicons");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.faicons";
+	}
 	return $arr;
 }
 
@@ -1499,6 +1521,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="main";
 	$arr[]="faicons";
 	$arr[]="admin_comments";
+	$arr[]="public.hispmd_noti_view";
+	$arr[]="public.faicons";
 	return $arr;
 }
 
@@ -2656,6 +2680,16 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "".$extraPerm;
+	}
+	if( $table=="public.hispmd_noti_view" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.faicons" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

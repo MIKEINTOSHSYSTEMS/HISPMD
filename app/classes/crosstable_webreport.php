@@ -1587,6 +1587,10 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.kbcomments" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.hispmd_noti" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.faicons" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

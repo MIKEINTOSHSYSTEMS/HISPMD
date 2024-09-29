@@ -1142,6 +1142,12 @@ $value.="<span><br> <br></span>";
 		$value = "<span class='fa ".$data["icon"]."'></span>";;
 		return $value;
 	}
+				if($table=="public.hispmd_noti_view" && $field=="icon")
+	{
+		//$value = "<span class='fa ".$data["icon"]."'></span>";
+$value = "<span class='fa ".$value."'></span>";
+		return $value;
+	}
 	return $value;
 }
 

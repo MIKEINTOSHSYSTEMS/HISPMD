@@ -649,6 +649,13 @@ function InitLookupLinks()
 			$lookupTableLinks["kbarticles"]["admin_comments.ArticleID"] = array();
 		}
 		$lookupTableLinks["kbarticles"]["admin_comments.ArticleID"]["edit"] = array("table" => "admin_comments", "field" => "ArticleID", "page" => "edit");
+		if( !isset( $lookupTableLinks["faicons"] ) ) {
+			$lookupTableLinks["faicons"] = array();
+		}
+		if( !isset( $lookupTableLinks["faicons"]["hispmd_noti_view.icon"] )) {
+			$lookupTableLinks["faicons"]["hispmd_noti_view.icon"] = array();
+		}
+		$lookupTableLinks["faicons"]["hispmd_noti_view.icon"]["edit"] = array("table" => "public.hispmd_noti_view", "field" => "icon", "page" => "edit");
 }
 
 ?>

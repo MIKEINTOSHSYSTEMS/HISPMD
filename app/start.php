@@ -84,7 +84,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#gallery">Support</a></li>
-          <li><a href="#team">Documentation</a></li>
+          <li><a href="./main_list.php">Knowledge Base</a></li><!--<li><a href="#team">Documentation</a></li>-->
           <li><a href="#contact">Contact</a></li>
           <li class="dropdown"><a href="./login.php"><span><b>Account<b></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
