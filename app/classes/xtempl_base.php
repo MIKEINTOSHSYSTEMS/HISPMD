@@ -177,6 +177,11 @@ class XTempl_Base
 				"chartName"=>"moh_indicators_data_chart",
 				"table"=>"MOH_Indicators_data_Chart",
 				"ctype"=>"2DColumn"));
+			$this->assign_function("moh_indicators_data_values_chart1_chart","xt_showchart",
+			array(
+				"chartName"=>"moh_indicators_data_values_chart1",
+				"table"=>"MoH_Indicators_Data_Values_Chart",
+				"ctype"=>"Line"));
 		}
 
 

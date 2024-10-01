@@ -857,6 +857,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="MoH_Indicators_Data_Values_Chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1537,6 +1541,10 @@ function getCaptionTable($table)
 	if($table=="public.faicons")
 	{
 		return GetTableCaption("public_faicons");
+	}
+	if($table=="MoH_Indicators_Data_Values_Chart")
+	{
+		return GetTableCaption("MoH_Indicators_Data_Values_Chart");
 	}
 	return $table;
 }

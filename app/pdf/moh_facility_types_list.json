@@ -430,6 +430,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -529,6 +532,11 @@ pdfDocument = {
 			 {BEGIN details_moh_indicator_data}
 			{$displayDetailTable_moh_indicator_data }
 		{END details_moh_indicator_data},
+				
+				
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 		  ],
   "border": [ true, true, true, true ],

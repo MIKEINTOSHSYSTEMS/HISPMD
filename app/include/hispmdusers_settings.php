@@ -3094,7 +3094,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "two_factor";
 
-		$fdata["FullName"] = "two_factor";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "two_factor";
 
 	
 	
@@ -3220,7 +3221,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	$fdata["GoodName"] = "totp";
 	$fdata["ownerTable"] = "public.hispmdusers";
 	$fdata["Label"] = GetFieldLabel("public_hispmdusers","totp");
-	$fdata["FieldType"] = 202;
+	$fdata["FieldType"] = 201;
 
 
 	
@@ -3231,7 +3232,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "totp";
 
-		$fdata["FullName"] = "totp";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "totp";
 
 	
 	
@@ -3268,7 +3270,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3286,16 +3288,16 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
-	
-			$edata["HTML5InuptType"] = "text";
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
 
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3306,7 +3308,10 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 			
 	
 	

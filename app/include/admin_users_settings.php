@@ -2970,6 +2970,8 @@ $proto39["m_columns"][] = "department";
 $proto39["m_columns"][] = "reset_token";
 $proto39["m_columns"][] = "reset_date";
 $proto39["m_columns"][] = "apikey";
+$proto39["m_columns"][] = "two_factor";
+$proto39["m_columns"][] = "totp";
 $obj = new SQLTable($proto39);
 
 $proto38["m_table"] = $obj;

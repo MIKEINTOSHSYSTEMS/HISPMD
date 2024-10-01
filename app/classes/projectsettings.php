@@ -3720,6 +3720,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "hispmd_noti_view" ] = "public.hispmd_noti_view";
 	$projectEntities[ "public.faicons" ] = array( "url" => "faicons1", "type" => 0 );
 	$projectEntitiesReverse[ "faicons1" ] = "public.faicons";
+	$projectEntities[ "MoH_Indicators_Data_Values_Chart" ] = array( "url" => "moh_indicators_data_values_chart1", "type" => 3 );
+	$projectEntitiesReverse[ "moh_indicators_data_values_chart1" ] = "MoH_Indicators_Data_Values_Chart";
 }
 
 function findTable( $table ) {

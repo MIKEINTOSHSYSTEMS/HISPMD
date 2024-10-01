@@ -1591,6 +1591,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.faicons" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.moh_indicator_data" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

@@ -120,6 +120,7 @@ $nonAdminTablesArr[] = "faicons";
 $nonAdminTablesArr[] = "admin_comments";
 $nonAdminTablesArr[] = "public.hispmd_noti_view";
 $nonAdminTablesArr[] = "public.faicons";
+$nonAdminTablesArr[] = "MoH_Indicators_Data_Values_Chart";
 
 $ug_connection = $cman->getForUserGroups();
 

@@ -1393,7 +1393,6 @@
 
 	<div class="dropdown filter-field filter-year-container" {BEGIN filter_selected_year} data-selected {END filter_selected_year}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-year" type="checkbox" name="selectAll" {$selectAll_attrs_year} />
 						{BEGIN clearLink_year}
 			<a href="#" class="filter-clear filter-clear-year" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1425,14 +1424,14 @@
 					</li>
 		{END filterCtrlBlock_year}
 
-			{BEGIN filter_button_showmore_year}
-		<li class=" filter-show-more {$collapsedClass_year} {$showMoreBtnClass_year}">
-			<a class="filter-show-more-link filterShowMore_year" href="#">{$show_n_more_year}</a>
-		</li>
-		{END filter_button_showmore_year}
 	
 
 
+			{BEGIN filter_button_apply_year}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_year}">
+			<a href="#" class="filter-btn-apply filter-apply-year" {$filterbutton_attrs_year}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_year}
 	
 
 			{BEGIN filter_button_multiselect_year}

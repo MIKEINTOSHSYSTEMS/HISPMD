@@ -830,6 +830,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="MoH_Indicators_Data_Values_Chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1609,6 +1613,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.faicons")
+		{
+			return false;
+		}
+		if($table=="MoH_Indicators_Data_Values_Chart")
 		{
 			return false;
 		}

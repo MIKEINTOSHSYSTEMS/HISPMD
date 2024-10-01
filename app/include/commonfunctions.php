@@ -414,6 +414,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("faicons1" == $shortTName )
 		return true;
+	if ("moh_indicators_data_values_chart1" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1409,6 +1411,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.faicons";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MoH_Indicators_Data_Values_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MoH_Indicators_Data_Values_Chart";
+	}
 	return $arr;
 }
 
@@ -1523,6 +1534,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="admin_comments";
 	$arr[]="public.hispmd_noti_view";
 	$arr[]="public.faicons";
+	$arr[]="MoH_Indicators_Data_Values_Chart";
 	return $arr;
 }
 
@@ -1582,6 +1594,8 @@ function GetChartType($shorttable)
 		return "2DColumn";
 	if($shorttable=="moh_indicators_data_chart")
 		return "2DColumn";
+	if($shorttable=="moh_indicators_data_values_chart1")
+		return "Line";
 	return "";
 }
 
@@ -2690,6 +2704,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MoH_Indicators_Data_Values_Chart" )
+	{
+//	default permissions
+		return "S".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

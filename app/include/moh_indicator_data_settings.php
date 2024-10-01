@@ -616,7 +616,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -783,7 +783,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -949,7 +949,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -1115,7 +1115,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -1279,7 +1279,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -1444,7 +1444,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -1727,21 +1727,20 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 1;
-		$fdata["filterTotalFields"] = "data_id";
-		$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+			$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Interval slider";
 		$fdata["showCollapsed"] = false;
 
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
 	
 	
+	
+	
+
+	$fdata["filterKnobsType"] = 0;
+		$fdata["filterApplyBtn"] = true;
+	$fdata["filterSliderStepType"] = 1;
+	$fdata["filterSliderStepValue"] = 1;
 //end of Filters settings
 
 
@@ -1893,7 +1892,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -2045,7 +2044,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -2199,7 +2198,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
@@ -2368,7 +2367,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
+	$fdata["filterTotals"] = 1;
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";

@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel public_hispmdusers search}","hidden":"{$item_hide_search_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel MoH_Indicators_Data_Values_Chart search}","hidden":"{$item_hide_search_header}","fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -166,55 +166,46 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
-			{"text":{$username_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+			{"text":{$Year_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 				
-			{"text":{$password_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+			{"text":{$Indicator_Group_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$email_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+			{"text":{$Baseline_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
-			{"text":{$fullname_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+			{"text":{$Target_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
-			{"text":{$groupid_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
 				
 				
-			{"text":{$active_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+			{"text":{$Data_Source_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"text":{$ext_security_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+			{"text":{$Assessment_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$phone_number_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+			{"text":{$Administration_Unit_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				
-			{"text":{$first_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+			{"text":{$Scope_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
 				
 				
-			{"text":{$middle_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+			{"text":{$Region_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
 				
-			{"text":{$last_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+			{"text":{$Gender_Sex_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
 				
 				
-			{"text":{$designation_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+			{"text":{$Data_Representation_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
 				
 				
-			{"text":{$organisation_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
-				
-				
-			{"text":{$department_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
-				
-				
-			{"text":{$reset_token_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
-				
-				
-			{"text":{$totp_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+			{"text":{$Indicator_Name_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -360,6 +360,11 @@ pdfDocument = {
 			{$displayDetailTable_moh_indicator_data }
 		{END details_moh_indicator_data},
 				
+				
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
