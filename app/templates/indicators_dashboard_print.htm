@@ -1,0 +1,970 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-print" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel Indicators_Dashboard print}</h2>
+	 
+		{BEGIN printtabheader}
+<span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
+{$printtabheader_text}
+</span>
+{END printtabheader}
+		</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Indicator_Group_class}	"
+
+			data-field="Indicator_Group"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Indicator_Group_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Group" data-fieldname="Indicator Group">
+	{$label Indicators_Dashboard Indicator_Group }	</span>
+{END Indicator_Group_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Indicator_Name_class}	"
+
+			data-field="Indicator_Name"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Indicator_Name_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name">
+	{$label Indicators_Dashboard Indicator_Name }	</span>
+{END Indicator_Name_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Baseline_class}	"
+
+			data-field="Baseline"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Baseline_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline" data-fieldname="Baseline">
+	{$label Indicators_Dashboard Baseline }	</span>
+{END Baseline_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Target_class}	"
+
+			data-field="Target"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Target_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target" data-fieldname="Target">
+	{$label Indicators_Dashboard Target }	</span>
+{END Target_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Facility_Type_class}	"
+
+			data-field="Facility_Type"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Facility_Type_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type">
+	{$label Indicators_Dashboard Facility_Type }	</span>
+{END Facility_Type_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_Source_class}	"
+
+			data-field="Data_Source"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_Source_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Source" data-fieldname="Data Source">
+	{$label Indicators_Dashboard Data_Source }	</span>
+{END Data_Source_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Assessment_class}	"
+
+			data-field="Assessment"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Assessment_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Assessment" data-fieldname="Assessment">
+	{$label Indicators_Dashboard Assessment }	</span>
+{END Assessment_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Administration_Unit_class}	"
+
+			data-field="Administration_Unit"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Administration_Unit_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Administration_Unit" data-fieldname="Administration Unit">
+	{$label Indicators_Dashboard Administration_Unit }	</span>
+{END Administration_Unit_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Year_class}	"
+
+			data-field="Year"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Year_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Year" data-fieldname="Year">
+	{$label Indicators_Dashboard Year }	</span>
+{END Year_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Scope_class}	"
+
+			data-field="Scope"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Scope_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Scope" data-fieldname="Scope">
+	{$label Indicators_Dashboard Scope }	</span>
+{END Scope_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Region_class}	"
+
+			data-field="Region"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Region_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Region" data-fieldname="Region">
+	{$label Indicators_Dashboard Region }	</span>
+{END Region_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Gender_Sex_class}	"
+
+			data-field="Gender_Sex"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Gender_Sex_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Gender_Sex" data-fieldname="Gender/Sex">
+	{$label Indicators_Dashboard Gender_Sex }	</span>
+{END Gender_Sex_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Value_class}	"
+
+			data-field="Value"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Value_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value">
+	{$label Indicators_Dashboard Value }	</span>
+{END Value_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_Representation_class}	"
+
+			data-field="Data_Representation"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_Representation_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Representation" data-fieldname="Data Representation">
+	{$label Indicators_Dashboard Data_Representation }	</span>
+{END Data_Representation_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															{BEGIN grid_row}
+					<tbody>
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Indicator_Group_class}	"
+
+			data-field="Indicator_Group"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Indicator_Group_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Group" data-fieldname="Indicator Group" data-default-width >
+{$Indicator_Group_value}
+</span>
+{END Indicator_Group_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Indicator_Name_class}	"
+
+			data-field="Indicator_Name"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Indicator_Name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name" data-default-width >
+{$Indicator_Name_value}
+</span>
+{END Indicator_Name_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Baseline_class}	"
+
+			data-field="Baseline"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Baseline_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline" data-fieldname="Baseline" data-default-width >
+{$Baseline_value}
+</span>
+{END Baseline_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Target_class}	"
+
+			data-field="Target"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Target_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target" data-fieldname="Target" data-default-width >
+{$Target_value}
+</span>
+{END Target_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Facility_Type_class}	"
+
+			data-field="Facility_Type"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Facility_Type_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type" data-default-width >
+{$Facility_Type_value}
+</span>
+{END Facility_Type_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_Source_class}	"
+
+			data-field="Data_Source"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_Source_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Source" data-fieldname="Data Source" data-default-width >
+{$Data_Source_value}
+</span>
+{END Data_Source_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Assessment_class}	"
+
+			data-field="Assessment"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Assessment_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Assessment" data-fieldname="Assessment" data-default-width >
+{$Assessment_value}
+</span>
+{END Assessment_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Administration_Unit_class}	"
+
+			data-field="Administration_Unit"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Administration_Unit_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Administration_Unit" data-fieldname="Administration Unit" data-default-width >
+{$Administration_Unit_value}
+</span>
+{END Administration_Unit_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Year_class}	"
+
+			data-field="Year"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Year_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Year" data-fieldname="Year" data-default-width >
+{$Year_value}
+</span>
+{END Year_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Scope_class}	"
+
+			data-field="Scope"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Scope_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Scope" data-fieldname="Scope" data-default-width >
+{$Scope_value}
+</span>
+{END Scope_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Region_class}	"
+
+			data-field="Region"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Region_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Region" data-fieldname="Region" data-default-width >
+{$Region_value}
+</span>
+{END Region_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Gender_Sex_class}	"
+
+			data-field="Gender_Sex"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Gender_Sex_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Gender_Sex" data-fieldname="Gender/Sex" data-default-width >
+{$Gender_Sex_value}
+</span>
+{END Gender_Sex_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Value_class}	"
+
+			data-field="Value"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Value_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value" data-default-width >
+{$Value_value}
+</span>
+{END Value_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_Representation_class}	"
+
+			data-field="Data_Representation"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_Representation_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Representation" data-fieldname="Data Representation" data-default-width >
+{$Data_Representation_value}
+</span>
+{END Data_Representation_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+							</tr>
+										
+											</tbody>
+					{END grid_row}
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Indicator_Group_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Indicator_Name_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Baseline_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Target_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Facility_Type_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_Source_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Assessment_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Administration_Unit_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Year_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Scope_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Region_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Gender_Sex_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Value_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Data_Representation_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

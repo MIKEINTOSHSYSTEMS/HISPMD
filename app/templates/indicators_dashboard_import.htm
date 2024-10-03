@@ -1,0 +1,199 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-import" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+			<div class="r-panel-page">
+								{BEGIN supertop_block}
+<div class="r-form" data-location="supertop" id="form_supertop_{$pageid}" data-makeup="panel" {$form_supertop} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="supertop_c1" data-pageid="{$pageid}"	{$cell_supertop_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END supertop_block}
+					<div class="bs-pagepanel panel panel-primary">
+					<div class="panel-heading">
+									{BEGIN top_block}
+<div class="panel-title r-panel-top row" data-location="top" id="form_top_{$pageid}" data-makeup="panel" {$form_top} data-pageid="{$pageid}" >		
+	 
+		 
+			<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h3 class="panel-title" data-itemtype="import_header" data-itemid="import_header" {$item_import_header} data-pageid="{$pageid}" >{$pagetitlelabel Indicators_Dashboard import}</h3>
+		</div>			</div>		
+{END top_block}
+						</div>
+					<div class="panel-body">
+													<!-- bsimportheader_text data-brick="importheader_text" data-pageid="{$pageid}" {$importheader_text_hiddenattr}-->
+	<div id="importheaderText{$id}" class="form-group">
+		{mlang_message IMPORT_DRAG_AND_DROP}	</div>
+
+	<!-- bsimportfields data-brick="importfields" data-pageid="{$pageid}" {$importfields_hiddenattr}-->
+	<div id="importFields{$id}" class="form-group">
+		<div id="importUploadFallback{$id}" style="display: none;">
+			<table class="fieldGrid">
+				<tr>
+					<td>
+						{mlang_message IMPORT_SELECT}					</td>
+					<td>
+						<input type="File" id="importFile{$id}" name="importFile{$id}">
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="rnr-import-settings">
+			<button type="button" class="btn btn-default" id="uploadImportFile{$id}">{mlang_message IMPORT_BROWSEBUTTON}</button>
+		</div>
+
+		<div id="importDropzone{$id}" class="rnr-dragndrop-area" style="display: none;">
+			<div class="rnr-dragtext"> {mlang_message UPLOAD_DRAG} </div>
+		</div>
+
+		<div class="rnr-import-settings">
+			<button type="button" class="btn btn-default" id="switchToTextInsertion{$id}">{mlang_message IMPORT_COPY_PASTE_TEXT}</button>
+		</div>
+	</div>
+
+	<!-- bsimport_rawtext_control brickname_attr data-brick="import_rawtext_control" data-pageid="{$pageid}" {$import_rawtext_control_hiddenattr}-->
+	<div id="copyAndPasteText{$id}" class="form-group" style="display:none;">
+		<div>{mlang_message IMPORT_COPY_PASTE_DATA}</div>
+		<textarea class="rnr-import-textarea" id="importText{$id}">
+		</textarea>
+	</div>
+
+	<!-- bsimport_preview data-brick="import_preview" data-pageid="{$pageid}" {$import_preview_hiddenattr}-->
+	<div id="importPreview{$id}" class="form-group" style="display:none;">
+		<div id="importSettings{$id}" class="rnr-import-settings form-group">
+			<div class="rnr-is-control checkbox">
+				<label>
+					<input class="rnr-checkbox" id="headersLineOption{$id}" name="headersLineOption" type="checkbox">
+					{mlang_message IMPORT_COLUMN_HEADERS_LINE}					<input type="number" class="rnr-import-input-small" id="headersLineNumber{$id}" value="1">
+				</label>
+			</div>
+			<div class="rnr-is-control checkbox">
+				<label>
+					<input class="rnr-checkbox" id="skipLinesOption{$id}" name="skipLinesOption" type="checkbox">
+					{$messagepart IMPORT_SKIP_N_LINES 1}
+					<input type="number" class="rnr-import-input-small" id="skipLinesAmount{$id}" value="1"> 
+					{$messagepart IMPORT_SKIP_N_LINES 2}
+				</label>
+			</div>
+
+
+			<ul id="delimiterSettings{$id}" style="display:none;" class="rnr-is-control list-inline">
+				<li class="radio">
+					<label>
+						<input name="importDelimiter" class="importDelimiters" type="radio" value=",">
+						{mlang_message IMPORT_COMMA}					</label>
+				</li>
+				<li class="radio">
+					<label>
+						<input name="importDelimiter" class="importDelimiters" type="radio" value="&#9;">
+						{mlang_message IMPORT_TAB}					</label>
+				</li>
+				<li class="radio">
+					<label>
+						<input name="importDelimiter" class="importDelimiters" type="radio" value="other">
+						{mlang_message IMPORT_OTHER}					</label>
+					<input id="customDelimiter{$id}" value=";" type="text">
+				</li>
+			</ul>
+
+			<div id="dateFormatSettings{$id}" class="rnr-is-control" style="display:none;">
+				<label>{mlang_message IMPORT_DATA_FORMAT}</label>
+				<input id="importDateFormat{$id}" type="text">
+			</div>
+		</div>
+
+		<div id="importGridHead{$id}" class="rnr-import-head-preview">
+		</div>
+		<div id="importGridBody{$id}" class="rnr-import-body-preview form-group">
+			<table id="importPreviewBodyTable{$id}"></table>
+		</div>
+		<div id="importErrorMessage{$id}" class="alert alert-danger" style="display:none;"></div>
+	</div>
+
+	<!-- bsimport_process data-brick="import_process" data-pageid="{$pageid}" {$import_process_hiddenattr} -->
+	<div id="importProgress{$id}" class="rnr-import-progress form-group" style="display:none;">
+	</div>
+
+	<!-- bsimport_results data-brick="import_results" data-pageid="{$pageid}" {$import_results_hiddenattr}-->
+	<div id="reportText{$id}" class="rnr-import-report form-group" style="display:none;">
+	</div>
+
+	<!-- bsimportbuttons data-brick="importbuttons" data-pageid="{$pageid}" {$importbuttons_hiddenattr}-->
+	<div id="importButtons{$id}">
+		<div class="rnr-buttons-right">
+			<button type="button" class="btn btn-default" id="backToList{$id}">
+				{mlang_message BACK_TO_LIST}			</button>
+			<button type="button" class="btn btn-default" id="newImport{$id}" style="display: none;">
+				{mlang_message IMPORT_NEW}			</button>
+		</div>
+		<div class="rnr-buttons-left">
+			<button type="button" class="btn btn-primary disabled" id="continueTextImport{$id}" style="display: none;">
+				{mlang_message CONTINUE}			</button>
+			<button type="button" class="btn btn-primary" id="importButton{$id}" style="display: none;">
+				{mlang_message IMPORT_DATA}			</button>
+			<button type="button" class="btn btn-default" id="backTo{$id}" style="display: none;">
+				{mlang_message BACK}			</button>
+			<button type="button" class="btn btn-default" id="saveReport{$id}" style="display: none;">
+				{mlang_message IMPORT_SAVE_REPORT}			</button>
+			<button type="button" class="btn btn-default errorReportButtons{$id}" id="saveUnprocessedData{$id}" style="display: none;">
+				{mlang_message IMPORT_DOWNLOAD_UNPROCESSED_DATA}			</button>
+			<button type="button" class="btn btn-default errorReportButtons{$id}" id="saveErrorReport{$id}" style="display: none;">
+				{mlang_message IMPORT_DOWNLOAD_ERROR_LOG}			</button>
+		</div>
+	</div>
+											</div>
+				</div>
+				
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

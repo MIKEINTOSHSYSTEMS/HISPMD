@@ -1,0 +1,1485 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption Indicators_Dashboard}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel Indicators_Dashboard print}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+															{BEGIN row_grid_0}
+							+1
+						{END row_grid_0}
+													{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														{BEGIN col_grid_0}
+					"%",
+					{END col_grid_0}
+										{BEGIN col_grid_1}
+					"%",
+					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
+										{BEGIN col_grid_3}
+					"%",
+					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
+										{BEGIN col_grid_5}
+					"%",
+					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
+										{BEGIN col_grid_13}
+					"%",
+					{END col_grid_13}
+															],
+											heights: [ // first height for header part
+					"%",
+																		{BEGIN row_grid_0}
+							"%",
+							{END row_grid_0}
+																							 	{BEGIN grid_row}
+													{BEGIN row_grid_1}
+							"%",
+							{END row_grid_1}
+													{END grid_row}
+																								{BEGIN row_grid_2}
+							"%",
+							{END row_grid_2}
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: {$formwidth_grid},
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel Indicators_Dashboard print}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																	
+
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'Indicator_Group',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Indicator_Group }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Indicator_Group_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Indicator_Name',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Indicator_Name }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Indicator_Name_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Baseline',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Baseline }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Baseline_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Target',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Target }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Target_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Facility_Type',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Facility_Type }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Facility_Type_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Data_Source',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Data_Source }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Data_Source_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Assessment',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Assessment }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Assessment_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Administration_Unit',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Administration_Unit }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Administration_Unit_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Year',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Year }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Year_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Scope',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Scope }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Scope_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Region',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Region }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Region_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			fieldName: 'Gender_Sex',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Gender_Sex }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Gender_Sex_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
+{
+	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Value',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Value }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Value_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Data_Representation',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Data_Representation }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Data_Representation_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+											],
+				{END row_grid_0}
+		
+			
+		{BEGIN grid_row}
+	{BEGIN grid_record}
+				
+				{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'Indicator_Group',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Indicator_Group_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Indicator_Group_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Indicator_Name',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Indicator_Name_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Indicator_Name_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Baseline',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Baseline_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Baseline_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Target',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Target_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Target_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Facility_Type',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Facility_Type_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Data_Source',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Data_Source_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Data_Source_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Assessment',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Assessment_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Assessment_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Administration_Unit',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Administration_Unit_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Administration_Unit_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Year',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Year_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Scope',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Scope_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Scope_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Region',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Region_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Region_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+			fieldName: 'Gender_Sex',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Gender_Sex_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Gender_Sex_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
+{
+	cellId: 'cell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Value',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Value_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Data_Representation',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Data_Representation_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Data_Representation_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
+											],
+				{END row_grid_1}
+		
+		{END grid_record}
+	{END grid_row}
+			
+					
+				{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_footcell_field}
+{
+	cellId: 'footcell_field',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field}
+																							{BEGIN cellblock_grid_footcell_field1}
+{
+	cellId: 'footcell_field1',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_footcell_field3}
+{
+	cellId: 'footcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field3}
+																							{BEGIN cellblock_grid_footcell_field4}
+{
+	cellId: 'footcell_field4',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field4}
+																							{BEGIN cellblock_grid_footcell_field5}
+{
+	cellId: 'footcell_field5',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field5}
+																							{BEGIN cellblock_grid_footcell_field6}
+{
+	cellId: 'footcell_field6',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field6}
+																							{BEGIN cellblock_grid_footcell_field7}
+{
+	cellId: 'footcell_field7',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field7}
+																							{BEGIN cellblock_grid_footcell_field8}
+{
+	cellId: 'footcell_field8',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field8}
+																							{BEGIN cellblock_grid_footcell_field9}
+{
+	cellId: 'footcell_field9',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field9}
+																							{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field10}
+																							{BEGIN cellblock_grid_footcell_field11}
+{
+	cellId: 'footcell_field11',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field11}
+																							{BEGIN cellblock_grid_footcell_field12}
+{
+	cellId: 'footcell_field12',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field12}
+																							{BEGIN cellblock_grid_footcell_field13}
+{
+	cellId: 'footcell_field13',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field13}
+											],
+				{END row_grid_2}
+		
+				
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	}

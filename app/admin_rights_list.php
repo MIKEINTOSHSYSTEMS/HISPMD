@@ -1593,6 +1593,23 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("moh_indicators_data_values_chart1", " " . GetTableCaption("MoH_Indicators_Data_Values_Chart"));
+$table = "Indicators_Dashboard";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("indicators_dashboard", " " . GetTableCaption("Indicators_Dashboard"));
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

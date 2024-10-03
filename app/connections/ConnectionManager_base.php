@@ -343,6 +343,7 @@ class ConnectionManager_Base
 		$connectionsIds["public.hispmd_noti_view"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.faicons"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MoH_Indicators_Data_Values_Chart"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["Indicators_Dashboard"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -416,6 +416,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_indicators_data_values_chart1" == $shortTName )
 		return true;
+	if ("indicators_dashboard" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1420,6 +1422,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="MoH_Indicators_Data_Values_Chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Indicators_Dashboard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Indicators_Dashboard";
+	}
 	return $arr;
 }
 
@@ -1535,6 +1546,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.hispmd_noti_view";
 	$arr[]="public.faicons";
 	$arr[]="MoH_Indicators_Data_Values_Chart";
+	$arr[]="Indicators_Dashboard";
 	return $arr;
 }
 
@@ -2709,6 +2721,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "S".$extraPerm;
+	}
+	if( $table=="Indicators_Dashboard" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

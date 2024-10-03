@@ -861,6 +861,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="Indicators_Dashboard")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1545,6 +1549,10 @@ function getCaptionTable($table)
 	if($table=="MoH_Indicators_Data_Values_Chart")
 	{
 		return GetTableCaption("MoH_Indicators_Data_Values_Chart");
+	}
+	if($table=="Indicators_Dashboard")
+	{
+		return GetTableCaption("Indicators_Dashboard");
 	}
 	return $table;
 }

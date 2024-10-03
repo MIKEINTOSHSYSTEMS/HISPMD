@@ -3722,6 +3722,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "faicons1" ] = "public.faicons";
 	$projectEntities[ "MoH_Indicators_Data_Values_Chart" ] = array( "url" => "moh_indicators_data_values_chart1", "type" => 3 );
 	$projectEntitiesReverse[ "moh_indicators_data_values_chart1" ] = "MoH_Indicators_Data_Values_Chart";
+	$projectEntities[ "Indicators_Dashboard" ] = array( "url" => "indicators_dashboard", "type" => 6 );
+	$projectEntitiesReverse[ "indicators_dashboard" ] = "Indicators_Dashboard";
 }
 
 function findTable( $table ) {
