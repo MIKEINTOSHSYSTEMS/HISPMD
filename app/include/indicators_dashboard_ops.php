@@ -3,7 +3,7 @@ $topsindicators_dashboard = array();
 		$topsindicators_dashboard["selectList"] = array(
 		"subtype" => "sql",
 		"sql" => "SELECT
-  ig.indicator_group_name AS \"Indicator Group\",
+  ig.indicator_group_id AS \"Indicator Group\",
   mi.indicator_name AS \"Indicator Name\",
   mi.baseline AS \"Baseline\",
   mi.target AS \"Target\",
@@ -41,7 +41,7 @@ GROUP BY
   s.scope_name,
   ind.gender_sex,
   ind.data_representation,
-  ig.indicator_group_name,
+  ig.indicator_group_id,
   ind.value
 "
 	);

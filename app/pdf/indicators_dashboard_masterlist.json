@@ -32,7 +32,7 @@ pdfDocument = {
 		{END embedded_grid_caption}
 		{BEGIN embedded_page_title}
 			{
-				text: '{$jspagetitlelabel Indicators_Dashboard print}',
+				text: '{$jspagetitlelabel Indicators_Dashboard masterlist}',
 			},
 		{END embedded_page_title}		
 		{ 
@@ -147,7 +147,7 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c2',
+	cellId: 'c1',
 	col:0,
 	row:0,
 			
@@ -157,38 +157,15 @@ pdfDocument = {
 			
 	
 	
-			"stack": [
+			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel Indicators_Dashboard print}","hidden":"{$item_hide_print_header}","fontSize":30},
+			{"text":""},
 				
 				
-			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+			{"text":"{$jspagetitlelabel Indicators_Dashboard masterlist}","hidden":"{$item_hide_masterlist_header}","fontSize":30},
 				
 		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"stack": [
-		
-				'',
-	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -231,10 +208,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

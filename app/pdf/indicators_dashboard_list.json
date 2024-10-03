@@ -134,7 +134,47 @@ pdfDocument = {
 							stack: [
 
 																										
-''
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
 ,
 								
 																										
@@ -786,7 +826,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Indicator_Group_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$Indicator_Group_pdfvalue},"color":"#00adc7","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -815,7 +855,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Indicator_Name_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$Indicator_Name_pdfvalue},"color":"#004777","hidden":"{$item_hide_simple_grid_field1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -902,7 +942,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Data_Source_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
+			{"text":{$Data_Source_pdfvalue},"color":"#007b9f","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1134,7 +1174,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
+			{"text":{$Value_pdfvalue},"color":"#137db7","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

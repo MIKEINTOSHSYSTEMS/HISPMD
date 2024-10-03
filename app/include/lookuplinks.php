@@ -656,6 +656,55 @@ function InitLookupLinks()
 			$lookupTableLinks["faicons"]["hispmd_noti_view.icon"] = array();
 		}
 		$lookupTableLinks["faicons"]["hispmd_noti_view.icon"]["edit"] = array("table" => "public.hispmd_noti_view", "field" => "icon", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
+			$lookupTableLinks["public.moh_indicator_groups"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_groups"]["indicators_dashboard.Indicator Group"] )) {
+			$lookupTableLinks["public.moh_indicator_groups"]["indicators_dashboard.Indicator Group"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_groups"]["indicators_dashboard.Indicator Group"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Indicator Group", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicators"] ) ) {
+			$lookupTableLinks["public.moh_indicators"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicators"]["indicators_dashboard.Indicator Name"] )) {
+			$lookupTableLinks["public.moh_indicators"]["indicators_dashboard.Indicator Name"] = array();
+		}
+		$lookupTableLinks["public.moh_indicators"]["indicators_dashboard.Indicator Name"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Indicator Name", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
+			$lookupTableLinks["public.moh_data_sources"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_sources"]["indicators_dashboard.Data Source"] )) {
+			$lookupTableLinks["public.moh_data_sources"]["indicators_dashboard.Data Source"] = array();
+		}
+		$lookupTableLinks["public.moh_data_sources"]["indicators_dashboard.Data Source"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Data Source", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
+			$lookupTableLinks["public.moh_assessments"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_assessments"]["indicators_dashboard.Assessment"] )) {
+			$lookupTableLinks["public.moh_assessments"]["indicators_dashboard.Assessment"] = array();
+		}
+		$lookupTableLinks["public.moh_assessments"]["indicators_dashboard.Assessment"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Assessment", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_administration_units"] ) ) {
+			$lookupTableLinks["public.moh_administration_units"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_administration_units"]["indicators_dashboard.Administration Unit"] )) {
+			$lookupTableLinks["public.moh_administration_units"]["indicators_dashboard.Administration Unit"] = array();
+		}
+		$lookupTableLinks["public.moh_administration_units"]["indicators_dashboard.Administration Unit"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Administration Unit", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_data_scope"] ) ) {
+			$lookupTableLinks["public.moh_data_scope"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_scope"]["indicators_dashboard.Scope"] )) {
+			$lookupTableLinks["public.moh_data_scope"]["indicators_dashboard.Scope"] = array();
+		}
+		$lookupTableLinks["public.moh_data_scope"]["indicators_dashboard.Scope"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Scope", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_regions"] ) ) {
+			$lookupTableLinks["public.moh_regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_regions"]["indicators_dashboard.Region"] )) {
+			$lookupTableLinks["public.moh_regions"]["indicators_dashboard.Region"] = array();
+		}
+		$lookupTableLinks["public.moh_regions"]["indicators_dashboard.Region"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Region", "page" => "edit");
 }
 
 ?>

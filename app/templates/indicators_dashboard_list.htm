@@ -259,6 +259,8 @@
 		
      
      
+             
+     
          
 
 			<div data-cellId="left_c" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
@@ -551,7 +553,16 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	</div>		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -1701,7 +1712,7 @@
 
 	 
 		{BEGIN Indicator_Group_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Group" data-fieldname="Indicator Group" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-page="indicators_dashboard_list" data-record-id="{$recId}" data-field="Indicator_Group" data-fieldname="Indicator Group" data-default-width >
 {$Indicator_Group_value}
 </span>
 {END Indicator_Group_fieldcolumn}	
@@ -1722,7 +1733,7 @@
 
 	 
 		{BEGIN Indicator_Name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-page="indicators_dashboard_list" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name" data-default-width >
 {$Indicator_Name_value}
 </span>
 {END Indicator_Name_fieldcolumn}	
@@ -1785,7 +1796,7 @@
 
 	 
 		{BEGIN Data_Source_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Source" data-fieldname="Data Source" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-page="indicators_dashboard_list" data-record-id="{$recId}" data-field="Data_Source" data-fieldname="Data Source" data-default-width >
 {$Data_Source_value}
 </span>
 {END Data_Source_fieldcolumn}	
@@ -1953,7 +1964,7 @@
 
 	 
 		{BEGIN Value_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-page="indicators_dashboard_list" data-record-id="{$recId}" data-field="Value" data-fieldname="Value" data-default-width >
 {$Value_value}
 </span>
 {END Value_fieldcolumn}	

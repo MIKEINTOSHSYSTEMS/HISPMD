@@ -43,6 +43,22 @@
 [data-cellid="grid_headcell_checkbox"][data-page="indicators_dashboard_list"][data-cellid="grid_headcell_checkbox"][data-page="indicators_dashboard_list"][data-cellid="grid_headcell_checkbox"][data-page="indicators_dashboard_list"] {
   width: 30px;
 }
+[data-page="indicators_dashboard_list"][data-itemid="simple_grid_field"] {
+  color: #00adc7;
+  font-weight: bold;
+}
+[data-page="indicators_dashboard_list"][data-itemid="simple_grid_field1"] {
+  color: #004777;
+  font-weight: bold;
+}
+[data-page="indicators_dashboard_list"][data-itemid="simple_grid_field5"] {
+  color: #007b9f;
+  font-weight: bold;
+}
+[data-page="indicators_dashboard_list"][data-itemid="simple_grid_field12"] {
+  color: #137db7;
+  font-weight: bold;
+}
 [data-page="indicators_dashboard_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
