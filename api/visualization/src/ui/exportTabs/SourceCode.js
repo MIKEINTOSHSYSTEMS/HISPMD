@@ -44,24 +44,24 @@ chartEditor.ui.exportTabs.SourceCode.prototype.onChartDraw = function(evt) {
       '<html>\n' +
       '<head>\n' +
       '    <meta charset="utf-8">\n\n'+
-      '    <!-- anychart -->\n' +
+      '    <!-- HISPMD Charts -->\n' +
       '    <script src="' + scripts.bundle + '"></script>\n';
 
   // Include theme if needed
   if (scripts.theme)
     resultCode +=
-        '    <!-- anychart theme -->\n' +
+        '    <!-- HSIPMD theme -->\n' +
         '    <script src="' + scripts.theme + '"></script>\n';
 
   resultCode +=
-      '    <!-- anychart css -->\n' +
+      '    <!-- HSIPMD css -->\n' +
       '    <link href="' + scripts.css_ui + '" type="text/css" rel="stylesheet">\n' +
       '    <link href="' + scripts.css_fonts + '" type="text/css" rel="stylesheet">\n\n';
 
   // Include proj4js for maps
   if (scripts.geoData) {
     resultCode +=
-        '    <!-- anychart geodata -->\n' +
+        '    <!-- HSIPMD geodata -->\n' +
         '    <script src="' + scripts.geoData + '"></script>\n';
 
     resultCode +=

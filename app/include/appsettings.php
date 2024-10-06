@@ -77,19 +77,10 @@ $custom_labels["Amharic"] = array();
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>HISPMD Chart Visualizations</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         iframe {
             border: none;
             width: 100%;
-            height: 100vh;
+            height: 77vh;
         }
         @media (max-width: 768px) {
             iframe {
@@ -109,6 +100,7 @@ $custom_labels["Amharic"] = array();
         src=\"../api//visualization/\"
 		<!--src=\"https://hispmd.merqconsultancy.org/api/visualization/\"-->
         allowtransparency></iframe>
+<!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
 </body>
 </html>
 ";
@@ -182,7 +174,7 @@ How can we help you?
         iframe {
             border: none;
             width: 100%;
-            height: 100vh;
+            height: 77vh;
         }
         @media (max-width: 768px) {
             iframe {
@@ -912,9 +904,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "653_1727801013";
+$projectBuildKey = "654_1727801013";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "653";
+$projectBuildNumber = "654";
 
 $mlang_messages = array();
 $mlang_charsets = array();

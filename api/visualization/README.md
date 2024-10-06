@@ -23,10 +23,10 @@ You can download all project binaries from [dist](https://github.com/AnyChart/ch
 
 To use AnyChart Chart Editor on a web page you should include AnyChart library first:
 ```html
-<!-- anychart -->
+<!-- HISPMD Charts -->
 <script src="https://cdn.anychart.com/releases/latest/js/anychart-bundle.min.js"></script>
 
-<!-- anychart css -->
+<!-- HSIPMD css -->
 <link href="https://cdn.anychart.com/releases/latest/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
 <link href="https://cdn.anychart.com/releases/latest/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
 
@@ -45,7 +45,7 @@ If you want to have any theming options on the Theming tab of Visual appearance 
  
 And at last include Chart Editor's binaries that you can find in a project's [dist](https://github.com/AnyChart/chart-editor/tree/master/dist) folder.
 ```html
-<!-- anychart chart editor -->
+<!-- HSIPMD chart editor -->
 <link href="anychart-editor.min.css" type="text/css" rel="stylesheet">
 <script src="anychart-editor.min.js"></script>
 ```
