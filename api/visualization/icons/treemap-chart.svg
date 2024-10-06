@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1800 1800"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#0B94DD}
+    .fil3 {fill:#5FBAE8}
+    .fil2 {fill:#6FC1EA}
+    .fil4 {fill:#B1DDF4}
+    .fil7 {fill:#E56800}
+    .fil5 {fill:#F3A61E}
+    .fil6 {fill:#FBC82D}
+    .fil1 {fill:#FEFEFE;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="47" y="109" width="624" height="1588"/>
+  <path class="fil1" d="M47 72l661 0 0 1662 -699 0 0 -1662 38 0zm586 75l-549 0 0 1512 549 0 0 -1512z"/>
+  <rect class="fil2" x="671" y="903" width="510" height="794"/>
+  <path class="fil1" d="M1143 940l-435 0 0 719 435 0 0 -719zm-472 -75l547 0 0 869 -585 0 0 -869 38 0z"/>
+  <rect class="fil3" x="671" y="109" width="510" height="794"/>
+  <path class="fil1" d="M1143 147l-435 0 0 718 435 0 0 -718zm-472 -75l547 0 0 868 -585 0 0 -868 38 0z"/>
+  <rect class="fil4" x="1180" y="109" width="565" height="397"/>
+  <path class="fil1" d="M1180 72l602 0 0 472 -639 0 0 -472 37 0zm527 75l-489 0 0 322 489 0 0 -322z"/>
+  <rect class="fil5" x="1463" y="506" width="282" height="648"/>
+  <path class="fil1" d="M1500 1117l207 0 0 -573 -207 0 0 573zm245 75l-320 0 0 -723 357 0 0 723 -37 0z"/>
+  <rect class="fil6" x="1180" y="506" width="282" height="648"/>
+  <path class="fil1" d="M1218 1117l207 0 0 -573 -207 0 0 573zm245 75l-320 0 0 -723 357 0 0 723 -37 0z"/>
+  <rect class="fil6" x="1180" y="1154" width="282" height="542"/>
+  <path class="fil1" d="M1180 1117l320 0 0 617 -357 0 0 -617 37 0zm245 75l-207 0 0 467 207 0 0 -467z"/>
+  <rect class="fil7" x="1463" y="1154" width="282" height="542"/>
+  <path class="fil1" d="M1707 1192l-207 0 0 467 207 0 0 -467zm-244 -75l319 0 0 617 -357 0 0 -617 38 0z"/>
+ </g>
+</svg>

@@ -1,0 +1,54 @@
+﻿Indicator Group,Indicator Name,Baseline,Target,Facility Type,Data Source,Assessment,Administration Unit,Year,Scope,Region,Gender/Sex,Value,Data Representation
+Data Quality,Proportion of health administration units that conducted Routine Data quality assessments (RDQA),,,,PRISM Assessment,PRISM Assessment,WorHO,2024,National,,,6,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Oromia,,83,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Amhara,,94,Percent
+Data Quality,Reporting completeness - Representative,,,Hospital,PRISM Assessment,PRISM Assessment,,2022,National,,,100,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Dire Dawa,,94,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,National Average,,85,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Oromia,,44,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,South Ethiopia,,90,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Afar,,69,Percent
+Data Quality,Proportion of health administration units that conducted Routine Data quality assessments (RDQA),,,,RDQA - comprehensive,RDQA,WorHO,2023,National,,,55,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Benishangul-Gumuz,,52,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Somali,,23,Percent
+Data Quality,Percentage of health facility with a VF within the acceptable range,,,Public HF,PRISM Assessment,PRISM Assessment,,2018,National,,,13,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,National Average,,41,Percent
+Data Quality,Reporting timeliness,,,Public HF,PRISM Assessment,PRISM Assessment,,2022,National,,,51,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Gambella,,49,Percent
+Data Quality,Percentage of health facility with a VF within the acceptable range,,,Public HF,PRISM Assessment,PRISM Assessment,,2024,National,,,0,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Dire Dawa,,36,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Addis Ababa,,93,Percent
+Data Quality,Reporting completeness - Representative,,,Public HF,PRISM Assessment,PRISM Assessment,,2018,National,,,73,Percent
+Data Quality,Proportion health facility which conduct LQAS,,,Public HF,PRISM Assessment,PRISM Assessment,,2018,National,,,57,Percent
+Data Quality,Proportion health facility which conduct LQAS,,,,RDQA - comprehensive,RDQA,,2023,National,,,68,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Sidama,,93,Percent
+Data Quality,Reporting completeness - Representative,,,Public HF,PRISM Assessment,PRISM Assessment,,2024,National,,,90,Percent
+Data Quality,Reporting completeness - Content,,,Public HF,PRISM Assessment,PRISM Assessment,,2022,National,,,94,Percent
+Data Quality,Percentage of health facility with a VF within the acceptable range,,,Public HF,PRISM Assessment,PRISM Assessment,,2022,National,,,25,Percent
+Data Quality,Proportion health facility which conduct LQAS,,,Public HF,PRISM Assessment,PRISM Assessment,,2022,National,,,100,Percent
+Data Quality,Proportion of health administration units that conducted Routine Data quality assessments (RDQA),,,,PRISM Assessment,PRISM Assessment,WorHO,2022,National,,,100,Percent
+Data Quality,Proportion health facility which conduct LQAS,,,Public HF,RDQA - comprehensive,RDQA,,2022,National,,,60,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Addis Ababa,,43,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,South Ethiopia,,34,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Gambella,,12,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Harari,,78,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,South West Ethiopia,,96,Percent
+Data Quality,Reporting completeness - Representative,,,Health Post,PRISM Assessment,PRISM Assessment,,2018,National,,,82,Percent
+Data Quality,Proportion of health administration units that conducted Routine Data quality assessments (RDQA),,,,RDQA - comprehensive,RDQA,WorHO,2022,National,,,57,Percent
+Data Quality,Proportion health facility which conduct LQAS,,,Health Post,PRISM Assessment,PRISM Assessment,,2024,National,,,9,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Somali,,69,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Amhara,,58,Percent
+Data Quality,Proportion health facility which conduct LQAS,,,Public HF,PRISM Assessment,PRISM Assessment,,2024,National,,,45,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,South West Ethiopia,,25,Percent
+Data Quality,Reporting completeness - Representative,,,Health Center,PRISM Assessment,PRISM Assessment,,2022,National,,,91,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Afar,,22,Percent
+Data Quality,Reporting completeness - Content,,,Public HF,PRISM Assessment,PRISM Assessment,,2024,National,,,70,Percent
+Data Quality,Reporting completeness - Content,,,Public HF,PRISM Assessment,PRISM Assessment,,2018,National,,,91,Percent
+Data Quality,Reporting timeliness,,,Public HF,PRISM Assessment,PRISM Assessment,,2018,National,,,33,Percent
+Data Quality,Reporting completeness - Representative,,,Health Post,PRISM Assessment,PRISM Assessment,,2024,National,,,76,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Sidama,,28,Percent
+Data Quality,Proportion of health administration units that conducted Routine Data quality assessments (RDQA),,,,PRISM Assessment,PRISM Assessment,WorHO,2018,National,,,74,Percent
+Data Quality,Reporting completeness - Representative,,,Health Post,PRISM Assessment,PRISM Assessment,,2022,National,,,95,Percent
+Data Quality,Reporting timeliness,,,,Admin Report,Admin Report,,2023,Regional,Benishangul-Gumuz,,17,Percent
+Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Harari,,97,Percent
+Data Quality,Reporting timeliness,,,Public HF,PRISM Assessment,PRISM Assessment,,2024,National,,,29,Percent

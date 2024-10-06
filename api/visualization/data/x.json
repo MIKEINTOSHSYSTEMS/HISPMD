@@ -1,0 +1,367 @@
+{
+    "id": "anychart_common",
+    "name": "AnyChart Common",
+    "type": "json",
+    "sets": [
+        {
+            "id": "0",
+            "logo": "./0.png",
+            "sample": "https://playground.anychart.com/Am9GhFAi",
+            "name": "Top 10 Cosmetic Products by Revenue",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Bar Charts",
+                "Sales",
+                "Revenue",
+                "Dummy data",
+                "Single value"
+            ],
+            "source": "AnyChart Common",
+            "data": "./0.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "1",
+            "logo": "./1.png",
+            "sample": "https://playground.anychart.com/w5ORYMFk",
+            "name": "Acme Corp. revenue for last 8 years",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Column Charts",
+                "Line Charts",
+                "Area Charts",
+                "Sales",
+                "Revenue",
+                "Acme Corp",
+                "Dummy data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./1.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "2",
+            "logo": "./2.png",
+            "sample": "https://playground.anychart.com/kKPKdynU",
+            "name": "Acme Corp. - Trend of Sales of the Most Popular Products",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Column Charts",
+                "Line Charts",
+                "Sales",
+                "Revenue",
+                "Acme Corp",
+                "Dummy data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./2.json",
+            "products": [
+                0,
+                1
+            ]
+        },
+        {
+            "id": "3",
+            "logo": "./3.png",
+            "sample": "https://playground.anychart.com/0by3leSz",
+            "name": "System interruption analysis",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Scatter Charts",
+                "Marker Chart",
+                "Line Chart",
+                "XY Plot",
+                "Analysis",
+                "Dummy data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./3.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "4",
+            "logo": "./4.png",
+            "sample": "https://playground.anychart.com/w53HhM4M",
+            "name": "Acme Corp. apparel sales through different retail channels",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Pie Chart",
+                "Donut Chart",
+                "Acme Corp",
+                "Sales",
+                "Retail",
+                "Dummy data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./4.json",
+            "products": [
+                0,
+                1
+            ]
+        },
+        {
+            "id": "5",
+            "logo": "./5.png",
+            "sample": "https://playground.anychart.com/iorQnr8z",
+            "name": "Analysis of purchase process in web-store",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Funnel Chart",
+                "Pyramid Chart",
+                "Analysis",
+                "Dummy data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./5.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "6",
+            "logo": "./6.png",
+            "sample": "https://playground.anychart.com/VQjHcmpS",
+            "name": "Life expectancy vs GDP per capita",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Bubble Chart",
+                "Choropleth map",
+                "Bubble chart",
+                "GDP per capita",
+                "Life Expectancy",
+                "Real life data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./6.json",
+            "products": [
+                3
+            ]
+        },
+        {
+            "id": "7",
+            "logo": "./7.png",
+            "sample": "https://playground.anychart.com/ZdC5wLrc",
+            "name": "Top 10 Jobs Salaries Grades Per Year\nCalisota, USA",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Box Chart",
+                "Dummy data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./7.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "8",
+            "logo": "./8.png",
+            "sample": "https://playground.anychart.com/cxDZ8inm",
+            "name": "Acme Inc. Historical Stock Prices 2007-2017",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Stock Chart"
+            ],
+            "source": "AnyChart Common",
+            "data": "./8.json",
+            "products": [
+                2
+            ]
+        },
+        {
+            "id": "9",
+            "logo": "./9.png",
+            "sample": "https://playground.anychart.com/de0sksKj",
+            "name": "Countries rating by GDP per capita",
+            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "tags": [
+                "Choropleth Map",
+                "GDP per capita",
+                "Real life data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./9.json",
+            "products": [
+                3
+            ]
+        },
+        {
+            "id": "10",
+            "logo": "./10.png",
+            "sample": "https://playground.anychart.com/pj0SDe5D",
+            "name": "USA National Parks",
+            "description": "This data set provides a real life data for map charts demonstration.",
+            "tags": [
+                "Choropleth Map",
+                "Marker",
+                "Bubble",
+                "coordinates",
+                "Real life data"
+            ],
+            "source": "AnyChart Common",
+            "data": "./10.json",
+            "products": [
+                3
+            ]
+        },
+        {
+            "id": "11",
+            "logo": "./11.png",
+            "sample": "https://playground.anychart.com/qfPGO1W3",
+            "name": "ACME corp. Revenue Flow 2017",
+            "description": "This data set provides a dummy data for waterfall charts demonstration.",
+            "tags": [
+                "waterfall",
+                "flying bricks",
+                "bridge",
+                "cascade",
+                "mario"
+            ],
+            "source": "AnyChart Common",
+            "data": "./11.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "12",
+            "logo": "./12.png",
+            "sample": "https://playground.anychart.com/7lJkkH91",
+            "name": "Single Series Polar Chart",
+            "description": "This data set provides a dummy data for polar charts demonstration.",
+            "tags": [
+                "polar",
+                "scatter",
+                "cartesian"
+            ],
+            "source": "AnyChart Common",
+            "data": "./12.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "13",
+            "logo": "./13.png",
+            "sample": "https://playground.anychart.com/ttawqBi3",
+            "name": "Contribution to Overall Sales by Brand",
+            "description": "This data set provides a dummy data for mekko charts demonstration.",
+            "tags": [
+                "mekko",
+                "mosaic",
+                "marimekko",
+                "barmekko"
+            ],
+            "source": "AnyChart Common",
+            "data": "./13.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "14",
+            "logo": "./14.png",
+            "sample": "https://playground.anychart.com/1t8Cw7kO",
+            "name": "Risk Matrix in Project Server",
+            "description": "This data set provides a dummy data for heat map charts demonstration.",
+            "tags": [
+                "heat map",
+                "heatmap"
+            ],
+            "source": "AnyChart Common",
+            "data": "./14.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "15",
+            "logo": "./15.png",
+            "sample": "https://playground.anychart.com/6zCq3jJ9",
+            "name": "US population by Biggest Cities",
+            "description": "This data set provides a dummy data for tree map charts demonstration.",
+            "tags": [
+                "tree map",
+                "treemap",
+                "tree"
+            ],
+            "source": "AnyChart Common",
+            "data": "./15.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "16",
+            "logo": "./16.png",
+            "sample": "https://playground.anychart.com/quoyYTa2",
+            "name": "Simple Thermometer",
+            "description": "This data set provides a dummy data for linear or circular gauge charts demonstration.",
+            "tags": [
+                "gauge",
+                "linear",
+                "circular"
+            ],
+            "source": "AnyChart Common",
+            "data": "./16.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "17",
+            "logo": "./17.png",
+            "sample": "https://playground.anychart.com/haBJcinU",
+            "name": "Basic Sankey Diagram",
+            "description": "This data set provides a dummy data for basic sankey diagram demonstration.",
+            "tags": [
+                "sankey",
+                "flow",
+                "node"
+            ],
+            "source": "AnyChart Common",
+            "data": "./17.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "18",
+            "logo": "./18.png",
+            "sample": "https://playground.anychart.com/wnH672BM",
+            "name": "Tag Cloud",
+            "description": "A tag cloud, otherwise known as a word cloud or weighted list, is a visual representation of text data.",
+            "tags": [
+                "tag cloud",
+                "word"
+            ],
+            "source": "AnyChart Common",
+            "data": "./18.json",
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": "19",
+            "logo": "./19.png",
+            "sample": "https://playground.anychart.com/MEPMaSze/1",
+            "name": "Gantt Project",
+            "description": "Gantt Chart example showing how to customize the size and the position of elements.",
+            "tags": [
+                "gantt",
+                "gantt project"
+            ],
+            "source": "AnyChart Common",
+            "data": "./19.json",
+            "products": [
+                4
+            ]
+        }
+    ]
+}

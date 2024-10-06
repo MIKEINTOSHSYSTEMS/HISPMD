@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "Indicator Group": "3",
+            "Indicator Name": "Proportion of health administration units that conducted Routine Data quality assessments (RDQA)",
+            "Baseline": null,
+            "Target": null,
+            "Facility Type": null,
+            "Data Source": "PRISM Assessment",
+            "Assessment": "PRISM Assessment",
+            "Administration Unit": "WorHO",
+            "Year": "2024",
+            "Scope": "National",
+            "Region": null,
+            "Gender/Sex": "",
+            "Value": "5.7",
+            "Data Representation": "Percent"
+        },
+        {
+            "Indicator Group": "5",
+            "Indicator Name": "Proportion of woredas by IR status",
+            "Baseline": null,
+            "Target": null,
+            "Facility Type": "Public HF",
+            "Data Source": "IR Ass - Emerging",
+            "Assessment": "IR Assessment",
+            "Administration Unit": null,
+            "Year": "2024",
+            "Scope": "National",
+            "Region": null,
+            "Gender/Sex": "",
+            "Value": "9",
+            "Data Representation": "Percent"
+        },
+        {
+            "Indicator Group": "2",
+            "Indicator Name": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "Baseline": null,
+            "Target": null,
+            "Facility Type": null,
+            "Data Source": "PRISM Assessment",
+            "Assessment": "PRISM Assessment",
+            "Administration Unit": "WorHO",
+            "Year": "2022",
+            "Scope": "National",
+            "Region": null,
+            "Gender/Sex": "",
+            "Value": "100",
+            "Data Representation": "Percent"
+        }
+    ]
+}

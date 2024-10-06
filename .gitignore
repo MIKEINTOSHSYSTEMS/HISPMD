@@ -8,6 +8,7 @@
 /api/sql/backup
 /api/database/backup
 /api/database/backups
+/api/viz/
 /maps/geojson/
 /maps/geojson/regions
 /app/templates_c/*.csv
@@ -21,6 +22,8 @@
 /app/modules/kb
 /app/modules/hd
 /build
+/analytics/misc/DBIP-City.mmdb
+/analytics/tmp/
 /analytics/tmp/cache/tracker
 /analytics/tmp/cache/tracker/eagercache-511-tracker.php
 /analytics/tmp/cache/tracker/eagercache-511-ui.php

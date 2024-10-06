@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1800 1800"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#0B94DD}
+    .fil2 {fill:#E06500}
+    .fil3 {fill:#FBC82D}
+    .fil1 {fill:white;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="50" y="933" width="770" height="767"/>
+  <path class="fil1" d="M50 896l808 0 0 842 -845 0 0 -842 37 0zm733 75l-695 0 0 692 695 0 0 -692z"/>
+  <rect class="fil2" x="50" y="415" width="770" height="518"/>
+  <path class="fil1" d="M88 896l695 0 0 -443 -695 0 0 443zm732 75l-807 0 0 -593 845 0 0 593 -38 0z"/>
+  <rect class="fil3" x="50" y="112" width="770" height="303"/>
+  <path class="fil1" d="M50 75l808 0 0 378 -845 0 0 -378 37 0zm733 75l-695 0 0 228 695 0 0 -228z"/>
+  <rect class="fil0" x="820" y="1300" width="571" height="400"/>
+  <path class="fil1" d="M1354 1337l-496 0 0 326 496 0 0 -326zm-534 -75l609 0 0 476 -646 0 0 -476 37 0z"/>
+  <rect class="fil2" x="820" y="799" width="571" height="501"/>
+  <path class="fil1" d="M1391 1337l-608 0 0 -575 646 0 0 575 -38 0zm-533 -75l496 0 0 -425 -496 0 0 425z"/>
+  <rect class="fil3" x="820" y="314" width="571" height="485"/>
+  <path class="fil1" d="M1354 352l-496 0 0 410 496 0 0 -410zm-534 -75l609 0 0 560 -646 0 0 -560 37 0z"/>
+  <rect class="fil0" x="1391" y="1323" width="357" height="377"/>
+  <path class="fil1" d="M1391 1286l395 0 0 452 -432 0 0 -452 37 0zm320 75l-282 0 0 302 282 0 0 -302z"/>
+  <rect class="fil2" x="1391" y="994" width="357" height="330"/>
+  <path class="fil1" d="M1429 1286l282 0 0 -255 -282 0 0 255zm319 75l-394 0 0 -405 432 0 0 405 -38 0z"/>
+  <rect class="fil2" x="1391" y="994" width="357" height="330"/>
+  <path class="fil1" d="M1429 1286l282 0 0 -255 -282 0 0 255zm319 75l-394 0 0 -405 432 0 0 405 -38 0z"/>
+  <rect class="fil3" x="1391" y="616" width="357" height="378"/>
+  <path class="fil1" d="M1391 579l395 0 0 452 -432 0 0 -452 37 0zm320 75l-282 0 0 302 282 0 0 -302z"/>
+ </g>
+</svg>

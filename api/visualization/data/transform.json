@@ -1,0 +1,496 @@
+{
+    "name": "Indicators Dashboard by Value",
+    "data": [
+        {
+            "indicator": "Proportion of health administration units that conducted Routine Data quality assessments (RDQA)",
+            "datavalue": 5.7
+        },
+        {
+            "indicator": "Proportion of woredas by IR status",
+            "datavalue": 9
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 87
+        },
+        {
+            "indicator": "Proportion of woredas by IR status",
+            "datavalue": 39
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 83
+        },
+        {
+            "indicator": "Proportion of births notified",
+            "datavalue": 52
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 91.9
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 94
+        },
+        {
+            "indicator": "Proportion of health institutions by IR status",
+            "datavalue": 41
+        },
+        {
+            "indicator": "Proportion of health facilities which reported out of stock selected registers by health facility and by type of register",
+            "datavalue": 63
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 40.5
+        },
+        {
+            "indicator": "Number of health institutions that disseminated publications/ best practices/ analytic reports to the stakeholders/ public (Newsletters, bulletins, brochure, etc.)",
+            "datavalue": 32.7
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 100
+        },
+        {
+            "indicator": "Information use index (average Information Use score)",
+            "datavalue": 0.59
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 94
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 85
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 44
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 81
+        },
+        {
+            "indicator": "Proportion of deaths notified",
+            "datavalue": 3
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 62
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 90
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 69
+        },
+        {
+            "indicator": "Proportion of woredas by IR status",
+            "datavalue": 6
+        },
+        {
+            "indicator": "Proportion of health administration units that conducted Routine Data quality assessments (RDQA)",
+            "datavalue": 54.5
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 74
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 94.7
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 52
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 65
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 23
+        },
+        {
+            "indicator": "Percentage of health facility with a VF within the acceptable range",
+            "datavalue": 12.5
+        },
+        {
+            "indicator": "Proportion of deaths notified",
+            "datavalue": 4
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 41
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 51
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 49
+        },
+        {
+            "indicator": "Proportion of births notified",
+            "datavalue": 75
+        },
+        {
+            "indicator": "Percentage of health facility with a VF within the acceptable range",
+            "datavalue": 0
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 36
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 93
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 73.3
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 85.2
+        },
+        {
+            "indicator": "Proportion health facility which conduct LQAS",
+            "datavalue": 57
+        },
+        {
+            "indicator": "Number of health institutions that disseminated publications/ best practices/ analytic reports to the stakeholders/ public (Newsletters, bulletins, brochure, etc.)",
+            "datavalue": 34.6
+        },
+        {
+            "indicator": "Proportion of woredas by IR status",
+            "datavalue": 25
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 64.3
+        },
+        {
+            "indicator": "Proportion of health institutions by IR status",
+            "datavalue": 23
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 88.7
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 62
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 63.8
+        },
+        {
+            "indicator": "Proportion health facility which conduct LQAS",
+            "datavalue": 68
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 93
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 90.3
+        },
+        {
+            "indicator": "Proportion of health facilities which reported out of stock selected registers by health facility and by type of register",
+            "datavalue": 1.4
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 65.7
+        },
+        {
+            "indicator": "Reporting completeness - Content",
+            "datavalue": 93.9
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 100
+        },
+        {
+            "indicator": "Percentage of health facility with a VF within the acceptable range",
+            "datavalue": 25
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 63.8
+        },
+        {
+            "indicator": "Number of health institutions that disseminated publications/ best practices/ analytic reports to the stakeholders/ public (Newsletters, bulletins, brochure, etc.)",
+            "datavalue": 14.1
+        },
+        {
+            "indicator": "Proportion health facility which conduct LQAS",
+            "datavalue": 100
+        },
+        {
+            "indicator": "Proportion of health administration units that conducted Routine Data quality assessments (RDQA)",
+            "datavalue": 100
+        },
+        {
+            "indicator": "Proportion health facility which conduct LQAS",
+            "datavalue": 60
+        },
+        {
+            "indicator": "Proportion of births notified",
+            "datavalue": 45
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 68.9
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 92.8
+        },
+        {
+            "indicator": "Proportion of deaths notified",
+            "datavalue": 3.6
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 84.4
+        },
+        {
+            "indicator": "Information use index (average Information Use score)",
+            "datavalue": 0.63
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 43
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 89.4
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 59.2
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 34
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 92
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 12
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 78
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 96
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 93
+        },
+        {
+            "indicator": "Information use index (average Information Use score)",
+            "datavalue": 0.43
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 82
+        },
+        {
+            "indicator": "Proportion of health administration units that conducted Routine Data quality assessments (RDQA)",
+            "datavalue": 57
+        },
+        {
+            "indicator": "Proportion of woredas by IR status",
+            "datavalue": 29
+        },
+        {
+            "indicator": "Proportion health facility which conduct LQAS",
+            "datavalue": 8.9
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 78
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 69
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 62
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 58
+        },
+        {
+            "indicator": "Proportion health facility which conduct LQAS",
+            "datavalue": 45.3
+        },
+        {
+            "indicator": "Information use index (average Information Use score)",
+            "datavalue": 0.63
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 25
+        },
+        {
+            "indicator": "Information use index (average Information Use score)",
+            "datavalue": 0.69
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 90.6
+        },
+        {
+            "indicator": "Proportion of health facilities which reported out of stock selected registers by health facility and by type of register",
+            "datavalue": 62
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 22
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 79.4
+        },
+        {
+            "indicator": "Reporting completeness - Content",
+            "datavalue": 70
+        },
+        {
+            "indicator": "Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS",
+            "datavalue": 97
+        },
+        {
+            "indicator": "HIS workforce core competency index",
+            "datavalue": 20.5
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 55.6
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 64.9
+        },
+        {
+            "indicator": "Reporting completeness - Content",
+            "datavalue": 90.9
+        },
+        {
+            "indicator": "Proportion of health institutions by IR status",
+            "datavalue": 27
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 71
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 93
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 33
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 75.9
+        },
+        {
+            "indicator": "Information use index (average Information Use score)",
+            "datavalue": 0.54
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 100
+        },
+        {
+            "indicator": "Proportion of health facilities with Adequate shelves by health facility",
+            "datavalue": 79.7
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 28
+        },
+        {
+            "indicator": "Proportion of health administration units that conducted Routine Data quality assessments (RDQA)",
+            "datavalue": 74
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 95
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 17
+        },
+        {
+            "indicator": "Reporting completeness - Representative",
+            "datavalue": 97
+        },
+        {
+            "indicator": "Reporting timeliness",
+            "datavalue": 29.3
+        },
+        {
+            "indicator": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "datavalue": 59
+        },
+        {
+            "indicator": "Proportion of health facilities which reported out of stock selected registers by health facility and by type of register",
+            "datavalue": 0.9
+        },
+        {
+            "indicator": "Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)",
+            "datavalue": 100
+        }
+    ],
+    "chartType": "bar",
+    "defaults": [
+        {
+            "key": [
+                [
+                    "chart"
+                ],
+                [
+                    "settings"
+                ],
+                "title().enabled()"
+            ],
+            "value": true
+        },
+        {
+            "key": [
+                [
+                    "chart"
+                ],
+                [
+                    "settings"
+                ],
+                "title().text()"
+            ],
+            "value": "Indicators Dashboard by Value"
+        }
+    ]
+}
