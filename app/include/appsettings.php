@@ -70,6 +70,48 @@ $custom_labels["Amharic"] = array();
 		$custom_labels["Amharic"]['MOST_VISITED_CONTENTS'] = "በብዛት የተጎበኙ ይዘቶች";
 		$custom_labels["Amharic"]['NAME'] = "Name";
 		$custom_labels["Amharic"]['ORGANISATION_AND_DEPARTMENT'] = "Organisation and Department";
+		$custom_labels["Amharic"]['__DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_HISPMD_CHART_VISUALIZATIONS__TITLE_______STYLE__________HTML__BODY_______________MARGIN__0______________PADDING__0______________WIDTH__100_______________HEIGHT__100_______________DISPLAY__FLEX______________JUSTIFY_CONTENT__CENTER______________ALIGN_ITEMS__CENTER____________________IFRAME_______________BORDER__NONE______________WIDTH__100_______________HEIGHT__100VH_____________________MEDIA__MAX_WIDTH__768PX________________IFRAME___________________HEIGHT__80VH_____ADJUST_HEIGHT_FOR_SMALLER_SCREENS_____________________________________MEDIA__MAX_WIDTH__480PX________________IFRAME___________________HEIGHT__70VH_____FURTHER_ADJUST_FOR_MOBILE_DEVICES__________________________________STYLE____HEAD___BODY_______IFRAME_________ID__HISPMD_IFRAME__________SRC_____API__VISUALIZATION_________SRC__HTTPS___HISPMD_MERQCONSULTANCY_ORG_API_VISUALIZATION______________ALLOWTRANSPARENCY___IFRAME____BODY____HTML__'] = "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>HISPMD Chart Visualizations</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100vh;
+        }
+        @media (max-width: 768px) {
+            iframe {
+                height: 80vh; /* Adjust height for smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            iframe {
+                height: 70vh; /* Further adjust for mobile devices */
+            }
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        id=\"hispmd-iframe\"
+        src=\"../api//visualization/\"
+		<!--src=\"https://hispmd.merqconsultancy.org/api/visualization/\"-->
+        allowtransparency></iframe>
+</body>
+</html>
+";
 	$custom_labels["English"] = array();
 		$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
 <html lang=\"en\">
@@ -130,6 +172,40 @@ How can we help you?
 		$custom_labels["English"]['MOST_VISITED_CONTENTS'] = "Most Visited Contents";
 		$custom_labels["English"]['NAME'] = "Your Name";
 		$custom_labels["English"]['ORGANISATION_AND_DEPARTMENT'] = "Your Organisation and Department";
+		$custom_labels["English"]['__DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_HISPMD_CHART_VISUALIZATIONS__TITLE_______STYLE__________HTML__BODY_______________MARGIN__0______________PADDING__0______________WIDTH__100_______________HEIGHT__100_______________DISPLAY__FLEX______________JUSTIFY_CONTENT__CENTER______________ALIGN_ITEMS__CENTER____________________IFRAME_______________BORDER__NONE______________WIDTH__100_______________HEIGHT__100VH_____________________MEDIA__MAX_WIDTH__768PX________________IFRAME___________________HEIGHT__80VH_____ADJUST_HEIGHT_FOR_SMALLER_SCREENS_____________________________________MEDIA__MAX_WIDTH__480PX________________IFRAME___________________HEIGHT__70VH_____FURTHER_ADJUST_FOR_MOBILE_DEVICES__________________________________STYLE____HEAD___BODY_______IFRAME_________ID__HISPMD_IFRAME__________SRC_____API__VISUALIZATION_________SRC__HTTPS___HISPMD_MERQCONSULTANCY_ORG_API_VISUALIZATION______________ALLOWTRANSPARENCY___IFRAME____BODY____HTML__'] = "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>HISPMD Chart Visualizations</title>
+    <style>
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100vh;
+        }
+        @media (max-width: 768px) {
+            iframe {
+                height: 80vh; /* Adjust height for smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            iframe {
+                height: 70vh; /* Further adjust for mobile devices */
+            }
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        id=\"hispmd-iframe\"
+        src=\"../api//visualization/\"
+		<!--src=\"https://hispmd.merqconsultancy.org/api/visualization/\"-->
+        allowtransparency></iframe>
+<!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
+</body>
+</html>
+";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -836,9 +912,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "651_1727801013";
+$projectBuildKey = "653_1727801013";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "651";
+$projectBuildNumber = "653";
 
 $mlang_messages = array();
 $mlang_charsets = array();

@@ -6,9 +6,9 @@ $tdataindicators_dashboard[".OwnerID"] = "";
 $tdataindicators_dashboard[".OriginalTable"] = "Indicators_Dashboard";
 
 
-$tdataindicators_dashboard[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataindicators_dashboard[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"chart_visualizations\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataindicators_dashboard[".originalPagesByType"] = $tdataindicators_dashboard[".pagesByType"];
-$tdataindicators_dashboard[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataindicators_dashboard[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"chart_visualizations\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataindicators_dashboard[".originalPages"] = $tdataindicators_dashboard[".pages"];
 $tdataindicators_dashboard[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataindicators_dashboard[".originalDefaultPages"] = $tdataindicators_dashboard[".defaultPages"];
