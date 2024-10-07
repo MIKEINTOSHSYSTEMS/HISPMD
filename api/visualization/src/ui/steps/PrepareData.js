@@ -79,7 +79,8 @@ chartEditor.ui.steps.PrepareData.prototype.createDom = function() {
     {
       id: 'file-json',
       type: 'upload',
-      caption: 'JSON File',
+      //caption: 'JSON File',
+      caption: 'Click OK to Load Data',
       icon: './icons/pngs/json-file.png'
     },
     {

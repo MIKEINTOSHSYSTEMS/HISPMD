@@ -1,6 +1,7 @@
 <?php
 // API URL to fetch the data
 $api_url = 'https://hispmd.merqconsultancy.org/app/api/v1.php?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=indicators_dashboard&action=list';
+//$api_url = 'https://hispmd.merqconsultancy.org/app/api/v1.php?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=indicators_dashboard&action=list';
 
 // Fetch the data from the API
 $response = file_get_contents($api_url);

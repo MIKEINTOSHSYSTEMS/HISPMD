@@ -1,4 +1,4 @@
-﻿Indicator Group,Indicator Name,Baseline,Target,Facility Type,Data Source,Assessment,Administration Unit,Year,Scope,Region,Gender/Sex,Value,Data Representation
+﻿IndicatorGroup,IndicatorName,Baseline,Target,FacilityType,DataSource,Assessment,AdministrationUnit,Year,Scope,Region,Sex,Value,DataRepresentation
 Data Quality,Proportion of health administration units that conducted Routine Data quality assessments (RDQA),,,,PRISM Assessment,PRISM Assessment,WorHO,2024,National,,,6,Percent
 Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Oromia,,83,Percent
 Data Quality,Reporting completeness - Representative,,,,Admin Report,Admin Report,,2023,Regional,Amhara,,94,Percent
