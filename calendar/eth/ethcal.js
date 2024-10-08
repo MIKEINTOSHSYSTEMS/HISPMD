@@ -4,16 +4,20 @@ function showTime() {
     const m = String(date.getMinutes()).padStart(2, '0');
     const s = String(date.getSeconds()).padStart(2, '0');
     let session = "ከጠዋቱ";
-
+    // ከሌሊቱ ከጠዋቱ ከረፋዱ ከቀኑ ከምሽቱ
     // Determine the time period
     if (h >= 0 && h < 6) {
         session = "ከሌሊቱ";
     } else if (h >= 6 && h < 12) {
         session = "ከጠዋቱ";
     } else if (h >= 12 && h < 18) {
+        session = "ከረፋዱ";
+    } else if (h >= 18 && h < 24) {
         session = "ከቀኑ";
-    } else {
+    } else if (h >= 24 && h < 30) {
         session = "ከምሽቱ";
+    } else {
+        session = "ሰዓቱ";
     }
 
     // Convert to 12-hour format if needed

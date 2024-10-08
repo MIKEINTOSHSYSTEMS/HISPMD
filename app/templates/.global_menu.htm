@@ -572,39 +572,7 @@
 ">
 		 
 		<span data-itemtype="text" data-itemid="text7" {$item_text7} data-pageid="{$pageid}" data-small > 
-	<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
 
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-አሁን ሰዓቱ
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  <script  src="../../calendar/eth/ethcal.js"></script>
-
-<br>
-
-</span>
-		</div>			 
-				<div 
-	data-cellId="above-grid_c7" data-pageid="{$pageid}"	{$cell_above-grid_c7}
-	class="r-align-center r-ori-vert			col-md-6
-	
-">
-		 
-		<span data-itemtype="text" data-itemid="text9" {$item_text9} data-pageid="{$pageid}" data-small > 
-	<link rel="stylesheet" href="../../calendar/eth/ethcal.css">
-
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel="stylesheet" href="./calendar/eth/ethcal.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-Current Time
-  <div id="GregClockDisplay" class="clock" onload="showTimeGreg()"></div>
-  <script  src="../../calendar/eth/ethcalgreg.js"></script>
-
-
-<br></span>
 		</div>					</div>
 			 
 				<div class="row">
@@ -614,9 +582,9 @@ Current Time
 	class="r-align-center			col-md-12
 	
 ">
-		 
+	<!--
 		<img src="{$file_url images/MOH_logo_text_250.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
-	 
+	-->
 		<span data-itemtype="text" data-itemid="text10" {$item_text10} data-pageid="{$pageid}" data-small > 
 		<br>
 	<br>
@@ -635,7 +603,7 @@ Current Time
 	class="r-align-center			col-md-12
 	
 ">
-		 
+<!-- 
 		<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-small > 
 	<br><br><h2><strong>MENU</strong></h2></span>
 	 
@@ -652,7 +620,7 @@ Current Time
 	<p><strong>DHIS2</strong></p></span>
 	 
 		<span data-itemtype="text" data-itemid="text6" {$item_text6} data-pageid="{$pageid}" data-small > 
-	<p><strong><em>NEW MENU</em></strong></p></span>
+	<p><strong><em>NEW MENU</em></strong></p></span>-->
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -663,7 +631,9 @@ Current Time
 	{$grid_tabs_content}
   </ul>
 {END grid_tabs}
-					{BEGIN grid_block}
+					
+<!--
+{BEGIN grid_block}
 <table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
 						<tbody>
 			
@@ -1746,6 +1716,7 @@ Current Time
 					</tbody>
 				</table>
 {END grid_block}
+			-->
 	</div>
 <div class="r-below">
 			</div>
