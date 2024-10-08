@@ -77,87 +77,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_region_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
-			<label>{$label public_moh_regions region_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_region_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
-						</div>
-		{END searchCtrlBlock_region_id}
-																{BEGIN searchCtrlBlock_region_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_region_name}" {$filterRow_attrs_region_name}>
-			<label>{$label public_moh_regions region_name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_region_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_region_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_region_name}</span>
-						</div>
-		{END searchCtrlBlock_region_name}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -467,11 +386,164 @@
 				<div class="row">
 			 
 				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
+	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_region_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
+			<label>{$label public_moh_regions region_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
+						</div>
+		{END searchCtrlBlock_region_id}
+																{BEGIN searchCtrlBlock_map}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_map}" {$filterRow_attrs_map}>
+			<label>{$label public_moh_regions map }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_map}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_map}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_map}</span>
+						</div>
+		{END searchCtrlBlock_map}
+																{BEGIN searchCtrlBlock_code}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_code}" {$filterRow_attrs_code}>
+			<label>{$label public_moh_regions code }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_code}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_code}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_code}</span>
+						</div>
+		{END searchCtrlBlock_code}
+																{BEGIN searchCtrlBlock_lng}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_lng}" {$filterRow_attrs_lng}>
+			<label>{$label public_moh_regions lng }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_lng}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_lng}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_lng}</span>
+						</div>
+		{END searchCtrlBlock_lng}
+																{BEGIN searchCtrlBlock_lat}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_lat}" {$filterRow_attrs_lat}>
+			<label>{$label public_moh_regions lat }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_lat}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_lat}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_lat}</span>
+						</div>
+		{END searchCtrlBlock_lat}
+																{BEGIN searchCtrlBlock_region_alternate}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_alternate}" {$filterRow_attrs_region_alternate}>
+			<label>{$label public_moh_regions region_alternate }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_alternate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_alternate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_alternate}</span>
+						</div>
+		{END searchCtrlBlock_region_alternate}
+																{BEGIN searchCtrlBlock_region_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_name}" {$filterRow_attrs_region_name}>
+			<label>{$label public_moh_regions region_name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_name}</span>
+						</div>
+		{END searchCtrlBlock_region_name}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class="			col-md-6
 	
 ">
-		{BEGIN firstAboveGridCell}
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
@@ -488,8 +560,7 @@
 							{mlang_message DELETE}			</a>
 </span>
 {END deleteselected_link}
-			{END firstAboveGridCell}	
-	</div>			 
+		</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6
@@ -616,6 +687,21 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_name"]:before {
 		content: "{$label public_moh_regions region_name}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_alternate"]:before {
+		content: "{$label public_moh_regions region_alternate}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="lat"]:before {
+		content: "{$label public_moh_regions lat}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="lng"]:before {
+		content: "{$label public_moh_regions lng}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="code"]:before {
+		content: "{$label public_moh_regions code}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="map"]:before {
+		content: "{$label public_moh_regions map}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -699,7 +785,7 @@
 	 
 		{BEGIN region_id_fieldheadercolumn}
 	{BEGIN region_id_fieldheader}
-	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
+	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
 	{$label public_moh_regions region_id }	{$arrow_icon_region_id}
 	</SPAN>
 	{END region_id_fieldheader}
@@ -724,13 +810,136 @@
 	 
 		{BEGIN region_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_name" data-fieldname="region_name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_name" data-fieldname="region_name">
 	{$label public_moh_regions region_name }	</span>
 {END region_name_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$region_alternate_class}	"
+
+			data-field="region_alternate"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN region_alternate_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_alternate" data-fieldname="region_alternate">
+	{$label public_moh_regions region_alternate }	</span>
+{END region_alternate_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lat_class}	"
+
+			data-field="lat"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lat_fieldheadercolumn}
+	{BEGIN lat_fieldheader}
+	<SPAN {$lat_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lat" data-fieldname="lat">
+	{$label public_moh_regions lat }	{$arrow_icon_lat}
+	</SPAN>
+	{END lat_fieldheader}
+{END lat_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lng_class}	"
+
+			data-field="lng"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lng_fieldheadercolumn}
+	{BEGIN lng_fieldheader}
+	<SPAN {$lng_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lng" data-fieldname="lng">
+	{$label public_moh_regions lng }	{$arrow_icon_lng}
+	</SPAN>
+	{END lng_fieldheader}
+{END lng_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$code_class}	"
+
+			data-field="code"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN code_fieldheadercolumn}
+	{BEGIN code_fieldheader}
+	<SPAN {$code_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="code" data-fieldname="code">
+	{$label public_moh_regions code }	{$arrow_icon_code}
+	</SPAN>
+	{END code_fieldheader}
+{END code_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+			data-field="map"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN map_fieldheadercolumn}
+	{BEGIN map_fieldheader}
+	<SPAN {$map_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="map" data-fieldname="map">
+	{$label public_moh_regions map }	{$arrow_icon_map}
+	</SPAN>
+	{END map_fieldheader}
+{END map_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
 							</tr>
 																				
 					{END grid_header}
@@ -912,6 +1121,111 @@
 {END region_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$region_alternate_class}	"
+
+			data-field="region_alternate"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN region_alternate_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_alternate" data-fieldname="region_alternate" data-default-width >
+{$region_alternate_value}
+</span>
+{END region_alternate_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lat_class}	"
+
+			data-field="lat"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lat_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lat" data-fieldname="lat" data-default-width >
+{$lat_value}
+</span>
+{END lat_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lng_class}	"
+
+			data-field="lng"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lng_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lng" data-fieldname="lng" data-default-width >
+{$lng_value}
+</span>
+{END lng_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$code_class}	"
+
+			data-field="code"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN code_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="code" data-fieldname="code" data-default-width >
+{$code_value}
+</span>
+{END code_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+			data-field="map"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN map_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="map" data-fieldname="map" data-default-width >
+{$map_value}
+</span>
+{END map_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1029,6 +1343,81 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$region_alternate_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lat_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lng_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$code_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
 							</tr>
 					
 					</tfoot>

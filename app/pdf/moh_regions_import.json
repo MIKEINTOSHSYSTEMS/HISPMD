@@ -111,6 +111,21 @@ pdfDocument = {
 				
 			{"text":{$region_name_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
+				
+			{"text":{$region_alternate_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$lat_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$lng_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$code_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$map_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -171,6 +171,21 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_moh_regions region_name }","bold":true},{"text":{$region_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_moh_regions region_alternate }","bold":true},{"text":{$region_alternate_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_moh_regions lat }","bold":true},{"text":{$lat_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_moh_regions lng }","bold":true},{"text":{$lng_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_moh_regions code }","bold":true},{"text":{$code_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_regions map }","bold":true},{"text":{$map_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

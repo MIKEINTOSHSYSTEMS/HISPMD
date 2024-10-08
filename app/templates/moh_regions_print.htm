@@ -113,7 +113,7 @@
 	 
 		{BEGIN region_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
 	{$label public_moh_regions region_id }	</span>
 {END region_id_fieldheadercolumn}
 
@@ -136,13 +136,128 @@
 	 
 		{BEGIN region_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_name" data-fieldname="region_name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_name" data-fieldname="region_name">
 	{$label public_moh_regions region_name }	</span>
 {END region_name_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$region_alternate_class}	"
+
+			data-field="region_alternate"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN region_alternate_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_alternate" data-fieldname="region_alternate">
+	{$label public_moh_regions region_alternate }	</span>
+{END region_alternate_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lat_class}	"
+
+			data-field="lat"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lat_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lat" data-fieldname="lat">
+	{$label public_moh_regions lat }	</span>
+{END lat_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lng_class}	"
+
+			data-field="lng"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lng_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lng" data-fieldname="lng">
+	{$label public_moh_regions lng }	</span>
+{END lng_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$code_class}	"
+
+			data-field="code"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN code_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="code" data-fieldname="code">
+	{$label public_moh_regions code }	</span>
+{END code_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+			data-field="map"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN map_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="map" data-fieldname="map">
+	{$label public_moh_regions map }	</span>
+{END map_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
 							</tr>
 																				
 					{END grid_header}
@@ -196,6 +311,111 @@
 {END region_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$region_alternate_class}	"
+
+			data-field="region_alternate"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN region_alternate_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_alternate" data-fieldname="region_alternate" data-default-width >
+{$region_alternate_value}
+</span>
+{END region_alternate_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lat_class}	"
+
+			data-field="lat"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lat_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lat" data-fieldname="lat" data-default-width >
+{$lat_value}
+</span>
+{END lat_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lng_class}	"
+
+			data-field="lng"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lng_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lng" data-fieldname="lng" data-default-width >
+{$lng_value}
+</span>
+{END lng_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$code_class}	"
+
+			data-field="code"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN code_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="code" data-fieldname="code" data-default-width >
+{$code_value}
+</span>
+{END code_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+			data-field="map"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN map_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="map" data-fieldname="map" data-default-width >
+{$map_value}
+</span>
+{END map_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -264,6 +484,81 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$region_alternate_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lat_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$lng_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$code_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
 							</tr>
 					
 					</tfoot>

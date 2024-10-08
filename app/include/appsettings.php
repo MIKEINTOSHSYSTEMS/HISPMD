@@ -97,7 +97,7 @@ $custom_labels["Amharic"] = array();
 <body>
     <iframe
         id=\"hispmd-iframe\"
-        src=\"../api//visualization/\"
+        src=\"../api/visualization/\"
 		<!--src=\"https://hispmd.merqconsultancy.org/api/visualization/\"-->
         allowtransparency></iframe>
 <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
@@ -191,7 +191,7 @@ How can we help you?
 <body>
     <iframe
         id=\"hispmd-iframe\"
-        src=\"../api//visualization/\"
+        src=\"../api/visualization/\"
 		<!--src=\"https://hispmd.merqconsultancy.org/api/visualization/\"-->
         allowtransparency></iframe>
 <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
@@ -904,9 +904,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "654_1727801013";
+$projectBuildKey = "655_1728397176";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "654";
+$projectBuildNumber = "655";
 
 $mlang_messages = array();
 $mlang_charsets = array();

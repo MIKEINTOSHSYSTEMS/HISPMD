@@ -33,6 +33,12 @@ class ViewUserControl extends ViewControl
 		// For build we need to add RunnerAll.js
 		//$this->AddJSFile("include/runnerJS/controls/".$this->viewFormat.".js", 'include/runnerJS/viewControls/ViewControl.js');
 		
+					if($this->container->tName=="public.moh_regions" && $this->field=="code")
+		{
+			$this->settings["qr_height"] = 128; // qr height/px
+$this->settings["qr_width"] = 128; // qr width/px;
+		}	
+		$this->addViewPluginJSControl("ViewQRCode");
 	}
 
 	/**
