@@ -5138,8 +5138,8 @@ a.thumbnail.active {
   color: #e6e6e6;
 }
 .alert-info {
-  background-color: #3498DB;
-  border-color: #3498DB;
+  background-color: transparent; /*#3498DB;*/
+  border-color: transparent;/*#3498DB;*/
   color: #fff;
 }
 .alert-info hr {
