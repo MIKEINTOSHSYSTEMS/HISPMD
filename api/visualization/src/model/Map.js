@@ -196,7 +196,7 @@ chartEditor.model.Map.prototype.initGeoData = function() {
     });
 
     var self = this;
-    goog.net.XhrIo.send('https://cdn.anychart.com/anydata/geo/index.json',
+    goog.net.XhrIo.send('./data/geo/index.json',
         function(e) {
           var xhr = e.target;
           var indexJson = xhr.getResponseJson();

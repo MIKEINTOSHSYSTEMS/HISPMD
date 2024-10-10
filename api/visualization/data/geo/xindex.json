@@ -1,0 +1,77 @@
+{
+    "id": "anychart_geo",
+    "name": "AnyChart Geo Data",
+    "type": "json",
+    "sets": [
+        {
+            "id": "0",
+            "logo": "/custom/world/world.svg",
+            "name": "World",
+            "data": "/custom/world/world.json",
+            "priority": "0"
+        },
+        {
+            "id": "1",
+            "logo": "/countries/united_states_of_america/united_states_of_america.svg",
+            "name": "United States Of America",
+            "data": "/countries/united_states_of_america/united_states_of_america.json",
+            "priority": "1"
+        },
+        {
+            "id": "2",
+            "logo": "/countries/china/china.svg",
+            "name": "China",
+            "data": "/countries/china/china.json",
+            "priority": "2"
+        },
+        {
+            "id": "3",
+            "logo": "/countries/australia/australia.svg",
+            "name": "Australia",
+            "data": "/countries/australia/australia.json",
+            "priority": "3"
+        },
+        {
+            "id": "4",
+            "logo": "/countries/india/india.svg",
+            "name": "India",
+            "data": "/countries/india/india.json",
+            "priority": "4"
+        },
+        {
+            "id": "5",
+            "logo": "/countries/united_kingdom/united_kingdom.svg",
+            "name": "United Kingdom",
+            "data": "/countries/united_kingdom/united_kingdom.json",
+            "priority": "5"
+        },
+        {
+            "id": "6",
+            "logo": "/countries/italy/italy.svg",
+            "name": "Italy",
+            "data": "/countries/italy/italy.json",
+            "priority": "6"
+        },
+        {
+            "id": "7",
+            "logo": "/countries/france/france.svg",
+            "name": "France",
+            "data": "/countries/france/france.json",
+            "priority": "7"
+        },
+        {
+            "id": "8",
+            "logo": "/countries/brazil/brazil.svg",
+            "name": "Brazil",
+            "data": "/countries/brazil/brazil.json",
+            "priority": "8"
+        },
+        {
+            "id": "9",
+            "logo": "/countries/japan/japan.svg",
+            "name": "Japan",
+            "data": "/countries/japan/japan.json",
+            "priority": "9"
+        }
+    ]
+}

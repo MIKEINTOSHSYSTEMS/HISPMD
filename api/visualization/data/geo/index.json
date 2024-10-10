@@ -1,0 +1,14 @@
+{
+    "id": "anychart_geo",
+    "name": "AnyChart Geo Data",
+    "type": "json",
+    "sets": [
+        {
+            "id": "0",
+            "logo": "/api/visualization/data/geo/maps/Ethiopia_Regions.svg",
+            "name": "Ethiopia",
+            "data": "/api/visualization/data/geo/maps/ethiopia.json",
+            "priority": "0"
+        }
+    ]
+}

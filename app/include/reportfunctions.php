@@ -865,6 +865,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="hispmd_indicators_data")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1553,6 +1557,10 @@ function getCaptionTable($table)
 	if($table=="Indicators_Dashboard")
 	{
 		return GetTableCaption("Indicators_Dashboard");
+	}
+	if($table=="hispmd_indicators_data")
+	{
+		return GetTableCaption("hispmd_indicators_data");
 	}
 	return $table;
 }

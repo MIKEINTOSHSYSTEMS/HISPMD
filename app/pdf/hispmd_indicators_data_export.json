@@ -1,0 +1,166 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel hispmd_indicators_data export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Indicator_Group_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Indicator_Name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Baseline_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Target_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Data_Source_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Assessment_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Administration_Unit_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Year_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Scope_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Region_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Gender_Sex_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Data_Representation_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

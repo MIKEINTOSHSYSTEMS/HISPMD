@@ -838,6 +838,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="hispmd_indicators_data")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1625,6 +1629,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Indicators_Dashboard")
+		{
+			return false;
+		}
+		if($table=="hispmd_indicators_data")
 		{
 			return false;
 		}
