@@ -9,6 +9,7 @@
 /api/database/backup
 /api/database/backups
 /api/viz/
+/api/indicators/
 /maps/geojson/
 /maps/geojson/regions
 /app/templates_c/*.csv
