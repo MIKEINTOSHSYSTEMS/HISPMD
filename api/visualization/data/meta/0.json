@@ -1,0 +1,80 @@
+{
+    "name": "Reporting Timeliness by Region",
+    "data": [
+        {
+            "region": "Addis Ababa",
+            "value": "43"
+        },
+        {
+            "region": "Afar",
+            "value": "22"
+        },
+        {
+            "region": "Amhara",
+            "value": "58"
+        },
+        {
+            "region": "Benishangul-Gumuz",
+            "value": "17"
+        },
+        {
+            "region": "Dire Dawa",
+            "value": "36"
+        },
+        {
+            "region": "Gambella",
+            "value": "12"
+        },
+        {
+            "region": "Harari",
+            "value": "78"
+        },
+        {
+            "region": "Oromia",
+            "value": "44"
+        },
+        {
+            "region": "Sidama",
+            "value": "28"
+        },
+        {
+            "region": "Somali",
+            "value": "23"
+        },
+        {
+            "region": "South Ethiopia",
+            "value": "34"
+        },
+        {
+            "region": "South West Ethiopia",
+            "value": "25"
+        }
+    ],
+    "chartType": "bar",
+    "defaults": [
+        {
+            "key": [
+                [
+                    "chart"
+                ],
+                [
+                    "settings"
+                ],
+                "title().enabled()"
+            ],
+            "value": true
+        },
+        {
+            "key": [
+                [
+                    "chart"
+                ],
+                [
+                    "settings"
+                ],
+                "title().text()"
+            ],
+            "value": "Reporting Timeliness by Region"
+        }
+    ]
+}
