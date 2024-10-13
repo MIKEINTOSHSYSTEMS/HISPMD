@@ -1,7 +1,7 @@
 <?php
 
 // URL and API key for the request
-$url = "https://viz.hispmd.merqconsultancy.org/api/card/90/query/json";
+$url = "https://viz.hispmd.merqconsultancy.org/api/card/113/query/json";
 $apiKey = "mb_NzG94LIVWHnYl75pRAemxffT0/EhYIC5ssI6HIdqMTM=";
 
 // Data to be sent in the POST request
@@ -45,7 +45,8 @@ if ($response === false) {
         $yearString = str_replace(',', '', $item["Year"]); // Remove commas
         $year = (int)$yearString;  // Cast Year directly to integer
 
-        $facilityType = $item["Facility Type → Facility Type Name"];
+        $adminUnit = $item["Unit → Unit Name"];
+        $indicatorName = $item["Indicator → Indicator Name"];
 
         // Continue if year is valid
         if ($year > 0) {  // Ensure the year is positive
@@ -55,12 +56,12 @@ if ($response === false) {
             }
 
             // Initialize the facility type entry if it doesn't exist
-            if (!isset($aggregatedData[$year][$facilityType])) {
-                $aggregatedData[$year][$facilityType] = 0;
+            if (!isset($aggregatedData[$year][$adminUnit])) {
+                $aggregatedData[$year][$adminUnit] = 0;
             }
 
             // Aggregate the values
-            $aggregatedData[$year][$facilityType] += (float)$cleanedValue;
+            $aggregatedData[$year][$adminUnit] += (float)$cleanedValue;
         }
     }
 
@@ -69,9 +70,9 @@ if ($response === false) {
 
     // Create the final output structure
     $output = [
-        "name" => "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+        "name" => "Information use index (average Information Use score) - WorHo",
         "data" => [],
-        "chartType" => "column",
+        "chartType" => "radar",
         "defaults" => [
             [
                 "key" => [["chart"], ["settings"], "title().enabled()"],
@@ -79,17 +80,18 @@ if ($response === false) {
             ],
             [
                 "key" => [["chart"], ["settings"], "title().text()"],
-                "value" => "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)"
+                "value" => "Information use index (average Information Use score) - WorHo"
             ]
         ]
     ];
 
     // Prepare the data for output
     foreach ($aggregatedData as $year => $facilityData) {
-        foreach ($facilityData as $facilityType => $value) {
+        foreach ($facilityData as $adminUnit => $value) {
             $output['data'][] = [
+                //"Indicator" => $indicatorName,
+                "Administration Unit" => $adminUnit,
                 "Year" => $year,  // Use the year directly from the API response
-                "Facility Type" => $facilityType,
                 "value" => $value
                 
             ];

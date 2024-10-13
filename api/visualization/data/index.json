@@ -68,15 +68,15 @@
             "id": "3",
             "logo": "./3.png",
             "sample": "",
-            "name": "System interruption analysis",
-            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "name": "Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)",
+            "description": "This data set provides a Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU) Via Prism Assessment data for single value charts demonstration.",
             "tags": [
-                "Scatter Charts",
+                "Charts",
                 "Marker Chart",
                 "Line Chart",
                 "XY Plot",
-                "Analysis",
-                "Dummy data"
+                "Prism Analysis",
+                "MRU"
             ],
             "source": "HISPMD Charts Common",
             "data": "./3.php",
@@ -87,19 +87,19 @@
         {
             "id": "4",
             "logo": "./4.png",
-            "sample": "https://playground.anychart.com/w53HhM4M",
-            "name": "Acme Corp. apparel sales through different retail channels",
-            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "sample": "",
+            "name": "Information use index (average Information Use score) - WorHo",
+            "description": "This data set provides a Information use index (average Information Use score) - WorHo data for single value charts demonstration.",
             "tags": [
                 "Pie Chart",
                 "Donut Chart",
-                "Acme Corp",
-                "Sales",
-                "Retail",
-                "Dummy data"
+                "HISPMD",
+                "WorHo",
+                "Information Use Score",
+                "Index data"
             ],
             "source": "HISPMD Charts Common",
-            "data": "./4.json",
+            "data": "./4.php",
             "products": [
                 0,
                 1
@@ -108,17 +108,17 @@
         {
             "id": "5",
             "logo": "./5.png",
-            "sample": "https://playground.anychart.com/iorQnr8z",
-            "name": "Analysis of purchase process in web-store",
-            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "sample": "",
+            "name": "Proportion of Births and Deaths Notified",
+            "description": "This data set provides the Proportion of Births and Deaths Notified data for single value charts demonstration.",
             "tags": [
                 "Funnel Chart",
                 "Pyramid Chart",
                 "Analysis",
-                "Dummy data"
+                "Birth and Death Notified data"
             ],
             "source": "HISPMD Charts Common",
-            "data": "./5.json",
+            "data": "./5.php",
             "products": [
                 1
             ]
@@ -127,24 +127,24 @@
             "id": "6",
             "logo": "./6.png",
             "sample": "https://playground.anychart.com/VQjHcmpS",
-            "name": "Life expectancy vs GDP per capita",
-            "description": "This data set provides a dummy data for single value charts demonstration.",
+            "name": "Geographical Map Reporting Timeliness by Region",
+            "description": "This data set provides a Reporting Timeliness by Region data for single value charts demonstration.",
             "tags": [
                 "Bubble Chart",
                 "Choropleth map",
                 "Bubble chart",
-                "GDP per capita",
-                "Life Expectancy",
-                "Real life data"
+                "Timeliness",
+                "Regional",
+                "Reporting data"
             ],
             "source": "HISPMD Charts Common",
-            "data": "./6.json",
+            "data": "./6.php",
             "products": [
                 3
             ]
         },
         {
-            "id": "7",
+            "id": "77",
             "logo": "./7.png",
             "sample": "https://playground.anychart.com/ZdC5wLrc",
             "name": "Top 10 Jobs Salaries Grades Per Year\nCalisota, USA",
@@ -190,178 +190,7 @@
             "products": [
                 3
             ]
-        },
-        {
-            "id": "10",
-            "logo": "./10.png",
-            "sample": "https://playground.anychart.com/pj0SDe5D",
-            "name": "USA National Parks",
-            "description": "This data set provides a real life data for map charts demonstration.",
-            "tags": [
-                "Choropleth Map",
-                "Marker",
-                "Bubble",
-                "coordinates",
-                "Real life data"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./10.json",
-            "products": [
-                3
-            ]
-        },
-        {
-            "id": "11",
-            "logo": "./11.png",
-            "sample": "https://playground.anychart.com/qfPGO1W3",
-            "name": "ACME corp. Indicator Value Flow 2017",
-            "description": "This data set provides a dummy data for waterfall charts demonstration.",
-            "tags": [
-                "waterfall",
-                "flying bricks",
-                "bridge",
-                "cascade",
-                "mario"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./11.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "12",
-            "logo": "./12.png",
-            "sample": "https://playground.anychart.com/7lJkkH91",
-            "name": "Single Series Polar Chart",
-            "description": "This data set provides a dummy data for polar charts demonstration.",
-            "tags": [
-                "polar",
-                "scatter",
-                "cartesian"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./12.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "13",
-            "logo": "./13.png",
-            "sample": "https://playground.anychart.com/ttawqBi3",
-            "name": "Contribution to Overall Sales by Brand",
-            "description": "This data set provides a dummy data for mekko charts demonstration.",
-            "tags": [
-                "mekko",
-                "mosaic",
-                "marimekko",
-                "barmekko"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./13.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "14",
-            "logo": "./14.png",
-            "sample": "https://playground.anychart.com/1t8Cw7kO",
-            "name": "Risk Matrix in Project Server",
-            "description": "This data set provides a dummy data for heat map charts demonstration.",
-            "tags": [
-                "heat map",
-                "heatmap"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./14.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "15",
-            "logo": "./15.png",
-            "sample": "https://playground.anychart.com/6zCq3jJ9",
-            "name": "US population by Biggest Cities",
-            "description": "This data set provides a dummy data for tree map charts demonstration.",
-            "tags": [
-                "tree map",
-                "treemap",
-                "tree"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./15.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "16",
-            "logo": "./16.png",
-            "sample": "https://playground.anychart.com/quoyYTa2",
-            "name": "Simple Thermometer",
-            "description": "This data set provides a dummy data for linear or circular gauge charts demonstration.",
-            "tags": [
-                "gauge",
-                "linear",
-                "circular"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./16.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "17",
-            "logo": "./17.png",
-            "sample": "https://playground.anychart.com/haBJcinU",
-            "name": "Basic Sankey Diagram",
-            "description": "This data set provides a dummy data for basic sankey diagram demonstration.",
-            "tags": [
-                "sankey",
-                "flow",
-                "node"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./17.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "18",
-            "logo": "./18.png",
-            "sample": "https://playground.anychart.com/wnH672BM",
-            "name": "Tag Cloud",
-            "description": "A tag cloud, otherwise known as a word cloud or weighted list, is a visual representation of text data.",
-            "tags": [
-                "tag cloud",
-                "word"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./18.json",
-            "products": [
-                1
-            ]
-        },
-        {
-            "id": "19",
-            "logo": "./19.png",
-            "sample": "https://playground.anychart.com/MEPMaSze/1",
-            "name": "Gantt Project",
-            "description": "Gantt Chart example showing how to customize the size and the position of elements.",
-            "tags": [
-                "gantt",
-                "gantt project"
-            ],
-            "source": "HISPMD Charts Common",
-            "data": "./19.json",
-            "products": [
-                4
-            ]
         }
+        
     ]
 }
