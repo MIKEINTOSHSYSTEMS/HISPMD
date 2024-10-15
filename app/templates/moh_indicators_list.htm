@@ -628,7 +628,21 @@
 					Moh Indicator Data				</label>
 			</div>
 			{END print_details_moh_indicator_data}
-														</div>
+																						{BEGIN print_details_moh_data_sources}
+			<div>
+				<label for="printDetailsmoh_data_sources{$id}">
+					<input type="checkbox" value="moh_data_sources" id="printDetailsmoh_data_sources{$id}" checked>
+					Moh Data Sources				</label>
+			</div>
+			{END print_details_moh_data_sources}
+														{BEGIN print_details_moh_indicators_data_chart}
+			<div>
+				<label for="printDetailsmoh_indicators_data_chart{$id}">
+					<input type="checkbox" value="moh_indicators_data_chart" id="printDetailsmoh_indicators_data_chart{$id}" checked>
+					MOH Indicators Data Chart				</label>
+			</div>
+			{END print_details_moh_indicators_data_chart}
+						</div>
 </div>
 {END print_details}
 				 
@@ -1021,6 +1035,25 @@
 	{END _dtable_link}
 
 
+	 
+		
+		
+	{BEGIN moh_data_sources_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$moh_data_sources_link_attrs} data-short-details="moh_data_sources"
+		class="{$moh_data_sources_dlink_class}" 
+		title="{$caption public_moh_data_sources }"			>
+								
+									{BEGIN moh_data_sources_childcount}
+				<span class="details-badge badge moh_data_sources_badge" {$moh_data_sources_childnumber_attr}>
+					{$moh_data_sources_childnumber}				
+				</span>
+				{END moh_data_sources_childcount}
+						</a>
+	</span>
+	{END moh_data_sources_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1146,17 +1179,23 @@
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="moh_indicator_data,"
-			data-details-moh_indicator_data			data-details-	>
+						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="moh_indicator_data,,moh_data_sources,moh_indicators_data_chart"
+			data-details-moh_indicator_data			data-details-			data-details-moh_data_sources			data-details-moh_indicators_data_chart	>
 		<span data-details-inside data-short-table="moh_indicator_data">
 			</span>
 		<span data-details-inside data-short-table="">
+			</span>
+		<span data-details-inside data-short-table="moh_data_sources">
+			</span>
+		<span data-details-inside data-short-table="moh_indicators_data_chart">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
+			 
 			
 	</td>
 	{END cellblock_grid_cell_dpreview}

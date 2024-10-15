@@ -421,7 +421,21 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	</div>		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -500,6 +514,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
 						</div>
 		{END searchCtrlBlock_data_source_id}
+																{BEGIN searchCtrlBlock_indicator_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
+			<label>{$label public_moh_data_sources indicator_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_id}
 																{BEGIN searchCtrlBlock_data_source_name}
 
 
@@ -634,7 +661,14 @@
 					Moh Indicator Data				</label>
 			</div>
 			{END print_details_moh_indicator_data}
-														</div>
+																						{BEGIN print_details_moh_indicators_data_chart}
+			<div>
+				<label for="printDetailsmoh_indicators_data_chart{$id}">
+					<input type="checkbox" value="moh_indicators_data_chart" id="printDetailsmoh_indicators_data_chart{$id}" checked>
+					MOH Indicators Data Chart				</label>
+			</div>
+			{END print_details_moh_indicators_data_chart}
+						</div>
 </div>
 {END print_details}
 				 
@@ -766,7 +800,7 @@
 	 
 		{BEGIN data_source_id_fieldheadercolumn}
 	{BEGIN data_source_id_fieldheader}
-	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
+	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
 	{$label public_moh_data_sources data_source_id }	{$arrow_icon_data_source_id}
 	</SPAN>
 	{END data_source_id_fieldheader}
@@ -791,13 +825,36 @@
 	 
 		{BEGIN data_source_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_name" data-fieldname="data_source_name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_name" data-fieldname="data_source_name">
 	{$label public_moh_data_sources data_source_name }	</span>
 {END data_source_name_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_id_class}	"
+
+			data-field="indicator_id"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN indicator_id_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
+	{$label public_moh_data_sources indicator_id }	</span>
+{END indicator_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
 							</tr>
 																				
 					{END grid_header}
@@ -979,6 +1036,27 @@
 {END data_source_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_id_class}	"
+
+			data-field="indicator_id"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN indicator_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id" data-default-width >
+{$indicator_id_value}
+</span>
+{END indicator_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -996,17 +1074,20 @@
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="moh_indicator_data,"
-			data-details-moh_indicator_data			data-details-	>
+					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="moh_indicator_data,,moh_indicators_data_chart"
+			data-details-moh_indicator_data			data-details-			data-details-moh_indicators_data_chart	>
 		<span data-details-inside data-short-table="moh_indicator_data">
 			</span>
 		<span data-details-inside data-short-table="">
+			</span>
+		<span data-details-inside data-short-table="moh_indicators_data_chart">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			
 	</td>
 	{END cellblock_grid_cell_dpreview}
@@ -1096,6 +1177,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_id_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_data_sources_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>

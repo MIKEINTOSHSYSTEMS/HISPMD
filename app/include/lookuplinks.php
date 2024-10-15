@@ -565,13 +565,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"] = array();
 		}
 		$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "indicator_id", "page" => "search");
-		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
-			$lookupTableLinks["public.moh_data_sources"] = array();
+		if( !isset( $lookupTableLinks["public.moh_indicator_data"] ) ) {
+			$lookupTableLinks["public.moh_indicator_data"] = array();
 		}
-		if( !isset( $lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"] )) {
-			$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"] = array();
+		if( !isset( $lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.data_source_id"] )) {
+			$lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.data_source_id"] = array();
 		}
-		$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "data_source_id", "page" => "search");
+		$lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.data_source_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "data_source_id", "page" => "search");
 		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
 			$lookupTableLinks["public.moh_assessments"] = array();
 		}

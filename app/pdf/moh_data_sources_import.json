@@ -111,6 +111,9 @@ pdfDocument = {
 				
 			{"text":{$data_source_name_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
+				
+			{"text":{$indicator_id_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

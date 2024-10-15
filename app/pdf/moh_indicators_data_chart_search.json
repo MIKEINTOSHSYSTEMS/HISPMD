@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$data_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$indicator_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
@@ -185,9 +182,6 @@ pdfDocument = {
 				
 				
 			{"text":{$facility_type_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$value_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
 			{"text":{$year_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},

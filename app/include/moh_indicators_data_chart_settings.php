@@ -230,14 +230,12 @@ $tdatamoh_indicators_data_chart[".filterFields"] = array();
 $tdatamoh_indicators_data_chart[".requiredSearchFields"] = array();
 
 $tdatamoh_indicators_data_chart[".googleLikeFields"] = array();
-$tdatamoh_indicators_data_chart[".googleLikeFields"][] = "data_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "indicator_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "data_source_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "assessment_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "region_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "unit_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "facility_type_id";
-$tdatamoh_indicators_data_chart[".googleLikeFields"][] = "value";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "year";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "scope_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "gender_sex";
@@ -264,7 +262,9 @@ $tdatamoh_indicators_data_chart[".chartType"] = "2DColumn";
 $tdatamoh_indicators_data_chart[".isDisplayLoading"] = true;
 
 
+$tdatamoh_indicators_data_chart[".searchIsRequiredForFilters"] = true;
 
+$tdatamoh_indicators_data_chart[".noRecordsFirstPage"] = true;
 
 
 
@@ -711,7 +711,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "data_source_id";
-	$edata["LinkFieldType"] = 3;
+	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "data_source_name";
 
 	
@@ -779,9 +779,8 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 1;
-		$fdata["filterTotalFields"] = "data_id";
-		$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2395,7 +2394,7 @@ $tdatamoh_indicators_data_chart[".chartSeries"][] = array(
 			<attr value="appearance">';
 
 
-	$tdatamoh_indicators_data_chart[".chartXml"] .= '<attr value="head">'.xmlencode("Indicators Data Series By Facility Type Chart").'</attr>
+	$tdatamoh_indicators_data_chart[".chartXml"] .= '<attr value="head">'.xmlencode("Indicators Data Chart").'</attr>
 <attr value="foot">'.xmlencode("Indicators Trend").'</attr>
 <attr value="y_axis_label">'.xmlencode("Indicators Value").'</attr>
 

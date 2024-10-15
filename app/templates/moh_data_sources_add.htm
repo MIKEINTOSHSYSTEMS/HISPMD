@@ -353,6 +353,27 @@
 
 
 {END data_source_name_fieldblock}
+											
+{BEGIN indicator_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_id}  r-vertical-field" 
+	data-signal-error-for="indicator_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="indicator_id" data-fieldname="indicator_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_indicator_id}">
+		{BEGIN indicator_id_label}{$label public_moh_data_sources indicator_id }{END indicator_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$indicator_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="indicator_id">
+		<div class="text-muted" >
+		{$tooltip public_moh_data_sources indicator_id }		</div>
+	</div>
+</div>
+
+
+{END indicator_id_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

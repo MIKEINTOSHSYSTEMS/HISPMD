@@ -346,6 +346,28 @@
 </div>
 
 {END data_source_name_fieldblock}
+											
+{BEGIN indicator_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="indicator_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="indicator_id" data-fieldname="indicator_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_indicator_id}">
+		{$label public_moh_data_sources indicator_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_indicator_id}
+	</div>
+	<div class="r-search-field">
+		{$indicator_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$indicator_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END indicator_id_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
