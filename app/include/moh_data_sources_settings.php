@@ -31,6 +31,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_data_sources["English"]["data_source_name"] = "Data Source Name";
 	$fieldToolTipsmoh_data_sources["English"]["data_source_name"] = "";
 	$placeHoldersmoh_data_sources["English"]["data_source_name"] = "";
+	$fieldLabelsmoh_data_sources["English"]["indicator_id"] = "Indicator Id";
+	$fieldToolTipsmoh_data_sources["English"]["indicator_id"] = "";
+	$placeHoldersmoh_data_sources["English"]["indicator_id"] = "";
 	if (count($fieldToolTipsmoh_data_sources["English"]))
 		$tdatamoh_data_sources[".isUseToolTips"] = true;
 }
@@ -46,6 +49,9 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_data_sources["Amharic"]["data_source_name"] = "የውሂብ ምንጭ ስም";
 	$fieldToolTipsmoh_data_sources["Amharic"]["data_source_name"] = "";
 	$placeHoldersmoh_data_sources["Amharic"]["data_source_name"] = "";
+	$fieldLabelsmoh_data_sources["Amharic"]["indicator_id"] = "Indicator Id";
+	$fieldToolTipsmoh_data_sources["Amharic"]["indicator_id"] = "";
+	$placeHoldersmoh_data_sources["Amharic"]["indicator_id"] = "";
 	if (count($fieldToolTipsmoh_data_sources["Amharic"]))
 		$tdatamoh_data_sources[".isUseToolTips"] = true;
 }
@@ -165,6 +171,7 @@ $tdatamoh_data_sources[".requiredSearchFields"] = array();
 $tdatamoh_data_sources[".googleLikeFields"] = array();
 $tdatamoh_data_sources[".googleLikeFields"][] = "data_source_id";
 $tdatamoh_data_sources[".googleLikeFields"][] = "data_source_name";
+$tdatamoh_data_sources[".googleLikeFields"][] = "indicator_id";
 
 
 
@@ -198,7 +205,7 @@ $tdatamoh_data_sources[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_data_sources[".orderindexes"] = array();
 
 
-$tdatamoh_data_sources[".sqlHead"] = "SELECT data_source_id,  	data_source_name";
+$tdatamoh_data_sources[".sqlHead"] = "SELECT data_source_id,  	data_source_name,  	indicator_id";
 $tdatamoh_data_sources[".sqlFrom"] = "FROM \"public\".moh_data_sources";
 $tdatamoh_data_sources[".sqlWhereExpr"] = "";
 $tdatamoh_data_sources[".sqlTail"] = "";
@@ -527,6 +534,144 @@ $tdatamoh_data_sources[".hideMobileList"] = array();
 
 	$tdatamoh_data_sources["data_source_name"] = $fdata;
 		$tdatamoh_data_sources[".searchableFields"][] = "data_source_name";
+//	indicator_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "indicator_id";
+	$fdata["GoodName"] = "indicator_id";
+	$fdata["ownerTable"] = "public.moh_data_sources";
+	$fdata["Label"] = GetFieldLabel("public_moh_data_sources","indicator_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_id";
+
+		$fdata["sourceSingle"] = "indicator_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_data_sources["indicator_id"] = $fdata;
+		$tdatamoh_data_sources[".searchableFields"][] = "indicator_id";
 
 
 $tables_data["public.moh_data_sources"]=&$tdatamoh_data_sources;
@@ -661,7 +806,7 @@ function createSqlQuery_moh_data_sources()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "data_source_id,  	data_source_name";
+$proto0["m_strFieldList"] = "data_source_id,  	data_source_name,  	indicator_id";
 $proto0["m_strFrom"] = "FROM \"public\".moh_data_sources";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -729,38 +874,53 @@ $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto10=array();
-$proto10["m_link"] = "SQLL_MAIN";
-			$proto11=array();
-$proto11["m_strName"] = "public.moh_data_sources";
-$proto11["m_srcTableName"] = "public.moh_data_sources";
-$proto11["m_columns"] = array();
-$proto11["m_columns"][] = "data_source_id";
-$proto11["m_columns"][] = "data_source_name";
-$obj = new SQLTable($proto11);
+						$proto10=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_id",
+	"m_strTable" => "public.moh_data_sources",
+	"m_srcTableName" => "public.moh_data_sources"
+));
 
-$proto10["m_table"] = $obj;
-$proto10["m_sql"] = "\"public\".moh_data_sources";
-$proto10["m_alias"] = "";
+$proto10["m_sql"] = "indicator_id";
 $proto10["m_srcTableName"] = "public.moh_data_sources";
-$proto12=array();
-$proto12["m_sql"] = "";
-$proto12["m_uniontype"] = "SQLL_UNKNOWN";
+$proto10["m_expr"]=$obj;
+$proto10["m_alias"] = "";
+$obj = new SQLFieldListItem($proto10);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto12=array();
+$proto12["m_link"] = "SQLL_MAIN";
+			$proto13=array();
+$proto13["m_strName"] = "public.moh_data_sources";
+$proto13["m_srcTableName"] = "public.moh_data_sources";
+$proto13["m_columns"] = array();
+$proto13["m_columns"][] = "data_source_id";
+$proto13["m_columns"][] = "data_source_name";
+$proto13["m_columns"][] = "indicator_id";
+$obj = new SQLTable($proto13);
+
+$proto12["m_table"] = $obj;
+$proto12["m_sql"] = "\"public\".moh_data_sources";
+$proto12["m_alias"] = "";
+$proto12["m_srcTableName"] = "public.moh_data_sources";
+$proto14=array();
+$proto14["m_sql"] = "";
+$proto14["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto12["m_column"]=$obj;
-$proto12["m_contained"] = array();
-$proto12["m_strCase"] = "";
-$proto12["m_havingmode"] = false;
-$proto12["m_inBrackets"] = false;
-$proto12["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto12);
+$proto14["m_column"]=$obj;
+$proto14["m_contained"] = array();
+$proto14["m_strCase"] = "";
+$proto14["m_havingmode"] = false;
+$proto14["m_inBrackets"] = false;
+$proto14["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto14);
 
-$proto10["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto10);
+$proto12["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto12);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -776,7 +936,7 @@ $queryData_moh_data_sources = createSqlQuery_moh_data_sources();
 	
 																												;
 
-		
+			
 
 $tdatamoh_data_sources[".sqlquery"] = $queryData_moh_data_sources;
 

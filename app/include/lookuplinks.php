@@ -481,6 +481,41 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"] = array();
 		}
 		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators.indicator_group_id"]["edit"] = array("table" => "public.moh_indicators", "field" => "indicator_group_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"] ) ) {
+			$lookupTableLinks["public.mfr_facilities_register"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.facilitytype"] )) {
+			$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.facilitytype"] = array();
+		}
+		$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.facilitytype"]["edit"] = array("table" => "public.mfr_facilities_register", "field" => "facilitytype", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"] ) ) {
+			$lookupTableLinks["public.mfr_facilities_register"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.parentfacilitytype"] )) {
+			$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.parentfacilitytype"] = array();
+		}
+		$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.parentfacilitytype"]["edit"] = array("table" => "public.mfr_facilities_register", "field" => "parentfacilitytype", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"] ) ) {
+			$lookupTableLinks["public.mfr_facilities_register"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.region"] )) {
+			$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.region"] = array();
+		}
+		$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.region"]["edit"] = array("table" => "public.mfr_facilities_register", "field" => "region", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"] ) ) {
+			$lookupTableLinks["public.mfr_facilities_register"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.zone"] )) {
+			$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.zone"] = array();
+		}
+		$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.zone"]["edit"] = array("table" => "public.mfr_facilities_register", "field" => "zone", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"] ) ) {
+			$lookupTableLinks["public.mfr_facilities_register"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.woreda"] )) {
+			$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.woreda"] = array();
+		}
+		$lookupTableLinks["public.mfr_facilities_register"]["mfr_facilities_register.woreda"]["edit"] = array("table" => "public.mfr_facilities_register", "field" => "woreda", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.hispmd_uggroups"] ) ) {
 			$lookupTableLinks["public.hispmd_uggroups"] = array();
 		}
@@ -565,13 +600,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"] = array();
 		}
 		$lookupTableLinks["public.moh_indicators"]["moh_indicators_data_chart.indicator_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "indicator_id", "page" => "search");
-		if( !isset( $lookupTableLinks["public.moh_indicator_data"] ) ) {
-			$lookupTableLinks["public.moh_indicator_data"] = array();
+		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
+			$lookupTableLinks["public.moh_data_sources"] = array();
 		}
-		if( !isset( $lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.data_source_id"] )) {
-			$lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.data_source_id"] = array();
+		if( !isset( $lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"] )) {
+			$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"] = array();
 		}
-		$lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.data_source_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "data_source_id", "page" => "search");
+		$lookupTableLinks["public.moh_data_sources"]["moh_indicators_data_chart.data_source_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "data_source_id", "page" => "search");
 		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
 			$lookupTableLinks["public.moh_assessments"] = array();
 		}

@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'totals' => array( 'data_source_id' => array( 'totalsType' => '' ),
-'data_source_name' => array( 'totalsType' => '' ) ),
+'data_source_name' => array( 'totalsType' => '' ),
+'indicator_id' => array( 'totalsType' => '' ) ),
 'fields' => array( 'gridFields' => array( 'data_source_id',
 'data_source_name',
 'indicator_id' ),

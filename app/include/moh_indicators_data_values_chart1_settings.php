@@ -2840,6 +2840,11 @@ $proto53["m_srcTableName"] = "MoH_Indicators_Data_Values_Chart";
 $proto53["m_columns"] = array();
 $proto53["m_columns"][] = "region_id";
 $proto53["m_columns"][] = "region_name";
+$proto53["m_columns"][] = "region_alternate";
+$proto53["m_columns"][] = "lat";
+$proto53["m_columns"][] = "lng";
+$proto53["m_columns"][] = "code";
+$proto53["m_columns"][] = "map";
 $obj = new SQLTable($proto53);
 
 $proto52["m_table"] = $obj;
@@ -2910,6 +2915,7 @@ $proto61["m_srcTableName"] = "MoH_Indicators_Data_Values_Chart";
 $proto61["m_columns"] = array();
 $proto61["m_columns"][] = "data_source_id";
 $proto61["m_columns"][] = "data_source_name";
+$proto61["m_columns"][] = "indicator_id";
 $obj = new SQLTable($proto61);
 
 $proto60["m_table"] = $obj;

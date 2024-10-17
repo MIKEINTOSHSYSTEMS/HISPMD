@@ -717,6 +717,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="data_source_name"]:before {
 		content: "{$label public_moh_data_sources data_source_name}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_id"]:before {
+		content: "{$label public_moh_data_sources indicator_id}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -847,9 +850,11 @@
 
 	 
 		{BEGIN indicator_id_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
-	{$label public_moh_data_sources indicator_id }	</span>
+	{BEGIN indicator_id_fieldheader}
+	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
+	{$label public_moh_data_sources indicator_id }	{$arrow_icon_indicator_id}
+	</SPAN>
+	{END indicator_id_fieldheader}
 {END indicator_id_fieldheadercolumn}
 
 	

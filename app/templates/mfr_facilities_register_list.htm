@@ -74,6 +74,167 @@
      
          
 
+			<div class="clearfix  r-ori-vert" data-cellId="left_c" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_name}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
+			<label>{$label public_mfr_facilities_register name }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_name}</span>
+						</div>
+		{END searchCtrlBlock_name}
+																{BEGIN searchCtrlBlock_status}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_status}" {$filterRow_attrs_status}>
+			<label>{$label public_mfr_facilities_register status }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_status}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_status}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_status}</span>
+						</div>
+		{END searchCtrlBlock_status}
+																{BEGIN searchCtrlBlock_operationalstatus}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_operationalstatus}" {$filterRow_attrs_operationalstatus}>
+			<label>{$label public_mfr_facilities_register operationalstatus }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_operationalstatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_operationalstatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_operationalstatus}</span>
+						</div>
+		{END searchCtrlBlock_operationalstatus}
+																{BEGIN searchCtrlBlock_parentfacilitytype}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_parentfacilitytype}" {$filterRow_attrs_parentfacilitytype}>
+			<label>{$label public_mfr_facilities_register parentfacilitytype }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_parentfacilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_parentfacilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_parentfacilitytype}</span>
+						</div>
+		{END searchCtrlBlock_parentfacilitytype}
+																{BEGIN searchCtrlBlock_facilitytype}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_facilitytype}" {$filterRow_attrs_facilitytype}>
+			<label>{$label public_mfr_facilities_register facilitytype }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_facilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_facilitytype}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_facilitytype}</span>
+						</div>
+		{END searchCtrlBlock_facilitytype}
+																{BEGIN searchCtrlBlock_region}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region}" {$filterRow_attrs_region}>
+			<label>{$label public_mfr_facilities_register region }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region}</span>
+						</div>
+		{END searchCtrlBlock_region}
+																{BEGIN searchCtrlBlock_zone}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_zone}" {$filterRow_attrs_zone}>
+			<label>{$label public_mfr_facilities_register zone }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_zone}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_zone}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_zone}</span>
+						</div>
+		{END searchCtrlBlock_zone}
+																{BEGIN searchCtrlBlock_woreda}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_woreda}" {$filterRow_attrs_woreda}>
+			<label>{$label public_mfr_facilities_register woreda }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_woreda}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_woreda}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_woreda}</span>
+						</div>
+		{END searchCtrlBlock_woreda}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+     
+     
+         
+
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
@@ -348,7 +509,7 @@
 {END supertop_block}
 						{$locking}
 				</div>
-				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
 					{$header}
 					<div class="r-top">
 									{BEGIN top_block}
@@ -378,176 +539,7 @@
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
-	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_name}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_name}" {$filterRow_attrs_name}>
-			<label>{$label public_mfr_facilities_register name }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_name}</span>
-						</div>
-		{END searchCtrlBlock_name}
-																{BEGIN searchCtrlBlock_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
-			<label>{$label public_mfr_facilities_register id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
-						</div>
-		{END searchCtrlBlock_id}
-																{BEGIN searchCtrlBlock_status}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_status}" {$filterRow_attrs_status}>
-			<label>{$label public_mfr_facilities_register status }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_status}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_status}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_status}</span>
-						</div>
-		{END searchCtrlBlock_status}
-																{BEGIN searchCtrlBlock_operationalstatus}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_operationalstatus}" {$filterRow_attrs_operationalstatus}>
-			<label>{$label public_mfr_facilities_register operationalstatus }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_operationalstatus}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_operationalstatus}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_operationalstatus}</span>
-						</div>
-		{END searchCtrlBlock_operationalstatus}
-																{BEGIN searchCtrlBlock_parentfacilitytype}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_parentfacilitytype}" {$filterRow_attrs_parentfacilitytype}>
-			<label>{$label public_mfr_facilities_register parentfacilitytype }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_parentfacilitytype}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_parentfacilitytype}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_parentfacilitytype}</span>
-						</div>
-		{END searchCtrlBlock_parentfacilitytype}
-																{BEGIN searchCtrlBlock_facilitytype}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_facilitytype}" {$filterRow_attrs_facilitytype}>
-			<label>{$label public_mfr_facilities_register facilitytype }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_facilitytype}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_facilitytype}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_facilitytype}</span>
-						</div>
-		{END searchCtrlBlock_facilitytype}
-																{BEGIN searchCtrlBlock_region}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_region}" {$filterRow_attrs_region}>
-			<label>{$label public_mfr_facilities_register region }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_region}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_region}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_region}</span>
-						</div>
-		{END searchCtrlBlock_region}
-																{BEGIN searchCtrlBlock_zone}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_zone}" {$filterRow_attrs_zone}>
-			<label>{$label public_mfr_facilities_register zone }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_zone}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_zone}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_zone}</span>
-						</div>
-		{END searchCtrlBlock_zone}
-																{BEGIN searchCtrlBlock_woreda}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_woreda}" {$filterRow_attrs_woreda}>
-			<label>{$label public_mfr_facilities_register woreda }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_woreda}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_woreda}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_woreda}</span>
-						</div>
-		{END searchCtrlBlock_woreda}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			{END firstAboveGridCell}	
+				{END firstAboveGridCell}	
 	</div>					</div>
 			 
 				<div class="row">
@@ -682,62 +674,11 @@
 
 
 
-{BEGIN filter_control_name}
-
-	<div class="dropdown filter-field filter-name-container" {BEGIN filter_selected_name} data-selected {END filter_selected_name}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_name}
-			<a href="#" class="filter-clear filter-clear-name" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_name}
-			<span class="r-filter-field">{$label public_mfr_facilities_register name }				{BEGIN filter_selected_name}:{END filter_selected_name}
-			</span>
-			{BEGIN filter_selected_name}
-			<span class="r-filter-value">{$filtervalue_name}</span>
-			{END filter_selected_name}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_name}
-		<li class=" filter-values filter-values-name  {$visibilityClass_name}">
-			{$name_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_name}
-
-			{BEGIN filter_button_showmore_name}
-		<li class=" filter-show-more {$collapsedClass_name} {$showMoreBtnClass_name}">
-			<a class="filter-show-more-link filterShowMore_name" href="#">{$show_n_more_name}</a>
-		</li>
-		{END filter_button_showmore_name}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_name}
-
-
-
-
-
-
 {BEGIN filter_control_status}
 
 	<div class="dropdown filter-field filter-status-container" {BEGIN filter_selected_status} data-selected {END filter_selected_status}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-status" type="checkbox" name="selectAll" {$selectAll_attrs_status} />
 						{BEGIN clearLink_status}
 			<a href="#" class="filter-clear filter-clear-status" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -762,7 +703,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_status}
 
@@ -774,6 +714,11 @@
 	
 
 
+			{BEGIN filter_button_apply_status}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_status}">
+			<a href="#" class="filter-btn-apply filter-apply-status" {$filterbutton_attrs_status}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_status}
 	
 
 			</ul>
@@ -790,6 +735,7 @@
 
 	<div class="dropdown filter-field filter-operationalstatus-container" {BEGIN filter_selected_operationalstatus} data-selected {END filter_selected_operationalstatus}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-operationalstatus" type="checkbox" name="selectAll" {$selectAll_attrs_operationalstatus} />
 						{BEGIN clearLink_operationalstatus}
 			<a href="#" class="filter-clear filter-clear-operationalstatus" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -814,7 +760,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_operationalstatus}
 
@@ -826,6 +771,11 @@
 	
 
 
+			{BEGIN filter_button_apply_operationalstatus}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_operationalstatus}">
+			<a href="#" class="filter-btn-apply filter-apply-operationalstatus" {$filterbutton_attrs_operationalstatus}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_operationalstatus}
 	
 
 			</ul>
@@ -842,6 +792,7 @@
 
 	<div class="dropdown filter-field filter-parentfacilitytype-container" {BEGIN filter_selected_parentfacilitytype} data-selected {END filter_selected_parentfacilitytype}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-parentfacilitytype" type="checkbox" name="selectAll" {$selectAll_attrs_parentfacilitytype} />
 						{BEGIN clearLink_parentfacilitytype}
 			<a href="#" class="filter-clear filter-clear-parentfacilitytype" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -866,7 +817,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_parentfacilitytype}
 
@@ -878,6 +828,11 @@
 	
 
 
+			{BEGIN filter_button_apply_parentfacilitytype}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_parentfacilitytype}">
+			<a href="#" class="filter-btn-apply filter-apply-parentfacilitytype" {$filterbutton_attrs_parentfacilitytype}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_parentfacilitytype}
 	
 
 			</ul>
@@ -894,6 +849,7 @@
 
 	<div class="dropdown filter-field filter-facilitytype-container" {BEGIN filter_selected_facilitytype} data-selected {END filter_selected_facilitytype}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-facilitytype" type="checkbox" name="selectAll" {$selectAll_attrs_facilitytype} />
 						{BEGIN clearLink_facilitytype}
 			<a href="#" class="filter-clear filter-clear-facilitytype" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -918,7 +874,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_facilitytype}
 
@@ -930,6 +885,11 @@
 	
 
 
+			{BEGIN filter_button_apply_facilitytype}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_facilitytype}">
+			<a href="#" class="filter-btn-apply filter-apply-facilitytype" {$filterbutton_attrs_facilitytype}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_facilitytype}
 	
 
 			</ul>
@@ -946,6 +906,7 @@
 
 	<div class="dropdown filter-field filter-region-container" {BEGIN filter_selected_region} data-selected {END filter_selected_region}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-region" type="checkbox" name="selectAll" {$selectAll_attrs_region} />
 						{BEGIN clearLink_region}
 			<a href="#" class="filter-clear filter-clear-region" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -970,7 +931,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_region}
 
@@ -982,6 +942,11 @@
 	
 
 
+			{BEGIN filter_button_apply_region}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_region}">
+			<a href="#" class="filter-btn-apply filter-apply-region" {$filterbutton_attrs_region}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_region}
 	
 
 			</ul>
@@ -998,6 +963,7 @@
 
 	<div class="dropdown filter-field filter-zone-container" {BEGIN filter_selected_zone} data-selected {END filter_selected_zone}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-zone" type="checkbox" name="selectAll" {$selectAll_attrs_zone} />
 						{BEGIN clearLink_zone}
 			<a href="#" class="filter-clear filter-clear-zone" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1022,7 +988,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_zone}
 
@@ -1034,6 +999,11 @@
 	
 
 
+			{BEGIN filter_button_apply_zone}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_zone}">
+			<a href="#" class="filter-btn-apply filter-apply-zone" {$filterbutton_attrs_zone}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_zone}
 	
 
 			</ul>
@@ -1050,6 +1020,7 @@
 
 	<div class="dropdown filter-field filter-woreda-container" {BEGIN filter_selected_woreda} data-selected {END filter_selected_woreda}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-woreda" type="checkbox" name="selectAll" {$selectAll_attrs_woreda} />
 						{BEGIN clearLink_woreda}
 			<a href="#" class="filter-clear filter-clear-woreda" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
@@ -1074,7 +1045,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_woreda}
 
@@ -1086,6 +1056,11 @@
 	
 
 
+			{BEGIN filter_button_apply_woreda}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_woreda}">
+			<a href="#" class="filter-btn-apply filter-apply-woreda" {$filterbutton_attrs_woreda}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_woreda}
 	
 
 			</ul>
