@@ -9,6 +9,9 @@
 /api/database/backup
 /api/database/backups
 /api/viz/
+/api/widget/
+/api/graphic/
+/api/visualizer/
 /api/indicators/
 /maps/geojson/
 /maps/geojson/regions
