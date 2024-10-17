@@ -1061,21 +1061,16 @@
 					</li>
 		{END filterCtrlBlock_year}
 
-			{BEGIN filter_button_showmore_year}
-		<li class=" filter-show-more {$collapsedClass_year} {$showMoreBtnClass_year}">
-			<a class="filter-show-more-link filterShowMore_year" href="#">{$show_n_more_year}</a>
-		</li>
-		{END filter_button_showmore_year}
 	
 
 
-	
-
-			{BEGIN filter_button_multiselect_year}
+			{BEGIN filter_button_apply_year}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_year}">
-			<a href="#" class="filter-year-btn-multiselect filter-apply-year" {$filterbutton_attrs_year}>{mlang_message FILTER_MULTISELECT}</a>
+			<a href="#" class="filter-btn-apply filter-apply-year" {$filterbutton_attrs_year}>{mlang_message FILTER_APPLY}</a>
 		</li>
-		{END filter_button_multiselect_year}
+		{END filter_button_apply_year}
+	
+
 			</ul>
 	</div>
 

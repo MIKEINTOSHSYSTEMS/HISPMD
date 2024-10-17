@@ -4834,6 +4834,90 @@ function printJSON($data, $returnPlainJSON = false)
 function getIntervalLimitsExprs($table, $field, $idx, $isLowerBound)
 {
 
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && $isLowerBound && $idx == 1)
+	{
+		//get the expression for a lower bound
+		$value = date("Y-m-d", time()+86400)
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && $isLowerBound && $idx == 2)
+	{
+		//get the expression for a lower bound
+		$value = date("Y-m-d", time())
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && !$isLowerBound && $idx == 2)
+	{
+		//get the expression for an upper bound
+		$value = date("Y-m-d", time()+86400)
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && $isLowerBound && $idx == 3)
+	{
+		//get the expression for a lower bound
+		$value = date("Y-m-d", time()-86400)
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && !$isLowerBound && $idx == 3)
+	{
+		//get the expression for an upper bound
+		$value = date("Y-m-d", time())
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && $isLowerBound && $idx == 4)
+	{
+		//get the expression for a lower bound
+		$value = date("Y-m-d", mktime(0,0,0, date("m"), 1, date("Y")))
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && !$isLowerBound && $idx == 4)
+	{
+		//get the expression for an upper bound
+		$value = date("Y-m-d", mktime(0,0,0, date("m") + 1, 1, date("Y")))
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && $isLowerBound && $idx == 5)
+	{
+		//get the expression for a lower bound
+		$value = date("Y-m-d", mktime(0,0,0, date("m") - 1, 1, date("Y")))
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && !$isLowerBound && $idx == 5)
+	{
+		//get the expression for an upper bound
+		$value = date("Y-m-d", mktime(0,0,0, date("m"), 1, date("Y")))
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && $isLowerBound && $idx == 6)
+	{
+		//get the expression for a lower bound
+		$value = date("Y-m-d", mktime(0,0,0, 1, 1, date("Y")))
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && !$isLowerBound && $idx == 6)
+	{
+		//get the expression for an upper bound
+		$value = date("Y-m-d", mktime(0,0,0, 1, 1, date("Y")+1))
+		;
+		return $value;
+	}
+	if($table=="MOH_Indicators_data_Chart" && $field=="year" && !$isLowerBound && $idx == 7)
+	{
+		//get the expression for an upper bound
+		$value = date("Y-m-d", mktime(0,0,0, 1, 1, date("Y")))
+		;
+		return $value;
+	}
 
 }
 

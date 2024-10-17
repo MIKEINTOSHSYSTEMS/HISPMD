@@ -53,6 +53,35 @@ $this->settings["initialCountry"] = "et";               // Country default
 $this->settings["preferredCountries"] = "et";           // Preferred Country;
 		return;
 	}	
+	$tName = $this->pageObject->tName;
+	$field = $this->field;
+	if( $this->pageObject->pSet ) {
+		if($this->pageObject->pageType == PAGE_SEARCH && $this->pageObject->pSet->getTableType() == PAGE_DASHBOARD)
+		{
+			$dashFields = $this->pageObject->pSet->getDashboardSearchFields();
+			$tName = $dashFields[$field][0]["table"];
+			$field = $dashFields[$field][0]["field"];
+		}
+	}
+				if($tName=="MOH_Indicators_data_Chart" && $field=="year")
+	{
+		$this->settings["required"] = false; // Wether is mandatory
+$this->settings["tooltip"] = "Click here to enter date / time"; // Information tooltip
+$this->settings["format"] = "MM/DD/YYYY"; // MomentJS Format. Check http://momentjs.com
+$this->settings["showWeekNumbers"] = true; // If we want to show the week numbers
+$this->settings["directionat"] = "ltr"; // Writing direction (from left to right)
+$this->settings["separator"] = " - "; // String separation between dates
+$this->settings["applyLabel"] = "Apply"; // Text for the "Apply" button
+$this->settings["cancelLabel"] = "Clear"; // Change Function - Text for the "Clear" button
+$this->settings["fromLabel"] = "From"; // Text for the date range definition (from XXXX to XXXXXX)
+$this->settings["toLabel"] = "to"; // Text for the date range definition (from XXXX to XXXXXX)
+$this->settings["firstDay"] = 0; // Beggining day of week (0,1)
+$this->settings["startDate"] = null; // Initial date according to the date format
+$this->settings["opens"] = "left"; // Calendar lookup orientation (right, center and left)
+$this->settings["daysOfWeek"] = array("Su","Mo","Tu","We","Th","Fr","Sa"); // Weekdays
+$this->settings["monthNames"] = array("January","February","March","April","May","June", "July","August","September","October","November","December"); // Months of the year;
+		return;
+	}	
 	}
 }
 ?>
