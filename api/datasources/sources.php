@@ -14,7 +14,8 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
+            /*background-color: #f4f4f9;#e9ecef*/
+            background-color: #f5f5f5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -142,10 +143,8 @@
     <!-- Introduction Section -->
     <div class="intro">
         <!--<img src="../app/images/MOH_logo_text_white.png" width="200" height="150" alt="MOH Logo">-->
-        <img src="../app/images/MOH_logo_text_250.png" width="100" height="100" alt="MOH Logo">
+        <img src="../../app/images/MOH_logo_text_250.png" width="100" height="100" alt="MOH Logo">
 
-        <br>
-        <br>
         <h2>Welcome to Our Interactive Health Information Systems Performance Monitoring Dashboard!</h2>
         <br>
         <p>Below you will find a set of data source cards that represent key sources used in the making and development of this dashboard. Click on each title to reveal more details about the source. We hope this interactive dashboard enhances your experience and provides useful information.</p>
@@ -234,5 +233,14 @@
             });
         });
     </script>
+    <br>
+    <br>
+    <br>
+    <br>
+        <br>
+    <br>
+        <br>
+    <br>
+        
 </body>
 </html>

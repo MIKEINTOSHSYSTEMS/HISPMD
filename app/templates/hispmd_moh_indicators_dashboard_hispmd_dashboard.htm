@@ -341,41 +341,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HISPMD Dashboard</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
         iframe {
             border: none;
             width: 100%;
-            height: 777vh;
-            position: relative;
-            top: 0;
-            left: 0;
+            height: 77vh;
+        }
+        @media (max-width: 768px) {
+            iframe {
+                height: 80vh; /* Adjust height for smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            iframe {
+                height: 70vh; /* Further adjust for mobile devices */
+            }
         }
     </style>
 </head>
 <body>
     <iframe
-        id="metabase-iframe"
-        src=""
+        id="hispmd-iframe"
+        src="../api/datasources/"
         allowtransparency></iframe>
-    <script>
-        // Set dashboard ID dynamically
-        var dashboardId = 13; // Replace with dynamic ID if needed
-
-        // Make a request to the PHP server to generate the iframe URL for the selected dashboard ID
-        fetch('../api/meta/base.php?dashboardId=' + dashboardId)
-            .then(response => response.text())
-            .then(iframeUrl => {
-                document.getElementById('metabase-iframe').src = iframeUrl;
-            });
-    </script>
+<!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
 </body>
-        <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
-
 </html>
 </span>
 </td>
