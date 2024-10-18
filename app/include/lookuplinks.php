@@ -635,6 +635,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"] = array();
 		}
 		$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "facility_type_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_indicator_data"] ) ) {
+			$lookupTableLinks["public.moh_indicator_data"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.year"] )) {
+			$lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.year"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_data"]["moh_indicators_data_chart.year"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "year", "page" => "search");
 		if( !isset( $lookupTableLinks["public.moh_data_scope"] ) ) {
 			$lookupTableLinks["public.moh_data_scope"] = array();
 		}

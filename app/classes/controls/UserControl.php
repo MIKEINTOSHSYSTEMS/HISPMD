@@ -78,8 +78,8 @@ $this->settings["toLabel"] = "to"; // Text for the date range definition (from X
 $this->settings["firstDay"] = 0; // Beggining day of week (0,1)
 $this->settings["startDate"] = null; // Initial date according to the date format
 $this->settings["opens"] = "left"; // Calendar lookup orientation (right, center and left)
-$this->settings["daysOfWeek"] = array("Su","Mo","Tu","We","Th","Fr","Sa"); // Weekdays
-$this->settings["monthNames"] = array("January","February","March","April","May","June", "July","August","September","October","November","December"); // Months of the year;
+$this->settings["daysOfWeek"] = array("እሁድ","ሰኞ","ማክሰኞ","እሮብ","ሐሙስ","አርብ","ቅዳሜ"); // Weekdays
+$this->settings["monthNames"] = array("ጥር","የካቲት","መጋቢት","ሚያዝያ","ግንቦት","ሰኔ","ሐምሌ","ነሐሴ","መስከረም","ጥቅምት","ህዳር","ታኅሣሥ"); // Months of the year;
 		return;
 	}	
 	}

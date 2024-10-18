@@ -1652,7 +1652,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "DateRangePicker");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
@@ -1662,6 +1662,35 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_data";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "year";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "year";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "year";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1705,8 +1734,10 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Equals";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
+		$fdata["searchOptionsList"][] = "Equals";
 // the end of search options settings
 
 
