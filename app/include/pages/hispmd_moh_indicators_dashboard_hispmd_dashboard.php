@@ -163,7 +163,7 @@ array( 'cell' => 'c2' ) ),
         iframe {
             border: none;
             width: 100%;
-            height: 77vh;
+            height: 111vh;
         }
         @media (max-width: 768px) {
             iframe {

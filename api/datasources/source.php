@@ -19,10 +19,8 @@
             justify-content: start;
             align-items: center;
             flex-direction: column;
-            
-            height: 100%;
-            width: auto;
-            /*padding: 20px;*/
+            min-height: 700vh;
+            padding: 20px;
         }
 
         .intro {
@@ -159,12 +157,7 @@
 </head>
 <body>
 
-    <div class="intro">
-        <img src="../../app/images/MOH_logo_text_250.png" width="100" height="100" alt="MOH Logo">
-        <h2>Welcome to Our Interactive Health Information Systems Performance Monitoring Dashboard!</h2>
-        <br>
-        <p>Below you will find a set of data source cards that represent key sources used in the making and development of this dashboard. Click on each title to reveal more details about the source. We hope this interactive dashboard enhances your experience and provides useful information.</p>
-    </div>
+
 
     <div class="container">
         <?php

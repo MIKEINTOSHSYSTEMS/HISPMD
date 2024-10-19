@@ -1457,10 +1457,10 @@
 .anychart-ce .anychart-chart-preview {
     position: absolute;
     left: 35%;
-    top: 0;
+    top: 25%;
     bottom: 0;
     right: 0;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto
 }
 
@@ -1473,7 +1473,7 @@
 .anychart-ce .anychart-chart-data-settings {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 25%;
     bottom: 0;
     width: 35%;
     overflow-x: hidden;
@@ -1483,7 +1483,7 @@
 .anychart-ce .anychart-ce-data-set {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 25%;
     bottom: 0;
     width: 231px;
     overflow-x: hidden;
@@ -1491,7 +1491,7 @@
 }
 
 .anychart-ce .anychart-ce-breadcrumbs {
-    position: absolute;
+    position: relative;/*absolute;*/
     bottom: 0;
     left: 0;
     right: 0;
@@ -1538,7 +1538,7 @@
 }
 
 .anychart-ce-breadcrumbs {
-    background: #4a6181;
+    background: #00274c;
     padding: 0 12px
 }
 
@@ -2135,7 +2135,7 @@
     box-sizing: border-box;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 20;
     bottom: 0;
     width: 35%;
     overflow-x: hidden;
