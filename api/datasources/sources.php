@@ -163,7 +163,8 @@
         <img src="../../app/images/MOH_logo_text_250.png" width="100" height="100" alt="MOH Logo">
         <h2>Welcome to Our Interactive Health Information Systems Performance Monitoring Dashboard!</h2>
         <br>
-        <p>Below you will find a set of data source cards that represent key sources used in the making and development of this dashboard. Click on each title to reveal more details about the source. We hope this interactive dashboard enhances your experience and provides useful information.</p>
+        <p>Below you will find a set of data source cards that represent key sources used in the making and development of this dashboard. <br>Click on each title to reveal more details about the source.</p>
+        <h6>For better user experience we recommend using a computer or desktop view!</h6>
     </div>
 
     <div class="container">
