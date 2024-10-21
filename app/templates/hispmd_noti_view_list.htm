@@ -437,45 +437,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_created}</span>
 						</div>
 		{END searchCtrlBlock_created}
-																{BEGIN searchCtrlBlock_user}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_user}" {$filterRow_attrs_user}>
-			<label>{$label public_hispmd_noti_view user }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_user}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_user}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_user}</span>
-						</div>
-		{END searchCtrlBlock_user}
-																{BEGIN searchCtrlBlock_url}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_url}" {$filterRow_attrs_url}>
-			<label>{$label public_hispmd_noti_view url }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_url}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_url}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_url}</span>
-						</div>
-		{END searchCtrlBlock_url}
-																{BEGIN searchCtrlBlock_type}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_type}" {$filterRow_attrs_type}>
-			<label>{$label public_hispmd_noti_view type }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_type}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_type}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_type}</span>
-						</div>
-		{END searchCtrlBlock_type}
 																{BEGIN searchCtrlBlock_title}
 
 
@@ -489,19 +450,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_title}</span>
 						</div>
 		{END searchCtrlBlock_title}
-																{BEGIN searchCtrlBlock_provider}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_provider}" {$filterRow_attrs_provider}>
-			<label>{$label public_hispmd_noti_view provider }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_provider}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_provider}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_provider}</span>
-						</div>
-		{END searchCtrlBlock_provider}
 																{BEGIN searchCtrlBlock_message}
 
 
@@ -515,58 +463,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_message}</span>
 						</div>
 		{END searchCtrlBlock_message}
-																{BEGIN searchCtrlBlock_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
-			<label>{$label public_hispmd_noti_view id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
-						</div>
-		{END searchCtrlBlock_id}
-																{BEGIN searchCtrlBlock_icon}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_icon}" {$filterRow_attrs_icon}>
-			<label>{$label public_hispmd_noti_view icon }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_icon}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_icon}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_icon}</span>
-						</div>
-		{END searchCtrlBlock_icon}
-																{BEGIN searchCtrlBlock_group}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_group}" {$filterRow_attrs_group}>
-			<label>{$label public_hispmd_noti_view group }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_group}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_group}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_group}</span>
-						</div>
-		{END searchCtrlBlock_group}
-																{BEGIN searchCtrlBlock_expire}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_expire}" {$filterRow_attrs_expire}>
-			<label>{$label public_hispmd_noti_view expire }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_expire}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_expire}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_expire}</span>
-						</div>
-		{END searchCtrlBlock_expire}
 		
 
 	</div>
@@ -869,40 +765,19 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id"]:before {
-		content: "{$label public_hispmd_noti_view id}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="message"]:before {
 		content: "{$label public_hispmd_noti_view message}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="user"]:before {
-		content: "{$label public_hispmd_noti_view user}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="provider"]:before {
-		content: "{$label public_hispmd_noti_view provider}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="title"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="title"]:before {
 		content: "{$label public_hispmd_noti_view title}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="url"]:before {
-		content: "{$label public_hispmd_noti_view url}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="icon"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="icon"]:before {
 		content: "{$label public_hispmd_noti_view icon}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="created"]:before {
 		content: "{$label public_hispmd_noti_view created}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="expire"]:before {
-		content: "{$label public_hispmd_noti_view expire}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="type"]:before {
-		content: "{$label public_hispmd_noti_view type}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group"]:before {
-		content: "{$label public_hispmd_noti_view group}";
-	}
-	}
+				}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -960,21 +835,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
+		 r-ori-vert		 {$title_class}	"
 
-			data-field="id"
+			data-field="title"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_fieldheadercolumn}
-	{BEGIN id_fieldheader}
-	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
-	{$label public_hispmd_noti_view id }	{$arrow_icon_id}
+		{BEGIN title_fieldheadercolumn}
+	{BEGIN title_fieldheader}
+	<SPAN {$title_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="title" data-fieldname="title">
+	{$label public_hispmd_noti_view title }	{$arrow_icon_title}
 	</SPAN>
-	{END id_fieldheader}
-{END id_fieldheadercolumn}
+	{END title_fieldheader}
+{END title_fieldheadercolumn}
 
 	
 	</th>
@@ -985,21 +860,19 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$title_class}	"
+		 r-ori-vert		 {$message_class}	"
 
-			data-field="title"
+			data-field="message"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN title_fieldheadercolumn}
-	{BEGIN title_fieldheader}
-	<SPAN {$title_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="title" data-fieldname="title">
-	{$label public_hispmd_noti_view title }	{$arrow_icon_title}
-	</SPAN>
-	{END title_fieldheader}
-{END title_fieldheadercolumn}
+		{BEGIN message_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="message" data-fieldname="message">
+	{$label public_hispmd_noti_view message }	</span>
+{END message_fieldheadercolumn}
 
 	
 	</th>
@@ -1010,19 +883,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$message_class}	"
+		 r-ori-vert		 {$icon_class}	"
 
-			data-field="message"
+			data-field="icon"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN message_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="message" data-fieldname="message">
-	{$label public_hispmd_noti_view message }	</span>
-{END message_fieldheadercolumn}
+		{BEGIN icon_fieldheadercolumn}
+	{BEGIN icon_fieldheader}
+	<SPAN {$icon_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="icon" data-fieldname="icon">
+	{$label public_hispmd_noti_view icon }	{$arrow_icon_icon}
+	</SPAN>
+	{END icon_fieldheader}
+{END icon_fieldheadercolumn}
 
 	
 	</th>
@@ -1033,115 +908,17 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$user_class}	"
+		 r-ori-vert		 {$created_class}	"
 
-			data-field="user"
+			data-field="created"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN user_fieldheadercolumn}
-	{BEGIN user_fieldheader}
-	<SPAN {$user_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="user" data-fieldname="user">
-	{$label public_hispmd_noti_view user }	{$arrow_icon_user}
-	</SPAN>
-	{END user_fieldheader}
-{END user_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$provider_class}	"
-
-			data-field="provider"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN provider_fieldheadercolumn}
-	{BEGIN provider_fieldheader}
-	<SPAN {$provider_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="provider" data-fieldname="provider">
-	{$label public_hispmd_noti_view provider }	{$arrow_icon_provider}
-	</SPAN>
-	{END provider_fieldheader}
-{END provider_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$url_class}	"
-
-			data-field="url"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN url_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="url" data-fieldname="url">
-	{$label public_hispmd_noti_view url }	</span>
-{END url_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$icon_class}	"
-
-			data-field="icon"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN icon_fieldheadercolumn}
-	{BEGIN icon_fieldheader}
-	<SPAN {$icon_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="icon" data-fieldname="icon">
-	{$label public_hispmd_noti_view icon }	{$arrow_icon_icon}
-	</SPAN>
-	{END icon_fieldheader}
-{END icon_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$created_class}	"
-
-			data-field="created"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN created_fieldheadercolumn}
 	{BEGIN created_fieldheader}
-	<SPAN {$created_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created">
+	<SPAN {$created_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created">
 	{$label public_hispmd_noti_view created }	{$arrow_icon_created}
 	</SPAN>
 	{END created_fieldheader}
@@ -1149,82 +926,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$expire_class}	"
-
-			data-field="expire"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN expire_fieldheadercolumn}
-	{BEGIN expire_fieldheader}
-	<SPAN {$expire_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="expire" data-fieldname="expire">
-	{$label public_hispmd_noti_view expire }	{$arrow_icon_expire}
-	</SPAN>
-	{END expire_fieldheader}
-{END expire_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$type_class}	"
-
-			data-field="type"
-	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN type_fieldheadercolumn}
-	{BEGIN type_fieldheader}
-	<SPAN {$type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="type" data-fieldname="type">
-	{$label public_hispmd_noti_view type }	{$arrow_icon_type}
-	</SPAN>
-	{END type_fieldheader}
-{END type_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$group_class}	"
-
-			data-field="group"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN group_fieldheadercolumn}
-	{BEGIN group_fieldheader}
-	<SPAN {$group_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group" data-fieldname="group">
-	{$label public_hispmd_noti_view group }	{$arrow_icon_group}
-	</SPAN>
-	{END group_fieldheader}
-{END group_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -1304,32 +1006,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
-
-			data-field="id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id" data-default-width >
-{$id_value}
-</span>
-{END id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$title_class}	"
 
 			data-field="title"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1339,18 +1020,18 @@
 </span>
 {END title_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$message_class}	"
 
 			data-field="message"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1360,81 +1041,18 @@
 </span>
 {END message_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$user_class}	"
-
-			data-field="user"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN user_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="user" data-fieldname="user" data-default-width >
-{$user_value}
-</span>
-{END user_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$provider_class}	"
-
-			data-field="provider"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN provider_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="provider" data-fieldname="provider" data-default-width >
-{$provider_value}
-</span>
-{END provider_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$url_class}	"
-
-			data-field="url"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN url_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="url" data-fieldname="url" data-default-width >
-{$url_value}
-</span>
-{END url_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$icon_class}	"
 
 			data-field="icon"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1444,18 +1062,18 @@
 </span>
 {END icon_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$created_class}	"
 
 			data-field="created"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1465,70 +1083,7 @@
 </span>
 {END created_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$expire_class}	"
-
-			data-field="expire"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN expire_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="expire" data-fieldname="expire" data-default-width >
-{$expire_value}
-</span>
-{END expire_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$type_class}	"
-
-			data-field="type"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN type_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="type" data-fieldname="type" data-default-width >
-{$type_value}
-</span>
-{END type_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$group_class}	"
-
-			data-field="group"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN group_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group" data-fieldname="group" data-default-width >
-{$group_value}
-</span>
-{END group_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -1576,7 +1131,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
+		 r-ori-vert		 {$title_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
@@ -1591,7 +1146,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$title_class}	"
+		 r-ori-vert		 {$message_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
@@ -1606,7 +1161,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$message_class}	"
+		 r-ori-vert		 {$icon_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
@@ -1621,7 +1176,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$user_class}	"
+		 r-ori-vert		 {$created_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
@@ -1630,111 +1185,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$provider_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
-									{BEGIN cellblock_grid_footcell_field5}
-	<td
-	
-	{$cell_grid_footcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$url_class}	"
-
-	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$icon_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$created_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-									{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$expire_class}	"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
-									{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$type_class}	"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
-									{BEGIN cellblock_grid_footcell_field10}
-	<td
-	
-	{$cell_grid_footcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$group_class}	"
-
-	
-	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field10}
 							</tr>
 					
 					</tfoot>

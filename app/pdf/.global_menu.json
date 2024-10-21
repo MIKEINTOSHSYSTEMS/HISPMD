@@ -87,10 +87,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n\nአሁን ሰዓቱ\n<div id=\"MyClockDisplay\" class=\"clock\" onload=\"showTime()\"></div>\n  <script  src=\"../../calendar/eth/ethcal.js\"></script>\n\n<br>\n\n","hidden":"{$item_hide_text7}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
      
@@ -110,10 +108,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"<link rel=\"stylesheet\" href=\"../../calendar/eth/ethcal.css\">\n\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>\n<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'><link rel=\"stylesheet\" href=\"./calendar/eth/ethcal.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js\"></script>\n\nCurrent Time\n  <div id=\"GregClockDisplay\" class=\"clock\" onload=\"showTimeGreg()\"></div>\n  <script  src=\"../../calendar/eth/ethcalgreg.js\"></script>\n\n\n<br>","hidden":"{$item_hide_text9}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
      
@@ -174,21 +170,6 @@ pdfDocument = {
 				
 			{"text":"<br><br><h2><strong>MENU</strong></h2>","hidden":"{$item_hide_text5}","isHtml":true},
 				
-				
-			{"text":"<br>","hidden":"{$item_hide_text11}","isHtml":true},
-				
-				
-			{"text":"<p><strong>INDICATORS</strong></p>","hidden":"{$item_hide_text4}","isHtml":true},
-				
-				
-			{"text":"<p><strong>MFR</strong></p>","hidden":"{$item_hide_text3}","isHtml":true},
-				
-				
-			{"text":"<p><strong>DHIS2</strong></p>","hidden":"{$item_hide_text2}","isHtml":true},
-				
-				
-			{"text":"<p><strong><em>NEW MENU</em></strong></p>","hidden":"{$item_hide_text6}","isHtml":true},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
@@ -222,6 +203,24 @@ pdfDocument = {
 					 ],	
 		
 			heights: [
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
+								
+			"%",
+			 
 								
 			"%",
 			 
@@ -292,6 +291,29 @@ pdfDocument = {
 	
 			"text": [
 		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				
 			{"text":"","hidden":"{$item_hide_welcome_group}"},
 				
@@ -305,7 +327,7 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c2',
+	cellId: 'c12',
 	col:0,
 	row:0,
 			
@@ -367,10 +389,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_welcome_group3}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -417,8 +437,31 @@ pdfDocument = {
 	
 			"text": [
 		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c10',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
 				
-			{"text":"","hidden":"{$item_hide_welcome_group5}"},
+			{"text":"","hidden":"{$item_hide_welcome_group7}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -430,7 +473,7 @@ pdfDocument = {
 											],
 						[
 																{
-	cellId: 'c7',
+	cellId: 'c9',
 	col:0,
 	row:0,
 			
@@ -455,6 +498,79 @@ pdfDocument = {
 											],
 						[
 																{
+	cellId: 'c7',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_welcome_group8}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c13',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_welcome_group5}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c14',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
 	cellId: 'c8',
 	col:0,
 	row:0,
@@ -468,18 +584,32 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#CD853F","hidden":"{$item_hide_welcome_item98}"},
-				
-				
-			{"text":"","background":"#6B8E23","hidden":"{$item_hide_welcome_item99}"},
-				
-				
-			{"text":"","background":"#DAA520","hidden":"{$item_hide_welcome_item100}"},
-				
-				
-			{"text":"","background":"#2F4F4F","hidden":"{$item_hide_welcome_item101}"},
+			{"text":"","hidden":"{$item_hide_welcome_group3}"},
 				
 		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c11',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
