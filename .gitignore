@@ -12,6 +12,7 @@
 /api/widget/
 /api/graphic/
 /api/visualizer/
+/app/addons/
 /maps/geojson/
 /maps/geojson/regions
 /app/templates_c/*.csv
