@@ -114,6 +114,9 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Chart Builder</button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="indicators-tab" data-bs-toggle="tab" data-bs-target="#indicators" type="button" role="tab" aria-controls="settings" aria-selected="false">Indicator Charts</button>
+            </li>
         </ul>
 
         <!-- Tab Content -->
@@ -162,8 +165,8 @@
                         <!--Build your custom visualizations and charts-->
                     </div>
                     <div class="card-body p-0">
-                        <h5 class="card-title">Build your custom visualizations and charts</h5>
-                        <p class="card-text">This is where you will be able to build custom charts and visalizations <br> You can modify your preferences here.</p>
+                     <!--   <h5 class="card-title">Build your custom visualizations and charts</h5>-->
+                      <!--  <p class="card-text">This is where you will be able to build custom charts and visalizations <br> You can modify your preferences here.</p>-->
                         <div class="iframe">
                             <!-- Spinner -->
                             <div class="spinner-container" id="spinner-settings">
@@ -173,6 +176,30 @@
                             </div>
                             <!-- Iframe -->
                             <iframe id="iframe-settings" src="../visualization" onload="hideSpinner('settings')"></iframe>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="indicators" role="tabpanel" aria-labelledby="indicators-tab">
+                <div class="card full-width-card">
+                    <div class="card-header">
+                        <!--Build your custom visualizations and charts-->
+                    </div>
+                    <div class="card-body p-0">
+                        <!--
+                        <h5 class="card-title">Build your custom visualizations and charts</h5>
+                        <p class="card-text">This is where you will be able to build custom charts and visalizations <br> You can modify your preferences here.</p>
+                        <div class="iframe">
+                        -->
+                            <!-- Spinner -->
+                            <div class="spinner-container" id="spinner-indicators">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                            <!-- Iframe -->
+                            <iframe id="iframe-indicators" src="../indicators/dist/" onload="hideSpinner('indicators')"></iframe>
                             
                         </div>
                     </div>

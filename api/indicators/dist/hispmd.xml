@@ -1,0 +1,2115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<indicators>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion of health administration units that conducted Routine indicator quality assessments (RDQA)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>5.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of woredas by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>IR Ass - Emerging</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Afar</Region>
+    <Sex></Sex>
+    <Value>65.3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Ass - SBA</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>87.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>87</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of woredas by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>IR Ass - Model</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>39</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Oromia</Region>
+    <Sex></Sex>
+    <Value>83</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Others</Indicator_Group>
+    <Indicator_Name>Proportion of births notified</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>52</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Amhara</Region>
+    <Sex></Sex>
+    <Value>94</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>IR Ass - Model</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>41</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities which reported out of stock selected registers by health facility and by type of register</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>63</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Number of health institutions that disseminated publications/ best practices/ analytic reports to the stakeholders/ public (Newsletters, bulletins, brochure, etc.)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>32.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Information use index (average Information Use score)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.59</Value>
+    <indicator_Representation>Number</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Ass - SBA</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>85</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Dire Dawa</Region>
+    <Sex></Sex>
+    <Value>94</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>National Average</Region>
+    <Sex></Sex>
+    <Value>85</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Ass - Penta 3</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>81.1</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Oromia</Region>
+    <Sex></Sex>
+    <Value>44</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>81</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Others</Indicator_Group>
+    <Indicator_Name>Proportion of deaths notified</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2021</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Somali</Region>
+    <Sex></Sex>
+    <Value>83.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>62</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>South Ethiopia</Region>
+    <Sex></Sex>
+    <Value>90</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Afar</Region>
+    <Sex></Sex>
+    <Value>69</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of woredas by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>IR Ass - Emerging</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Amhara</Region>
+    <Sex></Sex>
+    <Value>93</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion of health administration units that conducted Routine indicator quality assessments (RDQA)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>54.5</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>94.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Benishangul-Gumuz</Region>
+    <Sex></Sex>
+    <Value>52</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>65</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Somali</Region>
+    <Sex></Sex>
+    <Value>23</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Non-Public Health Facilities</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>33</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Others</Indicator_Group>
+    <Indicator_Name>Proportion of deaths notified</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>4</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Benishangul-Gumuz</Region>
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>National Average</Region>
+    <Sex></Sex>
+    <Value>41</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Harari</Region>
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>51</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Gambella</Region>
+    <Sex></Sex>
+    <Value>49</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Others</Indicator_Group>
+    <Indicator_Name>Proportion of births notified</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>75</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Dire Dawa</Region>
+    <Sex></Sex>
+    <Value>36</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Addis Ababa</Region>
+    <Sex></Sex>
+    <Value>93</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>73.3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>85.2</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>57</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Number of health institutions that disseminated publications/ best practices/ analytic reports to the stakeholders/ public (Newsletters, bulletins, brochure, etc.)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>34.6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of woredas by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>IR Ass - Candidate - low</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>25</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>64.3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>IR Ass - Candidate - low</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>23</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>91.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>88.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>62</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>63.8</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>68</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Sidama</Region>
+    <Sex></Sex>
+    <Value>93</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>90.3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Ass - Penta 3</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>53</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities which reported out of stock selected registers by health facility and by type of register</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>1.4</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>65.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Content</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>93.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>63.8</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Number of health institutions that disseminated publications/ best practices/ analytic reports to the stakeholders/ public (Newsletters, bulletins, brochure, etc.)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>14.1</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion of health administration units that conducted Routine indicator quality assessments (RDQA)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>60</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Others</Indicator_Group>
+    <Indicator_Name>Proportion of births notified</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2021</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>45</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>68.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>92.8</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Others</Indicator_Group>
+    <Indicator_Name>Proportion of deaths notified</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>3.6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>84.4</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Information use index (average Information Use score)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.63</Value>
+    <indicator_Representation>Number</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Addis Ababa</Region>
+    <Sex></Sex>
+    <Value>43</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>89.4</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>59.2</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>South Ethiopia</Region>
+    <Sex></Sex>
+    <Value>34</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>92</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Gambella</Region>
+    <Sex></Sex>
+    <Value>12</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Harari</Region>
+    <Sex></Sex>
+    <Value>78</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>South West Ethiopia</Region>
+    <Sex></Sex>
+    <Value>96</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>National Average</Region>
+    <Sex></Sex>
+    <Value>96</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>93</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Information use index (average Information Use score)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.43</Value>
+    <indicator_Representation>Number</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Post</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>82</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion of health administration units that conducted Routine indicator quality assessments (RDQA)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>57</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of woredas by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>IR Ass - Candidate - High</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>29</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Gambella</Region>
+    <Sex></Sex>
+    <Value>99.6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Post</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>8.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>78</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Somali</Region>
+    <Sex></Sex>
+    <Value>69</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>62</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Amhara</Region>
+    <Sex></Sex>
+    <Value>58</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>45.3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Information use index (average Information Use score)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.63</Value>
+    <indicator_Representation>Number</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>South West Ethiopia</Region>
+    <Sex></Sex>
+    <Value>25</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Information use index (average Information Use score)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.69</Value>
+    <indicator_Representation>Number</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>90.6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Ass - Penta 3</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>79</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities which reported out of stock selected registers by health facility and by type of register</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Hospital</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>62</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Afar</Region>
+    <Sex></Sex>
+    <Value>22</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>79.4</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Content</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>70</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>Digital Health</Indicator_Group>
+    <Indicator_Name>Proportion of sites that have a functioning computer dedicated for DHIS2/eHMIS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>97</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>HIS workforce core competency index</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>20.5</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>55.6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>64.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Content</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>90.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>89</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>IR Pathway</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions by IR status</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>IR Ass - Candidate - High</indicator_Source>
+    <Assessment>IR Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>27</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>40.5</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>71</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>93</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>33</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Post</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>75.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Information use index (average Information Use score)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.54</Value>
+    <indicator_Representation>Number</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Ass - SBA</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>66</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion health facility which conduct LQAS</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Post</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>25</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>74</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities with Adequate shelves by health facility</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>RDQA - comprehensive</indicator_Source>
+    <Assessment>RDQA</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>79.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Tigray</Region>
+    <Sex></Sex>
+    <Value>95.7</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Sidama</Region>
+    <Sex></Sex>
+    <Value>28</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Proportion of health administration units that conducted Routine indicator quality assessments (RDQA)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>74</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Post</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>95</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Benishangul-Gumuz</Region>
+    <Sex></Sex>
+    <Value>17</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Percentage of health facility with a VF within the acceptable range</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>75</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting completeness - Representative</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>Admin Report</indicator_Source>
+    <Assessment>Admin Report</Assessment>
+    <Administration_Unit />
+    <Year>2023</Year>
+    <Scope>Regional</Scope>
+    <Region>Harari</Region>
+    <Sex></Sex>
+    <Value>97</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Public HF</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2024</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>29.3</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities (Hospitals and health centers) which have standardized medical record unit (MRU)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>59</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Quality</Indicator_Group>
+    <Indicator_Name>Reporting timeliness</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>DQR</indicator_Source>
+    <Assessment>Periodic Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>Regional</Scope>
+    <Region>Dire Dawa</Region>
+    <Sex></Sex>
+    <Value>99.6</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>HIS Governance</Indicator_Group>
+    <Indicator_Name>Proportion of health facilities which reported out of stock selected registers by health facility and by type of register</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type>Health Center</Facility_Type>
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit />
+    <Year>2018</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>0.9</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+<indicator>
+    <Indicator_Group>indicator Use</Indicator_Group>
+    <Indicator_Name>Proportion of health institutions with an active and functional Performance Monitoring Team (PMT)</Indicator_Name>
+    <Baseline />
+    <Target />
+    <Facility_Type />
+    <indicator_Source>PRISM Assessment</indicator_Source>
+    <Assessment>PRISM Assessment</Assessment>
+    <Administration_Unit>WorHO</Administration_Unit>
+    <Year>2022</Year>
+    <Scope>National</Scope>
+    <Region />
+    <Sex></Sex>
+    <Value>100</Value>
+    <indicator_Representation>Percent</indicator_Representation>
+</indicator>
+</indicators>

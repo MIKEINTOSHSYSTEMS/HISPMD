@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HISPMD Indicators</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./style/normalize.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+
+    <!-- AnyChart UI -->
+    <link rel="stylesheet" href="./style/anychart-ui.min.css">
+    <link rel="stylesheet" href="./style/anychart-font.min.css">
+
+    <!-- Latest compiled and minified CSS Bootstrap Select -->
+    <link rel="stylesheet"
+        href="./style/bootstrap-select.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- AnyChart Loader -->
+    <div id="loader" class="anychart-loader">
+        <div class="rotating-cover">
+            <div class="rotating-plane">
+                <div class="chart-row">
+                    <span class="chart-col green"></span>
+                    <span class="chart-col orange"></span>
+                    <span class="chart-col red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Alert -->
+    <div class="modal fade" id="warning" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Attention</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger">
+                        <strong>XHR Fail: </strong>This Sample will properly work only if uploaded to a server and
+                        accessed via http or https.
+                        Please see <a href="https://github.com/anychart-solutions/technical-indicators"
+                            target="_blank">https://github.com/anychart-solutions/technical-indicators</a> to learn
+                        more.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Indicator Settings -->
+    <div class="modal fade" id="indicatorSettingsModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="indicatorSettingsModalTitle">Indicator Settings</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="indicatorForm" class="form"></form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="addIndicatorButton">Add Indicator</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <ul class="list list-unstyled list-nav" id="indicatorNavPanel">
+            <li>
+                <select name="" id="chartDataSelect" class="select selectpicker show-tick" title="Select Data Chart">
+                    <!--<option value="0" selected="selected" data-json="./data/hispmd.php">HISPMD</option>-->
+                    <!--<option value="1" selected="selected" data-json="./data/msft.json">MSFT</option>-->
+                    <!--
+                    
+                    -->
+                    <option value="1" selected="selected" data-json="./ind/1.php">Proportion of health administration units that conducted Routine Data quality assessments (RDQA)</option>
+                    <option value="2" data-json="./ind/2.php">Reporting Timeliness</option>
+                    <option value="3" data-json="./ind/3.php">Reporting completeness - Representative</option>
+                    <option value="4" data-json="./ind/4.php">Percentage of health facility with a VF within the acceptable range</option>
+                    <option value="5" data-json="./ind/5.php">Proportion of health facilities which reported out of stock selected registers by health facility and by type of
+                    register</option>
+
+                    <option value="6" data-json="./ind/6.php">Proportion health facility which conduct LQAS</option>
+                    <option value="" data-json="./ind/7.php">Reporting completeness - Content</option>
+                    <option value="10" data-json="./data/hispmd.php">HISPMD</option>
+                    <!--
+                    
+                    <option value="2" data-json="./data/orcl.json">ORCL</option>
+                    <option value="3" data-json="./data/csco.json">CSCO</option>
+                    <option value="4" data-json="./data/ibm.json">IBM</option>
+                    
+                    -->
+                    
+                </select>
+            </li>
+            <li>
+                <select name="" id="seriesTypeSelect" class="select selectpicker show-tick">
+                    <option value="area">Area Chart</option>
+                    <option value="candlestick">Candlestick Chart</option>
+                    <option value="column" selected="selected">Column Chart</option>
+                    <option value="jumpLine">Jump Line Chart</option>
+                    <option value="line">Line Chart</option>
+                    <option value="marker">Marker Chart</option>
+                    <option value="ohlc">OHLC Chart</option>
+                    <option value="rangeArea">Range Area Chart</option>
+                    <option value="rangeColumn">Range Column Chart</option>
+                    <option value="rangeSplineArea">Range Spline Area Chart</option>
+                    <option value="rangeStepArea">Range Step Area Chart</option>
+                    <option value="spline">Spline Chart</option>
+                    <option value="splineArea">Spline Area Chart</option>
+                    <option value="stepArea">Step Area Chart</option>
+                    <option value="stepLine">Step Line Chart</option>
+                    <option value="stick">Stick Chart</option>
+                </select>
+            </li>
+            <li>
+                <select name="" class="select selectpicker show-tick" id="scaleTypeSelect" title="Scale">
+                    <option value="linear" selected="selected">Linear</option>
+                    <option value="log">Logarithmic</option>
+                </select>
+            </li>
+            <li>
+                <select class="select show-tick" multiple="multiple" name="" data-width="350" id="indicatorTypeSelect"
+                    title="Add Indicator"></select>
+            </li>
+            <li>
+                <a class="btn btn-default" href="" id="resetButton">Reset</a>
+            </li>
+        </ul>
+        <div id="chart-container"></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./script/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./script/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript Bootstrap Select -->
+    <script src="./script/bootstrap-select.min.js"></script>
+
+    <script src="./script/anychart-base.min.js"></script>
+    <script src="./script/anychart-stock.min.js"></script>
+    <script src="./script/anychart-exports.min.js"></script>
+    <script src="./script/anychart-ui.min.js"></script>
+
+    <!-- Data adapter -->
+    <script src="./script/anychart-data-adapter.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <!-- This library enables the automatic resizing of the height and width of both same and cross-domain iFrames to fit their contained content. -->
+    <script
+        src="./script/iframeResizer.contentWindow.min.js"></script>
+</body>
+
+</html>
