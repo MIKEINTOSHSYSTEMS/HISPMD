@@ -1,0 +1,28 @@
+[data-cellid="grid_footcell_field"][data-page="sgb_blockedip_list"][data-cellid="grid_footcell_field"][data-page="sgb_blockedip_list"][data-cellid="grid_footcell_field"][data-page="sgb_blockedip_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_headcell_checkbox"][data-page="sgb_blockedip_list"][data-cellid="grid_headcell_checkbox"][data-page="sgb_blockedip_list"][data-cellid="grid_headcell_checkbox"][data-page="sgb_blockedip_list"] {
+  width: 30px;
+}
+[data-cellid="grid_headcell_icons"][data-page="sgb_blockedip_list"][data-cellid="grid_headcell_icons"][data-page="sgb_blockedip_list"][data-cellid="grid_headcell_icons"][data-page="sgb_blockedip_list"] {
+  width: 30px;
+}
+[data-cellid="grid_cell_icons"][data-page="sgb_blockedip_list"][data-cellid="grid_cell_icons"][data-page="sgb_blockedip_list"][data-cellid="grid_cell_icons"][data-page="sgb_blockedip_list"] {
+  white-space: nowrap;
+}
+[data-page="sgb_blockedip_list"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="above-grid_c1"][data-page="sgb_blockedip_list"][data-cellid="above-grid_c1"][data-page="sgb_blockedip_list"][data-cellid="above-grid_c1"][data-page="sgb_blockedip_list"] {
+  margin-bottom:20px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="above-grid_c2"][data-page="sgb_blockedip_list"][data-cellid="above-grid_c2"][data-page="sgb_blockedip_list"][data-cellid="above-grid_c2"][data-page="sgb_blockedip_list"] {
+  margin-bottom:20px;
+}
+

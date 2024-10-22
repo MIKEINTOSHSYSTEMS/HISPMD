@@ -1,0 +1,420 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-edit" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c6}
+<td
+	{$cell_grid_c6}
+	class="r-align-left r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="grid_c6" data-pageid="{$pageid}" data-page="sgb_split_edit"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	Edit the selected suggestion and create a new one.</span>
+	
+								</td>
+			{END cellblock_grid_c6}
+								</tr>
+	 
+	 
+														<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}" data-page="sgb_split_edit"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN title_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_title}  r-vertical-field" 
+	data-signal-error-for="title{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="title" data-fieldname="title" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_title}">
+		{BEGIN title_label}{$label sgb_split title }{END title_label}
+	</label>
+	<div class="r-edit-field">
+		{$title_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="title" {$tooltipAttr sgb_split title } >
+		<div class="text-muted" >
+		{$tooltip sgb_split title }		</div>
+	</div>
+</div>
+
+
+{END title_fieldblock}
+											
+{BEGIN suggestion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_suggestion}  r-vertical-field" 
+	data-signal-error-for="suggestion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="suggestion" data-fieldname="suggestion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_suggestion}">
+		{BEGIN suggestion_label}{$label sgb_split suggestion }{END suggestion_label}
+	</label>
+	<div class="r-edit-field">
+		{$suggestion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="suggestion" {$tooltipAttr sgb_split suggestion } >
+		<div class="text-muted" >
+		{$tooltip sgb_split suggestion }		</div>
+	</div>
+</div>
+
+
+{END suggestion_fieldblock}
+											
+{BEGIN status_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status}  r-vertical-field" 
+	data-signal-error-for="status{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="status" data-fieldname="status" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_status}">
+		{BEGIN status_label}{$label sgb_split status }{END status_label}
+	</label>
+	<div class="r-edit-field">
+		{$status_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="status" {$tooltipAttr sgb_split status } >
+		<div class="text-muted" >
+		{$tooltip sgb_split status }		</div>
+	</div>
+</div>
+
+
+{END status_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+	 
+	 
+														<tr {$row_grid_2} >
+										
+
+{BEGIN cellblock_grid_c7}
+<td
+	{$cell_grid_c7}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="grid_c7" data-pageid="{$pageid}" data-page="sgb_split_edit"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	New suggestion</span>
+	
+								</td>
+			{END cellblock_grid_c7}
+								</tr>
+	 
+	 
+														<tr {$row_grid_3} >
+										
+
+{BEGIN cellblock_grid_c4}
+<td
+	{$cell_grid_c4}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c4" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN newtitle_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_newtitle}  r-vertical-field" 
+	data-signal-error-for="newtitle{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="newtitle" data-fieldname="newtitle" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_newtitle}">
+		{BEGIN newtitle_label}{$label sgb_split newtitle }{END newtitle_label}
+	</label>
+	<div class="r-edit-field">
+		{$newtitle_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="newtitle" {$tooltipAttr sgb_split newtitle } >
+		<div class="text-muted" >
+		{$tooltip sgb_split newtitle }		</div>
+	</div>
+</div>
+
+
+{END newtitle_fieldblock}
+											
+{BEGIN newstatus_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_newstatus}  r-vertical-field" 
+	data-signal-error-for="newstatus{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="newstatus" data-fieldname="newstatus" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_newstatus}">
+		{BEGIN newstatus_label}{$label sgb_split newstatus }{END newstatus_label}
+	</label>
+	<div class="r-edit-field">
+		{$newstatus_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="newstatus" {$tooltipAttr sgb_split newstatus } >
+		<div class="text-muted" >
+		{$tooltip sgb_split newstatus }		</div>
+	</div>
+</div>
+
+
+{END newstatus_fieldblock}
+											
+{BEGIN newsuggestion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_newsuggestion}  r-vertical-field" 
+	data-signal-error-for="newsuggestion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="newsuggestion" data-fieldname="newsuggestion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_newsuggestion}">
+		{BEGIN newsuggestion_label}{$label sgb_split newsuggestion }{END newsuggestion_label}
+	</label>
+	<div class="r-edit-field">
+		{$newsuggestion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="newsuggestion" {$tooltipAttr sgb_split newsuggestion } >
+		<div class="text-muted" >
+		{$tooltip sgb_split newsuggestion }		</div>
+	</div>
+</div>
+
+
+{END newsuggestion_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c4}
+								</tr>
+	 
+	 
+														<tr {$row_grid_4} >
+										
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN copyupvotes_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_copyupvotes}  r-vertical-field" 
+	data-signal-error-for="copyupvotes{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="copyupvotes" data-fieldname="copyupvotes" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_copyupvotes}">
+		{BEGIN copyupvotes_label}{$label sgb_split copyupvotes }{END copyupvotes_label}
+	</label>
+	<div class="r-edit-field">
+		{$copyupvotes_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="copyupvotes" {$tooltipAttr sgb_split copyupvotes } >
+		<div class="text-muted" >
+		{$tooltip sgb_split copyupvotes }		</div>
+	</div>
+</div>
+
+
+{END copyupvotes_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c5}
+								</tr>
+	 
+	 
+														<tr {$row_grid_5} >
+										
+
+{BEGIN cellblock_grid_c8}
+<td
+	{$cell_grid_c8}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="grid_c8" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
+	<span>You cannot undo changes once they're done.</span></span>
+	
+								</td>
+			{END cellblock_grid_c8}
+								</tr>
+	 
+	 
+														<tr {$row_grid_6} >
+										
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class="r-align-right"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-page="sgb_split_edit" data-small > 
+	<span class='btn btn-default cancelmerge'>Cancel</span></span>
+											{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Split			</a>
+</span>
+{END save_edit}
+	
+								</td>
+			{END cellblock_grid_c}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-changepwd" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+			<div class="r-panel-page">
+								{BEGIN supertop_block}
+<div class="r-form" data-location="supertop" id="form_supertop_{$pageid}" data-makeup="panel" {$form_supertop} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="supertop_c1" data-pageid="{$pageid}"	{$cell_supertop_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END supertop_block}
+					<div class="bs-pagepanel panel panel-primary">
+					<div class="panel-heading">
+									{BEGIN top_block}
+<div class="panel-title r-panel-top row" data-location="top" id="form_top_{$pageid}" data-makeup="panel" {$form_top} data-pageid="{$pageid}" >		
+	 
+		 
+			<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h3 class="panel-title" data-itemtype="changepwd_header" data-itemid="changepwd_header" {$item_changepwd_header} data-pageid="{$pageid}" >{$pagetitlelabel  changepwd_Project}</h3>
+		</div>			</div>		
+{END top_block}
+						</div>
+					<div class="panel-body">
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="panel" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		{BEGIN message_block}
+<div data-itemtype="changepwd_message" data-itemid="changepwd_message" {$item_changepwd_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+	{$message}
+</div>
+{END message_block}			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+											{BEGIN grid_block}
+<table  class="r-edit-form r-panel-form" cellpadding="0" cellspacing="0" data-location="grid" id="form_grid_{$pageid}" data-makeup="panel" {$form_grid} data-pageid="{$pageid}" {$grid_hiddenattr} data-form-width="">
+<tbody>
+ 
+	<tr>
+	 
+				<td
+			class="r-align-right r-ori-vert							col-md-4						"
+			
+							data-single
+			
+									data-cellId="grid_c1" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<label data-itemtype="oldpass_label" data-itemid="oldpass_label" {$item_oldpass_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="{$labelfor_oldpass}">
+	{BEGIN oldpass_label}Old password:{END oldpass_label}
+</label>					</div>
+		</td>
+	 
+				<td
+			class=" r-ori-vert							col-md-6						"
+			
+							data-single
+			
+									data-cellId="grid_c2" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<div class="r-edit-field" data-itemtype="oldpass" data-itemid="oldpass" {$item_oldpass} data-pageid="{$pageid}" >
+	{$oldpass_editcontrol}
+</div>					</div>
+		</td>
+				<td class="col-md-2"></td>
+		</tr>
+ 
+	<tr>
+	 
+				<td
+			class="r-align-right r-ori-vert							col-md-4						"
+			
+							data-single
+			
+									data-cellId="grid_c3" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<label data-itemtype="newpass_label" data-itemid="newpass_label" {$item_newpass_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="{$labelfor_newpass}">
+	{BEGIN newpass_label}New password:{END newpass_label}
+</label>					</div>
+		</td>
+	 
+				<td
+			class=" r-ori-vert							col-md-6						"
+			
+							data-single
+			
+									data-cellId="grid_c4" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<div class="r-edit-field" data-itemtype="newpass" data-itemid="newpass" {$item_newpass} data-pageid="{$pageid}" >
+	{$newpass_editcontrol}
+</div>					</div>
+		</td>
+				<td class="col-md-2"></td>
+		</tr>
+ 
+	<tr>
+	 
+				<td
+			class="r-align-right r-ori-vert							col-md-4						"
+			
+							data-single
+			
+									data-cellId="grid_c5" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<label data-itemtype="confirm_label" data-itemid="confirm_label" {$item_confirm_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="{$labelfor_confirm}">
+	{BEGIN confirm_label}Confirm password:{END confirm_label}
+</label>					</div>
+		</td>
+	 
+				<td
+			class=" r-ori-vert							col-md-6						"
+			
+							data-single
+			
+									data-cellId="grid_c6" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<div class="r-edit-field" data-itemtype="confirm" data-itemid="confirm" {$item_confirm} data-pageid="{$pageid}" >
+	{$confirm_editcontrol}
+</div>					</div>
+		</td>
+				<td class="col-md-2"></td>
+		</tr>
+</tbody>
+</table>
+{END grid_block}
+											{BEGIN footer_block}
+<div class="r-form" data-location="footer" id="form_footer_{$pageid}" data-makeup="panel" {$form_footer} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="footer_c1" data-pageid="{$pageid}"	{$cell_footer_c1}
+	class="r-align-center			col-md-12
+	
+">
+		 
+		<span data-itemtype="changepwd_button" data-itemid="changepwd_button" {$item_changepwd_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$submit_attrs} >
+							Submit			</a>
+</span>
+	 
+		<span data-itemtype="changepwd_back" data-itemid="changepwd_back" {$item_changepwd_back} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" {$backlink_attrs} >
+							Back			</a>
+</span>
+		</div>					</div>
+			</div>		
+{END footer_block}
+						</div>
+				</div>
+						
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

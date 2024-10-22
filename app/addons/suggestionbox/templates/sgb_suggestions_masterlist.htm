@@ -1,0 +1,305 @@
+<div class="panel panel-primary">
+		<div class="panel-heading">
+						{BEGIN top_block}
+<div class="panel-title r-panel-top row" data-location="top" id="form_top_{$pageid}" data-makeup="panel-only" {$form_top} data-pageid="{$pageid}" >		
+	 
+		 
+			<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="back_master" data-itemid="back_master" {$item_back_master} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn-link  btn-xs 
+	 fa fa-arrow-left" {$backtomasterlink_attrs} >		
+				
+					All suggestions			</a>
+</span>
+		</div>			 
+		 
+			<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="snippet" data-itemid="sgb_change_info" {$item_sgb_change_info} data-pageid="{$pageid}" >
+{$event sgb_suggestions_snippet1}
+</span>		</div>			 
+		 
+			<div 
+	data-cellId="top_c" data-pageid="{$pageid}"	{$cell_top_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="snippet" data-itemid="stitle" {$item_stitle} data-pageid="{$pageid}" data-page="sgb_suggestions_masterlist" >
+{$event sgb_page_caption}
+</span>		</div>			</div>		
+{END top_block}
+			</div>
+		<div class="panel-body">
+							{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="panel-only" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+								{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="panel-only" {$form_grid} data-pageid="{$pageid}" class=" table table-striped table-bordered r-horizontal-grid  rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="4"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																																								<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+							</tr>
+																														
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																																													<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_field2}
+							</tr>
+											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$vote_class}	"
+
+			data-field="vote"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sgb_suggestions_masterlist"	
+	>
+
+	 
+		{BEGIN vote_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="vote" data-fieldname="vote" data-default-width >
+{$vote_value}
+</span>
+{END vote_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$suggestion_class}	"
+
+			data-field="suggestion"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sgb_suggestions_masterlist"	
+	>
+
+	 
+		{BEGIN suggestion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="suggestion" data-fieldname="suggestion" data-default-width >
+{$suggestion_value}
+</span>
+{END suggestion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$images_class}	"
+
+			data-field="images"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sgb_suggestions_masterlist"	
+	>
+
+	 
+		{BEGIN images_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="images" data-fieldname="images" data-default-width >
+{$images_value}
+</span>
+{END images_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+							</tr>
+											<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+				 {$status_class}	"
+
+			data-field="status"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN status_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="status" data-fieldname="status" data-default-width >
+{$status_value}
+</span>
+{END status_fieldcolumn}	 
+		{BEGIN categoryid_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="categoryid" data-fieldname="categoryid" data-default-width >
+{$categoryid_value}
+</span>
+{END categoryid_fieldcolumn}	 
+		{BEGIN suggested_by_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="suggested_by" data-fieldname="suggested_by" data-default-width >
+{$suggested_by_value}
+</span>
+{END suggested_by_fieldcolumn}	 
+		{BEGIN created_date_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created_date" data-fieldname="created_date" data-default-width >
+{$created_date_value}
+</span>
+{END created_date_fieldcolumn}	 
+		<span data-itemtype="text" data-itemid="pont" {$item_pont} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	•</span>
+	 
+		{BEGIN upvoted_date_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="upvoted_date" data-fieldname="upvoted_date" data-default-width >
+{$upvoted_date_value}
+</span>
+{END upvoted_date_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+							</tr>
+											<tr {$rowattrs} {$row_grid_4} class="{$rowclass}
+				
+								r-gridrow
+							">
+										<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="custom_button" data-itemid="sgb_EditSuggestion" {$item_sgb_EditSuggestion} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="sgb_EditSuggestion" href="javascript:void(0)" typeid="ib" >
+							Edit			</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="sgbMergerSuggestion" {$item_sgbMergerSuggestion} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="sgbMergerSuggestion" href="javascript:void(0)" typeid="ib" >
+							Merge			</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="sgb_splitSuggestion" {$item_sgb_splitSuggestion} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="sgb_splitSuggestion" href="javascript:void(0)" typeid="ib" >
+							Split			</a>
+</span>
+	 
+		<span data-itemtype="snippet" data-itemid="sgb_status_change" {$item_sgb_status_change} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event sgb_status_change}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="sgb_category_change" {$item_sgb_category_change} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event sgb_category_change}
+</span>	
+	</td>
+								</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																																																	<tr {$rowattrs} {$row_grid_5} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sgb_suggestions_masterlist"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+								</div>
+</div>

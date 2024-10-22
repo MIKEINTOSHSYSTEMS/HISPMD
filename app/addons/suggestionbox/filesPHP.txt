@@ -1,0 +1,29 @@
+include\phpfunctions.php include\phpfunctions.php
+
+plugins\facebook\facebook.php plugins\facebook\facebook.php
+plugins\facebook\base_facebook.php plugins\facebook\base_facebook.php
+plugins\facebook\fb_ca_chain_bundle.crt plugins\facebook\fb_ca_chain_bundle.crt
+
+include\ciphereraes.##@ext## include\ciphereraes.##@ext##
+include\import_functions.php include\import_functions.php
+
+
+##if @BUILDER.bPhpSpreadsheet##
+include\phpspreadsheet_int.php include\phpspreadsheet_int.php
+plugins\PhpOffice plugins\PhpOffice
+##else##
+plugins\PHPExcel plugins\PHPExcel
+plugins\PHPExcel.php plugins\PHPExcel.php
+include\export_functions_excel.php include\export_functions_excel.php
+##endif##
+
+libs\excelreader.src libs\excelreader.php
+libs\gif.php libs\gif.php
+libs\oleread.inc libs\oleread.inc
+libs\phpmailer libs\phpmailer
+
+include\xml.php include\xml.php
+
+##if @BUILDER.bCreateREST##
+api/v1.php api/v1.php
+##endif##

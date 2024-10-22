@@ -1,0 +1,35 @@
+[data-page="sgb_suggestions_list_admin"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="supertop_c2"][data-page="sgb_suggestions_list_admin"][data-cellid="supertop_c2"][data-page="sgb_suggestions_list_admin"][data-cellid="supertop_c2"][data-page="sgb_suggestions_list_admin"] {
+ text-align:left;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_label"][data-page="sgb_suggestions_list_admin"][data-cellid="grid_cell_label"][data-page="sgb_suggestions_list_admin"][data-cellid="grid_cell_label"][data-page="sgb_suggestions_list_admin"] {
+  width:110px !important;
+}
+/* Put  your custom CSS code here */
+
+[data-page="sgb_suggestions_list_admin"][data-itemid="point"] {
+  margin-left:3px;
+  margin-right:3px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="sgb_suggestions_list_admin"][data-itemid="text"] {
+  margin-left:3px;
+  margin-right:3px;
+}
+
+[data-page="sgb_suggestions_list_admin"][data-itemid="logo"] {
+    text-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+    line-height: 20px;
+    font-size: 18px;
+}
+

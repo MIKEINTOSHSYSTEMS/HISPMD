@@ -4089,26 +4089,26 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "158";
-	$menuNode["name"] = "HISPMD Notifications";
+	$menuNode["name"] = "Suggestion Box";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.hispmd_noti_view";
+	$menuNode["table"] = "main";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
+	$menuNode["pageId"] = "Suggestion_Box";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-bell";
+	$menuNode["icon"] = "fa-dropbox";
 	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "HISPMD Notifications";
+	$menuNode["title"] = "Suggestion Box";
 
 
 
@@ -4141,6 +4141,32 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "160";
+	$menuNode["name"] = "HISPMD Notifications";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.hispmd_noti_view";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-bell";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "HISPMD Notifications";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "161";
 	$menuNode["name"] = "-------";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Separator";
@@ -4166,7 +4192,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "161";
+	$menuNode["id"] = "162";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";

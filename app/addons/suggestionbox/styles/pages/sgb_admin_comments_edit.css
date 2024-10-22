@@ -1,0 +1,13 @@
+[data-page="sgb_admin_comments_edit"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="sgb_admin_comments_edit"][data-itemid="text"]{
+ font-size: 24px;
+ color: #2c3136;
+ text-align: left;
+    margin: 10px;
+}
+

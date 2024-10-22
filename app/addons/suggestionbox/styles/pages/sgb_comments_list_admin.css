@@ -1,0 +1,54 @@
+[data-cellid="grid_cell_field"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field"][data-page="sgb_comments_list_admin"] {
+  padding-top: 20px;
+}
+[data-page="sgb_comments_list_admin"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="left_c"][data-page="sgb_comments_list_admin"][data-cellid="left_c"][data-page="sgb_comments_list_admin"][data-cellid="left_c"][data-page="sgb_comments_list_admin"] {
+  display:none !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field5"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field5"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field5"][data-page="sgb_comments_list_admin"] {
+ width:48% !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field6"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field6"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field6"][data-page="sgb_comments_list_admin"] {
+ width:48% !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field7"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field7"][data-page="sgb_comments_list_admin"][data-cellid="grid_cell_field7"][data-page="sgb_comments_list_admin"] {
+ width:4% !important;
+}
+/* Put  your custom CSS code here */
+
+[data-page="sgb_comments_list_admin"][data-itemid="grid_field2"] {
+ font-style: italic;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="sgb_comments_list_admin"][data-itemid="grid_edit"] {
+  display:none;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="sgb_comments_list_admin"][data-itemid="grid_inline_cancel"] {
+  display:none;
+}
+
+[data-page="sgb_comments_list_admin"][data-itemid="logo"] {
+    text-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+    line-height: 20px;
+    font-size: 18px;
+}
+

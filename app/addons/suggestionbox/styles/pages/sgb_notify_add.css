@@ -1,0 +1,34 @@
+[data-page="sgb_notify_add"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="above-grid_c1"][data-page="sgb_notify_add"][data-cellid="above-grid_c1"][data-page="sgb_notify_add"][data-cellid="above-grid_c1"][data-page="sgb_notify_add"] {
+  display:none !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="above-grid_c2"][data-page="sgb_notify_add"][data-cellid="above-grid_c2"][data-page="sgb_notify_add"][data-cellid="above-grid_c2"][data-page="sgb_notify_add"] {
+  display:none !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="below-grid_c1"][data-page="sgb_notify_add"][data-cellid="below-grid_c1"][data-page="sgb_notify_add"][data-cellid="below-grid_c1"][data-page="sgb_notify_add"] {
+  display:none !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="top_c1"][data-page="sgb_notify_add"][data-cellid="top_c1"][data-page="sgb_notify_add"][data-cellid="top_c1"][data-page="sgb_notify_add"] {
+  display:none !important;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_c"][data-page="sgb_notify_add"][data-cellid="grid_c"][data-page="sgb_notify_add"][data-cellid="grid_c"][data-page="sgb_notify_add"] .clearfix{
+  text-align:right;
+}
+

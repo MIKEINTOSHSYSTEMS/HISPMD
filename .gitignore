@@ -12,7 +12,7 @@
 /api/widget/
 /api/graphic/
 /api/visualizer/
-/app/addons/
+/app/addons/suggestionbox/sql/mysql.sql
 /maps/geojson/
 /maps/geojson/regions
 /app/templates_c/*.csv

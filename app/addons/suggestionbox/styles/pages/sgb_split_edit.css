@@ -1,0 +1,28 @@
+[data-page="sgb_split_edit"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_c3"][data-page="sgb_split_edit"][data-cellid="grid_c3"][data-page="sgb_split_edit"][data-cellid="grid_c3"][data-page="sgb_split_edit"] {
+border-radius: 4px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_c6"][data-page="sgb_split_edit"][data-cellid="grid_c6"][data-page="sgb_split_edit"][data-cellid="grid_c6"][data-page="sgb_split_edit"] {
+  border-bottom: 1px solid #e3e8ee;
+}
+
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_c7"][data-page="sgb_split_edit"][data-cellid="grid_c7"][data-page="sgb_split_edit"][data-cellid="grid_c7"][data-page="sgb_split_edit"] {
+  border-top: 1px solid #e3e8ee;
+}
+/* Put  your custom CSS code here */
+
+[data-page="sgb_split_edit"][data-itemid="text3"] {
+     float: right;
+    margin-left: 10px;
+}
+

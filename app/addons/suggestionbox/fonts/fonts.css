@@ -1,0 +1,167 @@
+
+
+@font-face {
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url('Roboto-Regular.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url('Roboto-Bold.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto';
+			font-style: italic;
+			font-weight: 400;
+			font-display: swap;
+			src: url('Roboto-Italic.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto';
+			font-style: italic;
+			font-weight: 700;
+			font-display: swap;
+			src: url('Roboto-BoldItalic.ttf') format('truetype') ;
+		}
+		
+
+@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url('OpenSans-Regular.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url('OpenSans-Bold.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Open Sans';
+			font-style: italic;
+			font-weight: 400;
+			font-display: swap;
+			src: url('OpenSans-Italic.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Open Sans';
+			font-style: italic;
+			font-weight: 700;
+			font-display: swap;
+			src: url('OpenSans-BoldItalic.ttf') format('truetype') ;
+		}
+		
+
+@font-face {
+			font-family: 'Roboto Mono';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url('RobotoMono-Regular.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto Mono';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url('RobotoMono-Bold.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto Mono';
+			font-style: italic;
+			font-weight: 400;
+			font-display: swap;
+			src: url('RobotoMono-Italic.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto Mono';
+			font-style: italic;
+			font-weight: 700;
+			font-display: swap;
+			src: url('RobotoMono-BoldItalic.ttf') format('truetype') ;
+		}
+		
+
+@font-face {
+			font-family: 'Roboto Slab';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url('RobotoSlab-Regular.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Roboto Slab';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url('RobotoSlab-Bold.ttf') format('truetype') ;
+		}
+		
+
+@font-face {
+			font-family: 'Inconsolata';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url('Inconsolata-Regular.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Inconsolata';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url('Inconsolata-Bold.ttf') format('truetype') ;
+		}
+		
+
+@font-face {
+			font-family: 'Merriweather';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url('Merriweather-Regular.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Merriweather';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url('Merriweather-Bold.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Merriweather';
+			font-style: italic;
+			font-weight: 400;
+			font-display: swap;
+			src: url('Merriweather-Italic.ttf') format('truetype') ;
+		}
+		
+@font-face {
+			font-family: 'Merriweather';
+			font-style: italic;
+			font-weight: 700;
+			font-display: swap;
+			src: url('Merriweather-BoldItalic.ttf') format('truetype') ;
+		}
+		

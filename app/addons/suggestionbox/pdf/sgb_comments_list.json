@@ -1,0 +1,696 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption sgb_comments}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel sgb_comments list}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0; },
+				vLineWidth: function(i, node) { 
+					return 0; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"*",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 1,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																	
+	{BEGIN grid_row}
+	[ 
+	
+	{BEGIN grid_record}
+	{BEGIN grid_vrecord}
+	
+		{ 
+			layout: 'vrecord',
+			table: {
+				widths: ['*'],
+				body: [[
+					{
+						
+						table: {
+							tableForm: true,
+							widths: [
+																{BEGIN col_grid_0}
+								"*",
+								{END col_grid_0}
+																{BEGIN col_grid_1}
+								"*",
+								{END col_grid_1}
+																{BEGIN col_grid_2}
+								"*",
+								{END col_grid_2}
+															],
+													heights: [
+															{BEGIN row_grid_0}			
+								"%",
+								{END row_grid_0}
+															{BEGIN row_grid_1}			
+								"%",
+								{END row_grid_1}
+															{BEGIN row_grid_2}			
+								"%",
+								{END row_grid_2}
+															{BEGIN row_grid_3}			
+								"%",
+								{END row_grid_3}
+															{BEGIN row_grid_4}			
+								"%",
+								{END row_grid_4}
+															{BEGIN row_grid_5}			
+								"%",
+								{END row_grid_5}
+														],
+													
+							body: [
+									
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_cell_top}
+{
+	cellId: 'cell_top',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_top}
+			colSpan: {$colspan_grid_cell_top},
+			{END colspan_grid_cell_top}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event sgb_comments_countheader}","hidden":"{$item_hide_sgb_comments_countheader}","isHtml":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_top}
+																		{ 
+				cellId: 'cell_top',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_top',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'created_date',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_field}
+			colSpan: {$colspan_grid_cell_field},
+			{END colspan_grid_cell_field}
+		
+		
+	
+			// [left, top, right, bottom]
+	margin: [ 0, 20, 0, 0 ],
+		
+	
+			"stack": [
+		
+				
+			{"text":{$created_date_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+				
+			{"text":{$user_id_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+				
+			{"text":"<i class='fa fa-plus-square-o'></i>\n<span>Add a comment</span>","hidden":"{$item_hide_add_comment_label}","isHtml":true},
+				
+				
+			{"text":"Message","hidden":"{$item_hide_message_c_label}","isHtml":true},
+				
+				
+			{"text":{$comment_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": '{$created_date_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																		{ 
+				cellId: 'cell_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_field',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'name',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"stack": [
+		
+				
+			{"text":"Name","hidden":"{$item_hide_name_c_label}","isHtml":true},
+				
+				
+			{"text":{$name_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
+				
+				
+			{"text":"* Your name will be publicly visible","hidden":"{$item_hide_name_c_tooltip}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": '{$name_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'email',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"stack": [
+		
+				
+			{"text":"Email","hidden":"{$item_hide_email_c_label}","isHtml":true},
+				
+				
+			{"text":{$email_pdfvalue},"hidden":"{$item_hide_grid_field4}"},
+				
+				
+			{"text":"* Your email will be visible only to moderators","hidden":"{$item_hide_email_c_tooltip}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": '{$email_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+											],
+				{END row_grid_2}
+						{BEGIN row_grid_3}
+				[
+																{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'admin_buttons',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_field2}
+			colSpan: {$colspan_grid_cell_field2},
+			{END colspan_grid_cell_field2}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$admin_buttons_pdfvalue},"hidden":"{$item_hide_sgb_comments_moderate_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": '{$admin_buttons_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																		{ 
+				cellId: 'cell_field2',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_field2',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_grid_3}
+						{BEGIN row_grid_4}
+				[
+																{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_field1}
+			colSpan: {$colspan_grid_cell_field1},
+			{END colspan_grid_cell_field1}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_save}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																		{ 
+				cellId: 'cell_field1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_field1',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_grid_4}
+						{BEGIN row_grid_5}
+				[
+																{BEGIN cellblock_grid_cell_dpreview}
+{
+	cellId: 'cell_dpreview',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_dpreview}
+			colSpan: {$colspan_grid_cell_dpreview},
+			{END colspan_grid_cell_dpreview}
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_dpreview}
+																		{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_grid_5}
+		
+							]
+						}
+					}
+				]]
+			}
+		},
+	{END grid_vrecord}
+	{END grid_record}
+	]
+,
+	{END grid_row}
+	
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};

@@ -1,0 +1,103 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-changepwd_success" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+			<div class="r-panel-page">
+								{BEGIN supertop_block}
+<div class="r-form" data-location="supertop" id="form_supertop_{$pageid}" data-makeup="panel" {$form_supertop} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="supertop_c1" data-pageid="{$pageid}"	{$cell_supertop_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END supertop_block}
+					<div class="bs-pagepanel panel panel-primary">
+					<div class="panel-heading">
+									{BEGIN top_block}
+<div class="panel-title r-panel-top row" data-location="top" id="form_top_{$pageid}" data-makeup="panel" {$form_top} data-pageid="{$pageid}" >		
+	 
+		 
+			<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h3 class="panel-title" data-itemtype="changepwd_success_header" data-itemid="changepwd_success_header" {$item_changepwd_success_header} data-pageid="{$pageid}" >{$pagetitlelabel  changepwd_success_Project}</h3>
+		</div>			</div>		
+{END top_block}
+						</div>
+					<div class="panel-body">
+																		{BEGIN grid_block}
+<table  class="r-edit-form r-panel-form" cellpadding="0" cellspacing="0" data-location="grid" id="form_grid_{$pageid}" data-makeup="panel" {$form_grid} data-pageid="{$pageid}" {$grid_hiddenattr} data-form-width="">
+<tbody>
+ 
+	<tr>
+	 
+				<td
+			class="r-align-center r-ori-vert						"
+			
+							data-single
+			
+									data-cellId="grid_c1" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<div class="alert alert-success" data-itemtype="changepwd_success_message" data-itemid="changepwd_success_message" {$item_changepwd_success_message} data-pageid="{$pageid}" data-small > 
+	Password was changed</div>
+					</div>
+		</td>
+			</tr>
+</tbody>
+</table>
+{END grid_block}
+											{BEGIN footer_block}
+<div class="r-form" data-location="footer" id="form_footer_{$pageid}" data-makeup="panel" {$form_footer} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="footer_c1" data-pageid="{$pageid}"	{$cell_footer_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="changepwd_success_back" data-itemid="changepwd_success_back" {$item_changepwd_success_back} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$backlink_attrs} >
+							Back			</a>
+</span>
+		</div>					</div>
+			</div>		
+{END footer_block}
+						</div>
+				</div>
+						
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

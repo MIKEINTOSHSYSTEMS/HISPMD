@@ -1,0 +1,124 @@
+<ul class="r-menu nav 
+##if @treelike##
+menu-treelike
+##else##
+navbar-nav
+##endif##
+" data-menulevel="1">
+	{$active_submenu}
+	##foreach MenuChildren(0) as @m0##
+	##set @menu=@m0##
+	##set @top=1##
+	{BEGIN item##@m0.id##_menulink}
+	<li class="##if hasMenuChildren(@menu.id) && !@treelike## dropdown ##endif## {$item##@menu.id##_current}">
+		##include templates\bsmenuitem.htm##
+		##foreach MenuChildren(@m0.id) as @m1##
+		##set @top=0##
+		##set @menu=@m1##
+		##if @first##
+		<ul class="
+		##if @treelike##
+			nav collapse 
+		##else##
+			dropdown-menu
+		##endif##
+			{$submenu##@menu.parent##_class}" 
+			id="submenu##@m0.id##" data-menulevel=2>
+		##endif##
+			{BEGIN item##@m1.id##_menulink}
+			<li class="##if hasMenuChildren(@menu.id) && !@treelike## dropdown ##endif## {$item##@menu.id##_current}">
+				##include templates\bsmenuitem.htm##
+				##foreach MenuChildren(@m1.id) as @m2##
+				##set @menu=@m2##
+				##if @first##
+				<ul class="
+				##if @treelike##
+					nav collapse 
+				##else##
+					dropdown-menu
+				##endif##
+					{$submenu##@menu.parent##_class}" 
+					id="submenu##@m1.id##" data-menulevel=3>
+				##endif##
+					{BEGIN item##@m2.id##_menulink}
+						<li class="##if hasMenuChildren(@menu.id) && !@treelike## dropdown ##endif## {$item##@menu.id##_current}">
+						##include templates\bsmenuitem.htm##
+						##foreach MenuChildren(@m2.id) as @m3##
+						##set @menu=@m3##
+						##if @first##
+						<ul class="
+						##if @treelike##
+							nav collapse 
+						##else##
+							dropdown-menu
+						##endif##
+							{$submenu##@menu.parent##_class}" 
+							id="submenu##@m2.id##" data-menulevel=4>
+						##endif##
+							{BEGIN item##@m3.id##_menulink}
+								<li class="##if hasMenuChildren(@menu.id) && !@treelike## dropdown ##endif## {$item##@menu.id##_current}">
+								##include templates\bsmenuitem.htm##
+								##foreach MenuChildren(@m3.id) as @m4##
+								##set @menu=@m4##
+								##if @first##
+								<ul class="
+								##if @treelike##
+									nav collapse 
+								##else##
+									dropdown-menu
+								##endif##
+									{$submenu##@menu.parent##_class}" 
+									id="submenu##@m3.id##" data-menulevel=5>
+								##endif##
+									{BEGIN item##@m4.id##_menulink}
+										<li class="##if hasMenuChildren(@menu.id) && !@treelike## dropdown ##endif## {$item##@menu.id##_current}">
+										##include templates\bsmenuitem.htm##
+										##foreach MenuChildren(@m4.id) as @m5##
+										##set @menu=@m5##
+										##if @first##
+										<ul class="
+										##if @treelike##
+											nav collapse 
+										##else##
+											dropdown-menu
+										##endif##
+											{$submenu##@menu.parent##_class}" 
+											id="submenu##@m4.id##" data-menulevel=6>
+										##endif##
+											{BEGIN item##@m5.id##_menulink}
+											<li class="{$item##@menu.id##_current}">
+												##include templates\bsmenuitem.htm##
+											</li>
+											{END item##@m5.id##_menulink}
+										##if @last##
+										</ul>
+										##endif##
+										##endfor##
+									</li>
+									{END item##@m4.id##_menulink}
+								##if @last##
+								</ul>
+								##endif##
+								##endfor##
+							</li>
+							{END item##@m3.id##_menulink}
+						##if @last##
+						</ul>
+						##endif##
+						##endfor##
+					</li>
+					{END item##@m2.id##_menulink}
+				##if @last##
+				</ul>
+				##endif##
+				##endfor##
+			</li>
+			{END item##@m1.id##_menulink}
+		##if @last##
+		</ul>
+		##endif##
+		##endfor##
+	</li>
+	{END item##@m0.id##_menulink}
+	##endfor##
+</ul>

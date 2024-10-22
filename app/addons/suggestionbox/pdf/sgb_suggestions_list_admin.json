@@ -1,0 +1,447 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption sgb_suggestions}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel sgb_suggestions list_admin}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0; },
+				vLineWidth: function(i, node) { 
+					return 0; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"*",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 1,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+''
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event sgb_promo}","hidden":"{$item_hide_sgb_promo}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event sgb_suggestions_snippet}","hidden":"{$item_hide_sgb_top_new_buttons}","isHtml":true},
+				
+				
+			{"text":"{$event sgb_status_select}","hidden":"{$item_hide_sgb_status_select}","isHtml":true},
+				
+				
+			{"text":"{$event sgb_category_select}","hidden":"{$item_hide_sgb_category_select}","isHtml":true},
+				
+				
+			{"text":"{$event sgb_suggestions_showdeleted}","hidden":"{$item_hide_sgb_showdeleted}","isHtml":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_simple_search}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_add}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																	
+	{BEGIN grid_row}
+	[ 
+	
+	{BEGIN grid_record}
+	{BEGIN grid_vrecord}
+	
+		{ 
+			layout: 'vrecord',
+			table: {
+				widths: ['*'],
+				body: [[
+					{
+						
+						table: {
+							tableForm: true,
+							widths: [
+																{BEGIN col_grid_0}
+								"33%",
+								{END col_grid_0}
+																{BEGIN col_grid_1}
+								"66%",
+								{END col_grid_1}
+															],
+													heights: [
+															{BEGIN row_grid_0}			
+								"%",
+								{END row_grid_0}
+															{BEGIN row_grid_1}			
+								"%",
+								{END row_grid_1}
+															{BEGIN row_grid_2}			
+								"%",
+								{END row_grid_2}
+														],
+													
+							body: [
+									
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_cell_top}
+{
+	cellId: 'cell_top',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_top}
+			colSpan: {$colspan_grid_cell_top},
+			{END colspan_grid_cell_top}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_view}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_top}
+																		{ 
+				cellId: 'cell_top',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_label}
+{
+	cellId: 'cell_label',
+	col:0,
+	row:0,
+			fieldName: 'vote',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$vote_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_label}
+																							{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'title',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$title_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+				
+			{"text":{$suggested_by_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+				
+				
+			{"text":{$created_date_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+				
+			{"text":"•","hidden":"{$item_hide_point}","isHtml":true},
+				
+				
+			{"text":{$upvoted_date_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
+				
+				
+			{"text":"•","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
+			{"text":{$comments_pdfvalue},"hidden":"{$item_hide_grid_field4}"},
+				
+				
+			{"text":"&nbsp;","hidden":"{$item_hide_break1}","isHtml":true},
+				
+				
+			{"text":{$pinned_pdfvalue},"hidden":"{$item_hide_pinned}"},
+				
+				
+			{"text":{$status_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+				
+				
+			{"text":{$categoryid_pdfvalue},"hidden":"{$item_hide_sgb_category}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": '{$title_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+											],
+				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_dpreview}
+{
+	cellId: 'cell_dpreview',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_dpreview}
+			colSpan: {$colspan_grid_cell_dpreview},
+			{END colspan_grid_cell_dpreview}
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_dpreview}
+																		{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_grid_2}
+		
+							]
+						}
+					}
+				]]
+			}
+		},
+	{END grid_vrecord}
+	{END grid_record}
+	]
+,
+	{END grid_row}
+	
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};
