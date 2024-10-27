@@ -3043,6 +3043,7 @@ $proto35["m_columns"][] = "scope_id";
 $proto35["m_columns"][] = "gender_sex";
 $proto35["m_columns"][] = "data_representation";
 $proto35["m_columns"][] = "indicator_group_id";
+$proto35["m_columns"][] = "data_source_detail";
 $obj = new SQLTable($proto35);
 
 $proto34["m_table"] = $obj;

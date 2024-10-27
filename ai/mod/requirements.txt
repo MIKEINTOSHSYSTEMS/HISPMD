@@ -45,7 +45,7 @@ mypy-extensions==1.0.0
 numpy==1.26.4
 orjson==3.10.1
 packaging==23.2
-pandas==2.2.2
+pandas==2.2.3
 pathspec==0.12.1
 pillow==10.3.0
 platformdirs==4.2.1
@@ -80,3 +80,4 @@ tzdata==2024.1
 urllib3==2.2.1
 watchdog==4.0.0
 yarl==1.9.4
+rapidfuzz==3.10.0

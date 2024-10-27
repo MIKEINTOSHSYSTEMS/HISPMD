@@ -381,6 +381,48 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN assessment_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_assessment_id}  r-vertical-field" data-fieldname="assessment_id" data-signal-error-for="assessment_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_assessment_id}">
+		
+		{BEGIN assessment_id_label}{$label public_moh_indicator_data assessment_id }{END assessment_id_label}
+	</label>
+	<div class="" >
+		{$assessment_id_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END assessment_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c4}
+								</tr>
+	 
+	 
+														<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_c14}
+<td
+	{$cell_grid_c14}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c14" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN data_source_id_fieldblock}
 
 
@@ -403,27 +445,6 @@
 {END data_source_id_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c4}
-								</tr>
-	 
-	 
-		
-						<tr>
-						
-
-{BEGIN cellblock_grid_c14}
-<td
-	{$cell_grid_c14}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c14" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-									</td>
 			{END cellblock_grid_c14}
 			 
 																
@@ -441,26 +462,26 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN assessment_id_fieldblock}
+{BEGIN data_source_detail_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_assessment_id}  r-vertical-field" data-fieldname="assessment_id" data-signal-error-for="assessment_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_source_detail}  r-vertical-field" data-fieldname="data_source_detail" data-signal-error-for="data_source_detail{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
 
 		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_assessment_id}">
+	<label class="" for="{$labelfor_data_source_detail}">
 		
-		{BEGIN assessment_id_label}{$label public_moh_indicator_data assessment_id }{END assessment_id_label}
+		{BEGIN data_source_detail_label}{$label public_moh_indicator_data data_source_detail }{END data_source_detail_label}
 	</label>
 	<div class="" >
-		{$assessment_id_value}	</div>
+		{$data_source_detail_value}	</div>
 
 		</div>
 		
 </div>
 
 
-{END assessment_id_fieldblock}
+{END data_source_detail_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c15}

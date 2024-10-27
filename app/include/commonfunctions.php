@@ -420,6 +420,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("hispmd_indicators_data" == $shortTName )
 		return true;
+	if ("moh_ir_datasource" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1442,6 +1444,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="hispmd_indicators_data";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_ir_datasource");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_ir_datasource";
+	}
 	return $arr;
 }
 
@@ -1559,6 +1570,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="MoH_Indicators_Data_Values_Chart";
 	$arr[]="Indicators_Dashboard";
 	$arr[]="hispmd_indicators_data";
+	$arr[]="public.moh_ir_datasource";
 	return $arr;
 }
 
@@ -2740,6 +2752,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="hispmd_indicators_data" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_ir_datasource" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

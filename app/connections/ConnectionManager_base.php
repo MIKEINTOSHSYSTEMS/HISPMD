@@ -345,6 +345,7 @@ class ConnectionManager_Base
 		$connectionsIds["MoH_Indicators_Data_Values_Chart"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["Indicators_Dashboard"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["hispmd_indicators_data"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_ir_datasource"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -42,14 +42,14 @@ LOCAL_CHAT_BOT/
 2. Create and activate a virtual environment:
 
    ```bash
-   python -m venv env
+   python3 -m venv env
    source env/bin/activate  # On Windows use `env\Scripts\activate`
    ```
 
 3. Install dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 4. Set up environment variables:

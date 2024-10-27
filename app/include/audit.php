@@ -842,6 +842,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.moh_ir_datasource")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1633,6 +1637,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="hispmd_indicators_data")
+		{
+			return false;
+		}
+		if($table=="public.moh_ir_datasource")
 		{
 			return false;
 		}

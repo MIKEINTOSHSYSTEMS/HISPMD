@@ -144,6 +144,9 @@ pdfDocument = {
 				
 			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_export_field12}"},
 				
+				
+			{"text":{$data_source_detail_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

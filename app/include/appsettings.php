@@ -904,9 +904,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "675_1729179883";
+$projectBuildKey = "678_1730033043";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "675";
+$projectBuildNumber = "678";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1035,6 +1035,7 @@ $tableCaptions["English"]["public_faicons"] = "Faicons";
 $tableCaptions["English"]["MoH_Indicators_Data_Values_Chart"] = "MoH Indicators Data Values Chart";
 $tableCaptions["English"]["Indicators_Dashboard"] = "Indicators Dashboard";
 $tableCaptions["English"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
+$tableCaptions["English"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["Amharic"] = array();
@@ -1147,6 +1148,7 @@ $tableCaptions["Amharic"]["Indicators_Dashboard"] = "Indicators Dashboard";
 $tableCaptions["Amharic"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
 $tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["Amharic"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
 
 
 $globalEvents = new class_GlobalEvents;
