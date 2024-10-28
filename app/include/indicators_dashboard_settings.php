@@ -262,6 +262,7 @@ $tdataindicators_dashboard[".geocodingEnabled"] = false;
 $tdataindicators_dashboard[".isDisplayLoading"] = true;
 
 
+$tdataindicators_dashboard[".searchIsRequiredForFilters"] = true;
 
 $tdataindicators_dashboard[".noRecordsFirstPage"] = true;
 

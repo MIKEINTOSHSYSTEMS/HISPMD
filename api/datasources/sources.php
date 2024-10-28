@@ -158,7 +158,7 @@
     </style>
 </head>
 <body>
-
+<!--
     <div class="intro">
         <img src="../../app/images/MOH_logo_text_250.png" width="100" height="100" alt="MOH Logo">
         <h2>Welcome to Our Interactive Health Information Systems Performance Monitoring Dashboard!</h2>
@@ -166,6 +166,26 @@
         <p>Below you will find a set of data source cards that represent key sources used in the making and development of this dashboard. <br>Click on each title to reveal more details about the source.</p>
         <h6>For better user experience we recommend using a computer or desktop view!</h6>
     </div>
+    -->
+<div class="intro" style="text-align: center; margin-bottom: 20px;">
+    <!--<img src="../../app/images/MOH_logo_text_250.png" width="100" height="100" alt="MOH Logo" style="border-radius: 100%;">-->
+    <h2 style="font-family: 'Arial', sans-serif; color: #2980b9;">Welcome to</h2>
+    <h1 style="font-family: 'Arial', sans-serif; color: #2980b9;">The Ethiopian Health Information System (HIS) Performance Monitoring Dashboard</h1>
+</div>
+
+<p style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #34495e;">
+    The Ministry of Health – Ethiopia developed this dashboard to routinely monitor the performance of the Ethiopian Health Information System. This dashboard illustrates the HIS performance in terms of data quality, data use, digital health, HIS governance, and information revolution pathways. 
+</p>
+<p style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #34495e;">
+    The indicators used in the dashboard were selected and prioritized through a collaborative co-design process involving relevant stakeholders. It utilizes diverse data sources from the routine health information system, surveys, and review reports. To assist in interpreting the indicator values, a brief description of the data sources is provided.
+</p>
+
+<div class="intro" style="text-align: center; margin: 20px 0;">
+    <h4 style="font-family: 'Arial', sans-serif; color: #2980b9;">Key Data Sources</h4>
+    <h6 style="font-family: 'Arial', sans-serif; color: #7f8c8d;">Click on each title to reveal more details about the source.</h6>
+    <h6 style="font-family: 'Arial', sans-serif; color: #7f8c8d;">For a better user experience, we recommend using a computer or desktop view!</h6>
+</div>
+
 
     <div class="container">
         <?php
