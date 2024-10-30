@@ -873,6 +873,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.moh_years")
+		{
+			return 1;
+		}
+		if($table=="public.moh_months")
+		{
+			return 1;
+		}
+		if($table=="public.moh_quarters")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1569,6 +1581,18 @@ function getCaptionTable($table)
 	if($table=="public.moh_ir_datasource")
 	{
 		return GetTableCaption("public_moh_ir_datasource");
+	}
+	if($table=="public.moh_years")
+	{
+		return GetTableCaption("public_moh_years");
+	}
+	if($table=="public.moh_months")
+	{
+		return GetTableCaption("public_moh_months");
+	}
+	if($table=="public.moh_quarters")
+	{
+		return GetTableCaption("public_moh_quarters");
 	}
 	return $table;
 }
@@ -3138,6 +3162,42 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="public.moh_ir_datasource";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_years");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_years";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_years";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_months");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_months";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_months";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.moh_quarters");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.moh_quarters";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.moh_quarters";
 	}
 	return $arr;
 }

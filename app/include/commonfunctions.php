@@ -422,6 +422,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_ir_datasource" == $shortTName )
 		return true;
+	if ("moh_years" == $shortTName )
+		return true;
+	if ("moh_months" == $shortTName )
+		return true;
+	if ("moh_quarters" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1453,6 +1459,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.moh_ir_datasource";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_years");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_years";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_months");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_months";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_quarters");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_quarters";
+	}
 	return $arr;
 }
 
@@ -1571,6 +1604,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Indicators_Dashboard";
 	$arr[]="hispmd_indicators_data";
 	$arr[]="public.moh_ir_datasource";
+	$arr[]="public.moh_years";
+	$arr[]="public.moh_months";
+	$arr[]="public.moh_quarters";
 	return $arr;
 }
 
@@ -2757,6 +2793,21 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="public.moh_ir_datasource" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_years" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_months" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_quarters" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

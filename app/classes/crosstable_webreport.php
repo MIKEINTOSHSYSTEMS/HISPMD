@@ -1599,6 +1599,12 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.moh_ir_datasource" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.moh_years" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_months" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.moh_quarters" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

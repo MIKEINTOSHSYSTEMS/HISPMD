@@ -846,6 +846,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.moh_years")
+		{
+			return false;
+		}
+		if($table=="public.moh_months")
+		{
+			return false;
+		}
+		if($table=="public.moh_quarters")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1641,6 +1653,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.moh_ir_datasource")
+		{
+			return false;
+		}
+		if($table=="public.moh_years")
+		{
+			return false;
+		}
+		if($table=="public.moh_months")
+		{
+			return false;
+		}
+		if($table=="public.moh_quarters")
 		{
 			return false;
 		}

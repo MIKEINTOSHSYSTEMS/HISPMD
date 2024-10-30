@@ -3136,8 +3136,8 @@ fieldset[disabled] a.btn {
 }
 .btn-default {
   color: #fff;
-  background-color: #95a5a6; /*#95a5a6;*/
-  border-color: transparent; /*#95a5a6;*/
+  background-color: #95a5a6;
+  border-color: #95a5a6;
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -3147,15 +3147,15 @@ fieldset[disabled] a.btn {
 }
 .btn-default:hover {
   color: #fff;
-  background-color:#339ab9; /*#798d8f;*/
-  border-color: #337ab7; /*#74898a;*/
+  background-color: #798d8f;
+  border-color: #74898a;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #fff;
-  background-color: #339ab9; /*#798d8f;*/ 
-  border-color: #347ab7; /*#74898a;*/
+  background-color: #798d8f;
+  border-color: #74898a;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3167,8 +3167,8 @@ fieldset[disabled] a.btn {
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
   color: #fff;
-  background-color: #3a79db;/* #687b7c;*/
-  border-color: #3a89db;/*#566566;*/
+  background-color: #687b7c;
+  border-color: #566566;
 }
 .btn-default:active,
 .btn-default.active,
@@ -5138,8 +5138,8 @@ a.thumbnail.active {
   color: #e6e6e6;
 }
 .alert-info {
-  background-color: transparent; /*#3498DB;*/
-  border-color: transparent;/*#3498DB;*/
+  background-color: #3498DB;
+  border-color: #3498DB;
   color: #fff;
 }
 .alert-info hr {
@@ -5983,7 +5983,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #002747c7; /*#000;*/
+  background-color: #000;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -7181,7 +7181,7 @@ select.form-control[size="1"] {
   border-color: #d8d8d8;
   background: white;
   color: #2C3E50;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 .bs-admin-header.bs-admin-header:first-child > th {
   background-color: #f8f8f8;
@@ -7246,7 +7246,7 @@ table.indenttables > * > .rightsindent5 > td.rightscell.rightscell.rightscell.ri
     border-color: #2C3E50;
   }
   .navbar.navbar-default .btn-default:not(:hover) {
-    background-color: transparent; /*#95a5a6;*/
+    background-color: #95a5a6;
   }
   .sidebar.sidebar {
     background-color: #ffffff;
@@ -8316,7 +8316,7 @@ td::before {
 .r-user-image > img {
   height: 38px;
   margin: -10px 4px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 [data-itemtype="members_source_filter"] {
   font-weight: normal;
@@ -9117,7 +9117,7 @@ td::before {
 }
 .bs-welcome-item[data-comment-len="0"] > .bs-welcome-header,
 .bs-welcome-header:last-child {
-  border-radius: 4px;
+  border-radius: 27px;
   border-bottom: solid #d8d8d8 1px;
 }
 .welcome-group {
@@ -11708,7 +11708,7 @@ However there might have been the case where dropdown showed up where it shouldn
   padding: 8px 16px;
   margin: 0px 8px;
   margin-bottom: 3px;
-  border-radius: 17px;
+  border-radius: 4px;
 }
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-top] .menu-icon,
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-inline] .menu-icon {
@@ -12579,7 +12579,7 @@ span[data-itemid] {
   }
 }
 .r-cookie-banner {
-  background: #00274c; /*darkslategray;*/
+  background: darkslategray;
   color: #ddd;
   position: fixed;
   width: 100%;

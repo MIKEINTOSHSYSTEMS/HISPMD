@@ -3728,6 +3728,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "hispmd_indicators_data" ] = "hispmd_indicators_data";
 	$projectEntities[ "public.moh_ir_datasource" ] = array( "url" => "moh_ir_datasource", "type" => 0 );
 	$projectEntitiesReverse[ "moh_ir_datasource" ] = "public.moh_ir_datasource";
+	$projectEntities[ "public.moh_years" ] = array( "url" => "moh_years", "type" => 0 );
+	$projectEntitiesReverse[ "moh_years" ] = "public.moh_years";
+	$projectEntities[ "public.moh_months" ] = array( "url" => "moh_months", "type" => 0 );
+	$projectEntitiesReverse[ "moh_months" ] = "public.moh_months";
+	$projectEntities[ "public.moh_quarters" ] = array( "url" => "moh_quarters", "type" => 0 );
+	$projectEntitiesReverse[ "moh_quarters" ] = "public.moh_quarters";
 }
 
 function findTable( $table ) {

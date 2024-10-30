@@ -596,6 +596,12 @@ class Chart
 			return true;
 		if("public.moh_ir_datasource" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.moh_years" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_months" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.moh_quarters" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

@@ -124,6 +124,9 @@ $nonAdminTablesArr[] = "MoH_Indicators_Data_Values_Chart";
 $nonAdminTablesArr[] = "Indicators_Dashboard";
 $nonAdminTablesArr[] = "hispmd_indicators_data";
 $nonAdminTablesArr[] = "public.moh_ir_datasource";
+$nonAdminTablesArr[] = "public.moh_years";
+$nonAdminTablesArr[] = "public.moh_months";
+$nonAdminTablesArr[] = "public.moh_quarters";
 
 $ug_connection = $cman->getForUserGroups();
 

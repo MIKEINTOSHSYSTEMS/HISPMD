@@ -904,9 +904,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "681_1730033043";
+$projectBuildKey = "687_1730033043";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "681";
+$projectBuildNumber = "687";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1038,6 +1038,9 @@ $tableCaptions["English"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
 $tableCaptions["English"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["English"]["public_moh_years"] = "Moh Years";
+$tableCaptions["English"]["public_moh_months"] = "Moh Months";
+$tableCaptions["English"]["public_moh_quarters"] = "Moh Quarters";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1149,6 +1152,9 @@ $tableCaptions["Amharic"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
 $tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["Amharic"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
+$tableCaptions["Amharic"]["public_moh_years"] = "Moh Years";
+$tableCaptions["Amharic"]["public_moh_months"] = "Moh Months";
+$tableCaptions["Amharic"]["public_moh_quarters"] = "Moh Quarters";
 
 
 $globalEvents = new class_GlobalEvents;
