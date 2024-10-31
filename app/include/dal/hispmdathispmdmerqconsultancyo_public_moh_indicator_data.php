@@ -14,6 +14,11 @@ $dalTablemoh_indicator_data["gender_sex"] = array("type"=>200,"varname"=>"gender
 $dalTablemoh_indicator_data["data_representation"] = array("type"=>200,"varname"=>"data_representation", "name" => "data_representation", "autoInc" => "0");
 $dalTablemoh_indicator_data["indicator_group_id"] = array("type"=>3,"varname"=>"indicator_group_id", "name" => "indicator_group_id", "autoInc" => "0");
 $dalTablemoh_indicator_data["data_source_detail"] = array("type"=>200,"varname"=>"data_source_detail", "name" => "data_source_detail", "autoInc" => "0");
+$dalTablemoh_indicator_data["period_id"] = array("type"=>3,"varname"=>"period_id", "name" => "period_id", "autoInc" => "0");
+$dalTablemoh_indicator_data["month_id"] = array("type"=>3,"varname"=>"month_id", "name" => "month_id", "autoInc" => "0");
+$dalTablemoh_indicator_data["quarter_id"] = array("type"=>3,"varname"=>"quarter_id", "name" => "quarter_id", "autoInc" => "0");
+$dalTablemoh_indicator_data["year_id"] = array("type"=>3,"varname"=>"year_id", "name" => "year_id", "autoInc" => "0");
+$dalTablemoh_indicator_data["period"] = array("type"=>200,"varname"=>"period", "name" => "period", "autoInc" => "0");
 $dalTablemoh_indicator_data["data_id"]["key"]=true;
 
 $dal_info["hispmdathispmdmerqconsultancyo_public_moh_indicator_data"] = &$dalTablemoh_indicator_data;

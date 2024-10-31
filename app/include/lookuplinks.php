@@ -481,6 +481,34 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_ir_datasource"]["moh_indicator_data.data_source_detail"] = array();
 		}
 		$lookupTableLinks["public.moh_ir_datasource"]["moh_indicator_data.data_source_detail"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "data_source_detail", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_period_types"] ) ) {
+			$lookupTableLinks["public.moh_period_types"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_period_types"]["moh_indicator_data.period_id"] )) {
+			$lookupTableLinks["public.moh_period_types"]["moh_indicator_data.period_id"] = array();
+		}
+		$lookupTableLinks["public.moh_period_types"]["moh_indicator_data.period_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "period_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_months"] ) ) {
+			$lookupTableLinks["public.moh_months"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_months"]["moh_indicator_data.month_id"] )) {
+			$lookupTableLinks["public.moh_months"]["moh_indicator_data.month_id"] = array();
+		}
+		$lookupTableLinks["public.moh_months"]["moh_indicator_data.month_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "month_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_quarters"] ) ) {
+			$lookupTableLinks["public.moh_quarters"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"] )) {
+			$lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"] = array();
+		}
+		$lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "quarter_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_years"] ) ) {
+			$lookupTableLinks["public.moh_years"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_years"]["moh_indicator_data.year_id"] )) {
+			$lookupTableLinks["public.moh_years"]["moh_indicator_data.year_id"] = array();
+		}
+		$lookupTableLinks["public.moh_years"]["moh_indicator_data.year_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "year_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
 			$lookupTableLinks["public.moh_indicator_groups"] = array();
 		}

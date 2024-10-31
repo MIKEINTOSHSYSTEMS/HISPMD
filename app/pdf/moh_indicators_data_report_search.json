@@ -207,6 +207,21 @@ pdfDocument = {
 				
 			{"text":{$data_source_detail_value},"hidden":"{$item_hide_integrated_search_field13}"},
 				
+				
+			{"text":{$period_id_value},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$month_id_value},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$quarter_id_value},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$year_id_value},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$period_value},"hidden":"{$item_hide_integrated_search_field18}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

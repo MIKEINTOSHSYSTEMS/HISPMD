@@ -67,6 +67,21 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_report["English"]["data_source_detail"] = "Data Source Detail";
 	$fieldToolTipsmoh_indicators_data_report["English"]["data_source_detail"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["data_source_detail"] = "";
+	$fieldLabelsmoh_indicators_data_report["English"]["period_id"] = "Period Id";
+	$fieldToolTipsmoh_indicators_data_report["English"]["period_id"] = "";
+	$placeHoldersmoh_indicators_data_report["English"]["period_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["English"]["month_id"] = "Month Id";
+	$fieldToolTipsmoh_indicators_data_report["English"]["month_id"] = "";
+	$placeHoldersmoh_indicators_data_report["English"]["month_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["English"]["quarter_id"] = "Quarter Id";
+	$fieldToolTipsmoh_indicators_data_report["English"]["quarter_id"] = "";
+	$placeHoldersmoh_indicators_data_report["English"]["quarter_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["English"]["year_id"] = "Year Id";
+	$fieldToolTipsmoh_indicators_data_report["English"]["year_id"] = "";
+	$placeHoldersmoh_indicators_data_report["English"]["year_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["English"]["period"] = "Period";
+	$fieldToolTipsmoh_indicators_data_report["English"]["period"] = "";
+	$placeHoldersmoh_indicators_data_report["English"]["period"] = "";
 	if (count($fieldToolTipsmoh_indicators_data_report["English"]))
 		$tdatamoh_indicators_data_report[".isUseToolTips"] = true;
 }
@@ -118,6 +133,21 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_indicators_data_report["Amharic"]["data_source_detail"] = "Data Source Detail";
 	$fieldToolTipsmoh_indicators_data_report["Amharic"]["data_source_detail"] = "";
 	$placeHoldersmoh_indicators_data_report["Amharic"]["data_source_detail"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["period_id"] = "Period Id";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["period_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["period_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["month_id"] = "Month Id";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["month_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["month_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["quarter_id"] = "Quarter Id";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["quarter_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["quarter_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["year_id"] = "Year Id";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["year_id"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["year_id"] = "";
+	$fieldLabelsmoh_indicators_data_report["Amharic"]["period"] = "Period";
+	$fieldToolTipsmoh_indicators_data_report["Amharic"]["period"] = "";
+	$placeHoldersmoh_indicators_data_report["Amharic"]["period"] = "";
 	if (count($fieldToolTipsmoh_indicators_data_report["Amharic"]))
 		$tdatamoh_indicators_data_report[".isUseToolTips"] = true;
 }
@@ -249,6 +279,11 @@ $tdatamoh_indicators_data_report[".googleLikeFields"][] = "gender_sex";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "data_representation";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "indicator_group_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "data_source_detail";
+$tdatamoh_indicators_data_report[".googleLikeFields"][] = "period_id";
+$tdatamoh_indicators_data_report[".googleLikeFields"][] = "month_id";
+$tdatamoh_indicators_data_report[".googleLikeFields"][] = "quarter_id";
+$tdatamoh_indicators_data_report[".googleLikeFields"][] = "year_id";
+$tdatamoh_indicators_data_report[".googleLikeFields"][] = "period";
 
 
 
@@ -288,7 +323,7 @@ $tdatamoh_indicators_data_report[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_indicators_data_report[".orderindexes"] = array();
 
 
-$tdatamoh_indicators_data_report[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail";
+$tdatamoh_indicators_data_report[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,  	period";
 $tdatamoh_indicators_data_report[".sqlFrom"] = "FROM \"public\".moh_indicator_data";
 $tdatamoh_indicators_data_report[".sqlWhereExpr"] = "";
 $tdatamoh_indicators_data_report[".sqlTail"] = "";
@@ -2517,6 +2552,695 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 	$tdatamoh_indicators_data_report["data_source_detail"] = $fdata;
 		$tdatamoh_indicators_data_report[".searchableFields"][] = "data_source_detail";
+//	period_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "period_id";
+	$fdata["GoodName"] = "period_id";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("MOH_Indicators_Data_Report","period_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "period_id";
+
+		$fdata["sourceSingle"] = "period_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "period_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators_data_report["period_id"] = $fdata;
+		$tdatamoh_indicators_data_report[".searchableFields"][] = "period_id";
+//	month_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "month_id";
+	$fdata["GoodName"] = "month_id";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("MOH_Indicators_Data_Report","month_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "month_id";
+
+		$fdata["sourceSingle"] = "month_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "month_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators_data_report["month_id"] = $fdata;
+		$tdatamoh_indicators_data_report[".searchableFields"][] = "month_id";
+//	quarter_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "quarter_id";
+	$fdata["GoodName"] = "quarter_id";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("MOH_Indicators_Data_Report","quarter_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "quarter_id";
+
+		$fdata["sourceSingle"] = "quarter_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "quarter_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators_data_report["quarter_id"] = $fdata;
+		$tdatamoh_indicators_data_report[".searchableFields"][] = "quarter_id";
+//	year_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "year_id";
+	$fdata["GoodName"] = "year_id";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("MOH_Indicators_Data_Report","year_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "year_id";
+
+		$fdata["sourceSingle"] = "year_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "year_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators_data_report["year_id"] = $fdata;
+		$tdatamoh_indicators_data_report[".searchableFields"][] = "year_id";
+//	period
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "period";
+	$fdata["GoodName"] = "period";
+	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["Label"] = GetFieldLabel("MOH_Indicators_Data_Report","period");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "period";
+
+		$fdata["sourceSingle"] = "period";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "period";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators_data_report["period"] = $fdata;
+		$tdatamoh_indicators_data_report[".searchableFields"][] = "period";
 
 
 $tables_data["MOH_Indicators_Data_Report"]=&$tdatamoh_indicators_data_report;
@@ -2669,7 +3393,7 @@ function createSqlQuery_moh_indicators_data_report()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail";
+$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,  	period";
 $proto0["m_strFrom"] = "FROM \"public\".moh_indicator_data";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2905,50 +3629,125 @@ $proto32["m_alias"] = "";
 $obj = new SQLFieldListItem($proto32);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto34=array();
-$proto34["m_link"] = "SQLL_MAIN";
-			$proto35=array();
-$proto35["m_strName"] = "public.moh_indicator_data";
-$proto35["m_srcTableName"] = "MOH_Indicators_Data_Report";
-$proto35["m_columns"] = array();
-$proto35["m_columns"][] = "data_id";
-$proto35["m_columns"][] = "indicator_id";
-$proto35["m_columns"][] = "data_source_id";
-$proto35["m_columns"][] = "assessment_id";
-$proto35["m_columns"][] = "region_id";
-$proto35["m_columns"][] = "unit_id";
-$proto35["m_columns"][] = "facility_type_id";
-$proto35["m_columns"][] = "value";
-$proto35["m_columns"][] = "year";
-$proto35["m_columns"][] = "scope_id";
-$proto35["m_columns"][] = "gender_sex";
-$proto35["m_columns"][] = "data_representation";
-$proto35["m_columns"][] = "indicator_group_id";
-$proto35["m_columns"][] = "data_source_detail";
-$obj = new SQLTable($proto35);
+						$proto34=array();
+			$obj = new SQLField(array(
+	"m_strName" => "period_id",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_Data_Report"
+));
 
-$proto34["m_table"] = $obj;
-$proto34["m_sql"] = "\"public\".moh_indicator_data";
-$proto34["m_alias"] = "";
+$proto34["m_sql"] = "period_id";
 $proto34["m_srcTableName"] = "MOH_Indicators_Data_Report";
-$proto36=array();
-$proto36["m_sql"] = "";
-$proto36["m_uniontype"] = "SQLL_UNKNOWN";
+$proto34["m_expr"]=$obj;
+$proto34["m_alias"] = "";
+$obj = new SQLFieldListItem($proto34);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto36=array();
+			$obj = new SQLField(array(
+	"m_strName" => "month_id",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_Data_Report"
+));
+
+$proto36["m_sql"] = "month_id";
+$proto36["m_srcTableName"] = "MOH_Indicators_Data_Report";
+$proto36["m_expr"]=$obj;
+$proto36["m_alias"] = "";
+$obj = new SQLFieldListItem($proto36);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto38=array();
+			$obj = new SQLField(array(
+	"m_strName" => "quarter_id",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_Data_Report"
+));
+
+$proto38["m_sql"] = "quarter_id";
+$proto38["m_srcTableName"] = "MOH_Indicators_Data_Report";
+$proto38["m_expr"]=$obj;
+$proto38["m_alias"] = "";
+$obj = new SQLFieldListItem($proto38);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto40=array();
+			$obj = new SQLField(array(
+	"m_strName" => "year_id",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_Data_Report"
+));
+
+$proto40["m_sql"] = "year_id";
+$proto40["m_srcTableName"] = "MOH_Indicators_Data_Report";
+$proto40["m_expr"]=$obj;
+$proto40["m_alias"] = "";
+$obj = new SQLFieldListItem($proto40);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto42=array();
+			$obj = new SQLField(array(
+	"m_strName" => "period",
+	"m_strTable" => "public.moh_indicator_data",
+	"m_srcTableName" => "MOH_Indicators_Data_Report"
+));
+
+$proto42["m_sql"] = "period";
+$proto42["m_srcTableName"] = "MOH_Indicators_Data_Report";
+$proto42["m_expr"]=$obj;
+$proto42["m_alias"] = "";
+$obj = new SQLFieldListItem($proto42);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto44=array();
+$proto44["m_link"] = "SQLL_MAIN";
+			$proto45=array();
+$proto45["m_strName"] = "public.moh_indicator_data";
+$proto45["m_srcTableName"] = "MOH_Indicators_Data_Report";
+$proto45["m_columns"] = array();
+$proto45["m_columns"][] = "data_id";
+$proto45["m_columns"][] = "indicator_id";
+$proto45["m_columns"][] = "data_source_id";
+$proto45["m_columns"][] = "assessment_id";
+$proto45["m_columns"][] = "region_id";
+$proto45["m_columns"][] = "unit_id";
+$proto45["m_columns"][] = "facility_type_id";
+$proto45["m_columns"][] = "value";
+$proto45["m_columns"][] = "year";
+$proto45["m_columns"][] = "scope_id";
+$proto45["m_columns"][] = "gender_sex";
+$proto45["m_columns"][] = "data_representation";
+$proto45["m_columns"][] = "indicator_group_id";
+$proto45["m_columns"][] = "data_source_detail";
+$proto45["m_columns"][] = "period_id";
+$proto45["m_columns"][] = "month_id";
+$proto45["m_columns"][] = "quarter_id";
+$proto45["m_columns"][] = "year_id";
+$proto45["m_columns"][] = "period";
+$obj = new SQLTable($proto45);
+
+$proto44["m_table"] = $obj;
+$proto44["m_sql"] = "\"public\".moh_indicator_data";
+$proto44["m_alias"] = "";
+$proto44["m_srcTableName"] = "MOH_Indicators_Data_Report";
+$proto46=array();
+$proto46["m_sql"] = "";
+$proto46["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto36["m_column"]=$obj;
-$proto36["m_contained"] = array();
-$proto36["m_strCase"] = "";
-$proto36["m_havingmode"] = false;
-$proto36["m_inBrackets"] = false;
-$proto36["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto36);
+$proto46["m_column"]=$obj;
+$proto46["m_contained"] = array();
+$proto46["m_strCase"] = "";
+$proto46["m_havingmode"] = false;
+$proto46["m_inBrackets"] = false;
+$proto46["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto46);
 
-$proto34["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto34);
+$proto44["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto44);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2964,7 +3763,7 @@ $queryData_moh_indicators_data_report = createSqlQuery_moh_indicators_data_repor
 	
 																												;
 
-														
+																			
 
 $tdatamoh_indicators_data_report[".sqlquery"] = $queryData_moh_indicators_data_report;
 

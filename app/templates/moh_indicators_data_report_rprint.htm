@@ -193,7 +193,7 @@
 														<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
 														<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
 														<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
-																																																															
+																																																																																																		
 																																													<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
 														<td class="blackshade {$fieldclass_assessment_id}">{$label MOH_Indicators_Data_Report assessment_id }</td>
 														<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
@@ -202,6 +202,11 @@
 														<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
 														<td class="blackshade {$fieldclass_data_representation}">{$label MOH_Indicators_Data_Report data_representation }</td>
 														<td class="blackshade {$fieldclass_data_source_detail}">{$label MOH_Indicators_Data_Report data_source_detail }</td>
+														<td class="blackshade {$fieldclass_period_id}">{$label MOH_Indicators_Data_Report period_id }</td>
+														<td class="blackshade {$fieldclass_month_id}">{$label MOH_Indicators_Data_Report month_id }</td>
+														<td class="blackshade {$fieldclass_quarter_id}">{$label MOH_Indicators_Data_Report quarter_id }</td>
+														<td class="blackshade {$fieldclass_year_id}">{$label MOH_Indicators_Data_Report year_id }</td>
+														<td class="blackshade {$fieldclass_period}">{$label MOH_Indicators_Data_Report period }</td>
 									</tr>
 		
 																										<tr class="group-spliter-1 group-spliter-2 group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
@@ -278,6 +283,36 @@
 								{$xdata_source_detail_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
 {$data_source_detail_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_period_id}">
+								{$xperiod_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+{$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_month_id}">
+								{$xmonth_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+{$month_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_quarter_id}">
+								{$xquarter_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+{$quarter_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year_id}">
+								{$xyear_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+{$year_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_period}">
+								{$xperiod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+{$period_value}
 </span>				
 							</td>
 					
@@ -359,6 +394,36 @@
 {$data_source_detail_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_period_id}">
+								{$xperiod_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+{$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_month_id}">
+								{$xmonth_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+{$month_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_quarter_id}">
+								{$xquarter_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+{$quarter_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year_id}">
+								{$xyear_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+{$year_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_period}">
+								{$xperiod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+{$period_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END indicator_id_firstnewgroup}
@@ -436,6 +501,36 @@
 {$data_source_detail_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_period_id}">
+								{$xperiod_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+{$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_month_id}">
+								{$xmonth_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+{$month_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_quarter_id}">
+								{$xquarter_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+{$quarter_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year_id}">
+								{$xyear_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+{$year_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_period}">
+								{$xperiod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+{$period_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END scope_id_firstnewgroup}
@@ -511,6 +606,36 @@
 {$data_source_detail_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_period_id}">
+								{$xperiod_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+{$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_month_id}">
+								{$xmonth_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+{$month_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_quarter_id}">
+								{$xquarter_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+{$quarter_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year_id}">
+								{$xyear_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+{$year_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_period}">
+								{$xperiod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+{$period_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END facility_type_id_firstnewgroup}
@@ -584,6 +709,36 @@
 {$data_source_detail_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_period_id}">
+								{$xperiod_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+{$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_month_id}">
+								{$xmonth_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+{$month_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_quarter_id}">
+								{$xquarter_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+{$quarter_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year_id}">
+								{$xyear_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+{$year_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_period}">
+								{$xperiod_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+{$period_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END year_firstnewgroup}
@@ -654,6 +809,36 @@
 {$data_source_detail_value}
 </span>		
 		</td>
+													<td class="data {$fieldclass_period_id}">
+		{$xperiod_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+{$period_id_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_month_id}">
+		{$xmonth_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+{$month_id_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_quarter_id}">
+		{$xquarter_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+{$quarter_id_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_year_id}">
+		{$xyear_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+{$year_id_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_period}">
+		{$xperiod_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+{$period_value}
+</span>		
+		</td>
 							</tr>
 	{END nonewgroup}
 	
@@ -666,11 +851,11 @@
 							<td class="group_3" style="border-top: none;"></td>
 							<td class="group_4" style="border-top: none;"></td>
 							
-																																						<td  class="group_5" colspan=9 >
+																																						<td  class="group_5" colspan=14 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report year }&nbsp;{$year_grval}
 					- <span class="summary-5" data-type="summary">{$groupyear_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																	</tr>
+																																																																																																				</tr>
 
 	
 	
@@ -685,11 +870,11 @@
 							<td class="group_2" style="border-top: none;"></td>
 							<td class="group_3" style="border-top: none;"></td>
 							
-																															<td  class="group_4" colspan=10 >
+																															<td  class="group_4" colspan=15 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report facility_type_id }&nbsp;{$facility_type_id_grval}
 					- <span class="summary-4" data-type="summary">{$groupfacility_type_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																								</tr>
+																																																																																																											</tr>
 
 	
 	
@@ -703,11 +888,11 @@
 										<td class="group_1" style="border-top: none;"></td>
 							<td class="group_2" style="border-top: none;"></td>
 							
-																								<td  class="group_3" colspan=11 >
+																								<td  class="group_3" colspan=16 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report scope_id }&nbsp;{$scope_id_grval}
 					- <span class="summary-3" data-type="summary">{$groupscope_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																															</tr>
+																																																																																																																		</tr>
 
 	
 	
@@ -720,11 +905,11 @@
 		<tr class="summaryrow"  >
 										<td class="group_1" style="border-top: none;"></td>
 							
-																	<td  class="group_2" colspan=12 >
+																	<td  class="group_2" colspan=17 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
 					- <span class="summary-2" data-type="summary">{$groupindicator_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																						</tr>
+																																																																																																																									</tr>
 
 	
 	
@@ -736,11 +921,11 @@
 	{BEGIN indicator_group_id_endgroup}
 		<tr class="summaryrow"  >
 			
-										<td  class="group_1" colspan=13 >
+										<td  class="group_1" colspan=18 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
 					- <span class="summary-1" data-type="summary">{$groupindicator_group_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																													</tr>
+																																																																																																																																</tr>
 
 	
 	
@@ -765,6 +950,11 @@
 						<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
 						<td class="blackshade {$fieldclass_data_representation}">{$label MOH_Indicators_Data_Report data_representation }</td>
 						<td class="blackshade {$fieldclass_data_source_detail}">{$label MOH_Indicators_Data_Report data_source_detail }</td>
+						<td class="blackshade {$fieldclass_period_id}">{$label MOH_Indicators_Data_Report period_id }</td>
+						<td class="blackshade {$fieldclass_month_id}">{$label MOH_Indicators_Data_Report month_id }</td>
+						<td class="blackshade {$fieldclass_quarter_id}">{$label MOH_Indicators_Data_Report quarter_id }</td>
+						<td class="blackshade {$fieldclass_year_id}">{$label MOH_Indicators_Data_Report year_id }</td>
+						<td class="blackshade {$fieldclass_period}">{$label MOH_Indicators_Data_Report period }</td>
 					</tr>
 		{END summary_header}
 	
@@ -775,7 +965,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="13">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
+        <td class="pagesummary" colspan="18">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 	
 	
@@ -785,7 +975,7 @@
 	<!-- global summary-->
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
-        <td class="globalsummary" colspan="13">
+        <td class="globalsummary" colspan="18">
             {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 

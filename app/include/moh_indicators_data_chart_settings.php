@@ -6,11 +6,11 @@ $tdatamoh_indicators_data_chart[".OwnerID"] = "";
 $tdatamoh_indicators_data_chart[".OriginalTable"] = "public.moh_indicator_data";
 
 
-$tdatamoh_indicators_data_chart[".pagesByType"] = my_json_decode( "{\"chart\":[\"chart\"],\"search\":[\"search\"]}" );
+$tdatamoh_indicators_data_chart[".pagesByType"] = my_json_decode( "{\"chart\":[\"chart\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamoh_indicators_data_chart[".originalPagesByType"] = $tdatamoh_indicators_data_chart[".pagesByType"];
-$tdatamoh_indicators_data_chart[".pages"] = types2pages( my_json_decode( "{\"chart\":[\"chart\"],\"search\":[\"search\"]}" ) );
+$tdatamoh_indicators_data_chart[".pages"] = types2pages( my_json_decode( "{\"chart\":[\"chart\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamoh_indicators_data_chart[".originalPages"] = $tdatamoh_indicators_data_chart[".pages"];
-$tdatamoh_indicators_data_chart[".defaultPages"] = my_json_decode( "{\"chart\":\"chart\",\"search\":\"search\"}" );
+$tdatamoh_indicators_data_chart[".defaultPages"] = my_json_decode( "{\"chart\":\"chart\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamoh_indicators_data_chart[".originalDefaultPages"] = $tdatamoh_indicators_data_chart[".defaultPages"];
 
 //	field labels
@@ -3044,6 +3044,11 @@ $proto35["m_columns"][] = "gender_sex";
 $proto35["m_columns"][] = "data_representation";
 $proto35["m_columns"][] = "indicator_group_id";
 $proto35["m_columns"][] = "data_source_detail";
+$proto35["m_columns"][] = "period_id";
+$proto35["m_columns"][] = "month_id";
+$proto35["m_columns"][] = "quarter_id";
+$proto35["m_columns"][] = "year_id";
+$proto35["m_columns"][] = "period";
 $obj = new SQLTable($proto35);
 
 $proto34["m_table"] = $obj;

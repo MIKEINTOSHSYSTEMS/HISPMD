@@ -647,9 +647,8 @@
 								</tr>
 	 
 	 
-		
-						<tr>
-						
+														<tr {$row_grid_3} >
+										
 
 {BEGIN cellblock_grid_c8}
 <td
@@ -659,23 +658,6 @@
 			data-single
 			
 			data-cellId="grid_c8" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-									</td>
-			{END cellblock_grid_c8}
-			 
-																
-
-{BEGIN cellblock_grid_c9}
-<td
-	{$cell_grid_c9}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c9" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -701,6 +683,45 @@
 
 
 {END gender_sex_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c8}
+			 
+																
+
+{BEGIN cellblock_grid_c9}
+<td
+	{$cell_grid_c9}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c9" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN period_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_period_id}  r-vertical-field" data-fieldname="period_id" data-signal-error-for="period_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_period_id}">
+		
+		{BEGIN period_id_label}{$label public_moh_indicator_data period_id }{END period_id_label}
+	</label>
+	<div class="" >
+		{$period_id_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END period_id_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c9}
@@ -746,23 +767,64 @@
 								</tr>
 	 
 	 
-		
-						<tr>
-						
+														<tr {$row_grid_4} >
+										
 
 {BEGIN cellblock_grid_c5}
 <td
 	{$cell_grid_c5}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c5" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
 	<div edit-form-cell class="clearfix">
-									</td>
+				
+{BEGIN month_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_month_id}  r-vertical-field" data-fieldname="month_id" data-signal-error-for="month_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_month_id}">
+		
+		{BEGIN month_id_label}{$label public_moh_indicator_data month_id }{END month_id_label}
+	</label>
+	<div class="" >
+		{$month_id_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END month_id_fieldblock}
+											
+{BEGIN quarter_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_quarter_id}  r-vertical-field" data-fieldname="quarter_id" data-signal-error-for="quarter_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_quarter_id}">
+		
+		{BEGIN quarter_id_label}{$label public_moh_indicator_data quarter_id }{END quarter_id_label}
+	</label>
+	<div class="" >
+		{$quarter_id_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END quarter_id_fieldblock}
+	
+								</td>
 			{END cellblock_grid_c5}
 			 
 																
@@ -772,9 +834,67 @@
 	{$cell_grid_c6}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN year_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_year_id}  r-vertical-field" data-fieldname="year_id" data-signal-error-for="year_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_year_id}">
+		
+		{BEGIN year_id_label}{$label public_moh_indicator_data year_id }{END year_id_label}
+	</label>
+	<div class="" >
+		{$year_id_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END year_id_fieldblock}
+											
+{BEGIN period_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_period}  r-vertical-field" data-fieldname="period" data-signal-error-for="period{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_period}">
+		
+		{BEGIN period_label}{$label public_moh_indicator_data period }{END period_label}
+	</label>
+	<div class="" >
+		{$period_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END period_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c6}
+			 
+																
+
+{BEGIN cellblock_grid_c7}
+<td
+	{$cell_grid_c7}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c7" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -800,25 +920,7 @@
 
 
 {END value_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c6}
-			 
-																
-
-{BEGIN cellblock_grid_c7}
-<td
-	{$cell_grid_c7}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c7" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-				
+											
 {BEGIN data_representation_fieldblock}
 
 
@@ -876,10 +978,24 @@
 		</div>			 
 				<div 
 	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
-	class="r-align-right r-ori-vert			col-md-6
+	class="r-align-right			col-md-6
 	
 ">
 		 
+		<span data-itemtype="prev" data-itemid="prev" {$item_prev} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$prevbutton_class}" {$prevbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-left"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="next" data-itemid="next" {$item_next} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$nextbutton_class}" {$nextbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-right"></span>
+										</a>
+</span>
+	 
 		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown dropup">
 		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		

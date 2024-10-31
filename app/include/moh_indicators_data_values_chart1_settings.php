@@ -2700,6 +2700,11 @@ $proto37["m_columns"][] = "gender_sex";
 $proto37["m_columns"][] = "data_representation";
 $proto37["m_columns"][] = "indicator_group_id";
 $proto37["m_columns"][] = "data_source_detail";
+$proto37["m_columns"][] = "period_id";
+$proto37["m_columns"][] = "month_id";
+$proto37["m_columns"][] = "quarter_id";
+$proto37["m_columns"][] = "year_id";
+$proto37["m_columns"][] = "period";
 $obj = new SQLTable($proto37);
 
 $proto36["m_table"] = $obj;
