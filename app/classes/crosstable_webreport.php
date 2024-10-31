@@ -1605,6 +1605,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.moh_quarters" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.moh_period_types" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

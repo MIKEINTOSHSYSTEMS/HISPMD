@@ -127,6 +127,7 @@ $nonAdminTablesArr[] = "public.moh_ir_datasource";
 $nonAdminTablesArr[] = "public.moh_years";
 $nonAdminTablesArr[] = "public.moh_months";
 $nonAdminTablesArr[] = "public.moh_quarters";
+$nonAdminTablesArr[] = "public.moh_period_types";
 
 $ug_connection = $cman->getForUserGroups();
 

@@ -3734,6 +3734,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "moh_months" ] = "public.moh_months";
 	$projectEntities[ "public.moh_quarters" ] = array( "url" => "moh_quarters", "type" => 0 );
 	$projectEntitiesReverse[ "moh_quarters" ] = "public.moh_quarters";
+	$projectEntities[ "public.moh_period_types" ] = array( "url" => "moh_period_types", "type" => 0 );
+	$projectEntitiesReverse[ "moh_period_types" ] = "public.moh_period_types";
 }
 
 function findTable( $table ) {

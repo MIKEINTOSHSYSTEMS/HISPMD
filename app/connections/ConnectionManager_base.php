@@ -349,6 +349,7 @@ class ConnectionManager_Base
 		$connectionsIds["public.moh_years"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_months"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_quarters"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.moh_period_types"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

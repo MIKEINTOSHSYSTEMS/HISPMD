@@ -428,6 +428,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_quarters" == $shortTName )
 		return true;
+	if ("moh_period_types" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1486,6 +1488,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.moh_quarters";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_period_types");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_period_types";
+	}
 	return $arr;
 }
 
@@ -1607,6 +1618,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_years";
 	$arr[]="public.moh_months";
 	$arr[]="public.moh_quarters";
+	$arr[]="public.moh_period_types";
 	return $arr;
 }
 
@@ -2808,6 +2820,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="public.moh_quarters" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_period_types" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

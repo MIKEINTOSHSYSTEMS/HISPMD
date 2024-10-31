@@ -904,9 +904,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "687_1730033043";
+$projectBuildKey = "688_1730033043";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "687";
+$projectBuildNumber = "688";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1041,6 +1041,7 @@ $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indic
 $tableCaptions["English"]["public_moh_years"] = "Moh Years";
 $tableCaptions["English"]["public_moh_months"] = "Moh Months";
 $tableCaptions["English"]["public_moh_quarters"] = "Moh Quarters";
+$tableCaptions["English"]["public_moh_period_types"] = "Moh Period Types";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1155,6 +1156,7 @@ $tableCaptions["Amharic"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
 $tableCaptions["Amharic"]["public_moh_years"] = "Moh Years";
 $tableCaptions["Amharic"]["public_moh_months"] = "Moh Months";
 $tableCaptions["Amharic"]["public_moh_quarters"] = "Moh Quarters";
+$tableCaptions["Amharic"]["public_moh_period_types"] = "Moh Period Types";
 
 
 $globalEvents = new class_GlobalEvents;

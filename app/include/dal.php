@@ -97,6 +97,7 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_indicators;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_ir_datasource;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_months;
+	var $tblhispmdathispmdmerqconsultancyo_public_moh_period_types;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_quarters;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_regions;
 	var $tblhispmdathispmdmerqconsultancyo_public_moh_years;
@@ -165,6 +166,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "moh_indicators", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_indicators", "altvarname" => "moh_indicators", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_ir_datasource", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_ir_datasource", "altvarname" => "moh_ir_datasource", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_months", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_months", "altvarname" => "moh_months", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "moh_period_types", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_period_types", "altvarname" => "moh_period_types", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_quarters", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_quarters", "altvarname" => "moh_quarters", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_regions", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_regions", "altvarname" => "moh_regions", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "moh_years", "varname" => "hispmdathispmdmerqconsultancyo_public_moh_years", "altvarname" => "moh_years", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
