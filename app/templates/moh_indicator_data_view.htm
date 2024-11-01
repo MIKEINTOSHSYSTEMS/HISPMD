@@ -733,50 +733,8 @@
 	{$cell_grid_c10}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c10" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-				
-{BEGIN year_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_year}  r-vertical-field" data-fieldname="year" data-signal-error-for="year{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-
-		<div class="col-md-12">
-	
-	<label class="" for="{$labelfor_year}">
-		
-		{BEGIN year_label}{$label public_moh_indicator_data year }{END year_label}
-	</label>
-	<div class="" >
-		{$year_value}	</div>
-
-		</div>
-		
-</div>
-
-
-{END year_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c10}
-								</tr>
-	 
-	 
-														<tr {$row_grid_4} >
-										
-
-{BEGIN cellblock_grid_c5}
-<td
-	{$cell_grid_c5}
-	class=" r-ori-vert"
-	
-			
-			data-cellId="grid_c5" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -823,45 +781,49 @@
 
 
 {END quarter_id_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c5}
-			 
-																
-
-{BEGIN cellblock_grid_c6}
-<td
-	{$cell_grid_c6}
-	class=" r-ori-vert"
-	
-			
-			data-cellId="grid_c6" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-				
-{BEGIN year_id_fieldblock}
+											
+{BEGIN year_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_year_id}  r-vertical-field" data-fieldname="year_id" data-signal-error-for="year_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_year}  r-vertical-field" data-fieldname="year" data-signal-error-for="year{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
 
 		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_year_id}">
+	<label class="" for="{$labelfor_year}">
 		
-		{BEGIN year_id_label}{$label public_moh_indicator_data year_id }{END year_id_label}
+		{BEGIN year_label}{$label public_moh_indicator_data year }{END year_label}
 	</label>
 	<div class="" >
-		{$year_id_value}	</div>
+		{$year_value}	</div>
 
 		</div>
 		
 </div>
 
 
-{END year_id_fieldblock}
-											
+{END year_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c10}
+								</tr>
+	 
+	 
+														<tr {$row_grid_4} >
+										
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN period_fieldblock}
 
 
@@ -884,17 +846,18 @@
 {END period_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c6}
+			{END cellblock_grid_c5}
 			 
 																
 
-{BEGIN cellblock_grid_c7}
+{BEGIN cellblock_grid_c6}
 <td
-	{$cell_grid_c7}
+	{$cell_grid_c6}
 	class=" r-ori-vert"
 	
+			data-single
 			
-			data-cellId="grid_c7" data-pageid="{$pageid}"
+			data-cellId="grid_c6" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
@@ -920,7 +883,25 @@
 
 
 {END value_fieldblock}
-											
+	
+								</td>
+			{END cellblock_grid_c6}
+			 
+																
+
+{BEGIN cellblock_grid_c7}
+<td
+	{$cell_grid_c7}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c7" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN data_representation_fieldblock}
 
 

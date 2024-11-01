@@ -501,6 +501,12 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel public_moh_indicator_data month_id }","bold":true},{"text":{$month_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel public_moh_indicator_data quarter_id }","bold":true},{"text":{$quarter_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_moh_indicator_data year }","bold":true},{"text":{$year_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
@@ -532,10 +538,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel public_moh_indicator_data month_id }","bold":true},{"text":{$month_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel public_moh_indicator_data quarter_id }","bold":true},{"text":{$quarter_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel public_moh_indicator_data period }","bold":true},{"text":{$period_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -562,10 +565,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel public_moh_indicator_data year_id }","bold":true},{"text":{$year_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel public_moh_indicator_data period }","bold":true},{"text":{$period_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -591,9 +591,6 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
-				
 				
 			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel public_moh_indicator_data data_representation }","bold":true},{"text":{$data_representation_pdfvalue}}],"margin":[0,0,0,15]},
 				

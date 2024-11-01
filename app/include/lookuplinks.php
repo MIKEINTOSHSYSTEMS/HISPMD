@@ -460,6 +460,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_facility_types"]["moh_indicator_data.facility_type_id"] = array();
 		}
 		$lookupTableLinks["public.moh_facility_types"]["moh_indicator_data.facility_type_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "facility_type_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_years"] ) ) {
+			$lookupTableLinks["public.moh_years"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_years"]["moh_indicator_data.year"] )) {
+			$lookupTableLinks["public.moh_years"]["moh_indicator_data.year"] = array();
+		}
+		$lookupTableLinks["public.moh_years"]["moh_indicator_data.year"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "year", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_data_scope"] ) ) {
 			$lookupTableLinks["public.moh_data_scope"] = array();
 		}
@@ -502,13 +509,6 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"] = array();
 		}
 		$lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "quarter_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["public.moh_years"] ) ) {
-			$lookupTableLinks["public.moh_years"] = array();
-		}
-		if( !isset( $lookupTableLinks["public.moh_years"]["moh_indicator_data.year_id"] )) {
-			$lookupTableLinks["public.moh_years"]["moh_indicator_data.year_id"] = array();
-		}
-		$lookupTableLinks["public.moh_years"]["moh_indicator_data.year_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "year_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
 			$lookupTableLinks["public.moh_indicator_groups"] = array();
 		}

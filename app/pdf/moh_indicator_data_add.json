@@ -168,11 +168,6 @@ pdfDocument = {
 			"%",
 						{END row_grid_5}
 			 
-								{BEGIN row_grid_6}
-						
-			"%",
-						{END row_grid_6}
-			 
 				],
 	
 		body: [
@@ -502,10 +497,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_moh_indicator_data year }","bold":true},{"text":{$year_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -561,10 +554,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel public_moh_indicator_data month_id }","bold":true},{"text":{$month_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel public_moh_indicator_data quarter_id }","bold":true},{"text":{$quarter_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel public_moh_indicator_data month_id }","bold":true},{"text":{$month_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -591,7 +584,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel public_moh_indicator_data year_id }","bold":true},{"text":{$year_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_moh_indicator_data year }","bold":true},{"text":{$year_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -604,85 +597,6 @@ pdfDocument = {
 											],
 				{END row_grid_4}
 						{BEGIN row_grid_5}
-				[
-																{BEGIN cellblock_grid_c20}
-{
-	cellId: 'c20',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c20}
-																							{BEGIN cellblock_grid_c21}
-{
-	cellId: 'c21',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c21}
-																							{BEGIN cellblock_grid_c22}
-{
-	cellId: 'c22',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c22}
-											],
-				{END row_grid_5}
-						{BEGIN row_grid_6}
 				[
 																{BEGIN cellblock_grid_c17}
 {
@@ -700,10 +614,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel public_moh_indicator_data period }","bold":true},{"text":{$period_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -766,7 +678,7 @@ pdfDocument = {
 
 {END cellblock_grid_c19}
 											],
-				{END row_grid_6}
+				{END row_grid_5}
 		
 		]
 	}

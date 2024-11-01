@@ -157,9 +157,6 @@ pdfDocument = {
 			{"text":{$quarter_id_pdfvalue},"hidden":"{$item_hide_export_field16}"},
 				
 				
-			{"text":{$year_id_pdfvalue},"hidden":"{$item_hide_export_field17}"},
-				
-				
 			{"text":{$period_pdfvalue},"hidden":"{$item_hide_export_field18}"},
 				
 		  ],

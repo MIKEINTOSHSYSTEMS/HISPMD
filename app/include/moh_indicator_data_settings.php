@@ -67,18 +67,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicator_data["English"]["data_source_detail"] = "Data Source Detail";
 	$fieldToolTipsmoh_indicator_data["English"]["data_source_detail"] = "";
 	$placeHoldersmoh_indicator_data["English"]["data_source_detail"] = "";
-	$fieldLabelsmoh_indicator_data["English"]["period_id"] = "Period Id";
+	$fieldLabelsmoh_indicator_data["English"]["period_id"] = "Period Type";
 	$fieldToolTipsmoh_indicator_data["English"]["period_id"] = "";
 	$placeHoldersmoh_indicator_data["English"]["period_id"] = "";
-	$fieldLabelsmoh_indicator_data["English"]["month_id"] = "Month Id";
+	$fieldLabelsmoh_indicator_data["English"]["month_id"] = "Month";
 	$fieldToolTipsmoh_indicator_data["English"]["month_id"] = "";
 	$placeHoldersmoh_indicator_data["English"]["month_id"] = "";
-	$fieldLabelsmoh_indicator_data["English"]["quarter_id"] = "Quarter Id";
+	$fieldLabelsmoh_indicator_data["English"]["quarter_id"] = "Quarter";
 	$fieldToolTipsmoh_indicator_data["English"]["quarter_id"] = "";
 	$placeHoldersmoh_indicator_data["English"]["quarter_id"] = "";
-	$fieldLabelsmoh_indicator_data["English"]["year_id"] = "Year Id";
-	$fieldToolTipsmoh_indicator_data["English"]["year_id"] = "";
-	$placeHoldersmoh_indicator_data["English"]["year_id"] = "";
 	$fieldLabelsmoh_indicator_data["English"]["period"] = "Period";
 	$fieldToolTipsmoh_indicator_data["English"]["period"] = "";
 	$placeHoldersmoh_indicator_data["English"]["period"] = "";
@@ -143,9 +140,6 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_indicator_data["Amharic"]["quarter_id"] = "Quarter Id";
 	$fieldToolTipsmoh_indicator_data["Amharic"]["quarter_id"] = "";
 	$placeHoldersmoh_indicator_data["Amharic"]["quarter_id"] = "";
-	$fieldLabelsmoh_indicator_data["Amharic"]["year_id"] = "Year Id";
-	$fieldToolTipsmoh_indicator_data["Amharic"]["year_id"] = "";
-	$placeHoldersmoh_indicator_data["Amharic"]["year_id"] = "";
 	$fieldLabelsmoh_indicator_data["Amharic"]["period"] = "Period";
 	$fieldToolTipsmoh_indicator_data["Amharic"]["period"] = "";
 	$placeHoldersmoh_indicator_data["Amharic"]["period"] = "";
@@ -284,7 +278,6 @@ $tdatamoh_indicator_data[".googleLikeFields"][] = "data_source_detail";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "period_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "month_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "quarter_id";
-$tdatamoh_indicator_data[".googleLikeFields"][] = "year_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "period";
 
 
@@ -320,8 +313,8 @@ $tdatamoh_indicator_data[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_indicator_data[".orderindexes"] = array();
 
 
-$tdatamoh_indicator_data[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,  	period";
-$tdatamoh_indicator_data[".sqlFrom"] = "FROM \"public\".moh_indicator_data";
+$tdatamoh_indicator_data[".sqlHead"] = "SELECT data_id,      indicator_id,      data_source_id,      assessment_id,      region_id,      unit_id,      facility_type_id,      \"value\",      \"year\",      scope_id,      gender_sex,      data_representation,      indicator_group_id,      data_source_detail,      period_id,      month_id,      quarter_id,      -- Define period field based on available values without adding any placeholder      CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END AS period";
+$tdatamoh_indicator_data[".sqlFrom"] = "FROM       \"public\".moh_indicator_data";
 $tdatamoh_indicator_data[".sqlWhereExpr"] = "";
 $tdatamoh_indicator_data[".sqlTail"] = "";
 
@@ -1702,7 +1695,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1712,6 +1705,34 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_years";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "year";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "year";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -1727,18 +1748,14 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "number";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=4";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -1759,7 +1776,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2734,9 +2751,10 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2897,9 +2915,10 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -3060,9 +3079,10 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -3079,178 +3099,15 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 	$tdatamoh_indicator_data["quarter_id"] = $fdata;
 		$tdatamoh_indicator_data[".searchableFields"][] = "quarter_id";
-//	year_id
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 18;
-	$fdata["strName"] = "year_id";
-	$fdata["GoodName"] = "year_id";
-	$fdata["ownerTable"] = "public.moh_indicator_data";
-	$fdata["Label"] = GetFieldLabel("public_moh_indicator_data","year_id");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "year_id";
-
-		$fdata["sourceSingle"] = "year_id";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "year_id";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.moh_years";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "year_id";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "year";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatamoh_indicator_data["year_id"] = $fdata;
-		$tdatamoh_indicator_data[".searchableFields"][] = "year_id";
 //	period
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
+	$fdata["Index"] = 18;
 	$fdata["strName"] = "period";
 	$fdata["GoodName"] = "period";
-	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("public_moh_indicator_data","period");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 
 
 	
@@ -3262,7 +3119,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "period";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "period";
+	$fdata["FullName"] = "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END";
 
 	
 	
@@ -3299,7 +3156,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3317,16 +3174,14 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3337,7 +3192,10 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 			
 	
 	
@@ -3362,7 +3220,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -3567,8 +3426,8 @@ function createSqlQuery_moh_indicator_data()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,  	period";
-$proto0["m_strFrom"] = "FROM \"public\".moh_indicator_data";
+$proto0["m_strFieldList"] = "data_id,      indicator_id,      data_source_id,      assessment_id,      region_id,      unit_id,      facility_type_id,      \"value\",      \"year\",      scope_id,      gender_sex,      data_representation,      indicator_group_id,      data_source_detail,      period_id,      month_id,      quarter_id,      -- Define period field based on available values without adding any placeholder      CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END AS period";
+$proto0["m_strFrom"] = "FROM       \"public\".moh_indicator_data";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -3846,82 +3705,66 @@ $obj = new SQLFieldListItem($proto38);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto40=array();
-			$obj = new SQLField(array(
-	"m_strName" => "year_id",
-	"m_strTable" => "public.moh_indicator_data",
-	"m_srcTableName" => "public.moh_indicator_data"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END"
 ));
 
-$proto40["m_sql"] = "year_id";
+$proto40["m_sql"] = "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END";
 $proto40["m_srcTableName"] = "public.moh_indicator_data";
 $proto40["m_expr"]=$obj;
-$proto40["m_alias"] = "";
+$proto40["m_alias"] = "period";
 $obj = new SQLFieldListItem($proto40);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto42=array();
-			$obj = new SQLField(array(
-	"m_strName" => "period",
-	"m_strTable" => "public.moh_indicator_data",
-	"m_srcTableName" => "public.moh_indicator_data"
-));
-
-$proto42["m_sql"] = "period";
-$proto42["m_srcTableName"] = "public.moh_indicator_data";
-$proto42["m_expr"]=$obj;
-$proto42["m_alias"] = "";
-$obj = new SQLFieldListItem($proto42);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto44=array();
-$proto44["m_link"] = "SQLL_MAIN";
-			$proto45=array();
-$proto45["m_strName"] = "public.moh_indicator_data";
-$proto45["m_srcTableName"] = "public.moh_indicator_data";
-$proto45["m_columns"] = array();
-$proto45["m_columns"][] = "data_id";
-$proto45["m_columns"][] = "indicator_id";
-$proto45["m_columns"][] = "data_source_id";
-$proto45["m_columns"][] = "assessment_id";
-$proto45["m_columns"][] = "region_id";
-$proto45["m_columns"][] = "unit_id";
-$proto45["m_columns"][] = "facility_type_id";
-$proto45["m_columns"][] = "value";
-$proto45["m_columns"][] = "year";
-$proto45["m_columns"][] = "scope_id";
-$proto45["m_columns"][] = "gender_sex";
-$proto45["m_columns"][] = "data_representation";
-$proto45["m_columns"][] = "indicator_group_id";
-$proto45["m_columns"][] = "data_source_detail";
-$proto45["m_columns"][] = "period_id";
-$proto45["m_columns"][] = "month_id";
-$proto45["m_columns"][] = "quarter_id";
-$proto45["m_columns"][] = "year_id";
-$proto45["m_columns"][] = "period";
-$obj = new SQLTable($proto45);
+												$proto42=array();
+$proto42["m_link"] = "SQLL_MAIN";
+			$proto43=array();
+$proto43["m_strName"] = "public.moh_indicator_data";
+$proto43["m_srcTableName"] = "public.moh_indicator_data";
+$proto43["m_columns"] = array();
+$proto43["m_columns"][] = "data_id";
+$proto43["m_columns"][] = "indicator_id";
+$proto43["m_columns"][] = "data_source_id";
+$proto43["m_columns"][] = "assessment_id";
+$proto43["m_columns"][] = "region_id";
+$proto43["m_columns"][] = "unit_id";
+$proto43["m_columns"][] = "facility_type_id";
+$proto43["m_columns"][] = "value";
+$proto43["m_columns"][] = "year";
+$proto43["m_columns"][] = "scope_id";
+$proto43["m_columns"][] = "gender_sex";
+$proto43["m_columns"][] = "data_representation";
+$proto43["m_columns"][] = "indicator_group_id";
+$proto43["m_columns"][] = "data_source_detail";
+$proto43["m_columns"][] = "period_id";
+$proto43["m_columns"][] = "month_id";
+$proto43["m_columns"][] = "quarter_id";
+$proto43["m_columns"][] = "year_id";
+$proto43["m_columns"][] = "period";
+$obj = new SQLTable($proto43);
 
-$proto44["m_table"] = $obj;
-$proto44["m_sql"] = "\"public\".moh_indicator_data";
-$proto44["m_alias"] = "";
-$proto44["m_srcTableName"] = "public.moh_indicator_data";
-$proto46=array();
-$proto46["m_sql"] = "";
-$proto46["m_uniontype"] = "SQLL_UNKNOWN";
+$proto42["m_table"] = $obj;
+$proto42["m_sql"] = "\"public\".moh_indicator_data";
+$proto42["m_alias"] = "";
+$proto42["m_srcTableName"] = "public.moh_indicator_data";
+$proto44=array();
+$proto44["m_sql"] = "";
+$proto44["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto46["m_column"]=$obj;
-$proto46["m_contained"] = array();
-$proto46["m_strCase"] = "";
-$proto46["m_havingmode"] = false;
-$proto46["m_inBrackets"] = false;
-$proto46["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto46);
+$proto44["m_column"]=$obj;
+$proto44["m_contained"] = array();
+$proto44["m_strCase"] = "";
+$proto44["m_havingmode"] = false;
+$proto44["m_inBrackets"] = false;
+$proto44["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto44);
 
-$proto44["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto44);
+$proto42["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto42);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -3937,7 +3780,7 @@ $queryData_moh_indicator_data = createSqlQuery_moh_indicator_data();
 	
 																												;
 
-																			
+																		
 
 $tdatamoh_indicator_data[".sqlquery"] = $queryData_moh_indicator_data;
 
