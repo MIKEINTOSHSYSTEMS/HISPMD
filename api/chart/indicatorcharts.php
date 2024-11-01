@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HISPMD Dashboard Home Landing Page</title>
+    <title>HISPMD Indicator Chart</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -106,84 +106,13 @@
         <!-- Nav Tabs -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Info</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Dashboard</button>
-            </li>
-<!--
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Chart Builder</button>
-            </li>
-            <li class="nav-item" role="presentation">
                 <button class="nav-link" id="indicators-tab" data-bs-toggle="tab" data-bs-target="#indicators" type="button" role="tab" aria-controls="settings" aria-selected="false">Indicator Charts</button>
             </li>
--->
         </ul>
 
         <!-- Tab Content -->
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="card full-width-card">
-                    <div class="card-header">
-                        <!--Info Tab-->
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="iframe-container">
-                            <!-- Spinner -->
-                            <div class="spinner-container" id="spinner-home">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                            <!-- Iframe -->
-                            <iframe id="iframe-home" src="./sources.php" onload="hideSpinner('home')"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="card full-width-card">
-                    <div class="card-header">
-                        <!--Indicators-->
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="iframe-container">
-                            <!-- Spinner -->
-                            <div class="spinner-container" id="spinner-profile">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                            <!-- Iframe -->
-                            <iframe id="iframe-profile" src="../meta/main.php" onload="hideSpinner('profile')"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                <div class="card full-width-card">
-                    <div class="card-header">
-                        <!--Build your custom visualizations and charts-->
-                    </div>
-                    <div class="card-body p-0">
-                     <!--   <h5 class="card-title">Build your custom visualizations and charts</h5>-->
-                      <!--  <p class="card-text">This is where you will be able to build custom charts and visalizations <br> You can modify your preferences here.</p>-->
-                        <div class="iframe">
-                            <!-- Spinner -->
-                            <div class="spinner-container" id="spinner-settings">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                            <!-- Iframe -->
-                            <iframe id="iframe-settings" src="../visualization" onload="hideSpinner('settings')"></iframe>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="indicators" role="tabpanel" aria-labelledby="indicators-tab">
+            <div class="tab-pane fade show active" id="indicators" role="tabpanel" aria-labelledby="indicators-tab">
                 <div class="card full-width-card">
                     <div class="card-header">
                         <!--Build your custom visualizations and charts-->

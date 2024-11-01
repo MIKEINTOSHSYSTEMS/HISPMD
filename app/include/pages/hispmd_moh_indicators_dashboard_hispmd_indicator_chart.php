@@ -16,6 +16,7 @@
 'breadcrumb',
 'simple_search',
 'list_options',
+'lang_selector',
 'notifications',
 'username_button' ),
 'top' => array(  ) ),
@@ -29,6 +30,7 @@
 'breadcrumb' => 'supertop',
 'simple_search' => 'supertop',
 'list_options' => 'supertop',
+'lang_selector' => 'supertop',
 'notifications' => 'supertop',
 'username_button' => 'supertop' ),
 'itemLocations' => array(  ),
@@ -40,16 +42,16 @@
 'menu' => array( 'menu' ),
 'simple_search' => array( 'simple_search' ),
 'username_button' => array( 'username_button' ),
-'userinfo_link' => array( 'userinfo_link' ),
-'logout_link' => array( 'logout_link' ),
 'adminarea_link' => array( 'adminarea_link' ),
 'changepassword_link' => array( 'changepassword_link' ),
+'list_options' => array( 'list_options' ),
+'lang_selector' => array( 'lang_selector' ),
+'userinfo_link' => array( 'userinfo_link' ),
+'logout_link' => array( 'logout_link' ),
 'expand_menu_button' => array( 'expand_menu_button' ),
 'collapse_button' => array( 'collapse_button' ),
 'notifications' => array( 'notifications' ),
 'text' => array( 'text' ),
-'list_options' => array( 'list_options' ),
-'lang_selector' => array( 'lang_selector' ),
 'expand_button' => array( 'expand_button' ) ),
 'cellMaps' => array(  ) ),
 'loginForm' => array( 'loginForm' => 3 ),
@@ -70,21 +72,18 @@
 'dashSearch' => array( 'searchFields' => array(  ),
 'allSearchFields' => array(  ),
 'googleLikeFields' => array(  ) ) );
-			$pageArray = array( 'id' => 'hispmd_moh_dahsboard',
+			$pageArray = array( 'id' => 'hispmd_indicator_chart',
 'type' => 'dashboard',
 'layoutId' => 'leftbar',
 'disabled' => 0,
-'default' => 11,
+'default' => 0,
 'forms' => array( 'grid' => array( 'modelId' => 'dashboard-grid',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ),
 array( 'cell' => 'c' ) ),
 'section' => '' ),
 array( 'section' => '',
-'cells' => array( array( 'cell' => 'c6',
+'cells' => array( array( 'cell' => 'c4',
 'colspan' => 2 ) ) ),
-array( 'section' => '',
-'cells' => array( array( 'cell' => 'c4' ),
-array( 'cell' => 'c5' ) ) ),
 array( 'section' => '',
 'cells' => array( array( 'cell' => 'c2' ),
 array( 'cell' => 'c3' ) ) ) ),
@@ -97,10 +96,6 @@ array( 'cell' => 'c3' ) ) ) ),
 'c3' => array( 'model' => 'c1',
 'items' => array(  ) ),
 'c4' => array( 'model' => 'c1',
-'items' => array(  ) ),
-'c5' => array( 'model' => 'c1',
-'items' => array(  ) ),
-'c6' => array( 'model' => 'c1',
 'items' => array( 'text' ),
 'align' => 'center' ) ),
 'deferredItems' => array(  ),
@@ -128,13 +123,16 @@ array( 'cell' => 'c2' ) ),
 'c2' => array( 'model' => 'c2',
 'items' => array( 'simple_search',
 'list_options',
+'lang_selector',
 'notifications',
 'username_button' ) ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ),
 'top' => array( 'modelId' => 'dashboard-top',
-'grid' => array(  ),
-'cells' => array(  ),
+'grid' => array( array( 'cells' => array( array( 'cell' => 'c4' ) ),
+'section' => '' ) ),
+'cells' => array( 'c4' => array( 'model' => 'c4',
+'items' => array(  ) ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ) ),
 'items' => array( 'breadcrumb' => array( 'type' => 'breadcrumb' ),
@@ -146,64 +144,20 @@ array( 'cell' => 'c2' ) ),
 'logout_link',
 'adminarea_link',
 'changepassword_link' ) ),
-'userinfo_link' => array( 'type' => 'userinfo_link' ),
-'logout_link' => array( 'type' => 'logout_link' ),
 'adminarea_link' => array( 'type' => 'adminarea_link' ),
 'changepassword_link' => array( 'type' => 'changepassword_link' ),
+'list_options' => array( 'type' => 'list_options',
+'items' => array(  ) ),
+'lang_selector' => array( 'type' => 'lang_selector' ),
+'userinfo_link' => array( 'type' => 'userinfo_link' ),
+'logout_link' => array( 'type' => 'logout_link' ),
 'expand_menu_button' => array( 'type' => 'expand_menu_button' ),
 'collapse_button' => array( 'type' => 'collapse_button' ),
 'notifications' => array( 'type' => 'notifications' ),
 'text' => array( 'type' => 'text',
-'label' => array( 'text' => '<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOH Indicators Dashboard</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
-        iframe {
-            border: none;
-            width: 100%;
-            height: 777vh;
-            position: relative;
-            top: 0;
-            left: 0;
-        }
-    </style>
-</head>
-<body>
-    <iframe
-        id="metabase-iframe"
-        src=""
-        allowtransparency></iframe>
-    <script>
-        // Set dashboard ID dynamically
-        var dashboardId = 5; // Replace with dynamic ID if needed
-
-        // Make a request to the PHP server to generate the iframe URL for the selected dashboard ID
-        fetch(\'../api/meta/base.php?dashboardId=\' + dashboardId)
-            .then(response => response.text())
-            .then(iframeUrl => {
-                document.getElementById(\'metabase-iframe\').src = iframeUrl;
-            });
-    </script>
-</body>
-        <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
-
-</html>
-',
+'label' => array( 'text' => '<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>HISPMD Indicator Chart</title>    <style>        iframe {            border: none;            width: 100%;            height: 111vh;        }        @media (max-width: 768px) {            iframe {                height: 80vh; /* Adjust height for smaller screens */            }        }        @media (max-width: 480px) {            iframe {                height: 70vh; /* Further adjust for mobile devices */            }        }    </style></head><body>    <iframe        id="hispmd-iframe"        src="../api/chart/indicatorcharts.php"        allowtransparency></iframe><!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS --></body></html>',
 'type' => 0 ),
 'editedByRte' => false ),
-'list_options' => array( 'type' => 'list_options',
-'items' => array( 'lang_selector' ),
-'icon' => array( 'fa' => 'language' ) ),
-'lang_selector' => array( 'type' => 'lang_selector' ),
 'expand_button' => array( 'type' => 'expand_button' ) ),
 'dbProps' => array(  ),
 'version' => 11,
