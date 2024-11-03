@@ -264,7 +264,6 @@ $tdatamoh_indicator_data[".googleLikeFields"] = array();
 $tdatamoh_indicator_data[".googleLikeFields"][] = "data_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "indicator_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "data_source_id";
-$tdatamoh_indicator_data[".googleLikeFields"][] = "assessment_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "region_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "unit_id";
 $tdatamoh_indicator_data[".googleLikeFields"][] = "facility_type_id";
@@ -1713,7 +1712,8 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 		$edata["LCType"] = 0;
 
 	
-		
+			$edata["LookupUnique"] = true;
+
 	$edata["LinkField"] = "year";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "year";
@@ -1721,7 +1721,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "year";
 
 	
 	
@@ -3156,7 +3156,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Readonly");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3166,6 +3166,35 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_data";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "period";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -3210,7 +3239,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3219,7 +3248,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
+		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "data_id";
 		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;

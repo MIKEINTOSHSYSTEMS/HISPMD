@@ -480,19 +480,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
 						</div>
 		{END searchCtrlBlock_indicator_id}
-																{BEGIN searchCtrlBlock_assessment_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_assessment_id}" {$filterRow_attrs_assessment_id}>
-			<label>{$label public_moh_indicator_data assessment_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_assessment_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_assessment_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_assessment_id}</span>
-						</div>
-		{END searchCtrlBlock_assessment_id}
 																{BEGIN searchCtrlBlock_data_source_id}
 
 
@@ -911,7 +898,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_indicator_group_id}
 
@@ -934,65 +920,6 @@
 	</div>
 
 {END filter_control_indicator_group_id}
-
-
-
-
-
-
-{BEGIN filter_control_period}
-
-	<div class="dropdown filter-field filter-period-container" {BEGIN filter_selected_period} data-selected {END filter_selected_period}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_period}
-			<a href="#" class="filter-clear filter-clear-period" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_period}
-			<span class="r-filter-field">{$label public_moh_indicator_data period }				{BEGIN filter_selected_period}:{END filter_selected_period}
-			</span>
-			{BEGIN filter_selected_period}
-			<span class="r-filter-value">{$filtervalue_period}</span>
-			{END filter_selected_period}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_period}
-		<li class=" filter-values filter-values-period  {$visibilityClass_period}">
-			{$period_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_period}
-
-			{BEGIN filter_button_showmore_period}
-		<li class=" filter-show-more {$collapsedClass_period} {$showMoreBtnClass_period}">
-			<a class="filter-show-more-link filterShowMore_period" href="#">{$show_n_more_period}</a>
-		</li>
-		{END filter_button_showmore_period}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_period}
 
 
 
@@ -1035,7 +962,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_indicator_id}
 
@@ -1058,71 +984,6 @@
 	</div>
 
 {END filter_control_indicator_id}
-
-
-
-
-
-
-{BEGIN filter_control_assessment_id}
-
-	<div class="dropdown filter-field filter-assessment_id-container" {BEGIN filter_selected_assessment_id} data-selected {END filter_selected_assessment_id}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-assessment_id" type="checkbox" name="selectAll" {$selectAll_attrs_assessment_id} />
-						{BEGIN clearLink_assessment_id}
-			<a href="#" class="filter-clear filter-clear-assessment_id" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_assessment_id}
-			<span class="r-filter-field">{$label public_moh_indicator_data assessment_id }				{BEGIN filter_selected_assessment_id}:{END filter_selected_assessment_id}
-			</span>
-			{BEGIN filter_selected_assessment_id}
-			<span class="r-filter-value">{$filtervalue_assessment_id}</span>
-			{END filter_selected_assessment_id}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_assessment_id}
-		<li class=" filter-values filter-values-assessment_id  {$visibilityClass_assessment_id}">
-			{$assessment_id_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_assessment_id}
-
-			{BEGIN filter_button_showmore_assessment_id}
-		<li class=" filter-show-more {$collapsedClass_assessment_id} {$showMoreBtnClass_assessment_id}">
-			<a class="filter-show-more-link filterShowMore_assessment_id" href="#">{$show_n_more_assessment_id}</a>
-		</li>
-		{END filter_button_showmore_assessment_id}
-	
-
-
-	
-
-			{BEGIN filter_button_multiselect_assessment_id}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_assessment_id}">
-			<a href="#" class="filter-assessment_id-btn-multiselect filter-apply-assessment_id" {$filterbutton_attrs_assessment_id}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_assessment_id}
-			</ul>
-	</div>
-
-{END filter_control_assessment_id}
 
 
 
@@ -1152,7 +1013,6 @@
 		<li class=" filter-values filter-values-data_source_id  {$visibilityClass_data_source_id}">
 			{$data_source_id_filter}
 						
-					
 					
 					
 					
@@ -1230,7 +1090,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_scope_id}
 
@@ -1282,7 +1141,6 @@
 		<li class=" filter-values filter-values-region_id  {$visibilityClass_region_id}">
 			{$region_id_filter}
 						
-					
 					
 					
 					
@@ -1360,7 +1218,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_unit_id}
 
@@ -1412,7 +1269,6 @@
 		<li class=" filter-values filter-values-facility_type_id  {$visibilityClass_facility_type_id}">
 			{$facility_type_id_filter}
 						
-					
 					
 					
 					
@@ -1490,7 +1346,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_gender_sex}
 
@@ -1555,7 +1410,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_period_id}
 
@@ -1606,7 +1460,6 @@
 		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
 			{$year_filter}
 						
-					
 					
 					
 					
@@ -1684,7 +1537,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_quarter_id}
 
@@ -1749,7 +1601,6 @@
 					
 					
 					
-					
 					</li>
 		{END filterCtrlBlock_month_id}
 
@@ -1772,6 +1623,70 @@
 	</div>
 
 {END filter_control_month_id}
+
+
+
+
+
+
+{BEGIN filter_control_period}
+
+	<div class="dropdown filter-field filter-period-container" {BEGIN filter_selected_period} data-selected {END filter_selected_period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-period" type="checkbox" name="selectAll" {$selectAll_attrs_period} />
+						{BEGIN clearLink_period}
+			<a href="#" class="filter-clear filter-clear-period" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_period}
+			<span class="r-filter-field">{$label public_moh_indicator_data period }				{BEGIN filter_selected_period}:{END filter_selected_period}
+			</span>
+			{BEGIN filter_selected_period}
+			<span class="r-filter-value">{$filtervalue_period}</span>
+			{END filter_selected_period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_period}
+		<li class=" filter-values filter-values-period  {$visibilityClass_period}">
+			{$period_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_period}
+
+			{BEGIN filter_button_showmore_period}
+		<li class=" filter-show-more {$collapsedClass_period} {$showMoreBtnClass_period}">
+			<a class="filter-show-more-link filterShowMore_period" href="#">{$show_n_more_period}</a>
+		</li>
+		{END filter_button_showmore_period}
+	
+
+
+			{BEGIN filter_button_apply_period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_period}">
+			<a href="#" class="filter-btn-apply filter-apply-period" {$filterbutton_attrs_period}>{mlang_message FILTER_APPLY}</a>
+		</li>
+		{END filter_button_apply_period}
+	
+
+			</ul>
+	</div>
+
+{END filter_control_period}
 
 
 
@@ -1801,7 +1716,6 @@
 		<li class=" filter-values filter-values-data_representation  {$visibilityClass_data_representation}">
 			{$data_representation_filter}
 						
-					
 					
 					
 					
@@ -1861,10 +1775,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="data_source_id"]:before {
 		content: "{$label public_moh_indicator_data data_source_id}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="assessment_id"]:before {
-		content: "{$label public_moh_indicator_data assessment_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_id"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_id"]:before {
 		content: "{$label public_moh_indicator_data region_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="unit_id"]:before {
@@ -1989,7 +1900,7 @@
 	 
 		{BEGIN data_id_fieldheadercolumn}
 	{BEGIN data_id_fieldheader}
-	<SPAN {$data_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_id" data-fieldname="data_id">
+	<SPAN {$data_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_id" data-fieldname="data_id">
 	{$label public_moh_indicator_data data_id }	{$arrow_icon_data_id}
 	</SPAN>
 	{END data_id_fieldheader}
@@ -2014,7 +1925,7 @@
 	 
 		{BEGIN indicator_group_id_fieldheadercolumn}
 	{BEGIN indicator_group_id_fieldheader}
-	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
+	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
 	{$label public_moh_indicator_data indicator_group_id }	{$arrow_icon_indicator_group_id}
 	</SPAN>
 	{END indicator_group_id_fieldheader}
@@ -2039,7 +1950,7 @@
 	 
 		{BEGIN indicator_id_fieldheadercolumn}
 	{BEGIN indicator_id_fieldheader}
-	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
+	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
 	{$label public_moh_indicator_data indicator_id }	{$arrow_icon_indicator_id}
 	</SPAN>
 	{END indicator_id_fieldheader}
@@ -2054,21 +1965,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$assessment_id_class}	"
+		 r-ori-vert		 {$data_source_id_class}	"
 
-			data-field="assessment_id"
+			data-field="data_source_id"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN assessment_id_fieldheadercolumn}
-	{BEGIN assessment_id_fieldheader}
-	<SPAN {$assessment_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="assessment_id" data-fieldname="assessment_id">
-	{$label public_moh_indicator_data assessment_id }	{$arrow_icon_assessment_id}
+		{BEGIN data_source_id_fieldheadercolumn}
+	{BEGIN data_source_id_fieldheader}
+	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
+	{$label public_moh_indicator_data data_source_id }	{$arrow_icon_data_source_id}
 	</SPAN>
-	{END assessment_id_fieldheader}
-{END assessment_id_fieldheadercolumn}
+	{END data_source_id_fieldheader}
+{END data_source_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2079,21 +1990,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$data_source_id_class}	"
+		 r-ori-vert		 {$data_source_detail_class}	"
 
-			data-field="data_source_id"
+			data-field="data_source_detail"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN data_source_id_fieldheadercolumn}
-	{BEGIN data_source_id_fieldheader}
-	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
-	{$label public_moh_indicator_data data_source_id }	{$arrow_icon_data_source_id}
+		{BEGIN data_source_detail_fieldheadercolumn}
+	{BEGIN data_source_detail_fieldheader}
+	<SPAN {$data_source_detail_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_detail" data-fieldname="data_source_detail">
+	{$label public_moh_indicator_data data_source_detail }	{$arrow_icon_data_source_detail}
 	</SPAN>
-	{END data_source_id_fieldheader}
-{END data_source_id_fieldheadercolumn}
+	{END data_source_detail_fieldheader}
+{END data_source_detail_fieldheadercolumn}
 
 	
 	</th>
@@ -2104,21 +2015,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$data_source_detail_class}	"
+		 r-ori-vert		 {$scope_id_class}	"
 
-			data-field="data_source_detail"
+			data-field="scope_id"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN data_source_detail_fieldheadercolumn}
-	{BEGIN data_source_detail_fieldheader}
-	<SPAN {$data_source_detail_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_detail" data-fieldname="data_source_detail">
-	{$label public_moh_indicator_data data_source_detail }	{$arrow_icon_data_source_detail}
+		{BEGIN scope_id_fieldheadercolumn}
+	{BEGIN scope_id_fieldheader}
+	<SPAN {$scope_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="scope_id" data-fieldname="scope_id">
+	{$label public_moh_indicator_data scope_id }	{$arrow_icon_scope_id}
 	</SPAN>
-	{END data_source_detail_fieldheader}
-{END data_source_detail_fieldheadercolumn}
+	{END scope_id_fieldheader}
+{END scope_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2129,21 +2040,21 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$scope_id_class}	"
+		 r-ori-vert		 {$region_id_class}	"
 
-			data-field="scope_id"
+			data-field="region_id"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN scope_id_fieldheadercolumn}
-	{BEGIN scope_id_fieldheader}
-	<SPAN {$scope_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="scope_id" data-fieldname="scope_id">
-	{$label public_moh_indicator_data scope_id }	{$arrow_icon_scope_id}
+		{BEGIN region_id_fieldheadercolumn}
+	{BEGIN region_id_fieldheader}
+	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
+	{$label public_moh_indicator_data region_id }	{$arrow_icon_region_id}
 	</SPAN>
-	{END scope_id_fieldheader}
-{END scope_id_fieldheadercolumn}
+	{END region_id_fieldheader}
+{END region_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2154,21 +2065,21 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_id_class}	"
+		 r-ori-vert		 {$unit_id_class}	"
 
-			data-field="region_id"
+			data-field="unit_id"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN region_id_fieldheadercolumn}
-	{BEGIN region_id_fieldheader}
-	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
-	{$label public_moh_indicator_data region_id }	{$arrow_icon_region_id}
+		{BEGIN unit_id_fieldheadercolumn}
+	{BEGIN unit_id_fieldheader}
+	<SPAN {$unit_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id">
+	{$label public_moh_indicator_data unit_id }	{$arrow_icon_unit_id}
 	</SPAN>
-	{END region_id_fieldheader}
-{END region_id_fieldheadercolumn}
+	{END unit_id_fieldheader}
+{END unit_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2179,21 +2090,21 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$unit_id_class}	"
+		 r-ori-vert		 {$facility_type_id_class}	"
 
-			data-field="unit_id"
+			data-field="facility_type_id"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN unit_id_fieldheadercolumn}
-	{BEGIN unit_id_fieldheader}
-	<SPAN {$unit_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id">
-	{$label public_moh_indicator_data unit_id }	{$arrow_icon_unit_id}
+		{BEGIN facility_type_id_fieldheadercolumn}
+	{BEGIN facility_type_id_fieldheader}
+	<SPAN {$facility_type_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type_id" data-fieldname="facility_type_id">
+	{$label public_moh_indicator_data facility_type_id }	{$arrow_icon_facility_type_id}
 	</SPAN>
-	{END unit_id_fieldheader}
-{END unit_id_fieldheadercolumn}
+	{END facility_type_id_fieldheader}
+{END facility_type_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2204,21 +2115,21 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_type_id_class}	"
+		 r-ori-vert		 {$gender_sex_class}	"
 
-			data-field="facility_type_id"
+			data-field="gender_sex"
 	
 	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN facility_type_id_fieldheadercolumn}
-	{BEGIN facility_type_id_fieldheader}
-	<SPAN {$facility_type_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type_id" data-fieldname="facility_type_id">
-	{$label public_moh_indicator_data facility_type_id }	{$arrow_icon_facility_type_id}
+		{BEGIN gender_sex_fieldheadercolumn}
+	{BEGIN gender_sex_fieldheader}
+	<SPAN {$gender_sex_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gender_sex" data-fieldname="gender_sex">
+	{$label public_moh_indicator_data gender_sex }	{$arrow_icon_gender_sex}
 	</SPAN>
-	{END facility_type_id_fieldheader}
-{END facility_type_id_fieldheadercolumn}
+	{END gender_sex_fieldheader}
+{END gender_sex_fieldheadercolumn}
 
 	
 	</th>
@@ -2229,21 +2140,21 @@
 	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$gender_sex_class}	"
+		 r-ori-vert		 {$value_class}	"
 
-			data-field="gender_sex"
+			data-field="value"
 	
 	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN gender_sex_fieldheadercolumn}
-	{BEGIN gender_sex_fieldheader}
-	<SPAN {$gender_sex_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gender_sex" data-fieldname="gender_sex">
-	{$label public_moh_indicator_data gender_sex }	{$arrow_icon_gender_sex}
+		{BEGIN value_fieldheadercolumn}
+	{BEGIN value_fieldheader}
+	<SPAN {$value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
+	{$label public_moh_indicator_data value }	{$arrow_icon_value}
 	</SPAN>
-	{END gender_sex_fieldheader}
-{END gender_sex_fieldheadercolumn}
+	{END value_fieldheader}
+{END value_fieldheadercolumn}
 
 	
 	</th>
@@ -2254,21 +2165,21 @@
 	{$cell_grid_headcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$value_class}	"
+		 r-ori-vert		 {$data_representation_class}	"
 
-			data-field="value"
+			data-field="data_representation"
 	
 	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN value_fieldheadercolumn}
-	{BEGIN value_fieldheader}
-	<SPAN {$value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
-	{$label public_moh_indicator_data value }	{$arrow_icon_value}
+		{BEGIN data_representation_fieldheadercolumn}
+	{BEGIN data_representation_fieldheader}
+	<SPAN {$data_representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_representation" data-fieldname="data_representation">
+	{$label public_moh_indicator_data data_representation }	{$arrow_icon_data_representation}
 	</SPAN>
-	{END value_fieldheader}
-{END value_fieldheadercolumn}
+	{END data_representation_fieldheader}
+{END data_representation_fieldheadercolumn}
 
 	
 	</th>
@@ -2279,21 +2190,21 @@
 	{$cell_grid_headcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$data_representation_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
-			data-field="data_representation"
+			data-field="period_id"
 	
 	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN data_representation_fieldheadercolumn}
-	{BEGIN data_representation_fieldheader}
-	<SPAN {$data_representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_representation" data-fieldname="data_representation">
-	{$label public_moh_indicator_data data_representation }	{$arrow_icon_data_representation}
+		{BEGIN period_id_fieldheadercolumn}
+	{BEGIN period_id_fieldheader}
+	<SPAN {$period_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id">
+	{$label public_moh_indicator_data period_id }	{$arrow_icon_period_id}
 	</SPAN>
-	{END data_representation_fieldheader}
-{END data_representation_fieldheadercolumn}
+	{END period_id_fieldheader}
+{END period_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2304,21 +2215,21 @@
 	{$cell_grid_headcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$period_id_class}	"
+		 r-ori-vert		 {$year_class}	"
 
-			data-field="period_id"
+			data-field="year"
 	
 	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN period_id_fieldheadercolumn}
-	{BEGIN period_id_fieldheader}
-	<SPAN {$period_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id">
-	{$label public_moh_indicator_data period_id }	{$arrow_icon_period_id}
+		{BEGIN year_fieldheadercolumn}
+	{BEGIN year_fieldheader}
+	<SPAN {$year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year">
+	{$label public_moh_indicator_data year }	{$arrow_icon_year}
 	</SPAN>
-	{END period_id_fieldheader}
-{END period_id_fieldheadercolumn}
+	{END year_fieldheader}
+{END year_fieldheadercolumn}
 
 	
 	</th>
@@ -2329,21 +2240,21 @@
 	{$cell_grid_headcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$year_class}	"
+		 r-ori-vert		 {$month_id_class}	"
 
-			data-field="year"
+			data-field="month_id"
 	
 	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN year_fieldheadercolumn}
-	{BEGIN year_fieldheader}
-	<SPAN {$year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year">
-	{$label public_moh_indicator_data year }	{$arrow_icon_year}
+		{BEGIN month_id_fieldheadercolumn}
+	{BEGIN month_id_fieldheader}
+	<SPAN {$month_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="month_id" data-fieldname="month_id">
+	{$label public_moh_indicator_data month_id }	{$arrow_icon_month_id}
 	</SPAN>
-	{END year_fieldheader}
-{END year_fieldheadercolumn}
+	{END month_id_fieldheader}
+{END month_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2354,21 +2265,21 @@
 	{$cell_grid_headcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$month_id_class}	"
+		 r-ori-vert		 {$quarter_id_class}	"
 
-			data-field="month_id"
+			data-field="quarter_id"
 	
 	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN month_id_fieldheadercolumn}
-	{BEGIN month_id_fieldheader}
-	<SPAN {$month_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="month_id" data-fieldname="month_id">
-	{$label public_moh_indicator_data month_id }	{$arrow_icon_month_id}
+		{BEGIN quarter_id_fieldheadercolumn}
+	{BEGIN quarter_id_fieldheader}
+	<SPAN {$quarter_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="quarter_id" data-fieldname="quarter_id">
+	{$label public_moh_indicator_data quarter_id }	{$arrow_icon_quarter_id}
 	</SPAN>
-	{END month_id_fieldheader}
-{END month_id_fieldheadercolumn}
+	{END quarter_id_fieldheader}
+{END quarter_id_fieldheadercolumn}
 
 	
 	</th>
@@ -2379,48 +2290,23 @@
 	{$cell_grid_headcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$quarter_id_class}	"
+		 r-ori-vert		 {$period_class}	"
 
-			data-field="quarter_id"
+			data-field="period"
 	
 	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN quarter_id_fieldheadercolumn}
-	{BEGIN quarter_id_fieldheader}
-	<SPAN {$quarter_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="quarter_id" data-fieldname="quarter_id">
-	{$label public_moh_indicator_data quarter_id }	{$arrow_icon_quarter_id}
-	</SPAN>
-	{END quarter_id_fieldheader}
-{END quarter_id_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field16}
-									{BEGIN cellblock_grid_headcell_field17}
-	<th
-	
-	{$cell_grid_headcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$period_class}	"
-
-			data-field="period"
-	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN period_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period" data-fieldname="period">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period" data-fieldname="period">
 	{$label public_moh_indicator_data period }	</span>
 {END period_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field17}
+	{END cellblock_grid_headcell_field16}
 							</tr>
 																				
 					{END grid_header}
@@ -2627,32 +2513,11 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$assessment_id_class}	"
-
-			data-field="assessment_id"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN assessment_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="assessment_id" data-fieldname="assessment_id" data-default-width >
-{$assessment_id_value}
-</span>
-{END assessment_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$data_source_id_class}	"
 
 			data-field="data_source_id"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2662,18 +2527,18 @@
 </span>
 {END data_source_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$data_source_detail_class}	"
 
 			data-field="data_source_detail"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2683,18 +2548,18 @@
 </span>
 {END data_source_detail_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$scope_id_class}	"
 
 			data-field="scope_id"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2704,18 +2569,18 @@
 </span>
 {END scope_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$region_id_class}	"
 
 			data-field="region_id"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2725,18 +2590,18 @@
 </span>
 {END region_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$unit_id_class}	"
 
 			data-field="unit_id"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2746,18 +2611,18 @@
 </span>
 {END unit_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$facility_type_id_class}	"
 
 			data-field="facility_type_id"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2767,18 +2632,18 @@
 </span>
 {END facility_type_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$gender_sex_class}	"
 
 			data-field="gender_sex"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2788,18 +2653,18 @@
 </span>
 {END gender_sex_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field10}
-									{BEGIN cellblock_grid_cell_field11}
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
 	<td
 	
-	{$cell_grid_cell_field11}
+	{$cell_grid_cell_field10}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$value_class}	"
 
 			data-field="value"
 	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2809,18 +2674,18 @@
 </span>
 {END value_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
 	<td
 	
-	{$cell_grid_cell_field12}
+	{$cell_grid_cell_field11}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$data_representation_class}	"
 
 			data-field="data_representation"
 	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2830,18 +2695,18 @@
 </span>
 {END data_representation_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
 	<td
 	
-	{$cell_grid_cell_field13}
+	{$cell_grid_cell_field12}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$period_id_class}	"
 
 			data-field="period_id"
 	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2851,18 +2716,18 @@
 </span>
 {END period_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
 	<td
 	
-	{$cell_grid_cell_field14}
+	{$cell_grid_cell_field13}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$year_class}	"
 
 			data-field="year"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2872,18 +2737,18 @@
 </span>
 {END year_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
-									{BEGIN cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
 	<td
 	
-	{$cell_grid_cell_field15}
+	{$cell_grid_cell_field14}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$month_id_class}	"
 
 			data-field="month_id"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2893,18 +2758,18 @@
 </span>
 {END month_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
 	<td
 	
-	{$cell_grid_cell_field16}
+	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$quarter_id_class}	"
 
 			data-field="quarter_id"
 	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2914,18 +2779,18 @@
 </span>
 {END quarter_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field16}
-									{BEGIN cellblock_grid_cell_field17}
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
 	<td
 	
-	{$cell_grid_cell_field17}
+	{$cell_grid_cell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$period_class}	"
 
 			data-field="period"
 	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2935,7 +2800,7 @@
 </span>
 {END period_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field17}
+	{END cellblock_grid_cell_field16}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -3071,7 +2936,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$assessment_id_class}	"
+		 r-ori-vert		 {$data_source_id_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3086,7 +2951,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$data_source_id_class}	"
+		 r-ori-vert		 {$data_source_detail_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3101,7 +2966,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$data_source_detail_class}	"
+		 r-ori-vert		 {$scope_id_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3116,7 +2981,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$scope_id_class}	"
+		 r-ori-vert		 {$region_id_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3131,7 +2996,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_id_class}	"
+		 r-ori-vert		 {$unit_id_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3146,7 +3011,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$unit_id_class}	"
+		 r-ori-vert		 {$facility_type_id_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3161,7 +3026,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_type_id_class}	"
+		 r-ori-vert		 {$gender_sex_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3176,7 +3041,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$gender_sex_class}	"
+		 r-ori-vert		 {$value_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3191,7 +3056,7 @@
 	{$cell_grid_footcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$value_class}	"
+		 r-ori-vert		 {$data_representation_class}	"
 
 	
 	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3206,7 +3071,7 @@
 	{$cell_grid_footcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$data_representation_class}	"
+		 r-ori-vert		 {$period_id_class}	"
 
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3221,7 +3086,7 @@
 	{$cell_grid_footcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$period_id_class}	"
+		 r-ori-vert		 {$year_class}	"
 
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3236,7 +3101,7 @@
 	{$cell_grid_footcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$year_class}	"
+		 r-ori-vert		 {$month_id_class}	"
 
 	
 	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3251,7 +3116,7 @@
 	{$cell_grid_footcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$month_id_class}	"
+		 r-ori-vert		 {$quarter_id_class}	"
 
 	
 	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3266,7 +3131,7 @@
 	{$cell_grid_footcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$quarter_id_class}	"
+		 r-ori-vert		 {$period_class}	"
 
 	
 	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
@@ -3275,21 +3140,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field16}
-									{BEGIN cellblock_grid_footcell_field17}
-	<td
-	
-	{$cell_grid_footcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$period_class}	"
-
-	
-	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicator_data_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field17}
 							</tr>
 					
 					</tfoot>

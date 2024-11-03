@@ -115,9 +115,6 @@ pdfDocument = {
 			{"text":{$data_source_id_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 				
-			{"text":{$assessment_id_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$scope_id_pdfvalue},"hidden":"{$item_hide_export_field9}"},
 				
 				

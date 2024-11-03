@@ -509,6 +509,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"] = array();
 		}
 		$lookupTableLinks["public.moh_quarters"]["moh_indicator_data.quarter_id"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "quarter_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicator_data"] ) ) {
+			$lookupTableLinks["public.moh_indicator_data"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicator_data"]["moh_indicator_data.period"] )) {
+			$lookupTableLinks["public.moh_indicator_data"]["moh_indicator_data.period"] = array();
+		}
+		$lookupTableLinks["public.moh_indicator_data"]["moh_indicator_data.period"]["edit"] = array("table" => "public.moh_indicator_data", "field" => "period", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_indicator_groups"] ) ) {
 			$lookupTableLinks["public.moh_indicator_groups"] = array();
 		}
@@ -670,6 +677,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"] = array();
 		}
 		$lookupTableLinks["public.moh_facility_types"]["moh_indicators_data_chart.facility_type_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "facility_type_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_period_types"] ) ) {
+			$lookupTableLinks["public.moh_period_types"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_period_types"]["moh_indicators_data_chart.period_id"] )) {
+			$lookupTableLinks["public.moh_period_types"]["moh_indicators_data_chart.period_id"] = array();
+		}
+		$lookupTableLinks["public.moh_period_types"]["moh_indicators_data_chart.period_id"]["search"] = array("table" => "MOH_Indicators_data_Chart", "field" => "period_id", "page" => "search");
 		if( !isset( $lookupTableLinks["public.moh_indicator_data"] ) ) {
 			$lookupTableLinks["public.moh_indicator_data"] = array();
 		}
