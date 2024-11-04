@@ -113,13 +113,13 @@ services:
         ipv4_address: 192.168.128.12
 
   metabase:
-    image: metabase/metabase:v0.50.12
+    image: metabase/metabase:latest
     container_name: hispmd_viz
     hostname: metabase
     volumes:
       - ./src/hispmd_vizdata:/metabase-data
     ports:
-      - "4004:3000"
+      - "127.0.0.1:4004:3000"  # Bind to specific IP address
     environment:
       MB_DB_FILE: /metabase-data/hispmd.db
       MB_DB_TYPE: postgres
@@ -127,7 +127,7 @@ services:
       MB_DB_PORT: 5432
       MB_DB_USER: hispmddb
       MB_DB_PASS: hispmddb
-      MB_DB_HOST: postgres
+      MB_DB_HOST: 192.168.128.4 #postgres
       MB_ADMIN_EMAIL: dev@merqconsultancy.org
       MB_ADMIN_FIRST_NAME: MERQ
       MB_ADMIN_PASSWORD: hispmdmerqdev0
@@ -141,6 +141,11 @@ services:
     image: postgres:latest
     container_name: hispmd_postgres
     hostname: postgres
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "hispmddb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     environment:
       POSTGRES_DB: hispmddb
       POSTGRES_USER: hispmddb
