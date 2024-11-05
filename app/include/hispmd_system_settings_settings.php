@@ -6,9 +6,9 @@ $tdatahispmd_system_settings[".OwnerID"] = "";
 $tdatahispmd_system_settings[".OriginalTable"] = "public.hispmd_settings";
 
 
-$tdatahispmd_system_settings[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\",\"analytics_databases\",\"databases\",\"mb_databases\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahispmd_system_settings[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\",\"analytics_databases\",\"databases\",\"mb_databases\",\"suggestion_box_databases\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatahispmd_system_settings[".originalPagesByType"] = $tdatahispmd_system_settings[".pagesByType"];
-$tdatahispmd_system_settings[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\",\"analytics_databases\",\"databases\",\"mb_databases\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahispmd_system_settings[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\",\"analytics_databases\",\"databases\",\"mb_databases\",\"suggestion_box_databases\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatahispmd_system_settings[".originalPages"] = $tdatahispmd_system_settings[".pages"];
 $tdatahispmd_system_settings[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatahispmd_system_settings[".originalDefaultPages"] = $tdatahispmd_system_settings[".defaultPages"];

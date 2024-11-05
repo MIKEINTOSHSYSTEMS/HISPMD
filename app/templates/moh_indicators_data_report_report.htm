@@ -74,6 +74,245 @@
      
          
 
+			<div class="clearfix  r-ori-vert" data-cellId="left_c" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_indicator_group_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_group_id}" {$filterRow_attrs_indicator_group_id}>
+			<label>{$label MOH_Indicators_Data_Report indicator_group_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_group_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_group_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_group_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_group_id}
+																{BEGIN searchCtrlBlock_indicator_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
+			<label>{$label MOH_Indicators_Data_Report indicator_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
+						</div>
+		{END searchCtrlBlock_indicator_id}
+																{BEGIN searchCtrlBlock_data_source_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_source_id}" {$filterRow_attrs_data_source_id}>
+			<label>{$label MOH_Indicators_Data_Report data_source_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
+						</div>
+		{END searchCtrlBlock_data_source_id}
+																{BEGIN searchCtrlBlock_data_source_detail}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_source_detail}" {$filterRow_attrs_data_source_detail}>
+			<label>{$label MOH_Indicators_Data_Report data_source_detail }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_source_detail}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_source_detail}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_detail}</span>
+						</div>
+		{END searchCtrlBlock_data_source_detail}
+																{BEGIN searchCtrlBlock_scope_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_scope_id}" {$filterRow_attrs_scope_id}>
+			<label>{$label MOH_Indicators_Data_Report scope_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_scope_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_scope_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_scope_id}</span>
+						</div>
+		{END searchCtrlBlock_scope_id}
+																{BEGIN searchCtrlBlock_region_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
+			<label>{$label MOH_Indicators_Data_Report region_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
+						</div>
+		{END searchCtrlBlock_region_id}
+																{BEGIN searchCtrlBlock_unit_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_unit_id}" {$filterRow_attrs_unit_id}>
+			<label>{$label MOH_Indicators_Data_Report unit_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_unit_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_unit_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_unit_id}</span>
+						</div>
+		{END searchCtrlBlock_unit_id}
+																{BEGIN searchCtrlBlock_facility_type_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_facility_type_id}" {$filterRow_attrs_facility_type_id}>
+			<label>{$label MOH_Indicators_Data_Report facility_type_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_facility_type_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_facility_type_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_facility_type_id}</span>
+						</div>
+		{END searchCtrlBlock_facility_type_id}
+																{BEGIN searchCtrlBlock_gender_sex}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_gender_sex}" {$filterRow_attrs_gender_sex}>
+			<label>{$label MOH_Indicators_Data_Report gender_sex }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_gender_sex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_gender_sex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_gender_sex}</span>
+						</div>
+		{END searchCtrlBlock_gender_sex}
+																{BEGIN searchCtrlBlock_period_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_period_id}" {$filterRow_attrs_period_id}>
+			<label>{$label MOH_Indicators_Data_Report period_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_period_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_period_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_period_id}</span>
+						</div>
+		{END searchCtrlBlock_period_id}
+																{BEGIN searchCtrlBlock_month_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_month_id}" {$filterRow_attrs_month_id}>
+			<label>{$label MOH_Indicators_Data_Report month_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_month_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_month_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_month_id}</span>
+						</div>
+		{END searchCtrlBlock_month_id}
+																{BEGIN searchCtrlBlock_quarter_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_quarter_id}" {$filterRow_attrs_quarter_id}>
+			<label>{$label MOH_Indicators_Data_Report quarter_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_quarter_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_quarter_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_quarter_id}</span>
+						</div>
+		{END searchCtrlBlock_quarter_id}
+																{BEGIN searchCtrlBlock_year}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_year}" {$filterRow_attrs_year}>
+			<label>{$label MOH_Indicators_Data_Report year }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_year}</span>
+						</div>
+		{END searchCtrlBlock_year}
+																{BEGIN searchCtrlBlock_period}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_period}" {$filterRow_attrs_period}>
+			<label>{$label MOH_Indicators_Data_Report period }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_period}</span>
+						</div>
+		{END searchCtrlBlock_period}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message RESET}</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+     
+     
+         
+
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
@@ -132,7 +371,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message RESET}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -193,6 +432,20 @@
 		</a>
 	</li>
 {END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN saveSeachButton}
+	<li data-itemtype="save_search" data-itemid="save_search" {$item_save_search} data-pageid="{$pageid}" data-small >
+				<a  href="#" id="saveSearch{$id}"  title="" >
+				
+		{mlang_message SAVE_SEARCH}		
+		</a>
+	</li>
+{END saveSeachButton}
+							<li role="separator" class="divider"></li>							{BEGIN savedSeachesButton}
+<li data-itemtype="saved_searches" data-itemid="saved_searches" {$item_saved_searches} data-pageid="{$pageid}">
+	<a {$saveSearchButtonAttrs} id="savedSearches{$id}">{mlang_message SAVED_SEARCHES}:</a>
+	<ul class="rnr-saved-searches rnr-list" id ="savedSearchedList{$id}"></ul>
+</li>
+{END savedSeachesButton}
 							<li role="separator" class="divider"></li>								{BEGIN AmharicLANGLINK}
 	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
 		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
@@ -375,293 +628,7 @@
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
-	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_indicator_group_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_indicator_group_id}" {$filterRow_attrs_indicator_group_id}>
-			<label>{$label MOH_Indicators_Data_Report indicator_group_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_indicator_group_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_indicator_group_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_group_id}</span>
-						</div>
-		{END searchCtrlBlock_indicator_group_id}
-																{BEGIN searchCtrlBlock_period}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_period}" {$filterRow_attrs_period}>
-			<label>{$label MOH_Indicators_Data_Report period }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_period}</span>
-						</div>
-		{END searchCtrlBlock_period}
-																{BEGIN searchCtrlBlock_year_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_year_id}" {$filterRow_attrs_year_id}>
-			<label>{$label MOH_Indicators_Data_Report year_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_year_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_year_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_year_id}</span>
-						</div>
-		{END searchCtrlBlock_year_id}
-																{BEGIN searchCtrlBlock_quarter_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_quarter_id}" {$filterRow_attrs_quarter_id}>
-			<label>{$label MOH_Indicators_Data_Report quarter_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_quarter_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_quarter_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_quarter_id}</span>
-						</div>
-		{END searchCtrlBlock_quarter_id}
-																{BEGIN searchCtrlBlock_month_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_month_id}" {$filterRow_attrs_month_id}>
-			<label>{$label MOH_Indicators_Data_Report month_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_month_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_month_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_month_id}</span>
-						</div>
-		{END searchCtrlBlock_month_id}
-																{BEGIN searchCtrlBlock_period_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_period_id}" {$filterRow_attrs_period_id}>
-			<label>{$label MOH_Indicators_Data_Report period_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_period_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_period_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_period_id}</span>
-						</div>
-		{END searchCtrlBlock_period_id}
-																{BEGIN searchCtrlBlock_data_source_detail}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_data_source_detail}" {$filterRow_attrs_data_source_detail}>
-			<label>{$label MOH_Indicators_Data_Report data_source_detail }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_data_source_detail}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_data_source_detail}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_detail}</span>
-						</div>
-		{END searchCtrlBlock_data_source_detail}
-																{BEGIN searchCtrlBlock_indicator_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_indicator_id}" {$filterRow_attrs_indicator_id}>
-			<label>{$label MOH_Indicators_Data_Report indicator_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_indicator_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_indicator_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_id}</span>
-						</div>
-		{END searchCtrlBlock_indicator_id}
-																{BEGIN searchCtrlBlock_scope_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_scope_id}" {$filterRow_attrs_scope_id}>
-			<label>{$label MOH_Indicators_Data_Report scope_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_scope_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_scope_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_scope_id}</span>
-						</div>
-		{END searchCtrlBlock_scope_id}
-																{BEGIN searchCtrlBlock_facility_type_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_facility_type_id}" {$filterRow_attrs_facility_type_id}>
-			<label>{$label MOH_Indicators_Data_Report facility_type_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_facility_type_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_facility_type_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_facility_type_id}</span>
-						</div>
-		{END searchCtrlBlock_facility_type_id}
-																{BEGIN searchCtrlBlock_year}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_year}" {$filterRow_attrs_year}>
-			<label>{$label MOH_Indicators_Data_Report year }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_year}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_year}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_year}</span>
-						</div>
-		{END searchCtrlBlock_year}
-																{BEGIN searchCtrlBlock_data_source_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_data_source_id}" {$filterRow_attrs_data_source_id}>
-			<label>{$label MOH_Indicators_Data_Report data_source_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_data_source_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_data_source_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
-						</div>
-		{END searchCtrlBlock_data_source_id}
-																{BEGIN searchCtrlBlock_assessment_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_assessment_id}" {$filterRow_attrs_assessment_id}>
-			<label>{$label MOH_Indicators_Data_Report assessment_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_assessment_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_assessment_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_assessment_id}</span>
-						</div>
-		{END searchCtrlBlock_assessment_id}
-																{BEGIN searchCtrlBlock_region_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_region_id}" {$filterRow_attrs_region_id}>
-			<label>{$label MOH_Indicators_Data_Report region_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_region_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_region_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
-						</div>
-		{END searchCtrlBlock_region_id}
-																{BEGIN searchCtrlBlock_unit_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_unit_id}" {$filterRow_attrs_unit_id}>
-			<label>{$label MOH_Indicators_Data_Report unit_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_unit_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_unit_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_unit_id}</span>
-						</div>
-		{END searchCtrlBlock_unit_id}
-																{BEGIN searchCtrlBlock_gender_sex}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_gender_sex}" {$filterRow_attrs_gender_sex}>
-			<label>{$label MOH_Indicators_Data_Report gender_sex }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_gender_sex}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_gender_sex}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_gender_sex}</span>
-						</div>
-		{END searchCtrlBlock_gender_sex}
-																{BEGIN searchCtrlBlock_value}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_value}" {$filterRow_attrs_value}>
-			<label>{$label MOH_Indicators_Data_Report value }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_value}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_value}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_value}</span>
-						</div>
-		{END searchCtrlBlock_value}
-																{BEGIN searchCtrlBlock_data_representation}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_data_representation}" {$filterRow_attrs_data_representation}>
-			<label>{$label MOH_Indicators_Data_Report data_representation }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_data_representation}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_data_representation}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_data_representation}</span>
-						</div>
-		{END searchCtrlBlock_data_representation}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			{END firstAboveGridCell}	
+				{END firstAboveGridCell}	
 	</div>					</div>
 			 
 				<div class="row">
@@ -801,6 +768,9 @@
 					
 					
 					
+					
+					
+					
 					</li>
 		{END filterCtrlBlock_indicator_group_id}
 
@@ -857,6 +827,9 @@
 					
 					
 					
+					
+					
+					
 					</li>
 		{END filterCtrlBlock_indicator_id}
 
@@ -879,250 +852,6 @@
 	</div>
 
 {END filter_control_indicator_id}
-
-
-
-
-
-
-{BEGIN filter_control_data_representation}
-
-	<div class="dropdown filter-field filter-data_representation-container" {BEGIN filter_selected_data_representation} data-selected {END filter_selected_data_representation}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-data_representation" type="checkbox" name="selectAll" {$selectAll_attrs_data_representation} />
-						{BEGIN clearLink_data_representation}
-			<a href="#" class="filter-clear filter-clear-data_representation" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_data_representation}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report data_representation }				{BEGIN filter_selected_data_representation}:{END filter_selected_data_representation}
-			</span>
-			{BEGIN filter_selected_data_representation}
-			<span class="r-filter-value">{$filtervalue_data_representation}</span>
-			{END filter_selected_data_representation}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_data_representation}
-		<li class=" filter-values filter-values-data_representation  {$visibilityClass_data_representation}">
-			{$data_representation_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_data_representation}
-
-			{BEGIN filter_button_showmore_data_representation}
-		<li class=" filter-show-more {$collapsedClass_data_representation} {$showMoreBtnClass_data_representation}">
-			<a class="filter-show-more-link filterShowMore_data_representation" href="#">{$show_n_more_data_representation}</a>
-		</li>
-		{END filter_button_showmore_data_representation}
-	
-
-
-	
-
-			{BEGIN filter_button_multiselect_data_representation}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_data_representation}">
-			<a href="#" class="filter-data_representation-btn-multiselect filter-apply-data_representation" {$filterbutton_attrs_data_representation}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_data_representation}
-			</ul>
-	</div>
-
-{END filter_control_data_representation}
-
-
-
-
-
-
-{BEGIN filter_control_scope_id}
-
-	<div class="dropdown filter-field filter-scope_id-container" {BEGIN filter_selected_scope_id} data-selected {END filter_selected_scope_id}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-scope_id" type="checkbox" name="selectAll" {$selectAll_attrs_scope_id} />
-						{BEGIN clearLink_scope_id}
-			<a href="#" class="filter-clear filter-clear-scope_id" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_scope_id}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report scope_id }				{BEGIN filter_selected_scope_id}:{END filter_selected_scope_id}
-			</span>
-			{BEGIN filter_selected_scope_id}
-			<span class="r-filter-value">{$filtervalue_scope_id}</span>
-			{END filter_selected_scope_id}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_scope_id}
-		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
-			{$scope_id_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_scope_id}
-
-			{BEGIN filter_button_showmore_scope_id}
-		<li class=" filter-show-more {$collapsedClass_scope_id} {$showMoreBtnClass_scope_id}">
-			<a class="filter-show-more-link filterShowMore_scope_id" href="#">{$show_n_more_scope_id}</a>
-		</li>
-		{END filter_button_showmore_scope_id}
-	
-
-
-	
-
-			{BEGIN filter_button_multiselect_scope_id}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_scope_id}">
-			<a href="#" class="filter-scope_id-btn-multiselect filter-apply-scope_id" {$filterbutton_attrs_scope_id}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_scope_id}
-			</ul>
-	</div>
-
-{END filter_control_scope_id}
-
-
-
-
-
-
-{BEGIN filter_control_facility_type_id}
-
-	<div class="dropdown filter-field filter-facility_type_id-container" {BEGIN filter_selected_facility_type_id} data-selected {END filter_selected_facility_type_id}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-facility_type_id" type="checkbox" name="selectAll" {$selectAll_attrs_facility_type_id} />
-						{BEGIN clearLink_facility_type_id}
-			<a href="#" class="filter-clear filter-clear-facility_type_id" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_facility_type_id}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report facility_type_id }				{BEGIN filter_selected_facility_type_id}:{END filter_selected_facility_type_id}
-			</span>
-			{BEGIN filter_selected_facility_type_id}
-			<span class="r-filter-value">{$filtervalue_facility_type_id}</span>
-			{END filter_selected_facility_type_id}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_facility_type_id}
-		<li class=" filter-values filter-values-facility_type_id  {$visibilityClass_facility_type_id}">
-			{$facility_type_id_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_facility_type_id}
-
-			{BEGIN filter_button_showmore_facility_type_id}
-		<li class=" filter-show-more {$collapsedClass_facility_type_id} {$showMoreBtnClass_facility_type_id}">
-			<a class="filter-show-more-link filterShowMore_facility_type_id" href="#">{$show_n_more_facility_type_id}</a>
-		</li>
-		{END filter_button_showmore_facility_type_id}
-	
-
-
-	
-
-			{BEGIN filter_button_multiselect_facility_type_id}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_facility_type_id}">
-			<a href="#" class="filter-facility_type_id-btn-multiselect filter-apply-facility_type_id" {$filterbutton_attrs_facility_type_id}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_facility_type_id}
-			</ul>
-	</div>
-
-{END filter_control_facility_type_id}
-
-
-
-
-
-
-{BEGIN filter_control_year}
-
-	<div class="dropdown filter-field filter-year-container" {BEGIN filter_selected_year} data-selected {END filter_selected_year}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-year" type="checkbox" name="selectAll" {$selectAll_attrs_year} />
-						{BEGIN clearLink_year}
-			<a href="#" class="filter-clear filter-clear-year" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_year}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report year }				{BEGIN filter_selected_year}:{END filter_selected_year}
-			</span>
-			{BEGIN filter_selected_year}
-			<span class="r-filter-value">{$filtervalue_year}</span>
-			{END filter_selected_year}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_year}
-		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
-			{$year_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_year}
-
-			{BEGIN filter_button_showmore_year}
-		<li class=" filter-show-more {$collapsedClass_year} {$showMoreBtnClass_year}">
-			<a class="filter-show-more-link filterShowMore_year" href="#">{$show_n_more_year}</a>
-		</li>
-		{END filter_button_showmore_year}
-	
-
-
-	
-
-			{BEGIN filter_button_multiselect_year}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_year}">
-			<a href="#" class="filter-year-btn-multiselect filter-apply-year" {$filterbutton_attrs_year}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_year}
-			</ul>
-	</div>
-
-{END filter_control_year}
 
 
 
@@ -1162,6 +891,9 @@
 					
 					
 					
+					
+					
+					
 					</li>
 		{END filterCtrlBlock_data_source_id}
 
@@ -1190,28 +922,27 @@
 
 
 
-{BEGIN filter_control_assessment_id}
+{BEGIN filter_control_data_source_detail}
 
-	<div class="dropdown filter-field filter-assessment_id-container" {BEGIN filter_selected_assessment_id} data-selected {END filter_selected_assessment_id}>
+	<div class="dropdown filter-field filter-data_source_detail-container" {BEGIN filter_selected_data_source_detail} data-selected {END filter_selected_data_source_detail}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-assessment_id" type="checkbox" name="selectAll" {$selectAll_attrs_assessment_id} />
-						{BEGIN clearLink_assessment_id}
-			<a href="#" class="filter-clear filter-clear-assessment_id" title="{mlang_message FILTER_CLEAR}">
+						{BEGIN clearLink_data_source_detail}
+			<a href="#" class="filter-clear filter-clear-data_source_detail" title="{mlang_message FILTER_CLEAR}">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
-			{END clearLink_assessment_id}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report assessment_id }				{BEGIN filter_selected_assessment_id}:{END filter_selected_assessment_id}
+			{END clearLink_data_source_detail}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report data_source_detail }				{BEGIN filter_selected_data_source_detail}:{END filter_selected_data_source_detail}
 			</span>
-			{BEGIN filter_selected_assessment_id}
-			<span class="r-filter-value">{$filtervalue_assessment_id}</span>
-			{END filter_selected_assessment_id}
+			{BEGIN filter_selected_data_source_detail}
+			<span class="r-filter-value">{$filtervalue_data_source_detail}</span>
+			{END filter_selected_data_source_detail}
 			
 			<span class="caret"></span>
 		</div>
 		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_assessment_id}
-		<li class=" filter-values filter-values-assessment_id  {$visibilityClass_assessment_id}">
-			{$assessment_id_filter}
+					{BEGIN filterCtrlBlock_data_source_detail}
+		<li class=" filter-values filter-values-data_source_detail  {$visibilityClass_data_source_detail}">
+			{$data_source_detail_filter}
 						
 					
 					
@@ -1223,28 +954,90 @@
 					
 					
 					
+					
+					
+					
 					</li>
-		{END filterCtrlBlock_assessment_id}
+		{END filterCtrlBlock_data_source_detail}
 
-			{BEGIN filter_button_showmore_assessment_id}
-		<li class=" filter-show-more {$collapsedClass_assessment_id} {$showMoreBtnClass_assessment_id}">
-			<a class="filter-show-more-link filterShowMore_assessment_id" href="#">{$show_n_more_assessment_id}</a>
+			{BEGIN filter_button_showmore_data_source_detail}
+		<li class=" filter-show-more {$collapsedClass_data_source_detail} {$showMoreBtnClass_data_source_detail}">
+			<a class="filter-show-more-link filterShowMore_data_source_detail" href="#">{$show_n_more_data_source_detail}</a>
 		</li>
-		{END filter_button_showmore_assessment_id}
+		{END filter_button_showmore_data_source_detail}
 	
 
 
 	
 
-			{BEGIN filter_button_multiselect_assessment_id}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_assessment_id}">
-			<a href="#" class="filter-assessment_id-btn-multiselect filter-apply-assessment_id" {$filterbutton_attrs_assessment_id}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_assessment_id}
 			</ul>
 	</div>
 
-{END filter_control_assessment_id}
+{END filter_control_data_source_detail}
+
+
+
+
+
+
+{BEGIN filter_control_scope_id}
+
+	<div class="dropdown filter-field filter-scope_id-container" {BEGIN filter_selected_scope_id} data-selected {END filter_selected_scope_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-scope_id" type="checkbox" name="selectAll" {$selectAll_attrs_scope_id} />
+						{BEGIN clearLink_scope_id}
+			<a href="#" class="filter-clear filter-clear-scope_id" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_scope_id}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report scope_id }				{BEGIN filter_selected_scope_id}:{END filter_selected_scope_id}
+			</span>
+			{BEGIN filter_selected_scope_id}
+			<span class="r-filter-value">{$filtervalue_scope_id}</span>
+			{END filter_selected_scope_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_scope_id}
+		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
+			{$scope_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_scope_id}
+
+			{BEGIN filter_button_showmore_scope_id}
+		<li class=" filter-show-more {$collapsedClass_scope_id} {$showMoreBtnClass_scope_id}">
+			<a class="filter-show-more-link filterShowMore_scope_id" href="#">{$show_n_more_scope_id}</a>
+		</li>
+		{END filter_button_showmore_scope_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_scope_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_scope_id}">
+			<a href="#" class="filter-scope_id-btn-multiselect filter-apply-scope_id" {$filterbutton_attrs_scope_id}>{mlang_message FILTER_MULTISELECT}</a>
+		</li>
+		{END filter_button_multiselect_scope_id}
+			</ul>
+	</div>
+
+{END filter_control_scope_id}
 
 
 
@@ -1274,6 +1067,9 @@
 		<li class=" filter-values filter-values-region_id  {$visibilityClass_region_id}">
 			{$region_id_filter}
 						
+					
+					
+					
 					
 					
 					
@@ -1345,6 +1141,9 @@
 					
 					
 					
+					
+					
+					
 					</li>
 		{END filterCtrlBlock_unit_id}
 
@@ -1367,6 +1166,70 @@
 	</div>
 
 {END filter_control_unit_id}
+
+
+
+
+
+
+{BEGIN filter_control_facility_type_id}
+
+	<div class="dropdown filter-field filter-facility_type_id-container" {BEGIN filter_selected_facility_type_id} data-selected {END filter_selected_facility_type_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-facility_type_id" type="checkbox" name="selectAll" {$selectAll_attrs_facility_type_id} />
+						{BEGIN clearLink_facility_type_id}
+			<a href="#" class="filter-clear filter-clear-facility_type_id" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_facility_type_id}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report facility_type_id }				{BEGIN filter_selected_facility_type_id}:{END filter_selected_facility_type_id}
+			</span>
+			{BEGIN filter_selected_facility_type_id}
+			<span class="r-filter-value">{$filtervalue_facility_type_id}</span>
+			{END filter_selected_facility_type_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_facility_type_id}
+		<li class=" filter-values filter-values-facility_type_id  {$visibilityClass_facility_type_id}">
+			{$facility_type_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_facility_type_id}
+
+			{BEGIN filter_button_showmore_facility_type_id}
+		<li class=" filter-show-more {$collapsedClass_facility_type_id} {$showMoreBtnClass_facility_type_id}">
+			<a class="filter-show-more-link filterShowMore_facility_type_id" href="#">{$show_n_more_facility_type_id}</a>
+		</li>
+		{END filter_button_showmore_facility_type_id}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_facility_type_id}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_facility_type_id}">
+			<a href="#" class="filter-facility_type_id-btn-multiselect filter-apply-facility_type_id" {$filterbutton_attrs_facility_type_id}>{mlang_message FILTER_MULTISELECT}</a>
+		</li>
+		{END filter_button_multiselect_facility_type_id}
+			</ul>
+	</div>
+
+{END filter_control_facility_type_id}
 
 
 
@@ -1406,6 +1269,9 @@
 					
 					
 					
+					
+					
+					
 					</li>
 		{END filterCtrlBlock_gender_sex}
 
@@ -1431,6 +1297,302 @@
 
 
 
+
+
+
+{BEGIN filter_control_period_id}
+
+	<div class="dropdown filter-field filter-period_id-container" {BEGIN filter_selected_period_id} data-selected {END filter_selected_period_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_period_id}
+			<a href="#" class="filter-clear filter-clear-period_id" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_period_id}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report period_id }				{BEGIN filter_selected_period_id}:{END filter_selected_period_id}
+			</span>
+			{BEGIN filter_selected_period_id}
+			<span class="r-filter-value">{$filtervalue_period_id}</span>
+			{END filter_selected_period_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_period_id}
+		<li class=" filter-values filter-values-period_id  {$visibilityClass_period_id}">
+			{$period_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_period_id}
+
+			{BEGIN filter_button_showmore_period_id}
+		<li class=" filter-show-more {$collapsedClass_period_id} {$showMoreBtnClass_period_id}">
+			<a class="filter-show-more-link filterShowMore_period_id" href="#">{$show_n_more_period_id}</a>
+		</li>
+		{END filter_button_showmore_period_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_period_id}
+
+
+
+
+
+
+{BEGIN filter_control_month_id}
+
+	<div class="dropdown filter-field filter-month_id-container" {BEGIN filter_selected_month_id} data-selected {END filter_selected_month_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_month_id}
+			<a href="#" class="filter-clear filter-clear-month_id" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_month_id}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report month_id }				{BEGIN filter_selected_month_id}:{END filter_selected_month_id}
+			</span>
+			{BEGIN filter_selected_month_id}
+			<span class="r-filter-value">{$filtervalue_month_id}</span>
+			{END filter_selected_month_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_month_id}
+		<li class=" filter-values filter-values-month_id  {$visibilityClass_month_id}">
+			{$month_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_month_id}
+
+			{BEGIN filter_button_showmore_month_id}
+		<li class=" filter-show-more {$collapsedClass_month_id} {$showMoreBtnClass_month_id}">
+			<a class="filter-show-more-link filterShowMore_month_id" href="#">{$show_n_more_month_id}</a>
+		</li>
+		{END filter_button_showmore_month_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_month_id}
+
+
+
+
+
+
+{BEGIN filter_control_quarter_id}
+
+	<div class="dropdown filter-field filter-quarter_id-container" {BEGIN filter_selected_quarter_id} data-selected {END filter_selected_quarter_id}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_quarter_id}
+			<a href="#" class="filter-clear filter-clear-quarter_id" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_quarter_id}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report quarter_id }				{BEGIN filter_selected_quarter_id}:{END filter_selected_quarter_id}
+			</span>
+			{BEGIN filter_selected_quarter_id}
+			<span class="r-filter-value">{$filtervalue_quarter_id}</span>
+			{END filter_selected_quarter_id}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_quarter_id}
+		<li class=" filter-values filter-values-quarter_id  {$visibilityClass_quarter_id}">
+			{$quarter_id_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_quarter_id}
+
+			{BEGIN filter_button_showmore_quarter_id}
+		<li class=" filter-show-more {$collapsedClass_quarter_id} {$showMoreBtnClass_quarter_id}">
+			<a class="filter-show-more-link filterShowMore_quarter_id" href="#">{$show_n_more_quarter_id}</a>
+		</li>
+		{END filter_button_showmore_quarter_id}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_quarter_id}
+
+
+
+
+
+
+{BEGIN filter_control_year}
+
+	<div class="dropdown filter-field filter-year-container" {BEGIN filter_selected_year} data-selected {END filter_selected_year}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-year" type="checkbox" name="selectAll" {$selectAll_attrs_year} />
+						{BEGIN clearLink_year}
+			<a href="#" class="filter-clear filter-clear-year" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_year}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report year }				{BEGIN filter_selected_year}:{END filter_selected_year}
+			</span>
+			{BEGIN filter_selected_year}
+			<span class="r-filter-value">{$filtervalue_year}</span>
+			{END filter_selected_year}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_year}
+		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
+			{$year_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_year}
+
+			{BEGIN filter_button_showmore_year}
+		<li class=" filter-show-more {$collapsedClass_year} {$showMoreBtnClass_year}">
+			<a class="filter-show-more-link filterShowMore_year" href="#">{$show_n_more_year}</a>
+		</li>
+		{END filter_button_showmore_year}
+	
+
+
+	
+
+			{BEGIN filter_button_multiselect_year}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_year}">
+			<a href="#" class="filter-year-btn-multiselect filter-apply-year" {$filterbutton_attrs_year}>{mlang_message FILTER_MULTISELECT}</a>
+		</li>
+		{END filter_button_multiselect_year}
+			</ul>
+	</div>
+
+{END filter_control_year}
+
+
+
+
+
+
+{BEGIN filter_control_period}
+
+	<div class="dropdown filter-field filter-period-container" {BEGIN filter_selected_period} data-selected {END filter_selected_period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_period}
+			<a href="#" class="filter-clear filter-clear-period" title="{mlang_message FILTER_CLEAR}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_period}
+			<span class="r-filter-field">{$label MOH_Indicators_Data_Report period }				{BEGIN filter_selected_period}:{END filter_selected_period}
+			</span>
+			{BEGIN filter_selected_period}
+			<span class="r-filter-value">{$filtervalue_period}</span>
+			{END filter_selected_period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_period}
+		<li class=" filter-values filter-values-period  {$visibilityClass_period}">
+			{$period_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_period}
+
+			{BEGIN filter_button_showmore_period}
+		<li class=" filter-show-more {$collapsedClass_period} {$showMoreBtnClass_period}">
+			<a class="filter-show-more-link filterShowMore_period" href="#">{$show_n_more_period}</a>
+		</li>
+		{END filter_button_showmore_period}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_period}
+
+
+
 	<!-- End Filter panel content -->
 	</div>
 </div>		</div>					</div>
@@ -1451,61 +1613,37 @@
 		width: 100%;
 	}
 			td.group_1{
-			background-color: #e6e6fa;
+			background-color: #E6E6FA;
 		}
 		td.nbgroup_1{
-			background-color: #e6e6fa;
+			background-color: #E6E6FA;
 		}
 		td.header_1 {
-			background-color: #e6e6fa; 
+			background-color: #E6E6FA; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_2{
-			background-color: #fffff2;
+			background-color: #AFEEEE;
 		}
 		td.nbgroup_2{
-			background-color: #fffff2;
+			background-color: #AFEEEE;
 		}
 		td.header_2 {
-			background-color: #fffff2; 
+			background-color: #AFEEEE; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_3{
-			background-color: #e3f9f9;
+			background-color: #E3F9F9;
 		}
 		td.nbgroup_3{
-			background-color: #e3f9f9;
+			background-color: #E3F9F9;
 		}
 		td.header_3 {
-			background-color: #e3f9f9; 
-			font-size: 120%;
-			padding: 2px 8px;
-			font-weight: bold;
-		}
-			td.group_4{
-			background-color: #afeeee;
-		}
-		td.nbgroup_4{
-			background-color: #afeeee;
-		}
-		td.header_4 {
-			background-color: #afeeee; 
-			font-size: 120%;
-			padding: 2px 8px;
-			font-weight: bold;
-		}
-			td.group_5{
-			background-color: #add8e6;
-		}
-		td.nbgroup_5{
-			background-color: #add8e6;
-		}
-		td.header_5 {
-			background-color: #add8e6; 
+			background-color: #E3F9F9; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
@@ -1535,26 +1673,24 @@
 				<tr class="group-headers">
 										<td class="blackshade {$fieldclass_indicator_group_id}">{$label MOH_Indicators_Data_Report indicator_group_id }</td>
 														<td class="blackshade {$fieldclass_indicator_id}">{$label MOH_Indicators_Data_Report indicator_id }</td>
-														<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
-														<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
-														<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
+														<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
 																																																																																																		
-																																													<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
-														<td class="blackshade {$fieldclass_assessment_id}">{$label MOH_Indicators_Data_Report assessment_id }</td>
+																															<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
 														<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
 														<td class="blackshade {$fieldclass_unit_id}">{$label MOH_Indicators_Data_Report unit_id }</td>
-														<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
+														<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
 														<td class="blackshade {$fieldclass_value}">{$label MOH_Indicators_Data_Report value }</td>
 														<td class="blackshade {$fieldclass_data_representation}">{$label MOH_Indicators_Data_Report data_representation }</td>
 														<td class="blackshade {$fieldclass_data_source_detail}">{$label MOH_Indicators_Data_Report data_source_detail }</td>
+														<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
 														<td class="blackshade {$fieldclass_period_id}">{$label MOH_Indicators_Data_Report period_id }</td>
+														<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
 														<td class="blackshade {$fieldclass_month_id}">{$label MOH_Indicators_Data_Report month_id }</td>
 														<td class="blackshade {$fieldclass_quarter_id}">{$label MOH_Indicators_Data_Report quarter_id }</td>
-														<td class="blackshade {$fieldclass_year_id}">{$label MOH_Indicators_Data_Report year_id }</td>
 														<td class="blackshade {$fieldclass_period}">{$label MOH_Indicators_Data_Report period }</td>
 									</tr>
 		
-																										<tr class="group-spliter-1 group-spliter-2 group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
+																<tr class="group-spliter-1 group-spliter-2 group-spliter-3 " {$rowattrs}>
 													<td class="header_1">
 				{$xindicator_group_id_grval}
 								<span data-itemtype="report_group_field" data-itemid="report_group_field" {$item_report_group_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
@@ -1566,32 +1702,16 @@
 {$indicator_id_grval}
 </span>							</td>
 															<td class="header_3">
-				{$xscope_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
-{$scope_id_grval}
-</span>							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
+				{$xdata_source_id_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+{$data_source_id_grval}
 </span>							</td>
 								<!-- data -->
 
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
+																																			<td class="data {$fieldclass_scope_id}">
+								{$xscope_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_region_id}">
@@ -1606,10 +1726,10 @@
 {$unit_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_gender_sex}">
-								{$xgender_sex_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
+														<td class="data {$fieldclass_facility_type_id}">
+								{$xfacility_type_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_value}">
@@ -1630,10 +1750,22 @@
 {$data_source_detail_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_gender_sex}">
+								{$xgender_sex_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
+{$gender_sex_value}
+</span>				
+							</td>
 														<td class="data {$fieldclass_period_id}">
 								{$xperiod_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 {$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year}">
+								{$xyear_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_month_id}">
@@ -1646,12 +1778,6 @@
 								{$xquarter_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
 {$quarter_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_period}">
@@ -1665,7 +1791,7 @@
 		{END indicator_group_id_firstnewgroup}
 			{BEGIN indicator_id_firstnewgroup}
 		
-																					<tr class="group-spliter-2 group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
+											<tr class="group-spliter-2 group-spliter-3 " {$rowattrs}>
 													<td class="group_1">
 									&nbsp;
 							</td>
@@ -1675,32 +1801,16 @@
 {$indicator_id_grval}
 </span>							</td>
 															<td class="header_3">
-				{$xscope_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
-{$scope_id_grval}
-</span>							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
+				{$xdata_source_id_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+{$data_source_id_grval}
 </span>							</td>
 								<!-- data -->
 
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
+																																			<td class="data {$fieldclass_scope_id}">
+								{$xscope_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_region_id}">
@@ -1715,10 +1825,10 @@
 {$unit_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_gender_sex}">
-								{$xgender_sex_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
+														<td class="data {$fieldclass_facility_type_id}">
+								{$xfacility_type_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_value}">
@@ -1739,10 +1849,22 @@
 {$data_source_detail_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_gender_sex}">
+								{$xgender_sex_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
+{$gender_sex_value}
+</span>				
+							</td>
 														<td class="data {$fieldclass_period_id}">
 								{$xperiod_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 {$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year}">
+								{$xyear_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_month_id}">
@@ -1755,12 +1877,6 @@
 								{$xquarter_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
 {$quarter_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_period}">
@@ -1772,9 +1888,9 @@
 					
 		</tr>
 		{END indicator_id_firstnewgroup}
-			{BEGIN scope_id_firstnewgroup}
+			{BEGIN data_source_id_firstnewgroup}
 		
-																<tr class="group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
+						<tr class="group-spliter-3 " {$rowattrs}>
 													<td class="group_1">
 									&nbsp;
 							</td>
@@ -1782,32 +1898,16 @@
 									&nbsp;
 							</td>
 															<td class="header_3">
-				{$xscope_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
-{$scope_id_grval}
-</span>							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
+				{$xdata_source_id_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+{$data_source_id_grval}
 </span>							</td>
 								<!-- data -->
 
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
+																																			<td class="data {$fieldclass_scope_id}">
+								{$xscope_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_region_id}">
@@ -1822,10 +1922,10 @@
 {$unit_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_gender_sex}">
-								{$xgender_sex_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
+														<td class="data {$fieldclass_facility_type_id}">
+								{$xfacility_type_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_value}">
@@ -1846,115 +1946,22 @@
 {$data_source_detail_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_period_id}">
-								{$xperiod_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
-{$period_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_month_id}">
-								{$xmonth_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
-{$month_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_quarter_id}">
-								{$xquarter_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
-{$quarter_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period}">
-								{$xperiod_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
-{$period_value}
-</span>				
-							</td>
-					
-		</tr>
-		{END scope_id_firstnewgroup}
-			{BEGIN facility_type_id_firstnewgroup}
-		
-											<tr class="group-spliter-4 group-spliter-5 " {$rowattrs}>
-													<td class="group_1">
-									&nbsp;
-							</td>
-															<td class="group_2">
-									&nbsp;
-							</td>
-															<td class="group_3">
-									&nbsp;
-							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
-</span>							</td>
-								<!-- data -->
-
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_region_id}">
-								{$xregion_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
-{$region_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_unit_id}">
-								{$xunit_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
-{$unit_id_value}
-</span>				
-							</td>
 														<td class="data {$fieldclass_gender_sex}">
 								{$xgender_sex_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
 {$gender_sex_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_value}">
-								{$xvalue_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field7" {$item_report_grid_field7} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
-{$value_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_representation}">
-								{$xdata_representation_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field11" {$item_report_grid_field11} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
-{$data_representation_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_source_detail}">
-								{$xdata_source_detail_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
-{$data_source_detail_value}
-</span>				
-							</td>
 														<td class="data {$fieldclass_period_id}">
 								{$xperiod_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 {$period_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year}">
+								{$xyear_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
 </span>				
 							</td>
 														<td class="data {$fieldclass_month_id}">
@@ -1969,12 +1976,6 @@
 {$quarter_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
 														<td class="data {$fieldclass_period}">
 								{$xperiod_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
@@ -1983,110 +1984,7 @@
 							</td>
 					
 		</tr>
-		{END facility_type_id_firstnewgroup}
-			{BEGIN year_firstnewgroup}
-		
-						<tr class="group-spliter-5 " {$rowattrs}>
-													<td class="group_1">
-									&nbsp;
-							</td>
-															<td class="group_2">
-									&nbsp;
-							</td>
-															<td class="group_3">
-									&nbsp;
-							</td>
-															<td class="group_4">
-									&nbsp;
-							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
-</span>							</td>
-								<!-- data -->
-
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_region_id}">
-								{$xregion_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
-{$region_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_unit_id}">
-								{$xunit_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
-{$unit_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_gender_sex}">
-								{$xgender_sex_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_value}">
-								{$xvalue_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field7" {$item_report_grid_field7} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
-{$value_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_representation}">
-								{$xdata_representation_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field11" {$item_report_grid_field11} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
-{$data_representation_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_source_detail}">
-								{$xdata_source_detail_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
-{$data_source_detail_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period_id}">
-								{$xperiod_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
-{$period_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_month_id}">
-								{$xmonth_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
-{$month_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_quarter_id}">
-								{$xquarter_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
-{$quarter_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period}">
-								{$xperiod_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
-{$period_value}
-</span>				
-							</td>
-					
-		</tr>
-		{END year_firstnewgroup}
+		{END data_source_id_firstnewgroup}
 	
 		{BEGIN nonewgroup}
 		<tr>
@@ -2099,23 +1997,11 @@
 											<td class="group_3">
 					&nbsp;
 					</td>
-											<td class="group_4">
-					&nbsp;
-					</td>
-											<td class="group_5">
-					&nbsp;
-					</td>
 		
-																																																		<td class="data {$fieldclass_data_source_id}">
-		{$xdata_source_id_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>		
-		</td>
-													<td class="data {$fieldclass_assessment_id}">
-		{$xassessment_id_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
+																																		<td class="data {$fieldclass_scope_id}">
+		{$xscope_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>		
 		</td>
 													<td class="data {$fieldclass_region_id}">
@@ -2130,10 +2016,10 @@
 {$unit_id_value}
 </span>		
 		</td>
-													<td class="data {$fieldclass_gender_sex}">
-		{$xgender_sex_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
+													<td class="data {$fieldclass_facility_type_id}">
+		{$xfacility_type_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
 </span>		
 		</td>
 													<td class="data {$fieldclass_value}">
@@ -2154,10 +2040,22 @@
 {$data_source_detail_value}
 </span>		
 		</td>
+													<td class="data {$fieldclass_gender_sex}">
+		{$xgender_sex_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
+{$gender_sex_value}
+</span>		
+		</td>
 													<td class="data {$fieldclass_period_id}">
 		{$xperiod_id_value}
 				<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 {$period_id_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_year}">
+		{$xyear_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
 </span>		
 		</td>
 													<td class="data {$fieldclass_month_id}">
@@ -2172,12 +2070,6 @@
 {$quarter_id_value}
 </span>		
 		</td>
-													<td class="data {$fieldclass_year_id}">
-		{$xyear_id_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>		
-		</td>
 													<td class="data {$fieldclass_period}">
 		{$xperiod_value}
 				<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
@@ -2189,16 +2081,14 @@
 	
 							<!--  group summary -->
 
-	{BEGIN year_endgroup}
+	{BEGIN data_source_id_endgroup}
 		<tr class="summaryrow"  >
 										<td class="group_1" style="border-top: none;"></td>
 							<td class="group_2" style="border-top: none;"></td>
-							<td class="group_3" style="border-top: none;"></td>
-							<td class="group_4" style="border-top: none;"></td>
 							
-																																						<td  class="group_5" colspan=14 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report year }&nbsp;{$year_grval}
-					- <span class="summary-5" data-type="summary">{$groupyear_total_cnt}
+																								<td  class="group_3" colspan=14 >
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report data_source_id }&nbsp;{$data_source_id_grval}
+					- <span class="summary-3" data-type="summary">{$groupdata_source_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																																																																				</tr>
 
@@ -2206,55 +2096,18 @@
 	
 	
 	
-	{END year_endgroup}
-									<!--  group summary -->
-
-	{BEGIN facility_type_id_endgroup}
-		<tr class="summaryrow"  >
-										<td class="group_1" style="border-top: none;"></td>
-							<td class="group_2" style="border-top: none;"></td>
-							<td class="group_3" style="border-top: none;"></td>
-							
-																															<td  class="group_4" colspan=15 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report facility_type_id }&nbsp;{$facility_type_id_grval}
-					- <span class="summary-4" data-type="summary">{$groupfacility_type_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																											</tr>
-
-	
-	
-	
-	
-	{END facility_type_id_endgroup}
-									<!--  group summary -->
-
-	{BEGIN scope_id_endgroup}
-		<tr class="summaryrow"  >
-										<td class="group_1" style="border-top: none;"></td>
-							<td class="group_2" style="border-top: none;"></td>
-							
-																								<td  class="group_3" colspan=16 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report scope_id }&nbsp;{$scope_id_grval}
-					- <span class="summary-3" data-type="summary">{$groupscope_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																																		</tr>
-
-	
-	
-	
-	
-	{END scope_id_endgroup}
+	{END data_source_id_endgroup}
 									<!--  group summary -->
 
 	{BEGIN indicator_id_endgroup}
 		<tr class="summaryrow"  >
 										<td class="group_1" style="border-top: none;"></td>
 							
-																	<td  class="group_2" colspan=17 >
+																	<td  class="group_2" colspan=15 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
 					- <span class="summary-2" data-type="summary">{$groupindicator_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																																									</tr>
+																																																																																																											</tr>
 
 	
 	
@@ -2266,11 +2119,11 @@
 	{BEGIN indicator_group_id_endgroup}
 		<tr class="summaryrow"  >
 			
-										<td  class="group_1" colspan=18 >
+										<td  class="group_1" colspan=16 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
 					- <span class="summary-1" data-type="summary">{$groupindicator_group_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																																																</tr>
+																																																																																																																		</tr>
 
 	
 	
@@ -2284,21 +2137,19 @@
 		<tr class="summary-header">
 						<td class="blackshade {$fieldclass_indicator_group_id}">{$label MOH_Indicators_Data_Report indicator_group_id }</td>
 						<td class="blackshade {$fieldclass_indicator_id}">{$label MOH_Indicators_Data_Report indicator_id }</td>
-						<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
-						<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
-						<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
 						<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
-						<td class="blackshade {$fieldclass_assessment_id}">{$label MOH_Indicators_Data_Report assessment_id }</td>
+						<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
 						<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
 						<td class="blackshade {$fieldclass_unit_id}">{$label MOH_Indicators_Data_Report unit_id }</td>
-						<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
+						<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
 						<td class="blackshade {$fieldclass_value}">{$label MOH_Indicators_Data_Report value }</td>
 						<td class="blackshade {$fieldclass_data_representation}">{$label MOH_Indicators_Data_Report data_representation }</td>
 						<td class="blackshade {$fieldclass_data_source_detail}">{$label MOH_Indicators_Data_Report data_source_detail }</td>
+						<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
 						<td class="blackshade {$fieldclass_period_id}">{$label MOH_Indicators_Data_Report period_id }</td>
+						<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
 						<td class="blackshade {$fieldclass_month_id}">{$label MOH_Indicators_Data_Report month_id }</td>
 						<td class="blackshade {$fieldclass_quarter_id}">{$label MOH_Indicators_Data_Report quarter_id }</td>
-						<td class="blackshade {$fieldclass_year_id}">{$label MOH_Indicators_Data_Report year_id }</td>
 						<td class="blackshade {$fieldclass_period}">{$label MOH_Indicators_Data_Report period }</td>
 					</tr>
 		{END summary_header}
@@ -2310,7 +2161,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="18">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
+        <td class="pagesummary" colspan="16">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 	
 	
@@ -2320,7 +2171,7 @@
 	<!-- global summary-->
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
-        <td class="globalsummary" colspan="18">
+        <td class="globalsummary" colspan="16">
             {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 

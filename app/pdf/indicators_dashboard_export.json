@@ -124,9 +124,6 @@ pdfDocument = {
 			{"text":{$Data_Source_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
-			{"text":{$Assessment_pdfvalue},"hidden":"{$item_hide_export_field6}"},
-				
-				
 			{"text":{$Administration_Unit_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
@@ -146,6 +143,18 @@ pdfDocument = {
 				
 				
 			{"text":{$Data_Representation_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Period_ID_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Quarter_ID_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Month_ID_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_export_field17}"},
 				
 		  ],
   "border": [ false, false, false, false ],

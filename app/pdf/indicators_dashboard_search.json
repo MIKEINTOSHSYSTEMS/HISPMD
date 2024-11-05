@@ -178,9 +178,6 @@ pdfDocument = {
 			{"text":{$Data_Source_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"text":{$Assessment_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
 			{"text":{$Administration_Unit_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
@@ -194,6 +191,18 @@ pdfDocument = {
 				
 				
 			{"text":{$Gender_Sex_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$Period_ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$Quarter_ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$Month_ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
 				
 		  ],
   "border": [ false, false, false, false ],

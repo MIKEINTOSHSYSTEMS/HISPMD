@@ -107,61 +107,37 @@
 		width: 100%;
 	}
 			td.group_1{
-			background-color: #e6e6fa;
+			background-color: #E6E6FA;
 		}
 		td.nbgroup_1{
-			background-color: #e6e6fa;
+			background-color: #E6E6FA;
 		}
 		td.header_1 {
-			background-color: #e6e6fa; 
+			background-color: #E6E6FA; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_2{
-			background-color: #fffff2;
+			background-color: #AFEEEE;
 		}
 		td.nbgroup_2{
-			background-color: #fffff2;
+			background-color: #AFEEEE;
 		}
 		td.header_2 {
-			background-color: #fffff2; 
+			background-color: #AFEEEE; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_3{
-			background-color: #e3f9f9;
+			background-color: #E3F9F9;
 		}
 		td.nbgroup_3{
-			background-color: #e3f9f9;
+			background-color: #E3F9F9;
 		}
 		td.header_3 {
-			background-color: #e3f9f9; 
-			font-size: 120%;
-			padding: 2px 8px;
-			font-weight: bold;
-		}
-			td.group_4{
-			background-color: #afeeee;
-		}
-		td.nbgroup_4{
-			background-color: #afeeee;
-		}
-		td.header_4 {
-			background-color: #afeeee; 
-			font-size: 120%;
-			padding: 2px 8px;
-			font-weight: bold;
-		}
-			td.group_5{
-			background-color: #add8e6;
-		}
-		td.nbgroup_5{
-			background-color: #add8e6;
-		}
-		td.header_5 {
-			background-color: #add8e6; 
+			background-color: #E3F9F9; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
@@ -190,13 +166,9 @@
 				<tr class="group-headers">
 										<td class="blackshade {$fieldclass_indicator_group_id}">{$label MOH_Indicators_Data_Report indicator_group_id }</td>
 														<td class="blackshade {$fieldclass_indicator_id}">{$label MOH_Indicators_Data_Report indicator_id }</td>
-														<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
-														<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
-														<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
+														<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
 																																																																																																		
-																																													<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
-														<td class="blackshade {$fieldclass_assessment_id}">{$label MOH_Indicators_Data_Report assessment_id }</td>
-														<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
+																															<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
 														<td class="blackshade {$fieldclass_unit_id}">{$label MOH_Indicators_Data_Report unit_id }</td>
 														<td class="blackshade {$fieldclass_value}">{$label MOH_Indicators_Data_Report value }</td>
 														<td class="blackshade {$fieldclass_gender_sex}">{$label MOH_Indicators_Data_Report gender_sex }</td>
@@ -205,11 +177,13 @@
 														<td class="blackshade {$fieldclass_period_id}">{$label MOH_Indicators_Data_Report period_id }</td>
 														<td class="blackshade {$fieldclass_month_id}">{$label MOH_Indicators_Data_Report month_id }</td>
 														<td class="blackshade {$fieldclass_quarter_id}">{$label MOH_Indicators_Data_Report quarter_id }</td>
-														<td class="blackshade {$fieldclass_year_id}">{$label MOH_Indicators_Data_Report year_id }</td>
 														<td class="blackshade {$fieldclass_period}">{$label MOH_Indicators_Data_Report period }</td>
+														<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
+														<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
+														<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
 									</tr>
 		
-																										<tr class="group-spliter-1 group-spliter-2 group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
+																<tr class="group-spliter-1 group-spliter-2 group-spliter-3 " {$rowattrs}>
 													<td class="header_1">
 				{$xindicator_group_id_grval}
 								<span data-itemtype="report_group_field" data-itemid="report_group_field" {$item_report_group_field} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
@@ -221,35 +195,13 @@
 {$indicator_id_grval}
 </span>							</td>
 															<td class="header_3">
-				{$xscope_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
-{$scope_id_grval}
-</span>							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
+				{$xdata_source_id_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+{$data_source_id_grval}
 </span>							</td>
 								<!-- data -->
 
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_region_id}">
+																																			<td class="data {$fieldclass_region_id}">
 								{$xregion_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
 {$region_id_value}
@@ -303,16 +255,28 @@
 {$quarter_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
 														<td class="data {$fieldclass_period}">
 								{$xperiod_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
 {$period_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_facility_type_id}">
+								{$xfacility_type_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year}">
+								{$xyear_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_scope_id}">
+								{$xscope_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>				
 							</td>
 					
@@ -320,7 +284,7 @@
 		{END indicator_group_id_firstnewgroup}
 			{BEGIN indicator_id_firstnewgroup}
 		
-																					<tr class="group-spliter-2 group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
+											<tr class="group-spliter-2 group-spliter-3 " {$rowattrs}>
 													<td class="group_1">
 									&nbsp;
 							</td>
@@ -330,35 +294,13 @@
 {$indicator_id_grval}
 </span>							</td>
 															<td class="header_3">
-				{$xscope_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
-{$scope_id_grval}
-</span>							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
+				{$xdata_source_id_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+{$data_source_id_grval}
 </span>							</td>
 								<!-- data -->
 
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_region_id}">
+																																			<td class="data {$fieldclass_region_id}">
 								{$xregion_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
 {$region_id_value}
@@ -412,24 +354,36 @@
 {$quarter_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
 														<td class="data {$fieldclass_period}">
 								{$xperiod_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
 {$period_value}
 </span>				
 							</td>
+														<td class="data {$fieldclass_facility_type_id}">
+								{$xfacility_type_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_year}">
+								{$xyear_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
+</span>				
+							</td>
+														<td class="data {$fieldclass_scope_id}">
+								{$xscope_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
+</span>				
+							</td>
 					
 		</tr>
 		{END indicator_id_firstnewgroup}
-			{BEGIN scope_id_firstnewgroup}
+			{BEGIN data_source_id_firstnewgroup}
 		
-																<tr class="group-spliter-3 group-spliter-4 group-spliter-5 " {$rowattrs}>
+						<tr class="group-spliter-3 " {$rowattrs}>
 													<td class="group_1">
 									&nbsp;
 							</td>
@@ -437,35 +391,13 @@
 									&nbsp;
 							</td>
 															<td class="header_3">
-				{$xscope_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
-{$scope_id_grval}
-</span>							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
+				{$xdata_source_id_grval}
+								<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+{$data_source_id_grval}
 </span>							</td>
 								<!-- data -->
 
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_region_id}">
+																																			<td class="data {$fieldclass_region_id}">
 								{$xregion_id_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
 {$region_id_value}
@@ -519,229 +451,33 @@
 {$quarter_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
 														<td class="data {$fieldclass_period}">
 								{$xperiod_value}
 								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
 {$period_value}
 </span>				
 							</td>
-					
-		</tr>
-		{END scope_id_firstnewgroup}
-			{BEGIN facility_type_id_firstnewgroup}
-		
-											<tr class="group-spliter-4 group-spliter-5 " {$rowattrs}>
-													<td class="group_1">
-									&nbsp;
-							</td>
-															<td class="group_2">
-									&nbsp;
-							</td>
-															<td class="group_3">
-									&nbsp;
-							</td>
-															<td class="header_4">
-				{$xfacility_type_id_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
-{$facility_type_id_grval}
-</span>							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
-</span>							</td>
-								<!-- data -->
-
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
+														<td class="data {$fieldclass_facility_type_id}">
+								{$xfacility_type_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
+														<td class="data {$fieldclass_year}">
+								{$xyear_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
 </span>				
 							</td>
-														<td class="data {$fieldclass_region_id}">
-								{$xregion_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
-{$region_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_unit_id}">
-								{$xunit_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
-{$unit_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_value}">
-								{$xvalue_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field7" {$item_report_grid_field7} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
-{$value_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_gender_sex}">
-								{$xgender_sex_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_representation}">
-								{$xdata_representation_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field11" {$item_report_grid_field11} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
-{$data_representation_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_source_detail}">
-								{$xdata_source_detail_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
-{$data_source_detail_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period_id}">
-								{$xperiod_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
-{$period_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_month_id}">
-								{$xmonth_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
-{$month_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_quarter_id}">
-								{$xquarter_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
-{$quarter_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period}">
-								{$xperiod_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
-{$period_value}
+														<td class="data {$fieldclass_scope_id}">
+								{$xscope_id_value}
+								<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>				
 							</td>
 					
 		</tr>
-		{END facility_type_id_firstnewgroup}
-			{BEGIN year_firstnewgroup}
-		
-						<tr class="group-spliter-5 " {$rowattrs}>
-													<td class="group_1">
-									&nbsp;
-							</td>
-															<td class="group_2">
-									&nbsp;
-							</td>
-															<td class="group_3">
-									&nbsp;
-							</td>
-															<td class="group_4">
-									&nbsp;
-							</td>
-															<td class="header_5">
-				{$xyear_grval}
-								<span data-itemtype="report_group_field" data-itemid="report_group_field4" {$item_report_group_field4} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
-{$year_grval}
-</span>							</td>
-								<!-- data -->
-
-																																																			<td class="data {$fieldclass_data_source_id}">
-								{$xdata_source_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_assessment_id}">
-								{$xassessment_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_region_id}">
-								{$xregion_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
-{$region_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_unit_id}">
-								{$xunit_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
-{$unit_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_value}">
-								{$xvalue_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field7" {$item_report_grid_field7} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
-{$value_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_gender_sex}">
-								{$xgender_sex_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
-{$gender_sex_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_representation}">
-								{$xdata_representation_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field11" {$item_report_grid_field11} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
-{$data_representation_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_data_source_detail}">
-								{$xdata_source_detail_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
-{$data_source_detail_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period_id}">
-								{$xperiod_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
-{$period_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_month_id}">
-								{$xmonth_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
-{$month_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_quarter_id}">
-								{$xquarter_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
-{$quarter_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_year_id}">
-								{$xyear_id_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>				
-							</td>
-														<td class="data {$fieldclass_period}">
-								{$xperiod_value}
-								<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
-{$period_value}
-</span>				
-							</td>
-					
-		</tr>
-		{END year_firstnewgroup}
+		{END data_source_id_firstnewgroup}
 	
 		{BEGIN nonewgroup}
 		<tr>
@@ -754,26 +490,8 @@
 											<td class="group_3">
 					&nbsp;
 					</td>
-											<td class="group_4">
-					&nbsp;
-					</td>
-											<td class="group_5">
-					&nbsp;
-					</td>
 		
-																																																		<td class="data {$fieldclass_data_source_id}">
-		{$xdata_source_id_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
-{$data_source_id_value}
-</span>		
-		</td>
-													<td class="data {$fieldclass_assessment_id}">
-		{$xassessment_id_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="assessment_id" data-fieldname="assessment_id" >
-{$assessment_id_value}
-</span>		
-		</td>
-													<td class="data {$fieldclass_region_id}">
+																																		<td class="data {$fieldclass_region_id}">
 		{$xregion_id_value}
 				<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
 {$region_id_value}
@@ -827,16 +545,28 @@
 {$quarter_id_value}
 </span>		
 		</td>
-													<td class="data {$fieldclass_year_id}">
-		{$xyear_id_value}
-				<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="year_id" data-fieldname="year_id" >
-{$year_id_value}
-</span>		
-		</td>
 													<td class="data {$fieldclass_period}">
 		{$xperiod_value}
 				<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="period" data-fieldname="period" >
 {$period_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_facility_type_id}">
+		{$xfacility_type_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
+{$facility_type_id_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_year}">
+		{$xyear_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
+{$year_value}
+</span>		
+		</td>
+													<td class="data {$fieldclass_scope_id}">
+		{$xscope_id_value}
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
+{$scope_id_value}
 </span>		
 		</td>
 							</tr>
@@ -844,16 +574,14 @@
 	
 							<!--  group summary -->
 
-	{BEGIN year_endgroup}
+	{BEGIN data_source_id_endgroup}
 		<tr class="summaryrow"  >
 										<td class="group_1" style="border-top: none;"></td>
 							<td class="group_2" style="border-top: none;"></td>
-							<td class="group_3" style="border-top: none;"></td>
-							<td class="group_4" style="border-top: none;"></td>
 							
-																																						<td  class="group_5" colspan=14 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report year }&nbsp;{$year_grval}
-					- <span class="summary-5" data-type="summary">{$groupyear_total_cnt}
+																								<td  class="group_3" colspan=14 >
+				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report data_source_id }&nbsp;{$data_source_id_grval}
+					- <span class="summary-3" data-type="summary">{$groupdata_source_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
 																																																																																																				</tr>
 
@@ -861,55 +589,18 @@
 	
 	
 	
-	{END year_endgroup}
-									<!--  group summary -->
-
-	{BEGIN facility_type_id_endgroup}
-		<tr class="summaryrow"  >
-										<td class="group_1" style="border-top: none;"></td>
-							<td class="group_2" style="border-top: none;"></td>
-							<td class="group_3" style="border-top: none;"></td>
-							
-																															<td  class="group_4" colspan=15 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report facility_type_id }&nbsp;{$facility_type_id_grval}
-					- <span class="summary-4" data-type="summary">{$groupfacility_type_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																											</tr>
-
-	
-	
-	
-	
-	{END facility_type_id_endgroup}
-									<!--  group summary -->
-
-	{BEGIN scope_id_endgroup}
-		<tr class="summaryrow"  >
-										<td class="group_1" style="border-top: none;"></td>
-							<td class="group_2" style="border-top: none;"></td>
-							
-																								<td  class="group_3" colspan=16 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report scope_id }&nbsp;{$scope_id_grval}
-					- <span class="summary-3" data-type="summary">{$groupscope_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																																		</tr>
-
-	
-	
-	
-	
-	{END scope_id_endgroup}
+	{END data_source_id_endgroup}
 									<!--  group summary -->
 
 	{BEGIN indicator_id_endgroup}
 		<tr class="summaryrow"  >
 										<td class="group_1" style="border-top: none;"></td>
 							
-																	<td  class="group_2" colspan=17 >
+																	<td  class="group_2" colspan=15 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
 					- <span class="summary-2" data-type="summary">{$groupindicator_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																																									</tr>
+																																																																																																											</tr>
 
 	
 	
@@ -921,11 +612,11 @@
 	{BEGIN indicator_group_id_endgroup}
 		<tr class="summaryrow"  >
 			
-										<td  class="group_1" colspan=18 >
+										<td  class="group_1" colspan=16 >
 				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
 					- <span class="summary-1" data-type="summary">{$groupindicator_group_id_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
-																																																																																																																																</tr>
+																																																																																																																		</tr>
 
 	
 	
@@ -939,11 +630,7 @@
 		<tr class="summary-header">
 						<td class="blackshade {$fieldclass_indicator_group_id}">{$label MOH_Indicators_Data_Report indicator_group_id }</td>
 						<td class="blackshade {$fieldclass_indicator_id}">{$label MOH_Indicators_Data_Report indicator_id }</td>
-						<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
-						<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
-						<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
 						<td class="blackshade {$fieldclass_data_source_id}">{$label MOH_Indicators_Data_Report data_source_id }</td>
-						<td class="blackshade {$fieldclass_assessment_id}">{$label MOH_Indicators_Data_Report assessment_id }</td>
 						<td class="blackshade {$fieldclass_region_id}">{$label MOH_Indicators_Data_Report region_id }</td>
 						<td class="blackshade {$fieldclass_unit_id}">{$label MOH_Indicators_Data_Report unit_id }</td>
 						<td class="blackshade {$fieldclass_value}">{$label MOH_Indicators_Data_Report value }</td>
@@ -953,8 +640,10 @@
 						<td class="blackshade {$fieldclass_period_id}">{$label MOH_Indicators_Data_Report period_id }</td>
 						<td class="blackshade {$fieldclass_month_id}">{$label MOH_Indicators_Data_Report month_id }</td>
 						<td class="blackshade {$fieldclass_quarter_id}">{$label MOH_Indicators_Data_Report quarter_id }</td>
-						<td class="blackshade {$fieldclass_year_id}">{$label MOH_Indicators_Data_Report year_id }</td>
 						<td class="blackshade {$fieldclass_period}">{$label MOH_Indicators_Data_Report period }</td>
+						<td class="blackshade {$fieldclass_facility_type_id}">{$label MOH_Indicators_Data_Report facility_type_id }</td>
+						<td class="blackshade {$fieldclass_year}">{$label MOH_Indicators_Data_Report year }</td>
+						<td class="blackshade {$fieldclass_scope_id}">{$label MOH_Indicators_Data_Report scope_id }</td>
 					</tr>
 		{END summary_header}
 	
@@ -965,7 +654,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="18">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
+        <td class="pagesummary" colspan="16">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 	
 	
@@ -975,7 +664,7 @@
 	<!-- global summary-->
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
-        <td class="globalsummary" colspan="18">
+        <td class="globalsummary" colspan="16">
             {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
     </tr>
 

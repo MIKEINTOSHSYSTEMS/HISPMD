@@ -67,6 +67,18 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsindicators_dashboard["English"]["Data_Representation"] = "Data Representation";
 	$fieldToolTipsindicators_dashboard["English"]["Data_Representation"] = "";
 	$placeHoldersindicators_dashboard["English"]["Data_Representation"] = "";
+	$fieldLabelsindicators_dashboard["English"]["Period_ID"] = "Period Type";
+	$fieldToolTipsindicators_dashboard["English"]["Period_ID"] = "";
+	$placeHoldersindicators_dashboard["English"]["Period_ID"] = "";
+	$fieldLabelsindicators_dashboard["English"]["Quarter_ID"] = "Quarter";
+	$fieldToolTipsindicators_dashboard["English"]["Quarter_ID"] = "";
+	$placeHoldersindicators_dashboard["English"]["Quarter_ID"] = "";
+	$fieldLabelsindicators_dashboard["English"]["Month_ID"] = "Month";
+	$fieldToolTipsindicators_dashboard["English"]["Month_ID"] = "";
+	$placeHoldersindicators_dashboard["English"]["Month_ID"] = "";
+	$fieldLabelsindicators_dashboard["English"]["Period"] = "Period";
+	$fieldToolTipsindicators_dashboard["English"]["Period"] = "";
+	$placeHoldersindicators_dashboard["English"]["Period"] = "";
 	if (count($fieldToolTipsindicators_dashboard["English"]))
 		$tdataindicators_dashboard[".isUseToolTips"] = true;
 }
@@ -118,6 +130,18 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsindicators_dashboard["Amharic"]["Data_Representation"] = "Data Representation";
 	$fieldToolTipsindicators_dashboard["Amharic"]["Data_Representation"] = "";
 	$placeHoldersindicators_dashboard["Amharic"]["Data_Representation"] = "";
+	$fieldLabelsindicators_dashboard["Amharic"]["Period_ID"] = "Period ID";
+	$fieldToolTipsindicators_dashboard["Amharic"]["Period_ID"] = "";
+	$placeHoldersindicators_dashboard["Amharic"]["Period_ID"] = "";
+	$fieldLabelsindicators_dashboard["Amharic"]["Quarter_ID"] = "Quarter ID";
+	$fieldToolTipsindicators_dashboard["Amharic"]["Quarter_ID"] = "";
+	$placeHoldersindicators_dashboard["Amharic"]["Quarter_ID"] = "";
+	$fieldLabelsindicators_dashboard["Amharic"]["Month_ID"] = "Month ID";
+	$fieldToolTipsindicators_dashboard["Amharic"]["Month_ID"] = "";
+	$placeHoldersindicators_dashboard["Amharic"]["Month_ID"] = "";
+	$fieldLabelsindicators_dashboard["Amharic"]["Period"] = "Period";
+	$fieldToolTipsindicators_dashboard["Amharic"]["Period"] = "";
+	$placeHoldersindicators_dashboard["Amharic"]["Period"] = "";
 	if (count($fieldToolTipsindicators_dashboard["Amharic"]))
 		$tdataindicators_dashboard[".isUseToolTips"] = true;
 }
@@ -239,12 +263,15 @@ $tdataindicators_dashboard[".googleLikeFields"][] = "Indicator Group";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Indicator Name";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Facility Type";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Data Source";
-$tdataindicators_dashboard[".googleLikeFields"][] = "Assessment";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Administration Unit";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Year";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Scope";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Region";
 $tdataindicators_dashboard[".googleLikeFields"][] = "Gender/Sex";
+$tdataindicators_dashboard[".googleLikeFields"][] = "Period ID";
+$tdataindicators_dashboard[".googleLikeFields"][] = "Quarter ID";
+$tdataindicators_dashboard[".googleLikeFields"][] = "Month ID";
+$tdataindicators_dashboard[".googleLikeFields"][] = "Period";
 
 
 
@@ -1606,7 +1633,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1616,6 +1643,35 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "Indicators_Dashboard";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Year";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Year";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Year";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -1631,17 +1687,14 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2420,6 +2473,658 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 	$tdataindicators_dashboard["Data Representation"] = $fdata;
 		$tdataindicators_dashboard[".searchableFields"][] = "Data Representation";
+//	Period ID
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "Period ID";
+	$fdata["GoodName"] = "Period_ID";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Indicators_Dashboard","Period_ID");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Period ID";
+
+	
+		$fdata["FullName"] = "Period ID";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_period_types";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "period_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "period_type";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataindicators_dashboard["Period ID"] = $fdata;
+		$tdataindicators_dashboard[".searchableFields"][] = "Period ID";
+//	Quarter ID
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "Quarter ID";
+	$fdata["GoodName"] = "Quarter_ID";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Indicators_Dashboard","Quarter_ID");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Quarter ID";
+
+	
+		$fdata["FullName"] = "Quarter ID";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_quarters";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "quarter_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "quarter";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataindicators_dashboard["Quarter ID"] = $fdata;
+		$tdataindicators_dashboard[".searchableFields"][] = "Quarter ID";
+//	Month ID
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "Month ID";
+	$fdata["GoodName"] = "Month_ID";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Indicators_Dashboard","Month_ID");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Month ID";
+
+	
+		$fdata["FullName"] = "Month ID";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_months";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "month_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "month";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataindicators_dashboard["Month ID"] = $fdata;
+		$tdataindicators_dashboard[".searchableFields"][] = "Month ID";
+//	Period
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "Period";
+	$fdata["GoodName"] = "Period";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Indicators_Dashboard","Period");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Period";
+
+	
+		$fdata["FullName"] = "Period";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "Indicators_Dashboard";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Period";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataindicators_dashboard["Period"] = $fdata;
+		$tdataindicators_dashboard[".searchableFields"][] = "Period";
 
 
 $tables_data["Indicators_Dashboard"]=&$tdataindicators_dashboard;
@@ -2454,7 +3159,7 @@ require_once( getabspath( "include/indicators_dashboard_ops.php" ) );
 	
 																												;
 
-														
+																		
 
 $tdataindicators_dashboard[".sqlquery"] = $queryData_indicators_dashboard;
 

@@ -6,6 +6,7 @@
 /ai/chat/certs
 /app/chat/cache
 /api/sql/backup
+/api/sgb/backup
 /api/database/backup
 /api/database/backups
 /api/viz/

@@ -132,7 +132,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message RESET}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -171,7 +171,17 @@
 		</a>
 	</li>
 {END searchPanelTopButtons}
-							<li role="separator" class="divider"></li>					</ul>
+							<li role="separator" class="divider"></li>								{BEGIN AmharicLANGLINK}
+	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
+		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
+		አማርኛ</a></li>
+	{END AmharicLANGLINK}
+	{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+					</ul>
 	</span>
 </span>
 			</span>
@@ -238,29 +248,6 @@
 </script>	
 
 </div>
-			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="lang_selector" {$item_lang_selector} data-topcell-item-type="lang_selector" >
-				{BEGIN languages_block}
-<span class="pull-right btn-group">	
-		<button class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		<span class="glyphicon glyphicon-globe"></span>
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu">
-	{BEGIN AmharicLANGLINK}
-		<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-			{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-			አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-		<li><a href="#" data-lang="English" class="rnr-langlink">
-			{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-			English</a></li>
-	{END EnglishLANGLINK}
-	</ul>
-	</span>
-{END languages_block}
 			</span>
 		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
@@ -357,10 +344,15 @@
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class="r-align-right r-ori-vert			col-md-6
+	class="r-align-right			col-md-6
 	
 ">
 		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
 	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -381,7 +373,7 @@
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="indicators_dashboard_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+				<input type="radio" id="printAll{$id}" data-href="hispmd_system_settings_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
 									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
@@ -390,11 +382,22 @@
 		<div class="col-md-4">&nbsp;</div>
 		<div class="col-md-8">
 			<label for="printPage{$id}">
-				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="indicators_dashboard_print.php?{$crosstable_attrs}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="hispmd_system_settings_print.php?{$crosstable_attrs}">
 				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 		
+		 
+	<div class="row">
+		<div class="col-md-4">
+			&nbsp;
+		</div>
+		<div class="col-md-8">
+			<label style="color: gray;" for="printSelection{$id}">
+			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
+			{mlang_message PPANEL_SELECTED}			</label>
+		</div>
+	</div>
 	</div>
 				 
 					</li>
@@ -431,35 +434,26 @@
 				<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class=" r-ori-vert			col-md-6
-	
-">
-			</div>			 
-				<div 
-	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
 	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
-	class="r-align-center r-ori-vert			col-md-12
+	class=" r-ori-vert			col-md-12
 	
 ">
 		 
 		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
-	{$custom __DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_HISPMD_CHART_VISUALIZATIONS__TITLE_______STYLE__________HTML__BODY_______________MARGIN__0______________PADDING__0______________WIDTH__100_______________HEIGHT__100_______________DISPLAY__FLEX______________JUSTIFY_CONTENT__CENTER______________ALIGN_ITEMS__CENTER____________________IFRAME_______________BORDER__NONE______________WIDTH__100_______________HEIGHT__100VH_____________________MEDIA__MAX_WIDTH__768PX________________IFRAME___________________HEIGHT__80VH_____ADJUST_HEIGHT_FOR_SMALLER_SCREENS_____________________________________MEDIA__MAX_WIDTH__480PX________________IFRAME___________________HEIGHT__70VH_____FURTHER_ADJUST_FOR_MOBILE_DEVICES__________________________________STYLE____HEAD___BODY_______IFRAME_________ID__HISPMD_IFRAME__________SRC_____API__VISUALIZATION_________SRC__HTTPS___HISPMD_MERQCONSULTANCY_ORG_API_VISUALIZATION______________ALLOWTRANSPARENCY___IFRAME____BODY____HTML__}</span>
+	<iframe src="../api/sgb/sgb.php" width="100%" height="999" frameborder="0"></iframe></span>
 		</div>					</div>
 			 
 				<div class="row">
 			 
 				<div 
 	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
-	class=" r-ori-vert			col-md-12
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class="r-align-right r-ori-vert			col-md-6
 	
 ">
 			</div>					</div>
@@ -472,7 +466,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-																		}
+							}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -486,6 +480,22 @@
 					
 								r-gridrow
 							">
+									{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_system_settings_suggestion_box_databases"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
 									{BEGIN cellblock_grid_headcell_checkbox}
 	<th
 	
@@ -495,7 +505,7 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_chart_visualizations"	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_system_settings_suggestion_box_databases"	
 		data-checkbox-cell
 	>
 
@@ -519,6 +529,32 @@
 				
 								r-gridrow
 							">
+									{BEGIN cellblock_grid_cell_icons}
+	<td
+	
+	{$cell_grid_cell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_system_settings_suggestion_box_databases"	
+	>
+
+	 
+		{BEGIN view_column}
+{BEGIN view_link}
+<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
+	 glyphicon glyphicon-search" href="hispmd_system_settings_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
+				
+								</a>
+</span>
+{END view_link}
+{END view_column}
+	
+	</td>
+	{END cellblock_grid_cell_icons}
 									{BEGIN cellblock_grid_cell_checkbox}
 	<td
 	
@@ -553,6 +589,21 @@
 					
 								r-gridrow
 							">
+									{BEGIN cellblock_grid_footcell_icons}
+	<td
+	
+	{$cell_grid_footcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_icons}
 									{BEGIN cellblock_grid_footcell_checkbox}
 	<td
 	
@@ -586,7 +637,13 @@
 	class="r-align-center r-ori-vert			col-md-12
 	
 ">
-			</div>					</div>
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
 			</div>		
 {END below-grid_block}
 		</div>

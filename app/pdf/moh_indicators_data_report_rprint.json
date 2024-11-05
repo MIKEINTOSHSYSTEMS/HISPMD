@@ -26,108 +26,66 @@ pdfDocument = {
 		fillColor: '#ffe0b0',
 	},
 			group_1: {
-			fillColor: '#e6e6fa'
+			fillColor: '#E6E6FA'
 		},
 		nbgroup_1: {
-			fillColor: '#e6e6fa'
+			fillColor: '#E6E6FA'
 		},
 		header_1: {
-			fillColor: '#e6e6fa',
+			fillColor: '#E6E6FA',
 			fontSize: 15,
 			bold: true
 		},
 		/* new style styles */
 		header_indicator_group_id: {
-			fillColor: '#e6e6fa',
+			fillColor: '#E6E6FA',
 			fontSize: 15,
 			bold: true
 		},
 		group_indicator_group_id: {
-			fillColor: '#e6e6fa'
+			fillColor: '#E6E6FA'
 		},
 
 			group_2: {
-			fillColor: '#fffff2'
+			fillColor: '#AFEEEE'
 		},
 		nbgroup_2: {
-			fillColor: '#fffff2'
+			fillColor: '#AFEEEE'
 		},
 		header_2: {
-			fillColor: '#fffff2',
+			fillColor: '#AFEEEE',
 			fontSize: 15,
 			bold: true
 		},
 		/* new style styles */
 		header_indicator_id: {
-			fillColor: '#fffff2',
+			fillColor: '#AFEEEE',
 			fontSize: 15,
 			bold: true
 		},
 		group_indicator_id: {
-			fillColor: '#fffff2'
+			fillColor: '#AFEEEE'
 		},
 
 			group_3: {
-			fillColor: '#e3f9f9'
+			fillColor: '#E3F9F9'
 		},
 		nbgroup_3: {
-			fillColor: '#e3f9f9'
+			fillColor: '#E3F9F9'
 		},
 		header_3: {
-			fillColor: '#e3f9f9',
+			fillColor: '#E3F9F9',
 			fontSize: 15,
 			bold: true
 		},
 		/* new style styles */
-		header_scope_id: {
-			fillColor: '#e3f9f9',
+		header_data_source_id: {
+			fillColor: '#E3F9F9',
 			fontSize: 15,
 			bold: true
 		},
-		group_scope_id: {
-			fillColor: '#e3f9f9'
-		},
-
-			group_4: {
-			fillColor: '#afeeee'
-		},
-		nbgroup_4: {
-			fillColor: '#afeeee'
-		},
-		header_4: {
-			fillColor: '#afeeee',
-			fontSize: 15,
-			bold: true
-		},
-		/* new style styles */
-		header_facility_type_id: {
-			fillColor: '#afeeee',
-			fontSize: 15,
-			bold: true
-		},
-		group_facility_type_id: {
-			fillColor: '#afeeee'
-		},
-
-			group_5: {
-			fillColor: '#add8e6'
-		},
-		nbgroup_5: {
-			fillColor: '#add8e6'
-		},
-		header_5: {
-			fillColor: '#add8e6',
-			fontSize: 15,
-			bold: true
-		},
-		/* new style styles */
-		header_year: {
-			fillColor: '#add8e6',
-			fontSize: 15,
-			bold: true
-		},
-		group_year: {
-			fillColor: '#add8e6'
+		group_data_source_id: {
+			fillColor: '#E3F9F9'
 		},
 
 		
@@ -200,15 +158,13 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
-										"%",
-										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 18,
+							colSpan: 16,
 							border:[false, false,false,false],
 							stack: [
 
@@ -355,32 +311,12 @@ pdfDocument = {
 				alignment: '{$indicator_id_align}',
 			},
 											{
-				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
-				style: 'blackshade',
-				alignment: '{$scope_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
-				style: 'blackshade',
-				alignment: '{$facility_type_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report year }',
-				style: 'blackshade',
-				alignment: '{$year_align}',
-			},
-																																																																						
-																																	{
 				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
 				style: 'blackshade',
 				alignment: '{$data_source_id_align}',
 			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report assessment_id }',
-				style: 'blackshade',
-				alignment: '{$assessment_id_align}',
-			},
-											{
+																																																																						
+																							{
 				text: '{$jslabel MOH_Indicators_Data_Report region_id }',
 				style: 'blackshade',
 				alignment: '{$region_id_align}',
@@ -426,14 +362,24 @@ pdfDocument = {
 				alignment: '{$quarter_id_align}',
 			},
 											{
-				text: '{$jslabel MOH_Indicators_Data_Report year_id }',
-				style: 'blackshade',
-				alignment: '{$year_id_align}',
-			},
-											{
 				text: '{$jslabel MOH_Indicators_Data_Report period }',
 				style: 'blackshade',
 				alignment: '{$period_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
+				style: 'blackshade',
+				alignment: '{$facility_type_id_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report year }',
+				style: 'blackshade',
+				alignment: '{$year_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
+				style: 'blackshade',
+				alignment: '{$scope_id_align}',
 			},
 						],
 		
@@ -454,39 +400,13 @@ pdfDocument = {
 					
 											{
 				stack: [
-					{$scope_id_value},
+					{$data_source_id_value},
 									],
 				style: "header_3"
 			},
 					
-											{
-				stack: [
-					{$facility_type_id_value},
-									],
-				style: "header_4"
-			},
-					
-											{
-				stack: [
-					{$year_value},
-									],
-				style: "header_5"
-			},
-					
 							
-																																	{
-				text: [
-										{$data_source_id_value}
-									],
-				alignment: '{$data_source_id_align}',
-			},
-											{
-				text: [
-										{$assessment_id_value}
-									],
-				alignment: '{$assessment_id_align}',
-			},
-											{
+																							{
 				text: [
 										{$region_id_value}
 									],
@@ -542,15 +462,27 @@ pdfDocument = {
 			},
 											{
 				text: [
-										{$year_id_value}
-									],
-				alignment: '{$year_id_align}',
-			},
-											{
-				text: [
 										{$period_value}
 									],
 				alignment: '{$period_align}',
+			},
+											{
+				text: [
+										{$facility_type_id_value}
+									],
+				alignment: '{$facility_type_id_align}',
+			},
+											{
+				text: [
+										{$year_value}
+									],
+				alignment: '{$year_align}',
+			},
+											{
+				text: [
+										{$scope_id_value}
+									],
+				alignment: '{$scope_id_align}',
 			},
 					
 	],
@@ -574,39 +506,13 @@ pdfDocument = {
 					
 											{
 				stack: [
-					{$scope_id_value},
+					{$data_source_id_value},
 									],
 				style: "header_3"
 			},
 					
-											{
-				stack: [
-					{$facility_type_id_value},
-									],
-				style: "header_4"
-			},
-					
-											{
-				stack: [
-					{$year_value},
-									],
-				style: "header_5"
-			},
-					
 							
-																																	{
-				text: [
-										{$data_source_id_value}
-									],
-				alignment: '{$data_source_id_align}',
-			},
-											{
-				text: [
-										{$assessment_id_value}
-									],
-				alignment: '{$assessment_id_align}',
-			},
-											{
+																							{
 				text: [
 										{$region_id_value}
 									],
@@ -662,20 +568,32 @@ pdfDocument = {
 			},
 											{
 				text: [
-										{$year_id_value}
-									],
-				alignment: '{$year_id_align}',
-			},
-											{
-				text: [
 										{$period_value}
 									],
 				alignment: '{$period_align}',
+			},
+											{
+				text: [
+										{$facility_type_id_value}
+									],
+				alignment: '{$facility_type_id_align}',
+			},
+											{
+				text: [
+										{$year_value}
+									],
+				alignment: '{$year_align}',
+			},
+											{
+				text: [
+										{$scope_id_value}
+									],
+				alignment: '{$scope_id_align}',
 			},
 					
 	],
 	{END indicator_id_firstnewgroup}
-	{BEGIN scope_id_firstnewgroup}
+	{BEGIN data_source_id_firstnewgroup}
 		
 	[
 								{
@@ -694,39 +612,13 @@ pdfDocument = {
 
 											{
 				stack: [
-					{$scope_id_value},
+					{$data_source_id_value},
 									],
 				style: "header_3"
 			},
 					
-											{
-				stack: [
-					{$facility_type_id_value},
-									],
-				style: "header_4"
-			},
-					
-											{
-				stack: [
-					{$year_value},
-									],
-				style: "header_5"
-			},
-					
 							
-																																	{
-				text: [
-										{$data_source_id_value}
-									],
-				alignment: '{$data_source_id_align}',
-			},
-											{
-				text: [
-										{$assessment_id_value}
-									],
-				alignment: '{$assessment_id_align}',
-			},
-											{
+																							{
 				text: [
 										{$region_id_value}
 									],
@@ -782,259 +674,31 @@ pdfDocument = {
 			},
 											{
 				text: [
-										{$year_id_value}
-									],
-				alignment: '{$year_id_align}',
-			},
-											{
-				text: [
 										{$period_value}
 									],
 				alignment: '{$period_align}',
 			},
-					
-	],
-	{END scope_id_firstnewgroup}
-	{BEGIN facility_type_id_firstnewgroup}
-		
-	[
-								{
-				text: [
-											''
-									],
-				style: "group_1"
-			},
-
 											{
 				text: [
-											''
+										{$facility_type_id_value}
 									],
-				style: "group_2"
-			},
-
-											{
-				text: [
-											''
-									],
-				style: "group_3"
-			},
-
-											{
-				stack: [
-					{$facility_type_id_value},
-									],
-				style: "header_4"
-			},
-					
-											{
-				stack: [
-					{$year_value},
-									],
-				style: "header_5"
-			},
-					
-							
-																																	{
-				text: [
-										{$data_source_id_value}
-									],
-				alignment: '{$data_source_id_align}',
+				alignment: '{$facility_type_id_align}',
 			},
 											{
 				text: [
-										{$assessment_id_value}
+										{$year_value}
 									],
-				alignment: '{$assessment_id_align}',
+				alignment: '{$year_align}',
 			},
 											{
 				text: [
-										{$region_id_value}
+										{$scope_id_value}
 									],
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: [
-										{$unit_id_value}
-									],
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: [
-										{$value_value}
-									],
-				alignment: '{$value_align}',
-			},
-											{
-				text: [
-										{$gender_sex_value}
-									],
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: [
-										{$data_representation_value}
-									],
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: [
-										{$data_source_detail_value}
-									],
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: [
-										{$period_id_value}
-									],
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: [
-										{$month_id_value}
-									],
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: [
-										{$quarter_id_value}
-									],
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: [
-										{$year_id_value}
-									],
-				alignment: '{$year_id_align}',
-			},
-											{
-				text: [
-										{$period_value}
-									],
-				alignment: '{$period_align}',
+				alignment: '{$scope_id_align}',
 			},
 					
 	],
-	{END facility_type_id_firstnewgroup}
-	{BEGIN year_firstnewgroup}
-		
-	[
-								{
-				text: [
-											''
-									],
-				style: "group_1"
-			},
-
-											{
-				text: [
-											''
-									],
-				style: "group_2"
-			},
-
-											{
-				text: [
-											''
-									],
-				style: "group_3"
-			},
-
-											{
-				text: [
-											''
-									],
-				style: "group_4"
-			},
-
-											{
-				stack: [
-					{$year_value},
-									],
-				style: "header_5"
-			},
-					
-							
-																																	{
-				text: [
-										{$data_source_id_value}
-									],
-				alignment: '{$data_source_id_align}',
-			},
-											{
-				text: [
-										{$assessment_id_value}
-									],
-				alignment: '{$assessment_id_align}',
-			},
-											{
-				text: [
-										{$region_id_value}
-									],
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: [
-										{$unit_id_value}
-									],
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: [
-										{$value_value}
-									],
-				alignment: '{$value_align}',
-			},
-											{
-				text: [
-										{$gender_sex_value}
-									],
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: [
-										{$data_representation_value}
-									],
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: [
-										{$data_source_detail_value}
-									],
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: [
-										{$period_id_value}
-									],
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: [
-										{$month_id_value}
-									],
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: [
-										{$quarter_id_value}
-									],
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: [
-										{$year_id_value}
-									],
-				alignment: '{$year_id_align}',
-			},
-											{
-				text: [
-										{$period_value}
-									],
-				alignment: '{$period_align}',
-			},
-					
-	],
-	{END year_firstnewgroup}
+	{END data_source_id_firstnewgroup}
 
 {BEGIN nonewgroup}
 	[
@@ -1050,24 +714,8 @@ pdfDocument = {
 						text: '',
 						style: 'group_3',
 		},
-				{
-						text: '',
-						style: 'group_4',
-		},
-				{
-						text: '',
-						style: 'group_5',
-		},
 		
-																																	{
-				text: {$data_source_id_value},
-				alignment: '{$data_source_id_align}',
-			},
-											{
-				text: {$assessment_id_value},
-				alignment: '{$assessment_id_align}',
-			},
-											{
+																							{
 				text: {$region_id_value},
 				alignment: '{$region_id_align}',
 			},
@@ -1104,90 +752,26 @@ pdfDocument = {
 				alignment: '{$quarter_id_align}',
 			},
 											{
-				text: {$year_id_value},
-				alignment: '{$year_id_align}',
-			},
-											{
 				text: {$period_value},
 				alignment: '{$period_align}',
+			},
+											{
+				text: {$facility_type_id_value},
+				alignment: '{$facility_type_id_align}',
+			},
+											{
+				text: {$year_value},
+				alignment: '{$year_align}',
+			},
+											{
+				text: {$scope_id_value},
+				alignment: '{$scope_id_align}',
 			},
 						],
 {END nonewgroup}
 
 
-			{BEGIN year_endgroup}
-
-				[
-											{
-					text: [''],
-					style: 'group_1',
-				},
-								{
-					text: [''],
-					style: 'group_2',
-				},
-								{
-					text: [''],
-					style: 'group_3',
-				},
-								{
-					text: [''],
-					style: 'group_4',
-				},
-							
-																																							{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report year } ', 
-						{$year_grval},
-						' - ', 
-						{$groupyear_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
-					],
-					style: 'group_5',
-					colSpan: 14				},
-																																																																																																				],
-		
-		
-		
-		
-			
-
-		{END year_endgroup}
-	
-			{BEGIN facility_type_id_endgroup}
-
-				[
-											{
-					text: [''],
-					style: 'group_1',
-				},
-								{
-					text: [''],
-					style: 'group_2',
-				},
-								{
-					text: [''],
-					style: 'group_3',
-				},
-							
-																																{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report facility_type_id } ', 
-						{$facility_type_id_grval},
-						' - ', 
-						{$groupfacility_type_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
-					],
-					style: 'group_4',
-					colSpan: 15				},
-																																																																																																											],
-		
-		
-		
-		
-			
-
-		{END facility_type_id_endgroup}
-	
-			{BEGIN scope_id_endgroup}
+			{BEGIN data_source_id_endgroup}
 
 				[
 											{
@@ -1200,22 +784,22 @@ pdfDocument = {
 				},
 							
 																									{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report scope_id } ', 
-						{$scope_id_grval},
+					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report data_source_id } ', 
+						{$data_source_id_grval},
 						' - ', 
-						{$groupscope_id_total_cnt}, 
+						{$groupdata_source_id_total_cnt}, 
 						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_3',
-					colSpan: 16				},
-																																																																																																																		],
+					colSpan: 14				},
+																																																																																																				],
 		
 		
 		
 		
 			
 
-		{END scope_id_endgroup}
+		{END data_source_id_endgroup}
 	
 			{BEGIN indicator_id_endgroup}
 
@@ -1233,8 +817,8 @@ pdfDocument = {
 						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_2',
-					colSpan: 17				},
-																																																																																																																									],
+					colSpan: 15				},
+																																																																																																											],
 		
 		
 		
@@ -1255,8 +839,8 @@ pdfDocument = {
 						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_1',
-					colSpan: 18				},
-																																																																																																																																],
+					colSpan: 16				},
+																																																																																																																		],
 		
 		
 		
@@ -1281,28 +865,8 @@ pdfDocument = {
 				style: 'blackshade'
 			},
 						{
-				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
-				alignment: '{$scope_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
-				alignment: '{$facility_type_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report year }',
-				alignment: '{$year_align}',
-				style: 'blackshade'
-			},
-						{
 				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
 				alignment: '{$data_source_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report assessment_id }',
-				alignment: '{$assessment_id_align}',
 				style: 'blackshade'
 			},
 						{
@@ -1351,13 +915,23 @@ pdfDocument = {
 				style: 'blackshade'
 			},
 						{
-				text: '{$jslabel MOH_Indicators_Data_Report year_id }',
-				alignment: '{$year_id_align}',
+				text: '{$jslabel MOH_Indicators_Data_Report period }',
+				alignment: '{$period_align}',
 				style: 'blackshade'
 			},
 						{
-				text: '{$jslabel MOH_Indicators_Data_Report period }',
-				alignment: '{$period_align}',
+				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
+				alignment: '{$facility_type_id_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report year }',
+				alignment: '{$year_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
+				alignment: '{$scope_id_align}',
 				style: 'blackshade'
 			},
 					],
@@ -1371,7 +945,7 @@ pdfDocument = {
 	[
 		{	
 			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
-			colSpan: 18,
+			colSpan: 16,
 			style: 'pagesummary',
 		}
 	],
@@ -1386,7 +960,7 @@ pdfDocument = {
 	[
 		{
 			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
-			colSpan: 18,
+			colSpan: 16,
 			style: 'globalsummary',
 		}
 	],

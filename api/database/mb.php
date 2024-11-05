@@ -156,6 +156,40 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         .checkbox-container {
             margin-bottom: 20px;
         }
+                /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            .main {
+                padding: 10px;
+            }
+            table, th, td {
+                font-size: 14px;
+            }
+            .pagination a {
+                padding: 8px 12px;
+            }
+            .btn-custom {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+        /* Table Responsiveness */
+        @media (max-width: 576px) {
+            table {
+                font-size: 12px;
+                overflow-x: auto;
+                display: block;
+            }
+            th, td {
+                white-space: nowrap;
+            }
+            .progress-container {
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>

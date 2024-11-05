@@ -1,8 +1,8 @@
 <?php
 
 $config_hostname = "192.168.128.7";
-$config_hostuser = "hispmd_sgb";
-$config_hostpass = "hispmd_sgb";
+$config_hostuser = "hisp_md";
+$config_hostpass = "hisp_md";
 $config_hostport = 3306;
 $config_dbname = "hispmd_sgb";
 

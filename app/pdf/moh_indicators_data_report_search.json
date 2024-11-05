@@ -175,9 +175,6 @@ pdfDocument = {
 			{"text":{$data_source_id_value},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
-			{"text":{$assessment_id_value},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
 			{"text":{$region_id_value},"hidden":"{$item_hide_integrated_search_field4}"},
 				
 				
@@ -185,9 +182,6 @@ pdfDocument = {
 				
 				
 			{"text":{$facility_type_id_value},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$value_value},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
 			{"text":{$year_value},"hidden":"{$item_hide_integrated_search_field8}"},
@@ -215,9 +209,6 @@ pdfDocument = {
 				
 				
 			{"text":{$quarter_id_value},"hidden":"{$item_hide_integrated_search_field16}"},
-				
-				
-			{"text":{$year_id_value},"hidden":"{$item_hide_integrated_search_field17}"},
 				
 				
 			{"text":{$period_value},"hidden":"{$item_hide_integrated_search_field18}"},

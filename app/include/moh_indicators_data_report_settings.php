@@ -40,7 +40,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_report["English"]["region_id"] = "Region";
 	$fieldToolTipsmoh_indicators_data_report["English"]["region_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["region_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["unit_id"] = "Unit";
+	$fieldLabelsmoh_indicators_data_report["English"]["unit_id"] = "Administration Unit";
 	$fieldToolTipsmoh_indicators_data_report["English"]["unit_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["unit_id"] = "";
 	$fieldLabelsmoh_indicators_data_report["English"]["facility_type_id"] = "Facility Type";
@@ -67,13 +67,13 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_report["English"]["data_source_detail"] = "Data Source Detail";
 	$fieldToolTipsmoh_indicators_data_report["English"]["data_source_detail"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["data_source_detail"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["period_id"] = "Period Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["period_id"] = "Period Type";
 	$fieldToolTipsmoh_indicators_data_report["English"]["period_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["period_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["month_id"] = "Month Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["month_id"] = "Month";
 	$fieldToolTipsmoh_indicators_data_report["English"]["month_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["month_id"] = "";
-	$fieldLabelsmoh_indicators_data_report["English"]["quarter_id"] = "Quarter Id";
+	$fieldLabelsmoh_indicators_data_report["English"]["quarter_id"] = "Quarter";
 	$fieldToolTipsmoh_indicators_data_report["English"]["quarter_id"] = "";
 	$placeHoldersmoh_indicators_data_report["English"]["quarter_id"] = "";
 	$fieldLabelsmoh_indicators_data_report["English"]["year_id"] = "Year Id";
@@ -268,11 +268,9 @@ $tdatamoh_indicators_data_report[".googleLikeFields"] = array();
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "data_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "indicator_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "data_source_id";
-$tdatamoh_indicators_data_report[".googleLikeFields"][] = "assessment_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "region_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "unit_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "facility_type_id";
-$tdatamoh_indicators_data_report[".googleLikeFields"][] = "value";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "year";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "scope_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "gender_sex";
@@ -282,7 +280,6 @@ $tdatamoh_indicators_data_report[".googleLikeFields"][] = "data_source_detail";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "period_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "month_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "quarter_id";
-$tdatamoh_indicators_data_report[".googleLikeFields"][] = "year_id";
 $tdatamoh_indicators_data_report[".googleLikeFields"][] = "period";
 
 
@@ -312,7 +309,9 @@ $tdatamoh_indicators_data_report[".pageSizeRecords"] = 20;
 $tdatamoh_indicators_data_report[".isDisplayLoading"] = true;
 
 
+$tdatamoh_indicators_data_report[".searchIsRequiredForFilters"] = true;
 
+$tdatamoh_indicators_data_report[".noRecordsFirstPage"] = true;
 
 
 
@@ -323,8 +322,8 @@ $tdatamoh_indicators_data_report[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_indicators_data_report[".orderindexes"] = array();
 
 
-$tdatamoh_indicators_data_report[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,  	period";
-$tdatamoh_indicators_data_report[".sqlFrom"] = "FROM \"public\".moh_indicator_data";
+$tdatamoh_indicators_data_report[".sqlHead"] = "SELECT data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,      -- Define period field based on available values without adding any placeholder      CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END AS period";
+$tdatamoh_indicators_data_report[".sqlFrom"] = "FROM       \"public\".moh_indicator_data";
 $tdatamoh_indicators_data_report[".sqlWhereExpr"] = "";
 $tdatamoh_indicators_data_report[".sqlTail"] = "";
 
@@ -1698,7 +1697,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1708,6 +1707,35 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_data";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "year";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "year";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "year";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1722,17 +1750,14 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -1752,7 +1777,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2609,7 +2634,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2619,6 +2644,34 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_period_types";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "period_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "period_type";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2633,17 +2686,14 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -2663,7 +2713,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3110,9 +3160,9 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	$fdata["Index"] = 19;
 	$fdata["strName"] = "period";
 	$fdata["GoodName"] = "period";
-	$fdata["ownerTable"] = "public.moh_indicator_data";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("MOH_Indicators_Data_Report","period");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 
 
 	
@@ -3124,7 +3174,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "period";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "period";
+	$fdata["FullName"] = "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END";
 
 	
 	
@@ -3161,7 +3211,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3171,6 +3221,35 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_indicator_data";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "period";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -3179,16 +3258,14 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3199,7 +3276,10 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 	
 	
 	
@@ -3214,7 +3294,7 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3393,8 +3473,8 @@ function createSqlQuery_moh_indicators_data_report()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,  	period";
-$proto0["m_strFrom"] = "FROM \"public\".moh_indicator_data";
+$proto0["m_strFieldList"] = "data_id,  	indicator_id,  	data_source_id,  	assessment_id,  	region_id,  	unit_id,  	facility_type_id,  	\"value\",  	\"year\",  	scope_id,  	gender_sex,  	data_representation,  	indicator_group_id,  	data_source_detail,  	period_id,  	month_id,  	quarter_id,  	year_id,      -- Define period field based on available values without adding any placeholder      CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END AS period";
+$proto0["m_strFrom"] = "FROM       \"public\".moh_indicator_data";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -3686,16 +3766,14 @@ $obj = new SQLFieldListItem($proto40);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto42=array();
-			$obj = new SQLField(array(
-	"m_strName" => "period",
-	"m_strTable" => "public.moh_indicator_data",
-	"m_srcTableName" => "MOH_Indicators_Data_Report"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END"
 ));
 
-$proto42["m_sql"] = "period";
+$proto42["m_sql"] = "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END";
 $proto42["m_srcTableName"] = "MOH_Indicators_Data_Report";
 $proto42["m_expr"]=$obj;
-$proto42["m_alias"] = "";
+$proto42["m_alias"] = "period";
 $obj = new SQLFieldListItem($proto42);
 
 $proto0["m_fieldlist"][]=$obj;
