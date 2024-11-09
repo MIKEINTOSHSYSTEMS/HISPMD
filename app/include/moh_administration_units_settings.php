@@ -604,36 +604,6 @@ $detailsTablesData["public.moh_administration_units"] = array();
 				$detailsTablesData["public.moh_administration_units"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.moh_administration_units"][$dIndex]["detailKeys"][]="unit_id";
-//	MOH_Indicators_data_Chart
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="MOH_Indicators_data_Chart";
-		$detailsParam["dOriginalTable"] = "public.moh_indicator_data";
-
-
-
-			$detailsParam["dType"]=PAGE_CHART;
-
-		$detailsParam["dShortTable"] = "moh_indicators_data_chart";
-	$detailsParam["dCaptionTable"] = GetTableCaption("MOH_Indicators_data_Chart");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["public.moh_administration_units"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["public.moh_administration_units"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["public.moh_administration_units"][$dIndex]["masterKeys"][]="unit_id";
-
-				$detailsTablesData["public.moh_administration_units"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["public.moh_administration_units"][$dIndex]["detailKeys"][]="unit_id";
 //endif
 
 // tables which are master tables for current table (detail)

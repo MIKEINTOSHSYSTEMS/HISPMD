@@ -3,8 +3,6 @@
 'details' => array( 'public.moh_indicator_data' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'MOH_Indicators_Data_Report' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'MOH_Indicators_data_Chart' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'data_source_id',
 'data_source_name',

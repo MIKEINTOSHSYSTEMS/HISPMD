@@ -24,14 +24,15 @@
   </div>
 </div>
 
-<!-- Footer content with responsive styling -->
-<div align="center">
+<!-- Footer content with modern, enterprise-level styling -->
+<div align="center" class="footer-container">
   <p>
-    <u>Health Information Systems Performance Monitoring Dashboard</u>
-    <b> [HISPMD]</b> | <b><i>Version 0.1</i></b> | <b>Ministry of Health Ethiopia.</b> © 
-    <script>document.write(new Date().getFullYear())</script> 
-    All Rights Reserved. | Designed & Developed By 
-    <a href="https://merqconsultancy.org"><b>MERQ Consultancy</b></a>
+    Health Information Systems Performance Monitoring Dashboard
+    <b> [HISPMD</b> <b><i>V-1.3 BUILD-Ver.2324]</b></i><br> 
+     © <script>document.write(new Date().getFullYear())</script> All Rights Reserved. <img height="25px" width="25px" src="./assets/img/mohfavicon.png" alt="Ministry of Health Ethiopia"> <a href="https://moh.gov.et"><b>Ministry of Health Ethiopia.</b></a>
+    <br> Designed & Developed By 
+    <a href="https://merqconsultancy.org" target="_blank"><b>MERQ Consultancy</b></a>
+    
   </p>    
 </div>
 
@@ -47,44 +48,58 @@
   .ethiopian-calendar, .gregorian-calendar {
     margin: 10px;
     padding: 10px;
-    /*border: 1px solid #ddd;*/
     width: 100%;
     max-width: 400px;
   }
 
-  /* Footer styles */
-  p {
+  /* Footer container with rounded edges and enterprise-style */
+  .footer-container {
+    padding: 20px 0;
+    font-family: 'Aldrich', sans-serif;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.8;
     color: #333;
-    margin: 0;
-    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for a more polished, enterprise feel */
+    background-color: #ffffff;  /* White background for clean, official look */
+    border-top: 3px solid #007bff; /* Subtle top border with official blue color */
   }
 
-  a {
+  /* Footer paragraph with spacing */
+  .footer-container p {
+    margin: 0;
+    color: #333;
+  }
+
+  /* Links in the footer */
+  .footer-container a {
     color: #007bff;
     text-decoration: none;
+    font-weight: bold;
   }
 
-  /* Responsive footer */
+  .footer-container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
-    .calendar-container {
-      flex-direction: column;
-    }
-
-    .ethiopian-calendar, .gregorian-calendar {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    p {
-      font-size: 12px;
+    .footer-container p {
+      font-size: 13px;
     }
   }
 
   @media (max-width: 480px) {
-    p {
-      font-size: 11px;
+    .footer-container p {
+      font-size: 12px;
     }
   }
 </style>
+<br>
+<br>
+<br>

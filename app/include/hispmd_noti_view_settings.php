@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelshispmd_noti_view["English"]["id"] = "Id";
 	$fieldToolTipshispmd_noti_view["English"]["id"] = "";
 	$placeHoldershispmd_noti_view["English"]["id"] = "";
-	$fieldLabelshispmd_noti_view["English"]["message"] = "Message";
+	$fieldLabelshispmd_noti_view["English"]["message"] = "Details";
 	$fieldToolTipshispmd_noti_view["English"]["message"] = "";
 	$placeHoldershispmd_noti_view["English"]["message"] = "";
 	$fieldLabelshispmd_noti_view["English"]["user"] = "User";
@@ -37,7 +37,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelshispmd_noti_view["English"]["provider"] = "Provider";
 	$fieldToolTipshispmd_noti_view["English"]["provider"] = "";
 	$placeHoldershispmd_noti_view["English"]["provider"] = "";
-	$fieldLabelshispmd_noti_view["English"]["title"] = "Title";
+	$fieldLabelshispmd_noti_view["English"]["title"] = "Notification Subject";
 	$fieldToolTipshispmd_noti_view["English"]["title"] = "";
 	$placeHoldershispmd_noti_view["English"]["title"] = "";
 	$fieldLabelshispmd_noti_view["English"]["url"] = "Url";
@@ -46,7 +46,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelshispmd_noti_view["English"]["icon"] = "Icon";
 	$fieldToolTipshispmd_noti_view["English"]["icon"] = "";
 	$placeHoldershispmd_noti_view["English"]["icon"] = "";
-	$fieldLabelshispmd_noti_view["English"]["created"] = "Created";
+	$fieldLabelshispmd_noti_view["English"]["created"] = "Date";
 	$fieldToolTipshispmd_noti_view["English"]["created"] = "";
 	$placeHoldershispmd_noti_view["English"]["created"] = "";
 	$fieldLabelshispmd_noti_view["English"]["expire"] = "Expire";
@@ -220,17 +220,9 @@ $tdatahispmd_noti_view[".filterFields"] = array();
 $tdatahispmd_noti_view[".requiredSearchFields"] = array();
 
 $tdatahispmd_noti_view[".googleLikeFields"] = array();
-$tdatahispmd_noti_view[".googleLikeFields"][] = "id";
 $tdatahispmd_noti_view[".googleLikeFields"][] = "message";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "user";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "provider";
 $tdatahispmd_noti_view[".googleLikeFields"][] = "title";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "url";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "icon";
 $tdatahispmd_noti_view[".googleLikeFields"][] = "created";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "expire";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "type";
-$tdatahispmd_noti_view[".googleLikeFields"][] = "group";
 
 
 
@@ -249,7 +241,9 @@ $tdatahispmd_noti_view[".geocodingEnabled"] = false;
 $tdatahispmd_noti_view[".isDisplayLoading"] = true;
 
 
+$tdatahispmd_noti_view[".searchIsRequiredForFilters"] = true;
 
+$tdatahispmd_noti_view[".noRecordsFirstPage"] = true;
 
 
 
@@ -1704,7 +1698,8 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;

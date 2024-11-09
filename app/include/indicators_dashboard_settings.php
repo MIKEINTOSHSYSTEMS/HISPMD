@@ -608,6 +608,9 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "Data Source";
 
 	
 	
@@ -1162,16 +1165,17 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.moh_data_sources";
+	$edata["LookupTable"] = "Indicators_Dashboard";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-		
-	$edata["LinkField"] = "data_source_name";
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Data Source";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "data_source_name";
+	$edata["DisplayField"] = "Data Source";
 
 	
 
@@ -1179,7 +1183,10 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "Indicator Name", "lookup" => "Indicator Name" );
+
 	
 	
 

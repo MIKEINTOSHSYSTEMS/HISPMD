@@ -1199,6 +1199,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return 0;
 	}
+				if($table=="public.hispmd_noti_view" && $field=="type")
+	{
+		return 0;
+	}
 	return "";
 }
 

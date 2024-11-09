@@ -165,40 +165,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":{$id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
-			{"text":{$message_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$user_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
-			{"text":{$provider_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$title_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$url_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$icon_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$created_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$expire_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
-			{"text":{$type_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
-				
-				
-			{"text":{$group_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

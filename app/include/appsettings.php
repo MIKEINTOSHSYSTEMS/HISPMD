@@ -904,9 +904,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "704_1730387974";
+$projectBuildKey = "712_1731163434";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "704";
+$projectBuildNumber = "712";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1036,12 +1036,12 @@ $tableCaptions["English"]["MoH_Indicators_Data_Values_Chart"] = "MoH Indicators 
 $tableCaptions["English"]["Indicators_Dashboard"] = "Indicators Dashboard";
 $tableCaptions["English"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
 $tableCaptions["English"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
-$tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
-$tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["English"]["public_moh_years"] = "Moh Years";
 $tableCaptions["English"]["public_moh_months"] = "Moh Months";
 $tableCaptions["English"]["public_moh_quarters"] = "Moh Quarters";
 $tableCaptions["English"]["public_moh_period_types"] = "Moh Period Types";
+$tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
+$tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1150,13 +1150,13 @@ $tableCaptions["Amharic"]["public_faicons"] = "Faicons";
 $tableCaptions["Amharic"]["MoH_Indicators_Data_Values_Chart"] = "MoH Indicators Data Values Chart";
 $tableCaptions["Amharic"]["Indicators_Dashboard"] = "Indicators Dashboard";
 $tableCaptions["Amharic"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
-$tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
-$tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["Amharic"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
 $tableCaptions["Amharic"]["public_moh_years"] = "Moh Years";
 $tableCaptions["Amharic"]["public_moh_months"] = "Moh Months";
 $tableCaptions["Amharic"]["public_moh_quarters"] = "Moh Quarters";
 $tableCaptions["Amharic"]["public_moh_period_types"] = "Moh Period Types";
+$tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
+$tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 
 
 $globalEvents = new class_GlobalEvents;

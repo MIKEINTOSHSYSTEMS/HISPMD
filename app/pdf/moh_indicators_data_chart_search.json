@@ -166,13 +166,19 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"text":{$year_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$period_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$data_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
 			{"text":{$indicator_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
 			{"text":{$data_source_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
-			{"text":{$assessment_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
 			{"text":{$region_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
@@ -184,31 +190,25 @@ pdfDocument = {
 			{"text":{$facility_type_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$year_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+			{"text":{$period_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
-			{"text":{$scope_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+			{"text":{$quarter_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				
-			{"text":{$gender_sex_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+			{"text":{$month_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
 				
 				
-			{"text":{$data_representation_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+			{"text":{$scope_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
 				
-			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+			{"text":{$gender_sex_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
 				
 				
-			{"text":{$period_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+			{"text":{$data_representation_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
 				
 				
-			{"text":{$quarter_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$month_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
-				
-				
-			{"text":{$period_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
 				
 		  ],
   "border": [ false, false, false, false ],

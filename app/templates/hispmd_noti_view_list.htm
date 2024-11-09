@@ -132,7 +132,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message RESET}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -470,7 +470,7 @@
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
 		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message RESET}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -609,53 +609,6 @@
 
 
 
-{BEGIN filter_control_user}
-
-	<div class="dropdown filter-field filter-user-container" {BEGIN filter_selected_user} data-selected {END filter_selected_user}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_user}
-			<a href="#" class="filter-clear filter-clear-user" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_user}
-			<span class="r-filter-field">{$label public_hispmd_noti_view user }				{BEGIN filter_selected_user}:{END filter_selected_user}
-			</span>
-			{BEGIN filter_selected_user}
-			<span class="r-filter-value">{$filtervalue_user}</span>
-			{END filter_selected_user}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_user}
-		<li class=" filter-values filter-values-user  {$visibilityClass_user}">
-			{$user_filter}
-						
-					
-					
-					</li>
-		{END filterCtrlBlock_user}
-
-			{BEGIN filter_button_showmore_user}
-		<li class=" filter-show-more {$collapsedClass_user} {$showMoreBtnClass_user}">
-			<a class="filter-show-more-link filterShowMore_user" href="#">{$show_n_more_user}</a>
-		</li>
-		{END filter_button_showmore_user}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_user}
-
-
-
-
-
-
 {BEGIN filter_control_type}
 
 	<div class="dropdown filter-field filter-type-container" {BEGIN filter_selected_type} data-selected {END filter_selected_type}>
@@ -678,7 +631,6 @@
 		<li class=" filter-values filter-values-type  {$visibilityClass_type}">
 			{$type_filter}
 						
-					
 					
 					</li>
 		{END filterCtrlBlock_type}
@@ -726,7 +678,6 @@
 			{$created_filter}
 						
 					
-					
 					</li>
 		{END filterCtrlBlock_created}
 
@@ -771,10 +722,7 @@
 					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="title"]:before {
 		content: "{$label public_hispmd_noti_view title}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="icon"]:before {
-		content: "{$label public_hispmd_noti_view icon}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="created"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="created"]:before {
 		content: "{$label public_hispmd_noti_view created}";
 	}
 				}
@@ -883,42 +831,17 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$icon_class}	"
+		 r-ori-vert		 {$created_class}	"
 
-			data-field="icon"
+			data-field="created"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN icon_fieldheadercolumn}
-	{BEGIN icon_fieldheader}
-	<SPAN {$icon_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="icon" data-fieldname="icon">
-	{$label public_hispmd_noti_view icon }	{$arrow_icon_icon}
-	</SPAN>
-	{END icon_fieldheader}
-{END icon_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$created_class}	"
-
-			data-field="created"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN created_fieldheadercolumn}
 	{BEGIN created_fieldheader}
-	<SPAN {$created_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created">
+	<SPAN {$created_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created">
 	{$label public_hispmd_noti_view created }	{$arrow_icon_created}
 	</SPAN>
 	{END created_fieldheader}
@@ -926,7 +849,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field2}
 							</tr>
 															
 					{END grid_header}
@@ -1048,32 +971,11 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$icon_class}	"
-
-			data-field="icon"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN icon_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="icon" data-fieldname="icon" data-default-width >
-{$icon_value}
-</span>
-{END icon_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$created_class}	"
 
 			data-field="created"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1083,7 +985,7 @@
 </span>
 {END created_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field2}
 							</tr>
 										
 											{END grid_row}
@@ -1161,7 +1063,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$icon_class}	"
+		 r-ori-vert		 {$created_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
@@ -1170,21 +1072,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$created_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="hispmd_noti_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

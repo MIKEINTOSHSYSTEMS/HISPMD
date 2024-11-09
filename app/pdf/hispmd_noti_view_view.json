@@ -174,9 +174,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_hispmd_noti_view icon }","bold":true},{"text":{$icon_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_hispmd_noti_view title }","bold":true},{"text":{$title_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],

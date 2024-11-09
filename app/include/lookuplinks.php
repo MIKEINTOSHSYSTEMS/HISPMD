@@ -782,13 +782,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicators"]["indicators_dashboard.Indicator Name"] = array();
 		}
 		$lookupTableLinks["public.moh_indicators"]["indicators_dashboard.Indicator Name"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Indicator Name", "page" => "edit");
-		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
-			$lookupTableLinks["public.moh_data_sources"] = array();
+		if( !isset( $lookupTableLinks["Indicators_Dashboard"] ) ) {
+			$lookupTableLinks["Indicators_Dashboard"] = array();
 		}
-		if( !isset( $lookupTableLinks["public.moh_data_sources"]["indicators_dashboard.Data Source"] )) {
-			$lookupTableLinks["public.moh_data_sources"]["indicators_dashboard.Data Source"] = array();
+		if( !isset( $lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Data Source"] )) {
+			$lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Data Source"] = array();
 		}
-		$lookupTableLinks["public.moh_data_sources"]["indicators_dashboard.Data Source"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Data Source", "page" => "edit");
+		$lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Data Source"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Data Source", "page" => "edit");
 		if( !isset( $lookupTableLinks["public.moh_assessments"] ) ) {
 			$lookupTableLinks["public.moh_assessments"] = array();
 		}

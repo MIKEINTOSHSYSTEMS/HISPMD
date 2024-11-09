@@ -25,6 +25,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmoh_indicators_data_chart["English"] = array();
 	$placeHoldersmoh_indicators_data_chart["English"] = array();
 	$pageTitlesmoh_indicators_data_chart["English"] = array();
+	$fieldLabelsmoh_indicators_data_chart["English"]["value"] = "Value";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["value"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["value"] = "";
+	$fieldLabelsmoh_indicators_data_chart["English"]["year"] = "Year";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["year"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["year"] = "";
+	$fieldLabelsmoh_indicators_data_chart["English"]["period"] = "Period";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["period"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["period"] = "";
 	$fieldLabelsmoh_indicators_data_chart["English"]["data_id"] = "Data Id";
 	$fieldToolTipsmoh_indicators_data_chart["English"]["data_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["English"]["data_id"] = "";
@@ -46,12 +55,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_chart["English"]["facility_type_id"] = "Facility Type";
 	$fieldToolTipsmoh_indicators_data_chart["English"]["facility_type_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["English"]["facility_type_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["English"]["value"] = "Value";
-	$fieldToolTipsmoh_indicators_data_chart["English"]["value"] = "";
-	$placeHoldersmoh_indicators_data_chart["English"]["value"] = "";
-	$fieldLabelsmoh_indicators_data_chart["English"]["year"] = "Year";
-	$fieldToolTipsmoh_indicators_data_chart["English"]["year"] = "";
-	$placeHoldersmoh_indicators_data_chart["English"]["year"] = "";
+	$fieldLabelsmoh_indicators_data_chart["English"]["period_id"] = "Period Type";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["period_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["period_id"] = "";
+	$fieldLabelsmoh_indicators_data_chart["English"]["quarter_id"] = "Quarter";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["quarter_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["quarter_id"] = "";
+	$fieldLabelsmoh_indicators_data_chart["English"]["month_id"] = "Month";
+	$fieldToolTipsmoh_indicators_data_chart["English"]["month_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["English"]["month_id"] = "";
 	$fieldLabelsmoh_indicators_data_chart["English"]["scope_id"] = "Scope";
 	$fieldToolTipsmoh_indicators_data_chart["English"]["scope_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["English"]["scope_id"] = "";
@@ -64,18 +76,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators_data_chart["English"]["indicator_group_id"] = "Indicator Group";
 	$fieldToolTipsmoh_indicators_data_chart["English"]["indicator_group_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["English"]["indicator_group_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["English"]["period_id"] = "Period Type";
-	$fieldToolTipsmoh_indicators_data_chart["English"]["period_id"] = "";
-	$placeHoldersmoh_indicators_data_chart["English"]["period_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["English"]["quarter_id"] = "Quarter";
-	$fieldToolTipsmoh_indicators_data_chart["English"]["quarter_id"] = "";
-	$placeHoldersmoh_indicators_data_chart["English"]["quarter_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["English"]["month_id"] = "Month";
-	$fieldToolTipsmoh_indicators_data_chart["English"]["month_id"] = "";
-	$placeHoldersmoh_indicators_data_chart["English"]["month_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["English"]["period"] = "Period";
-	$fieldToolTipsmoh_indicators_data_chart["English"]["period"] = "";
-	$placeHoldersmoh_indicators_data_chart["English"]["period"] = "";
 	if (count($fieldToolTipsmoh_indicators_data_chart["English"]))
 		$tdatamoh_indicators_data_chart[".isUseToolTips"] = true;
 }
@@ -85,6 +85,15 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldToolTipsmoh_indicators_data_chart["Amharic"] = array();
 	$placeHoldersmoh_indicators_data_chart["Amharic"] = array();
 	$pageTitlesmoh_indicators_data_chart["Amharic"] = array();
+	$fieldLabelsmoh_indicators_data_chart["Amharic"]["value"] = "የውሂብ እሴት";
+	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["value"] = "";
+	$placeHoldersmoh_indicators_data_chart["Amharic"]["value"] = "";
+	$fieldLabelsmoh_indicators_data_chart["Amharic"]["year"] = "አመት";
+	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["year"] = "";
+	$placeHoldersmoh_indicators_data_chart["Amharic"]["year"] = "";
+	$fieldLabelsmoh_indicators_data_chart["Amharic"]["period"] = "Period";
+	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["period"] = "";
+	$placeHoldersmoh_indicators_data_chart["Amharic"]["period"] = "";
 	$fieldLabelsmoh_indicators_data_chart["Amharic"]["data_id"] = "የውሂብ መለያ";
 	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["data_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["Amharic"]["data_id"] = "";
@@ -106,12 +115,15 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_indicators_data_chart["Amharic"]["facility_type_id"] = "የመገልገያ አይነት";
 	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["facility_type_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["Amharic"]["facility_type_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["Amharic"]["value"] = "የውሂብ እሴት";
-	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["value"] = "";
-	$placeHoldersmoh_indicators_data_chart["Amharic"]["value"] = "";
-	$fieldLabelsmoh_indicators_data_chart["Amharic"]["year"] = "አመት";
-	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["year"] = "";
-	$placeHoldersmoh_indicators_data_chart["Amharic"]["year"] = "";
+	$fieldLabelsmoh_indicators_data_chart["Amharic"]["period_id"] = "Period Id";
+	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["period_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["Amharic"]["period_id"] = "";
+	$fieldLabelsmoh_indicators_data_chart["Amharic"]["quarter_id"] = "Quarter Id";
+	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["quarter_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["Amharic"]["quarter_id"] = "";
+	$fieldLabelsmoh_indicators_data_chart["Amharic"]["month_id"] = "Month Id";
+	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["month_id"] = "";
+	$placeHoldersmoh_indicators_data_chart["Amharic"]["month_id"] = "";
 	$fieldLabelsmoh_indicators_data_chart["Amharic"]["scope_id"] = "ወሰን";
 	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["scope_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["Amharic"]["scope_id"] = "";
@@ -124,18 +136,6 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_indicators_data_chart["Amharic"]["indicator_group_id"] = "አመላካች ቡድን";
 	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["indicator_group_id"] = "";
 	$placeHoldersmoh_indicators_data_chart["Amharic"]["indicator_group_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["Amharic"]["period_id"] = "Period Id";
-	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["period_id"] = "";
-	$placeHoldersmoh_indicators_data_chart["Amharic"]["period_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["Amharic"]["quarter_id"] = "Quarter Id";
-	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["quarter_id"] = "";
-	$placeHoldersmoh_indicators_data_chart["Amharic"]["quarter_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["Amharic"]["month_id"] = "Month Id";
-	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["month_id"] = "";
-	$placeHoldersmoh_indicators_data_chart["Amharic"]["month_id"] = "";
-	$fieldLabelsmoh_indicators_data_chart["Amharic"]["period"] = "Period";
-	$fieldToolTipsmoh_indicators_data_chart["Amharic"]["period"] = "";
-	$placeHoldersmoh_indicators_data_chart["Amharic"]["period"] = "";
 	if (count($fieldToolTipsmoh_indicators_data_chart["Amharic"]))
 		$tdatamoh_indicators_data_chart[".isUseToolTips"] = true;
 }
@@ -234,7 +234,7 @@ $tdatamoh_indicators_data_chart[".isUseAjaxSuggest"] = true;
 
 
 
-																					
+			
 
 $tdatamoh_indicators_data_chart[".ajaxCodeSnippetAdded"] = false;
 
@@ -254,9 +254,9 @@ $tdatamoh_indicators_data_chart[".filterFields"] = array();
 $tdatamoh_indicators_data_chart[".requiredSearchFields"] = array();
 
 $tdatamoh_indicators_data_chart[".googleLikeFields"] = array();
+$tdatamoh_indicators_data_chart[".googleLikeFields"][] = "data_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "indicator_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "data_source_id";
-$tdatamoh_indicators_data_chart[".googleLikeFields"][] = "assessment_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "region_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "unit_id";
 $tdatamoh_indicators_data_chart[".googleLikeFields"][] = "facility_type_id";
@@ -344,7 +344,6 @@ $tdatamoh_indicators_data_chart[".arrGroupsPerPage"] = $arrGPP;
 $tdatamoh_indicators_data_chart[".highlightSearchResults"] = true;
 
 $tableKeysmoh_indicators_data_chart = array();
-$tableKeysmoh_indicators_data_chart[] = "data_id";
 $tdatamoh_indicators_data_chart[".Keys"] = $tableKeysmoh_indicators_data_chart;
 
 
@@ -806,9 +805,8 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 2;
-		$fdata["filterTotalFields"] = "data_id";
-		$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2637,7 +2635,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2789,7 +2787,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2991,7 +2989,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 	$fdata["GoodName"] = "period";
 	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("MOH_Indicators_data_Chart","period");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 
 
 	
@@ -3058,7 +3056,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
@@ -3078,7 +3076,10 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 	
 	
 	
@@ -3288,114 +3289,6 @@ $masterTablesData["MOH_Indicators_data_Chart"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="public.moh_assessments";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="public.moh_assessments";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "moh_assessments";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MOH_Indicators_data_Chart"][0] = $masterParams;
-				$masterTablesData["MOH_Indicators_data_Chart"][0]["masterKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][0]["masterKeys"][]="assessment_id";
-				$masterTablesData["MOH_Indicators_data_Chart"][0]["detailKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][0]["detailKeys"][]="assessment_id";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="public.moh_data_sources";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="public.moh_data_sources";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "moh_data_sources";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MOH_Indicators_data_Chart"][1] = $masterParams;
-				$masterTablesData["MOH_Indicators_data_Chart"][1]["masterKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][1]["masterKeys"][]="data_source_id";
-				$masterTablesData["MOH_Indicators_data_Chart"][1]["detailKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][1]["detailKeys"][]="data_source_id";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="public.moh_health_facilities";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="public.moh_health_facilities";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "moh_health_facilities";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MOH_Indicators_data_Chart"][2] = $masterParams;
-				$masterTablesData["MOH_Indicators_data_Chart"][2]["masterKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][2]["masterKeys"][]="facility_id";
-				$masterTablesData["MOH_Indicators_data_Chart"][2]["detailKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][2]["detailKeys"][]="facility_type_id";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="public.moh_indicators";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="public.moh_indicators";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "moh_indicators";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MOH_Indicators_data_Chart"][3] = $masterParams;
-				$masterTablesData["MOH_Indicators_data_Chart"][3]["masterKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][3]["masterKeys"][]="indicator_id";
-				$masterTablesData["MOH_Indicators_data_Chart"][3]["detailKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][3]["detailKeys"][]="indicator_id";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="public.moh_regions";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="public.moh_regions";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "moh_regions";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MOH_Indicators_data_Chart"][4] = $masterParams;
-				$masterTablesData["MOH_Indicators_data_Chart"][4]["masterKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][4]["masterKeys"][]="region_id";
-				$masterTablesData["MOH_Indicators_data_Chart"][4]["detailKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][4]["detailKeys"][]="region_id";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="public.moh_administration_units";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="public.moh_administration_units";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "moh_administration_units";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["MOH_Indicators_data_Chart"][5] = $masterParams;
-				$masterTablesData["MOH_Indicators_data_Chart"][5]["masterKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][5]["masterKeys"][]="unit_id";
-				$masterTablesData["MOH_Indicators_data_Chart"][5]["detailKeys"] = array();
-	$masterTablesData["MOH_Indicators_data_Chart"][5]["detailKeys"][]="unit_id";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

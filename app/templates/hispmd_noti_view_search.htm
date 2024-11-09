@@ -277,275 +277,34 @@
 
  
 	 
-												<table 
+		
+					<table 
 	data-body-align="left"
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
 		data-form-width="1"
 		
-		data-v-width="6"
+		data-v-width="1"
 	>
 	<tbody>
-										<tr {$row_grid_0} >
-										
+						<tr>
+						
 
 {BEGIN cellblock_grid_c3}
 <td
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
+			data-single
 				data-fullwidth
 		
 			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="6"
+		data-v-cell="1"
 		
 >
 	<div edit-form-cell class="clearfix">
-				
-{BEGIN id_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="id{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_id}">
-		{$label public_hispmd_noti_view id }	</label>
-	<div class="r-search-option">
-		{$searchtype_id}
-	</div>
-	<div class="r-search-field">
-		{$id_editcontrol}	</div>
-	<div class="r-search-field">
-		{$id_editcontrol1}
-	</div>
-	
-</div>
-
-{END id_fieldblock}
-											
-{BEGIN message_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_message}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="message{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="message" data-fieldname="message" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_message}">
-		{$label public_hispmd_noti_view message }	</label>
-	<div class="r-search-option">
-		{$searchtype_message}
-	</div>
-	<div class="r-search-field">
-		{$message_editcontrol}	</div>
-	<div class="r-search-field">
-		{$message_editcontrol1}
-	</div>
-	
-</div>
-
-{END message_fieldblock}
-											
-{BEGIN user_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_user}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="user{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="user" data-fieldname="user" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_user}">
-		{$label public_hispmd_noti_view user }	</label>
-	<div class="r-search-option">
-		{$searchtype_user}
-	</div>
-	<div class="r-search-field">
-		{$user_editcontrol}	</div>
-	<div class="r-search-field">
-		{$user_editcontrol1}
-	</div>
-	
-</div>
-
-{END user_fieldblock}
-											
-{BEGIN provider_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_provider}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="provider{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="provider" data-fieldname="provider" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_provider}">
-		{$label public_hispmd_noti_view provider }	</label>
-	<div class="r-search-option">
-		{$searchtype_provider}
-	</div>
-	<div class="r-search-field">
-		{$provider_editcontrol}	</div>
-	<div class="r-search-field">
-		{$provider_editcontrol1}
-	</div>
-	
-</div>
-
-{END provider_fieldblock}
-											
-{BEGIN title_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_title}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="title{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="title" data-fieldname="title" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_title}">
-		{$label public_hispmd_noti_view title }	</label>
-	<div class="r-search-option">
-		{$searchtype_title}
-	</div>
-	<div class="r-search-field">
-		{$title_editcontrol}	</div>
-	<div class="r-search-field">
-		{$title_editcontrol1}
-	</div>
-	
-</div>
-
-{END title_fieldblock}
-											
-{BEGIN url_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_url}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="url{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="url" data-fieldname="url" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_url}">
-		{$label public_hispmd_noti_view url }	</label>
-	<div class="r-search-option">
-		{$searchtype_url}
-	</div>
-	<div class="r-search-field">
-		{$url_editcontrol}	</div>
-	<div class="r-search-field">
-		{$url_editcontrol1}
-	</div>
-	
-</div>
-
-{END url_fieldblock}
-											
-{BEGIN icon_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_icon}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="icon{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="icon" data-fieldname="icon" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_icon}">
-		{$label public_hispmd_noti_view icon }	</label>
-	<div class="r-search-option">
-		{$searchtype_icon}
-	</div>
-	<div class="r-search-field">
-		{$icon_editcontrol}	</div>
-	<div class="r-search-field">
-		{$icon_editcontrol1}
-	</div>
-	
-</div>
-
-{END icon_fieldblock}
-											
-{BEGIN created_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_created}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="created{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="created" data-fieldname="created" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_created}">
-		{$label public_hispmd_noti_view created }	</label>
-	<div class="r-search-option">
-		{$searchtype_created}
-	</div>
-	<div class="r-search-field">
-		{$created_editcontrol}	</div>
-	<div class="r-search-field">
-		{$created_editcontrol1}
-	</div>
-	
-</div>
-
-{END created_fieldblock}
-											
-{BEGIN expire_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_expire}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="expire{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="expire" data-fieldname="expire" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_expire}">
-		{$label public_hispmd_noti_view expire }	</label>
-	<div class="r-search-option">
-		{$searchtype_expire}
-	</div>
-	<div class="r-search-field">
-		{$expire_editcontrol}	</div>
-	<div class="r-search-field">
-		{$expire_editcontrol1}
-	</div>
-	
-</div>
-
-{END expire_fieldblock}
-											
-{BEGIN type_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_type}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="type{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="type" data-fieldname="type" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_type}">
-		{$label public_hispmd_noti_view type }	</label>
-	<div class="r-search-option">
-		{$searchtype_type}
-	</div>
-	<div class="r-search-field">
-		{$type_editcontrol}	</div>
-	<div class="r-search-field">
-		{$type_editcontrol1}
-	</div>
-	
-</div>
-
-{END type_fieldblock}
-											
-{BEGIN group_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_group}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="group{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="group" data-fieldname="group" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_group}">
-		{$label public_hispmd_noti_view group }	</label>
-	<div class="r-search-option">
-		{$searchtype_group}
-	</div>
-	<div class="r-search-field">
-		{$group_editcontrol}	</div>
-	<div class="r-search-field">
-		{$group_editcontrol1}
-	</div>
-	
-</div>
-
-{END group_fieldblock}
-	
-								</td>
+									</td>
 			{END cellblock_grid_c3}
 								</tr>
 			</tbody></table>

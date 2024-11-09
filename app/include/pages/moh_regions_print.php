@@ -2,8 +2,6 @@
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'public.moh_indicator_data' => array( 'displayPreview' => 1 ),
 'MOH_Indicators_Data_Report' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'MOH_Indicators_data_Chart' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'totals' => array( 'region_id' => array( 'totalsType' => '' ),
 'region_name' => array( 'totalsType' => '' ),
