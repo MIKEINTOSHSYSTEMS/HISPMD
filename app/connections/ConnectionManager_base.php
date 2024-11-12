@@ -350,6 +350,8 @@ class ConnectionManager_Base
 		$connectionsIds["public.moh_months"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_quarters"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.moh_period_types"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["DHIS2_Reporting_Rate_Details"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rate_Details_Chart"] = "devdhis2hispmdathispmdmerqcons";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

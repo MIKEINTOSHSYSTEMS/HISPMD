@@ -862,6 +862,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DHIS2_Reporting_Rate_Details")
+		{
+			return true;
+		}
+		if($table=="DHIS2_Reporting_Rate_Details_Chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1673,6 +1681,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="public.moh_period_types")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Reporting_Rate_Details")
+		{
+			return true;
+		}
+		if($table=="DHIS2_Reporting_Rate_Details_Chart")
 		{
 			return false;
 		}

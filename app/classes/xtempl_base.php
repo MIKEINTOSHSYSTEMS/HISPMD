@@ -182,6 +182,11 @@ class XTempl_Base
 				"chartName"=>"moh_indicators_data_values_chart1",
 				"table"=>"MoH_Indicators_Data_Values_Chart",
 				"ctype"=>"Line"));
+			$this->assign_function("dhis2_reporting_rate_details_chart_chart","xt_showchart",
+			array(
+				"chartName"=>"dhis2_reporting_rate_details_chart",
+				"table"=>"DHIS2_Reporting_Rate_Details_Chart",
+				"ctype"=>"2DColumn"));
 		}
 
 

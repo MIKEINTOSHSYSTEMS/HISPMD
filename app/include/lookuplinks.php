@@ -852,6 +852,34 @@ function InitLookupLinks()
 			$lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Period"] = array();
 		}
 		$lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Period"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Period", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
+			$lookupTableLinks["DHIS2_Datasets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_details.Dataset ID"] )) {
+			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_details.Dataset ID"] = array();
+		}
+		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_details.Dataset ID"]["edit"] = array("table" => "DHIS2_Reporting_Rate_Details", "field" => "Dataset ID", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details.Report Period"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details.Report Period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details.Report Period"]["edit"] = array("table" => "DHIS2_Reporting_Rate_Details", "field" => "Report Period", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
+			$lookupTableLinks["DHIS2_Datasets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_details_chart.Dataset ID"] )) {
+			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_details_chart.Dataset ID"] = array();
+		}
+		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reporting_rate_details_chart.Dataset ID"]["search"] = array("table" => "DHIS2_Reporting_Rate_Details_Chart", "field" => "Dataset ID", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details_chart.Report Period"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details_chart.Report Period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details_chart.Report Period"]["search"] = array("table" => "DHIS2_Reporting_Rate_Details_Chart", "field" => "Report Period", "page" => "search");
 }
 
 ?>

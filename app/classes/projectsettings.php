@@ -3736,6 +3736,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "moh_quarters" ] = "public.moh_quarters";
 	$projectEntities[ "public.moh_period_types" ] = array( "url" => "moh_period_types", "type" => 0 );
 	$projectEntitiesReverse[ "moh_period_types" ] = "public.moh_period_types";
+	$projectEntities[ "DHIS2_Reporting_Rate_Details" ] = array( "url" => "dhis2_reporting_rate_details", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_reporting_rate_details" ] = "DHIS2_Reporting_Rate_Details";
+	$projectEntities[ "DHIS2_Reporting_Rate_Details_Chart" ] = array( "url" => "dhis2_reporting_rate_details_chart", "type" => 11 );
+	$projectEntitiesReverse[ "dhis2_reporting_rate_details_chart" ] = "DHIS2_Reporting_Rate_Details_Chart";
 }
 
 function findTable( $table ) {

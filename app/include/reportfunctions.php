@@ -889,6 +889,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_Reporting_Rate_Details")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Reporting_Rate_Details_Chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1601,6 +1609,14 @@ function getCaptionTable($table)
 	if($table=="public.moh_period_types")
 	{
 		return GetTableCaption("public_moh_period_types");
+	}
+	if($table=="DHIS2_Reporting_Rate_Details")
+	{
+		return GetTableCaption("DHIS2_Reporting_Rate_Details");
+	}
+	if($table=="DHIS2_Reporting_Rate_Details_Chart")
+	{
+		return GetTableCaption("DHIS2_Reporting_Rate_Details_Chart");
 	}
 	return $table;
 }

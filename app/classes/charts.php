@@ -604,6 +604,10 @@ class Chart
 			return true;
 		if("public.moh_period_types" == $this->chrt_array['tables'][0])
 			return true;
+		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
+			return true;
+		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

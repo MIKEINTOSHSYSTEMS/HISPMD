@@ -430,6 +430,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_period_types" == $shortTName )
 		return true;
+	if ("dhis2_reporting_rate_details" == $shortTName )
+		return true;
+	if ("dhis2_reporting_rate_details_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1497,6 +1501,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.moh_period_types";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Reporting_Rate_Details");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Reporting_Rate_Details";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Reporting_Rate_Details_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Reporting_Rate_Details_Chart";
+	}
 	return $arr;
 }
 
@@ -1619,6 +1641,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_months";
 	$arr[]="public.moh_quarters";
 	$arr[]="public.moh_period_types";
+	$arr[]="DHIS2_Reporting_Rate_Details";
+	$arr[]="DHIS2_Reporting_Rate_Details_Chart";
 	return $arr;
 }
 
@@ -1680,6 +1704,8 @@ function GetChartType($shorttable)
 		return "2DColumn";
 	if($shorttable=="moh_indicators_data_values_chart1")
 		return "Line";
+	if($shorttable=="dhis2_reporting_rate_details_chart")
+		return "2DColumn";
 	return "";
 }
 
@@ -2825,6 +2851,16 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="public.moh_period_types" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Reporting_Rate_Details" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Reporting_Rate_Details_Chart" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

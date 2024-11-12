@@ -1,0 +1,163 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel DHIS2_Reporting_Rate_Details export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Organisation_unit_ID_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Organisation_unit_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Organisation_unit_code_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Organisation_unit_description_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Actual_reports_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Expected_reports_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Reporting_rate_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Actual_reports_on_time_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Reporting_rate_on_time_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Dataset_ID_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Dataset_Name_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

@@ -1607,6 +1607,10 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.moh_period_types" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("DHIS2_Reporting_Rate" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("DHIS2_Reporting_Rate" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	
