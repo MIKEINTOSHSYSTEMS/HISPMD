@@ -4564,7 +4564,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #001f3f;
+  background-color: #00274ce9;
+    /* #001f3f;*/
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
@@ -4584,13 +4585,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #fff;
-  background-color: #00060c;
+  background-color: #1a242f;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #00060c;
+  background-color: #1a242f;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4599,11 +4600,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #00060c;
+  border-color: #1a242f;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #00060c;
+  background-color: #1a242f;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
@@ -4615,7 +4616,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #00060c;
+  background-color: #1a242f;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -4625,13 +4626,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #fff;
-    background-color: #00060c;
+    background-color: #1a242f;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
-    background-color: #00060c;
+    background-color: #1a242f;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -6825,7 +6826,7 @@ button.close {
 }
 .navbar-default .badge {
   background-color: #fff;
-  color: #001f3f;
+  color: #2c3e50;
 }
 .navbar-inverse .badge {
   background-color: #fff;
@@ -8180,7 +8181,7 @@ td::before {
 }
 @media screen and (max-width: 767px) {
   .r-leftbar-top-page [data-logo-cell] {
-    background: #001f3f;
+    background: #2c3e50;
   }
   .r-leftbar-top-page [data-logo-cell] > .navbar-header {
     display: block;
@@ -9117,7 +9118,7 @@ td::before {
 }
 .bs-welcome-item[data-comment-len="0"] > .bs-welcome-header,
 .bs-welcome-header:last-child {
-  border-radius: 27px;
+  border-radius: 4px;
   border-bottom: solid #d8d8d8 1px;
 }
 .welcome-group {
@@ -9630,11 +9631,7 @@ td.bs-details-opened.bs-details-opened.bs-details-opened {
   color: rgba(255, 255, 255, 0.75);
 }
 .navbar.navbar-default {
-  background-image: -webkit-linear-gradient(#003368, #001f3f 60%, #00152b);
-  background-image: -o-linear-gradient(#003368, #001f3f 60%, #00152b);
-  background-image: linear-gradient(#003368, #001f3f 60%, #00152b);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff003368', endColorstr='#ff00152b', GradientType=0);
+  background-image: none;
 }
 .navbar .open > a:hover {
   color: #fff;
@@ -9651,6 +9648,59 @@ td.bs-details-opened.bs-details-opened.bs-details-opened {
 }
 .navbar a:hover {
   color: #fff;
+}
+.navbar .btn.btn.btn {
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.navbar .btn.btn.btn:hover,
+.navbar .btn.btn.btn:focus {
+  color: #fff;
+}
+.navbar .btn.btn.btn .caret {
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
+.navbar .input-group {
+  background: #33485d;
+  border-radius: 4px;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+.navbar .input-group:focus-within {
+  background: #354b60;
+}
+.navbar .input-group:focus-within .btn.btn {
+  color: #ffffff;
+}
+.navbar .input-group .form-control.form-control,
+.navbar .input-group .btn.btn {
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 4px 8px;
+  height: auto;
+}
+.navbar .input-group .form-control.form-control::placeholder,
+.navbar .input-group .btn.btn::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.navbar .input-group .form-control.form-control:focus,
+.navbar .input-group .btn.btn:focus {
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+.navbar .input-group .form-control.form-control:focus::placeholder,
+.navbar .input-group .btn.btn:focus::placeholder {
+  color: #ffffff;
+}
+.navbar .input-group .btn {
+  font-weight: bold;
 }
 @media print, (min-width: 768px) {
   .r-topbar-page h2 {
@@ -11656,7 +11706,7 @@ However there might have been the case where dropdown showed up where it shouldn
     transform: rotate(-0.25turn);
   }
   [data-location="supertop"] .open > .dropdown-menu {
-    background-color: #002c59;
+    background-color: #354b60;
     padding-top: 0;
     padding-bottom: 0;
   }

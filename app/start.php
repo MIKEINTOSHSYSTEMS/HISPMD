@@ -321,18 +321,21 @@ document.write(getGreeting());
 }
   </style>
   <br>
+  <br>
+  <p>Currently Undergoing System Testing</p>
+  <br>
 
         <!-- partial:index.partial.html -->
         <h1>📅</h1> 
         <h1>Days Remaing Until... </h1>
-        <br>
-        <br>
+        <!--
 <h2>🧪Testing Day</h2>
 <time class="countdown" date-time="2024-09-27 00:00:00" style="--accent: #3a89db"></time>
+-->
 <br>
 <br>
 <h2>🚀System Launch Day</h2>
-<time class="countdown" date-time="2024-11-07 00:00:00" style="--accent: green"></time>
+<time class="countdown" date-time="2024-12-12 00:00:00" style="--accent: green"></time>
 <!-- partial -->
   <script  src="../../calendar/countdown/script.js"></script>
 

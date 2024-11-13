@@ -766,10 +766,10 @@ $ajaxSearchStartsWith = true;
 
 
 $globalSettings["LandingPageType"] = 1;
-$globalSettings["LandingTable"] = "";
-$globalSettings["LandingPage"] = "menu";
-$globalSettings["LandingURL"] = "menu.php?page=menu";
-$globalSettings["LandingPageId"] = "menu";
+$globalSettings["LandingTable"] = "HISPMD_MOH_Indicators_Dashboard";
+$globalSettings["LandingPage"] = "dashboard";
+$globalSettings["LandingURL"] = "hispmd_moh_indicators_dashboard_dashboard.php?page=hispmd_dashboard";
+$globalSettings["LandingPageId"] = "hispmd_dashboard";
 
 $globalSettings["ProjectLogo"] = array();
 $globalSettings["ProjectLogo"]["Amharic"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
@@ -908,9 +908,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "714_1731163434";
+$projectBuildKey = "715_1731163434";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "714";
+$projectBuildNumber = "715";
 
 $mlang_messages = array();
 $mlang_charsets = array();

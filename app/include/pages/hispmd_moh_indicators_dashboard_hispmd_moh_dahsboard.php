@@ -74,7 +74,7 @@
 'type' => 'dashboard',
 'layoutId' => 'leftbar',
 'disabled' => 0,
-'default' => 11,
+'default' => -1,
 'forms' => array( 'grid' => array( 'modelId' => 'dashboard-grid',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ),
 array( 'cell' => 'c' ) ),

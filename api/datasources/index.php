@@ -106,10 +106,10 @@
         <!-- Nav Tabs -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Info</button>
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Dashboard</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Dashboard</button>
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Info</button>
             </li>
 <!--
             <li class="nav-item" role="presentation">
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                             <!-- Iframe -->
-                            <iframe id="iframe-home" src="./sources.php" onload="hideSpinner('home')"></iframe>
+                            <iframe id="iframe-home" src="../meta/main.php" onload="hideSpinner('home')"></iframe>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                                 </div>
                             </div>
                             <!-- Iframe -->
-                            <iframe id="iframe-profile" src="../meta/main.php" onload="hideSpinner('profile')"></iframe>
+                            <iframe id="iframe-profile" src="./sources.php" onload="hideSpinner('profile')"></iframe>
                         </div>
                     </div>
                 </div>
