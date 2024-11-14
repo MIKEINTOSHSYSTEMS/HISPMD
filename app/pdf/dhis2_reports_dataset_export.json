@@ -1,0 +1,178 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel DHIS2_Reports_DataSet export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Hospital_by_ownership_ID_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Hospital_by_ownership_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Ownership_ID_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Ownership_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Clinics_by_Type_ID_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Clinics_by_Type_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Facility_Type_ID_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Health_Post_Type_ID_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Health_Post_Type_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Hospital_Type_ID_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Hospital_Type_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Rural_ID_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Rural_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Settlement_ID_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Settlement_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Woreda_Type_ID_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$Woreda_Type_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

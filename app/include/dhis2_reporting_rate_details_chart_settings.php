@@ -2160,18 +2160,6 @@ $tdatadhis2_reporting_rate_details_chart[".chartLabelInterval"] = 0;
 $tdatadhis2_reporting_rate_details_chart[".chartLabelField"] = "Organisation unit";
 $tdatadhis2_reporting_rate_details_chart[".chartSeries"] = array();
 $tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
-	"field" => "actual reports",
-	"total" => "AVG"
-);
-$tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
-	"field" => "actual reports on time",
-	"total" => "AVG"
-);
-$tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
-	"field" => "expected reports",
-	"total" => "AVG"
-);
-$tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
 	"field" => "reporting rate",
 	"total" => "AVG"
 );
@@ -2189,21 +2177,12 @@ $tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
 
 		<attr value="parameters">';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="0">
-			<attr value="name">actual reports</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="1">
-			<attr value="name">actual reports on time</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="2">
-			<attr value="name">expected reports</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="3">
 			<attr value="name">reporting rate</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="4">
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="1">
 			<attr value="name">reporting rate on time</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
-	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="5">
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="2">
 		<attr value="name">Organisation unit</attr>
 	</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>

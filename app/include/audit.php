@@ -870,6 +870,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DHIS2_ReportingRate")
+		{
+			return true;
+		}
+		if($table=="DHIS2_Reports_DataSet")
+		{
+			return true;
+		}
+		if($table=="DHIS2_ReportingRate_Chart")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1689,6 +1701,18 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="DHIS2_Reporting_Rate_Details_Chart")
+		{
+			return false;
+		}
+		if($table=="DHIS2_ReportingRate")
+		{
+			return true;
+		}
+		if($table=="DHIS2_Reports_DataSet")
+		{
+			return true;
+		}
+		if($table=="DHIS2_ReportingRate_Chart")
 		{
 			return false;
 		}

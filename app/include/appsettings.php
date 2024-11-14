@@ -106,6 +106,8 @@ $custom_labels["Amharic"] = array();
 ";
 		$custom_labels["Amharic"]['START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH'] = "START HERE by Selecting an Dataset, Facility Type and then Report Period the and Click on SEARCH";
 		$custom_labels["Amharic"]['AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_'] = "After Selecting from the above Available Datasets and Facility Types, you can use the FILTER below to narrow down your search results by Org Units!";
+		$custom_labels["Amharic"]['___'] = "⬅️";
+		$custom_labels["Amharic"]['_BR__BR__BR_'] = "<br><br><br>";
 	$custom_labels["English"] = array();
 		$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
 <html lang=\"en\">
@@ -202,6 +204,8 @@ How can we help you?
 ";
 		$custom_labels["English"]['START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH'] = "START HERE by Selecting an Dataset, Facility Type and then Report Period the and Click on SEARCH";
 		$custom_labels["English"]['AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_'] = "After Selecting from the above Available Datasets and Facility Types, you can use the FILTER below to narrow down your search results by Org Units!";
+		$custom_labels["English"]['___'] = "⬅️";
+		$custom_labels["English"]['_BR__BR__BR_'] = "<br><br>";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -908,9 +912,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "715_1731163434";
+$projectBuildKey = "723_1731163434";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "715";
+$projectBuildNumber = "723";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1048,6 +1052,9 @@ $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["English"]["DHIS2_Reporting_Rate_Details"] = "DHIS2 Reporting Rate Details";
 $tableCaptions["English"]["DHIS2_Reporting_Rate_Details_Chart"] = "DHIS2 Reporting Rate Details Chart";
+$tableCaptions["English"]["DHIS2_ReportingRate"] = "DHIS2 ReportingRate";
+$tableCaptions["English"]["DHIS2_Reports_DataSet"] = "DHIS2 Reports DataSet";
+$tableCaptions["English"]["DHIS2_ReportingRate_Chart"] = "DHIS2 ReportingRate Chart";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1165,6 +1172,9 @@ $tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web
 $tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 $tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Details"] = "DHIS2 Reporting Rate Details";
 $tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Details_Chart"] = "DHIS2 Reporting Rate Details Chart";
+$tableCaptions["Amharic"]["DHIS2_ReportingRate"] = "DHIS2 ReportingRate";
+$tableCaptions["Amharic"]["DHIS2_Reports_DataSet"] = "DHIS2 Reports DataSet";
+$tableCaptions["Amharic"]["DHIS2_ReportingRate_Chart"] = "DHIS2 ReportingRate Chart";
 
 
 $globalEvents = new class_GlobalEvents;

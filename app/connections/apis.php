@@ -46,6 +46,8 @@ class RestManager
 		$connectionsIds["DHIS2_OrgUnit_Distributions"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_OrgUnits_Distribution"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Details"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_ReportingRate"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reports_DataSet"] = "devdhis2hispmdathispmdmerqcons";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 

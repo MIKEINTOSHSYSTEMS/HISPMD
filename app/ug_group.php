@@ -130,6 +130,9 @@ $nonAdminTablesArr[] = "public.moh_quarters";
 $nonAdminTablesArr[] = "public.moh_period_types";
 $nonAdminTablesArr[] = "DHIS2_Reporting_Rate_Details";
 $nonAdminTablesArr[] = "DHIS2_Reporting_Rate_Details_Chart";
+$nonAdminTablesArr[] = "DHIS2_ReportingRate";
+$nonAdminTablesArr[] = "DHIS2_Reports_DataSet";
+$nonAdminTablesArr[] = "DHIS2_ReportingRate_Chart";
 
 $ug_connection = $cman->getForUserGroups();
 

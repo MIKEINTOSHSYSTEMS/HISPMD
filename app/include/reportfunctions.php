@@ -897,6 +897,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS2_ReportingRate")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Reports_DataSet")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_ReportingRate_Chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1617,6 +1629,18 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Reporting_Rate_Details_Chart")
 	{
 		return GetTableCaption("DHIS2_Reporting_Rate_Details_Chart");
+	}
+	if($table=="DHIS2_ReportingRate")
+	{
+		return GetTableCaption("DHIS2_ReportingRate");
+	}
+	if($table=="DHIS2_Reports_DataSet")
+	{
+		return GetTableCaption("DHIS2_Reports_DataSet");
+	}
+	if($table=="DHIS2_ReportingRate_Chart")
+	{
+		return GetTableCaption("DHIS2_ReportingRate_Chart");
 	}
 	return $table;
 }

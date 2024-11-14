@@ -608,6 +608,12 @@ class Chart
 			return true;
 		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
 			return true;
+		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
+			return true;
+		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
+			return true;
+		if("DHIS2_Reporting_Rate" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

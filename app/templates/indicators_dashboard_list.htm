@@ -740,120 +740,6 @@
 
 
 
-{BEGIN filter_control_Indicator_Group}
-
-	<div class="dropdown filter-field filter-Indicator_Group-container" {BEGIN filter_selected_Indicator_Group} data-selected {END filter_selected_Indicator_Group}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_Indicator_Group}
-			<a href="#" class="filter-clear filter-clear-Indicator_Group" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_Indicator_Group}
-			<span class="r-filter-field">{$label Indicators_Dashboard Indicator_Group }				{BEGIN filter_selected_Indicator_Group}:{END filter_selected_Indicator_Group}
-			</span>
-			{BEGIN filter_selected_Indicator_Group}
-			<span class="r-filter-value">{$filtervalue_Indicator_Group}</span>
-			{END filter_selected_Indicator_Group}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_Indicator_Group}
-		<li class=" filter-values filter-values-Indicator_Group  {$visibilityClass_Indicator_Group}">
-			{$Indicator_Group_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_Indicator_Group}
-
-			{BEGIN filter_button_showmore_Indicator_Group}
-		<li class=" filter-show-more {$collapsedClass_Indicator_Group} {$showMoreBtnClass_Indicator_Group}">
-			<a class="filter-show-more-link filterShowMore_Indicator_Group" href="#">{$show_n_more_Indicator_Group}</a>
-		</li>
-		{END filter_button_showmore_Indicator_Group}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_Indicator_Group}
-
-
-
-
-
-
-{BEGIN filter_control_Indicator_Name}
-
-	<div class="dropdown filter-field filter-Indicator_Name-container" {BEGIN filter_selected_Indicator_Name} data-selected {END filter_selected_Indicator_Name}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_Indicator_Name}
-			<a href="#" class="filter-clear filter-clear-Indicator_Name" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_Indicator_Name}
-			<span class="r-filter-field">{$label Indicators_Dashboard Indicator_Name }				{BEGIN filter_selected_Indicator_Name}:{END filter_selected_Indicator_Name}
-			</span>
-			{BEGIN filter_selected_Indicator_Name}
-			<span class="r-filter-value">{$filtervalue_Indicator_Name}</span>
-			{END filter_selected_Indicator_Name}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_Indicator_Name}
-		<li class=" filter-values filter-values-Indicator_Name  {$visibilityClass_Indicator_Name}">
-			{$Indicator_Name_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_Indicator_Name}
-
-			{BEGIN filter_button_showmore_Indicator_Name}
-		<li class=" filter-show-more {$collapsedClass_Indicator_Name} {$showMoreBtnClass_Indicator_Name}">
-			<a class="filter-show-more-link filterShowMore_Indicator_Name" href="#">{$show_n_more_Indicator_Name}</a>
-		</li>
-		{END filter_button_showmore_Indicator_Name}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_Indicator_Name}
-
-
-
-
-
-
 {BEGIN filter_control_Data_Source}
 
 	<div class="dropdown filter-field filter-Data_Source-container" {BEGIN filter_selected_Data_Source} data-selected {END filter_selected_Data_Source}>
@@ -876,8 +762,6 @@
 		<li class=" filter-values filter-values-Data_Source  {$visibilityClass_Data_Source}">
 			{$Data_Source_filter}
 						
-					
-					
 					
 					
 					
@@ -943,8 +827,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_Scope}
 
@@ -990,8 +872,6 @@
 		<li class=" filter-values filter-values-Region  {$visibilityClass_Region}">
 			{$Region_filter}
 						
-					
-					
 					
 					
 					
@@ -1057,8 +937,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_Administration_Unit}
 
@@ -1104,8 +982,6 @@
 		<li class=" filter-values filter-values-Facility_Type  {$visibilityClass_Facility_Type}">
 			{$Facility_Type_filter}
 						
-					
-					
 					
 					
 					
@@ -1171,8 +1047,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_Gender_Sex}
 
@@ -1218,8 +1092,6 @@
 		<li class=" filter-values filter-values-Period_ID  {$visibilityClass_Period_ID}">
 			{$Period_ID_filter}
 						
-					
-					
 					
 					
 					
@@ -1285,8 +1157,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_Month_ID}
 
@@ -1332,8 +1202,6 @@
 		<li class=" filter-values filter-values-Quarter_ID  {$visibilityClass_Quarter_ID}">
 			{$Quarter_ID_filter}
 						
-					
-					
 					
 					
 					
@@ -1399,8 +1267,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_Year}
 
@@ -1446,8 +1312,6 @@
 		<li class=" filter-values filter-values-Period  {$visibilityClass_Period}">
 			{$Period_filter}
 						
-					
-					
 					
 					
 					

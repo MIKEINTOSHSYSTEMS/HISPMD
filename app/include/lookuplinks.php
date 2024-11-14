@@ -880,6 +880,48 @@ function InitLookupLinks()
 			$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details_chart.Report Period"] = array();
 		}
 		$lookupTableLinks["public.dhis2_periods"]["dhis2_reporting_rate_details_chart.Report Period"]["search"] = array("table" => "DHIS2_Reporting_Rate_Details_Chart", "field" => "Report Period", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Regions"] ) ) {
+			$lookupTableLinks["DHIS2_OrgUnit_Regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Regions"]["dhis2_reportingrate.Organisation unit"] )) {
+			$lookupTableLinks["DHIS2_OrgUnit_Regions"]["dhis2_reportingrate.Organisation unit"] = array();
+		}
+		$lookupTableLinks["DHIS2_OrgUnit_Regions"]["dhis2_reportingrate.Organisation unit"]["edit"] = array("table" => "DHIS2_ReportingRate", "field" => "Organisation unit", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
+			$lookupTableLinks["DHIS2_Datasets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate.Dataset ID"] )) {
+			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate.Dataset ID"] = array();
+		}
+		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate.Dataset ID"]["edit"] = array("table" => "DHIS2_ReportingRate", "field" => "Dataset ID", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate.Report Period"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate.Report Period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate.Report Period"]["edit"] = array("table" => "DHIS2_ReportingRate", "field" => "Report Period", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Regions"] ) ) {
+			$lookupTableLinks["DHIS2_OrgUnit_Regions"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Regions"]["dhis2_reportingrate_chart.Organisation unit"] )) {
+			$lookupTableLinks["DHIS2_OrgUnit_Regions"]["dhis2_reportingrate_chart.Organisation unit"] = array();
+		}
+		$lookupTableLinks["DHIS2_OrgUnit_Regions"]["dhis2_reportingrate_chart.Organisation unit"]["search"] = array("table" => "DHIS2_ReportingRate_Chart", "field" => "Organisation unit", "page" => "search");
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
+			$lookupTableLinks["DHIS2_Datasets"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate_chart.Dataset ID"] )) {
+			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate_chart.Dataset ID"] = array();
+		}
+		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate_chart.Dataset ID"]["search"] = array("table" => "DHIS2_ReportingRate_Chart", "field" => "Dataset ID", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate_chart.Report Period"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate_chart.Report Period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate_chart.Report Period"]["search"] = array("table" => "DHIS2_ReportingRate_Chart", "field" => "Report Period", "page" => "search");
 }
 
 ?>

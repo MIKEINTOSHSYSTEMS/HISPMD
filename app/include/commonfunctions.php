@@ -434,6 +434,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("dhis2_reporting_rate_details_chart" == $shortTName )
 		return true;
+	if ("dhis2_reportingrate" == $shortTName )
+		return true;
+	if ("dhis2_reports_dataset" == $shortTName )
+		return true;
+	if ("dhis2_reportingrate_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1519,6 +1525,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Reporting_Rate_Details_Chart";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_ReportingRate");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_ReportingRate";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Reports_DataSet");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Reports_DataSet";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_ReportingRate_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_ReportingRate_Chart";
+	}
 	return $arr;
 }
 
@@ -1643,6 +1676,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.moh_period_types";
 	$arr[]="DHIS2_Reporting_Rate_Details";
 	$arr[]="DHIS2_Reporting_Rate_Details_Chart";
+	$arr[]="DHIS2_ReportingRate";
+	$arr[]="DHIS2_Reports_DataSet";
+	$arr[]="DHIS2_ReportingRate_Chart";
 	return $arr;
 }
 
@@ -1705,6 +1741,8 @@ function GetChartType($shorttable)
 	if($shorttable=="moh_indicators_data_values_chart1")
 		return "Line";
 	if($shorttable=="dhis2_reporting_rate_details_chart")
+		return "2DColumn";
+	if($shorttable=="dhis2_reportingrate_chart")
 		return "2DColumn";
 	return "";
 }
@@ -2861,6 +2899,21 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_Reporting_Rate_Details_Chart" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_ReportingRate" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Reports_DataSet" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_ReportingRate_Chart" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
