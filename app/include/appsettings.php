@@ -912,9 +912,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "723_1731163434";
+$projectBuildKey = "727_1731163434";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "723";
+$projectBuildNumber = "727";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1055,6 +1055,8 @@ $tableCaptions["English"]["DHIS2_Reporting_Rate_Details_Chart"] = "DHIS2 Reporti
 $tableCaptions["English"]["DHIS2_ReportingRate"] = "DHIS2 ReportingRate";
 $tableCaptions["English"]["DHIS2_Reports_DataSet"] = "DHIS2 Reports DataSet";
 $tableCaptions["English"]["DHIS2_ReportingRate_Chart"] = "DHIS2 ReportingRate Chart";
+$tableCaptions["English"]["DHIS2_ReportingRates"] = "DHIS2 ReportingRates";
+$tableCaptions["English"]["DHIS2_AnalyticsReport"] = "DHIS2 AnalyticsReport";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1175,6 +1177,8 @@ $tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Details_Chart"] = "DHIS2 Reporti
 $tableCaptions["Amharic"]["DHIS2_ReportingRate"] = "DHIS2 ReportingRate";
 $tableCaptions["Amharic"]["DHIS2_Reports_DataSet"] = "DHIS2 Reports DataSet";
 $tableCaptions["Amharic"]["DHIS2_ReportingRate_Chart"] = "DHIS2 ReportingRate Chart";
+$tableCaptions["Amharic"]["DHIS2_ReportingRates"] = "DHIS2 ReportingRates";
+$tableCaptions["Amharic"]["DHIS2_AnalyticsReport"] = "DHIS2 AnalyticsReport";
 
 
 $globalEvents = new class_GlobalEvents;

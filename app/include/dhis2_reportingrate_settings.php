@@ -532,7 +532,7 @@ $tdatadhis2_reportingrate[".hideMobileList"] = array();
 
 	
 		
-	$edata["LinkField"] = "id";
+	$edata["LinkField"] = "displayName";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "displayName";
 

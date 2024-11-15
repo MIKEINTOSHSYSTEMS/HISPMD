@@ -1,0 +1,1461 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption DHIS2_ReportingRates}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel DHIS2_ReportingRates list}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+															{BEGIN row_grid_0}
+							+1
+						{END row_grid_0}
+													{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														{BEGIN col_grid_0}
+					"%",
+					{END col_grid_0}
+										{BEGIN col_grid_1}
+					"%",
+					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
+										{BEGIN col_grid_3}
+					"%",
+					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
+										{BEGIN col_grid_5}
+					"%",
+					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+															],
+											heights: [ // first height for header part
+					"%",
+																		{BEGIN row_grid_0}
+							"%",
+							{END row_grid_0}
+																							 	{BEGIN grid_row}
+													{BEGIN row_grid_1}
+							"%",
+							{END row_grid_1}
+													{END grid_row}
+																								{BEGIN row_grid_2}
+							"%",
+							{END row_grid_2}
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: {$formwidth_grid},
+							border:[false, false,false,false],
+							stack: [
+
+																										
+''
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"👈","color":"#00b5ff","hidden":"{$item_hide_text11}","bold":true,"isHtml":true},
+				
+				
+			{"text":"{$custom START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH}","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c5',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$custom _BR__BR__BR_}","hidden":"{$item_hide_text12}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$custom AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_}","hidden":"{$item_hide_text1}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text9}","isHtml":true},
+				
+				
+			{"text":"<br><br><br>","hidden":"{$item_hide_text8}","isHtml":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"<br>","hidden":"{$item_hide_text10}","isHtml":true},
+				
+				
+			{"text":"DHIS2 Reporting Rate Details","hidden":"{$item_hide_text2}","italics":true,"bold":true,"isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c6',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																	
+
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_headcell_checkbox}
+{
+	cellId: 'headcell_checkbox',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_checkbox_head}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_checkbox}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Organisation_unit',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_ReportingRates Organisation_unit }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Organisation_unit_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'Dataset_ID',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_ReportingRates Dataset_ID }","hidden":"{$item_hide_grid_field_label9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dataset_ID_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field14}
+{
+	cellId: 'headcell_field14',
+	col:0,
+	row:0,
+			fieldName: 'Facility_Type',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_ReportingRates Facility_Type }","hidden":"{$item_hide_grid_field_label11}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Facility_Type_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field17}
+{
+	cellId: 'headcell_field17',
+	col:0,
+	row:0,
+			fieldName: 'Ownership_Type_Label',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_ReportingRates Ownership_Type_Label }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Ownership_Type_Label_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field20}
+{
+	cellId: 'headcell_field20',
+	col:0,
+	row:0,
+			fieldName: 'Settlement_Type_Label',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_ReportingRates Settlement_Type_Label }","hidden":"{$item_hide_grid_field_label3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Settlement_Type_Label_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field20}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Report_Period',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel DHIS2_ReportingRates Report_Period }","hidden":"{$item_hide_grid_field_label12}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Report_Period_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"Actual Reports","hidden":"{$item_hide_text3}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"Expected Reports","hidden":"{$item_hide_text4}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"Reporting Rate (%)","hidden":"{$item_hide_text5}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"Actual Reports On Time","hidden":"{$item_hide_text6}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"Reporting Rate On Time (%)","hidden":"{$item_hide_text7}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+											],
+				{END row_grid_0}
+		
+			
+		{BEGIN grid_row}
+	{BEGIN grid_record}
+				
+				{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_checkbox}
+{
+	cellId: 'cell_checkbox',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_checkbox}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_checkbox}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Organisation_unit',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Organisation_unit_pdfvalue},"color":"#337ab7","hidden":"{$item_hide_grid_field1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Organisation_unit_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Dataset_ID',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Dataset_ID_pdfvalue},"hidden":"{$item_hide_grid_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dataset_ID_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field15}
+{
+	cellId: 'headcell_field15',
+	col:0,
+	row:0,
+			fieldName: 'Facility_Type',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_grid_field11}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Facility_Type_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field18}
+{
+	cellId: 'headcell_field18',
+	col:0,
+	row:0,
+			fieldName: 'Ownership_Type_Label',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Ownership_Type_Label_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Ownership_Type_Label_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field21}
+{
+	cellId: 'headcell_field21',
+	col:0,
+	row:0,
+			fieldName: 'Settlement_Type_Label',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Settlement_Type_Label_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Settlement_Type_Label_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field21}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Report_Period',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Report_Period_pdfvalue},"hidden":"{$item_hide_grid_field12}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Report_Period_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'actual_reports',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$actual_reports_pdfvalue},"hidden":"{$item_hide_grid_field4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'expected_reports',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$expected_reports_pdfvalue},"hidden":"{$item_hide_grid_field5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'reporting_rate',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$reporting_rate_pdfvalue},"hidden":"{$item_hide_grid_field6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+      fillColor: '#e7feff',        "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'actual_reports_on_time',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$actual_reports_on_time_pdfvalue},"hidden":"{$item_hide_grid_field7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'reporting_rate_on_time',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$reporting_rate_on_time_pdfvalue},"hidden":"{$item_hide_grid_field8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+      fillColor: '#e7feff',        "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+											],
+				{END row_grid_1}
+		
+		{END grid_record}
+	{END grid_row}
+			
+					
+				{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_footcell_checkbox}
+{
+	cellId: 'footcell_checkbox',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_checkbox}
+																							{BEGIN cellblock_grid_footcell_field1}
+{
+	cellId: 'footcell_field1',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field16}
+{
+	cellId: 'headcell_field16',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field19}
+{
+	cellId: 'headcell_field19',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field19}
+																							{BEGIN cellblock_grid_headcell_field22}
+{
+	cellId: 'headcell_field22',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field22}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_footcell_field4}
+{
+	cellId: 'footcell_field4',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field4}
+																							{BEGIN cellblock_grid_footcell_field5}
+{
+	cellId: 'footcell_field5',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field5}
+																							{BEGIN cellblock_grid_footcell_field6}
+{
+	cellId: 'footcell_field6',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field6}
+																							{BEGIN cellblock_grid_footcell_field7}
+{
+	cellId: 'footcell_field7',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field7}
+																							{BEGIN cellblock_grid_footcell_field8}
+{
+	cellId: 'footcell_field8',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field8}
+											],
+				{END row_grid_2}
+		
+				
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	}
