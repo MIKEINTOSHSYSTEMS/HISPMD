@@ -736,128 +736,6 @@
 
 
 
-{BEGIN filter_control_indicator_group_id}
-
-	<div class="dropdown filter-field filter-indicator_group_id-container" {BEGIN filter_selected_indicator_group_id} data-selected {END filter_selected_indicator_group_id}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-						{BEGIN clearLink_indicator_group_id}
-			<a href="#" class="filter-clear filter-clear-indicator_group_id" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_indicator_group_id}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report indicator_group_id }				{BEGIN filter_selected_indicator_group_id}:{END filter_selected_indicator_group_id}
-			</span>
-			{BEGIN filter_selected_indicator_group_id}
-			<span class="r-filter-value">{$filtervalue_indicator_group_id}</span>
-			{END filter_selected_indicator_group_id}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_indicator_group_id}
-		<li class=" filter-values filter-values-indicator_group_id  {$visibilityClass_indicator_group_id}">
-			{$indicator_group_id_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_indicator_group_id}
-
-			{BEGIN filter_button_showmore_indicator_group_id}
-		<li class=" filter-show-more {$collapsedClass_indicator_group_id} {$showMoreBtnClass_indicator_group_id}">
-			<a class="filter-show-more-link filterShowMore_indicator_group_id" href="#">{$show_n_more_indicator_group_id}</a>
-		</li>
-		{END filter_button_showmore_indicator_group_id}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_indicator_group_id}
-
-
-
-
-
-
-{BEGIN filter_control_indicator_id}
-
-	<div class="dropdown filter-field filter-indicator_id-container" {BEGIN filter_selected_indicator_id} data-selected {END filter_selected_indicator_id}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-indicator_id" type="checkbox" name="selectAll" {$selectAll_attrs_indicator_id} />
-						{BEGIN clearLink_indicator_id}
-			<a href="#" class="filter-clear filter-clear-indicator_id" title="{mlang_message FILTER_CLEAR}">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_indicator_id}
-			<span class="r-filter-field">{$label MOH_Indicators_Data_Report indicator_id }				{BEGIN filter_selected_indicator_id}:{END filter_selected_indicator_id}
-			</span>
-			{BEGIN filter_selected_indicator_id}
-			<span class="r-filter-value">{$filtervalue_indicator_id}</span>
-			{END filter_selected_indicator_id}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_indicator_id}
-		<li class=" filter-values filter-values-indicator_id  {$visibilityClass_indicator_id}">
-			{$indicator_id_filter}
-						
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_indicator_id}
-
-			{BEGIN filter_button_showmore_indicator_id}
-		<li class=" filter-show-more {$collapsedClass_indicator_id} {$showMoreBtnClass_indicator_id}">
-			<a class="filter-show-more-link filterShowMore_indicator_id" href="#">{$show_n_more_indicator_id}</a>
-		</li>
-		{END filter_button_showmore_indicator_id}
-	
-
-
-	
-
-			{BEGIN filter_button_multiselect_indicator_id}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_indicator_id}">
-			<a href="#" class="filter-indicator_id-btn-multiselect filter-apply-indicator_id" {$filterbutton_attrs_indicator_id}>{mlang_message FILTER_MULTISELECT}</a>
-		</li>
-		{END filter_button_multiselect_indicator_id}
-			</ul>
-	</div>
-
-{END filter_control_indicator_id}
-
-
-
-
-
-
 {BEGIN filter_control_data_source_id}
 
 	<div class="dropdown filter-field filter-data_source_id-container" {BEGIN filter_selected_data_source_id} data-selected {END filter_selected_data_source_id}>
@@ -881,8 +759,6 @@
 		<li class=" filter-values filter-values-data_source_id  {$visibilityClass_data_source_id}">
 			{$data_source_id_filter}
 						
-					
-					
 					
 					
 					
@@ -955,8 +831,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_data_source_detail}
 
@@ -1003,8 +877,6 @@
 		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
 			{$scope_id_filter}
 						
-					
-					
 					
 					
 					
@@ -1078,8 +950,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_region_id}
 
@@ -1131,8 +1001,6 @@
 		<li class=" filter-values filter-values-unit_id  {$visibilityClass_unit_id}">
 			{$unit_id_filter}
 						
-					
-					
 					
 					
 					
@@ -1206,8 +1074,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_facility_type_id}
 
@@ -1259,8 +1125,6 @@
 		<li class=" filter-values filter-values-gender_sex  {$visibilityClass_gender_sex}">
 			{$gender_sex_filter}
 						
-					
-					
 					
 					
 					
@@ -1333,8 +1197,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_period_id}
 
@@ -1391,8 +1253,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_month_id}
 
@@ -1438,8 +1298,6 @@
 		<li class=" filter-values filter-values-quarter_id  {$visibilityClass_quarter_id}">
 			{$quarter_id_filter}
 						
-					
-					
 					
 					
 					
@@ -1508,8 +1366,6 @@
 					
 					
 					
-					
-					
 					</li>
 		{END filterCtrlBlock_year}
 
@@ -1560,8 +1416,6 @@
 		<li class=" filter-values filter-values-period  {$visibilityClass_period}">
 			{$period_filter}
 						
-					
-					
 					
 					
 					
