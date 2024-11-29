@@ -297,11 +297,21 @@ $tdatamoh_indicators_data_chart[".noRecordsFirstPage"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY TO_DATE(\"year\"::text, 'YYYY')";
+$tstrOrderBy = "ORDER BY TO_DATE(\"year\"::text, 'YYYY'), CASE 
+        WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)
+        WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)
+        ELSE \"year\"::TEXT
+    END";
 $tdatamoh_indicators_data_chart[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamoh_indicators_data_chart[".orderindexes"] = array();
 	$tdatamoh_indicators_data_chart[".orderindexes"][] = array(12, (1 ? "ASC" : "DESC"), "TO_DATE(\"year\"::text, 'YYYY')");
+
+	$tdatamoh_indicators_data_chart[".orderindexes"][] = array(17, (1 ? "ASC" : "DESC"), "CASE 
+        WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)
+        WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)
+        ELSE \"year\"::TEXT
+    END");
 
 
 
@@ -3312,7 +3322,7 @@ $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "data_id,  indicator_id,  data_source_id,  assessment_id,  region_id,  unit_id,  facility_type_id,  \"value\",  period_id,  quarter_id,  month_id,  TO_DATE(\"year\"::text, 'YYYY') AS \"year\",  scope_id,  gender_sex,  data_representation,  indicator_group_id,  CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END AS period";
 $proto0["m_strFrom"] = "FROM \"public\".moh_indicator_data";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY TO_DATE(\"year\"::text, 'YYYY')";
+$proto0["m_strOrderBy"] = "ORDER BY TO_DATE(\"year\"::text, 'YYYY'), CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END";
 	
 																												;
 			$proto0["cipherer"] = null;
@@ -3864,6 +3874,17 @@ $proto82["m_column"]=$obj;
 $proto82["m_bAsc"] = 1;
 $proto82["m_nColumn"] = 0;
 $obj = new SQLOrderByItem($proto82);
+
+$proto0["m_orderby"][]=$obj;					
+												$proto86=array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "CASE           WHEN quarter_id IS NOT NULL THEN CONCAT('Q', quarter_id::TEXT, '-', \"year\"::TEXT)          WHEN month_id IS NOT NULL THEN CONCAT('M', month_id::TEXT, '-', \"year\"::TEXT)          ELSE \"year\"::TEXT      END"
+));
+
+$proto86["m_column"]=$obj;
+$proto86["m_bAsc"] = 1;
+$proto86["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto86);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="MOH_Indicators_data_Chart";		
