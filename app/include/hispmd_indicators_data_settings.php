@@ -67,6 +67,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelshispmd_indicators_data["English"]["Data_Representation"] = "Data Representation";
 	$fieldToolTipshispmd_indicators_data["English"]["Data_Representation"] = "";
 	$placeHoldershispmd_indicators_data["English"]["Data_Representation"] = "";
+	$fieldLabelshispmd_indicators_data["English"]["Data_Source_Detail"] = "Data Source Detail";
+	$fieldToolTipshispmd_indicators_data["English"]["Data_Source_Detail"] = "";
+	$placeHoldershispmd_indicators_data["English"]["Data_Source_Detail"] = "";
 	if (count($fieldToolTipshispmd_indicators_data["English"]))
 		$tdatahispmd_indicators_data[".isUseToolTips"] = true;
 }
@@ -118,6 +121,9 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelshispmd_indicators_data["Amharic"]["Data_Representation"] = "Data Representation";
 	$fieldToolTipshispmd_indicators_data["Amharic"]["Data_Representation"] = "";
 	$placeHoldershispmd_indicators_data["Amharic"]["Data_Representation"] = "";
+	$fieldLabelshispmd_indicators_data["Amharic"]["Data_Source_Detail"] = "Data Source Detail";
+	$fieldToolTipshispmd_indicators_data["Amharic"]["Data_Source_Detail"] = "";
+	$placeHoldershispmd_indicators_data["Amharic"]["Data_Source_Detail"] = "";
 	if (count($fieldToolTipshispmd_indicators_data["Amharic"]))
 		$tdatahispmd_indicators_data[".isUseToolTips"] = true;
 }
@@ -249,6 +255,7 @@ $tdatahispmd_indicators_data[".googleLikeFields"][] = "Region";
 $tdatahispmd_indicators_data[".googleLikeFields"][] = "Gender/Sex";
 $tdatahispmd_indicators_data[".googleLikeFields"][] = "Value";
 $tdatahispmd_indicators_data[".googleLikeFields"][] = "Data Representation";
+$tdatahispmd_indicators_data[".googleLikeFields"][] = "Data Source Detail";
 
 
 
@@ -2233,6 +2240,141 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 	$tdatahispmd_indicators_data["Data Representation"] = $fdata;
 		$tdatahispmd_indicators_data[".searchableFields"][] = "Data Representation";
+//	Data Source Detail
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "Data Source Detail";
+	$fdata["GoodName"] = "Data_Source_Detail";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("hispmd_indicators_data","Data_Source_Detail");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Data Source Detail";
+
+	
+		$fdata["FullName"] = "Data Source Detail";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatahispmd_indicators_data["Data Source Detail"] = $fdata;
+		$tdatahispmd_indicators_data[".searchableFields"][] = "Data Source Detail";
 
 
 $tables_data["hispmd_indicators_data"]=&$tdatahispmd_indicators_data;
@@ -2267,7 +2409,7 @@ require_once( getabspath( "include/hispmd_indicators_data_ops.php" ) );
 	
 																												;
 
-														
+															
 
 $tdatahispmd_indicators_data[".sqlquery"] = $queryData_hispmd_indicators_data;
 

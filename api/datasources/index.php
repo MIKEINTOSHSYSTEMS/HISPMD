@@ -124,7 +124,7 @@
 
         <!-- Tab Content -->
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="card full-width-card">
                     <div class="card-header">
                         <!--Info Tab-->
@@ -143,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <div class="card full-width-card">
                     <div class="card-header">
                         <!--Indicators-->

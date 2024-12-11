@@ -147,6 +147,9 @@ pdfDocument = {
 				
 			{"text":{$Data_Representation_pdfvalue},"hidden":"{$item_hide_export_field13}"},
 				
+				
+			{"text":{$Data_Source_Detail_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

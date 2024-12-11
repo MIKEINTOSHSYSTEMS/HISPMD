@@ -19,6 +19,7 @@ VALUES
   mi.target AS \"Target\",
   mf.facility_type_name AS \"Facility Type\",
   ds.data_source_name AS \"Data Source\",
+  ir.ir_datasource AS \"Data Source Detail\",
   a.assessment_name AS \"Assessment\",
   u.unit_name AS \"Administration Unit\",
   ind.year AS \"Year\",
@@ -35,15 +36,16 @@ LEFT JOIN public.moh_data_scope s ON ind.scope_id = s.scope_id
 LEFT JOIN public.moh_regions r ON ind.region_id = r.region_id
 LEFT JOIN public.moh_administration_units u ON ind.unit_id = u.unit_id
 LEFT JOIN public.moh_data_sources ds ON ind.data_source_id = ds.data_source_id
+LEFT JOIN public.moh_ir_datasource ir ON ind.data_source_detail = CAST(ir.ir_id AS VARCHAR)
 LEFT JOIN public.moh_assessments a ON ind.assessment_id = a.assessment_id
 LEFT JOIN public.moh_indicator_groups ig ON mi.indicator_group_id = ig.indicator_group_id
-
 GROUP BY
   mi.indicator_name,
   mi.baseline,
   mi.target,
   mf.facility_type_name,
   ds.data_source_name,
+  ir.ir_datasource,
   a.assessment_name,
   r.region_name,
   u.unit_name,
@@ -52,7 +54,7 @@ GROUP BY
   ind.gender_sex,
   ind.data_representation,
   ig.indicator_group_id,
-  ind.value
+  ind.value;
 "
 	);
 		$tables_data["hispmd_indicators_data"][".operations"] = &$topshispmd_indicators_data;
