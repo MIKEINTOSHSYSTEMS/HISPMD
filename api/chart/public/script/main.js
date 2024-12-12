@@ -1,11 +1,10 @@
-const $button  = document.querySelector('#sidebar-toggle');
+const $button = document.querySelector('#sidebar-toggle');
 const $wrapper = document.querySelector('#wrapper');
 
 $button.addEventListener('click', (e) => {
   e.preventDefault();
   $wrapper.classList.toggle('toggled');
 });
-
 
 let rawData = []; // Store fetched data
 let filteredData = []; // Store filtered data
@@ -41,7 +40,12 @@ function populateFilters() {
   populateDropdown("facilityType", [
     ...new Set(rawData.map((item) => item["Facility Type"])),
   ]);
-  populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))]);
+  //populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))]);
+
+  // Year filter sorted in ascending order
+  populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))].sort((a, b) => a - b));
+  
+
   populateDropdown("administrationUnit", [
     ...new Set(rawData.map((item) => item["Administration Unit"])),
   ]);
@@ -58,7 +62,6 @@ function populateDropdown(id, options) {
     });
 }
 
-// Apply filters to the data
 // Apply filters to the data
 function applyFilters() {
   const chartType = document.getElementById("chartType").value;
@@ -108,33 +111,6 @@ function updateIndicatorsBasedOnGroup(indicatorGroup) {
   populateDropdown("indicator", [...new Set(indicators)]);
 }
 
-// Populate filter dropdowns dynamically
-function populateFilters() {
-  populateDropdown("indicatorGroup", [
-    ...new Set(rawData.map((item) => item["Indicator Group"])),
-  ]);
-  populateDropdown("dataSource", [
-    ...new Set(rawData.map((item) => item["Data Source"])),
-  ]);
-  populateDropdown("dataSourceDetail", [
-    ...new Set(rawData.map((item) => item["Data Source Detail"])),
-  ]);
-  populateDropdown("scope", [...new Set(rawData.map((item) => item["Scope"]))]);
-  populateDropdown("region", [
-    ...new Set(rawData.map((item) => item["Region"])),
-  ]);
-  populateDropdown("facilityType", [
-    ...new Set(rawData.map((item) => item["Facility Type"])),
-  ]);
-  populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))]);
-  populateDropdown("administrationUnit", [
-    ...new Set(rawData.map((item) => item["Administration Unit"])),
-  ]);
-
-  // Initialize indicators based on the first indicator group or all
-  updateIndicatorsBasedOnGroup(document.getElementById("indicatorGroup").value);
-}
-
 // Draw the chart
 function drawChart(chartType, selectedIndicators, xAxis) {
   // Prepare chart data (average value instead of sum)
@@ -152,7 +128,7 @@ function drawChart(chartType, selectedIndicators, xAxis) {
 
   // Calculate the average values
   const chartDataArray = Object.entries(chartData).map(
-    ([key, { total, count }]) => [key, total / count],
+    ([key, { total, count }]) => [key, total / count]
   );
 
   // Clear the previous chart
@@ -161,7 +137,17 @@ function drawChart(chartType, selectedIndicators, xAxis) {
   // Create a chart instance based on the selected chart type
   let chart;
   if (chartType === "pie") {
-    chart = anychart.pie();
+    chart = anychart.pie3d();
+    chart.innerRadius("30%");
+      // font labels font settings
+  chart.labels().fontFamily("Menlo");
+  chart.labels().fontSize(18);
+  //chart.labels().fontDecoration("underline");
+  chart.labels().fontWeight(900);
+  chart.labels().background().enabled(true);
+  chart.labels().background().fill("White 0.4");
+  
+
   } else if (chartType === "bar") {
     chart = anychart.bar();
   } else if (chartType === "line") {
@@ -169,17 +155,22 @@ function drawChart(chartType, selectedIndicators, xAxis) {
   } else if (chartType === "area") {
     chart = anychart.area();
   } else {
+//    chart = anychart.column3d(); // Default to column chart
     chart = anychart.column(); // Default to column chart
   }
 
+  
   // Add data to the chart
   chart.data(chartDataArray);
+
+  // Turn on chart animation
+  chart.animation(true);
 
   // Set chart title dynamically
   const chartTitle =
     selectedIndicators.length > 0
       ? `Chart for ${selectedIndicators.join(", ")}`
-      : "Indicators Chart";
+      : "HISPMD Indicators Chart";
   chart.title(chartTitle);
 
   // Set axis titles for non-pie charts
@@ -220,63 +211,47 @@ function drawChart(chartType, selectedIndicators, xAxis) {
   }
 
   // Show legends and data labels
-  //chart.legend(true); //default is true
-    //chart.legend().enabled(true);
-    chart.legend().useHtml(true);
-    
-    // enable the drag-and-drop mode of the legend
-    chart.legend().drag(true);
+  chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
+  chart.legend().positionMode("outside");
+  chart.legend().useHtml(true);
 
+  // Automatically assign legend items based on the chart data
+  chart.legend().itemsSourceMode("categories");
 
-   chart.labels().enabled(true).format("{%value}");
+  // Enable the drag-and-drop mode of the legend
+  chart.legend().drag(true);
+
+  // Set labels settings
+  chart
+    .labels()
+    .enabled(true)
+    .fontColor('#60727b')
+    .position('center-top')
+    .anchor('center-bottom')
+    //.format('{%Value}{groupsSeparator: }');
+    //.format('{%Value}{decimalsCount:1}');
+    .format('{%Value}{decimalsCount:1}');
+  chart.hovered().labels(true);
+
+  // Set interactivity settings
+  chart.interactivity().hoverMode('single');
+
+  // Set tooltip settings
+  chart
+    .tooltip()
+    //.positionMode('point')
+    .position('center-top')
+    .anchor('center-bottom')
+    .offsetX(0)
+    .offsetY(5)
+    //.format('Value: {%Value}{groupsSeparator: }');
+    //.format('{%Value}{decimalsCount:1}');
+    .format('Value: {%Value}{decimalsCount:1}');
 
   // Draw the chart
   chart.container("container");
   chart.draw();
-
-      var legend = anychart.standalones.legend();
-    var legendItems = [];
-    for (let i = 0; i < chartDataArray.length; i++) {
-        legendItems.push({
-            text: chartDataArray[i][0],
-            iconType: "circle",
-            iconFill: chart.palette().itemAt(i)
-        });
-    }
-
-    legend.items(legendItems);
-    legend.position("left");
-    legend.align("top");
-    legend.container("container");
-    legend.draw();
-
-    
 }
-
-// replace menu items provider
-chart.contextMenu().itemsProvider(function () {
-  var items = {
-    "menu-item-1": {
-      text: "Print chart",
-      action: function () {
-        this.chart.print();
-      },
-    },
-    "menu-item-2": {
-      text: "Save chart as image",
-      action: function () {
-        this.chart.saveAsPng();
-      },
-    },
-    "menu-item-3": {
-      text: "Go to my page",
-      href: "http://merqconsultancy.org",
-      target: "_blank",
-    },
-  };
-
-  return items;
-});
 
 // Get the chart key based on the selected x-axis
 function getChartKey(xAxis, item) {

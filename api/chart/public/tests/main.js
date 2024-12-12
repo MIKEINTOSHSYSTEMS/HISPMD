@@ -1,11 +1,10 @@
-const $button  = document.querySelector('#sidebar-toggle');
+const $button = document.querySelector('#sidebar-toggle');
 const $wrapper = document.querySelector('#wrapper');
 
 $button.addEventListener('click', (e) => {
   e.preventDefault();
   $wrapper.classList.toggle('toggled');
 });
-
 
 let rawData = []; // Store fetched data
 let filteredData = []; // Store filtered data
@@ -25,25 +24,31 @@ function populateFilters() {
   populateDropdown("indicatorGroup", [
     ...new Set(rawData.map((item) => item["Indicator Group"])),
   ]);
-  populateDropdown("indicator", [
-    ...new Set(rawData.map((item) => item["indicator"])),
+  
+  // Indicator filter (using checkboxes for multi-selection)
+  populateCheckboxes("indicator", [
+    ...new Set(rawData.map((item) => item["indicator"])) 
   ]);
+
   populateDropdown("dataSource", [
     ...new Set(rawData.map((item) => item["Data Source"])),
   ]);
   populateDropdown("dataSourceDetail", [
-    ...new Set(rawData.map((item) => item["Data Source Detail"])),
-  ]);
+    ...new Set(rawData.map((item) => item["Data Source Detail"]))],
+  );
   populateDropdown("scope", [...new Set(rawData.map((item) => item["Scope"]))]);
   populateDropdown("region", [
-    ...new Set(rawData.map((item) => item["Region"])),
+    ...new Set(rawData.map((item) => item["Region"])) 
   ]);
   populateDropdown("facilityType", [
-    ...new Set(rawData.map((item) => item["Facility Type"])),
+    ...new Set(rawData.map((item) => item["Facility Type"])) 
   ]);
-  populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))]);
+  
+  // Year filter sorted in ascending order
+  populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))].sort((a, b) => a - b));
+  
   populateDropdown("administrationUnit", [
-    ...new Set(rawData.map((item) => item["Administration Unit"])),
+    ...new Set(rawData.map((item) => item["Administration Unit"])) 
   ]);
 }
 
@@ -58,39 +63,59 @@ function populateDropdown(id, options) {
     });
 }
 
-// Apply filters to the data
+// Populate checkboxes for multi-selection
+function populateCheckboxes(id, options) {
+  const container = document.getElementById(id);
+  container.innerHTML = ''; // Clear the container first
+  options
+    .filter((option) => option !== "")
+    .forEach((option) => {
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = option;
+      checkbox.id = `${id}-${option}`;
+      checkbox.name = id;
+      const label = document.createElement('label');
+      label.setAttribute('for', `${id}-${option}`);
+      label.textContent = option;
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('checkbox-wrapper');
+      wrapper.appendChild(checkbox);
+      wrapper.appendChild(label);
+      container.appendChild(wrapper);
+    });
+}
+
 // Apply filters to the data
 function applyFilters() {
   const chartType = document.getElementById("chartType").value;
   const indicatorGroup = document.getElementById("indicatorGroup").value;
   const selectedIndicators = Array.from(
-    document.getElementById("indicator").selectedOptions,
-  ).map((option) => option.value);
+    document.querySelectorAll("input[name='indicator']:checked")
+  ).map((checkbox) => checkbox.value);
   const dataSource = document.getElementById("dataSource").value;
   const dataSourceDetail = document.getElementById("dataSourceDetail").value;
   const scope = document.getElementById("scope").value;
   const region = document.getElementById("region").value;
   const facilityType = document.getElementById("facilityType").value;
-  const year = document.getElementById("year").value;
-  const administrationUnit =
-    document.getElementById("administrationUnit").value;
+  const selectedYears = Array.from(
+    document.querySelectorAll("input[name='year']:checked")
+  ).map((checkbox) => checkbox.value);
+  const administrationUnit = document.getElementById("administrationUnit").value;
   const xAxis = document.getElementById("xAxis").value;
 
   // Filter data based on selected values
   filteredData = rawData.filter(
     (item) =>
       (indicatorGroup === "" || item["Indicator Group"] === indicatorGroup) &&
-      (selectedIndicators.length === 0 ||
-        selectedIndicators.includes(item["indicator"])) &&
+      (selectedIndicators.length === 0 || selectedIndicators.includes(item["indicator"])) &&
       (dataSource === "" || item["Data Source"] === dataSource) &&
-      (dataSourceDetail === "" ||
-        item["Data Source Detail"] === dataSourceDetail) &&
+      (dataSourceDetail === "" || item["Data Source Detail"] === dataSourceDetail) &&
       (scope === "" || item["Scope"] === scope) &&
       (region === "" || item["Region"] === region) &&
       (facilityType === "" || item["Facility Type"] === facilityType) &&
-      (year === "" || item["Year"] === year) &&
-      (administrationUnit === "" ||
-        item["Administration Unit"] === administrationUnit),
+      (selectedYears.length === 0 || selectedYears.includes(item["Year"].toString())) &&
+      (administrationUnit === "" || item["Administration Unit"] === administrationUnit),
   );
 
   updateIndicatorsBasedOnGroup(indicatorGroup);
@@ -105,34 +130,7 @@ function updateIndicatorsBasedOnGroup(indicatorGroup) {
         indicatorGroup === "" || item["Indicator Group"] === indicatorGroup,
     )
     .map((item) => item["indicator"]);
-  populateDropdown("indicator", [...new Set(indicators)]);
-}
-
-// Populate filter dropdowns dynamically
-function populateFilters() {
-  populateDropdown("indicatorGroup", [
-    ...new Set(rawData.map((item) => item["Indicator Group"])),
-  ]);
-  populateDropdown("dataSource", [
-    ...new Set(rawData.map((item) => item["Data Source"])),
-  ]);
-  populateDropdown("dataSourceDetail", [
-    ...new Set(rawData.map((item) => item["Data Source Detail"])),
-  ]);
-  populateDropdown("scope", [...new Set(rawData.map((item) => item["Scope"]))]);
-  populateDropdown("region", [
-    ...new Set(rawData.map((item) => item["Region"])),
-  ]);
-  populateDropdown("facilityType", [
-    ...new Set(rawData.map((item) => item["Facility Type"])),
-  ]);
-  populateDropdown("year", [...new Set(rawData.map((item) => item["Year"]))]);
-  populateDropdown("administrationUnit", [
-    ...new Set(rawData.map((item) => item["Administration Unit"])),
-  ]);
-
-  // Initialize indicators based on the first indicator group or all
-  updateIndicatorsBasedOnGroup(document.getElementById("indicatorGroup").value);
+  populateCheckboxes("indicator", [...new Set(indicators)]);
 }
 
 // Draw the chart
@@ -152,7 +150,7 @@ function drawChart(chartType, selectedIndicators, xAxis) {
 
   // Calculate the average values
   const chartDataArray = Object.entries(chartData).map(
-    ([key, { total, count }]) => [key, total / count],
+    ([key, { total, count }]) => [key, total / count]
   );
 
   // Clear the previous chart
@@ -161,7 +159,7 @@ function drawChart(chartType, selectedIndicators, xAxis) {
   // Create a chart instance based on the selected chart type
   let chart;
   if (chartType === "pie") {
-    chart = anychart.pie();
+    chart = anychart.pie3d();
   } else if (chartType === "bar") {
     chart = anychart.bar();
   } else if (chartType === "line") {
@@ -220,38 +218,37 @@ function drawChart(chartType, selectedIndicators, xAxis) {
   }
 
   // Show legends and data labels
-  chart.legend(true); //default is true
-  chart.labels().enabled(true).format("{%value}");
+  chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
+  chart.legend().positionMode("outside");
+  chart.legend().useHtml(true);
+
+  // Set labels settings
+  chart
+    .labels()
+    .enabled(true)
+    .fontColor('#60727b')
+    .position('center-top')
+    .anchor('center-bottom')
+    .format('{%Value}{groupsSeparator: }');
+  chart.hovered().labels(true);
+
+  // Set interactivity settings
+  chart.interactivity().hoverMode('single');
+
+  // Set tooltip settings
+  chart
+    .tooltip()
+    .positionMode('point')
+    .position('center-top')
+    .anchor('center-bottom')
+    .offsetX(0)
+    .offsetY(5)
+    .format('Value: {%Value}{groupsSeparator: }');
 
   // Draw the chart
   chart.container("container");
   chart.draw();
 }
-
-// replace menu items provider
-chart.contextMenu().itemsProvider(function () {
-  var items = {
-    "menu-item-1": {
-      text: "Print chart",
-      action: function () {
-        this.chart.print();
-      },
-    },
-    "menu-item-2": {
-      text: "Save chart as image",
-      action: function () {
-        this.chart.saveAsPng();
-      },
-    },
-    "menu-item-3": {
-      text: "Go to my page",
-      href: "http://merqconsultancy.org",
-      target: "_blank",
-    },
-  };
-
-  return items;
-});
 
 // Get the chart key based on the selected x-axis
 function getChartKey(xAxis, item) {
@@ -273,13 +270,6 @@ function getChartKey(xAxis, item) {
     default:
       return item["Year"];
   }
-}
-
-// Show the relevant section based on the clicked menu item
-function showSection(sectionId) {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => (section.style.display = "none"));
-  document.getElementById(sectionId).style.display = "block";
 }
 
 // Initialize the view

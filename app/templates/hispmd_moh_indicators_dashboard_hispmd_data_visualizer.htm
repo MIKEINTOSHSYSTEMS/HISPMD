@@ -9,6 +9,16 @@
     <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
     <!-- Matomo -->
 <script>
+
+	    // Automatically hide the header container when the page loads
+    window.onload = function() {
+        var header = document.querySelector('.header-container');
+        if (header) {
+            header.style.display = 'none';
+        }
+    };
+
+
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
@@ -263,18 +273,22 @@
         /* Adjust iframe height for smaller screens */
         @media (max-width: 768px) {
             iframe {
-                height: 80vh; /* For tablets or smaller screens */
+                height: 110vh; /* For tablets or smaller screens */
             }
         }
 
         @media (max-width: 480px) {
             iframe {
-                height: 70vh; /* For mobile devices */
+                height: 100vh; /* For mobile devices */
             }
         }
     </style>
 </head>
 <body>
+    <!--
+src="../api/chart/index.php"
+src="index.php"
+    -->
     <iframe
         id="hispmd-iframe"
         src="../api/chart/index.php"
@@ -282,6 +296,8 @@
         title="HISPMD Indicator Chart"
         loading="lazy">
     </iframe>
+
+
     <noscript>
         Your browser does not support JavaScript, which is required to load this chart.
     </noscript>
@@ -315,7 +331,7 @@
 									<td 
 	class=" r-ori-vert			"
 			 
-	data-cellId="grid_c1" data-pageid="{$pageid}">
+	data-cellId="grid_c1" data-pageid="{$pageid}" data-page="hispmd_moh_indicators_dashboard_hispmd_data_visualizer">
 </td>
 									<td 
 	class=" r-ori-vert			"

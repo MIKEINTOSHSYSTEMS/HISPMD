@@ -79,7 +79,16 @@ array( 'section' => '',
 'cells' => array( array( 'cell' => 'c2' ),
 array( 'cell' => 'c3' ) ) ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
-'items' => array(  ) ),
+'items' => array(  ),
+'customCSS' => '    .header-container {
+            display: none;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            /* background-color: #00274c; */
+            /* padding: 4px 10px; */
+            /* box-shadow: 0 4px 2px -2px gray; */
+            /* flex-wrap: wrap; */
+                }' ),
 'c' => array( 'model' => 'c1',
 'items' => array(  ) ),
 'c2' => array( 'model' => 'c1',
@@ -140,18 +149,22 @@ array( 'cell' => 'c2' ) ),
         /* Adjust iframe height for smaller screens */
         @media (max-width: 768px) {
             iframe {
-                height: 80vh; /* For tablets or smaller screens */
+                height: 110vh; /* For tablets or smaller screens */
             }
         }
 
         @media (max-width: 480px) {
             iframe {
-                height: 70vh; /* For mobile devices */
+                height: 100vh; /* For mobile devices */
             }
         }
     </style>
 </head>
 <body>
+    <!--
+src="../api/chart/index.php"
+src="index.php"
+    -->
     <iframe
         id="hispmd-iframe"
         src="../api/chart/index.php"
@@ -159,6 +172,8 @@ array( 'cell' => 'c2' ) ),
         title="HISPMD Indicator Chart"
         loading="lazy">
     </iframe>
+
+
     <noscript>
         Your browser does not support JavaScript, which is required to load this chart.
     </noscript>
@@ -196,5 +211,14 @@ array( 'cell' => 'c2' ) ),
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'pageCSS' => '    .header-container {
+            display: none;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            /* background-color: #00274c; */
+            /* padding: 4px 10px; */
+            /* box-shadow: 0 4px 2px -2px gray; */
+            /* flex-wrap: wrap; */
+                }' );
 		?>

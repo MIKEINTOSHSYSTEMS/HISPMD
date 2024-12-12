@@ -92,7 +92,9 @@ a:focus {
 }
 #navbar-wrapper .navbar {
   border-width: 0 0 0 0;
-  background-color: #00274ce9; /*#2c4055;*/
+  /*background-color: #00274ce9;*/ /*#2c4055;*/
+  background-color: #233d57;
+  /*background: linear-gradient(145deg, #2e4053, #00274ce9, #1c2833);*/
   font-size: 21px;
   margin-bottom: 0;
   border-radius: 0;
@@ -364,9 +366,10 @@ a:focus {
             width: calc(100% - 300px);
             overflow-y: auto;
             transition: margin-left 0.3s ease;
-            z-index: 500; /* Ensure the content appears below the sidebar */
+            z-index: 500; 
         }
         */
+        /* Ensure the content appears below the sidebar */
 
 
         h2 {
