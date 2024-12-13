@@ -769,10 +769,10 @@ $ajaxSearchStartsWith = true;
 
 
 
-$globalSettings["LandingPageType"] = 1;
+$globalSettings["LandingPageType"] = 2;
 $globalSettings["LandingTable"] = "HISPMD_MOH_Indicators_Dashboard";
 $globalSettings["LandingPage"] = "dashboard";
-$globalSettings["LandingURL"] = "hispmd_moh_indicators_dashboard_dashboard.php?page=hispmd_dashboard";
+$globalSettings["LandingURL"] = "hispmd_moh_indicators_dashboard_dashboard.php?page=hispmd_dashboard&menuItemId=1";
 $globalSettings["LandingPageId"] = "hispmd_dashboard";
 
 $globalSettings["ProjectLogo"] = array();
@@ -912,9 +912,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "736_1733669802";
+$projectBuildKey = "737_1733669802";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "736";
+$projectBuildNumber = "737";
 
 $mlang_messages = array();
 $mlang_charsets = array();
