@@ -3750,6 +3750,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_reportingrates" ] = "DHIS2_ReportingRates";
 	$projectEntities[ "DHIS2_AnalyticsReport" ] = array( "url" => "dhis2_analyticsreport", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_analyticsreport" ] = "DHIS2_AnalyticsReport";
+	$projectEntities[ "public.moh_indicators_target" ] = array( "url" => "moh_indicators_target", "type" => 0 );
+	$projectEntitiesReverse[ "moh_indicators_target" ] = "public.moh_indicators_target";
 }
 
 function findTable( $table ) {

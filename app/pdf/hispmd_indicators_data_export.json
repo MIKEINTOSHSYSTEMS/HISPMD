@@ -112,12 +112,6 @@ pdfDocument = {
 			{"text":{$Indicator_Name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$Baseline_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
-			{"text":{$Target_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
@@ -149,6 +143,30 @@ pdfDocument = {
 				
 				
 			{"text":{$Data_Source_Detail_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Target_Value_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Target_Year_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Baseline_Value_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Baseline_Year_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$Quarter_ID_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$Month_ID_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$Period_ID_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_export_field20}"},
 				
 		  ],
   "border": [ false, false, false, false ],

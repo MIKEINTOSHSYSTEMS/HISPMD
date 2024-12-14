@@ -150,6 +150,18 @@ pdfDocument = {
 				
 			{"text":{$quarter_id_pdfvalue},"hidden":"{$item_hide_import_field15}"},
 				
+				
+			{"text":{$indicator_target_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$indicator_target_year_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$indicator_baseline_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$indicator_baseline_year_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

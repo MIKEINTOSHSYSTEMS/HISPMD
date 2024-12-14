@@ -538,6 +538,12 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel public_moh_indicator_data period }","bold":true},{"text":{$period_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_target }","bold":true},{"text":{$indicator_target_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_baseline }","bold":true},{"text":{$indicator_baseline_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -564,6 +570,12 @@ pdfDocument = {
 		
 				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_moh_indicator_data value }","bold":true},{"text":{$value_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_target_year }","bold":true},{"text":{$indicator_target_year_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel public_moh_indicator_data indicator_baseline_year }","bold":true},{"text":{$indicator_baseline_year_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

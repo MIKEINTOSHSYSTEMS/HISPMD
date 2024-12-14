@@ -112,12 +112,6 @@ pdfDocument = {
 			{"text":{$Indicator_Name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$Baseline_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
-			{"text":{$Target_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$Facility_Type_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
@@ -155,6 +149,18 @@ pdfDocument = {
 				
 				
 			{"text":{$Period_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$Target_Year_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$Baseline_Year_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$Target_Value_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Baseline_Value_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],

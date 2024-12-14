@@ -1066,6 +1066,41 @@ $detailsTablesData["public.moh_indicators"] = array();
 				$detailsTablesData["public.moh_indicators"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.moh_indicators"][$dIndex]["detailKeys"][]="indicator_id";
+//	public.moh_indicators_target
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="public.moh_indicators_target";
+		$detailsParam["dOriginalTable"] = "public.moh_indicators_target";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "moh_indicators_target";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_moh_indicators_target");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.moh_indicators"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.moh_indicators"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.moh_indicators"][$dIndex]["masterKeys"][]="indicator_id";
+
+	$detailsTablesData["public.moh_indicators"][$dIndex]["masterKeys"][]="indicator_name";
+
+				$detailsTablesData["public.moh_indicators"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.moh_indicators"][$dIndex]["detailKeys"][]="indicator_id";
+
+		
+	$detailsTablesData["public.moh_indicators"][$dIndex]["detailKeys"][]="indicator_name";
 //endif
 
 // tables which are master tables for current table (detail)

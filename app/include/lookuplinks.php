@@ -964,6 +964,27 @@ function InitLookupLinks()
 			$lookupTableLinks["public.dhis2_periods"]["dhis2_analyticsreport.period"] = array();
 		}
 		$lookupTableLinks["public.dhis2_periods"]["dhis2_analyticsreport.period"]["edit"] = array("table" => "DHIS2_AnalyticsReport", "field" => "period", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_indicators"] ) ) {
+			$lookupTableLinks["public.moh_indicators"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_indicators"]["moh_indicators_target.indicator_id"] )) {
+			$lookupTableLinks["public.moh_indicators"]["moh_indicators_target.indicator_id"] = array();
+		}
+		$lookupTableLinks["public.moh_indicators"]["moh_indicators_target.indicator_id"]["edit"] = array("table" => "public.moh_indicators_target", "field" => "indicator_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_years"] ) ) {
+			$lookupTableLinks["public.moh_years"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_target_year"] )) {
+			$lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_target_year"] = array();
+		}
+		$lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_target_year"]["edit"] = array("table" => "public.moh_indicators_target", "field" => "indicator_target_year", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_years"] ) ) {
+			$lookupTableLinks["public.moh_years"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_baseline_year"] )) {
+			$lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_baseline_year"] = array();
+		}
+		$lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_baseline_year"]["edit"] = array("table" => "public.moh_indicators_target", "field" => "indicator_baseline_year", "page" => "edit");
 }
 
 ?>

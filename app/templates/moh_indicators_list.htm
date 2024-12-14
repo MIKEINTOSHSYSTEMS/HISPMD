@@ -119,20 +119,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_baseline}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_baseline}" {$filterRow_attrs_baseline}>
-			<label>{$label public_moh_indicators baseline }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_baseline}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_baseline}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_baseline}</span>
-						</div>
-		{END searchCtrlBlock_baseline}
-																{BEGIN searchCtrlBlock_indicator_group_id}
+																		{BEGIN searchCtrlBlock_indicator_group_id}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_indicator_group_id}" {$filterRow_attrs_indicator_group_id}>
@@ -145,19 +132,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_group_id}</span>
 						</div>
 		{END searchCtrlBlock_indicator_group_id}
-																{BEGIN searchCtrlBlock_target}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_target}" {$filterRow_attrs_target}>
-			<label>{$label public_moh_indicators target }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_target}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_target}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_target}</span>
-						</div>
-		{END searchCtrlBlock_target}
 																{BEGIN searchCtrlBlock_indicator_name}
 
 
@@ -642,6 +616,13 @@
 					MOH Indicators Data Chart				</label>
 			</div>
 			{END print_details_moh_indicators_data_chart}
+														{BEGIN print_details_moh_indicators_target}
+			<div>
+				<label for="printDetailsmoh_indicators_target{$id}">
+					<input type="checkbox" value="moh_indicators_target" id="printDetailsmoh_indicators_target{$id}" checked>
+					Moh Indicators Target				</label>
+			</div>
+			{END print_details_moh_indicators_target}
 						</div>
 </div>
 {END print_details}
@@ -691,13 +672,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_name"]:before {
 		content: "{$label public_moh_indicators indicator_name}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="baseline"]:before {
-		content: "{$label public_moh_indicators baseline}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="target"]:before {
-		content: "{$label public_moh_indicators target}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_group_id"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_group_id"]:before {
 		content: "{$label public_moh_indicators indicator_group_id}";
 	}
 	}
@@ -783,7 +758,7 @@
 	 
 		{BEGIN indicator_id_fieldheadercolumn}
 	{BEGIN indicator_id_fieldheader}
-	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
+	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
 	{$label public_moh_indicators indicator_id }	{$arrow_icon_indicator_id}
 	</SPAN>
 	{END indicator_id_fieldheader}
@@ -808,7 +783,7 @@
 	 
 		{BEGIN indicator_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_name" data-fieldname="indicator_name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_name" data-fieldname="indicator_name">
 	{$label public_moh_indicators indicator_name }	</span>
 {END indicator_name_fieldheadercolumn}
 
@@ -831,7 +806,7 @@
 	 
 		{BEGIN indicator_group_id_fieldheadercolumn}
 	{BEGIN indicator_group_id_fieldheader}
-	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
+	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
 	{$label public_moh_indicators indicator_group_id }	{$arrow_icon_indicator_group_id}
 	</SPAN>
 	{END indicator_group_id_fieldheader}
@@ -840,56 +815,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$baseline_class}	"
-
-			data-field="baseline"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN baseline_fieldheadercolumn}
-	{BEGIN baseline_fieldheader}
-	<SPAN {$baseline_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="baseline" data-fieldname="baseline">
-	{$label public_moh_indicators baseline }	{$arrow_icon_baseline}
-	</SPAN>
-	{END baseline_fieldheader}
-{END baseline_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$target_class}	"
-
-			data-field="target"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN target_fieldheadercolumn}
-	{BEGIN target_fieldheader}
-	<SPAN {$target_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="target" data-fieldname="target">
-	{$label public_moh_indicators target }	{$arrow_icon_target}
-	</SPAN>
-	{END target_fieldheader}
-{END target_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
 							</tr>
 																				
 					{END grid_header}
@@ -1054,6 +979,25 @@
 	{END moh_data_sources_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN moh_indicators_target_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$moh_indicators_target_link_attrs} data-short-details="moh_indicators_target"
+		class="{$moh_indicators_target_dlink_class}" 
+		title="{$caption public_moh_indicators_target }"			>
+								
+									{BEGIN moh_indicators_target_childcount}
+				<span class="details-badge badge moh_indicators_target_badge" {$moh_indicators_target_childnumber_attr}>
+					{$moh_indicators_target_childnumber}				
+				</span>
+				{END moh_indicators_target_childcount}
+						</a>
+	</span>
+	{END moh_indicators_target_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1120,48 +1064,6 @@
 {END indicator_group_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$baseline_class}	"
-
-			data-field="baseline"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN baseline_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="baseline" data-fieldname="baseline" data-default-width >
-{$baseline_value}
-</span>
-{END baseline_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$target_class}	"
-
-			data-field="target"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN target_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="target" data-fieldname="target" data-default-width >
-{$target_value}
-</span>
-{END target_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1179,9 +1081,9 @@
 	>
 
 	 
-						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="moh_indicator_data,,moh_data_sources,moh_indicators_data_chart"
-			data-details-moh_indicator_data			data-details-			data-details-moh_data_sources			data-details-moh_indicators_data_chart	>
+							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="moh_indicator_data,,moh_data_sources,moh_indicators_data_chart,moh_indicators_target"
+			data-details-moh_indicator_data			data-details-			data-details-moh_data_sources			data-details-moh_indicators_data_chart			data-details-moh_indicators_target	>
 		<span data-details-inside data-short-table="moh_indicator_data">
 			</span>
 		<span data-details-inside data-short-table="">
@@ -1190,10 +1092,13 @@
 			</span>
 		<span data-details-inside data-short-table="moh_indicators_data_chart">
 			</span>
+		<span data-details-inside data-short-table="moh_indicators_target">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			
@@ -1300,36 +1205,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$baseline_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicators_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$target_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicators_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

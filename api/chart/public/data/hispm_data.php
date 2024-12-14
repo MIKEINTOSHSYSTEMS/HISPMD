@@ -7,18 +7,31 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // API URL to fetch the data
 $api_url = 'https://hispmd.merqconsultancy.org/app/api/v1.php?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=hispmd_indicators_data&action=list';
+$period_api_url = 'https://hispmd.merqconsultancy.org/app/api/v1.php?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=moh_period_types&action=list';
 
-// Fetch the data from the API
+// Fetch the data from the main API
 $response = file_get_contents($api_url);
 
-// Decode the JSON response
+// Fetch the period data from the period API
+$period_response = file_get_contents($period_api_url);
+
+// Decode the JSON responses
 $data = json_decode($response, true);
+$period_data = json_decode($period_response, true);
 
 // Initialize the transformed structure
 $transformed = [];
 
+// Create a mapping of Period ID to period_type
+$period_mapping = [];
+foreach ($period_data['data'] as $period_item) {
+    $period_mapping[$period_item['period_id']] = $period_item['period_type'];
+}
+
 // Loop through the original data and transform it
 foreach ($data['data'] as $item) {
+    // Get the period_type using the Period ID from the mapping
+    $period_type = isset($period_mapping[$item['Period ID']]) ? $period_mapping[$item['Period ID']] : "";
 
     // Initialize transformed entry with proper data types
     $transformed_entry = [
@@ -26,12 +39,21 @@ foreach ($data['data'] as $item) {
         "indicator" => isset($item['Indicator Name']) ? (string)$item['Indicator Name'] : "", // String
         "Data Source" => isset($item['Data Source']) ? (string)$item['Data Source'] : "", // String
         "Year" => isset($item['Year']) ? (int)$item['Year'] : null, // Integer
+        //"Period ID" => isset($item['Period ID']) ? (string)$item['Period ID'] : "", // String
+        "Period Type" => $period_type, // Use period_type instead of Period ID
+        "Period" => isset($item['Period']) ? (string)$item['Period'] : "", // String
         "Scope" => isset($item['Scope']) ? (string)$item['Scope'] : "", // String
         "Region" => isset($item['Region']) ? (string)$item['Region'] : "", // String
         "Administration Unit" => isset($item['Administration Unit']) ? (string)$item['Administration Unit'] : "", // String
         "Facility Type" => isset($item['Facility Type']) ? (string)$item['Facility Type'] : "", // String
         "Data Source Detail" => isset($item['Data Source Detail']) ? (string)$item['Data Source Detail'] : "", // String
         "value" => isset($item['Value']) ? (float)$item['Value'] : "", // Float
+        "Target Value" => isset($item['Target Value']) ? (float)$item['Target Value'] : "", // Float
+        "Target Year" => isset($item['Target Year']) ? (int)$item['Target Year'] : null, // Integer
+        "Baseline Value" => isset($item['Baseline Value']) ? (float)$item['Baseline Value'] : "", // Float
+        "Baseline Year" => isset($item['Baseline Year']) ? (int)$item['Baseline Year'] : null, // Integer
+        "Data Representation" => isset($item['Data Representation']) ? (string)$item['Data Representation'] : "" // String
+
 //        "Assessment" => isset($item['Assessment']) ? (string)$item['Assessment'] : "", // String
 //        "Sex" => isset($item['Sex']) ? (string)$item['Sex'] : "", // String
 //        "Baseline" => isset($item['Baseline']) ? (float)$item['Baseline'] : null, // Float

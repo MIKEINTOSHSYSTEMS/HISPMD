@@ -5,8 +5,10 @@ $topsindicators_dashboard = array();
 		"sql" => "SELECT
   ig.indicator_group_id AS \"Indicator Group\",
   mi.indicator_name AS \"Indicator Name\",
-  mi.baseline AS \"Baseline\",
-  mi.target AS \"Target\",
+  mit.indicator_target AS \"Target Value\",
+  mit.indicator_target_year AS \"Target Year\",
+  mit.indicator_baseline AS \"Baseline Value\",
+  mit.indicator_baseline_year AS \"Baseline Year\",
   mf.facility_type_name AS \"Facility Type\",
   ds.data_source_name AS \"Data Source\",
   a.assessment_name AS \"Assessment\",
@@ -35,11 +37,14 @@ LEFT JOIN public.moh_administration_units u ON ind.unit_id = u.unit_id
 LEFT JOIN public.moh_data_sources ds ON ind.data_source_id = ds.data_source_id
 LEFT JOIN public.moh_assessments a ON ind.assessment_id = a.assessment_id
 LEFT JOIN public.moh_indicator_groups ig ON mi.indicator_group_id = ig.indicator_group_id
+LEFT JOIN public.moh_indicators_target mit ON mi.indicator_id = mit.indicator_id -- Join the moh_indicators_target table
 GROUP BY
   ig.indicator_group_id,
   mi.indicator_name,
-  mi.baseline,
-  mi.target,
+  mit.indicator_target,
+  mit.indicator_target_year,
+  mit.indicator_baseline,
+  mit.indicator_baseline_year,
   mf.facility_type_name,
   ds.data_source_name,
   a.assessment_name,
@@ -58,7 +63,7 @@ GROUP BY
         WHEN ind.month_id IS NOT NULL THEN CONCAT('M', ind.month_id::TEXT, '-', ind.\"year\"::TEXT)
         ELSE ind.\"year\"::TEXT
     END
-ORDER BY ind.\"year\"
+ORDER BY ind.\"year\";
 "
 	);
 		$tables_data["Indicators_Dashboard"][".operations"] = &$topsindicators_dashboard;

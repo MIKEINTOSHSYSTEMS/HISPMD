@@ -91,12 +91,21 @@
 
         </select>
 
+        <label for="periodType">Period Type:</label>
+        <select id="periodType" onchange="applyFilters()">
+
+        </select>
         <label for="year">Year:</label>
         <select id="year" onchange="applyFilters()" multiple></select>
+
+        <label for="period">Period:</label>
+        <select id="period" onchange="applyFilters()"></select>
 
         <label for="xAxis">Group By:</label>
         <select id="xAxis" onchange="applyFilters()">
             <option value="year">Year</option>
+            <option value="period">Period</option>
+            <option value="periodType">Period Type</option>
             <option value="indicator">Indicator</option>
             <option value="region">Region</option>
             <option value="dataSource">Data Source</option>
@@ -115,7 +124,10 @@
         </select>
     </div>
 
-    <br><br>
+<button id="resetFilters">Reset Filters</button>
+
+    <br>    
+    <br>
 
     <ul>
         <li><a href="#filtered-chart" onclick="showSection('filtered-chart')">HISPMD Data Visualizer</a></li>
@@ -178,7 +190,9 @@ function applyFilters() {
         region: document.getElementById('region').value,
         administrationUnit: document.getElementById('administrationUnit').value,
         facilityType: document.getElementById('facilityType').value,
+        periodType: document.getElementById('periodType').value,
         year: document.getElementById('year').value,
+        period: document.getElementById('period').value,
         xAxis: document.getElementById('xAxis').value,
         chartType: document.getElementById('chartType').value
     };
@@ -192,6 +206,38 @@ function showSection(section) {
     sections.forEach(sec => sec.style.display = 'none');
     document.getElementById(section).style.display = 'block';
 }
+
+// Add a reset filter button handler
+const resetFiltersButton = document.getElementById("resetFilters");
+
+resetFiltersButton.addEventListener("click", () => {
+  // Reset all dropdowns to "All" option
+  const filterDropdowns = [
+    "indicatorGroup",
+    "indicator",
+    "dataSource",
+    "dataSourceDetail",
+    "scope",
+    "region",
+    "periodType",
+    "facilityType",
+    "year",
+    "period",
+    "administrationUnit",
+  ];
+
+  filterDropdowns.forEach((id) => {
+    const dropdown = document.getElementById(id);
+    if (dropdown) {
+      dropdown.selectedIndex = 0; // Reset to "All" option
+    }
+  });
+
+  // Reset filtered data and redraw the chart
+  filteredData = rawData; // Reset to all data
+  applyFilters(); // Reapply filters (will update the chart)
+});
+
 </script>
 <script src="./public/script/main.js"></script>
 </body>

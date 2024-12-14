@@ -118,6 +118,12 @@ pdfDocument = {
 										{BEGIN col_grid_17}
 					"%",
 					{END col_grid_17}
+										{BEGIN col_grid_18}
+					"%",
+					{END col_grid_18}
+										{BEGIN col_grid_19}
+					"%",
+					{END col_grid_19}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -421,7 +427,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Indicator_Name }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Indicator_Name }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -434,64 +440,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field2}
 {
 	cellId: 'headcell_field2',
-	col:0,
-	row:0,
-			fieldName: 'Baseline',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Indicators_Dashboard Baseline }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Baseline_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
-	col:0,
-	row:0,
-			fieldName: 'Target',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Indicators_Dashboard Target }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Target_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
-{
-	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'Data_Source',
@@ -517,10 +465,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Scope',
@@ -546,10 +494,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'Region',
@@ -575,10 +523,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'Administration_Unit',
@@ -604,10 +552,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'Facility_Type',
@@ -633,10 +581,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Gender_Sex',
@@ -662,10 +610,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'Value',
@@ -691,6 +639,64 @@ pdfDocument = {
       
       },
 
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Target_Value',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Target_Value }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Target_Value_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Baseline_Value',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Baseline_Value }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Baseline_Value_align}',
+     
+      
+      },
+
 {END cellblock_grid_headcell_field10}
 																							{BEGIN cellblock_grid_headcell_field11}
 {
@@ -711,7 +717,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Data_Representation }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Data_Representation }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -724,6 +730,64 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field12}
 {
 	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Target_Year',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Target_Year }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Target_Year_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Baseline_Year',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Indicators_Dashboard Baseline_Year }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Baseline_Year_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
+{
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'Period_ID',
@@ -740,7 +804,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Period_ID }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Period_ID }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -749,10 +813,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'Year',
@@ -769,7 +833,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Year }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Year }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -778,10 +842,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field16',
 	col:0,
 	row:0,
 			fieldName: 'Quarter_ID',
@@ -798,7 +862,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Quarter_ID }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Quarter_ID }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -807,10 +871,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
 {
-	cellId: 'headcell_field15',
+	cellId: 'headcell_field17',
 	col:0,
 	row:0,
 			fieldName: 'Month_ID',
@@ -827,7 +891,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Month_ID }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Month_ID }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -836,10 +900,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
 {
-	cellId: 'headcell_field16',
+	cellId: 'headcell_field18',
 	col:0,
 	row:0,
 			fieldName: 'Period',
@@ -856,7 +920,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Indicators_Dashboard Period }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel Indicators_Dashboard Period }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -865,7 +929,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field18}
 											],
 				{END row_grid_0}
 		
@@ -966,64 +1030,6 @@ pdfDocument = {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Baseline',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Baseline_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Baseline_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
-	col:0,
-	row:0,
-			fieldName: 'Target',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Target_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Target_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
-{
-	cellId: 'cell_field4',
-	col:0,
-	row:0,
 			fieldName: 'Data_Source',
 				style: 'bodycell',
 		
@@ -1047,10 +1053,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Scope',
@@ -1076,10 +1082,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'Region',
@@ -1105,10 +1111,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'Administration_Unit',
@@ -1134,10 +1140,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'Facility_Type',
@@ -1163,10 +1169,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Gender_Sex',
@@ -1192,10 +1198,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'Value',
@@ -1217,6 +1223,64 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Value_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Target_Value',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Target_Value_pdfvalue},"color":"#7fe417","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Target_Value_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Baseline_Value',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Baseline_Value_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Baseline_Value_align}',
      
       
       },
@@ -1256,6 +1320,64 @@ pdfDocument = {
 	cellId: 'cell_field12',
 	col:0,
 	row:0,
+			fieldName: 'Target_Year',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Target_Year_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Target_Year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Baseline_Year',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Baseline_Year_pdfvalue},"hidden":"{$item_hide_simple_grid_field20}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Baseline_Year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
+{
+	cellId: 'cell_field14',
+	col:0,
+	row:0,
 			fieldName: 'Period_ID',
 				style: 'bodycell',
 		
@@ -1279,10 +1401,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'Year',
@@ -1308,10 +1430,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			fieldName: 'Quarter_ID',
@@ -1337,10 +1459,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field17',
 	col:0,
 	row:0,
 			fieldName: 'Month_ID',
@@ -1366,10 +1488,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
 {
-	cellId: 'cell_field16',
+	cellId: 'cell_field18',
 	col:0,
 	row:0,
 			fieldName: 'Period',
@@ -1395,7 +1517,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field18}
 											],
 				{END row_grid_1}
 		
@@ -1873,6 +1995,58 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field16}
+																							{BEGIN cellblock_grid_footcell_field17}
+{
+	cellId: 'footcell_field17',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field17}
+																							{BEGIN cellblock_grid_footcell_field18}
+{
+	cellId: 'footcell_field18',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field18}
 											],
 				{END row_grid_2}
 		

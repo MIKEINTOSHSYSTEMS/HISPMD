@@ -127,6 +127,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Indicator_Group}</span>
 						</div>
 		{END searchCtrlBlock_Indicator_Group}
+																{BEGIN searchCtrlBlock_Baseline_Year}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Baseline_Year}" {$filterRow_attrs_Baseline_Year}>
+			<label>{$label Indicators_Dashboard Baseline_Year }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Baseline_Year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Baseline_Year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Baseline_Year}</span>
+						</div>
+		{END searchCtrlBlock_Baseline_Year}
+																{BEGIN searchCtrlBlock_Target_Year}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Target_Year}" {$filterRow_attrs_Target_Year}>
+			<label>{$label Indicators_Dashboard Target_Year }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Target_Year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Target_Year}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Target_Year}</span>
+						</div>
+		{END searchCtrlBlock_Target_Year}
 																{BEGIN searchCtrlBlock_Indicator_Name}
 
 
@@ -1360,12 +1386,6 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Indicator_Name"]:before {
 		content: "{$label Indicators_Dashboard Indicator_Name}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Baseline"]:before {
-		content: "{$label Indicators_Dashboard Baseline}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Target"]:before {
-		content: "{$label Indicators_Dashboard Target}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Facility_Type"]:before {
 		content: "{$label Indicators_Dashboard Facility_Type}";
 	}
@@ -1404,6 +1424,18 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Period"]:before {
 		content: "{$label Indicators_Dashboard Period}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Target_Value"]:before {
+		content: "{$label Indicators_Dashboard Target_Value}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Target_Year"]:before {
+		content: "{$label Indicators_Dashboard Target_Year}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Baseline_Value"]:before {
+		content: "{$label Indicators_Dashboard Baseline_Value}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Baseline_Year"]:before {
+		content: "{$label Indicators_Dashboard Baseline_Year}";
 	}
 	}
 </style>
@@ -1480,7 +1512,7 @@
 	 
 		{BEGIN Indicator_Name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name">
 	{$label Indicators_Dashboard Indicator_Name }	</span>
 {END Indicator_Name_fieldheadercolumn}
 
@@ -1493,61 +1525,11 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Baseline_class}	"
-
-			data-field="Baseline"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Baseline_fieldheadercolumn}
-	{BEGIN Baseline_fieldheader}
-	<SPAN {$Baseline_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline" data-fieldname="Baseline">
-	{$label Indicators_Dashboard Baseline }	{$arrow_icon_Baseline}
-	</SPAN>
-	{END Baseline_fieldheader}
-{END Baseline_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Target_class}	"
-
-			data-field="Target"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Target_fieldheadercolumn}
-	{BEGIN Target_fieldheader}
-	<SPAN {$Target_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target" data-fieldname="Target">
-	{$label Indicators_Dashboard Target }	{$arrow_icon_Target}
-	</SPAN>
-	{END Target_fieldheader}
-{END Target_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Data_Source_class}	"
 
 			data-field="Data_Source"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1559,18 +1541,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
-	{$cell_grid_headcell_field5}
+	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Scope_class}	"
 
 			data-field="Scope"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1582,18 +1564,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Region_class}	"
 
 			data-field="Region"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1605,18 +1587,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
 	<th
 	
-	{$cell_grid_headcell_field7}
+	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Administration_Unit_class}	"
 
 			data-field="Administration_Unit"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1628,18 +1610,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field8}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Facility_Type_class}	"
 
 			data-field="Facility_Type"
 	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1651,18 +1633,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_headcell_field9}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Gender_Sex_class}	"
 
 			data-field="Gender_Sex"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1676,18 +1658,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
 	<th
 	
-	{$cell_grid_headcell_field10}
+	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Value_class}	"
 
 			data-field="Value"
 	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1698,6 +1680,56 @@
 	</SPAN>
 	{END Value_fieldheader}
 {END Value_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Target_Value_class}	"
+
+			data-field="Target_Value"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Target_Value_fieldheadercolumn}
+	{BEGIN Target_Value_fieldheader}
+	<SPAN {$Target_Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Value" data-fieldname="Target Value">
+	{$label Indicators_Dashboard Target_Value }	{$arrow_icon_Target_Value}
+	</SPAN>
+	{END Target_Value_fieldheader}
+{END Target_Value_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Baseline_Value_class}	"
+
+			data-field="Baseline_Value"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Baseline_Value_fieldheadercolumn}
+	{BEGIN Baseline_Value_fieldheader}
+	<SPAN {$Baseline_Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Value" data-fieldname="Baseline Value">
+	{$label Indicators_Dashboard Baseline_Value }	{$arrow_icon_Baseline_Value}
+	</SPAN>
+	{END Baseline_Value_fieldheader}
+{END Baseline_Value_fieldheadercolumn}
 
 	
 	</th>
@@ -1718,7 +1750,7 @@
 	 
 		{BEGIN Data_Representation_fieldheadercolumn}
 	{BEGIN Data_Representation_fieldheader}
-	<SPAN {$Data_Representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Representation" data-fieldname="Data Representation">
+	<SPAN {$Data_Representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Representation" data-fieldname="Data Representation">
 	{$label Indicators_Dashboard Data_Representation }	{$arrow_icon_Data_Representation}
 	</SPAN>
 	{END Data_Representation_fieldheader}
@@ -1733,21 +1765,21 @@
 	{$cell_grid_headcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$Target_Year_class}	"
 
-			data-field="Period_ID"
+			data-field="Target_Year"
 	
 	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Period_ID_fieldheadercolumn}
-	{BEGIN Period_ID_fieldheader}
-	<SPAN {$Period_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period ID">
-	{$label Indicators_Dashboard Period_ID }	{$arrow_icon_Period_ID}
+		{BEGIN Target_Year_fieldheadercolumn}
+	{BEGIN Target_Year_fieldheader}
+	<SPAN {$Target_Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Year" data-fieldname="Target Year">
+	{$label Indicators_Dashboard Target_Year }	{$arrow_icon_Target_Year}
 	</SPAN>
-	{END Period_ID_fieldheader}
-{END Period_ID_fieldheadercolumn}
+	{END Target_Year_fieldheader}
+{END Target_Year_fieldheadercolumn}
 
 	
 	</th>
@@ -1758,21 +1790,21 @@
 	{$cell_grid_headcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Year_class}	"
+		 r-ori-vert		 {$Baseline_Year_class}	"
 
-			data-field="Year"
+			data-field="Baseline_Year"
 	
 	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Year_fieldheadercolumn}
-	{BEGIN Year_fieldheader}
-	<SPAN {$Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Year" data-fieldname="Year">
-	{$label Indicators_Dashboard Year }	{$arrow_icon_Year}
+		{BEGIN Baseline_Year_fieldheadercolumn}
+	{BEGIN Baseline_Year_fieldheader}
+	<SPAN {$Baseline_Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Year" data-fieldname="Baseline Year">
+	{$label Indicators_Dashboard Baseline_Year }	{$arrow_icon_Baseline_Year}
 	</SPAN>
-	{END Year_fieldheader}
-{END Year_fieldheadercolumn}
+	{END Baseline_Year_fieldheader}
+{END Baseline_Year_fieldheadercolumn}
 
 	
 	</th>
@@ -1783,21 +1815,21 @@
 	{$cell_grid_headcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Quarter_ID_class}	"
+		 r-ori-vert		 {$Period_ID_class}	"
 
-			data-field="Quarter_ID"
+			data-field="Period_ID"
 	
 	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Quarter_ID_fieldheadercolumn}
-	{BEGIN Quarter_ID_fieldheader}
-	<SPAN {$Quarter_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quarter_ID" data-fieldname="Quarter ID">
-	{$label Indicators_Dashboard Quarter_ID }	{$arrow_icon_Quarter_ID}
+		{BEGIN Period_ID_fieldheadercolumn}
+	{BEGIN Period_ID_fieldheader}
+	<SPAN {$Period_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period ID">
+	{$label Indicators_Dashboard Period_ID }	{$arrow_icon_Period_ID}
 	</SPAN>
-	{END Quarter_ID_fieldheader}
-{END Quarter_ID_fieldheadercolumn}
+	{END Period_ID_fieldheader}
+{END Period_ID_fieldheadercolumn}
 
 	
 	</th>
@@ -1808,21 +1840,21 @@
 	{$cell_grid_headcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Month_ID_class}	"
+		 r-ori-vert		 {$Year_class}	"
 
-			data-field="Month_ID"
+			data-field="Year"
 	
 	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Month_ID_fieldheadercolumn}
-	{BEGIN Month_ID_fieldheader}
-	<SPAN {$Month_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Month_ID" data-fieldname="Month ID">
-	{$label Indicators_Dashboard Month_ID }	{$arrow_icon_Month_ID}
+		{BEGIN Year_fieldheadercolumn}
+	{BEGIN Year_fieldheader}
+	<SPAN {$Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Year" data-fieldname="Year">
+	{$label Indicators_Dashboard Year }	{$arrow_icon_Year}
 	</SPAN>
-	{END Month_ID_fieldheader}
-{END Month_ID_fieldheadercolumn}
+	{END Year_fieldheader}
+{END Year_fieldheadercolumn}
 
 	
 	</th>
@@ -1833,23 +1865,73 @@
 	{$cell_grid_headcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_class}	"
+		 r-ori-vert		 {$Quarter_ID_class}	"
 
-			data-field="Period"
+			data-field="Quarter_ID"
 	
 	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN Quarter_ID_fieldheadercolumn}
+	{BEGIN Quarter_ID_fieldheader}
+	<SPAN {$Quarter_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quarter_ID" data-fieldname="Quarter ID">
+	{$label Indicators_Dashboard Quarter_ID }	{$arrow_icon_Quarter_ID}
+	</SPAN>
+	{END Quarter_ID_fieldheader}
+{END Quarter_ID_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Month_ID_class}	"
+
+			data-field="Month_ID"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Month_ID_fieldheadercolumn}
+	{BEGIN Month_ID_fieldheader}
+	<SPAN {$Month_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Month_ID" data-fieldname="Month ID">
+	{$label Indicators_Dashboard Month_ID }	{$arrow_icon_Month_ID}
+	</SPAN>
+	{END Month_ID_fieldheader}
+{END Month_ID_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Period_class}	"
+
+			data-field="Period"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN Period_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period" data-fieldname="Period">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period" data-fieldname="Period">
 	{$label Indicators_Dashboard Period }	</span>
 {END Period_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field16}
+	{END cellblock_grid_headcell_field18}
 							</tr>
 															
 					{END grid_header}
@@ -1933,53 +2015,11 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Baseline_class}	"
-
-			data-field="Baseline"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Baseline_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline" data-fieldname="Baseline" data-default-width >
-{$Baseline_value}
-</span>
-{END Baseline_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Target_class}	"
-
-			data-field="Target"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Target_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target" data-fieldname="Target" data-default-width >
-{$Target_value}
-</span>
-{END Target_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Data_Source_class}	"
 
 			data-field="Data_Source"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1989,18 +2029,18 @@
 </span>
 {END Data_Source_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Scope_class}	"
 
 			data-field="Scope"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2010,18 +2050,18 @@
 </span>
 {END Scope_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Region_class}	"
 
 			data-field="Region"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2031,18 +2071,18 @@
 </span>
 {END Region_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Administration_Unit_class}	"
 
 			data-field="Administration_Unit"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2052,18 +2092,18 @@
 </span>
 {END Administration_Unit_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Facility_Type_class}	"
 
 			data-field="Facility_Type"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2073,18 +2113,18 @@
 </span>
 {END Facility_Type_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Gender_Sex_class}	"
 
 			data-field="Gender_Sex"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2094,18 +2134,18 @@
 </span>
 {END Gender_Sex_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Value_class}	"
 
 			data-field="Value"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2114,6 +2154,48 @@
 {$Value_value}
 </span>
 {END Value_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Target_Value_class}	"
+
+			data-field="Target_Value"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Target_Value_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-page="indicators_dashboard_list" data-record-id="{$recId}" data-field="Target_Value" data-fieldname="Target Value" data-default-width >
+{$Target_Value_value}
+</span>
+{END Target_Value_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Baseline_Value_class}	"
+
+			data-field="Baseline_Value"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Baseline_Value_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Value" data-fieldname="Baseline Value" data-default-width >
+{$Baseline_Value_value}
+</span>
+{END Baseline_Value_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field10}
 									{BEGIN cellblock_grid_cell_field11}
@@ -2143,11 +2225,53 @@
 	{$cell_grid_cell_field12}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Target_Year_class}	"
+
+			data-field="Target_Year"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Target_Year_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Year" data-fieldname="Target Year" data-default-width >
+{$Target_Year_value}
+</span>
+{END Target_Year_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Baseline_Year_class}	"
+
+			data-field="Baseline_Year"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Baseline_Year_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Year" data-fieldname="Baseline Year" data-default-width >
+{$Baseline_Year_value}
+</span>
+{END Baseline_Year_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Period_ID_class}	"
 
 			data-field="Period_ID"
 	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2157,18 +2281,18 @@
 </span>
 {END Period_ID_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
 	<td
 	
-	{$cell_grid_cell_field13}
+	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Year_class}	"
 
 			data-field="Year"
 	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2178,18 +2302,18 @@
 </span>
 {END Year_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
 	<td
 	
-	{$cell_grid_cell_field14}
+	{$cell_grid_cell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Quarter_ID_class}	"
 
 			data-field="Quarter_ID"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2199,18 +2323,18 @@
 </span>
 {END Quarter_ID_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
-									{BEGIN cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
 	<td
 	
-	{$cell_grid_cell_field15}
+	{$cell_grid_cell_field17}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Month_ID_class}	"
 
 			data-field="Month_ID"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2220,18 +2344,18 @@
 </span>
 {END Month_ID_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
 	<td
 	
-	{$cell_grid_cell_field16}
+	{$cell_grid_cell_field18}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Period_class}	"
 
 			data-field="Period"
 	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2241,7 +2365,7 @@
 </span>
 {END Period_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field16}
+	{END cellblock_grid_cell_field18}
 							</tr>
 										
 											{END grid_row}
@@ -2304,7 +2428,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Baseline_class}	"
+		 r-ori-vert		 {$Data_Source_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2319,7 +2443,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Target_class}	"
+		 r-ori-vert		 {$Scope_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2334,7 +2458,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Data_Source_class}	"
+		 r-ori-vert		 {$Region_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2349,7 +2473,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Scope_class}	"
+		 r-ori-vert		 {$Administration_Unit_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2364,7 +2488,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Region_class}	"
+		 r-ori-vert		 {$Facility_Type_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2379,7 +2503,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Administration_Unit_class}	"
+		 r-ori-vert		 {$Gender_Sex_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2394,7 +2518,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Facility_Type_class}	"
+		 r-ori-vert		 {$Value_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2409,7 +2533,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Gender_Sex_class}	"
+		 r-ori-vert		 {$Target_Value_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2424,7 +2548,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Value_class}	"
+		 r-ori-vert		 {$Baseline_Value_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2454,7 +2578,7 @@
 	{$cell_grid_footcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_ID_class}	"
+		 r-ori-vert		 {$Target_Year_class}	"
 
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2469,7 +2593,7 @@
 	{$cell_grid_footcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Year_class}	"
+		 r-ori-vert		 {$Baseline_Year_class}	"
 
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2484,7 +2608,7 @@
 	{$cell_grid_footcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Quarter_ID_class}	"
+		 r-ori-vert		 {$Period_ID_class}	"
 
 	
 	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2499,7 +2623,7 @@
 	{$cell_grid_footcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Month_ID_class}	"
+		 r-ori-vert		 {$Year_class}	"
 
 	
 	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2514,7 +2638,7 @@
 	{$cell_grid_footcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Period_class}	"
+		 r-ori-vert		 {$Quarter_ID_class}	"
 
 	
 	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
@@ -2523,6 +2647,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Month_ID_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Period_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicators_dashboard_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
 							</tr>
 					
 					</tfoot>

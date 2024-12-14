@@ -1621,6 +1621,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.moh_indicators_target" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

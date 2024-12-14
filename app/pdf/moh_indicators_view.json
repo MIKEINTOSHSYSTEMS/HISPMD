@@ -172,12 +172,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_moh_indicators indicator_name }","bold":true},{"text":{$indicator_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_moh_indicators baseline }","bold":true},{"text":{$baseline_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_moh_indicators target }","bold":true},{"text":{$target_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_moh_indicators indicator_group_id }","bold":true},{"text":{$indicator_group_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],

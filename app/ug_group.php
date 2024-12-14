@@ -135,6 +135,7 @@ $nonAdminTablesArr[] = "DHIS2_Reports_DataSet";
 $nonAdminTablesArr[] = "DHIS2_ReportingRate_Chart";
 $nonAdminTablesArr[] = "DHIS2_ReportingRates";
 $nonAdminTablesArr[] = "DHIS2_AnalyticsReport";
+$nonAdminTablesArr[] = "public.moh_indicators_target";
 
 $ug_connection = $cman->getForUserGroups();
 

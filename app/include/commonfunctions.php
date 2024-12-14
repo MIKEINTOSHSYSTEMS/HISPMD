@@ -444,6 +444,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("dhis2_analyticsreport" == $shortTName )
 		return true;
+	if ("moh_indicators_target" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1574,6 +1576,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_AnalyticsReport";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.moh_indicators_target");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.moh_indicators_target";
+	}
 	return $arr;
 }
 
@@ -1703,6 +1714,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_ReportingRate_Chart";
 	$arr[]="DHIS2_ReportingRates";
 	$arr[]="DHIS2_AnalyticsReport";
+	$arr[]="public.moh_indicators_target";
 	return $arr;
 }
 
@@ -2948,6 +2960,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="DHIS2_AnalyticsReport" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.moh_indicators_target" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

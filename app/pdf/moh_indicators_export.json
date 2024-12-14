@@ -112,12 +112,6 @@ pdfDocument = {
 			{"text":{$indicator_name_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$baseline_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
-			{"text":{$target_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 		  ],

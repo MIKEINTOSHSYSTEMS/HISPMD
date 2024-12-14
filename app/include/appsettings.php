@@ -912,9 +912,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "737_1733669802";
+$projectBuildKey = "742_1733669802";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "737";
+$projectBuildNumber = "742";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1057,6 +1057,7 @@ $tableCaptions["English"]["DHIS2_ReportingRates"] = "DHIS2 ReportingRates";
 $tableCaptions["English"]["DHIS2_AnalyticsReport"] = "DHIS2 AnalyticsReport";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["English"]["public_moh_indicators_target"] = "Moh Indicators Target";
 $tableCaptions["Amharic"] = array();
 $tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
 $tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
@@ -1179,6 +1180,7 @@ $tableCaptions["Amharic"]["DHIS2_ReportingRates"] = "DHIS2 ReportingRates";
 $tableCaptions["Amharic"]["DHIS2_AnalyticsReport"] = "DHIS2 AnalyticsReport";
 $tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
+$tableCaptions["Amharic"]["public_moh_indicators_target"] = "Moh Indicators Target";
 
 
 $globalEvents = new class_GlobalEvents;
