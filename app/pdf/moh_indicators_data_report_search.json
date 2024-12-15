@@ -213,6 +213,18 @@ pdfDocument = {
 				
 			{"text":{$period_value},"hidden":"{$item_hide_integrated_search_field18}"},
 				
+				
+			{"text":{$indicator_target_value},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$indicator_target_year_value},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$indicator_baseline_value},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$indicator_baseline_year_value},"hidden":"{$item_hide_integrated_search_field19}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

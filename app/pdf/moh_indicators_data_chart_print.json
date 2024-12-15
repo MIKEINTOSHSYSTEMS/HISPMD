@@ -109,6 +109,21 @@ pdfDocument = {
 										{BEGIN col_grid_14}
 					"%",
 					{END col_grid_14}
+										{BEGIN col_grid_15}
+					"%",
+					{END col_grid_15}
+										{BEGIN col_grid_16}
+					"%",
+					{END col_grid_16}
+										{BEGIN col_grid_17}
+					"%",
+					{END col_grid_17}
+										{BEGIN col_grid_18}
+					"%",
+					{END col_grid_18}
+										{BEGIN col_grid_19}
+					"%",
+					{END col_grid_19}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -256,7 +271,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart period }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart period }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -285,7 +300,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart data_id }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart data_id }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -314,7 +329,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_id }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_id }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -343,7 +358,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart data_source_id }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart data_source_id }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -372,7 +387,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart assessment_id }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart assessment_id }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -401,7 +416,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart region_id }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart region_id }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -430,7 +445,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart unit_id }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart unit_id }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -459,7 +474,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart facility_type_id }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart facility_type_id }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -488,7 +503,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart period_id }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart period_id }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -517,7 +532,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart quarter_id }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart quarter_id }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -546,7 +561,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart month_id }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart month_id }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -575,7 +590,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart scope_id }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart scope_id }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -604,7 +619,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart gender_sex }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart gender_sex }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -633,7 +648,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart data_representation }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart data_representation }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -662,7 +677,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_group_id }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_group_id }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -672,6 +687,151 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
+{
+	cellId: 'headcell_field15',
+	col:0,
+	row:0,
+			fieldName: 'data_source_detail',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_data_Chart data_source_detail }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$data_source_detail_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
+{
+	cellId: 'headcell_field16',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_target }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_target_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
+{
+	cellId: 'headcell_field17',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target_year',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_target_year }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_target_year_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
+{
+	cellId: 'headcell_field18',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_baseline }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_baseline_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field19}
+{
+	cellId: 'headcell_field19',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline_year',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_data_Chart indicator_baseline_year }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_baseline_year_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field19}
 											],
 				{END row_grid_0}
 		
@@ -1116,6 +1276,151 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
+{
+	cellId: 'cell_field15',
+	col:0,
+	row:0,
+			fieldName: 'data_source_detail',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$data_source_detail_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$data_source_detail_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
+{
+	cellId: 'cell_field16',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_target_pdfvalue},"hidden":"{$item_hide_simple_grid_field16}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_target_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
+{
+	cellId: 'cell_field17',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target_year',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_target_year_pdfvalue},"hidden":"{$item_hide_simple_grid_field17}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_target_year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
+{
+	cellId: 'cell_field18',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_baseline_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_baseline_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field19}
+{
+	cellId: 'cell_field19',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline_year',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_baseline_year_pdfvalue},"hidden":"{$item_hide_simple_grid_field19}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_baseline_year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field19}
 											],
 				{END row_grid_1}
 		
@@ -1515,6 +1820,136 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field14}
+																							{BEGIN cellblock_grid_footcell_field15}
+{
+	cellId: 'footcell_field15',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field15}
+																							{BEGIN cellblock_grid_footcell_field16}
+{
+	cellId: 'footcell_field16',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field16}
+																							{BEGIN cellblock_grid_footcell_field17}
+{
+	cellId: 'footcell_field17',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field17}
+																							{BEGIN cellblock_grid_footcell_field18}
+{
+	cellId: 'footcell_field18',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field18}
+																							{BEGIN cellblock_grid_footcell_field19}
+{
+	cellId: 'footcell_field19',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field19}
 											],
 				{END row_grid_2}
 		

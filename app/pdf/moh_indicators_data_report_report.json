@@ -77,13 +77,17 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
+										"%",
+										"%",
+										"%",
+										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 16,
+							colSpan: 20,
 							border:[false, false,false,false],
 							stack: [
 
@@ -296,7 +300,7 @@ pdfDocument = {
 				style: 'blackshade',
 				alignment: '{$data_source_id_align}',
 			},
-																																																																						
+																																																																																										
 																							{
 				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
 				style: 'blackshade',
@@ -321,6 +325,11 @@ pdfDocument = {
 				text: '{$jslabel MOH_Indicators_Data_Report value }',
 				style: 'blackshade',
 				alignment: '{$value_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_target }',
+				style: 'blackshade',
+				alignment: '{$indicator_target_align}',
 			},
 											{
 				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
@@ -361,6 +370,21 @@ pdfDocument = {
 				text: '{$jslabel MOH_Indicators_Data_Report period }',
 				style: 'blackshade',
 				alignment: '{$period_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_target_year }',
+				style: 'blackshade',
+				alignment: '{$indicator_target_year_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline }',
+				style: 'blackshade',
+				alignment: '{$indicator_baseline_align}',
+			},
+											{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline_year }',
+				style: 'blackshade',
+				alignment: '{$indicator_baseline_year_align}',
 			},
 						],
 		
@@ -419,6 +443,12 @@ pdfDocument = {
 			},
 											{
 				text: [
+										{$indicator_target_value}
+									],
+				alignment: '{$indicator_target_align}',
+			},
+											{
+				text: [
 										{$data_representation_value}
 									],
 				alignment: '{$data_representation_align}',
@@ -464,6 +494,24 @@ pdfDocument = {
 										{$period_value}
 									],
 				alignment: '{$period_align}',
+			},
+											{
+				text: [
+										{$indicator_target_year_value}
+									],
+				alignment: '{$indicator_target_year_align}',
+			},
+											{
+				text: [
+										{$indicator_baseline_value}
+									],
+				alignment: '{$indicator_baseline_align}',
+			},
+											{
+				text: [
+										{$indicator_baseline_year_value}
+									],
+				alignment: '{$indicator_baseline_year_align}',
 			},
 					
 	],
@@ -525,6 +573,12 @@ pdfDocument = {
 			},
 											{
 				text: [
+										{$indicator_target_value}
+									],
+				alignment: '{$indicator_target_align}',
+			},
+											{
+				text: [
 										{$data_representation_value}
 									],
 				alignment: '{$data_representation_align}',
@@ -570,6 +624,24 @@ pdfDocument = {
 										{$period_value}
 									],
 				alignment: '{$period_align}',
+			},
+											{
+				text: [
+										{$indicator_target_year_value}
+									],
+				alignment: '{$indicator_target_year_align}',
+			},
+											{
+				text: [
+										{$indicator_baseline_value}
+									],
+				alignment: '{$indicator_baseline_align}',
+			},
+											{
+				text: [
+										{$indicator_baseline_year_value}
+									],
+				alignment: '{$indicator_baseline_year_align}',
 			},
 					
 	],
@@ -631,6 +703,12 @@ pdfDocument = {
 			},
 											{
 				text: [
+										{$indicator_target_value}
+									],
+				alignment: '{$indicator_target_align}',
+			},
+											{
+				text: [
 										{$data_representation_value}
 									],
 				alignment: '{$data_representation_align}',
@@ -677,6 +755,24 @@ pdfDocument = {
 									],
 				alignment: '{$period_align}',
 			},
+											{
+				text: [
+										{$indicator_target_year_value}
+									],
+				alignment: '{$indicator_target_year_align}',
+			},
+											{
+				text: [
+										{$indicator_baseline_value}
+									],
+				alignment: '{$indicator_baseline_align}',
+			},
+											{
+				text: [
+										{$indicator_baseline_year_value}
+									],
+				alignment: '{$indicator_baseline_year_align}',
+			},
 					
 	],
 	{END data_source_id_firstnewgroup}
@@ -717,6 +813,10 @@ pdfDocument = {
 				alignment: '{$value_align}',
 			},
 											{
+				text: {$indicator_target_value},
+				alignment: '{$indicator_target_align}',
+			},
+											{
 				text: {$data_representation_value},
 				alignment: '{$data_representation_align}',
 			},
@@ -748,6 +848,18 @@ pdfDocument = {
 				text: {$period_value},
 				alignment: '{$period_align}',
 			},
+											{
+				text: {$indicator_target_year_value},
+				alignment: '{$indicator_target_year_align}',
+			},
+											{
+				text: {$indicator_baseline_value},
+				alignment: '{$indicator_baseline_align}',
+			},
+											{
+				text: {$indicator_baseline_year_value},
+				alignment: '{$indicator_baseline_year_align}',
+			},
 						],
 {END nonewgroup}
 
@@ -772,8 +884,8 @@ pdfDocument = {
 						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_3',
-					colSpan: 14				},
-																																																																																																				],
+					colSpan: 18				},
+																																																																																																																																],
 		
 		
 		
@@ -798,8 +910,8 @@ pdfDocument = {
 						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_2',
-					colSpan: 15				},
-																																																																																																											],
+					colSpan: 19				},
+																																																																																																																																							],
 		
 		
 		
@@ -820,8 +932,8 @@ pdfDocument = {
 						' {mlang_message RECORDS_TOTAL}'
 					],
 					style: 'group_1',
-					colSpan: 16				},
-																																																																																																																		],
+					colSpan: 20				},
+																																																																																																																																														],
 		
 		
 		
@@ -876,6 +988,11 @@ pdfDocument = {
 				style: 'blackshade'
 			},
 						{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_target }',
+				alignment: '{$indicator_target_align}',
+				style: 'blackshade'
+			},
+						{
 				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
 				alignment: '{$data_representation_align}',
 				style: 'blackshade'
@@ -915,6 +1032,21 @@ pdfDocument = {
 				alignment: '{$period_align}',
 				style: 'blackshade'
 			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_target_year }',
+				alignment: '{$indicator_target_year_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline }',
+				alignment: '{$indicator_baseline_align}',
+				style: 'blackshade'
+			},
+						{
+				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline_year }',
+				alignment: '{$indicator_baseline_year_align}',
+				style: 'blackshade'
+			},
 					],
 
 
@@ -926,7 +1058,7 @@ pdfDocument = {
 	[
 		{	
 			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
-			colSpan: 16,
+			colSpan: 20,
 			style: 'pagesummary',
 		}
 	],
@@ -941,7 +1073,7 @@ pdfDocument = {
 	[
 		{
 			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
-			colSpan: 16,
+			colSpan: 20,
 			style: 'globalsummary',
 		}
 	],

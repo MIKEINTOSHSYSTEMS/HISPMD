@@ -172,9 +172,13 @@ function drawChart(chartType, selectedIndicators, xAxis) {
         chart = anychart.line();
     } else if (chartType === "area") {
         chart = anychart.area();
+    } else if (chartType === "pareto") {
+        chart = anychart.pareto();
+    } else if (chartType === "column") {
+        chart = anychart.column();
     } else {
         //    chart = anychart.column3d(); // Default to column chart
-        chart = anychart.column(); // Default to column chart
+        chart = anychart.pareto(); // Default to column chart
     }
 
 
@@ -231,7 +235,12 @@ function drawChart(chartType, selectedIndicators, xAxis) {
         }
 
         chart.xAxis().title(xAxisTitle);
-        chart.yAxis().title("Data Values");
+        chart.yAxis(0).title("Data Values");
+        chart.yAxis(1).title("Target Data Values")
+             .orientation('right')
+             //chart.getSeriesAt(1).tooltip().format('Target Value: {%Target Value}')
+             
+        ;
     }
 
     // Show legends and data labels

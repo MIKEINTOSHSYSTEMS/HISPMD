@@ -176,7 +176,7 @@ class XTempl_Base
 			array(
 				"chartName"=>"moh_indicators_data_chart",
 				"table"=>"MOH_Indicators_data_Chart",
-				"ctype"=>"2DColumn"));
+				"ctype"=>"Combined"));
 			$this->assign_function("moh_indicators_data_values_chart1_chart","xt_showchart",
 			array(
 				"chartName"=>"moh_indicators_data_values_chart1",

@@ -2414,7 +2414,7 @@ $tdatahispmdusers[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2424,36 +2424,6 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.hispmd_organisations";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "orgid";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "organisation_name";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-		$edata["AllowToAdd"] = true;
-			$edata["addPageId"] = "add";
-
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2469,8 +2439,11 @@ $tdatahispmdusers[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation

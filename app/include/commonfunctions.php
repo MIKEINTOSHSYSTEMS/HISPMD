@@ -1773,7 +1773,7 @@ function GetChartType($shorttable)
 	if($shorttable=="public_mfr_facilities_register_chart")
 		return "2DColumn";
 	if($shorttable=="moh_indicators_data_chart")
-		return "2DColumn";
+		return "Combined";
 	if($shorttable=="moh_indicators_data_values_chart1")
 		return "Line";
 	if($shorttable=="dhis2_reporting_rate_details_chart")

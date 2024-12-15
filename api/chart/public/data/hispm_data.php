@@ -48,9 +48,9 @@ foreach ($data['data'] as $item) {
         "Facility Type" => isset($item['Facility Type']) ? (string)$item['Facility Type'] : "", // String
         "Data Source Detail" => isset($item['Data Source Detail']) ? (string)$item['Data Source Detail'] : "", // String
         "value" => isset($item['Value']) ? (float)$item['Value'] : "", // Float
-        "Target Value" => isset($item['Target Value']) ? (float)$item['Target Value'] : "", // Float
+        "Target Value" => isset($item['Target Value']) ? (float)$item['Target Value'] : null, //"", // Float
         "Target Year" => isset($item['Target Year']) ? (int)$item['Target Year'] : null, // Integer
-        "Baseline Value" => isset($item['Baseline Value']) ? (float)$item['Baseline Value'] : "", // Float
+        "Baseline Value" => isset($item['Baseline Value']) ? (float)$item['Baseline Value'] : null, //"", // Float
         "Baseline Year" => isset($item['Baseline Year']) ? (int)$item['Baseline Year'] : null, // Integer
         "Data Representation" => isset($item['Data Representation']) ? (string)$item['Data Representation'] : "" // String
 

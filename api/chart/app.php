@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./public/style/anychart-ui.min.css">
     <link rel='stylesheet' href='./public/style/bootstrap.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='../../app/styles/default.css'>
+    <link rel='stylesheet' href='../../app/styles/bootstrap/flatly/normal/style.css'>
     <link rel="stylesheet" href="./public/style/main.css">
     <link rel="stylesheet" href="./public/style/overrides.css">
 
@@ -95,11 +97,13 @@
         <select id="periodType" onchange="applyFilters()">
 
         </select>
-        <label for="year">Year:</label>
-        <select id="year" onchange="applyFilters()" multiple></select>
 
         <label for="period">Period:</label>
         <select id="period" onchange="applyFilters()"></select>
+        
+        <label for="year">Year:</label>
+        <select id="year" onchange="applyFilters()"></select>
+
 
         <label for="xAxis">Group By:</label>
         <select id="xAxis" onchange="applyFilters()">
@@ -117,16 +121,17 @@
         <label for="chartType">Select Chart Type</label>
         <select id="chartType" onchange="applyFilters()">
             <option value="column">Column</option>
-            <option value="pareto">Combined</option>
+            <option value="pareto">Combined + Target</option>
             <option value="bar">Bar</option>
             <option value="line">Line</option>
             <option value="area">Area</option>
             <option value="pie">Pie</option>
         </select>
+        <br>
+        <br>
+        <button id="resetFilters" class="btn btn-default btn-sm" id="showAll1">Reset</button>
+        
     </div>
-
-<button id="resetFilters">Reset Filters</button>
-
     <br>    
     <br>
 
@@ -225,7 +230,6 @@ resetFiltersButton.addEventListener("click", () => {
     "year",
     "period",
     "administrationUnit",
-    "chartType",
   ];
 
   filterDropdowns.forEach((id) => {

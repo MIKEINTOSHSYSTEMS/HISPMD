@@ -174,9 +174,11 @@ function drawChart(chartType, selectedIndicators, xAxis) {
         chart = anychart.area();
     } else if (chartType === "pareto") {
         chart = anychart.pareto();
+    } else if (chartType === "column") {
+        chart = anychart.column();
     } else {
         //    chart = anychart.column3d(); // Default to column chart
-        chart = anychart.column(); // Default to column chart
+        chart = anychart.pareto(); // Default to column chart
     }
 
 

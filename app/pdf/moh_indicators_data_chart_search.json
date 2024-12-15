@@ -210,6 +210,21 @@ pdfDocument = {
 				
 			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
 				
+				
+			{"text":{$data_source_detail_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$indicator_target_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$indicator_target_year_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$indicator_baseline_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$indicator_baseline_year_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
