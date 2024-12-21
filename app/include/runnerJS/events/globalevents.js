@@ -1,3 +1,3 @@
 
 Runner.pages.PageSettings.addPageEvent('<global>',Runner.pages.constants.PAGE_LOGIN,"afterInit",function(pageObj,proxy,pageid){if(!proxy.haveLocation){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(showPosition);}
-function showPosition(position){$.post("menu.php",{lat:position.coords.latitude,lng:position.coords.longitude})}}});
+function showPosition(position){$.post("hispmd_moh_indicators_dashboard_dashboard.php?page=hispmd_dashboard&menuItemId=1.php",{lat:position.coords.latitude,lng:position.coords.longitude})}}});

@@ -31,6 +31,8 @@ class class_GlobalEvents extends eventsBase
 
 		$this->events["BeforeRegister"]=true;
 
+		$this->events["BeforeProcessMenu"]=true;
+
 
 //	onscreen events
 		$this->events["MFR_Region_Report_map"] = true;
@@ -252,6 +254,51 @@ return true;
 ;
 } // function BeforeRegister
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+				// Welcome page: Before process
+function BeforeProcessMenu($pageObject)
+{
+
+		
+
+
+//**********  Redirect to another page  ************
+header("Location: hispmd_moh_indicators_dashboard_dashboard.php?page=hispmd_dashboard&menuItemId=1");
+exit();
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeProcessMenu
+
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

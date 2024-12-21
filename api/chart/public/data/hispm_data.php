@@ -64,7 +64,15 @@ foreach ($data['data'] as $item) {
     // Add the transformed data to the array
     $transformed[] = $transformed_entry;
 }
-
+// Sort the array by Year and Period
+usort($transformed, function($a, $b) {
+    // First, compare by Year
+    if ($a['Year'] == $b['Year']) {
+        // If Year is the same, compare by Period
+        return strcmp($a['Period'], $b['Period']);
+    }
+    return $a['Year'] - $b['Year']; // Ascending order for Year
+});
 // Output the transformed JSON
 header('Content-Type: application/json');
 echo json_encode($transformed, JSON_PRETTY_PRINT);

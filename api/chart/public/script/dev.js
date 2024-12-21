@@ -16,6 +16,7 @@ fetch("https://hispmd.merqconsultancy.org/api/chart/public/data/hispm_data.php")
     .then((data) => {
         rawData = data;
         populateFilters(); // Populate filters dynamically
+        // applyFilters(); // To Initialize chart with data  
     })
     .catch((error) => console.error("Error fetching data:", error));
 
@@ -95,6 +96,18 @@ function updateIndicatorsBasedOnGroup(indicatorGroup) {
 function drawChart(chartType, selectedIndicators, xAxis) {
     let seriesData = {};
     let chartData = [];
+    Object.entries(seriesData).forEach(([seriesKey, data]) => {
+    if (chartType === "pie") {
+        // For pie charts, push data into chartData array
+        Object.entries(data).forEach(([xKey, { total, count }]) => {
+            chartData.push({
+                x: xKey, // Label for the pie slice
+                value: total / count, // Value for the pie slice
+                seriesName: seriesKey // Optional: Include series name if needed
+            });
+        });
+    }
+});
 
     // Group data by series (categories) and xAxis
     filteredData.forEach((item) => {
@@ -108,6 +121,12 @@ function drawChart(chartType, selectedIndicators, xAxis) {
             seriesData[seriesKey][xAxisKey] = {
                 total: 0,
                 count: 0,
+                indicatorGroup: item["Indicator Group"],
+                indicator: item["indicator"],
+                dataSource: item["Data Source"],
+                scope: item["Scope"],
+                periodType: item["Period Type"],
+                period: item["Period"],                
             };
         }
 
@@ -115,22 +134,31 @@ function drawChart(chartType, selectedIndicators, xAxis) {
         seriesData[seriesKey][xAxisKey].count += 1;
     });
 
+    // Prepare chart data for pie chart
     const chartSeries = Object.entries(seriesData).map(([seriesKey, data]) => {
         if (chartType === "pie") {
             // For pie chart, we only need one data array with x and value pairs
             return {
                 name: seriesKey,
                 data: Object.entries(data).map(([xKey, { total, count }]) => ({
-                    x: xKey,
+                    xKey, 
                     value: total / count,
-                })),
+                }))
             };
         }
 
-        return {
-            name: seriesKey,
-            data: Object.entries(data).map(([xKey, { total, count }]) => [xKey, total / count]),
-        };
+        const seriesArray = Object.entries(data)
+            .map(([xKey, { total, count, indicatorGroup, indicator, dataSource, scope, periodType, period }]) => ({
+                xKey,
+                value: total / count,
+                indicatorGroup,
+                indicator,
+                dataSource,
+                scope,
+                periodType,
+                period,
+            }));
+        return { name: seriesKey, data: seriesArray };
     });
 
     // Clear the previous chart
@@ -142,35 +170,42 @@ function drawChart(chartType, selectedIndicators, xAxis) {
     // Add series to the chart
     chartSeries.forEach(({ name, data }) => {
         if (chartType === "pie") {
-            chart.data(data); // Apply pie chart data
+            // Pie chart expects data in an array of objects like: [{x: 'Category', value: 10}, ...]
+            const pieData = data.map(({ xKey, value }) => ({ x: xKey, value }));
+            chart.data(pieData); // Apply pie chart data
         } else {
-            const series = chart[chartType || "column"](data);
-            chart.xAxis().title(xAxis);
-            chart.yAxis(0).title("Data Values");
-            chart.yAxis(1).title("Target Data Values").orientation("right");
-
+            const series = chart[chartType || "column"](
+                data.map(({ xKey, value }) => [xKey, value])
+            );
             series.name(name);
+
+            // Add tooltip for hover functionality
+            series.tooltip().format(function () {
+                const point = data[this.index];
+                return `Value: ${this.value}
+                \nIndicator Group: ${point.indicatorGroup}
+                \nIndicator: ${point.indicator}
+                \nData Source: ${point.dataSource}
+                \nScope: ${point.scope}
+                \nPeriod Type: ${point.periodType}
+                \nPeriod: ${point.period}`;
+            });
         }
     });
 
-        // enable tooltip for all series
-        chart.tooltip(true);
-        // enable HTML for tooltips
-        chart.tooltip().useHtml(true);
-
-        // tooltip settings
-        var tooltip = chart.tooltip();
-        //tooltip.positionMode("point");
-        //tooltip.format("Year: <b>{%x}</b>\nData Value: <b>{%value}</b>");
-        //tooltip.format("Year: <b>{%x}</b>\nData Value: <b>{%value}</b>");
-
-    
-        
     // Turn on chart animation
     chart.animation(true);
 
-    // Configure chart
-        chart.legend().enabled(true);
+    // Configure chart settings
+    const chartTitle = selectedIndicators.length > 0
+        ? `Chart for ${selectedIndicators.join(", ")}`
+        : "HISPMD Indicators Chart";
+    chart.title(chartTitle);
+    chart.xAxis().title(xAxis);
+    chart.yAxis(0).title("Data Values");
+    chart.yAxis(1).title("Target Data Values").orientation("right");
+
+    chart.legend().enabled(true);
 
     // Enable the drag-and-drop mode of the legend
     chart.legend().drag(true);
@@ -185,14 +220,10 @@ function drawChart(chartType, selectedIndicators, xAxis) {
         .format('{%Value}{decimalsCount:1}');
     chart.hovered().labels(true);
 
-    // Configure chart settings
-    const chartTitle = selectedIndicators.length > 0
-        ? `Chart for ${selectedIndicators.join(", ")}`
-        : "HISPMD Indicators Chart";
-    chart.title(chartTitle);
-        chart.container("container");
+    chart.container("container");
     chart.draw();
 }
+
 
 // Get the chart instance based on the selected type
 function getChartInstance(chartType) {

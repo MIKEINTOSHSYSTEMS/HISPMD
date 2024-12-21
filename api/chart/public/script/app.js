@@ -1,3 +1,5 @@
+//Older Script
+
 const $button = document.querySelector('#sidebar-toggle');
 const $wrapper = document.querySelector('#wrapper');
 
