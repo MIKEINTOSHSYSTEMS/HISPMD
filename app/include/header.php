@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html><head></head><body><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -77,21 +77,21 @@
     <div class="greeting">
         <strong>👋 
             <script>
-                function getGreeting() {
-                    var now = new Date();
-                    var hour = now.getHours();
+         //       function getGreeting() {
+        //            var now = new Date();
+          //          var hour = now.getHours();
 
-                    if (hour < 12) {
-                        return " እንደምን አደሩ! ";
-                    } else if (hour < 18) {
-                        return " እንደምን ዋሉ! ";
-                    } else if (hour < 22) {
-                        return " አንደምን አመሹ! ";
-                    } else {
-                        return " ደህና እደሩ! ";
-                    }
-                }
-                document.write(getGreeting());
+            //        if (hour < 12) {
+              //          return " እንደምን አደሩ! ";
+                //    } else if (hour < 18) {
+                  //      return " እንደምን ዋሉ! ";
+                //    } else if (hour < 22) {
+                  //      return " አንደምን አመሹ! ";
+                //    } else {
+                  //      return " ደህና እደሩ! ";
+                    //}
+            //    }
+              //  document.write(getGreeting());
             </script>
             <br />
             <script>
@@ -118,7 +118,7 @@
     <div class="logo">
         <img src="./images/Moh_Logo.png" alt="Ministry of Health Ethiopia Logo">
         <span>
-            <strong>ጤና ጥበቃ ሚኒስቴር - ኢትዮጵያ</strong><br>
+            <strong>ጤና ሚኒስቴር - ኢትዮጵያ</strong><br>
             Ministry Of Health - Ethiopia<br>
             Health Information Systems Performance Monitoring Dashboard (HISPMD)
         </span>
@@ -144,3 +144,4 @@
 
 </body>
 </html>
+</body></html>
