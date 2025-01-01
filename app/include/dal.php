@@ -52,6 +52,8 @@ class tDAL
 	var $tblhispmdathispmdmerqconsultancyo_public_dataquality;
 	var $tblhispmdathispmdmerqconsultancyo_public_datause;
 	var $tblhispmdathispmdmerqconsultancyo_public_dhis2_periods;
+	var $tblhispmdathispmdmerqconsultancyo_public_dhis2_reporting_rates;
+	var $tblhispmdathispmdmerqconsultancyo_public_dhis2_reportingrate_settings;
 	var $tblhispmdathispmdmerqconsultancyo_public_digitalhealth;
 	var $tblhispmdathispmdmerqconsultancyo_public_digitalhealthapps;
 	var $tblhispmdathispmdmerqconsultancyo_public_ethprism_additional_organizational_and_behavioral_assessment;
@@ -122,6 +124,8 @@ class tDAL
 		$this->lstTables[] = array("name" => "dataquality", "varname" => "hispmdathispmdmerqconsultancyo_public_dataquality", "altvarname" => "dataquality", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "datause", "varname" => "hispmdathispmdmerqconsultancyo_public_datause", "altvarname" => "datause", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "dhis2_periods", "varname" => "hispmdathispmdmerqconsultancyo_public_dhis2_periods", "altvarname" => "dhis2_periods", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "dhis2_reporting_rates", "varname" => "hispmdathispmdmerqconsultancyo_public_dhis2_reporting_rates", "altvarname" => "dhis2_reporting_rates", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
+		$this->lstTables[] = array("name" => "dhis2_reportingrate_settings", "varname" => "hispmdathispmdmerqconsultancyo_public_dhis2_reportingrate_settings", "altvarname" => "dhis2_reportingrate_settings", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "digitalhealth", "varname" => "hispmdathispmdmerqconsultancyo_public_digitalhealth", "altvarname" => "digitalhealth", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "digitalhealthapps", "varname" => "hispmdathispmdmerqconsultancyo_public_digitalhealthapps", "altvarname" => "digitalhealthapps", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");
 		$this->lstTables[] = array("name" => "ethprism_additional_organizational_and_behavioral_assessment", "varname" => "hispmdathispmdmerqconsultancyo_public_ethprism_additional_organizational_and_behavioral_assessment", "altvarname" => "ethprism_additional_organizational_and_behavioral_assessment", "connId" => "hispmdathispmdmerqconsultancyo", "schema" => "public", "connName" => "hisp_md at hispmd.merqconsulta");

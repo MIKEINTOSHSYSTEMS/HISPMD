@@ -358,6 +358,9 @@ class ConnectionManager_Base
 		$connectionsIds["DHIS2_ReportingRates"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_AnalyticsReport"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["public.moh_indicators_target"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.dhis2_reporting_rates"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["public.dhis2_reportingrate_settings"] = "hispmdathispmdmerqconsultancyo";
+		$connectionsIds["DHIS2_Reporting_Rates_Report"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

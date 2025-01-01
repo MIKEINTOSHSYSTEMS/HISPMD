@@ -80,9 +80,9 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <!--<li><a href="#about">About</a></li>-->
           <li><a href="#features">Features</a></li>
-          <li><a href="#gallery">Support</a></li>
+          <!--<li><a href="#gallery">Support</a></li>
           <li><a href="./main_list.php">Knowledge Base</a></li><!--<li><a href="#team">Documentation</a></li>-->
           <li><a href="#contact">Contact</a></li>
           <li class="dropdown"><a href="./login.php"><span><b>Account<b></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -137,20 +137,20 @@
           </div>
 <div>
 <script>
-function getGreeting() {
-    var now = new Date();
-    var hour = now.getHours();
+//function getGreeting() {
+  //  var now = new Date();
+//    var hour = now.getHours();
 
-    if (hour < 12) {
-        return "እንደምን አደሩ!";
-    } else if (hour < 18) {
-        return "እንደምን ዋሉ!";
-    } else if (hour < 22) {
-        return "አንደምን አመሹ!";
-    } else {
-        return "ደህና እደሩ!";
-    }
-}
+   // if (hour < 12) {
+   //     return "እንደምን አደሩ!";
+   // } else if (hour < 18) {
+    //    return "እንደምን ዋሉ!";
+   // } else if (hour < 22) {
+    //    return "አንደምን አመሹ!";
+   // } else {
+    //    return "ደህና እደሩ!";
+  //  }
+//}
 
 document.write(getGreeting());
   </script>
@@ -320,27 +320,47 @@ document.write(getGreeting());
   }
 }
   </style>
-  <br>
-  <br>
-  <p>Currently Undergoing System Testing</p>
-  <br>
 
-        <!-- partial:index.partial.html -->
-        <h1>📅</h1> 
-        <h1>Days Remaing Until... </h1>
-        <!--
-<h2>🧪Testing Day</h2>
-<time class="countdown" date-time="2024-09-27 00:00:00" style="--accent: #3a89db"></time>
+  <!--
+
 -->
 <br>
 <br>
-<h2>🚀System Launch Day</h2>
+<br>
+
+<iframe src="start_slider.php" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;"></div>
+   </div><style>.boxes2{height:212px;width:316px;} #new img{max-width:none!important;background:none!important}#iframe{max-height:none!important;max-width:none!important;background:none!important}</style></div>
+
+
+
+ <!-- 
+   <br>
+  <br> 
+ <p>Currently Undergoing System Testing</p>
+  <br>
+-->
+        <!-- partial:index.partial.html -->
+
+        <!--
+        <h1>📅</h1> 
+        <h1>Days Remaing Until... </h1>
+        <h2>🧪Testing Day</h2>
+<time class="countdown" date-time="2024-09-27 00:00:00" style="--accent: #3a89db"></time>
+<br>
+<br>
+-->
+
+<!--<h2>🚀System Launch Day</h2>
 <time class="countdown" date-time="2024-12-12 00:00:00" style="--accent: green"></time>
+-->
 <!-- partial -->
-  <script  src="../../calendar/countdown/script.js"></script>
+ <!-- <script  src="../../calendar/countdown/script.js"></script>
 
 </div>
 <br>
+ -->
+
+
 
 <!--HISPMD_COUNTDOWN-->
     <!-- Page Title -->
@@ -361,7 +381,7 @@ document.write(getGreeting());
         <div class="container">
           <ol>
             <li><a href="../../">Home</a></li>
-            <li class="current">Starter Page</li>
+            <li class="current"></li>
           </ol>
         </div>
       </nav>
@@ -373,13 +393,22 @@ document.write(getGreeting());
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Information Section</h2>
-        <div><span>Check Our</span> <span class="description-title">Log Changes Section</span></div>
+        <!--<div><span>Check Our</span> <span class="description-title">Log Changes Section</span></div>-->
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
+
+            <!--  <h1>HISPMD is Currently Under Development</h1>-->
+             <!-- <p class="mb-0">If you have any questions or support</p>-->
+              <p>Information Center: <a href="mailto:info@merqconsultancy.org">info@merqconsultancy.org</a></p>
+              <p>Tech Support: <a href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
+
+
+        <!--
         <p>HISPMD Ver0.1 [Curernt] </p>
         <p>HISPMD Ver1.0.0 Coming Soon...!</p>
       </div>
+        -->
 
     </section><!-- /Starter Section Section -->
 
@@ -458,13 +487,22 @@ document.write(getGreeting());
     </div>
 
     <div class="container copyright text-center mt-4">
+
+  <p>
+    Health Information Systems Performance Monitoring Dashboard
+    <b> [HISPMD</b> <b><i>V-1.3 BUILD-Ver.2324]</b></i><br> 
+     © <script>document.write(new Date().getFullYear())</script> All Rights Reserved. <img height="25px" width="25px" src="./assets/img/mohfavicon.png" alt="Ministry of Health Ethiopia"> <a href="https://moh.gov.et"><b>Ministry of Health Ethiopia.</b></a>
+    <br> Designed & Developed By <a href="https://ethiopiadup.jsi.com/">JSI DUP</a> in collaboration with
+    <a href="https://merqconsultancy.org" target="_blank"><b>MERQ Consultancy</b></a>
+    </p>   
+<!--
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Ministry of Health - Ethiopia</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
+      <div class="credits">-->
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed & Developed by <a href="https://merqconsultancy.org/">MERQ Consultancy</a>
+        <!--Designed & Developed by <a href="https://merqconsultancy.org/">MERQ Consultancy</a> -->
       </div>
     </div>
 

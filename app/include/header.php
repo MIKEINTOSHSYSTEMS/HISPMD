@@ -1,4 +1,5 @@
-<html><head></head><body><!DOCTYPE html>
+<!--HEADER-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -112,6 +113,15 @@
                 document.write(getEnglishGreeting());
             </script>
         </strong>
+                            <!--
+                    <h4>ዛሬ ቀኑ</h4>
+                    -->
+                    <?php
+                    require_once "../calendar/eth/ethcal.php";
+                    $EC = new EthiopianCalendar(date("Y-m-d"));
+                    $EC->ECDrawCalendar();
+                    $EC->GCDrawCalendar();
+                    ?>
     </div>
 
     <!-- Logo Section -->
@@ -122,6 +132,7 @@
             Ministry Of Health - Ethiopia<br>
             Health Information Systems Performance Monitoring Dashboard (HISPMD)
         </span>
+        
     </div>
 
     <!-- Clock Section -->
@@ -130,11 +141,15 @@
         <script src="../../calendar/eth/ethcal.js"></script>
         <div id="GregClockDisplay"></div>
         <script src="../../calendar/eth/ethcalgreg.js"></script>
-        <div id="date"></div>
+        
+        <div id="date">
+            
+        </div>
+        
         <script>
-            var today = new Date();
-            var formattedDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            document.getElementById("date").innerHTML = formattedDate;
+        //    var today = new Date();
+        //    var formattedDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        //    document.getElementById("date").innerHTML = formattedDate;
         </script>
     </div>
 </div>
@@ -144,4 +159,3 @@
 
 </body>
 </html>
-</body></html>

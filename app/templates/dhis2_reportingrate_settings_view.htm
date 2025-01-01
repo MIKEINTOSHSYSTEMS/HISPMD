@@ -1,0 +1,585 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				{mlang_message NOTIFICATIONS}			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		{mlang_message USERINFO}		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		{mlang_message CHANGE_PASSWORD}		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel public_dhis2_reportingrate_settings view}</h2>
+		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	{$custom __DOCTYPE_HTML___HTML_LANG__EN_____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_UPDATE_REPORTING_RATES__TITLE____________INCLUDE_BOOTSTRAP_CSS_FOR_MODERN_LOOK__________LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET_________STYLE__________BODY_______________BACKGROUND_COLOR___F1F5F9______________FONT_FAMILY___ARIAL___SANS_SERIF______________PADDING__20PX______________________CONTAINER_______________MAX_WIDTH__600PX______________MARGIN__0_AUTO______________BACKGROUND___FFFFFF______________BORDER_RADIUS__10PX______________BOX_SHADOW__0_4PX_6PX_RGBA_0__0__0__0_1_______________PADDING__20PX_____________________H1_______________FONT_SIZE__1_8REM______________FONT_WEIGHT__BOLD______________COLOR___333______________________PROGRESS_CONTAINER_______________MARGIN_TOP__20PX______________________LOG_CONTAINER_______________MARGIN_TOP__20PX______________MAX_HEIGHT__300PX______________OVERFLOW_Y__AUTO______________BACKGROUND___F8F9FA______________PADDING__15PX______________BORDER__1PX_SOLID__DEE2E6______________BORDER_RADIUS__5PX______________________LOG_CONTAINER_PRE_______________MARGIN__0______________FONT_SIZE__14PX______________COLOR___495057______________WHITE_SPACE__PRE_WRAP______________________BTN_LG_______________FONT_SIZE__1REM______________PADDING__10PX_20PX______________________PROGRESS_BAR_______________TRANSITION__WIDTH_0_4S_EASE_____________________FOOTER_______________MARGIN_TOP__20PX______________TEXT_ALIGN__CENTER______________FONT_SIZE__0_9REM______________COLOR___6C757D_____________________FOOTER_A_______________COLOR___007BFF______________TEXT_DECORATION__NONE_____________________FOOTER_A_HOVER_______________TEXT_DECORATION__UNDERLINE__________________STYLE____HEAD____BODY_______DIV_CLASS__CONTAINER____________DIV_ALIGN__CENTER___SVG_WIDTH__64PX__HEIGHT__64PX__VIEWBOX__0_0_48_48__FILL__NONE__XMLNS__HTTP___WWW_W3_ORG_2000_SVG___G_ID__SVGREPO_BGCARRIER__STROKE_WIDTH__0____G__G_ID__SVGREPO_TRACERCARRIER__STROKE_LINECAP__ROUND__STROKE_LINEJOIN__ROUND____G__G_ID__SVGREPO_ICONCARRIER____PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M8_05655_23_9708L6_86383_24_7067C5_64458_25_4589_5_58843_27_2115_6_75703_28_0402L22_8484_39_4515C23_5388_39_9411_24_4626_39_9431_25_1551_39_4565L41_3962_28_0456C42_5744_27_2178_42_5181_25_4536_41_2895_24_7026L39_8479_23_8215L38_0784_25_0839L40_2464_26_4091L24_0054_37_8201L7_91396_26_4088L9_84309_25_2186L8_05655_23_9708ZM33_4418_22_2498L24_0049_16_4814L14_4796_22_3581L12_693_21_1103L22_9547_14_7793C23_596_14_3837_24_4051_14_382_25_0479_14_775L35_2113_20_9873L33_4418_22_2498Z__FILL___3276C3____PATH___PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M24_0048_9_48139L7_91391_19_4087L24_0053_30_82L40_2464_19_4091L24_0048_9_48139ZM6_86378_17_7066C5_64453_18_4588_5_58838_20_2114_6_75698_21_0401L22_8484_32_4514C23_5388_32_941_24_4626_32_943_25_1551_32_4565L41_3961_21_0455C42_5744_20_2177_42_518_18_4536_41_2894_17_7026L25_0479_7_77494C24_4051_7_38199_23_5959_7_38367_22_9547_7_77927L6_86378_17_7066Z__FILL___3276C3____PATH____G___SVG___DIV___________H2_CLASS__TEXT_CENTER_MB_4__UPDATE__U_DHIS2__U__REPORTING_RATES__H2____________DIV_CLASS__TEXT_CENTER________________BUTTON_ID__STARTUPDATE__CLASS__BTN_BTN_PRIMARY_BTN_LG__UPDATE_REPORTING_RATES__BUTTON____________DIV____________DIV_CLASS__PROGRESS_CONTAINER________________DIV_CLASS__PROGRESS____________________DIV_ID__PROGRESSBAR__CLASS__PROGRESS_BAR_BG_SUCCESS__ROLE__PROGRESSBAR__STYLE__WIDTH__0___ARIA_VALUENOW__0__ARIA_VALUEMIN__0__ARIA_VALUEMAX__100__0___DIV________________DIV____________DIV____________DIV_CLASS__LOG_CONTAINER_MT_4________________H5_CLASS__MB_3__LOGS___H5_______________PRE_ID__LOG__CLICK_THE_BUTTON_TO_START_THE_UPDATE_PROCESS_____PRE____________DIV____________FOOTER__________________BUILT_WITH____BY__A_HREF__HTTPS___MERQCONSULTANCY_ORG__TARGET___BLANK__MERQ_CONSULTANCY_PLC_LLC__A_______________FOOTER________DIV____________INCLUDE_JQUERY__________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT___________BOOTSTRAP_BUNDLE_JS__________SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT________SCRIPT____________DOCUMENT__READY_FUNCTION______________________STARTUPDATE___ON__CLICK___FUNCTION______________________CONST_BUTTON_____THIS___________________CONST_PROGRESSBAR_______PROGRESSBAR____________________CONST_LOG_______LOG________________________RESET_PROGRESS_BAR_AND_LOG_________________PROGRESSBAR_CSS__WIDTH____0____ATTR__ARIA_VALUENOW___0__TEXT__0_____________________LOG_HTML__________CLEAR_LOGS_________________BUTTON_PROP__DISABLED___TRUE__TEXT__UPDATING___________________________SIMULATE_THE_UPDATE_PROCESS___________________AJAX_______________________URL______API_DHIS2_APIS_UPDATE_REPORTING_RATES_PHP_______________________TYPE___GET_______________________XHR__FUNCTION______________________________CONST_XHR___NEW_WINDOW_XMLHTTPREQUEST________________________________UPDATE_PROGRESS_AND_LOG_IN_REAL_TIME_________________________XHR_ONPROGRESS___FUNCTION__E________________________________IF__E_LENGTHCOMPUTABLE____________________________________CONST_PROGRESS___MATH_FLOOR__E_LOADED___E_TOTAL____100___________________________________PROGRESSBAR_CSS__WIDTH___PROGRESS________ATTR__ARIA_VALUENOW___PROGRESS__TEXT_PROGRESS____________________________________________________________________CONST_NEWLOG___E_TARGET_RESPONSETEXT______________________________LOG_HTML_NEWLOG_______UPDATE_LOG_DIV_WITH_NEW_LOG_DATA_____________________________________________________RETURN_XHR_____________________________________________SUCCESS__FUNCTION__RESPONSE____________________________PROGRESSBAR_CSS__WIDTH____100____ATTR__ARIA_VALUENOW___100__TEXT__100_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES____________________________LOG_APPEND___PRE_UPDATE_COMPLETED_SUCCESSFULLY___PRE________________________________________________ERROR__FUNCTION__XHR__STATUS__ERROR____________________________LOG_APPEND___PRE_ERROR____ERROR___PRE_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES________________________________________________________________________________SCRIPT____BODY_____HTML__}</span>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-small > 
+	<br></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
+	<p><strong>To Update Reporting Rates Data:</strong> Make sure to update the settings below are correctly set!</p></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	<br>
+<br>
+<br></span>
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c3" data-pageid="{$pageid}" data-page="dhis2_reportingrate_settings_view"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN data_set_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_set}  r-vertical-field" data-fieldname="data_set" data-signal-error-for="data_set{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="data_set" data-fieldname="data_set" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_data_set}">
+		
+		{BEGIN data_set_label}{$label public_dhis2_reportingrate_settings data_set }{END data_set_label}
+	</label>
+	<div class="" >
+		{$data_set_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END data_set_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c5" data-pageid="{$pageid}" data-page="dhis2_reportingrate_settings_view"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN org_unit_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_org_unit}  r-vertical-field" data-fieldname="org_unit" data-signal-error-for="org_unit{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="org_unit" data-fieldname="org_unit" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_org_unit}">
+		
+		{BEGIN org_unit_label}{$label public_dhis2_reportingrate_settings org_unit }{END org_unit_label}
+	</label>
+	<div class="" >
+		{$org_unit_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END org_unit_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c5}
+								</tr>
+	 
+	 
+														<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_c4}
+<td
+	{$cell_grid_c4}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c4" data-pageid="{$pageid}" data-page="dhis2_reportingrate_settings_view"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN report_period_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_report_period}  r-vertical-field" data-fieldname="report_period" data-signal-error-for="report_period{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="report_period" data-fieldname="report_period" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_report_period}">
+		
+		{BEGIN report_period_label}{$label public_dhis2_reportingrate_settings report_period }{END report_period_label}
+	</label>
+	<div class="" >
+		{$report_period_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END report_period_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c4}
+			 
+																
+
+{BEGIN cellblock_grid_c6}
+<td
+	{$cell_grid_c6}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c6" data-pageid="{$pageid}" data-page="dhis2_reportingrate_settings_view"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN ownership_types_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ownership_types}  r-vertical-field" data-fieldname="ownership_types" data-signal-error-for="ownership_types{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="ownership_types" data-fieldname="ownership_types" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_ownership_types}">
+		
+		{BEGIN ownership_types_label}{$label public_dhis2_reportingrate_settings ownership_types }{END ownership_types_label}
+	</label>
+	<div class="" >
+		{$ownership_types_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END ownership_types_fieldblock}
+											
+{BEGIN facility_types_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_facility_types}  r-vertical-field" data-fieldname="facility_types" data-signal-error-for="facility_types{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="facility_types" data-fieldname="facility_types" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_facility_types}">
+		
+		{BEGIN facility_types_label}{$label public_dhis2_reportingrate_settings facility_types }{END facility_types_label}
+	</label>
+	<div class="" >
+		{$facility_types_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END facility_types_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c6}
+								</tr>
+			</tbody></table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	
+">
+		 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							{mlang_message CLOSE_WINDOW}			</a>
+</span>
+{END close_button}
+		</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-page="dhis2_reportingrate_settings_view" data-small > 
+	{$custom _P_CLICK_ON_THE_BUTTON_TO_EDIT_THE_SETTINGS__STRONG___GT___STRONG___P_}</span>
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="dhis2_reportingrate_settings_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		{mlang_message EDIT}		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

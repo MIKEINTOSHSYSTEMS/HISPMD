@@ -273,35 +273,8 @@ class EthiopianCalendar
     public function ECDrawCalendar()
     {
         if ($this->Converted) {
-            echo "<table class='calendar'><tr><th>ሰኞ</th><th>ማክሰኞ</th><th>ረቡዕ</th><th>ሐሙስ</th><th>ዓርብ</th><th class='rest'>ቅዳሜ</th><th class='rest'>እሁድ</th></tr>";
+            echo "<table class='calendar'><tr> </tr>";
 
-            $date = $this->EC_day;
-            while ($date > 7) {
-                $date -= 7;
-            }
-
-            $date = -(((-self::WEEK_DAY_LIST[$this->GetGCDayFullName()]) + 1) - $date);
-            if ($date > 0) {
-                $date = $date - 7;
-            }
-
-            $count_day = $date;
-            while ($count_day < $this->GetECMonthLength()) {
-                if ($date >= -6 && $date <= 0) {
-                    $count_day++;
-                    if ($count_day > 0) {
-                        if (is_int(($count_day - (7 + $date)) / 7)) {
-                            echo "<td class='" . $this->MatchDay($count_day, $this->GetECDate('d'), 'today', 'day') . "'>" . $count_day . "</td><tr>";
-                        } else {
-                            echo "<td class='" . $this->MatchDay($count_day, $this->GetECDate('d'), 'today', 'day') . "'>" . $count_day . "</td>";
-                        }
-                    } else {
-                        echo "<td></td>";
-                    }
-                } else {
-                    break;
-                }
-            }
             echo "</tr><tr><td class='today' colspan='7'>" . $this->GetECDate('Y-m-d / D M d Yዓ.ም') . "</td></tr></table>";
         }
     }
@@ -309,35 +282,9 @@ class EthiopianCalendar
     public function GCDrawCalendar()
     {
         if ($this->Converted) {
-            echo "<table class='calendar'><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th class='rest'>Sun</th></tr>";
+            echo "<table class='calendar'><tr> </tr>";
 
-            $date = $this->day;
-            while ($date > 7) {
-                $date -= 7;
-            }
 
-            $date = -(((-self::WEEK_DAY_LIST[$this->GetGCDayFullName()]) + 1) - $date);
-            if ($date > 0) {
-                $date = $date - 7;
-            }
-
-            $count_day = $date;
-            while ($count_day < $this->GetGCMonthLength()) {
-                if ($date >= -6 && $date <= 0) {
-                    $count_day++;
-                    if ($count_day > 0) {
-                        if (is_int(($count_day - (7 + $date)) / 7)) {
-                            echo "<td class='" . $this->MatchDay($count_day, $this->GetGCDate('d'), 'today', 'day') . "'>" . $count_day . "</td><tr>";
-                        } else {
-                            echo "<td class='" . $this->MatchDay($count_day, $this->GetGCDate('d'), 'today', 'day') . "'>" . $count_day . "</td>";
-                        }
-                    } else {
-                        echo "<td></td>";
-                    }
-                } else {
-                    break;
-                }
-            }
             echo "</tr><tr><td class='today' colspan='7'>" . $this->GetGCDate('Y-m-d / ') . $this->GetGCDayFullName() . " " . $this->GetGCMonthFullName() . $this->GetGCDate(" d Y") . "</td></tr></table>";
         }
     }

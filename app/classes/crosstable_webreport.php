@@ -1623,6 +1623,12 @@ class CrossTableWebReport
 			$isDB = true;
 		if("public.moh_indicators_target" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.dhis2_reporting_rates" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.dhis2_reportingrate_settings" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("public.dhis2_reporting_rates" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

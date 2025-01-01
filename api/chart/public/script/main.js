@@ -46,12 +46,21 @@ function populateDropdown(id, options) {
 }
 
 // Apply filters to the data
+let selectedIndicators = []; // To track selected indicators persistently
+
+// Apply filters to the data
 function applyFilters() {
     const chartType = document.getElementById("chartType").value;
     const indicatorGroup = document.getElementById("indicatorGroup").value;
-    const selectedIndicators = Array.from(
+    const currentSelectedIndicators = Array.from(
         document.getElementById("indicator").selectedOptions,
     ).map((option) => option.value);
+
+    // Update the selected indicators only if they are explicitly changed
+    if (currentSelectedIndicators.length > 0) {
+        selectedIndicators = currentSelectedIndicators;
+    }
+
     const dataSource = document.getElementById("dataSource").value;
     const dataSourceDetail = document.getElementById("dataSourceDetail").value;
     const scope = document.getElementById("scope").value;
@@ -79,6 +88,8 @@ function applyFilters() {
             (administrationUnit === "" || item["Administration Unit"] === administrationUnit),
     );
 
+    // Draw the chart with filtered data
+    
     updateIndicatorsBasedOnGroup(indicatorGroup);
     drawChart(chartType, selectedIndicators, xAxis); // Update chart with filtered data
 }
@@ -147,7 +158,7 @@ function drawChart(chartType, selectedIndicators, xAxis) {
             const series = chart[chartType || "column"](data);
             chart.xAxis().title(xAxis);
             chart.yAxis(0).title("Data Values");
-            chart.yAxis(1).title("Target Data Values").orientation("right");
+            //chart.yAxis(1).title("Target Data Values").orientation("right");
 
             series.name(name);
         }
@@ -269,3 +280,13 @@ const sidebar = document.getElementById("sidebar");
 toggleMenuButton.addEventListener("click", () => {
     sidebar.classList.toggle("show");
 });
+
+// Reset all filters
+function resetFilters() {
+    document.querySelectorAll("select").forEach((dropdown) => {
+        dropdown.value = ""; // Reset all dropdowns
+    });
+    selectedIndicators = []; // Clear the selected indicators
+    filteredData = rawData; // Reset the filtered data
+    drawChart("column", [], "year"); // Redraw the default chart
+}

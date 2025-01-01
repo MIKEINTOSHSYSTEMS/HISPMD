@@ -29,8 +29,10 @@
         <!-- Include FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Include Select2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Include Select2 CSS 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" /> 
+    -->
+    
 
     <!--
     <link rel="stylesheet" href="./public/style/main.css"> for dark theme side bar
@@ -40,6 +42,7 @@
     <link rel="stylesheet" 1  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" 2  referrerpolicy="no-referrer" /> 
     <link rel="stylesheet" href="./public/style/main.light.css">
     <link rel="stylesheet" href="./public/style/overrides.css">
+    <link rel="stylesheet" href="./public/style/select2.min.css">
 
     <!-- AnyChart Font -->
     <link rel="stylesheet" type="text/css" href="https://cdn.anychart.com/releases/8.13.0/fonts/css/anychart-font.min.css"/>
@@ -124,7 +127,8 @@
         <select id="indicator" multiple="multiple" onchange="applyFilters()"></select>
 
         <label for="dataSource">Data Source:</label>
-        <select id="dataSource" multiple="multiple" onchange="applyFilters()">
+        <select id="dataSource"  onchange="applyFilters()">
+        <!--<select id="dataSource" multiple="multiple" onchange="applyFilters()">-->
 
         </select>
 
@@ -191,12 +195,17 @@
 
         <br>
         <br>
+        <!--
         <button id="resetFilters" class="btn btn-primary btn-sm" id="showAll1"><h4>Reset Filters</h4></button>
+        <button id="reset-button" onclick="resetFilters()">Reset Filters</button>
+
+        -->
+        <button id="resetFilters" class="btn btn-primary btn-sm" id="reset-button"><h4>Reset Filters</h4></button>
         
     </div>
+    <!--
     <br>    
-    <br>
-
+    -->
     <ul>
         <li><a href="#filtered-chart" onclick="showSection('filtered-chart')"><h4><i class="fa-solid fa-chart-line"></i> Data Visualizer</a></h4></li>
         <li><a href="#help" onclick="showSection('help')"><h4><i class="fa fa-question-circle"></i> Help</a></h4></li>
@@ -208,7 +217,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" id="sidebar-toggle">
-      <i class="fa-solid fa-circle-chevron-left"></i>
+      <i class="fa-solid fa-circle-chevron-left"> </i>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -293,7 +302,7 @@
         <li><strong>Bar:</strong> Displays data as horizontal bars.</li>
         <li><strong>Line:</strong> Shows trends over time using a line graph.</li>
         <li><strong>Area:</strong> Similar to a line graph, but fills the area beneath the line for emphasis.</li>
-        <li><strong>Pie:(COMING SOON)</strong> Represents data proportions as slices of a pie chart.</li>
+        <li><strong>Pie:</strong> Represents data proportions as slices of a pie chart.</li>
         <li><strong>Combined + Target:(COMING SOON) </strong> Displays a combination chart, potentially including target values.</li>
     </ul>
     <p><strong>Selecting a Chart Type:</strong></p>

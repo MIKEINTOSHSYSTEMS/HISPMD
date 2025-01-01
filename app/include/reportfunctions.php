@@ -921,6 +921,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="public.dhis2_reporting_rates")
+		{
+			return 1;
+		}
+		if($table=="public.dhis2_reportingrate_settings")
+		{
+			return 1;
+		}
+		if($table=="DHIS2_Reporting_Rates_Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1665,6 +1677,18 @@ function getCaptionTable($table)
 	if($table=="public.moh_indicators_target")
 	{
 		return GetTableCaption("public_moh_indicators_target");
+	}
+	if($table=="public.dhis2_reporting_rates")
+	{
+		return GetTableCaption("public_dhis2_reporting_rates");
+	}
+	if($table=="public.dhis2_reportingrate_settings")
+	{
+		return GetTableCaption("public_dhis2_reportingrate_settings");
+	}
+	if($table=="DHIS2_Reporting_Rates_Report")
+	{
+		return GetTableCaption("DHIS2_Reporting_Rates_Report");
 	}
 	return $table;
 }
@@ -3294,6 +3318,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="public.moh_indicators_target";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.dhis2_reporting_rates");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.dhis2_reporting_rates";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.dhis2_reporting_rates";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("public.dhis2_reportingrate_settings");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="public.dhis2_reportingrate_settings";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="public.dhis2_reportingrate_settings";
 	}
 	return $arr;
 }

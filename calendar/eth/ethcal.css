@@ -17,7 +17,8 @@ table.calendar {
 table.calendar td {
     cursor: pointer;
     min-width: 40px;
-    padding: 5px 0;
+    padding: 0px 0;
+    /*padding: 5px 0;*/
 }
 
 table.calendar th {
@@ -36,6 +37,7 @@ table.calendar th.rest {
 td.today {
     background: #00274c;
     color: white;
+    font-size: 12px;
 }
 
 td.today:hover {
@@ -84,5 +86,5 @@ td.day:hover {
 
 .ethiopian-calendar,
 .gregorian-calendar {
-    flex: 1;
+    /*flex: 1;*/
 }

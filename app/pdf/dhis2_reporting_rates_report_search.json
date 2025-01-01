@@ -1,0 +1,282 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel DHIS2_Reporting_Rates_Report search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":{$organisationunit_id_value},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$organisationunit_value},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$organisationunit_code_value},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$actual_reports_value},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$expected_reports_value},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$reporting_rate_value},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$actual_reports_on_time_value},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$reporting_rate_on_time_value},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$dataset_id_value},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$dataset_name_value},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$facility_type_value},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$report_period_value},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$ownership_type_id_value},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$ownership_type_label_value},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

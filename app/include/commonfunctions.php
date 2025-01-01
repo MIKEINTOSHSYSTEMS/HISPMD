@@ -446,6 +446,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("moh_indicators_target" == $shortTName )
 		return true;
+	if ("dhis2_reporting_rates" == $shortTName )
+		return true;
+	if ("dhis2_reportingrate_settings" == $shortTName )
+		return true;
+	if ("dhis2_reporting_rates_report" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1585,6 +1591,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="public.moh_indicators_target";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.dhis2_reporting_rates");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.dhis2_reporting_rates";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.dhis2_reportingrate_settings");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.dhis2_reportingrate_settings";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Reporting_Rates_Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Reporting_Rates_Report";
+	}
 	return $arr;
 }
 
@@ -1715,6 +1748,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="DHIS2_ReportingRates";
 	$arr[]="DHIS2_AnalyticsReport";
 	$arr[]="public.moh_indicators_target";
+	$arr[]="public.dhis2_reporting_rates";
+	$arr[]="public.dhis2_reportingrate_settings";
+	$arr[]="DHIS2_Reporting_Rates_Report";
 	return $arr;
 }
 
@@ -1777,7 +1813,7 @@ function GetChartType($shorttable)
 	if($shorttable=="moh_indicators_data_values_chart1")
 		return "Line";
 	if($shorttable=="dhis2_reporting_rate_details_chart")
-		return "2DColumn";
+		return "Combined";
 	if($shorttable=="dhis2_reportingrate_chart")
 		return "2DColumn";
 	return "";
@@ -2968,6 +3004,21 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.dhis2_reporting_rates" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.dhis2_reportingrate_settings" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Reporting_Rates_Report" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

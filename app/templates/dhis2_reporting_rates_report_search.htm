@@ -1,0 +1,675 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				{mlang_message NOTIFICATIONS}			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		{mlang_message USERINFO}		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		{mlang_message CHANGE_PASSWORD}		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel DHIS2_Reporting_Rates_Report search}</h2>
+		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN organisationunit_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_organisationunit_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="organisationunit_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="organisationunit_id" data-fieldname="organisationunit_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_organisationunit_id}">
+		{$label DHIS2_Reporting_Rates_Report organisationunit_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_organisationunit_id}
+	</div>
+	<div class="r-search-field">
+		{$organisationunit_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$organisationunit_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END organisationunit_id_fieldblock}
+											
+{BEGIN organisationunit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_organisationunit}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="organisationunit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="organisationunit" data-fieldname="organisationunit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_organisationunit}">
+		{$label DHIS2_Reporting_Rates_Report organisationunit }	</label>
+	<div class="r-search-option">
+		{$searchtype_organisationunit}
+	</div>
+	<div class="r-search-field">
+		{$organisationunit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$organisationunit_editcontrol1}
+	</div>
+	
+</div>
+
+{END organisationunit_fieldblock}
+											
+{BEGIN organisationunit_code_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_organisationunit_code}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="organisationunit_code{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="organisationunit_code" data-fieldname="organisationunit_code" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_organisationunit_code}">
+		{$label DHIS2_Reporting_Rates_Report organisationunit_code }	</label>
+	<div class="r-search-option">
+		{$searchtype_organisationunit_code}
+	</div>
+	<div class="r-search-field">
+		{$organisationunit_code_editcontrol}	</div>
+	<div class="r-search-field">
+		{$organisationunit_code_editcontrol1}
+	</div>
+	
+</div>
+
+{END organisationunit_code_fieldblock}
+											
+{BEGIN actual_reports_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_actual_reports}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="actual_reports{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="actual_reports" data-fieldname="actual_reports" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_actual_reports}">
+		{$label DHIS2_Reporting_Rates_Report actual_reports }	</label>
+	<div class="r-search-option">
+		{$searchtype_actual_reports}
+	</div>
+	<div class="r-search-field">
+		{$actual_reports_editcontrol}	</div>
+	<div class="r-search-field">
+		{$actual_reports_editcontrol1}
+	</div>
+	
+</div>
+
+{END actual_reports_fieldblock}
+											
+{BEGIN expected_reports_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_expected_reports}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="expected_reports{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="expected_reports" data-fieldname="expected_reports" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_expected_reports}">
+		{$label DHIS2_Reporting_Rates_Report expected_reports }	</label>
+	<div class="r-search-option">
+		{$searchtype_expected_reports}
+	</div>
+	<div class="r-search-field">
+		{$expected_reports_editcontrol}	</div>
+	<div class="r-search-field">
+		{$expected_reports_editcontrol1}
+	</div>
+	
+</div>
+
+{END expected_reports_fieldblock}
+											
+{BEGIN reporting_rate_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_reporting_rate}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="reporting_rate{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="reporting_rate" data-fieldname="reporting_rate" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_reporting_rate}">
+		{$label DHIS2_Reporting_Rates_Report reporting_rate }	</label>
+	<div class="r-search-option">
+		{$searchtype_reporting_rate}
+	</div>
+	<div class="r-search-field">
+		{$reporting_rate_editcontrol}	</div>
+	<div class="r-search-field">
+		{$reporting_rate_editcontrol1}
+	</div>
+	
+</div>
+
+{END reporting_rate_fieldblock}
+											
+{BEGIN actual_reports_on_time_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_actual_reports_on_time}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="actual_reports_on_time{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="actual_reports_on_time" data-fieldname="actual_reports_on_time" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_actual_reports_on_time}">
+		{$label DHIS2_Reporting_Rates_Report actual_reports_on_time }	</label>
+	<div class="r-search-option">
+		{$searchtype_actual_reports_on_time}
+	</div>
+	<div class="r-search-field">
+		{$actual_reports_on_time_editcontrol}	</div>
+	<div class="r-search-field">
+		{$actual_reports_on_time_editcontrol1}
+	</div>
+	
+</div>
+
+{END actual_reports_on_time_fieldblock}
+											
+{BEGIN reporting_rate_on_time_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_reporting_rate_on_time}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="reporting_rate_on_time{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="reporting_rate_on_time" data-fieldname="reporting_rate_on_time" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_reporting_rate_on_time}">
+		{$label DHIS2_Reporting_Rates_Report reporting_rate_on_time }	</label>
+	<div class="r-search-option">
+		{$searchtype_reporting_rate_on_time}
+	</div>
+	<div class="r-search-field">
+		{$reporting_rate_on_time_editcontrol}	</div>
+	<div class="r-search-field">
+		{$reporting_rate_on_time_editcontrol1}
+	</div>
+	
+</div>
+
+{END reporting_rate_on_time_fieldblock}
+											
+{BEGIN dataset_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dataset_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="dataset_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="dataset_id" data-fieldname="dataset_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_dataset_id}">
+		{$label DHIS2_Reporting_Rates_Report dataset_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_dataset_id}
+	</div>
+	<div class="r-search-field">
+		{$dataset_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$dataset_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END dataset_id_fieldblock}
+											
+{BEGIN dataset_name_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dataset_name}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="dataset_name{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="dataset_name" data-fieldname="dataset_name" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_dataset_name}">
+		{$label DHIS2_Reporting_Rates_Report dataset_name }	</label>
+	<div class="r-search-option">
+		{$searchtype_dataset_name}
+	</div>
+	<div class="r-search-field">
+		{$dataset_name_editcontrol}	</div>
+	<div class="r-search-field">
+		{$dataset_name_editcontrol1}
+	</div>
+	
+</div>
+
+{END dataset_name_fieldblock}
+											
+{BEGIN facility_type_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_facility_type}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="facility_type{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="facility_type" data-fieldname="facility_type" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_facility_type}">
+		{$label DHIS2_Reporting_Rates_Report facility_type }	</label>
+	<div class="r-search-option">
+		{$searchtype_facility_type}
+	</div>
+	<div class="r-search-field">
+		{$facility_type_editcontrol}	</div>
+	<div class="r-search-field">
+		{$facility_type_editcontrol1}
+	</div>
+	
+</div>
+
+{END facility_type_fieldblock}
+											
+{BEGIN report_period_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_report_period}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="report_period{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="report_period" data-fieldname="report_period" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_report_period}">
+		{$label DHIS2_Reporting_Rates_Report report_period }	</label>
+	<div class="r-search-option">
+		{$searchtype_report_period}
+	</div>
+	<div class="r-search-field">
+		{$report_period_editcontrol}	</div>
+	<div class="r-search-field">
+		{$report_period_editcontrol1}
+	</div>
+	
+</div>
+
+{END report_period_fieldblock}
+											
+{BEGIN ownership_type_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ownership_type_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ownership_type_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="ownership_type_id" data-fieldname="ownership_type_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ownership_type_id}">
+		{$label DHIS2_Reporting_Rates_Report ownership_type_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_ownership_type_id}
+	</div>
+	<div class="r-search-field">
+		{$ownership_type_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ownership_type_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END ownership_type_id_fieldblock}
+											
+{BEGIN ownership_type_label_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ownership_type_label}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ownership_type_label{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="ownership_type_label" data-fieldname="ownership_type_label" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ownership_type_label}">
+		{$label DHIS2_Reporting_Rates_Report ownership_type_label }	</label>
+	<div class="r-search-option">
+		{$searchtype_ownership_type_label}
+	</div>
+	<div class="r-search-field">
+		{$ownership_type_label_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ownership_type_label_editcontrol1}
+	</div>
+	
+</div>
+
+{END ownership_type_label_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	
+">
+		 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							{mlang_message SEARCH}			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							{mlang_message RESET}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

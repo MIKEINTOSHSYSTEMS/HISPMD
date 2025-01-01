@@ -46,10 +46,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_reporting_rate_details_chart["English"]["reporting_rate"] = "Reporting Rate";
 	$fieldToolTipsdhis2_reporting_rate_details_chart["English"]["reporting_rate"] = "";
 	$placeHoldersdhis2_reporting_rate_details_chart["English"]["reporting_rate"] = "";
-	$fieldLabelsdhis2_reporting_rate_details_chart["English"]["actual_reports_on_time"] = "actual reports on time";
+	$fieldLabelsdhis2_reporting_rate_details_chart["English"]["actual_reports_on_time"] = "Actual reports on time";
 	$fieldToolTipsdhis2_reporting_rate_details_chart["English"]["actual_reports_on_time"] = "";
 	$placeHoldersdhis2_reporting_rate_details_chart["English"]["actual_reports_on_time"] = "";
-	$fieldLabelsdhis2_reporting_rate_details_chart["English"]["reporting_rate_on_time"] = "reporting rate on time";
+	$fieldLabelsdhis2_reporting_rate_details_chart["English"]["reporting_rate_on_time"] = "Reporting rate on time";
 	$fieldToolTipsdhis2_reporting_rate_details_chart["English"]["reporting_rate_on_time"] = "";
 	$placeHoldersdhis2_reporting_rate_details_chart["English"]["reporting_rate_on_time"] = "";
 	$fieldLabelsdhis2_reporting_rate_details_chart["English"]["Dataset_ID"] = "Dataset";
@@ -206,7 +206,7 @@ $tdatadhis2_reporting_rate_details_chart[".allowShowHideFields"] = true; // temp
 $tdatadhis2_reporting_rate_details_chart[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatadhis2_reporting_rate_details_chart[".isUseAjaxSuggest"] = false;
+$tdatadhis2_reporting_rate_details_chart[".isUseAjaxSuggest"] = true;
 
 
 
@@ -244,13 +244,14 @@ $tdatadhis2_reporting_rate_details_chart[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatadhis2_reporting_rate_details_chart[".chartType"] = "2DColumn";
+$tdatadhis2_reporting_rate_details_chart[".chartType"] = "Combined";
 // end of chart settings
 
 $tdatadhis2_reporting_rate_details_chart[".isDisplayLoading"] = true;
 
 
 
+$tdatadhis2_reporting_rate_details_chart[".noRecordsFirstPage"] = true;
 
 
 
@@ -560,8 +561,9 @@ $tdatadhis2_reporting_rate_details_chart[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "Organisation unit code";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2160,6 +2162,10 @@ $tdatadhis2_reporting_rate_details_chart[".chartLabelInterval"] = 0;
 $tdatadhis2_reporting_rate_details_chart[".chartLabelField"] = "Organisation unit";
 $tdatadhis2_reporting_rate_details_chart[".chartSeries"] = array();
 $tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
+	"field" => "expected reports",
+	"total" => "AVG"
+);
+$tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
 	"field" => "reporting rate",
 	"total" => "AVG"
 );
@@ -2167,22 +2173,39 @@ $tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
 	"field" => "reporting rate on time",
 	"total" => "AVG"
 );
+$tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
+	"field" => "actual reports",
+	"total" => "AVG"
+);
+$tdatadhis2_reporting_rate_details_chart[".chartSeries"][] = array(
+	"field" => "actual reports on time",
+	"total" => "AVG"
+);
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] = '<chart>
 		<attr value="tables">
 			<attr value="0">DHIS2_Reporting_Rate_Details_Chart</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">2d_column</attr>
+			<attr value="type">combined</attr>
 		</attr>
 
 		<attr value="parameters">';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="0">
-			<attr value="name">reporting rate</attr>';
+			<attr value="name">expected reports</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="1">
-			<attr value="name">reporting rate on time</attr>';
+			<attr value="name">reporting rate</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="2">
+			<attr value="name">reporting rate on time</attr>';
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="3">
+			<attr value="name">actual reports</attr>';
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="4">
+			<attr value="name">actual reports on time</attr>';
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>';
+	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '<attr value="5">
 		<attr value="name">Organisation unit</attr>
 	</attr>';
 	$tdatadhis2_reporting_rate_details_chart[".chartXml"] .= '</attr>

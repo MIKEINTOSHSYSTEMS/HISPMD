@@ -458,3 +458,49 @@ a {
     color: rgb(255 255 255);
     text-decoration: none;
 }
+/* Mobile View Filter Styles */
+@media (max-width: 768px) {
+    .filters {
+        display: block; /* Ensure it's visible */
+        width: 100%; /* Full width on mobile */
+        padding: 15px;
+        margin: 10px auto; /* Center it vertically */
+        background: rgba(255, 255, 255, 0.95); /* Light background for visibility */
+        border-radius: 8px; /* Smooth corners */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        position: relative; /* Ensure it stays in the flow */
+    }
+
+    .filters label {
+        display: block; /* Ensure labels are on separate lines */
+        font-size: 14px;
+        color: #234d57;
+        margin-bottom: 5px;
+    }
+
+    .filters select {
+        display: block; /* Full width */
+        width: 100%; /* Stretch dropdown to container width */
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #5dade2;
+        border-radius: 5px;
+        background: #ffffff;
+        color: #34495e;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .filters select:focus {
+        outline: none;
+        border-color: #5dade2;
+        box-shadow: 0px 0px 6px rgba(93, 173, 226, 0.7);
+    }
+}
+.navbar-brand {
+    float: left;
+    padding: 19.5px 55px;
+    font-size: 19px;
+    line-height: 21px;
+    height: 60px;
+}

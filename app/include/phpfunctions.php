@@ -1203,6 +1203,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return 0;
 	}
+				if($table=="public.dhis2_reportingrate_settings" && $field=="updated_at")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
+	}
 	return "";
 }
 
@@ -1214,6 +1218,10 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="public.dhis2_reportingrate_settings" && $field=="updated_at")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
+	}
 	return "";
 }
 

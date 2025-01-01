@@ -125,8 +125,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"<br>\n<br>","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
