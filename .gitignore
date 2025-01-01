@@ -1,4 +1,5 @@
 /ai/mod/env/
+/ai/mod/source/
 /ai/bot/env
 /ai/chatbot/venv
 /ai/pandas-ai
@@ -61,4 +62,5 @@
 /analytics/tmp/cache/tracker/matomocache_portablemediaplayer632-all.php
 /analytics/tmp/cache/tracker/matomocache_Translations-en-bd0742531c00d414667a0c4af342cbb605e83c7f.php
 /analytics/tmp/cache/tracker/matomocache_Translations-en-d878d5ee8a4ad4271dc56a57a6b04f2cadfd7dcd.php
+/.env
 **/sysdb.php

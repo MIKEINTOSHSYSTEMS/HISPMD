@@ -15,10 +15,6 @@ WORKDIR /var/www/html
 # Copy all application source code and directories to the container
 COPY . /var/www/html/
 
-# Create missing directory
-#RUN mkdir -p /var/www/html/ai/mod/source/lib64
-RUN [ ! -d /var/www/html/ai/mod/source/lib64 ] && mkdir -p /var/www/html/ai/mod/source/lib64 || echo "Directory already exists"
-
 # Copy custom nginx configurations
 COPY config/nginx.conf /etc/nginx/conf.d/default.conf
 
