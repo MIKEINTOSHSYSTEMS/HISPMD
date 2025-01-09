@@ -1,9 +1,9 @@
 streamlit==1.36.0
 langchain==0.1.8
-langchain-community==0.0.21
+langchain-community==0.2.19
 langchain-core==0.1.24
 langchain-openai==0.0.6
-mysql-connector-python==8.3.0
+mysql-connector-python==9.1.0
 groq==0.4.2
 langchain-groq==0.0.1
 python-dotenv==1.0.0
