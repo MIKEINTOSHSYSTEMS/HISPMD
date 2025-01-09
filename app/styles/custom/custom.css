@@ -8,3 +8,12 @@
             /* flex-wrap: wrap; */
             /*Modify CSS*/
                 }
+    a {
+    color: #007bff;
+    text-decoration: none;
+    }
+    .btn-link {
+    color: #437ab7;
+    font-weight: normal;
+    border-radius: 0;
+}

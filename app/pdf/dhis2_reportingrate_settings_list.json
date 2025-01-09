@@ -621,7 +621,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$data_set_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$data_set_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

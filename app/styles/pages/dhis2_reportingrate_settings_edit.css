@@ -1,3 +1,11 @@
+[data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"] > * > label,
+[data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"] > * > * > input,
+[data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"] > * > * > textarea,
+[data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"] > * > * > select,
+[data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"] > * > * > .r-readonly-control,
+[data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"][data-page="dhis2_reportingrate_settings_edit"][data-itemid="integrated_edit_field"] > * > * > * > select {
+  font-weight: bold;
+}
 [data-page="dhis2_reportingrate_settings_edit"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

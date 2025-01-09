@@ -168,7 +168,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_dhis2_reportingrate_settings data_set }","bold":true},{"text":{$data_set_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","bold":true,"stack":[{"text":"{$jslabel public_dhis2_reportingrate_settings data_set }","bold":true},{"text":{$data_set_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

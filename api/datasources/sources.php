@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HISPMD Data Sources and Descriptions</title>
+    <!--<link rel="stylesheet" href="./style/all.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -255,7 +256,7 @@
                 This assessment was conducted by universities serving as centers of excellence for the capacity building and mentorship program (CBMP) through technical support from the Ministry of Health and the Ethiopia Data Use Partnership (DUP). The assessment covered all nine regional states (Afar, Amhara, Tigray, Benishangul Gumuz, Gambella, Harari, Oromia, SNNP, and Somali) and two city administrations (Addis Ababa and Dire Dawa) of the CBMP woredas. A cross-sectional survey design was employed among all the Woreda/Sub-city Health Offices (38), health facilities (219 public and 24 private), and selected health posts (132) found in the 35 woredas and 3 sub-cities drawn from all the regions. The OBAT tool was applied for 623 staff of the WorHOs, health facilities, and health posts.
                 '
             ],
-/*            [
+            /*            [
                 'icon' => 'fa fa-chart-line',
                 'title' => '',
                 'description' => ''
@@ -351,7 +352,10 @@
         }
         ?>
     </div>
-
+            <br>
+            <br>
+            <br>
+            
     <!-- Modal Structure -->
     <div id="myModal" class="modal">
         <div class="modal-content">

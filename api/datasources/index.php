@@ -6,7 +6,8 @@
     <title>HISPMD Dashboard Home Landing Page</title>
     
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="./style/merq_bootstrap.min.css" rel="stylesheet">
     
 <style>
     body {
@@ -134,12 +135,13 @@
 
                     <div class="card-body p-0">
                         <div class="iframe-container">
-                            <!-- Spinner -->
+                            <!-- Spinner 
                             <div class="spinner-container" id="spinner-home">
                                 <div class="spinner-border text-primary" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
                             </div>
+                            -->
                             <!-- Iframe -->
                             <iframe id="iframe-home" src="../meta/main.php" onload="hideSpinner('home')"></iframe>
                         </div>
@@ -203,14 +205,14 @@
                         <p class="card-text">This is where you will be able to build custom charts and visalizations <br> You can modify your preferences here.</p>
                         <div class="iframe">
                         -->
-                            <!-- Spinner -->
+                            <!-- Spinner 
                             <div class="spinner-container" id="spinner-indicators">
                                 <div class="spinner-border text-primary" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
-                            </div>
+                            </div>-->
                             <!-- Iframe -->
-                            <iframe id="iframe-indicators" src="../indicators/dist/" onload="hideSpinner('indicators')"></iframe>
+                            <!--<iframe id="iframe-indicators" src="../indicators/dist/" onload="hideSpinner('indicators')"></iframe>-->
                             
                         </div>
                     </div>
@@ -220,7 +222,8 @@
     </div>
 
     <!-- Bootstrap 5 JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="./script/merq_bootstrap.bundle.min.js"></script>
 
     <script>
         function hideSpinner(tabId) {

@@ -125,7 +125,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<br>","hidden":"{$item_hide_text4}","isHtml":true},
+			{"text":"<br>","hidden":"{$item_hide_text4}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

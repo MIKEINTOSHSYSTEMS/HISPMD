@@ -1517,8 +1517,8 @@ $tdatahispmdusers[".hideMobileList"] = array();
 
 	
 	
-				$vdata["ImageWidth"] = 600;
-	$vdata["ImageHeight"] = 400;
+				$vdata["ImageWidth"] = 150;
+	$vdata["ImageHeight"] = 100;
 
 		
 			$vdata["showGallery"] = true;
