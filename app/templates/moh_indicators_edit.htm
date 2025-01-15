@@ -46,7 +46,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -64,7 +64,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -101,7 +101,7 @@
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
-		data-form-width="1"
+		data-form-width="2"
 		
 		data-v-width="4"
 	>
@@ -114,10 +114,9 @@
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
-				data-fullwidth
-		
+			
 			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="4"
+		data-v-cell="2"
 		
 >
 	<div edit-form-cell class="clearfix">
@@ -166,13 +165,72 @@
 	
 								</td>
 			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN indicator_shortname_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_shortname}  r-vertical-field" 
+	data-signal-error-for="indicator_shortname{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="indicator_shortname" data-fieldname="indicator_shortname" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_indicator_shortname}">
+		{BEGIN indicator_shortname_label}{$label public_moh_indicators indicator_shortname }{END indicator_shortname_label}
+	</label>
+	<div class="r-edit-field">
+		{$indicator_shortname_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="indicator_shortname">
+		<div class="text-muted" >
+		{$tooltip public_moh_indicators indicator_shortname }		</div>
+	</div>
+</div>
+
+
+{END indicator_shortname_fieldblock}
+											
+{BEGIN indicator_desc_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_desc}  r-vertical-field" 
+	data-signal-error-for="indicator_desc{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="indicator_desc" data-fieldname="indicator_desc" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_indicator_desc}">
+		{BEGIN indicator_desc_label}{$label public_moh_indicators indicator_desc }{END indicator_desc_label}
+	</label>
+	<div class="r-edit-field">
+		{$indicator_desc_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="indicator_desc">
+		<div class="text-muted" >
+		{$tooltip public_moh_indicators indicator_desc }		</div>
+	</div>
+</div>
+
+
+{END indicator_desc_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c}
 								</tr>
 			</tbody></table>
 {END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 

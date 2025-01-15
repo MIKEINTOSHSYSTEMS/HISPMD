@@ -3130,7 +3130,8 @@ $tdatamoh_indicators_data_report[".hideMobileList"] = array();
 	
 
 	
-	
+		$edata["Multiselect"] = true;
+
 		$edata["SelectSize"] = 1;
 
 // End Lookup Settings

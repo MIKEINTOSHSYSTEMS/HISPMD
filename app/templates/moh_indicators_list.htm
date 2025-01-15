@@ -132,6 +132,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_group_id}</span>
 						</div>
 		{END searchCtrlBlock_indicator_group_id}
+																{BEGIN searchCtrlBlock_indicator_desc}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_desc}" {$filterRow_attrs_indicator_desc}>
+			<label>{$label public_moh_indicators indicator_desc }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_desc}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_desc}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_desc}</span>
+						</div>
+		{END searchCtrlBlock_indicator_desc}
+																{BEGIN searchCtrlBlock_indicator_shortname}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_shortname}" {$filterRow_attrs_indicator_shortname}>
+			<label>{$label public_moh_indicators indicator_shortname }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_indicator_shortname}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_shortname}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_shortname}</span>
+						</div>
+		{END searchCtrlBlock_indicator_shortname}
 																{BEGIN searchCtrlBlock_indicator_name}
 
 
@@ -675,6 +701,12 @@
 					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_group_id"]:before {
 		content: "{$label public_moh_indicators indicator_group_id}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_shortname"]:before {
+		content: "{$label public_moh_indicators indicator_shortname}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_desc"]:before {
+		content: "{$label public_moh_indicators indicator_desc}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -758,7 +790,7 @@
 	 
 		{BEGIN indicator_id_fieldheadercolumn}
 	{BEGIN indicator_id_fieldheader}
-	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
+	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
 	{$label public_moh_indicators indicator_id }	{$arrow_icon_indicator_id}
 	</SPAN>
 	{END indicator_id_fieldheader}
@@ -783,7 +815,7 @@
 	 
 		{BEGIN indicator_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_name" data-fieldname="indicator_name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_name" data-fieldname="indicator_name">
 	{$label public_moh_indicators indicator_name }	</span>
 {END indicator_name_fieldheadercolumn}
 
@@ -796,17 +828,63 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$indicator_group_id_class}	"
+		 r-ori-vert		 {$indicator_shortname_class}	"
 
-			data-field="indicator_group_id"
+			data-field="indicator_shortname"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN indicator_shortname_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_shortname" data-fieldname="indicator_shortname">
+	{$label public_moh_indicators indicator_shortname }	</span>
+{END indicator_shortname_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_desc_class}	"
+
+			data-field="indicator_desc"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN indicator_desc_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_desc" data-fieldname="indicator_desc">
+	{$label public_moh_indicators indicator_desc }	</span>
+{END indicator_desc_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_group_id_class}	"
+
+			data-field="indicator_group_id"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN indicator_group_id_fieldheadercolumn}
 	{BEGIN indicator_group_id_fieldheader}
-	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
+	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
 	{$label public_moh_indicators indicator_group_id }	{$arrow_icon_indicator_group_id}
 	</SPAN>
 	{END indicator_group_id_fieldheader}
@@ -814,7 +892,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field4}
 							</tr>
 																				
 					{END grid_header}
@@ -1049,11 +1127,53 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$indicator_shortname_class}	"
+
+			data-field="indicator_shortname"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN indicator_shortname_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_shortname" data-fieldname="indicator_shortname" data-default-width >
+{$indicator_shortname_value}
+</span>
+{END indicator_shortname_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_desc_class}	"
+
+			data-field="indicator_desc"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN indicator_desc_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_desc" data-fieldname="indicator_desc" data-default-width >
+{$indicator_desc_value}
+</span>
+{END indicator_desc_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$indicator_group_id_class}	"
 
 			data-field="indicator_group_id"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1063,7 +1183,7 @@
 </span>
 {END indicator_group_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field4}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1196,7 +1316,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$indicator_group_id_class}	"
+		 r-ori-vert		 {$indicator_shortname_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicators_list"	
@@ -1205,6 +1325,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_desc_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicators_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$indicator_group_id_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_indicators_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

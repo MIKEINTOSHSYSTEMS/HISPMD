@@ -445,6 +445,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_region_id}</span>
 						</div>
 		{END searchCtrlBlock_region_id}
+																{BEGIN searchCtrlBlock_region_code}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_region_code}" {$filterRow_attrs_region_code}>
+			<label>{$label public_moh_regions region_code }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_region_code}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_region_code}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_region_code}</span>
+						</div>
+		{END searchCtrlBlock_region_code}
 																{BEGIN searchCtrlBlock_map}
 
 
@@ -702,6 +715,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="map"]:before {
 		content: "{$label public_moh_regions map}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="region_code"]:before {
+		content: "{$label public_moh_regions region_code}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -785,7 +801,7 @@
 	 
 		{BEGIN region_id_fieldheadercolumn}
 	{BEGIN region_id_fieldheader}
-	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
+	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
 	{$label public_moh_regions region_id }	{$arrow_icon_region_id}
 	</SPAN>
 	{END region_id_fieldheader}
@@ -800,19 +816,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_name_class}	"
+		 r-ori-vert		 {$region_code_class}	"
 
-			data-field="region_name"
+			data-field="region_code"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN region_name_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_name" data-fieldname="region_name">
-	{$label public_moh_regions region_name }	</span>
-{END region_name_fieldheadercolumn}
+		{BEGIN region_code_fieldheadercolumn}
+	{BEGIN region_code_fieldheader}
+	<SPAN {$region_code_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_code" data-fieldname="region_code">
+	{$label public_moh_regions region_code }	{$arrow_icon_region_code}
+	</SPAN>
+	{END region_code_fieldheader}
+{END region_code_fieldheadercolumn}
 
 	
 	</th>
@@ -823,19 +841,19 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_alternate_class}	"
+		 r-ori-vert		 {$region_name_class}	"
 
-			data-field="region_alternate"
+			data-field="region_name"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN region_alternate_fieldheadercolumn}
+		{BEGIN region_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_alternate" data-fieldname="region_alternate">
-	{$label public_moh_regions region_alternate }	</span>
-{END region_alternate_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_name" data-fieldname="region_name">
+	{$label public_moh_regions region_name }	</span>
+{END region_name_fieldheadercolumn}
 
 	
 	</th>
@@ -846,21 +864,19 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$lat_class}	"
+		 r-ori-vert		 {$region_alternate_class}	"
 
-			data-field="lat"
+			data-field="region_alternate"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN lat_fieldheadercolumn}
-	{BEGIN lat_fieldheader}
-	<SPAN {$lat_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lat" data-fieldname="lat">
-	{$label public_moh_regions lat }	{$arrow_icon_lat}
-	</SPAN>
-	{END lat_fieldheader}
-{END lat_fieldheadercolumn}
+		{BEGIN region_alternate_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_alternate" data-fieldname="region_alternate">
+	{$label public_moh_regions region_alternate }	</span>
+{END region_alternate_fieldheadercolumn}
 
 	
 	</th>
@@ -871,21 +887,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$lng_class}	"
+		 r-ori-vert		 {$lat_class}	"
 
-			data-field="lng"
+			data-field="lat"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN lng_fieldheadercolumn}
-	{BEGIN lng_fieldheader}
-	<SPAN {$lng_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lng" data-fieldname="lng">
-	{$label public_moh_regions lng }	{$arrow_icon_lng}
+		{BEGIN lat_fieldheadercolumn}
+	{BEGIN lat_fieldheader}
+	<SPAN {$lat_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lat" data-fieldname="lat">
+	{$label public_moh_regions lat }	{$arrow_icon_lat}
 	</SPAN>
-	{END lng_fieldheader}
-{END lng_fieldheadercolumn}
+	{END lat_fieldheader}
+{END lat_fieldheadercolumn}
 
 	
 	</th>
@@ -896,21 +912,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$code_class}	"
+		 r-ori-vert		 {$lng_class}	"
 
-			data-field="code"
+			data-field="lng"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN code_fieldheadercolumn}
-	{BEGIN code_fieldheader}
-	<SPAN {$code_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="code" data-fieldname="code">
-	{$label public_moh_regions code }	{$arrow_icon_code}
+		{BEGIN lng_fieldheadercolumn}
+	{BEGIN lng_fieldheader}
+	<SPAN {$lng_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lng" data-fieldname="lng">
+	{$label public_moh_regions lng }	{$arrow_icon_lng}
 	</SPAN>
-	{END code_fieldheader}
-{END code_fieldheadercolumn}
+	{END lng_fieldheader}
+{END lng_fieldheadercolumn}
 
 	
 	</th>
@@ -921,17 +937,42 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$map_class}	"
+		 r-ori-vert		 {$code_class}	"
 
-			data-field="map"
+			data-field="code"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN code_fieldheadercolumn}
+	{BEGIN code_fieldheader}
+	<SPAN {$code_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="code" data-fieldname="code">
+	{$label public_moh_regions code }	{$arrow_icon_code}
+	</SPAN>
+	{END code_fieldheader}
+{END code_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+			data-field="map"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN map_fieldheadercolumn}
 	{BEGIN map_fieldheader}
-	<SPAN {$map_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="map" data-fieldname="map">
+	<SPAN {$map_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="map" data-fieldname="map">
 	{$label public_moh_regions map }	{$arrow_icon_map}
 	</SPAN>
 	{END map_fieldheader}
@@ -939,7 +980,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field7}
 							</tr>
 																				
 					{END grid_header}
@@ -1106,11 +1147,32 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$region_code_class}	"
+
+			data-field="region_code"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN region_code_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_code" data-fieldname="region_code" data-default-width >
+{$region_code_value}
+</span>
+{END region_code_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$region_name_class}	"
 
 			data-field="region_name"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1120,18 +1182,18 @@
 </span>
 {END region_name_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$region_alternate_class}	"
 
 			data-field="region_alternate"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1141,18 +1203,18 @@
 </span>
 {END region_alternate_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$lat_class}	"
 
 			data-field="lat"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1162,18 +1224,18 @@
 </span>
 {END lat_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$lng_class}	"
 
 			data-field="lng"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1183,18 +1245,18 @@
 </span>
 {END lng_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$code_class}	"
 
 			data-field="code"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1204,18 +1266,18 @@
 </span>
 {END code_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$map_class}	"
 
 			data-field="map"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1225,7 +1287,7 @@
 </span>
 {END map_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field7}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1334,7 +1396,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_name_class}	"
+		 r-ori-vert		 {$region_code_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
@@ -1349,7 +1411,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$region_alternate_class}	"
+		 r-ori-vert		 {$region_name_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
@@ -1364,7 +1426,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$lat_class}	"
+		 r-ori-vert		 {$region_alternate_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
@@ -1379,7 +1441,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$lng_class}	"
+		 r-ori-vert		 {$lat_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
@@ -1394,7 +1456,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$code_class}	"
+		 r-ori-vert		 {$lng_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
@@ -1409,7 +1471,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$map_class}	"
+		 r-ori-vert		 {$code_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
@@ -1418,6 +1480,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$map_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_regions_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

@@ -456,6 +456,28 @@
 </div>
 
 {END map_fieldblock}
+											
+{BEGIN region_code_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_region_code}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="region_code{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="region_code" data-fieldname="region_code" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_region_code}">
+		{$label public_moh_regions region_code }	</label>
+	<div class="r-search-option">
+		{$searchtype_region_code}
+	</div>
+	<div class="r-search-field">
+		{$region_code_editcontrol}	</div>
+	<div class="r-search-field">
+		{$region_code_editcontrol1}
+	</div>
+	
+</div>
+
+{END region_code_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

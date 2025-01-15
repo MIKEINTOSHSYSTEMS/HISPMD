@@ -247,6 +247,27 @@
 
 
 {END map_fieldblock}
+											
+{BEGIN region_code_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_region_code}  r-vertical-field" 
+	data-signal-error-for="region_code{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="region_code" data-fieldname="region_code" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_region_code}">
+		{BEGIN region_code_label}{$label public_moh_regions region_code }{END region_code_label}
+	</label>
+	<div class="r-edit-field">
+		{$region_code_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="region_code">
+		<div class="text-muted" >
+		{$tooltip public_moh_regions region_code }		</div>
+	</div>
+</div>
+
+
+{END region_code_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

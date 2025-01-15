@@ -46,6 +46,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_regions["English"]["map"] = "Map";
 	$fieldToolTipsmoh_regions["English"]["map"] = "";
 	$placeHoldersmoh_regions["English"]["map"] = "";
+	$fieldLabelsmoh_regions["English"]["region_code"] = "Region Code";
+	$fieldToolTipsmoh_regions["English"]["region_code"] = "";
+	$placeHoldersmoh_regions["English"]["region_code"] = "";
 	if (count($fieldToolTipsmoh_regions["English"]))
 		$tdatamoh_regions[".isUseToolTips"] = true;
 }
@@ -76,6 +79,9 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_regions["Amharic"]["map"] = "Map";
 	$fieldToolTipsmoh_regions["Amharic"]["map"] = "";
 	$placeHoldersmoh_regions["Amharic"]["map"] = "";
+	$fieldLabelsmoh_regions["Amharic"]["region_code"] = "Region Code";
+	$fieldToolTipsmoh_regions["Amharic"]["region_code"] = "";
+	$placeHoldersmoh_regions["Amharic"]["region_code"] = "";
 	if (count($fieldToolTipsmoh_regions["Amharic"]))
 		$tdatamoh_regions[".isUseToolTips"] = true;
 }
@@ -201,6 +207,7 @@ $tdatamoh_regions[".googleLikeFields"][] = "lat";
 $tdatamoh_regions[".googleLikeFields"][] = "lng";
 $tdatamoh_regions[".googleLikeFields"][] = "code";
 $tdatamoh_regions[".googleLikeFields"][] = "map";
+$tdatamoh_regions[".googleLikeFields"][] = "region_code";
 
 
 
@@ -229,13 +236,15 @@ $tdatamoh_regions[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY region_code";
 $tdatamoh_regions[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamoh_regions[".orderindexes"] = array();
+	$tdatamoh_regions[".orderindexes"][] = array(8, (1 ? "ASC" : "DESC"), "region_code");
 
 
-$tdatamoh_regions[".sqlHead"] = "SELECT region_id,  	region_name,  	region_alternate,  	lat,  	lng,  	code,  	\"map\"";
+
+$tdatamoh_regions[".sqlHead"] = "SELECT region_id,  region_name,  region_alternate,  lat,  lng,  code,  \"map\",  region_code";
 $tdatamoh_regions[".sqlFrom"] = "FROM \"public\".moh_regions";
 $tdatamoh_regions[".sqlWhereExpr"] = "";
 $tdatamoh_regions[".sqlTail"] = "";
@@ -1262,6 +1271,144 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 	$tdatamoh_regions["map"] = $fdata;
 		$tdatamoh_regions[".searchableFields"][] = "map";
+//	region_code
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "region_code";
+	$fdata["GoodName"] = "region_code";
+	$fdata["ownerTable"] = "public.moh_regions";
+	$fdata["Label"] = GetFieldLabel("public_moh_regions","region_code");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "region_code";
+
+		$fdata["sourceSingle"] = "region_code";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "region_code";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_regions["region_code"] = $fdata;
+		$tdatamoh_regions[".searchableFields"][] = "region_code";
 
 
 $tables_data["public.moh_regions"]=&$tdatamoh_regions;
@@ -1366,10 +1513,10 @@ function createSqlQuery_moh_regions()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "region_id,  	region_name,  	region_alternate,  	lat,  	lng,  	code,  	\"map\"";
+$proto0["m_strFieldList"] = "region_id,  region_name,  region_alternate,  lat,  lng,  code,  \"map\",  region_code";
 $proto0["m_strFrom"] = "FROM \"public\".moh_regions";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY region_code";
 	
 																												;
 			$proto0["cipherer"] = null;
@@ -1504,47 +1651,75 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "public.moh_regions";
-$proto21["m_srcTableName"] = "public.moh_regions";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "region_id";
-$proto21["m_columns"][] = "region_name";
-$proto21["m_columns"][] = "region_alternate";
-$proto21["m_columns"][] = "lat";
-$proto21["m_columns"][] = "lng";
-$proto21["m_columns"][] = "code";
-$proto21["m_columns"][] = "map";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "region_code",
+	"m_strTable" => "public.moh_regions",
+	"m_srcTableName" => "public.moh_regions"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "\"public\".moh_regions";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "region_code";
 $proto20["m_srcTableName"] = "public.moh_regions";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "public.moh_regions";
+$proto23["m_srcTableName"] = "public.moh_regions";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "region_id";
+$proto23["m_columns"][] = "region_name";
+$proto23["m_columns"][] = "region_alternate";
+$proto23["m_columns"][] = "lat";
+$proto23["m_columns"][] = "lng";
+$proto23["m_columns"][] = "code";
+$proto23["m_columns"][] = "map";
+$proto23["m_columns"][] = "region_code";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "\"public\".moh_regions";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "public.moh_regions";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto26=array();
+						$obj = new SQLField(array(
+	"m_strName" => "region_code",
+	"m_strTable" => "public.moh_regions",
+	"m_srcTableName" => "public.moh_regions"
+));
+
+$proto26["m_column"]=$obj;
+$proto26["m_bAsc"] = 1;
+$proto26["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto26);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="public.moh_regions";		
 $obj = new SQLQuery($proto0);
 
@@ -1556,7 +1731,7 @@ $queryData_moh_regions = createSqlQuery_moh_regions();
 	
 																												;
 
-							
+								
 
 $tdatamoh_regions[".sqlquery"] = $queryData_moh_regions;
 

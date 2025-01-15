@@ -1,9 +1,25 @@
-[data-page="moh_indicators_data_report_report"][data-itemid="report_grid_field7"] {
-  color: #007cff;
+[data-page="moh_indicators_data_report_report"][data-itemid="group_summary_field_label"] {
   font-weight: bold;
 }
-[data-page="moh_indicators_data_report_report"][data-itemid="report_grid_field3"] {
-  color: #47ac34;
+[data-page="moh_indicators_data_report_report"][data-itemid="group_summary_count"] {
+  font-weight: bold;
+}
+[data-page="moh_indicators_data_report_report"][data-itemid="group_summary_field_label1"] {
+  font-weight: bold;
+}
+[data-page="moh_indicators_data_report_report"][data-itemid="group_summary_count1"] {
+  font-weight: bold;
+}
+[data-page="moh_indicators_data_report_report"][data-itemid="group_summary_field_label2"] {
+  font-weight: bold;
+}
+[data-page="moh_indicators_data_report_report"][data-itemid="group_summary_count2"] {
+  font-weight: bold;
+}
+[data-page="moh_indicators_data_report_report"][data-itemid="page_summary_count"] {
+  font-weight: bold;
+}
+[data-page="moh_indicators_data_report_report"][data-itemid="global_summary_count"] {
   font-weight: bold;
 }
 [data-page="moh_indicators_data_report_report"][data-itemid="page_image_ash8f23hr"] {

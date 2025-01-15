@@ -186,6 +186,9 @@ pdfDocument = {
 				
 			{"text":{$map_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
+				
+			{"text":{$region_code_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

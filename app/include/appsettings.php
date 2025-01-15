@@ -1236,9 +1236,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "761_1736259330";
+$projectBuildKey = "764_1736953417";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "761";
+$projectBuildNumber = "764";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1508,9 +1508,9 @@ $tableCaptions["Amharic"]["DHIS2_AnalyticsReport"] = "DHIS2 AnalyticsReport";
 $tableCaptions["Amharic"]["public_moh_indicators_target"] = "Moh Indicators Target";
 $tableCaptions["Amharic"]["public_dhis2_reporting_rates"] = "Dhis2 Reporting Rates";
 $tableCaptions["Amharic"]["public_dhis2_reportingrate_settings"] = "Dhis2 Reportingrate Settings";
+$tableCaptions["Amharic"]["DHIS2_Reporting_Rates_Report"] = "DHIS2 Reporting Rates Report";
 $tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rates_Report"] = "DHIS2 Reporting Rates Report";
 
 
 $globalEvents = new class_GlobalEvents;

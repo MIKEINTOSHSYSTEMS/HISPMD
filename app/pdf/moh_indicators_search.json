@@ -180,6 +180,12 @@ pdfDocument = {
 				
 			{"text":{$indicator_group_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
 				
+				
+			{"text":{$indicator_shortname_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$indicator_desc_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

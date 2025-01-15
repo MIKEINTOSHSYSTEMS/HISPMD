@@ -82,6 +82,12 @@ pdfDocument = {
 										{BEGIN col_grid_5}
 					"%",
 					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -347,7 +353,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_moh_indicators indicator_id }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+			{"text":"{$jslabel public_moh_indicators indicator_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -376,7 +382,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_moh_indicators indicator_name }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_moh_indicators indicator_name }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -389,6 +395,64 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field2}
 {
 	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'indicator_shortname',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_moh_indicators indicator_shortname }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_shortname_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'indicator_desc',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_moh_indicators indicator_desc }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_desc_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'indicator_group_id',
@@ -405,7 +469,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_moh_indicators indicator_group_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel public_moh_indicators indicator_group_id }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -414,7 +478,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field4}
 											],
 				{END row_grid_0}
 		
@@ -589,6 +653,64 @@ pdfDocument = {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
+			fieldName: 'indicator_shortname',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_shortname_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_shortname_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'indicator_desc',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_desc_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_desc_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
 			fieldName: 'indicator_group_id',
 				style: 'bodycell',
 		
@@ -612,7 +734,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field4}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -698,6 +820,18 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  7,
 				text: ''
 			},
 							],
@@ -865,6 +999,58 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_footcell_field3}
+{
+	cellId: 'footcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field3}
+																							{BEGIN cellblock_grid_footcell_field4}
+{
+	cellId: 'footcell_field4',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field4}
 											],
 				{END row_grid_3}
 		

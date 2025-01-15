@@ -40,6 +40,12 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmoh_indicators["English"]["indicator_group_id"] = "Indicator Group Id";
 	$fieldToolTipsmoh_indicators["English"]["indicator_group_id"] = "";
 	$placeHoldersmoh_indicators["English"]["indicator_group_id"] = "";
+	$fieldLabelsmoh_indicators["English"]["indicator_shortname"] = "Indicator Shortname";
+	$fieldToolTipsmoh_indicators["English"]["indicator_shortname"] = "";
+	$placeHoldersmoh_indicators["English"]["indicator_shortname"] = "";
+	$fieldLabelsmoh_indicators["English"]["indicator_desc"] = "Indicator Desc";
+	$fieldToolTipsmoh_indicators["English"]["indicator_desc"] = "";
+	$placeHoldersmoh_indicators["English"]["indicator_desc"] = "";
 	if (count($fieldToolTipsmoh_indicators["English"]))
 		$tdatamoh_indicators[".isUseToolTips"] = true;
 }
@@ -64,6 +70,12 @@ if(mlang_getcurrentlang()=="Amharic")
 	$fieldLabelsmoh_indicators["Amharic"]["indicator_group_id"] = "የአመልካች ቡድን መለያ";
 	$fieldToolTipsmoh_indicators["Amharic"]["indicator_group_id"] = "";
 	$placeHoldersmoh_indicators["Amharic"]["indicator_group_id"] = "";
+	$fieldLabelsmoh_indicators["Amharic"]["indicator_shortname"] = "Indicator Shortname";
+	$fieldToolTipsmoh_indicators["Amharic"]["indicator_shortname"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["indicator_shortname"] = "";
+	$fieldLabelsmoh_indicators["Amharic"]["indicator_desc"] = "Indicator Desc";
+	$fieldToolTipsmoh_indicators["Amharic"]["indicator_desc"] = "";
+	$placeHoldersmoh_indicators["Amharic"]["indicator_desc"] = "";
 	if (count($fieldToolTipsmoh_indicators["Amharic"]))
 		$tdatamoh_indicators[".isUseToolTips"] = true;
 }
@@ -186,6 +198,8 @@ $tdatamoh_indicators[".googleLikeFields"][] = "indicator_name";
 $tdatamoh_indicators[".googleLikeFields"][] = "baseline";
 $tdatamoh_indicators[".googleLikeFields"][] = "target";
 $tdatamoh_indicators[".googleLikeFields"][] = "indicator_group_id";
+$tdatamoh_indicators[".googleLikeFields"][] = "indicator_shortname";
+$tdatamoh_indicators[".googleLikeFields"][] = "indicator_desc";
 
 
 
@@ -219,7 +233,7 @@ $tdatamoh_indicators[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_indicators[".orderindexes"] = array();
 
 
-$tdatamoh_indicators[".sqlHead"] = "SELECT indicator_id,  	indicator_name,  	baseline,  	target,  	indicator_group_id";
+$tdatamoh_indicators[".sqlHead"] = "SELECT indicator_id,  	indicator_name,  	baseline,  	target,  	indicator_group_id,  	indicator_shortname,  	indicator_desc";
 $tdatamoh_indicators[".sqlFrom"] = "FROM \"public\".moh_indicators";
 $tdatamoh_indicators[".sqlWhereExpr"] = "";
 $tdatamoh_indicators[".sqlTail"] = "";
@@ -989,6 +1003,286 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 	$tdatamoh_indicators["indicator_group_id"] = $fdata;
 		$tdatamoh_indicators[".searchableFields"][] = "indicator_group_id";
+//	indicator_shortname
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "indicator_shortname";
+	$fdata["GoodName"] = "indicator_shortname";
+	$fdata["ownerTable"] = "public.moh_indicators";
+	$fdata["Label"] = GetFieldLabel("public_moh_indicators","indicator_shortname");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_shortname";
+
+		$fdata["sourceSingle"] = "indicator_shortname";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_shortname";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 0;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators["indicator_shortname"] = $fdata;
+		$tdatamoh_indicators[".searchableFields"][] = "indicator_shortname";
+//	indicator_desc
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "indicator_desc";
+	$fdata["GoodName"] = "indicator_desc";
+	$fdata["ownerTable"] = "public.moh_indicators";
+	$fdata["Label"] = GetFieldLabel("public_moh_indicators","indicator_desc");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_desc";
+
+		$fdata["sourceSingle"] = "indicator_desc";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_desc";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 0;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_indicators["indicator_desc"] = $fdata;
+		$tdatamoh_indicators[".searchableFields"][] = "indicator_desc";
 
 
 $tables_data["public.moh_indicators"]=&$tdatamoh_indicators;
@@ -1146,7 +1440,7 @@ function createSqlQuery_moh_indicators()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "indicator_id,  	indicator_name,  	baseline,  	target,  	indicator_group_id";
+$proto0["m_strFieldList"] = "indicator_id,  	indicator_name,  	baseline,  	target,  	indicator_group_id,  	indicator_shortname,  	indicator_desc";
 $proto0["m_strFrom"] = "FROM \"public\".moh_indicators";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1256,41 +1550,71 @@ $proto14["m_alias"] = "";
 $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto16=array();
-$proto16["m_link"] = "SQLL_MAIN";
-			$proto17=array();
-$proto17["m_strName"] = "public.moh_indicators";
-$proto17["m_srcTableName"] = "public.moh_indicators";
-$proto17["m_columns"] = array();
-$proto17["m_columns"][] = "indicator_id";
-$proto17["m_columns"][] = "indicator_name";
-$proto17["m_columns"][] = "baseline";
-$proto17["m_columns"][] = "target";
-$proto17["m_columns"][] = "indicator_group_id";
-$obj = new SQLTable($proto17);
+						$proto16=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_shortname",
+	"m_strTable" => "public.moh_indicators",
+	"m_srcTableName" => "public.moh_indicators"
+));
 
-$proto16["m_table"] = $obj;
-$proto16["m_sql"] = "\"public\".moh_indicators";
-$proto16["m_alias"] = "";
+$proto16["m_sql"] = "indicator_shortname";
 $proto16["m_srcTableName"] = "public.moh_indicators";
-$proto18=array();
-$proto18["m_sql"] = "";
-$proto18["m_uniontype"] = "SQLL_UNKNOWN";
+$proto16["m_expr"]=$obj;
+$proto16["m_alias"] = "";
+$obj = new SQLFieldListItem($proto16);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_desc",
+	"m_strTable" => "public.moh_indicators",
+	"m_srcTableName" => "public.moh_indicators"
+));
+
+$proto18["m_sql"] = "indicator_desc";
+$proto18["m_srcTableName"] = "public.moh_indicators";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto20=array();
+$proto20["m_link"] = "SQLL_MAIN";
+			$proto21=array();
+$proto21["m_strName"] = "public.moh_indicators";
+$proto21["m_srcTableName"] = "public.moh_indicators";
+$proto21["m_columns"] = array();
+$proto21["m_columns"][] = "indicator_id";
+$proto21["m_columns"][] = "indicator_name";
+$proto21["m_columns"][] = "baseline";
+$proto21["m_columns"][] = "target";
+$proto21["m_columns"][] = "indicator_group_id";
+$proto21["m_columns"][] = "indicator_shortname";
+$proto21["m_columns"][] = "indicator_desc";
+$obj = new SQLTable($proto21);
+
+$proto20["m_table"] = $obj;
+$proto20["m_sql"] = "\"public\".moh_indicators";
+$proto20["m_alias"] = "";
+$proto20["m_srcTableName"] = "public.moh_indicators";
+$proto22=array();
+$proto22["m_sql"] = "";
+$proto22["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto18["m_column"]=$obj;
-$proto18["m_contained"] = array();
-$proto18["m_strCase"] = "";
-$proto18["m_havingmode"] = false;
-$proto18["m_inBrackets"] = false;
-$proto18["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto18);
+$proto22["m_column"]=$obj;
+$proto22["m_contained"] = array();
+$proto22["m_strCase"] = "";
+$proto22["m_havingmode"] = false;
+$proto22["m_inBrackets"] = false;
+$proto22["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto22);
 
-$proto16["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto16);
+$proto20["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto20);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1306,7 +1630,7 @@ $queryData_moh_indicators = createSqlQuery_moh_indicators();
 	
 																												;
 
-					
+							
 
 $tdatamoh_indicators[".sqlquery"] = $queryData_moh_indicators;
 

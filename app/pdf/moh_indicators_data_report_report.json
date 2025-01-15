@@ -61,33 +61,84 @@ pdfDocument = {
 								{BEGIN embedded_grid} -1 {END embedded_grid} ,
 
 				widths: [
-														"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
+														{BEGIN col_grid_0}
+					"%",
+					{END col_grid_0}
+										{BEGIN col_grid_1}
+					"%",
+					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
+										{BEGIN col_grid_3}
+					"%",
+					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
+										{BEGIN col_grid_5}
+					"%",
+					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
+										{BEGIN col_grid_13}
+					"%",
+					{END col_grid_13}
+										{BEGIN col_grid_14}
+					"%",
+					{END col_grid_14}
+															],
+											heights: [ // first height for header part
+					"%",
+																		{BEGIN row_grid_0}
+							"%",
+							{END row_grid_0}
+																							 	{BEGIN grid_row}
+													{BEGIN row_grid_1}
+							"%",
+							{END row_grid_1}
+													{END grid_row}
+																								{BEGIN row_grid_2}
+							"%",
+							{END row_grid_2}
+																								{BEGIN row_grid_3}
+							"%",
+							{END row_grid_3}
+																								{BEGIN row_grid_4}
+							"%",
+							{END row_grid_4}
+																								{BEGIN row_grid_5}
+							"%",
+							{END row_grid_5}
+																								{BEGIN row_grid_6}
+							"%",
+							{END row_grid_6}
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 20,
+							colSpan: {$formwidth_grid},
 							border:[false, false,false,false],
 							stack: [
 
@@ -279,810 +330,1638 @@ pdfDocument = {
 					],
 				{END standalone_page}
 
-																
-
-
+																	
 {BEGIN grid_row}
-	{BEGIN indicator_group_id_firstnewgroup}
-		[
-								{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_group_id }',
-				style: 'blackshade',
-				alignment: '{$indicator_group_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_id }',
-				style: 'blackshade',
-				alignment: '{$indicator_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
-				style: 'blackshade',
-				alignment: '{$data_source_id_align}',
-			},
-																																																																																										
-																							{
-				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
-				style: 'blackshade',
-				alignment: '{$scope_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report region_id }',
-				style: 'blackshade',
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report unit_id }',
-				style: 'blackshade',
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
-				style: 'blackshade',
-				alignment: '{$facility_type_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report value }',
-				style: 'blackshade',
-				alignment: '{$value_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_target }',
-				style: 'blackshade',
-				alignment: '{$indicator_target_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
-				style: 'blackshade',
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report data_source_detail }',
-				style: 'blackshade',
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report gender_sex }',
-				style: 'blackshade',
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report period_id }',
-				style: 'blackshade',
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report year }',
-				style: 'blackshade',
-				alignment: '{$year_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report month_id }',
-				style: 'blackshade',
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report quarter_id }',
-				style: 'blackshade',
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report period }',
-				style: 'blackshade',
-				alignment: '{$period_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_target_year }',
-				style: 'blackshade',
-				alignment: '{$indicator_target_year_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline }',
-				style: 'blackshade',
-				alignment: '{$indicator_baseline_align}',
-			},
-											{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline_year }',
-				style: 'blackshade',
-				alignment: '{$indicator_baseline_year_align}',
-			},
-						],
-		
-	[
-								{
-				stack: [
-					{$indicator_group_id_value},
-									],
-				style: "header_1"
-			},
-					
-											{
-				stack: [
-					{$indicator_id_value},
-									],
-				style: "header_2"
-			},
-					
-											{
-				stack: [
-					{$data_source_id_value},
-									],
-				style: "header_3"
-			},
-					
 							
-																							{
-				text: [
-										{$scope_id_value}
-									],
-				alignment: '{$scope_id_align}',
-			},
-											{
-				text: [
-										{$region_id_value}
-									],
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: [
-										{$unit_id_value}
-									],
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: [
-										{$facility_type_id_value}
-									],
-				alignment: '{$facility_type_id_align}',
-			},
-											{
-				text: [
-										{$value_value}
-									],
-				alignment: '{$value_align}',
-			},
-											{
-				text: [
-										{$indicator_target_value}
-									],
-				alignment: '{$indicator_target_align}',
-			},
-											{
-				text: [
-										{$data_representation_value}
-									],
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: [
-										{$data_source_detail_value}
-									],
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: [
-										{$gender_sex_value}
-									],
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: [
-										{$period_id_value}
-									],
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: [
-										{$year_value}
-									],
-				alignment: '{$year_align}',
-			},
-											{
-				text: [
-										{$month_id_value}
-									],
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: [
-										{$quarter_id_value}
-									],
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: [
-										{$period_value}
-									],
-				alignment: '{$period_align}',
-			},
-											{
-				text: [
-										{$indicator_target_year_value}
-									],
-				alignment: '{$indicator_target_year_align}',
-			},
-											{
-				text: [
-										{$indicator_baseline_value}
-									],
-				alignment: '{$indicator_baseline_align}',
-			},
-											{
-				text: [
-										{$indicator_baseline_year_value}
-									],
-				alignment: '{$indicator_baseline_year_align}',
-			},
-					
-	],
-	{END indicator_group_id_firstnewgroup}
-	{BEGIN indicator_id_firstnewgroup}
-		
-	[
-								{
-				text: [
-											''
-									],
-				style: "group_1"
-			},
-
-											{
-				stack: [
-					{$indicator_id_value},
-									],
-				style: "header_2"
-			},
-					
-											{
-				stack: [
-					{$data_source_id_value},
-									],
-				style: "header_3"
-			},
-					
-							
-																							{
-				text: [
-										{$scope_id_value}
-									],
-				alignment: '{$scope_id_align}',
-			},
-											{
-				text: [
-										{$region_id_value}
-									],
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: [
-										{$unit_id_value}
-									],
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: [
-										{$facility_type_id_value}
-									],
-				alignment: '{$facility_type_id_align}',
-			},
-											{
-				text: [
-										{$value_value}
-									],
-				alignment: '{$value_align}',
-			},
-											{
-				text: [
-										{$indicator_target_value}
-									],
-				alignment: '{$indicator_target_align}',
-			},
-											{
-				text: [
-										{$data_representation_value}
-									],
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: [
-										{$data_source_detail_value}
-									],
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: [
-										{$gender_sex_value}
-									],
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: [
-										{$period_id_value}
-									],
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: [
-										{$year_value}
-									],
-				alignment: '{$year_align}',
-			},
-											{
-				text: [
-										{$month_id_value}
-									],
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: [
-										{$quarter_id_value}
-									],
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: [
-										{$period_value}
-									],
-				alignment: '{$period_align}',
-			},
-											{
-				text: [
-										{$indicator_target_year_value}
-									],
-				alignment: '{$indicator_target_year_align}',
-			},
-											{
-				text: [
-										{$indicator_baseline_value}
-									],
-				alignment: '{$indicator_baseline_align}',
-			},
-											{
-				text: [
-										{$indicator_baseline_year_value}
-									],
-				alignment: '{$indicator_baseline_year_align}',
-			},
-					
-	],
-	{END indicator_id_firstnewgroup}
-	{BEGIN data_source_id_firstnewgroup}
-		
-	[
-								{
-				text: [
-											''
-									],
-				style: "group_1"
-			},
-
-											{
-				text: [
-											''
-									],
-				style: "group_2"
-			},
-
-											{
-				stack: [
-					{$data_source_id_value},
-									],
-				style: "header_3"
-			},
-					
-							
-																							{
-				text: [
-										{$scope_id_value}
-									],
-				alignment: '{$scope_id_align}',
-			},
-											{
-				text: [
-										{$region_id_value}
-									],
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: [
-										{$unit_id_value}
-									],
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: [
-										{$facility_type_id_value}
-									],
-				alignment: '{$facility_type_id_align}',
-			},
-											{
-				text: [
-										{$value_value}
-									],
-				alignment: '{$value_align}',
-			},
-											{
-				text: [
-										{$indicator_target_value}
-									],
-				alignment: '{$indicator_target_align}',
-			},
-											{
-				text: [
-										{$data_representation_value}
-									],
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: [
-										{$data_source_detail_value}
-									],
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: [
-										{$gender_sex_value}
-									],
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: [
-										{$period_id_value}
-									],
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: [
-										{$year_value}
-									],
-				alignment: '{$year_align}',
-			},
-											{
-				text: [
-										{$month_id_value}
-									],
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: [
-										{$quarter_id_value}
-									],
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: [
-										{$period_value}
-									],
-				alignment: '{$period_align}',
-			},
-											{
-				text: [
-										{$indicator_target_year_value}
-									],
-				alignment: '{$indicator_target_year_align}',
-			},
-											{
-				text: [
-										{$indicator_baseline_value}
-									],
-				alignment: '{$indicator_baseline_align}',
-			},
-											{
-				text: [
-										{$indicator_baseline_year_value}
-									],
-				alignment: '{$indicator_baseline_year_align}',
-			},
-					
-	],
-	{END data_source_id_firstnewgroup}
-
-{BEGIN nonewgroup}
-	[
-				{
-						text: '',
-						style: 'group_1',
-		},
-				{
-						text: '',
-						style: 'group_2',
-		},
-				{
-						text: '',
-						style: 'group_3',
-		},
-		
-																							{
-				text: {$scope_id_value},
-				alignment: '{$scope_id_align}',
-			},
-											{
-				text: {$region_id_value},
-				alignment: '{$region_id_align}',
-			},
-											{
-				text: {$unit_id_value},
-				alignment: '{$unit_id_align}',
-			},
-											{
-				text: {$facility_type_id_value},
-				alignment: '{$facility_type_id_align}',
-			},
-											{
-				text: {$value_value},
-				alignment: '{$value_align}',
-			},
-											{
-				text: {$indicator_target_value},
-				alignment: '{$indicator_target_align}',
-			},
-											{
-				text: {$data_representation_value},
-				alignment: '{$data_representation_align}',
-			},
-											{
-				text: {$data_source_detail_value},
-				alignment: '{$data_source_detail_align}',
-			},
-											{
-				text: {$gender_sex_value},
-				alignment: '{$gender_sex_align}',
-			},
-											{
-				text: {$period_id_value},
-				alignment: '{$period_id_align}',
-			},
-											{
-				text: {$year_value},
-				alignment: '{$year_align}',
-			},
-											{
-				text: {$month_id_value},
-				alignment: '{$month_id_align}',
-			},
-											{
-				text: {$quarter_id_value},
-				alignment: '{$quarter_id_align}',
-			},
-											{
-				text: {$period_value},
-				alignment: '{$period_align}',
-			},
-											{
-				text: {$indicator_target_year_value},
-				alignment: '{$indicator_target_year_align}',
-			},
-											{
-				text: {$indicator_baseline_value},
-				alignment: '{$indicator_baseline_align}',
-			},
-											{
-				text: {$indicator_baseline_year_value},
-				alignment: '{$indicator_baseline_year_align}',
-			},
-						],
-{END nonewgroup}
-
-
-			{BEGIN data_source_id_endgroup}
-
+	{BEGIN indicator_group_id_newgroup}
+				{BEGIN row_grid_0}
 				[
-											{
-					text: [''],
-					style: 'group_1',
-				},
-								{
-					text: [''],
-					style: 'group_2',
-				},
-							
-																									{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report data_source_id } ', 
-						{$data_source_id_grval},
-						' - ', 
-						{$groupdata_source_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
-					],
-					style: 'group_3',
-					colSpan: 18				},
-																																																																																																																																],
+																{BEGIN cellblock_grid_headcell_groupfield}
+{
+	cellId: 'headcell_groupfield',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'blackshade ',
 		
 		
-		
-		
-			
+	//	dynamic colspan/rowspan
 
-		{END data_source_id_endgroup}
+		
+						
 	
-			{BEGIN indicator_id_endgroup}
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_group_id }","hidden":"{$item_hide_grid_group_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
 
+{END cellblock_grid_headcell_groupfield}
+																							{BEGIN cellblock_grid_headcell_groupfield1}
+{
+	cellId: 'headcell_groupfield1',
+	col:0,
+	row:0,
+			fieldName: 'indicator_id',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_id }","hidden":"{$item_hide_grid_group_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_groupfield1}
+																							{BEGIN cellblock_grid_headcell_groupfield2}
+{
+	cellId: 'headcell_groupfield2',
+	col:0,
+	row:0,
+			fieldName: 'data_source_id',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report data_source_id }","hidden":"{$item_hide_grid_group_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_groupfield2}
+																							{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'scope_id',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report scope_id }","hidden":"{$item_hide_report_advanced_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'region_id',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report region_id }","hidden":"{$item_hide_report_advanced_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'facility_type_id',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report facility_type_id }","hidden":"{$item_hide_report_advanced_field_label3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'value',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report value }","hidden":"{$item_hide_report_advanced_field_label4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_target }","hidden":"{$item_hide_report_advanced_field_label5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'data_representation',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report data_representation }","hidden":"{$item_hide_report_advanced_field_label6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'data_source_detail',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report data_source_detail }","hidden":"{$item_hide_report_advanced_field_label7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'period_id',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report period_id }","hidden":"{$item_hide_report_advanced_field_label9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'period',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report period }","hidden":"{$item_hide_report_advanced_field_label13}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
+{
+	cellId: 'headcell_field14',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target_year',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_target_year }","hidden":"{$item_hide_report_advanced_field_label14}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
+{
+	cellId: 'headcell_field15',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_baseline }","hidden":"{$item_hide_report_advanced_field_label15}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
+{
+	cellId: 'headcell_field16',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline_year',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_baseline_year }","hidden":"{$item_hide_report_advanced_field_label16}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field16}
+											],
+				{END row_grid_0}
+			{END indicator_group_id_newgroup}
+
+									
+	{BEGIN row_data}
+				{BEGIN row_grid_1}
 				[
-											{
-					text: [''],
-					style: 'group_1',
-				},
-							
-																		{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
-						{$indicator_id_grval},
-						' - ', 
-						{$groupindicator_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
-					],
-					style: 'group_2',
-					colSpan: 19				},
-																																																																																																																																							],
+																{BEGIN cellblock_grid_cell_group_field}
+{
+	cellId: 'cell_group_field',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'group_indicator_group_id',
 		
 		
-		
-		
-			
+	//	dynamic colspan/rowspan
 
-		{END indicator_id_endgroup}
+		
+						
 	
-			{BEGIN indicator_group_id_endgroup}
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_group_id_grval},"hidden":"{$item_hide_grid_group_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
 
+{END cellblock_grid_cell_group_field}
+																							{BEGIN cellblock_grid_cell_group_field1}
+{
+	cellId: 'cell_group_field1',
+	col:0,
+	row:0,
+			fieldName: 'indicator_id',
+				style: 'group_indicator_id',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_id_grval},"hidden":"{$item_hide_grid_group_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field1}
+																							{BEGIN cellblock_grid_cell_group_field2}
+{
+	cellId: 'cell_group_field2',
+	col:0,
+	row:0,
+			fieldName: 'data_source_id',
+				style: 'group_data_source_id',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$data_source_id_grval},"hidden":"{$item_hide_grid_group_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field2}
+																							{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'scope_id',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$scope_id_value},"hidden":"{$item_hide_report_advanced_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$scope_id_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'region_id',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$region_id_value},"hidden":"{$item_hide_report_advanced_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$region_id_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'facility_type_id',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$facility_type_id_value},"hidden":"{$item_hide_report_advanced_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$facility_type_id_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'value',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$value_value},"hidden":"{$item_hide_report_advanced_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$value_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_target_value},"hidden":"{$item_hide_report_advanced_field5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_target_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'data_representation',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$data_representation_value},"hidden":"{$item_hide_report_advanced_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$data_representation_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'data_source_detail',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$data_source_detail_value},"hidden":"{$item_hide_report_advanced_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$data_source_detail_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'period_id',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$period_id_value},"hidden":"{$item_hide_report_advanced_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$period_id_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'period',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$period_value},"hidden":"{$item_hide_report_advanced_field13}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$period_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
+{
+	cellId: 'cell_field14',
+	col:0,
+	row:0,
+			fieldName: 'indicator_target_year',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_target_year_value},"hidden":"{$item_hide_report_advanced_field14}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_target_year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
+{
+	cellId: 'cell_field15',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_baseline_value},"hidden":"{$item_hide_report_advanced_field15}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_baseline_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
+{
+	cellId: 'cell_field16',
+	col:0,
+	row:0,
+			fieldName: 'indicator_baseline_year',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$indicator_baseline_year_value},"hidden":"{$item_hide_report_advanced_field16}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$indicator_baseline_year_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field16}
+											],
+				{END row_grid_1}
+			{END row_data}
+
+									
+	{BEGIN data_source_id_endgroup}
+				{BEGIN row_grid_2}
 				[
-			
-											{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report indicator_group_id } ', 
-						{$indicator_group_id_grval},
-						' - ', 
-						{$groupindicator_group_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
-					],
-					style: 'group_1',
-					colSpan: 20				},
-																																																																																																																																														],
+																{BEGIN cellblock_grid_cell_group_empty1}
+{
+	cellId: 'cell_group_empty1',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'group_indicator_group_id',
 		
 		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+         italics: false,
+      bold: false,
+   },
+
+{END cellblock_grid_cell_group_empty1}
+																							{BEGIN cellblock_grid_cell_group_empty2}
+{
+	cellId: 'cell_group_empty2',
+	col:0,
+	row:0,
+			fieldName: 'indicator_id',
+				style: 'group_indicator_id',
 		
 		
-			
+	//	dynamic colspan/rowspan
 
-		{END indicator_group_id_endgroup}
-	
-{END grid_row}
-
-
-
-		[
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_group_id }',
-				alignment: '{$indicator_group_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_id }',
-				alignment: '{$indicator_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report data_source_id }',
-				alignment: '{$data_source_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report scope_id }',
-				alignment: '{$scope_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report region_id }',
-				alignment: '{$region_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report unit_id }',
-				alignment: '{$unit_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report facility_type_id }',
-				alignment: '{$facility_type_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report value }',
-				alignment: '{$value_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_target }',
-				alignment: '{$indicator_target_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report data_representation }',
-				alignment: '{$data_representation_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report data_source_detail }',
-				alignment: '{$data_source_detail_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report gender_sex }',
-				alignment: '{$gender_sex_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report period_id }',
-				alignment: '{$period_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report year }',
-				alignment: '{$year_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report month_id }',
-				alignment: '{$month_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report quarter_id }',
-				alignment: '{$quarter_id_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report period }',
-				alignment: '{$period_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_target_year }',
-				alignment: '{$indicator_target_year_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline }',
-				alignment: '{$indicator_baseline_align}',
-				style: 'blackshade'
-			},
-						{
-				text: '{$jslabel MOH_Indicators_Data_Report indicator_baseline_year }',
-				alignment: '{$indicator_baseline_year_align}',
-				style: 'blackshade'
-			},
-					],
-
-
-
-
-
-
-
-	[
-		{	
-			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
-			colSpan: 20,
-			style: 'pagesummary',
-		}
-	],
-
+		
+						
 	
 	
 	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+         italics: false,
+      bold: false,
+   },
+
+{END cellblock_grid_cell_group_empty2}
+																							{BEGIN cellblock_grid_cell_group_summary2}
+{
+	cellId: 'cell_group_summary2',
+	col:0,
+	row:0,
+			fieldName: 'data_source_id',
+				style: 'group_data_source_id',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary2}
+			colSpan: {$colspan_grid_cell_group_summary2},
+			{END colspan_grid_cell_group_summary2}
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message SUMMARY_FOR}","hidden":"{$item_hide_group_summary_label4}","isHtml":true},
+				
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report data_source_id }","hidden":"{$item_hide_group_summary_field_label2}","bold":true},
+				
+				
+			{"text":{$data_source_id_grval},"hidden":"{$item_hide_group_summary_field_value2}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash2}","isHtml":true},
+				
+				
+			{"text":"{$groupdata_source_id_total_cnt}","hidden":"{$item_hide_group_summary_count2}"},
+				
+				
+			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_group_summary_label5}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary2}
+																		{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+							],
+				{END row_grid_2}
+			{END data_source_id_endgroup}
+
+									
+	{BEGIN indicator_id_endgroup}
+				{BEGIN row_grid_3}
+				[
+																{BEGIN cellblock_grid_cell_group_empty}
+{
+	cellId: 'cell_group_empty',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'group_indicator_group_id',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+         italics: false,
+      bold: false,
+   },
+
+{END cellblock_grid_cell_group_empty}
+																							{BEGIN cellblock_grid_cell_group_summary1}
+{
+	cellId: 'cell_group_summary1',
+	col:0,
+	row:0,
+			fieldName: 'indicator_id',
+				style: 'group_indicator_id',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary1}
+			colSpan: {$colspan_grid_cell_group_summary1},
+			{END colspan_grid_cell_group_summary1}
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message SUMMARY_FOR}","hidden":"{$item_hide_group_summary_label}","isHtml":true},
+				
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_id }","hidden":"{$item_hide_group_summary_field_label1}","bold":true},
+				
+				
+			{"text":{$indicator_id_grval},"hidden":"{$item_hide_group_summary_field_value1}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash1}","isHtml":true},
+				
+				
+			{"text":"{$groupindicator_id_total_cnt}","hidden":"{$item_hide_group_summary_count1}"},
+				
+				
+			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_group_summary_label3}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary1}
+																		{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  13,
+				text: ''
+			},
+							],
+				{END row_grid_3}
+			{END indicator_id_endgroup}
+
+									
+	{BEGIN indicator_group_id_endgroup}
+				{BEGIN row_grid_4}
+				[
+																{BEGIN cellblock_grid_cell_group_summary}
+{
+	cellId: 'cell_group_summary',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'group_indicator_group_id',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary}
+			colSpan: {$colspan_grid_cell_group_summary},
+			{END colspan_grid_cell_group_summary}
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message SUMMARY_FOR}","hidden":"{$item_hide_group_summary_label1}","isHtml":true},
+				
+				
+			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_group_id }","hidden":"{$item_hide_group_summary_field_label}","bold":true},
+				
+				
+			{"text":{$indicator_group_id_grval},"hidden":"{$item_hide_group_summary_field_value}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$groupindicator_group_id_total_cnt}","hidden":"{$item_hide_group_summary_count}"},
+				
+				
+			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_group_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary}
+																		{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  13,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  14,
+				text: ''
+			},
+							],
+				{END row_grid_4}
+			{END indicator_group_id_endgroup}
+
+									{END grid_row}
+
+									
+	{BEGIN page_summary}
+				{BEGIN row_grid_5}
+				[
+																{BEGIN cellblock_grid_cell_page_summary}
+{
+	cellId: 'cell_page_summary',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_page_summary}
+			colSpan: {$colspan_grid_cell_page_summary},
+			{END colspan_grid_cell_page_summary}
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message PAGE_SUMMARY}","hidden":"{$item_hide_page_summary_label1}","isHtml":true},
+				
+				
+			{"text":"-","hidden":"{$item_hide_page_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$page_total_cnt}","hidden":"{$item_hide_page_summary_count}"},
+				
+				
+			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_page_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary}
+																		{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  13,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  14,
+				text: ''
+			},
+							],
+				{END row_grid_5}
+			{END page_summary}
+
+					
+	{BEGIN global_summary}
+				{BEGIN row_grid_6}
+				[
+																{BEGIN cellblock_grid_cell_global_summary}
+{
+	cellId: 'cell_global_summary',
+	col:0,
+	row:0,
+			fieldName: 'indicator_group_id',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_global_summary}
+			colSpan: {$colspan_grid_cell_global_summary},
+			{END colspan_grid_cell_global_summary}
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message GLOBAL_SUMMARY}","hidden":"{$item_hide_global_summary_label1}","isHtml":true},
+				
+				
+			{"text":"-","hidden":"{$item_hide_global_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$global_total_cnt}","hidden":"{$item_hide_global_summary_count}"},
+				
+				
+			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_global_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary}
+																		{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  13,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  14,
+				text: ''
+			},
+							],
+				{END row_grid_6}
+			{END global_summary}
+
 	
 
-
-{BEGIN global_summary}
-	[
-		{
-			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
-			colSpan: 20,
-			style: 'globalsummary',
-		}
-	],
-
-	
-	
-	
-	
-{END global_summary}
 									]
 			
 			}

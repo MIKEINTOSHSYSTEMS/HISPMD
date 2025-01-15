@@ -412,6 +412,50 @@
 </div>
 
 {END indicator_group_id_fieldblock}
+											
+{BEGIN indicator_shortname_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_shortname}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="indicator_shortname{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="indicator_shortname" data-fieldname="indicator_shortname" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_indicator_shortname}">
+		{$label public_moh_indicators indicator_shortname }	</label>
+	<div class="r-search-option">
+		{$searchtype_indicator_shortname}
+	</div>
+	<div class="r-search-field">
+		{$indicator_shortname_editcontrol}	</div>
+	<div class="r-search-field">
+		{$indicator_shortname_editcontrol1}
+	</div>
+	
+</div>
+
+{END indicator_shortname_fieldblock}
+											
+{BEGIN indicator_desc_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_desc}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="indicator_desc{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="indicator_desc" data-fieldname="indicator_desc" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_indicator_desc}">
+		{$label public_moh_indicators indicator_desc }	</label>
+	<div class="r-search-option">
+		{$searchtype_indicator_desc}
+	</div>
+	<div class="r-search-field">
+		{$indicator_desc_editcontrol}	</div>
+	<div class="r-search-field">
+		{$indicator_desc_editcontrol1}
+	</div>
+	
+</div>
+
+{END indicator_desc_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
