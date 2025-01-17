@@ -1766,7 +1766,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	

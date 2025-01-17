@@ -635,6 +635,13 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_report.indicator_group_id"] = array();
 		}
 		$lookupTableLinks["public.moh_indicator_groups"]["moh_indicators_data_report.indicator_group_id"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "indicator_group_id", "page" => "search");
+		if( !isset( $lookupTableLinks["public.moh_ir_datasource"] ) ) {
+			$lookupTableLinks["public.moh_ir_datasource"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_ir_datasource"]["moh_indicators_data_report.data_source_detail"] )) {
+			$lookupTableLinks["public.moh_ir_datasource"]["moh_indicators_data_report.data_source_detail"] = array();
+		}
+		$lookupTableLinks["public.moh_ir_datasource"]["moh_indicators_data_report.data_source_detail"]["search"] = array("table" => "MOH_Indicators_Data_Report", "field" => "data_source_detail", "page" => "search");
 		if( !isset( $lookupTableLinks["public.moh_period_types"] ) ) {
 			$lookupTableLinks["public.moh_period_types"] = array();
 		}

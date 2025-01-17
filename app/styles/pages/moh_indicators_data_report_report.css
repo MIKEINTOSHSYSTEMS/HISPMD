@@ -16,6 +16,9 @@
 [data-page="moh_indicators_data_report_report"][data-itemid="group_summary_count2"] {
   font-weight: bold;
 }
+[data-page="moh_indicators_data_report_report"][data-itemid="report_advanced_field4"] {
+  font-weight: bold;
+}
 [data-page="moh_indicators_data_report_report"][data-itemid="page_summary_count"] {
   font-weight: bold;
 }

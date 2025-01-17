@@ -988,6 +988,27 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="MOH_Indicators_Data_Report" && $field=="value")
+	{
+		if ($data["data_source_id"] == 1) {
+  if ($data["value"] >= 95) {
+    $color = "green";
+  } elseif ($data["value"] >= 80) {
+    $color = "lightgreen";
+  } elseif ($data["value"] >= 65) {
+    $color = "yellow";
+  } elseif ($data["value"] >= 55) {
+    $color = "orange";
+  } else {
+    $color = "red";
+  }
+} else {
+  $color = "black";
+}
+
+$value = "<span style='color: " . $color . "'>" . $data["value"] . "</span>";;
+		return $value;
+	}
 				if($table=="kbarticles" && $field=="ArticleID")
 	{
 		$value = "<a target='_blank' href='".GetTableLink("main","export")."?a=export&amp;selection[]=".$data["ArticleID"]."'>Export article</a>";;

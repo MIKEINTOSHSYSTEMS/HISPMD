@@ -968,7 +968,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$value_value},"hidden":"{$item_hide_report_advanced_field4}"},
+			{"text":{$value_value},"hidden":"{$item_hide_report_advanced_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],

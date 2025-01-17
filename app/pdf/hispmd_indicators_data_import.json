@@ -105,8 +105,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":{$Value_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

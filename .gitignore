@@ -1,6 +1,8 @@
 /ai/mod/env/
 /ai/mod/source/
 /ai/bot/env
+/ai/bots/env
+/ai/bots/source
 /ai/chatbot/venv
 /ai/pandas-ai
 /ai/bot/certs
