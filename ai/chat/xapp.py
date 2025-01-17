@@ -10,19 +10,42 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import altair as alt
+#import sshtunnel
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
-# Initialize database connection
-def init_database() -> SQLDatabase:
-    user = os.getenv('MYSQL_USER')
-    password = os.getenv('MYSQL_PASSWORD')
-    host = os.getenv('MYSQL_HOST')
-    port = os.getenv('MYSQL_PORT')
-    database = os.getenv('MYSQL_DATABASE')
-    db_uri = f"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database}"
-    return SQLDatabase.from_uri(db_uri)
+# Initialize SSH tunnel
+#def init_ssh_tunnel():
+#    ssh_host = os.getenv('SSH_HOST')
+#    ssh_port = int(os.getenv('SSH_PORT'))
+#    ssh_user = os.getenv('SSH_USER')
+#    ssh_password = os.getenv('SSH_PASSWORD')
+#    local_port = int(os.getenv('LOCAL_PORT'))
+
+#    tunnel = sshtunnel.SSHTunnelForwarder(
+#        (ssh_host, ssh_port),
+#        ssh_username=ssh_user,
+#        ssh_password=ssh_password,
+#        remote_bind_address=('localhost', 3306)
+#   )
+
+#    return tunnel
+
+# Initialize database connection through SSH tunnel
+#def init_database():
+#    tunnel = init_ssh_tunnel()
+#    tunnel.start()
+    
+#    user = os.getenv('MYSQL_USER')
+#    password = os.getenv('MYSQL_PASSWORD')
+#    host = os.getenv('MYSQL_HOST')
+#    port = tunnel.local_bind_port
+#    database = os.getenv('MYSQL_DATABASE')
+    
+#    db_uri = f"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database}"
+#    return SQLDatabase.from_uri(db_uri)
 
 # Function to handle SQLInterfaceError: Commands out of sync
 def run_query(db, query):
@@ -32,10 +55,22 @@ def run_query(db, query):
     except Exception as e:
         st.error(f"Error executing query: {str(e)}")
 
+
+load_dotenv()
+
+def init_database() -> SQLDatabase:
+    user = os.getenv('MYSQL_USER')
+    password = os.getenv('MYSQL_PASSWORD')
+    host = os.getenv('MYSQL_HOST')
+    port = os.getenv('MYSQL_PORT')
+    database = os.getenv('MYSQL_DATABASE')
+    db_uri = f"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database}"
+    return SQLDatabase.from_uri(db_uri)
+
 # Function to get SQL chain for processing user queries
 def get_sql_chain(db):
     template = """
-        You are a senior data analyst at MERQ Consultancy. You are interacting with a user who is asking you questions about the company's database.
+        You are a senior data analyst at MERQ Consultancy. You are interacting with a user who is asking you questions about the HISPMD's database.
         Based on the table schema below, write a SQL query that would answer the user's question. Take the conversation history into account.
 
         <SCHEMA>{schema}</SCHEMA>
@@ -183,7 +218,7 @@ def get_sql_chain(db):
 
     prompt = ChatPromptTemplate.from_template(template)
 
-    llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0.2)
+    llm = ChatGroq(model="llama3-8b-8192", temperature=0.2) #llama3-8b-8192 OR #mixtral-8x7b-32768
 
     def get_schema(_):
         return db.get_table_info()
@@ -211,7 +246,7 @@ def get_response(user_query: str, db: SQLDatabase, chat_history: list):
 
     prompt = ChatPromptTemplate.from_template(template)
 
-    llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0.2)
+    llm = ChatGroq(model="llama3-8b-8192", temperature=0.2) #llama3-8b-8192 OR #mixtral-8x7b-32768
 
     chain = (
         RunnablePassthrough.assign(query=sql_chain).assign(
@@ -251,37 +286,20 @@ def create_pie_chart(data, labels, title):
     plt.title(title)
     st.pyplot()
 
-# Event status code resolver
-def resolve_status_code(status_code):
-    if status_code == 429:
-        return "RateLimitError: Rate limit reached. Please try again later."
-    elif status_code >= 500:
-        return "InternalServerError: The server encountered an unexpected condition."
-    elif status_code == 400:
-        return "BadRequestError: The request could not be understood by the server."
-    elif status_code == 401:
-        return "AuthenticationError: Authentication is required to access the resource."
-    elif status_code == 403:
-        return "PermissionDeniedError: You do not have permission to access the requested resource."
-    elif status_code == 404:
-        return "NotFoundError: The requested resource could not be found."
-    elif status_code == 422:
-        return "UnprocessableEntityError: The server understands the content type of the request entity, but it was unable to process the contained instructions."
-
 # Streamlit UI
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        AIMessage(content="Hey! I'm MERQ AI Data Assistant. Ask me anything about your HISPMD Data."),
+        AIMessage(content="Hello! I'm MERQ AI Data Assistant. Ask me anything about your HISPD System Data."),
     ]
 
-st.set_page_config(page_title="Chat with HISPMD", page_icon=":speech_balloon:")
+st.set_page_config(page_title="Chat with HISPD", page_icon=":speech_balloon:")
 
 st.title("Chat with MERQ-AI Data Assistant")
 
 with st.sidebar:
     st.header("AI-powered analysis and interpretation")
     st.subheader("Instructions")
-    st.write("This is a simple chat application using the HISPMD Data. Tap/Click on the button below to start chatting.")
+    st.write("This is a simple chat application using the HISPD Data. Tap/Click on the button below to start chatting.")
 
     if st.button("Click Here To START"):
         with st.spinner("Connecting to MERQ AI..."):
@@ -305,37 +323,33 @@ if user_query is not None and user_query.strip() != "":
         st.markdown(user_query)
 
     with st.chat_message("AI"):
-        try:
-            response = get_response(user_query, st.session_state.db, st.session_state.chat_history)
-            st.markdown(response)
+        response = get_response(user_query, st.session_state.db, st.session_state.chat_history)
+        st.markdown(response)
 
-            # Data visualization based on response
-            if "SELECT" in user_query.upper() and "GRAPH:" in response:
-                lines = response.split('\n')
-                graph_type = None
-                for line in lines:
-                    if "Graph:" in line:
-                        graph_type = line.split(':')[-1].strip()
-                        break
-
-                if graph_type == 'Line graph':
-                    df = pd.DataFrame(run_query(st.session_state.db, user_query))
-                    if not df.empty:
-                        create_line_chart(df, df.columns[0], df.columns[1], "Line Chart")
-
-                elif graph_type == 'Bar chart':
-                    df = pd.DataFrame(run_query(st.session_state.db, user_query))
-                    if not df.empty:
-                        create_bar_chart(df, df.columns[0], df.columns[1], "Bar Chart")
-
-                elif graph_type == 'Pie chart':
-                    data = run_query(st.session_state.db, user_query)
-                    labels = [str(item[0]) for item in data]
-                    values = [float(item[1]) for item in data]
-                    create_pie_chart(values, labels, "Pie Chart")
-
-        except Exception as e:
-            st.error(f"Error: {resolve_status_code(e.status_code)}")
+        # Data visualization based on response
+        if "SELECT" in user_query.upper() and "GRAPH:" in response:
+            lines = response.split('\n')
+            graph_type = None
+            for line in lines:
+                if "Graph:" in line:
+                    graph_type = line.split(':')[-1].strip()
+                    break
+            
+            if graph_type == 'Line graph':
+                df = pd.DataFrame(run_query(st.session_state.db, user_query))
+                if not df.empty:
+                    create_line_chart(df, df.columns[0], df.columns[1], "Line Chart")
+            
+            elif graph_type == 'Bar chart':
+                df = pd.DataFrame(run_query(st.session_state.db, user_query))
+                if not df.empty:
+                    create_bar_chart(df, df.columns[0], df.columns[1], "Bar Chart")
+            
+            elif graph_type == 'Pie chart':
+                data = run_query(st.session_state.db, user_query)
+                labels = [str(item[0]) for item in data]
+                values = [float(item[1]) for item in data]
+                create_pie_chart(values, labels, "Pie Chart")
 
     st.session_state.chat_history.append(AIMessage(content=response))
-
+    

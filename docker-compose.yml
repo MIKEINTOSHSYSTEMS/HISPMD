@@ -50,7 +50,8 @@ services:
     ports:
       - "8501:8501"
     healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      #test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      test: ["CMD", "curl", "--fail", "https://localhost:8501/_stcore/health"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -66,6 +67,12 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
       - SSH_USE=${SSH_USE}
       - SSH_HOST=${SSH_HOST}
       - SSH_PORT=${SSH_PORT}
@@ -83,7 +90,7 @@ services:
     image: nginx:latest
     container_name: hispmd_nginx
     ports:
-      - "8080:80"
+      - "8008:80"
       - "8443:443"
     volumes:
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
@@ -138,7 +145,7 @@ services:
         ipv4_address: 192.168.128.9
 
   postgres:
-    image: postgres:latest
+    image: postgres:17
     container_name: hispmd_postgres
     hostname: postgres
     healthcheck:

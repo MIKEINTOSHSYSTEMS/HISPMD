@@ -2,12 +2,19 @@
 
 [theme]
 base = "light"
-primaryColor = "#E694FF"
+primaryColor = "#00274c"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#black"
-font = "sans-serif"
+font = "sans serif"
 
 [server]
-sslCertFile = '/ai/chat/certs/fullchain.pem'
-sslKeyFile = '/ai/chat/certs/privkey.pem'
+# Comment out or remove SSL configuration if not needed
+sslCertFile = './certs/fullchain.pem'
+sslKeyFile = './certs/privkey.pem'
+
+#sslCertFile = '/etc/letsencrypt/live/hispmd.merqconsultancy.org/fullchain.pem'
+#sslKeyFile = '/etc/letsencrypt/live/hispmd.merqconsultancy.org/privkey.pem'
+
+port = 8501  # Replace 8585 with your desired port
+#enableCORS = false  # Optional: disable CORS if you are having cross-origin issues

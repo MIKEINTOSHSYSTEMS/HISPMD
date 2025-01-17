@@ -35,22 +35,38 @@ if (!file_exists($backupFilePath)) {
     exit;
 }
 
-// Create a connection to verify database existence
-$mysqli = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
+// Create a connection to the MySQL server (not the specific database)
+$mysqli = new mysqli($dbHost, $dbUser, $dbPassword);
 
 if ($mysqli->connect_error) {
-    echo json_encode(['success' => false, 'message' => 'Database does not exist or cannot connect to the database.']);
+    echo json_encode(['success' => false, 'message' => 'Cannot connect to the database server.']);
     exit;
 }
 
-// Drop and recreate the database
-$dropAllCommand = "mysql -h $dbHost -u $dbUser -p'$dbPassword' -e 'SET FOREIGN_KEY_CHECKS = 0; DROP DATABASE IF EXISTS $dbName; CREATE DATABASE $dbName; SET FOREIGN_KEY_CHECKS = 1;'";
-$command = "docker run --rm -i --network hispmd_sys_hispmdnet mysql:latest sh -c \"$dropAllCommand\"";
-exec($command . ' 2>&1', $output, $return_var);
+// Check if the database exists
+$dbExistsQuery = "SHOW DATABASES LIKE '$dbName'";
+$result = $mysqli->query($dbExistsQuery);
 
-if ($return_var !== 0) {
-    echo json_encode(['success' => false, 'message' => 'Error dropping and recreating the database. Details: ' . implode("\n", $output)]);
-    exit;
+if ($result && $result->num_rows > 0) {
+    // Database exists, drop it and recreate
+    $dropCreateCommand = "mysql -h $dbHost -u $dbUser -p'$dbPassword' -e 'SET FOREIGN_KEY_CHECKS = 0; DROP DATABASE IF EXISTS $dbName; CREATE DATABASE $dbName; SET FOREIGN_KEY_CHECKS = 1;'";
+    $command = "docker run --rm -i --network hispmd_sys_hispmdnet mysql:latest sh -c \"$dropCreateCommand\"";
+    exec($command . ' 2>&1', $output, $return_var);
+
+    if ($return_var !== 0) {
+        echo json_encode(['success' => false, 'message' => 'Error dropping and recreating the database. Details: ' . implode("\n", $output)]);
+        exit;
+    }
+} else {
+    // Database does not exist, so we can directly create it
+    $createDatabaseCommand = "mysql -h $dbHost -u $dbUser -p'$dbPassword' -e 'CREATE DATABASE $dbName;'";
+    $command = "docker run --rm -i --network hispmd_sys_hispmdnet mysql:latest sh -c \"$createDatabaseCommand\"";
+    exec($command . ' 2>&1', $output, $return_var);
+
+    if ($return_var !== 0) {
+        echo json_encode(['success' => false, 'message' => 'Error creating the database. Details: ' . implode("\n", $output)]);
+        exit;
+    }
 }
 
 // Copy the backup file to the Docker container
@@ -82,5 +98,6 @@ if ($return_var === 0) {
     echo json_encode(['success' => false, 'message' => 'Error restoring backup. Details: ' . implode("\n", $output)]);
 }
 
+// Close the MySQL connection
 $mysqli->close();
 ?>

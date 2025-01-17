@@ -1,16 +1,16 @@
-#version: '3.8'
+version: '3.8'
 
 services:
   chat:
-    image: hispd_chatbot  # Specify the Docker image name
-    container_name: HISPD_ChatBot  # Specify the Docker container name
+    image: hispmd_chatbot  # Specify the Docker image name
+    container_name: hispmd_chatbot  # Specify the Docker container name
     build:
       context: ./chat
       dockerfile: Dockerfile
     ports:
       - "8501:8501"
     healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      test: ["CMD", "curl", "--fail", "https://localhost:8501/_stcore/health"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -25,6 +25,12 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
       - SSH_USE=${SSH_USE}
       - SSH_HOST=${SSH_HOST}
       - SSH_PORT=${SSH_PORT}
@@ -35,7 +41,7 @@ services:
     env_file:
       - ./chat/.env  # Specify the path to your .env file
     networks:
-      - hispd_chatbot
+      - hispmd_chatbot
 
 networks:
   hispd_chatbot:

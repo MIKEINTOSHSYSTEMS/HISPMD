@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
+import re  # Import the re module
+import datetime  # Import datetime for timestamp
 
 # Load environment variables from .env
 load_dotenv()
@@ -125,10 +127,118 @@ def filter_data(df, query):
     filtered = df[df.apply(lambda row: query in row.astype(str).str.lower().to_string(), axis=1)]
     return filtered
 
+# Handle different types of user queries
+def handle_user_query(df, user_input):
+    user_input = user_input.lower()
+    if "hello" in user_input or "hi" in user_input:
+        return "Hello! How can I assist you with the indicator data today?"
+    elif "how are you" in user_input:
+        return "I'm just a bot, but I'm here to help you with your indicator data queries!"
+    elif "list all data" in user_input:
+        return df
+    elif "how many" in user_input:
+        return df["Indicator Name"].nunique()
+    elif "average" in user_input:
+        match = re.search(r"average of (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result["Value"].mean()
+    elif "sum of" in user_input:
+        match = re.search(r"sum of (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result["Value"].sum()
+    elif "unique" in user_input:
+        return df["Indicator Name"].unique()
+    elif "summary of" in user_input:
+        match = re.search(r"summary of (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result.describe()
+    elif "maximum" in user_input:
+        match = re.search(r"maximum of (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result["Value"].max()
+    elif "minimum" in user_input:
+        match = re.search(r"minimum of (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result["Value"].min()
+    elif "lowest" in user_input:
+        match = re.search(r"lowest value for (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result.loc[result["Value"].idxmin()]
+    elif "highest" in user_input:
+        match = re.search(r"highest value for (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return result.loc[result["Value"].idxmax()]
+    elif "value of" in user_input:
+        match = re.search(r"value of (.+) in the year (\d{4})", user_input)
+        if match:
+            indicator, year = match.groups()
+            indicator = indicator.strip()
+            result = df[(df["Indicator Name"].str.lower().str.contains(indicator)) & (df["Year"] == int(year))]
+            if not result.empty:
+                return result
+    else:
+        return filter_data(df, user_input)
+
+# Generate conversational response
+def generate_response(result, user_input):
+    columns_order = [
+        "Indicator Group", "Indicator Name", "Data Source", "Data Source Detail", "Facility Type",
+        "Administration Unit", "Year", "Value", "Data Representation", "Period", "Target Value",
+        "Quarter ID", "Month ID", "Period ID", "Scope", "Region", "Gender/Sex", "Assessment",
+        "Target Year", "Baseline Value", "Baseline Year"
+    ]
+    
+    if isinstance(result, pd.DataFrame):
+        if not result.empty:
+            # Reorder columns and drop columns with all NaN values
+            result = result[columns_order].dropna(axis=1, how='all')
+            response = f"Here are the results for your query '{user_input}':\n\n{result.to_markdown(index=False)}"
+        else:
+            response = "I couldn't find any matching results for your query. Could you please rephrase or provide more details?"
+    elif isinstance(result, pd.Series):
+        response = f"Here is the result for your query '{user_input}':\n\n{result.to_markdown()}"
+    elif isinstance(result, (int, float)):
+        response = f"The result for your query '{user_input}' is {result}."
+    elif isinstance(result, str):
+        response = result
+    else:
+        response = "I couldn't understand your query. Could you please rephrase or provide more details?"
+    return response
+
+# Export conversation and data
+def export_conversation(messages):
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"conversation_{timestamp}.txt"
+    with open(filename, "w") as file:
+        for message in messages:
+            file.write(f"{message['role']}: {message['content']}\n")
+    return filename
+
 # Main application
 def main():
-    st.title("Chat with Your Indicator Data")
-    st.sidebar.info("Data loaded from the query!")
+    st.title("Chat with HISPMD Indicators Data")
+    st.sidebar.info("Data loaded from the HISPMD!")
 
     # Load data
     data = load_data()
@@ -152,19 +262,21 @@ def main():
         # Process user query
         with st.spinner("Analyzing your query..."):
             try:
-                # Filter data
-                filtered_data = filter_data(data, user_input)
-                if not filtered_data.empty:
-                    response = f"Here are the results:\n{filtered_data.to_markdown(index=False)}"
-                else:
-                    response = "No matching results found for your query."
+                # Handle user query
+                result = handle_user_query(data, user_input)
+                response = generate_response(result, user_input)
             except Exception as e:
-                response = f"Error: {e}"
+                response = f"Oops! Something went wrong while processing your query. Error: {e}"
 
         # Display assistant's response
         with st.chat_message("assistant", avatar="🤖"):
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response})
+
+    # Export conversation button
+    if st.button("Export Conversation"):
+        filename = export_conversation(st.session_state.messages)
+        st.success(f"Conversation exported successfully! Filename: {filename}")
 
 if __name__ == "__main__":
     main()

@@ -11,7 +11,11 @@ font = "sans serif"
 
 [server]
 # Comment out or remove SSL configuration if not needed
-sslCertFile = './certs/fullchain.pem'
-sslKeyFile = './certs/privkey.pem'
+#sslCertFile = './certs/fullchain.pem'
+#sslKeyFile = './certs/privkey.pem'
+
+sslCertFile = '/etc/letsencrypt/live/hispmd.merqconsultancy.org/fullchain.pem'
+sslKeyFile = '/etc/letsencrypt/live/hispmd.merqconsultancy.org/privkey.pem'
+
 port = 8585  # Replace 8585 with your desired port
 #enableCORS = false  # Optional: disable CORS if you are having cross-origin issues
