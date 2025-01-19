@@ -5,6 +5,9 @@ from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 import re  # Import the re module
 import datetime  # Import datetime for timestamp
+import numpy as np
+import plotly.express as px  # Import Plotly for interactive plotting
+from io import BytesIO  # Import BytesIO for in-memory file handling
 
 # Load environment variables from .env
 load_dotenv()
@@ -131,9 +134,17 @@ def filter_data(df, query):
 def handle_user_query(df, user_input):
     user_input = user_input.lower()
     if "hello" in user_input or "hi" in user_input:
-        return "Hello! How can I assist you with the indicator data today?"
+        return "Hello! How can I assist you with the HISPMD Indicator data today?"
     elif "how are you" in user_input:
-        return "I'm just a bot, but I'm here to help you with your indicator data queries!"
+        return "I'm am fine I hope you are doing well too!"
+    elif "who are you" in user_input:
+        return "I'm just a chatbot, but I'm here to help you with your indicator data queries!"    
+    elif "how do i use this dashboard help me" in user_input:
+        return "sure I will be very happy to help you just start by typeing an indicator name..."    
+    elif "who developed you?" in user_input:
+        return "I'm developed by MERQ Consultancy by a developer named Michael Kifle Teferra! You can see the details in Aditional Info under Menu section"    
+    elif "what is HISPMD" in user_input:
+        return "HISPMD stands for Health Information Systems Performance Monitoring Dashboard."    
     elif "list all data" in user_input:
         return df
     elif "how many" in user_input:
@@ -161,6 +172,18 @@ def handle_user_query(df, user_input):
             result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
             if not result.empty:
                 return result.describe()
+    elif "summary of" in user_input and "by" in user_input:
+        match = re.search(r"summary of (.+) by (.+)", user_input)
+        if match:
+            indicator, group_by = match.groups()
+            indicator = indicator.strip()
+            group_by = [g.strip().lower() for g in group_by.split(",")]
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                group_by_columns = [next((col for col in result.columns if col.lower() == g), g) for g in group_by]
+                if all(col in result.columns for col in group_by_columns):
+                    grouped_result = result.groupby(group_by_columns).describe()
+                    return grouped_result
     elif "maximum" in user_input:
         match = re.search(r"maximum of (.+)", user_input)
         if match:
@@ -197,23 +220,165 @@ def handle_user_query(df, user_input):
             result = df[(df["Indicator Name"].str.lower().str.contains(indicator)) & (df["Year"] == int(year))]
             if not result.empty:
                 return result
+    elif "trend of" in user_input:
+        match = re.search(r"trend of (.+)", user_input)
+        if match:
+            indicator = match.group(1).strip()
+            result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                return {"data": result.sort_values(by="Year"), "type": "trend"}
+    elif "chart of" in user_input or "chart for" in user_input:
+        match = re.search(r"chart (?:of|for) (.+) by (.+)", user_input)
+        if match:
+            indicator, x_axis = match.groups()
+            indicator = indicator.strip()
+            x_axis = x_axis.strip().lower()
+            year_match = re.search(r"for year (\d{4}(?: \d{4})*)", user_input)
+            if year_match:
+                years = list(map(int, year_match.group(1).split()))
+                result = df[(df["Indicator Name"].str.lower().str.contains(indicator)) & (df["Year"].isin(years))]
+            else:
+                result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+            if not result.empty:
+                x_axis = re.sub(r" for year \d{4}(?: \d{4})*", "", x_axis).strip()  # Clean x_axis
+                chart_type = "bar"  # Default chart type
+                if "line chart" in user_input:
+                    chart_type = "line"
+                elif "area chart" in user_input:
+                    chart_type = "area"
+                elif "pie chart" in user_input:
+                    chart_type = "pie"
+                elif "horizontal bar chart" in user_input:
+                    chart_type = "horizontal_bar"
+                elif "combo chart" in user_input:
+                    chart_type = "combo"
+                return {"data": result, "x_axis": x_axis, "chart_type": chart_type}
+        else:
+            match = re.search(r"chart (?:of|for) (.+)", user_input)
+            if match:
+                indicator = match.group(1).strip()
+                result = df[df["Indicator Name"].str.lower().str.contains(indicator)]
+                if not result.empty:
+                    x_axis = "year"
+                    chart_type = "bar"  # Default chart type
+                    return {"data": result, "x_axis": x_axis, "chart_type": chart_type}
+    elif "filter by" in user_input:
+        match = re.search(r"filter by (.+)", user_input)
+        if match:
+            filters = match.group(1).strip().split(",")
+            filtered_df = df
+            for f in filters:
+                key, value = f.split("=")
+                key = key.strip().lower()
+                value = value.strip().lower()
+                filtered_df = filtered_df[filtered_df[key].str.lower() == value]
+            if not filtered_df.empty:
+                return filtered_df
     else:
         return filter_data(df, user_input)
 
 # Generate conversational response
 def generate_response(result, user_input):
     columns_order = [
-        "Indicator Group", "Indicator Name", "Data Source", "Data Source Detail", "Facility Type",
-        "Administration Unit", "Year", "Value", "Data Representation", "Period", "Target Value",
-        "Quarter ID", "Month ID", "Period ID", "Scope", "Region", "Gender/Sex", "Assessment",
-        "Target Year", "Baseline Value", "Baseline Year"
+        "Indicator Group", "Indicator Name", "Year", "Data Source", "Scope", "Data Source Detail",
+        "Value", "Target Value", "Baseline Value", "Administration Unit", "Facility Type", "Region"
     ]
     
-    if isinstance(result, pd.DataFrame):
+    if isinstance(result, dict) and "data" in result:
+        data = result["data"]
+        chart_type = result.get("chart_type", "bar")
+        x_axis = result["x_axis"]
+        match = re.search(r"chart (?:of|for) (.+) by", user_input, re.IGNORECASE)
+        indicator_name = match.group(1) if match else "Indicator"
+        
+        # Ensure x_axis matches column names
+        x_axis = next((col for col in data.columns if col.lower() == x_axis.lower()), x_axis)
+        
+        if x_axis not in data.columns:
+            response = f"Invalid x-axis '{x_axis}'. Please specify a valid column name."
+        else:
+            hover_data = [col for col in data.columns if col not in ["Value", x_axis] and data[col].notna().any()]
+            hover_data = ["Indicator Group", "Indicator Name", "Data Source", "Scope"] + hover_data
+            
+            if chart_type == "line":
+                fig = px.line(data, x=x_axis, y="Value", title=f"Line Chart of {indicator_name} by {x_axis}", 
+                              hover_data=hover_data, template="plotly_dark")
+            elif chart_type == "area":
+                fig = px.area(data, x=x_axis, y="Value", title=f"Area Chart of {indicator_name} by {x_axis}", 
+                              hover_data=hover_data, template="plotly_dark")
+            elif chart_type == "pie":
+                fig = px.pie(data, names=x_axis, values="Value", title=f"Pie Chart of {indicator_name} by {x_axis}")
+            elif chart_type == "horizontal_bar":
+                fig = px.bar(data, x="Value", y=x_axis, orientation='h', title=f"Horizontal Bar Chart of {indicator_name} by {x_axis}", 
+                             hover_data=hover_data, template="plotly_dark")
+            elif chart_type == "combo":
+                fig = px.line(data, x=x_axis, y="Value", title=f"Combo Chart of {indicator_name} by {x_axis}", 
+                              hover_data=hover_data, template="plotly_dark")
+                fig.add_bar(x=data[x_axis], y=data["Value"], name="Bar")
+                fig.add_scatter(x=data[x_axis], y=data["Value"], mode='markers', name="Scatter")
+            else:
+                fig = px.bar(data, x=x_axis, y="Value", title=f"Bar Chart of {indicator_name} by {x_axis}", 
+                             hover_data=hover_data, template="plotly_dark")
+            
+            if chart_type != "pie":
+                fig.update_traces(marker=dict(opacity=0.7))
+            st.plotly_chart(fig)
+            
+            # Export functionality
+            st.download_button(
+                label="Export Data as CSV",
+                data=data.to_csv(index=False).encode('utf-8'),
+                file_name=f"{indicator_name}_data.csv",
+                mime="text/csv"
+            )
+            
+            # Export to Excel
+            output = BytesIO()
+            with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+                data.to_excel(writer, index=False, sheet_name='Sheet1')
+                writer.close()
+            st.download_button(
+                label="Export Data as Excel",
+                data=output.getvalue(),
+                file_name=f"{indicator_name}_data.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
+            
+            st.download_button(
+                label="Export Chart as PNG",
+                data=fig.to_image(format="png"),
+                file_name=f"{indicator_name}_chart.png",
+                mime="image/png"
+            )
+            st.download_button(
+                label="Export Chart as PDF",
+                data=fig.to_image(format="pdf"),
+                file_name=f"{indicator_name}_chart.pdf",
+                mime="application/pdf"
+            )
+            
+            response = f"Here is the {chart_type.replace('_', ' ')} for your query '{user_input}':"
+    elif isinstance(result, pd.DataFrame):
         if not result.empty:
             # Reorder columns and drop columns with all NaN values
-            result = result[columns_order].dropna(axis=1, how='all')
-            response = f"Here are the results for your query '{user_input}':\n\n{result.to_markdown(index=False)}"
+            available_columns = [col for col in columns_order if col in result.columns]
+            result = result[available_columns].dropna(axis=1, how='all')
+            
+            # Format Year column to remove decimals
+            if "Year" in result.columns:
+                result["Year"] = result["Year"].astype(int)
+            
+            # Calculate summary statistics
+            summary_stats = result.describe().loc[['mean', 'max', 'min', 'count']]
+            
+            # Generate summary paragraph
+            summary_paragraph = f"The summary of the indicator data is as follows:\n\n"
+            summary_paragraph += f"Average Value: {summary_stats.loc['mean', 'Value']:.2f} "
+            summary_paragraph += f"Maximum Value: {summary_stats.loc['max', 'Value']:.2f} "
+            summary_paragraph += f"Minimum Value: {summary_stats.loc['min', 'Value']:.2f} "
+            summary_paragraph += f"Count of Rows: {int(summary_stats.loc['count', 'Value'])}\n"
+            
+            response = f"Here are the results for your query '{user_input}':\n\n{result.to_markdown(index=False)}\n\n{summary_paragraph}"
         else:
             response = "I couldn't find any matching results for your query. Could you please rephrase or provide more details?"
     elif isinstance(result, pd.Series):
@@ -226,57 +391,111 @@ def generate_response(result, user_input):
         response = "I couldn't understand your query. Could you please rephrase or provide more details?"
     return response
 
-# Export conversation and data
-def export_conversation(messages):
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"conversation_{timestamp}.txt"
-    with open(filename, "w") as file:
-        for message in messages:
-            file.write(f"{message['role']}: {message['content']}\n")
-    return filename
+# Generate conversation content
+def generate_conversation_content(messages):
+    content = ""
+    for message in messages:
+        content += f"{message['role']}: {message['content']}\n"
+    return content
 
 # Main application
 def main():
-    st.title("Chat with HISPMD Indicators Data")
+    st.title("HISPMD AI Data Assistant")
     st.sidebar.info("Data loaded from the HISPMD!")
 
-    # Load data
-    data = load_data()
+    # Sidebar menu
+    menu = st.sidebar.selectbox("Menu", ["Chat", "Help", "About", "Additional Info"])
 
-    # Initialize chat state
-    if "messages" not in st.session_state:
-        st.session_state.messages = []  # Chat messages
+    if menu == "Help":
+        st.subheader("Help")
+        st.markdown("""
+        **How to use the AI Chatbot:**
+        1. Type your question in the chat input box.
+        2. The chatbot will respond with relevant information based on the indicator data.
+        3. You can ask questions like:
+            - "Hello" or "Hi"
+            - "List all data"
+            - "How many indicators are there?"
+            - "What is the average value of [Indicator Name]?"
+            - "What is the sum of [Indicator Name]?"
+            - "Show unique indicators"
+            - "Give me a summary of [Indicator Name]"
+            - "What is the maximum value of [Indicator Name]?"
+            - "What is the minimum value of [Indicator Name]?"
+            - "Show the lowest value for [Indicator Name]"
+            - "Show the highest value for [Indicator Name]"
+            - "What is the value of [Indicator Name] in the year [Year]?"
+        """)
+    elif menu == "About":
+        st.subheader("About")
+        st.markdown("""
+        **HISPMD AI Data Assistant**
+        This application allows you to interact with the HISPMD indicator data using natural language queries.
+        It leverages Streamlit for the web interface and SQLAlchemy for database interactions.
+        NO AI Or ML is used in this application. It is a simple rule-based chatbot. That only works on HISPMD data and has it's own Engine.
+        """)
+    elif menu == "Additional Info":
+        st.subheader("Additional Info")
+        st.markdown("""
+        **Relevant Information:**
+        - This chatbot is designed to help you quickly access and analyze indicator data.
+        - For more information, please contact the support team.
 
-    # Display chat messages
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"], avatar=message["avatar"]):
-            st.markdown(message["content"])
+        **Powered By [MERQ Consultancy](https://merqconsultancy.org)**
 
-    # Chat input for user
-    if user_input := st.chat_input("Ask your question about the indicator data..."):
-        # Display user input
-        with st.chat_message("user", avatar="👨🏻"):
-            st.markdown(user_input)
-        st.session_state.messages.append({"role": "user", "avatar": "👨🏻", "content": user_input})
+        **Designed and Developed by Information Systems & Digital Health Unit**
 
-        # Process user query
-        with st.spinner("Analyzing your query..."):
-            try:
-                # Handle user query
-                result = handle_user_query(data, user_input)
-                response = generate_response(result, user_input)
-            except Exception as e:
-                response = f"Oops! Something went wrong while processing your query. Error: {e}"
+        **Developer: Michael Kifle Teferra**
+        - **Contact:** +251913391985
+        - **Web:** [mikeintoshsys.com](https://mikeintoshsys.com)
+        - **Telegram:** [@mikeintosh](https://t.me/mikeintosh)
+        - **GitHub:** [MIKEINTOSHSYSTEMS](https://github.com/MIKEINTOSHSYSTEMS)
 
-        # Display assistant's response
-        with st.chat_message("assistant", avatar="🤖"):
-            st.markdown(response)
-        st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response})
+        **For support regarding HISPMD:** support@merqconsultancy.org
+        """)
+    else:
+        # Load data
+        data = load_data()
 
-    # Export conversation button
-    if st.button("Export Conversation"):
-        filename = export_conversation(st.session_state.messages)
-        st.success(f"Conversation exported successfully! Filename: {filename}")
+        # Initialize chat state
+        if "messages" not in st.session_state:
+            st.session_state.messages = []  # Chat messages
+
+        # Display chat messages
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"], avatar=message["avatar"]):
+                st.markdown(message["content"])
+
+        # Chat input for user
+        if user_input := st.chat_input("Ask your question about the indicator data..."):
+            # Display user input
+            with st.chat_message("user", avatar="👨🏻"):
+                st.markdown(user_input)
+            st.session_state.messages.append({"role": "user", "avatar": "👨🏻", "content": user_input})
+
+            # Process user query
+            with st.spinner("Analyzing your query..."):
+                try:
+                    # Handle user query
+                    result = handle_user_query(data, user_input)
+                    response = generate_response(result, user_input)
+                except Exception as e:
+                    response = f"Oops! Something went wrong while processing your query. Error: {e}"
+
+            # Display assistant's response
+            with st.chat_message("assistant", avatar="🤖"):
+                st.markdown(response)
+            st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response})
+
+        # Export and download conversation button
+        if st.button("Chat History"):
+            content = generate_conversation_content(st.session_state.messages)
+            st.download_button(
+                label="Export and Download Conversation",
+                data=content,
+                file_name=f"conversation_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+                mime="text/plain"
+            )
 
 if __name__ == "__main__":
     main()
