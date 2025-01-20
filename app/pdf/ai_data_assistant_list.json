@@ -105,7 +105,6 @@ pdfDocument = {
 		
 		widths: [
 								"*", 
-											"*", 
 					 ],	
 		
 	
@@ -113,112 +112,27 @@ pdfDocument = {
 				
 				[
 																{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c2',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-					colSpan: 2,
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"Use the embeded side menu located below and click on Start to initialize and use MERQ AI Data ChatBot\n\n<br>","color":"#001f3f","hidden":"{$item_hide_text}","bold":true,"isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																		{ 
-				cellId: 'c',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
-						[
-																{
 	cellId: 'c4',
 	col:0,
 	row:0,
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
 	
 			"text": [
 		
-				
-			{"text":"<br>","hidden":"{$item_hide_text1}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
       
       },
 
-																		{ 
-				cellId: 'c4',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
 						[
 																{
 	cellId: 'c3',
@@ -227,7 +141,6 @@ pdfDocument = {
 			
 		
 	//	static colspan/rowspan
-					colSpan: 2,
 		
 			
 	
@@ -244,13 +157,30 @@ pdfDocument = {
       
       },
 
-																		{ 
-				cellId: 'c3',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}

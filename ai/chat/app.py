@@ -133,17 +133,31 @@ def filter_data(df, query):
 # Handle different types of user queries
 def handle_user_query(df, user_input):
     user_input = user_input.lower()
-    if "hello" in user_input or "hi" in user_input:
+    if "what is hispmd" in user_input or "what is the system all about" in user_input or "hispmd" in user_input:
+        return """HISPMD is Health Information Systems Performance Monitoring Dashboard.
+
+The [Ministry of Health – Ethiopia](https://moh.gov.et) developed this dashboard to routinely monitor the performance of the Ethiopian Health Information System. This dashboard illustrates the HIS performance in terms of data quality, data use, digital health, HIS governance, and information revolution pathways. The indicators used in the dashboard were selected and prioritized through a collaborative co-design process involving relevant stakeholders. It utilizes diverse data sources from the routine health information system, surveys, and review reports. To assist in interpreting the indicator values, a brief description of the data sources is provided."""
+    elif "hello" in user_input or "hi" in user_input:
         return "Hello! How can I assist you with the HISPMD Indicator data today?"
     elif "how are you" in user_input:
-        return "I'm am fine I hope you are doing well too!"
+        return "I'm fine, I hope you are doing well too!"
     elif "who are you" in user_input:
-        return "I'm just a chatbot, but I'm here to help you with your indicator data queries!"    
+        return "I'm your HISPMD AI Data Assistant chatbot, but I'm here to help you with your indicator data queries! Type help to learn more..."
+    elif "how do i use this dashboard help me" in user_input or "how can i use this chat bot" in user_input:
+        return "Sure, I will be very happy to help you. Just start by typing an indicator name or a question about the data."
+    elif "who developed you" in user_input or "who is the developer" in user_input:
+        return "I'm developed by [MERQ Consultancy](https://merqconsultancy.org) by a developer named [Michael Kifle Teferra](https://www.linkedin.com/in/michael-k-teferra-50573079/)! You can see the details in Additional Info under the Menu section."
+    elif "help" in user_input or "i don't understand" in user_input or "please help" in user_input or "explain" in user_input or "what" in user_input:
+        return "You can ask questions like:\n- 'List all data'\n- 'How many indicators are there?'\n- 'What is the average value of [Indicator Name]?'\n- 'What is the sum of [Indicator Name]?'\n- 'Show unique indicators'\n- 'Give me a summary of [Indicator Name]'\n- 'What is the maximum value of [Indicator Name]?'\n- 'What is the minimum value of [Indicator Name]?'\n- 'Show the lowest value for [Indicator Name]'\n- 'Show the highest value for [Indicator Name]'\n- 'What is the value of [Indicator Name] in the year [Year]?'"
+    elif "how to generate charts" in user_input or "how to" in user_input:
+        return "You can generate different types of charts by asking the chatbot. Here are some examples:\n- 'Show a bar chart of [Indicator Name] by year'\n- 'Show a line chart of [Indicator Name] by year'\n- 'Show an area chart of [Indicator Name] by year'\n- 'Show a pie chart of [Indicator Name] by [Category]'\n- 'Show a horizontal bar chart of [Indicator Name] by [Category]'\n- 'Show a combo chart of [Indicator Name] by year'\n\nExamples:\n- 'Show a bar chart of birth notifications by year'\n- 'Show a chart of reporting completeness by region'\n- 'Show an area chart of RDQA by region'\n- 'Show a pie chart of Woreda by data source detail'\n- 'Show a horizontal bar chart of Reporting completeness by Facility Type'\n- 'Show a combo chart of Reporting Timeliness by region for year 2024'"
+    elif "why is this like this" in user_input:
+        return "Please provide more details about your query so I can assist you better."
     elif "how do i use this dashboard help me" in user_input:
         return "sure I will be very happy to help you just start by typeing an indicator name..."    
-    elif "who developed you?" in user_input:
-        return "I'm developed by MERQ Consultancy by a developer named Michael Kifle Teferra! You can see the details in Aditional Info under Menu section"    
-    elif "what is HISPMD" in user_input:
+    elif "thank you" in user_input or "thanks" in user_input:
+        return "You are very Welcome!😊 If you have got any questions regarding HISPMD indicators please feel free to ask!"    
+    elif "HISPMD" in user_input:
         return "HISPMD stands for Health Information Systems Performance Monitoring Dashboard."    
     elif "list all data" in user_input:
         return df
@@ -278,7 +292,7 @@ def handle_user_query(df, user_input):
         return filter_data(df, user_input)
 
 # Generate conversational response
-def generate_response(result, user_input):
+def generate_response(result, user_input, chart_color):
     columns_order = [
         "Indicator Group", "Indicator Name", "Year", "Data Source", "Scope", "Data Source Detail",
         "Value", "Target Value", "Baseline Value", "Administration Unit", "Facility Type", "Region"
@@ -289,7 +303,10 @@ def generate_response(result, user_input):
         chart_type = result.get("chart_type", "bar")
         x_axis = result["x_axis"]
         match = re.search(r"chart (?:of|for) (.+) by", user_input, re.IGNORECASE)
-        indicator_name = match.group(1) if match else "Indicator"
+        indicator_name = match.group(1) if match else user_input
+        
+        # Clean the indicator_name to remove "chart for" or "chart of"
+        indicator_name = re.sub(r"chart (?:of|for) ", "", indicator_name, flags=re.IGNORECASE)
         
         # Ensure x_axis matches column names
         x_axis = next((col for col in data.columns if col.lower() == x_axis.lower()), x_axis)
@@ -302,27 +319,35 @@ def generate_response(result, user_input):
             
             if chart_type == "line":
                 fig = px.line(data, x=x_axis, y="Value", title=f"Line Chart of {indicator_name} by {x_axis}", 
-                              hover_data=hover_data, template="plotly_dark")
+                              hover_data=hover_data, template="plotly_dark", line_shape='linear')
+                fig.update_traces(line=dict(color=chart_color))
             elif chart_type == "area":
                 fig = px.area(data, x=x_axis, y="Value", title=f"Area Chart of {indicator_name} by {x_axis}", 
                               hover_data=hover_data, template="plotly_dark")
+                fig.update_traces(line=dict(color=chart_color), fillcolor=chart_color)
             elif chart_type == "pie":
                 fig = px.pie(data, names=x_axis, values="Value", title=f"Pie Chart of {indicator_name} by {x_axis}")
+                fig.update_traces(marker=dict(colors=[chart_color]))
             elif chart_type == "horizontal_bar":
                 fig = px.bar(data, x="Value", y=x_axis, orientation='h', title=f"Horizontal Bar Chart of {indicator_name} by {x_axis}", 
                              hover_data=hover_data, template="plotly_dark")
+                fig.update_traces(marker=dict(color=chart_color))
             elif chart_type == "combo":
                 fig = px.line(data, x=x_axis, y="Value", title=f"Combo Chart of {indicator_name} by {x_axis}", 
                               hover_data=hover_data, template="plotly_dark")
-                fig.add_bar(x=data[x_axis], y=data["Value"], name="Bar")
-                fig.add_scatter(x=data[x_axis], y=data["Value"], mode='markers', name="Scatter")
+                fig.add_bar(x=data[x_axis], y=data["Value"], name="Bar", marker=dict(color=chart_color))
+                fig.add_scatter(x=data[x_axis], y=data["Value"], mode='markers', name="Scatter", marker=dict(color=chart_color))
             else:
                 fig = px.bar(data, x=x_axis, y="Value", title=f"Bar Chart of {indicator_name} by {x_axis}", 
                              hover_data=hover_data, template="plotly_dark")
+                fig.update_traces(marker=dict(color=chart_color))
             
             if chart_type != "pie":
                 fig.update_traces(marker=dict(opacity=0.7))
-            st.plotly_chart(fig)
+            st.plotly_chart(fig, key=f"chart_{len(st.session_state.charts)}")
+            
+            # Store chart in session state
+            st.session_state.charts.append({"fig": fig, "user_input": user_input})
             
             # Export functionality
             st.download_button(
@@ -425,6 +450,24 @@ def main():
             - "Show the lowest value for [Indicator Name]"
             - "Show the highest value for [Indicator Name]"
             - "What is the value of [Indicator Name] in the year [Year]?"
+
+        **How to generate charts:**
+        \n
+        You can generate different types of charts by asking the chatbot. Here are some examples:\n
+            - "Show a bar chart of [Indicator Name] by year"
+            - "Show a line chart of [Indicator Name] by year"
+            - "Show an area chart of [Indicator Name] by year"
+            - "Show a pie chart of [Indicator Name] by [Category]"
+            - "Show a horizontal bar chart of [Indicator Name] by [Category]"
+            - "Show a combo chart of [Indicator Name] by year"
+        
+        **Examples:**\n
+            Show a bar chart of reporting timeliness by year
+            Show a line chart of birth notification by year
+            Show an area chart of reporting completeness by year
+            Show a pie chart of woredas by data source detail
+            Show a horizontal bar chart of Reporting completeness by Facility Type
+            Show a combo chart of reporting timeliness by region for year 2024
         """)
     elif menu == "About":
         st.subheader("About")
@@ -460,14 +503,42 @@ def main():
         # Initialize chat state
         if "messages" not in st.session_state:
             st.session_state.messages = []  # Chat messages
+        if "charts" not in st.session_state:
+            st.session_state.charts = []  # Store charts
 
         # Display chat messages
-        for message in st.session_state.messages:
+        for i, message in enumerate(st.session_state.messages):
             with st.chat_message(message["role"], avatar=message["avatar"]):
                 st.markdown(message["content"])
+                if message["role"] == "assistant" and "chart_index" in message:
+                    if message["chart_index"] < len(st.session_state.charts):
+                        st.plotly_chart(st.session_state.charts[message["chart_index"]]["fig"], key=f"chart_{i}_{message['chart_index']}")
+                if message["role"] == "user":
+                    if st.button("Re-run this query", key=f"rerun_{i}"):
+                        user_input = message["content"]
+                        with st.chat_message("user", avatar="👨🏻"):
+                            st.markdown(user_input)
+                        st.session_state.messages.append({"role": "user", "avatar": "👨🏻", "content": user_input})
+
+                        with st.spinner("Analyzing your query..."):
+                            try:
+                                result = handle_user_query(data, user_input)
+                                response = generate_response(result, user_input, chart_color)
+                            except Exception as e:
+                                response = f"Oops! Something went wrong while processing your query. Error: {e}"
+
+                        with st.chat_message("assistant", avatar="🤖"):
+                            st.markdown(response)
+                        if isinstance(result, dict) and "data" in result:
+                            st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response, "chart_index": len(st.session_state.charts) - 1})
+                        else:
+                            st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response})
+
+        # Add color picker to sidebar
+        chart_color = st.sidebar.color_picker("Pick a chart color", "#1f77b4")
 
         # Chat input for user
-        if user_input := st.chat_input("Ask your question about the indicator data..."):
+        if user_input := st.chat_input("Type help or Ask your question here..."):
             # Display user input
             with st.chat_message("user", avatar="👨🏻"):
                 st.markdown(user_input)
@@ -476,16 +547,18 @@ def main():
             # Process user query
             with st.spinner("Analyzing your query..."):
                 try:
-                    # Handle user query
                     result = handle_user_query(data, user_input)
-                    response = generate_response(result, user_input)
+                    response = generate_response(result, user_input, chart_color)
                 except Exception as e:
                     response = f"Oops! Something went wrong while processing your query. Error: {e}"
 
             # Display assistant's response
             with st.chat_message("assistant", avatar="🤖"):
                 st.markdown(response)
-            st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response})
+            if isinstance(result, dict) and "data" in result:
+                st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response, "chart_index": len(st.session_state.charts) - 1})
+            else:
+                st.session_state.messages.append({"role": "assistant", "avatar": "🤖", "content": response})
 
         # Export and download conversation button
         if st.button("Chat History"):
