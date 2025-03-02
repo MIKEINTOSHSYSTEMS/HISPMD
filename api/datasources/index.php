@@ -12,7 +12,8 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f5f5f5; /* Light gray background */
+        /*background-color: #f5f5f5; /* Light gray background */
+        background-color: transparent; /* Transparent */
         margin: 0; /* Remove default margin */
         height: 770vh; /* Full viewport height */
         width: 100%;
@@ -79,7 +80,8 @@
         height: calc(100vh - 56px); /* Full height minus nav bar */
         border: none; /* Remove border */
         box-shadow: none; /* Remove shadow */
-        background-color: #f5f5f5; /* Background color for the card */
+        /*background-color: #f5f5f5; /* Background color for the card */
+        background-color: transparent; /* Transparent */
     }
     .card-header {
         background-color: transparent; /* Header background */

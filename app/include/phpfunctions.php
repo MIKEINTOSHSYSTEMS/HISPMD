@@ -1243,6 +1243,10 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
+				if($table=="public.eidm_settings" && $field=="created_at")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
+	}
 	return "";
 }
 

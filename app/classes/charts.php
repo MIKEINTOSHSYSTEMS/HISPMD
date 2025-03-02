@@ -626,6 +626,14 @@ class Chart
 			return true;
 		if("public.dhis2_reporting_rates" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.eidm_hc" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.eidm_settings" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

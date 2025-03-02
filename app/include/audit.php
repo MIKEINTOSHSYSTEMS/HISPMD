@@ -906,6 +906,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DHIS2_EIDM_HC")
+		{
+			return false;
+		}
+		if($table=="public.eidm_hc")
+		{
+			return false;
+		}
+		if($table=="public.eidm_settings")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Data_Elements")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1761,6 +1777,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="DHIS2_Reporting_Rates_Report")
+		{
+			return false;
+		}
+		if($table=="DHIS2_EIDM_HC")
+		{
+			return false;
+		}
+		if($table=="public.eidm_hc")
+		{
+			return false;
+		}
+		if($table=="public.eidm_settings")
+		{
+			return false;
+		}
+		if($table=="DHIS2_Data_Elements")
 		{
 			return false;
 		}

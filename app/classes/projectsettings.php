@@ -3758,6 +3758,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dhis2_reportingrate_settings" ] = "public.dhis2_reportingrate_settings";
 	$projectEntities[ "DHIS2_Reporting_Rates_Report" ] = array( "url" => "dhis2_reporting_rates_report", "type" => 2 );
 	$projectEntitiesReverse[ "dhis2_reporting_rates_report" ] = "DHIS2_Reporting_Rates_Report";
+	$projectEntities[ "DHIS2_EIDM_HC" ] = array( "url" => "dhis2_eidm_hc", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_eidm_hc" ] = "DHIS2_EIDM_HC";
+	$projectEntities[ "public.eidm_hc" ] = array( "url" => "eidm_hc", "type" => 0 );
+	$projectEntitiesReverse[ "eidm_hc" ] = "public.eidm_hc";
+	$projectEntities[ "public.eidm_settings" ] = array( "url" => "eidm_settings", "type" => 0 );
+	$projectEntitiesReverse[ "eidm_settings" ] = "public.eidm_settings";
+	$projectEntities[ "DHIS2_Data_Elements" ] = array( "url" => "dhis2_data_elements", "type" => 7 );
+	$projectEntitiesReverse[ "dhis2_data_elements" ] = "DHIS2_Data_Elements";
 }
 
 function findTable( $table ) {

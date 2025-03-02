@@ -1,0 +1,482 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel public_eidm_settings view}","hidden":"{$item_hide_view_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$custom __PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_1}","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+												{BEGIN col_grid_1}
+						"*", 
+							{END col_grid_1}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+								{BEGIN row_grid_1}
+						
+			"%",
+						{END row_grid_1}
+			 
+								{BEGIN row_grid_2}
+						
+			"%",
+						{END row_grid_2}
+			 
+								{BEGIN row_grid_3}
+						
+			"%",
+						{END row_grid_3}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_eidm_settings id }","bold":true},{"text":{$id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+																							{BEGIN cellblock_grid_c5}
+{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c5}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_c8}
+{
+	cellId: 'c8',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_eidm_settings dx }","bold":true},{"text":{$dx_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c8}
+																							{BEGIN cellblock_grid_c9}
+{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_eidm_settings pe }","bold":true},{"text":{$pe_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c9}
+											],
+				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_c4}
+{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_eidm_settings ou }","bold":true},{"text":{$ou_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c4}
+																							{BEGIN cellblock_grid_c6}
+{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c6}
+											],
+				{END row_grid_2}
+						{BEGIN row_grid_3}
+				[
+																{BEGIN cellblock_grid_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c}
+																							{BEGIN cellblock_grid_c7}
+{
+	cellId: 'c7',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_eidm_settings created_at }","bold":true},{"text":{$created_at_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c7}
+											],
+				{END row_grid_3}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_view_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_view_close}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

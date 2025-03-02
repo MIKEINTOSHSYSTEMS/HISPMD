@@ -452,6 +452,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("dhis2_reporting_rates_report" == $shortTName )
 		return true;
+	if ("dhis2_eidm_hc" == $shortTName )
+		return true;
+	if ("eidm_hc" == $shortTName )
+		return true;
+	if ("eidm_settings" == $shortTName )
+		return true;
+	if ("dhis2_data_elements" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1618,6 +1626,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Reporting_Rates_Report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_EIDM_HC");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_EIDM_HC";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.eidm_hc");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.eidm_hc";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.eidm_settings");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.eidm_settings";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS2_Data_Elements");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS2_Data_Elements";
+	}
 	return $arr;
 }
 
@@ -1751,6 +1795,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.dhis2_reporting_rates";
 	$arr[]="public.dhis2_reportingrate_settings";
 	$arr[]="DHIS2_Reporting_Rates_Report";
+	$arr[]="DHIS2_EIDM_HC";
+	$arr[]="public.eidm_hc";
+	$arr[]="public.eidm_settings";
+	$arr[]="DHIS2_Data_Elements";
 	return $arr;
 }
 
@@ -3019,6 +3067,26 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="DHIS2_EIDM_HC" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.eidm_hc" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="public.eidm_settings" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS2_Data_Elements" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

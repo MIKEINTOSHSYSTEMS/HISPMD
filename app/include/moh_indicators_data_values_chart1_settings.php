@@ -2741,6 +2741,8 @@ $proto41["m_columns"][] = "indicator_name";
 $proto41["m_columns"][] = "baseline";
 $proto41["m_columns"][] = "target";
 $proto41["m_columns"][] = "indicator_group_id";
+$proto41["m_columns"][] = "indicator_shortname";
+$proto41["m_columns"][] = "indicator_desc";
 $obj = new SQLTable($proto41);
 
 $proto40["m_table"] = $obj;
@@ -2851,6 +2853,7 @@ $proto53["m_columns"][] = "lat";
 $proto53["m_columns"][] = "lng";
 $proto53["m_columns"][] = "code";
 $proto53["m_columns"][] = "map";
+$proto53["m_columns"][] = "region_code";
 $obj = new SQLTable($proto53);
 
 $proto52["m_table"] = $obj;

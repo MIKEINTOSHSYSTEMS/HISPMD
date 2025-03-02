@@ -15,7 +15,8 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
+            /*background-color: #f5f5f5; /*Light Grey */
+            background-color: transparent; /* Transparent */
             display: flex;
             justify-content: start;
             align-items: center;
@@ -24,6 +25,7 @@
             height: 100%;
             width: auto;
             /*padding: 20px;*/
+            padding: 20px;
         }
 
         .intro {
@@ -39,7 +41,7 @@
             line-height: 1.6;
         }
 
-        .container {
+        .sources_container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
@@ -238,7 +240,7 @@
                font-size: 0.9em;">For a better user experience, we recommend using a computer or desktop view!</h6>
 </div>
 
-    <div class="container">
+    <div class="sources_container">
         <?php
         // Array of cards data
         $cards = [

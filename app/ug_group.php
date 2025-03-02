@@ -139,6 +139,10 @@ $nonAdminTablesArr[] = "public.moh_indicators_target";
 $nonAdminTablesArr[] = "public.dhis2_reporting_rates";
 $nonAdminTablesArr[] = "public.dhis2_reportingrate_settings";
 $nonAdminTablesArr[] = "DHIS2_Reporting_Rates_Report";
+$nonAdminTablesArr[] = "DHIS2_EIDM_HC";
+$nonAdminTablesArr[] = "public.eidm_hc";
+$nonAdminTablesArr[] = "public.eidm_settings";
+$nonAdminTablesArr[] = "DHIS2_Data_Elements";
 
 $ug_connection = $cman->getForUserGroups();
 
