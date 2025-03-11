@@ -1,5 +1,6 @@
 version: '3.9'
-
+# docker-compose -p hispmd_sys up -d
+# docker-compose -p hispmd_sys down --volumes --rmi all
 services:
   php:
     build:
@@ -250,6 +251,32 @@ services:
     networks:
       hispmdnet:
         ipv4_address: 192.168.128.3
+
+  mkdocs:
+    image: squidfunk/mkdocs-material:latest
+    container_name: hispmd_docs
+    ports:
+      - "8558:8558"  # Expose MkDocs server on port 8000
+    volumes:
+      - ./docs/:/docs  # Mount the current docs directory to /docs inside the container
+    restart: unless-stopped  # Ensures the container restarts unless manually stopped
+    command: serve -a 0.0.0.0:8558  # Start the MkDocs development server on all interfaces
+
+    environment:
+      - MKDOCS_CONFIG=mkdocs.yml  # Specify the configuration file
+
+    healthcheck:
+      #test: ["CMD", "curl", "-f", "http://0.0.0.0:8558"]  # Health check for the service
+      test: ["CMD", "nc", "-z", "0.0.0.0", "8558"]  # Health check for the service
+      interval: 30s  # Check health every 30 seconds
+      retries: 3  # Retry up to 3 times before marking as unhealthy
+      start_period: 10s  # Wait 10 seconds before starting health checks
+      timeout: 5s  # Health check timeout of 5 seconds
+
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.128.14
+
 
   #hispmd_matomo:
   #  image: bitnami/matomo:latest

@@ -85,11 +85,13 @@
           <!--<li><a href="#about">About</a></li>-->
           <li><a href="#datasources">Data Sources</a></li>
           <li><a href="#dashboard">Dashboard</a></li>
-          <li><a href="#documentation">Documentation</a></li>
+          <li><a href="../docs/">Documentation</a></li>
           <!--<li><a href="#gallery">Support</a></li>
-          <li><a href="./main_list.php">Knowledge Base</a></li><!--<li><a href="#team">Documentation</a></li>-->
+          <li><a href="./main_list.php">Knowledge Base</a></li>-->
+          <!--<li><a href="#team">Documentation</a></li>-->
           <li><a href="#contact">Contact</a></li>
           <li class="dropdown"><a href="./login.php"><span><b>Account<b></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+<!--
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -105,6 +107,7 @@
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
+-->
           </li>
           <li>
             <!-- mibew button --><a id="mibew-agent-button" href="/app/chat/chat?locale=en&amp;style=default" target="_blank" onclick="Mibew.Objects.ChatPopups['66d612944de9fd8e'].open();return false;"><img src="/app/chat/b?i=simple&amp;lang=en" border="0" alt="" /></a><script type="text/javascript" src="/app/chat/js/compiled/chat_popup.js"></script><script type="text/javascript">Mibew.ChatPopup.init({"id":"66d612944de9fd8e","url":"\/app\/chat\/chat?locale=en&style=default","preferIFrame":true,"modSecurity":false,"forceSecure":false,"style":"default","height":480,"width":640,"resizable":true,"styleLoader":"\/app\/chat\/chat\/style\/popup\/default"});</script><div id="mibew-invitation"></div><script type="text/javascript" src="/app/chat/js/compiled/widget.js"></script><script type="text/javascript">Mibew.Widget.init({"inviteStyle":"\/app\/chat\/styles\/invitations\/default\/invite.css","requestTimeout":10000,"requestURL":"\/app\/chat\/widget","silentInvitation":true,"locale":"en","visitorCookieName":"MIBEW_VisitorID"})</script><script type="text/javascript">(function() {var img = document.getElementById("mibew-agent-button").getElementsByTagName("img")[0];var originalSrc = img.src;setInterval(function() {img.src = originalSrc + "&dummy=" + (new Date()).getTime();}, 3000);})();</script><!-- / mibew button -->
@@ -812,9 +815,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "trebuchet ms", sans-serif;    
 }
 .item{
-    background: #00274c;    
+    background: #00274ce9; /* #00274c;    */
     text-align: center;
     height: 300px !important;
+}
+.scrolled .header {
+    --background-color: #00274ce9;
 }
 .carousel{
     margin-top: 20px;
@@ -857,8 +863,9 @@ h1, h2, h3, h4, h5, h6 {
             <div class="item">
                 <h2>Reporting and analytics</h2>
                 <div class="carousel-caption">
-                  <h3>Generates customized reports for different stakeholders.</h3>
-                  <p>Advanced analytics capabilities for trend analysis and data visualization builder.</p>
+                  <h3>Advanced analytics capabilities for trend analysis and data visualization builder.</h3>
+                  <p>Generates customized reports for different stakeholders.</p>
+                  <p></p>
                 </div>
             </div>
             <div class="item">
@@ -955,7 +962,7 @@ h1, h2, h3, h4, h5, h6 {
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Information Section</h2>
+        <h2>Support & Information Section</h2>
         <!--<div><span>Check Our</span> <span class="description-title">Log Changes Section</span></div>-->
       </div><!-- End Section Title -->
 
@@ -963,8 +970,8 @@ h1, h2, h3, h4, h5, h6 {
 
             <!--  <h1>HISPMD is Currently Under Development</h1>-->
              <!-- <p class="mb-0">If you have any questions or support</p>-->
-              <p>Information Center: <a href="mailto:info@merqconsultancy.org">info@merqconsultancy.org</a></p>
-              <p>Tech Support: <a href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
+              <p>Information Center: <a href="mailto:info@moh.gov">info@moh.gov</a></p>
+              <p>Developer & Tech Support: <a href="mailto:support@merqconsultancy.org">support@merqconsultancy.org</a></p>
 
 
         <!--
@@ -976,106 +983,211 @@ h1, h2, h3, h4, h5, h6 {
     </section><!-- /Starter Section Section -->
 
   </main>
-
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-<!--
+  <!--
           <span class="sitename">HISPMD </span>          
           <p><b>Health Information Systems Performance Management Dashboard</b></p>
           <p><b>HISPMD</b></p>
--->  
-
+          
             <br>
             
 
                       <p><b>HISPMD</b></p>
-            <div _ngcontent-kyh-c0=""><a _ngcontent-kyh-c0="" class="navbar-brand"><div _ngcontent-kyh-c0=""><h4 _ngcontent-kyh-c0="">ጤና ሚኒስቴር - ኢትዮጵያ</h4></div><div _ngcontent-kyh-c0=""><h5 _ngcontent-kyh-c0="">MINISTRY OF HEALTH - ETHIOPIA</h5></div></a></div>
+                                <br>
             <br>
             <br>
             <br>
             <br>
             <br>
-            <br>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>1234 Sudan Street</p>
-            <p>Addis Ababa, Ethiopia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+251 115 517 011</span></p>
-            <p><strong>Email:</strong> <span>info@moh.gov.et</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
+-->  
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
+<style>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+/* General footer styles */
+.footer {
+  background-color: #00274c/* #1e1e1e;*/
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Top Section */
+.footer-top {
+  padding-bottom: 50px;
+}
+
+.footer-about h4, .footer-about h5 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #ccc;
+}
+
+.footer-contact h1.sitename {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1acc7d;
+}
+
+.footer-links h4, .footer-newsletter h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1acc7d;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #1acc9d;
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links .social-icon {
+  margin-right: 20px;
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+  color: #1acc9d;
+}
+
+/* Footer Bottom Section */
+.footer-bottom p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #1acc9d;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom img {
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 767px) {
+  .footer-about, .footer-links, .footer-newsletter {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .row>* {
+    flex-shrink: 0;
+    width: 12%;
+    max-width: 50%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+}
+
+  </style>
+
+<footer id="footer" class="footer dark-background py-5">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <!-- About Section -->
+       
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="start.php" class="logo d-flex align-items-center mb-4">
+          <img src="./MOH_logo_text_white.png" alt="Health Information System Performance Monitoring Dashboard (HISPMD)" height="100%">
+          <br>  
+          HISPMD
+            <div>
+
+            
+            <!--
+              <h4>HISPMD</h4>
+            <h5>Health Information Systems Performance Monitoring Dashboard</h5>
+          
+
+            <img src="./Moh_Logo.png" alt="Health Information System Performance Monitoring Dashboard (HISPMD)" height="50px">
+                       <h4>ጤና ሚኒስቴር - ኢትዮጵያ</h4>
+            <h5>MINISTRY OF HEALTH - ETHIOPIA</h5>
+            -->
+            
+
+          </div>
+        </a>
 <!--
-                  <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-
+        <div class="social-links d-flex mt-4">
+          <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        </div>
 -->
+      </div>
 
-        </div>
+      <!-- Useful Links Section -->
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4 class="footer-title">Useful Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#datasources">Data Sources</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="../docs/index.php">Documentation</a></li>
+          <li><a href="login.php">Login</a></li>
+        </ul>
+      </div>
 
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to HISPMD newsletter and receive the latest news</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
+      <!-- Newsletter Section -->
+      <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4 class="footer-title">Contact</h4>
+          <p>1234 Sudan Street, Addis Ababa, Ethiopia</p>
+          <p><strong>Phone:</strong> +251 115 517 011</p>
+          <p><strong>Email:</strong> info@moh.gov.et</p>
+        
       </div>
     </div>
+  </div>
 
-    <div class="container copyright text-center mt-4">
+  <!-- Footer Bottom Section -->
+  <div class="container text-center mt-5 footer-bottom">
+    <p>
+      Health Information Systems Performance Monitoring Dashboard <b>[HISPMD V-1.3 BUILD-Ver.2324]</b><br>
+      &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved. 
+      <img src="./assets/img/mohfavicon.png" alt="Ministry of Health Ethiopia" height="25px">
+      <a href="https://moh.gov.et"><b>Ministry of Health Ethiopia</b></a>
+      <br>Designed & Developed by <a href="https://ethiopiadup.jsi.com/">JSI DUP</a> in collaboration with 
+      <a href="https://merqconsultancy.org" target="_blank"><b>MERQ Consultancy</b></a>
+    </p>
+  </div>
+</footer>
 
-  <p>
-    Health Information Systems Performance Monitoring Dashboard
-    <b> [HISPMD</b> <b><i>V-1.3 BUILD-Ver.2324]</b></i><br> 
-     © <script>document.write(new Date().getFullYear())</script> All Rights Reserved. <img height="25px" width="25px" src="./assets/img/mohfavicon.png" alt="Ministry of Health Ethiopia"> <a href="https://moh.gov.et"><b>Ministry of Health Ethiopia.</b></a>
-    <br> Designed & Developed By <a href="https://ethiopiadup.jsi.com/">JSI DUP</a> in collaboration with
-    <a href="https://merqconsultancy.org" target="_blank"><b>MERQ Consultancy</b></a>
-    </p>   
-<!--
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ministry of Health - Ethiopia</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">-->
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!--Designed & Developed by <a href="https://merqconsultancy.org/">MERQ Consultancy</a> -->
-      </div>
-    </div>
-
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

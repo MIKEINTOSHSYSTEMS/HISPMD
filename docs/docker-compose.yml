@@ -1,0 +1,25 @@
+version: '3.8'
+# docker-compose -p hispmd_docs up -d
+# docker-compose -p hispmd_docs down --volumes --rmi all
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material:latest
+    container_name: hispmd_mkdocs_material
+    ports:
+      - "8558:8558"  # Expose MkDocs server on port 8000
+    volumes:
+      - .:/docs  # Mount the current directory to /docs inside the container
+    restart: unless-stopped  # Ensures the container restarts unless manually stopped
+    command: serve -a 0.0.0.0:8558  # Start the MkDocs development server on all interfaces
+    #command: /bin/sh -c "apk add --no-cache curl && serve -a 0.0.0.0:8558"
+
+    environment:
+      - MKDOCS_CONFIG=mkdocs.yml  # Specify the configuration file
+
+    healthcheck:
+      #test: ["CMD", "curl", "-f", "http://0.0.0.0:8558"]  # Health check for the service
+      test: ["CMD", "nc", "-z", "0.0.0.0", "8558"]  # Health check for the service
+      interval: 30s  # Check health every 30 seconds
+      retries: 3  # Retry up to 3 times before marking as unhealthy
+      start_period: 10s  # Wait 10 seconds before starting health checks
+      timeout: 5s  # Health check timeout of 5 seconds
