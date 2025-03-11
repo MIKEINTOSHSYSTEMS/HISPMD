@@ -219,7 +219,7 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
 
     <p><span style="font-weight: 600; color: #2980b9;">
-        <a href="https://moh.gov.et" target="_blank" style="text-decoration: none; color: inherit;">The Ministry of Health – Ethiopia</a></span> developed this dashboard to routinely monitor the performance of the Ethiopian Health Information System. This dashboard illustrates the HIS performance in terms of data quality, data use, digital health, HIS governance, and information revolution pathways. The indicators used in the dashboard were selected and prioritized through a collaborative co-design process involving relevant stakeholders. It utilizes diverse data sources from the routine health information system, surveys, and review reports. To assist in interpreting the indicator values, a brief description of the data sources is provided.</p>
+        <a href="https://moh.gov.et" target="_blank" style="text-decoration: none; color: inherit;">The Ministry of Health – Ethiopia</a></span> developed this dashboard to routinely monitor the performance of the Ethiopian Health Information System. This dashboard illustrates the HIS performance in terms of data quality, data use, digital health, HIS governance, information revolution pathways, structure and resource as well as other data sources. The indicators used in the dashboard were selected and prioritized through a collaborative co-design process involving relevant stakeholders. It utilizes diverse data sources from the routine health information system, surveys, and review reports. To assist in interpreting the indicator values, a brief description of the data sources is provided.</p>
 </div>
 
 <div  style="text-align: center; margin: 40px 0; /* Increased margin for better spacing */">
@@ -339,6 +339,19 @@
                 'title' => 'DQR',
                 'description' => '
                 The 2018 Ethiopia Data Quality Review assessment was a cross-sectional study utilizing the World Health Organization’s Data Quality Review tool after customization to the local context. The sample size for the DQR was determined by a combination of census of hospitals and random samples of health centers and private clinics. A total of 629 health facilities, 365 Woreda/districts, 63 zones, nine regions, and two city administrative council health bureaus were included in the survey.'
+            ],
+            [
+                'icon' => 'fab fa-scribd',
+                'title' => 'SOCI',
+                'description' => '
+                Stages of Continuous Improvement assessment conducted on a Health Information System (HIS) to determine the current and goal status. It is a comprehensive evaluation to identify strengths, weaknesses, and areas for improvement within the HIS, using a structured framework to guide the assessment process and prioritize interventions for strengthening the system. Ethiopia has been utilizing SOCI as one of HIS performance measurement and HIS maturity index, DHIS2 maturity index and eCHIS maturity index related indicators received from SOCI assessment conducted in 2020 and 2023. '
+            ],
+            [
+                'icon' => 'fas fa-receipt',
+                'title' => 'Annual Performance Report',
+                'description' => '
+                Annual Performance Report 	Annual performance report (APR) is the health sector’s comprehensive report that indicates the performance and progress of the sector on yearly bases and also highlights progress over the past three to five years. It mainly describes performance against the targets and includes description of 
+                the major achievements, initiatives, activities, challenges and way forwards of all programs and health system investments or inputs. Annual performance report from 2012 to 2014 included as data source for report timelines, completeness, CRVS related indicators, eMRU, eCHIS, DHIS2 coverage.'
             ]
         ];
 
