@@ -25,13 +25,15 @@ site_name: !ENV [SITE_NAME, OTHER_NAME, 'HISPMD Documentation']
 site_url: https://mikeintoshsystems.github.io/HISPMD/
 site_author: Michael Kifle Teferra | MIKEINTOSH SYSTEMS
 site_description: >-
-  The Health Information Systems Performance Monitoring Dashboard (HISPMD) is a web-based platform designed to track, analyze, and visualize key health system performance indicators.
+  The Health Information Systems Performance Monitoring Dashboard (HISPMD) is a web-based platform designed to track, analyze, and visualize key health system performance indicators and so much more
 
 # Repository
 #repo_name: squidfunk/mkdocs-material
 #repo_name: mikeintosh/mikeintosh-hispmd-app
 repo_name: HISPMD
 repo_url: https://github.com/MIKEINTOSHSYSTEMS/HISPMD
+#repo_url: https://github.com/MIKEINTOSHSYSTEMS/HISPMD/tree/main
+edit_uri: edit/main/docs/docs/
 
 # Copyright
 copyright: Copyright &copy; 2025 Ministry Of Health - Ethiopia
@@ -103,6 +105,8 @@ plugins:
   - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - git-committers:
+      branch: main
   - minify:
       minify_html: true
   - offline:

@@ -31,6 +31,8 @@ site_description: >-
 #repo_name: mikeintosh/mikeintosh-hispmd-app
 repo_name: HISPMD
 repo_url: https://github.com/MIKEINTOSHSYSTEMS/HISPMD
+#repo_url: https://github.com/MIKEINTOSHSYSTEMS/HISPMD/tree/main
+edit_uri: edit/main/docs/docs/
 
 # Copyright
 copyright: Copyright &copy; 2025 Ministry Of Health - Ethiopia
