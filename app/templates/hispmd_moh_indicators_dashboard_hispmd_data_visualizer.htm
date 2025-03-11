@@ -9,16 +9,6 @@
     <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
     <!-- Matomo -->
 <script>
-
-	    // Automatically hide the header container when the page loads
-    window.onload = function() {
-        var header = document.querySelector('.header-container');
-        if (header) {
-            header.style.display = 'none';
-        }
-    };
-
-
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
@@ -83,29 +73,6 @@
 </span>
 			</span>
 		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="lang_selector" {$item_lang_selector} data-topcell-item-type="lang_selector" >
-				{BEGIN languages_block}
-<span class="pull-right btn-group">	
-		<button class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		<span class="glyphicon glyphicon-globe"></span>
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu">
-	{BEGIN AmharicLANGLINK}
-		<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-			{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-			አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-		<li><a href="#" data-lang="English" class="rnr-langlink">
-			{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-			English</a></li>
-	{END EnglishLANGLINK}
-	</ul>
-	</span>
-{END languages_block}
-			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
 				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
 	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
@@ -115,7 +82,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				{mlang_message NOTIFICATIONS}			</span>
+				Notifications			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -175,7 +142,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Login			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -198,7 +165,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		User Profile		
 		</a>
 	</li>
 {END userinfo_link}
@@ -206,7 +173,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Log out		
 		</a>
 	</li>
 {END logoutbutton}
@@ -214,7 +181,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		{mlang_message AA_ADMINAREA}		
+		Admin Area		
 		</a>
 	</li>
 {END adminarea_link}
@@ -222,7 +189,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Change password		
 		</a>
 	</li>
 {END changepwd_link}

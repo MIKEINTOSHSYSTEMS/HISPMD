@@ -183,7 +183,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -584,11 +584,11 @@ pdfDocument = {
 				[
 			
 											{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel DHIS2_Reporting_Rates_Report dataset_name } ', 
+					text: ['Summary for {$jslabel DHIS2_Reporting_Rates_Report dataset_name } ', 
 						{$dataset_name_grval},
 						' - ', 
 						{$groupdataset_name_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
+						' records total'
 					],
 					style: 'group_1',
 					colSpan: 10				},
@@ -597,7 +597,7 @@ pdfDocument = {
 				[
 											{
 					text: [
-													'{mlang_message SUM} ',
+													'Sum ',
 											],
 					style: 'group_1',
 
@@ -675,7 +675,7 @@ pdfDocument = {
 				[
 											{
 					text: [
-													'{mlang_message AVERAGE} ',
+													'Average ',
 									
 					],
 					style: 'group_1',
@@ -763,7 +763,7 @@ pdfDocument = {
 				[
 											{
 					text: [
-													'{mlang_message MIN} ',
+													'Min ',
 									
 					],
 					style: 'group_1',
@@ -861,7 +861,7 @@ pdfDocument = {
 				[
 											{
 					text: [
-													'{mlang_message MAX} ',
+													'Max ',
 									
 					],
 					style: 'group_1',

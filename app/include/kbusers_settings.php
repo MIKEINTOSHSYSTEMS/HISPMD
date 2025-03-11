@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipskbusers["English"]))
 		$tdatakbusers[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelskbusers["Amharic"] = array();
-	$fieldToolTipskbusers["Amharic"] = array();
-	$placeHolderskbusers["Amharic"] = array();
-	$pageTitleskbusers["Amharic"] = array();
-	$fieldLabelskbusers["Amharic"]["email"] = "Email";
-	$fieldToolTipskbusers["Amharic"]["email"] = "";
-	$placeHolderskbusers["Amharic"]["email"] = "";
-	$fieldLabelskbusers["Amharic"]["fullname"] = "Fullname";
-	$fieldToolTipskbusers["Amharic"]["fullname"] = "";
-	$placeHolderskbusers["Amharic"]["fullname"] = "";
-	$fieldLabelskbusers["Amharic"]["password"] = "Password";
-	$fieldToolTipskbusers["Amharic"]["password"] = "";
-	$placeHolderskbusers["Amharic"]["password"] = "";
-	$fieldLabelskbusers["Amharic"]["username"] = "Username";
-	$fieldToolTipskbusers["Amharic"]["username"] = "";
-	$placeHolderskbusers["Amharic"]["username"] = "";
-	if (count($fieldToolTipskbusers["Amharic"]))
-		$tdatakbusers[".isUseToolTips"] = true;
-}
 
 
 	$tdatakbusers[".NCSearch"] = true;

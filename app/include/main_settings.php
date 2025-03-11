@@ -64,51 +64,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmain["English"]))
 		$tdatamain[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmain["Amharic"] = array();
-	$fieldToolTipsmain["Amharic"] = array();
-	$placeHoldersmain["Amharic"] = array();
-	$pageTitlesmain["Amharic"] = array();
-	$fieldLabelsmain["Amharic"]["ArticleID"] = "Article ID";
-	$fieldToolTipsmain["Amharic"]["ArticleID"] = "";
-	$placeHoldersmain["Amharic"]["ArticleID"] = "";
-	$fieldLabelsmain["Amharic"]["Category"] = "Category";
-	$fieldToolTipsmain["Amharic"]["Category"] = "";
-	$placeHoldersmain["Amharic"]["Category"] = "";
-	$fieldLabelsmain["Amharic"]["Title"] = "Title";
-	$fieldToolTipsmain["Amharic"]["Title"] = "";
-	$placeHoldersmain["Amharic"]["Title"] = "";
-	$fieldLabelsmain["Amharic"]["Views"] = "Views";
-	$fieldToolTipsmain["Amharic"]["Views"] = "";
-	$placeHoldersmain["Amharic"]["Views"] = "";
-	$fieldLabelsmain["Amharic"]["DateCreated"] = "Created";
-	$fieldToolTipsmain["Amharic"]["DateCreated"] = "";
-	$placeHoldersmain["Amharic"]["DateCreated"] = "";
-	$fieldLabelsmain["Amharic"]["Problem"] = "Problem";
-	$fieldToolTipsmain["Amharic"]["Problem"] = "";
-	$placeHoldersmain["Amharic"]["Problem"] = "";
-	$fieldLabelsmain["Amharic"]["Solution"] = "Solution";
-	$fieldToolTipsmain["Amharic"]["Solution"] = "";
-	$placeHoldersmain["Amharic"]["Solution"] = "";
-	$fieldLabelsmain["Amharic"]["ArticleID2"] = "Article ID2";
-	$fieldToolTipsmain["Amharic"]["ArticleID2"] = "";
-	$placeHoldersmain["Amharic"]["ArticleID2"] = "";
-	$fieldLabelsmain["Amharic"]["ArticleIDedit"] = "Article IDedit";
-	$fieldToolTipsmain["Amharic"]["ArticleIDedit"] = "";
-	$placeHoldersmain["Amharic"]["ArticleIDedit"] = "";
-	$fieldLabelsmain["Amharic"]["helpfullblock"] = "Helpfullblock";
-	$fieldToolTipsmain["Amharic"]["helpfullblock"] = "";
-	$placeHoldersmain["Amharic"]["helpfullblock"] = "";
-	$fieldLabelsmain["Amharic"]["likecount"] = "Likecount";
-	$fieldToolTipsmain["Amharic"]["likecount"] = "";
-	$placeHoldersmain["Amharic"]["likecount"] = "";
-	$fieldLabelsmain["Amharic"]["dislikecount"] = "Dislikecount";
-	$fieldToolTipsmain["Amharic"]["dislikecount"] = "";
-	$placeHoldersmain["Amharic"]["dislikecount"] = "";
-	if (count($fieldToolTipsmain["Amharic"]))
-		$tdatamain[".isUseToolTips"] = true;
-}
 
 
 	$tdatamain[".NCSearch"] = true;

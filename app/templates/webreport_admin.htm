@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
     <head>
-        <title>{mlang_message AA_ADMINAREA}</title>
+        <title>Admin Area</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link type="text/css" href="styles/default.css" rel="stylesheet">
 		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 			<div class="rnr-s-1 {$wr_pagestylepath}">
 				<div class="rnr-c rnr-cv">
 					<div class="style2" align=center>
-						{mlang_message WR_ADMININ_PERMISS}
+						Admin page: Table permissions
 					</div>
 					<div class="style1 rnr-b-wrapper">
 						<div class="rnr-s-fields {$wr_pagestylepath}">
@@ -31,9 +31,9 @@
 											<td colspan=2 id="my_tabs">
 												<div id="radio_select_table" class="yui-navset yui-navset-top">
 													<ul class="yui-nav">
-														<li id=li_db class="selected"><a href="#tabs-0" id="radio_db">{mlang_message WR_DB_ADMIN}</a></li>
-														<li id=li_project><a href="#tabs-0" id="radio_project">{mlang_message WR_PROJECT_ADMIN}</a></li>
-														<li id=li_custom><a href="#tabs-0" id="radio_custom">{mlang_message WR_QUERY_TABLES}</a></li>
+														<li id=li_db class="selected"><a href="#tabs-0" id="radio_db">Database tables</a></li>
+														<li id=li_project><a href="#tabs-0" id="radio_project">Project tables</a></li>
+														<li id=li_custom><a href="#tabs-0" id="radio_custom">SQL queries</a></li>
 													</ul>
 												</div>
 											</td>
@@ -45,7 +45,7 @@
 												<b>{$group_header}</b>
 											</td>
 											<td>
-												<input type=checkbox id="ch_all">&nbsp;<b>{mlang_message SELECT}</b>
+												<input type=checkbox id="ch_all">&nbsp;<b>Select/Unselect all</b>
 											</td>
 											<td></td>
 										</tr>
@@ -66,8 +66,8 @@
 									</table>
 								</div>
 								<div id="btns" class="style2" align=center>
-									<a id="saveexitbtn" name="saveexitbtn" class="rnr-button" href="#">{mlang_message SAVE}</a>
-									<a id="backbtn" name="backbtn" class="rnr-button" href="#">{mlang_message BACK}</a>
+									<a id="saveexitbtn" name="saveexitbtn" class="rnr-button" href="#">Save</a>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
 								</div>
 							</div>
 						</div>

@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsregions["English"]))
 		$tdataregions[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsregions["Amharic"] = array();
-	$fieldToolTipsregions["Amharic"] = array();
-	$placeHoldersregions["Amharic"] = array();
-	$pageTitlesregions["Amharic"] = array();
-	$fieldLabelsregions["Amharic"]["region_id"] = "የክልል መለያ";
-	$fieldToolTipsregions["Amharic"]["region_id"] = "";
-	$placeHoldersregions["Amharic"]["region_id"] = "";
-	$fieldLabelsregions["Amharic"]["name"] = "ስም";
-	$fieldToolTipsregions["Amharic"]["name"] = "";
-	$placeHoldersregions["Amharic"]["name"] = "";
-	$fieldLabelsregions["Amharic"]["his_strategic_plan"] = "የእሱ ስትራቴጂክ ዕቅድ";
-	$fieldToolTipsregions["Amharic"]["his_strategic_plan"] = "";
-	$placeHoldersregions["Amharic"]["his_strategic_plan"] = "";
-	if (count($fieldToolTipsregions["Amharic"]))
-		$tdataregions[".isUseToolTips"] = true;
-}
 
 
 	$tdataregions[".NCSearch"] = true;

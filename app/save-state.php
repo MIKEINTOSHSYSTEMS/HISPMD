@@ -45,7 +45,7 @@ if ( isset( $_POST['str_xml'] ) && isset( $_POST['web'] ) && !isset( $_POST['sav
 		: 0;
 	if( $parameterCount < 2 && $_POST['web']=='webcharts' && $_POST['name']=='parameters')
 	{
-		echo mlang_message("WR_NEED_SELECT_SERIES");
+		echo "You must select at least one series";
 		return;
 	}
 	
@@ -174,7 +174,7 @@ elseif ( isset( $_POST['str_xml'] ) && isset( $_POST['web'] ) && isset( $_POST['
 		: 0;
 	if(  $parameterCount < 2 && $_POST['web']=='webcharts' && $_POST['name']=='parameters')
 	{
-		echo mlang_message("WR_NEED_SELECT_SERIES");
+		echo "You must select at least one series";
 		return;
 	}
 	
@@ -258,9 +258,9 @@ elseif ( isset( $_POST['del'] ))
         	    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $g==$rpt["name"])
 	            {
 					if($s=="report")
-						echo "<p>".mlang_message("WR_REPORT_DELETE")."</p>";
+						echo "<p>"."You don't have permissions to delete this report"."</p>";
 					else
-						echo "<p>".mlang_message("WR_CHART_DELETE")."</p>";
+						echo "<p>"."You don't have permissions to delete this chart"."</p>";
                 	exit();
 	            }
         	}
@@ -1193,7 +1193,7 @@ function Check_Crosstable_Group($arr,$is_save)
 	{
 		if(pre8count($arr["group_fields"])-1<2 && $is_save)
 		{
-			echo mlang_message("WR_NEED_GROUP");
+			echo "You must select at least one group fields";
 			exit();
 		}
 		$count_x=0;
@@ -1207,7 +1207,7 @@ function Check_Crosstable_Group($arr,$is_save)
 		}
 		if($count_x==0 || $count_y==0)
 		{
-			echo mlang_message("WR_NEED_AXIS");
+			echo "You must select at least one axis";
 			exit();
 		}
 	}
@@ -1221,7 +1221,7 @@ function Check_Crosstable_Totals($arr,$is_crosstable)
 			if($value["min"]=="true" || $value["max"]=="true" || $value["sum"]=="true" || $value["avg"]=="true")
 				return;
 		}
-		echo mlang_message("WR_NEED_FUNC");
+		echo "You must check group functions";
 		exit();
 	}
 }

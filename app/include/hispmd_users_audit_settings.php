@@ -49,36 +49,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmd_users_audit["English"]))
 		$tdatahispmd_users_audit[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelshispmd_users_audit["Amharic"] = array();
-	$fieldToolTipshispmd_users_audit["Amharic"] = array();
-	$placeHoldershispmd_users_audit["Amharic"] = array();
-	$pageTitleshispmd_users_audit["Amharic"] = array();
-	$fieldLabelshispmd_users_audit["Amharic"]["id"] = "Id";
-	$fieldToolTipshispmd_users_audit["Amharic"]["id"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["id"] = "";
-	$fieldLabelshispmd_users_audit["Amharic"]["datetime"] = "Datetime";
-	$fieldToolTipshispmd_users_audit["Amharic"]["datetime"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["datetime"] = "";
-	$fieldLabelshispmd_users_audit["Amharic"]["ip"] = "Ip";
-	$fieldToolTipshispmd_users_audit["Amharic"]["ip"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["ip"] = "";
-	$fieldLabelshispmd_users_audit["Amharic"]["user"] = "User";
-	$fieldToolTipshispmd_users_audit["Amharic"]["user"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["user"] = "";
-	$fieldLabelshispmd_users_audit["Amharic"]["table"] = "Table";
-	$fieldToolTipshispmd_users_audit["Amharic"]["table"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["table"] = "";
-	$fieldLabelshispmd_users_audit["Amharic"]["action"] = "Action";
-	$fieldToolTipshispmd_users_audit["Amharic"]["action"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["action"] = "";
-	$fieldLabelshispmd_users_audit["Amharic"]["description"] = "Description";
-	$fieldToolTipshispmd_users_audit["Amharic"]["description"] = "";
-	$placeHoldershispmd_users_audit["Amharic"]["description"] = "";
-	if (count($fieldToolTipshispmd_users_audit["Amharic"]))
-		$tdatahispmd_users_audit[".isUseToolTips"] = true;
-}
 
 
 	$tdatahispmd_users_audit[".NCSearch"] = true;

@@ -63,7 +63,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expand" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -81,7 +81,7 @@
 	<div class="panel-heading">
 		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			Search in			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -91,12 +91,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
 			</ul>
 		</div>
 
@@ -184,9 +184,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message RESET}</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Reset</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -210,7 +210,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -219,7 +219,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -254,7 +254,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message RESET}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Reset">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -280,14 +280,14 @@
 								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="dhis2_reporting_rates_report_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		{mlang_message ADVANCED_SEARCH}		
+		Advanced search		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		{mlang_message SHOW_SEARCH_PANEL}		
+		Show search panel		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -295,7 +295,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		{mlang_message HIDE_SEARCH_PANEL}		
+		Hide search panel		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -303,7 +303,7 @@
 	<li data-itemtype="export_report_excel" data-itemid="export_report_excel" {$item_export_report_excel} data-pageid="{$pageid}" data-small >
 				<a  href="dhis2_reporting_rates_report_print.php?all=1&amp;format=excel{$stateLink}" {$excellink_attrs}  title="" >
 				
-		{mlang_message EXPORT_TO_EXCEL}		
+		Export to Excel		
 		</a>
 	</li>
 {END export_link}
@@ -311,7 +311,7 @@
 	<li data-itemtype="export_report_word" data-itemid="export_report_word" {$item_export_report_word} data-pageid="{$pageid}" data-small >
 				<a  href="dhis2_reporting_rates_report_print.php?all=1&amp;format=word{$stateLink}" {$wordlink_attrs}  title="" >
 				
-		{mlang_message EXPORT_TO_WORD}		
+		Export to Word		
 		</a>
 	</li>
 {END export_link}
@@ -319,27 +319,17 @@
 	<li data-itemtype="save_search" data-itemid="save_search" {$item_save_search} data-pageid="{$pageid}" data-small >
 				<a  href="#" id="saveSearch{$id}"  title="" >
 				
-		{mlang_message SAVE_SEARCH}		
+		Save search		
 		</a>
 	</li>
 {END saveSeachButton}
 							<li role="separator" class="divider"></li>							{BEGIN savedSeachesButton}
 <li data-itemtype="saved_searches" data-itemid="saved_searches" {$item_saved_searches} data-pageid="{$pageid}">
-	<a {$saveSearchButtonAttrs} id="savedSearches{$id}">{mlang_message SAVED_SEARCHES}:</a>
+	<a {$saveSearchButtonAttrs} id="savedSearches{$id}">Saved searches:</a>
 	<ul class="rnr-saved-searches rnr-list" id ="savedSearchedList{$id}"></ul>
 </li>
 {END savedSeachesButton}
-							<li role="separator" class="divider"></li>								{BEGIN AmharicLANGLINK}
-	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-		አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-					</ul>
+							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
 			</span>
@@ -353,7 +343,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				{mlang_message NOTIFICATIONS}			</span>
+				Notifications			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -413,7 +403,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Login			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -431,7 +421,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		User Profile		
 		</a>
 	</li>
 {END userinfo_link}
@@ -439,7 +429,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Log out		
 		</a>
 	</li>
 {END logoutbutton}
@@ -447,7 +437,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		{mlang_message AA_ADMINAREA}		
+		Admin Area		
 		</a>
 	</li>
 {END adminarea_link}
@@ -455,7 +445,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Change password		
 		</a>
 	</li>
 {END changepwd_link}
@@ -531,7 +521,7 @@
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 							<input class="filter-selectAll-ownership_type_label" type="checkbox" name="selectAll" {$selectAll_attrs_ownership_type_label} />
 						{BEGIN clearLink_ownership_type_label}
-			<a href="#" class="filter-clear filter-clear-ownership_type_label" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-ownership_type_label" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_ownership_type_label}
@@ -563,7 +553,7 @@
 
 			{BEGIN filter_button_apply_ownership_type_label}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_ownership_type_label}">
-			<a href="#" class="filter-btn-apply filter-apply-ownership_type_label" {$filterbutton_attrs_ownership_type_label}>{mlang_message FILTER_APPLY}</a>
+			<a href="#" class="filter-btn-apply filter-apply-ownership_type_label" {$filterbutton_attrs_ownership_type_label}>Apply</a>
 		</li>
 		{END filter_button_apply_ownership_type_label}
 	
@@ -583,7 +573,7 @@
 	<div class="dropdown filter-field filter-facility_type-container" {BEGIN filter_selected_facility_type} data-selected {END filter_selected_facility_type}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_facility_type}
-			<a href="#" class="filter-clear filter-clear-facility_type" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-facility_type" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_facility_type}
@@ -631,7 +621,7 @@
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 							<input class="filter-selectAll-report_period" type="checkbox" name="selectAll" {$selectAll_attrs_report_period} />
 						{BEGIN clearLink_report_period}
-			<a href="#" class="filter-clear filter-clear-report_period" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-report_period" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_report_period}
@@ -663,7 +653,7 @@
 
 			{BEGIN filter_button_apply_report_period}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_report_period}">
-			<a href="#" class="filter-btn-apply filter-apply-report_period" {$filterbutton_attrs_report_period}>{mlang_message FILTER_APPLY}</a>
+			<a href="#" class="filter-btn-apply filter-apply-report_period" {$filterbutton_attrs_report_period}>Apply</a>
 		</li>
 		{END filter_button_apply_report_period}
 	
@@ -691,7 +681,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -703,14 +693,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
+			Scope:		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="dhis2_reporting_rates_report_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_WHOLE_REPORT}							</label>
+									Print whole report							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -719,7 +709,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="dhis2_reporting_rates_report_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
+				Print this page			</label>
 		</div>
 	</div>
 		
@@ -733,7 +723,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					{mlang_message GROUPS_PP}							
+					Groups per page							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -747,7 +737,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
+							Print			</a>
 </span>
 				 
 					</li>
@@ -1111,14 +1101,14 @@
 							<td class="group_2" style="border-top: none;"></td>
 							
 																								<td  class="group_3" colspan=8 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label DHIS2_Reporting_Rates_Report facility_type }&nbsp;{$facility_type_grval}
+				Summary for&nbsp;{$label DHIS2_Reporting_Rates_Report facility_type }&nbsp;{$facility_type_grval}
 					- <span class="summary-3" data-type="summary">{$groupfacility_type_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																																										</tr>
 
 					<!--  Sum -->
 		<tr class="grouptotalsrow" style="display:none; height:0px;" >
-														<td class="group_3">{mlang_message SUM}</td>
+														<td class="group_3">Sum</td>
 																		<td class="group_2">&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
@@ -1152,7 +1142,7 @@
 	
 			<!--  Avg -->
 		<tr class="grouptotalsrow" style="display:none; height:0px;" >
-														<td class="group_3">{mlang_message AVERAGE}</td>
+														<td class="group_3">Average</td>
 																		<td class="group_2" >&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
@@ -1181,7 +1171,7 @@
 	
 			<!--  Min -->
 		<tr class="grouptotalsrow" style="display:none; height:0px;">
-														<td class="group_3">{mlang_message MIN}</td>
+														<td class="group_3">Min</td>
 																		<td class="group_2" >&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
@@ -1205,7 +1195,7 @@
 	
 					<!--  Max -->
 		<tr class="grouptotalsrow" style="display:none; height:0px;">
-														<td class="group_3">{mlang_message MAX}</td>
+														<td class="group_3">Max</td>
 																		<td class="group_2" >&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
 																		<td class="group_3">&nbsp;</td>
@@ -1239,14 +1229,14 @@
 		<tr class="summaryrow"  >
 			
 										<td  class="group_1" colspan=10 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label DHIS2_Reporting_Rates_Report dataset_name }&nbsp;{$dataset_name_grval}
+				Summary for&nbsp;{$label DHIS2_Reporting_Rates_Report dataset_name }&nbsp;{$dataset_name_grval}
 					- <span class="summary-1" data-type="summary">{$groupdataset_name_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																																																								</tr>
 
 					<!--  Sum -->
 		<tr class="grouptotalsrow"  >
-														<td class="group_1">{mlang_message SUM}</td>
+														<td class="group_1">Sum</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
@@ -1280,7 +1270,7 @@
 	
 			<!--  Avg -->
 		<tr class="grouptotalsrow"  >
-														<td class="group_1">{mlang_message AVERAGE}</td>
+														<td class="group_1">Average</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
@@ -1309,7 +1299,7 @@
 	
 			<!--  Min -->
 		<tr class="grouptotalsrow" >
-														<td class="group_1">{mlang_message MIN}</td>
+														<td class="group_1">Min</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
@@ -1333,7 +1323,7 @@
 	
 					<!--  Max -->
 		<tr class="grouptotalsrow" >
-														<td class="group_1">{mlang_message MAX}</td>
+														<td class="group_1">Max</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>
 																		<td class="group_1">&nbsp;</td>

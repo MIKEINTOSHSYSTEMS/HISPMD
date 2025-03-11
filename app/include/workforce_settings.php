@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsworkforce["English"]))
 		$tdataworkforce[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsworkforce["Amharic"] = array();
-	$fieldToolTipsworkforce["Amharic"] = array();
-	$placeHoldersworkforce["Amharic"] = array();
-	$pageTitlesworkforce["Amharic"] = array();
-	$fieldLabelsworkforce["Amharic"]["workforce_id"] = "የስራ ሃይል መለያ";
-	$fieldToolTipsworkforce["Amharic"]["workforce_id"] = "";
-	$placeHoldersworkforce["Amharic"]["workforce_id"] = "";
-	$fieldLabelsworkforce["Amharic"]["region_id"] = "የክልል መለያ";
-	$fieldToolTipsworkforce["Amharic"]["region_id"] = "";
-	$placeHoldersworkforce["Amharic"]["region_id"] = "";
-	$fieldLabelsworkforce["Amharic"]["adequate_staff"] = "በቂ ሠራተኞች";
-	$fieldToolTipsworkforce["Amharic"]["adequate_staff"] = "";
-	$placeHoldersworkforce["Amharic"]["adequate_staff"] = "";
-	$fieldLabelsworkforce["Amharic"]["competency_index"] = "የብቃት መረጃ ጠቋሚ";
-	$fieldToolTipsworkforce["Amharic"]["competency_index"] = "";
-	$placeHoldersworkforce["Amharic"]["competency_index"] = "";
-	if (count($fieldToolTipsworkforce["Amharic"]))
-		$tdataworkforce[".isUseToolTips"] = true;
-}
 
 
 	$tdataworkforce[".NCSearch"] = true;

@@ -273,7 +273,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -756,11 +756,11 @@ pdfDocument = {
 				},
 							
 																									{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report data_source_id } ', 
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report data_source_id } ', 
 						{$data_source_id_grval},
 						' - ', 
 						{$groupdata_source_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
+						' records total'
 					],
 					style: 'group_3',
 					colSpan: 13				},
@@ -782,11 +782,11 @@ pdfDocument = {
 				},
 							
 																		{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report indicator_id } ', 
 						{$indicator_id_grval},
 						' - ', 
 						{$groupindicator_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
+						' records total'
 					],
 					style: 'group_2',
 					colSpan: 14				},
@@ -804,11 +804,11 @@ pdfDocument = {
 				[
 			
 											{
-					text: ['{mlang_message SUMMARY_FOR} {$jslabel MOH_Indicators_Data_Report indicator_group_id } ', 
+					text: ['Summary for {$jslabel MOH_Indicators_Data_Report indicator_group_id } ', 
 						{$indicator_group_id_grval},
 						' - ', 
 						{$groupindicator_group_id_total_cnt}, 
-						' {mlang_message RECORDS_TOTAL}'
+						' records total'
 					],
 					style: 'group_1',
 					colSpan: 15				},
@@ -911,7 +911,7 @@ pdfDocument = {
 
 	[
 		{	
-			text: '{mlang_message PAGE_SUMMARY} {$page_total_cnt} - {mlang_message RECORDS_TOTAL}',
+			text: 'Page summary {$page_total_cnt} - records total',
 			colSpan: 15,
 			style: 'pagesummary',
 		}
@@ -926,7 +926,7 @@ pdfDocument = {
 {BEGIN global_summary}
 	[
 		{
-			text: '{mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}',
+			text: 'Global summary {$global_total_cnt} - records total',
 			colSpan: 15,
 			style: 'globalsummary',
 		}

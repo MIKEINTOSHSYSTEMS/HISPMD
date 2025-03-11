@@ -56,43 +56,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipskbarticles["English"]))
 		$tdatakbarticles[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelskbarticles["Amharic"] = array();
-	$fieldToolTipskbarticles["Amharic"] = array();
-	$placeHolderskbarticles["Amharic"] = array();
-	$pageTitleskbarticles["Amharic"] = array();
-	$fieldLabelskbarticles["Amharic"]["ArticleID"] = "Article ID";
-	$fieldToolTipskbarticles["Amharic"]["ArticleID"] = "";
-	$placeHolderskbarticles["Amharic"]["ArticleID"] = "";
-	$fieldLabelskbarticles["Amharic"]["Category"] = "Category";
-	$fieldToolTipskbarticles["Amharic"]["Category"] = "";
-	$placeHolderskbarticles["Amharic"]["Category"] = "";
-	$fieldLabelskbarticles["Amharic"]["DateCreated"] = "Date Created";
-	$fieldToolTipskbarticles["Amharic"]["DateCreated"] = "";
-	$placeHolderskbarticles["Amharic"]["DateCreated"] = "";
-	$fieldLabelskbarticles["Amharic"]["Problem"] = "Problem";
-	$fieldToolTipskbarticles["Amharic"]["Problem"] = "";
-	$placeHolderskbarticles["Amharic"]["Problem"] = "";
-	$fieldLabelskbarticles["Amharic"]["Solution"] = "Solution";
-	$fieldToolTipskbarticles["Amharic"]["Solution"] = "";
-	$placeHolderskbarticles["Amharic"]["Solution"] = "";
-	$fieldLabelskbarticles["Amharic"]["Title"] = "Title";
-	$fieldToolTipskbarticles["Amharic"]["Title"] = "";
-	$placeHolderskbarticles["Amharic"]["Title"] = "";
-	$fieldLabelskbarticles["Amharic"]["Views"] = "Views";
-	$fieldToolTipskbarticles["Amharic"]["Views"] = "";
-	$placeHolderskbarticles["Amharic"]["Views"] = "";
-	$fieldLabelskbarticles["Amharic"]["ArticleID2"] = "Article ID2";
-	$fieldToolTipskbarticles["Amharic"]["ArticleID2"] = "";
-	$placeHolderskbarticles["Amharic"]["ArticleID2"] = "";
-	$fieldLabelskbarticles["Amharic"]["ArticleIDedit"] = "Article IDedit";
-	$fieldToolTipskbarticles["Amharic"]["ArticleIDedit"] = "";
-	$placeHolderskbarticles["Amharic"]["ArticleIDedit"] = "";
-	$pageTitleskbarticles["Amharic"]["edit"] = "Articles, Edit";
-	if (count($fieldToolTipskbarticles["Amharic"]))
-		$tdatakbarticles[".isUseToolTips"] = true;
-}
 
 
 	$tdatakbarticles[".NCSearch"] = true;

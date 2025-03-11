@@ -62,7 +62,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expand" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -87,7 +87,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +96,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -106,24 +106,6 @@
 							 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown ">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-										<span class="fa fa-language"></span>
-												<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-								{BEGIN AmharicLANGLINK}
-	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-		አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-					</ul>
-	</span>
 </span>
 			</span>
 		 
@@ -136,7 +118,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				{mlang_message NOTIFICATIONS}			</span>
+				Notifications			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -204,7 +186,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		User Profile		
 		</a>
 	</li>
 {END userinfo_link}
@@ -212,7 +194,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Log out		
 		</a>
 	</li>
 {END logoutbutton}
@@ -220,7 +202,7 @@
 	<li data-itemtype="exit_adminarea_link" data-itemid="exit_adminarea_link" {$item_exit_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exitaalink_attrs}  title="" >
 				
-		{mlang_message AA_EXIT_ADMINAREA}		
+		Exit Admin Area		
 		</a>
 	</li>
 {END exitadminarea_link}
@@ -228,7 +210,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Change password		
 		</a>
 	</li>
 {END changepwd_link}
@@ -284,13 +266,13 @@
 		<span data-itemtype="members_save" data-itemid="members_save" {$item_members_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							{mlang_message SAVE}			</a>
+							Save			</a>
 </span>
 	 
 		<span data-itemtype="members_reset" data-itemid="members_reset" {$item_members_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$resetbutton_attrs} >
-							{mlang_message RESET}			</a>
+							Reset			</a>
 </span>
 		</div>			 
 				<div 
@@ -302,15 +284,15 @@
 		<span data-itemtype="members_choose_columns" data-itemid="members_choose_columns" {$item_members_choose_columns} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$choosecolumnsbutton_attrs} >
-							{mlang_message CHOOSE_COLUMNS}			</a>
+							Choose columns...			</a>
 </span>
 	 
 		<span data-itemtype="members_displaying_filter" data-itemid="members_displaying_filter" {$item_members_displaying_filter} data-pageid="{$pageid}">
-{mlang_message AA_MEMBERS_DISPLAYING}	<span id="linkselectFilter" class="btn-group">
-		<span class="btn btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{mlang_message AA_MEMBERS_DISPLAYING_ALL}</span>
+Displaying	<span id="linkselectFilter" class="btn-group">
+		<span class="btn btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">all users</span>
 		<ul class="dropdown-menu">
-			<li data-value="all" ><a href="#">{mlang_message AA_MEMBERS_DISPLAYING_ALL}</a></li>
-			<li data-value="modified" ><a href="#">{mlang_message AA_MEMBERS_DISPLAYING_MODIFIED}</a></li>
+			<li data-value="all" ><a href="#">all users</a></li>
+			<li data-value="modified" ><a href="#">modified users</a></li>
 		</ul>
 	</span>
 </span>
@@ -338,7 +320,7 @@
 		data-cellId="grid_hcell_source" data-pageid="{$pageid}"	>
 
  
-	<a class="rnr-orderlink" {$sourceuserheadersort_attrs} data-itemtype="members_source_label" data-itemid="members_source_label" {$item_members_source_label} data-pageid="{$pageid}">{mlang_message AA_MEMBERS_SOURCE_LABEL}</a>
+	<a class="rnr-orderlink" {$sourceuserheadersort_attrs} data-itemtype="members_source_label" data-itemid="members_source_label" {$item_members_source_label} data-pageid="{$pageid}">Source</a>
 
 	</th>
 	{END cellblock_grid_hcell_source}
@@ -353,7 +335,7 @@
 		data-cellId="grid_hcell_username" data-pageid="{$pageid}"	>
 
  
-	<a class="rnr-orderlink" {$usernameheadersort_attrs} data-itemtype="members_username_label" data-itemid="members_username_label" {$item_members_username_label} data-pageid="{$pageid}">{mlang_message USERNAME}</a>
+	<a class="rnr-orderlink" {$usernameheadersort_attrs} data-itemtype="members_username_label" data-itemid="members_username_label" {$item_members_username_label} data-pageid="{$pageid}">Username</a>
 
 	</th>
 	{END cellblock_grid_hcell_username}
@@ -368,7 +350,7 @@
 		data-cellId="grid_hcell_displayname" data-pageid="{$pageid}" {$displayuserheadertdsort_attrs}	>
 
  
-	<a class="rnr-orderlink" {$displayuserheadersort_attrs} data-itemtype="members_displayname_label" data-itemid="members_displayname_label" {$item_members_displayname_label} data-pageid="{$pageid}">{mlang_message DISPLAY_NAME}</a>
+	<a class="rnr-orderlink" {$displayuserheadersort_attrs} data-itemtype="members_displayname_label" data-itemid="members_displayname_label" {$item_members_displayname_label} data-pageid="{$pageid}">Display name</a>
 
 	</th>
 	{END cellblock_grid_hcell_displayname}
@@ -384,7 +366,7 @@
 		data-cellId="grid_hcell_email" data-pageid="{$pageid}" {$emailuserheadertdsort_attrs}	>
 
  
-	<a class="rnr-orderlink" {$emailuserheadersort_attrs} data-itemtype="members_email_label" data-itemid="members_email_label" {$item_members_email_label} data-pageid="{$pageid}">{mlang_message EMAIL_ALREADY1}</a>
+	<a class="rnr-orderlink" {$emailuserheadersort_attrs} data-itemtype="members_email_label" data-itemid="members_email_label" {$item_members_email_label} data-pageid="{$pageid}">Email</a>
 
 	</th>
 	{END cellblock_grid_hcell_email}
@@ -420,7 +402,7 @@
  
 	<span data-itemtype="members_source_filter" data-itemid="members_source_filter" {$item_members_source_filter} data-pageid="{$pageid}" >
 	<select class="form-control">
-		<option value="">{mlang_message ALL}</option>
+		<option value="">All</option>
 		{BEGIN user_sources}
 		<option value="{$code}">{$label}</option>
 		{END user_sources}
@@ -440,7 +422,7 @@
 
  
 	<div data-itemtype="members_search" data-itemid="members_search" {$item_members_search} data-pageid="{$pageid}">
-	<input class="form-control" type=search id="adminMembersSearch"  placeholder="{mlang_message SEARCH_TIP}">			
+	<input class="form-control" type=search id="adminMembersSearch"  placeholder="search">			
 </div>
 
 	</th>

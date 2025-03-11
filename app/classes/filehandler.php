@@ -185,7 +185,7 @@ class RunnerFileHandler {
 
 	protected function validateFile( $filename, $fileSize, &$errorMessage ) {
         if ( !$filename ) {
-            $errorMessage = mlang_message("ERROR_MISSING_FILE_NAME");
+            $errorMessage = "File name was not provided";
             return false;
         }
         
@@ -193,28 +193,28 @@ class RunnerFileHandler {
 		if( $acceptedTypes ) {
 			$ext = strtoupper( getFileExtension( $filename ) );
 			if( array_search( $ext, $acceptedTypes ) === false && array_search( ".".$ext, $acceptedTypes ) === false ) {
-				$errorMessage = mlang_message("ERROR_ACCEPT_FILE_TYPES");
+				$errorMessage = "File type is not acceptable";
 				return false;
 			}
 		}
 
 		$maxFileSize = $this->pSet->getMaxFileSize( $this->field );
 		if ( $maxFileSize && $fileSize > $maxFileSize * 1024 ) {
-            $errorMessage = mysprintf(mlang_message("ERROR_MAX_FILE_SIZE"), array( $maxFileSize ) );
+            $errorMessage = mysprintf("File size exceeds limit of %s kbytes", array( $maxFileSize ) );
             return false;
         }
 
 		$maxTotalFileSize = $this->pSet->getMaxTotalFilesSize( $this->field );
 		if ( $maxTotalFileSize ) {
 			if( $this->getUploadFilesSize() + $fileSize > $maxTotalFileSize * 1024 ) {
-				$errorMessage = mysprintf( mlang_message("ERROR_MAX_TOTAL_FILE_SIZE"), array( $maxTotalFileSize ) );
+				$errorMessage = mysprintf( "Total files size exceeds limit of %s kbytes", array( $maxTotalFileSize ) );
 				return false;
 			}
 		}
 
 		$maxNumberOfFiles = $this->pSet->getMaxNumberOfFiles( $this->field );
 		if ( $maxNumberOfFiles && $this->getUploadFilesCount() >= $maxNumberOfFiles ) {
-			$errorMessage = mysprintf( mlang_message("ERROR_MAX_NUMBER_OF_FILES_MANY"), array( $maxNumberOfFiles ) );
+			$errorMessage = mysprintf( "You can upload no more than %s files", array( $maxNumberOfFiles ) );
 			return false;
 		}
         return true;

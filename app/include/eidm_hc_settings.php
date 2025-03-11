@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipseidm_hc["English"]))
 		$tdataeidm_hc[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelseidm_hc["Amharic"] = array();
-	$fieldToolTipseidm_hc["Amharic"] = array();
-	$placeHolderseidm_hc["Amharic"] = array();
-	$pageTitleseidm_hc["Amharic"] = array();
-	$fieldLabelseidm_hc["Amharic"]["indicator"] = "Indicator";
-	$fieldToolTipseidm_hc["Amharic"]["indicator"] = "";
-	$placeHolderseidm_hc["Amharic"]["indicator"] = "";
-	$fieldLabelseidm_hc["Amharic"]["organisation_unit"] = "Organisation Unit";
-	$fieldToolTipseidm_hc["Amharic"]["organisation_unit"] = "";
-	$placeHolderseidm_hc["Amharic"]["organisation_unit"] = "";
-	$fieldLabelseidm_hc["Amharic"]["period"] = "Period";
-	$fieldToolTipseidm_hc["Amharic"]["period"] = "";
-	$placeHolderseidm_hc["Amharic"]["period"] = "";
-	$fieldLabelseidm_hc["Amharic"]["value"] = "Value";
-	$fieldToolTipseidm_hc["Amharic"]["value"] = "";
-	$placeHolderseidm_hc["Amharic"]["value"] = "";
-	if (count($fieldToolTipseidm_hc["Amharic"]))
-		$tdataeidm_hc[".isUseToolTips"] = true;
-}
 
 
 	$tdataeidm_hc[".NCSearch"] = true;

@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdatause["English"]))
 		$tdatadatause[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdatause["Amharic"] = array();
-	$fieldToolTipsdatause["Amharic"] = array();
-	$placeHoldersdatause["Amharic"] = array();
-	$pageTitlesdatause["Amharic"] = array();
-	$fieldLabelsdatause["Amharic"]["use_id"] = "መለያ ተጠቀም";
-	$fieldToolTipsdatause["Amharic"]["use_id"] = "";
-	$placeHoldersdatause["Amharic"]["use_id"] = "";
-	$fieldLabelsdatause["Amharic"]["institution_type"] = "ተቋም ዓይነት";
-	$fieldToolTipsdatause["Amharic"]["institution_type"] = "";
-	$placeHoldersdatause["Amharic"]["institution_type"] = "";
-	$fieldLabelsdatause["Amharic"]["pmt_active"] = "Pmt ንቁ";
-	$fieldToolTipsdatause["Amharic"]["pmt_active"] = "";
-	$placeHoldersdatause["Amharic"]["pmt_active"] = "";
-	$fieldLabelsdatause["Amharic"]["baseline_assessment"] = "የመነሻ መስመር ግምገማ";
-	$fieldToolTipsdatause["Amharic"]["baseline_assessment"] = "";
-	$placeHoldersdatause["Amharic"]["baseline_assessment"] = "";
-	if (count($fieldToolTipsdatause["Amharic"]))
-		$tdatadatause[".isUseToolTips"] = true;
-}
 
 
 	$tdatadatause[".NCSearch"] = true;

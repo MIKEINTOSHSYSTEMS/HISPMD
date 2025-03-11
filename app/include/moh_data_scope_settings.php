@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_data_scope["English"]))
 		$tdatamoh_data_scope[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_data_scope["Amharic"] = array();
-	$fieldToolTipsmoh_data_scope["Amharic"] = array();
-	$placeHoldersmoh_data_scope["Amharic"] = array();
-	$pageTitlesmoh_data_scope["Amharic"] = array();
-	$fieldLabelsmoh_data_scope["Amharic"]["scope_id"] = "የወሰን መለያ";
-	$fieldToolTipsmoh_data_scope["Amharic"]["scope_id"] = "";
-	$placeHoldersmoh_data_scope["Amharic"]["scope_id"] = "";
-	$fieldLabelsmoh_data_scope["Amharic"]["scope_name"] = "የወሰን ስም";
-	$fieldToolTipsmoh_data_scope["Amharic"]["scope_name"] = "";
-	$placeHoldersmoh_data_scope["Amharic"]["scope_name"] = "";
-	if (count($fieldToolTipsmoh_data_scope["Amharic"]))
-		$tdatamoh_data_scope[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_data_scope[".NCSearch"] = true;

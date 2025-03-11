@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipschat_history["English"]))
 		$tdatachat_history[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelschat_history["Amharic"] = array();
-	$fieldToolTipschat_history["Amharic"] = array();
-	$placeHolderschat_history["Amharic"] = array();
-	$pageTitleschat_history["Amharic"] = array();
-	$fieldLabelschat_history["Amharic"]["id"] = "Id";
-	$fieldToolTipschat_history["Amharic"]["id"] = "";
-	$placeHolderschat_history["Amharic"]["id"] = "";
-	$fieldLabelschat_history["Amharic"]["chat_history"] = "Chat History";
-	$fieldToolTipschat_history["Amharic"]["chat_history"] = "";
-	$placeHolderschat_history["Amharic"]["chat_history"] = "";
-	if (count($fieldToolTipschat_history["Amharic"]))
-		$tdatachat_history[".isUseToolTips"] = true;
-}
 
 
 	$tdatachat_history[".NCSearch"] = true;

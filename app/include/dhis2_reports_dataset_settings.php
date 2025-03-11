@@ -82,69 +82,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_reports_dataset["English"]))
 		$tdatadhis2_reports_dataset[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_reports_dataset["Amharic"] = array();
-	$fieldToolTipsdhis2_reports_dataset["Amharic"] = array();
-	$placeHoldersdhis2_reports_dataset["Amharic"] = array();
-	$pageTitlesdhis2_reports_dataset["Amharic"] = array();
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Hospital_by_ownership_ID"] = "Hospital by ownership ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Hospital_by_ownership_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Hospital_by_ownership_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Hospital_by_ownership"] = "Hospital by ownership";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Hospital_by_ownership"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Hospital_by_ownership"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Ownership_ID"] = "Ownership ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Ownership_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Ownership_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Ownership"] = "Ownership";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Ownership"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Ownership"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Clinics_by_Type_ID"] = "Clinics by Type ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Clinics_by_Type_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Clinics_by_Type_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Clinics_by_Type"] = "Clinics by Type";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Clinics_by_Type"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Clinics_by_Type"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Facility_Type_ID"] = "Facility Type ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Facility_Type_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Facility_Type_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Facility_Type"] = "Facility Type";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Facility_Type"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Facility_Type"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Health_Post_Type_ID"] = "Health Post Type ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Health_Post_Type_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Health_Post_Type_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Health_Post_Type"] = "Health Post Type";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Health_Post_Type"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Health_Post_Type"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Hospital_Type_ID"] = "Hospital Type ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Hospital_Type_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Hospital_Type_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Hospital_Type"] = "Hospital Type";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Hospital_Type"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Hospital_Type"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Rural_ID"] = "Rural ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Rural_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Rural_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Rural"] = "Rural";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Rural"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Rural"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Settlement_ID"] = "Settlement ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Settlement_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Settlement_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Settlement"] = "Settlement";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Settlement"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Settlement"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Woreda_Type_ID"] = "Woreda Type ID";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Woreda_Type_ID"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Woreda_Type_ID"] = "";
-	$fieldLabelsdhis2_reports_dataset["Amharic"]["Woreda_Type"] = "Woreda Type";
-	$fieldToolTipsdhis2_reports_dataset["Amharic"]["Woreda_Type"] = "";
-	$placeHoldersdhis2_reports_dataset["Amharic"]["Woreda_Type"] = "";
-	if (count($fieldToolTipsdhis2_reports_dataset["Amharic"]))
-		$tdatadhis2_reports_dataset[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_reports_dataset[".NCSearch"] = true;

@@ -46,33 +46,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipstimetracker["English"]))
 		$tdatatimetracker[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelstimetracker["Amharic"] = array();
-	$fieldToolTipstimetracker["Amharic"] = array();
-	$placeHolderstimetracker["Amharic"] = array();
-	$pageTitlestimetracker["Amharic"] = array();
-	$fieldLabelstimetracker["Amharic"]["trackerid"] = "Trackerid";
-	$fieldToolTipstimetracker["Amharic"]["trackerid"] = "";
-	$placeHolderstimetracker["Amharic"]["trackerid"] = "";
-	$fieldLabelstimetracker["Amharic"]["pagename"] = "የገጽ ስም";
-	$fieldToolTipstimetracker["Amharic"]["pagename"] = "";
-	$placeHolderstimetracker["Amharic"]["pagename"] = "";
-	$fieldLabelstimetracker["Amharic"]["timeon"] = "Timeon";
-	$fieldToolTipstimetracker["Amharic"]["timeon"] = "";
-	$placeHolderstimetracker["Amharic"]["timeon"] = "";
-	$fieldLabelstimetracker["Amharic"]["timeoff"] = "ጊዜው ያለፈበት";
-	$fieldToolTipstimetracker["Amharic"]["timeoff"] = "";
-	$placeHolderstimetracker["Amharic"]["timeoff"] = "";
-	$fieldLabelstimetracker["Amharic"]["userid"] = "ተጠቃሚ";
-	$fieldToolTipstimetracker["Amharic"]["userid"] = "";
-	$placeHolderstimetracker["Amharic"]["userid"] = "";
-	$fieldLabelstimetracker["Amharic"]["recordid"] = "የተቀዳ";
-	$fieldToolTipstimetracker["Amharic"]["recordid"] = "";
-	$placeHolderstimetracker["Amharic"]["recordid"] = "";
-	if (count($fieldToolTipstimetracker["Amharic"]))
-		$tdatatimetracker[".isUseToolTips"] = true;
-}
 
 
 	$tdatatimetracker[".NCSearch"] = true;

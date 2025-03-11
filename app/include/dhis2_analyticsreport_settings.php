@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_analyticsreport["English"]))
 		$tdatadhis2_analyticsreport[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_analyticsreport["Amharic"] = array();
-	$fieldToolTipsdhis2_analyticsreport["Amharic"] = array();
-	$placeHoldersdhis2_analyticsreport["Amharic"] = array();
-	$pageTitlesdhis2_analyticsreport["Amharic"] = array();
-	$fieldLabelsdhis2_analyticsreport["Amharic"]["organisationUnit"] = "Organisation Unit";
-	$fieldToolTipsdhis2_analyticsreport["Amharic"]["organisationUnit"] = "";
-	$placeHoldersdhis2_analyticsreport["Amharic"]["organisationUnit"] = "";
-	$fieldLabelsdhis2_analyticsreport["Amharic"]["indicator"] = "Indicator";
-	$fieldToolTipsdhis2_analyticsreport["Amharic"]["indicator"] = "";
-	$placeHoldersdhis2_analyticsreport["Amharic"]["indicator"] = "";
-	$fieldLabelsdhis2_analyticsreport["Amharic"]["period"] = "Period";
-	$fieldToolTipsdhis2_analyticsreport["Amharic"]["period"] = "";
-	$placeHoldersdhis2_analyticsreport["Amharic"]["period"] = "";
-	$fieldLabelsdhis2_analyticsreport["Amharic"]["value"] = "Value";
-	$fieldToolTipsdhis2_analyticsreport["Amharic"]["value"] = "";
-	$placeHoldersdhis2_analyticsreport["Amharic"]["value"] = "";
-	if (count($fieldToolTipsdhis2_analyticsreport["Amharic"]))
-		$tdatadhis2_analyticsreport[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_analyticsreport[".NCSearch"] = true;

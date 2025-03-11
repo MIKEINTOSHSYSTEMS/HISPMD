@@ -86,9 +86,9 @@ class FileField extends EditControl
  				<SPAN class="btn btn-primary btn-sm fileinput-button filesUpload">
 					<!--<A class="rnr-button filesUpload button" href="#" >-->
 					<input class="fileinput-button-input" type="file" accept="'.$this->pageObject->pSetEdit->getAcceptFileTypesHtml($this->field).'" name="files[]" value="'
-				.mlang_message("ADD_FILES")
+				."Add files"
 				.'" '. $multiple .' />'
-				.mlang_message("ADD_FILES")
+				."Add files"
 				.'<!--</A>-->
 				</SPAN>'
 		.'
@@ -119,7 +119,7 @@ class FileField extends EditControl
             <td class="name"><span class="text-muted">{%=file.name%}</span></td>
             <td class="size"><span class="text-muted" dir="LTR">{%=o.formatFileSize(file.size)%}</span></td>
             <td colspan=2 class="error"><span class="text-danger rnr-error">'
-			.mlang_message("ERROR")
+			.""
 			.' {%=locale.fileupload.errors[file.error] || file.error%}</span></td>
         {% } else { %}
             <td class="preview">{% if (file.thumbnail_url) { %}
@@ -140,7 +140,7 @@ class FileField extends EditControl
 				{% if (!file.error) { %}
 				<SPAN class="btn btn-xs btn-default delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}" data-name="{%=file.name%}">
 				<!--<A href="#" >-->'
-				.mlang_message("DELETE")
+				."Delete"
 				.'<!--</A>-->
 					</SPAN>
 				{% } %}
@@ -156,7 +156,7 @@ class FileField extends EditControl
 			<td class="name"><span class="text-muted">{%=file.name%}</span></td>
 			<td class="size"><span class="text-muted">{%=o.formatFileSize(file.size)%}</span></td>
             <td class="error" colspan="2"><span class="text-danger rnr-error">'
-			.mlang_message("ERROR")
+			.""
 			.' {%=locale.fileupload.errors[file.error] || file.error%}</span></td>
         {% } else if (o.files.valid && !i) { %}
 			<td class="name"><span>{%=file.name%}</span></td>
@@ -172,7 +172,7 @@ class FileField extends EditControl
         	{% if (!file.error) { %}
         	<SPAN class="btn btn-default btn-xs">
 			<!--<A href="#" >-->'
-			.mlang_message("CANCEL")
+			."Cancel"
 			.'<!--</A>-->
 				</SPAN>
 			{% } %}

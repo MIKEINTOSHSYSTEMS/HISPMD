@@ -55,42 +55,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_reporting_rate["English"]))
 		$tdatadhis2_reporting_rate[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_reporting_rate["Amharic"] = array();
-	$fieldToolTipsdhis2_reporting_rate["Amharic"] = array();
-	$placeHoldersdhis2_reporting_rate["Amharic"] = array();
-	$pageTitlesdhis2_reporting_rate["Amharic"] = array();
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["title"] = "የሪፖርት ቀናት";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["title"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["title"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["organisationUnit"] = "የድርጅት ክፍል";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["organisationUnit"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["organisationUnit"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["dataSet"] = "የውሂብ ስብስብ";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["dataSet"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["dataSet"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["reportPeriod"] = "የሪፖርት ጊዜ";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["reportPeriod"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["reportPeriod"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["ACTUAL_REPORTS"] = "ትክክለኛ ሪፖርቶች";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["ACTUAL_REPORTS"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["ACTUAL_REPORTS"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["EXPECTED_REPORTS"] = "የሚጠበቁ ሪፖርቶች";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["EXPECTED_REPORTS"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["EXPECTED_REPORTS"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["REPORTING_RATE"] = "የሪፖርት ደረጃ (%)";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["REPORTING_RATE"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["REPORTING_RATE"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["ACTUAL_REPORTS_ON_TIME"] = "ትክክለኛ ሪፖርቶች በሰዓቱ";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["ACTUAL_REPORTS_ON_TIME"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["ACTUAL_REPORTS_ON_TIME"] = "";
-	$fieldLabelsdhis2_reporting_rate["Amharic"]["REPORTING_RATE_ON_TIME"] = "የሪፖርት መጠን በሰዓቱ (%)";
-	$fieldToolTipsdhis2_reporting_rate["Amharic"]["REPORTING_RATE_ON_TIME"] = "";
-	$placeHoldersdhis2_reporting_rate["Amharic"]["REPORTING_RATE_ON_TIME"] = "";
-	if (count($fieldToolTipsdhis2_reporting_rate["Amharic"]))
-		$tdatadhis2_reporting_rate[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_reporting_rate[".NCSearch"] = true;

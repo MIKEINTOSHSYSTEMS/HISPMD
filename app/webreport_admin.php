@@ -63,9 +63,9 @@ if(pre8count($arr_UserGroups))
 	$i=0;
 
 	if(!$wr_is_standalone)
-		$xt->assign("group_header",mlang_message("WR_USER_GROUPS"));
+		$xt->assign("group_header","User Groups");
 	else
-		$xt->assign("group_header",mlang_message("AA_USERS"));
+		$xt->assign("group_header","Users");
 	$group_list="<select name=select_group_list id=select_group_list size=3 style='width:150px;";
 	$group_list.="'>";
 	foreach($arr_UserGroups as $val)
@@ -347,7 +347,7 @@ $xt->assign("b_includes", $b_includes);
 
 
 if (@$_SESSION['webreports']['settings']['title'] != "") {
-	$xt->assign("report_title",", ".mlang_message("WR_TITLE").": ".@$_SESSION['webreports']['settings']['title']);
+	$xt->assign("report_title",", "."Title".": ".@$_SESSION['webreports']['settings']['title']);
 } else {
 	$xt->assign("report_title","");
 }

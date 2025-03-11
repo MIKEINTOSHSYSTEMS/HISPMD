@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmd_prism_settings["English"]))
 		$tdatahispmd_prism_settings[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelshispmd_prism_settings["Amharic"] = array();
-	$fieldToolTipshispmd_prism_settings["Amharic"] = array();
-	$placeHoldershispmd_prism_settings["Amharic"] = array();
-	$pageTitleshispmd_prism_settings["Amharic"] = array();
-	$fieldLabelshispmd_prism_settings["Amharic"]["ID"] = "ID";
-	$fieldToolTipshispmd_prism_settings["Amharic"]["ID"] = "";
-	$placeHoldershispmd_prism_settings["Amharic"]["ID"] = "";
-	$fieldLabelshispmd_prism_settings["Amharic"]["prism_data_update"] = "Prism Data Update";
-	$fieldToolTipshispmd_prism_settings["Amharic"]["prism_data_update"] = "";
-	$placeHoldershispmd_prism_settings["Amharic"]["prism_data_update"] = "";
-	if (count($fieldToolTipshispmd_prism_settings["Amharic"]))
-		$tdatahispmd_prism_settings[".isUseToolTips"] = true;
-}
 
 
 	$tdatahispmd_prism_settings[".NCSearch"] = true;

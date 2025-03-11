@@ -100,14 +100,14 @@ class RegisterPage extends RunnerPage
 		$qResult = $this->connection->query( $sql );
 		if( !$qResult )
 		{
-			echo mlang_message("SEC_INVALID_REG_CODE");
+			echo "Invalid validation code.";
 			return;
 		}
 
 		$data = $qResult->fetchNumeric();
 		if( !$data )
 		{
-			echo mlang_message("SEC_INVALID_REG_CODE");
+			echo "Invalid validation code.";
 			return;
 		}
 
@@ -120,7 +120,7 @@ class RegisterPage extends RunnerPage
 
 		if( $code != md5( $usercode ) )
 		{
-			echo mlang_message("SEC_INVALID_REG_CODE");
+			echo "Invalid validation code.";
 			return;
 		}
 
@@ -432,12 +432,12 @@ class RegisterPage extends RunnerPage
 		//	check if entered username already exists
 		if( !strlen($strUsername) )
 		{
-			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = mlang_message("USER_NOEMPTY");
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = "Username can not be empty.";
 			$ret = false;
 		}
 		else if( !$this->checkIfUsernameUnique( $strUsername ) )
 		{
-			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = mlang_message("USERNAME_EXISTS1")." <i>".runner_htmlspecialchars( $strUsername )."</i> ".mlang_message("USERNAME_EXISTS2");
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = "Username"." <i>".runner_htmlspecialchars( $strUsername )."</i> "."already exists. Choose another username.";
 			$ret = false;
 		}
 
@@ -446,12 +446,12 @@ class RegisterPage extends RunnerPage
 			//	check if entered email already exists
 			if( !strlen($strEmail) )
 			{
-				$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = mlang_message("VALID_EMAIL");
+				$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = "Please enter a valid email address.";
 				$ret = false;
 			}
 			else if( !$this->checkIfEmailUnique( $strEmail ) )
 			{
-				$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = mlang_message("EMAIL_ALREADY1")." <i>". runner_htmlspecialchars( $strEmail )."</i> ".mlang_message("EMAIL_ALREADY2");
+				$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = "Email"." <i>". runner_htmlspecialchars( $strEmail )."</i> "."already registered. If you forgot your username or password use the password reminder form.";
 				$ret = false;
 			}
 		}
@@ -478,27 +478,27 @@ class RegisterPage extends RunnerPage
 		$pwdLen = GetGlobalData("pwdLen", 0);
 		if($pwdLen)
 		{
-			$fmt = mlang_message("SEC_PWD_LEN");
+			$fmt = "Password must be at least %% characters length.";
 			$fmt = str_replace("%%", "".$pwdLen, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		$pwdUnique = GetGlobalData("pwdUnique", 0);
 		if($pwdUnique)
 		{
-			$fmt = mlang_message("SEC_PWD_UNIQUE");
+			$fmt = "Password must contain %% unique characters.";
 			$fmt = str_replace("%%", "".$pwdUnique, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		$pwdDigits = GetGlobalData("pwdDigits", 0);
 		if($pwdDigits)
 		{
-			$fmt = mlang_message("SEC_PWD_DIGIT");
+			$fmt = "Password must contain %% digits or symbols.";
 			$fmt = str_replace("%%", "".$pwdDigits, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		if(GetGlobalData("pwdUpperLower", false))
 		{
-			$fmt = mlang_message("SEC_PWD_CASE");
+			$fmt = "Password must contain letters in upper and lower case.";
 			$msg.= "<br>".$fmt;
 		}
 

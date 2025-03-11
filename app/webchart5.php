@@ -23,7 +23,7 @@ if (@$_SESSION['webcharts']['settings']['title'] != "") {
 	$title=@$_SESSION['webcharts']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,25)."...";
-	$xt->assign("chart_title",", ".mlang_message("WR_TITLE").": ".$title);
+	$xt->assign("chart_title",", "."Title".": ".$title);
 } else {
 	$xt->assign("chart_title","");
 }
@@ -32,7 +32,7 @@ if (@$_SESSION['webcharts']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,25)."...";
 
-	$xt->assign("chart_table",", ".mlang_message("WR_TABLE").": ".$stable);
+	$xt->assign("chart_table",", "."Table".": ".$stable);
 } else {
 	$xt->assign("chart_table","");
 }
@@ -233,7 +233,7 @@ $b_includes .= '
 						if(id == "savebtn")
 						{
 							$("#alert")
-								.html("<p>'.mlang_message("WR_CHART_SAVED").'</p>")
+								.html("<p>'."Chart Saved".'</p>")
 								.dialog("option", "close", function(){
 									window.location = "'.GetTableLink("webreport").'";
 								})
@@ -245,16 +245,16 @@ $b_includes .= '
 						}
 					} else {
 						if(this.id == "savebtn")
-							$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+							$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 						else
-							$("#alert").html("<p>'.mlang_message("WR_PROBLEM_PREVIEW").'</p>").dialog("open");
+							$("#alert").html("<p>'."Some problems appear during preview".'</p>").dialog("open");
 					}
 				},
 				error: function() {
 					if(this.id == "savebtn")
-						$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+						$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 					else
-						$("#alert").html("<p>'.mlang_message("WR_PROBLEM_PREVIEW").'</p>").dialog("open");
+						$("#alert").html("<p>'."Some problems appear during preview".'</p>").dialog("open");
 				}
 			});
 		}
@@ -438,38 +438,38 @@ $b_includes .= '});
 
 $xt->assign("b_includes", $b_includes);
 
-$xt->assign("stacked", "<span id=\"td_stacked\" style=\"visibility:hidden\"><input type=\"checkbox\" ".$sstacked_checked." id=\"sstacked\" name=\"sstacked\" />&nbsp;".mlang_message("WR_100STACKED")."</span>");
+$xt->assign("stacked", "<span id=\"td_stacked\" style=\"visibility:hidden\"><input type=\"checkbox\" ".$sstacked_checked." id=\"sstacked\" name=\"sstacked\" />&nbsp;"."100% Stacked"."</span>");
 
 if ($_SESSION['webcharts']['chart_type']['type']=="2d_column" || $_SESSION['webcharts']['chart_type']['type']=="2d_bar" || $_SESSION['webcharts']['chart_type']['type']=="bubble" || $_SESSION['webcharts']['chart_type']['type']=="2d_pie" || $_SESSION['webcharts']['chart_type']['type']=="2d_doughnut") 
-	$xt->assign("chart_is_3d","<input type=\"checkbox\" ".$is3d_checked." id=\"is3d\" name=\"is3d\">&nbsp;".mlang_message("WR_CHART3D"));
+	$xt->assign("chart_is_3d","<input type=\"checkbox\" ".$is3d_checked." id=\"is3d\" name=\"is3d\">&nbsp;"."Chart 3D");
 else 
 	$xt->assign("chart_is_3d", '');	
 
 if ($_SESSION['webcharts']['chart_type']['type']=="2d_column" || $_SESSION['webcharts']['chart_type']['type']=="2d_bar" || $_SESSION['webcharts']['chart_type']['type']=="area") 
-	$xt->assign("chart_is_stacked","<input type=\"checkbox\" ".$isstacked_checked." id=\"isstacked\" name=\"isstacked\">&nbsp;".mlang_message("WR_STACKED"));
+	$xt->assign("chart_is_stacked","<input type=\"checkbox\" ".$isstacked_checked." id=\"isstacked\" name=\"isstacked\">&nbsp;"."Chart stacked");
 else 
 	$xt->assign("chart_is_stacked", '');	
 if ( preg_match( "/bar/i", $_SESSION['webcharts']['chart_type']['type'] ) ) {
-	$xt->assign("aqua", mlang_message("WR_USE_STYLE")." <select name=\"aqua\" id=\"aqua\">
-		<option value=\"0\">".mlang_message("WR_STYLE_NONE")."</option>
-		<option value=\"1\">".mlang_message("WR_STYLE_AQUAL")."</option>
-		<option value=\"2\">".mlang_message("WR_STYLE_AQUAD")."</option>
+	$xt->assign("aqua", "Use Style"." <select name=\"aqua\" id=\"aqua\">
+		<option value=\"0\">"."None"."</option>
+		<option value=\"1\">"."AquaLight"."</option>
+		<option value=\"2\">"."AquaDark"."</option>
 	  </select>");
-    $xt->assign("cview", mlang_message("WR_CH_TYPE")." <select name=\"cview\" id=\"cview\">
-		<option value=\"0\">".mlang_message("WR_TYPE_COLUMN")."</option>
-		<option value=\"1\">".mlang_message("WR_TYPE_CONE")."</option>
-		<option value=\"2\">".mlang_message("WR_TYPE_CYL")."</option>
-		<option value=\"3\">".mlang_message("WR_TYPE_PYR")."</option>
+    $xt->assign("cview", "Chart Type"." <select name=\"cview\" id=\"cview\">
+		<option value=\"0\">"."Column"."</option>
+		<option value=\"1\">"."Cone"."</option>
+		<option value=\"2\">"."Cylinder"."</option>
+		<option value=\"3\">"."Pyramid"."</option>
 	  </select>");
 } else {
 	$xt->assign("aqua", '');
     $xt->assign("cview", '');	
 }
 if ( preg_match( "/line/i", $_SESSION['webcharts']['chart_type']['type'] ) ) {
-	$xt->assign("line", "&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("WR_STYLE_LINE")." <select name=\"linestyle\" id=\"linestyle\">
-		<option value=\"0\">".mlang_message("WR_LINE_NORMAL")."</option>
-		<option value=\"1\">".mlang_message("WR_LINE_SPLINE")."</option>
-		<option value=\"2\">".mlang_message("WR_LINE_STEP")."</option>
+	$xt->assign("line", "&nbsp;&nbsp;&nbsp;&nbsp;"."Line Style"." <select name=\"linestyle\" id=\"linestyle\">
+		<option value=\"0\">"."Normal"."</option>
+		<option value=\"1\">"."Spline"."</option>
+		<option value=\"2\">"."Step"."</option>
 	  </select>");
 } else {
 	$xt->assign("line", '');
@@ -482,10 +482,10 @@ if ( preg_match( "/funnel/i", $_SESSION['webcharts']['chart_type']['type'] ) ) {
 	$xt->assign("tr_funnel", "style=\"display:none\"");
 }
 if ( preg_match( "/gauge/i", $_SESSION['webcharts']['chart_type']['type'] ) ) {
-	$xt->assign("gauge", mlang_message("WR_STYLE_GAUGE")." <select name=\"gaugestyle\" id=\"gaugestyle\">
-		<option value=\"0\">".mlang_message("WR_GAUGE_CIRCLE")."</option>
-		<option value=\"1\">".mlang_message("WR_GAUGE_HORIZ")."</option>
-		<option value=\"2\">".mlang_message("WR_GAUGE_VERT")."</option>
+	$xt->assign("gauge", "Gauge style"." <select name=\"gaugestyle\" id=\"gaugestyle\">
+		<option value=\"0\">"."Circle"."</option>
+		<option value=\"1\">"."Horizontal"."</option>
+		<option value=\"2\">"."Vertical"."</option>
 	  </select>");
 } else {
 	$xt->assign("gauge", '');

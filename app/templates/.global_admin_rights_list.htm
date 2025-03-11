@@ -62,7 +62,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expand" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -87,7 +87,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +96,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -106,24 +106,6 @@
 							 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown ">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-										<span class="fa fa-language"></span>
-												<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-								{BEGIN AmharicLANGLINK}
-	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-		አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-					</ul>
-	</span>
 </span>
 			</span>
 		 
@@ -136,7 +118,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				{mlang_message NOTIFICATIONS}			</span>
+				Notifications			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -204,7 +186,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		User Profile		
 		</a>
 	</li>
 {END userinfo_link}
@@ -212,7 +194,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Log out		
 		</a>
 	</li>
 {END logoutbutton}
@@ -220,7 +202,7 @@
 	<li data-itemtype="exit_adminarea_link" data-itemid="exit_adminarea_link" {$item_exit_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exitaalink_attrs}  title="" >
 				
-		{mlang_message AA_EXIT_ADMINAREA}		
+		Exit Admin Area		
 		</a>
 	</li>
 {END exitadminarea_link}
@@ -228,7 +210,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Change password		
 		</a>
 	</li>
 {END changepwd_link}
@@ -284,13 +266,13 @@
 		<span data-itemtype="rights_save" data-itemid="rights_save" {$item_rights_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							{mlang_message SAVE}			</a>
+							Save			</a>
 </span>
 	 
 		<span data-itemtype="rights_reset" data-itemid="rights_reset" {$item_rights_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$resetbutton_attrs} >
-							{mlang_message RESET}			</a>
+							Reset			</a>
 </span>
 		</div>			 
 				<div 
@@ -300,21 +282,21 @@
 ">
 		 
 		<span data-itemtype="rights_displaying_tables" data-itemid="rights_displaying_tables" {$item_rights_displaying_tables} data-pageid="{$pageid}">
-{mlang_message AA_SHOW_TABES}	<span id=linkselectFilter class="">
-		<span class="btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{mlang_message AA_SHOW_ALL}</span>
+Show tables:	<span id=linkselectFilter class="">
+		<span class="btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">all</span>
 		<ul class="dropdown-menu">
-			<li data-value="all" ><a href="#">{mlang_message AA_SHOW_ALL}</a></li>
-			<li data-value="modified" ><a href="#">{mlang_message AA_SHOW_MODIFIED}</a></li>
+			<li data-value="all" ><a href="#">all</a></li>
+			<li data-value="modified" ><a href="#">modified only</a></li>
 		</ul>
 	</span>
 </span>
 	 
 		<span data-itemtype="rights_ordering_tables" data-itemid="rights_ordering_tables" {$item_rights_ordering_tables} data-pageid="{$pageid}">
-{mlang_message AA_ORDER_TABLES}	<span id=linkselectOrder >
-		<span class="btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{mlang_message AA_ORDER_ASMENU}</span>
+Order tables	<span id=linkselectOrder >
+		<span class="btn-link dropdown-toggle inline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">as in menu</span>
 		<ul class="dropdown-menu">
-			<li data-value="menu" ><a href="#">{mlang_message AA_ORDER_ASMENU}</a></li>
-			<li data-value="alpha" ><a href="#">{mlang_message AA_ORDER_ALPHA}</a></li>
+			<li data-value="menu" ><a href="#">as in menu</a></li>
+			<li data-value="alpha" ><a href="#">alphabetically</a></li>
 		</ul>
 	</span>
 </span>
@@ -337,19 +319,19 @@
 		<span data-itemtype="rights_del_group" data-itemid="rights_del_group" {$item_rights_del_group} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$delgroup_attrs} >
-							{mlang_message AA_DELGROUP}			</a>
+							Del group			</a>
 </span>
 	 
 		<span data-itemtype="rights_rename_group" data-itemid="rights_rename_group" {$item_rights_rename_group} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$rengroup_attrs} >
-							{mlang_message AA_RENAME}			</a>
+							Rename			</a>
 </span>
 	 
 		<span data-itemtype="rights_copy_permissions" data-itemid="rights_copy_permissions" {$item_rights_copy_permissions} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-info   
 	" id="copyPermissions" >
-							{mlang_message COPY_PERMISSIONS}			</a>
+							Copy permissions from ...			</a>
 </span>
 		</div>					</div>
 			</div>		
@@ -377,7 +359,7 @@
 >
  
 <div data-itemtype="rights_search" data-itemid="rights_search" {$item_rights_search} data-pageid="{$pageid}">
-	<input class="form-control" type=search id="tableRightsSearch"  placeholder="{mlang_message SEARCH_TIP}">			
+	<input class="form-control" type=search id="tableRightsSearch"  placeholder="search">			
 </div>
 </td>
 									<td 
@@ -387,7 +369,7 @@
 >
  
 <span data-itemtype="rights_name_a" data-itemid="rights_name_a" {$item_rights_name_a} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_ADD}</span>
+	Add</span>
 </td>
 									<td 
 	class=" r-ori-vert			"
@@ -396,7 +378,7 @@
 >
  
 <span data-itemtype="rights_name_e" data-itemid="rights_name_e" {$item_rights_name_e} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_EDIT}</span>
+	Edit</span>
 </td>
 									<td 
 	class=" r-ori-vert			"
@@ -405,7 +387,7 @@
 >
  
 <span data-itemtype="rights_name_d" data-itemid="rights_name_d" {$item_rights_name_d} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_DELETE}</span>
+	Delete</span>
 </td>
 									<td 
 	class=" r-ori-vert			"
@@ -414,7 +396,7 @@
 >
  
 <span data-itemtype="rights_name_s" data-itemid="rights_name_s" {$item_rights_name_s} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_LISTVIEW}</span>
+	List/View</span>
 </td>
 									<td 
 	class=" r-ori-vert			"
@@ -423,7 +405,7 @@
 >
  
 <span data-itemtype="rights_name_p" data-itemid="rights_name_p" {$item_rights_name_p} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_EXPORTPRINT}</span>
+	Print/Export</span>
 </td>
 									<td 
 	class=" r-ori-vert			"
@@ -432,7 +414,7 @@
 >
  
 <span data-itemtype="rights_name_i" data-itemid="rights_name_i" {$item_rights_name_i} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_IMPORT}</span>
+	Import</span>
 </td>
 									<td 
 	class=" r-ori-vert			"
@@ -441,10 +423,10 @@
 >
  
 <span data-itemtype="rights_name_m" data-itemid="rights_name_m" {$item_rights_name_m} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_ADMIN}</span>
+	Admin mode</span>
  
 <span data-itemtype="rights_name_m1" data-itemid="rights_name_m1" {$item_rights_name_m1} data-pageid="{$pageid}" > 
-	{mlang_message AA_P_ADMIN_ACCESS}</span>
+	access to all records</span>
 </td>
 							</tr>
 											<tr >
@@ -455,7 +437,7 @@
 >
  
 <span data-itemtype="rights_expand_all" data-itemid="rights_expand_all" {$item_rights_expand_all} data-pageid="{$pageid}" > 
-	<a href="#" id="expandAll">{mlang_message EXPAND_ALL}</a>
+	<a href="#" id="expandAll">expand all</a>
 </span>
 </td>
 									<td 
@@ -552,14 +534,14 @@
 	<a type="button" title="" class="btn-link   
 	 " href="javascript:void(0)" {$show_pages_attrs} >		
 				
-					{mlang_message AA_SHOW_PAGES}			</a>
+					show pages			</a>
 </span>
  
 <span data-itemtype="rights_hide_pages" data-itemid="rights_hide_pages" {$item_rights_hide_pages} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn-link   
 	 " href="javascript:void(0)" {$hide_pages_attrs} >		
 				
-					{mlang_message AA_HIDE_PAGES}			</a>
+					hide pages			</a>
 </span>
  
 <span data-itemtype="rights_group_expander" data-itemid="rights_group_expander" {$item_rights_group_expander} data-pageid="{$pageid}" > 

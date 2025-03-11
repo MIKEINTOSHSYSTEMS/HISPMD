@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_data_elements["English"]))
 		$tdatadhis2_data_elements[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_data_elements["Amharic"] = array();
-	$fieldToolTipsdhis2_data_elements["Amharic"] = array();
-	$placeHoldersdhis2_data_elements["Amharic"] = array();
-	$pageTitlesdhis2_data_elements["Amharic"] = array();
-	$fieldLabelsdhis2_data_elements["Amharic"]["dimensionItemType"] = "Dimension Item Type";
-	$fieldToolTipsdhis2_data_elements["Amharic"]["dimensionItemType"] = "";
-	$placeHoldersdhis2_data_elements["Amharic"]["dimensionItemType"] = "";
-	$fieldLabelsdhis2_data_elements["Amharic"]["id"] = "Id";
-	$fieldToolTipsdhis2_data_elements["Amharic"]["id"] = "";
-	$placeHoldersdhis2_data_elements["Amharic"]["id"] = "";
-	$fieldLabelsdhis2_data_elements["Amharic"]["name"] = "Name";
-	$fieldToolTipsdhis2_data_elements["Amharic"]["name"] = "";
-	$placeHoldersdhis2_data_elements["Amharic"]["name"] = "";
-	if (count($fieldToolTipsdhis2_data_elements["Amharic"]))
-		$tdatadhis2_data_elements[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_data_elements[".NCSearch"] = true;

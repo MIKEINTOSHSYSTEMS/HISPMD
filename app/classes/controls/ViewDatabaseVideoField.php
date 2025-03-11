@@ -27,7 +27,7 @@ class ViewDatabaseVideoField extends ViewVideoFileField
 	 */
 	public function getExportValue(&$data, $keylink = "", $html = false )
 	{
-		return mlang_message("LONG_BINARY");
+		return "LONG BINARY DATA - CANNOT BE DISPLAYED";
 	}
 
 	protected function getFileURLs( &$data, $keylink )

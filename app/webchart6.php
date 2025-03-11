@@ -23,7 +23,7 @@ if (@$_SESSION['webcharts']['settings']['title'] != "") {
 	$title=@$_SESSION['webcharts']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,25)."...";
-	$xt->assign("chart_title",", ".mlang_message("WR_TITLE").": ".$title);
+	$xt->assign("chart_title",", "."Title".": ".$title);
 } else {
 	$xt->assign("chart_title","");
 }
@@ -32,7 +32,7 @@ if (@$_SESSION['webcharts']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,25)."...";
 
-	$xt->assign("chart_table",", ".mlang_message("WR_TABLE").": ".$stable);
+	$xt->assign("chart_table",", "."Table".": ".$stable);
 } else {
 	$xt->assign("chart_table","");
 }
@@ -139,13 +139,13 @@ $b_includes .= '
 
 		if ( $("#cname").val() == ""  && this.id!="row8" && this.id!="row9" ) {
 			$("#menujump").hide();
-			$("#alert").html("<p>'.mlang_message("WR_CHART_NAME").'</p>").dialog("open");
+			$("#alert").html("<p>'."Set chart name".'</p>").dialog("open");
 			return false;
 		}
 		
 		if ( $("#ctitle").val() == "" && this.id!="row8" && this.id!="row9" ) {
 			$("#menujump").hide();
-			$("#alert").html("<p>'.mlang_message("WR_CHART_TITLE").'</p>").dialog("open");
+			$("#alert").html("<p>'."Set chart title".'</p>").dialog("open");
 			return false;
 		}			
 	
@@ -169,17 +169,17 @@ $b_includes .= '
 				success: function(msg){
 					if ( msg == "OK" ) {
 						$("#alert")
-							.html("<p>'.mlang_message("WR_CHART_SAVED").'</p>")
+							.html("<p>'."Chart Saved".'</p>")
 							.dialog("option", "close", function(){
 								window.location = "'.GetTableLink("webreport").'";
 							})
 							.dialog("open");
 					} else {
-						$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+						$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 					}
 				},
 				error: function() {
-					$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+					$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 				}
 			});
 		}

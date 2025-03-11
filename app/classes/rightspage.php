@@ -125,9 +125,9 @@ class RightsPage extends ListPage
 		global $cman;
 		$grConnection = $cman->getForUserGroups();
 
-		$this->groups[-1] = array( "label" => "<".mlang_message("AA_GROUP_ADMIN").">" );
-		$this->groups[-2] = array( "label" => "<".mlang_message("AA_GROUP_DEFAULT").">" );
-		$this->groups[-3] = array( "label" => "<".mlang_message("AA_GROUP_GUEST").">" );
+		$this->groups[-1] = array( "label" => "<"."Admin".">" );
+		$this->groups[-2] = array( "label" => "<"."Default".">" );
+		$this->groups[-3] = array( "label" => "<"."Guest".">" );
 
 		$groupIdField = "GroupID";
 		$groupLabelField = "Label";
@@ -361,7 +361,7 @@ class RightsPage extends ListPage
 			$unlistedId = count($this->menuOrderedTables);
 			$arr = array();
 			$arr["collapsed"] = true;
-			$arr["title"] = mlang_message("UNLISTED");
+			$arr["title"] = "Unlisted tables";
 			$arr["items"] = array();
 			$this->menuOrderedTables[] = $arr;
 			foreach( $this->alphaOrderedTables as $table)

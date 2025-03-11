@@ -52,29 +52,29 @@
 	</style>
 
 {$script}
-<p align=center><font size=+2>php {mlang_message ERR_HAPPENED}</font></p>
+<p align=center><font size=+2>php error happened</font></p>
 
 <table cellpadding="3" cellspacing="1" align="center" class="errTable">
 	<th>
-		<td colspan=2 align=middle><font size=+1><b>{mlang_message TECH_INFO}</b></font></td>
+		<td colspan=2 align=middle><font size=+1><b>Technical information</b></font></td>
 	</th>
 	<tr>
-		<td><b>{mlang_message ERR_TYPE}</b></td><td class="grayCell">{$errno}</td>
+		<td><b>Error type</b></td><td class="grayCell">{$errno}</td>
 	</tr>
 	<tr>
-		<td><b>{mlang_message ERR_DESC}</b></td><td class="grayCell"><span class="errDesc">{$errstr}</span></td>
+		<td><b>Error description</b></td><td class="grayCell"><span class="errDesc">{$errstr}</span></td>
 	</tr>
 	<tr>
 		<td><b>URL</b></td><td class="grayCell">{$url}</td>
 	</tr>
 	<tr>
-		<td><b>{mlang_message ERR_FILE}</b></td><td class="grayCell">{$errfile}</td>
+		<td><b>Error file</b></td><td class="grayCell">{$errfile}</td>
 	</tr>
 	<tr>
-		<td><b>{mlang_message ERR_LINE}</b></td><td class="grayCell">{$errline}</td>
+		<td><b>Error line</b></td><td class="grayCell">{$errline}</td>
 	</tr>
 	<tr>
-		<td ><b>{mlang_message SQL_QUERY}</b></td><td class="grayCell">{$sqlStr}</td>
+		<td ><b>SQL query</b></td><td class="grayCell">{$sqlStr}</td>
 	</tr>
 </table>
 

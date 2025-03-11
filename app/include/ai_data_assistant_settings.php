@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsai_data_assistant["English"]))
 		$tdataai_data_assistant[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsai_data_assistant["Amharic"] = array();
-	$fieldToolTipsai_data_assistant["Amharic"] = array();
-	$placeHoldersai_data_assistant["Amharic"] = array();
-	$pageTitlesai_data_assistant["Amharic"] = array();
-	$fieldLabelsai_data_assistant["Amharic"]["id"] = "መለያ";
-	$fieldToolTipsai_data_assistant["Amharic"]["id"] = "";
-	$placeHoldersai_data_assistant["Amharic"]["id"] = "";
-	$fieldLabelsai_data_assistant["Amharic"]["chatbot"] = "ቻትቦት";
-	$fieldToolTipsai_data_assistant["Amharic"]["chatbot"] = "";
-	$placeHoldersai_data_assistant["Amharic"]["chatbot"] = "";
-	if (count($fieldToolTipsai_data_assistant["Amharic"]))
-		$tdataai_data_assistant[".isUseToolTips"] = true;
-}
 
 
 	$tdataai_data_assistant[".NCSearch"] = true;

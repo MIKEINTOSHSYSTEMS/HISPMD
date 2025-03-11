@@ -958,29 +958,29 @@ class CrossTableWebReport
 		$res = "";
 		if($this->dataFieldSettings["sum"] == true)
 		{
-			$arrDisplay[] = mlang_message("SUM");
+			$arrDisplay[] = "Sum";
 			$arr[] = "sum";
 		}
 		if($this->dataFieldSettings["max"] == true)
 		{
-			$arrDisplay[] = mlang_message("MAX");
+			$arrDisplay[] = "Max";
 			$arr[] = "max";
 		}
 		if($this->dataFieldSettings["min"] == true)
 		{
-			$arrDisplay[] = mlang_message("MIN");
+			$arrDisplay[] = "Min";
 			$arr[] = "min";
 		}
 		if($this->dataFieldSettings["avg"] == true)
 		{
-			$arrDisplay[] = mlang_message("AVERAGE");
+			$arrDisplay[] = "Average";
 			$arr[] = "avg";
 		}
 
 		if(!pre8count($arr))
 		{
 				$arr[] = "sum";
-				$arrDisplay[] = mlang_message("SUM");
+				$arrDisplay[] = "Sum";
 		}
 		
 		$res = "";	
@@ -1281,10 +1281,10 @@ class CrossTableWebReport
 		$fieldName = $prefix.GoodFieldName($fieldName);
 		
 		
-		return mlang_message("GROUP_X")
-			.":<b>".$this->xml_array["totals"][ $fieldNameX ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("GROUP_Y")
-			.":<b>".$this->xml_array["totals"][ $fieldNameY ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("FIELD")
-			.":<b>".$this->xml_array["totals"][ $fieldName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("GROUP_FUNCTION")
+		return "Group X"
+			.":<b>".$this->xml_array["totals"][ $fieldNameX ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Group Y"
+			.":<b>".$this->xml_array["totals"][ $fieldNameY ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Field"
+			.":<b>".$this->xml_array["totals"][ $fieldName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Group function"
 			.":<b>".$this->dataGroupFunction."</b>";
 	}
 	
@@ -1293,16 +1293,16 @@ class CrossTableWebReport
 		switch($grfunc)
 		{
 			case "sum":
-				return mlang_message("SUM");
+				return "Sum";
 				break;
 			case "min":
-				return mlang_message("MIN");
+				return "Min";
 				break;
 			case "max":
-				return mlang_message("MAX");
+				return "Max";
 				break;
 			case "avg":
-				return mlang_message("AVERAGE");
+				return "Average";
 				break;
 		}
 	}

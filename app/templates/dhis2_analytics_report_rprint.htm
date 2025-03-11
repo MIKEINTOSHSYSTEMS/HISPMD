@@ -252,9 +252,9 @@
 										<td class="group_1" style="border-top: none;"></td>
 							
 																	<td  class="group_2" colspan=4 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label DHIS2_Analytics_Report ou }&nbsp;{$ou_grval}
+				Summary for&nbsp;{$label DHIS2_Analytics_Report ou }&nbsp;{$ou_grval}
 					- <span class="summary-2" data-type="summary">{$groupou_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																														</tr>
 
 	
@@ -268,9 +268,9 @@
 		<tr class="summaryrow"  >
 			
 										<td  class="group_1" colspan=5 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label DHIS2_Analytics_Report dx }&nbsp;{$dx_grval}
+				Summary for&nbsp;{$label DHIS2_Analytics_Report dx }&nbsp;{$dx_grval}
 					- <span class="summary-1" data-type="summary">{$groupdx_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																					</tr>
 
 	
@@ -298,7 +298,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="5">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
+        <td class="pagesummary" colspan="5">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
     </tr>
 	
 	
@@ -309,7 +309,7 @@
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
         <td class="globalsummary" colspan="5">
-            {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
+            Global summary {$global_total_cnt} - records total        </td>
     </tr>
 
 	

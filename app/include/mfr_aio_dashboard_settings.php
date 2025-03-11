@@ -42,30 +42,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsmfr_aio_dashboard["English"]["mfr_region_chart_lng"] = "Lng";
 	$fieldLabelsmfr_aio_dashboard["English"]["mfr_region_chart_count"] = "Count";
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmfr_aio_dashboard["Amharic"] = array();
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_dashboard_reports_type"] = "ዓይነት";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_dashboard_reports_name"] = "ስም";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_dashboard_reports_count"] = "ቁጠር";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_operational_status_operationalstatus"] = "የአሠራር ሁኔታ";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_operational_status_status"] = "ሁኔታ";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_operational_status_count"] = "ቁጠር";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_dashboard_reports_chart_type"] = "ዓይነት";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_dashboard_reports_chart_name"] = "ስም";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_dashboard_reports_chart_count"] = "ቁጠር";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_operational_status_chart_operationalstatus"] = "የአሠራር ሁኔታ";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_operational_status_chart_status"] = "ሁኔታ";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_operational_status_chart_count"] = "ቁጠር";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_region_region"] = "ክልል";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_region_lat"] = "ላቲ";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_region_lng"] = "Lng";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["public_mfr_region_count"] = "ቁጠር";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_region_chart_region"] = "ክልል";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_region_chart_lat"] = "ላቲ";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_region_chart_lng"] = "Lng";
-	$fieldLabelsmfr_aio_dashboard["Amharic"]["mfr_region_chart_count"] = "ቁጠር";
-}
 
 /*
 //	search fields

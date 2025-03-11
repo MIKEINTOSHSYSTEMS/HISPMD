@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_data_sources["English"]))
 		$tdatamoh_data_sources[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_data_sources["Amharic"] = array();
-	$fieldToolTipsmoh_data_sources["Amharic"] = array();
-	$placeHoldersmoh_data_sources["Amharic"] = array();
-	$pageTitlesmoh_data_sources["Amharic"] = array();
-	$fieldLabelsmoh_data_sources["Amharic"]["data_source_id"] = "የውሂብ ምንጭ መለያ";
-	$fieldToolTipsmoh_data_sources["Amharic"]["data_source_id"] = "";
-	$placeHoldersmoh_data_sources["Amharic"]["data_source_id"] = "";
-	$fieldLabelsmoh_data_sources["Amharic"]["data_source_name"] = "የውሂብ ምንጭ ስም";
-	$fieldToolTipsmoh_data_sources["Amharic"]["data_source_name"] = "";
-	$placeHoldersmoh_data_sources["Amharic"]["data_source_name"] = "";
-	$fieldLabelsmoh_data_sources["Amharic"]["indicator_id"] = "Indicator Id";
-	$fieldToolTipsmoh_data_sources["Amharic"]["indicator_id"] = "";
-	$placeHoldersmoh_data_sources["Amharic"]["indicator_id"] = "";
-	if (count($fieldToolTipsmoh_data_sources["Amharic"]))
-		$tdatamoh_data_sources[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_data_sources[".NCSearch"] = true;

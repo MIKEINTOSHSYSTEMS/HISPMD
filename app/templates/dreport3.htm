@@ -37,14 +37,7 @@
 {$header}
 <div class="rnr-page dreport">
 	<div class="rnr-top ">
-				<div class="languages">
-			<b>{mlang_message LANGUAGE}:</b>&nbsp;
-			<select {$langselector_attrs}>
-				<option value="Amharic" {$Amharic_langattrs}>አማርኛ</option>
-				<option value="English" {$English_langattrs}>English</option>
-			</select>
-		</div>	
-	{BEGIN top_menu_block}
+			{BEGIN top_menu_block}
 			<div  class="rnr-cw-toplinks rnr-s-2 asbuttons {$wr_pagestylepath}">
 				<div class="rnr-c rnr-ch rnr-c-toplinks">
 					<div class="style1 rnr-bl rnr-b-toplinks_advsearch" >
@@ -52,20 +45,20 @@
 					</div>
 					{BEGIN back_to_menu}
 					<div class="style1 rnr-bl rnr-b-toplinks_print" >
-						<a class="rnr-button" href="webreport.php">{mlang_message BACK_TO_MENU}</a>
+						<a class="rnr-button" href="webreport.php">Back to menu</a>
 					</div>
 					{END back_to_menu}
 					{BEGIN adv_search_block}
 					<div class="style1 rnr-bl rnr-b-toplinks_advsearch" >
-						<a class="rnr-button" {$searchHref}>{mlang_message ADVANCED_SEARCH}</a>
+						<a class="rnr-button" {$searchHref}>Advanced search</a>
 					</div>
 					{END adv_search_block}
 					{BEGIN print_friendly_block}
 					<div class="style1 rnr-bl rnr-b-toplinks_print">
-						<a class="rnr-button" target="_blank" href="dreport.php?mode=print&rname={$reportName}{$searchClause}">{mlang_message PRINT_THIS_PAGE}</a>
+						<a class="rnr-button" target="_blank" href="dreport.php?mode=print&rname={$reportName}{$searchClause}">Print this page</a>
 					</div>
 					<div class="style1 rnr-bl rnr-b-toplinks_print">
-						<a class="rnr-button" target="_blank" href="dreport.php?mode=print&rname={$reportName}&all=1{$searchClause}">{mlang_message PRINT_WHOLE_REPORT}</a>
+						<a class="rnr-button" target="_blank" href="dreport.php?mode=print&rname={$reportName}&all=1{$searchClause}">Print whole report</a>
 					</div>
 					<div  class="style1 rnr-bl rnr-b-toplinks_export" >
 						<a href="dreport.php?mode=print&all=1&format=excel&rname={$reportName}{$searchClause}"><img src="images/excel.gif" border="0"></a>
@@ -81,7 +74,7 @@
 							<div class="rnr-c rnr-ch rnr-c-toplinks">
 								<div class="style1 rnr-bl rnr-b-toplinks_advsearch" >
 									{BEGIN groups_per_page_block}
-									{mlang_message GROUPS_PP}:&nbsp;
+									Groups per page:&nbsp;
 									<select
 										onChange="document.location='dreport.php?rname={$reportNamejs}&pagesize='+this.options[this.selectedIndex].value;">
 										<option value="1" {$gpp1_selected}>1</option>
@@ -94,7 +87,7 @@
 									</select>
 									{END groups_per_page_block}
 									{BEGIN records_per_page_block}
-									{mlang_message RECORDS_PP}:&nbsp;
+									Records Per Page:&nbsp;
 									<select
 										onChange="document.location='dreport.php?rname={$reportNamejs}&pagesize='+this.options[this.selectedIndex].value;">
 										<option value="10" {$rpp10_selected}>10</option>
@@ -398,7 +391,7 @@
 				<div class="rnr-s-1 {$wr_pagestylepath}">
 					<div class="rnr-c rnr-cv">
 						<div class="style2" align=center id="wnd_header">
-							{mlang_message WR_REPORT_STYLEED}
+							Report: Style Editor
 						</div>
 						<div class="style1 rnr-b-wrapper">
 							<div class="rnr-s-fields {$wr_pagestylepath}">
@@ -406,13 +399,13 @@
 									<div class="style1">
 										<table class="fieldGrid" id="params">
 											<tr>
-												<td>{mlang_message WR_BACKGROUND}</td>
-												<td>{mlang_message WR_FONT_COLOR}</td>
-												<td>{mlang_message WR_FONT_FAMILY}</td>
-												<td>{mlang_message WR_FONR_SIZE}</td>
-												<td>{mlang_message WR_FONT_STYLE}</td>
-												<td>{mlang_message WR_ALIGN}</td>
-												<td>{mlang_message WR_PADDING}</td>
+												<td>Background</td>
+												<td>Font color</td>
+												<td>Font family</td>
+												<td>Font size</td>
+												<td>Font style</td>
+												<td>Align Layout</td>
+												<td>Padding</td>
 											</tr>
 											<tr>
 												<td>
@@ -444,7 +437,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div id="fontfamily" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
-																	{mlang_message AA_GROUP_DEFAULT}
+																	Default
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -454,7 +447,7 @@
 														<tr style="position: absolute; display: none;z-index:150;" id="fontfamilyselect">
 															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
 																<table style="width: 100%;">
-																	<tr><td class="selectstyle">{mlang_message AA_GROUP_DEFAULT}</td></tr>
+																	<tr><td class="selectstyle">Default</td></tr>
 																	<tr><td class="selectstyle">Arial</td></tr>
 																	<tr><td class="selectstyle">Comic Sans MS</td></tr>
 																	<tr><td class="selectstyle">Courier New</td></tr>
@@ -470,7 +463,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div id="fontsize" class="ColorPickerDivSample" style="width: 80px; background: #ffffff;">
-																	{mlang_message AA_GROUP_DEFAULT}
+																	Default
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -480,7 +473,7 @@
 														<tr style="position: absolute; display: none;z-index:150;" id="fontsizeselect">
 															<td colspan="2" style="padding: 0px 0px 0px 5px;" class="SelectorDiv">
 																<table style="width: 100%;">
-																	<tr><td class="selectstyle">{mlang_message AA_GROUP_DEFAULT}</td></tr>
+																	<tr><td class="selectstyle">Default</td></tr>
 																	<tr><td class="selectstyle">7px</td></tr>
 																	<tr><td class="selectstyle">8px</td></tr>
 																	<tr><td class="selectstyle">9px</td></tr>
@@ -546,7 +539,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width:80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -560,7 +553,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -574,7 +567,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -588,7 +581,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -602,7 +595,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -616,7 +609,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -630,7 +623,7 @@
 														<tr>
 															<td style="padding: 0px 0px 0px 5px;">
 																<div class="ColorPickerDivSample" style="width: 80px; background: #FFFFFF">
-																	{mlang_message WR_APPLY_TO}
+																	apply to
 																</div>
 															</td>
 															<td style="padding: 2px 0px 0px 0px;">
@@ -643,18 +636,18 @@
 										</table>
 									</div>
 									<div class="style2" align=center id="btns">
-										<a id="backbtn" name="backbtn" class="rnr-button" href="#">{mlang_message BACK}</a>
+										<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
 										<span style="position:absolute;" id="jumptospan"></span>
-										<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">{mlang_message WR_JUMP_TO}</a>
-										<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">{mlang_message NEXT}</a>
+										<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+										<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
 										{BEGIN b_is_report_save}
-										<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">{mlang_message WR_SAVE_AS}</a>
+										<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
 										{END b_is_report_save}	
 										{BEGIN b_is_report_name}
-										<a id="savebtn" name="savebtn" class="rnr-button" href="#">{mlang_message SAVE}</a>
+										<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
 										{END b_is_report_name}														
-										<a id="default" name="default" class="rnr-button" href="#">{mlang_message RESET}</a>
-										<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">{mlang_message WR_PREVIEW}</a>
+										<a id="default" name="default" class="rnr-button" href="#">Reset</a>
+										<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
 										<a id="preview" class="various fancybox.iframe" href="dreport.php?rname={$report_name_preview}&param=preview&ie=UTF-8&iframe"></a>
 									</div>
 								</div>
@@ -675,18 +668,18 @@
 <iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
 <div id="menujump" class=action style="display:none;position:absolute;">
 	<table width=100% cellpadding=0 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
-		<tr><td id=row0 style="cursor:pointer;padding:5px;">{mlang_message AA_TABLES}</td></tr>
-		<tr><td id=row1 style="cursor:pointer;padding:5px;">{mlang_message WR_JUMP_RELAT}</td></tr>
-		<tr><td id=row2 style="cursor:pointer;padding:5px;">{mlang_message WR_WHERE_CONDITION}</td></tr>
-		<tr><td id=row3 style="cursor:pointer;padding:5px;">{mlang_message WR_GR_FIELDS}</td></tr>
-		<tr><td id=row4 style="cursor:pointer;padding:5px;">{mlang_message TOTALS}</td></tr>
-		<tr><td id=row5 style="cursor:pointer;padding:5px;">{mlang_message WR_MISCELL}</td></tr>
-		<tr><td id=row6 style="cursor:pointer;padding:5px;">{mlang_message WR_SORTFIELDS}</td></tr>
-		<tr><td id=row7 style="cursor:pointer;padding:5px;">{mlang_message WR_STYLE_EDIT}</td></tr>
-		<tr><td id=row8 style="cursor:pointer;padding:5px;">{mlang_message WR_REPORT_SETT}</td></tr>
-		<tr><td id=row9 style="cursor:pointer;padding:5px;">{mlang_message WR_DYNAM_PERMISSIONS}</td></tr>
-		<tr><td id=row10 style="cursor:pointer;padding:5px;;border-top:1px solid blue;">{mlang_message WR_BACK_TO_MENU}</td></tr>
-		<tr><td id=row11 style="cursor:pointer;padding:5px;">{mlang_message WR_BACK_TO_APPL}</td></tr>
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Where Condition</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Group fields</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Totals</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Miscellaneous</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Sort fields</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Style Editor</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;">Report Settings</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row10 style="cursor:pointer;padding:5px;;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row11 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
 	</table>
 </div>
 
@@ -696,9 +689,9 @@
 
 	<div id="groupSelectorDiv">
 	<table width=100% cellpadding=5 cellspacing=0 border=0>
-		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">{mlang_message WR_GROUP}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
-		<tr><td><div class="groupSelect" id="groupSelectField" value="field">{mlang_message WR_FIELD}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
-		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">{mlang_message SEARCH_ALL}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
 	</table>
 </div>
 <div id="colorPickerVtd">
@@ -794,7 +787,7 @@
 			<td class="row0cell7">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="7" id="nocolor" class="ColorPickerNoColor">{mlang_message WR_NO_COLOR}</td>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
 		</tr>
 	</table>
 </div>		

@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdigitalhealthapps["English"]))
 		$tdatadigitalhealthapps[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdigitalhealthapps["Amharic"] = array();
-	$fieldToolTipsdigitalhealthapps["Amharic"] = array();
-	$placeHoldersdigitalhealthapps["Amharic"] = array();
-	$pageTitlesdigitalhealthapps["Amharic"] = array();
-	$fieldLabelsdigitalhealthapps["Amharic"]["app_id"] = "የመተግበሪያ መለያ";
-	$fieldToolTipsdigitalhealthapps["Amharic"]["app_id"] = "";
-	$placeHoldersdigitalhealthapps["Amharic"]["app_id"] = "";
-	$fieldLabelsdigitalhealthapps["Amharic"]["name"] = "ስም";
-	$fieldToolTipsdigitalhealthapps["Amharic"]["name"] = "";
-	$placeHoldersdigitalhealthapps["Amharic"]["name"] = "";
-	$fieldLabelsdigitalhealthapps["Amharic"]["standards_met"] = "ደረጃዎች ተሟልተዋል።";
-	$fieldToolTipsdigitalhealthapps["Amharic"]["standards_met"] = "";
-	$placeHoldersdigitalhealthapps["Amharic"]["standards_met"] = "";
-	if (count($fieldToolTipsdigitalhealthapps["Amharic"]))
-		$tdatadigitalhealthapps[".isUseToolTips"] = true;
-}
 
 
 	$tdatadigitalhealthapps[".NCSearch"] = true;

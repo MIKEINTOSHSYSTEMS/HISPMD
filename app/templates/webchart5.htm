@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
   <head>
-		<title>{mlang_message WR_CH_APPEAR}</title>
+		<title>Chart: Appearance</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link type="text/css" href="styles/default.css" rel="stylesheet">
 		<link type="text/css" href="styles/{$wr_pagestylepath}/style.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 			<div class="rnr-s-1 {$wr_pagestylepath}">
 				<div class="rnr-c rnr-cv">
 					<div class="style2" align=center>
-						{mlang_message WR_CH_APPEAR}{$chart_title}{$chart_table}
+						Chart: Appearance{$chart_title}{$chart_table}
 					</div>
 					<div class="style1 rnr-b-wrapper">
 						<div class="rnr-s-fields {$wr_pagestylepath}">
@@ -25,14 +25,14 @@
 									<tr>
 										<td></td>
 										<td width="150px" style="text-align:left">
-											<input type="checkbox" {$sgrid_checked} id="sgrid" name="sgrid" /> {mlang_message WR_SHOW_GRID}
+											<input type="checkbox" {$sgrid_checked} id="sgrid" name="sgrid" /> Show grid
 										</td>
 										<td width="150px">
 											<table cellspacing="0" cellpadding="0" border="0">
 												<tbody>
 													<tr>
 														<td align="right">
-															<div id="picker12" class="ColorPickerDivSample" style="width: 115px;">{mlang_message WR_GRID_COLOR}</div>
+															<div id="picker12" class="ColorPickerDivSample" style="width: 115px;">Grid Color</div>
 														</td>
 														<td align="left"><img class="selector" src="images/selector.png" /></td>
 													</tr>
@@ -40,7 +40,7 @@
 											</table>
 										</td>
 										<td width="200px">
-											<input type="checkbox" {$slegend_checked} id="slegend" name="slegend" /> {mlang_message WR_LEGEND}
+											<input type="checkbox" {$slegend_checked} id="slegend" name="slegend" /> Show legend
 										</td>
 										<td>
 										</td>
@@ -49,14 +49,14 @@
 									<tr>
 										<td></td>
 										<td>
-											<input type="checkbox" {$sname_checked} id="sname" name="sname" /> {mlang_message WR_SHOW_NAMES}
+											<input type="checkbox" {$sname_checked} id="sname" name="sname" /> Show names
 										</td>
 										<td>
 											<table cellspacing="0" cellpadding="0" border="0">
 												<tbody>
 													<tr>
 														<td align="right">
-															<div id="picker5" class="ColorPickerDivSample" style="width: 115px;">{mlang_message WR_NAMES_COLOR}</div>
+															<div id="picker5" class="ColorPickerDivSample" style="width: 115px;">Names Color</div>
 														</td>
 														<td align="left"><img class="selector" src="images/selector.png" /></td>
 													</tr>
@@ -64,7 +64,7 @@
 											</table>
 										</td>
 										<td>
-											<input type="checkbox" {$scur_checked} id="scur" name="scur" /> {mlang_message WR_FORMAT_CURR}
+											<input type="checkbox" {$scur_checked} id="scur" name="scur" /> Format as currency
 										</td>
 										<td></td>
 										<td></td>
@@ -72,14 +72,14 @@
 									<tr>
 										<td></td>
 										<td>
-											<input type="checkbox" {$sval_checked} id="sval" name="sval" /> {mlang_message WR_SHOW_VALUES}
+											<input type="checkbox" {$sval_checked} id="sval" name="sval" /> Show values
 										</td>
 										<td>
 											<table cellspacing="0" cellpadding="0" border="0">
 												<tbody>
 													<tr>
 														<td align="right">
-															<div id="picker6" class="ColorPickerDivSample" style="width: 115px;">{mlang_message WR_VALUES_COLOR}</div>
+															<div id="picker6" class="ColorPickerDivSample" style="width: 115px;">Values Color</div>
 														</td>
 														<td align="left"><img class="selector" src="images/selector.png" /></td>
 													</tr>
@@ -87,7 +87,7 @@
 											</table>
 										</td>
 										<td>
-											{mlang_message WR_DECIMAL}&nbsp;&nbsp;<input type="text" value="{$dec_val}" id="dec" name="dec" size="1" />
+											Decimal points&nbsp;&nbsp;<input type="text" value="{$dec_val}" id="dec" name="dec" size="1" />
 										</td>
 										<td></td>
 										<td></td>
@@ -95,7 +95,7 @@
 									<tr>
 										<td></td>
 										<td>
-										  <input type="checkbox" {$sanim_checked} id="sanim" name="sanim" /> {mlang_message WR_ANIMAT}
+										  <input type="checkbox" {$sanim_checked} id="sanim" name="sanim" /> Use animation
 										</td>
 										<td>
 										{$aqua}
@@ -125,24 +125,24 @@
 									<tr {$tr_funnel}>
 										<td></td>
 										{$funnel}
-											{mlang_message WR_ACCUM_APP} <select name="accumulstyle" id="accumulstyle">
-											<option value="0">{mlang_message WR_ACCUM_FLAT}</option>
-											<option value="1">{mlang_message WR_ACCUM_CONE}</option>
-											<option value="2">{mlang_message WR_TYPE_PYR}</option>
+											Accumulation appearance <select name="accumulstyle" id="accumulstyle">
+											<option value="0">Flat</option>
+											<option value="1">Cone</option>
+											<option value="2">Pyramid</option>
 										  </select>
 										</td>
 										{$funnel}
-											<input type="checkbox" {$accumulinvert_checked} id="accumulinvert" name="accumulinvert" /> {mlang_message WR_ACCUM_INV}
+											<input type="checkbox" {$accumulinvert_checked} id="accumulinvert" name="accumulinvert" /> Accumulation inverted
 										</td>
 										<td></td>
 									</tr>
 									<tr>
 										<td></td>
 										<td>
-											<input type="checkbox" {$autoupdate_checked} id="autoupdate" name="autoupdate" /> {mlang_message WR_AUTOUPDATE}
+											<input type="checkbox" {$autoupdate_checked} id="autoupdate" name="autoupdate" /> Autoupdate
 										</td>
 										<td>
-											{mlang_message WR_AUTOUPD_INTERVAL} <input size=2 type="text" id="update_interval" name="update_interval" value="{$update_interval_val}"/>
+											Autoupdate interval (min) <input size=2 type="text" id="update_interval" name="update_interval" value="{$update_interval_val}"/>
 										</td>
 										<td colspan=2>
 										{$gauge}
@@ -152,10 +152,10 @@
 									<tr>
 										<td></td>
 										<td>
-										  <input type="checkbox" {$cscroll_checked} id="cscroll" name="cscroll" /> {mlang_message WR_SCROLL}
+										  <input type="checkbox" {$cscroll_checked} id="cscroll" name="cscroll" /> Chart scrolling
 										</td>
 										<td colspan=3>
-											{mlang_message WR_MAX_BAR} <input size=2 type="text" id="maxbarscroll" name="maxbarscroll" value="{$maxbarscroll_val}" />
+											Max bars on screen <input size=2 type="text" id="maxbarscroll" name="maxbarscroll" value="{$maxbarscroll_val}" />
 										</td>
 										<td></td>
 									</tr>
@@ -170,7 +170,7 @@
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker7" class="ColorPickerDivSample" style="width: 180px;">{mlang_message WR_BGCOLOR}</div>
+																			<div id="picker7" class="ColorPickerDivSample" style="width: 180px;">Chart Background Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
@@ -182,14 +182,14 @@
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker13" class="ColorPickerDivSample" style="width: 120px;">{mlang_message WR_XAXIS_COLOR}</div>
+																			<div id="picker13" class="ColorPickerDivSample" style="width: 120px;">X-Axis Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
 																</tbody>
 															</table>
 														</td>								
-														<td><input type="checkbox" {$slog_checked} id="slog" name="slog" /> {mlang_message WR_LOGARITHMIC}</td>
+														<td><input type="checkbox" {$slog_checked} id="slog" name="slog" /> Logarithmic Y-Axis</td>
 													</tr>
 													<tr>
 														<td style="padding-bottom:5px">
@@ -197,7 +197,7 @@
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker8" class="ColorPickerDivSample" style="width: 180px;">{mlang_message WR_PLOT_COLOR}</div>
+																			<div id="picker8" class="ColorPickerDivSample" style="width: 180px;">Data Plot Background Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
@@ -209,14 +209,14 @@
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker14" class="ColorPickerDivSample" style="width: 120px;">{mlang_message WR_YAXIC_COLOR}</div>
+																			<div id="picker14" class="ColorPickerDivSample" style="width: 120px;">Y-Axis Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
 																</tbody>
 															</table>
 														</td>								
-														<td><input type="checkbox" {$saxes_checked} id="saxes" name="saxes" /> {mlang_message WR_MULTIPLE}</td>
+														<td><input type="checkbox" {$saxes_checked} id="saxes" name="saxes" /> Multiple Y-Axes</td>
 													</tr>
 													<tr>
 														<td style="padding-bottom:5px">
@@ -224,7 +224,7 @@
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker9" class="ColorPickerDivSample" style="width: 180px;">{mlang_message WR_BORDER_COLOR}</div>
+																			<div id="picker9" class="ColorPickerDivSample" style="width: 180px;">Border Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
@@ -246,14 +246,14 @@
 											<table cellpadding="0" cellspacing="0" border="0" width="100%">
 												<tbody>
 													<tr>
-														<td style="padding-bottom:5px">{mlang_message WR_HEADER}</td>
+														<td style="padding-bottom:5px">Header</td>
 														<td style="padding-bottom:5px"><input type="text" value="{$head_val}" id="head" name="head" style="width: 420px;" /></td>
 														<td style="padding-bottom:5px">
 															<table cellspacing="0" cellpadding="0" border="0">
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker10" class="ColorPickerDivSample" style="width: 50px;">{mlang_message WR_COLOR}</div>
+																			<div id="picker10" class="ColorPickerDivSample" style="width: 50px;">Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
@@ -262,14 +262,14 @@
 														</td>
 													</tr>
 													<tr>
-														<td>{mlang_message WR_FOOTER}</td>
+														<td>Footer</td>
 														<td><input type="text" value="{$foot_val}" id="foot" name="foot" style="width: 420px;" /></td>
 														<td>
 															<table cellspacing="0" cellpadding="0" border="0">
 																<tbody>
 																	<tr>
 																		<td align="right">
-																			<div id="picker11" class="ColorPickerDivSample" style="width: 50px;">{mlang_message WR_COLOR}</div>
+																			<div id="picker11" class="ColorPickerDivSample" style="width: 50px;">Color</div>
 																		</td>
 																		<td align="left"><img class="selector" src="images/selector.png" /></td>
 																	</tr>
@@ -285,17 +285,17 @@
 								</table>
 								</div>
 								<div id="btns" class="style2" align=center>
-									<a id="backbtn" name="backbtn" class="rnr-button" href="#">{mlang_message BACK}</a>
+									<a id="backbtn" name="backbtn" class="rnr-button" href="#">Back</a>
 									<span style="position:absolute;" id="jumptospan"></span>
-									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">{mlang_message WR_JUMP_TO}</a>
-									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">{mlang_message NEXT}</a>
+									<a id="jumpto" name="jumpto" class="rnr-button" href="#" onclick="event.cancelBubble = true;return false;" onmouseover="event.cancelBubble = true;return false;">Jump to ...</a>
+									<a id="nextbtn" name="nextbtn" class="rnr-button" href="#">Next</a>
 									{BEGIN b_is_chart_save}
-									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">{mlang_message WR_SAVE_AS}</a>
+									<a id="saveasbtn" name="saveasbtn" class="rnr-button" href="#">Save as...</a>
 									{END b_is_chart_save}															
 									{BEGIN b_is_chart_name}
-									<a id="savebtn" name="savebtn" class="rnr-button" href="#">{mlang_message SAVE}</a>
+									<a id="savebtn" name="savebtn" class="rnr-button" href="#">Save</a>
 									{END b_is_chart_name}	
-									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">{mlang_message WR_PREVIEW}</a>
+									<a id="previewbtn" name="previewbtn" class="rnr-button" href="#">Preview</a>
 									<a id="preview" class="various fancybox.iframe" href="dchart_preview.php?cname={$chart_name_preview}&ie=UTF-8&iframe"></a>
 								</div>
 							</div>
@@ -309,9 +309,9 @@
 		
         <div id="groupSelectorDiv">
 	<table width=100% cellpadding=5 cellspacing=0 border=0>
-		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">{mlang_message WR_GROUP}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
-		<tr><td><div class="groupSelect" id="groupSelectField" value="field">{mlang_message WR_FIELD}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
-		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">{mlang_message SEARCH_ALL}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectGroup" value="group">group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectField" value="field">field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
+		<tr><td><div class="groupSelect" id="groupSelectTable" value="table">all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td></tr>
 	</table>
 </div>
 <div id="colorPickerVtd">
@@ -407,7 +407,7 @@
 			<td class="row0cell7">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="7" id="nocolor" class="ColorPickerNoColor">{mlang_message WR_NO_COLOR}</td>
+			<td colspan="7" id="nocolor" class="ColorPickerNoColor">No color</td>
 		</tr>
 	</table>
 </div>		
@@ -420,16 +420,16 @@
 <iframe id="framejump" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>
 <div id="menujump" class=action style="display:none;position:absolute;">
 	<table width=100% cellpadding=5 cellspacing=0 border=0 style="background-color:#F4F7FB;border: solid 1px blue;">
-		<tr><td id=row0 style="cursor:pointer;padding:5px;">{mlang_message AA_TABLES}</td></tr>
-		<tr><td id=row1 style="cursor:pointer;padding:5px;">{mlang_message WR_JUMP_RELAT}</td></tr>
-		<tr><td id=row2 style="cursor:pointer;padding:5px;">{mlang_message WR_GROUP_BY}</td></tr>
-		<tr><td id=row3 style="cursor:pointer;padding:5px;">{mlang_message WR_TYPE}</td></tr>
-		<tr><td id=row4 style="cursor:pointer;padding:5px;">{mlang_message WR_PARAM}</td></tr>
-		<tr><td id=row5 style="cursor:pointer;padding:5px;">{mlang_message WR_APPEARANCE}</td></tr>
-		<tr><td id=row6 style="cursor:pointer;padding:5px;">{mlang_message WR_CHART_SETT}</td></tr>
-		<tr><td id=row7 style="cursor:pointer;padding:5px;">{mlang_message WR_DYNAM_PERMISSIONS}</td></tr>
-		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">{mlang_message WR_BACK_TO_MENU}</td></tr>
-		<tr><td id=row9 style="cursor:pointer;padding:5px;">{mlang_message WR_BACK_TO_APPL}</td></tr>
+		<tr><td id=row0 style="cursor:pointer;padding:5px;">Tables</td></tr>
+		<tr><td id=row1 style="cursor:pointer;padding:5px;">Table Relations</td></tr>
+		<tr><td id=row2 style="cursor:pointer;padding:5px;">Group By</td></tr>
+		<tr><td id=row3 style="cursor:pointer;padding:5px;">Type</td></tr>
+		<tr><td id=row4 style="cursor:pointer;padding:5px;">Parameters</td></tr>
+		<tr><td id=row5 style="cursor:pointer;padding:5px;">Appearance</td></tr>
+		<tr><td id=row6 style="cursor:pointer;padding:5px;">Chart Settings</td></tr>
+		<tr><td id=row7 style="cursor:pointer;padding:5px;">Dynamic Permissions</td></tr>
+		<tr><td id=row8 style="cursor:pointer;padding:5px;border-top:1px solid blue;">Back to Web Reports menu</td></tr>
+		<tr><td id=row9 style="cursor:pointer;padding:5px;">Back to main application</td></tr>
 	</table>
 </div>
 	<iframe id="aframe" style="display:none;position:absolute;" scrolling="no" frameborder="0"></iframe>	

@@ -72,13 +72,13 @@ $(document).ready(function(){
 			name = $(this).parent("span").attr("id"),
 			title = $(this).parent("span").attr("title");
 			
-		var mess = (type == "report") ? "'. mlang_message("WR_DELETE_REPORT").'" : "'.mlang_message("WR_DELETE_CHART").'";';
+		var mess = (type == "report") ? "'. "Do you really want to delete report %s ?".'" : "'."Do you really want to delete chart %s ?".'";';
 		$b_includes .= 'mess=mess.replace("%s",title);
 		$("#alert")
 			.html("<p>"+mess+"</p>")
 			.dialog("option", "buttons", {
-				"'.mlang_message("NO").'": function() { $(this).dialog("close"); },'.
-				'"'. mlang_message("DELETE");
+				"'."No".'": function() { $(this).dialog("close"); },'.
+				'"'. "Delete";
 
 				$b_includes .= '": function() {
 					$.ajax({
@@ -99,7 +99,7 @@ $(document).ready(function(){
 							}
 						},
 						error: function() {
-							$("#alert").html("<p>'.mlang_message("WR_TRY_LATER").
+							$("#alert").html("<p>'."Try again later".
 							'</p>").dialog("open");
 						}
 					});				
@@ -115,15 +115,15 @@ $(document).ready(function(){
 	if(!pre8count($arr_UserGroups))
 	{
 		$b_includes .= '$("#admin_sql").click(function(){
-			$("#alert").dialog("option","title","'.mlang_message("WR_ENTER_PASSWORD").
+			$("#alert").dialog("option","title","'."Enter password".
 			'");
 			$("#alert")
-				.html("'.mlang_message("PASSWORD").
+				.html("'."Password".
 				':&nbsp;<input type=password id=admin_password size=30 value=\"\">")
 				.dialog("option", "buttons", {
-					"'.mlang_message("CANCEL").
+					"'."Cancel".
 					'": function() { $(this).dialog("close"); },
-					"'.mlang_message("OK").
+					"'."OK".
 					'": function() {
 						$.ajax({
 							type: "POST",
@@ -137,9 +137,9 @@ $(document).ready(function(){
 								if ( msg == "OK" ) {
 									window.location="'.GetTableLink("webreport_sql").'";
 								} else {
-									$("#alert").dialog("option", "buttons", {"'.mlang_message("CANCEL").
+									$("#alert").dialog("option", "buttons", {"'."Cancel".
 										'": function() { $(this).dialog("close");}});
-									$("#alert").html("<p>'.mlang_message("INVALID_PASSWORD").
+									$("#alert").html("<p>'."Invalid password".
 									'</p>").dialog("open");
 								}
 							}
@@ -164,15 +164,15 @@ $(document).ready(function(){
 	if(!pre8count($arr_UserGroups))
 	{
 		$b_includes .= '$("#admin_page").click(function(){
-			$("#alert").dialog("option","title","'.mlang_message("WR_ENTER_PASSWORD").
+			$("#alert").dialog("option","title","'."Enter password".
 			'");
 			$("#alert")
-				.html("'.mlang_message("PASSWORD").
+				.html("'."Password".
 				':&nbsp;<input type=password id=admin_password size=30 value=\"\">")
 				.dialog("option", "buttons", {
-					"'.mlang_message("CANCEL").
+					"'."Cancel".
 					'": function() { $(this).dialog("close"); },
-					"'.mlang_message("OK").
+					"'."OK".
 					'": function() {
 						$.ajax({
 							type: "POST",
@@ -186,9 +186,9 @@ $(document).ready(function(){
 								if ( msg == "OK" ) {
 									window.location="'.GetTableLink("webreport_admin").'";
 								} else {
-									$("#alert").dialog("option", "buttons", {"'.mlang_message("CANCEL").
+									$("#alert").dialog("option", "buttons", {"'."Cancel".
 										'": function() { $(this).dialog("close");}});
-									$("#alert").html("<p>'.mlang_message("INVALID_PASSWORD").
+									$("#alert").html("<p>'."Invalid password".
 									'</p>").dialog("open");
 								}
 							}
@@ -225,7 +225,7 @@ $(document).ready(function(){
 				}
 			},
 			error: function() {
-				$("#alert").html("<p>'.mlang_message("WR_TRY_LATER").
+				$("#alert").html("<p>'."Try again later".
 				'</p>").dialog("open");
 			}
 		});
@@ -251,7 +251,7 @@ $(document).ready(function(){
 				}
 			},
 			error: function() {
-				$("#alert").html("<p>'.mlang_message("WR_TRY_LATER").
+				$("#alert").html("<p>'."Try again later".
 				'</p>").dialog("open");				
 			}
 		});
@@ -299,12 +299,12 @@ if( Security::permissionsAvailable() ) {
 			$shared_reports .= ( strlen( $rpt['title'] ) > $cMaxTitleLength+5 ) ? substr( $rpt['title'], 0, $cMaxTitleLength  ) . "..." : $rpt['title'];
 		// if @BUILDER.bDynamicPermissions
 			if ( $rpt['view'] ) {
-				$shared_reports .= '<a class="action view" type="report" href="#">['.mlang_message("VIEW").']</a>';
+				$shared_reports .= '<a class="action view" type="report" href="#">['."View".']</a>';
 			}
 			if ( $rpt['edit'] ) {
 				if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-					$shared_reports .= '<a class="action edit" type="report" href="#">['.mlang_message("EDIT").']</a>';
-				$shared_reports .= '<a class="action del" type="report" href="#">['.mlang_message("DELETE").']</a>';
+					$shared_reports .= '<a class="action edit" type="report" href="#">['."Edit".']</a>';
+				$shared_reports .= '<a class="action del" type="report" href="#">['."Delete".']</a>';
 			}
 			$shared_reports .= '</span>';
 			$shared_reports .= '</div>'."\r\n";
@@ -317,12 +317,12 @@ if( Security::permissionsAvailable() ) {
 			$shared_charts .= ( strlen( $chart['title'] ) > $cMaxTitleLength+5 ) ? substr( $chart['title'], 0, $cMaxTitleLength  ) . "..." : $chart['title'];
 		// if @BUILDER.bDynamicPermissions
 			if ( $chart['view'] ) {
-				$shared_charts .= '<a class="action view" type="chart" href="#">['.mlang_message("VIEW").']</a>';
+				$shared_charts .= '<a class="action view" type="chart" href="#">['."View".']</a>';
 			}
 			if ( $chart['edit'] ) {
 				if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-					$shared_charts .= '<a class="action edit" type="chart" href="#">['.mlang_message("EDIT").']</a>';
-				$shared_charts .= '<a class="action del" type="chart" href="#">['.mlang_message("DELETE").']</a>';
+					$shared_charts .= '<a class="action edit" type="chart" href="#">['."Edit".']</a>';
+				$shared_charts .= '<a class="action del" type="chart" href="#">['."Delete".']</a>';
 			}
 			$shared_charts .= '</span>';		
 			$shared_charts .= '</div>'."\r\n";
@@ -333,15 +333,15 @@ if( Security::permissionsAvailable() ) {
 		$shared_reports .= '<div style="margin-bottom:5px;">';
 		$shared_reports .= '<span class="ritem" id="' . $rpt['name'] . '" title="'.runner_htmlspecialchars($rpt['title']).'">';
 		$shared_reports .= ( strlen( $rpt['title'] ) > $cMaxTitleLength+5 ) ? substr( $rpt['title'], 0, $cMaxTitleLength  ) . "..." : $rpt['title'];
-		$shared_reports .= '<a class="action view" type="report" href="#">['.mlang_message("VIEW").']</a>';
+		$shared_reports .= '<a class="action view" type="report" href="#">['."View".']</a>';
 		/*
 		 * If there's no login page
 		 */
 		if(trim($rpt["owner"]) == Security::getUserName() )
 		{		
 			if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-				$shared_reports .= '<a class="action edit" type="report" href="#">['.mlang_message("EDIT").']</a>';
-			$shared_reports .= '<a class="action del" type="report" href="#">['.mlang_message("DELETE").']</a>';
+				$shared_reports .= '<a class="action edit" type="report" href="#">['."Edit".']</a>';
+			$shared_reports .= '<a class="action del" type="report" href="#">['."Delete".']</a>';
 		}
 		$shared_reports .= '</span>';
 		$shared_reports .= '</div>'."\r\n";
@@ -350,15 +350,15 @@ if( Security::permissionsAvailable() ) {
 		$shared_charts .= '<div style="margin-bottom:5px;">';
 		$shared_charts .= '<span class="ritem" id="' . $chart['name'] . '" title="'.runner_htmlspecialchars($chart['title']).'">';
 		$shared_charts .= ( strlen( $chart['title'] ) > $cMaxTitleLength+5 ) ? substr( $chart['title'], 0, $cMaxTitleLength  ) . "..." : $chart['title'];
-		$shared_charts .= '<a class="action view" type="chart" href="#">['.mlang_message("VIEW").']</a>';
+		$shared_charts .= '<a class="action view" type="chart" href="#">['."View".']</a>';
 		/*
 		 * If there's no login page
 		 */
 		if(trim($chart["owner"]) == Security::getUserName() )
 		{
 			if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-				$shared_charts .= '<a class="action edit" type="chart" href="#">['.mlang_message("EDIT").']</a>';
-			$shared_charts .= '<a class="action del" type="chart" href="#">['.mlang_message("DELETE").']</a>';
+				$shared_charts .= '<a class="action edit" type="chart" href="#">['."Edit".']</a>';
+			$shared_charts .= '<a class="action del" type="chart" href="#">['."Delete".']</a>';
 		}
 		$shared_charts .= '</span>';	
 		$shared_charts .= '</div>'."\r\n";
@@ -369,23 +369,23 @@ foreach ( $arrPrivateReports as $rpt ) {
 	if ( $rpt["status"] == "public" ) {
 		$private_reports .= '<div style="margin-bottom:5px;">';
 		$private_reports .= '<span class="ritem" id="' . $rpt['name'] . '" title="'.runner_htmlspecialchars($rpt['title']).'">';
-				$private_reports .= '<img src="images/unlock16.png" title="'.mlang_message("WR_PUBLIC_REPORT").'"/>';
+				$private_reports .= '<img src="images/unlock16.png" title="'."Public report".'"/>';
 		$private_reports .= ( strlen( $rpt['title'] ) > $cMaxTitleLength+5 ) ? substr( $rpt['title'], 0, $cMaxTitleLength  ) . "..." : $rpt['title'];
-		$private_reports .= '<a class="action view" type="report" href="#">['.mlang_message("VIEW").']</a>';
+		$private_reports .= '<a class="action view" type="report" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-			$private_reports .= '<a class="action edit" type="report" href="#">['.mlang_message("EDIT").']</a>';
-		$private_reports .= '<a class="action del" type="report" href="#">['.mlang_message("DELETE").']</a>';
+			$private_reports .= '<a class="action edit" type="report" href="#">['."Edit".']</a>';
+		$private_reports .= '<a class="action del" type="report" href="#">['."Delete".']</a>';
 		$private_reports .= '</span>';
 		$private_reports .= '</div>'."\r\n";
 	} else {
 		$private_reports .= '<div style="margin-bottom:5px;">';
 		$private_reports .= '<span class="ritem" id="' . $rpt['name'] . '" title="'.runner_htmlspecialchars($rpt['title']).'">';
-				$private_reports .= '<img src="images/lock16.png" title="'.mlang_message("WR_PRIVATE_REPORT").'"/>';
+				$private_reports .= '<img src="images/lock16.png" title="'."Private report".'"/>';
 		$private_reports .= ( strlen( $rpt['title'] ) > $cMaxTitleLength+5 ) ? substr( $rpt['title'], 0, $cMaxTitleLength  ) . "..." : $rpt['title'];
-		$private_reports .= '<a class="action view" type="report" href="#">['.mlang_message("VIEW").']</a>';
+		$private_reports .= '<a class="action view" type="report" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-			$private_reports .= '<a class="action edit" type="report" href="#">['.mlang_message("EDIT").']</a>';
-		$private_reports .= '<a class="action del" type="report" href="#">['.mlang_message("DELETE").']</a>';
+			$private_reports .= '<a class="action edit" type="report" href="#">['."Edit".']</a>';
+		$private_reports .= '<a class="action del" type="report" href="#">['."Delete".']</a>';
 		$private_reports .= '</span>';
 		$private_reports .= '</div>'."\r\n";
 	}
@@ -395,23 +395,23 @@ foreach ( $arrPrivateCharts as $chart ) {
 	if ( $chart["status"] == "public" ) {
 		$private_charts .= '<div style="margin-bottom:5px;">';
 		$private_charts .= '<span class="ritem" id="' . $chart['name'] . '" title="'.runner_htmlspecialchars($chart['title']).'">';
-				$private_charts .= '<img src="images/unlock16.png" title="'.mlang_message("WR_PUBLIC_CHART").'"/>';
+				$private_charts .= '<img src="images/unlock16.png" title="'."Public chart".'"/>';
 		$private_charts .= ( strlen( $chart['title'] ) > $cMaxTitleLength+5 ) ? substr( $chart['title'], 0, $cMaxTitleLength  ) . "..." : $chart['title'];
-		$private_charts .= '<a class="action view" type="chart" href="#">['.mlang_message("VIEW").']</a>';
+		$private_charts .= '<a class="action view" type="chart" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-			$private_charts .= '<a class="action edit" type="chart" href="#">['.mlang_message("EDIT").']</a>';
-		$private_charts .= '<a class="action del" type="chart" href="#">['.mlang_message("DELETE").']</a>';
+			$private_charts .= '<a class="action edit" type="chart" href="#">['."Edit".']</a>';
+		$private_charts .= '<a class="action del" type="chart" href="#">['."Delete".']</a>';
 		$private_charts .= '</span>';		
 		$private_charts .= '</div>'."\r\n";
 	} else {
 		$private_charts .= '<div style="margin-bottom:5px;">';
 		$private_charts .= '<span class="ritem" id="' . $chart['name'] . '" title="'.runner_htmlspecialchars($chart['title']).'">';
-				$private_charts .= '<img src="images/lock16.png" title="'.mlang_message("WR_PRIVATE_CHART").'"/>';
+				$private_charts .= '<img src="images/lock16.png" title="'."Private chart".'"/>';
 		$private_charts .= ( strlen( $chart['title'] ) > $cMaxTitleLength+5 ) ? substr( $chart['title'], 0, $cMaxTitleLength  ) . "..." : $chart['title'];
-		$private_charts .= '<a class="action view" type="chart" href="#">['.mlang_message("VIEW").']</a>';
+		$private_charts .= '<a class="action view" type="chart" href="#">['."View".']</a>';
 		if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
-			$private_charts .= '<a class="action edit" type="chart" href="#">['.mlang_message("EDIT").']</a>';
-		$private_charts .= '<a class="action del" type="chart" href="#">['.mlang_message("DELETE").']</a>';
+			$private_charts .= '<a class="action edit" type="chart" href="#">['."Edit".']</a>';
+		$private_charts .= '<a class="action del" type="chart" href="#">['."Delete".']</a>';
 		$private_charts .= '</span>';		
 		$private_charts .= '</div>'."\r\n";
 	}
@@ -444,17 +444,17 @@ $xt->assign("b_includes", $b_includes);
 
 if(isWRAdmin() || !pre8count($arr_UserGroups))
 {
-	$create_butt="<a id=\"admin_page\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"admin_page\" href=\"#\">".mlang_message("AA_ADMINAREA")."</a>";
+	$create_butt="<a id=\"admin_page\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"admin_page\" href=\"#\">"."Admin Area"."</a>";
 	$xt->assign("admin_page", $create_butt);
 }
 if(!$wr_is_standalone)
 {
-	$create_butt="<a id=\"return_app\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"return_app\" href=\"#\">".mlang_message("WR_BACK_TO_APPL")."</a>";
+	$create_butt="<a id=\"return_app\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"return_app\" href=\"#\">"."Back to main application"."</a>";
 	$xt->assign("back_to_app", $create_butt);
 }
 if($wr_is_standalone && isWRAdmin())	
 {
-	$create_butt="<a id=\"users_list\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"users_list\" href=\"#\">".mlang_message("WR_USERS_LIST")."</a>";
+	$create_butt="<a id=\"users_list\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"users_list\" href=\"#\">"."Users list"."</a>";
 	$xt->assign("users_list_page", $create_butt);
 }
 if( Security::hasLogin() ) {
@@ -464,7 +464,7 @@ if( Security::hasLogin() ) {
 	} 
 	else 
 	{
-		$strLogin=mlang_message("LOGGED_AS")." <b>".$_SESSION["UserName"]."</b>&nbsp;&nbsp;&nbsp;<A class=tablelinks href=\"".GetTableLink("login")."?a=logout\">".mlang_message("LOG_OUT")."</A>";
+		$strLogin="Logged on as"." <b>".$_SESSION["UserName"]."</b>&nbsp;&nbsp;&nbsp;<A class=tablelinks href=\"".GetTableLink("login")."?a=logout\">"."Log out"."</A>";
 	}
 
 	$xt->assign("login_mess",$strLogin);		
@@ -472,7 +472,7 @@ if( Security::hasLogin() ) {
 
 if(isWRAdmin() || !pre8count($arr_UserGroups))
 {
-	$create_butt="<a id=\"admin_sql\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"admin_sql\" href=\"#\">".mlang_message("WR_CUSTOM_SQL")."</a>";
+	$create_butt="<a id=\"admin_sql\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"admin_sql\" href=\"#\">"."Custom SQL"."</a>";
 	$xt->assign("admin_sql", $create_butt);
 }	
 else	
@@ -480,20 +480,19 @@ else
 	
 if(pre8count($arr_tables_db) || pre8count($arr_tables_project) || pre8count($arr_tables_custom))	
 {                 
-	$create_butt="<a id=\"report_createbtn\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"report_createbtn\" wtype=\"report\" href=\"#\">".mlang_message("WR_CREATE_REPORT")."</a>";
-    $create_butt.="<a id=\"chart_createbtn\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"chart_createbtn\" wtype=\"chart\" href=\"#\">".mlang_message("WR_CREATE_CHART")."</a>";
+	$create_butt="<a id=\"report_createbtn\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"report_createbtn\" wtype=\"report\" href=\"#\">"."Create Report"."</a>";
+    $create_butt.="<a id=\"chart_createbtn\" class=\"rnr-button\" onmouseover=\"this.focus();\" name=\"chart_createbtn\" wtype=\"chart\" href=\"#\">"."Create chart"."</a>";
 	$xt->assign("create_report_chart", $create_butt);
 }
 else
 {	
 	if($wr_is_standalone && !isWRAdmin())
-		$xt->assign("create_report_chart", "<b>".mlang_message("WR_NOT_PERMISSIONS_TO_CREATE")."</b>");
+		$xt->assign("create_report_chart", "<b>"."You do not have permissions to create reports and charts. Contact administrator in this regard."."</b>");
 }
 
 if( Security::isGuest() && $wr_is_standalone)
-	$xt->assign("create_report_chart", "<b>".mlang_message("WR_NOT_PERMISSIONS_TO_CREATE")."</b>");
+	$xt->assign("create_report_chart", "<b>"."You do not have permissions to create reports and charts. Contact administrator in this regard."."</b>");
 
-SetWRLangVars($xt, "webreport");
 
 	
 $xt->assign("wr_pagestylepath", $wr_pagestylepath);

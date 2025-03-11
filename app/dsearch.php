@@ -33,7 +33,7 @@ elseif (postvalue("cname"))
 		header("Location: ".GetTableLink("login", "", "message=expired"));
 		return;
 	} elseif ( $xml_array['settings']['status'] == "private" && $xml_array['owner'] != @$_SESSION["UserID"] ) {
-		echo "<p>".mlang_message("WR_REPORT_NO_PERMISS")."</p>";
+		echo "<p>"."You don't have permissions to view this report"."</p>";
 		exit();
 	}
 
@@ -97,33 +97,33 @@ $pageObject->init();
 
 $includes = '<script type="text/javascript" src="'.GetRootPathForResources("include/js/jquery.min.js").'"></script>';
 
-$jscode.="TEXT_MONTH_JAN='".jsreplace(mlang_message("MONTH_JAN"))."';\r\n";
-$jscode.="TEXT_MONTH_FEB='".jsreplace(mlang_message("MONTH_FEB"))."';\r\n";
-$jscode.="TEXT_MONTH_MAR='".jsreplace(mlang_message("MONTH_MAR"))."';\r\n";
-$jscode.="TEXT_MONTH_APR='".jsreplace(mlang_message("MONTH_APR"))."';\r\n";
-$jscode.="TEXT_MONTH_MAY='".jsreplace(mlang_message("MONTH_MAY"))."';\r\n";
-$jscode.="TEXT_MONTH_JUN='".jsreplace(mlang_message("MONTH_JUN"))."';\r\n";
-$jscode.="TEXT_MONTH_JUL='".jsreplace(mlang_message("MONTH_JUL"))."';\r\n";
-$jscode.="TEXT_MONTH_AUG='".jsreplace(mlang_message("MONTH_AUG"))."';\r\n";
-$jscode.="TEXT_MONTH_SEP='".jsreplace(mlang_message("MONTH_SEP"))."';\r\n";
-$jscode.="TEXT_MONTH_OCT='".jsreplace(mlang_message("MONTH_OCT"))."';\r\n";
-$jscode.="TEXT_MONTH_NOV='".jsreplace(mlang_message("MONTH_NOV"))."';\r\n";
-$jscode.="TEXT_MONTH_DEC='".jsreplace(mlang_message("MONTH_DEC"))."';\r\n";
+$jscode.="TEXT_MONTH_JAN='".jsreplace("January")."';\r\n";
+$jscode.="TEXT_MONTH_FEB='".jsreplace("February")."';\r\n";
+$jscode.="TEXT_MONTH_MAR='".jsreplace("March")."';\r\n";
+$jscode.="TEXT_MONTH_APR='".jsreplace("April")."';\r\n";
+$jscode.="TEXT_MONTH_MAY='".jsreplace("May")."';\r\n";
+$jscode.="TEXT_MONTH_JUN='".jsreplace("June")."';\r\n";
+$jscode.="TEXT_MONTH_JUL='".jsreplace("July")."';\r\n";
+$jscode.="TEXT_MONTH_AUG='".jsreplace("August")."';\r\n";
+$jscode.="TEXT_MONTH_SEP='".jsreplace("September")."';\r\n";
+$jscode.="TEXT_MONTH_OCT='".jsreplace("October")."';\r\n";
+$jscode.="TEXT_MONTH_NOV='".jsreplace("November")."';\r\n";
+$jscode.="TEXT_MONTH_DEC='".jsreplace("December")."';\r\n";
 
-$jscode.="TEXT_DAY_SU='".jsreplace(mlang_message("DAY_SU"))."';\r\n";
-$jscode.="TEXT_DAY_MO='".jsreplace(mlang_message("DAY_MO"))."';\r\n";
-$jscode.="TEXT_DAY_TU='".jsreplace(mlang_message("DAY_TU"))."';\r\n";
-$jscode.="TEXT_DAY_WE='".jsreplace(mlang_message("DAY_WE"))."';\r\n";
-$jscode.="TEXT_DAY_TH='".jsreplace(mlang_message("DAY_TH"))."';\r\n";
-$jscode.="TEXT_DAY_FR='".jsreplace(mlang_message("DAY_FR"))."';\r\n";
-$jscode.="TEXT_DAY_SA='".jsreplace(mlang_message("DAY_SA"))."';\r\n";
+$jscode.="TEXT_DAY_SU='".jsreplace("Su")."';\r\n";
+$jscode.="TEXT_DAY_MO='".jsreplace("Mo")."';\r\n";
+$jscode.="TEXT_DAY_TU='".jsreplace("Tu")."';\r\n";
+$jscode.="TEXT_DAY_WE='".jsreplace("We")."';\r\n";
+$jscode.="TEXT_DAY_TH='".jsreplace("Th")."';\r\n";
+$jscode.="TEXT_DAY_FR='".jsreplace("Fr")."';\r\n";
+$jscode.="TEXT_DAY_SA='".jsreplace("Sa")."';\r\n";
 
-$jscode.="TEXT_TODAY='".jsreplace(mlang_message("TODAY"))."';\r\n";
+$jscode.="TEXT_TODAY='".jsreplace("today")."';\r\n";
 $jscode .= '
 locale_dateformat = "'.$locale_info["LOCALE_IDATE"].'";
 locale_datedelimiter = "'.$locale_info["LOCALE_SDATE"].'";
 bLoading = false;
-TEXT_PLEASE_SELECT = "'.jsreplace(mlang_message("PLEASE_SELECT")).'"; 
+TEXT_PLEASE_SELECT = "'.jsreplace("Please select").'"; 
 detect = navigator.userAgent.toLowerCase();
 checkIt = function(string)
 {

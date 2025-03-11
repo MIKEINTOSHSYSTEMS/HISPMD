@@ -15,27 +15,20 @@
         {$header}
 		<div class="rnr-page dreport">
 			<div class="rnr-top ">
-								<div class="languages">
-					<b>{mlang_message LANGUAGE}:</b>&nbsp;
-					<select {$langselector_attrs}>
-						<option value="Amharic" {$Amharic_langattrs}>አማርኛ</option>
-						<option value="English" {$English_langattrs}>English</option>
-					</select>
-				</div>	
-				<div class="rnr-cw-toplinks rnr-s-2 asbuttons {$wr_pagestylepath}">
+								<div class="rnr-cw-toplinks rnr-s-2 asbuttons {$wr_pagestylepath}">
 					<div class="rnr-c rnr-ch rnr-c-toplinks">
 						{BEGIN back_to_menu}
 						<div align=center class="style1 rnr-bl rnr-b-toplinks_print" >
-							<a class="rnr-button" href="webreport.php">{mlang_message BACK_TO_MENU}</a>
+							<a class="rnr-button" href="webreport.php">Back to menu</a>
 						</div>
 						{END back_to_menu}
 						{BEGIN testAdvSearch}
 						<div align="center" class="style1 rnr-bl rnr-b-toplinks_advsearch" >
-							<a class="rnr-button" href="#" onclick="window.location.{$searchHref}">{mlang_message ADVANCED_SEARCH}</a>
+							<a class="rnr-button" href="#" onclick="window.location.{$searchHref}">Advanced search</a>
 						</div>
 						{END testAdvSearch}
 						<div align="center" class="style1 rnr-bl rnr-b-toplinks_export" >
-							<a id=ExpPDF class="rnr-button" href="#" onclick="chart.saveAsPDF();">{mlang_message WR_EXPORT_PDF}</a>
+							<a id=ExpPDF class="rnr-button" href="#" onclick="chart.saveAsPDF();">Export to PDF</a>
 						</div>
 						<div class="rnr-hfiller"></div>					
 					</div>

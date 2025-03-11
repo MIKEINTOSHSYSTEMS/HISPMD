@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipspublications["English"]))
 		$tdatapublications[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelspublications["Amharic"] = array();
-	$fieldToolTipspublications["Amharic"] = array();
-	$placeHolderspublications["Amharic"] = array();
-	$pageTitlespublications["Amharic"] = array();
-	$fieldLabelspublications["Amharic"]["publication_id"] = "የህትመት መለያ";
-	$fieldToolTipspublications["Amharic"]["publication_id"] = "";
-	$placeHolderspublications["Amharic"]["publication_id"] = "";
-	$fieldLabelspublications["Amharic"]["title"] = "ርዕስ";
-	$fieldToolTipspublications["Amharic"]["title"] = "";
-	$placeHolderspublications["Amharic"]["title"] = "";
-	$fieldLabelspublications["Amharic"]["level"] = "ደረጃ";
-	$fieldToolTipspublications["Amharic"]["level"] = "";
-	$placeHolderspublications["Amharic"]["level"] = "";
-	if (count($fieldToolTipspublications["Amharic"]))
-		$tdatapublications[".isUseToolTips"] = true;
-}
 
 
 	$tdatapublications[".NCSearch"] = true;

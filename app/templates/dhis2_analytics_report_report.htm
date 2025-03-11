@@ -63,7 +63,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expand" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -88,7 +88,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +97,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -132,7 +132,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -158,14 +158,14 @@
 								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="dhis2_analytics_report_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		{mlang_message ADVANCED_SEARCH}		
+		Advanced search		
 		</a>
 	</li>
 							<li role="separator" class="divider"></li>							{BEGIN export_link}
 	<li data-itemtype="export_report_excel" data-itemid="export_report_excel" {$item_export_report_excel} data-pageid="{$pageid}" data-small >
 				<a  href="dhis2_analytics_report_print.php?all=1&amp;format=excel{$stateLink}" {$excellink_attrs}  title="" >
 				
-		{mlang_message EXPORT_TO_EXCEL}		
+		Export to Excel		
 		</a>
 	</li>
 {END export_link}
@@ -173,21 +173,11 @@
 	<li data-itemtype="export_report_word" data-itemid="export_report_word" {$item_export_report_word} data-pageid="{$pageid}" data-small >
 				<a  href="dhis2_analytics_report_print.php?all=1&amp;format=word{$stateLink}" {$wordlink_attrs}  title="" >
 				
-		{mlang_message EXPORT_TO_WORD}		
+		Export to Word		
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>								{BEGIN AmharicLANGLINK}
-	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-		አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-					</ul>
+							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
 			</span>
@@ -201,7 +191,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				{mlang_message NOTIFICATIONS}			</span>
+				Notifications			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -261,7 +251,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Login			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -279,7 +269,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		User Profile		
 		</a>
 	</li>
 {END userinfo_link}
@@ -287,7 +277,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Log out		
 		</a>
 	</li>
 {END logoutbutton}
@@ -295,7 +285,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		{mlang_message AA_ADMINAREA}		
+		Admin Area		
 		</a>
 	</li>
 {END adminarea_link}
@@ -303,7 +293,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Change password		
 		</a>
 	</li>
 {END changepwd_link}
@@ -360,7 +350,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -372,14 +362,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
+			Scope:		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="dhis2_analytics_report_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_WHOLE_REPORT}							</label>
+									Print whole report							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -388,7 +378,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="dhis2_analytics_report_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
+				Print this page			</label>
 		</div>
 	</div>
 		
@@ -402,7 +392,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					{mlang_message GROUPS_PP}							
+					Groups per page							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -416,7 +406,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
+							Print			</a>
 </span>
 				 
 					</li>
@@ -450,7 +440,7 @@
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 							<input class="filter-selectAll-dx" type="checkbox" name="selectAll" {$selectAll_attrs_dx} />
 						{BEGIN clearLink_dx}
-			<a href="#" class="filter-clear filter-clear-dx" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-dx" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_dx}
@@ -485,7 +475,7 @@
 
 			{BEGIN filter_button_multiselect_dx}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_dx}">
-			<a href="#" class="filter-dx-btn-multiselect filter-apply-dx" {$filterbutton_attrs_dx}>{mlang_message FILTER_MULTISELECT}</a>
+			<a href="#" class="filter-dx-btn-multiselect filter-apply-dx" {$filterbutton_attrs_dx}>Multiselect</a>
 		</li>
 		{END filter_button_multiselect_dx}
 			</ul>
@@ -504,7 +494,7 @@
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 							<input class="filter-selectAll-ou" type="checkbox" name="selectAll" {$selectAll_attrs_ou} />
 						{BEGIN clearLink_ou}
-			<a href="#" class="filter-clear filter-clear-ou" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-ou" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_ou}
@@ -539,7 +529,7 @@
 
 			{BEGIN filter_button_multiselect_ou}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_ou}">
-			<a href="#" class="filter-ou-btn-multiselect filter-apply-ou" {$filterbutton_attrs_ou}>{mlang_message FILTER_MULTISELECT}</a>
+			<a href="#" class="filter-ou-btn-multiselect filter-apply-ou" {$filterbutton_attrs_ou}>Multiselect</a>
 		</li>
 		{END filter_button_multiselect_ou}
 			</ul>
@@ -558,7 +548,7 @@
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 							<input class="filter-selectAll-pe" type="checkbox" name="selectAll" {$selectAll_attrs_pe} />
 						{BEGIN clearLink_pe}
-			<a href="#" class="filter-clear filter-clear-pe" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-pe" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_pe}
@@ -593,7 +583,7 @@
 
 			{BEGIN filter_button_multiselect_pe}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_pe}">
-			<a href="#" class="filter-pe-btn-multiselect filter-apply-pe" {$filterbutton_attrs_pe}>{mlang_message FILTER_MULTISELECT}</a>
+			<a href="#" class="filter-pe-btn-multiselect filter-apply-pe" {$filterbutton_attrs_pe}>Multiselect</a>
 		</li>
 		{END filter_button_multiselect_pe}
 			</ul>
@@ -612,7 +602,7 @@
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 							<input class="filter-selectAll-Period" type="checkbox" name="selectAll" {$selectAll_attrs_Period} />
 						{BEGIN clearLink_Period}
-			<a href="#" class="filter-clear filter-clear-Period" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-Period" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_Period}
@@ -647,7 +637,7 @@
 
 			{BEGIN filter_button_multiselect_Period}
 		<li class="filter-multiselect  filter-field-btn {$collapsedClass_Period}">
-			<a href="#" class="filter-Period-btn-multiselect filter-apply-Period" {$filterbutton_attrs_Period}>{mlang_message FILTER_MULTISELECT}</a>
+			<a href="#" class="filter-Period-btn-multiselect filter-apply-Period" {$filterbutton_attrs_Period}>Multiselect</a>
 		</li>
 		{END filter_button_multiselect_Period}
 			</ul>
@@ -837,9 +827,9 @@
 										<td class="group_1" style="border-top: none;"></td>
 							
 																	<td  class="group_2" colspan=4 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label DHIS2_Analytics_Report ou }&nbsp;{$ou_grval}
+				Summary for&nbsp;{$label DHIS2_Analytics_Report ou }&nbsp;{$ou_grval}
 					- <span class="summary-2" data-type="summary">{$groupou_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																														</tr>
 
 	
@@ -853,9 +843,9 @@
 		<tr class="summaryrow"  >
 			
 										<td  class="group_1" colspan=5 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label DHIS2_Analytics_Report dx }&nbsp;{$dx_grval}
+				Summary for&nbsp;{$label DHIS2_Analytics_Report dx }&nbsp;{$dx_grval}
 					- <span class="summary-1" data-type="summary">{$groupdx_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																					</tr>
 
 	
@@ -883,7 +873,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="5">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
+        <td class="pagesummary" colspan="5">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
     </tr>
 	
 	
@@ -894,7 +884,7 @@
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
         <td class="globalsummary" colspan="5">
-            {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
+            Global summary {$global_total_cnt} - records total        </td>
     </tr>
 
 	

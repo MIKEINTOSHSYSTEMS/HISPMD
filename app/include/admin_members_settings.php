@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsadmin_members["English"]))
 		$tdataadmin_members[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsadmin_members["Amharic"] = array();
-	$fieldToolTipsadmin_members["Amharic"] = array();
-	$placeHoldersadmin_members["Amharic"] = array();
-	$pageTitlesadmin_members["Amharic"] = array();
-	$fieldLabelsadmin_members["Amharic"]["UserName"] = "User Name";
-	$fieldToolTipsadmin_members["Amharic"]["UserName"] = "";
-	$placeHoldersadmin_members["Amharic"]["UserName"] = "";
-	$fieldLabelsadmin_members["Amharic"]["GroupID"] = "Group ID";
-	$fieldToolTipsadmin_members["Amharic"]["GroupID"] = "";
-	$placeHoldersadmin_members["Amharic"]["GroupID"] = "";
-	$fieldLabelsadmin_members["Amharic"]["Provider"] = "Provider";
-	$fieldToolTipsadmin_members["Amharic"]["Provider"] = "";
-	$placeHoldersadmin_members["Amharic"]["Provider"] = "";
-	if (count($fieldToolTipsadmin_members["Amharic"]))
-		$tdataadmin_members[".isUseToolTips"] = true;
-}
 
 
 	$tdataadmin_members[".NCSearch"] = true;

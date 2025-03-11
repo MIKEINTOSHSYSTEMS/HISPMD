@@ -49,36 +49,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_analytics_chart["English"]))
 		$tdatadhis2_analytics_chart[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_analytics_chart["Amharic"] = array();
-	$fieldToolTipsdhis2_analytics_chart["Amharic"] = array();
-	$placeHoldersdhis2_analytics_chart["Amharic"] = array();
-	$pageTitlesdhis2_analytics_chart["Amharic"] = array();
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["Data"] = "የልኬት ውሂብ";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["Data"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["Data"] = "";
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["Organisation_unit"] = "Dimension Org";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["Organisation_unit"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["Organisation_unit"] = "";
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["Period"] = "የተወሰነ ጊዜ";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["Period"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["Period"] = "";
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["dx"] = "አመልካች";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["dx"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["dx"] = "";
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["ou"] = "ኦርግ ክፍል";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["ou"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["ou"] = "";
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["pe"] = "አንጻራዊ ጊዜ";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["pe"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["pe"] = "";
-	$fieldLabelsdhis2_analytics_chart["Amharic"]["Value"] = "የውሂብ እሴት";
-	$fieldToolTipsdhis2_analytics_chart["Amharic"]["Value"] = "";
-	$placeHoldersdhis2_analytics_chart["Amharic"]["Value"] = "";
-	if (count($fieldToolTipsdhis2_analytics_chart["Amharic"]))
-		$tdatadhis2_analytics_chart[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_analytics_chart[".NCSearch"] = true;

@@ -161,7 +161,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message OLD_PASSWORD}","hidden":"{$item_hide_oldpass_label}","isHtml":true},
+			{"text":"Old password","hidden":"{$item_hide_oldpass_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -209,7 +209,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message NEW_PASSWORD}","hidden":"{$item_hide_newpass_label}","isHtml":true},
+			{"text":"New password","hidden":"{$item_hide_newpass_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -257,7 +257,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message CONFIRM_PASSWORD}","hidden":"{$item_hide_confirm_label}","isHtml":true},
+			{"text":"Confirm password","hidden":"{$item_hide_confirm_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

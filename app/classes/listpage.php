@@ -466,10 +466,10 @@ class ListPage extends RunnerPage
 			$this->body["begin"].= "<div id=\"search_suggest\" class=\"search_suggest\"></div>";
 
 		if($this->is508) {
-			$this->body["begin"].= "<a href=\"#skipdata\" title=\"".mlang_message("508_SKIP_DATA")."\" class=\"".$this->makeClassName("s508")."\">".mlang_message("508_SKIP_DATA")."</a>";
-			$this->body["begin"].= "<a href=\"#skipmenu\" title=\"".mlang_message("508_SKIP_MENU")."\" class=\"".$this->makeClassName("s508")."\">".mlang_message("508_SKIP_MENU")."</a>";
-			$this->body["begin"].= "<a href=\"#skipsearch\" title=\"".mlang_message("508_SKIP_SEARCH")."\" class=\"".$this->makeClassName("s508")."\">".mlang_message("508_SKIP_SEARCH")."</a>";
-			$this->body["begin"].= "<a href=\"templates/helpshortcut.htm\" title=\"".mlang_message("508_HELP")."\" class=\"".$this->makeClassName("s508")."\">".mlang_message("508_HELP")."</a>";
+			$this->body["begin"].= "<a href=\"#skipdata\" title=\""."Skip to table data"."\" class=\"".$this->makeClassName("s508")."\">"."Skip to table data"."</a>";
+			$this->body["begin"].= "<a href=\"#skipmenu\" title=\""."Skip to menu"."\" class=\"".$this->makeClassName("s508")."\">"."Skip to menu"."</a>";
+			$this->body["begin"].= "<a href=\"#skipsearch\" title=\""."Skip to search"."\" class=\"".$this->makeClassName("s508")."\">"."Skip to search"."</a>";
+			$this->body["begin"].= "<a href=\"templates/helpshortcut.htm\" title=\""."Hotkeys reference"."\" class=\"".$this->makeClassName("s508")."\">"."Hotkeys reference"."</a>";
 		}
 
 		//prepare for dispaly master table info on details table
@@ -2429,7 +2429,7 @@ class ListPage extends RunnerPage
 		if( $showLabelOnly )
 			return $fName;
 
-		return $fName." ". ($desc ? mlang_message("SORT_HIGH_TO_LOW") : mlang_message("SORT_LOW_TO_HIGH"));
+		return $fName." ". ($desc ? "High to Low" : "Low to High");
 	}
 
 	/**

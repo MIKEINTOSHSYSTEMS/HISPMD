@@ -63,7 +63,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expand" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -88,7 +88,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +97,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -132,7 +132,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -158,14 +158,14 @@
 								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="public_mfr_facilities_register_chart_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		{mlang_message ADVANCED_SEARCH}		
+		Advanced search		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		{mlang_message SHOW_SEARCH_PANEL}		
+		Show search panel		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -173,21 +173,11 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		{mlang_message HIDE_SEARCH_PANEL}		
+		Hide search panel		
 		</a>
 	</li>
 {END searchPanelTopButtons}
-							<li role="separator" class="divider"></li>								{BEGIN AmharicLANGLINK}
-	<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-		{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-		አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-					</ul>
+							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
 			</span>
@@ -201,7 +191,7 @@
 	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<div class="r-noti-header">
 			<span class="r-noti-h-text">
-				{mlang_message NOTIFICATIONS}			</span>
+				Notifications			</span>
 			<!--
 			<a class="r-noti-all">
 				see all
@@ -261,7 +251,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Login			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -279,7 +269,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		User Profile		
 		</a>
 	</li>
 {END userinfo_link}
@@ -287,7 +277,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Log out		
 		</a>
 	</li>
 {END logoutbutton}
@@ -295,7 +285,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		{mlang_message AA_ADMINAREA}		
+		Admin Area		
 		</a>
 	</li>
 {END adminarea_link}
@@ -303,7 +293,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Change password		
 		</a>
 	</li>
 {END changepwd_link}
@@ -353,7 +343,7 @@
 	<div class="panel-heading">
 		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			Search in			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -363,12 +353,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
 			</ul>
 		</div>
 
@@ -482,9 +472,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -515,7 +505,7 @@
 	<div class="dropdown filter-field filter-status-container" {BEGIN filter_selected_status} data-selected {END filter_selected_status}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_status}
-			<a href="#" class="filter-clear filter-clear-status" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-status" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_status}
@@ -566,7 +556,7 @@
 	<div class="dropdown filter-field filter-woreda-container" {BEGIN filter_selected_woreda} data-selected {END filter_selected_woreda}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_woreda}
-			<a href="#" class="filter-clear filter-clear-woreda" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-woreda" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_woreda}
@@ -617,7 +607,7 @@
 	<div class="dropdown filter-field filter-zone-container" {BEGIN filter_selected_zone} data-selected {END filter_selected_zone}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_zone}
-			<a href="#" class="filter-clear filter-clear-zone" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-zone" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_zone}
@@ -668,7 +658,7 @@
 	<div class="dropdown filter-field filter-region-container" {BEGIN filter_selected_region} data-selected {END filter_selected_region}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_region}
-			<a href="#" class="filter-clear filter-clear-region" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-region" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_region}
@@ -719,7 +709,7 @@
 	<div class="dropdown filter-field filter-parentfacilitytype-container" {BEGIN filter_selected_parentfacilitytype} data-selected {END filter_selected_parentfacilitytype}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_parentfacilitytype}
-			<a href="#" class="filter-clear filter-clear-parentfacilitytype" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-parentfacilitytype" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_parentfacilitytype}
@@ -770,7 +760,7 @@
 	<div class="dropdown filter-field filter-facilitytype-container" {BEGIN filter_selected_facilitytype} data-selected {END filter_selected_facilitytype}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_facilitytype}
-			<a href="#" class="filter-clear filter-clear-facilitytype" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-facilitytype" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_facilitytype}
@@ -821,7 +811,7 @@
 	<div class="dropdown filter-field filter-operationalstatus-container" {BEGIN filter_selected_operationalstatus} data-selected {END filter_selected_operationalstatus}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
 						{BEGIN clearLink_operationalstatus}
-			<a href="#" class="filter-clear filter-clear-operationalstatus" title="{mlang_message FILTER_CLEAR}">
+			<a href="#" class="filter-clear filter-clear-operationalstatus" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 			{END clearLink_operationalstatus}

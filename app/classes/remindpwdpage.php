@@ -86,9 +86,9 @@ class RemindPasswordPage extends RunnerPage
 	 * @return String
 	 */
 	protected function getNotRegisteredMessage() {
-		return mlang_message("USER_NOREG1")." "
+		return "User"." "
 				.runner_htmlspecialchars( $this->userEmail )
-					." ".mlang_message("USER_NOREG2");
+					." "."is not registered.";
 	}
 
 	/**
@@ -98,7 +98,7 @@ class RemindPasswordPage extends RunnerPage
 		global $globalEvents;
 
 		if( !$this->checkCaptcha() ) {
-			$this->message = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+			$this->message = "Invalid security code.";
 			return false;
 		}
 		

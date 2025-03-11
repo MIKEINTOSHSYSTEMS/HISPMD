@@ -64,48 +64,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmd_noti_view["English"]))
 		$tdatahispmd_noti_view[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelshispmd_noti_view["Amharic"] = array();
-	$fieldToolTipshispmd_noti_view["Amharic"] = array();
-	$placeHoldershispmd_noti_view["Amharic"] = array();
-	$pageTitleshispmd_noti_view["Amharic"] = array();
-	$fieldLabelshispmd_noti_view["Amharic"]["id"] = "Id";
-	$fieldToolTipshispmd_noti_view["Amharic"]["id"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["id"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["message"] = "Message";
-	$fieldToolTipshispmd_noti_view["Amharic"]["message"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["message"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["user"] = "User";
-	$fieldToolTipshispmd_noti_view["Amharic"]["user"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["user"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["provider"] = "Provider";
-	$fieldToolTipshispmd_noti_view["Amharic"]["provider"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["provider"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["title"] = "Title";
-	$fieldToolTipshispmd_noti_view["Amharic"]["title"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["title"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["url"] = "Url";
-	$fieldToolTipshispmd_noti_view["Amharic"]["url"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["url"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["icon"] = "Icon";
-	$fieldToolTipshispmd_noti_view["Amharic"]["icon"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["icon"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["created"] = "Created";
-	$fieldToolTipshispmd_noti_view["Amharic"]["created"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["created"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["expire"] = "Expire";
-	$fieldToolTipshispmd_noti_view["Amharic"]["expire"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["expire"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["type"] = "Type";
-	$fieldToolTipshispmd_noti_view["Amharic"]["type"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["type"] = "";
-	$fieldLabelshispmd_noti_view["Amharic"]["group"] = "Group";
-	$fieldToolTipshispmd_noti_view["Amharic"]["group"] = "";
-	$placeHoldershispmd_noti_view["Amharic"]["group"] = "";
-	if (count($fieldToolTipshispmd_noti_view["Amharic"]))
-		$tdatahispmd_noti_view[".isUseToolTips"] = true;
-}
 
 
 	$tdatahispmd_noti_view[".NCSearch"] = true;

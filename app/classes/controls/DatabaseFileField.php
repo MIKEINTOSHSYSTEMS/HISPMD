@@ -136,25 +136,25 @@ class DatabaseFileField extends EditControl
 					$filename = "";
 				if($mode == MODE_INLINE_EDIT)
 				{
-					$strfilename = '<br><label for="filename_'.$this->cfieldname.'">'.mlang_message("FILENAME")
+					$strfilename = '<br><label for="filename_'.$this->cfieldname.'">'."Filename"
 						.'</label>&nbsp;&nbsp;<input type="text" '.$this->inputStyle.' id="filename_'.$this->cfieldname
 						.'" name="filename_'.$this->cfieldname.'" size="20" maxlength="50" value="'.runner_htmlspecialchars($filename).'">';
 				}
 				else
 				{
-					$strfilename = '<br><label for="filename_'.$this->cfieldname.'">'.mlang_message("FILENAME")
+					$strfilename = '<br><label for="filename_'.$this->cfieldname.'">'."Filename"
 						.'</label>&nbsp;&nbsp;<input type="text" '.$this->inputStyle.' id="filename_'.$this->cfieldname.'" name="filename_'
 						.$this->cfieldname.'" size="20" maxlength="50" value="'.runner_htmlspecialchars($filename).'">';
 				}
 			}
 			if(strlen($value)) {
-				$strtype = '<br><input id="'.$this->ctype.'_keep" type="Radio" name="'.$this->ctype.'" value="file0" checked class="rnr-uploadtype">'.mlang_message("KEEP");
+				$strtype = '<br><input id="'.$this->ctype.'_keep" type="Radio" name="'.$this->ctype.'" value="file0" checked class="rnr-uploadtype">'."Keep";
 
 			if(strlen($value) && !$this->pageObject->pSetEdit->isRequired($this->field))
 			{
-					$strtype .= '<input id="'.$this->ctype.'_delete" type="Radio" name="'.$this->ctype.'" value="file1" class="rnr-uploadtype">'.mlang_message("DELETE");
+					$strtype .= '<input id="'.$this->ctype.'_delete" type="Radio" name="'.$this->ctype.'" value="file1" class="rnr-uploadtype">'."Delete";
 			}
-				$strtype .= '<input id="'.$this->ctype.'_update" type="Radio" name="'.$this->ctype.'" value="file2" class="rnr-uploadtype">'.mlang_message("UPDATE");
+				$strtype .= '<input id="'.$this->ctype.'_update" type="Radio" name="'.$this->ctype.'" value="file2" class="rnr-uploadtype">'."Update";
 			} else {
 				$strtype = '<input id="'.$this->ctype.'_update" type="hidden" name="'.$this->ctype.'" value="file2" class="rnr-uploadtype">';
 		}
@@ -165,7 +165,7 @@ class DatabaseFileField extends EditControl
 			$strtype = '<input id="'.$this->ctype.'" type="hidden" name="'.$this->ctype.'" value="file2">';
 			if($this->format == EDIT_FORMAT_DATABASE_FILE && $this->pageObject->pSetEdit->getFilenameField($this->field))
 			{
-				$strfilename = '<br><label for="filename_'.$this->cfieldname.'">'.mlang_message("FILENAME")
+				$strfilename = '<br><label for="filename_'.$this->cfieldname.'">'."Filename"
 					.'</label>&nbsp;&nbsp;<input type="text" '.$this->inputStyle.' id="filename_'.$this->cfieldname.'" name="filename_'
 					.$this->cfieldname.'" size="20" maxlength="50">';
 			}

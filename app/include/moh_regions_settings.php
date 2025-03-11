@@ -52,39 +52,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_regions["English"]))
 		$tdatamoh_regions[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_regions["Amharic"] = array();
-	$fieldToolTipsmoh_regions["Amharic"] = array();
-	$placeHoldersmoh_regions["Amharic"] = array();
-	$pageTitlesmoh_regions["Amharic"] = array();
-	$fieldLabelsmoh_regions["Amharic"]["region_id"] = "የክልል መለያ";
-	$fieldToolTipsmoh_regions["Amharic"]["region_id"] = "";
-	$placeHoldersmoh_regions["Amharic"]["region_id"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["region_name"] = "የክልል ስም";
-	$fieldToolTipsmoh_regions["Amharic"]["region_name"] = "";
-	$placeHoldersmoh_regions["Amharic"]["region_name"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["region_alternate"] = "Region Alternate";
-	$fieldToolTipsmoh_regions["Amharic"]["region_alternate"] = "";
-	$placeHoldersmoh_regions["Amharic"]["region_alternate"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["lat"] = "Lat";
-	$fieldToolTipsmoh_regions["Amharic"]["lat"] = "";
-	$placeHoldersmoh_regions["Amharic"]["lat"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["lng"] = "Lng";
-	$fieldToolTipsmoh_regions["Amharic"]["lng"] = "";
-	$placeHoldersmoh_regions["Amharic"]["lng"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["code"] = "Code";
-	$fieldToolTipsmoh_regions["Amharic"]["code"] = "";
-	$placeHoldersmoh_regions["Amharic"]["code"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["map"] = "Map";
-	$fieldToolTipsmoh_regions["Amharic"]["map"] = "";
-	$placeHoldersmoh_regions["Amharic"]["map"] = "";
-	$fieldLabelsmoh_regions["Amharic"]["region_code"] = "Region Code";
-	$fieldToolTipsmoh_regions["Amharic"]["region_code"] = "";
-	$placeHoldersmoh_regions["Amharic"]["region_code"] = "";
-	if (count($fieldToolTipsmoh_regions["Amharic"]))
-		$tdatamoh_regions[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_regions[".NCSearch"] = true;

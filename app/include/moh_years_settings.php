@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_years["English"]))
 		$tdatamoh_years[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_years["Amharic"] = array();
-	$fieldToolTipsmoh_years["Amharic"] = array();
-	$placeHoldersmoh_years["Amharic"] = array();
-	$pageTitlesmoh_years["Amharic"] = array();
-	$fieldLabelsmoh_years["Amharic"]["year_id"] = "Year Id";
-	$fieldToolTipsmoh_years["Amharic"]["year_id"] = "";
-	$placeHoldersmoh_years["Amharic"]["year_id"] = "";
-	$fieldLabelsmoh_years["Amharic"]["year"] = "Year";
-	$fieldToolTipsmoh_years["Amharic"]["year"] = "";
-	$placeHoldersmoh_years["Amharic"]["year"] = "";
-	if (count($fieldToolTipsmoh_years["Amharic"]))
-		$tdatamoh_years[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_years[".NCSearch"] = true;

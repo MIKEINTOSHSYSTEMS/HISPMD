@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_dashboard_reports["English"]))
 		$tdatamfr_dashboard_reports[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmfr_dashboard_reports["Amharic"] = array();
-	$fieldToolTipsmfr_dashboard_reports["Amharic"] = array();
-	$placeHoldersmfr_dashboard_reports["Amharic"] = array();
-	$pageTitlesmfr_dashboard_reports["Amharic"] = array();
-	$fieldLabelsmfr_dashboard_reports["Amharic"]["type"] = "ዓይነት";
-	$fieldToolTipsmfr_dashboard_reports["Amharic"]["type"] = "";
-	$placeHoldersmfr_dashboard_reports["Amharic"]["type"] = "";
-	$fieldLabelsmfr_dashboard_reports["Amharic"]["name"] = "ስም";
-	$fieldToolTipsmfr_dashboard_reports["Amharic"]["name"] = "";
-	$placeHoldersmfr_dashboard_reports["Amharic"]["name"] = "";
-	$fieldLabelsmfr_dashboard_reports["Amharic"]["count"] = "ቁጠር";
-	$fieldToolTipsmfr_dashboard_reports["Amharic"]["count"] = "";
-	$placeHoldersmfr_dashboard_reports["Amharic"]["count"] = "";
-	if (count($fieldToolTipsmfr_dashboard_reports["Amharic"]))
-		$tdatamfr_dashboard_reports[".isUseToolTips"] = true;
-}
 
 
 	$tdatamfr_dashboard_reports[".NCSearch"] = true;

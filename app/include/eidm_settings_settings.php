@@ -43,30 +43,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipseidm_settings["English"]))
 		$tdataeidm_settings[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelseidm_settings["Amharic"] = array();
-	$fieldToolTipseidm_settings["Amharic"] = array();
-	$placeHolderseidm_settings["Amharic"] = array();
-	$pageTitleseidm_settings["Amharic"] = array();
-	$fieldLabelseidm_settings["Amharic"]["id"] = "Id";
-	$fieldToolTipseidm_settings["Amharic"]["id"] = "";
-	$placeHolderseidm_settings["Amharic"]["id"] = "";
-	$fieldLabelseidm_settings["Amharic"]["dx"] = "Dx";
-	$fieldToolTipseidm_settings["Amharic"]["dx"] = "";
-	$placeHolderseidm_settings["Amharic"]["dx"] = "";
-	$fieldLabelseidm_settings["Amharic"]["ou"] = "Ou";
-	$fieldToolTipseidm_settings["Amharic"]["ou"] = "";
-	$placeHolderseidm_settings["Amharic"]["ou"] = "";
-	$fieldLabelseidm_settings["Amharic"]["pe"] = "Pe";
-	$fieldToolTipseidm_settings["Amharic"]["pe"] = "";
-	$placeHolderseidm_settings["Amharic"]["pe"] = "";
-	$fieldLabelseidm_settings["Amharic"]["created_at"] = "Created At";
-	$fieldToolTipseidm_settings["Amharic"]["created_at"] = "";
-	$placeHolderseidm_settings["Amharic"]["created_at"] = "";
-	if (count($fieldToolTipseidm_settings["Amharic"]))
-		$tdataeidm_settings[".isUseToolTips"] = true;
-}
 
 
 	$tdataeidm_settings[".NCSearch"] = true;

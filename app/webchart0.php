@@ -89,7 +89,7 @@ $b_includes .= alertDialog();
 			$("#add_new_query").hide();
 			$("#li_db").addClass("selected").addClass("ui-state-selected").addClass("ui-state-active");;
 			li_selected="db";
-			$("#tl").html("'.mlang_message("WR_SELECT_CHART_TABLE").'");
+			$("#tl").html("'."Select table which you will use to create the chart:".'");
 			NEXT_PAGE_URL = "'.GetTableLink("webchart1").'";
 			PREV_PAGE_URL = "'.GetTableLink("webreport").'";';
 	$b_includes .= '
@@ -109,7 +109,7 @@ $b_includes .= alertDialog();
 			$("#add_new_query").hide();
 			$("#li_project").addClass("selected").addClass("ui-state-selected").addClass("ui-state-active");;
 			li_selected="project";
-			$("#tl").html("'.mlang_message("WR_SELECT_CHART_TABLE").'");
+			$("#tl").html("'."Select table which you will use to create the chart:".'");
 			NEXT_PAGE_URL = "'.GetTableLink("webchart3").'";
 			PREV_PAGE_URL = "'.GetTableLink("webreport").'";';
 	$b_includes .= '
@@ -136,7 +136,7 @@ $b_includes .= alertDialog();
 	$b_includes .= '
 			li_selected="custom";
 			$("#li_custom").addClass("selected").addClass("ui-state-selected").addClass("ui-state-active");;
-			$("#tl").html("'.mlang_message("WR_SELECT_CHART_SQL").'");
+			$("#tl").html("'."Select SQL query which you will use to create the chart:".'");
 			NEXT_PAGE_URL = "'.GetTableLink("webchart3").'";
 			PREV_PAGE_URL = "'.GetTableLink("webreport").'";';
 	$b_includes .= '
@@ -174,7 +174,7 @@ if(postvalue("sqlname"))
 					li_selected_start="custom";
 					$("#radio_custom").click();
 					li_selected="custom";
-					$("#tl").html("'.mlang_message("WR_SELECT_REPORT_SQL").'");
+					$("#tl").html("'."Select SQL query which you will use to create the report:".'");
 					';
 else
 {	
@@ -183,21 +183,21 @@ else
 						li_selected_start="db";
 						$("#radio_db").click();
 						li_selected="db";
-						$("#tl").html("'.mlang_message("WR_SELECT_CHART_TABLE").'");
+						$("#tl").html("'."Select table which you will use to create the chart:".'");
 						';
 	elseif(is_wr_project() && pre8count($arr_tables_project))
 		$b_includes .= '
 						li_selected_start="project";
 						$("#radio_project").click();
 						li_selected="project";
-						$("#tl").html("'.mlang_message("WR_SELECT_CHART_TABLE").'");
+						$("#tl").html("'."Select table which you will use to create the chart:".'");
 						';
 	else
 		$b_includes .= '
 						li_selected_start="custom";
 						$("#radio_custom").click();
 						li_selected="custom";
-						$("#tl").html("'.mlang_message("WR_SELECT_REPORT_SQL").'");
+						$("#tl").html("'."Select SQL query which you will use to create the report:".'");
 						';
 }
 	$b_includes .= '});
@@ -398,7 +398,7 @@ foreach ($arr_tables as $tbl_name)
 }
 
 if (@$root['settings']['title'] != "") {
-	$xt->assign("chart_title",", ".mlang_message("WR_TITLE").": ".@$root['settings']['title']);
+	$xt->assign("chart_title",", "."Title".": ".@$root['settings']['title']);
 } else {
 	$xt->assign("chart_title","");
 }

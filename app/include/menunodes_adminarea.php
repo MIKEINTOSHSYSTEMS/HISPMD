@@ -18,7 +18,7 @@ function getMenuNodes_adminarea($menuNodesObject)
 		$menuNode["linkType"] = "External";
 		$menuNode["pageType"] = "AdminArea";
 		$menuNode["openType"] = "None";	
-				$menuNode["title"] = mlang_message("AA_PERMISSIONS");
+				$menuNode["title"] = "Permissions";
 		$menuNode["href"] = GetTableLink("admin_rights", "list");
 		$menuNodesObject->menuNodes["adminarea"][] = $menuNode;
 		// admin_members item
@@ -34,7 +34,7 @@ function getMenuNodes_adminarea($menuNodesObject)
 		$menuNode["linkType"] = "External";
 		$menuNode["pageType"] = "AdminArea";
 		$menuNode["openType"] = "None";	
-				$menuNode["title"] = mlang_message("AA_ASSIGN_USERS");
+				$menuNode["title"] = "Assign users to groups";
 		$menuNode["href"] = GetTableLink("admin_members", "list");
 		$menuNodesObject->menuNodes["adminarea"][] = $menuNode;
 		// admin_users item
@@ -50,7 +50,7 @@ function getMenuNodes_adminarea($menuNodesObject)
 		$menuNode["linkType"] = "External";
 		$menuNode["pageType"] = "AdminArea";
 		$menuNode["openType"] = "None";	
-				$menuNode["title"] = mlang_message("AA_ADDEDIT_USERS");
+				$menuNode["title"] = "Add/Edit users";
 		$menuNode["href"] = GetTableLink("admin_users", "list");
 		$menuNodesObject->menuNodes["adminarea"][] = $menuNode;
 }

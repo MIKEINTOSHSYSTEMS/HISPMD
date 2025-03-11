@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshispmd_uggroups["English"]))
 		$tdatahispmd_uggroups[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelshispmd_uggroups["Amharic"] = array();
-	$fieldToolTipshispmd_uggroups["Amharic"] = array();
-	$placeHoldershispmd_uggroups["Amharic"] = array();
-	$pageTitleshispmd_uggroups["Amharic"] = array();
-	$fieldLabelshispmd_uggroups["Amharic"]["GroupID"] = "የቡድን መለያ";
-	$fieldToolTipshispmd_uggroups["Amharic"]["GroupID"] = "";
-	$placeHoldershispmd_uggroups["Amharic"]["GroupID"] = "";
-	$fieldLabelshispmd_uggroups["Amharic"]["Label"] = "መለያ";
-	$fieldToolTipshispmd_uggroups["Amharic"]["Label"] = "";
-	$placeHoldershispmd_uggroups["Amharic"]["Label"] = "";
-	$fieldLabelshispmd_uggroups["Amharic"]["Provider"] = "አቅራቢ";
-	$fieldToolTipshispmd_uggroups["Amharic"]["Provider"] = "";
-	$placeHoldershispmd_uggroups["Amharic"]["Provider"] = "";
-	$fieldLabelshispmd_uggroups["Amharic"]["Comment"] = "አስተያየት";
-	$fieldToolTipshispmd_uggroups["Amharic"]["Comment"] = "";
-	$placeHoldershispmd_uggroups["Amharic"]["Comment"] = "";
-	if (count($fieldToolTipshispmd_uggroups["Amharic"]))
-		$tdatahispmd_uggroups[".isUseToolTips"] = true;
-}
 
 
 	$tdatahispmd_uggroups[".NCSearch"] = true;

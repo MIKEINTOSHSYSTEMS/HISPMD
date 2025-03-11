@@ -60,7 +60,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message PROFILE}","hidden":"{$item_hide_user_fields_title}","fontSize":24,"isHtml":true},
+			{"text":"Profile","hidden":"{$item_hide_user_fields_title}","fontSize":24,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -769,10 +769,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{mlang_message TWO_FACTOR_TITLE}","hidden":"{$item_hide_twofactor_label}","fontSize":24,"isHtml":true},
+			{"text":"Two-Factor Authentication","hidden":"{$item_hide_twofactor_label}","fontSize":24,"isHtml":true},
 				
 				
-			{"text":"{mlang_message TWO_FACTOR_COMMENT}","hidden":"{$item_hide_twofactor_comment}","isHtml":true},
+			{"text":"Select your preferred method to receive the authentication code","hidden":"{$item_hide_twofactor_comment}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -803,7 +803,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{mlang_message TWO_FACTOR_SETUP_COMMENT}","hidden":"{$item_hide_twofactor_setup_comment}","isHtml":true},
+			{"text":"To complete the registration select your preferred method to receive the authentication code","hidden":"{$item_hide_twofactor_setup_comment}","isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_twofactor_settings}"},

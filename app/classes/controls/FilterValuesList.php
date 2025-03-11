@@ -663,7 +663,7 @@ class FilterValuesList extends FilterControl
 				}
 
 
-				$mFilterBlocks[ $key ]["show_n_more_".$dgName] = str_replace( "%n%", $visibleItemsCounter - $numberOfdItemsToShow, mlang_message("SHOW_N_MORE") );
+				$mFilterBlocks[ $key ]["show_n_more_".$dgName] = str_replace( "%n%", $visibleItemsCounter - $numberOfdItemsToShow, "Show %n% more" );
 				$mFilterBlocks[ $key ][ $showMoreBlockName ] = $numberOfdItemsToShow && $numberOfdItemsToShow < $visibleItemsCounter;
 			}
 		}

@@ -711,7 +711,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{$custom _IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_}","hidden":"{$item_hide_text1}","isHtml":true},
+			{"text":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>MFR Facilities Registery Dashboard</title>\n    <style>\n        html, body {\n            margin: 0;\n            padding: 0;\n            height: 100%;\n            width: 100%;\n        }\n        iframe {\n            border: none;\n            width: 100%;\n            height: 777vh;\n            position: relative;\n            top: 0;\n            left: 0;\n        }\n    </style>\n</head>\n<body>\n    <iframe\n        id=\"metabase-iframe\"\n        src=\"\"\n        allowtransparency></iframe>\n    <script>\n        // Set dashboard ID dynamically\n        var dashboardId = 2; // Replace with dynamic ID if needed\n\n        // Make a request to the PHP server to generate the iframe URL for the selected dashboard ID\n        fetch('../api/meta/base.php?dashboardId=' + dashboardId)\n            .then(response => response.text())\n            .then(iframeUrl => {\n                document.getElementById('metabase-iframe').src = iframeUrl;\n            });\n    </script>\n</body>\n        <!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->\n\n</html>\n","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

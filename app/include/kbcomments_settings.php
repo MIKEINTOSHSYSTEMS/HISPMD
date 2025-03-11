@@ -50,37 +50,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipskbcomments["English"]))
 		$tdatakbcomments[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelskbcomments["Amharic"] = array();
-	$fieldToolTipskbcomments["Amharic"] = array();
-	$placeHolderskbcomments["Amharic"] = array();
-	$pageTitleskbcomments["Amharic"] = array();
-	$fieldLabelskbcomments["Amharic"]["ArticleID"] = "Article ID";
-	$fieldToolTipskbcomments["Amharic"]["ArticleID"] = "";
-	$placeHolderskbcomments["Amharic"]["ArticleID"] = "";
-	$fieldLabelskbcomments["Amharic"]["comment"] = "Comment";
-	$fieldToolTipskbcomments["Amharic"]["comment"] = "";
-	$placeHolderskbcomments["Amharic"]["comment"] = "";
-	$fieldLabelskbcomments["Amharic"]["CommentID"] = "Comment ID";
-	$fieldToolTipskbcomments["Amharic"]["CommentID"] = "";
-	$placeHolderskbcomments["Amharic"]["CommentID"] = "";
-	$fieldLabelskbcomments["Amharic"]["email"] = "Email";
-	$fieldToolTipskbcomments["Amharic"]["email"] = "";
-	$placeHolderskbcomments["Amharic"]["email"] = "";
-	$fieldLabelskbcomments["Amharic"]["name"] = "Name";
-	$fieldToolTipskbcomments["Amharic"]["name"] = "";
-	$placeHolderskbcomments["Amharic"]["name"] = "";
-	$fieldLabelskbcomments["Amharic"]["moderated"] = "Moderated";
-	$fieldToolTipskbcomments["Amharic"]["moderated"] = "";
-	$placeHolderskbcomments["Amharic"]["moderated"] = "";
-	$fieldLabelskbcomments["Amharic"]["created_date"] = "Created Date";
-	$fieldToolTipskbcomments["Amharic"]["created_date"] = "";
-	$placeHolderskbcomments["Amharic"]["created_date"] = "";
-	$pageTitleskbcomments["Amharic"]["add"] = "Comments, Add new comment";
-	if (count($fieldToolTipskbcomments["Amharic"]))
-		$tdatakbcomments[".isUseToolTips"] = true;
-}
 
 
 	$tdatakbcomments[".NCSearch"] = true;

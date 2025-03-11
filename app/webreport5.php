@@ -24,7 +24,7 @@ if (@$_SESSION['webreports']['settings']['title'] != "") {
 	$title=@$_SESSION['webreports']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,25)."...";
-	$xt->assign("report_title",", ".mlang_message("WR_TITLE").": ".$title);
+	$xt->assign("report_title",", "."Title".": ".$title);
 } else {
 	$xt->assign("report_title","");
 }
@@ -33,7 +33,7 @@ if (@$_SESSION['webreports']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,25)."...";
 
-	$xt->assign("report_table",", ".mlang_message("WR_TABLE").": ".$stable);
+	$xt->assign("report_table",", "."Table".": ".$stable);
 } else {
 	$xt->assign("report_table","");
 }
@@ -188,7 +188,7 @@ $b_includes .= '
 						if(id=="savebtn")
 						{
 							$("#alert")
-								.html("<p>'.mlang_message("WR_REPORT_SAVED").'</p>")
+								.html("<p>'."Report Saved".'</p>")
 								.dialog("option", "close", function(){
 									window.location = "'.GetTableLink("webreport").'";
 								})
@@ -201,7 +201,7 @@ $b_includes .= '
 					}
 				},
 				error: function() {
-					$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+					$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 				}
 			});
 		}
@@ -236,14 +236,14 @@ if(count($_SESSION['webreports']['group_fields'])>1)
 	$strTemplate='
 	<tr>
 		<td class="tdimg rl" style="text-align:center">
-			<img src="'.GetRootPathForResources("images/layout_stepped.png").'" id="stepped" border="0" alt="'.mlang_message("WR_STEPPED").'" />
-			<img src="'.GetRootPathForResources("images/layout_block.png").'" id="block" border="0" alt="'.mlang_message("WR_BLOCK").'" />
+			<img src="'.GetRootPathForResources("images/layout_stepped.png").'" id="stepped" border="0" alt="'."Stepped Layout".'" />
+			<img src="'.GetRootPathForResources("images/layout_block.png").'" id="block" border="0" alt="'."Block Layout".'" />
 		</td>
 	</tr>
 	<tr>
 		<td class="tdimg rl" style="text-align:center">
-		  <img src="'.GetRootPathForResources("images/layout_align.png").'" id="align" border="0" alt="'.mlang_message("WR_ALIGN").'" />
-		  <img src="'.GetRootPathForResources("images/layout_outline.png").'" id="outline" border="0" alt="'.mlang_message("WR_OUTLINE").'" />
+		  <img src="'.GetRootPathForResources("images/layout_align.png").'" id="align" border="0" alt="'."Align Layout".'" />
+		  <img src="'.GetRootPathForResources("images/layout_outline.png").'" id="outline" border="0" alt="'."Outline Layout".'" />
 		</td>
 	</tr>';
 }
@@ -252,7 +252,7 @@ else
 	$strTemplate='
 	<tr>
 		<td class="tdimg rl" style="text-align:center">
-		<img src="'.GetRootPathForResources("images/layout_tabular.png").'" id="stepped" border="0" alt="'.mlang_message("WR_TABULAR").'" />
+		<img src="'.GetRootPathForResources("images/layout_tabular.png").'" id="stepped" border="0" alt="'."Tabular Layout".'" />
 		</td>
 	</tr>
 		';

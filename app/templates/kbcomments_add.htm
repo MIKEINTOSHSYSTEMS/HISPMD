@@ -81,13 +81,13 @@
 <div>
 {BEGIN message_back_button}
 		
-	<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
 	{END message_back_button}
 {BEGIN view_page_button}
-	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
 {END view_page_button}
 {BEGIN edit_page_button}
-	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
 {END edit_page_button}
 </div>
 </div>
@@ -212,14 +212,14 @@
 		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							{mlang_message SAVE}			</a>
+							Save			</a>
 </span>
 	 
 		{BEGIN back_button}
 <span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="backButton{$id}" >
-							{mlang_message BACK_TO_LIST}			</a>
+							Back to list			</a>
 </span>
 {END back_button}
 	 
@@ -227,7 +227,7 @@
 <span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="cancelButton{$id}" >
-							{mlang_message CANCEL}			</a>
+							Cancel			</a>
 </span>
 {END cancel_button}
 	</div>					</div>

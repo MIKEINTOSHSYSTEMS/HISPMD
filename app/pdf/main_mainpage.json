@@ -109,7 +109,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom KNOWLEDGE_BASE}","color":"#ffffff","background":"#0075d9","hidden":"{$item_hide_text1}","bold":false,"isHtml":true},
+			{"text":"Knowledge Base","color":"#ffffff","background":"#0075d9","hidden":"{$item_hide_text1}","bold":false,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -137,7 +137,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom _BR___BR___BR_}","color":"#00293c","hidden":"{$item_hide_text4}","bold":true,"isHtml":true},
+			{"text":"<br>\nHow can we help you?","color":"#00293c","hidden":"{$item_hide_text4}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","pageBreak":"after","hidden":"{$item_hide_simple_search}"},

@@ -79,66 +79,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_reportingrates["English"]))
 		$tdatadhis2_reportingrates[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_reportingrates["Amharic"] = array();
-	$fieldToolTipsdhis2_reportingrates["Amharic"] = array();
-	$placeHoldersdhis2_reportingrates["Amharic"] = array();
-	$pageTitlesdhis2_reportingrates["Amharic"] = array();
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Organisation_unit_ID"] = "Organisation unit ID";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Organisation_unit_ID"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Organisation_unit_ID"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Organisation_unit"] = "Organisation Unit";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Organisation_unit"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Organisation_unit"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Organisation_unit_code"] = "Organisation unit code";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Organisation_unit_code"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Organisation_unit_code"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Organisation_unit_description"] = "Organisation unit description";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Organisation_unit_description"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Organisation_unit_description"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["actual_reports"] = "Actual Reports";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["actual_reports"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["actual_reports"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["expected_reports"] = "Expected Reports";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["expected_reports"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["expected_reports"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["reporting_rate"] = "Reporting Rate";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["reporting_rate"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["reporting_rate"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["actual_reports_on_time"] = "Actual reports on time";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["actual_reports_on_time"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["actual_reports_on_time"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["reporting_rate_on_time"] = "Reporting rate on time";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["reporting_rate_on_time"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["reporting_rate_on_time"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Dataset_ID"] = "Dataset ID";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Dataset_ID"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Dataset_ID"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Dataset_Name"] = "Dataset Name";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Dataset_Name"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Dataset_Name"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Facility_Type"] = "Facility Type";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Facility_Type"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Facility_Type"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Report_Period"] = "Report Period";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Report_Period"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Report_Period"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Ownership_Type_ID"] = "Ownership Type ID";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Ownership_Type_ID"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Ownership_Type_ID"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Ownership_Type_Label"] = "Ownership Type Label";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Ownership_Type_Label"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Ownership_Type_Label"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Settlement_Type_ID"] = "Settlement Type ID";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Settlement_Type_ID"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Settlement_Type_ID"] = "";
-	$fieldLabelsdhis2_reportingrates["Amharic"]["Settlement_Type_Label"] = "Settlement Type Label";
-	$fieldToolTipsdhis2_reportingrates["Amharic"]["Settlement_Type_Label"] = "";
-	$placeHoldersdhis2_reportingrates["Amharic"]["Settlement_Type_Label"] = "";
-	if (count($fieldToolTipsdhis2_reportingrates["Amharic"]))
-		$tdatadhis2_reportingrates[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_reportingrates[".NCSearch"] = true;

@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_operational_status["English"]))
 		$tdatamfr_operational_status[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmfr_operational_status["Amharic"] = array();
-	$fieldToolTipsmfr_operational_status["Amharic"] = array();
-	$placeHoldersmfr_operational_status["Amharic"] = array();
-	$pageTitlesmfr_operational_status["Amharic"] = array();
-	$fieldLabelsmfr_operational_status["Amharic"]["operationalstatus"] = "የአሠራር ሁኔታ";
-	$fieldToolTipsmfr_operational_status["Amharic"]["operationalstatus"] = "";
-	$placeHoldersmfr_operational_status["Amharic"]["operationalstatus"] = "";
-	$fieldLabelsmfr_operational_status["Amharic"]["status"] = "ሁኔታ";
-	$fieldToolTipsmfr_operational_status["Amharic"]["status"] = "";
-	$placeHoldersmfr_operational_status["Amharic"]["status"] = "";
-	$fieldLabelsmfr_operational_status["Amharic"]["count"] = "ቁጠር";
-	$fieldToolTipsmfr_operational_status["Amharic"]["count"] = "";
-	$placeHoldersmfr_operational_status["Amharic"]["count"] = "";
-	if (count($fieldToolTipsmfr_operational_status["Amharic"]))
-		$tdatamfr_operational_status[".isUseToolTips"] = true;
-}
 
 
 	$tdatamfr_operational_status[".NCSearch"] = true;

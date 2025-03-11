@@ -46,33 +46,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_facility_types["English"]))
 		$tdatamfr_facility_types[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmfr_facility_types["Amharic"] = array();
-	$fieldToolTipsmfr_facility_types["Amharic"] = array();
-	$placeHoldersmfr_facility_types["Amharic"] = array();
-	$pageTitlesmfr_facility_types["Amharic"] = array();
-	$fieldLabelsmfr_facility_types["Amharic"]["Parent_Facility_Type"] = "የወላጅ መገልገያ ዓይነት";
-	$fieldToolTipsmfr_facility_types["Amharic"]["Parent_Facility_Type"] = "";
-	$placeHoldersmfr_facility_types["Amharic"]["Parent_Facility_Type"] = "";
-	$fieldLabelsmfr_facility_types["Amharic"]["id"] = "መለያ";
-	$fieldToolTipsmfr_facility_types["Amharic"]["id"] = "";
-	$placeHoldersmfr_facility_types["Amharic"]["id"] = "";
-	$fieldLabelsmfr_facility_types["Amharic"]["parentFacilityTypeId"] = "የወላጅ መገልገያ አይነት መለያ";
-	$fieldToolTipsmfr_facility_types["Amharic"]["parentFacilityTypeId"] = "";
-	$placeHoldersmfr_facility_types["Amharic"]["parentFacilityTypeId"] = "";
-	$fieldLabelsmfr_facility_types["Amharic"]["Facility_Type"] = "የመገልገያ አይነት";
-	$fieldToolTipsmfr_facility_types["Amharic"]["Facility_Type"] = "";
-	$placeHoldersmfr_facility_types["Amharic"]["Facility_Type"] = "";
-	$fieldLabelsmfr_facility_types["Amharic"]["code"] = "ኮድ";
-	$fieldToolTipsmfr_facility_types["Amharic"]["code"] = "";
-	$placeHoldersmfr_facility_types["Amharic"]["code"] = "";
-	$fieldLabelsmfr_facility_types["Amharic"]["facilityTypeId"] = "የመገልገያ አይነት መለያ";
-	$fieldToolTipsmfr_facility_types["Amharic"]["facilityTypeId"] = "";
-	$placeHoldersmfr_facility_types["Amharic"]["facilityTypeId"] = "";
-	if (count($fieldToolTipsmfr_facility_types["Amharic"]))
-		$tdatamfr_facility_types[".isUseToolTips"] = true;
-}
 
 
 	$tdatamfr_facility_types[".NCSearch"] = true;

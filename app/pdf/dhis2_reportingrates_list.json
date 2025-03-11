@@ -163,7 +163,7 @@ pdfDocument = {
 			{"text":"👈","color":"#00b5ff","hidden":"{$item_hide_text11}","bold":true,"isHtml":true},
 				
 				
-			{"text":"{$custom START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH}","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"START HERE by Selecting an Dataset, Facility Type and then Report Period the and Click on SEARCH","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -195,7 +195,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom _BR__BR__BR_}","hidden":"{$item_hide_text12}","isHtml":true},
+			{"text":"<br><br>","hidden":"{$item_hide_text12}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -227,7 +227,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_}","hidden":"{$item_hide_text1}","isHtml":true},
+			{"text":"After Selecting from the above Available Datasets and Facility Types, you can use the FILTER below to narrow down your search results by Org Units!","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -317,7 +317,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},

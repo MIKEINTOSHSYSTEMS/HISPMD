@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_quarters["English"]))
 		$tdatamoh_quarters[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_quarters["Amharic"] = array();
-	$fieldToolTipsmoh_quarters["Amharic"] = array();
-	$placeHoldersmoh_quarters["Amharic"] = array();
-	$pageTitlesmoh_quarters["Amharic"] = array();
-	$fieldLabelsmoh_quarters["Amharic"]["quarter_id"] = "Quarter Id";
-	$fieldToolTipsmoh_quarters["Amharic"]["quarter_id"] = "";
-	$placeHoldersmoh_quarters["Amharic"]["quarter_id"] = "";
-	$fieldLabelsmoh_quarters["Amharic"]["quarter"] = "Quarter";
-	$fieldToolTipsmoh_quarters["Amharic"]["quarter"] = "";
-	$placeHoldersmoh_quarters["Amharic"]["quarter"] = "";
-	if (count($fieldToolTipsmoh_quarters["Amharic"]))
-		$tdatamoh_quarters[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_quarters[".NCSearch"] = true;

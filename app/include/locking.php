@@ -22,10 +22,10 @@ class oLocking
 	{
 		global $cman;
 		
-		$this->ConfirmAdmin = mlang_message("LOCK_ADMIN_ABORTED");
-		$this->ConfirmUser = mlang_message("LOCK_TIMED_OUT");
-		$this->LockAdmin = mlang_message("LOCK_RECORD_EDITED_BY");
-		$this->LockUser = mlang_message("LOCK_RECORD_EDITED");
+		$this->ConfirmAdmin = "Administrator %s aborted your edit session";
+		$this->ConfirmUser = "Your edit session timed out";
+		$this->LockAdmin = "Record is edited by %s during %s minutes";
+		$this->LockUser = "Record is edited by another user";
 		
 		$this->connection = $cman->getForLocking();	
 		
@@ -231,9 +231,9 @@ class oLocking
 			$str = mysprintf( $this->LockAdmin, array($data["userid"], round(secondsPassedFrom($data["startdatetime"])/60, 2)) );
 			if( $links ) {
 				$str.='<a class="unlock" href="#">'
-					.mlang_message("LOCK_UNLOCK").'</a>';
+					."Unlock record".'</a>';
 				$str.='<a class="edit" href="#">'
-					.mlang_message("LOCK_EDIT").'</a>';
+					."Edit record".'</a>';
 			}
 			
 			return $str;

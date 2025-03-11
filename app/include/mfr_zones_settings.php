@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_zones["English"]))
 		$tdatamfr_zones[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmfr_zones["Amharic"] = array();
-	$fieldToolTipsmfr_zones["Amharic"] = array();
-	$placeHoldersmfr_zones["Amharic"] = array();
-	$pageTitlesmfr_zones["Amharic"] = array();
-	$fieldLabelsmfr_zones["Amharic"]["regionId"] = "የክልል መለያ";
-	$fieldToolTipsmfr_zones["Amharic"]["regionId"] = "";
-	$placeHoldersmfr_zones["Amharic"]["regionId"] = "";
-	$fieldLabelsmfr_zones["Amharic"]["name"] = "ስም";
-	$fieldToolTipsmfr_zones["Amharic"]["name"] = "";
-	$placeHoldersmfr_zones["Amharic"]["name"] = "";
-	$fieldLabelsmfr_zones["Amharic"]["id"] = "መለያ";
-	$fieldToolTipsmfr_zones["Amharic"]["id"] = "";
-	$placeHoldersmfr_zones["Amharic"]["id"] = "";
-	if (count($fieldToolTipsmfr_zones["Amharic"]))
-		$tdatamfr_zones[".isUseToolTips"] = true;
-}
 
 
 	$tdatamfr_zones[".NCSearch"] = true;

@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_health_facilities["English"]))
 		$tdatamoh_health_facilities[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_health_facilities["Amharic"] = array();
-	$fieldToolTipsmoh_health_facilities["Amharic"] = array();
-	$placeHoldersmoh_health_facilities["Amharic"] = array();
-	$pageTitlesmoh_health_facilities["Amharic"] = array();
-	$fieldLabelsmoh_health_facilities["Amharic"]["facility_id"] = "የፋሲሊቲ መለያ";
-	$fieldToolTipsmoh_health_facilities["Amharic"]["facility_id"] = "";
-	$placeHoldersmoh_health_facilities["Amharic"]["facility_id"] = "";
-	$fieldLabelsmoh_health_facilities["Amharic"]["facility_name"] = "የመገልገያ ስም";
-	$fieldToolTipsmoh_health_facilities["Amharic"]["facility_name"] = "";
-	$placeHoldersmoh_health_facilities["Amharic"]["facility_name"] = "";
-	$fieldLabelsmoh_health_facilities["Amharic"]["facility_type_id"] = "የመገልገያ አይነት መለያ";
-	$fieldToolTipsmoh_health_facilities["Amharic"]["facility_type_id"] = "";
-	$placeHoldersmoh_health_facilities["Amharic"]["facility_type_id"] = "";
-	if (count($fieldToolTipsmoh_health_facilities["Amharic"]))
-		$tdatamoh_health_facilities[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_health_facilities[".NCSearch"] = true;

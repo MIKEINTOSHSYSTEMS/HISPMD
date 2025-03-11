@@ -139,7 +139,7 @@ class ExportPage extends RunnerPage
 			$options[] = '<option value="'.runner_htmlspecialchars( $field ).'" selected="selected">'.runner_htmlspecialchars( $this->pSet->label( $field ) ).'</option>';
 		}
 
-		return '<select name="exportFields" multiple style="width: 100%;" data-placeholder="'.mlang_message("PLEASE_SELECT").'" id="exportFields'. $this->id .'">'. implode( "", $options ) .'</select>';
+		return '<select name="exportFields" multiple style="width: 100%;" data-placeholder="'."Please select".'" id="exportFields'. $this->id .'">'. implode( "", $options ) .'</select>';
 	}
 	
 	/**
@@ -482,11 +482,11 @@ class ExportPage extends RunnerPage
 				if( strlen( $data["totalsType"] ) )
 				{
 					if( $data["totalsType"] == "COUNT" )
-						echo mlang_message("COUNT").": ";
+						echo "Count".": ";
 					elseif( $data["totalsType"] == "TOTAL" )
-						echo mlang_message("TOTAL").": ";
+						echo "Total".": ";
 					elseif( $data["totalsType"] == "AVERAGE" )
-						echo mlang_message("AVERAGE").": ";
+						echo "Average".": ";
 
 					echo runner_htmlspecialchars( GetTotals($data["fName"],
 						$totals[ $data["fName"] ]["value"],
@@ -511,7 +511,7 @@ class ExportPage extends RunnerPage
 		{
 			$fType = $this->pSet->getFieldType( $field );
 			if( IsBinaryType( $fType ) )
-				$values[ $field ] = mlang_message("LONG_BINARY");
+				$values[ $field ] = "LONG BINARY DATA - CANNOT BE DISPLAYED";
 			else
 				$values[ $field ] = $this->getFormattedFieldValue( $field, $row );
 		}

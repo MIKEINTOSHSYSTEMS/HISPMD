@@ -74,7 +74,7 @@ $b_includes .= '
 	});
 	table_name=$("#tables").val();
 	li_selected="db";
-	$("#tl").html("'.mlang_message("WR_SELECT_REPORT_TABLE").'");
+	$("#tl").html("'."Select table which you will use to create the report:".'");
 	$(function() {
 		$("#radio_select_table").tabs();';
 if(postvalue("sqlname"))
@@ -82,7 +82,7 @@ if(postvalue("sqlname"))
 					li_selected_start="custom";
 					$("#radio_custom").click();
 					li_selected="custom";
-					$("#tl").html("'.mlang_message("WR_SELECT_REPORT_SQL").'");
+					$("#tl").html("'."Select SQL query which you will use to create the report:".'");
 					';
 else
 {	
@@ -91,21 +91,21 @@ else
 						li_selected_start="db";
 						$("#radio_db").click();
 						li_selected="db";
-						$("#tl").html("'.mlang_message("WR_SELECT_REPORT_TABLE").'");
+						$("#tl").html("'."Select table which you will use to create the report:".'");
 						';
 	elseif(is_wr_project() && !!$arr_tables_project )
 		$b_includes .= '
 						li_selected_start="project";
 						$("#radio_project").click();
 						li_selected="project";
-						$("#tl").html("'.mlang_message("WR_SELECT_REPORT_TABLE").'");
+						$("#tl").html("'."Select table which you will use to create the report:".'");
 						';
 	else
 		$b_includes .= '
 						li_selected_start="custom";
 						$("#radio_custom").click();
 						li_selected="custom";
-						$("#tl").html("'.mlang_message("WR_SELECT_REPORT_SQL").'");
+						$("#tl").html("'."Select SQL query which you will use to create the report:".'");
 						';
 }
 	$b_includes .= '});
@@ -125,7 +125,7 @@ else
 		{
 			$("#li_db").addClass("selected").addClass("ui-state-selected").addClass("ui-state-active");
 			li_selected="db";
-			$("#tl").html("'.mlang_message("WR_SELECT_REPORT_TABLE").'");
+			$("#tl").html("'."Select table which you will use to create the report:".'");
 			NEXT_PAGE_URL = "'.GetTableLink("webreport1").'";
 			PREV_PAGE_URL = "'.GetTableLink("webreport").'";';
 	$b_includes .= '$("td[id=row1], td[id=row2]").show();'."\r\n";			
@@ -144,7 +144,7 @@ else
 			$("#li_project").addClass("selected").addClass("ui-state-selected").addClass("ui-state-active");
 			$("#add_new_query").hide();
 			li_selected="project";
-			$("#tl").html("'.mlang_message("WR_SELECT_REPORT_TABLE").'");
+			$("#tl").html("'."Select table which you will use to create the report:".'");
 			NEXT_PAGE_URL = "'.GetTableLink("webreport3").'";
 			PREV_PAGE_URL = "'.GetTableLink("webreport").'";';
 			$b_includes .= '$("td[id=row1], td[id=row2]").hide();'."\r\n";
@@ -163,7 +163,7 @@ else
 	{
 			$("#li_custom").addClass("selected").addClass("ui-state-selected").addClass("ui-state-active");
 			$("#add_new_query").show();
-			$("#tl").html("'.mlang_message("WR_SELECT_REPORT_SQL").'");
+			$("#tl").html("'."Select SQL query which you will use to create the report:".'");
 			li_selected="custom";';
 		if(isWRAdmin() && ($_SESSION['webreports']['tmp_active']=="x" || @$_SESSION['webreports']['settings']['title']==""))
 			$b_includes .= '$("#add_new_query").show();';
@@ -427,7 +427,7 @@ foreach ($arr_tables as $tbl_name) {
 }
 
 if (@$_SESSION['webreports']['settings']['title'] != "") {
-	$xt->assign("report_title",", ".mlang_message("WR_TITLE").": ".@$_SESSION['webreports']['settings']['title']);
+	$xt->assign("report_title",", "."Title".": ".@$_SESSION['webreports']['settings']['title']);
 } else {
 	$xt->assign("report_title","");
 }

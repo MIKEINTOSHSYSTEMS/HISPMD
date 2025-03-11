@@ -37,24 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsresearch["English"]))
 		$tdataresearch[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsresearch["Amharic"] = array();
-	$fieldToolTipsresearch["Amharic"] = array();
-	$placeHoldersresearch["Amharic"] = array();
-	$pageTitlesresearch["Amharic"] = array();
-	$fieldLabelsresearch["Amharic"]["research_id"] = "የምርምር መለያ";
-	$fieldToolTipsresearch["Amharic"]["research_id"] = "";
-	$placeHoldersresearch["Amharic"]["research_id"] = "";
-	$fieldLabelsresearch["Amharic"]["title"] = "ርዕስ";
-	$fieldToolTipsresearch["Amharic"]["title"] = "";
-	$placeHoldersresearch["Amharic"]["title"] = "";
-	$fieldLabelsresearch["Amharic"]["conducted"] = "ተካሂዷል";
-	$fieldToolTipsresearch["Amharic"]["conducted"] = "";
-	$placeHoldersresearch["Amharic"]["conducted"] = "";
-	if (count($fieldToolTipsresearch["Amharic"]))
-		$tdataresearch[".isUseToolTips"] = true;
-}
 
 
 	$tdataresearch[".NCSearch"] = true;

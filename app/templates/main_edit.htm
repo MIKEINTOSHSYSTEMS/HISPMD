@@ -79,10 +79,10 @@
 <h5>{$message}</h5>
 <div>
 {BEGIN message_back_button}
-			<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
 	{END message_back_button}
 {BEGIN message_view_page_button}
-		<a class="btn btn-sm btn-default" href="main_view.php?{$editlink}" {$view_page_button_attrs}>{mlang_message VIEW}</a>
+		<a class="btn btn-sm btn-default" href="main_view.php?{$editlink}" {$view_page_button_attrs}>View</a>
 {END message_view_page_button}
 </div>
 </div>
@@ -331,7 +331,7 @@
 <span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							{mlang_message SAVE}			</a>
+							Save			</a>
 </span>
 {END save_edit}
 	 
@@ -339,7 +339,7 @@
 <span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							{mlang_message BACK_TO_LIST}			</a>
+							Back to list			</a>
 </span>
 {END back_button}
 	 
@@ -347,7 +347,7 @@
 <span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$closebutton_attrs} >
-							{mlang_message CANCEL}			</a>
+							Cancel			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -366,14 +366,14 @@
 								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
 				<a  {$resetbutton_attrs}  title="" >
 				
-		{mlang_message RESET}		
+		Reset		
 		</a>
 	</li>
 							{BEGIN view_page_button}
 	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
 				<a  href="main_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
 				
-		{mlang_message VIEW}		
+		View		
 		</a>
 	</li>
 {END view_page_button}

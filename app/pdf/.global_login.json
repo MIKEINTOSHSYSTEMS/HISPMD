@@ -54,7 +54,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$logo}","hidden":"{$item_hide_login-logo}","fontSize":24,"isHtml":true},
+			{"text":"<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>","hidden":"{$item_hide_login-logo}","fontSize":24,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -175,7 +175,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message LOGIN_SUBTITLE}","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
+			{"text":"Login into your account","hidden":"{$item_hide_login_welcome}","bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -260,7 +260,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{mlang_message USERNAME}","hidden":"{$item_hide_username_label}","bold":true,"isHtml":true},
+			{"text":"Username","hidden":"{$item_hide_username_label}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_username}"},
@@ -295,7 +295,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{mlang_message PASSWORD}","hidden":"{$item_hide_password_label}","bold":true,"isHtml":true},
+			{"text":"Password","hidden":"{$item_hide_password_label}","bold":true,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_password}"},

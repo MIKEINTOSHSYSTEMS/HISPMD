@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsfaicons1["English"]))
 		$tdatafaicons1[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsfaicons1["Amharic"] = array();
-	$fieldToolTipsfaicons1["Amharic"] = array();
-	$placeHoldersfaicons1["Amharic"] = array();
-	$pageTitlesfaicons1["Amharic"] = array();
-	$fieldLabelsfaicons1["Amharic"]["id"] = "Id";
-	$fieldToolTipsfaicons1["Amharic"]["id"] = "";
-	$placeHoldersfaicons1["Amharic"]["id"] = "";
-	$fieldLabelsfaicons1["Amharic"]["icon"] = "Icon";
-	$fieldToolTipsfaicons1["Amharic"]["icon"] = "";
-	$placeHoldersfaicons1["Amharic"]["icon"] = "";
-	if (count($fieldToolTipsfaicons1["Amharic"]))
-		$tdatafaicons1[".isUseToolTips"] = true;
-}
 
 
 	$tdatafaicons1[".NCSearch"] = true;

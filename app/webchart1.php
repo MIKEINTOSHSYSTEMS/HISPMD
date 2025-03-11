@@ -25,7 +25,7 @@ if (@$_SESSION['webcharts']['settings']['title'] != "") {
 	$title=@$_SESSION['webcharts']['settings']['title'];
 	if(strlen($title)>25)
 		$title=substr($title,25)."...";
-	$xt->assign("chart_title",", ".mlang_message("WR_TITLE").": ".$title);
+	$xt->assign("chart_title",", "."Title".": ".$title);
 } else {
 	$xt->assign("chart_title","");
 }
@@ -34,7 +34,7 @@ if (@$_SESSION['webcharts']['tables'][0] != "") {
 	if(strlen($stable)>25)
 		$stable=substr($stable,25)."...";
 
-	$xt->assign("chart_table",", ".mlang_message("WR_TABLE").": ".$stable);
+	$xt->assign("chart_table",", "."Table".": ".$stable);
 } else {
 	$xt->assign("chart_table","");
 }
@@ -208,11 +208,11 @@ $(document).ready(function(){
 			leftFieldSelector = "select[id^=left_fields_]";
 		
 		if ( tbl_left == -1 ) {
-			$("#alert").html("<p>'.mlang_message("WR_LEFT_TABLE").'</p>").dialog("open");
+			$("#alert").html("<p>'."Select left table".'</p>").dialog("open");
 			return;
 		}
 		if ( tbl_right == -1 ) {
-			$("#alert").html("<p>'.mlang_message("WR_RIGHT_TABLE").'</p>").dialog("open");
+			$("#alert").html("<p>'."Select right table".'</p>").dialog("open");
 			return;
 		}
 		// add check if field is selected
@@ -232,7 +232,7 @@ $(document).ready(function(){
 		rel_txt = rel_txt.substr(0,rel_txt.length-5);
 	
 		if (relation_stack[rel_txt] != undefined) {
-			$("#alert").html("<p>'.mlang_message("WR_EXISTS_RELATION").'</p>").dialog("open");
+			$("#alert").html("<p>'."The relation with selected parameters already exists".'</p>").dialog("open");
 			return;
 		}		
 		
@@ -298,7 +298,7 @@ $(document).ready(function(){
 			relation_stack[val] = undefined;
 			$(rel).remove();
 		} else {
-			$("#alert").html("<p>'.mlang_message("WR_REMOVE_RELATION").'</p>").dialog("open");
+			$("#alert").html("<p>'."Select relation you want to remove".'</p>").dialog("open");
 			return;
 		}
 	});
@@ -446,7 +446,7 @@ $b_includes .= '
 						if( id == "savebtn")
 						{
 							$("#alert")
-								.html("<p>'.mlang_message("WR_CHART_SAVED").'</p>")
+								.html("<p>'."Chart Saved".'</p>")
 								.dialog("option", "close", function(){
 									window.location = "'.GetTableLink("webreport").'";
 								})
@@ -455,11 +455,11 @@ $b_includes .= '
 						else
 							$("#preview").click();
 					} else {
-						$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+						$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 					}
 				},
 				error: function() {
-					$("#alert").html("<p>'.mlang_message("WR_SOME_PROBLEM").'</p>").dialog("open");
+					$("#alert").html("<p>'."Some problems appear during saving".'</p>").dialog("open");
 				}
 			});
 		}

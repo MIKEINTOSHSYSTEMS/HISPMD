@@ -70,57 +70,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_indicators_data_values_chart1["English"]))
 		$tdatamoh_indicators_data_values_chart1[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"] = array();
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"] = array();
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"] = array();
-	$pageTitlesmoh_indicators_data_values_chart1["Amharic"] = array();
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Indicator_Group"] = "Indicator Group";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Indicator_Group"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Indicator_Group"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Baseline"] = "Baseline";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Baseline"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Baseline"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Target"] = "Target";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Target"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Target"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Facility_Type"] = "Facility Type";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Facility_Type"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Facility_Type"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Data_Source"] = "Data Source";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Data_Source"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Data_Source"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Assessment"] = "Assessment";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Assessment"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Assessment"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Administration_Unit"] = "Administration Unit";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Administration_Unit"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Administration_Unit"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Year"] = "Year";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Year"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Year"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Scope"] = "Scope";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Scope"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Scope"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Region"] = "Region";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Region"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Region"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Gender_Sex"] = "Gender/Sex";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Gender_Sex"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Gender_Sex"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Value"] = "Value";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Value"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Value"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Data_Representation"] = "Data Representation";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Data_Representation"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Data_Representation"] = "";
-	$fieldLabelsmoh_indicators_data_values_chart1["Amharic"]["Indicator_Name"] = "Indicator Name";
-	$fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]["Indicator_Name"] = "";
-	$placeHoldersmoh_indicators_data_values_chart1["Amharic"]["Indicator_Name"] = "";
-	if (count($fieldToolTipsmoh_indicators_data_values_chart1["Amharic"]))
-		$tdatamoh_indicators_data_values_chart1[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_indicators_data_values_chart1[".NCSearch"] = true;

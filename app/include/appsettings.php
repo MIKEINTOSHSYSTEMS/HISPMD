@@ -48,553 +48,8 @@ include(getabspath('classes/pdlayout.php'));
 
 //	custom labels
 $custom_labels = array();
-$custom_labels["Amharic"] = array();
-	$custom_labels["Amharic"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<iframe
-    src=\"https://viz.hispmd.merqconsultancy.org/public/dashboard/d918846e-4cd4-4909-837e-73c99e8f85d8\"
-    frameborder=\"0\"
-    width=\"100%\"
-    height=\"100%\"
-    allowtransparency
-></iframe>";
-		$custom_labels["Amharic"]['_BR_'] = "<br>";
-		$custom_labels["Amharic"]['_BR___BR___BR_'] = "<br>
-ምን እንረዳዎ?
-
-";
-		$custom_labels["Amharic"]['HOW_CAN_WE_HELP_YOU_'] = "የእውቀት ማዕከል";
-		$custom_labels["Amharic"]['_BR__'] = "<br>
-ምን እንረዳዎ?
-<br>
-<br>";
-		$custom_labels["Amharic"]['KNOWLEDGE_BASE'] = "የእውቀት ማዕከል";
-		$custom_labels["Amharic"]['MOST_VISITED_CONTENTS'] = "በብዛት የተጎበኙ ይዘቶች";
-		$custom_labels["Amharic"]['NAME'] = "Name";
-		$custom_labels["Amharic"]['ORGANISATION_AND_DEPARTMENT'] = "Organisation and Department";
-		$custom_labels["Amharic"]['__DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_HISPMD_CHART_VISUALIZATIONS__TITLE_______STYLE__________HTML__BODY_______________MARGIN__0______________PADDING__0______________WIDTH__100_______________HEIGHT__100_______________DISPLAY__FLEX______________JUSTIFY_CONTENT__CENTER______________ALIGN_ITEMS__CENTER____________________IFRAME_______________BORDER__NONE______________WIDTH__100_______________HEIGHT__100VH_____________________MEDIA__MAX_WIDTH__768PX________________IFRAME___________________HEIGHT__80VH_____ADJUST_HEIGHT_FOR_SMALLER_SCREENS_____________________________________MEDIA__MAX_WIDTH__480PX________________IFRAME___________________HEIGHT__70VH_____FURTHER_ADJUST_FOR_MOBILE_DEVICES__________________________________STYLE____HEAD___BODY_______IFRAME_________ID__HISPMD_IFRAME__________SRC_____API__VISUALIZATION_________SRC__HTTPS___HISPMD_MERQCONSULTANCY_ORG_API_VISUALIZATION______________ALLOWTRANSPARENCY___IFRAME____BODY____HTML__'] = "<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <title>HISPMD Chart Visualizations</title>
-    <style>
-        iframe {
-            border: none;
-            width: 100%;
-            height: 77vh;
-        }
-        @media (max-width: 768px) {
-            iframe {
-                height: 80vh; /* Adjust height for smaller screens */
-            }
-        }
-        @media (max-width: 480px) {
-            iframe {
-                height: 70vh; /* Further adjust for mobile devices */
-            }
-        }
-    </style>
-</head>
-<body>
-    <iframe
-        id=\"hispmd-iframe\"
-        src=\"../api/visualization/\"
-		<!--src=\"https://hispmd.merqconsultancy.org/api/visualization/\"-->
-        allowtransparency></iframe>
-<!--If any Questions Please Contact https://github.com/MIKEINTOSHSYSTEMS -->
-</body>
-</html>
-";
-		$custom_labels["Amharic"]['START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH'] = "START HERE by Selecting an Dataset, Facility Type and then Report Period the and Click on SEARCH";
-		$custom_labels["Amharic"]['AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_'] = "After Selecting from the above Available Datasets and Facility Types, you can use the FILTER below to narrow down your search results by Org Units!";
-		$custom_labels["Amharic"]['___'] = "⬅️";
-		$custom_labels["Amharic"]['_BR__BR__BR_'] = "<br><br><br>";
-		$custom_labels["Amharic"]['_P_CLICK_ON_THE_BUTTON_TO_EDIT_THE_SETTINGS__STRONG___GT___STRONG___P_'] = "<p>Click on the button to edit the settings <strong>=&gt;</strong></p>";
-		$custom_labels["Amharic"]['__DOCTYPE_HTML___HTML_LANG__EN_____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_UPDATE_REPORTING_RATES__TITLE____________INCLUDE_BOOTSTRAP_CSS_FOR_MODERN_LOOK__________LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET_________STYLE__________BODY_______________BACKGROUND_COLOR___F1F5F9______________FONT_FAMILY___ARIAL___SANS_SERIF______________PADDING__20PX______________________CONTAINER_______________MAX_WIDTH__600PX______________MARGIN__0_AUTO______________BACKGROUND___FFFFFF______________BORDER_RADIUS__10PX______________BOX_SHADOW__0_4PX_6PX_RGBA_0__0__0__0_1_______________PADDING__20PX_____________________H1_______________FONT_SIZE__1_8REM______________FONT_WEIGHT__BOLD______________COLOR___333______________________PROGRESS_CONTAINER_______________MARGIN_TOP__20PX______________________LOG_CONTAINER_______________MARGIN_TOP__20PX______________MAX_HEIGHT__300PX______________OVERFLOW_Y__AUTO______________BACKGROUND___F8F9FA______________PADDING__15PX______________BORDER__1PX_SOLID__DEE2E6______________BORDER_RADIUS__5PX______________________LOG_CONTAINER_PRE_______________MARGIN__0______________FONT_SIZE__14PX______________COLOR___495057______________WHITE_SPACE__PRE_WRAP______________________BTN_LG_______________FONT_SIZE__1REM______________PADDING__10PX_20PX______________________PROGRESS_BAR_______________TRANSITION__WIDTH_0_4S_EASE_____________________FOOTER_______________MARGIN_TOP__20PX______________TEXT_ALIGN__CENTER______________FONT_SIZE__0_9REM______________COLOR___6C757D_____________________FOOTER_A_______________COLOR___007BFF______________TEXT_DECORATION__NONE_____________________FOOTER_A_HOVER_______________TEXT_DECORATION__UNDERLINE__________________STYLE____HEAD____BODY_______DIV_CLASS__CONTAINER____________DIV_ALIGN__CENTER___SVG_WIDTH__64PX__HEIGHT__64PX__VIEWBOX__0_0_48_48__FILL__NONE__XMLNS__HTTP___WWW_W3_ORG_2000_SVG___G_ID__SVGREPO_BGCARRIER__STROKE_WIDTH__0____G__G_ID__SVGREPO_TRACERCARRIER__STROKE_LINECAP__ROUND__STROKE_LINEJOIN__ROUND____G__G_ID__SVGREPO_ICONCARRIER____PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M8_05655_23_9708L6_86383_24_7067C5_64458_25_4589_5_58843_27_2115_6_75703_28_0402L22_8484_39_4515C23_5388_39_9411_24_4626_39_9431_25_1551_39_4565L41_3962_28_0456C42_5744_27_2178_42_5181_25_4536_41_2895_24_7026L39_8479_23_8215L38_0784_25_0839L40_2464_26_4091L24_0054_37_8201L7_91396_26_4088L9_84309_25_2186L8_05655_23_9708ZM33_4418_22_2498L24_0049_16_4814L14_4796_22_3581L12_693_21_1103L22_9547_14_7793C23_596_14_3837_24_4051_14_382_25_0479_14_775L35_2113_20_9873L33_4418_22_2498Z__FILL___3276C3____PATH___PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M24_0048_9_48139L7_91391_19_4087L24_0053_30_82L40_2464_19_4091L24_0048_9_48139ZM6_86378_17_7066C5_64453_18_4588_5_58838_20_2114_6_75698_21_0401L22_8484_32_4514C23_5388_32_941_24_4626_32_943_25_1551_32_4565L41_3961_21_0455C42_5744_20_2177_42_518_18_4536_41_2894_17_7026L25_0479_7_77494C24_4051_7_38199_23_5959_7_38367_22_9547_7_77927L6_86378_17_7066Z__FILL___3276C3____PATH____G___SVG___DIV___________H2_CLASS__TEXT_CENTER_MB_4__UPDATE__U_DHIS2__U__REPORTING_RATES__H2____________DIV_CLASS__TEXT_CENTER________________BUTTON_ID__STARTUPDATE__CLASS__BTN_BTN_PRIMARY_BTN_LG__UPDATE_REPORTING_RATES__BUTTON____________DIV____________DIV_CLASS__PROGRESS_CONTAINER________________DIV_CLASS__PROGRESS____________________DIV_ID__PROGRESSBAR__CLASS__PROGRESS_BAR_BG_SUCCESS__ROLE__PROGRESSBAR__STYLE__WIDTH__0___ARIA_VALUENOW__0__ARIA_VALUEMIN__0__ARIA_VALUEMAX__100__0___DIV________________DIV____________DIV____________DIV_CLASS__LOG_CONTAINER_MT_4________________H5_CLASS__MB_3__LOGS___H5_______________PRE_ID__LOG__CLICK_THE_BUTTON_TO_START_THE_UPDATE_PROCESS_____PRE____________DIV____________FOOTER__________________BUILT_WITH____BY__A_HREF__HTTPS___MERQCONSULTANCY_ORG__TARGET___BLANK__MERQ_CONSULTANCY_PLC_LLC__A_______________FOOTER________DIV____________INCLUDE_JQUERY__________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT___________BOOTSTRAP_BUNDLE_JS__________SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT________SCRIPT____________DOCUMENT__READY_FUNCTION______________________STARTUPDATE___ON__CLICK___FUNCTION______________________CONST_BUTTON_____THIS___________________CONST_PROGRESSBAR_______PROGRESSBAR____________________CONST_LOG_______LOG________________________RESET_PROGRESS_BAR_AND_LOG_________________PROGRESSBAR_CSS__WIDTH____0____ATTR__ARIA_VALUENOW___0__TEXT__0_____________________LOG_HTML__________CLEAR_LOGS_________________BUTTON_PROP__DISABLED___TRUE__TEXT__UPDATING___________________________SIMULATE_THE_UPDATE_PROCESS___________________AJAX_______________________URL______API_DHIS2_APIS_UPDATE_REPORTING_RATES_PHP_______________________TYPE___GET_______________________XHR__FUNCTION______________________________CONST_XHR___NEW_WINDOW_XMLHTTPREQUEST________________________________UPDATE_PROGRESS_AND_LOG_IN_REAL_TIME_________________________XHR_ONPROGRESS___FUNCTION__E________________________________IF__E_LENGTHCOMPUTABLE____________________________________CONST_PROGRESS___MATH_FLOOR__E_LOADED___E_TOTAL____100___________________________________PROGRESSBAR_CSS__WIDTH___PROGRESS________ATTR__ARIA_VALUENOW___PROGRESS__TEXT_PROGRESS____________________________________________________________________CONST_NEWLOG___E_TARGET_RESPONSETEXT______________________________LOG_HTML_NEWLOG_______UPDATE_LOG_DIV_WITH_NEW_LOG_DATA_____________________________________________________RETURN_XHR_____________________________________________SUCCESS__FUNCTION__RESPONSE____________________________PROGRESSBAR_CSS__WIDTH____100____ATTR__ARIA_VALUENOW___100__TEXT__100_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES____________________________LOG_APPEND___PRE_UPDATE_COMPLETED_SUCCESSFULLY___PRE________________________________________________ERROR__FUNCTION__XHR__STATUS__ERROR____________________________LOG_APPEND___PRE_ERROR____ERROR___PRE_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES________________________________________________________________________________SCRIPT____BODY_____HTML__'] = "<!DOCTYPE html>
-<html lang=\"en\">
-
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <title>Update Reporting Rates</title>
-
-    <!-- Include Bootstrap CSS for modern look -->
-    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
-
-    <style>
-        body {
-            background-color: #f1f5f9;
-            font-family: 'Arial', sans-serif;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .progress-container {
-            margin-top: 20px;
-        }
-
-        .log-container {
-            margin-top: 20px;
-            max-height: 300px;
-            overflow-y: auto;
-            background: #f8f9fa;
-            padding: 15px;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-        }
-
-        .log-container pre {
-            margin: 0;
-            font-size: 14px;
-            color: #495057;
-            white-space: pre-wrap;
-        }
-
-        .btn-lg {
-            font-size: 1rem;
-            padding: 10px 20px;
-        }
-
-        .progress-bar {
-            transition: width 0.4s ease;
-        }
-
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-
-        footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-
-<body>
-    <div class=\"container\">
-        <div align=\"center\"><svg width=\"64px\" height=\"64px\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.05655 23.9708L6.86383 24.7067C5.64458 25.4589 5.58843 27.2115 6.75703 28.0402L22.8484 39.4515C23.5388 39.9411 24.4626 39.9431 25.1551 39.4565L41.3962 28.0456C42.5744 27.2178 42.5181 25.4536 41.2895 24.7026L39.8479 23.8215L38.0784 25.0839L40.2464 26.4091L24.0054 37.8201L7.91396 26.4088L9.84309 25.2186L8.05655 23.9708ZM33.4418 22.2498L24.0049 16.4814L14.4796 22.3581L12.693 21.1103L22.9547 14.7793C23.596 14.3837 24.4051 14.382 25.0479 14.775L35.2113 20.9873L33.4418 22.2498Z\" fill=\"#3276c3\"></path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24.0048 9.48139L7.91391 19.4087L24.0053 30.82L40.2464 19.4091L24.0048 9.48139ZM6.86378 17.7066C5.64453 18.4588 5.58838 20.2114 6.75698 21.0401L22.8484 32.4514C23.5388 32.941 24.4626 32.943 25.1551 32.4565L41.3961 21.0455C42.5744 20.2177 42.518 18.4536 41.2894 17.7026L25.0479 7.77494C24.4051 7.38199 23.5959 7.38367 22.9547 7.77927L6.86378 17.7066Z\" fill=\"#3276c3\"></path> </g></svg></div>
-        <h2 class=\"text-center mb-4\">Update <u>DHIS2</u> Reporting Rates</h2>
-
-        <div class=\"text-center\">
-            <button id=\"startUpdate\" class=\"btn btn-primary btn-lg\">Update Reporting Rates</button>
-        </div>
-
-        <div class=\"progress-container\">
-            <div class=\"progress\">
-                <div id=\"progressBar\" class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 0%\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\">0%</div>
-            </div>
-        </div>
-
-        <div class=\"log-container mt-4\">
-            <h5 class=\"mb-3\">Logs:</h5>
-            <pre id=\"log\">Click the button to start the update process...</pre>
-        </div>
-
-        <footer>
-           <!-- Built with ❤️ by <a href=\"https://merqconsultancy.org\" target=\"_blank\">MERQ Consultancy PLC LLC</a>-->
-        </footer>
-    </div>
-
-    <!-- Include jQuery -->
-    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
-    <!-- Bootstrap Bundle JS -->
-    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\"></script>
-
-    <script>
-        \$(document).ready(function () {
-            \$('#startUpdate').on('click', function () {
-                const button = \$(this);
-                const progressBar = \$('#progressBar');
-                const log = \$('#log');
-
-                // Reset progress bar and log
-                progressBar.css('width', '0%').attr('aria-valuenow', 0).text('0%');
-                log.html('');  // Clear logs
-                button.prop('disabled', true).text('Updating...');
-
-                // Simulate the update process
-                \$.ajax({
-                    url: '../api/dhis2/apis/update_reporting_rates.php',
-                    type: 'GET',
-                    xhr: function () {
-                        const xhr = new window.XMLHttpRequest();
-
-                        // Update progress and log in real-time
-                        xhr.onprogress = function (e) {
-                            if (e.lengthComputable) {
-                                const progress = Math.floor((e.loaded / e.total) * 100);
-                                progressBar.css('width', progress + '%').attr('aria-valuenow', progress).text(progress + '%');
-                            }
-
-                            const newLog = e.target.responseText;
-                            log.html(newLog);  // Update log div with new log data
-                        };
-
-                        return xhr;
-                    },
-                    success: function (response) {
-                        progressBar.css('width', '100%').attr('aria-valuenow', 100).text('100%');
-                        button.prop('disabled', false).text('Update Reporting Rates');
-                        log.append('<pre>Update completed successfully!</pre>');
-                    },
-                    error: function (xhr, status, error) {
-                        log.append(`<pre>Error: \${error}</pre>`);
-                        button.prop('disabled', false).text('Update Reporting Rates');
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-
-</html>
-";
-		$custom_labels["Amharic"]['__PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_'] = "<?php
-// Include database connection
-include '../api/dhis2/eidm_hc/settings/db_connection.php';
-?>
-<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <title>DHIS2 EIDM Data Management</title>
-    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
-    <style>
-        .container { max-width: 1200px; margin: 40px auto; }
-        .data-preview { max-height: 500px; overflow-y: auto; margin: 20px 0; }
-        .status-box { padding: 15px; margin: 10px 0; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <div class=\"container\">
-        <h2 class=\"mb-4\">DHIS2 - EIDM [HC|HOSP|WOR|HP] Data Management</h2>
-
-        <!-- Add this after <h2> tag -->
-<ul class=\"nav nav-tabs mb-4\">
-    <li class=\"nav-item\">
-        <a class=\"nav-link active\" href=\"#operations\" data-bs-toggle=\"tab\">Operations</a>
-    </li>
-    <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"#settings\" data-bs-toggle=\"tab\">Settings</a>
-    </li>
-</ul>
-
-<div class=\"tab-content\">
-    <div class=\"tab-pane fade show active\" id=\"operations\">
-        <!-- Existing operations content -->
-    </div>
-    <div class=\"tab-pane fade\" id=\"settings\">
-        <?php include '../api/dhis2/eidm_hc/settings_ui.php'; ?>
-    </div>
-</div>
-        
-        <!-- Control Section -->
-        <div class=\"card mb-4\">
-            <div class=\"card-header bg-primary text-white\">
-                Operations
-            </div>
-            <div class=\"card-body\">
-                <button id=\"updateData\" class=\"btn btn-success\">
-                    Update EIDM Data
-                </button>
-                <div id=\"status\" class=\"status-box\"></div>
-            </div>
-        </div>
-
-        <!-- Data Preview Section -->
-        <div class=\"card\">
-            <div class=\"card-header\">
-                Data Preview (Last Fetched Results)
-            </div>
-            <div class=\"card-body\">
-                <div id=\"dataPreview\" class=\"data-preview\">
-                    <!-- Data will be loaded here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
-    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\"></script>
-    <script>
-    \$(document).ready(function() {
-        \$('#updateData').click(function() {
-            const btn = \$(this);
-            btn.prop('disabled', true);
-            \$('#status').html('<div class=\"alert alert-info\">Fetching data from API...</div>');
-
-            // Fetch data from API
-            \$.ajax({
-                url: '../api/dhis2/eidm_hc/settings/api_eidmhc.php',
-                method: 'GET',
-                dataType: 'json',
-                success: function(apiData) {
-                    \$('#status').html('<div class=\"alert alert-info\">Saving data to database...</div>');
-                    
-                    // Send data to save endpoint
-                    \$.ajax({
-                        url: '../api/dhis2/eidm_hc/save_data.php',
-                        method: 'POST',
-                        contentType: 'application/json',
-                        data: JSON.stringify(apiData),
-                        success: function(response) {
-                            if(response.success) {
-                                \$('#status').html(`
-                                    <div class=\"alert alert-success\">
-                                        Success! \${response.inserted_rows} records inserted
-                                    </div>
-                                `);
-                                loadDataPreview();
-                            } else {
-                                \$('#status').html(`
-                                    <div class=\"alert alert-danger\">
-                                        Error: \${response.error}
-                                    </div>
-                                `);
-                            }
-                        },
-                        error: function(xhr) {
-                            \$('#status').html(`
-                                <div class=\"alert alert-danger\">
-                                    Save failed: \${xhr.responseJSON?.error || 'Unknown error'}
-                                </div>
-                            `);
-                        },
-                        complete: () => btn.prop('disabled', false)
-                    });
-                },
-                error: function(xhr) {
-                    \$('#status').html(`
-                        <div class=\"alert alert-danger\">
-                            API Error: \${xhr.responseJSON?.error || 'Unknown error'}
-                        </div>
-                    `);
-                    btn.prop('disabled', false);
-                }
-            });
-        });
-
-        function loadDataPreview() {
-            \$.get('../api/dhis2/eidm_hc/fetch_data.php', function(data) {
-                const preview = \$('#dataPreview');
-                preview.html(
-                    `<table class=\"table table-striped\">
-                        <thead>
-                            <tr>
-                                <th>Indicator</th>
-                                <th>Organisation Unit</th>
-                                <th>Period</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            \${data.rows.map(row => `
-                                <tr>
-                                    <td>\${row.indicator}</td>
-                                    <td>\${row.organisation_unit}</td>
-                                    <td>\${row.period}</td>
-                                    <td>\${row.value}</td>
-                                </tr>
-                            `).join('')}
-                        </tbody>
-                    </table>`
-                );
-            }).fail(() => {
-                \$('#dataPreview').html('<div class=\"alert alert-warning\">Error loading preview</div>');
-            });
-        }
-
-        // Load initial preview
-        loadDataPreview();
-    });
-    </script>
-</body>
-</html>";
-		$custom_labels["Amharic"]['__PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_1'] = "<?php
-// Include database connection
-include '../api/dhis2/eidm_hc/settings/db_connection.php';
-?>
-<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <title>DHIS2 EIDM Data Management</title>
-    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
-    <style>
-        .container { max-width: 1200px; margin: 40px auto; }
-        .data-preview { max-height: 500px; overflow-y: auto; margin: 20px 0; }
-        .status-box { padding: 15px; margin: 10px 0; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <div class=\"container\">
-        <h2 class=\"mb-4\">DHIS2 - EIDM [HC|HOSP|WOR|HP] Data Management</h2>
-
-        <!-- Add this after <h2> tag -->
-<ul class=\"nav nav-tabs mb-4\">
-    <li class=\"nav-item\">
-        <a class=\"nav-link active\" href=\"#operations\" data-bs-toggle=\"tab\">Operations</a>
-    </li>
-    <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"#settings\" data-bs-toggle=\"tab\">Settings</a>
-    </li>
-</ul>
-
-<div class=\"tab-content\">
-    <div class=\"tab-pane fade show active\" id=\"operations\">
-        <!-- Existing operations content -->
-    </div>
-    <div class=\"tab-pane fade\" id=\"settings\">
-        <?php include '../api/dhis2/eidm_hc/settings_ui.php'; ?>
-    </div>
-</div>
-        
-        <!-- Control Section -->
-        <div class=\"card mb-4\">
-            <div class=\"card-header bg-primary text-white\">
-                Operations
-            </div>
-            <div class=\"card-body\">
-                <button id=\"updateData\" class=\"btn btn-success\">
-                    Update EIDM Data
-                </button>
-                <div id=\"status\" class=\"status-box\"></div>
-            </div>
-        </div>
-
-        <!-- Data Preview Section -->
-        <div class=\"card\">
-            <div class=\"card-header\">
-                Data Preview (Last Fetched Results)
-            </div>
-            <div class=\"card-body\">
-                <div id=\"dataPreview\" class=\"data-preview\">
-                    <!-- Data will be loaded here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
-    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\"></script>
-    <script>
-    \$(document).ready(function() {
-        \$('#updateData').click(function() {
-            const btn = \$(this);
-            btn.prop('disabled', true);
-            \$('#status').html('<div class=\"alert alert-info\">Fetching data from API...</div>');
-
-            // Fetch data from API
-            \$.ajax({
-                url: '../api/dhis2/eidm_hc/settings/api_eidmhc.php',
-                method: 'GET',
-                dataType: 'json',
-                success: function(apiData) {
-                    \$('#status').html('<div class=\"alert alert-info\">Saving data to database...</div>');
-                    
-                    // Send data to save endpoint
-                    \$.ajax({
-                        url: '../api/dhis2/eidm_hc/save_data.php',
-                        method: 'POST',
-                        contentType: 'application/json',
-                        data: JSON.stringify(apiData),
-                        success: function(response) {
-                            if(response.success) {
-                                \$('#status').html(`
-                                    <div class=\"alert alert-success\">
-                                        Success! \${response.inserted_rows} records inserted
-                                    </div>
-                                `);
-                                loadDataPreview();
-                            } else {
-                                \$('#status').html(`
-                                    <div class=\"alert alert-danger\">
-                                        Error: \${response.error}
-                                    </div>
-                                `);
-                            }
-                        },
-                        error: function(xhr) {
-                            \$('#status').html(`
-                                <div class=\"alert alert-danger\">
-                                    Save failed: \${xhr.responseJSON?.error || 'Unknown error'}
-                                </div>
-                            `);
-                        },
-                        complete: () => btn.prop('disabled', false)
-                    });
-                },
-                error: function(xhr) {
-                    \$('#status').html(`
-                        <div class=\"alert alert-danger\">
-                            API Error: \${xhr.responseJSON?.error || 'Unknown error'}
-                        </div>
-                    `);
-                    btn.prop('disabled', false);
-                }
-            });
-        });
-
-        function loadDataPreview() {
-            \$.get('../api/dhis2/eidm_hc/fetch_data.php', function(data) {
-                const preview = \$('#dataPreview');
-                preview.html(
-                    `<table class=\"table table-striped\">
-                        <thead>
-                            <tr>
-                                <th>Indicator</th>
-                                <th>Organisation Unit</th>
-                                <th>Period</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            \${data.rows.map(row => `
-                                <tr>
-                                    <td>\${row.indicator}</td>
-                                    <td>\${row.organisation_unit}</td>
-                                    <td>\${row.period}</td>
-                                    <td>\${row.value}</td>
-                                </tr>
-                            `).join('')}
-                        </tbody>
-                    </table>`
-                );
-            }).fail(() => {
-                \$('#dataPreview').html('<div class=\"alert alert-warning\">Error loading preview</div>');
-            });
-        }
-
-        // Load initial preview
-        loadDataPreview();
-    });
-    </script>
-</body>
-</html>";
-	$custom_labels["English"] = array();
-		$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
+$custom_labels["English"] = array();
+	$custom_labels["English"]['_IFRAME_____SRC__HTTPS___VIZ_HISPMD_MERQCONSULTANCY_ORG_PUBLIC_DASHBOARD_D918846E_4CD4_4909_837E_73C99E8F85D8______FRAMEBORDER__0______WIDTH__100_______HEIGHT__100_______ALLOWTRANSPARENCY____IFRAME_'] = "<!DOCTYPE html>
 <html lang=\"en\">
 <head>
     <meta charset=\"UTF-8\">
@@ -638,22 +93,22 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
 
 </html>
 ";
-		$custom_labels["English"]['_BR_'] = "<br>
+	$custom_labels["English"]['_BR_'] = "<br>
 <br>
 <br>
 ";
-		$custom_labels["English"]['_BR___BR___BR_'] = "<br>
+	$custom_labels["English"]['_BR___BR___BR_'] = "<br>
 How can we help you?";
-		$custom_labels["English"]['HOW_CAN_WE_HELP_YOU_'] = "Knowledge Base";
-		$custom_labels["English"]['_BR__'] = "<br>
+	$custom_labels["English"]['HOW_CAN_WE_HELP_YOU_'] = "Knowledge Base";
+	$custom_labels["English"]['_BR__'] = "<br>
 How can we help you?
 <br>
 <br>";
-		$custom_labels["English"]['KNOWLEDGE_BASE'] = "Knowledge Base";
-		$custom_labels["English"]['MOST_VISITED_CONTENTS'] = "Most Visited Contents";
-		$custom_labels["English"]['NAME'] = "Your Name";
-		$custom_labels["English"]['ORGANISATION_AND_DEPARTMENT'] = "Your Organisation and Department";
-		$custom_labels["English"]['__DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_HISPMD_CHART_VISUALIZATIONS__TITLE_______STYLE__________HTML__BODY_______________MARGIN__0______________PADDING__0______________WIDTH__100_______________HEIGHT__100_______________DISPLAY__FLEX______________JUSTIFY_CONTENT__CENTER______________ALIGN_ITEMS__CENTER____________________IFRAME_______________BORDER__NONE______________WIDTH__100_______________HEIGHT__100VH_____________________MEDIA__MAX_WIDTH__768PX________________IFRAME___________________HEIGHT__80VH_____ADJUST_HEIGHT_FOR_SMALLER_SCREENS_____________________________________MEDIA__MAX_WIDTH__480PX________________IFRAME___________________HEIGHT__70VH_____FURTHER_ADJUST_FOR_MOBILE_DEVICES__________________________________STYLE____HEAD___BODY_______IFRAME_________ID__HISPMD_IFRAME__________SRC_____API__VISUALIZATION_________SRC__HTTPS___HISPMD_MERQCONSULTANCY_ORG_API_VISUALIZATION______________ALLOWTRANSPARENCY___IFRAME____BODY____HTML__'] = "<!DOCTYPE html>
+	$custom_labels["English"]['KNOWLEDGE_BASE'] = "Knowledge Base";
+	$custom_labels["English"]['MOST_VISITED_CONTENTS'] = "Most Visited Contents";
+	$custom_labels["English"]['NAME'] = "Your Name";
+	$custom_labels["English"]['ORGANISATION_AND_DEPARTMENT'] = "Your Organisation and Department";
+	$custom_labels["English"]['__DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_HISPMD_CHART_VISUALIZATIONS__TITLE_______STYLE__________HTML__BODY_______________MARGIN__0______________PADDING__0______________WIDTH__100_______________HEIGHT__100_______________DISPLAY__FLEX______________JUSTIFY_CONTENT__CENTER______________ALIGN_ITEMS__CENTER____________________IFRAME_______________BORDER__NONE______________WIDTH__100_______________HEIGHT__100VH_____________________MEDIA__MAX_WIDTH__768PX________________IFRAME___________________HEIGHT__80VH_____ADJUST_HEIGHT_FOR_SMALLER_SCREENS_____________________________________MEDIA__MAX_WIDTH__480PX________________IFRAME___________________HEIGHT__70VH_____FURTHER_ADJUST_FOR_MOBILE_DEVICES__________________________________STYLE____HEAD___BODY_______IFRAME_________ID__HISPMD_IFRAME__________SRC_____API__VISUALIZATION_________SRC__HTTPS___HISPMD_MERQCONSULTANCY_ORG_API_VISUALIZATION______________ALLOWTRANSPARENCY___IFRAME____BODY____HTML__'] = "<!DOCTYPE html>
 <html lang=\"en\">
 <head>
     <meta charset=\"UTF-8\">
@@ -687,12 +142,12 @@ How can we help you?
 </body>
 </html>
 ";
-		$custom_labels["English"]['START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH'] = "START HERE by Selecting an Dataset, Facility Type and then Report Period the and Click on SEARCH";
-		$custom_labels["English"]['AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_'] = "After Selecting from the above Available Datasets and Facility Types, you can use the FILTER below to narrow down your search results by Org Units!";
-		$custom_labels["English"]['___'] = "⬅️";
-		$custom_labels["English"]['_BR__BR__BR_'] = "<br><br>";
-		$custom_labels["English"]['_P_CLICK_ON_THE_BUTTON_TO_EDIT_THE_SETTINGS__STRONG___GT___STRONG___P_'] = "<p>Click on the button to edit the settings<strong>&nbsp; </strong></p>";
-		$custom_labels["English"]['__DOCTYPE_HTML___HTML_LANG__EN_____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_UPDATE_REPORTING_RATES__TITLE____________INCLUDE_BOOTSTRAP_CSS_FOR_MODERN_LOOK__________LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET_________STYLE__________BODY_______________BACKGROUND_COLOR___F1F5F9______________FONT_FAMILY___ARIAL___SANS_SERIF______________PADDING__20PX______________________CONTAINER_______________MAX_WIDTH__600PX______________MARGIN__0_AUTO______________BACKGROUND___FFFFFF______________BORDER_RADIUS__10PX______________BOX_SHADOW__0_4PX_6PX_RGBA_0__0__0__0_1_______________PADDING__20PX_____________________H1_______________FONT_SIZE__1_8REM______________FONT_WEIGHT__BOLD______________COLOR___333______________________PROGRESS_CONTAINER_______________MARGIN_TOP__20PX______________________LOG_CONTAINER_______________MARGIN_TOP__20PX______________MAX_HEIGHT__300PX______________OVERFLOW_Y__AUTO______________BACKGROUND___F8F9FA______________PADDING__15PX______________BORDER__1PX_SOLID__DEE2E6______________BORDER_RADIUS__5PX______________________LOG_CONTAINER_PRE_______________MARGIN__0______________FONT_SIZE__14PX______________COLOR___495057______________WHITE_SPACE__PRE_WRAP______________________BTN_LG_______________FONT_SIZE__1REM______________PADDING__10PX_20PX______________________PROGRESS_BAR_______________TRANSITION__WIDTH_0_4S_EASE_____________________FOOTER_______________MARGIN_TOP__20PX______________TEXT_ALIGN__CENTER______________FONT_SIZE__0_9REM______________COLOR___6C757D_____________________FOOTER_A_______________COLOR___007BFF______________TEXT_DECORATION__NONE_____________________FOOTER_A_HOVER_______________TEXT_DECORATION__UNDERLINE__________________STYLE____HEAD____BODY_______DIV_CLASS__CONTAINER____________DIV_ALIGN__CENTER___SVG_WIDTH__64PX__HEIGHT__64PX__VIEWBOX__0_0_48_48__FILL__NONE__XMLNS__HTTP___WWW_W3_ORG_2000_SVG___G_ID__SVGREPO_BGCARRIER__STROKE_WIDTH__0____G__G_ID__SVGREPO_TRACERCARRIER__STROKE_LINECAP__ROUND__STROKE_LINEJOIN__ROUND____G__G_ID__SVGREPO_ICONCARRIER____PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M8_05655_23_9708L6_86383_24_7067C5_64458_25_4589_5_58843_27_2115_6_75703_28_0402L22_8484_39_4515C23_5388_39_9411_24_4626_39_9431_25_1551_39_4565L41_3962_28_0456C42_5744_27_2178_42_5181_25_4536_41_2895_24_7026L39_8479_23_8215L38_0784_25_0839L40_2464_26_4091L24_0054_37_8201L7_91396_26_4088L9_84309_25_2186L8_05655_23_9708ZM33_4418_22_2498L24_0049_16_4814L14_4796_22_3581L12_693_21_1103L22_9547_14_7793C23_596_14_3837_24_4051_14_382_25_0479_14_775L35_2113_20_9873L33_4418_22_2498Z__FILL___3276C3____PATH___PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M24_0048_9_48139L7_91391_19_4087L24_0053_30_82L40_2464_19_4091L24_0048_9_48139ZM6_86378_17_7066C5_64453_18_4588_5_58838_20_2114_6_75698_21_0401L22_8484_32_4514C23_5388_32_941_24_4626_32_943_25_1551_32_4565L41_3961_21_0455C42_5744_20_2177_42_518_18_4536_41_2894_17_7026L25_0479_7_77494C24_4051_7_38199_23_5959_7_38367_22_9547_7_77927L6_86378_17_7066Z__FILL___3276C3____PATH____G___SVG___DIV___________H2_CLASS__TEXT_CENTER_MB_4__UPDATE__U_DHIS2__U__REPORTING_RATES__H2____________DIV_CLASS__TEXT_CENTER________________BUTTON_ID__STARTUPDATE__CLASS__BTN_BTN_PRIMARY_BTN_LG__UPDATE_REPORTING_RATES__BUTTON____________DIV____________DIV_CLASS__PROGRESS_CONTAINER________________DIV_CLASS__PROGRESS____________________DIV_ID__PROGRESSBAR__CLASS__PROGRESS_BAR_BG_SUCCESS__ROLE__PROGRESSBAR__STYLE__WIDTH__0___ARIA_VALUENOW__0__ARIA_VALUEMIN__0__ARIA_VALUEMAX__100__0___DIV________________DIV____________DIV____________DIV_CLASS__LOG_CONTAINER_MT_4________________H5_CLASS__MB_3__LOGS___H5_______________PRE_ID__LOG__CLICK_THE_BUTTON_TO_START_THE_UPDATE_PROCESS_____PRE____________DIV____________FOOTER__________________BUILT_WITH____BY__A_HREF__HTTPS___MERQCONSULTANCY_ORG__TARGET___BLANK__MERQ_CONSULTANCY_PLC_LLC__A_______________FOOTER________DIV____________INCLUDE_JQUERY__________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT___________BOOTSTRAP_BUNDLE_JS__________SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT________SCRIPT____________DOCUMENT__READY_FUNCTION______________________STARTUPDATE___ON__CLICK___FUNCTION______________________CONST_BUTTON_____THIS___________________CONST_PROGRESSBAR_______PROGRESSBAR____________________CONST_LOG_______LOG________________________RESET_PROGRESS_BAR_AND_LOG_________________PROGRESSBAR_CSS__WIDTH____0____ATTR__ARIA_VALUENOW___0__TEXT__0_____________________LOG_HTML__________CLEAR_LOGS_________________BUTTON_PROP__DISABLED___TRUE__TEXT__UPDATING___________________________SIMULATE_THE_UPDATE_PROCESS___________________AJAX_______________________URL______API_DHIS2_APIS_UPDATE_REPORTING_RATES_PHP_______________________TYPE___GET_______________________XHR__FUNCTION______________________________CONST_XHR___NEW_WINDOW_XMLHTTPREQUEST________________________________UPDATE_PROGRESS_AND_LOG_IN_REAL_TIME_________________________XHR_ONPROGRESS___FUNCTION__E________________________________IF__E_LENGTHCOMPUTABLE____________________________________CONST_PROGRESS___MATH_FLOOR__E_LOADED___E_TOTAL____100___________________________________PROGRESSBAR_CSS__WIDTH___PROGRESS________ATTR__ARIA_VALUENOW___PROGRESS__TEXT_PROGRESS____________________________________________________________________CONST_NEWLOG___E_TARGET_RESPONSETEXT______________________________LOG_HTML_NEWLOG_______UPDATE_LOG_DIV_WITH_NEW_LOG_DATA_____________________________________________________RETURN_XHR_____________________________________________SUCCESS__FUNCTION__RESPONSE____________________________PROGRESSBAR_CSS__WIDTH____100____ATTR__ARIA_VALUENOW___100__TEXT__100_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES____________________________LOG_APPEND___PRE_UPDATE_COMPLETED_SUCCESSFULLY___PRE________________________________________________ERROR__FUNCTION__XHR__STATUS__ERROR____________________________LOG_APPEND___PRE_ERROR____ERROR___PRE_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES________________________________________________________________________________SCRIPT____BODY_____HTML__'] = "<!DOCTYPE html>
+	$custom_labels["English"]['START_HERE_BY_SELECTING_AN_ORGANISATION_UNIT____DATASET_AND_THEN_REPORT_PERIOD_THE_AND_CLICK_ON_SEARCH'] = "START HERE by Selecting an Dataset, Facility Type and then Report Period the and Click on SEARCH";
+	$custom_labels["English"]['AFTER_SELECTING_FROM_THE_ABOVE_AVAILABLE_DATASETS_AND_ORGANISATION_UNITS__YOU_CAN_USE_THE_FILTERS_BELOW_TO_NARROW_DOWN_YOUR_SEARCH_RESULTS_'] = "After Selecting from the above Available Datasets and Facility Types, you can use the FILTER below to narrow down your search results by Org Units!";
+	$custom_labels["English"]['___'] = "⬅️";
+	$custom_labels["English"]['_BR__BR__BR_'] = "<br><br>";
+	$custom_labels["English"]['_P_CLICK_ON_THE_BUTTON_TO_EDIT_THE_SETTINGS__STRONG___GT___STRONG___P_'] = "<p>Click on the button to edit the settings<strong>&nbsp; </strong></p>";
+	$custom_labels["English"]['__DOCTYPE_HTML___HTML_LANG__EN_____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_UPDATE_REPORTING_RATES__TITLE____________INCLUDE_BOOTSTRAP_CSS_FOR_MODERN_LOOK__________LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET_________STYLE__________BODY_______________BACKGROUND_COLOR___F1F5F9______________FONT_FAMILY___ARIAL___SANS_SERIF______________PADDING__20PX______________________CONTAINER_______________MAX_WIDTH__600PX______________MARGIN__0_AUTO______________BACKGROUND___FFFFFF______________BORDER_RADIUS__10PX______________BOX_SHADOW__0_4PX_6PX_RGBA_0__0__0__0_1_______________PADDING__20PX_____________________H1_______________FONT_SIZE__1_8REM______________FONT_WEIGHT__BOLD______________COLOR___333______________________PROGRESS_CONTAINER_______________MARGIN_TOP__20PX______________________LOG_CONTAINER_______________MARGIN_TOP__20PX______________MAX_HEIGHT__300PX______________OVERFLOW_Y__AUTO______________BACKGROUND___F8F9FA______________PADDING__15PX______________BORDER__1PX_SOLID__DEE2E6______________BORDER_RADIUS__5PX______________________LOG_CONTAINER_PRE_______________MARGIN__0______________FONT_SIZE__14PX______________COLOR___495057______________WHITE_SPACE__PRE_WRAP______________________BTN_LG_______________FONT_SIZE__1REM______________PADDING__10PX_20PX______________________PROGRESS_BAR_______________TRANSITION__WIDTH_0_4S_EASE_____________________FOOTER_______________MARGIN_TOP__20PX______________TEXT_ALIGN__CENTER______________FONT_SIZE__0_9REM______________COLOR___6C757D_____________________FOOTER_A_______________COLOR___007BFF______________TEXT_DECORATION__NONE_____________________FOOTER_A_HOVER_______________TEXT_DECORATION__UNDERLINE__________________STYLE____HEAD____BODY_______DIV_CLASS__CONTAINER____________DIV_ALIGN__CENTER___SVG_WIDTH__64PX__HEIGHT__64PX__VIEWBOX__0_0_48_48__FILL__NONE__XMLNS__HTTP___WWW_W3_ORG_2000_SVG___G_ID__SVGREPO_BGCARRIER__STROKE_WIDTH__0____G__G_ID__SVGREPO_TRACERCARRIER__STROKE_LINECAP__ROUND__STROKE_LINEJOIN__ROUND____G__G_ID__SVGREPO_ICONCARRIER____PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M8_05655_23_9708L6_86383_24_7067C5_64458_25_4589_5_58843_27_2115_6_75703_28_0402L22_8484_39_4515C23_5388_39_9411_24_4626_39_9431_25_1551_39_4565L41_3962_28_0456C42_5744_27_2178_42_5181_25_4536_41_2895_24_7026L39_8479_23_8215L38_0784_25_0839L40_2464_26_4091L24_0054_37_8201L7_91396_26_4088L9_84309_25_2186L8_05655_23_9708ZM33_4418_22_2498L24_0049_16_4814L14_4796_22_3581L12_693_21_1103L22_9547_14_7793C23_596_14_3837_24_4051_14_382_25_0479_14_775L35_2113_20_9873L33_4418_22_2498Z__FILL___3276C3____PATH___PATH_FILL_RULE__EVENODD__CLIP_RULE__EVENODD__D__M24_0048_9_48139L7_91391_19_4087L24_0053_30_82L40_2464_19_4091L24_0048_9_48139ZM6_86378_17_7066C5_64453_18_4588_5_58838_20_2114_6_75698_21_0401L22_8484_32_4514C23_5388_32_941_24_4626_32_943_25_1551_32_4565L41_3961_21_0455C42_5744_20_2177_42_518_18_4536_41_2894_17_7026L25_0479_7_77494C24_4051_7_38199_23_5959_7_38367_22_9547_7_77927L6_86378_17_7066Z__FILL___3276C3____PATH____G___SVG___DIV___________H2_CLASS__TEXT_CENTER_MB_4__UPDATE__U_DHIS2__U__REPORTING_RATES__H2____________DIV_CLASS__TEXT_CENTER________________BUTTON_ID__STARTUPDATE__CLASS__BTN_BTN_PRIMARY_BTN_LG__UPDATE_REPORTING_RATES__BUTTON____________DIV____________DIV_CLASS__PROGRESS_CONTAINER________________DIV_CLASS__PROGRESS____________________DIV_ID__PROGRESSBAR__CLASS__PROGRESS_BAR_BG_SUCCESS__ROLE__PROGRESSBAR__STYLE__WIDTH__0___ARIA_VALUENOW__0__ARIA_VALUEMIN__0__ARIA_VALUEMAX__100__0___DIV________________DIV____________DIV____________DIV_CLASS__LOG_CONTAINER_MT_4________________H5_CLASS__MB_3__LOGS___H5_______________PRE_ID__LOG__CLICK_THE_BUTTON_TO_START_THE_UPDATE_PROCESS_____PRE____________DIV____________FOOTER__________________BUILT_WITH____BY__A_HREF__HTTPS___MERQCONSULTANCY_ORG__TARGET___BLANK__MERQ_CONSULTANCY_PLC_LLC__A_______________FOOTER________DIV____________INCLUDE_JQUERY__________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT___________BOOTSTRAP_BUNDLE_JS__________SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_3_0_ALPHA1_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT________SCRIPT____________DOCUMENT__READY_FUNCTION______________________STARTUPDATE___ON__CLICK___FUNCTION______________________CONST_BUTTON_____THIS___________________CONST_PROGRESSBAR_______PROGRESSBAR____________________CONST_LOG_______LOG________________________RESET_PROGRESS_BAR_AND_LOG_________________PROGRESSBAR_CSS__WIDTH____0____ATTR__ARIA_VALUENOW___0__TEXT__0_____________________LOG_HTML__________CLEAR_LOGS_________________BUTTON_PROP__DISABLED___TRUE__TEXT__UPDATING___________________________SIMULATE_THE_UPDATE_PROCESS___________________AJAX_______________________URL______API_DHIS2_APIS_UPDATE_REPORTING_RATES_PHP_______________________TYPE___GET_______________________XHR__FUNCTION______________________________CONST_XHR___NEW_WINDOW_XMLHTTPREQUEST________________________________UPDATE_PROGRESS_AND_LOG_IN_REAL_TIME_________________________XHR_ONPROGRESS___FUNCTION__E________________________________IF__E_LENGTHCOMPUTABLE____________________________________CONST_PROGRESS___MATH_FLOOR__E_LOADED___E_TOTAL____100___________________________________PROGRESSBAR_CSS__WIDTH___PROGRESS________ATTR__ARIA_VALUENOW___PROGRESS__TEXT_PROGRESS____________________________________________________________________CONST_NEWLOG___E_TARGET_RESPONSETEXT______________________________LOG_HTML_NEWLOG_______UPDATE_LOG_DIV_WITH_NEW_LOG_DATA_____________________________________________________RETURN_XHR_____________________________________________SUCCESS__FUNCTION__RESPONSE____________________________PROGRESSBAR_CSS__WIDTH____100____ATTR__ARIA_VALUENOW___100__TEXT__100_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES____________________________LOG_APPEND___PRE_UPDATE_COMPLETED_SUCCESSFULLY___PRE________________________________________________ERROR__FUNCTION__XHR__STATUS__ERROR____________________________LOG_APPEND___PRE_ERROR____ERROR___PRE_____________________________BUTTON_PROP__DISABLED___FALSE__TEXT__UPDATE_REPORTING_RATES________________________________________________________________________________SCRIPT____BODY_____HTML__'] = "<!DOCTYPE html>
 <html lang=\"en\">
 
 <head>
@@ -854,7 +309,7 @@ How can we help you?
 
 </html>
 ";
-		$custom_labels["English"]['__PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_'] = "<?php
+	$custom_labels["English"]['__PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_'] = "<?php
 // Include database connection
 include '../api/dhis2/eidm_hc/settings/db_connection.php';
 ?>
@@ -1089,7 +544,7 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
 </body>
 </html>
 ";
-		$custom_labels["English"]['__PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_1'] = "<?php
+	$custom_labels["English"]['__PHP____INCLUDE_DATABASE_CONNECTION_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_DB_CONNECTION_PHP________DOCTYPE_HTML___HTML_LANG__EN____HEAD_______META_CHARSET__UTF_8________META_NAME__VIEWPORT__CONTENT__WIDTH_DEVICE_WIDTH__INITIAL_SCALE_1_0________TITLE_DHIS2_EIDM_DATA_MANAGEMENT__TITLE_______LINK_HREF__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_CSS_BOOTSTRAP_MIN_CSS__REL__STYLESHEET________STYLE___________CONTAINER___MAX_WIDTH__1200PX__MARGIN__40PX_AUTO_____________DATA_PREVIEW___MAX_HEIGHT__500PX__OVERFLOW_Y__AUTO__MARGIN__20PX_0_____________STATUS_BOX___PADDING__15PX__MARGIN__10PX_0__BORDER_RADIUS__5PX__________STYLE____HEAD___BODY_______DIV_CLASS__CONTAINER____________H2_CLASS__MB_4__DHIS2___EIDM__HC_HOSP_WOR_HP__DATA_MANAGEMENT__H2________________ADD_THIS_AFTER__H2__TAG______UL_CLASS__NAV_NAV_TABS_MB_4________LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK_ACTIVE__HREF___OPERATIONS__DATA_BS_TOGGLE__TAB__OPERATIONS__A________LI_______LI_CLASS__NAV_ITEM____________A_CLASS__NAV_LINK__HREF___SETTINGS__DATA_BS_TOGGLE__TAB__SETTINGS__A________LI____UL____DIV_CLASS__TAB_CONTENT________DIV_CLASS__TAB_PANE_FADE_SHOW_ACTIVE__ID__OPERATIONS________________EXISTING_OPERATIONS_CONTENT___________DIV_______DIV_CLASS__TAB_PANE_FADE__ID__SETTINGS_____________PHP_INCLUDE_____API_DHIS2_EIDM_HC_SETTINGS_UI_PHP____________DIV____DIV________________________CONTROL_SECTION______________DIV_CLASS__CARD_MB_4________________DIV_CLASS__CARD_HEADER_BG_PRIMARY_TEXT_WHITE___________________OPERATIONS_______________DIV_______________DIV_CLASS__CARD_BODY____________________BUTTON_ID__UPDATEDATA__CLASS__BTN_BTN_SUCCESS_______________________UPDATE_EIDM_DATA___________________BUTTON___________________DIV_ID__STATUS__CLASS__STATUS_BOX____DIV________________DIV____________DIV________________DATA_PREVIEW_SECTION______________DIV_CLASS__CARD________________DIV_CLASS__CARD_HEADER___________________DATA_PREVIEW__LAST_FETCHED_RESULTS________________DIV_______________DIV_CLASS__CARD_BODY____________________DIV_ID__DATAPREVIEW__CLASS__DATA_PREVIEW____________________________DATA_WILL_BE_LOADED_HERE_______________________DIV________________DIV____________DIV________DIV________SCRIPT_SRC__HTTPS___CODE_JQUERY_COM_JQUERY_3_6_0_MIN_JS____SCRIPT_______SCRIPT_SRC__HTTPS___CDN_JSDELIVR_NET_NPM_BOOTSTRAP_5_1_3_DIST_JS_BOOTSTRAP_BUNDLE_MIN_JS____SCRIPT_______SCRIPT________DOCUMENT__READY_FUNCTION_________________UPDATEDATA___CLICK_FUNCTION_________________CONST_BTN_____THIS_______________BTN_PROP__DISABLED___TRUE___________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__FETCHING_DATA_FROM_API_____DIV_____________________FETCH_DATA_FROM_API_______________AJAX___________________URL______API_DHIS2_EIDM_HC_SETTINGS_API_EIDMHC_PHP___________________METHOD___GET___________________DATATYPE___JSON___________________SUCCESS__FUNCTION_APIDATA____________________________STATUS___HTML___DIV_CLASS__ALERT_ALERT_INFO__SAVING_DATA_TO_DATABASE_____DIV_________________________________________________SEND_DATA_TO_SAVE_ENDPOINT_______________________AJAX___________________________URL______API_DHIS2_EIDM_HC_SAVE_DATA_PHP___________________________METHOD___POST___________________________CONTENTTYPE___APPLICATION_JSON___________________________DATA__JSON_STRINGIFY_APIDATA___________________________SUCCESS__FUNCTION_RESPONSE________________________________IF_RESPONSE_SUCCESS________________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_SUCCESS___________________________________________SUCCESS____RESPONSE_INSERTED_ROWS__RECORDS_INSERTED_______________________________________DIV______________________________________________________________________LOADDATAPREVIEW__________________________________ELSE_______________________________________STATUS___HTML________________________________________DIV_CLASS__ALERT_ALERT_DANGER___________________________________________ERROR____RESPONSE_ERROR________________________________________DIV_______________________________________________________________________________________________________________________ERROR__FUNCTION_XHR____________________________________STATUS___HTML____________________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________________SAVE_FAILED____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________________DIV_____________________________________________________________________________________COMPLETE________BTN_PROP__DISABLED___FALSE_____________________________________________________________ERROR__FUNCTION_XHR____________________________STATUS___HTML____________________________DIV_CLASS__ALERT_ALERT_DANGER_______________________________API_ERROR____XHR_RESPONSEJSON__ERROR_____UNKNOWN_ERROR_____________________________DIV______________________________________________BTN_PROP__DISABLED___FALSE__________________________________________________________FUNCTION_LOADDATAPREVIEW___________________GET_____API_DHIS2_EIDM_HC_FETCH_DATA_PHP___FUNCTION_DATA____________________CONST_PREVIEW_______DATAPREVIEW____________________PREVIEW_HTML________________________TABLE_CLASS__TABLE_TABLE_STRIPED____________________________THEAD_______________________________TR___________________________________TH_INDICATOR__TH___________________________________TH_ORGANISATION_UNIT__TH___________________________________TH_PERIOD__TH___________________________________TH_VALUE__TH________________________________TR____________________________THEAD___________________________TBODY________________________________DATA_ROWS_MAP_ROW_______________________________________TR_______________________________________TD___ROW_INDICATOR___TD_______________________________________TD___ROW_ORGANISATION_UNIT___TD_______________________________________TD___ROW_PERIOD___TD_______________________________________TD___ROW_VALUE___TD____________________________________TR_________________________________JOIN________________________________TBODY________________________TABLE_____________________________________FAIL_____________________________DATAPREVIEW___HTML___DIV_CLASS__ALERT_ALERT_WARNING__ERROR_LOADING_PREVIEW__DIV___________________________________________LOAD_INITIAL_PREVIEW_________LOADDATAPREVIEW__________________SCRIPT____BODY____HTML_1'] = "<?php
 // Include database connection
 include '../api/dhis2/eidm_hc/settings/db_connection.php';
 ?>
@@ -1894,13 +1349,9 @@ $globalSettings["LandingURL"] = "hispmd_moh_indicators_dashboard_dashboard.php?p
 $globalSettings["LandingPageId"] = "hispmd_dashboard";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["Amharic"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
 $globalSettings["ProjectLogo"]["English"] = "<p><img src=\"moh_black.png\" alt=\"Health Information System Performance Monitoring Dashboard (HISPMD)\" width=\"147\" height=\"47\" class=\"mCS_img_loaded\" /></p>";
 
 $globalSettings["CookieBanner"] = array();
-$globalSettings["CookieBanner"]["Amharic"] = "በእኛ የድር መተግበሪያ ላይ የእርስዎን የአሰሳ ተሞክሮ ለማሻሻል እና የጣቢያ ትራፊክን ለመተንተን ኩኪዎችን እና ሌሎች የመከታተያ ቴክኖሎጂዎችን እንጠቀማለን። 
-እሺን/OK ጠቅ በማድረግ ኩኪዎችን እና ሌሎች የመከታተያ ቴክኖሎጂዎችን እንድንጠቀም ተስማምተሃል።
-";
 $globalSettings["CookieBanner"]["English"] = "We use cookies and other tracking technologies to improve your browsing experience on our web application, and analyze site traffic.
 By clicking OK, you consent to our use of cookies and other tracking technologies.";
 
@@ -2030,9 +1481,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "774_1741699667";
+$projectBuildKey = "775_1741699667";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "774";
+$projectBuildNumber = "775";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -2183,136 +1634,6 @@ $tableCaptions["English"]["public_eidm_settings"] = "Eidm Settings";
 $tableCaptions["English"]["DHIS2_Data_Elements"] = "DHIS2 Data Elements";
 $tableCaptions["English"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
 $tableCaptions["English"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
-$tableCaptions["Amharic"] = array();
-$tableCaptions["Amharic"]["MFR_Dashboard_Report"] = "የMFR ዳሽቦርድ ሪፖርት";
-$tableCaptions["Amharic"]["MFR_Status_Report"] = "MFR ሁኔታ ሪፖርት";
-$tableCaptions["Amharic"]["MFR_Facilities"] = "MFR መገልገያዎች";
-$tableCaptions["Amharic"]["MFR_Region_Report"] = "MFR ክልል ሪፖርት";
-$tableCaptions["Amharic"]["MFR_Zone_Report"] = "MFR ዞን ሪፖርት";
-$tableCaptions["Amharic"]["MFR_Woreda_Report"] = "MFR ወረዳ ሪፖርት";
-$tableCaptions["Amharic"]["DHIS2_Indicators"] = "የ DHIS2 አመላካቾች";
-$tableCaptions["Amharic"]["DHIS2_Organisation_Units"] = "DHIS2 ድርጅት ክፍሎች";
-$tableCaptions["Amharic"]["DHIS2_Analytics"] = "DHIS2 ትንታኔ";
-$tableCaptions["Amharic"]["DHIS2_Indicator"] = "የ DHIS2 አመልካች";
-$tableCaptions["Amharic"]["DHIS2_Organisation_Unit"] = "DHIS2 ድርጅት ክፍል";
-$tableCaptions["Amharic"]["DHIS2_Analytics_Chart"] = "DHIS2 ትንታኔ ገበታ";
-$tableCaptions["Amharic"]["DHIS2_Analytics_Report"] = "DHIS2 ትንታኔ ሪፖርት";
-$tableCaptions["Amharic"]["DHIS2_Reports"] = "DHIS2 ሪፖርቶች";
-$tableCaptions["Amharic"]["DHIS2_Datasets"] = "DHIS2 የውሂብ ስብስቦች";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rate"] = "DHIS2 ሪፖርት የማድረግ መጠን";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Chart"] = "DHIS2 የሪፖርት ደረጃ ገበታ";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Report"] = "DHIS2 የሪፖርት ደረጃ ሪፖርት";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rates_Chart"] = "DHIS2 ሪፖርት ማድረጊያ ተመኖች ገበታ";
-$tableCaptions["Amharic"]["MFR_AIO_Dashboard"] = "MFR AIO ዳሽቦርድ";
-$tableCaptions["Amharic"]["MFR_Facility"] = "MFR ተቋም";
-$tableCaptions["Amharic"]["MFR_Regions"] = "MFR ክልሎች";
-$tableCaptions["Amharic"]["MFR_Zones"] = "MFR ዞኖች";
-$tableCaptions["Amharic"]["MFR_Woredas"] = "MFR ወረዳዎች";
-$tableCaptions["Amharic"]["MFR_Facility_Types"] = "የ MFR መገልገያ ዓይነቶች";
-$tableCaptions["Amharic"]["MFR_Operational_Statuses"] = "MFR የአሠራር ሁኔታዎች";
-$tableCaptions["Amharic"]["MFR_Status"] = "MFR ሁኔታ";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Country"] = "DHIS2 OrgUnit አገር";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Regions"] = "DHIS2 OrgUnit ክልሎች";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Zone"] = "DHIS2 OrgUnit ዞን";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Woredas"] = "DHIS2 OrgUnit ወረዳዎች";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Groups"] = "DHIS2 OrgUnit ቡድኖች";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Group_Sets"] = "DHIS2 OrgUnit ቡድን ስብስቦች";
-$tableCaptions["Amharic"]["DHIS2_AIO_OrgUnit"] = "DHIS2 AIO OrgUnit";
-$tableCaptions["Amharic"]["DHIS2_OrgUnit_Distributions"] = "DHIS2 OrgUnit ስርጭቶች";
-$tableCaptions["Amharic"]["public_ai_data_assistant"] = "Ai የውሂብ ረዳት";
-$tableCaptions["Amharic"]["public_dataquality"] = "የውሂብ ጥራት";
-$tableCaptions["Amharic"]["public_datause"] = "የውሂብ አጠቃቀም";
-$tableCaptions["Amharic"]["public_dhis2_periods"] = "DHIS2 ወቅቶች";
-$tableCaptions["Amharic"]["public_digitalhealth"] = "ዲጂታል ጤና";
-$tableCaptions["Amharic"]["public_digitalhealthapps"] = "Digitalhealthapps";
-$tableCaptions["Amharic"]["public_financialresources"] = "የፋይናንስ ምንጮች";
-$tableCaptions["Amharic"]["public_healthfacilities"] = "የጤና ተቋማት";
-$tableCaptions["Amharic"]["public_healthunits"] = "የጤና ክፍሎች";
-$tableCaptions["Amharic"]["public_hisgovernance"] = "የሱ አስተዳደር";
-$tableCaptions["Amharic"]["public_hispartners"] = "የትዳር አጋሮች";
-$tableCaptions["Amharic"]["public_mfr_dashboard_reports"] = "Mfr ዳሽቦርድ ሪፖርቶች";
-$tableCaptions["Amharic"]["public_mfr_operational_status"] = "Mfr የስራ ሁኔታ";
-$tableCaptions["Amharic"]["public_mfr_region"] = "Mfr ክልል";
-$tableCaptions["Amharic"]["public_mfr_woreda"] = "ምፍር ወረዳ";
-$tableCaptions["Amharic"]["public_mfr_zone"] = "Mfr ዞን";
-$tableCaptions["Amharic"]["public_publications"] = "ህትመቶች";
-$tableCaptions["Amharic"]["public_regions"] = "ክልሎች";
-$tableCaptions["Amharic"]["public_research"] = "ምርምር";
-$tableCaptions["Amharic"]["public_workforce"] = "የሰው ኃይል";
-$tableCaptions["Amharic"]["public_hispmdusers"] = "Hispmduserer";
-$tableCaptions["Amharic"]["mfr_dashboard_reports_chart"] = "Mfr ዳሽቦርድ ሪፖርቶች ገበታ";
-$tableCaptions["Amharic"]["mfr_operational_status_chart"] = "Mfr የስራ ሁኔታ ገበታ";
-$tableCaptions["Amharic"]["mfr_region_chart"] = "Mfr ክልል ገበታ";
-$tableCaptions["Amharic"]["public_ethprism_additional_organizational_and_behavioral_assessment"] = "Ethprism Additional Organizational And Behavioral Assessment";
-$tableCaptions["Amharic"]["public_ethprism_facility_level_rhis_performance_diagnostic"] = "Ethprism Facility Level Rhis Performance Diagnostic";
-$tableCaptions["Amharic"]["public_ethprism_facility_office_checklist"] = "Ethprism Facility Office Checklist";
-$tableCaptions["Amharic"]["public_ethprism_healthpost_level_rhis_performance_diagnostic"] = "Ethprism Healthpost Level Rhis Performance Diagnostic";
-$tableCaptions["Amharic"]["public_ethprism_national_prism_woreda_level_diagnostic"] = "Ethprism National Prism Woreda Level Diagnostic";
-$tableCaptions["Amharic"]["public_ethprism_organizational_and_behavioral_assessment"] = "Ethprism Organizational And Behavioral Assessment";
-$tableCaptions["Amharic"]["public_hispmd_prism_settings"] = "Hispmd Prism Settings";
-$tableCaptions["Amharic"]["PRISM_Dashboard"] = "PRISM Dashboard";
-$tableCaptions["Amharic"]["hispmd_users_audit"] = "Hispmd Users Audit";
-$tableCaptions["Amharic"]["hispmd_system_settings"] = "Hispmd System Settings";
-$tableCaptions["Amharic"]["hispmd_prism_data_forms"] = "Hispmd Prism Data Forms";
-$tableCaptions["Amharic"]["public_moh_administration_units"] = "MOH አስተዳደር ክፍሎች";
-$tableCaptions["Amharic"]["public_moh_assessments"] = "Moh ግምገማዎች";
-$tableCaptions["Amharic"]["public_moh_data_sources"] = "Moh የውሂብ ምንጮች";
-$tableCaptions["Amharic"]["public_moh_facility_types"] = "Moh ፋሲሊቲ አይነቶች";
-$tableCaptions["Amharic"]["public_moh_health_facilities"] = "Moh የጤና ተቋማት";
-$tableCaptions["Amharic"]["public_moh_indicator_data"] = "የMOH አመልካች ውሂብ";
-$tableCaptions["Amharic"]["public_moh_indicators"] = "MOH አመላካቾች";
-$tableCaptions["Amharic"]["public_moh_regions"] = "MOH ክልሎች";
-$tableCaptions["Amharic"]["public_moh_indicator_groups"] = "MOH አመላካች ቡድኖች";
-$tableCaptions["Amharic"]["public_timetracker"] = "የሰዓት ቆጣሪ";
-$tableCaptions["Amharic"]["public_mfr_facilities_register"] = "Mfr መገልገያዎች ይመዝገቡ";
-$tableCaptions["Amharic"]["admin_rights"] = "Admin Rights";
-$tableCaptions["Amharic"]["admin_members"] = "Admin Members";
-$tableCaptions["Amharic"]["admin_users"] = "Admin Users";
-$tableCaptions["Amharic"]["System_Users_Activity_Dashboard"] = "System Users Activity Dashboard";
-$tableCaptions["Amharic"]["public_mfr_facilities_register_report"] = "Mfr መገልገያዎች ይመዝገቡ ሪፖርት";
-$tableCaptions["Amharic"]["public_hispmd_organisations"] = "Hispmd ድርጅቶች";
-$tableCaptions["Amharic"]["public_hispmd_uggroups"] = "Hispmd Uggroups";
-$tableCaptions["Amharic"]["public_mfr_facilities_register_chart"] = "Mfr መገልገያዎች መመዝገቢያ ገበታ";
-$tableCaptions["Amharic"]["public_moh_data_scope"] = "የMoh ውሂብ ወሰን";
-$tableCaptions["Amharic"]["MOH_Indicators_Data_Report"] = "MOH ጠቋሚዎች ውሂብ ሪፖርት";
-$tableCaptions["Amharic"]["MOH_Indicators_data_Chart"] = "MOH አመልካቾች የውሂብ ገበታ";
-$tableCaptions["Amharic"]["DHIS2_OrgUnits_Distribution"] = "DHIS2 OrgUnits ስርጭት";
-$tableCaptions["Amharic"]["public_chat_history"] = "Chat History";
-$tableCaptions["Amharic"][""] = "";
-$tableCaptions["Amharic"]["kbarticles"] = "Articles";
-$tableCaptions["Amharic"]["kbcategories"] = "Categories";
-$tableCaptions["Amharic"]["kbcomments"] = "Comments";
-$tableCaptions["Amharic"]["kbusers"] = "Users";
-$tableCaptions["Amharic"]["main"] = "";
-$tableCaptions["Amharic"]["faicons"] = "Faicons";
-$tableCaptions["Amharic"]["admin_comments"] = "Admin Comments";
-$tableCaptions["Amharic"]["public_hispmd_noti_view"] = "Hispmd Noti View";
-$tableCaptions["Amharic"]["public_faicons"] = "Faicons";
-$tableCaptions["Amharic"]["MoH_Indicators_Data_Values_Chart"] = "MoH Indicators Data Values Chart";
-$tableCaptions["Amharic"]["Indicators_Dashboard"] = "Indicators Dashboard";
-$tableCaptions["Amharic"]["hispmd_indicators_data"] = "Hispmd Indicators Data";
-$tableCaptions["Amharic"]["public_moh_ir_datasource"] = "Moh Ir Datasource";
-$tableCaptions["Amharic"]["public_moh_years"] = "Moh Years";
-$tableCaptions["Amharic"]["public_moh_months"] = "Moh Months";
-$tableCaptions["Amharic"]["public_moh_quarters"] = "Moh Quarters";
-$tableCaptions["Amharic"]["public_moh_period_types"] = "Moh Period Types";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Details"] = "DHIS2 Reporting Rate Details";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rate_Details_Chart"] = "DHIS2 Reporting Rate Details Chart";
-$tableCaptions["Amharic"]["DHIS2_ReportingRate"] = "DHIS2 ReportingRate";
-$tableCaptions["Amharic"]["DHIS2_Reports_DataSet"] = "DHIS2 Reports DataSet";
-$tableCaptions["Amharic"]["DHIS2_ReportingRate_Chart"] = "DHIS2 ReportingRate Chart";
-$tableCaptions["Amharic"]["DHIS2_ReportingRates"] = "DHIS2 ReportingRates";
-$tableCaptions["Amharic"]["DHIS2_AnalyticsReport"] = "DHIS2 AnalyticsReport";
-$tableCaptions["Amharic"]["public_moh_indicators_target"] = "Moh Indicators Target";
-$tableCaptions["Amharic"]["public_dhis2_reporting_rates"] = "Dhis2 Reporting Rates";
-$tableCaptions["Amharic"]["public_dhis2_reportingrate_settings"] = "Dhis2 Reportingrate Settings";
-$tableCaptions["Amharic"]["DHIS2_Reporting_Rates_Report"] = "DHIS2 Reporting Rates Report";
-$tableCaptions["Amharic"]["DHIS2_EIDM_HC"] = "DHIS2 EIDM HC";
-$tableCaptions["Amharic"]["public_eidm_hc"] = "Eidm Hc";
-$tableCaptions["Amharic"]["public_eidm_settings"] = "Eidm Settings";
-$tableCaptions["Amharic"]["DHIS2_Data_Elements"] = "DHIS2 Data Elements";
-$tableCaptions["Amharic"]["HISPMD_Web_Reports_and_Charts_Builder"] = "HISPMD Web Reports And Charts Builder";
-$tableCaptions["Amharic"]["HISPMD_MOH_Indicators_Dashboard"] = "HISPMD MOH Indicators Dashboard";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -2390,9 +1711,6 @@ $mediaType = $mediaType ? $mediaType : 0;
 
 $page_titles[GLOBAL_PAGES_SHORT] = array();
 if(mlang_getcurrentlang()=="English")
-{
-}
-if(mlang_getcurrentlang()=="Amharic")
 {
 }
 

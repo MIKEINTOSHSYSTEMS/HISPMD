@@ -61,48 +61,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmfr_facility["English"]))
 		$tdatamfr_facility[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmfr_facility["Amharic"] = array();
-	$fieldToolTipsmfr_facility["Amharic"] = array();
-	$placeHoldersmfr_facility["Amharic"] = array();
-	$pageTitlesmfr_facility["Amharic"] = array();
-	$fieldLabelsmfr_facility["Amharic"]["id"] = "መለያ";
-	$fieldToolTipsmfr_facility["Amharic"]["id"] = "";
-	$placeHoldersmfr_facility["Amharic"]["id"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["name"] = "ስም";
-	$fieldToolTipsmfr_facility["Amharic"]["name"] = "";
-	$placeHoldersmfr_facility["Amharic"]["name"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["statusId"] = "ሁኔታ";
-	$fieldToolTipsmfr_facility["Amharic"]["statusId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["statusId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["operationalStatusId"] = "የአሠራር ሁኔታ";
-	$fieldToolTipsmfr_facility["Amharic"]["operationalStatusId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["operationalStatusId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["facilityTypeId"] = "የመገልገያ አይነት";
-	$fieldToolTipsmfr_facility["Amharic"]["facilityTypeId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["facilityTypeId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["parentFacilityTypeId"] = "የወላጅ መገልገያ ዓይነት";
-	$fieldToolTipsmfr_facility["Amharic"]["parentFacilityTypeId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["parentFacilityTypeId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["regionId"] = "ክልል";
-	$fieldToolTipsmfr_facility["Amharic"]["regionId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["regionId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["zoneId"] = "ዞን";
-	$fieldToolTipsmfr_facility["Amharic"]["zoneId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["zoneId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["woredaId"] = "ወረዳ";
-	$fieldToolTipsmfr_facility["Amharic"]["woredaId"] = "";
-	$placeHoldersmfr_facility["Amharic"]["woredaId"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["pageCount"] = "የገጽ ብዛት";
-	$fieldToolTipsmfr_facility["Amharic"]["pageCount"] = "";
-	$placeHoldersmfr_facility["Amharic"]["pageCount"] = "";
-	$fieldLabelsmfr_facility["Amharic"]["totalCount"] = "ጠቅላላ ብዛት";
-	$fieldToolTipsmfr_facility["Amharic"]["totalCount"] = "";
-	$placeHoldersmfr_facility["Amharic"]["totalCount"] = "";
-	if (count($fieldToolTipsmfr_facility["Amharic"]))
-		$tdatamfr_facility[".isUseToolTips"] = true;
-}
 
 
 	$tdatamfr_facility[".NCSearch"] = true;

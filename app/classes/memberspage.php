@@ -285,7 +285,7 @@ class MembersPage extends ListPage_Simple
 	 */
 	function fillGroups()
 	{
-		$this->groups[] = array(-1, "<".mlang_message("AA_GROUP_ADMIN").">");
+		$this->groups[] = array(-1, "<"."Admin".">");
 		$this->groupFullChecked[] = true;
 
 		$groupIdField = "GroupID";

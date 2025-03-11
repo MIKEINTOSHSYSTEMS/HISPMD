@@ -272,7 +272,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -1290,7 +1290,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message SUMMARY_FOR}","hidden":"{$item_hide_group_summary_label4}","isHtml":true},
+			{"text":"Summary for","hidden":"{$item_hide_group_summary_label4}","isHtml":true},
 				
 				
 			{"text":"{$jslabel MOH_Indicators_Data_Report data_source_id }","hidden":"{$item_hide_group_summary_field_label2}","bold":true},
@@ -1305,7 +1305,7 @@ pdfDocument = {
 			{"text":"{$groupdata_source_id_total_cnt}","hidden":"{$item_hide_group_summary_count2}"},
 				
 				
-			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_group_summary_label5}","isHtml":true},
+			{"text":"records total","hidden":"{$item_hide_group_summary_label5}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1446,7 +1446,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message SUMMARY_FOR}","hidden":"{$item_hide_group_summary_label}","isHtml":true},
+			{"text":"Summary for","hidden":"{$item_hide_group_summary_label}","isHtml":true},
 				
 				
 			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_id }","hidden":"{$item_hide_group_summary_field_label1}","bold":true},
@@ -1461,7 +1461,7 @@ pdfDocument = {
 			{"text":"{$groupindicator_id_total_cnt}","hidden":"{$item_hide_group_summary_count1}"},
 				
 				
-			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_group_summary_label3}","isHtml":true},
+			{"text":"records total","hidden":"{$item_hide_group_summary_label3}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1579,7 +1579,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message SUMMARY_FOR}","hidden":"{$item_hide_group_summary_label1}","isHtml":true},
+			{"text":"Summary for","hidden":"{$item_hide_group_summary_label1}","isHtml":true},
 				
 				
 			{"text":"{$jslabel MOH_Indicators_Data_Report indicator_group_id }","hidden":"{$item_hide_group_summary_field_label}","bold":true},
@@ -1594,7 +1594,7 @@ pdfDocument = {
 			{"text":"{$groupindicator_group_id_total_cnt}","hidden":"{$item_hide_group_summary_count}"},
 				
 				
-			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_group_summary_label2}","isHtml":true},
+			{"text":"records total","hidden":"{$item_hide_group_summary_label2}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1720,7 +1720,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message PAGE_SUMMARY}","hidden":"{$item_hide_page_summary_label1}","isHtml":true},
+			{"text":"Page summary","hidden":"{$item_hide_page_summary_label1}","isHtml":true},
 				
 				
 			{"text":"-","hidden":"{$item_hide_page_summary_dash}","isHtml":true},
@@ -1729,7 +1729,7 @@ pdfDocument = {
 			{"text":"{$page_total_cnt}","hidden":"{$item_hide_page_summary_count}"},
 				
 				
-			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_page_summary_label2}","isHtml":true},
+			{"text":"records total","hidden":"{$item_hide_page_summary_label2}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1853,7 +1853,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message GLOBAL_SUMMARY}","hidden":"{$item_hide_global_summary_label1}","isHtml":true},
+			{"text":"Global summary","hidden":"{$item_hide_global_summary_label1}","isHtml":true},
 				
 				
 			{"text":"-","hidden":"{$item_hide_global_summary_dash}","isHtml":true},
@@ -1862,7 +1862,7 @@ pdfDocument = {
 			{"text":"{$global_total_cnt}","hidden":"{$item_hide_global_summary_count}"},
 				
 				
-			{"text":"{mlang_message RECORDS_TOTAL}","hidden":"{$item_hide_global_summary_label2}","isHtml":true},
+			{"text":"records total","hidden":"{$item_hide_global_summary_label2}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],

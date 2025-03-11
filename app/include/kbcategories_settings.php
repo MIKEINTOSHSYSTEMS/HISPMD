@@ -40,27 +40,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipskbcategories["English"]))
 		$tdatakbcategories[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelskbcategories["Amharic"] = array();
-	$fieldToolTipskbcategories["Amharic"] = array();
-	$placeHolderskbcategories["Amharic"] = array();
-	$pageTitleskbcategories["Amharic"] = array();
-	$fieldLabelskbcategories["Amharic"]["Category"] = "Category";
-	$fieldToolTipskbcategories["Amharic"]["Category"] = "";
-	$placeHolderskbcategories["Amharic"]["Category"] = "";
-	$fieldLabelskbcategories["Amharic"]["CategoryID"] = "Category ID";
-	$fieldToolTipskbcategories["Amharic"]["CategoryID"] = "";
-	$placeHolderskbcategories["Amharic"]["CategoryID"] = "";
-	$fieldLabelskbcategories["Amharic"]["Description"] = "Description";
-	$fieldToolTipskbcategories["Amharic"]["Description"] = "";
-	$placeHolderskbcategories["Amharic"]["Description"] = "";
-	$fieldLabelskbcategories["Amharic"]["faicon"] = "Faicon";
-	$fieldToolTipskbcategories["Amharic"]["faicon"] = "";
-	$placeHolderskbcategories["Amharic"]["faicon"] = "";
-	if (count($fieldToolTipskbcategories["Amharic"]))
-		$tdatakbcategories[".isUseToolTips"] = true;
-}
 
 
 	$tdatakbcategories[".NCSearch"] = true;

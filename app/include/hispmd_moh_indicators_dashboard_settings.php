@@ -22,10 +22,6 @@ if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelshispmd_moh_indicators_dashboard["English"] = array();
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelshispmd_moh_indicators_dashboard["Amharic"] = array();
-}
 
 /*
 //	search fields

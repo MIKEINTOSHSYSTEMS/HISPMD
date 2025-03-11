@@ -555,9 +555,9 @@
 							<td class="group_2" style="border-top: none;"></td>
 							
 																								<td  class="group_3" colspan=13 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report data_source_id }&nbsp;{$data_source_id_grval}
+				Summary for&nbsp;{$label MOH_Indicators_Data_Report data_source_id }&nbsp;{$data_source_id_grval}
 					- <span class="summary-3" data-type="summary">{$groupdata_source_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																																																																													</tr>
 
 	
@@ -572,9 +572,9 @@
 										<td class="group_1" style="border-top: none;"></td>
 							
 																	<td  class="group_2" colspan=14 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
+				Summary for&nbsp;{$label MOH_Indicators_Data_Report indicator_id }&nbsp;{$indicator_id_grval}
 					- <span class="summary-2" data-type="summary">{$groupindicator_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																																																																																				</tr>
 
 	
@@ -588,9 +588,9 @@
 		<tr class="summaryrow"  >
 			
 										<td  class="group_1" colspan=15 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
+				Summary for&nbsp;{$label MOH_Indicators_Data_Report indicator_group_id }&nbsp;{$indicator_group_id_grval}
 					- <span class="summary-1" data-type="summary">{$groupindicator_group_id_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
+					</span> records total			</td>
 																																																																																																											</tr>
 
 	
@@ -628,7 +628,7 @@
     {BEGIN page_summary}
     <!-- page summary-->
     <tr class="summaryrow summary-page">
-        <td class="pagesummary" colspan="15">{mlang_message PAGE_SUMMARY}            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - {mlang_message RECORDS_TOTAL}        </td>
+        <td class="pagesummary" colspan="15">Page summary            <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total        </td>
     </tr>
 	
 	
@@ -639,7 +639,7 @@
 	{BEGIN global_summary}
     <tr class="summaryrow summary-global">
         <td class="globalsummary" colspan="15">
-            {mlang_message GLOBAL_SUMMARY} {$global_total_cnt} - {mlang_message RECORDS_TOTAL}        </td>
+            Global summary {$global_total_cnt} - records total        </td>
     </tr>
 
 	

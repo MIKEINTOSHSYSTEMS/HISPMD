@@ -49,36 +49,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_analytics_report["English"]))
 		$tdatadhis2_analytics_report[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_analytics_report["Amharic"] = array();
-	$fieldToolTipsdhis2_analytics_report["Amharic"] = array();
-	$placeHoldersdhis2_analytics_report["Amharic"] = array();
-	$pageTitlesdhis2_analytics_report["Amharic"] = array();
-	$fieldLabelsdhis2_analytics_report["Amharic"]["Data"] = "የልኬት ውሂብ";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["Data"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["Data"] = "";
-	$fieldLabelsdhis2_analytics_report["Amharic"]["Organisation_unit"] = "Dimension Org";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["Organisation_unit"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["Organisation_unit"] = "";
-	$fieldLabelsdhis2_analytics_report["Amharic"]["Period"] = "የተወሰነ ጊዜ";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["Period"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["Period"] = "";
-	$fieldLabelsdhis2_analytics_report["Amharic"]["dx"] = "አመልካች";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["dx"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["dx"] = "";
-	$fieldLabelsdhis2_analytics_report["Amharic"]["ou"] = "ኦርግ ክፍል";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["ou"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["ou"] = "";
-	$fieldLabelsdhis2_analytics_report["Amharic"]["pe"] = "አንጻራዊ ጊዜ";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["pe"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["pe"] = "";
-	$fieldLabelsdhis2_analytics_report["Amharic"]["Value"] = "የውሂብ እሴት";
-	$fieldToolTipsdhis2_analytics_report["Amharic"]["Value"] = "";
-	$placeHoldersdhis2_analytics_report["Amharic"]["Value"] = "";
-	if (count($fieldToolTipsdhis2_analytics_report["Amharic"]))
-		$tdatadhis2_analytics_report[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_analytics_report[".NCSearch"] = true;

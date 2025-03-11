@@ -109,7 +109,7 @@
 {$message}
 		{BEGIN resend_activation_button}
 	<br>
-	<button class="btn btn-sm btn-default" {$resend_activation_button_attrs} id="resendActivation{$id}">{mlang_message RESEND_EMAIL}</button>
+	<button class="btn btn-sm btn-default" {$resend_activation_button_attrs} id="resendActivation{$id}">Resend email</button>
 	{END resend_activation_button}
 </div>
 {END message_block}		</div>					</div>
@@ -123,7 +123,7 @@
 ">
 		 
 		<span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-page=".global_login" data-small >
-{mlang_message LOGIN_SUBTITLE}</span>
+Login into your account</span>
 		</div>					</div>
 			 
 				<div class="row">
@@ -147,7 +147,7 @@
 	data-cellId="grid_c1" data-pageid="{$pageid}">
  
 <label data-itemtype="username_label" data-itemid="username_label" {$item_username_label} data-pageid="{$pageid}" data-page=".global_login" data-small class="r-edit-label control-label" for="username">
-	{BEGIN username_label}{mlang_message USERNAME}{END username_label}
+	{BEGIN username_label}Username{END username_label}
 </label> 
 <div class="r-edit-field" data-itemtype="username" data-itemid="username" {$item_username} data-pageid="{$pageid}" >
 	<input type="text" class="form-control" name="username" {$username_attrs} id="username">
@@ -160,7 +160,7 @@
 	data-cellId="grid_c2" data-pageid="{$pageid}">
  
 <label data-itemtype="password_label" data-itemid="password_label" {$item_password_label} data-pageid="{$pageid}" data-page=".global_login" data-small class="r-edit-label control-label" for="password">
-	{BEGIN password_label}{mlang_message PASSWORD}{END password_label}
+	{BEGIN password_label}Password{END password_label}
 </label> 
 <div class="r-edit-field" data-itemtype="password" data-itemid="password" {$item_password} data-pageid="{$pageid}" >
 	<input type="password" class="form-control" name="password" {$password_attrs} id="password">
@@ -195,11 +195,11 @@
  
 <div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" data-page=".global_login" >
 	<label>
-		<input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}> {mlang_message REMEMBER_ME}	</label>
+		<input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}> Remember me	</label>
 </div> 
 <div class="checkbox r-edit-field" data-itemtype="remember_machine" data-itemid="remember_machine" {$item_remember_machine} data-pageid="{$pageid}" >
 	<label>
-		<input type="checkbox" id="remember_machine{$id}" name="remember_machine" value="1" {$remembermachine_attrs}> {mlang_message REMEMBER_MACHINE}	</label>
+		<input type="checkbox" id="remember_machine{$id}" name="remember_machine" value="1" {$remembermachine_attrs}> Remember this machine	</label>
 </div></td>
 									<td 
 	class="r-align-right r-ori-vert			"
@@ -225,7 +225,7 @@
 <span data-itemtype="login_button" data-itemid="login_button" {$item_login_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary  btn-lg 
 	" {$loginlink_attrs} >
-							{mlang_message SIGN_IN}			</a>
+							Sign in			</a>
 </span>
 {END signin_button}
  
@@ -233,20 +233,20 @@
 <span data-itemtype="continue_login_button" data-itemid="continue_login_button" {$item_continue_login_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$continuebutton_attrs} >
-							{mlang_message CONTINUE}			</a>
+							Continue			</a>
 </span>
 {END continue_button}
  
 <span data-itemtype="verify_button" data-itemid="verify_button" {$item_verify_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="verifyCode{$id}" {$verifyButtonClass} >
-							{mlang_message VERIFY}			</a>
+							Verify			</a>
 </span>
  
 <span data-itemtype="resend_button" data-itemid="resend_button" {$item_resend_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="resendCode{$id}" {$resendButtonClass} >
-							{mlang_message RESENT_CODE}			</a>
+							Resend code			</a>
 </span>
 </td>
 									<td 
@@ -257,13 +257,13 @@
 <span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-success  btn-lg 
 	" {$registerlink_attrs} href="register.php" >
-							{mlang_message SIGN_UP}			</a>
+							Sign Up			</a>
 </span>
  
 <span data-itemtype="login_remind" data-itemid="login_remind" {$item_login_remind} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link   
 	" {$forgotpasswordlink_attrs} href="remind.php" >
-							{mlang_message FORGOT}			</a>
+							Forgot password?			</a>
 </span>
 </td>
 							</tr>
@@ -280,27 +280,6 @@
 	class="r-align-center r-ori-vert			"
 			 
 	data-cellId="footer_c3" data-pageid="{$pageid}">
- 
-{BEGIN languages_block}
-<span class="pull-right btn-group">	
-		<button class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		<span class="glyphicon glyphicon-globe"></span>
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu">
-	{BEGIN AmharicLANGLINK}
-		<li><a href="#" data-lang="Amharic" class="rnr-langlink">
-			{BEGIN AmharicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END AmharicLANGLINK_ACTIVE}
-			አማርኛ</a></li>
-	{END AmharicLANGLINK}
-	{BEGIN EnglishLANGLINK}
-		<li><a href="#" data-lang="English" class="rnr-langlink">
-			{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-			English</a></li>
-	{END EnglishLANGLINK}
-	</ul>
-	</span>
-{END languages_block}
 </td>
 							</tr>
 											<tr {$row_footer_2} >
@@ -342,7 +321,7 @@ It can only be accessed by an <u><b>AUTHORIZED<b><u> personel!<br></span>
 <span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page=".global_login" data-small data-button-item>
 	<a type="button" title="" class="btn btn-info   
 	" {$guestlink_attrs} >
-							{mlang_message GUEST}			</a>
+							Login as Guest			</a>
 </span>
 {END guestlink_block}
 </td>

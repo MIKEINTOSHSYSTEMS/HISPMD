@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_assessments["English"]))
 		$tdatamoh_assessments[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_assessments["Amharic"] = array();
-	$fieldToolTipsmoh_assessments["Amharic"] = array();
-	$placeHoldersmoh_assessments["Amharic"] = array();
-	$pageTitlesmoh_assessments["Amharic"] = array();
-	$fieldLabelsmoh_assessments["Amharic"]["assessment_id"] = "የግምገማ መለያ";
-	$fieldToolTipsmoh_assessments["Amharic"]["assessment_id"] = "";
-	$placeHoldersmoh_assessments["Amharic"]["assessment_id"] = "";
-	$fieldLabelsmoh_assessments["Amharic"]["assessment_name"] = "የግምገማ ስም";
-	$fieldToolTipsmoh_assessments["Amharic"]["assessment_name"] = "";
-	$placeHoldersmoh_assessments["Amharic"]["assessment_name"] = "";
-	if (count($fieldToolTipsmoh_assessments["Amharic"]))
-		$tdatamoh_assessments[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_assessments[".NCSearch"] = true;

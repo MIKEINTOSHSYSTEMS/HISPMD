@@ -34,21 +34,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdhis2_periods["English"]))
 		$tdatadhis2_periods[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsdhis2_periods["Amharic"] = array();
-	$fieldToolTipsdhis2_periods["Amharic"] = array();
-	$placeHoldersdhis2_periods["Amharic"] = array();
-	$pageTitlesdhis2_periods["Amharic"] = array();
-	$fieldLabelsdhis2_periods["Amharic"]["period_id"] = "የወቅት መለያ";
-	$fieldToolTipsdhis2_periods["Amharic"]["period_id"] = "";
-	$placeHoldersdhis2_periods["Amharic"]["period_id"] = "";
-	$fieldLabelsdhis2_periods["Amharic"]["period_name"] = "የጊዜ ስም";
-	$fieldToolTipsdhis2_periods["Amharic"]["period_name"] = "";
-	$placeHoldersdhis2_periods["Amharic"]["period_name"] = "";
-	if (count($fieldToolTipsdhis2_periods["Amharic"]))
-		$tdatadhis2_periods[".isUseToolTips"] = true;
-}
 
 
 	$tdatadhis2_periods[".NCSearch"] = true;

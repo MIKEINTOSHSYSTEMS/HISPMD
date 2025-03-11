@@ -49,36 +49,6 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsmoh_indicators_target["English"]))
 		$tdatamoh_indicators_target[".isUseToolTips"] = true;
 }
-if(mlang_getcurrentlang()=="Amharic")
-{
-	$fieldLabelsmoh_indicators_target["Amharic"] = array();
-	$fieldToolTipsmoh_indicators_target["Amharic"] = array();
-	$placeHoldersmoh_indicators_target["Amharic"] = array();
-	$pageTitlesmoh_indicators_target["Amharic"] = array();
-	$fieldLabelsmoh_indicators_target["Amharic"]["ID"] = "ID";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["ID"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["ID"] = "";
-	$fieldLabelsmoh_indicators_target["Amharic"]["indicator_id"] = "Indicator Id";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["indicator_id"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["indicator_id"] = "";
-	$fieldLabelsmoh_indicators_target["Amharic"]["indicator_name"] = "Indicator Name";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["indicator_name"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["indicator_name"] = "";
-	$fieldLabelsmoh_indicators_target["Amharic"]["indicator_target"] = "Indicator Target";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["indicator_target"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["indicator_target"] = "";
-	$fieldLabelsmoh_indicators_target["Amharic"]["indicator_baseline"] = "Indicator Baseline";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["indicator_baseline"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["indicator_baseline"] = "";
-	$fieldLabelsmoh_indicators_target["Amharic"]["indicator_target_year"] = "Indicator Target Year";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["indicator_target_year"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["indicator_target_year"] = "";
-	$fieldLabelsmoh_indicators_target["Amharic"]["indicator_baseline_year"] = "Indicator Baseline Year";
-	$fieldToolTipsmoh_indicators_target["Amharic"]["indicator_baseline_year"] = "";
-	$placeHoldersmoh_indicators_target["Amharic"]["indicator_baseline_year"] = "";
-	if (count($fieldToolTipsmoh_indicators_target["Amharic"]))
-		$tdatamoh_indicators_target[".isUseToolTips"] = true;
-}
 
 
 	$tdatamoh_indicators_target[".NCSearch"] = true;

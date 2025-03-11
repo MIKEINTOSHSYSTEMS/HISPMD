@@ -106,7 +106,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message WERE_SENT}","hidden":"{$item_hide_remind_success_message}","isHtml":true},
+			{"text":"Login and password were sent to your email address.","hidden":"{$item_hide_remind_success_message}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

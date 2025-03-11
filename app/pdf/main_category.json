@@ -109,7 +109,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom HOW_CAN_WE_HELP_YOU_}","color":"#0075d9","background":"#0075d9","hidden":"{$item_hide_text}","bold":false,"isHtml":true},
+			{"text":"Knowledge Base","color":"#0075d9","background":"#0075d9","hidden":"{$item_hide_text}","bold":false,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -136,7 +136,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom _BR__}","color":"#00293c","hidden":"{$item_hide_text1}","fontSize":21,"bold":true,"isHtml":true},
+			{"text":"<br>\nHow can we help you?\n<br>\n<br>","color":"#00293c","hidden":"{$item_hide_text1}","fontSize":21,"bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -214,7 +214,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$custom MOST_VISITED_CONTENTS}","hidden":"{$item_hide_text2}","italics":true,"bold":true,"isHtml":true},
+			{"text":"Most Visited Contents","hidden":"{$item_hide_text2}","italics":true,"bold":true,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
