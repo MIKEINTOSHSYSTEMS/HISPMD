@@ -634,6 +634,8 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.dhis2_reporting_rates" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

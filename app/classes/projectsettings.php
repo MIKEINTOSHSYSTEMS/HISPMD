@@ -3766,6 +3766,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "eidm_settings" ] = "public.eidm_settings";
 	$projectEntities[ "DHIS2_Data_Elements" ] = array( "url" => "dhis2_data_elements", "type" => 7 );
 	$projectEntitiesReverse[ "dhis2_data_elements" ] = "DHIS2_Data_Elements";
+	$projectEntities[ "DHIS_2_Reporting_Rates_Chart" ] = array( "url" => "dhis_2_reporting_rates_chart", "type" => 3 );
+	$projectEntitiesReverse[ "dhis_2_reporting_rates_chart" ] = "DHIS_2_Reporting_Rates_Chart";
 }
 
 function findTable( $table ) {

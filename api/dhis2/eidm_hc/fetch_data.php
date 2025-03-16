@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 
 try {
     $stmt = $pdo->query("
-        SELECT indicator, organisation_unit, period, value
+        SELECT indicator, organisation_unit, relative_period, period, value
         FROM eidm_hc
         ORDER BY period DESC
         LIMIT 100
@@ -25,3 +25,4 @@ try {
         'error' => $e->getMessage()
     ]);
 }
+?>

@@ -207,6 +207,21 @@ pdfDocument = {
 				
 			{"text":{$ownership_type_label_value},"hidden":"{$item_hide_integrated_search_field13}"},
 				
+				
+			{"text":{$indicator_id_value},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$indicator_name_value},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$organisationunit_description_value},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$value_value},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$relative_period_value},"hidden":"{$item_hide_integrated_search_field18}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

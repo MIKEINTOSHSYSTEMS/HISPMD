@@ -26,8 +26,8 @@ try {
     // Prepare statement
     $stmt = $pdo->prepare("
         INSERT INTO eidm_hc 
-        (indicator, organisation_unit, period, value)
-        VALUES (:indicator, :organisation_unit, :period, :value)
+        (indicator, organisation_unit, relative_period, period, value)
+        VALUES (:indicator, :organisation_unit, :relative_period, :period, :value)
     ");
 
     $insertCount = 0;
@@ -37,6 +37,7 @@ try {
             $normalized = [
                 'indicator' => $row['Indicator'] ?? null,
                 'organisation_unit' => $row['Organisation Unit'] ?? null,
+                'relative_period' => $row['RelativePeriod'] ?? null, // Add relative_period
                 'period' => $row['Period'] ?? null,
                 'value' => $row['Value'] ?? null
             ];
@@ -57,16 +58,9 @@ try {
             //$stmt->execute($normalized);
             //$insertCount++;
 
-            // Modify the value handling in save_data.php
-            $stmt->execute([
-                $normalized['indicator'],
-                $normalized['organisation_unit'],
-                $normalized['period'],
-                // Convert string value to numeric
-                (float)str_replace(['"', "'", ","], '', $normalized['value']) 
-            ]);
-            $insertCount++; // to count inserted rows
-            
+            // Execute insert
+            $stmt->execute($normalized);
+            $insertCount++;
         } catch (Exception $e) {
             error_log("Error inserting row $index: " . $e->getMessage());
             throw $e;
@@ -91,3 +85,4 @@ try {
         'trace' => $e->getTraceAsString()
     ]);
 }
+?>

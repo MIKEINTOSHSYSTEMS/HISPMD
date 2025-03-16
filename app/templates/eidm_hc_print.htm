@@ -113,7 +113,7 @@
 	 
 		{BEGIN indicator_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator" data-fieldname="indicator">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator" data-fieldname="indicator">
 	{$label public_eidm_hc indicator }	</span>
 {END indicator_fieldheadercolumn}
 
@@ -136,7 +136,7 @@
 	 
 		{BEGIN organisation_unit_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="organisation_unit" data-fieldname="organisation_unit">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="organisation_unit" data-fieldname="organisation_unit">
 	{$label public_eidm_hc organisation_unit }	</span>
 {END organisation_unit_fieldheadercolumn}
 
@@ -159,7 +159,7 @@
 	 
 		{BEGIN period_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period" data-fieldname="period">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period" data-fieldname="period">
 	{$label public_eidm_hc period }	</span>
 {END period_fieldheadercolumn}
 
@@ -182,13 +182,36 @@
 	 
 		{BEGIN value_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
 	{$label public_eidm_hc value }	</span>
 {END value_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$relative_period_class}	"
+
+			data-field="relative_period"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN relative_period_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="relative_period" data-fieldname="relative_period">
+	{$label public_eidm_hc relative_period }	</span>
+{END relative_period_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
 							</tr>
 															
 					{END grid_header}
@@ -284,6 +307,27 @@
 {END value_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$relative_period_class}	"
+
+			data-field="relative_period"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN relative_period_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="relative_period" data-fieldname="relative_period" data-default-width >
+{$relative_period_value}
+</span>
+{END relative_period_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
 							</tr>
 										
 											</tbody>
@@ -355,6 +399,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$relative_period_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="eidm_hc_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

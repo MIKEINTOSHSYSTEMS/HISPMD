@@ -992,20 +992,62 @@ function InitLookupLinks()
 			$lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_baseline_year"] = array();
 		}
 		$lookupTableLinks["public.moh_years"]["moh_indicators_target.indicator_baseline_year"]["edit"] = array("table" => "public.moh_indicators_target", "field" => "indicator_baseline_year", "page" => "edit");
-		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
-			$lookupTableLinks["DHIS2_Datasets"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
 		}
-		if( !isset( $lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate_settings.data_set"] )) {
-			$lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate_settings.data_set"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.organisationunit"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.organisationunit"] = array();
 		}
-		$lookupTableLinks["DHIS2_Datasets"]["dhis2_reportingrate_settings.data_set"]["edit"] = array("table" => "public.dhis2_reportingrate_settings", "field" => "data_set", "page" => "edit");
-		if( !isset( $lookupTableLinks["public.moh_years"] ) ) {
-			$lookupTableLinks["public.moh_years"] = array();
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.organisationunit"]["edit"] = array("table" => "public.dhis2_reporting_rates", "field" => "organisationunit", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
 		}
-		if( !isset( $lookupTableLinks["public.moh_years"]["dhis2_reportingrate_settings.report_period"] )) {
-			$lookupTableLinks["public.moh_years"]["dhis2_reportingrate_settings.report_period"] = array();
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.facility_type"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.facility_type"] = array();
 		}
-		$lookupTableLinks["public.moh_years"]["dhis2_reportingrate_settings.report_period"]["edit"] = array("table" => "public.dhis2_reportingrate_settings", "field" => "report_period", "page" => "edit");
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.facility_type"]["edit"] = array("table" => "public.dhis2_reporting_rates", "field" => "facility_type", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.report_period"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.report_period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.report_period"]["edit"] = array("table" => "public.dhis2_reporting_rates", "field" => "report_period", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.ownership_type_label"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.ownership_type_label"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.ownership_type_label"]["edit"] = array("table" => "public.dhis2_reporting_rates", "field" => "ownership_type_label", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.indicator_name"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.indicator_name"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.indicator_name"]["edit"] = array("table" => "public.dhis2_reporting_rates", "field" => "indicator_name", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.relative_period"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.relative_period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates.relative_period"]["edit"] = array("table" => "public.dhis2_reporting_rates", "field" => "relative_period", "page" => "edit");
+		if( !isset( $lookupTableLinks["DHIS2_Indicators"] ) ) {
+			$lookupTableLinks["DHIS2_Indicators"] = array();
+		}
+		if( !isset( $lookupTableLinks["DHIS2_Indicators"]["dhis2_reportingrate_settings.data_set"] )) {
+			$lookupTableLinks["DHIS2_Indicators"]["dhis2_reportingrate_settings.data_set"] = array();
+		}
+		$lookupTableLinks["DHIS2_Indicators"]["dhis2_reportingrate_settings.data_set"]["edit"] = array("table" => "public.dhis2_reportingrate_settings", "field" => "data_set", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_periods"] ) ) {
+			$lookupTableLinks["public.dhis2_periods"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate_settings.report_period"] )) {
+			$lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate_settings.report_period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_periods"]["dhis2_reportingrate_settings.report_period"]["edit"] = array("table" => "public.dhis2_reportingrate_settings", "field" => "report_period", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_OrgUnit_Regions"] ) ) {
 			$lookupTableLinks["DHIS2_OrgUnit_Regions"] = array();
 		}
@@ -1048,6 +1090,48 @@ function InitLookupLinks()
 			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.ownership_type_label"] = array();
 		}
 		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.ownership_type_label"]["search"] = array("table" => "DHIS2_Reporting_Rates_Report", "field" => "ownership_type_label", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.indicator_name"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.indicator_name"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.indicator_name"]["search"] = array("table" => "DHIS2_Reporting_Rates_Report", "field" => "indicator_name", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.relative_period"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.relative_period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis2_reporting_rates_report.relative_period"]["search"] = array("table" => "DHIS2_Reporting_Rates_Report", "field" => "relative_period", "page" => "search");
+		if( !isset( $lookupTableLinks["public.eidm_hc"] ) ) {
+			$lookupTableLinks["public.eidm_hc"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.eidm_hc"]["eidm_hc.indicator"] )) {
+			$lookupTableLinks["public.eidm_hc"]["eidm_hc.indicator"] = array();
+		}
+		$lookupTableLinks["public.eidm_hc"]["eidm_hc.indicator"]["edit"] = array("table" => "public.eidm_hc", "field" => "indicator", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.eidm_hc"] ) ) {
+			$lookupTableLinks["public.eidm_hc"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.eidm_hc"]["eidm_hc.organisation_unit"] )) {
+			$lookupTableLinks["public.eidm_hc"]["eidm_hc.organisation_unit"] = array();
+		}
+		$lookupTableLinks["public.eidm_hc"]["eidm_hc.organisation_unit"]["edit"] = array("table" => "public.eidm_hc", "field" => "organisation_unit", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.eidm_hc"] ) ) {
+			$lookupTableLinks["public.eidm_hc"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.eidm_hc"]["eidm_hc.period"] )) {
+			$lookupTableLinks["public.eidm_hc"]["eidm_hc.period"] = array();
+		}
+		$lookupTableLinks["public.eidm_hc"]["eidm_hc.period"]["edit"] = array("table" => "public.eidm_hc", "field" => "period", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.eidm_hc"] ) ) {
+			$lookupTableLinks["public.eidm_hc"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.eidm_hc"]["eidm_hc.relative_period"] )) {
+			$lookupTableLinks["public.eidm_hc"]["eidm_hc.relative_period"] = array();
+		}
+		$lookupTableLinks["public.eidm_hc"]["eidm_hc.relative_period"]["edit"] = array("table" => "public.eidm_hc", "field" => "relative_period", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Data_Elements"] ) ) {
 			$lookupTableLinks["DHIS2_Data_Elements"] = array();
 		}
@@ -1069,6 +1153,48 @@ function InitLookupLinks()
 			$lookupTableLinks["public.dhis2_periods"]["eidm_settings.pe"] = array();
 		}
 		$lookupTableLinks["public.dhis2_periods"]["eidm_settings.pe"]["edit"] = array("table" => "public.eidm_settings", "field" => "pe", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.organisationunit"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.organisationunit"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.organisationunit"]["search"] = array("table" => "DHIS_2_Reporting_Rates_Chart", "field" => "organisationunit", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.facility_type"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.facility_type"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.facility_type"]["search"] = array("table" => "DHIS_2_Reporting_Rates_Chart", "field" => "facility_type", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.report_period"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.report_period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.report_period"]["search"] = array("table" => "DHIS_2_Reporting_Rates_Chart", "field" => "report_period", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.ownership_type_label"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.ownership_type_label"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.ownership_type_label"]["search"] = array("table" => "DHIS_2_Reporting_Rates_Chart", "field" => "ownership_type_label", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.indicator_name"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.indicator_name"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.indicator_name"]["search"] = array("table" => "DHIS_2_Reporting_Rates_Chart", "field" => "indicator_name", "page" => "search");
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"] ) ) {
+			$lookupTableLinks["public.dhis2_reporting_rates"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.relative_period"] )) {
+			$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.relative_period"] = array();
+		}
+		$lookupTableLinks["public.dhis2_reporting_rates"]["dhis_2_reporting_rates_chart.relative_period"]["search"] = array("table" => "DHIS_2_Reporting_Rates_Chart", "field" => "relative_period", "page" => "search");
 }
 
 ?>

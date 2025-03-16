@@ -949,6 +949,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="DHIS_2_Reporting_Rates_Chart")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1721,6 +1725,10 @@ function getCaptionTable($table)
 	if($table=="DHIS2_Data_Elements")
 	{
 		return "DHIS2 Data Elements";
+	}
+	if($table=="DHIS_2_Reporting_Rates_Chart")
+	{
+		return "DHIS 2 Reporting Rates Chart";
 	}
 	return $table;
 }

@@ -68,16 +68,13 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
-										"%",
-										"%",
-										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 10,
+							colSpan: 7,
 							border:[false, false,false,false],
 							stack: [
 
@@ -257,12 +254,12 @@ pdfDocument = {
 
 
 {BEGIN grid_row}
-	{BEGIN dataset_name_firstnewgroup}
+	{BEGIN indicator_name_firstnewgroup}
 		[
 								{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report dataset_name }',
+				text: '{$jslabel DHIS2_Reporting_Rates_Report indicator_name }',
 				style: 'blackshade',
-				alignment: '{$dataset_name_align}',
+				alignment: '{$indicator_name_align}',
 			},
 											{
 				text: '{$jslabel DHIS2_Reporting_Rates_Report organisationunit }',
@@ -274,48 +271,33 @@ pdfDocument = {
 				style: 'blackshade',
 				alignment: '{$facility_type_align}',
 			},
-																																								
-																							{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report report_period }',
-				style: 'blackshade',
-				alignment: '{$report_period_align}',
-			},
 											{
 				text: '{$jslabel DHIS2_Reporting_Rates_Report ownership_type_label }',
 				style: 'blackshade',
 				alignment: '{$ownership_type_label_align}',
 			},
-											{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report actual_reports }',
+																				
+																												{
+				text: '{$jslabel DHIS2_Reporting_Rates_Report relative_period }',
 				style: 'blackshade',
-				alignment: '{$actual_reports_align}',
+				alignment: '{$relative_period_align}',
 			},
 											{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report actual_reports_on_time }',
+				text: '{$jslabel DHIS2_Reporting_Rates_Report report_period }',
 				style: 'blackshade',
-				alignment: '{$actual_reports_on_time_align}',
+				alignment: '{$report_period_align}',
 			},
 											{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report expected_reports }',
+				text: '{$jslabel DHIS2_Reporting_Rates_Report value }',
 				style: 'blackshade',
-				alignment: '{$expected_reports_align}',
-			},
-											{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report reporting_rate }',
-				style: 'blackshade',
-				alignment: '{$reporting_rate_align}',
-			},
-											{
-				text: '{$jslabel DHIS2_Reporting_Rates_Report reporting_rate_on_time }',
-				style: 'blackshade',
-				alignment: '{$reporting_rate_on_time_align}',
+				alignment: '{$value_align}',
 			},
 						],
 		
 	[
 								{
 				stack: [
-					{$dataset_name_value},
+					{$indicator_name_value},
 									],
 				style: "header_1"
 			},
@@ -334,8 +316,21 @@ pdfDocument = {
 				style: "header_3"
 			},
 					
+											{
+				stack: [
+					{$ownership_type_label_value},
+									],
+				style: "header_4"
+			},
+					
 							
-																							{
+																												{
+				text: [
+										{$relative_period_value}
+									],
+				alignment: '{$relative_period_align}',
+			},
+											{
 				text: [
 										{$report_period_value}
 									],
@@ -343,43 +338,13 @@ pdfDocument = {
 			},
 											{
 				text: [
-										{$ownership_type_label_value}
+										{$value_value}
 									],
-				alignment: '{$ownership_type_label_align}',
-			},
-											{
-				text: [
-										{$actual_reports_value}
-									],
-				alignment: '{$actual_reports_align}',
-			},
-											{
-				text: [
-										{$actual_reports_on_time_value}
-									],
-				alignment: '{$actual_reports_on_time_align}',
-			},
-											{
-				text: [
-										{$expected_reports_value}
-									],
-				alignment: '{$expected_reports_align}',
-			},
-											{
-				text: [
-										{$reporting_rate_value}
-									],
-				alignment: '{$reporting_rate_align}',
-			},
-											{
-				text: [
-										{$reporting_rate_on_time_value}
-									],
-				alignment: '{$reporting_rate_on_time_align}',
+				alignment: '{$value_align}',
 			},
 					
 	],
-	{END dataset_name_firstnewgroup}
+	{END indicator_name_firstnewgroup}
 	{BEGIN organisationunit_firstnewgroup}
 		
 	[
@@ -404,8 +369,21 @@ pdfDocument = {
 				style: "header_3"
 			},
 					
+											{
+				stack: [
+					{$ownership_type_label_value},
+									],
+				style: "header_4"
+			},
+					
 							
-																							{
+																												{
+				text: [
+										{$relative_period_value}
+									],
+				alignment: '{$relative_period_align}',
+			},
+											{
 				text: [
 										{$report_period_value}
 									],
@@ -413,39 +391,9 @@ pdfDocument = {
 			},
 											{
 				text: [
-										{$ownership_type_label_value}
+										{$value_value}
 									],
-				alignment: '{$ownership_type_label_align}',
-			},
-											{
-				text: [
-										{$actual_reports_value}
-									],
-				alignment: '{$actual_reports_align}',
-			},
-											{
-				text: [
-										{$actual_reports_on_time_value}
-									],
-				alignment: '{$actual_reports_on_time_align}',
-			},
-											{
-				text: [
-										{$expected_reports_value}
-									],
-				alignment: '{$expected_reports_align}',
-			},
-											{
-				text: [
-										{$reporting_rate_value}
-									],
-				alignment: '{$reporting_rate_align}',
-			},
-											{
-				text: [
-										{$reporting_rate_on_time_value}
-									],
-				alignment: '{$reporting_rate_on_time_align}',
+				alignment: '{$value_align}',
 			},
 					
 	],
@@ -474,8 +422,21 @@ pdfDocument = {
 				style: "header_3"
 			},
 					
+											{
+				stack: [
+					{$ownership_type_label_value},
+									],
+				style: "header_4"
+			},
+					
 							
-																							{
+																												{
+				text: [
+										{$relative_period_value}
+									],
+				alignment: '{$relative_period_align}',
+			},
+											{
 				text: [
 										{$report_period_value}
 									],
@@ -483,43 +444,66 @@ pdfDocument = {
 			},
 											{
 				text: [
-										{$ownership_type_label_value}
+										{$value_value}
 									],
-				alignment: '{$ownership_type_label_align}',
-			},
-											{
-				text: [
-										{$actual_reports_value}
-									],
-				alignment: '{$actual_reports_align}',
-			},
-											{
-				text: [
-										{$actual_reports_on_time_value}
-									],
-				alignment: '{$actual_reports_on_time_align}',
-			},
-											{
-				text: [
-										{$expected_reports_value}
-									],
-				alignment: '{$expected_reports_align}',
-			},
-											{
-				text: [
-										{$reporting_rate_value}
-									],
-				alignment: '{$reporting_rate_align}',
-			},
-											{
-				text: [
-										{$reporting_rate_on_time_value}
-									],
-				alignment: '{$reporting_rate_on_time_align}',
+				alignment: '{$value_align}',
 			},
 					
 	],
 	{END facility_type_firstnewgroup}
+	{BEGIN ownership_type_label_firstnewgroup}
+		
+	[
+								{
+				text: [
+											''
+									],
+				style: "group_1"
+			},
+
+											{
+				text: [
+											''
+									],
+				style: "group_2"
+			},
+
+											{
+				text: [
+											''
+									],
+				style: "group_3"
+			},
+
+											{
+				stack: [
+					{$ownership_type_label_value},
+									],
+				style: "header_4"
+			},
+					
+							
+																												{
+				text: [
+										{$relative_period_value}
+									],
+				alignment: '{$relative_period_align}',
+			},
+											{
+				text: [
+										{$report_period_value}
+									],
+				alignment: '{$report_period_align}',
+			},
+											{
+				text: [
+										{$value_value}
+									],
+				alignment: '{$value_align}',
+			},
+					
+	],
+	{END ownership_type_label_firstnewgroup}
 
 {BEGIN nonewgroup}
 	[
@@ -535,40 +519,28 @@ pdfDocument = {
 						text: '',
 						style: 'group_3',
 		},
+				{
+						text: '',
+						style: 'group_4',
+		},
 		
-																							{
+																												{
+				text: {$relative_period_value},
+				alignment: '{$relative_period_align}',
+			},
+											{
 				text: {$report_period_value},
 				alignment: '{$report_period_align}',
 			},
 											{
-				text: {$ownership_type_label_value},
-				alignment: '{$ownership_type_label_align}',
-			},
-											{
-				text: {$actual_reports_value},
-				alignment: '{$actual_reports_align}',
-			},
-											{
-				text: {$actual_reports_on_time_value},
-				alignment: '{$actual_reports_on_time_align}',
-			},
-											{
-				text: {$expected_reports_value},
-				alignment: '{$expected_reports_align}',
-			},
-											{
-				text: {$reporting_rate_value},
-				alignment: '{$reporting_rate_align}',
-			},
-											{
-				text: {$reporting_rate_on_time_value},
-				alignment: '{$reporting_rate_on_time_align}',
+				text: {$value_value},
+				alignment: '{$value_align}',
 			},
 						],
 {END nonewgroup}
 
 
-			{BEGIN facility_type_endgroup}
+			{BEGIN ownership_type_label_endgroup}
 
 		
 		
@@ -576,23 +548,24 @@ pdfDocument = {
 		
 			
 
-		{END facility_type_endgroup}
+		{END ownership_type_label_endgroup}
 	
 	
-			{BEGIN dataset_name_endgroup}
+	
+			{BEGIN indicator_name_endgroup}
 
 				[
 			
 											{
-					text: ['Summary for {$jslabel DHIS2_Reporting_Rates_Report dataset_name } ', 
-						{$dataset_name_grval},
+					text: ['Summary for {$jslabel DHIS2_Reporting_Rates_Report indicator_name } ', 
+						{$indicator_name_grval},
 						' - ', 
-						{$groupdataset_name_total_cnt}, 
+						{$groupindicator_name_total_cnt}, 
 						' records total'
 					],
 					style: 'group_1',
-					colSpan: 10				},
-																																																																								],
+					colSpan: 7				},
+																																																			],
 		
 				[
 											{
@@ -632,43 +605,18 @@ pdfDocument = {
 									},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_sum},
+													''	
 											],
 					style: 'group_1',
 
-										alignment: '{$actual_reports_align}',
 									},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_on_time_sum},
+													{$groupindicator_name_totalvalue_sum},
 											],
 					style: 'group_1',
 
-										alignment: '{$actual_reports_on_time_align}',
-									},
-											{
-					text: [
-													{$groupdataset_name_totalexpected_reports_sum},
-											],
-					style: 'group_1',
-
-										alignment: '{$expected_reports_align}',
-									},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_sum},
-											],
-					style: 'group_1',
-
-										alignment: '{$reporting_rate_align}',
-									},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_on_time_sum},
-											],
-					style: 'group_1',
-
-										alignment: '{$reporting_rate_on_time_align}',
+										alignment: '{$value_align}',
 									},
 					],
 		
@@ -715,47 +663,19 @@ pdfDocument = {
 				},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_avg},
+													''	
 									
 					],
 					style: 'group_1',
-										alignment: '{$actual_reports_align}',
 										
 				},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_on_time_avg},
+													{$groupindicator_name_totalvalue_avg},
 									
 					],
 					style: 'group_1',
-										alignment: '{$actual_reports_on_time_align}',
-										
-				},
-											{
-					text: [
-													{$groupdataset_name_totalexpected_reports_avg},
-									
-					],
-					style: 'group_1',
-										alignment: '{$expected_reports_align}',
-										
-				},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_avg},
-									
-					],
-					style: 'group_1',
-										alignment: '{$reporting_rate_align}',
-										
-				},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_on_time_avg},
-									
-					],
-					style: 'group_1',
-										alignment: '{$reporting_rate_on_time_align}',
+										alignment: '{$value_align}',
 										
 				},
 					],
@@ -808,52 +728,21 @@ pdfDocument = {
 				},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_min},
+													''	
 									
 					],
 					style: 'group_1',
 
-										alignment: '{$actual_reports_align}',
 											
 				},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_on_time_min},
+													{$groupindicator_name_totalvalue_min},
 									
 					],
 					style: 'group_1',
 
-										alignment: '{$actual_reports_on_time_align}',
-											
-				},
-											{
-					text: [
-													{$groupdataset_name_totalexpected_reports_min},
-									
-					],
-					style: 'group_1',
-
-										alignment: '{$expected_reports_align}',
-											
-				},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_min},
-									
-					],
-					style: 'group_1',
-
-										alignment: '{$reporting_rate_align}',
-											
-				},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_on_time_min},
-									
-					],
-					style: 'group_1',
-
-										alignment: '{$reporting_rate_on_time_align}',
+										alignment: '{$value_align}',
 											
 				},
 					],
@@ -901,53 +790,25 @@ pdfDocument = {
 									},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_max},
+													''	
 									
 					],
 					style: 'group_1',
 
-										alignment: '{$actual_reports_align}',
 									},
 											{
 					text: [
-													{$groupdataset_name_totalactual_reports_on_time_max},
+													{$groupindicator_name_totalvalue_max},
 									
 					],
 					style: 'group_1',
 
-										alignment: '{$actual_reports_on_time_align}',
-									},
-											{
-					text: [
-													{$groupdataset_name_totalexpected_reports_max},
-									
-					],
-					style: 'group_1',
-
-										alignment: '{$expected_reports_align}',
-									},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_max},
-									
-					],
-					style: 'group_1',
-
-										alignment: '{$reporting_rate_align}',
-									},
-											{
-					text: [
-													{$groupdataset_name_totalreporting_rate_on_time_max},
-									
-					],
-					style: 'group_1',
-
-										alignment: '{$reporting_rate_on_time_align}',
+										alignment: '{$value_align}',
 									},
 					],
 			
 
-		{END dataset_name_endgroup}
+		{END indicator_name_endgroup}
 	
 {END grid_row}
 

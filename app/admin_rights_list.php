@@ -1939,6 +1939,13 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("dhis2_data_elements", " " . "DHIS2 Data Elements");
+$table = "DHIS_2_Reporting_Rates_Chart";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("dhis_2_reporting_rates_chart", " " . "DHIS 2 Reporting Rates Chart");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

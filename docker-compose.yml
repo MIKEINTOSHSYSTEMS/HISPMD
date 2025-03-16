@@ -277,6 +277,18 @@ services:
       hispmdnet:
         ipv4_address: 192.168.128.14
 
+  rancher:
+    image: rancher/rancher:latest
+    container_name: hispmd_rancher
+    restart: unless-stopped
+    ports:
+      - "8088:80"  # Map host port 8081 to container port 80
+      - "8444:443" # Map host port 8444 to container port 443
+    volumes:
+      - rancher_data:/var/lib/rancher
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.128.17
 
   #hispmd_matomo:
   #  image: bitnami/matomo:latest
@@ -309,6 +321,7 @@ volumes:
   hispmd_vizdata:
   hispmd_mongodata:
   grafana-storage:
+  rancher_data:
   #hispmd_matomo:
 
 networks:

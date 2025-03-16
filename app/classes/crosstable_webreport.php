@@ -1637,6 +1637,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("public.dhis2_reporting_rates" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

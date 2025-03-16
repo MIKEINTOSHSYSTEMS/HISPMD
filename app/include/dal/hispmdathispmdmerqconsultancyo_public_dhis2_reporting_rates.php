@@ -14,6 +14,11 @@ $dalTabledhis2_reporting_rates["facility_type"] = array("type"=>200,"varname"=>"
 $dalTabledhis2_reporting_rates["report_period"] = array("type"=>200,"varname"=>"report_period", "name" => "report_period", "autoInc" => "0");
 $dalTabledhis2_reporting_rates["ownership_type_id"] = array("type"=>200,"varname"=>"ownership_type_id", "name" => "ownership_type_id", "autoInc" => "0");
 $dalTabledhis2_reporting_rates["ownership_type_label"] = array("type"=>200,"varname"=>"ownership_type_label", "name" => "ownership_type_label", "autoInc" => "0");
+$dalTabledhis2_reporting_rates["indicator_id"] = array("type"=>200,"varname"=>"indicator_id", "name" => "indicator_id", "autoInc" => "0");
+$dalTabledhis2_reporting_rates["indicator_name"] = array("type"=>200,"varname"=>"indicator_name", "name" => "indicator_name", "autoInc" => "0");
+$dalTabledhis2_reporting_rates["organisationunit_description"] = array("type"=>200,"varname"=>"organisationunit_description", "name" => "organisationunit_description", "autoInc" => "0");
+$dalTabledhis2_reporting_rates["value"] = array("type"=>14,"varname"=>"fldvalue", "name" => "value", "autoInc" => "0");
+$dalTabledhis2_reporting_rates["relative_period"] = array("type"=>200,"varname"=>"relative_period", "name" => "relative_period", "autoInc" => "0");
 
 $dal_info["hispmdathispmdmerqconsultancyo_public_dhis2_reporting_rates"] = &$dalTabledhis2_reporting_rates;
 ?>

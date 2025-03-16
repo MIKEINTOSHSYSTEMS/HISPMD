@@ -114,6 +114,12 @@ include './settings/db_connection.php';
                 <button id="eidm-updateData" class="btn btn-success btn-custom">
                     Update EIDM Data
                 </button>
+                <button id="eidm-deleteAll" class="btn btn-danger btn-custom">
+                    Delete All Rows
+                </button>
+                <button id="eidm-deleteNonNull" class="btn btn-warning btn-custom">
+                    Delete Non-Null Data
+                </button>
                 <div id="eidm-status" class="status-box"></div>
             </div>
         </div>
@@ -189,6 +195,78 @@ include './settings/db_connection.php';
             });
         });
 
+        // Delete All Rows
+        $('#eidm-deleteAll').click(function() {
+            const btn = $(this);
+            btn.prop('disabled', true);
+            $('#eidm-status').html('<div class="alert alert-info">Deleting all rows...</div>');
+
+            $.ajax({
+                url: 'delete_data.php?action=deleteAll',
+                method: 'GET',
+                success: function(response) {
+                    if (response.success) {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-success">
+                                Success! All rows deleted.
+                            </div>
+                        `);
+                        loadDataPreview();
+                    } else {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-danger">
+                                Error: ${response.error}
+                            </div>
+                        `);
+                    }
+                },
+                error: function(xhr) {
+                    $('#eidm-status').html(`
+                        <div class="alert alert-danger">
+                            Delete failed: ${xhr.responseJSON?.error || 'Unknown error'}
+                        </div>
+                    `);
+                },
+                complete: () => btn.prop('disabled', false)
+            });
+        });
+
+        // Delete Non-Null Data
+        $('#eidm-deleteNonNull').click(function() {
+            const btn = $(this);
+            btn.prop('disabled', true);
+            $('#eidm-status').html('<div class="alert alert-info">Deleting non-null data...</div>');
+
+            $.ajax({
+                url: 'delete_data.php?action=deleteNonNull',
+                method: 'GET',
+                success: function(response) {
+                    if (response.success) {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-success">
+                                Success! Non-null data deleted.
+                            </div>
+                        `);
+                        loadDataPreview();
+                    } else {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-danger">
+                                Error: ${response.error}
+                            </div>
+                        `);
+                    }
+                },
+                error: function(xhr) {
+                    $('#eidm-status').html(`
+                        <div class="alert alert-danger">
+                            Delete failed: ${xhr.responseJSON?.error || 'Unknown error'}
+                        </div>
+                    `);
+                },
+                complete: () => btn.prop('disabled', false)
+            });
+        });
+
         function loadDataPreview() {
             $.get('fetch_data.php', function(data) {
                 const preview = $('#eidm-dataPreview');
@@ -198,6 +276,7 @@ include './settings/db_connection.php';
                             <tr>
                                 <th>Indicator</th>
                                 <th>Organisation Unit</th>
+                                <th>Relative Period</th>
                                 <th>Period</th>
                                 <th>Value</th>
                             </tr>
@@ -207,6 +286,7 @@ include './settings/db_connection.php';
                                 <tr>
                                     <td>${row.indicator}</td>
                                     <td>${row.organisation_unit}</td>
+                                    <td>${row.relative_period}</td>
                                     <td>${row.period}</td>
                                     <td>${row.value}</td>
                                 </tr>

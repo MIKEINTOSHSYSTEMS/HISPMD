@@ -570,15 +570,12 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
 <br>
         <!-- Tabs Section -->
         <ul class="nav nav-tabs mb-4">
-                      <!--
             <li class="nav-item">
                 <a class="nav-link active" href="#eidm-operations" data-bs-toggle="tab">Operations</a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="#eidm-settings" data-bs-toggle="tab">Settings</a>
             </li>
-    -->
         </ul>
 
         <div class="tab-content">
@@ -596,6 +593,12 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
             <div class="card-body">
                 <button id="eidm-updateData" class="btn btn-success btn-custom">
                     Update EIDM Data
+                </button>
+                <button id="eidm-deleteAll" class="btn btn-danger btn-custom">
+                    Delete All Rows
+                </button>
+                <button id="eidm-deleteNonNull" class="btn btn-warning btn-custom">
+                    Delete Non-Null Data
                 </button>
                 <div id="eidm-status" class="status-box"></div>
             </div>
@@ -672,6 +675,78 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
             });
         });
 
+        // Delete All Rows
+        $('#eidm-deleteAll').click(function() {
+            const btn = $(this);
+            btn.prop('disabled', true);
+            $('#eidm-status').html('<div class="alert alert-info">Deleting all rows...</div>');
+
+            $.ajax({
+                url: '../api/dhis2/eidm_hc/delete_data.php?action=deleteAll',
+                method: 'GET',
+                success: function(response) {
+                    if (response.success) {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-success">
+                                Success! All rows deleted.
+                            </div>
+                        `);
+                        loadDataPreview();
+                    } else {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-danger">
+                                Error: ${response.error}
+                            </div>
+                        `);
+                    }
+                },
+                error: function(xhr) {
+                    $('#eidm-status').html(`
+                        <div class="alert alert-danger">
+                            Delete failed: ${xhr.responseJSON?.error || 'Unknown error'}
+                        </div>
+                    `);
+                },
+                complete: () => btn.prop('disabled', false)
+            });
+        });
+
+        // Delete Non-Null Data
+        $('#eidm-deleteNonNull').click(function() {
+            const btn = $(this);
+            btn.prop('disabled', true);
+            $('#eidm-status').html('<div class="alert alert-info">Deleting non-null data...</div>');
+
+            $.ajax({
+                url: '../api/dhis2/eidm_hc/delete_data.php?action=deleteNonNull',
+                method: 'GET',
+                success: function(response) {
+                    if (response.success) {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-success">
+                                Success! Non-null data deleted.
+                            </div>
+                        `);
+                        loadDataPreview();
+                    } else {
+                        $('#eidm-status').html(`
+                            <div class="alert alert-danger">
+                                Error: ${response.error}
+                            </div>
+                        `);
+                    }
+                },
+                error: function(xhr) {
+                    $('#eidm-status').html(`
+                        <div class="alert alert-danger">
+                            Delete failed: ${xhr.responseJSON?.error || 'Unknown error'}
+                        </div>
+                    `);
+                },
+                complete: () => btn.prop('disabled', false)
+            });
+        });
+
         function loadDataPreview() {
             $.get('../api/dhis2/eidm_hc/fetch_data.php', function(data) {
                 const preview = $('#eidm-dataPreview');
@@ -681,6 +756,7 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
                             <tr>
                                 <th>Indicator</th>
                                 <th>Organisation Unit</th>
+                                <th>Relative Period</th>
                                 <th>Period</th>
                                 <th>Value</th>
                             </tr>
@@ -690,6 +766,7 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
                                 <tr>
                                     <td>${row.indicator}</td>
                                     <td>${row.organisation_unit}</td>
+                                    <td>${row.relative_period}</td>
                                     <td>${row.period}</td>
                                     <td>${row.value}</td>
                                 </tr>

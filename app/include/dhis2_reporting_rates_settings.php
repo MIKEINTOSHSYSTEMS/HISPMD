@@ -67,6 +67,21 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_reporting_rates["English"]["ownership_type_label"] = "Ownership Type";
 	$fieldToolTipsdhis2_reporting_rates["English"]["ownership_type_label"] = "";
 	$placeHoldersdhis2_reporting_rates["English"]["ownership_type_label"] = "";
+	$fieldLabelsdhis2_reporting_rates["English"]["indicator_id"] = "Indicator Id";
+	$fieldToolTipsdhis2_reporting_rates["English"]["indicator_id"] = "";
+	$placeHoldersdhis2_reporting_rates["English"]["indicator_id"] = "";
+	$fieldLabelsdhis2_reporting_rates["English"]["indicator_name"] = "Indicator Name";
+	$fieldToolTipsdhis2_reporting_rates["English"]["indicator_name"] = "";
+	$placeHoldersdhis2_reporting_rates["English"]["indicator_name"] = "";
+	$fieldLabelsdhis2_reporting_rates["English"]["organisationunit_description"] = "Organisationunit Description";
+	$fieldToolTipsdhis2_reporting_rates["English"]["organisationunit_description"] = "";
+	$placeHoldersdhis2_reporting_rates["English"]["organisationunit_description"] = "";
+	$fieldLabelsdhis2_reporting_rates["English"]["value"] = "Value";
+	$fieldToolTipsdhis2_reporting_rates["English"]["value"] = "";
+	$placeHoldersdhis2_reporting_rates["English"]["value"] = "";
+	$fieldLabelsdhis2_reporting_rates["English"]["relative_period"] = "Relative Period";
+	$fieldToolTipsdhis2_reporting_rates["English"]["relative_period"] = "";
+	$placeHoldersdhis2_reporting_rates["English"]["relative_period"] = "";
 	if (count($fieldToolTipsdhis2_reporting_rates["English"]))
 		$tdatadhis2_reporting_rates[".isUseToolTips"] = true;
 }
@@ -198,6 +213,11 @@ $tdatadhis2_reporting_rates[".googleLikeFields"][] = "facility_type";
 $tdatadhis2_reporting_rates[".googleLikeFields"][] = "report_period";
 $tdatadhis2_reporting_rates[".googleLikeFields"][] = "ownership_type_id";
 $tdatadhis2_reporting_rates[".googleLikeFields"][] = "ownership_type_label";
+$tdatadhis2_reporting_rates[".googleLikeFields"][] = "indicator_id";
+$tdatadhis2_reporting_rates[".googleLikeFields"][] = "indicator_name";
+$tdatadhis2_reporting_rates[".googleLikeFields"][] = "organisationunit_description";
+$tdatadhis2_reporting_rates[".googleLikeFields"][] = "value";
+$tdatadhis2_reporting_rates[".googleLikeFields"][] = "relative_period";
 
 
 
@@ -232,7 +252,7 @@ $tdatadhis2_reporting_rates[".strOrderBy"] = $tstrOrderBy;
 $tdatadhis2_reporting_rates[".orderindexes"] = array();
 
 
-$tdatadhis2_reporting_rates[".sqlHead"] = "SELECT organisationunit_id,  	organisationunit,  	organisationunit_code,  	actual_reports,  	expected_reports,  	reporting_rate,  	actual_reports_on_time,  	reporting_rate_on_time,  	dataset_id,  	dataset_name,  	facility_type,  	report_period,  	ownership_type_id,  	ownership_type_label";
+$tdatadhis2_reporting_rates[".sqlHead"] = "SELECT organisationunit_id,  	organisationunit,  	organisationunit_code,  	actual_reports,  	expected_reports,  	reporting_rate,  	actual_reports_on_time,  	reporting_rate_on_time,  	dataset_id,  	dataset_name,  	facility_type,  	report_period,  	ownership_type_id,  	ownership_type_label,  	indicator_id,  	indicator_name,  	organisationunit_description,  	\"value\",  	relative_period";
 $tdatadhis2_reporting_rates[".sqlFrom"] = "FROM \"public\".dhis2_reporting_rates";
 $tdatadhis2_reporting_rates[".sqlWhereExpr"] = "";
 $tdatadhis2_reporting_rates[".sqlTail"] = "";
@@ -474,7 +494,7 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -484,6 +504,36 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_reporting_rates";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "organisationunit";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "organisationunit";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -498,11 +548,8 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -528,7 +575,7 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1720,7 +1767,7 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1730,6 +1777,36 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_reporting_rates";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "facility_type";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "facility_type";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1744,11 +1821,8 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1774,7 +1848,7 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1859,7 +1933,7 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1869,6 +1943,36 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_reporting_rates";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "report_period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "report_period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1883,11 +1987,8 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1913,7 +2014,7 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2136,6 +2237,172 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_reporting_rates";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "ownership_type_label";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "ownership_type_label";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "actual_reports";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_reporting_rates["ownership_type_label"] = $fdata;
+		$tdatadhis2_reporting_rates[".searchableFields"][] = "ownership_type_label";
+//	indicator_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "indicator_id";
+	$fdata["GoodName"] = "indicator_id";
+	$fdata["ownerTable"] = "public.dhis2_reporting_rates";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_reporting_rates","indicator_id");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_id";
+
+		$fdata["sourceSingle"] = "indicator_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
 	$edata = array("EditFormat" => "Text field");
 
 	
@@ -2199,6 +2466,171 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_reporting_rates["indicator_id"] = $fdata;
+		$tdatadhis2_reporting_rates[".searchableFields"][] = "indicator_id";
+//	indicator_name
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "indicator_name";
+	$fdata["GoodName"] = "indicator_name";
+	$fdata["ownerTable"] = "public.dhis2_reporting_rates";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_reporting_rates","indicator_name");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "indicator_name";
+
+		$fdata["sourceSingle"] = "indicator_name";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "indicator_name";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_reporting_rates";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "indicator_name";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "indicator_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "actual_reports";
 		$fdata["filterFormat"] = "Values list";
@@ -2216,8 +2648,451 @@ $tdatadhis2_reporting_rates[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatadhis2_reporting_rates["ownership_type_label"] = $fdata;
-		$tdatadhis2_reporting_rates[".searchableFields"][] = "ownership_type_label";
+	$tdatadhis2_reporting_rates["indicator_name"] = $fdata;
+		$tdatadhis2_reporting_rates[".searchableFields"][] = "indicator_name";
+//	organisationunit_description
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "organisationunit_description";
+	$fdata["GoodName"] = "organisationunit_description";
+	$fdata["ownerTable"] = "public.dhis2_reporting_rates";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_reporting_rates","organisationunit_description");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "organisationunit_description";
+
+		$fdata["sourceSingle"] = "organisationunit_description";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "organisationunit_description";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_reporting_rates["organisationunit_description"] = $fdata;
+		$tdatadhis2_reporting_rates[".searchableFields"][] = "organisationunit_description";
+//	value
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "value";
+	$fdata["GoodName"] = "value";
+	$fdata["ownerTable"] = "public.dhis2_reporting_rates";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_reporting_rates","value");
+	$fdata["FieldType"] = 14;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "value";
+
+		$fdata["sourceSingle"] = "value";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "\"value\"";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 2;
+
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_reporting_rates["value"] = $fdata;
+		$tdatadhis2_reporting_rates[".searchableFields"][] = "value";
+//	relative_period
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "relative_period";
+	$fdata["GoodName"] = "relative_period";
+	$fdata["ownerTable"] = "public.dhis2_reporting_rates";
+	$fdata["Label"] = GetFieldLabel("public_dhis2_reporting_rates","relative_period");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "relative_period";
+
+		$fdata["sourceSingle"] = "relative_period";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "relative_period";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.dhis2_reporting_rates";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "relative_period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "relative_period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "actual_reports";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadhis2_reporting_rates["relative_period"] = $fdata;
+		$tdatadhis2_reporting_rates[".searchableFields"][] = "relative_period";
 
 
 $tables_data["public.dhis2_reporting_rates"]=&$tdatadhis2_reporting_rates;
@@ -2262,7 +3137,7 @@ function createSqlQuery_dhis2_reporting_rates()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "organisationunit_id,  	organisationunit,  	organisationunit_code,  	actual_reports,  	expected_reports,  	reporting_rate,  	actual_reports_on_time,  	reporting_rate_on_time,  	dataset_id,  	dataset_name,  	facility_type,  	report_period,  	ownership_type_id,  	ownership_type_label";
+$proto0["m_strFieldList"] = "organisationunit_id,  	organisationunit,  	organisationunit_code,  	actual_reports,  	expected_reports,  	reporting_rate,  	actual_reports_on_time,  	reporting_rate_on_time,  	dataset_id,  	dataset_name,  	facility_type,  	report_period,  	ownership_type_id,  	ownership_type_label,  	indicator_id,  	indicator_name,  	organisationunit_description,  	\"value\",  	relative_period";
 $proto0["m_strFrom"] = "FROM \"public\".dhis2_reporting_rates";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2498,50 +3373,125 @@ $proto32["m_alias"] = "";
 $obj = new SQLFieldListItem($proto32);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto34=array();
-$proto34["m_link"] = "SQLL_MAIN";
-			$proto35=array();
-$proto35["m_strName"] = "public.dhis2_reporting_rates";
-$proto35["m_srcTableName"] = "public.dhis2_reporting_rates";
-$proto35["m_columns"] = array();
-$proto35["m_columns"][] = "organisationunit_id";
-$proto35["m_columns"][] = "organisationunit";
-$proto35["m_columns"][] = "organisationunit_code";
-$proto35["m_columns"][] = "actual_reports";
-$proto35["m_columns"][] = "expected_reports";
-$proto35["m_columns"][] = "reporting_rate";
-$proto35["m_columns"][] = "actual_reports_on_time";
-$proto35["m_columns"][] = "reporting_rate_on_time";
-$proto35["m_columns"][] = "dataset_id";
-$proto35["m_columns"][] = "dataset_name";
-$proto35["m_columns"][] = "facility_type";
-$proto35["m_columns"][] = "report_period";
-$proto35["m_columns"][] = "ownership_type_id";
-$proto35["m_columns"][] = "ownership_type_label";
-$obj = new SQLTable($proto35);
+						$proto34=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_id",
+	"m_strTable" => "public.dhis2_reporting_rates",
+	"m_srcTableName" => "public.dhis2_reporting_rates"
+));
 
-$proto34["m_table"] = $obj;
-$proto34["m_sql"] = "\"public\".dhis2_reporting_rates";
-$proto34["m_alias"] = "";
+$proto34["m_sql"] = "indicator_id";
 $proto34["m_srcTableName"] = "public.dhis2_reporting_rates";
-$proto36=array();
-$proto36["m_sql"] = "";
-$proto36["m_uniontype"] = "SQLL_UNKNOWN";
+$proto34["m_expr"]=$obj;
+$proto34["m_alias"] = "";
+$obj = new SQLFieldListItem($proto34);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto36=array();
+			$obj = new SQLField(array(
+	"m_strName" => "indicator_name",
+	"m_strTable" => "public.dhis2_reporting_rates",
+	"m_srcTableName" => "public.dhis2_reporting_rates"
+));
+
+$proto36["m_sql"] = "indicator_name";
+$proto36["m_srcTableName"] = "public.dhis2_reporting_rates";
+$proto36["m_expr"]=$obj;
+$proto36["m_alias"] = "";
+$obj = new SQLFieldListItem($proto36);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto38=array();
+			$obj = new SQLField(array(
+	"m_strName" => "organisationunit_description",
+	"m_strTable" => "public.dhis2_reporting_rates",
+	"m_srcTableName" => "public.dhis2_reporting_rates"
+));
+
+$proto38["m_sql"] = "organisationunit_description";
+$proto38["m_srcTableName"] = "public.dhis2_reporting_rates";
+$proto38["m_expr"]=$obj;
+$proto38["m_alias"] = "";
+$obj = new SQLFieldListItem($proto38);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto40=array();
+			$obj = new SQLField(array(
+	"m_strName" => "value",
+	"m_strTable" => "public.dhis2_reporting_rates",
+	"m_srcTableName" => "public.dhis2_reporting_rates"
+));
+
+$proto40["m_sql"] = "\"value\"";
+$proto40["m_srcTableName"] = "public.dhis2_reporting_rates";
+$proto40["m_expr"]=$obj;
+$proto40["m_alias"] = "";
+$obj = new SQLFieldListItem($proto40);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto42=array();
+			$obj = new SQLField(array(
+	"m_strName" => "relative_period",
+	"m_strTable" => "public.dhis2_reporting_rates",
+	"m_srcTableName" => "public.dhis2_reporting_rates"
+));
+
+$proto42["m_sql"] = "relative_period";
+$proto42["m_srcTableName"] = "public.dhis2_reporting_rates";
+$proto42["m_expr"]=$obj;
+$proto42["m_alias"] = "";
+$obj = new SQLFieldListItem($proto42);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto44=array();
+$proto44["m_link"] = "SQLL_MAIN";
+			$proto45=array();
+$proto45["m_strName"] = "public.dhis2_reporting_rates";
+$proto45["m_srcTableName"] = "public.dhis2_reporting_rates";
+$proto45["m_columns"] = array();
+$proto45["m_columns"][] = "organisationunit_id";
+$proto45["m_columns"][] = "organisationunit";
+$proto45["m_columns"][] = "organisationunit_code";
+$proto45["m_columns"][] = "actual_reports";
+$proto45["m_columns"][] = "expected_reports";
+$proto45["m_columns"][] = "reporting_rate";
+$proto45["m_columns"][] = "actual_reports_on_time";
+$proto45["m_columns"][] = "reporting_rate_on_time";
+$proto45["m_columns"][] = "dataset_id";
+$proto45["m_columns"][] = "dataset_name";
+$proto45["m_columns"][] = "facility_type";
+$proto45["m_columns"][] = "report_period";
+$proto45["m_columns"][] = "ownership_type_id";
+$proto45["m_columns"][] = "ownership_type_label";
+$proto45["m_columns"][] = "indicator_id";
+$proto45["m_columns"][] = "indicator_name";
+$proto45["m_columns"][] = "organisationunit_description";
+$proto45["m_columns"][] = "value";
+$proto45["m_columns"][] = "relative_period";
+$obj = new SQLTable($proto45);
+
+$proto44["m_table"] = $obj;
+$proto44["m_sql"] = "\"public\".dhis2_reporting_rates";
+$proto44["m_alias"] = "";
+$proto44["m_srcTableName"] = "public.dhis2_reporting_rates";
+$proto46=array();
+$proto46["m_sql"] = "";
+$proto46["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto36["m_column"]=$obj;
-$proto36["m_contained"] = array();
-$proto36["m_strCase"] = "";
-$proto36["m_havingmode"] = false;
-$proto36["m_inBrackets"] = false;
-$proto36["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto36);
+$proto46["m_column"]=$obj;
+$proto46["m_contained"] = array();
+$proto46["m_strCase"] = "";
+$proto46["m_havingmode"] = false;
+$proto46["m_inBrackets"] = false;
+$proto46["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto46);
 
-$proto34["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto34);
+$proto44["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto44);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2557,7 +3507,7 @@ $queryData_dhis2_reporting_rates = createSqlQuery_dhis2_reporting_rates();
 	
 																												;
 
-														
+																			
 
 $tdatadhis2_reporting_rates[".sqlquery"] = $queryData_dhis2_reporting_rates;
 

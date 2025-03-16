@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdhis2_reportingrate_settings["English"]["id"] = "Id";
 	$fieldToolTipsdhis2_reportingrate_settings["English"]["id"] = "";
 	$placeHoldersdhis2_reportingrate_settings["English"]["id"] = "";
-	$fieldLabelsdhis2_reportingrate_settings["English"]["data_set"] = "Data Sets";
+	$fieldLabelsdhis2_reportingrate_settings["English"]["data_set"] = "Indicator Data Sets";
 	$fieldToolTipsdhis2_reportingrate_settings["English"]["data_set"] = "";
 	$placeHoldersdhis2_reportingrate_settings["English"]["data_set"] = "";
 	$fieldLabelsdhis2_reportingrate_settings["English"]["report_period"] = "Reporting Periods";
@@ -469,7 +469,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "DHIS2_Datasets";
+	$edata["LookupTable"] = "DHIS2_Indicators";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -633,16 +633,16 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.moh_years";
+	$edata["LookupTable"] = "public.dhis2_periods";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
 		
-	$edata["LinkField"] = "year";
+	$edata["LinkField"] = "period_id";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "year";
+	$edata["DisplayField"] = "period_name";
 
 	
 

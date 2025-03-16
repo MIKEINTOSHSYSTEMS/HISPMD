@@ -88,8 +88,8 @@
           <li><a href="../docs/">Documentation</a></li>
           <!--<li><a href="#gallery">Support</a></li>
           <li><a href="./main_list.php">Knowledge Base</a></li>-->
-          <!--<li><a href="#team">Documentation</a></li>-->
-          <li><a href="#contact">Contact</a></li>
+          <!--<li><a href="#docs">Documentation</a></li>-->
+          <!--<li><a href="#contact">Contact</a></li>-->
           <li class="dropdown"><a href="./login.php"><span><b>Account<b></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 <!--
             <ul>
@@ -127,7 +127,7 @@
       <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
 
       <div class="container">
-        <div class="row gy-4 justify-content-between">
+        <!--<div class="row gy-4 justify-content-between">-->
           <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
             <!--
           <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
@@ -162,24 +162,28 @@
 document.write(getGreeting());
   </script>
 <br>
+<br>
+<br>
 <script>
 function getGreeting() {
   var now = new Date();
   var hour = now.getHours();
 
   if (hour < 12) {
-    return "Good Morning!";
+    return "👋🏻 Good Morning!";
   } else if (hour < 18) {
-    return "Good Day!";
+    return "👋🏼 Good Day!";
   } else if (hour < 22) {
-    return "Good Evening!";
+    return "👋🏽 Good Evening!";
   } else {
-    return "Good Night!";
+    return "👋🏾 Good Night!";
   }
 }
 
 document.write(getGreeting());
 </script>
+<br>
+
 </div>
           <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
             <h1>Welcome to <span>HISPMD</span></h1>
@@ -269,6 +273,16 @@ document.write(getGreeting());
 
         <div align=center>
 <style>
+
+.hero {
+    width: 100%;
+    height: 99vh;
+    position: relative;
+    padding: 120px 0 120px 0;
+    display: flex;
+    align-items: center;
+}
+
   @layer demo, countdown;
 
 @layer countdown{
@@ -520,6 +534,8 @@ document.write(getGreeting());
             line-height: 1.2;
         }
         
+
+
 
     </style>
 <section id="datasources">
@@ -1004,7 +1020,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General footer styles */
 .footer {
-  background-color: #00274c/* #1e1e1e;*/
+  background-color: #00274c; /* #1e1e1e;*/
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -1096,25 +1112,172 @@ h1, h2, h3, h4, h5, h6 {
 /* Media Queries for responsiveness */
 @media (max-width: 767px) {
   .footer-about, .footer-links, .footer-newsletter {
-    text-align: center;
+    text-align: justify;
     margin-bottom: 30px;
   }
 
+      .navmenu ul {
+        background-color: #00274ce9;
+        }
+
+      .navmenu a, .navmenu a:focus {
+        color: #e7e7e7;
+        }
+
+  /* Stack the footer sections vertically on smaller screens */
+  .footer-top .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about, .footer-links, .footer-newsletter {
+    margin: 0;
+    width: 100%; /* Ensures that each section takes up full width on mobile */
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  /* Adjust social links to be centered */
   .social-links {
     justify-content: center;
   }
 
+  .social-links .social-icon {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+
+  /* Ensure the footer bottom content is centered on mobile */
+  .footer-bottom p {
+    text-align: center;
+  }
+
+  .footer-bottom a {
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  /* Adjust footer items to ensure no overlap or fixed widths */
   .row>* {
-    flex-shrink: 0;
-    width: 12%;
-    max-width: 50%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y);
-}
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 10px; /* Adds margin between items */
+  }
 }
 
-  </style>
+/* General Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00274c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Preloader content styling */
+.preloader-content {
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Logo styling */
+.preloader-logo {
+  width: 100px; /* Adjust logo size as needed */
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: logoFadeIn 1.5s 0.5s forwards; /* Fade in with a slight delay */
+}
+
+/* Typography styles */
+.welcome-text, .dashboard-text {
+  opacity: 0;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2rem; /* Adjust font size as necessary */
+  margin: 77px 0;
+}
+
+/* Animation for Welcome Text */
+@keyframes welcomeTextAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for Dashboard Text */
+@keyframes dashboardTextAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Welcome text animation */
+.welcome-text {
+  animation: welcomeTextAnimation 2s ease-out forwards;
+  animation-delay: 0.5s; /* Delay for welcome text */
+}
+
+/* Dashboard text animation */
+.dashboard-text {
+  animation: dashboardTextAnimation 2s ease-out forwards;
+  animation-delay: 3s; /* Delay for dashboard text */
+}
+
+/* Fade-in animation for logo */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fade-in effect for the entire preloader */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* After all content has loaded, hide the preloader */
+body.loaded #preloader {
+  display: none;
+}
+
+</style>
+
 
 <footer id="footer" class="footer dark-background py-5">
   <div class="container footer-top">
@@ -1166,11 +1329,12 @@ h1, h2, h3, h4, h5, h6 {
 
       <!-- Newsletter Section -->
       <div class="col-lg-4 col-md-12 footer-newsletter">
+        <section id="contact">
           <h4 class="footer-title">Contact</h4>
           <p>1234 Sudan Street, Addis Ababa, Ethiopia</p>
           <p><strong>Phone:</strong> +251 115 517 011</p>
           <p><strong>Email:</strong> info@moh.gov.et</p>
-        
+        </section>
       </div>
     </div>
   </div>
@@ -1192,8 +1356,21 @@ h1, h2, h3, h4, h5, h6 {
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Preloader -->
+<div id="preloader" align="center">
+  <div class="preloader-content">
+    <img src="./MOH_logo_text_white.png" alt="HISPMD Logo" class="preloader-logo" />
+    <h1 class="welcome-text">Welcome to HISPMD</h1>
+    <h2 class="dashboard-text">The Ethiopian Health Information Systems Performance Monitoring Dashboard</h2>
+    <!--
+    <h1 class="welcome-text">Welcome to HISPMD</h1>
+    <h2 class="dashboard-text">The Ethiopian</h2>
+    <h2 class="dashboard-text">Health Information Systems</h2>
+    <h2 class="dashboard-text">Performance Monitoring Dashboard</h2>
+    -->
+  </div>
+</div>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

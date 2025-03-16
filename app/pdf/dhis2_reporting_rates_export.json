@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$dataset_name_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
 			{"text":{$organisationunit_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
@@ -118,22 +115,16 @@ pdfDocument = {
 			{"text":{$report_period_pdfvalue},"hidden":"{$item_hide_export_field11}"},
 				
 				
-			{"text":{$actual_reports_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
-			{"text":{$actual_reports_on_time_pdfvalue},"hidden":"{$item_hide_export_field6}"},
-				
-				
-			{"text":{$expected_reports_pdfvalue},"hidden":"{$item_hide_export_field4}"},
-				
-				
-			{"text":{$reporting_rate_pdfvalue},"hidden":"{$item_hide_export_field5}"},
-				
-				
-			{"text":{$reporting_rate_on_time_pdfvalue},"hidden":"{$item_hide_export_field7}"},
-				
-				
 			{"text":{$ownership_type_label_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$indicator_name_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$value_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$relative_period_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

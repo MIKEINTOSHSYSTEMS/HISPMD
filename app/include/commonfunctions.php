@@ -459,6 +459,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("dhis2_data_elements" == $shortTName )
 		return true;
+	if ("dhis_2_reporting_rates_chart" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1661,6 +1663,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="DHIS2_Data_Elements";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DHIS_2_Reporting_Rates_Chart");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DHIS_2_Reporting_Rates_Chart";
+	}
 	return $arr;
 }
 
@@ -1798,6 +1809,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.eidm_hc";
 	$arr[]="public.eidm_settings";
 	$arr[]="DHIS2_Data_Elements";
+	$arr[]="DHIS_2_Reporting_Rates_Chart";
 	return $arr;
 }
 
@@ -1862,6 +1874,8 @@ function GetChartType($shorttable)
 	if($shorttable=="dhis2_reporting_rate_details_chart")
 		return "Combined";
 	if($shorttable=="dhis2_reportingrate_chart")
+		return "2DColumn";
+	if($shorttable=="dhis_2_reporting_rates_chart")
 		return "2DColumn";
 	return "";
 }
@@ -3086,6 +3100,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="DHIS_2_Reporting_Rates_Chart" )
+	{
+//	default permissions
+		return "S".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

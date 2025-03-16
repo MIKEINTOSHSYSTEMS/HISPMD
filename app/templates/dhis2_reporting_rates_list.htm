@@ -385,19 +385,19 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_dataset_name}
+																		{BEGIN searchCtrlBlock_indicator_name}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_dataset_name}" {$filterRow_attrs_dataset_name}>
-			<label>{$label public_dhis2_reporting_rates dataset_name }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_indicator_name}" {$filterRow_attrs_indicator_name}>
+			<label>{$label public_dhis2_reporting_rates indicator_name }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_dataset_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_dataset_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_dataset_name}</span>
+								<span class="rnr-searchtype">{$searchtype_indicator_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_indicator_name}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_indicator_name}</span>
 						</div>
-		{END searchCtrlBlock_dataset_name}
+		{END searchCtrlBlock_indicator_name}
 																{BEGIN searchCtrlBlock_organisationunit}
 
 
@@ -411,6 +411,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_organisationunit}</span>
 						</div>
 		{END searchCtrlBlock_organisationunit}
+																{BEGIN searchCtrlBlock_relative_period}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_relative_period}" {$filterRow_attrs_relative_period}>
+			<label>{$label public_dhis2_reporting_rates relative_period }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_relative_period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_relative_period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_relative_period}</span>
+						</div>
+		{END searchCtrlBlock_relative_period}
+																{BEGIN searchCtrlBlock_report_period}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_report_period}" {$filterRow_attrs_report_period}>
+			<label>{$label public_dhis2_reporting_rates report_period }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_report_period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_report_period}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_report_period}</span>
+						</div>
+		{END searchCtrlBlock_report_period}
 																{BEGIN searchCtrlBlock_facility_type}
 
 
@@ -437,19 +463,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ownership_type_label}</span>
 						</div>
 		{END searchCtrlBlock_ownership_type_label}
-																{BEGIN searchCtrlBlock_report_period}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_report_period}" {$filterRow_attrs_report_period}>
-			<label>{$label public_dhis2_reporting_rates report_period }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_report_period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_report_period}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_report_period}</span>
-						</div>
-		{END searchCtrlBlock_report_period}
 		
 
 	</div>
@@ -569,55 +582,56 @@
 
 
 
-{BEGIN filter_control_dataset_name}
+{BEGIN filter_control_indicator_name}
 
-	<div class="dropdown filter-field filter-dataset_name-container" {BEGIN filter_selected_dataset_name} data-selected {END filter_selected_dataset_name}>
+	<div class="dropdown filter-field filter-indicator_name-container" {BEGIN filter_selected_indicator_name} data-selected {END filter_selected_indicator_name}>
 		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-dataset_name" type="checkbox" name="selectAll" {$selectAll_attrs_dataset_name} />
-						{BEGIN clearLink_dataset_name}
-			<a href="#" class="filter-clear filter-clear-dataset_name" title="Clear">
+							<input class="filter-selectAll-indicator_name" type="checkbox" name="selectAll" {$selectAll_attrs_indicator_name} />
+						{BEGIN clearLink_indicator_name}
+			<a href="#" class="filter-clear filter-clear-indicator_name" title="Clear">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
-			{END clearLink_dataset_name}
-			<span class="r-filter-field">{$label public_dhis2_reporting_rates dataset_name }				{BEGIN filter_selected_dataset_name}:{END filter_selected_dataset_name}
+			{END clearLink_indicator_name}
+			<span class="r-filter-field">{$label public_dhis2_reporting_rates indicator_name }				{BEGIN filter_selected_indicator_name}:{END filter_selected_indicator_name}
 			</span>
-			{BEGIN filter_selected_dataset_name}
-			<span class="r-filter-value">{$filtervalue_dataset_name}</span>
-			{END filter_selected_dataset_name}
+			{BEGIN filter_selected_indicator_name}
+			<span class="r-filter-value">{$filtervalue_indicator_name}</span>
+			{END filter_selected_indicator_name}
 			
 			<span class="caret"></span>
 		</div>
 		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_dataset_name}
-		<li class=" filter-values filter-values-dataset_name  {$visibilityClass_dataset_name}">
-			{$dataset_name_filter}
+					{BEGIN filterCtrlBlock_indicator_name}
+		<li class=" filter-values filter-values-indicator_name  {$visibilityClass_indicator_name}">
+			{$indicator_name_filter}
 						
 					
 					
 					
 					
+					
 					</li>
-		{END filterCtrlBlock_dataset_name}
+		{END filterCtrlBlock_indicator_name}
 
-			{BEGIN filter_button_showmore_dataset_name}
-		<li class=" filter-show-more {$collapsedClass_dataset_name} {$showMoreBtnClass_dataset_name}">
-			<a class="filter-show-more-link filterShowMore_dataset_name" href="#">{$show_n_more_dataset_name}</a>
+			{BEGIN filter_button_showmore_indicator_name}
+		<li class=" filter-show-more {$collapsedClass_indicator_name} {$showMoreBtnClass_indicator_name}">
+			<a class="filter-show-more-link filterShowMore_indicator_name" href="#">{$show_n_more_indicator_name}</a>
 		</li>
-		{END filter_button_showmore_dataset_name}
+		{END filter_button_showmore_indicator_name}
 	
 
 
-			{BEGIN filter_button_apply_dataset_name}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_dataset_name}">
-			<a href="#" class="filter-btn-apply filter-apply-dataset_name" {$filterbutton_attrs_dataset_name}>Apply</a>
+			{BEGIN filter_button_apply_indicator_name}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_indicator_name}">
+			<a href="#" class="filter-btn-apply filter-apply-indicator_name" {$filterbutton_attrs_indicator_name}>Apply</a>
 		</li>
-		{END filter_button_apply_dataset_name}
+		{END filter_button_apply_indicator_name}
 	
 
 			</ul>
 	</div>
 
-{END filter_control_dataset_name}
+{END filter_control_indicator_name}
 
 
 
@@ -651,6 +665,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_organisationunit}
 
@@ -673,6 +688,118 @@
 	</div>
 
 {END filter_control_organisationunit}
+
+
+
+
+
+
+{BEGIN filter_control_relative_period}
+
+	<div class="dropdown filter-field filter-relative_period-container" {BEGIN filter_selected_relative_period} data-selected {END filter_selected_relative_period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-relative_period" type="checkbox" name="selectAll" {$selectAll_attrs_relative_period} />
+						{BEGIN clearLink_relative_period}
+			<a href="#" class="filter-clear filter-clear-relative_period" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_relative_period}
+			<span class="r-filter-field">{$label public_dhis2_reporting_rates relative_period }				{BEGIN filter_selected_relative_period}:{END filter_selected_relative_period}
+			</span>
+			{BEGIN filter_selected_relative_period}
+			<span class="r-filter-value">{$filtervalue_relative_period}</span>
+			{END filter_selected_relative_period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_relative_period}
+		<li class=" filter-values filter-values-relative_period  {$visibilityClass_relative_period}">
+			{$relative_period_filter}
+						
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_relative_period}
+
+			{BEGIN filter_button_showmore_relative_period}
+		<li class=" filter-show-more {$collapsedClass_relative_period} {$showMoreBtnClass_relative_period}">
+			<a class="filter-show-more-link filterShowMore_relative_period" href="#">{$show_n_more_relative_period}</a>
+		</li>
+		{END filter_button_showmore_relative_period}
+	
+
+
+			{BEGIN filter_button_apply_relative_period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_relative_period}">
+			<a href="#" class="filter-btn-apply filter-apply-relative_period" {$filterbutton_attrs_relative_period}>Apply</a>
+		</li>
+		{END filter_button_apply_relative_period}
+	
+
+			</ul>
+	</div>
+
+{END filter_control_relative_period}
+
+
+
+
+
+
+{BEGIN filter_control_report_period}
+
+	<div class="dropdown filter-field filter-report_period-container" {BEGIN filter_selected_report_period} data-selected {END filter_selected_report_period}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-report_period" type="checkbox" name="selectAll" {$selectAll_attrs_report_period} />
+						{BEGIN clearLink_report_period}
+			<a href="#" class="filter-clear filter-clear-report_period" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_report_period}
+			<span class="r-filter-field">{$label public_dhis2_reporting_rates report_period }				{BEGIN filter_selected_report_period}:{END filter_selected_report_period}
+			</span>
+			{BEGIN filter_selected_report_period}
+			<span class="r-filter-value">{$filtervalue_report_period}</span>
+			{END filter_selected_report_period}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_report_period}
+		<li class=" filter-values filter-values-report_period  {$visibilityClass_report_period}">
+			{$report_period_filter}
+						
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_report_period}
+
+			{BEGIN filter_button_showmore_report_period}
+		<li class=" filter-show-more {$collapsedClass_report_period} {$showMoreBtnClass_report_period}">
+			<a class="filter-show-more-link filterShowMore_report_period" href="#">{$show_n_more_report_period}</a>
+		</li>
+		{END filter_button_showmore_report_period}
+	
+
+
+			{BEGIN filter_button_apply_report_period}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_report_period}">
+			<a href="#" class="filter-btn-apply filter-apply-report_period" {$filterbutton_attrs_report_period}>Apply</a>
+		</li>
+		{END filter_button_apply_report_period}
+	
+
+			</ul>
+	</div>
+
+{END filter_control_report_period}
 
 
 
@@ -702,6 +829,7 @@
 		<li class=" filter-values filter-values-facility_type  {$visibilityClass_facility_type}">
 			{$facility_type_filter}
 						
+					
 					
 					
 					
@@ -761,6 +889,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_ownership_type_label}
 
@@ -786,61 +915,6 @@
 
 
 
-
-
-
-{BEGIN filter_control_report_period}
-
-	<div class="dropdown filter-field filter-report_period-container" {BEGIN filter_selected_report_period} data-selected {END filter_selected_report_period}>
-		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-							<input class="filter-selectAll-report_period" type="checkbox" name="selectAll" {$selectAll_attrs_report_period} />
-						{BEGIN clearLink_report_period}
-			<a href="#" class="filter-clear filter-clear-report_period" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_report_period}
-			<span class="r-filter-field">{$label public_dhis2_reporting_rates report_period }				{BEGIN filter_selected_report_period}:{END filter_selected_report_period}
-			</span>
-			{BEGIN filter_selected_report_period}
-			<span class="r-filter-value">{$filtervalue_report_period}</span>
-			{END filter_selected_report_period}
-			
-			<span class="caret"></span>
-		</div>
-		<ul class="dropdown-menu">
-					{BEGIN filterCtrlBlock_report_period}
-		<li class=" filter-values filter-values-report_period  {$visibilityClass_report_period}">
-			{$report_period_filter}
-						
-					
-					
-					
-					
-					</li>
-		{END filterCtrlBlock_report_period}
-
-			{BEGIN filter_button_showmore_report_period}
-		<li class=" filter-show-more {$collapsedClass_report_period} {$showMoreBtnClass_report_period}">
-			<a class="filter-show-more-link filterShowMore_report_period" href="#">{$show_n_more_report_period}</a>
-		</li>
-		{END filter_button_showmore_report_period}
-	
-
-
-			{BEGIN filter_button_apply_report_period}
-		<li class="filter-multiselect  filter-field-btn {$collapsedClass_report_period}">
-			<a href="#" class="filter-btn-apply filter-apply-report_period" {$filterbutton_attrs_report_period}>Apply</a>
-		</li>
-		{END filter_button_apply_report_period}
-	
-
-			</ul>
-	</div>
-
-{END filter_control_report_period}
-
-
-
 	<!-- End Filter panel content -->
 	</div>
 </div>		</div>					</div>
@@ -856,25 +930,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="organisationunit"]:before {
 		content: "{$label public_dhis2_reporting_rates organisationunit}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="actual_reports"]:before {
-		content: "{$label public_dhis2_reporting_rates actual_reports}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="expected_reports"]:before {
-		content: "{$label public_dhis2_reporting_rates expected_reports}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="reporting_rate"]:before {
-		content: "{$label public_dhis2_reporting_rates reporting_rate}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="actual_reports_on_time"]:before {
-		content: "{$label public_dhis2_reporting_rates actual_reports_on_time}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="reporting_rate_on_time"]:before {
-		content: "{$label public_dhis2_reporting_rates reporting_rate_on_time}";
-	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="dataset_name"]:before {
-		content: "{$label public_dhis2_reporting_rates dataset_name}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="facility_type"]:before {
+											[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="facility_type"]:before {
 		content: "{$label public_dhis2_reporting_rates facility_type}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="report_period"]:before {
@@ -882,6 +938,15 @@
 	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ownership_type_label"]:before {
 		content: "{$label public_dhis2_reporting_rates ownership_type_label}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="indicator_name"]:before {
+		content: "{$label public_dhis2_reporting_rates indicator_name}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="value"]:before {
+		content: "{$label public_dhis2_reporting_rates value}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="relative_period"]:before {
+		content: "{$label public_dhis2_reporting_rates relative_period}";
 	}
 	}
 </style>
@@ -925,21 +990,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$dataset_name_class}	"
+		 r-ori-vert		 {$indicator_name_class}	"
 
-			data-field="dataset_name"
+			data-field="indicator_name"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN dataset_name_fieldheadercolumn}
-	{BEGIN dataset_name_fieldheader}
-	<SPAN {$dataset_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dataset_name" data-fieldname="dataset_name">
-	{$label public_dhis2_reporting_rates dataset_name }	{$arrow_icon_dataset_name}
+		{BEGIN indicator_name_fieldheadercolumn}
+	{BEGIN indicator_name_fieldheader}
+	<SPAN {$indicator_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_name" data-fieldname="indicator_name">
+	{$label public_dhis2_reporting_rates indicator_name }	{$arrow_icon_indicator_name}
 	</SPAN>
-	{END dataset_name_fieldheader}
-{END dataset_name_fieldheadercolumn}
+	{END indicator_name_fieldheader}
+{END indicator_name_fieldheadercolumn}
 
 	
 	</th>
@@ -960,7 +1025,7 @@
 	 
 		{BEGIN organisationunit_fieldheadercolumn}
 	{BEGIN organisationunit_fieldheader}
-	<SPAN {$organisationunit_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="organisationunit" data-fieldname="organisationunit">
+	<SPAN {$organisationunit_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="organisationunit" data-fieldname="organisationunit">
 	{$label public_dhis2_reporting_rates organisationunit }	{$arrow_icon_organisationunit}
 	</SPAN>
 	{END organisationunit_fieldheader}
@@ -975,21 +1040,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_type_class}	"
+		 r-ori-vert		 {$report_period_class}	"
 
-			data-field="facility_type"
+			data-field="report_period"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN facility_type_fieldheadercolumn}
-	{BEGIN facility_type_fieldheader}
-	<SPAN {$facility_type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type" data-fieldname="facility_type">
-	{$label public_dhis2_reporting_rates facility_type }	{$arrow_icon_facility_type}
+		{BEGIN report_period_fieldheadercolumn}
+	{BEGIN report_period_fieldheader}
+	<SPAN {$report_period_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="report_period" data-fieldname="report_period">
+	{$label public_dhis2_reporting_rates report_period }	{$arrow_icon_report_period}
 	</SPAN>
-	{END facility_type_fieldheader}
-{END facility_type_fieldheadercolumn}
+	{END report_period_fieldheader}
+{END report_period_fieldheadercolumn}
 
 	
 	</th>
@@ -1000,21 +1065,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ownership_type_label_class}	"
+		 r-ori-vert		 {$facility_type_class}	"
 
-			data-field="ownership_type_label"
+			data-field="facility_type"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ownership_type_label_fieldheadercolumn}
-	{BEGIN ownership_type_label_fieldheader}
-	<SPAN {$ownership_type_label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ownership_type_label" data-fieldname="ownership_type_label">
-	{$label public_dhis2_reporting_rates ownership_type_label }	{$arrow_icon_ownership_type_label}
+		{BEGIN facility_type_fieldheadercolumn}
+	{BEGIN facility_type_fieldheader}
+	<SPAN {$facility_type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type" data-fieldname="facility_type">
+	{$label public_dhis2_reporting_rates facility_type }	{$arrow_icon_facility_type}
 	</SPAN>
-	{END ownership_type_label_fieldheader}
-{END ownership_type_label_fieldheadercolumn}
+	{END facility_type_fieldheader}
+{END facility_type_fieldheadercolumn}
 
 	
 	</th>
@@ -1025,21 +1090,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$report_period_class}	"
+		 r-ori-vert		 {$ownership_type_label_class}	"
 
-			data-field="report_period"
+			data-field="ownership_type_label"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN report_period_fieldheadercolumn}
-	{BEGIN report_period_fieldheader}
-	<SPAN {$report_period_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="report_period" data-fieldname="report_period">
-	{$label public_dhis2_reporting_rates report_period }	{$arrow_icon_report_period}
+		{BEGIN ownership_type_label_fieldheadercolumn}
+	{BEGIN ownership_type_label_fieldheader}
+	<SPAN {$ownership_type_label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ownership_type_label" data-fieldname="ownership_type_label">
+	{$label public_dhis2_reporting_rates ownership_type_label }	{$arrow_icon_ownership_type_label}
 	</SPAN>
-	{END report_period_fieldheader}
-{END report_period_fieldheadercolumn}
+	{END ownership_type_label_fieldheader}
+{END ownership_type_label_fieldheadercolumn}
 
 	
 	</th>
@@ -1050,21 +1115,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$actual_reports_class}	"
+		 r-ori-vert		 {$value_class}	"
 
-			data-field="actual_reports"
+			data-field="value"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN actual_reports_fieldheadercolumn}
-	{BEGIN actual_reports_fieldheader}
-	<SPAN {$actual_reports_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="actual_reports" data-fieldname="actual_reports">
-	{$label public_dhis2_reporting_rates actual_reports }	{$arrow_icon_actual_reports}
+		{BEGIN value_fieldheadercolumn}
+	{BEGIN value_fieldheader}
+	<SPAN {$value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
+	{$label public_dhis2_reporting_rates value }	{$arrow_icon_value}
 	</SPAN>
-	{END actual_reports_fieldheader}
-{END actual_reports_fieldheadercolumn}
+	{END value_fieldheader}
+{END value_fieldheadercolumn}
 
 	
 	</th>
@@ -1075,100 +1140,25 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$actual_reports_on_time_class}	"
+		 r-ori-vert		 {$relative_period_class}	"
 
-			data-field="actual_reports_on_time"
+			data-field="relative_period"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN actual_reports_on_time_fieldheadercolumn}
-	{BEGIN actual_reports_on_time_fieldheader}
-	<SPAN {$actual_reports_on_time_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="actual_reports_on_time" data-fieldname="actual_reports_on_time">
-	{$label public_dhis2_reporting_rates actual_reports_on_time }	{$arrow_icon_actual_reports_on_time}
+		{BEGIN relative_period_fieldheadercolumn}
+	{BEGIN relative_period_fieldheader}
+	<SPAN {$relative_period_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="relative_period" data-fieldname="relative_period">
+	{$label public_dhis2_reporting_rates relative_period }	{$arrow_icon_relative_period}
 	</SPAN>
-	{END actual_reports_on_time_fieldheader}
-{END actual_reports_on_time_fieldheadercolumn}
+	{END relative_period_fieldheader}
+{END relative_period_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$expected_reports_class}	"
-
-			data-field="expected_reports"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN expected_reports_fieldheadercolumn}
-	{BEGIN expected_reports_fieldheader}
-	<SPAN {$expected_reports_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="expected_reports" data-fieldname="expected_reports">
-	{$label public_dhis2_reporting_rates expected_reports }	{$arrow_icon_expected_reports}
-	</SPAN>
-	{END expected_reports_fieldheader}
-{END expected_reports_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reporting_rate_class}	"
-
-			data-field="reporting_rate"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN reporting_rate_fieldheadercolumn}
-	{BEGIN reporting_rate_fieldheader}
-	<SPAN {$reporting_rate_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reporting_rate" data-fieldname="reporting_rate">
-	{$label public_dhis2_reporting_rates reporting_rate }	{$arrow_icon_reporting_rate}
-	</SPAN>
-	{END reporting_rate_fieldheader}
-{END reporting_rate_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reporting_rate_on_time_class}	"
-
-			data-field="reporting_rate_on_time"
-	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN reporting_rate_on_time_fieldheadercolumn}
-	{BEGIN reporting_rate_on_time_fieldheader}
-	<SPAN {$reporting_rate_on_time_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reporting_rate_on_time" data-fieldname="reporting_rate_on_time">
-	{$label public_dhis2_reporting_rates reporting_rate_on_time }	{$arrow_icon_reporting_rate_on_time}
-	</SPAN>
-	{END reporting_rate_on_time_fieldheader}
-{END reporting_rate_on_time_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field9}
 							</tr>
 															
 					{END grid_header}
@@ -1210,19 +1200,19 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$dataset_name_class}	"
+		 r-ori-vert		 {$indicator_name_class}	"
 
-			data-field="dataset_name"
+			data-field="indicator_name"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN dataset_name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-page="dhis2_reporting_rates_list" data-record-id="{$recId}" data-field="dataset_name" data-fieldname="dataset_name" data-default-width >
-{$dataset_name_value}
+		{BEGIN indicator_name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_name" data-fieldname="indicator_name" data-default-width >
+{$indicator_name_value}
 </span>
-{END dataset_name_fieldcolumn}	
+{END indicator_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -1252,53 +1242,11 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_type_class}	"
-
-			data-field="facility_type"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN facility_type_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type" data-fieldname="facility_type" data-default-width >
-{$facility_type_value}
-</span>
-{END facility_type_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ownership_type_label_class}	"
-
-			data-field="ownership_type_label"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ownership_type_label_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ownership_type_label" data-fieldname="ownership_type_label" data-default-width >
-{$ownership_type_label_value}
-</span>
-{END ownership_type_label_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$report_period_class}	"
 
 			data-field="report_period"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1308,6 +1256,48 @@
 </span>
 {END report_period_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$facility_type_class}	"
+
+			data-field="facility_type"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN facility_type_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type" data-fieldname="facility_type" data-default-width >
+{$facility_type_value}
+</span>
+{END facility_type_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ownership_type_label_class}	"
+
+			data-field="ownership_type_label"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ownership_type_label_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ownership_type_label" data-fieldname="ownership_type_label" data-default-width >
+{$ownership_type_label_value}
+</span>
+{END ownership_type_label_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field4}
 									{BEGIN cellblock_grid_cell_field5}
 	<td
@@ -1315,19 +1305,19 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$actual_reports_class}	"
+		 r-ori-vert		 {$value_class}	"
 
-			data-field="actual_reports"
+			data-field="value"
 	
 	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN actual_reports_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-page="dhis2_reporting_rates_list" data-record-id="{$recId}" data-field="actual_reports" data-fieldname="actual_reports" data-default-width >
-{$actual_reports_value}
+		{BEGIN value_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value" data-default-width >
+{$value_value}
 </span>
-{END actual_reports_fieldcolumn}	
+{END value_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 									{BEGIN cellblock_grid_cell_field6}
@@ -1336,84 +1326,21 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$actual_reports_on_time_class}	"
+		 r-ori-vert		 {$relative_period_class}	"
 
-			data-field="actual_reports_on_time"
+			data-field="relative_period"
 	
 	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN actual_reports_on_time_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="dhis2_reporting_rates_list" data-record-id="{$recId}" data-field="actual_reports_on_time" data-fieldname="actual_reports_on_time" data-default-width >
-{$actual_reports_on_time_value}
+		{BEGIN relative_period_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="relative_period" data-fieldname="relative_period" data-default-width >
+{$relative_period_value}
 </span>
-{END actual_reports_on_time_fieldcolumn}	
+{END relative_period_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$expected_reports_class}	"
-
-			data-field="expected_reports"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN expected_reports_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-page="dhis2_reporting_rates_list" data-record-id="{$recId}" data-field="expected_reports" data-fieldname="expected_reports" data-default-width >
-{$expected_reports_value}
-</span>
-{END expected_reports_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reporting_rate_class}	"
-
-			data-field="reporting_rate"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN reporting_rate_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-page="dhis2_reporting_rates_list" data-record-id="{$recId}" data-field="reporting_rate" data-fieldname="reporting_rate" data-default-width >
-{$reporting_rate_value}
-</span>
-{END reporting_rate_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reporting_rate_on_time_class}	"
-
-			data-field="reporting_rate_on_time"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN reporting_rate_on_time_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-page="dhis2_reporting_rates_list" data-record-id="{$recId}" data-field="reporting_rate_on_time" data-fieldname="reporting_rate_on_time" data-default-width >
-{$reporting_rate_on_time_value}
-</span>
-{END reporting_rate_on_time_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
 							</tr>
 										
 											{END grid_row}
@@ -1446,7 +1373,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$dataset_name_class}	"
+		 r-ori-vert		 {$indicator_name_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
@@ -1476,7 +1403,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$facility_type_class}	"
+		 r-ori-vert		 {$report_period_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
@@ -1491,7 +1418,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ownership_type_label_class}	"
+		 r-ori-vert		 {$facility_type_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
@@ -1506,7 +1433,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$report_period_class}	"
+		 r-ori-vert		 {$ownership_type_label_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
@@ -1521,7 +1448,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$actual_reports_class}	"
+		 r-ori-vert		 {$value_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
@@ -1536,7 +1463,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$actual_reports_on_time_class}	"
+		 r-ori-vert		 {$relative_period_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
@@ -1545,51 +1472,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$expected_reports_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-									{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reporting_rate_class}	"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
-									{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reporting_rate_on_time_class}	"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dhis2_reporting_rates_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
 							</tr>
 					
 					</tfoot>

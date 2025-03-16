@@ -117,6 +117,9 @@ pdfDocument = {
 				
 			{"text":{$value_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
+				
+			{"text":{$relative_period_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

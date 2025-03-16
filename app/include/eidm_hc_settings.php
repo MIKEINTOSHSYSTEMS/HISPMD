@@ -37,6 +37,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelseidm_hc["English"]["value"] = "Value";
 	$fieldToolTipseidm_hc["English"]["value"] = "";
 	$placeHolderseidm_hc["English"]["value"] = "";
+	$fieldLabelseidm_hc["English"]["relative_period"] = "Relative Period";
+	$fieldToolTipseidm_hc["English"]["relative_period"] = "";
+	$placeHolderseidm_hc["English"]["relative_period"] = "";
 	if (count($fieldToolTipseidm_hc["English"]))
 		$tdataeidm_hc[".isUseToolTips"] = true;
 }
@@ -158,6 +161,7 @@ $tdataeidm_hc[".googleLikeFields"][] = "indicator";
 $tdataeidm_hc[".googleLikeFields"][] = "organisation_unit";
 $tdataeidm_hc[".googleLikeFields"][] = "period";
 $tdataeidm_hc[".googleLikeFields"][] = "value";
+$tdataeidm_hc[".googleLikeFields"][] = "relative_period";
 
 
 
@@ -192,7 +196,7 @@ $tdataeidm_hc[".strOrderBy"] = $tstrOrderBy;
 $tdataeidm_hc[".orderindexes"] = array();
 
 
-$tdataeidm_hc[".sqlHead"] = "SELECT \"indicator\",  	organisation_unit,  	period,  	\"value\"";
+$tdataeidm_hc[".sqlHead"] = "SELECT \"indicator\",  	organisation_unit,  	period,  	\"value\",  	relative_period";
 $tdataeidm_hc[".sqlFrom"] = "FROM \"public\".eidm_hc";
 $tdataeidm_hc[".sqlWhereExpr"] = "";
 $tdataeidm_hc[".sqlTail"] = "";
@@ -296,7 +300,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -306,6 +310,36 @@ $tdataeidm_hc[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.eidm_hc";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "indicator";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "indicator";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -320,11 +354,8 @@ $tdataeidm_hc[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -350,7 +381,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -435,7 +466,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -445,6 +476,36 @@ $tdataeidm_hc[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.eidm_hc";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "organisation_unit";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "organisation_unit";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -459,11 +520,8 @@ $tdataeidm_hc[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -489,7 +547,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -574,7 +632,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -584,6 +642,36 @@ $tdataeidm_hc[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.eidm_hc";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -598,11 +686,8 @@ $tdataeidm_hc[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -628,7 +713,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -797,6 +882,172 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 	$tdataeidm_hc["value"] = $fdata;
 		$tdataeidm_hc[".searchableFields"][] = "value";
+//	relative_period
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "relative_period";
+	$fdata["GoodName"] = "relative_period";
+	$fdata["ownerTable"] = "public.eidm_hc";
+	$fdata["Label"] = GetFieldLabel("public_eidm_hc","relative_period");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "relative_period";
+
+		$fdata["sourceSingle"] = "relative_period";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "relative_period";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.eidm_hc";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "relative_period";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "relative_period";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "value";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataeidm_hc["relative_period"] = $fdata;
+		$tdataeidm_hc[".searchableFields"][] = "relative_period";
 
 
 $tables_data["public.eidm_hc"]=&$tdataeidm_hc;
@@ -841,7 +1092,7 @@ function createSqlQuery_eidm_hc()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "\"indicator\",  	organisation_unit,  	period,  	\"value\"";
+$proto0["m_strFieldList"] = "\"indicator\",  	organisation_unit,  	period,  	\"value\",  	relative_period";
 $proto0["m_strFrom"] = "FROM \"public\".eidm_hc";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -937,40 +1188,55 @@ $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto14=array();
-$proto14["m_link"] = "SQLL_MAIN";
-			$proto15=array();
-$proto15["m_strName"] = "public.eidm_hc";
-$proto15["m_srcTableName"] = "public.eidm_hc";
-$proto15["m_columns"] = array();
-$proto15["m_columns"][] = "indicator";
-$proto15["m_columns"][] = "organisation_unit";
-$proto15["m_columns"][] = "period";
-$proto15["m_columns"][] = "value";
-$obj = new SQLTable($proto15);
+						$proto14=array();
+			$obj = new SQLField(array(
+	"m_strName" => "relative_period",
+	"m_strTable" => "public.eidm_hc",
+	"m_srcTableName" => "public.eidm_hc"
+));
 
-$proto14["m_table"] = $obj;
-$proto14["m_sql"] = "\"public\".eidm_hc";
-$proto14["m_alias"] = "";
+$proto14["m_sql"] = "relative_period";
 $proto14["m_srcTableName"] = "public.eidm_hc";
-$proto16=array();
-$proto16["m_sql"] = "";
-$proto16["m_uniontype"] = "SQLL_UNKNOWN";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "";
+$obj = new SQLFieldListItem($proto14);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto16=array();
+$proto16["m_link"] = "SQLL_MAIN";
+			$proto17=array();
+$proto17["m_strName"] = "public.eidm_hc";
+$proto17["m_srcTableName"] = "public.eidm_hc";
+$proto17["m_columns"] = array();
+$proto17["m_columns"][] = "indicator";
+$proto17["m_columns"][] = "organisation_unit";
+$proto17["m_columns"][] = "period";
+$proto17["m_columns"][] = "value";
+$proto17["m_columns"][] = "relative_period";
+$obj = new SQLTable($proto17);
+
+$proto16["m_table"] = $obj;
+$proto16["m_sql"] = "\"public\".eidm_hc";
+$proto16["m_alias"] = "";
+$proto16["m_srcTableName"] = "public.eidm_hc";
+$proto18=array();
+$proto18["m_sql"] = "";
+$proto18["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto16["m_column"]=$obj;
-$proto16["m_contained"] = array();
-$proto16["m_strCase"] = "";
-$proto16["m_havingmode"] = false;
-$proto16["m_inBrackets"] = false;
-$proto16["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto16);
+$proto18["m_column"]=$obj;
+$proto18["m_contained"] = array();
+$proto18["m_strCase"] = "";
+$proto18["m_havingmode"] = false;
+$proto18["m_inBrackets"] = false;
+$proto18["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto18);
 
-$proto14["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto14);
+$proto16["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto16);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -986,7 +1252,7 @@ $queryData_eidm_hc = createSqlQuery_eidm_hc();
 	
 																												;
 
-				
+					
 
 $tdataeidm_hc[".sqlquery"] = $queryData_eidm_hc;
 

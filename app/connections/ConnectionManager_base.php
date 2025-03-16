@@ -365,6 +365,7 @@ class ConnectionManager_Base
 		$connectionsIds["public.eidm_hc"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["public.eidm_settings"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["DHIS2_Data_Elements"] = "xhispmdathispmdmerqconsultancy";
+		$connectionsIds["DHIS_2_Reporting_Rates_Chart"] = "hispmdathispmdmerqconsultancyo";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

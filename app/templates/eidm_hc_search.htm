@@ -390,6 +390,28 @@
 </div>
 
 {END value_fieldblock}
+											
+{BEGIN relative_period_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_relative_period}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="relative_period{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="relative_period" data-fieldname="relative_period" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_relative_period}">
+		{$label public_eidm_hc relative_period }	</label>
+	<div class="r-search-option">
+		{$searchtype_relative_period}
+	</div>
+	<div class="r-search-field">
+		{$relative_period_editcontrol}	</div>
+	<div class="r-search-field">
+		{$relative_period_editcontrol1}
+	</div>
+	
+</div>
+
+{END relative_period_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

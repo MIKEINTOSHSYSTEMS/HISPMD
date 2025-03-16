@@ -88,15 +88,6 @@ pdfDocument = {
 										{BEGIN col_grid_7}
 					"%",
 					{END col_grid_7}
-										{BEGIN col_grid_8}
-					"%",
-					{END col_grid_8}
-										{BEGIN col_grid_9}
-					"%",
-					{END col_grid_9}
-										{BEGIN col_grid_10}
-					"%",
-					{END col_grid_10}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -305,7 +296,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'dataset_name',
+			fieldName: 'indicator_name',
 				style: 'headcell',
 		
 		
@@ -319,11 +310,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_dhis2_reporting_rates dataset_name }","hidden":"{$item_hide_simple_grid_field}","bold":true},
+			{"text":"{$jslabel public_dhis2_reporting_rates indicator_name }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$dataset_name_align}',
+              "alignment": '{$indicator_name_align}',
      
       
       },
@@ -348,7 +339,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_dhis2_reporting_rates organisationunit }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
+			{"text":"{$jslabel public_dhis2_reporting_rates organisationunit }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -361,64 +352,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field2}
 {
 	cellId: 'headcell_field2',
-	col:0,
-	row:0,
-			fieldName: 'facility_type',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel public_dhis2_reporting_rates facility_type }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$facility_type_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
-	col:0,
-	row:0,
-			fieldName: 'ownership_type_label',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel public_dhis2_reporting_rates ownership_type_label }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ownership_type_label_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
-{
-	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'report_period',
@@ -435,11 +368,69 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_dhis2_reporting_rates report_period }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel public_dhis2_reporting_rates report_period }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$report_period_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'facility_type',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_dhis2_reporting_rates facility_type }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$facility_type_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'ownership_type_label',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_dhis2_reporting_rates ownership_type_label }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ownership_type_label_align}',
      
       
       },
@@ -450,7 +441,7 @@ pdfDocument = {
 	cellId: 'headcell_field5',
 	col:0,
 	row:0,
-			fieldName: 'actual_reports',
+			fieldName: 'value',
 				style: 'headcell',
 		
 		
@@ -464,11 +455,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_dhis2_reporting_rates actual_reports }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel public_dhis2_reporting_rates value }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$actual_reports_align}',
+              "alignment": '{$value_align}',
      
       
       },
@@ -479,7 +470,7 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'actual_reports_on_time',
+			fieldName: 'relative_period',
 				style: 'headcell',
 		
 		
@@ -493,103 +484,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_dhis2_reporting_rates actual_reports_on_time }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel public_dhis2_reporting_rates relative_period }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$actual_reports_on_time_align}',
+              "alignment": '{$relative_period_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
-{
-	cellId: 'headcell_field7',
-	col:0,
-	row:0,
-			fieldName: 'expected_reports',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel public_dhis2_reporting_rates expected_reports }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$expected_reports_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
-{
-	cellId: 'headcell_field8',
-	col:0,
-	row:0,
-			fieldName: 'reporting_rate',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel public_dhis2_reporting_rates reporting_rate }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$reporting_rate_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
-{
-	cellId: 'headcell_field9',
-	col:0,
-	row:0,
-			fieldName: 'reporting_rate_on_time',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel public_dhis2_reporting_rates reporting_rate_on_time }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$reporting_rate_on_time_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field9}
 											],
 				{END row_grid_0}
 		
@@ -632,7 +536,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'dataset_name',
+			fieldName: 'indicator_name',
 				style: 'bodycell',
 		
 		
@@ -646,11 +550,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$dataset_name_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}","bold":true},
+			{"text":{$indicator_name_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$dataset_name_align}',
+              "alignment": '{$indicator_name_align}',
      
       
       },
@@ -690,6 +594,35 @@ pdfDocument = {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
+			fieldName: 'report_period',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$report_period_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$report_period_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
 			fieldName: 'facility_type',
 				style: 'bodycell',
 		
@@ -713,10 +646,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'ownership_type_label',
@@ -742,42 +675,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
-{
-	cellId: 'cell_field4',
-	col:0,
-	row:0,
-			fieldName: 'report_period',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$report_period_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$report_period_align}',
-     
-      
-      },
-
 {END cellblock_grid_cell_field4}
 																							{BEGIN cellblock_grid_cell_field5}
 {
 	cellId: 'cell_field5',
 	col:0,
 	row:0,
-			fieldName: 'actual_reports',
+			fieldName: 'value',
 				style: 'bodycell',
 		
 		
@@ -791,11 +695,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$actual_reports_pdfvalue},"color":"#00bd47","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":{$value_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$actual_reports_align}',
+              "alignment": '{$value_align}',
      
       
       },
@@ -806,7 +710,7 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
-			fieldName: 'actual_reports_on_time',
+			fieldName: 'relative_period',
 				style: 'bodycell',
 		
 		
@@ -820,103 +724,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$actual_reports_on_time_pdfvalue},"color":"#007abc","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":{$relative_period_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$actual_reports_on_time_align}',
+              "alignment": '{$relative_period_align}',
      
       
       },
 
 {END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
-{
-	cellId: 'cell_field7',
-	col:0,
-	row:0,
-			fieldName: 'expected_reports',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$expected_reports_pdfvalue},"color":"#f70909","hidden":"{$item_hide_simple_grid_field4}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$expected_reports_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
-{
-	cellId: 'cell_field8',
-	col:0,
-	row:0,
-			fieldName: 'reporting_rate',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$reporting_rate_pdfvalue},"color":"#00c147","hidden":"{$item_hide_simple_grid_field5}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$reporting_rate_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
-{
-	cellId: 'cell_field9',
-	col:0,
-	row:0,
-			fieldName: 'reporting_rate_on_time',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$reporting_rate_on_time_pdfvalue},"color":"#00dcc7","hidden":"{$item_hide_simple_grid_field7}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$reporting_rate_on_time_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field9}
 											],
 				{END row_grid_1}
 		
@@ -1134,84 +951,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field6}
-																							{BEGIN cellblock_grid_footcell_field7}
-{
-	cellId: 'footcell_field7',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field7}
-																							{BEGIN cellblock_grid_footcell_field8}
-{
-	cellId: 'footcell_field8',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field8}
-																							{BEGIN cellblock_grid_footcell_field9}
-{
-	cellId: 'footcell_field9',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field9}
 											],
 				{END row_grid_2}
 		
