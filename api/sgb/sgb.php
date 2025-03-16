@@ -30,7 +30,10 @@ usort($backups, function ($a, $b) use ($sortField, $sortOrder) {
 });
 
 // Pagination
-$perPage = 5;
+$perPageOptions = [5, 10, 20, 50, 100, 'All'];
+$perPage = isset($_GET['perPage']) && in_array($_GET['perPage'], $perPageOptions) ? $_GET['perPage'] : 5;
+$perPage = $perPage === 'All' ? count($backups) : (int)$perPage;
+
 $totalBackups = count($backups);
 $totalPages = ceil($totalBackups / $perPage);
 $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
@@ -190,6 +193,16 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
                 margin-bottom: 10px;
             }
         }
+                /* Add this CSS for the new dropdown and "Select All" checkbox */
+        .per-page-selector {
+            margin-bottom: 20px;
+        }
+        .per-page-selector label {
+            margin-right: 10px;
+        }
+        .select-all-container {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -207,6 +220,24 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         </div>
         <h2>Available Backups</h2>
         <p>Total backups: <?php echo $totalBackups; ?></p>
+                <!-- Per Page Selector -->
+        <div class="per-page-selector">
+            <label for="perPage">Backups per page:</label>
+            <select id="perPage" onchange="updatePerPage(this.value)">
+                <?php foreach ($perPageOptions as $option): ?>
+                    <option value="<?php echo $option; ?>" <?php echo $perPage == $option ? 'selected' : ''; ?>>
+                        <?php echo $option; ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <!-- Select All Checkbox -->
+        <div class="select-all-container">
+            <label>
+                <input type="checkbox" id="selectAll" onclick="toggleSelectAll()"> Select All
+            </label>
+        </div>
 <form id="bulkActionForm" method="post" action="sgb_bulk_action.php">
     <div class="checkbox-container" id="backupList">
         <?php foreach ($pagedBackups as $backup): ?>
@@ -218,43 +249,61 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
     </div>
     <button type="submit" name="action" value="delete" onclick="return confirmDelete();">Delete Selected</button>
 </form>
-<table>
-    <thead>
-        <tr>
-            <th><a href="?sort=name&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Backup Name <i class="fas fa-sort"></i></a></th>
-            <th><a href="?sort=date&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Date <i class="fas fa-sort"></i></a></th>
-            <th><a href="?sort=size&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Size <i class="fas fa-sort"></i></a></th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody id="backupTable">
-        <?php foreach ($pagedBackups as $backup): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($backup['name']); ?></td>
-            <td><?php echo date('Y-m-d H:i:s', $backup['date']); ?></td>
-            <td><?php echo round($backup['size'] / 1024, 2); ?> KB</td>
-            <td>
-                <a href="#" onclick="return confirmRestore('<?php echo urlencode($backup['name']); ?>');">Restore</a> |
-                <a href="<?php echo $backupDir . '/' . urlencode($backup['name']); ?>" download onclick="return confirmDownload();">Download</a>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+        <!-- Backup Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th><a href="?sort=name&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Backup Name <i class="fas fa-sort"></i></a></th>
+                    <th><a href="?sort=date&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Date <i class="fas fa-sort"></i></a></th>
+                    <th><a href="?sort=size&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Size <i class="fas fa-sort"></i></a></th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="backupTable">
+                <?php foreach ($pagedBackups as $backup): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($backup['name']); ?></td>
+                        <td><?php echo date('Y-m-d H:i:s', $backup['date']); ?></td>
+                        <td><?php echo round($backup['size'] / 1024, 2); ?> KB</td>
+                        <td>
+                            <a href="#" onclick="return confirmRestore('<?php echo urlencode($backup['name']); ?>');">Restore</a> |
+                            <a href="<?php echo $backupDir . '/' . urlencode($backup['name']); ?>" download onclick="return confirmDownload();">Download</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
         <div class="pagination">
             <?php if ($currentPage > 1): ?>
-                <a href="?page=<?php echo $currentPage - 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>">« Prev</a>
+                <a href="?page=<?php echo $currentPage - 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>&perPage=<?php echo $perPage; ?>">« Prev</a>
             <?php endif; ?>
             <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                <a href="?page=<?php echo $i; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>" class="<?php echo $i == $currentPage ? 'active' : ''; ?>"><?php echo $i; ?></a>
+                <a href="?page=<?php echo $i; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>&perPage=<?php echo $perPage; ?>" class="<?php echo $i == $currentPage ? 'active' : ''; ?>"><?php echo $i; ?></a>
             <?php endfor; ?>
             <?php if ($currentPage < $totalPages): ?>
-                <a href="?page=<?php echo $currentPage + 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>">Next »</a>
+                <a href="?page=<?php echo $currentPage + 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>&perPage=<?php echo $perPage; ?>">Next »</a>
             <?php endif; ?>
         </div>
-
     </div>
+
     <script>
+        // Function to update the number of backups per page
+        function updatePerPage(perPage) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('perPage', perPage);
+            window.location.href = url.toString();
+        }
+
+        // Function to toggle "Select All" checkboxes
+        function toggleSelectAll() {
+            const selectAll = document.getElementById('selectAll');
+            const checkboxes = document.querySelectorAll('#backupList input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = selectAll.checked;
+            });
+        }
 
         
         function confirmDownload() {

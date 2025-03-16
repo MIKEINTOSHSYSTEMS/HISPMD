@@ -1,0 +1,93 @@
+version: '3.6'
+
+# docker compose -p hispmd_port -f port-docker-compose.yml up -d
+# docker compose -p hispmd_port -f port-docker-compose.yml down --volumes --rmi all
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: hispmd_portainer
+    restart: unless-stopped
+    ports:
+      - "9009:9000"  # Portainer web UI
+      #- "8000:8000"  # Portainer agent (optional)
+    volumes:
+      - portainer_data:/data  # Persist Portainer data
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket
+    environment:
+      - DOCKER_HOST=tcp://docker-proxy:2375  # Point to the Docker proxy
+    networks:
+      hispmd_sys_hispmdnet:  # Connect to the same network as your existing services
+        ipv4_address: 192.168.128.17
+
+  docker-proxy:
+    image: alpine/socat
+    container_name: docker-proxy
+    command: TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount the Docker socket
+    networks:
+      hispmd_sys_hispmdnet:
+        ipv4_address: 192.168.128.18
+
+  portainer-setup:
+#    build:
+#      context: .
+#      dockerfile: port.Dockerfile
+    #image: alpine/curl:latest  
+    image: curlimages/curl:latest
+    container_name: portainer-setup
+    user: root
+    depends_on:
+      - portainer
+    networks:
+      hispmd_sys_hispmdnet:
+        ipv4_address: 192.168.128.19
+    command: |
+      sh -c '
+      apk add --no-cache jq
+      until curl -s http://portainer:9000/api/status >/dev/null; do sleep 2; done
+
+      # Create admin user
+      curl -X POST http://portainer:9000/api/users/admin/init \
+        -H "Content-Type: application/json" \
+        -d "{\"username\":\"admin\",\"password\":\"hispmdportainers\"}"
+
+      TOKEN=$$(curl -s -X POST http://portainer:9000/api/auth \
+        -H "Content-Type: application/json" \
+        -d "{\"username\":\"admin\",\"password\":\"hispmdportainers\"}" \
+        | jq -r ".jwt")
+
+      # Create a new user with restricted access
+      curl -X POST http://portainer:9000/api/users \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $$TOKEN" \
+        -d "{\"username\":\"hispmd_user\",\"password\":\"hispmdpassword\",\"role\":2}"
+
+      # Apply resource filtering to restrict access to hispmd_sys stack only
+      curl -X PUT http://portainer:9000/api/settings \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $$TOKEN" \
+        -d "{\"resourceFilters\":[{\"type\":\"label\",\"label\":\"com.docker.compose.project=hispmd_sys\"}]}"
+
+      # Assign 'hispmd_user' access to hispmd_sys stack only
+      STACK_ID=$$(curl -s -X GET http://portainer:9000/api/stacks \
+        -H "Authorization: Bearer $$TOKEN" | jq -r '.[] | select(.Name=="hispmd_sys") | .Id')
+
+      curl -X PUT http://portainer:9000/api/stacks/$$STACK_ID/access \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $$TOKEN" \
+        -d "[{\"UserId\":2,\"Role\":1}]"  # Read-only access
+      '
+volumes:
+  portainer_data:
+    driver: local
+
+networks:
+  hispmd_sys_hispmdnet:
+    external: true  # Use the existing network
+    #local: true
+
+# Set admin username and password
+# Get JWT token for API authentication
+# Apply resource filter for project=hispmd_sys    

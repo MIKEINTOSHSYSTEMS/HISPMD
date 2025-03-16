@@ -277,18 +277,93 @@ services:
       hispmdnet:
         ipv4_address: 192.168.128.14
 
-  rancher:
-    image: rancher/rancher:latest
-    container_name: hispmd_rancher
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: hispmd_portainer
     restart: unless-stopped
     ports:
-      - "8088:80"  # Map host port 8081 to container port 80
-      - "8444:443" # Map host port 8444 to container port 443
+      - "9009:9000"  # Portainer web UI
+      #- "8000:8000"  # Portainer agent (optional)
     volumes:
-      - rancher_data:/var/lib/rancher
+      - portainer_data:/data  # Persist Portainer data
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket
+    environment:
+      - DOCKER_HOST=tcp://docker-proxy:2375  # Point to the Docker proxy
+    networks:
+      hispmdnet:  # Connect to the same network as your existing services
+        ipv4_address: 192.168.128.17
+
+  docker-proxy:
+    image: alpine/socat
+    container_name: docker-proxy
+    command: TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount the Docker socket
     networks:
       hispmdnet:
-        ipv4_address: 192.168.128.17
+        ipv4_address: 192.168.128.18
+
+  portainer-setup:
+    image: curlimages/curl:latest
+    container_name: portainer-setup
+    user: root
+    depends_on:
+      - portainer
+    networks:
+      hispmdnet:
+        ipv4_address: 192.168.128.19
+    command: |
+      sh -c '
+      apk add --no-cache jq
+      until curl -s http://portainer:9000/api/status >/dev/null; do sleep 2; done
+
+      # Create admin user
+      curl -X POST http://portainer:9000/api/users/admin/init \
+        -H "Content-Type: application/json" \
+        -d "{\"username\":\"admin\",\"password\":\"hispmdportainers\"}"
+
+      TOKEN=$$(curl -s -X POST http://portainer:9000/api/auth \
+        -H "Content-Type: application/json" \
+        -d "{\"username\":\"admin\",\"password\":\"hispmdportainers\"}" \
+        | jq -r ".jwt")
+
+      # Create a new user with restricted access
+      curl -X POST http://portainer:9000/api/users \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $$TOKEN" \
+        -d "{\"username\":\"hispmd_user\",\"password\":\"hispmdpassword\",\"role\":2}"
+
+      # Apply resource filtering to restrict access to hispmd_sys stack only
+      curl -X PUT http://portainer:9000/api/settings \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $$TOKEN" \
+        -d "{\"resourceFilters\":[{\"type\":\"label\",\"label\":\"com.docker.compose.project=hispmd_sys\"}]}"
+
+      # Assign 'hispmd_user' access to hispmd_sys stack only
+      STACK_ID=$$(curl -s -X GET http://portainer:9000/api/stacks \
+        -H "Authorization: Bearer $$TOKEN" | jq -r '.[] | select(.Name=="hispmd_sys") | .Id')
+
+      curl -X PUT http://portainer:9000/api/stacks/$$STACK_ID/access \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $$TOKEN" \
+        -d "[{\"UserId\":2,\"Role\":1}]"  # Read-only access
+      '
+
+#  rancher:
+#    image: rancher/rancher:latest
+#    container_name: hispmd_rancher
+#    restart: unless-stopped
+#    ports:
+#      - "8088:80"  # Map host port 8081 to container port 80
+#      - "8444:443" # Map host port 8444 to container port 443
+#    volumes:
+#      - rancher_data:/var/lib/rancher
+#    environment:
+#      - CATTLE_BOOTSTRAP_PASSWORD=hispmdranchers # Set the admin password      
+#    networks:
+#      hispmdnet:
+#        ipv4_address: 192.168.128.17
+#    privileged: true  #to enable privileged mode
 
   #hispmd_matomo:
   #  image: bitnami/matomo:latest
@@ -321,7 +396,8 @@ volumes:
   hispmd_vizdata:
   hispmd_mongodata:
   grafana-storage:
-  rancher_data:
+  portainer_data:
+  #rancher_data:
   #hispmd_matomo:
 
 networks:

@@ -1,0 +1,37 @@
+version: '3.6'
+
+services:
+  rancher:
+    image: rancher/rancher:latest
+    container_name: hispmd_rancher
+    restart: unless-stopped
+    ports:
+      - "8088:80"  # Map host port 8088 to container port 80
+      - "8444:443" # Map host port 8444 to container port 443
+    volumes:
+      - rancher_data:/var/lib/rancher
+    environment:
+      - CATTLE_BOOTSTRAP_PASSWORD=hispmdranchers # Set the admin password
+      - DOCKER_HOST=tcp://docker-proxy:2375  # Point to the proxy
+    networks:
+      hispmd_sys_hispmdnet:  # Connect to the network used by hispmd_sys
+        ipv4_address: 192.168.128.17
+    privileged: true  # Required for Rancher to function
+
+  docker-proxy:
+    image: alpine/socat
+    container_name: docker-proxy
+    command: TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount the Docker socket
+    networks:
+      hispmd_sys_hispmdnet:
+        ipv4_address: 192.168.128.18  # Use an IP within the 192.168.128.0/24 subnet
+
+volumes:
+  rancher_data:
+    driver: local
+
+networks:
+  hispmd_sys_hispmdnet:
+    external: true  # Use the existing network
