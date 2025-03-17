@@ -1,0 +1,41 @@
+version: '3.8'
+
+# docker compose -p hispmd_mato -f mato-docker-compose.yml up -d
+# docker compose -p hispmd_mato -f mato-docker-compose.yml down --volumes --rmi all
+
+services:
+  hispmd_matomo:
+    image: matomo:latest
+    container_name: hispmd_matomo
+    restart: always
+    ports:
+      - "8880:80"
+    networks:
+#      hispmdnet:
+      hispmd_sys_hispmdnet:
+        ipv4_address: 192.168.128.21
+    volumes:
+      - ./analytics:/var/www/html
+#    depends_on:
+#      - db      
+    environment:
+      - MATOMO_DATABASE_HOST=192.168.128.7
+      - MATOMO_DATABASE_ADAPTER=mysql
+      - MATOMO_DATABASE_TABLES_PREFIX=matomo_
+      - MATOMO_DATABASE_USERNAME=hisp_md
+      - MATOMO_DATABASE_PASSWORD=hisp_md
+      - MATOMO_DATABASE_DBNAME=hispmd_matomo
+      - PHP_MEMORY_LIMIT=256M
+    command: /bin/bash -c "chmod -R 777 /var/www/html/tmp && apache2-foreground"
+volumes:
+  analytics:
+    driver: local
+
+networks:
+  hispmd_sys_hispmdnet:
+    external: true  # Use the existing network
+#  hispmdnet:
+#    driver: bridge
+#    ipam:
+#      config:
+#        - subnet: 192.168.128.0/24

@@ -349,6 +349,31 @@ services:
         -d "[{\"UserId\":2,\"Role\":1}]"  # Read-only access
       '
 
+
+  hispmd_matomo:
+    image: matomo:latest
+    container_name: hispmd_matomo
+    restart: always
+    ports:
+      - "8880:80"
+    networks:
+      hispmdnet:
+#      hispmd_sys_hispmdnet:
+        ipv4_address: 192.168.128.21
+    volumes:
+      - ./analytics:/var/www/html
+    depends_on:
+      - db      
+    environment:
+      - MATOMO_DATABASE_HOST=192.168.128.7
+      - MATOMO_DATABASE_ADAPTER=mysql
+      - MATOMO_DATABASE_TABLES_PREFIX=matomo_
+      - MATOMO_DATABASE_USERNAME=hisp_md
+      - MATOMO_DATABASE_PASSWORD=hisp_md
+      - MATOMO_DATABASE_DBNAME=hispmd_matomo
+      - PHP_MEMORY_LIMIT=256M
+    command: /bin/bash -c "chmod -R 777 /var/www/html/tmp && apache2-foreground"
+
 #  rancher:
 #    image: rancher/rancher:latest
 #    container_name: hispmd_rancher
@@ -397,6 +422,7 @@ volumes:
   hispmd_mongodata:
   grafana-storage:
   portainer_data:
+  analytics:
   #rancher_data:
   #hispmd_matomo:
 

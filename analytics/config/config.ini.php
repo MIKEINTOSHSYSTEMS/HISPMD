@@ -12,12 +12,14 @@ charset = "utf8mb4"
 
 [General]
 salt = "0a6ef8bef07533bc4be6f6a5119f895d"
+enable_trusted_host_check=0
 trusted_hosts[] = "hispmd.merqconsultancy.org"
 trusted_hosts[] = "http://159.223.174.134:8080"
 trusted_hosts[] = "http://192.168.128.12:8080"
 trusted_hosts[] = "http://localhost:8080"
 trusted_hosts[] = "http://0.0.0.0:8080"
 trusted_hosts[] = "http://127.0.0.1:8080"
+trusted_hosts[] = "http://0.0.0.0:8880"
 
 [Plugins]
 Plugins[] = "CoreVue"
