@@ -1,0 +1,34 @@
+version: '3.8'
+
+# docker compose -p hispmd_files -f files-docker-compose.yml up -d
+# docker compose -p hispmd_files -f files-docker-compose.yml down --volumes --rmi all
+
+services:
+  hispmd_filebrowser:
+    image: filebrowser/filebrowser
+    container_name: hispmd_filebrowser
+    restart: unless-stopped
+    networks:
+      hispmd_sys_hispmdnet:
+        ipv4_address: 192.168.128.20
+    volumes:
+      - ./:/srv
+      #- ./filebrowser.db:/database/filebrowser.db
+      - filebrowser.db:/database/filebrowser.db
+      #- ./settings.json:/config/settings.json
+      - settings.json:/config/settings.json
+    ports:
+      - "8888:80"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+volumes:
+  filebrowser.db:
+  settings.json:
+    driver: local
+
+networks:
+  hispmd_sys_hispmdnet:
+    external: true
