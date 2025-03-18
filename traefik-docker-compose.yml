@@ -1,0 +1,101 @@
+version: '3.7'
+
+# docker-compose -p hispmd_sys -f traefik-docker-compose.yml up -d
+# docker-compose -p hispmd_sys -f traefik-docker-compose.yml down --volumes --rmi all
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: hispmd_traefik
+    privileged: false  # If you want to run with elevated privileges make it true
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --entrypoints.web.address=:8808
+      - --entrypoints.websecure.address=:9443
+      - --api.dashboard=true
+      - --entrypoints.websecure.http.tls=true
+      - --entrypoints.websecure.http.tls.certResolver=myresolver
+      - --certificatesresolvers.myresolver.acme.email=dev@merqconsultancy.org
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
+#      - --entrypoints.websecure.http.tls.domains[0].main=hispmd.moh.gov.et
+#      - --entrypoints.websecure.http.tls.domains[0].sans=www.example.com     
+
+      - "--certificatesresolvers.myresolver.acme.dnschallenge.resolvers=1.1.1.1:53,1.0.0.1:53" # define dns servers for your resolver, here cloudflare
+      ####################################################
+      #- "--log.level=INFO" # enable log level
+      - "--log.level=DEBUG" # enable log level
+      - "--accesslog=true" # enable access logs
+      - "--accesslog.filepath=/logs/traefik.log" # define access log path
+      - "--accesslog.format=json" # set access log format to json instead clm
+      - "--accesslog.bufferingsize=0" # set access log buffer size to 0
+      - "--accesslog.filters.statuscodes=200-599" # only log http errors in logs; alternatively set 200-599 to include successful http requests
+      - "--accesslog.fields.headers.defaultmode=drop" # drop all headers
+      - "--accesslog.fields.headers.names.user-agent=keep" # keep user-agent header
+      - "--serversTransport.insecureSkipVerify=true" # set insecureSkipVerify to true to allow self-signed certificates
+
+    ports:
+      - "8808:8080"
+      - "9443:8443"
+      - "8087:8080"
+    volumes:
+      - ./letsencrypt:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro  # Mount the Docker socket as readonly      
+      #- /var/run/docker.sock:/var/run/docker.sock
+    extra_hosts:
+      - host.docker.internal:192.168.128.1  # 172.17.0.1 define internal ip; helps traefik to resolve containers running in host network mode
+    security_opt:
+      - no-new-privileges:true      
+    networks:
+      docker-proxynet:
+        #- docker-proxynet
+      hispmdnet:
+        ipv4_address: 192.168.128.22
+        
+    environment:
+      - TZ=Africa/Addis_Ababa # define timezone
+      - TRAEFIK_BASIC_AUTH_USER=${TRAEFIK_BASIC_AUTH_USER}  # Username for dashboard
+      - TRAEFIK_BASIC_AUTH_PASSWORD=${TRAEFIK_BASIC_AUTH_PASSWORD}  # Password for dashboard        
+    env_file:
+      - .env    
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.hispmd.moh.gov.et`)"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.tls.certresolver=myresolver"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+      - "traefik.http.middlewares.auth.basicauth.users=${TRAEFIK_BASIC_AUTH_USER}:${TRAEFIK_BASIC_AUTH_PASSWORD}"
+
+      #- "traefik.http.middlewares.traefik-auth.basicauth.users=admin:$$apr1$$hashedpassword"  # Add Basic Auth
+      #- "traefik.http.routers.traefik.middlewares=traefik-auth"  # Apply Basic Auth
+      #- echo $(htpasswd -nb admin hispmdadmin) | sed -e s/\\$/\\$\\$/g
+
+  socket-proxy:
+    image: lscr.io/linuxserver/socket-proxy:1.26.2
+    container_name: hispmd_socket-proxy
+    environment:
+      - CONTAINERS=1
+      - EVENTS=1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - docker-proxynet
+
+#    networks:
+#      hispmdnet:
+#        ipv4_address:192.168.128.23
+
+    restart: always
+    read_only: true
+    tmpfs:
+      - /run   
+
+networks:
+  hispmdnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.128.0/24
+  docker-proxynet:
+  internal: true  

@@ -37,3 +37,4 @@
 /docs/.devcontainer
 /docs/.vscode
 /hispmd.code-workspace
+/letsencrypt/acme.json
