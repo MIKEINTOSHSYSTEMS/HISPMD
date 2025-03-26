@@ -124,8 +124,9 @@ COPY . .
 # Expose the port Streamlit listens on
 EXPOSE 8501
 
-# Healthcheck for Streamlit (optional: customize as needed)
-HEALTHCHECK --interval=30s --timeout=10s CMD curl --fail http://localhost:8501/_stcore/health || exit 1
+# Healthcheck to ensure the app is running
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
 
 ################################################################################
 # Setup for Supervisor

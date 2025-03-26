@@ -35,12 +35,21 @@ if (!file_exists($backupFilePath)) {
     exit;
 }
 
-// Check if the database exists
+// Ensure the database exists; if not, create it
 $checkDbCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -tAc 'SELECT 1 FROM pg_database WHERE datname = \"$dbName\"'\"";
 exec($checkDbCommand, $output, $return_var);
 
+// If the database doesn't exist, create it
+if ($return_var !== 0 || empty($output)) {
+    $createDbCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -c 'CREATE DATABASE $dbName;'\"";
+    exec($createDbCommand, $output, $return_var);
+    if ($return_var !== 0) {
+        echo json_encode(['success' => false, 'message' => 'Error creating database. Details: ' . implode("\n", $output)]);
+        exit;
+    }
+}
 
-// Drop all tables and other objects in the public schema
+// Drop all tables and other objects in the public schema (clean restore)
 $dropAllCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -d $dbName -c 'DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA public;'\"";
 exec($dropAllCommand . ' 2>&1', $output, $return_var);
 

@@ -185,7 +185,8 @@ services:
      # retries: 3
 
       #test: ["CMD", "curl", "-f", "http://0.0.0.0:8501"]  # Health check for the service
-      test: ["CMD", "nc", "-z", "0.0.0.0", "8501"]  # Health check for the service
+      #test: ["CMD", "nc", "-z", "0.0.0.0", "8501"]  # Health check for the service
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]      
       interval: 30s  # Check health every 30 seconds
       retries: 3  # Retry up to 3 times before marking as unhealthy
       start_period: 10s  # Wait 10 seconds before starting health checks
@@ -244,6 +245,7 @@ services:
 
   metabase:
     image: metabase/metabase:latest
+    #image: metabase/metabase:v0.53.0.x
     container_name: hispmd_viz
     hostname: metabase
     volumes:
@@ -275,6 +277,8 @@ services:
 
   postgres:
     image: postgres:17
+#    image: postgres:16
+#    image: postgres:latest
     container_name: hispmd_postgres
     hostname: postgres
     healthcheck:
@@ -288,7 +292,18 @@ services:
       POSTGRES_PASSWORD: hispmddb
     volumes:
       - ./src/hispmddb:/var/lib/postgresql/data
-      #- ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Runs only once
+      #- ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb   
+    command: >
+      bash -c "
+      docker-entrypoint.sh postgres &
+      while ! pg_isready -U hispmddb; do sleep 1; done;
+      psql -U hispmddb -tc \"SELECT 1 FROM pg_database WHERE datname = 'hisp_md'\" | grep -q 1 ||
+      psql -U hispmddb -c 'CREATE DATABASE hisp_md;';
+      wait"
+
+# docker exec -it hispmd_postgres psql -U hispmddb -tc "SELECT 1 FROM pg_database WHERE datname = 'hisp_md'" | grep -q 1 || docker exec -it hispmd_postgres psql -U hispmddb -c "CREATE DATABASE hisp_md;"
+
     networks:
       hispmdnet:
         ipv4_address: 192.168.128.4
@@ -488,7 +503,7 @@ services:
     container_name: hispmd_matomo
     restart: always
     ports:
-      - "8880:80"
+      - "8088:80"
     networks:
       hispmdnet:
 #      hispmd_sys_hispmdnet:
