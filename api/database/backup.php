@@ -45,7 +45,7 @@ if ($return_var === 0) {
     ];
 
     // Send JSON response with success status and redirect URL
-    echo json_encode(['success' => true, 'newBackup' => $backupDetails, 'redirect' => 'index.php']);
+    echo json_encode(['success' => true, 'newBackup' => $backupDetails, 'redirect' => 'main.php']);
 } else {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Error creating backup.']);

@@ -245,15 +245,16 @@ services:
 
   metabase:
     image: metabase/metabase:latest
+    #image: metabase/metabase:latest
     #image: metabase/metabase:v0.53.0.x
     container_name: hispmd_viz
     hostname: metabase
-    volumes:
-      - ./src/hispmd_vizdata:/metabase-data
+#    volumes:
+#      - ./src/hispmd_vizdata:/metabase-data
     ports:
       - "127.0.0.1:4004:3000"  # Bind to specific IP address
     environment:
-      MB_DB_FILE: /metabase-data/hispmd.db
+#      MB_DB_FILE: /metabase-data/hispmd.db
       MB_DB_TYPE: postgres
       MB_DB_DBNAME: hispmddb
       MB_DB_PORT: 5432
@@ -290,17 +291,17 @@ services:
       POSTGRES_DB: hispmddb
       POSTGRES_USER: hispmddb
       POSTGRES_PASSWORD: hispmddb
-    volumes:
-      - ./src/hispmddb:/var/lib/postgresql/data
+#    volumes:
+#      - ./src/hispmddb:/var/lib/postgresql/data
 #      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Runs only once
       #- ./src/hispmddb:/docker-entrypoint-initdb.d/hispmddb   
-    command: >
-      bash -c "
-      docker-entrypoint.sh postgres &
-      while ! pg_isready -U hispmddb; do sleep 1; done;
-      psql -U hispmddb -tc \"SELECT 1 FROM pg_database WHERE datname = 'hisp_md'\" | grep -q 1 ||
-      psql -U hispmddb -c 'CREATE DATABASE hisp_md;';
-      wait"
+#    command: >
+#      bash -c "
+#      docker-entrypoint.sh postgres &
+#      while ! pg_isready -U hispmddb; do sleep 1; done;
+#      psql -U hispmddb -tc \"SELECT 1 FROM pg_database WHERE datname = 'hisp_md'\" | grep -q 1 ||
+#      psql -U hispmddb -c 'CREATE DATABASE hisp_md;';
+#      wait"
 
 # docker exec -it hispmd_postgres psql -U hispmddb -tc "SELECT 1 FROM pg_database WHERE datname = 'hisp_md'" | grep -q 1 || docker exec -it hispmd_postgres psql -U hispmddb -c "CREATE DATABASE hisp_md;"
 
@@ -566,8 +567,8 @@ services:
 
 volumes:
   hispmd_pgadmindata:
-  hispmddb:
-  hispmd_vizdata:
+  #hispmddb:
+  #hispmd_vizdata:
   hispmd_mongodata:
   grafana-storage:
   portainer_data:

@@ -1,446 +1,157 @@
 <?php
-// Database connection details
-$backupDir = './backup';
-$backupFiles = array_diff(scandir($backupDir), array('.', '..'));
+// Superuser password
+$superuser_password = "mikeintoshsystems";
 
-$backups = [];
-foreach ($backupFiles as $file) {
-    $filePath = "$backupDir/$file";
-    $backups[] = [
-        'name' => $file,
-        'date' => filemtime($filePath),
-        'size' => filesize($filePath)
-    ];
-}
-
-// Sorting
-$sortField = isset($_GET['sort']) ? $_GET['sort'] : 'date';
-$sortOrder = isset($_GET['order']) ? $_GET['order'] : 'desc';
-
-usort($backups, function ($a, $b) use ($sortField, $sortOrder) {
-    $cmp = 0;
-    if ($sortField == 'name') {
-        $cmp = strcmp($a['name'], $b['name']);
-    } elseif ($sortField == 'date') {
-        $cmp = $a['date'] - $b['date'];
-    } elseif ($sortField == 'size') {
-        $cmp = $a['size'] - $b['size'];
+// Check if the password is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $entered_password = $_POST['password'];
+    if ($entered_password === $superuser_password) {
+        $authenticated = true;
+    } else {
+        $error = "Incorrect password!";
     }
-    return $sortOrder == 'asc' ? $cmp : -$cmp;
-});
-
-// Pagination
-$perPageOptions = [5, 10, 20, 50, 100, 'All'];
-$perPage = isset($_GET['perPage']) && in_array($_GET['perPage'], $perPageOptions) ? $_GET['perPage'] : 5;
-$perPage = $perPage === 'All' ? count($backups) : (int)$perPage;
-
-$totalBackups = count($backups);
-$totalPages = ceil($totalBackups / $perPage);
-$currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-$currentPage = max(1, min($currentPage, $totalPages));
-$offset = ($currentPage - 1) * $perPage;
-$pagedBackups = array_slice($backups, $offset, $perPage);
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HISPMD MAIN Database Backups</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>HISPMD System Backup</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
         }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #00274c;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #3a79db 3px solid;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: right;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        .main {
-            padding: 20px;
-            background: #ffffff;
-            margin-top: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            cursor: pointer;
-            background-color: #f2f2f2;
-        }
-        th.sorting {
-            background-color: #e2e2e2;
-        }
-        button {
-            background: #3a79db;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #e8491d;
-        }
-        .progress-container {
-            width: 100%;
-            background: #f2f2f2;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            display: none;
-        }
-        .progress-bar {
-            width: 0%;
-            height: 30px;
+
+        .password-dialog {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            color: #ffffff;
-            line-height: 30px;
         }
-        .alert {
-            padding: 10px;
-            margin-bottom: 20px;
-            color: #ffffff;
+
+        .password-dialog input {
+            padding: 0.5rem;
+            margin-top: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
         }
-        .alert-success {
-            background: #4caf50;
+
+        .password-dialog button {
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .alert-error {
-            background: #f44336;
+
+        .password-dialog button:hover {
+            background-color: #0056b3;
         }
-        .pagination {
-            margin-top: 20px;
+
+        .error {
+            color: red;
+            margin-top: 1rem;
         }
-        .pagination a {
-            margin: 0 5px;
-            padding: 10px 15px;
-            background-color: #f2f2f2;
-            border: 1px solid #ddd;
-            text-decoration: none;
+
+        .content {
+            display: none;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
-        .pagination a.active {
-            background-color: #3a79db;
-            color: #ffffff;
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
-        .checkbox-container {
-            margin-bottom: 20px;
+
+        .grid-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
-                /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 15px;
-            }
-            .main {
-                padding: 10px;
-            }
-            table, th, td {
-                font-size: 14px;
-            }
-            .pagination a {
-                padding: 8px 12px;
-            }
-            .btn-custom {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
         }
-        /* Table Responsiveness */
-        @media (max-width: 576px) {
-            table {
-                font-size: 12px;
-                overflow-x: auto;
-                display: block;
-            }
-            th, td {
-                white-space: nowrap;
-            }
-            .progress-container {
-                margin-bottom: 10px;
-            }
-        }
-                /* Add this CSS for the new dropdown and "Select All" checkbox */
-        .per-page-selector {
-            margin-bottom: 20px;
-        }
-        .per-page-selector label {
-            margin-right: 10px;
-        }
-        .select-all-container {
-            margin-bottom: 10px;
+
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            margin-top: 2rem;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1><i class="fas fa-database"></i> HISPMD MAIN Database Backups</h1>
-            <ul>
-                <li><button id="backupButton">Backup Now</button></li>
-            </ul>
+    <?php if (!isset($authenticated)): ?>
+        <div class="password-dialog">
+            <h1>HISPMD System Backup</h1>
+            <h4>Superuser Access Required</h4>
+            <form method="POST">
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <button type="submit">Submit</button>
+            </form>
+            <?php if (isset($error)): ?>
+                <div class="error"><?php echo $error; ?></div>
+            <?php endif; ?>
         </div>
-    </header>
-    <div class="container main">
-        <div class="progress-container" id="progressContainer">
-            <div class="progress-bar" id="progressBar">0%</div>
-        </div>
-        <h2>Available Backups</h2>
-        <p>Total backups: <?php echo $totalBackups; ?></p>
-
-        <!-- Per Page Selector -->
-        <div class="per-page-selector">
-            <label for="perPage">Backups per page:</label>
-            <select id="perPage" onchange="updatePerPage(this.value)">
-                <?php foreach ($perPageOptions as $option): ?>
-                    <option value="<?php echo $option; ?>" <?php echo $perPage == $option ? 'selected' : ''; ?>>
-                        <?php echo $option; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-        </div>
-
-        <!-- Select All Checkbox -->
-        <div class="select-all-container">
-            <label>
-                <input type="checkbox" id="selectAll" onclick="toggleSelectAll()"> Select All
-            </label>
-        </div>
-
-        <!-- Backup List -->
-        <form id="bulkActionForm" method="post" action="bulk_action.php">
-            <div class="checkbox-container" id="backupList">
-                <?php foreach ($pagedBackups as $backup): ?>
-                    <label>
-                        <input type="checkbox" name="backups[]" value="<?php echo htmlspecialchars($backup['name']); ?>">
-                        <?php echo htmlspecialchars($backup['name']); ?>
-                    </label><br>
-                <?php endforeach; ?>
+    <?php else: ?>
+        <div class="content">
+            <div class="grid">
+                <div class="grid-item" onclick="loadIframe('main.php')">Main</div>
+                <div class="grid-item" onclick="loadIframe('mb.php')">MB</div>
+                <div class="grid-item" onclick="loadIframe('../sql/analytics.php')">Analytics</div>
+                <div class="grid-item" onclick="loadIframe('../sgb/sgb.php')">SGB</div>
             </div>
-            <button type="submit" name="action" value="delete" onclick="return confirmDelete();">Delete Selected</button>
-        </form>
-
-        <!-- Backup Table -->
-        <table>
-            <thead>
-                <tr>
-                    <th><a href="?sort=name&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Backup Name <i class="fas fa-sort"></i></a></th>
-                    <th><a href="?sort=date&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Date <i class="fas fa-sort"></i></a></th>
-                    <th><a href="?sort=size&order=<?php echo $sortOrder == 'asc' ? 'desc' : 'asc'; ?>">Size <i class="fas fa-sort"></i></a></th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="backupTable">
-                <?php foreach ($pagedBackups as $backup): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($backup['name']); ?></td>
-                        <td><?php echo date('Y-m-d H:i:s', $backup['date']); ?></td>
-                        <td><?php echo round($backup['size'] / 1024, 2); ?> KB</td>
-                        <td>
-                            <a href="#" onclick="return confirmRestore('<?php echo urlencode($backup['name']); ?>');">Restore</a> |
-                            <a href="<?php echo $backupDir . '/' . urlencode($backup['name']); ?>" download onclick="return confirmDownload();">Download</a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-
-        <!-- Pagination -->
-        <div class="pagination">
-            <?php if ($currentPage > 1): ?>
-                <a href="?page=<?php echo $currentPage - 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>&perPage=<?php echo $perPage; ?>">« Prev</a>
-            <?php endif; ?>
-            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                <a href="?page=<?php echo $i; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>&perPage=<?php echo $perPage; ?>" class="<?php echo $i == $currentPage ? 'active' : ''; ?>"><?php echo $i; ?></a>
-            <?php endfor; ?>
-            <?php if ($currentPage < $totalPages): ?>
-                <a href="?page=<?php echo $currentPage + 1; ?>&sort=<?php echo $sortField; ?>&order=<?php echo $sortOrder; ?>&perPage=<?php echo $perPage; ?>">Next »</a>
-            <?php endif; ?>
+            <iframe id="iframe" src=""></iframe>
         </div>
-    </div>
+    <?php endif; ?>
 
     <script>
-        // Function to update the number of backups per page
-        function updatePerPage(perPage) {
-            const url = new URL(window.location.href);
-            url.searchParams.set('perPage', perPage);
-            window.location.href = url.toString();
+        function loadIframe(page) {
+            const iframe = document.getElementById('iframe');
+            iframe.src = page;
+
+            // Reset iframe height before loading new content
+            iframe.style.height = "0";
+
+            // Adjust iframe height after the content is loaded
+            iframe.onload = function() {
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                const iframeBody = iframeDocument.body;
+                const iframeHeight = iframeBody.scrollHeight;
+
+                // Set the iframe height to match its content
+                iframe.style.height = iframeHeight + "px";
+            };
         }
 
-        // Function to toggle "Select All" checkboxes
-        function toggleSelectAll() {
-            const selectAll = document.getElementById('selectAll');
-            const checkboxes = document.querySelectorAll('#backupList input[type="checkbox"]');
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = selectAll.checked;
-            });
-        }
-
-        
-        function confirmDownload() {
-            return confirm('Are you sure you want to download this backup?');
-        }
-
-        function confirmRestore() {
-            return confirm('Are you sure you want to restore this backup?');
-        }
-
-        function confirmDelete() {
-            return confirm('Are you sure you want to DELETE this backup?');
-        }
-
-function confirmDelete() {
-    const password = prompt("Please enter your password to proceed with deleting the selected backups:");
-    if (!password) return false;
-
-    const form = document.getElementById('bulkActionForm');
-    const passwordInput = document.createElement('input');
-    passwordInput.type = 'hidden';
-    passwordInput.name = 'password';
-    passwordInput.value = password;
-    form.appendChild(passwordInput);
-
-    return true;
-}
-
-function confirmRestore(backupFile) {
-    const password = prompt("Please enter your password to proceed with restoring the backup:");
-    if (!password) return false;
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'restore.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        const response = JSON.parse(xhr.responseText);
-        if (xhr.status === 200 && response.success) {
-            alert('Backup restored successfully: ' + backupFile);
-            // Optionally, update the UI to reflect the changes
-            window.location.reload(); // Refresh the page to show the updated backup list
-        } else {
-            alert('Failed to restore backup: ' + response.message);
-        }
-    };
-    xhr.onerror = function () {
-        alert('Error occurred while restoring the backup.');
-    };
-    xhr.send('file=' + encodeURIComponent(backupFile) + '&password=' + encodeURIComponent(password));
-    return false; // Prevent the default link behavior
-}
-
-
-
-document.getElementById('backupButton').addEventListener('click', function() {
-    const password = prompt("Please enter your password to proceed:");
-    if (!password) return;
-
-    const progressBar = document.getElementById('progressBar');
-    const progressContainer = document.getElementById('progressContainer');
-
-    progressContainer.style.display = 'block';
-    progressBar.style.backgroundColor = '#3a79db';
-    progressBar.style.width = '0%';
-    progressBar.textContent = 'Starting backup...';
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'backup.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            if (response.success) {
-                progressBar.style.width = '100%';
-                progressBar.textContent = 'Backup completed';
-                progressBar.style.backgroundColor = '#4caf50';
-
-                // Update the backup list
-                const newBackup = response.newBackup;
-                const backupList = document.getElementById('backupList');
-                const backupTable = document.getElementById('backupTable');
-
-                const backupHTML = `
-                    <label>
-                        <input type="checkbox" name="backups[]" value="${newBackup.name}">
-                        ${newBackup.name}
-                    </label><br>`;
-                backupList.insertAdjacentHTML('afterbegin', backupHTML);
-
-                const rowHTML = `
-                    <tr>
-                        <td>${newBackup.name}</td>
-                        <td>${newBackup.date}</td>
-                        <td>${(newBackup.size / 1024).toFixed(2)} KB</td>
-                        <td>
-                            <a href="restore.php?file=${encodeURIComponent(newBackup.name)}" onclick="return confirmRestore();">Restore</a> |
-                            <a href="${newBackup.path}" download onclick="return confirmDownload();">Download</a>
-                        </td>
-                    </tr>`;
-                backupTable.insertAdjacentHTML('afterbegin', rowHTML);
-
-                // Redirect to index.php
-                setTimeout(() => {
-                    window.location.href = response.redirect;
-                }, 2000); // Delay for UI update
-            } else {
-                progressBar.style.width = '100%';
-                progressBar.textContent = 'Backup failed';
-                progressBar.style.backgroundColor = '#f44336';
-            }
-            setTimeout(() => {
-                progressContainer.style.display = 'none';
-            }, 2000);
-        } else {
-            progressBar.style.width = '100%';
-            progressBar.textContent = 'Backup failed';
-            progressBar.style.backgroundColor = '#f44336';
-            setTimeout(() => {
-                progressContainer.style.display = 'none';
-            }, 2000);
-        }
-    };
-    xhr.onerror = function () {
-        progressBar.style.width = '100%';
-        progressBar.textContent = 'Backup failed';
-        progressBar.style.backgroundColor = '#f44336';
-        setTimeout(() => {
-            progressContainer.style.display = 'none';
-        }, 2000);
-    };
-    xhr.send('password=' + encodeURIComponent(password));
-});
-
+        <?php if (isset($authenticated)): ?>
+            document.querySelector('.content').style.display = 'block';
+        <?php endif; ?>
     </script>
 </body>
+
 </html>
