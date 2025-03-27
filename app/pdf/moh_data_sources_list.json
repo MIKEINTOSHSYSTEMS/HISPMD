@@ -210,8 +210,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_filter_panel}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      
@@ -552,6 +554,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -685,6 +690,11 @@ pdfDocument = {
 			 {BEGIN details_moh_indicators_data_chart}
 			{$displayDetailTable_moh_indicators_data_chart }
 		{END details_moh_indicators_data_chart},
+				
+				
+			 {BEGIN details_moh_ir_datasource}
+			{$displayDetailTable_moh_ir_datasource }
+		{END details_moh_ir_datasource},
 				
 		  ],
   "border": [ true, true, true, true ],

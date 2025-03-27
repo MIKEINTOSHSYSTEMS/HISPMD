@@ -453,6 +453,11 @@ pdfDocument = {
 			{$displayDetailTable_moh_indicators_data_chart }
 		{END details_moh_indicators_data_chart},
 				
+				
+			 {BEGIN details_moh_ir_datasource}
+			{$displayDetailTable_moh_ir_datasource }
+		{END details_moh_ir_datasource},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

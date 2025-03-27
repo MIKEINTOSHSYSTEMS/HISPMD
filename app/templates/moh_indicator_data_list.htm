@@ -875,6 +875,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_indicator_group_id}
 
@@ -926,6 +927,7 @@
 		<li class=" filter-values filter-values-indicator_id  {$visibilityClass_indicator_id}">
 			{$indicator_id_filter}
 						
+					
 					
 					
 					
@@ -1003,6 +1005,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_data_source_id}
 
@@ -1025,6 +1028,71 @@
 	</div>
 
 {END filter_control_data_source_id}
+
+
+
+
+
+
+{BEGIN filter_control_data_source_detail}
+
+	<div class="dropdown filter-field filter-data_source_detail-container" {BEGIN filter_selected_data_source_detail} data-selected {END filter_selected_data_source_detail}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<input class="filter-selectAll-data_source_detail" type="checkbox" name="selectAll" {$selectAll_attrs_data_source_detail} />
+						{BEGIN clearLink_data_source_detail}
+			<a href="#" class="filter-clear filter-clear-data_source_detail" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_data_source_detail}
+			<span class="r-filter-field">{$label public_moh_indicator_data data_source_detail }				{BEGIN filter_selected_data_source_detail}:{END filter_selected_data_source_detail}
+			</span>
+			{BEGIN filter_selected_data_source_detail}
+			<span class="r-filter-value">{$filtervalue_data_source_detail}</span>
+			{END filter_selected_data_source_detail}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_data_source_detail}
+		<li class=" filter-values filter-values-data_source_detail  {$visibilityClass_data_source_detail}">
+			{$data_source_detail_filter}
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_data_source_detail}
+
+			{BEGIN filter_button_showmore_data_source_detail}
+		<li class=" filter-show-more {$collapsedClass_data_source_detail} {$showMoreBtnClass_data_source_detail}">
+			<a class="filter-show-more-link filterShowMore_data_source_detail" href="#">{$show_n_more_data_source_detail}</a>
+		</li>
+		{END filter_button_showmore_data_source_detail}
+	
+
+
+			{BEGIN filter_button_apply_data_source_detail}
+		<li class="filter-multiselect  filter-field-btn {$collapsedClass_data_source_detail}">
+			<a href="#" class="filter-btn-apply filter-apply-data_source_detail" {$filterbutton_attrs_data_source_detail}>Apply</a>
+		</li>
+		{END filter_button_apply_data_source_detail}
+	
+
+			</ul>
+	</div>
+
+{END filter_control_data_source_detail}
 
 
 
@@ -1054,6 +1122,7 @@
 		<li class=" filter-values filter-values-scope_id  {$visibilityClass_scope_id}">
 			{$scope_id_filter}
 						
+					
 					
 					
 					
@@ -1131,6 +1200,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_region_id}
 
@@ -1182,6 +1252,7 @@
 		<li class=" filter-values filter-values-unit_id  {$visibilityClass_unit_id}">
 			{$unit_id_filter}
 						
+					
 					
 					
 					
@@ -1259,6 +1330,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_facility_type_id}
 
@@ -1310,6 +1382,7 @@
 		<li class=" filter-values filter-values-gender_sex  {$visibilityClass_gender_sex}">
 			{$gender_sex_filter}
 						
+					
 					
 					
 					
@@ -1387,6 +1460,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_period_id}
 
@@ -1437,6 +1511,7 @@
 		<li class=" filter-values filter-values-year  {$visibilityClass_year}">
 			{$year_filter}
 						
+					
 					
 					
 					
@@ -1514,6 +1589,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_quarter_id}
 
@@ -1565,6 +1641,7 @@
 		<li class=" filter-values filter-values-month_id  {$visibilityClass_month_id}">
 			{$month_id_filter}
 						
+					
 					
 					
 					
@@ -1642,6 +1719,7 @@
 					
 					
 					
+					
 					</li>
 		{END filterCtrlBlock_period}
 
@@ -1693,6 +1771,7 @@
 		<li class=" filter-values filter-values-data_representation  {$visibilityClass_data_representation}">
 			{$data_representation_filter}
 						
+					
 					
 					
 					

@@ -77,87 +77,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_ir_datasource}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ir_datasource}" {$filterRow_attrs_ir_datasource}>
-			<label>{$label public_moh_ir_datasource ir_datasource }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ir_datasource}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ir_datasource}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ir_datasource}</span>
-						</div>
-		{END searchCtrlBlock_ir_datasource}
-																{BEGIN searchCtrlBlock_ir_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ir_id}" {$filterRow_attrs_ir_id}>
-			<label>{$label public_moh_ir_datasource ir_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ir_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ir_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ir_id}</span>
-						</div>
-		{END searchCtrlBlock_ir_id}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -424,7 +343,21 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	</div>		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
 {END top_block}
 						</div>
 											<div class="r-grid"
@@ -444,11 +377,112 @@
 				<div class="row">
 			 
 				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"			data-horizontal
+	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_ir_datasource}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ir_datasource}" {$filterRow_attrs_ir_datasource}>
+			<label>{$label public_moh_ir_datasource ir_datasource }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ir_datasource}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ir_datasource}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ir_datasource}</span>
+						</div>
+		{END searchCtrlBlock_ir_datasource}
+																{BEGIN searchCtrlBlock_data_source_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_data_source_id}" {$filterRow_attrs_data_source_id}>
+			<label>{$label public_moh_ir_datasource data_source_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_data_source_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_data_source_id}</span>
+						</div>
+		{END searchCtrlBlock_data_source_id}
+																{BEGIN searchCtrlBlock_ir_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ir_id}" {$filterRow_attrs_ir_id}>
+			<label>{$label public_moh_ir_datasource ir_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ir_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ir_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ir_id}</span>
+						</div>
+		{END searchCtrlBlock_ir_id}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class="			col-md-6
 	
 ">
-		{BEGIN firstAboveGridCell}
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
@@ -458,6 +492,14 @@
 </span>
 {END add_link}
 	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Inline Add			</a>
+</span>
+{END inlineadd_link}
+	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
@@ -465,8 +507,7 @@
 							Delete			</a>
 </span>
 {END deleteselected_link}
-			{END firstAboveGridCell}	
-	</div>			 
+		</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class="r-align-right			col-md-6
@@ -570,6 +611,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ir_datasource"]:before {
 		content: "{$label public_moh_ir_datasource ir_datasource}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="data_source_id"]:before {
+		content: "{$label public_moh_ir_datasource data_source_id}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -638,7 +682,7 @@
 	 
 		{BEGIN ir_id_fieldheadercolumn}
 	{BEGIN ir_id_fieldheader}
-	<SPAN {$ir_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ir_id" data-fieldname="ir_id">
+	<SPAN {$ir_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ir_id" data-fieldname="ir_id">
 	{$label public_moh_ir_datasource ir_id }	{$arrow_icon_ir_id}
 	</SPAN>
 	{END ir_id_fieldheader}
@@ -663,7 +707,7 @@
 	 
 		{BEGIN ir_datasource_fieldheadercolumn}
 	{BEGIN ir_datasource_fieldheader}
-	<SPAN {$ir_datasource_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ir_datasource" data-fieldname="ir_datasource">
+	<SPAN {$ir_datasource_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ir_datasource" data-fieldname="ir_datasource">
 	{$label public_moh_ir_datasource ir_datasource }	{$arrow_icon_ir_datasource}
 	</SPAN>
 	{END ir_datasource_fieldheader}
@@ -672,6 +716,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$data_source_id_class}	"
+
+			data-field="data_source_id"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN data_source_id_fieldheadercolumn}
+	{BEGIN data_source_id_fieldheader}
+	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
+	{$label public_moh_ir_datasource data_source_id }	{$arrow_icon_data_source_id}
+	</SPAN>
+	{END data_source_id_fieldheader}
+{END data_source_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
 							</tr>
 															
 					{END grid_header}
@@ -707,6 +776,15 @@
 </span>
 {END edit_link}
 {END edit_column}
+	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Cancel" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+				
+								</a>
+</span>
+{END inline_cancel}
 	 
 		{BEGIN view_column}
 {BEGIN view_link}
@@ -787,6 +865,27 @@
 {END ir_datasource_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$data_source_id_class}	"
+
+			data-field="data_source_id"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN data_source_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id" data-default-width >
+{$data_source_id_value}
+</span>
+{END data_source_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
 							</tr>
 										
 											{END grid_row}
@@ -858,6 +957,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$data_source_id_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="moh_ir_datasource_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>

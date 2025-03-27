@@ -77,61 +77,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
-				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
-	<div class="filterPanelContainer {$filterPanelStateClass}" 
-			>
-	<!-- Begin Filter panel content -->
-
-
-
-
-
-
-{BEGIN filter_control_data_source_name}
-
-	<div class="panel panel-info filter-field filter-data_source_name-container">
-		<div class="panel-heading filter-expander">
-													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
-
-		
-			{BEGIN clearLink_data_source_name}
-			<a href="#" class="filter-clear filter-clear-data_source_name" title="Clear">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_data_source_name}
-			{$label public_moh_data_sources data_source_name }		</div>
-		<ul class="list-group">
-					{BEGIN filterCtrlBlock_data_source_name}
-		<li class="list-group-item filter-values filter-values-data_source_name {$collapsedClass_data_source_name} {$visibilityClass_data_source_name}">
-			{$data_source_name_filter}
-						
-					</li>
-		{END filterCtrlBlock_data_source_name}
-
-			{BEGIN filter_button_showmore_data_source_name}
-		<li class="list-group-item filter-show-more {$collapsedClass_data_source_name} {$showMoreBtnClass_data_source_name}">
-			<a class="filter-show-more-link filterShowMore_data_source_name" href="#">{$show_n_more_data_source_name}</a>
-		</li>
-		{END filter_button_showmore_data_source_name}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_data_source_name}
-
-
-
-	<!-- End Filter panel content -->
-	</div>
-</div>			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -535,7 +480,63 @@
 	class="r-align-right r-ori-vert			col-md-6
 	
 ">
-			</div>					</div>
+		 
+		<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+					data-horizontal
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_data_source_name}
+
+	<div class="dropdown filter-field filter-data_source_name-container" {BEGIN filter_selected_data_source_name} data-selected {END filter_selected_data_source_name}>
+		<div class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+						{BEGIN clearLink_data_source_name}
+			<a href="#" class="filter-clear filter-clear-data_source_name" title="Clear">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_data_source_name}
+			<span class="r-filter-field">{$label public_moh_data_sources data_source_name }				{BEGIN filter_selected_data_source_name}:{END filter_selected_data_source_name}
+			</span>
+			{BEGIN filter_selected_data_source_name}
+			<span class="r-filter-value">{$filtervalue_data_source_name}</span>
+			{END filter_selected_data_source_name}
+			
+			<span class="caret"></span>
+		</div>
+		<ul class="dropdown-menu">
+					{BEGIN filterCtrlBlock_data_source_name}
+		<li class=" filter-values filter-values-data_source_name  {$visibilityClass_data_source_name}">
+			{$data_source_name_filter}
+						
+					</li>
+		{END filterCtrlBlock_data_source_name}
+
+			{BEGIN filter_button_showmore_data_source_name}
+		<li class=" filter-show-more {$collapsedClass_data_source_name} {$showMoreBtnClass_data_source_name}">
+			<a class="filter-show-more-link filterShowMore_data_source_name" href="#">{$show_n_more_data_source_name}</a>
+		</li>
+		{END filter_button_showmore_data_source_name}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_data_source_name}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>		</div>					</div>
 			 
 				<div class="row">
 			 
@@ -645,6 +646,13 @@
 					MOH Indicators Data Chart				</label>
 			</div>
 			{END print_details_moh_indicators_data_chart}
+														{BEGIN print_details_moh_ir_datasource}
+			<div>
+				<label for="printDetailsmoh_ir_datasource{$id}">
+					<input type="checkbox" value="moh_ir_datasource" id="printDetailsmoh_ir_datasource{$id}" checked>
+					Moh Ir Datasource				</label>
+			</div>
+			{END print_details_moh_ir_datasource}
 						</div>
 </div>
 {END print_details}
@@ -973,6 +981,25 @@
 	{END _dtable_link}
 
 
+	 
+		
+		
+	{BEGIN moh_ir_datasource_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$moh_ir_datasource_link_attrs} data-short-details="moh_ir_datasource"
+		class="{$moh_ir_datasource_dlink_class}" 
+		title="{$caption public_moh_ir_datasource }"			>
+								
+									{BEGIN moh_ir_datasource_childcount}
+				<span class="details-badge badge moh_ir_datasource_badge" {$moh_ir_datasource_childnumber_attr}>
+					{$moh_ir_datasource_childnumber}				
+				</span>
+				{END moh_ir_datasource_childcount}
+						</a>
+	</span>
+	{END moh_ir_datasource_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1056,19 +1083,22 @@
 	>
 
 	 
-					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="moh_indicator_data,,moh_indicators_data_chart"
-			data-details-moh_indicator_data			data-details-			data-details-moh_indicators_data_chart	>
+						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="moh_indicator_data,,moh_indicators_data_chart,moh_ir_datasource"
+			data-details-moh_indicator_data			data-details-			data-details-moh_indicators_data_chart			data-details-moh_ir_datasource	>
 		<span data-details-inside data-short-table="moh_indicator_data">
 			</span>
 		<span data-details-inside data-short-table="">
 			</span>
 		<span data-details-inside data-short-table="moh_indicators_data_chart">
 			</span>
+		<span data-details-inside data-short-table="moh_ir_datasource">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			
 	</td>

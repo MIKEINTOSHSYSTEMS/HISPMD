@@ -171,6 +171,9 @@ pdfDocument = {
 				
 			{"text":{$ir_datasource_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
+				
+			{"text":{$data_source_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

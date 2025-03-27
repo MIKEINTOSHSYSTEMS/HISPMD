@@ -371,7 +371,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "15";
-	$menuNode["name"] = "MOH IR Status";
+	$menuNode["name"] = "MOH Data Source Details";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.moh_ir_datasource";
@@ -390,7 +390,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "MOH IR Status";
+	$menuNode["title"] = "MOH Data Source Details";
 
 
 

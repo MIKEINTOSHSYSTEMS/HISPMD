@@ -162,6 +162,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_moh_ir_datasource ir_datasource }","bold":true},{"text":{$ir_datasource_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_moh_ir_datasource data_source_id }","bold":true},{"text":{$data_source_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

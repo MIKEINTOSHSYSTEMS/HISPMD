@@ -70,6 +70,9 @@ pdfDocument = {
 										{BEGIN col_grid_1}
 					"%",
 					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -137,6 +140,33 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -174,6 +204,12 @@ pdfDocument = {
 		
 				
 			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -217,7 +253,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_moh_ir_datasource ir_id }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+			{"text":"{$jslabel public_moh_ir_datasource ir_id }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -246,7 +282,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_moh_ir_datasource ir_datasource }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel public_moh_ir_datasource ir_datasource }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -256,6 +292,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'data_source_id',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_moh_ir_datasource data_source_id }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$data_source_id_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
 											],
 				{END row_grid_0}
 		
@@ -323,6 +388,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'data_source_id',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$data_source_id_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$data_source_id_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
 		
@@ -384,6 +478,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_2}
 		

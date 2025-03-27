@@ -711,6 +711,9 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "data_source_detail";
 
 	
 	
@@ -2482,7 +2485,10 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "data_source_id", "lookup" => "data_source_id" );
+
 	
 	
 
@@ -2541,8 +2547,9 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "data_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;

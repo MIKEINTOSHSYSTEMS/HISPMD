@@ -731,6 +731,36 @@ $detailsTablesData["public.moh_data_sources"] = array();
 				$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"][]="data_source_id";
+//	public.moh_ir_datasource
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="public.moh_ir_datasource";
+		$detailsParam["dOriginalTable"] = "public.moh_ir_datasource";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "moh_ir_datasource";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_moh_ir_datasource");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.moh_data_sources"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.moh_data_sources"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.moh_data_sources"][$dIndex]["masterKeys"][]="data_source_id";
+
+				$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.moh_data_sources"][$dIndex]["detailKeys"][]="data_source_id";
 //endif
 
 // tables which are master tables for current table (detail)

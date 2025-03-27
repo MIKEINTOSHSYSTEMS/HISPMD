@@ -346,6 +346,28 @@
 </div>
 
 {END ir_datasource_fieldblock}
+											
+{BEGIN data_source_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_source_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="data_source_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_data_source_id}">
+		{$label public_moh_ir_datasource data_source_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_data_source_id}
+	</div>
+	<div class="r-search-field">
+		{$data_source_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$data_source_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END data_source_id_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

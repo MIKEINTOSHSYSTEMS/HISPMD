@@ -859,6 +859,13 @@ function InitLookupLinks()
 			$lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Period"] = array();
 		}
 		$lookupTableLinks["Indicators_Dashboard"]["indicators_dashboard.Period"]["edit"] = array("table" => "Indicators_Dashboard", "field" => "Period", "page" => "edit");
+		if( !isset( $lookupTableLinks["public.moh_data_sources"] ) ) {
+			$lookupTableLinks["public.moh_data_sources"] = array();
+		}
+		if( !isset( $lookupTableLinks["public.moh_data_sources"]["moh_ir_datasource.data_source_id"] )) {
+			$lookupTableLinks["public.moh_data_sources"]["moh_ir_datasource.data_source_id"] = array();
+		}
+		$lookupTableLinks["public.moh_data_sources"]["moh_ir_datasource.data_source_id"]["edit"] = array("table" => "public.moh_ir_datasource", "field" => "data_source_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["DHIS2_Datasets"] ) ) {
 			$lookupTableLinks["DHIS2_Datasets"] = array();
 		}

@@ -25,12 +25,21 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsmoh_ir_datasource["English"] = array();
 	$placeHoldersmoh_ir_datasource["English"] = array();
 	$pageTitlesmoh_ir_datasource["English"] = array();
-	$fieldLabelsmoh_ir_datasource["English"]["ir_id"] = "Ir Id";
+	$fieldLabelsmoh_ir_datasource["English"]["ir_id"] = "Id";
 	$fieldToolTipsmoh_ir_datasource["English"]["ir_id"] = "";
 	$placeHoldersmoh_ir_datasource["English"]["ir_id"] = "";
-	$fieldLabelsmoh_ir_datasource["English"]["ir_datasource"] = "IR Status";
+	$fieldLabelsmoh_ir_datasource["English"]["ir_datasource"] = "Data Source Detail";
 	$fieldToolTipsmoh_ir_datasource["English"]["ir_datasource"] = "";
 	$placeHoldersmoh_ir_datasource["English"]["ir_datasource"] = "";
+	$fieldLabelsmoh_ir_datasource["English"]["data_source_id"] = "Data Source";
+	$fieldToolTipsmoh_ir_datasource["English"]["data_source_id"] = "";
+	$placeHoldersmoh_ir_datasource["English"]["data_source_id"] = "";
+	$pageTitlesmoh_ir_datasource["English"]["add"] = "MoH Datasource Detail, Add new";
+	$pageTitlesmoh_ir_datasource["English"]["edit"] = "MoH Datasource Detail, Edit [{%ir_id}]";
+	$pageTitlesmoh_ir_datasource["English"]["view"] = "MoH Datasource Detail {%ir_id}";
+	$pageTitlesmoh_ir_datasource["English"]["print"] = "MoH Datasource Detail";
+	$pageTitlesmoh_ir_datasource["English"]["search"] = "MoH Datasource Detail, Advanced search";
+	$pageTitlesmoh_ir_datasource["English"]["import"] = "MoH Datasource Detail, Import";
 	if (count($fieldToolTipsmoh_ir_datasource["English"]))
 		$tdatamoh_ir_datasource[".isUseToolTips"] = true;
 }
@@ -128,7 +137,7 @@ $tdatamoh_ir_datasource[".isUseAjaxSuggest"] = true;
 
 
 
-			
+						
 
 $tdatamoh_ir_datasource[".ajaxCodeSnippetAdded"] = false;
 
@@ -140,7 +149,7 @@ $tdatamoh_ir_datasource[".addPageEvents"] = false;
 $tdatamoh_ir_datasource[".isUseTimeForSearch"] = false;
 
 
-$tdatamoh_ir_datasource[".badgeColor"] = "E67349";
+$tdatamoh_ir_datasource[".badgeColor"] = "0080ff";
 
 
 $tdatamoh_ir_datasource[".allSearchFields"] = array();
@@ -150,6 +159,7 @@ $tdatamoh_ir_datasource[".requiredSearchFields"] = array();
 $tdatamoh_ir_datasource[".googleLikeFields"] = array();
 $tdatamoh_ir_datasource[".googleLikeFields"][] = "ir_id";
 $tdatamoh_ir_datasource[".googleLikeFields"][] = "ir_datasource";
+$tdatamoh_ir_datasource[".googleLikeFields"][] = "data_source_id";
 
 
 
@@ -183,7 +193,7 @@ $tdatamoh_ir_datasource[".strOrderBy"] = $tstrOrderBy;
 $tdatamoh_ir_datasource[".orderindexes"] = array();
 
 
-$tdatamoh_ir_datasource[".sqlHead"] = "SELECT ir_id,  	ir_datasource";
+$tdatamoh_ir_datasource[".sqlHead"] = "SELECT ir_id,  	ir_datasource,  	data_source_id";
 $tdatamoh_ir_datasource[".sqlFrom"] = "FROM \"public\".moh_ir_datasource";
 $tdatamoh_ir_datasource[".sqlWhereExpr"] = "";
 $tdatamoh_ir_datasource[".sqlTail"] = "";
@@ -509,6 +519,169 @@ $tdatamoh_ir_datasource[".hideMobileList"] = array();
 
 	$tdatamoh_ir_datasource["ir_datasource"] = $fdata;
 		$tdatamoh_ir_datasource[".searchableFields"][] = "ir_datasource";
+//	data_source_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "data_source_id";
+	$fdata["GoodName"] = "data_source_id";
+	$fdata["ownerTable"] = "public.moh_ir_datasource";
+	$fdata["Label"] = GetFieldLabel("public_moh_ir_datasource","data_source_id");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "data_source_id";
+
+		$fdata["sourceSingle"] = "data_source_id";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "data_source_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "public.moh_data_sources";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "data_source_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "data_source_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamoh_ir_datasource["data_source_id"] = $fdata;
+		$tdatamoh_ir_datasource[".searchableFields"][] = "data_source_id";
 
 
 $tables_data["public.moh_ir_datasource"]=&$tdatamoh_ir_datasource;
@@ -533,6 +706,24 @@ $masterTablesData["public.moh_ir_datasource"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="public.moh_data_sources";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="public.moh_data_sources";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "moh_data_sources";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["public.moh_ir_datasource"][0] = $masterParams;
+				$masterTablesData["public.moh_ir_datasource"][0]["masterKeys"] = array();
+	$masterTablesData["public.moh_ir_datasource"][0]["masterKeys"][]="data_source_id";
+				$masterTablesData["public.moh_ir_datasource"][0]["detailKeys"] = array();
+	$masterTablesData["public.moh_ir_datasource"][0]["detailKeys"][]="data_source_id";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -553,7 +744,7 @@ function createSqlQuery_moh_ir_datasource()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ir_id,  	ir_datasource";
+$proto0["m_strFieldList"] = "ir_id,  	ir_datasource,  	data_source_id";
 $proto0["m_strFrom"] = "FROM \"public\".moh_ir_datasource";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -621,38 +812,53 @@ $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto10=array();
-$proto10["m_link"] = "SQLL_MAIN";
-			$proto11=array();
-$proto11["m_strName"] = "public.moh_ir_datasource";
-$proto11["m_srcTableName"] = "public.moh_ir_datasource";
-$proto11["m_columns"] = array();
-$proto11["m_columns"][] = "ir_id";
-$proto11["m_columns"][] = "ir_datasource";
-$obj = new SQLTable($proto11);
+						$proto10=array();
+			$obj = new SQLField(array(
+	"m_strName" => "data_source_id",
+	"m_strTable" => "public.moh_ir_datasource",
+	"m_srcTableName" => "public.moh_ir_datasource"
+));
 
-$proto10["m_table"] = $obj;
-$proto10["m_sql"] = "\"public\".moh_ir_datasource";
-$proto10["m_alias"] = "";
+$proto10["m_sql"] = "data_source_id";
 $proto10["m_srcTableName"] = "public.moh_ir_datasource";
-$proto12=array();
-$proto12["m_sql"] = "";
-$proto12["m_uniontype"] = "SQLL_UNKNOWN";
+$proto10["m_expr"]=$obj;
+$proto10["m_alias"] = "";
+$obj = new SQLFieldListItem($proto10);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto12=array();
+$proto12["m_link"] = "SQLL_MAIN";
+			$proto13=array();
+$proto13["m_strName"] = "public.moh_ir_datasource";
+$proto13["m_srcTableName"] = "public.moh_ir_datasource";
+$proto13["m_columns"] = array();
+$proto13["m_columns"][] = "ir_id";
+$proto13["m_columns"][] = "ir_datasource";
+$proto13["m_columns"][] = "data_source_id";
+$obj = new SQLTable($proto13);
+
+$proto12["m_table"] = $obj;
+$proto12["m_sql"] = "\"public\".moh_ir_datasource";
+$proto12["m_alias"] = "";
+$proto12["m_srcTableName"] = "public.moh_ir_datasource";
+$proto14=array();
+$proto14["m_sql"] = "";
+$proto14["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto12["m_column"]=$obj;
-$proto12["m_contained"] = array();
-$proto12["m_strCase"] = "";
-$proto12["m_havingmode"] = false;
-$proto12["m_inBrackets"] = false;
-$proto12["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto12);
+$proto14["m_column"]=$obj;
+$proto14["m_contained"] = array();
+$proto14["m_strCase"] = "";
+$proto14["m_havingmode"] = false;
+$proto14["m_inBrackets"] = false;
+$proto14["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto14);
 
-$proto10["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto10);
+$proto12["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto12);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -668,7 +874,7 @@ $queryData_moh_ir_datasource = createSqlQuery_moh_ir_datasource();
 	
 																												;
 
-		
+			
 
 $tdatamoh_ir_datasource[".sqlquery"] = $queryData_moh_ir_datasource;
 

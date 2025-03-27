@@ -46,7 +46,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MB Database Backups</title>
+    <title>HISPMD MB Database Backups</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -127,9 +127,11 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         .progress-bar {
             width: 0%;
             height: 30px;
+            background-color: #3a79db;
             text-align: center;
             color: #ffffff;
             line-height: 30px;
+            transition: width 0.3s;
         }
         .alert {
             padding: 10px;
@@ -159,7 +161,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         .checkbox-container {
             margin-bottom: 20px;
         }
-                /* Responsive adjustments */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 width: 100%;
@@ -193,7 +195,7 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
                 margin-bottom: 10px;
             }
         }
-                /* Add this CSS for the new dropdown and "Select All" checkbox */
+        /* Add this CSS for the new dropdown and "Select All" checkbox */
         .per-page-selector {
             margin-bottom: 20px;
         }
@@ -202,6 +204,45 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         }
         .select-all-container {
             margin-bottom: 10px;
+        }
+        /* Upload section styles */
+        .upload-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .upload-section h3 {
+            margin-top: 0;
+        }
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .file-input-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file-input-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3a79db;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .file-input-button:hover {
+            background: #2a69cb;
+        }
+        .file-name {
+            display: inline-block;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -218,9 +259,24 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         <div class="progress-container" id="progressContainer">
             <div class="progress-bar" id="progressBar">0%</div>
         </div>
+        
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h3>Upload Backup File</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-input-wrapper">
+                    <button class="file-input-button">Choose File</button>
+                    <input type="file" name="backupFile" id="backupFile" accept=".sql,.gz,.zip,.backup" required>
+                </div>
+                <span class="file-name" id="fileName">No file chosen</span>
+                <button type="button" id="uploadButton" onclick="uploadBackup()">Upload Backup</button>
+            </form>
+        </div>
+
         <h2>Available Backups</h2>
         <p>Total backups: <?php echo $totalBackups; ?></p>
-                <!-- Per Page Selector -->
+
+        <!-- Per Page Selector -->
         <div class="per-page-selector">
             <label for="perPage">Backups per page:</label>
             <select id="perPage" onchange="updatePerPage(this.value)">
@@ -238,17 +294,20 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
                 <input type="checkbox" id="selectAll" onclick="toggleSelectAll()"> Select All
             </label>
         </div>
-<form id="bulkActionForm" method="post" action="bulk_actions.php">
-    <div class="checkbox-container" id="backupList">
-        <?php foreach ($pagedBackups as $backup): ?>
-        <label>
-            <input type="checkbox" name="backups[]" value="<?php echo htmlspecialchars($backup['name']); ?>">
-            <?php echo htmlspecialchars($backup['name']); ?>
-        </label><br>
-        <?php endforeach; ?>
-    </div>
-    <button type="submit" name="action" value="delete" onclick="return confirmDelete();">Delete Selected</button>
-</form>
+
+        <!-- Backup List -->
+        <form id="bulkActionForm" method="post" action="bulk_actions.php">
+            <div class="checkbox-container" id="backupList">
+                <?php foreach ($pagedBackups as $backup): ?>
+                    <label>
+                        <input type="checkbox" name="backups[]" value="<?php echo htmlspecialchars($backup['name']); ?>">
+                        <?php echo htmlspecialchars($backup['name']); ?>
+                    </label><br>
+                <?php endforeach; ?>
+            </div>
+            <button type="submit" name="action" value="delete" onclick="return confirmDelete();">Delete Selected</button>
+        </form>
+
         <!-- Backup Table -->
         <table>
             <thead>
@@ -304,7 +363,93 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
                 checkbox.checked = selectAll.checked;
             });
         }
-        
+
+        // Show selected file name
+        document.getElementById('backupFile').addEventListener('change', function(e) {
+            const fileName = document.getElementById('fileName');
+            if (this.files.length > 0) {
+                fileName.textContent = this.files[0].name;
+            } else {
+                fileName.textContent = 'No file chosen';
+            }
+        });
+
+        // File upload function
+        function uploadBackup() {
+            const fileInput = document.getElementById('backupFile');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                alert('Please select a file to upload');
+                return;
+            }
+
+            const password = prompt("Please enter your password to proceed:");
+            if (!password) return;
+
+            const progressBar = document.getElementById('progressBar');
+            const progressContainer = document.getElementById('progressContainer');
+
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+            progressBar.textContent = 'Starting upload...';
+
+            const formData = new FormData();
+            formData.append('backupFile', file);
+            formData.append('password', password);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'uploads.php', true);
+
+            // Upload progress event
+            xhr.upload.addEventListener('progress', function(e) {
+                if (e.lengthComputable) {
+                    const percentComplete = Math.round((e.loaded / e.total) * 100);
+                    progressBar.style.width = percentComplete + '%';
+                    progressBar.textContent = percentComplete + '% Uploaded';
+                }
+            });
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        progressBar.style.width = '100%';
+                        progressBar.textContent = 'Upload completed';
+                        progressBar.style.backgroundColor = '#4caf50';
+                        
+                        // Refresh the page to show the new backup
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1000);
+                    } else {
+                        progressBar.style.width = '100%';
+                        progressBar.textContent = 'Upload failed: ' + response.message;
+                        progressBar.style.backgroundColor = '#f44336';
+                    }
+                } else {
+                    progressBar.style.width = '100%';
+                    progressBar.textContent = 'Upload failed';
+                    progressBar.style.backgroundColor = '#f44336';
+                }
+                
+                setTimeout(() => {
+                    progressContainer.style.display = 'none';
+                }, 3000);
+            };
+
+            xhr.onerror = function() {
+                progressBar.style.width = '100%';
+                progressBar.textContent = 'Upload failed';
+                progressBar.style.backgroundColor = '#f44336';
+                setTimeout(() => {
+                    progressContainer.style.display = 'none';
+                }, 3000);
+            };
+
+            xhr.send(formData);
+        }
+
         function confirmDownload() {
             return confirm('Are you sure you want to download this backup?');
         }
@@ -314,128 +459,121 @@ $pagedBackups = array_slice($backups, $offset, $perPage);
         }
 
         function confirmDelete() {
-            return confirm('Are you sure you want to DELETE this backup?');
+            const password = prompt("Please enter your password to proceed with deleting the selected backups:");
+            if (!password) return false;
+
+            const form = document.getElementById('bulkActionForm');
+            const passwordInput = document.createElement('input');
+            passwordInput.type = 'hidden';
+            passwordInput.name = 'password';
+            passwordInput.value = password;
+            form.appendChild(passwordInput);
+
+            return true;
         }
 
-function confirmDelete() {
-    const password = prompt("Please enter your password to proceed with deleting the selected backups:");
-    if (!password) return false;
+        function confirmRestore(backupFile) {
+            const password = prompt("Please enter your password to proceed with restoring the backup:");
+            if (!password) return false;
 
-    const form = document.getElementById('bulkActionForm');
-    const passwordInput = document.createElement('input');
-    passwordInput.type = 'hidden';
-    passwordInput.name = 'password';
-    passwordInput.value = password;
-    form.appendChild(passwordInput);
-
-    return true;
-}
-
-function confirmRestore(backupFile) {
-    const password = prompt("Please enter your password to proceed with restoring the backup:");
-    if (!password) return false;
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'restores.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        const response = JSON.parse(xhr.responseText);
-        if (xhr.status === 200 && response.success) {
-            alert('Backup restored successfully: ' + backupFile);
-            // Optionally, update the UI to reflect the changes
-            window.location.reload(); // Refresh the page to show the updated backup list
-        } else {
-            alert('Failed to restore backup: ' + response.message);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'restores.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                const response = JSON.parse(xhr.responseText);
+                if (xhr.status === 200 && response.success) {
+                    alert('Backup restored successfully: ' + backupFile);
+                    // Optionally, update the UI to reflect the changes
+                    window.location.reload(); // Refresh the page to show the updated backup list
+                } else {
+                    alert('Failed to restore backup: ' + response.message);
+                }
+            };
+            xhr.onerror = function () {
+                alert('Error occurred while restoring the backup.');
+            };
+            xhr.send('file=' + encodeURIComponent(backupFile) + '&password=' + encodeURIComponent(password));
+            return false; // Prevent the default link behavior
         }
-    };
-    xhr.onerror = function () {
-        alert('Error occurred while restoring the backup.');
-    };
-    xhr.send('file=' + encodeURIComponent(backupFile) + '&password=' + encodeURIComponent(password));
-    return false; // Prevent the default link behavior
-}
 
+        document.getElementById('backupButton').addEventListener('click', function() {
+            const password = prompt("Please enter your password to proceed:");
+            if (!password) return;
 
+            const progressBar = document.getElementById('progressBar');
+            const progressContainer = document.getElementById('progressContainer');
 
-document.getElementById('backupButton').addEventListener('click', function() {
-    const password = prompt("Please enter your password to proceed:");
-    if (!password) return;
+            progressContainer.style.display = 'block';
+            progressBar.style.backgroundColor = '#3a79db';
+            progressBar.style.width = '0%';
+            progressBar.textContent = 'Starting backup...';
 
-    const progressBar = document.getElementById('progressBar');
-    const progressContainer = document.getElementById('progressContainer');
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'backups.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        progressBar.style.width = '100%';
+                        progressBar.textContent = 'Backup completed';
+                        progressBar.style.backgroundColor = '#4caf50';
 
-    progressContainer.style.display = 'block';
-    progressBar.style.backgroundColor = '#3a79db';
-    progressBar.style.width = '0%';
-    progressBar.textContent = 'Starting backup...';
+                        // Update the backup list
+                        const newBackup = response.newBackup;
+                        const backupList = document.getElementById('backupList');
+                        const backupTable = document.getElementById('backupTable');
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'backups.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            if (response.success) {
-                progressBar.style.width = '100%';
-                progressBar.textContent = 'Backup completed';
-                progressBar.style.backgroundColor = '#4caf50';
+                        const backupHTML = `
+                            <label>
+                                <input type="checkbox" name="backups[]" value="${newBackup.name}">
+                                ${newBackup.name}
+                            </label><br>`;
+                        backupList.insertAdjacentHTML('afterbegin', backupHTML);
 
-                // Update the backup list
-                const newBackup = response.newBackup;
-                const backupList = document.getElementById('backupList');
-                const backupTable = document.getElementById('backupTable');
+                        const rowHTML = `
+                            <tr>
+                                <td>${newBackup.name}</td>
+                                <td>${newBackup.date}</td>
+                                <td>${(newBackup.size / 1024).toFixed(2)} KB</td>
+                                <td>
+                                    <a href="restores.php?file=${encodeURIComponent(newBackup.name)}" onclick="return confirmRestore();">Restore</a> |
+                                    <a href="${newBackup.path}" download onclick="return confirmDownload();">Download</a>
+                                </td>
+                            </tr>`;
+                        backupTable.insertAdjacentHTML('afterbegin', rowHTML);
 
-                const backupHTML = `
-                    <label>
-                        <input type="checkbox" name="backups[]" value="${newBackup.name}">
-                        ${newBackup.name}
-                    </label><br>`;
-                backupList.insertAdjacentHTML('afterbegin', backupHTML);
-
-                const rowHTML = `
-                    <tr>
-                        <td>${newBackup.name}</td>
-                        <td>${newBackup.date}</td>
-                        <td>${(newBackup.size / 1024).toFixed(2)} KB</td>
-                        <td>
-                            <a href="restore.php?file=${encodeURIComponent(newBackup.name)}" onclick="return confirmRestore();">Restore</a> |
-                            <a href="${newBackup.path}" download onclick="return confirmDownload();">Download</a>
-                        </td>
-                    </tr>`;
-                backupTable.insertAdjacentHTML('afterbegin', rowHTML);
-
-                // Redirect to index.php
-                setTimeout(() => {
-                    window.location.href = response.redirect;
-                }, 2000); // Delay for UI update
-            } else {
+                        // Redirect to index.php
+                        setTimeout(() => {
+                            window.location.href = response.redirect;
+                        }, 2000); // Delay for UI update
+                    } else {
+                        progressBar.style.width = '100%';
+                        progressBar.textContent = 'Backup failed';
+                        progressBar.style.backgroundColor = '#f44336';
+                    }
+                    setTimeout(() => {
+                        progressContainer.style.display = 'none';
+                    }, 2000);
+                } else {
+                    progressBar.style.width = '100%';
+                    progressBar.textContent = 'Backup failed';
+                    progressBar.style.backgroundColor = '#f44336';
+                    setTimeout(() => {
+                        progressContainer.style.display = 'none';
+                    }, 2000);
+                }
+            };
+            xhr.onerror = function () {
                 progressBar.style.width = '100%';
                 progressBar.textContent = 'Backup failed';
                 progressBar.style.backgroundColor = '#f44336';
-            }
-            setTimeout(() => {
-                progressContainer.style.display = 'none';
-            }, 2000);
-        } else {
-            progressBar.style.width = '100%';
-            progressBar.textContent = 'Backup failed';
-            progressBar.style.backgroundColor = '#f44336';
-            setTimeout(() => {
-                progressContainer.style.display = 'none';
-            }, 2000);
-        }
-    };
-    xhr.onerror = function () {
-        progressBar.style.width = '100%';
-        progressBar.textContent = 'Backup failed';
-        progressBar.style.backgroundColor = '#f44336';
-        setTimeout(() => {
-            progressContainer.style.display = 'none';
-        }, 2000);
-    };
-    xhr.send('password=' + encodeURIComponent(password));
-});
-
+                setTimeout(() => {
+                    progressContainer.style.display = 'none';
+                }, 2000);
+            };
+            xhr.send('password=' + encodeURIComponent(password));
+        });
     </script>
 </body>
 </html>
