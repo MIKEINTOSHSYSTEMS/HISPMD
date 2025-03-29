@@ -112,8 +112,10 @@
           <li>
             <!-- mibew button --><a id="mibew-agent-button" href="/app/chat/chat?locale=en&amp;style=default" target="_blank" onclick="Mibew.Objects.ChatPopups['66d612944de9fd8e'].open();return false;"><img src="/app/chat/b?i=simple&amp;lang=en" border="0" alt="" /></a><script type="text/javascript" src="/app/chat/js/compiled/chat_popup.js"></script><script type="text/javascript">Mibew.ChatPopup.init({"id":"66d612944de9fd8e","url":"\/app\/chat\/chat?locale=en&style=default","preferIFrame":true,"modSecurity":false,"forceSecure":false,"style":"default","height":480,"width":640,"resizable":true,"styleLoader":"\/app\/chat\/chat\/style\/popup\/default"});</script><div id="mibew-invitation"></div><script type="text/javascript" src="/app/chat/js/compiled/widget.js"></script><script type="text/javascript">Mibew.Widget.init({"inviteStyle":"\/app\/chat\/styles\/invitations\/default\/invite.css","requestTimeout":10000,"requestURL":"\/app\/chat\/widget","silentInvitation":true,"locale":"en","visitorCookieName":"MIBEW_VisitorID"})</script><script type="text/javascript">(function() {var img = document.getElementById("mibew-agent-button").getElementsByTagName("img")[0];var originalSrc = img.src;setInterval(function() {img.src = originalSrc + "&dummy=" + (new Date()).getTime();}, 3000);})();</script><!-- / mibew button -->
         </li>
+        <li><a href="../api/">API</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        
         
       </nav>
 
@@ -1323,6 +1325,7 @@ body.loaded #preloader {
           <li><a href="#datasources">Data Sources</a></li>
           <li><a href="#dashboard">Dashboard</a></li>
           <li><a href="../docs/index.php">Documentation</a></li>
+          <li><a href="../api/">API</a></li>
           <li><a href="login.php">Login</a></li>
         </ul>
       </div>

@@ -38,3 +38,5 @@
 /docs/.vscode
 /hispmd.code-workspace
 /letsencrypt/acme.json
+/api/1.php
+/api/test.php
