@@ -145,7 +145,7 @@ By integrating Ethiopia-specific indicators into HISPMD, users can drive evidenc
 
 # 5.10 Data Entry
 
-The Data Entry module in the Health Information Systems Performance Monitoring Dashboard (HISPMD) allows users to input health indicator data efficiently. This feature ensures that collected data is accurately recorded and aligned with national and regional health reporting standards.  
+The Data Entry module in the Health Information Systems Performance Monitoring Dashboard (HISPMD) allows users to input health indicator data efficiently. This feature ensures that collected data is accurately recorded and aligned with national and regional health reporting standards.
 This section provides a comprehensive guide to entering health information systems indicators data, including the various fields and attributes required for proper data submission.
 
 ### 5.10.1 MOH Indicator Data Entry
@@ -183,50 +183,50 @@ Each data entry field plays a crucial role in ensuring data accuracy and proper 
 
 1. **Indicator Group**
    - 📌 **Field Name:** Indicator Group
-   - 🛠️ **Selection Type:** Dropdown  
-   Select the Indicator Group from the available options.  
+   - 🛠️ **Selection Type:** Dropdown
+   Select the Indicator Group from the available options.
    Example groups: HIS Governance, Data Use, Data Quality, Digital Health, IR Pathway, CRVS, HIS Structure and Resource.
 
 2. **Indicator**
    - 📌 **Field Name:** Indicator
-   - 🛠️ **Selection Type:** Dropdown  
-   Select the Indicator you want to enter data for.  
+   - 🛠️ **Selection Type:** Dropdown
+   Select the Indicator you want to enter data for.
    Example indicators: Ratio of HMIS versus EDHS data - SBA, Reporting Timeliness - Service Report, Birth and Death - Report, etc.
 
 3. **Data Source**
    - 📌 **Field Name:** Data Source
-   - 🛠️ **Selection Type:** Dropdown  
-   Identify where the data originates from (e.g., health facility reports, surveys, electronic health records, administrative records).  
+   - 🛠️ **Selection Type:** Dropdown
+   Identify where the data originates from (e.g., health facility reports, surveys, electronic health records, administrative records).
    Example sources: IR Assessment, PRISM Assessment, Rapid assessment, Periodic Assessment, Admin Report, DHIS2, PRISM Ass - SBA, PRISM Ass - Penta 3, RDQA - comprehensive, RDQA - Verification, SOCI Assessment, DQR… etc.
 
 4. **Scope**
    - 📌 **Field Name:** Scope
-   - 🛠️ **Selection Type:** Dropdown  
-   Choose whether the data is for National or Regional reporting.  
-   If Regional, further selections will be required based on administrative levels = 1.  
+   - 🛠️ **Selection Type:** Dropdown
+   Choose whether the data is for National or Regional reporting.
+   If Regional, further selections will be required based on administrative levels = 1.
    List of Regions of Ethiopia will be available for selection on the dropdown field.
 
 5. **Region**
    - 📌 **Field Name:** Region
-   - 🛠️ **Selection Type:** Dropdown  
-   Determines if the data is entered for Regional level.  
+   - 🛠️ **Selection Type:** Dropdown
+   Determines if the data is entered for Regional level.
    Selection affects regional and facility-level reporting structures.
 
 6. **Health Administration Level**
    - 📌 **Field Name:** Health Administration Level
-   - 🛠️ **Selection Type:** Dropdown  
-   Determines if the data is entered for Woreda (District) or Zonal (Provincial) level.  
+   - 🛠️ **Selection Type:** Dropdown
+   Determines if the data is entered for Woreda (District) or Zonal (Provincial) level.
    Selection affects regional and facility-level reporting structures.
 
 7. **Facility Type**
    - 📌 **Field Name:** Facility Type
-   - 🛠️ **Selection Type:** Dropdown  
-   Select the health facility type where the data was collected.  
+   - 🛠️ **Selection Type:** Dropdown
+   Select the health facility type where the data was collected.
    Example facility types: Health Post, Health Center, Public HF, Private HF, PHCU, etc.
 
 8. **Period Type**
    - 📌 **Field Name:** Period Type
-   - 🛠️ **Selection Type:** Dropdown  
+   - 🛠️ **Selection Type:** Dropdown
    Select the reporting period format. Common period types include:
      - Monthly | You will be prompted to select Months (January, February, March, ..)
      - Quarterly | You will be prompted to select Quarters (Q1, Q2, Q3, Q4)
@@ -234,18 +234,18 @@ Each data entry field plays a crucial role in ensuring data accuracy and proper 
 
 9. **Gender/Sex**
    - 📌 **Field Name:** Gender/Sex
-   - 🛠️ **Selection Type:** Dropdown  
+   - 🛠️ **Selection Type:** Dropdown
    Select the gender category (if applicable). Options include: Male or Female.
 
 10. **Value**
     - 📌 **Field Name:** Value
-    - 🛠️ **Input Type:** Numeric  
-    Enter the actual numerical value for the indicator being reported.  
+    - 🛠️ **Input Type:** Numeric
+    Enter the actual numerical value for the indicator being reported.
     Ensure the value is accurate and within an acceptable range.
 
 11. **Data Representation**
     - 📌 **Field Name:** Data Representation
-    - 🛠️ **Selection Type:** Dropdown  
+    - 🛠️ **Selection Type:** Dropdown
     Select how the data should be represented:
       - Number (Absolute Value) or Percent (Proportion)
 
@@ -269,9 +269,9 @@ Once all required fields are completed:
 
 ### 5.10.5 Editing and Deleting Data
 
-If you need to make changes, navigate to MOH Indicator Data Entry / Data Review, locate the entry, and select the checkbox you want to edit then click on **Edit**.  
-To delete incorrect entries, use the **Delete** option.  
-Only authorized users can modify or delete data entries.  
+If you need to make changes, navigate to MOH Indicator Data Entry / Data Review, locate the entry, and select the checkbox you want to edit then click on **Edit**.
+To delete incorrect entries, use the **Delete** option.
+Only authorized users can modify or delete data entries.
 In this case, Data Manager or Administrator has privileges to alter any data entered.
 
 ### 5.10.6 Summary
@@ -288,7 +288,7 @@ By following these guidelines, users can ensure the integrity of health performa
 
 # 5.11 Setting Targets
 
-The Setting Targets module in the Health Information Systems Performance Monitoring Dashboard (HISPMD) allows users to define performance targets for various health indicators. Establishing clear and realistic targets ensures effective health system planning, progress monitoring, and policy implementation.  
+The Setting Targets module in the Health Information Systems Performance Monitoring Dashboard (HISPMD) allows users to define performance targets for various health indicators. Establishing clear and realistic targets ensures effective health system planning, progress monitoring, and policy implementation.
 This section provides a step-by-step guide for setting targets for Ministry of Health (MOH) Indicators, including selecting indicators, defining baseline values, and specifying target years.
 
 ### 5.11.1 MOH Indicator Target Setting
@@ -306,16 +306,16 @@ The MOH Indicator Target Setting feature allows users to set performance targets
    - Select "Add New" from the available options.
 
 2. **Select the Indicator:**
-   - Choose the Indicator for which you want to set a target from the dropdown list.  
-   Example indicators include:  
-     - HIS governance indexes  
-     - Proportion of health facilities with a functional LAN system  
-     - Reporting timeliness - Service Report  
+   - Choose the Indicator for which you want to set a target from the dropdown list.
+   Example indicators include:
+     - HIS governance indexes
+     - Proportion of health facilities with a functional LAN system
+     - Reporting timeliness - Service Report
 
 3. **Review the Indicator Details:**
-   - Once selected, the system will display the following fields:  
-     - **Indicator Name** (e.g., Reporting completeness - Representative - Service)  
-     - **Indicator Baseline** (e.g., 98%)  
+   - Once selected, the system will display the following fields:
+     - **Indicator Name** (e.g., Reporting completeness - Representative - Service)
+     - **Indicator Baseline** (e.g., 98%)
      - **Indicator Baseline Year** (e.g., 2024)
 
 4. **Set the Target Value:**
@@ -336,28 +336,32 @@ The MOH Indicator Target Setting feature allows users to set performance targets
 Each field in the target-setting module plays a crucial role in ensuring accurate and meaningful goal-setting. Below are the required fields and their descriptions:
 
 1. **Indicator**
-   - 📌 **Field Name:** Indicator  
-   - 🛠️ **Selection Type:** Dropdown  
-   Select the health indicator from the available list.  
-   Examples include:  
-     - HIS workforce core competency index  
+   - 📌 **Field Name:** Indicator
+   - 🛠️ **Selection Type:** Dropdown
+   Select the health indicator from the available list.
+   Examples include:
+     - HIS workforce core competency index
      - Number of policy briefs prepared and submitted - HIS related
 
 2. **Indicator Baseline**
-   - 📌 **Field Name:** Indicator Baseline  
-   - 🛠️ **Input Type:** Numeric  
+   - 📌 **Field Name:** Indicator Baseline
+   - 🛠️ **Input Type:** Numeric
    Displays the current performance level of the selected indicator (i.e., baseline data).
 
 3. **Target Value**
-   - 📌 **Field Name:** Target Value  
-   - 🛠️ **Input Type:** Numeric  
+   - 📌 **Field Name:** Target Value
+   - 🛠️ **Input Type:** Numeric
    Enter the target value that you aim to achieve by the selected year.
 
 4. **Target Year**
-   - 📌 **Field Name:** Target Year  
-   - 🛠️ **Selection Type:** Dropdown  
+   - 📌 **Field Name:** Target Year
+   - 🛠️ **Selection Type:** Dropdown
    Select the year for which the target will be evaluated.
 
 ---
 
 ## End of Module
+
+<br></br>
+
+> 📌 **NOTE:** Some sections which say are for future implementation which have **[TBD]** to be determined | developed on top of the existing **HISPMD**. 📌

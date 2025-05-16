@@ -4,6 +4,36 @@
 
 The Health Information Systems Performance Monitoring Dashboard (HISPMD) features a robust **User Management and Access Control** system that ensures secure access to health data while allowing role-based permissions for different users. This module is critical for maintaining data security, integrity, and accountability within the system.
 
+### Getting used to User Profile
+
+Your User Profile Consists of the following features and functionalities.
+
+<img src="assets/pictures/user_profile.jpeg" alt="Overview of User Profile"  width="500"/>
+
+Figure 7.1: Overview of User Profile
+
+<br>
+
+
+<img src="assets/pictures/changing_password.jpeg" alt="Changing Password"  width="500"/>
+
+Figure 7.2: Changing Password
+
+<br>
+
+<img src="assets/pictures/2fa.jpeg" alt="2FA"  width="500"/>
+
+Figure 7.3: 2FA (Two Factor Authentication)
+
+<br>
+
+
+<img src="assets/pictures/2fa_application.jpeg" alt="2FA Application"  width="300"/>
+
+Figure 7.4: 2FA (Setting Authenticator Application)
+
+<br>
+
 ### Key Features of User Management in HISPMD
 - **Role-Based Access Control (RBAC)**: Restrict access to sensitive data based on user roles.
 - **User Authentication**: Secure login system using usernames, passwords, and multi-factor authentication (MFA).
@@ -99,7 +129,7 @@ HISPMD employs strong security measures to protect user accounts.
 - Can be enabled for all users or for specific roles (e.g., Admins).
 - Supported methods:
   - Email-based OTPs
-  - SMS verification codes
+  - SMS verification codes (N/A)
   - Authenticator apps (Google Authenticator, Microsoft Authenticator)
 
 #### How to Enable MFA:
@@ -150,9 +180,12 @@ Admins can track user activity logs to detect suspicious behavior.
 
 By effectively managing users in HISPMD, organizations can maintain data integrity, enhance security, and improve accountability in health performance monitoring.
 
-📌 **Next Section**: Learn how to configure system settings and integrations in **System Administration & Configuration**. 🚀
-
 ### 7.8.1 Assigning a User to a Role and Group
 
 An administrator can go to the **Admin Area** and click on **Assign users to groups**.
 - Select a user and check mark on the desired **role** and assign a **role/group** to a user.
+
+---
+<br></br>
+
+📌 **Next Section**: Learn how to configure system settings and integrations in **System Administration & Configuration**. 🚀

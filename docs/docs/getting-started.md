@@ -19,18 +19,30 @@ This section will guide you through the initial steps of accessing and using HIS
 
 Follow these steps to access HISPMD:
 
-1. **Open Your Web Browser**  
+1. **Open Your Web Browser**
    Use a supported browser such as Google Chrome, Mozilla Firefox, Microsoft Edge, or Apple Safari.
 
-2. **Go to the HISPMD Login Page**  
+2. **Go to the HISPMD Login Page**
+
+   Enter the URL: [https://hispmd.moh.gov.et/](https://hispmd.moh.gov.et/)
+
+   #### OR
+
    Enter the URL: [https://hispmd.merqconsultancy.org/](https://hispmd.merqconsultancy.org/)
 
-3. **Enter Your Credentials**  
-   - **Username**: Provided by the system administrator.
-   - **Password**: Set during registration or provided by an admin.
 
-4. **Click on "Login"**  
+3. **Enter Your Credentials**
+   - **Username**: The username you entered when you create an account.
+   - **Password**: The password you have set during registration.
+
+4. **Click on "Login"**
    If your credentials are correct, you will be redirected to the dashboard home page.
+
+   <img src="assets/pictures/login.jpeg" alt="login page" width="250"/>
+
+Figure 2.1: Login Page
+
+<br>
 
 ### Don’t Have an Account?
 To access the dashboard, you must create an account:
@@ -38,11 +50,25 @@ To access the dashboard, you must create an account:
 - Fill out all required fields.
 - Follow the on-screen instructions.
 
+<img src="assets/pictures/register.jpeg" alt="registration page" width="250"/>
+
+Figure 2.2: Registration/Sign Up Page
+
+<br>
+
+
 ### Forgot Password?
 If you forget your password:
 1. Click on **Forgot Password?** on the login page.
 2. Enter your registered email address.
 3. Follow the instructions in the password reset email.
+
+<img src="assets/pictures/remind.jpeg" alt="forgot password page" width="250"/>
+
+
+Figure 2.3: Forgot Password Page
+
+<br>
 
 ---
 

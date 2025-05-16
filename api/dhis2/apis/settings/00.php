@@ -51,52 +51,27 @@ foreach ($reportPeriods as $period) {
     $period = trim($period);
     if (!$period) continue;
 
-    foreach ($facilityTypes as $facilityType) {
-        if (!isset($facilityTypeMap[$facilityType])) continue;
-        
-        foreach ($ownershipTypes as $ownershipType) {
-            if (!isset($ownershipTypeMap[$ownershipType])) continue;
+    // Build dimension parameters
+    $dimensions = [
+        'dx:' . implode(';', $dataSets),
+        'pe:' . $period,
+        'ou:' . implode(';', $orgUnits)
+    ];
 
-            // Build dimension parameters
-            $dimensions = [
-                'dx:' . implode(';', $dataSets),
-                'pe:' . $period,
-                'ou:' . implode(';', $orgUnits)
-            ];
+    $queryParams = http_build_query([
+        'dimension' => implode(',', $dimensions),
+        'displayProperty' => 'NAME',
+        'includeNumDen' => 'true',
+        'skipMeta' => 'false',
+        'skipData' => 'false'
+    ]);
 
-            // Add specific facility type and ownership filters
-            $filters = [
-                'saIPeABoPMH:' . $facilityTypeMap[$facilityType]['id'],
-                'qxGrmOo1l71:' . $ownershipTypeMap[$ownershipType]['id']
-            ];
+    $url = "https://dhis.moh.gov.et/api/40/analytics?$queryParams";
 
-            $queryParams = http_build_query([
-                'dimension' => implode(',', $dimensions),
-                'filter' => implode(';', $filters),
-                'displayProperty' => 'NAME',
-                'includeNumDen' => 'true',
-                'skipMeta' => 'false',
-                'skipData' => 'false'
-            ]);
-
-            $url = "https://dhis.moh.gov.et/api/40/analytics?$queryParams";
-            
-            // Fetch and process data
-            try {
-                $response = fetchData($url);
-                $processed = processResponse(
-                    $response, 
-                    $period, 
-                    $facilityTypeMap[$facilityType], 
-                    $ownershipTypeMap[$ownershipType]
-                );
-                $allData = array_merge($allData, $processed);
-            } catch (Exception $e) {
-                error_log("Error processing data for period {$period}, facility {$facilityType}, ownership {$ownershipType}: " . $e->getMessage());
-                continue;
-            }
-        }
-    }
+    // Fetch data
+    $response = fetchData($url);
+    $processed = processResponse($response, $period, $facilityTypeMap, $ownershipTypeMap);
+    $allData = array_merge($allData, $processed);
 }
 
 // Final output
@@ -111,6 +86,7 @@ echo json_encode([
     ]
 ], JSON_PRETTY_PRINT);
 
+
 // Fetch data from DHIS2 API
 function fetchData($url) {
     global $auth;
@@ -124,23 +100,19 @@ function fetchData($url) {
 
     $response = curl_exec($ch);
     if (curl_errno($ch)) {
-        $error = curl_error($ch);
+        error_log("CURL Error: " . curl_error($ch));
         curl_close($ch);
-        throw new Exception("CURL Error: " . $error);
+        http_response_code(500);
+        echo json_encode(['error' => curl_error($ch)]);
+        exit;
     }
 
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-
-    if ($httpCode >= 400) {
-        throw new Exception("API request failed with HTTP code $httpCode");
-    }
-
     return $response;
 }
 
 // Process API response
-function processResponse($response, $relativePeriod, $facilityType, $ownershipType) {
+function processResponse($response, $relativePeriod, $facilityTypeMap, $ownershipTypeMap) {
     $data = json_decode($response, true);
     if (!$data || !isset($data['rows']) || !isset($data['metaData']['items'])) {
         error_log("Invalid data structure");
@@ -161,14 +133,14 @@ function processResponse($response, $relativePeriod, $facilityType, $ownershipTy
             "report_period" => $metadata[$pe]['name'] ?? $pe,
             "organisationunit_id" => $ou,
             "organisationunit" => $metadata[$ou]['name'] ?? $ou,
-            "reporting_rate" => null, // These would need specific indicator queries
+            "reporting_rate" => null, // Placeholder, can be computed if needed
             "actual_reports" => null,
             "expected_reports" => null,
             "reporting_rate_on_time" => null,
             "actual_reports_on_time" => null,
-            "facility_type" => $facilityType['label'],
-            "ownership_type_id" => $ownershipType['id'],
-            "ownership_type_label" => $ownershipType['label'],
+            "facility_type" => null, // Map if needed from orgUnit structure
+            "ownership_type_id" => null,
+            "ownership_type_label" => null,
             "indicator_id" => "default_indicator_id",
             "indicator_name" => $metadata[$dx]['name'] ?? $dx,
             "organisationunit_code" => null,

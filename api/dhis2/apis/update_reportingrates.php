@@ -87,50 +87,40 @@ function upsertData($dbConn, $data) {
         $reportPeriod = $row['Report Period'];
         $relativePeriod = $row['Relative Period'];
 
-        $query = "
-        INSERT INTO dhis2_reporting_rates (
-            organisationunit_id,
-            organisationunit,
-            organisationunit_code,
-            organisationunit_description,
-            actual_reports,
-            expected_reports,
-            reporting_rate,
-            actual_reports_on_time,
-            reporting_rate_on_time,
-            dataset_id,
-            dataset_name,
-            facility_type,
-            report_period,
-            relative_period,  -- Add relative_period column
-            ownership_type_id,
-            ownership_type_label,
-            indicator_id,
-            indicator_name,
-            value
-        )
-        VALUES (
-            :organisationunit_id,
-            :organisationunit,
-            :organisationunit_code,
-            :organisationunit_description,
-            :actual_reports,
-            :expected_reports,
-            :reporting_rate,
-            :actual_reports_on_time,
-            :reporting_rate_on_time,
-            :dataset_id,
-            :dataset_name,
-            :facility_type,
-            :report_period,
-            :relative_period,  -- Bind relative_period value
-            :ownership_type_id,
-            :ownership_type_label,
-            :indicator_id,
-            :indicator_name,
-            :value
-        );
-        ";
+$query = "
+INSERT INTO dhis2_reporting_rates (
+    organisationunit_id,
+    organisationunit,
+    organisationunit_code,
+    organisationunit_description,
+    dataset_id,
+    dataset_name,
+    facility_type,
+    report_period,
+    relative_period,
+    ownership_type_id,
+    ownership_type_label,
+    indicator_id,
+    indicator_name,
+    value
+)
+VALUES (
+    :organisationunit_id,
+    :organisationunit,
+    :organisationunit_code,
+    :organisationunit_description,
+    :dataset_id,
+    :dataset_name,
+    :facility_type,
+    :report_period,
+    :relative_period,
+    :ownership_type_id,
+    :ownership_type_label,
+    :indicator_id,
+    :indicator_name,
+    :value
+);
+";
 //ON CONFLICT (organisationunit_id, dataset_id, facility_type, report_period, ownership_type_id, indicator_id)
 //DO NOTHING; -- Skip conflicting rows
         try {
@@ -138,18 +128,14 @@ function upsertData($dbConn, $data) {
             $stmt->execute([
                 ':organisationunit_id' => $row['Organisation unit ID'],
                 ':organisationunit' => $row['Organisation unit'],
-                ':organisationunit_code' => $row['Organisation unit code'],
+                //':organisationunit_code' => $row['Organisation unit code'],
+                ':organisationunit_code' => $row['Organisation unit code'] ?? 'N/A', // Default value
                 ':organisationunit_description' => $row['Organisation unit description'],
-                ':actual_reports' => $row['actual reports'],
-                ':expected_reports' => $row['expected reports'],
-                ':reporting_rate' => $row['reporting rate'],
-                ':actual_reports_on_time' => $row['actual reports on time'],
-                ':reporting_rate_on_time' => $row['reporting rate on time'],
-                ':dataset_id' => $dataset_id, // Use the default value if missing
-                ':dataset_name' => $row['Dataset Name'],
+                ':dataset_id' => $row['Indicator ID'], // Using Indicator ID as dataset_id if needed
+                ':dataset_name' => $row['Indicator Name'], // Using Indicator Name as dataset_name
                 ':facility_type' => $row['Facility Type'],
-                ':report_period' => $reportPeriod, // Use individual report period
-                ':relative_period' => $relativePeriod, // Bind relative_period value
+                ':report_period' => $row['Report Period'],
+                ':relative_period' => $row['Relative Period'],
                 ':ownership_type_id' => $row['Ownership Type ID'],
                 ':ownership_type_label' => $row['Ownership Type Label'],
                 ':indicator_id' => $row['Indicator ID'],

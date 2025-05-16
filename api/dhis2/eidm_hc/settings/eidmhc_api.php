@@ -14,7 +14,11 @@ include './db_connection.php';
 // DHIS2 API Configuration
 $auth = base64_encode("michaelk:Dhis2_12345");
 
-// Fetch current settings
+// Get request parameters with default values
+$requestedIndicator = $_GET['indicator'] ?? null;
+$requestedOrgUnit = $_GET['orgunit'] ?? null;
+$requestedPeriod = $_GET['period'] ?? null;
+
 try {
     $stmt = $pdo->query("SELECT * FROM eidm_settings ORDER BY id DESC LIMIT 1");
     $settings = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -25,6 +29,14 @@ try {
     
     // Split the 'pe' column into an array of periods
     $relativePeriods = explode(',', $settings['pe']);
+
+    // If a specific period was requested, filter the periods array
+    if ($requestedPeriod) {
+        $relativePeriods = array_intersect($relativePeriods, [$requestedPeriod]);
+        if (empty($relativePeriods)) {
+            throw new Exception("Requested period not found in settings");
+        }
+    }
 
     // Array to store all processed data
     $allProcessedData = [];
@@ -37,7 +49,7 @@ try {
                 'dx:' . str_replace(',', ';', $settings['dx']),
                 'ou:' . str_replace(',', ';', $settings['ou'])
             ]),
-            'filter' => 'pe:' . trim($relativePeriod), // Use the current period
+            'filter' => 'pe:' . trim($relativePeriod),
             'displayProperty' => 'NAME',
             'includeNumDen' => 'true',
             'skipMeta' => 'false',
@@ -50,12 +62,30 @@ try {
         // Process the response for the current period
         $processedData = processResponse($response, trim($relativePeriod));
 
+        // Apply additional filters if parameters were provided
+        if ($requestedIndicator || $requestedOrgUnit) {
+            $processedData = array_filter($processedData, function($item) use ($requestedIndicator, $requestedOrgUnit) {
+                $indicatorMatch = !$requestedIndicator || 
+                                 stripos($item['Indicator'], $requestedIndicator) !== false;
+                $orgUnitMatch = !$requestedOrgUnit || 
+                               stripos($item['Organisation Unit'], $requestedOrgUnit) !== false;
+                return $indicatorMatch && $orgUnitMatch;
+            });
+        }
+
         // Merge the processed data into the main array
         $allProcessedData = array_merge($allProcessedData, $processedData);
     }
 
     // Output the JSON response
-    echo json_encode(["rows" => $allProcessedData], JSON_PRETTY_PRINT);
+    echo json_encode([
+        "rows" => $allProcessedData,
+        "request_parameters" => [
+            "indicator" => $requestedIndicator,
+            "orgunit" => $requestedOrgUnit,
+            "period" => $requestedPeriod
+        ]
+    ], JSON_PRETTY_PRINT);
 
 } catch (Exception $e) {
     http_response_code(500);

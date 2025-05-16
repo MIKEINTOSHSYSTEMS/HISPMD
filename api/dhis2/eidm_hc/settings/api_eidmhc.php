@@ -14,7 +14,11 @@ include './db_connection.php';
 // DHIS2 API Configuration
 $auth = base64_encode("michaelk:Dhis2_12345");
 
-// Fetch current settings
+// Get request parameters with default values
+$requestedIndicator = $_GET['indicator'] ?? null;
+$requestedOrgUnit = $_GET['orgunit'] ?? null;
+$requestedPeriod = $_GET['period'] ?? null;
+
 try {
     $stmt = $pdo->query("SELECT * FROM eidm_settings ORDER BY id DESC LIMIT 1");
     $settings = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -26,18 +30,26 @@ try {
     // Split the 'pe' column into an array of periods
     $relativePeriods = explode(',', $settings['pe']);
 
+    // If a specific period was requested, filter the periods array
+    if ($requestedPeriod) {
+        $relativePeriods = array_intersect($relativePeriods, [$requestedPeriod]);
+        if (empty($relativePeriods)) {
+            throw new Exception("Requested period not found in settings");
+        }
+    }
+
     // Array to store all processed data
     $allProcessedData = [];
 
-    // Loop through each relative period and fetch data
+    // Loop through each relative period and make separate API calls
     foreach ($relativePeriods as $relativePeriod) {
-        // Construct the API URL for the current period
+        // Construct the API URL for the current relative period
         $apiUrl = "https://dhis.moh.gov.et/api/40/analytics?" . http_build_query([
             'dimension' => implode(',', [
                 'dx:' . str_replace(',', ';', $settings['dx']),
+                'pe:' . trim($relativePeriod),
                 'ou:' . str_replace(',', ';', $settings['ou'])
             ]),
-            'filter' => 'pe:' . trim($relativePeriod), // Use the current period
             'displayProperty' => 'NAME',
             'includeNumDen' => 'true',
             'skipMeta' => 'false',
@@ -47,15 +59,33 @@ try {
         // Fetch data from the DHIS2 API
         $response = fetchData($apiUrl);
 
-        // Process the response for the current period
+        // Process the response for the current relative period
         $processedData = processResponse($response, trim($relativePeriod));
 
         // Merge the processed data into the main array
         $allProcessedData = array_merge($allProcessedData, $processedData);
     }
 
+    // Apply additional filters if parameters were provided
+    if ($requestedIndicator || $requestedOrgUnit) {
+        $allProcessedData = array_filter($allProcessedData, function($item) use ($requestedIndicator, $requestedOrgUnit) {
+            $indicatorMatch = !$requestedIndicator || 
+                             stripos($item['Indicator'], $requestedIndicator) !== false;
+            $orgUnitMatch = !$requestedOrgUnit || 
+                           stripos($item['Organisation Unit'], $requestedOrgUnit) !== false;
+            return $indicatorMatch && $orgUnitMatch;
+        });
+    }
+
     // Output the JSON response
-    echo json_encode(["rows" => $allProcessedData], JSON_PRETTY_PRINT);
+    echo json_encode([
+        "rows" => array_values($allProcessedData), // array_values to reindex after filtering
+        "request_parameters" => [
+            "indicator" => $requestedIndicator,
+            "orgunit" => $requestedOrgUnit,
+            "period" => $requestedPeriod
+        ]
+    ], JSON_PRETTY_PRINT);
 
 } catch (Exception $e) {
     http_response_code(500);
@@ -110,26 +140,18 @@ function processResponse($response, $relativePeriod) {
     $metadata = $data['metaData']['items'];
     $formattedData = [];
 
-    // Extract the period values from the filter (if available)
-    $periods = [];
-    if (isset($data['metaData']['dimensions']['pe'])) {
-        $periods = $data['metaData']['dimensions']['pe']; // Get all periods in the filter
-    }
-
-    // Format the period range
-    $periodRange = formatPeriodRange($periods, $metadata);
-
     foreach ($data['rows'] as $row) {
-        if (count($row) >= 3) { // Now rows have 3 columns: dx, ou, value
+        if (count($row) >= 4) { // Should have at least dx, pe, ou, value
             $dxId = $row[0];
-            $ouId = $row[1];
-            $value = $row[2]; // Value is now the third column
+            $peId = $row[1];
+            $ouId = $row[2];
+            $value = $row[3];
 
             $formattedData[] = [
                 "Indicator" => $metadata[$dxId]['name'] ?? $dxId,
                 "Organisation Unit" => $metadata[$ouId]['name'] ?? $ouId,
-                "RelativePeriod" => $relativePeriod, // Use the current relative period
-                "Period" => $periodRange, // Use the formatted period range
+                "RelativePeriod" => $relativePeriod, // The specific relative period used for this call
+                "Period" => $metadata[$peId]['name'] ?? $peId, // The actual period name
                 "Value" => $value
             ];
         }
@@ -137,21 +159,4 @@ function processResponse($response, $relativePeriod) {
 
     return $formattedData;
 }
-
-// Helper function to format the period range
-function formatPeriodRange($periods, $metadata) {
-    if (empty($periods)) {
-        return "N/A";
-    }
-
-    // Extract period names from metadata
-    $periodNames = [];
-    foreach ($periods as $period) {
-        $periodNames[] = $metadata[$period]['name'] ?? 'Unknown Period';
-    }
-
-    // Format the period range
-    return implode(', ', $periodNames); // Combine all period names
-}
-
 ?>

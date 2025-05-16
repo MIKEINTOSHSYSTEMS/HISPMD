@@ -17,12 +17,23 @@ Each visualization type is optimized for a specific kind of analysis, ensuring t
 
 ### Accessing the Data Visualizer
 
+<img src="assets/pictures/data_visualizer_menu_item.jpeg" alt="Accessing Data Visualizer Menu Item"  width="300"/>
+
+Figure 4.1: Accessing Data Visualizer Menu Item
+
+<br>
+
 1. Navigate to the **left sidebar** under the `Reports Charts & Visualization` menu.
 2. Click on `Data Visualizer`.
 3. A new **sidebar and navigation menu** will appear.
-4. Refer to the screenshot below:
+4. Refer to the screenshot above: Figure 4.1
 
-![Data Visualizer Navigation](#)
+
+<img src="assets/pictures/advanced_live_data_visualizer.jpeg" alt="Advanced Live Data Visualizer Options"  width="200"/>
+
+Figure 4.2: Advanced Live Data Visualizer Options
+
+<br>
 
 ---
 
@@ -30,9 +41,15 @@ Each visualization type is optimized for a specific kind of analysis, ensuring t
 
 HISPMD provides several types of data visualizations, each serving a specific analytical purpose.
 
+<img src="assets/pictures/advanced_data_visualizer_chart_types.jpeg" alt="Data Visualizer Chart Types"  width="200"/>
+
+Figure 4.3: Data Visualizer Chart Types
+
+<br>
+
 ### 1️⃣ Line Charts (Trend Analysis)
 
-📈 **Best For:** Analyzing changes in indicators over time.  
+📈 **Best For:** Analyzing changes in indicators over time.
 🔍 **Example:** Tracking reporting rates over the years.
 
 #### How to Use:
@@ -40,13 +57,16 @@ HISPMD provides several types of data visualizations, each serving a specific an
 - Click on legend items to show/hide specific data series.
 - Zoom in to focus on a specific time period.
 
-![Line Chart Example](#)
+<img src="assets/pictures/advanced_data_visualizer_line_charts.jpeg" alt="Example of Advanced Data Visualizer Line Chart"  width="500"/>
 
+Figure 4.4: Example of Advanced Data Visualizer Line Chart
+
+<br>
 ---
 
 ### 2️⃣ Bar / Column Charts (Comparative Analysis)
 
-📊 **Best For:** Comparing different categories within an indicator.  
+📊 **Best For:** Comparing different categories within an indicator.
 🔍 **Example:** Comparing the proportion of health institutions with active functional PMT across years.
 
 #### How to Use:
@@ -54,13 +74,18 @@ HISPMD provides several types of data visualizations, each serving a specific an
 - Click on a region or category to see more detailed breakdowns.
 - Switch between **horizontal and vertical** bar charts for better readability by changing the chart type.
 
-![Bar Chart Example](#)
+<img src="assets/pictures/advanced_data_visualizer_column_charts.jpeg" alt="Example of Advanced Data Visualizer Column Chart"  width="500"/>
+
+Figure 4.5: Example of Advanced Data Visualizer Column Chart
+
+<br>
+
 
 ---
 
 ### 3️⃣ Pie Charts (Proportional Analysis)
 
-🟢 **Best For:** Showing proportions or distributions within a dataset.  
+🟢 **Best For:** Showing proportions or distributions within a dataset.
 🔍 **Example:** Breakdown of **Proportion of Woredas** grouped by IR Status based on their data source details in a given year.
 
 #### How to Use:
@@ -68,13 +93,17 @@ HISPMD provides several types of data visualizations, each serving a specific an
 - Click on a slice to filter data related to that category.
 - Use the legend to toggle segments on and off.
 
-![Pie Chart Example](#)
+<img src="assets/pictures/data_drilldown_advanced_data_visualization_piechart.jpeg" alt="Example of Advanced Data Visualizer pie Chart"  width="500"/>
+
+Figure 4.5: Example of Advanced Data Visualizer Pie Chart
+
+<br>
 
 ---
 
-### 4️⃣ Heat Maps (Geographical Analysis) [TBD]
+### 4️⃣ Heat Maps (Geographical Analysis) [Represented on MFR on The AIO Dashboard]
 
-🌍 **Best For:** Displaying regional health data on a geographic map.  
+🌍 **Best For:** Displaying regional health data on a geographic map.
 🔍 **Example:** Mapping **Regional Scope Indicators** across different provinces such as Regions, Zones & Woredas.
 
 #### How to Use:
@@ -82,13 +111,12 @@ HISPMD provides several types of data visualizations, each serving a specific an
 - Use the color scale to interpret intensity (e.g., darker shades indicate higher values).
 - Zoom in for detailed regional analysis.
 
-📌 **This feature is under development**
 
 ---
 
-### 5️⃣ Tables (Raw Data Representation)
+### 5️⃣ Tables (Raw Data Representation) [Available at the bottom of the Home Dashboard]
 
-📑 **Best For:** Viewing detailed, structured health data records.  
+📑 **Best For:** Viewing detailed, structured health data records.
 🔍 **Example:** Listing all **DHIS2 Reporting-Rates**.
 
 #### How to Use:
@@ -96,7 +124,7 @@ HISPMD provides several types of data visualizations, each serving a specific an
 - **Use the search bar** to filter specific records.
 - **Export the table** as Excel, CSV, PDF, or Word using the **⚙️ gear icon** in the top navigation bar.
 
-![Table Example](#)
+
 
 ---
 
@@ -135,7 +163,7 @@ HISPMD allows users to customize charts and graphs to suit specific reporting ne
 2. Choose customization options from the available settings.
 3. Apply changes and view the updated chart.
 
-![Customization Example](#)
+[TBD]
 
 ---
 
@@ -157,7 +185,7 @@ HISPMD allows users to export and share visualizations for presentations, report
 2. Select the desired format.
 3. Click **Download**.
 
-![Export Example](#)
+
 
 ---
 
@@ -185,3 +213,8 @@ Data visualization in HISPMD is **not just about displaying information**; it is
 
 🚀 **Next Section:** Learn how to generate detailed reports in **Report Generation & Exporting on the Indicator Analysis section**.
 
+---
+
+<br></br>
+
+> 📌 **NOTE:** Some sections which say are for future implementation which have **[TBD]** to be determined | developed on top of the existing **HISPMD**. 📌

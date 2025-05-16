@@ -2,7 +2,7 @@ Here's the markdown content for your request:
 
 ---
 
-# 6. Reports and Exports [TBD]
+# 6. Reports and Exports [Mentioned on Data Dashboard Navigation]
 
 ## 6.1 Overview of Report Generation & Data Export in HISPMD
 
@@ -13,6 +13,15 @@ The Health Information Systems Performance Monitoring Dashboard (HISPMD) provide
 - **Customization**: Build reports focused on Ethiopia-specific priorities (e.g., eCHIS implementation, CRVS birth/death notifications).
 - **Integration**: Export data for national audits, partner alignment, or regional performance reviews.
 - **Scheduling**: Automate reports for monthly HMIS completeness or quarterly data quality assessments.
+
+<br>
+
+<img src="assets/pictures/indicators_data_report_generation.jpeg" alt="Example of Indicators Data Report Generation"  width="500"/>
+
+Figure 6.1: Example of Indicators Data Report Generation
+
+<br>
+
 
 ---
 
@@ -52,7 +61,7 @@ Predefined templates align with Ethiopia’s HIS strategic plan and national hea
    - **Administrative Level**: Compare HIS core competency index across RHBs.
    - **Facility Tier**: Contrast LAN functionality in hospitals vs. health posts.
 3. **Output**: Export as PDF (for policy briefs) or Excel (for partner coordination).
-   
+
 **Example**: Generate a cross-tabulated report on HIS budget allocation vs. data quality index by region.
 
 ---
@@ -70,7 +79,7 @@ Predefined templates align with Ethiopia’s HIS strategic plan and national hea
 
 ---
 
-## 6.5 Scheduling Automated Reports [TBD]
+## 6.5 Scheduling Automated Reports [Admin Side | Dashboard Subscription]
 
 ### Use Cases:
 - **Weekly**: Reporting timeliness alerts for lagging regions.

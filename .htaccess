@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  Rewrite .* - [E=noabort:1]
-  Rewrite .* - [E=noconntimeout:1]
+  RewriteRule .* - [E=noabort:1]
+  RewriteRule .* - [E=noconntimeout:1]
 
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
