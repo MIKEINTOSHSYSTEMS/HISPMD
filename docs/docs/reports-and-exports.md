@@ -16,7 +16,7 @@ The Health Information Systems Performance Monitoring Dashboard (HISPMD) provide
 
 <br>
 
-<img src="assets/pictures/indicators_data_report_generation.jpeg" alt="Example of Indicators Data Report Generation"  width="500"/>
+<img src="assets/pictures/indicators_data_report_generation.jpeg" alt="Example of Indicators Data Report Generation"  width="700"/>
 
 Figure 6.1: Example of Indicators Data Report Generation
 

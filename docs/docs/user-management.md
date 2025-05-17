@@ -8,7 +8,7 @@ The Health Information Systems Performance Monitoring Dashboard (HISPMD) feature
 
 Your User Profile Consists of the following features and functionalities.
 
-<img src="assets/pictures/user_profile.jpeg" alt="Overview of User Profile"  width="500"/>
+<img src="assets/pictures/user_profile.jpeg" alt="Overview of User Profile"  width="700"/>
 
 Figure 7.1: Overview of User Profile
 

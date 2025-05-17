@@ -4,7 +4,7 @@
 ## Overview of HISPMD
 
 
-   <img src="assets/pictures/start_page.jpeg" alt="login page" width="500"/>
+   <img src="assets/pictures/start_page.jpeg" alt="login page" width="700"/>
 
 Figure 1.1: Start Page for the HISPMD
 

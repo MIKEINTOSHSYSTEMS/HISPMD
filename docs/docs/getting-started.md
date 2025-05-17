@@ -26,7 +26,7 @@ Follow these steps to access HISPMD:
 
    Enter the URL: [https://hispmd.moh.gov.et/](https://hispmd.moh.gov.et/)
 
-   #### OR
+    OR
 
    Enter the URL: [https://hispmd.merqconsultancy.org/](https://hispmd.merqconsultancy.org/)
 
@@ -38,7 +38,7 @@ Follow these steps to access HISPMD:
 4. **Click on "Login"**
    If your credentials are correct, you will be redirected to the dashboard home page.
 
-   <img src="assets/pictures/login.jpeg" alt="login page" width="250"/>
+   <img src="assets/pictures/login.jpeg" alt="login page" width="700"/>
 
 Figure 2.1: Login Page
 
@@ -50,7 +50,7 @@ To access the dashboard, you must create an account:
 - Fill out all required fields.
 - Follow the on-screen instructions.
 
-<img src="assets/pictures/register.jpeg" alt="registration page" width="250"/>
+<img src="assets/pictures/register.jpeg" alt="registration page" width="700"/>
 
 Figure 2.2: Registration/Sign Up Page
 
@@ -63,7 +63,7 @@ If you forget your password:
 2. Enter your registered email address.
 3. Follow the instructions in the password reset email.
 
-<img src="assets/pictures/remind.jpeg" alt="forgot password page" width="250"/>
+<img src="assets/pictures/remind.jpeg" alt="forgot password page" width="700"/>
 
 
 Figure 2.3: Forgot Password Page

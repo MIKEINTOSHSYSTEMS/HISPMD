@@ -57,7 +57,7 @@ Figure 4.3: Data Visualizer Chart Types
 - Click on legend items to show/hide specific data series.
 - Zoom in to focus on a specific time period.
 
-<img src="assets/pictures/advanced_data_visualizer_line_charts.jpeg" alt="Example of Advanced Data Visualizer Line Chart"  width="500"/>
+<img src="assets/pictures/advanced_data_visualizer_line_chart.png" alt="Example of Advanced Data Visualizer Line Chart"  width="700"/>
 
 Figure 4.4: Example of Advanced Data Visualizer Line Chart
 
@@ -74,7 +74,7 @@ Figure 4.4: Example of Advanced Data Visualizer Line Chart
 - Click on a region or category to see more detailed breakdowns.
 - Switch between **horizontal and vertical** bar charts for better readability by changing the chart type.
 
-<img src="assets/pictures/advanced_data_visualizer_column_charts.jpeg" alt="Example of Advanced Data Visualizer Column Chart"  width="500"/>
+<img src="assets/pictures/advanced_data_visualizer_column_charts.jpeg" alt="Example of Advanced Data Visualizer Column Chart"  width="700"/>
 
 Figure 4.5: Example of Advanced Data Visualizer Column Chart
 
@@ -93,7 +93,7 @@ Figure 4.5: Example of Advanced Data Visualizer Column Chart
 - Click on a slice to filter data related to that category.
 - Use the legend to toggle segments on and off.
 
-<img src="assets/pictures/data_drilldown_advanced_data_visualization_piechart.jpeg" alt="Example of Advanced Data Visualizer pie Chart"  width="500"/>
+<img src="assets/pictures/data_drilldown_advanced_data_visualization_piechart.jpeg" alt="Example of Advanced Data Visualizer pie Chart"  width="700"/>
 
 Figure 4.5: Example of Advanced Data Visualizer Pie Chart
 

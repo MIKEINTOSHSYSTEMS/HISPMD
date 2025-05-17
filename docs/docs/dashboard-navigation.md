@@ -2,13 +2,13 @@
 
 The Health Information Systems Performance Monitoring Dashboard (HISPMD) is designed for ease of use, with an intuitive interface that allows users to access health performance data, visualize trends, and generate reports efficiently. This section provides a comprehensive guide to navigating the dashboard, including understanding the main menu, using filters, and exploring key functionalities.
 
-<img src="assets/pictures/dashboard_landing.jpeg" alt="dashboard landing page" width="500"/>
+<img src="assets/pictures/dashboard_landing.jpeg" alt="dashboard landing page" width="700"/>
 
 Figure 3.1: Key Indicators Data Source
 
 <br>
 
-<img src="assets/pictures/hispmd_dashboard.jpeg" alt="dashboard landing page" width="500"/>
+<img src="assets/pictures/hispmd_dashboard.jpeg" alt="dashboard landing page" width="700"/>
 
 Figure 3.2: Landing Dashboard Page
 
@@ -47,7 +47,7 @@ The Home Dashboard serves as the landing page after login and provides:
 
 Users can click on any **Indicator Group (Tabs)** to explore more details and apply filters for deeper analysis.
 
-<img src="assets/pictures/hispmd_indicator_groups_dashboard_tabs.jpeg" alt="Indicator Group Tabs" width="500"/>
+<img src="assets/pictures/hispmd_indicator_groups_dashboard_tabs.jpeg" alt="Indicator Group Tabs" width="700"/>
 
 Figure 3.4: Indicator Group Tabs
 
@@ -83,7 +83,7 @@ Figure 3.5: Standard(Basic) Searching & Filtering Options
 - Start typing On the Indicator Group and Select an indicator name or attribute, and relevant results will appear in real-time.
 - Click on **Search** to view detailed data.
 
-<img src="assets/pictures/indicators_data_report_generation.jpeg" alt="Example of Indicator data report generation" height="250" width="600"/>
+<img src="assets/pictures/indicators_data_report_generation.jpeg" alt="Example of Indicator data report generation" height="250" width="700"/>
 
 Figure 3.6: Example of Indicator data report generation
 
@@ -171,7 +171,7 @@ By clicking on the three (3) dots ...
 - **PNG** – Useful for embeding in your report as a picture.
 - **PDF Print** – Ideal for sharing formatted reports and printing.
 
-<img src="assets/pictures/exporting_data_from_home_dashboard.jpeg" alt="Data Export from home dashboard and charts"  width="500"/>
+<img src="assets/pictures/exporting_data_from_home_dashboard.jpeg" alt="Data Export from home dashboard and charts"  width="700"/>
 
 Figure 3.8: Data Export from home dashboard and charts
 
@@ -184,7 +184,7 @@ Figure 3.8: Data Export from home dashboard and charts
 3. Select the **file format**.
 4. Click **Download**.
 
-<img src="assets/pictures/Export_Data_from_Indicators_Data_Chart.png" alt="Data Export from HIS Indicators Data charts"  width="500"/>
+<img src="assets/pictures/Export_Data_from_Indicators_Data_Chart.png" alt="Data Export from HIS Indicators Data charts"  width="700"/>
 
 Figure 3.9: Data Export from home dashboard and charts
 
