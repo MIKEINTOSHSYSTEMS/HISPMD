@@ -14,6 +14,9 @@ $dbUser = 'hispmddb';
 $dbPassword = 'hispmddb';
 $dbName = 'hisp_md';
 
+// Docker container name
+$containerName = 'hispmd_postgres';
+
 // Directory to store backups
 $backupDir = './backup';
 
@@ -32,75 +35,36 @@ if (!file_exists($backupFilePath)) {
     exit;
 }
 
-// Connect to the PostgreSQL database (newly created)
-$connString = "host=$dbHost dbname=$dbName user=$dbUser password=$dbPassword";
-$conn = pg_connect($connString);
+// Check if the database exists
+$checkDbCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -tAc 'SELECT 1 FROM pg_database WHERE datname = \"$dbName\"'\"";
+exec($checkDbCommand, $output, $return_var);
 
-if (!$conn) {
-    echo json_encode(['success' => false, 'message' => 'Failed to connect to PostgreSQL database']);
-    exit;
-}
 
 // Drop all tables and other objects in the public schema
-$query = "DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA public;";
-$result = pg_query($conn, $query);
+$dropAllCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -d $dbName -c 'DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA public;'\"";
+exec($dropAllCommand . ' 2>&1', $output, $return_var);
 
-if (!$result) {
-    echo json_encode(['success' => false, 'message' => 'Error dropping schema. Details: ' . pg_last_error($conn)]);
-    pg_close($conn);
+if ($return_var !== 0) {
+    echo json_encode(['success' => false, 'message' => 'Error dropping schema. Details: ' . implode("\n", $output)]);
     exit;
 }
 
-// Ensure pg_restore command is correct
-// Specify the host explicitly with the -h option
-// Pass the password via PGPASSWORD environment variable
+// Copy the backup file to the Docker container
+$copyBackupCommand = "docker cp $backupFilePath $containerName:/tmp/$backupFile";
+exec($copyBackupCommand . ' 2>&1', $output, $return_var);
 
-$restoreCommand = "PGPASSWORD='$dbPassword' pg_restore -h $dbHost -U $dbUser -d $dbName -v $backupFilePath";
-
-// Provide the full path to pg_restore, if necessary
-$fullPathRestoreCommand = "PGPASSWORD='$dbPassword' /usr/bin/pg_restore -h $dbHost -U $dbUser -d $dbName -v $backupFilePath";  // Adjust to where pg_restore is located on your system
-
-// Execute the restore command with shell_exec
-$restoreResult = shell_exec($fullPathRestoreCommand . ' 2>&1');
-
-// Capture the output for debugging
-if ($restoreResult === null) {
-    echo json_encode(['success' => false, 'message' => 'Error executing restore command']);
-    pg_close($conn);
+if ($return_var !== 0) {
+    echo json_encode(['success' => false, 'message' => 'Error copying backup file to Docker container. Details: ' . implode("\n", $output)]);
     exit;
 }
 
-// Check for errors in the restore process
-if (strpos($restoreResult, 'error') !== false || strpos($restoreResult, 'failed') !== false) {
-    echo json_encode(['success' => false, 'message' => 'Restore failed. Details: ' . $restoreResult]);
-    pg_close($conn);
-    exit;
+// Restore the backup
+$restoreCommand = "docker exec -i $containerName sh -c \"PGPASSWORD='$dbPassword' pg_restore -h $dbHost -U $dbUser -d $dbName -v /tmp/$backupFile\"";
+exec($restoreCommand . ' 2>&1', $output, $return_var);
+
+if ($return_var === 0) {
+    echo json_encode(['success' => true, 'message' => "Backup successfully restored: $backupFilePath"]);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Error restoring backup. Details: ' . implode("\n", $output)]);
 }
-
-echo json_encode(['success' => true, 'message' => "Backup successfully restored: $backupFilePath"]);
-
-// Close the PostgreSQL connection
-pg_close($conn);
-
-
-// at line  35 
-// we removed the line
-/*
-// Drop the existing database
-$dropDbCommand = "PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -d postgres -c 'DROP DATABASE IF EXISTS $dbName;'";
-$dropDbOutput = shell_exec($dropDbCommand . ' 2>&1');
-
-if (strpos($dropDbOutput, 'ERROR') !== false) {
-    echo json_encode(['success' => false, 'message' => 'Error dropping database. Details: ' . $dropDbOutput]);
-    exit;
-}
-
-// Recreate the database
-$createDbCommand = "PGPASSWORD='$dbPassword' psql -h $dbHost -U $dbUser -d postgres -c 'CREATE DATABASE $dbName;'";
-$createDbOutput = shell_exec($createDbCommand . ' 2>&1');
-
-if (strpos($createDbOutput, 'ERROR') !== false) {
-    echo json_encode(['success' => false, 'message' => 'Error creating database. Details: ' . $createDbOutput]);
-    exit;
-}
-*/
+?>
