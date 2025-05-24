@@ -1,0 +1,3 @@
+[submodule "api/dash"]
+	path = api/dash
+	url = https://github.com/MIKEINTOSHSYSTEMS/HISPMD_Data_Visualizer.git
