@@ -5,9 +5,16 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
+// Get the base URL dynamically (host + protocol)
+$base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+
 // API URL to fetch the data
-$api_url = 'https://hispmd.merqconsultancy.org/app/api/v1.php?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=hispmd_indicators_data&action=list';
-$period_api_url = 'https://hispmd.merqconsultancy.org/app/api/v1.php?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=moh_period_types&action=list';
+$api_url = $base_url . '/app/api/v1.php';
+$period_api_url = $base_url . '/app/api/v1.php';
+
+// Add query parameters for the APIs
+$api_url .= '?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=hispmd_indicators_data&action=list';
+$period_api_url .= '?apikey=$2y$10$vdzwxfOVSYoy9xMYgISLjuNfKYxGCa4RpQRTTm5kU3qcMDxupd72C&table=moh_period_types&action=list';
 
 // Fetch the data from the main API
 $response = file_get_contents($api_url);
@@ -39,7 +46,6 @@ foreach ($data['data'] as $item) {
         "indicator" => isset($item['Indicator Name']) ? (string)$item['Indicator Name'] : "", // String
         "Data Source" => isset($item['Data Source']) ? (string)$item['Data Source'] : "", // String
         "Year" => isset($item['Year']) ? (int)$item['Year'] : null, // Integer
-        //"Period ID" => isset($item['Period ID']) ? (string)$item['Period ID'] : "", // String
         "Period Type" => $period_type, // Use period_type instead of Period ID
         "Period" => isset($item['Period']) ? (string)$item['Period'] : "", // String
         "Scope" => isset($item['Scope']) ? (string)$item['Scope'] : "", // String
@@ -48,22 +54,17 @@ foreach ($data['data'] as $item) {
         "Facility Type" => isset($item['Facility Type']) ? (string)$item['Facility Type'] : "", // String
         "Data Source Detail" => isset($item['Data Source Detail']) ? (string)$item['Data Source Detail'] : "", // String
         "value" => isset($item['Value']) ? (float)$item['Value'] : "", // Float
-        "Target Value" => isset($item['Target Value']) ? (float)$item['Target Value'] : null, //"", // Float
+        "Target Value" => isset($item['Target Value']) ? (float)$item['Target Value'] : null, // Float
         "Target Year" => isset($item['Target Year']) ? (int)$item['Target Year'] : null, // Integer
-        "Baseline Value" => isset($item['Baseline Value']) ? (float)$item['Baseline Value'] : null, //"", // Float
+        "Baseline Value" => isset($item['Baseline Value']) ? (float)$item['Baseline Value'] : null, // Float
         "Baseline Year" => isset($item['Baseline Year']) ? (int)$item['Baseline Year'] : null, // Integer
         "Data Representation" => isset($item['Data Representation']) ? (string)$item['Data Representation'] : "" // String
-
-//        "Assessment" => isset($item['Assessment']) ? (string)$item['Assessment'] : "", // String
-//        "Sex" => isset($item['Sex']) ? (string)$item['Sex'] : "", // String
-//        "Baseline" => isset($item['Baseline']) ? (float)$item['Baseline'] : null, // Float
-//        "Target" => isset($item['Target']) ? (float)$item['Target'] : null, // Float
-//        "Data Representation" => isset($item['Data Representation']) ? (string)$item['Data Representation'] : "" // String
     ];
 
     // Add the transformed data to the array
     $transformed[] = $transformed_entry;
 }
+
 // Sort the array by Year and Period
 usort($transformed, function($a, $b) {
     // First, compare by Year
@@ -73,6 +74,7 @@ usort($transformed, function($a, $b) {
     }
     return $a['Year'] - $b['Year']; // Ascending order for Year
 });
+
 // Output the transformed JSON
 header('Content-Type: application/json');
 echo json_encode($transformed, JSON_PRETTY_PRINT);
