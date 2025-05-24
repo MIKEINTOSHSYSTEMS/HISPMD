@@ -1,0 +1,445 @@
+{
+    "DQ Dash": {
+        "filters": {
+            "indicatorGroup": [],
+            "indicator": [],
+            "dataSource": [],
+            "scope": [],
+            "region": [],
+            "adminUnit": [],
+            "facilityType": [],
+            "dataSourceDetail": [],
+            "periodType": []
+        },
+        "charts": [
+            {
+                "id": 1747766556296,
+                "title": "Completeness",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Representative - Service"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1747766606692,
+                "title": "Timeliness",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting timeliness - Service Report"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            }
+        ],
+        "chartOrder": [
+            "1747766556296",
+            "1747766606692"
+        ]
+    },
+    "reporting_dashs": {
+        "filters": {
+            "indicatorGroup": [],
+            "indicator": [],
+            "dataSource": [],
+            "scope": [],
+            "region": [],
+            "adminUnit": [],
+            "facilityType": [],
+            "dataSourceDetail": [],
+            "periodType": []
+        },
+        "charts": [
+            {
+                "id": 1747766556296,
+                "title": "Completeness",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Representative - Service"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1747766606692,
+                "title": "Timeliness",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 544,
+                "height": 392,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting timeliness - Service Report"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1747770939462,
+                "title": "Content",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Content"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            }
+        ],
+        "chartOrder": [
+            "1747766556296",
+            "1747770939462",
+            "1747766606692"
+        ]
+    },
+    "dashboard_2025-05-22": {
+        "filters": {
+            "indicatorGroup": [],
+            "indicator": [],
+            "dataSource": [],
+            "scope": [],
+            "region": [],
+            "adminUnit": [],
+            "facilityType": [],
+            "dataSourceDetail": [],
+            "periodType": [],
+            "year": []
+        },
+        "charts": [
+            {
+                "id": 1747766556296,
+                "title": "Completeness",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Representative - Service"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1747766606692,
+                "title": "Timeliness",
+                "type": "geojson",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 544,
+                "height": 392,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting timeliness - Service Report"
+                    ],
+                    "dataSource": [],
+                    "dataSourceDetail": [],
+                    "scope": [],
+                    "year": []
+                }
+            },
+            {
+                "id": 1747770939462,
+                "title": "Content",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Content"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1747927636186,
+                "title": "New Chart",
+                "type": "geojson",
+                "xAxis": "Region",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting timeliness - Service Report"
+                    ],
+                    "dataSource": [],
+                    "dataSourceDetail": [],
+                    "scope": [],
+                    "year": []
+                }
+            }
+        ],
+        "chartOrder": [
+            "1747766556296",
+            "1747770939462",
+            "1747766606692",
+            "1747927636186"
+        ]
+    },
+    "Geodashboard_2025-05-22": {
+        "filters": {
+            "indicatorGroup": [],
+            "indicator": [],
+            "dataSource": [],
+            "scope": [],
+            "region": [],
+            "adminUnit": [],
+            "facilityType": [],
+            "dataSourceDetail": [],
+            "periodType": [],
+            "year": []
+        },
+        "charts": [
+            {
+                "id": 1747934293330,
+                "title": "GeoMap",
+                "type": "geojson",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [],
+                    "dataSource": [],
+                    "dataSourceDetail": [],
+                    "scope": [],
+                    "region": [],
+                    "year": []
+                }
+            },
+            {
+                "id": 1747934301247,
+                "title": "GeoMap",
+                "type": "column",
+                "xAxis": "Region",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [],
+                    "dataSource": [],
+                    "dataSourceDetail": [],
+                    "scope": [],
+                    "region": [],
+                    "year": []
+                }
+            }
+        ],
+        "chartOrder": [
+            "1747934293330",
+            "1747934301247"
+        ]
+    },
+    "dashboard_2025-05-23": {
+        "filters": {
+            "indicatorGroup": [],
+            "indicator": [],
+            "dataSource": [],
+            "scope": [],
+            "region": [],
+            "adminUnit": [],
+            "facilityType": [],
+            "dataSourceDetail": [],
+            "periodType": [],
+            "year": []
+        },
+        "charts": [
+            {
+                "id": 1747766556296,
+                "title": "Completeness",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Representative - Service"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1747766606692,
+                "title": "IR Woreda",
+                "type": "combination",
+                "xAxis": "Data Source Detail",
+                "yAxis": "value",
+                "width": 544,
+                "height": 392,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "IR Pathway"
+                    ],
+                    "indicator": [],
+                    "dataSource": [],
+                    "dataSourceDetail": [],
+                    "scope": [],
+                    "region": [],
+                    "year": []
+                }
+            },
+            {
+                "id": 1747770939462,
+                "title": "Content",
+                "type": "column",
+                "xAxis": "Year",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "Data Quality"
+                    ],
+                    "indicator": [
+                        "Reporting completeness - Content"
+                    ],
+                    "dataSource": [],
+                    "scope": []
+                }
+            },
+            {
+                "id": 1748009022977,
+                "title": "Proportion of woredas by IR status",
+                "type": "pie",
+                "xAxis": "Data Source Detail",
+                "yAxis": "value",
+                "width": 500,
+                "height": 400,
+                "showLegend": true,
+                "showLabels": true,
+                "showTooltip": true,
+                "filters": {
+                    "indicatorGroup": [
+                        "IR Pathway"
+                    ],
+                    "indicator": [
+                        "Proportion of woredas by IR status"
+                    ],
+                    "dataSource": [],
+                    "dataSourceDetail": [],
+                    "scope": [],
+                    "region": [],
+                    "year": []
+                }
+            }
+        ],
+        "chartOrder": [
+            "1747766556296",
+            "1748009022977",
+            "1747770939462",
+            "1747766606692"
+        ]
+    }
+}
