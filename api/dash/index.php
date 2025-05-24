@@ -8,7 +8,12 @@ if (isset($_GET['getdashboards'])) {
 
 if (isset($_GET['api']) && $_GET['api'] == '1') {
     header('Content-Type: application/json');
-    echo file_get_contents('./data/offline_hispmd_data.json');
+    //echo file_get_contents('./data/offline_hispmd_data.json');
+    //echo file_get_contents('https://hispmd.merqconsultancy.org/api/chart/public/data/hispm_data.php');
+    //echo file_get_contents('api/chart/public/data/hispm_data.php');
+
+    // Include the script that generates the JSON response
+    include '../chart/public/data/hispm_data.php';    
     exit;
 }
 

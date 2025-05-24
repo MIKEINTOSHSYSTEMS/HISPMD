@@ -56,6 +56,32 @@
 
 	$menuNodes[] = $menuNode;
 	$menuNode = array();
+	$menuNode["id"] = "139";
+	$menuNode["name"] = "Advanced Dashboard Builder";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "HISPMD_MOH_Indicators_Dashboard";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "2";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("Dashboard");//
+	$menuNode["pageId"] = "hispmd_advanced_dashboard_data_visualizer";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-pie-chart";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Advanced Dashboard Builder";
+
+
+
+	$menuNodes[] = $menuNode;
+	$menuNode = array();
 	$menuNode["id"] = "3";
 	$menuNode["name"] = "Indicators Data Report";
 	$menuNode["href"] = "mypage.htm";

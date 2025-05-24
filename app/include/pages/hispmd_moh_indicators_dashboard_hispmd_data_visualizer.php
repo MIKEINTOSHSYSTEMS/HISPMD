@@ -78,15 +78,9 @@ array( 'section' => '',
 array( 'cell' => 'c3' ) ) ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
 'items' => array(  ),
-'customCSS' => '    .header-container {
-            display: none;
-            /* justify-content: space-between; */
-            /* align-items: center; */
-            /* background-color: #00274c; */
-            /* padding: 4px 10px; */
-            /* box-shadow: 0 4px 2px -2px gray; */
-            /* flex-wrap: wrap; */
-                }' ),
+'customCSS' => '.header-container {
+    display: none;
+}' ),
 'c' => array( 'model' => 'c1',
 'items' => array(  ) ),
 'c2' => array( 'model' => 'c1',
