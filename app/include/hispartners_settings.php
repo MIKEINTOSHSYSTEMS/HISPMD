@@ -254,6 +254,7 @@ $tdatahispartners[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "partner_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "partner_id";
 
@@ -392,6 +393,7 @@ $tdatahispartners[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -530,6 +532,7 @@ $tdatahispartners[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "aligned_plan";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "aligned_plan";
 

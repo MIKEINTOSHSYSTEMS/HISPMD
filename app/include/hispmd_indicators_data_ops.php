@@ -8,7 +8,10 @@ $topshispmd_indicators_data = array();
 VALUES
 (
 
-)"
+)",
+		"skipFilter" => "0",
+		"skipOrder" => "0"
+
 	);
 				$topshispmd_indicators_data["selectList"] = array(
 		"subtype" => "sql",
@@ -77,7 +80,10 @@ GROUP BY
       WHEN ind.month_id IS NOT NULL THEN CONCAT('M', ind.month_id::TEXT, '-', ind.year::TEXT)
       ELSE ind.year::TEXT
   END;
-"
+",
+		"skipFilter" => "0",
+		"skipOrder" => "0"
+
 	);
 		$tables_data["hispmd_indicators_data"][".operations"] = &$topshispmd_indicators_data;
 ?>

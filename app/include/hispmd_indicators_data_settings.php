@@ -256,6 +256,9 @@ $tstrOrderBy = "";
 $tdatahispmd_indicators_data[".strOrderBy"] = $tstrOrderBy;
 
 $tdatahispmd_indicators_data[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatahispmd_indicators_data[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatahispmd_indicators_data[".sqlHead"] = "";
@@ -322,6 +325,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Indicator Group";
 
+	
 	
 		$fdata["FullName"] = "Indicator Group";
 
@@ -458,6 +462,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Indicator Name";
 
 	
+	
 		$fdata["FullName"] = "Indicator Name";
 
 	
@@ -592,6 +597,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Facility Type";
 
+	
 	
 		$fdata["FullName"] = "Facility Type";
 
@@ -728,6 +734,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Data Source";
 
 	
+	
 		$fdata["FullName"] = "Data Source";
 
 	
@@ -862,6 +869,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Assessment";
 
+	
 	
 		$fdata["FullName"] = "Assessment";
 
@@ -998,6 +1006,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Administration Unit";
 
 	
+	
 		$fdata["FullName"] = "Administration Unit";
 
 	
@@ -1132,6 +1141,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Year";
 
+	
 	
 		$fdata["FullName"] = "Year";
 
@@ -1271,6 +1281,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Scope";
 
 	
+	
 		$fdata["FullName"] = "Scope";
 
 	
@@ -1405,6 +1416,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Region";
 
+	
 	
 		$fdata["FullName"] = "Region";
 
@@ -1541,6 +1553,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Gender/Sex";
 
 	
+	
 		$fdata["FullName"] = "Gender/Sex";
 
 	
@@ -1675,6 +1688,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Value";
 
+	
 	
 		$fdata["FullName"] = "Value";
 
@@ -1815,6 +1829,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Data Representation";
 
 	
+	
 		$fdata["FullName"] = "Data Representation";
 
 	
@@ -1949,6 +1964,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Data Source Detail";
 
+	
 	
 		$fdata["FullName"] = "Data Source Detail";
 
@@ -2085,6 +2101,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Target Value";
 
 	
+	
 		$fdata["FullName"] = "Target Value";
 
 	
@@ -2219,6 +2236,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Target Year";
 
+	
 	
 		$fdata["FullName"] = "Target Year";
 
@@ -2355,6 +2373,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Baseline Value";
 
 	
+	
 		$fdata["FullName"] = "Baseline Value";
 
 	
@@ -2490,6 +2509,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Baseline Year";
 
 	
+	
 		$fdata["FullName"] = "Baseline Year";
 
 	
@@ -2624,6 +2644,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Quarter ID";
 
+	
 	
 		$fdata["FullName"] = "Quarter ID";
 
@@ -2763,6 +2784,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Month ID";
 
 	
+	
 		$fdata["FullName"] = "Month ID";
 
 	
@@ -2901,6 +2923,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 		$fdata["strField"] = "Period ID";
 
 	
+	
 		$fdata["FullName"] = "Period ID";
 
 	
@@ -3038,6 +3061,7 @@ $tdatahispmd_indicators_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Period";
 
+	
 	
 		$fdata["FullName"] = "Period";
 

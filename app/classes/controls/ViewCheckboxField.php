@@ -5,7 +5,7 @@ class ViewCheckboxField extends ViewControl
 	public function getTrueCondition($data)
 	{
 		if( $this->getHostPageDbType() == nDATABASE_PostgreSQL )
-			return $data[$this->field] === "t" || $data[$this->field] != 0 && $data[$this->field] != "";
+			return $data[$this->field] === "t" || $data[$this->field] !== "f" && $data[$this->field] != 0 && $data[$this->field] != "";
 		else
 			return $data[$this->field] != 0 && $data[$this->field] != "";
 	}

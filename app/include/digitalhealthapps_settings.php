@@ -254,6 +254,7 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "app_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "app_id";
 
@@ -392,6 +393,7 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -530,6 +532,7 @@ $tdatadigitalhealthapps[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "standards_met";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "standards_met";
 

@@ -127,15 +127,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_facility_type_name}  r-vertical-field" 
-	data-signal-error-for="facility_type_name{$id}" 
+	data-signal-error-for="facility_type_name{$id}" {$required_attr_facility_type_name}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="facility_type_name" data-fieldname="facility_type_name" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_facility_type_name}">
 		{BEGIN facility_type_name_label}{$label public_moh_facility_types facility_type_name }{END facility_type_name_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$facility_type_name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="facility_type_name">
+	<div class="r-edit-tooltip" data-helpfor="facility_type_name" {$tooltipAttr public_moh_facility_types facility_type_name } >
 		<div class="text-muted" >
 		{$tooltip public_moh_facility_types facility_type_name }		</div>
 	</div>

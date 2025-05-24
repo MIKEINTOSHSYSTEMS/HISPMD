@@ -212,6 +212,9 @@ $tstrOrderBy = "";
 $tdatamfr_facility[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamfr_facility[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatamfr_facility[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatamfr_facility[".sqlHead"] = "";
@@ -278,6 +281,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/id";
 
+	
 	
 		$fdata["FullName"] = "id";
 
@@ -417,6 +421,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 		$fdata["strField"] = "*/name";
 
 	
+	
 		$fdata["FullName"] = "name";
 
 	
@@ -551,6 +556,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/status";
 
+	
 	
 		$fdata["FullName"] = "statusId";
 
@@ -717,6 +723,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 		$fdata["strField"] = "*/operationalStatus";
 
 	
+	
 		$fdata["FullName"] = "operationalStatusId";
 
 	
@@ -881,6 +888,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/facilityType";
 
+	
 	
 		$fdata["FullName"] = "facilityTypeId";
 
@@ -1050,6 +1058,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 		$fdata["strField"] = "*/parentFacilityType";
 
 	
+	
 		$fdata["FullName"] = "parentFacilityTypeId";
 
 	
@@ -1218,6 +1227,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 		$fdata["strField"] = "*/region";
 
 	
+	
 		$fdata["FullName"] = "regionId";
 
 	
@@ -1385,6 +1395,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/zone";
 
+	
 	
 		$fdata["FullName"] = "zoneId";
 
@@ -1557,6 +1568,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 		$fdata["strField"] = "*/woreda";
 
 	
+	
 		$fdata["FullName"] = "woredaId";
 
 	
@@ -1725,6 +1737,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 		$fdata["strField"] = "*/pageCount";
 
 	
+	
 		$fdata["FullName"] = "pageCount";
 
 	
@@ -1862,6 +1875,7 @@ $tdatamfr_facility[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/totalCount";
 
+	
 	
 		$fdata["FullName"] = "totalCount";
 

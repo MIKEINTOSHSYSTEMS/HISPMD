@@ -10,7 +10,7 @@ class SecurityPlugin
 
 	protected $provider;
 
-	
+
 	/**
 	 * @constructor
 	 * @param Array $params - SecurityProvider class instance
@@ -58,7 +58,7 @@ class SecurityPlugin
 	public function logout()
 	{
 	}
-	
+
 
 	public function getError() {
 		return $this->error;
@@ -76,6 +76,29 @@ class SecurityPlugin
 	 */
 	public function validateCallback( $code ) {
 		return false;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function hasExternalLogout() {
+		return false;
+	}
+
+	/**
+	 * Redirecit to external logout page
+	 * @param string $redirectUri - url to redirect client after extenal logout
+	 * @return string|null
+	 */
+	public function redirectToLogout( $token, $redirectUri ) {
+
+	}
+
+	/*
+	 * Save temporary data to storage after login
+	 */
+	public function saveStorageData() {
+
 	}
 }
 

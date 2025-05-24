@@ -258,6 +258,7 @@ $tdatadatause[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "use_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "use_id";
 
@@ -396,6 +397,7 @@ $tdatadatause[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "institution_type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "institution_type";
 
@@ -534,6 +536,7 @@ $tdatadatause[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "pmt_active";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "pmt_active";
 
@@ -672,6 +675,7 @@ $tdatadatause[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "baseline_assessment";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "baseline_assessment";
 

@@ -65,6 +65,8 @@ class MySQLiConnection extends Connection
 			$this->port = 3306;
 
 		$hosts = array();
+/*
+		//	no need to do this anymore	
 		//	fix IPv6 slow connection issue
 		if( $this->host == "localhost" )
 		{
@@ -73,6 +75,7 @@ class MySQLiConnection extends Connection
 			else
 				$hosts[] = "127.0.0.1";
 		}
+*/		
 		$hosts[] = $this->host;
 
 		$flags = 0;
@@ -85,8 +88,13 @@ class MySQLiConnection extends Connection
 			if (!$this->conn)
 				break;
 
-			if (!@mysqli_real_connect($this->conn, $h, $this->user, $this->pwd, "", $this->port, "", $flags))
+			try {
+				if (!@mysqli_real_connect($this->conn, $h, $this->user, $this->pwd, "", $this->port, "", $flags)) {
+					$this->conn = null;
+				}
+			} catch( Exception $e ) {
 				$this->conn = null;
+			}
 
 			if ($this->conn) {
 				if ($this->host == "localhost")
@@ -154,7 +162,12 @@ class MySQLiConnection extends Connection
 		$this->clearResultBuffer();
 		$this->debugInfo($sql);
 
-		$ret = mysqli_query($this->conn, $sql);
+		try {
+			$ret = @mysqli_query($this->conn, $sql);
+		} catch ( Exception $e ) {
+			$this->triggerError( mysqli_error($this->conn) );
+			return false;
+		}
 		if( !$ret )
 		{
 			$this->triggerError( mysqli_error($this->conn) );
@@ -171,7 +184,11 @@ class MySQLiConnection extends Connection
 	public function exec( $sql )
 	{
 		$this->clearResultBuffer();
-		$qResult = $this->query( $sql );
+		try {
+			$qResult = $this->query( $sql );
+		} catch( Exception $e ) {
+			return false;
+		}
 		if( $qResult )
 			return $qResult->getQueryHandle();
 
@@ -188,7 +205,11 @@ class MySQLiConnection extends Connection
 	public function execWithBlobProcessing( $sql, $blobs, $blobTypes = array(), $autoincField = null )
 	{
 		$this->debugInfo($sql);
-		return @mysqli_query($this->conn, $sql);
+		try {
+			return mysqli_query($this->conn, $sql);
+		} catch( Exception $e ) {
+			return false;
+		}
 	}
 
 	/**

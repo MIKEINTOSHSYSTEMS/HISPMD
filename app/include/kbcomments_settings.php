@@ -282,6 +282,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -418,6 +419,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "moderated";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "moderated";
 
@@ -552,6 +554,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "created_date";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "created_date";
 
@@ -689,6 +692,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 		$fdata["strField"] = "ArticleID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
 
@@ -825,6 +829,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 		$fdata["strField"] = "comment";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"comment\"";
@@ -968,6 +973,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 		$fdata["strField"] = "CommentID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"CommentID\"";
 
@@ -1106,6 +1112,7 @@ $tdatakbcomments[".hideMobileList"] = array();
 
 		$fdata["strField"] = "email";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "email";

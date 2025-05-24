@@ -1,4 +1,3 @@
-
 <?php
 	$fontSettings_var = array( array( 'name' => 'Roboto',
 'type' => 0,

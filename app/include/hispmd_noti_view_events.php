@@ -43,9 +43,10 @@ GetTableLink( "hispmd_noti_view", "view", "editid1=".$keys["id"]));
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function AfterAdd
 
+		
 		
 		
 		

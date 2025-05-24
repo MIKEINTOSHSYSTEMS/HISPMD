@@ -23,7 +23,7 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
                         	if (count(GetUserGroups()) > 1)
 	            {
         	        $arr_reports = array();
-                	$arr_reports = GetReportsList();
+                	$arr_reports = wrGetEntityList( WR_REPORT );
 	                foreach ( $arr_reports as $rpt ) {
         	            if (( $rpt["owner"] != Security::getUserName()|| $rpt["owner"] == "") && $rpt["view"]==0 && $_SESSION['webreports']['settings']['name']==$rpt["name"])
                 	    {
@@ -32,7 +32,7 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
         	            }
                 	}
 	            }
-			$arr=getReportArray($_POST['name']);
+			$arr = wrGetEntityArray( $_POST['name'], WR_REPORT );
 			if(!$arr["table_type"])
 				if($arr["db_based"])
 					$arr["table_type"]="db";
@@ -46,7 +46,7 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
             	            if (count(GetUserGroups()) > 1)
         	    {
                 	$arr_reports = array();
-	                $arr_reports = GetChartsList();
+	                $arr_reports = wrGetEntityList( WR_CHART );
         	        foreach ( $arr_reports as $rpt ) {
                 	    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $_SESSION['webcharts']['settings']['name']==$rpt["name"])
                     	{
@@ -55,7 +55,7 @@ if ( isset($_POST['type']) && isset( $_POST['web'] ) ) {
         	            }
                 	}
 	            }
-			$arr=getChartArray($_POST['name']);
+			$arr = wrGetEntityArray( $_POST['name'], WR_CHART );
 			if(!$arr["table_type"])
 				if($arr["db_based"])
 					$arr["table_type"]="db";

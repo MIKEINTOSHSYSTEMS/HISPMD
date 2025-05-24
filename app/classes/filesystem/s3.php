@@ -1,13 +1,12 @@
-<?php 
+<?php
 
 require_once( getabspath("classes/filesystem/authaws.php") );
 
 define( 'S3_AWS_SERVICE', 's3' );
-define( 'S3_URL_POSTFIX', '.s3.amazonaws.com' );
 define( 'S3_EXPIRATION_TIME_SECONDS', 30 );
 
 class S3FileSystem extends RunnerFileSystem {
-	
+
 	public $accessKey;
 	public $secretKey;
 	public $bucket;
@@ -30,12 +29,16 @@ class S3FileSystem extends RunnerFileSystem {
 		return S3FileSystem::normalizePath($path);
 	}
 
+	protected function urlPostfix() {
+		return '.s3.amazonaws.com';
+	}
+
 	protected function host() {
-		return $this->bucket . S3_URL_POSTFIX;
+		return $this->bucket . $this->urlPostfix();
 	}
 
 	protected function endpoint() {
-		return 'https://' . $this->bucket . S3_URL_POSTFIX;
+		return 'https://' . $this->host();
 	}
 
 	protected function setRequiredHeaders( $request, $reqTimestamp ) {
@@ -57,7 +60,7 @@ class S3FileSystem extends RunnerFileSystem {
 
 		$this->setRequiredHeaders( $request, $reqTimestamp );
 		$request->headers["content-md5"] = base64_encode( md5( $request->body, true ) );
-		$request->headers["content-length"] = strlen( $request->body );
+		$request->headers["content-length"] = strlen_bin( $request->body );
 		$this->addHeaderAuthentication( $request, $resourceKey, $reqTimestamp );
 
 		$response = $request->run();
@@ -75,7 +78,7 @@ class S3FileSystem extends RunnerFileSystem {
 		}
 
 		$data = RunnerFileSystem::uploadedFileContent( $uploadFile );
-		$resourceKey = $this->path . $userFilename;
+		$resourceKey = $this->path . $uniqueFilename;
 		return $this->saveFile( $data, $resourceKey );
 	}
 
@@ -100,7 +103,7 @@ class S3FileSystem extends RunnerFileSystem {
 		$reqTimestamp = time();
 		$url = $this->endpoint() . "/" . AuthorizationAWS4::pathEncode( $resourceKey );
 		$request = new HttpRequest( $url, "GET" );
-		
+
 		$request->headers["host"] = $this->host();
 		$request->urlParams["X-Amz-Date"] = iso8601date_timestamp( $reqTimestamp );
 		$request->urlParams["X-Amz-Expires"] = S3_EXPIRATION_TIME_SECONDS;
@@ -135,21 +138,21 @@ class S3FileSystem extends RunnerFileSystem {
 		$this->setRequiredHeaders( $request, $reqTimestamp );
 		$this->addHeaderAuthentication( $request, $resourceKey, $reqTimestamp );
 
-		$response = $request->run();
+		$result = $request->run();
 		if( $result["error"] ) {
 			$this->setLastError( $result["errorMessage"] );
 			return null;
 		}
-		if( $response["responseCode"] != 200 ) {
+		if( $result["responseCode"] != 200 ) {
 			$this->setLastError( $result["errorMessage"] );
 			return null;
 		}
 
-		$headers = HttpRequest::parseHeaders( $response );
+		$headers = HttpRequest::parseHeaders( $result );
 		$ret = array(
 			"fullPath" => $resourceKey,
 			"size" => $headers[ "content-length" ],
-			"raw" => $response,
+			"raw" => $result,
 			"returnContent" => false
 		);
 
@@ -163,7 +166,7 @@ class S3FileSystem extends RunnerFileSystem {
 
 	/**
 	 * @param HttpRequest $request
-	 * 
+	 *
 	 * Return object, that can perform operations described here:
 	 * https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html
 	 */
@@ -223,7 +226,7 @@ class S3FileSystem extends RunnerFileSystem {
 	 * ''
 	 * 'aaa/'
 	 * 'aaa/bbb/'
-	 * 
+	 *
 	 * Incorrect:
 	 * '/'
 	 * '/aaa/'
@@ -267,17 +270,17 @@ class S3FileSystem extends RunnerFileSystem {
 		$postPolicy["conditions"] = array(
 			array( "bucket" => $this->bucket ),
 			array( "eq", "\$key", $resourceKey ),
-			
+
 //			array( "success_action_status" => "201" ),
-			
+
 			array( "x-amz-credential" => $auth->getCredential() ),
 			array( "x-amz-algorithm" => "AWS4-HMAC-SHA256" ),
 			array( "x-amz-date" => iso8601date_timestamp( $reqTimestamp ) )
-			
+
 		);
 		$policy = base64_encode( runner_json_encode( $postPolicy ) );
 
-		
+
 		$uploadParams = array(
 			"key" => $resourceKey,
 			"X-Amz-Credential" => $auth->getCredential(),
@@ -287,12 +290,12 @@ class S3FileSystem extends RunnerFileSystem {
 			"X-Amz-Signature" => $auth->signString( $policy )
 //			"success_action_status" => 201
 		 );
-		
-		return array( 
-			'uploadParams' => array( 
+
+		return array(
+			'uploadParams' => array(
 				"url" => $this->endpoint(),
 				"data" => $uploadParams ),
-			'fileId' => $resourceKey 
+			'fileId' => $resourceKey
 		);
 	}
 	public function directUpload() {

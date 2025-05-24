@@ -251,10 +251,7 @@ class RunnerFileHandler {
 
 
 	protected function getFormData( $filename ) {
-		$formInfo =& $_SESSION["mupload_".$this->formStamp];
-		if( !$formInfo ) {
-			return array();
-		}
+		$formInfo = $this->getFormInfo();
 		return $formInfo[ $filename ];
 	}
 
@@ -854,8 +851,26 @@ class RunnerFileHandler {
 		}
 		return false;
 	}
-	
 
+	protected function getFormInfo() {
+		$formInfo =& $_SESSION["mupload_".$this->formStamp];
+		if( !$formInfo ) {
+			return array();
+		}
+
+		return $formInfo;
+	}
+
+	public function resetUplodedFiles() {
+		$formInfo = $this->getFormInfo();
+		foreach ($formInfo as $usrName => $fileData) {
+			$info = $fileData["file"];
+			if( !$info["fromDB"] ) {
+				$this->delete( $usrName );
+			}
+		}
+		return true;
+	}
 }
 
 ?>

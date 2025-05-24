@@ -285,6 +285,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "id";
 
@@ -425,6 +426,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "message";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "message";
 
@@ -565,6 +567,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "user";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"user\"";
 
@@ -702,6 +705,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "provider";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "provider";
 
@@ -839,6 +843,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "title";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "title";
 
@@ -976,6 +981,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "url";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "url";
 
@@ -1116,6 +1122,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "icon";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "icon";
 
@@ -1278,6 +1285,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "created";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "created";
 
@@ -1416,6 +1424,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "expire";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "expire";
 
@@ -1554,6 +1563,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"type\"";
 
@@ -1693,6 +1703,7 @@ $tdatahispmd_noti_view[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "group";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"group\"";
 

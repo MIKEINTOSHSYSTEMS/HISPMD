@@ -271,6 +271,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "status";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "status";
 
@@ -411,6 +412,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "operationalstatus";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "operationalstatus";
 
@@ -551,6 +553,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facilitytype";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facilitytype";
 
@@ -691,6 +694,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "parentfacilitytype";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "parentfacilitytype";
 
@@ -831,6 +835,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region";
 
@@ -971,6 +976,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "zone";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"zone\"";
 
@@ -1111,6 +1117,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "woreda";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "woreda";
 
@@ -1249,6 +1256,7 @@ $tdatapublic_mfr_facilities_register_chart[".hideMobileList"] = array();
 
 		$fdata["strField"] = "COUNT(*)";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "COUNT(*)";

@@ -61,7 +61,9 @@
 'details_found' => array(  ) ),
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'view',
 'breadcrumb' => false,
 'nextPrev' => false ),
@@ -126,9 +128,10 @@ array( 'cell' => 'c2' ) ),
 'type' => 'integrated_edit_field',
 'orientation' => 0 ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

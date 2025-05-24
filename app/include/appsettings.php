@@ -1,5 +1,6 @@
 <?php
 $dDebug = false;
+$debug2Factor = false;
 $dSQL = "";
 
 $tables_data = array();
@@ -1180,7 +1181,7 @@ include '../api/dhis2/eidm_hc/settings/db_connection.php';
 </html>
 ";
 
-define('GLOBAL_PAGES_SHORT', ".global");
+define('GLOBAL_PAGES_SHORT', "_global");
 define('GLOBAL_PAGES', "<global>");
 
 /**
@@ -1395,6 +1396,9 @@ define("TOTAL_MAX", 0);
 define("TOTAL_AVG", 1);
 define("TOTAL_SUM", 3);
 define("TOTAL_MIN", 4);
+
+define("TOTALS_ALL_DATA", 0);
+define("TOTALS_DISPLAYED_RECORDS", 1);
 
 define("LIST_SIMPLE",0);
 define("LIST_LOOKUP",1);
@@ -1643,10 +1647,18 @@ define('MEDIA_MOBILE_EXPANDED', 2);
 
 define('WEBREPORTS_TABLE', "{04AFFBE6-86C0-47b0-ADD3-BA7FA19CA6FC}" );
 
+define( 'WR_REPORT', 1 );
+define( 'WR_CHART', 0 );
+
 define('REST_BASIC', 1);
 define('REST_APIKEY', 2);
 define('REST_JWT', 3);
 define('REST_OAUTH', 4);
+
+define('TWOFACTOR_EMAIL', 0);
+define('TWOFACTOR_PHONE', 1);
+define('TWOFACTOR_APP', 2);
+
 
 define("TIME_FORMAT_TIME_OF_DAY", 0);
 define("TIME_FORMAT_DURATION", 1);
@@ -1680,12 +1692,17 @@ define("stpAMAZON", 1 );
 define("stpGOOGLEDRIVE", 2 );
 define("stpONEDRIVE", 3 );
 define("stpDROPBOX", 4 );
+define("stpWASABI", 5 );
 
 define( "spidGOOGLEDRIVE", "_PHPRunnerGoogleDriveConnection" );
 define( "spidAMAZON", "_PHPRunnerAmazonS3Connection" );
 define( "spidONEDRIVE", "_PHPRunnerOneDriveConnection" );
 define( "spidDROPBOX", "_PHPRunnerDropboxConnection" );
+define( "spidWASABI", "_PHPRunnerWasabiS3Connection" );
 
+//	REST View payload format
+define( "pfJSON", 1 );
+define( "pfFORM", 4 );
 
 $globalSettings = array();
 $g_defaultOptionValues = array();
@@ -1826,10 +1843,11 @@ $globalSettings["CaptchaSettings"]["captchaPassesCount"] = "5";
 
 
 
+
 $bsProjectTheme = "flatly";
 $bsProjectSize = "normal";
 
-$wr_pagestylepath = "OfficeOffice";
+$wr_pagestylepath = "webreports";
 $wr_is_standalone = false;
 $WRAdminPagePassword = "";
 
@@ -1881,9 +1899,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "778_1743093850";
-$wizardBuildKey = "39558";
-$projectBuildNumber = "778";
+$projectBuildKey = "779_1748097345";
+$wizardBuildKey = "41974";
+$projectBuildNumber = "779";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1897,6 +1915,9 @@ $projectMenus[] = "secondary";
 $menuTreelikeFlags = array();
 $menuTreelikeFlags["main"] = 1;
 
+//	save menu objects
+$menuCache = array();
+$menuNodesCache = array();
 
 $menuTreelikeFlags["secondary"] = 1;
 
@@ -2064,6 +2085,7 @@ require_once( getabspath("classes/cipherer.php"));
 require_once( getabspath('classes/wheretabs.php') );
 require_once( getabspath('classes/datasource/datacontext.php') );
 require_once( getabspath("classes/filesystem/filesystem.php") );
+require_once( getabspath("classes/runnermenu.php") );
 
 $pageTypesForView = array();
 $pageTypesForView[] = "list";
@@ -2073,6 +2095,8 @@ $pageTypesForView[] = "print";
 $pageTypesForView[] = "report";
 $pageTypesForView[] = "rprint";
 $pageTypesForView[] = "chart";
+$pageTypesForView[] = "masterlist";
+$pageTypesForView[] = "masterprint";
 
 $pageTypesForEdit = array();
 $pageTypesForEdit[] = "add";
@@ -2105,8 +2129,7 @@ $mlang_defaultlang = getDefaultLanguage();
 
 include(getabspath("include/languages.php"));
 
-$mediaType = $_COOKIE["mediaType"];
-$mediaType = $mediaType ? $mediaType : 0;
+$mediaType = isset($_COOKIE["mediaType"]) ? $_COOKIE["mediaType"] : 0;
 
 
 
@@ -2121,6 +2144,8 @@ $globalSettings["smsCodeLength"] = 6;
 $globalSettings["smsMaskLength"] = 4;
 
 $globalSettings["restCreate"] = true;
+$globalSettings["restReturnEncodedBinary"] = 1 != 0;
+$globalSettings["restAcceptEncodedBinary"] = 0 != 0;
 $globalSettings["restAuth"] = REST_APIKEY;
 $globalSettings["APIkey"] = "";
 $globalSettings["APIkeyField"] = "apikey";
@@ -2146,7 +2171,14 @@ $cacheImages = true;
  */
 $gReadPermissions = true;
 
-$resizeImagesOnClient = false;
+$resizeImagesOnClient = true;
+
+
+$fieldFilterMaxDisplayValueLength = 50;
+$fieldFilterMaxSearchValueLength = 200;
+$fieldFilterMaxValuesCount = 3000;
+$fieldFilterDefaultValue = "";
+$fieldFilterValueShrinkPostfix = "...";
 
 
 // here goes EVENT_INIT_APP event
@@ -2226,5 +2258,6 @@ $menuNodesIndex=0;
 $pagesData = array();
 
 $pageInConstruction = null;
+
 
 ?>

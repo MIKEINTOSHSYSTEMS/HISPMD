@@ -15,6 +15,8 @@ class LoginPage extends RunnerPage
 	public $var_pPassword = "";
 	public $action = "";
 
+	public $twoFactorMethod = -1;
+
 	public $redirectAfterLogin = false;
 
 	protected $myurl = "";
@@ -30,7 +32,6 @@ class LoginPage extends RunnerPage
 
 	public $twoFactorCode;
 
-	protected $twoFactAuth = false;
 
 	protected $SMSCodeSent = false;
 
@@ -135,7 +136,7 @@ class LoginPage extends RunnerPage
 		}
 
 
-		if( $this->action == "resendCode" && $sessionLevel === LOGGED_2F_PENDING )
+		if( ( $this->action == "change2f" || $this->action == "resendCode") && $sessionLevel === LOGGED_2F_PENDING )
 		{
 			$this->sendTwoFactorCode();
 		}
@@ -208,6 +209,9 @@ class LoginPage extends RunnerPage
 		//	prompt for 2factor code
 			$this->hideMainLoginItems();
 			$this->prepareTwoFactorMessage();
+			$this->prepareTwoFactorAlternatives();
+			$this->xt->assign("twofactor_code_message", true );
+			$this->pageData["twoFactorMethod"] = $this->get2FactorMethod();
 
 		} else if( $sessionLevel === LOGGED_ACTIVATION_PENDING ) {
 			//	tell about activation
@@ -356,15 +360,43 @@ class LoginPage extends RunnerPage
 			$this->xt->assign("resendButtonClass", "rnr-invisible-button");
 	}
 
+	protected function prepareTwoFactorAlternatives() {
+		$method = $this->get2FactorMethod();
+		$twoValue = $this->twoFactorValue();
+		$altMethods = Security::twoFactorEnabledMethods( $twoValue );
+		foreach( $altMethods as $m => $dummy ) {
+			if( $m == $method ) {
+				continue;
+			}
+			$tag = "twofactor_altemail";
+			if( $m == TWOFACTOR_APP ) {
+				$tag = "twofactor_altapp";
+			} else if( $m == TWOFACTOR_PHONE ) {
+				$tag = "twofactor_altphone";
+			}
+			$this->xt->assign( $tag, true );
+		}
+		if( count( $altMethods ) > 1 ) {
+			$this->xt->assign( "twofactor_alt_message", true );
+		}
+	}
+
+	protected function twoFactorValue() {
+		$userdata = Security::provisionalUserData();
+		$twofSettings =& Security::twoFactorSettings();
+		return $userdata[ $twofSettings["twoFactorField"] ];
+	}
 
 	protected function prepareTwoFactorMessage() {
-		$destination = Security::twoFactorDeliveryInfo( Security::provisionalUserData() );
+
+		$method = $this->get2FactorMethod();
+		$destination = Security::twoFactorDeliveryInfo( Security::provisionalUserData(), $method );
 		$twofMessage = "";
-		if( $destination["method"] === "phone" ) {
+		if( $destination["method"] == TWOFACTOR_PHONE ) {
 			$twofMessage = str_replace( "%phone%", $destination["address"], "A text message with your code has been sent to: %phone%" );
-		} else if( $destination["method"] === "email" ) {
+		} else if( $destination["method"] == TWOFACTOR_EMAIL ) {
 			$twofMessage = str_replace( "%email%", $destination["address"], "An email with your code has been sent to: %email%." );
-		} else if( $destination["method"] === "totp" ) {
+		} else if( $destination["method"] == TWOFACTOR_APP ) {
 			$twofMessage = str_replace(
 				array( "%username%", "%site%" ),
 				array( "<br><b>".Security::provisionalUsername()."</b>", "<b>".$destination["address"]."</b>" ),
@@ -377,18 +409,29 @@ class LoginPage extends RunnerPage
 	}
 	protected function sendTwoFactorCode()
 	{
-		$ret = Security::generateAndSendTwoFactorCode();
+		$method = $this->get2FactorMethod();
+		$ret = Security::generateAndSendTwoFactorCode( $method );
 		if( !$ret ) {
 			return true;
 		}
 		if( !$ret["success"] )
 		{
-			$this->message = "Error sending message"." ".$ret["error"];
+			$this->message = "Error sending message"." ".$ret["message"];
 			$this->messageType = MESSAGE_ERROR;
 			return false;
 		}
 
 		//return true; //?
+	}
+
+	protected function get2FactorMethod() {
+		$method = $this->twoFactorMethod;
+		$value = $this->twoFactorValue();
+		if( Security::twoFactorMethodEnabled( $value, $method ) ) {
+			return $method;
+		}
+		return Security::twoFactorPreferredMethod( $value );
+
 	}
 
 
@@ -401,6 +444,7 @@ class LoginPage extends RunnerPage
 
 			Security::elevateSession();
 			$this->setRememberMachineCookie( true );
+			$this->saveTwoFactorValue();
 
 			Security::auditLoginSuccess();
 			$this->callAfterSuccessfulLoginEvent( Security::getUserName(), '', Security::currentUserData() );
@@ -418,16 +462,6 @@ class LoginPage extends RunnerPage
 		$this->xt->assign( "resend_activation_button", true );
 		$this->message = mlang_message( "LOGIN_USER_NOT_ACTIVATED" );
 		$this->messageType = MESSAGE_ERROR;
-	}
-
-
-	/**
-	 * @param String code
-	 * @return Boolean
-	 */
-	protected function verifySMSCode( $code )
-	{
-		return $code == $_SESSION["smsCode"];
 	}
 
 
@@ -470,7 +504,7 @@ class LoginPage extends RunnerPage
 	{
 		$this->myurl = @$_SESSION["MyURL"];
 
-		if( $this->redirectAfterLogin || $this->mode == LOGIN_POPUP || $this->action == "Login" || $this->twoFactAuth ) {
+		if( $this->redirectAfterLogin || $this->mode == LOGIN_POPUP || $this->action == "Login" || Security::userSessionLevel() === LOGGED_2F_PENDING ) {
 			// save $this->myurl value
 		}
 		else
@@ -697,6 +731,8 @@ class LoginPage extends RunnerPage
 			? ""
 			: Security::getUserName();
 
+		$logoutToken = storageGet( "logout_token_hint" );
+
 		unset( $_SESSION["MyURL"] );
 
 		Security::clearSecuritySession();
@@ -707,6 +743,13 @@ class LoginPage extends RunnerPage
 
 		if( $globalEvents->exists("AfterLogout") )
 			$globalEvents->AfterLogout( $username );
+
+		$authPlugin = Security::getAuthPlugin( $this->providerCode );
+
+		if( $authPlugin != null && $authPlugin->hasExternalLogout() ) {
+			$extRedirectUri = projectURL() . GetTableLink( "login" );
+			$authPlugin->redirectToLogout( $logoutToken, $extRedirectUri );
+		}
 
 		// redirect to login page and show message
 		if ($redirectToLogin)
@@ -777,6 +820,10 @@ class LoginPage extends RunnerPage
 			$data[ Security::fullnameField() ? Security::fullnameField() : "name" ] = $info[ "name" ];
 			$data[ Security::userpicField() ? Security::userpicField() : "picture" ] = $info[ "picture" ];
 		}
+
+		storageSet( "logout_token_hint", $token );
+		storageSet( "rawUserData", $info[ "raw" ] );
+		$plugin->saveStorageData();
 
 		$this->loggedWithSP = true;
 
@@ -879,7 +926,7 @@ class LoginPage extends RunnerPage
 		$this->body['end'] .= "Runner.applyPagesData( ".my_json_encode( $pagesData )." );";
 		$this->body['end'] .= "window.settings = ".my_json_encode($this->jsSettings).";</script>";
 
-		$this->body["end"] .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/runnerJS/RunnerAll.js?39558")."\"></script>";
+		$this->body["end"] .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/runnerJS/RunnerAll.js?41974")."\"></script>";
 		$this->body["end"] .= '<script>'.$this->PrepareJS()."</script>";
 
 		$this->xt->assignbyref("body", $this->body);
@@ -890,9 +937,6 @@ class LoginPage extends RunnerPage
 	 */
 	protected function assignSPButtons()
 	{
-		if ( $this->twoFactAuth )
-			return;
-
 		$this->xt->assign("facebookbutton", true);
 		$this->xt->assign("google_signin", true);
 
@@ -921,32 +965,19 @@ class LoginPage extends RunnerPage
 		$this->xt->assign("password_label", true);
 
 
-		if( $this->is508 && !$this->isBootstrap() )
-		{
-			$this->xt->assign_section("username_label", "<label for=\"username\">", "</label>");
-			$this->xt->assign_section("password_label", "<label for=\"password\">", "</label>");
+		$usernameValue = "";
+		if( strlen( $this->var_pUsername ) ) {
+			$usernameValue = 'value="' . runner_htmlspecialchars($this->var_pUsername) . '"';
 		}
+		$this->xt->assign("username_attrs", "id=\"username\" " . $usernameValue );
+		$this->xt->assign("password_attrs", "id=\"password\" " );
 
 
-		if( strlen( $this->var_pUsername ) )
-		{
-			$this->xt->assign("username_attrs",($this->is508? "id=\"username\" " : "")
-				."value=\"".runner_htmlspecialchars($this->var_pUsername)."\"");
-		}
-		else if ( !$this->twoFactAuth )
-		{
-			$this->xt->assign("username_attrs",($this->is508 ? "id=\"username\" " : ""));
-		}
+		$guestUrl = $this->myurl && $_SESSION["MyUrlAccess"]
+			? $this->myurl
+			: GetTableLink("menu");
 
-		else if ( !$this->twoFactAuth )
-		{
-			$this->xt->assign("password_attrs", ($this->is508 ? " id=\"password\"": ""));
-		}
-
-		if( $this->myurl && $_SESSION["MyUrlAccess"] )
-			$this->xt->assign("guestlink_attrs", "href=\"".$this->myurl."\"");
-		else
-			$this->xt->assign("guestlink_attrs", "href=\"".GetTableLink("menu")."\"");
+		$this->xt->assign("guestlink_attrs", 'href="' . runner_htmlspecialchars($guestUrl) . '"');
 
 
 
@@ -980,7 +1011,7 @@ class LoginPage extends RunnerPage
 			$this->xt->assign("login_logo", false );
 		}
 
-		if( $this->message || $this->mode == LOGIN_POPUP || $this->twoFactAuth || $this->securityPlugins )
+		if( $this->message || $this->mode == LOGIN_POPUP || $this->securityPlugins )
 		{
 			$this->xt->assign("message_block", true);
 			$this->xt->assign("message",  $this->message );
@@ -1044,6 +1075,14 @@ class LoginPage extends RunnerPage
 			return $action;
 
 		return @$_POST["btnSubmit"];
+	}
+
+	public static function readMethodFromRequest()
+	{
+		$method = postvalue("method");
+		if( $method == "" )
+			return -1;
+		return $method;
 	}
 
 	function element2Item( $name ) {
@@ -1204,10 +1243,9 @@ class LoginPage extends RunnerPage
 
 
 		$activationCode = Security::getActivationCode(
-				$email,
-				$uData[ Security::passwordField() ],
-				$this->cipherer
-			);
+			$username,
+			$uData[ Security::passwordField() ]
+		);
 
 		$data = array();
 		$data["activateurl"] = $this->getUserActivationUrl( $username, $activationCode );
@@ -1246,6 +1284,20 @@ class LoginPage extends RunnerPage
 			}
 		}
 		return Security::defaultProvider();
+	}
+
+	/**
+	 * Save stored in the userdata two fator value into the database
+	 */
+	protected function saveTwoFactorValue() {
+		$userdata = Security::currentUserData();
+		$twoFactorSettings =& Security::twoFactorSettings();
+		$dc = new DsCommand();
+		$dc->values[ $twoFactorSettings[ "twoFactorField" ] ] = $userdata[ $twoFactorSettings[ "twoFactorField" ] ];
+		$dc->filter = Security::currentUserCondition();
+		$dataSource = getLoginDataSource();
+		$dataSource->updateSingle( $dc, false );
+
 	}
 }
 ?>

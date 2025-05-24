@@ -200,9 +200,9 @@ class ListPage_DPInline extends ListPage_Embed
 			{
 				$searchPermis = $this->permis[$this->tName]['search'];
 				$this->xt->assign("record_controls_block", $this->permis[$this->tName]['edit'] && $this->pSet->hasInlineEdit() || $this->permis[$this->tName]['delete'] && $this->pSet->hasDelete());
-				$this->xt->assign("details_block", $searchPermis && $this->rowsFound );
+				$this->xt->assign("details_block", $searchPermis && $this->recordsOnPage );
 				$this->xt->assign("details_attrs","id=\"detFound".$this->id."\" name=\"detFound".$this->id."\"");
-				$this->xt->assign("pages_block", $searchPermis && $this->rowsFound );
+				$this->xt->assign("pages_block", $searchPermis && $this->recordsOnPage );
 			}
 		}
 
@@ -247,32 +247,11 @@ class ListPage_DPInline extends ListPage_Embed
 	 */
 	protected function prepareTemplate()
 	{
-		//set bricks, which	must be shown on details preview page
-		$bricksExcept = array("grid", "grid_mobile", "pagination", "reorder_records", "bsgrid_tabs");
-		if( $this->masterPageType == PAGE_LIST )
-		{	
-			$bricksExcept[] = "details_found";
-			$bricksExcept[] = "page_of";
-		}
-		
-		if( $this->masterPageType == PAGE_EDIT || $this->masterPageType == PAGE_ADD || $this->masterPageType == PAGE_LIST  )
-		{
-			if( $this->pSet->hasInlineEdit() || $this->pSet->hasDelete() && $this->masterPageType != PAGE_ADD ) 
-			{
-				if( $this->permis[ $this->tName ]['edit'] || $this->permis[ $this->tName ]['delete'] )
-					$bricksExcept[] = "recordcontrol";
-			}
-
-			if( $this->pSet->hasInlineAdd() && $this->permis[$this->tName]['add'] )
-				$bricksExcept[] = "recordcontrols_new";
-		}
-		$bricksExcept[] = "message";
 		
 		// if we use details inline. We don't need show the header/footer.
 		$this->xt->assign("header", false);
 		$this->xt->assign("footer", false);
 		
-		$this->xt->hideAllBricksExcept($bricksExcept);
 		$this->xt->prepare_template($this->templatefile);	
 	}
 	
@@ -432,7 +411,8 @@ class ListPage_DPInline extends ListPage_Embed
 		
 		$this->prepareTemplate();
 		
-		$contents = $this->fetchForms( array( "grid", "below-grid" ) );
+		//$contents = $this->fetchForms( array( "grid", "below-grid" ) );
+		$contents = $this->fetchBlocksList( array( "grid_tabs", "grid_block", "below-grid_block" ) );
 
 		$this->addControlsJSAndCSS();
 		$this->fillSetCntrlMaps();
@@ -469,38 +449,7 @@ class ListPage_DPInline extends ListPage_Embed
 	 */
 	public function showPageDp($params = "")
 	{	
-		if( $this->isBootstrap() )
-		{
-			return $this->showGridOnly();
-		}
-		
-		global $page_layouts;
-		
-		$this->BeforeShowList();
-		
-		$this->prepareTemplate();
-		$contents = $this->xt->fetch_loaded("body");	
-		
-		//add for details preview page skin and style
-		$layout =& $page_layouts[$this->shortTableName.'_'.$this->pageType];
-		$pageSkinStyle = $layout->style." page-".$layout->name;	
-		
-		$this->xt->assign("dpShowHide", true);
-		$this->xt->assign("dpMinus", true);
-		$this->xt->assign("dpShowHide_attrs", 'id="dpShowHide'.$this->id.'"');
-		$this->xt->assign("dpMinus_attrs", 'id="dpMinus'.$this->id.'"');
-		$this->xt->assign("dt_attrs", 'name="dt'.$this->id.'"');
-		
-		if(GetGlobalData("printDetailTableName", false))
-		{
-			$this->xt->assign("dpShowHide", false);
-			$this->xt->assign("dpMinus", false);
-		}
-		
-		if(postvalue("pdf") == 1)
-			$this->xt->assign("dpMinus", false);
-
-		echo '<div id="detailPreview'.$this->id.'" class="'.$pageSkinStyle.' rnr-pagewrapper dpStyle">'.$contents.'</div>';	
+		return $this->showGridOnly();
 	}	
 
 	public function prepareDisplayDetails() {
@@ -518,9 +467,9 @@ class ListPage_DPInline extends ListPage_Embed
 			return;
 		}
 		
-		$forms = array( "grid" );
+		$forms = array( "grid_block" );
 		if( $this->masterPageType != PAGE_ADD ) {
-			$forms = array( "grid", "below-grid" );	
+			$forms = array( "grid_tabs", "grid_block", "below-grid_block" );	
 		}
 		
 		
@@ -528,7 +477,7 @@ class ListPage_DPInline extends ListPage_Embed
 		$this->renderedButtons = str_replace("btn-primary", "btn-xs btn-info", $this->renderedButtons);
 		$this->renderedButtons = str_replace("btn-default", "btn-xs btn-info", $this->renderedButtons);
 
-		$bodyContents = $this->fetchForms($forms);		
+		$bodyContents = $this->fetchBlocksList($forms);		
 		$this->renderedBody = '<div id="detailPreview'.$this->id.'">'.$bodyContents.'</div>';	
 	}
 
@@ -698,7 +647,7 @@ class ListPage_DPInline extends ListPage_Embed
 	}
 	
 	protected function spreadsheetGridApplicable() {
-		return $this->masterPageType != PAGE_ADD 
+		return $this->masterPageType != PAGE_ADD && $this->masterPageType != PAGE_VIEW
 			&& parent::spreadsheetGridApplicable();
 	}
 

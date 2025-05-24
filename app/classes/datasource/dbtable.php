@@ -86,7 +86,11 @@ class DataSourceDbTable extends DataSourceTable {
 			return false;
 		}
 
-		return $dc->values;
+		$data = $dc->values;
+		if ($autoincField && !array_key_exists($autoincField, $data)) {
+			$data[ $autoincField ] = $this->connection->getInsertedId();
+		}
+		return $data;
 	}
 
 	public function updateSingle( $dc, $requireKeys = true  ) {

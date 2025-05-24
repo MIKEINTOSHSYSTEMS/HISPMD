@@ -125,7 +125,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"stack": [
 		
@@ -153,7 +153,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"stack": [
 		
@@ -201,7 +201,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -243,9 +243,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -272,9 +272,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -301,9 +301,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -339,9 +339,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -368,9 +368,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -397,9 +397,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -432,9 +432,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_dpreview},
 			{END colspan_grid_cell_dpreview}
 		
-						
+		
 	
-	
+			
 	
 			"stack": [
 		
@@ -470,13 +470,15 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_2}
@@ -498,9 +500,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -524,9 +526,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -550,9 +552,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -601,7 +603,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -619,4 +621,7 @@ pdfDocument = {
 	}
 }
 			],
-	}
+	};
+
+
+pdfFonts = {$pdfFonts};

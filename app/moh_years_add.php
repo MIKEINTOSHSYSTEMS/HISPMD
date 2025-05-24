@@ -40,6 +40,8 @@ $params["needSearchClauseObj"] = false;
 $params["afterAdd_id"] = postvalue("afteradd");
 
 $params["hostPageName"] = postvalue("hostPageName");
+$params["listPage"] = postvalue("listPage");
+
 $params["newRowId"] = postvalue("newRowId");
 
 $params["masterTable"] = postvalue("mastertable");
@@ -54,6 +56,7 @@ $params["captchaValue"] = postvalue("value_captcha_1209xre_" . $id);
 $params["dashElementName"] = postvalue("dashelement");
 $params["fromDashboard"] = postvalue("fromDashboard");
 $params["dashTName"] = $params["fromDashboard"] ? $params["fromDashboard"] : postvalue("dashTName");
+$params["dashPage"] = postvalue("dashPage");
 
 $params["forSpreadsheetGrid"] = postvalue("spreadsheetGrid");
 
@@ -65,6 +68,7 @@ if( $pageMode == ADD_DASHBOARD )
 {
 	$params["dashElementName"] = postvalue("dashelement");
 	$params["dashTName"] = postvalue("table");
+	$params["dashPage"] = postvalue("dashPage");
 }
 
 

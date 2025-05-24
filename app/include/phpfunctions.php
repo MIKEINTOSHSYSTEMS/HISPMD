@@ -568,18 +568,49 @@ function printfileByRange($filename, $startPos, $endPos)
 	fclose($file);
 }
 
+function ImageFromBytes($value)
+{
+	$image = null;
+	if (SupposeImageType($value) == "image/webp" && version_compare(phpversion(), "7.3.0") < 0) {
+		if (function_exists("imagecreatefromwebp")) {
+			$tempfile = tempnam("", "");
+			runner_save_file($tempfile, $value);
+			$image = imagecreatefromwebp($tempfile);
+			@unlink($tempfile);
+		}
+	} else {
+		if (function_exists("imagecreatefromstring")) {
+			$image = imagecreatefromstring($value);
+		}
+	}
+	return $image;
+}
+
+function ImageFromFile($fileName)
+{
+	$image = null;
+	if (strtoupper(getFileExtension($fileName)) == "WEBP" && version_compare(phpversion(), "7.3.0") < 0) {
+		if (function_exists("imagecreatefromwebp")) {
+			$image = imagecreatefromwebp($fileName);
+		}
+	} else {
+		if (function_exists("imagecreatefromstring")) {
+			$image = imagecreatefromstring(myfile_get_contents($fileName));
+		}
+	}
+	return $image;
+}
+
 /**
  * @intellisense
  */
 function CreateThumbnail($value, $size, $ext)
 {
-	if(!function_exists("imagecreatefromstring"))
-		return $value;
-
 	$error_handler=set_error_handler("empty_error_handler");
-	$image = imagecreatefromstring($value);
-	if($error_handler)
-		set_error_handler($error_handler);
+
+	$image = ImageFromBytes($value);
+
+	if($error_handler) set_error_handler($error_handler);
 
 	if(!$image)
 		return $value;
@@ -599,10 +630,9 @@ function CreateThumbnail($value, $size, $ext)
 			$final_height=$size;
 		}
 
-
 	    $image_resized = imagecreatetruecolor( $final_width, $final_height );
 
-	    if ($ext==".GIF" || $ext=="GIF" || $ext==".PNG" || $ext=="PNG") {
+		if ($ext==".GIF" || $ext=="GIF" || $ext==".PNG" || $ext=="PNG" || $ext==".WEBP" || $ext=="WEBP") {
 	      $trnprt_indx = imagecolortransparent($image);
 
 	      // If we have a specific transparent color
@@ -651,6 +681,8 @@ function CreateThumbnail($value, $size, $ext)
 			imagejpeg($image_resized);
 		elseif($ext==".PNG")
 			imagepng($image_resized);
+		elseif($ext==".WEBP" || $ext=="WEBP")
+			imagewebp($image_resized);
 		else
 			imagegif($image_resized);
 		$ret=ob_get_contents();
@@ -661,7 +693,6 @@ function CreateThumbnail($value, $size, $ext)
 	}
 	imagedestroy($image);
 	return $value;
-
 }
 /**
  * @intellisense
@@ -702,6 +733,9 @@ function SupposeImageType($file)
 		return "image/gif";
 	if(strlen($file)>3 &&  ord($file[0])==0xff && ord($file[1])==0xd8 && ord($file[2])==0xff)
 		return "image/jpeg";
+	if (strlen($file) > 11 && ord($file[0]) == 'R' && ord($file[1]) == 'I' && ord($file[2]) == 'F' && ord($file[3]) == 'F'
+		&& ord($file[8]) == 'W' && ord($file[9]) == 'E' && ord($file[10]) == 'B' && ord($file[11]) == 'P')
+		return "image/webp";
 	if(strlen($file)>8 &&  ord($file[0])==0x89 && ord($file[1])==0x50 && ord($file[2])==0x4e && ord($file[3])==0x47
 					   &&  ord($file[4])==0x0d && ord($file[5])==0x0a && ord($file[6])==0x1a && ord($file[7])==0x0a)
 		return "image/png";
@@ -944,7 +978,10 @@ function sortfunc_members(&$a,&$b)
  */
 function postvalue($name)
 {
-	if(isset($_POST[$name]))
+	global $jsonDataFromRequest;
+	if(is_array($jsonDataFromRequest) && isset($jsonDataFromRequest[$name]))
+		$value=$jsonDataFromRequest[$name];
+	else if(isset($_POST[$name]))
 		$value=$_POST[$name];
 	else if(isset($_GET[$name]))
 		$value=$_GET[$name];
@@ -969,15 +1006,13 @@ function getCustomMapIcon($field, $table, $data)
 	return $icon;
 }
 
-function getDashMapCustomIcon( $dashName, $dashElementName, $data )
+function getDashMapCustomIcon( $eventObj, $funcName, $data )
 {
 	$icon = "";
+	$eventObj->$funcName( $icon, $data );
+	return $icon;
 }
 
-function getDashMapCustomLocationIcon( $dashName, $dashElementName, $data )
-{
-	$icon = "";
-}
 
 /**
  * return custom expression
@@ -2136,10 +2171,8 @@ function imageCreateThumb($new_width,$new_height,$img_width,$img_height,$file_pa
 			}
 
 			$success = @imagejpeg($new_img, $new_file_path, $image_quality);
-
-
 			break;
-	case "image/gif":
+		case "image/gif":
 			@imagecolortransparent($new_img, @imagecolorallocate($new_img, 0, 0, 0));
 			$src_img = @imagecreatefromgif($file_path);
 			$image_quality = null;
@@ -2153,8 +2186,8 @@ function imageCreateThumb($new_width,$new_height,$img_width,$img_height,$file_pa
 					$img_height
 				) && imagegif($new_img, $new_file_path, $image_quality);
 			break;
-	case "image/png":
-	case "image/x-png":
+		case "image/png":
+		case "image/x-png":
 			@imagecolortransparent($new_img, @imagecolorallocate($new_img, 0, 0, 0));
 			@imagealphablending($new_img, false);
 			@imagesavealpha($new_img, true);
@@ -2170,6 +2203,19 @@ function imageCreateThumb($new_width,$new_height,$img_width,$img_height,$file_pa
 					$img_width,
 					$img_height
 				) && imagepng($new_img, $new_file_path, $image_quality);
+			break;
+		case "image/webp":
+			@imagecolortransparent($new_img, @imagecolorallocate($new_img, 0, 0, 0));
+			$src_img = ImageFromFile($file_path);
+			$success = @imagecopyresampled(
+					$new_img,
+					$src_img,
+					0, 0, 0, 0,
+					$new_width,
+					$new_height,
+					$img_width,
+					$img_height
+				) && imagewebp($new_img, $new_file_path);
 			break;
 		default:
 			$src_img = null;
@@ -2363,7 +2409,7 @@ function GetLocalLink($table, $pageType = "", $getParams = "")
 function GetTemplateName($table, $templateName)
 {
 	if( $templateName == "" )
-		return ".global_" . $table . ".htm";
+		return GLOBAL_PAGES_SHORT . "_" . $table . ".htm";
 
 	if( $table == "" ) {
 		return $templateName . ".htm";
@@ -2398,6 +2444,11 @@ function getYMDdate($unixTimeStamp)
 function getHISdate($unixTimeStamp)
 {
 	return date("H:i:s", $unixTimeStamp);
+}
+
+function timestampToDbDate($unixTimeStamp)
+{
+	return gmdate("Y-m-d H:i:s", $unixTimeStamp);
 }
 
 function IsJSONAccepted()
@@ -2822,7 +2873,7 @@ function callDashboardSnippet($dashName, $dashElem)
 	$icon = $dashElem["item"]["icon"];
 	$funcName = "event_" . GoodFieldName($dashElem['snippetId']);
 	$eventObj = getEventObject($dashName);
-	if ($eventObj !== null) {
+	if ($eventObj !== null && method_exists($eventObj, $funcName)) {
 		$eventObj->$funcName($header, $icon);
 	}
 	$snippetData["header"] = $header;
@@ -3276,7 +3327,7 @@ function regenerateSessionId() {
 
 function importSecuritySettings() {
 	global $globalSettings;
-	if( $globalSettings["security"] ) {
+	if( isset($globalSettings["security"]) ) {
 		return;
 	}
 	require_once( getabspath( "include/securitySettings.php" ) );
@@ -3331,6 +3382,31 @@ function loadPrivateData( $id ) {
 
 function setCookieDirectly( $name, $value ) {
 	$_COOKIE[$name] = $value;
+}
+
+function & loadMenuNodes( $name ) {
+	global $menuNodesCache;
+	if( $name == "main" ) {
+		require_once( getabspath( "include/menunodes_" . $name .".php") );
+	}
+	if( $name == "adminarea" ) {
+		require_once( getabspath( "include/menunodes_" . $name .".php") );
+	}
+	if( $name == "secondary" ) {
+		require_once( getabspath( "include/menunodes_" . $name . ".php") );
+	}
+	return $menuNodesCache[ $name ];
+}
+
+function storeJSONDataFromRequest() {
+	global $jsonDataFromRequest;
+
+	$contentType = getHttpHeader('Content-Type');
+	if(!$contentType || strtolower($contentType) !== "application/json" ) {
+		return;
+	}
+
+	$jsonDataFromRequest = my_json_decode(file_get_contents('php://input'));
 }
 
 ?>

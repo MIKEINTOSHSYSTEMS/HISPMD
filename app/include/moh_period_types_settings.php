@@ -252,6 +252,7 @@ $tdatamoh_period_types[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "period_id";
 
@@ -392,6 +393,7 @@ $tdatamoh_period_types[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period_type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "period_type";
 

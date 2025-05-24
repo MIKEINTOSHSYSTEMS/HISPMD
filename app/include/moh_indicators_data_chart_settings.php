@@ -265,14 +265,12 @@ $tstrOrderBy = "ORDER BY d.\"year\", CASE
 $tdatamoh_indicators_data_chart[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamoh_indicators_data_chart[".orderindexes"] = array();
-	$tdatamoh_indicators_data_chart[".orderindexes"][] = array(9, (1 ? "ASC" : "DESC"), "d.\"year\"");
-
-	$tdatamoh_indicators_data_chart[".orderindexes"][] = array(18, (1 ? "ASC" : "DESC"), "CASE 
+			$tdatamoh_indicators_data_chart[".orderindexes"][] = array(9, (1 ? "ASC" : "DESC"), "d.\"year\"");
+			$tdatamoh_indicators_data_chart[".orderindexes"][] = array(18, (1 ? "ASC" : "DESC"), "CASE 
         WHEN d.quarter_id IS NOT NULL THEN CONCAT('Q', d.quarter_id::TEXT, '-', d.\"year\"::TEXT)
         WHEN d.month_id IS NOT NULL THEN CONCAT('M', d.month_id::TEXT, '-', d.\"year\"::TEXT)
         ELSE d.\"year\"::TEXT
     END");
-
 
 
 $tdatamoh_indicators_data_chart[".sqlHead"] = "SELECT d.data_id,  d.indicator_id,  d.data_source_id,  d.assessment_id,  d.region_id,  d.unit_id,  d.facility_type_id,  d.\"value\",  d.\"year\",  d.scope_id,  d.gender_sex,  d.data_representation,  d.indicator_group_id,  d.data_source_detail,  d.period_id,  d.month_id,  d.quarter_id,  CASE           WHEN d.quarter_id IS NOT NULL THEN CONCAT('Q', d.quarter_id::TEXT, '-', d.\"year\"::TEXT)          WHEN d.month_id IS NOT NULL THEN CONCAT('M', d.month_id::TEXT, '-', d.\"year\"::TEXT)          ELSE d.\"year\"::TEXT      END AS period,  CAST(NULLIF(t.indicator_target, '') AS NUMERIC) AS indicator_target,  t.indicator_target_year,  t.indicator_baseline,  t.indicator_baseline_year";
@@ -342,6 +340,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.data_id";
 
@@ -482,6 +481,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.indicator_id";
 
@@ -649,6 +649,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_source_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.data_source_id";
 
@@ -812,6 +813,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "assessment_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.assessment_id";
 
@@ -976,6 +978,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.region_id";
 
@@ -1140,6 +1143,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "unit_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.unit_id";
 
@@ -1304,6 +1308,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_type_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.facility_type_id";
 
@@ -1468,6 +1473,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "value";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.\"value\"";
 
@@ -1609,6 +1615,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "year";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.\"year\"";
 
@@ -1895,6 +1902,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "scope_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.scope_id";
 
@@ -2059,6 +2067,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "gender_sex";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.gender_sex";
 
@@ -2211,6 +2220,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_representation";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.data_representation";
 
@@ -2363,6 +2373,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_group_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.indicator_group_id";
 
@@ -2529,6 +2540,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_source_detail";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.data_source_detail";
 
@@ -2666,6 +2678,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.period_id";
 
@@ -2829,6 +2842,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "month_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.month_id";
 
@@ -2968,6 +2982,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "quarter_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "d.quarter_id";
 
@@ -3107,6 +3122,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "CASE           WHEN d.quarter_id IS NOT NULL THEN CONCAT('Q', d.quarter_id::TEXT, '-', d.\"year\"::TEXT)          WHEN d.month_id IS NOT NULL THEN CONCAT('M', d.month_id::TEXT, '-', d.\"year\"::TEXT)          ELSE d.\"year\"::TEXT      END";
 
@@ -3275,6 +3291,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 		$fdata["strField"] = "indicator_target";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "CAST(NULLIF(t.indicator_target, '') AS NUMERIC)";
 
@@ -3415,6 +3432,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 		$fdata["strField"] = "indicator_target_year";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "t.indicator_target_year";
 
@@ -3550,6 +3568,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["strField"] = "indicator_baseline";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "t.indicator_baseline";
@@ -3687,6 +3706,7 @@ $tdatamoh_indicators_data_chart[".hideMobileList"] = array();
 
 		$fdata["strField"] = "indicator_baseline_year";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "t.indicator_baseline_year";

@@ -8,7 +8,8 @@ class RunnerCiphererAES extends RunnerCiphererES
 	{
 		$this->INITIALISATION_VECTOR = 'A7EC0E8D9D35BFDA';
 		$this->SSLMethod = 'AES-256-CBC';
-		$this->mcript_algorithm = MCRYPT_RIJNDAEL_128;
+		if( !$useSSL )
+			$this->mcript_algorithm = MCRYPT_RIJNDAEL_128;
 		$this->max_key_size = 32;
 		$this->useSSL = $useSSL;
 

@@ -35,7 +35,7 @@ class ListPage_Embed extends ListPage
 		if ($this->isDispGrid())
 		{
 			$this->xt->assign_section ("grid_block", '', '');
-			if(!$this->rowsFound)
+			if(!$this->recordsOnPage && !$this->fieldFilterEnabled())
 			{
 				$this->hideElement("grid");
 			}

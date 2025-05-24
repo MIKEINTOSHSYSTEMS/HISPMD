@@ -94,9 +94,10 @@ $breadcrumb = array();
 $breadcrumb[0] = array("crumb_attrs" => "href='".GetTableLink("main","list")."?page=list&f=(Category~equals~".rawurlencode($values["Category"]).")'" ,"crumb_title_link"=>true, "crumb_title"=> $values["Category"]);
 $breadcrumb[1] = array("crumb_attrs" => "", "crumb_title_span" => true,"crumb_title" => $values["Title"]);
 $xt->assign_loopsection("crumb", $breadcrumb);
-;
+;		
 } // function BeforeShowView
 
+		
 		
 		
 		
@@ -206,7 +207,7 @@ if( $pageObject->pageName === "category" ){
 //	}
 
 //}
-;
+;		
 } // function BeforeShowList
 
 		
@@ -235,70 +236,6 @@ if( $pageObject->pageName === "category" ){
 		
 		
 		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 
 		
@@ -365,7 +302,75 @@ if( $pageObject->pageName === "category" ){
 		
 		
 		
+		
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
 		
 		
 		
@@ -485,7 +490,7 @@ if(postvalue("incrimentColumn")!=false){
 	exit();
 }
 
-;
+;		
 } // function ProcessValuesView
 
 		
@@ -515,7 +520,9 @@ if(postvalue("incrimentColumn")!=false){
 		
 		
 		
+		
 
+		
 		
 		
 		

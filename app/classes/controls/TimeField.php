@@ -12,20 +12,6 @@ class TimeField extends DateTimeControl
 		$this->timeAttrs = $this->pageObject->pSetEdit->getFormatTimeAttrs( $this->field );
 	}
 
-	function addJSFiles()
-	{
-		if( !$this->timeAttrs || !$this->timeAttrs["useTimePicker"] )
-			return;
-		
-		if ( $this->pageObject->isBootstrap() )
-		{
-		}
-		else
-		{
-			$this->pageObject->AddJSFile("include/timepickr_jquery.timepickr.js");	
-		}	
-	}
-
 	function buildControl($value, $mode, $fieldNum, $validate, $additionalCtrlParams, $data)
 	{
 		if( $this->container->pageType == PAGE_LIST )
@@ -35,15 +21,12 @@ class TimeField extends DateTimeControl
 		
 		echo '<input id="'.$this->ctype.'" '.$this->inputStyle.' type="hidden" name="'.$this->ctype.'" value="time">';
 		
-		$resultHtml = '';
 
 		if( count( $this->timeAttrs ) )
-		{
+		{	
 			$type = $this->pageObject->mobileTemplateMode() ? "time" : "text";
 
-			$classString = "";
-			if ( $this->pageObject->isBootstrap() )
-				$classString = 'class="form-control"';				
+			$classString = 'class="form-control"';				
 				
 			$resultHtml = '<input '.$this->getPlaceholderAttr().' type="'.$type.'" '.$this->inputStyle.' name="'.$this->cfield.'" ' . $classString
 					.(($mode==MODE_INLINE_EDIT || $mode==MODE_INLINE_ADD) && $this->is508 == true ? 'alt="'.$this->strLabel.'" ' : '')
@@ -56,24 +39,18 @@ class TimeField extends DateTimeControl
 				$tpVal = getValForTimePicker($this->type, $value, $loc['locale']);
 				
 				$resultHtml .= ' value="'.runner_htmlspecialchars($tpVal['val']).'">';
-
-				if( $this->pageObject->isBootstrap() )
-					$resultHtml .= '<span class="input-group-addon" id="trigger-test-'.$this->cfield.'"><span class="glyphicon glyphicon-time"></span></span>';
-				else
-					$resultHtml .= '&nbsp;<a class="rnr-imgclock" data-icon="timepicker" title="Time" style="display:inline-block; margin:4px 0 0 6px; visibility: hidden;" id="trigger-test-'.$this->cfield.'" /></a>';
+				
+				$resultHtml .= '<span class="input-group-addon" id="trigger-test-' . $this->cfield
+					.'"><span class="glyphicon glyphicon-time"></span></span>';
 			}
 			else
 				$resultHtml .=' value="'.runner_htmlspecialchars( $this->getOutputValue( $value ) ).'">';
 
-			if( $this->pageObject->isBootstrap() )
-			{
-				if ( isRTL() )
-				{
-					$resultHtml .= "<span></span>"; // for bootstrap calend icon anomaly
-				}
-				$resultHtml = '<div class="input-group" '.$this->inputStyle.' >' . $resultHtml . '</div>';
-			}
 
+			if ( isRTL() )
+				$resultHtml .= "<span></span>"; // for bootstrap calend icon anomaly
+			
+			$resultHtml = '<div class="input-group" '.$this->inputStyle.' >' . $resultHtml . '</div>';
 			echo $resultHtml;
 		}
 		
@@ -112,12 +89,8 @@ class TimeField extends DateTimeControl
 		return $this->cfield;
 	}
 
-	function addCSSFiles()
-	{
-		if ( $this->pageObject->isBootstrap() )
-		{
-			$this->pageObject->AddCSSFile("include/bootstrap/css/bootstrap-datetimepicker.min.css");
-		}
+	function addCSSFiles() {
+		$this->pageObject->AddCSSFile("include/bootstrap/css/bootstrap-datetimepicker.min.css");
 	}
 }
 ?>

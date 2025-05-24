@@ -271,6 +271,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ID";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ID\"";
 
@@ -411,6 +412,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "TYPE";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"TYPE\"";
 
@@ -549,6 +551,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "NAME";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"NAME\"";
 
@@ -689,6 +692,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "USERNAME";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"USERNAME\"";
 
@@ -829,6 +833,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "COOKIE";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"COOKIE\"";
 
@@ -966,6 +971,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "SEARCH";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"SEARCH\"";
 
@@ -1106,6 +1112,7 @@ $tdatahispmd_system_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "TABLENAME";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"TABLENAME\"";
 

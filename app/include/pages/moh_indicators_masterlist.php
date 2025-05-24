@@ -207,7 +207,9 @@
 'gridType' => 0,
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'masterlist',
 'breadcrumb' => false ),
 'events' => array( 'maps' => array(  ),
@@ -346,9 +348,10 @@ array( 'cell' => 'footcell_field4' ) ) ) ),
 'detailsOnly' => true ),
 'grid_inline_cancel' => array( 'type' => 'grid_inline_cancel' ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

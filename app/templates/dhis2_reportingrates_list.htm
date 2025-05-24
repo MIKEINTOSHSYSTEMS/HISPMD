@@ -214,7 +214,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -227,7 +370,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -236,7 +379,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -364,6 +507,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -945,9 +1091,18 @@
 	 
 		{BEGIN Organisation_unit_fieldheadercolumn}
 	{BEGIN Organisation_unit_fieldheader}
-	<SPAN {$Organisation_unit_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_unit" data-fieldname="Organisation unit">
-	{$label DHIS2_ReportingRates Organisation_unit }	{$arrow_icon_Organisation_unit}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Organisation_unit" data-fieldname="Organisation unit" 
+
+			{$Organisation_unit_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_ReportingRates Organisation_unit }</span>
+					{$arrow_icon_Organisation_unit}
+			</span>
+	</span>
 	{END Organisation_unit_fieldheader}
 {END Organisation_unit_fieldheadercolumn}
 
@@ -970,9 +1125,18 @@
 	 
 		{BEGIN Dataset_ID_fieldheadercolumn}
 	{BEGIN Dataset_ID_fieldheader}
-	<SPAN {$Dataset_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label9" {$item_grid_field_label9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dataset_ID" data-fieldname="Dataset ID">
-	{$label DHIS2_ReportingRates Dataset_ID }	{$arrow_icon_Dataset_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="grid_field_label9" {$item_grid_field_label9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dataset_ID" data-fieldname="Dataset ID" 
+
+			{$Dataset_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_ReportingRates Dataset_ID }</span>
+					{$arrow_icon_Dataset_ID}
+			</span>
+	</span>
 	{END Dataset_ID_fieldheader}
 {END Dataset_ID_fieldheadercolumn}
 
@@ -995,9 +1159,18 @@
 	 
 		{BEGIN Facility_Type_fieldheadercolumn}
 	{BEGIN Facility_Type_fieldheader}
-	<SPAN {$Facility_Type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label11" {$item_grid_field_label11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type">
-	{$label DHIS2_ReportingRates Facility_Type }	{$arrow_icon_Facility_Type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="grid_field_label11" {$item_grid_field_label11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type" 
+
+			{$Facility_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_ReportingRates Facility_Type }</span>
+					{$arrow_icon_Facility_Type}
+			</span>
+	</span>
 	{END Facility_Type_fieldheader}
 {END Facility_Type_fieldheadercolumn}
 
@@ -1020,9 +1193,18 @@
 	 
 		{BEGIN Ownership_Type_Label_fieldheadercolumn}
 	{BEGIN Ownership_Type_Label_fieldheader}
-	<SPAN {$Ownership_Type_Label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ownership_Type_Label" data-fieldname="Ownership Type Label">
-	{$label DHIS2_ReportingRates Ownership_Type_Label }	{$arrow_icon_Ownership_Type_Label}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ownership_Type_Label" data-fieldname="Ownership Type Label" 
+
+			{$Ownership_Type_Label_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_ReportingRates Ownership_Type_Label }</span>
+					{$arrow_icon_Ownership_Type_Label}
+			</span>
+	</span>
 	{END Ownership_Type_Label_fieldheader}
 {END Ownership_Type_Label_fieldheadercolumn}
 
@@ -1045,9 +1227,18 @@
 	 
 		{BEGIN Settlement_Type_Label_fieldheadercolumn}
 	{BEGIN Settlement_Type_Label_fieldheader}
-	<SPAN {$Settlement_Type_Label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Settlement_Type_Label" data-fieldname="Settlement Type Label">
-	{$label DHIS2_ReportingRates Settlement_Type_Label }	{$arrow_icon_Settlement_Type_Label}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Settlement_Type_Label" data-fieldname="Settlement Type Label" 
+
+			{$Settlement_Type_Label_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_ReportingRates Settlement_Type_Label }</span>
+					{$arrow_icon_Settlement_Type_Label}
+			</span>
+	</span>
 	{END Settlement_Type_Label_fieldheader}
 {END Settlement_Type_Label_fieldheadercolumn}
 
@@ -1070,9 +1261,18 @@
 	 
 		{BEGIN Report_Period_fieldheadercolumn}
 	{BEGIN Report_Period_fieldheader}
-	<SPAN {$Report_Period_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label12" {$item_grid_field_label12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Report_Period" data-fieldname="Report Period">
-	{$label DHIS2_ReportingRates Report_Period }	{$arrow_icon_Report_Period}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="grid_field_label12" {$item_grid_field_label12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Report_Period" data-fieldname="Report Period" 
+
+			{$Report_Period_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_ReportingRates Report_Period }</span>
+					{$arrow_icon_Report_Period}
+			</span>
+	</span>
 	{END Report_Period_fieldheader}
 {END Report_Period_fieldheadercolumn}
 

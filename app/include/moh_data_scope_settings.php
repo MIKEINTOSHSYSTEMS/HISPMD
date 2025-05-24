@@ -251,6 +251,7 @@ $tdatamoh_data_scope[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "scope_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "scope_id";
 
@@ -391,6 +392,7 @@ $tdatamoh_data_scope[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "scope_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "scope_name";
 

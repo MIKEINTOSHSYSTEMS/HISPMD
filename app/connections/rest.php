@@ -82,21 +82,21 @@ class RestConnection {
 	 */
 	function sendJsonRequest( $request ) {
 		$res = &$this->requestWithAuth( $request );
-		if( $res === false ) {
+		if( $res["error"] ) {
 			return false;
 		}
-		if( $res == "" ) {
+		$content = $res["content"];
+		if( $content == "" ) {
 			return "";
 		}
-		$obj = my_json_decode( $res );
-		if( is_array($obj) && count( $obj ) == 0 && trim( $res ) != "[]" ) {
+		$obj = runner_json_decode( $content );
+		if( is_array($obj) && count( $obj ) == 0 && trim( $content ) != "[]" ) {
 			//	unable to parse?
-			$this->error = "Unable to parse JSON result\n\n" . $res;
+			$this->error = "Unable to parse JSON result\n\n" . $content;
 			return false;
 		}
 		return $obj;
 	}
-
 
 	/**
 	 * Returns auth data depending on clientCredentials state
@@ -229,13 +229,13 @@ class RestConnection {
 		
 		
 		$ret = $this->doRequest( $request );
-		if( $ret === false ) {
-			return false;
+		if( $ret["error"] ) {
+			return $ret;
 		}
 		
 		if( $requestKey !== null )
-			$restResultCache[ $requestKey ] = &$ret["content"];
-		return $ret["content"];
+			$restResultCache[ $requestKey ] = &$ret;
+		return $ret;
 	}
 
 	/**
@@ -247,27 +247,9 @@ class RestConnection {
 	 * )
 	 */
 	public function doRequest( $request ) {
-		global $dDebug;
-		if( $dDebug ) {
-			echo "<pre>";
-			print_r( $request );
-			echo "</pre>";
-		}
-		$url = prepareUrl( $request->url, $request->urlParams );
-		//$body = $this->prepareRequestBody( $request );
-		$body = $request->prepareRequestBody();
-		$bodyLength = strlen_bin( $body );
-		if( $bodyLength ) {
-			$request->headers["Content-Length"] = $bodyLength;
-		}
-		$ret = runner_http_request( $url, $body, $request->method, $request->headers );
+		$ret = $request->run();
 		if( $ret["error"] ) {
-			$this->error = $ret["error"];
-			return false;
-		}
-		if( $ret["responseCode"] < 200 || $ret["responseCode"] >= 300 ) {
-			$this->error = $ret["header"] . $ret["content"];
-			return false;
+			$this->error = $ret["errorMessage"];
 		}
 		return $ret;
 	}
@@ -312,7 +294,7 @@ class RestConnection {
 	 */
 	public function requestOauthToken( $request ) {
 		$response = $this->doRequest( $request );
-		if( $response === false ) {
+		if( $response["error"] ) {
 			return false;
 		}
 

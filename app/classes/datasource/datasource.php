@@ -1,5 +1,6 @@
 <?php
 
+
 class DataSource {
 
 	protected $_name;
@@ -40,8 +41,11 @@ class DataSource {
 	 * returns recordset or array
 	 */
 	public function getList( $dc ) {
-
+		$result = $this->getListImpl( $dc );
+		return $this->substituteDataResult( $result );
 	}
+
+	protected function getListImpl( $dc ) {}
 
 	protected function getListData( $dc, $listRequest = true ) {
 
@@ -51,8 +55,11 @@ class DataSource {
 	}
 
 	public function getSingle( $dc ) {
-
+		$result = $this->getSingleImpl( $dc );
+		return $this->substituteDataResult( $result );
 	}
+
+	protected function getSingleImpl( $dc ) {}
 
 	public function updateSingle( $dc, $requireKeys = true  ) {
 
@@ -129,7 +136,7 @@ class DataSource {
 		while( $data = $rs->fetchAssoc() ) {
 			foreach( $dc->extraColumns as $ec ) {
 				if( $ec->field ) {
-					$data[ $ec->alias ] = DataSource::groupValue( $data[ $ec->field ], $this->pSet->getFieldType( $ec->field ), $ec->modifier );
+					$data[ $ec->alias ] = DataSource::groupValue( $data[ $ec->field ], $this->getFieldType( $ec->field ), $ec->modifier );
 				}
 			}
 			$ret[] = $data;
@@ -207,7 +214,7 @@ class DataSource {
 		$modifier = $condition->operands[0]->modifier;
 		$fieldValue = $data[ $fieldName ];
 		if( $modifier ) {
-			$fieldValue = DataSource::groupValue( $fieldValue, $this->pSet->getFieldType( $fieldName ), $modifier );
+			$fieldValue = DataSource::groupValue( $fieldValue, $this->getFieldType( $fieldName ), $modifier );
 		}
 		if( $op == dsopEMPTY ) {
 			return $fieldValue === '' || $fieldValue === null;
@@ -351,7 +358,7 @@ class DataSource {
 		foreach( $dc->totals as $t ) {
 			if( !$t["total"] || $t["total"] == "distinct" ) {
 				$groupFields[] = $t["field"];
-				$groupTypes[ $t["field"] ] = $this->pSet->getFieldType( $t["field"] );
+				$groupTypes[ $t["field"] ] = $this->getFieldType( $t["field"] );
 				$groupModifiers[ $t["field"] ] = $t["modifier"];
 				if( $t["skipEmpty"] )
 					$skipEmptyGroups[ $t["field"] ] = true;
@@ -719,6 +726,9 @@ class DataSource {
 	}
 
 	public function getFieldSubs( $listRequest ) {
+		if( !$this->pSet ) {
+			return array();
+		}
 		$ret = array();
 		foreach( $this->pSet->getFieldsList() as $f ) {
 			$source = $this->pSet->getFieldSource( $f, $listRequest );
@@ -733,6 +743,54 @@ class DataSource {
 		return $ret;
 	}
 
+	/**
+	 * @param DataResult $result
+	 * @return DataResult
+	 */
+	private function substituteDataResult( $result ) {
+		$eventsObject = getEventObject( $this->_name );
+
+		if ( $eventsObject && $eventsObject->exists( "ProcessRecord" ) ) {
+			return new EventDataResult( $result, $eventsObject );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * @return DsCondition
+	 */
+	protected function addKeysToFilter( $dc ) {
+		//	when there are $dc->keys, just add them to the WHERE expression
+		$filter = $dc->filter;
+		if( $dc->keys ) {
+			$filter = DataCondition::_And( array(
+				$dc->filter,
+				DataCondition::FieldsEqual( $this->getKeyFields(), $dc->keys )
+			) );
+		}
+		return $filter;
+
+	}
+
+	protected function getKeyFields() {
+		
+		if( $this->pSet ) {
+			return $this->pSet->getTableKeys();
+		}
+		return array();
+	}
+
+	public function getFieldType( $field ) {
+		if( $this->pSet ) {
+			return $this->pSet->getFieldType( $field );
+		}
+		trigger_error("Unsupported datasource", E_USER_ERROR );
+		return 200;
+	}
+
+
+
 }
 
 require_once( getabspath( 'classes/datasource/table.php') );
@@ -742,5 +800,7 @@ require_once( getabspath( 'classes/datasource/sql.php') );
 require_once( getabspath( 'classes/datasource/rest.php') );
 require_once( getabspath( 'classes/datasource/webtable.php') );
 require_once( getabspath( 'classes/datasource/websql.php') );
+require_once( getabspath( 'classes/datasource/eventdataresult.php') );
+
 
 ?>

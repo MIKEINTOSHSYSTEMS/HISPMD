@@ -39,6 +39,8 @@ $gLoadSearchControls = 30;
 
 $bSubqueriesSupported = true;
 
+$jsonDataFromRequest = null;
+
 $projectPath = '';
 
 $regenerateSessionOnLogin = true;

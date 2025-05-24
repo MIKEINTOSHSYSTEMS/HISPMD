@@ -180,6 +180,9 @@ $tstrOrderBy = "";
 $tdatadhis2_organisation_units[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_organisation_units[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_organisation_units[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_organisation_units[".sqlHead"] = "";
@@ -246,6 +249,7 @@ $tdatadhis2_organisation_units[".hideMobileList"] = array();
 
 		$fdata["strField"] = "organisationUnits/*/displayName";
 
+	
 	
 		$fdata["FullName"] = "displayName";
 
@@ -381,6 +385,7 @@ $tdatadhis2_organisation_units[".hideMobileList"] = array();
 
 		$fdata["strField"] = "organisationUnits/*/id";
 
+	
 	
 		$fdata["FullName"] = "id";
 

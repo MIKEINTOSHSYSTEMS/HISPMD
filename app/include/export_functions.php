@@ -1,6 +1,6 @@
 <?php
 
-require_once getabspath( "plugins/PHPExcel/IOFactory.php" );
+require_once getabspath( "plugins/PHPExcel.php" );
 require_once getabspath( "include/export_functions_excel.php" );
 
 function ExportToExcel($rs, $pageSize, $pageObj)
@@ -47,12 +47,16 @@ function ExportToExcel($rs, $pageSize, $pageObj)
 		countTotals($totals, $totalsFields, $row);
 		
 		$values = array();	
-		foreach( $arrFields as $field )
-		{
-			if( IsBinaryType( $pageObj->pSet->getFieldType( $field ) ) )
+		foreach( $arrFields as $field ) {
+			$type = $pageObj->pSet->getFieldType( $field );
+			
+			if( IsBinaryType( $type ) || IsNumberType( $type ) 
+				&& ( $pageObj->pSet->getViewFormat( $field ) == FORMAT_NUMBER 
+					|| $pageObj->pSet->getViewFormat( $field ) == FORMAT_CURRENCY ) ) {
 				$values[ $field ] = $row[ $field ];
-			else
+			} else {
 				$values[ $field ] = $pageObj->getFormattedFieldValue( $field, $row );
+			}
 		}
 		
 		$eventRes = true;
@@ -68,18 +72,22 @@ function ExportToExcel($rs, $pageSize, $pageObj)
 			$i = 0;
 			foreach( $arrFields as $field )
 			{
+				$arrData[ $field ] = $values[ $field ];
 				$vFormat = $pageObj->pSet->getViewFormat( $field );
+				$type = $pageObj->pSet->getFieldType( $field );
 				
-				if( IsBinaryType( $pageObj->pSet->getFieldType( $field ) ) )
+				if( IsBinaryType( $type ) )
 					$arrDataType[ $field ] = "binary";
 				elseif( $vFormat == FORMAT_DATE_SHORT || $vFormat == FORMAT_DATE_LONG || $vFormat == FORMAT_DATE_TIME )
 					$arrDataType[ $field ] = "date";
 				elseif( $vFormat == FORMAT_FILE_IMAGE )
 					$arrDataType[ $field ] = "file";
+				elseif( FORMAT_NUMBER == $vFormat && IsNumberType( $type ) )
+					$arrDataType[ $field ] = "number";
+				elseif( FORMAT_CURRENCY == $vFormat && IsNumberType( $type ) )
+					$arrDataType[ $field ] = "currency";
 				else
 					$arrDataType[ $field ] = "";
-					
-				$arrData[ $field ] = $values[ $field ];
 			}
 			
 			ExportExcelRecord( $arrData, $arrDataType, $iNumberOfRows, $objPHPExcel, $pageObj );
@@ -124,4 +132,128 @@ function ExportToExcel($rs, $pageSize, $pageObj)
 	ExportExcelTotals( $arrTotal, $arrTotalMessage, ++$iNumberOfRows, $objPHPExcel );
 	ExportExcelSave( GoodFieldName( $pageObj->tName ).".xlsx", "Excel2007", $objPHPExcel );
 }
+
+/**
+ * simplified number formate code
+ */
+function excelNumberFormat( $nDigits ) {
+	global $locale_info;
+	
+	if( $nDigits === false )  
+		$nDigits = $locale_info["LOCALE_IDIGITS"];
+	
+	if( $nDigits > 0 ) {
+		$nFormat = '#,##0.' . str_pad( '', $nDigits, '0');
+	} else {
+		$nFormat = '#,#'.'#';
+	}
+	
+	$positive = $locale_info["LOCALE_SPOSITIVESIGN"]. $nFormat;
+	$negatives = ""; 
+	switch( $locale_info["LOCALE_INEGNUMBER"] ) {
+		case 0:
+			$negative = "(".$nFormat.")";
+			break;
+		case 1:
+			$negative = "-".$nFormat;
+			break;
+		case 2:
+			$negative = "- ".$nFormat;
+			break;
+		case 3:
+			$negative = $nFormat."-";
+			break;
+		case 4:
+			$negative = $nFormat." -";
+			break;
+	}
+	return $positive .";[Red]". $negative;
+}
+
+
+/**
+ * simplified currency formate code
+ */
+function excelCurrencyFormat() {
+	global $locale_info;
+	
+	if( $locale_info["LOCALE_ICURRDIGITS"] > 0 ) {
+		$nFormat = '#,#'.'#0.' . str_pad( '', $locale_info["LOCALE_ICURRDIGITS"], '0');
+	} else {
+		$nFormat = '# #'.'#0';
+	}
+	
+	$curr = "\"".$locale_info["LOCALE_SCURRENCY"]."\"";
+	
+	$positive = "";
+	$negative = "";
+	switch( $locale_info["LOCALE_ICURRENCY"] ) {
+		case 0:
+			$positive = $locale_info["LOCALE_SCURRENCY"].$nFormat;
+			break;
+		case 1:
+			$positive = $nFormat.$locale_info["LOCALE_SCURRENCY"];
+			break;
+		case 2:
+			$positive = $locale_info["LOCALE_SCURRENCY"]." ".$nFormat;
+			break;
+		case 3:
+			$positive = $nFormat." ".$locale_info["LOCALE_SCURRENCY"];
+			break;
+	}
+
+	switch( $locale_info["LOCALE_INEGCURR"] ) {
+		case 0:
+			$negative = "(".$locale_info["LOCALE_SCURRENCY"].$nFormat.")";
+			break;
+		case 1:
+			$negative = "-".$locale_info["LOCALE_SCURRENCY"].$nFormat;
+			break;
+		case 2:
+			$negative = $locale_info["LOCALE_SCURRENCY"]."-".$nFormat;
+			break;
+		case 3:
+			$negative = $locale_info["LOCALE_SCURRENCY"].$nFormat."-";
+			break;
+		case 4:
+			$negative = "(".$nFormat.$locale_info["LOCALE_SCURRENCY"].")";
+			break;
+		case 5:
+			$negative = "-".$nFormat.$locale_info["LOCALE_SCURRENCY"];
+			break;
+		case 6:
+			$negative = $nFormat."-".$locale_info["LOCALE_SCURRENCY"];
+			break;
+		case 7:
+			$negative = $nFormat.$locale_info["LOCALE_SCURRENCY"]."-";
+			break;
+		case 8:
+			$negative = "-".$nFormat." ".$locale_info["LOCALE_SCURRENCY"];
+			break;
+		case 9:
+			$negative = "-".$locale_info["LOCALE_SCURRENCY"]." ".$nFormat;
+			break;
+		case 10:
+			$negative = $nFormat." ".$locale_info["LOCALE_SCURRENCY"]."-";
+			break;
+		case 11:
+			$negative = $locale_info["LOCALE_SCURRENCY"]." ".$nFormat."-";
+			break;
+		case 12:
+			$negative = $locale_info["LOCALE_SCURRENCY"]." -".$nFormat;
+			break;
+		case 13:
+			$negative = $nFormat."- ".$locale_info["LOCALE_SCURRENCY"];
+			break;
+		case 14:
+			$negative = "(".$locale_info["LOCALE_SCURRENCY"]." ".$nFormat.")";
+			break;
+		case 15:
+			$negative = "(".$nFormat." ".$locale_info["LOCALE_SCURRENCY"].")";
+			break;
+	}
+	
+	return $positive .";[Red]". $negative;
+}
+
 ?>

@@ -202,8 +202,7 @@ $tstrOrderBy = "order by created_date desc";
 $tdataadmin_comments[".strOrderBy"] = $tstrOrderBy;
 
 $tdataadmin_comments[".orderindexes"] = array();
-	$tdataadmin_comments[".orderindexes"][] = array(3, (0 ? "ASC" : "DESC"), "created_date");
-
+			$tdataadmin_comments[".orderindexes"][] = array(3, (0 ? "ASC" : "DESC"), "created_date");
 
 
 $tdataadmin_comments[".sqlHead"] = "SELECT \"name\", 	\"moderated\", 	\"created_date\", 	\"ArticleID\", 	\"comment\", 	\"CommentID\", 	\"email\"";
@@ -292,6 +291,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"name\"";
 
@@ -430,6 +430,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "moderated";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"moderated\"";
 
@@ -565,6 +566,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "created_date";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"created_date\"";
 
@@ -701,6 +703,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 		$fdata["strField"] = "ArticleID";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
@@ -864,6 +867,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 		$fdata["strField"] = "comment";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"comment\"";
 
@@ -1005,6 +1009,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 		$fdata["strField"] = "CommentID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"CommentID\"";
 
@@ -1143,6 +1148,7 @@ $tdataadmin_comments[".hideMobileList"] = array();
 
 		$fdata["strField"] = "email";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"email\"";

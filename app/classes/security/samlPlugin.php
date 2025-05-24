@@ -49,6 +49,7 @@ class SecurityPluginSaml extends SecurityPlugin {
 		}
 
 		$ret = array( "id" => $this->code . $payload["id"] );
+		$ret[ "raw" ] = $payload;
 		if( $this->idClaim ) {
 			$ret["id"] = $this->code . $payload[ $this->idClaim ];
 		}

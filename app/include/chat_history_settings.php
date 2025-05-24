@@ -252,6 +252,7 @@ $tdatachat_history[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "id";
 
@@ -392,6 +393,7 @@ $tdatachat_history[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "chat_history";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "chat_history";
 

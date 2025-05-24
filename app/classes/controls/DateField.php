@@ -8,26 +8,8 @@ class DateField extends DateTimeControl
 		$this->format = EDIT_FORMAT_DATE;
 	}
 
-	function addJSFiles()
-	{
-		global $locale_info;
-		$dateEditType = $this->getDateEditType();
-
-	}
-
-	function addCSSFiles()
-	{
-		$dateEditType = $this->getDateEditType();
-		if( $dateEditType == EDIT_DATE_SIMPLE_INLINE || $dateEditType == EDIT_DATE_DD_INLINE )
-		{
-			$this->pageObject->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->pageObject->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
-
-		if ( $this->pageObject->isBootstrap() )
-		{
-			$this->pageObject->AddCSSFile("include/bootstrap/css/bootstrap-datetimepicker.min.css");
-		}
+	function addCSSFiles() {
+		$this->pageObject->AddCSSFile("include/bootstrap/css/bootstrap-datetimepicker.min.css");
 	}
 
 	function getProjectSettings() 
@@ -42,22 +24,22 @@ class DateField extends DateTimeControl
 	{
 		if( !$pSet )
 			$pSet = $this->getProjectSettings();
+
 		$dateEditType = $pSet->getDateEditType($this->field);
-		if( $this->pageObject->isBootstrap() )
+
+		//	search panel control
+		if( !$this->forSpreadsheetGrid 
+			&& ( ( $this->pageObject->pageType == PAGE_LIST || $this->pageObject->pageType == PAGE_CHART || $this->pageObject->pageType == PAGE_REPORT) 
+			|| $this->pageObject->pageType == PAGE_SEARCH && $this->pageObject->mode == SEARCH_LOAD_CONTROL) )
 		{
-			//	search panel control
-			if( !$this->forSpreadsheetGrid 
-				&& ( ( $this->pageObject->pageType == PAGE_LIST || $this->pageObject->pageType == PAGE_CHART || $this->pageObject->pageType == PAGE_REPORT) 
-				|| $this->pageObject->pageType == PAGE_SEARCH && $this->pageObject->mode == SEARCH_LOAD_CONTROL) )
-			{
-				if( $dateEditType == EDIT_DATE_DD )
-					return EDIT_DATE_SIMPLE;
-				if( $dateEditType == EDIT_DATE_DD_DP )
-					return EDIT_DATE_SIMPLE_DP;
-				if( $dateEditType == EDIT_DATE_DD_INLINE )
-					return EDIT_DATE_SIMPLE_INLINE;
-			}
+			if( $dateEditType == EDIT_DATE_DD )
+				return EDIT_DATE_SIMPLE;
+			if( $dateEditType == EDIT_DATE_DD_DP )
+				return EDIT_DATE_SIMPLE_DP;
+			if( $dateEditType == EDIT_DATE_DD_INLINE )
+				return EDIT_DATE_SIMPLE_INLINE;
 		}
+		
 		return $dateEditType;
 	}
 
@@ -83,9 +65,7 @@ class DateField extends DateTimeControl
 		if( !$time )
 			$time = array(0, 0, 0, 0, 0, 0);
 
-		$classString = '';
-		if( $this->pageObject->isBootstrap() )
-			$classString = ' form-control';
+		$classString = ' form-control';
 
 		$dp = 0;
 		$hasImgCal = true;
@@ -119,19 +99,12 @@ class DateField extends DateTimeControl
 				$ret= '<input '.$this->getPlaceholderAttr().' id="'.$this->cfield.'" '.$this->inputStyle.' class="'.$classString.'" type="Text" name="'.$this->cfield.'" value="'.$ovalue.'">';								
 				$ret.= '<input id="ts'.$this->cfield.'" type="Hidden" name="ts'.$this->cfield.'" value="'.$ovalue1.'">';
 				
-				if( $this->pageObject->isBootstrap() )
-					$ret .= '<span class="input-group-addon" id="imgCal_'.$this->cfield.'"><span class="glyphicon glyphicon-calendar"></span></span>';
-				elseif ( $hasImgCal )
-					$ret .= '<a href="#" id="imgCal_'.$this->cfield.'" data-icon="calendar" title="Click Here to Pick up the date"></a>';
+				$ret .= '<span class="input-group-addon" id="imgCal_'.$this->cfield.'"><span class="glyphicon glyphicon-calendar"></span></span>';
 
-				if( $this->pageObject->isBootstrap() )
-				{
-					if ( isRTL() )
-					{
-						$ret .= "<span></span>"; // for bootstrap calend icon anomaly
-					}
-					$ret = '<div class="input-group date">' . $ret . '</div>';
-				}
+				if ( isRTL() )
+					$ret .= "<span></span>"; // for bootstrap calend icon anomaly
+				
+				$ret = '<div class="input-group date">' . $ret . '</div>';
 
 				echo $ret;
 			break;
@@ -182,11 +155,7 @@ class DateField extends DateTimeControl
 				else
 					$ret = $retyear.$space.$retmonth.$space.$retday;
 				
-				$setHiddenElem = 'type=hidden';
-				if ( $this->pageObject->isBootstrap() )
-				{ 
-					$setHiddenElem = 'class="'. $classString.' hiddenPickerElement"';
-				}
+				$setHiddenElem = 'class="'. $classString.' hiddenPickerElement"';
 				
 				if($time[0] && $time[1] && $time[2])
 					$ret.="<input id=\"".$this->cfield."\" ".$setHiddenElem." name=\"".$this->cfield."\" value=\"".$time[0]."-".$time[1]."-".$time[2]."\">";
@@ -194,19 +163,11 @@ class DateField extends DateTimeControl
 					$ret.="<input id=\"".$this->cfield."\" ".$setHiddenElem." name=\"".$this->cfield."\" value=\"\">";
 
 				// calendar handling for three DD
-				if($dp)
-				{
-					if( $this->pageObject->isBootstrap() ) 											
-						$ret .= '<button class="btn btn-default" id="imgCal_'.$this->cfield.'" aria-hidden=true><span class="glyphicon glyphicon-calendar"  ></span></button>';				
-					else {
-						$ret .= '<a href="#" id="imgCal_'.$this->cfield.'" data-icon="calendar" title="Click Here to Pick up the date"></a>';
-						$ret .= '<input id="ts'.$this->cfield.'" type=hidden name="ts'.$this->cfield.'" value="'.$time[2].'-'.$time[1].'-'.$time[0].'">';
-					}					
+				if( $dp ) {					
+					$ret .= '<button class="btn btn-default" id="imgCal_'.$this->cfield.'" aria-hidden=true><span class="glyphicon glyphicon-calendar"  ></span></button>';				
 				}
 
-				if( $this->pageObject->isBootstrap() )
-					$ret = '<span class="bs-date-control form-inline">' . $ret . '</span>';
-
+				$ret = '<span class="bs-date-control form-inline">' . $ret . '</span>';
 				echo $ret;
 			break;
 
@@ -328,7 +289,5 @@ class DateField extends DateTimeControl
 		}
 		return parent::getBasicFieldCondition( $searchFor, $strSearchOption, $searchFor2, $etype );
 	}
-	
-
 }
 ?>

@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -88,7 +231,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +240,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -249,6 +392,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -1968,9 +2114,18 @@
 	 
 		{BEGIN data_id_fieldheadercolumn}
 	{BEGIN data_id_fieldheader}
-	<SPAN {$data_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_id" data-fieldname="data_id">
-	{$label public_moh_indicator_data data_id }	{$arrow_icon_data_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_id" data-fieldname="data_id" 
+
+			{$data_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data data_id }</span>
+					{$arrow_icon_data_id}
+			</span>
+	</span>
 	{END data_id_fieldheader}
 {END data_id_fieldheadercolumn}
 
@@ -1993,9 +2148,18 @@
 	 
 		{BEGIN indicator_group_id_fieldheadercolumn}
 	{BEGIN indicator_group_id_fieldheader}
-	<SPAN {$indicator_group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id">
-	{$label public_moh_indicator_data indicator_group_id }	{$arrow_icon_indicator_group_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_group_id" data-fieldname="indicator_group_id" 
+
+			{$indicator_group_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data indicator_group_id }</span>
+					{$arrow_icon_indicator_group_id}
+			</span>
+	</span>
 	{END indicator_group_id_fieldheader}
 {END indicator_group_id_fieldheadercolumn}
 
@@ -2018,9 +2182,18 @@
 	 
 		{BEGIN indicator_id_fieldheadercolumn}
 	{BEGIN indicator_id_fieldheader}
-	<SPAN {$indicator_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id">
-	{$label public_moh_indicator_data indicator_id }	{$arrow_icon_indicator_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_id" data-fieldname="indicator_id" 
+
+			{$indicator_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data indicator_id }</span>
+					{$arrow_icon_indicator_id}
+			</span>
+	</span>
 	{END indicator_id_fieldheader}
 {END indicator_id_fieldheadercolumn}
 
@@ -2043,9 +2216,18 @@
 	 
 		{BEGIN data_source_id_fieldheadercolumn}
 	{BEGIN data_source_id_fieldheader}
-	<SPAN {$data_source_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id">
-	{$label public_moh_indicator_data data_source_id }	{$arrow_icon_data_source_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_id" data-fieldname="data_source_id" 
+
+			{$data_source_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data data_source_id }</span>
+					{$arrow_icon_data_source_id}
+			</span>
+	</span>
 	{END data_source_id_fieldheader}
 {END data_source_id_fieldheadercolumn}
 
@@ -2068,9 +2250,18 @@
 	 
 		{BEGIN data_source_detail_fieldheadercolumn}
 	{BEGIN data_source_detail_fieldheader}
-	<SPAN {$data_source_detail_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_detail" data-fieldname="data_source_detail">
-	{$label public_moh_indicator_data data_source_detail }	{$arrow_icon_data_source_detail}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_source_detail" data-fieldname="data_source_detail" 
+
+			{$data_source_detail_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data data_source_detail }</span>
+					{$arrow_icon_data_source_detail}
+			</span>
+	</span>
 	{END data_source_detail_fieldheader}
 {END data_source_detail_fieldheadercolumn}
 
@@ -2093,9 +2284,18 @@
 	 
 		{BEGIN scope_id_fieldheadercolumn}
 	{BEGIN scope_id_fieldheader}
-	<SPAN {$scope_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="scope_id" data-fieldname="scope_id">
-	{$label public_moh_indicator_data scope_id }	{$arrow_icon_scope_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="scope_id" data-fieldname="scope_id" 
+
+			{$scope_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data scope_id }</span>
+					{$arrow_icon_scope_id}
+			</span>
+	</span>
 	{END scope_id_fieldheader}
 {END scope_id_fieldheadercolumn}
 
@@ -2118,9 +2318,18 @@
 	 
 		{BEGIN region_id_fieldheadercolumn}
 	{BEGIN region_id_fieldheader}
-	<SPAN {$region_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id">
-	{$label public_moh_indicator_data region_id }	{$arrow_icon_region_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="region_id" data-fieldname="region_id" 
+
+			{$region_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data region_id }</span>
+					{$arrow_icon_region_id}
+			</span>
+	</span>
 	{END region_id_fieldheader}
 {END region_id_fieldheadercolumn}
 
@@ -2143,9 +2352,18 @@
 	 
 		{BEGIN unit_id_fieldheadercolumn}
 	{BEGIN unit_id_fieldheader}
-	<SPAN {$unit_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id">
-	{$label public_moh_indicator_data unit_id }	{$arrow_icon_unit_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="unit_id" data-fieldname="unit_id" 
+
+			{$unit_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data unit_id }</span>
+					{$arrow_icon_unit_id}
+			</span>
+	</span>
 	{END unit_id_fieldheader}
 {END unit_id_fieldheadercolumn}
 
@@ -2168,9 +2386,18 @@
 	 
 		{BEGIN facility_type_id_fieldheadercolumn}
 	{BEGIN facility_type_id_fieldheader}
-	<SPAN {$facility_type_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type_id" data-fieldname="facility_type_id">
-	{$label public_moh_indicator_data facility_type_id }	{$arrow_icon_facility_type_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="facility_type_id" data-fieldname="facility_type_id" 
+
+			{$facility_type_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data facility_type_id }</span>
+					{$arrow_icon_facility_type_id}
+			</span>
+	</span>
 	{END facility_type_id_fieldheader}
 {END facility_type_id_fieldheadercolumn}
 
@@ -2193,9 +2420,18 @@
 	 
 		{BEGIN gender_sex_fieldheadercolumn}
 	{BEGIN gender_sex_fieldheader}
-	<SPAN {$gender_sex_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gender_sex" data-fieldname="gender_sex">
-	{$label public_moh_indicator_data gender_sex }	{$arrow_icon_gender_sex}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gender_sex" data-fieldname="gender_sex" 
+
+			{$gender_sex_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data gender_sex }</span>
+					{$arrow_icon_gender_sex}
+			</span>
+	</span>
 	{END gender_sex_fieldheader}
 {END gender_sex_fieldheadercolumn}
 
@@ -2218,9 +2454,18 @@
 	 
 		{BEGIN value_fieldheadercolumn}
 	{BEGIN value_fieldheader}
-	<SPAN {$value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value">
-	{$label public_moh_indicator_data value }	{$arrow_icon_value}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="value" data-fieldname="value" 
+
+			{$value_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data value }</span>
+					{$arrow_icon_value}
+			</span>
+	</span>
 	{END value_fieldheader}
 {END value_fieldheadercolumn}
 
@@ -2243,9 +2488,18 @@
 	 
 		{BEGIN data_representation_fieldheadercolumn}
 	{BEGIN data_representation_fieldheader}
-	<SPAN {$data_representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_representation" data-fieldname="data_representation">
-	{$label public_moh_indicator_data data_representation }	{$arrow_icon_data_representation}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="data_representation" data-fieldname="data_representation" 
+
+			{$data_representation_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data data_representation }</span>
+					{$arrow_icon_data_representation}
+			</span>
+	</span>
 	{END data_representation_fieldheader}
 {END data_representation_fieldheadercolumn}
 
@@ -2268,9 +2522,18 @@
 	 
 		{BEGIN period_id_fieldheadercolumn}
 	{BEGIN period_id_fieldheader}
-	<SPAN {$period_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id">
-	{$label public_moh_indicator_data period_id }	{$arrow_icon_period_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period_id" data-fieldname="period_id" 
+
+			{$period_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data period_id }</span>
+					{$arrow_icon_period_id}
+			</span>
+	</span>
 	{END period_id_fieldheader}
 {END period_id_fieldheadercolumn}
 
@@ -2293,9 +2556,18 @@
 	 
 		{BEGIN year_fieldheadercolumn}
 	{BEGIN year_fieldheader}
-	<SPAN {$year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year">
-	{$label public_moh_indicator_data year }	{$arrow_icon_year}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="year" data-fieldname="year" 
+
+			{$year_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data year }</span>
+					{$arrow_icon_year}
+			</span>
+	</span>
 	{END year_fieldheader}
 {END year_fieldheadercolumn}
 
@@ -2318,9 +2590,18 @@
 	 
 		{BEGIN month_id_fieldheadercolumn}
 	{BEGIN month_id_fieldheader}
-	<SPAN {$month_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="month_id" data-fieldname="month_id">
-	{$label public_moh_indicator_data month_id }	{$arrow_icon_month_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="month_id" data-fieldname="month_id" 
+
+			{$month_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data month_id }</span>
+					{$arrow_icon_month_id}
+			</span>
+	</span>
 	{END month_id_fieldheader}
 {END month_id_fieldheadercolumn}
 
@@ -2343,9 +2624,18 @@
 	 
 		{BEGIN quarter_id_fieldheadercolumn}
 	{BEGIN quarter_id_fieldheader}
-	<SPAN {$quarter_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="quarter_id" data-fieldname="quarter_id">
-	{$label public_moh_indicator_data quarter_id }	{$arrow_icon_quarter_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="quarter_id" data-fieldname="quarter_id" 
+
+			{$quarter_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data quarter_id }</span>
+					{$arrow_icon_quarter_id}
+			</span>
+	</span>
 	{END quarter_id_fieldheader}
 {END quarter_id_fieldheadercolumn}
 
@@ -2367,9 +2657,20 @@
 
 	 
 		{BEGIN period_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period" data-fieldname="period">
-	{$label public_moh_indicator_data period }	</span>
+	{BEGIN period_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="period" data-fieldname="period" 
+
+			{$period_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data period }</span>
+					{$arrow_icon_period}
+			</span>
+	</span>
+	{END period_fieldheader}
 {END period_fieldheadercolumn}
 
 	
@@ -2391,9 +2692,18 @@
 	 
 		{BEGIN indicator_target_fieldheadercolumn}
 	{BEGIN indicator_target_fieldheader}
-	<SPAN {$indicator_target_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_target" data-fieldname="indicator_target">
-	{$label public_moh_indicator_data indicator_target }	{$arrow_icon_indicator_target}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_target" data-fieldname="indicator_target" 
+
+			{$indicator_target_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data indicator_target }</span>
+					{$arrow_icon_indicator_target}
+			</span>
+	</span>
 	{END indicator_target_fieldheader}
 {END indicator_target_fieldheadercolumn}
 
@@ -2416,9 +2726,18 @@
 	 
 		{BEGIN indicator_target_year_fieldheadercolumn}
 	{BEGIN indicator_target_year_fieldheader}
-	<SPAN {$indicator_target_year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_target_year" data-fieldname="indicator_target_year">
-	{$label public_moh_indicator_data indicator_target_year }	{$arrow_icon_indicator_target_year}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_target_year" data-fieldname="indicator_target_year" 
+
+			{$indicator_target_year_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data indicator_target_year }</span>
+					{$arrow_icon_indicator_target_year}
+			</span>
+	</span>
 	{END indicator_target_year_fieldheader}
 {END indicator_target_year_fieldheadercolumn}
 
@@ -2441,9 +2760,18 @@
 	 
 		{BEGIN indicator_baseline_fieldheadercolumn}
 	{BEGIN indicator_baseline_fieldheader}
-	<SPAN {$indicator_baseline_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_baseline" data-fieldname="indicator_baseline">
-	{$label public_moh_indicator_data indicator_baseline }	{$arrow_icon_indicator_baseline}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_baseline" data-fieldname="indicator_baseline" 
+
+			{$indicator_baseline_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data indicator_baseline }</span>
+					{$arrow_icon_indicator_baseline}
+			</span>
+	</span>
 	{END indicator_baseline_fieldheader}
 {END indicator_baseline_fieldheadercolumn}
 
@@ -2466,9 +2794,18 @@
 	 
 		{BEGIN indicator_baseline_year_fieldheadercolumn}
 	{BEGIN indicator_baseline_year_fieldheader}
-	<SPAN {$indicator_baseline_year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_baseline_year" data-fieldname="indicator_baseline_year">
-	{$label public_moh_indicator_data indicator_baseline_year }	{$arrow_icon_indicator_baseline_year}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="indicator_baseline_year" data-fieldname="indicator_baseline_year" 
+
+			{$indicator_baseline_year_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_moh_indicator_data indicator_baseline_year }</span>
+					{$arrow_icon_indicator_baseline_year}
+			</span>
+	</span>
 	{END indicator_baseline_year_fieldheader}
 {END indicator_baseline_year_fieldheadercolumn}
 

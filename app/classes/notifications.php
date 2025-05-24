@@ -2,6 +2,13 @@
 
 define('ntMESSAGE', 0 );
 define('ntUSERDATA', 1 );
+define('ntPERMISSIONS', 2 );
+
+// Permissions type
+define('ntPermTypeUser', 0 );
+define('ntPermTypeGroup', 1 );
+define('ntPermTypePage', 2 );
+define('ntPermTypeNone', 3 );
 
 class RunnerNotifications {
 	var $enabled;
@@ -24,7 +31,7 @@ class RunnerNotifications {
 		$this->dataSource = getDbTableDataSource( $this->table["table"], $this->table["connId"] );
 	}
 
-	protected function fetchMessages( $dc ) {
+	protected function fetchRecords( $dc, $keys ) {
 		$rs = $this->dataSource->getList( $dc );
 		if( !$rs ) {
 			return array();
@@ -32,14 +39,32 @@ class RunnerNotifications {
 		$ret = array();
 		while( $data = $rs->fetchAssoc() ) {
 			$note = array();
-			$keys = array( "message", "title", "url", "icon", "created", "expire", "id" );
 			foreach( $keys as $k ) {
 				$note[ $k ] = $data[ $k ];
 			}
+			if( $data["type"] == 0 ) {
+				//	decode message field if needed
+				//	this function is used for both messages and permissions
+				//	only decode messages
+				if( substr( $note["message"], 0, 1) == '{' ) {
+					$messageData = @runner_json_decode( $note["message"] );
+					if( $messageData ) {
+						$note["message"] = $messageData["message"];
+						$note["newWindow"] = $messageData["newWindow"];
+					}
+				}
+			}
+
 			$ret[]= $note;
 		}
 		return $ret;
 	}
+
+	protected function fetchMessages( $dc ) {
+		$keys = array( "message", "title", "url", "icon", "created", "expire", "id" );
+		return $this->fetchRecords( $dc, $keys );
+	}
+
 	public function getUpdates( $lastId ) {
 		if( !$this->enabled ) {
 			return array();
@@ -56,7 +81,9 @@ class RunnerNotifications {
 			"dir" => "DESC"
 		);
 		$dc->reccount = $this->messageLimit;
-		return $this->fetchMessages( $dc );
+
+		$messages = $this->fetchMessages( $dc );
+		return $this->applyPermissionsFilter( $messages );
 
 	}
 
@@ -75,7 +102,9 @@ class RunnerNotifications {
 			"dir" => "DESC"
 		);
 		$dc->reccount = $this->messageLimit;
-		return $this->fetchMessages( $dc );
+
+		$messages = $this->fetchMessages( $dc );
+		return $this->applyPermissionsFilter( $messages );
 	}
 
 	/**
@@ -204,11 +233,52 @@ class RunnerNotifications {
 	}
 
 	public function create( $params ) {
+		$ret = $this->dataSource->insertSingle( $this->getAddMessageCommand( $params ) );
+
+		if( !$ret ) {
+			return false;
+		}
+		
+		$messageId = $ret["id"];
+		$permissions = $params["permissions"];
+		$permissionsType = $this->permissionsType( $permissions );
+		if( $permissionsType == ntPermTypeGroup || $permissionsType == ntPermTypePage ) {
+			$permissionsRet = $this->dataSource->insertSingle( $this->getAddPermissionsCommand( $messageId, $permissions ) );
+			if( !$permissionsRet ) {
+				return false;
+			}
+		}
+
+		return $messageId;
+	}
+
+	protected function getAddMessageCommand( $params ) {
 		$dc = new DsCommand;
-		$keys = array( "message", "user", "provider", "title", "url", "icon", "expire" );
+		
+		$keys = array( "message", "title", "url", "icon", "expire" );
+
 		foreach( $keys as $k ) {
 			if( array_key_exists( $k, $params ) ) {
 				$dc->values[ $k ] = $params[ $k ];
+			}
+		}
+
+		$messageData = array( 
+			"message" => @$params["message"],
+			"newWindow" => @$params["newWindow"]
+		);
+		$dc->values[ "message" ] = runner_json_encode( $messageData );
+
+		$permissions = $params["permissions"];
+		$permissionsType = $this->permissionsType( $permissions );
+
+		$userKeys = $permissionsType == ntPermTypeUser 
+			? array( "user", "provider" )
+			: array();
+
+		foreach( $userKeys as $k ) {
+			if( array_key_exists( $k, $permissions ) ) {
+				$dc->values[ $k ] = $permissions[ $k ];
 			}
 		}
 		if( $params["expire"] && is_int( $params["expire"] ) ) {
@@ -218,14 +288,117 @@ class RunnerNotifications {
 		}
 		$dc->values["created"] = now();
 		$dc->values["type"] = ntMESSAGE;
-		$ret = $this->dataSource->insertSingle( $dc );
-		if( $ret ) {
-			return $ret["id"];
-		}
-		return false;
-	
+
+		return $dc;
 	}
 
+	/**
+	 * Returns DsCommand for adding permissions row to Notifications datasource ( title references notification id )
+	 */
+	protected function getAddPermissionsCommand( $messageId, $permissions ) {
+		$dc = new DsCommand;
+		$dc->values["title"] = $messageId;
+		$dc->values["type"] = ntPERMISSIONS;
+		$dc->values["message"] = my_json_encode( $permissions );
+		return $dc;
+	}
+
+	/**
+	 * Fetch permissions records for all messages in $msgIdList
+	 */
+	protected function getPermissions( $msgIdList ) {
+		$dc = new DsCommand;
+		$inListCondition = count( $msgIdList ) > 0 ? DataCondition::FieldInList( "title", $msgIdList ) : DataCondition::_False();
+		$dc->filter = DataCondition::_And( 
+			array(
+				$inListCondition,
+				$this->typeCondition( ntPERMISSIONS )
+			)
+		);
+		$keys = array( "message", "title" );
+		return $this->fetchRecords( $dc, $keys );
+	}
+
+	/**
+	 * Filters each message with permissions
+	 */
+	protected function applyPermissionsFilter( $messages ) {
+		$msgIdList = array();
+		// message id => message
+		$msgMap = array();
+		foreach( $messages as $msg ) {
+			$msgId = $msg["id"];
+			$msgIdList[] = $msgId;
+			$msgMap[$msgId] = $msg;
+		}
+
+		$permissionsRecordsList = $this->getPermissions( $msgIdList );
+
+		// message id => permissions
+		$msgPermissionsMap = array();
+		foreach( $permissionsRecordsList as $permissionsRecord ) {
+			$messageId = $permissionsRecord["title"];
+			$permissions = my_json_decode( $permissionsRecord["message"] );
+			$msgPermissionsMap[$messageId] = $permissions;
+		}
+
+		$returnMessages = array();
+		foreach( $msgMap as $messageId => $message ) {
+			$permissions = $msgPermissionsMap[$messageId];
+			if( $this->userFitsPermissions( $permissions ) ) {
+				$returnMessages[] = $message;
+			}
+		}
+
+		return $returnMessages;
+	}
+
+	protected function userFitsPermissions( $permissions ) {
+		$permissionsType = $this->permissionsType( $permissions );
+
+		if( $permissionsType == ntPermTypeNone ) {
+			return true;
+		}
+
+		if( $permissionsType == ntPermTypePage ) {
+			$table = $permissions["table"];
+			$page = $permissions["page"];
+			return Security::userCanSeePage( $table, $page );
+		}
+
+		if( $permissionsType == ntPermTypeGroup ) {
+			$group = $permissions["group"];
+			$userGroups = Security::getUserGroups();
+			return $userGroups[$group];
+		}
+
+		if( $permissionsType == ntPermTypeUser ) {
+			// handled in typeCondition 
+			return true;
+		}
+
+		return false;
+	}
+
+	protected function permissionsType( $permissions ) {
+		if( is_null( $permissions ) || !is_array( $permissions ) ) {
+			return ntPermTypeNone;
+		}
+
+		if( $permissions["user"] ) {
+			return ntPermTypeUser;
+		}
+
+		if( $permissions["group"] ) {
+			return ntPermTypeGroup;
+		}
+
+		if( $permissions["table"] && $permissions["page"] ) {
+			return ntPermTypePage;
+		}
+
+		return ntPermTypeNone;
+	}
 }
 
 ?>

@@ -228,11 +228,11 @@ if (count(GetUserGroups()) > 1){
 
 $report_name = ( isset( $_SESSION['webreports']['settings']['name'] ) ) ?
 	$_SESSION['webreports']['settings']['name'] :
-	GoodFieldName(@$_SESSION['webreports']['tables'][0]).'_'.CheckLastID('report');
+	GoodFieldName(@$_SESSION['webreports']['tables'][0]).'_'.CheckLastID( WR_REPORT );
 
 $report_title = ( isset( $_SESSION['webreports']['settings']['title'] ) ) ?
 	$_SESSION['webreports']['settings']['title'] :
-	@$_SESSION['webreports']['tables'][0].' Report '.CheckLastID('report');
+	@$_SESSION['webreports']['tables'][0].' Report '.CheckLastID( WR_REPORT );
 
 
 	$show_status = 'style="display:line;"';

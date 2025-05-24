@@ -262,6 +262,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "resource_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "resource_id";
 
@@ -402,6 +403,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "year";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"year\"";
 
@@ -542,6 +544,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "amount";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "amount";
 
@@ -681,6 +684,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "utilized";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "utilized";
 
@@ -820,6 +824,7 @@ $tdatafinancialresources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_id";
 

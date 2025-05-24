@@ -74,7 +74,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -87,7 +230,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +239,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -131,6 +274,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -324,15 +470,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_group_id}  r-vertical-field" 
-	data-signal-error-for="indicator_group_id{$id}" 
+	data-signal-error-for="indicator_group_id{$id}" {$required_attr_indicator_group_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="indicator_group_id" data-fieldname="indicator_group_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_indicator_group_id}">
 		{BEGIN indicator_group_id_label}{$label public_moh_indicator_data indicator_group_id }{END indicator_group_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$indicator_group_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="indicator_group_id">
+	<div class="r-edit-tooltip" data-helpfor="indicator_group_id" {$tooltipAttr public_moh_indicator_data indicator_group_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data indicator_group_id }		</div>
 	</div>
@@ -363,15 +510,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_id}  r-vertical-field" 
-	data-signal-error-for="indicator_id{$id}" 
+	data-signal-error-for="indicator_id{$id}" {$required_attr_indicator_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="indicator_id" data-fieldname="indicator_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_indicator_id}">
 		{BEGIN indicator_id_label}{$label public_moh_indicator_data indicator_id }{END indicator_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$indicator_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="indicator_id">
+	<div class="r-edit-tooltip" data-helpfor="indicator_id" {$tooltipAttr public_moh_indicator_data indicator_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data indicator_id }		</div>
 	</div>
@@ -401,15 +549,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_data_source_id}  r-vertical-field" 
-	data-signal-error-for="data_source_id{$id}" 
+	data-signal-error-for="data_source_id{$id}" {$required_attr_data_source_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="data_source_id" data-fieldname="data_source_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_data_source_id}">
 		{BEGIN data_source_id_label}{$label public_moh_indicator_data data_source_id }{END data_source_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$data_source_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="data_source_id">
+	<div class="r-edit-tooltip" data-helpfor="data_source_id" {$tooltipAttr public_moh_indicator_data data_source_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data data_source_id }		</div>
 	</div>
@@ -422,15 +571,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_data_source_detail}  r-vertical-field" 
-	data-signal-error-for="data_source_detail{$id}" 
+	data-signal-error-for="data_source_detail{$id}" {$required_attr_data_source_detail}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="data_source_detail" data-fieldname="data_source_detail" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_data_source_detail}">
 		{BEGIN data_source_detail_label}{$label public_moh_indicator_data data_source_detail }{END data_source_detail_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$data_source_detail_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="data_source_detail">
+	<div class="r-edit-tooltip" data-helpfor="data_source_detail" {$tooltipAttr public_moh_indicator_data data_source_detail } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data data_source_detail }		</div>
 	</div>
@@ -463,15 +613,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_scope_id}  r-vertical-field" 
-	data-signal-error-for="scope_id{$id}" 
+	data-signal-error-for="scope_id{$id}" {$required_attr_scope_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="scope_id" data-fieldname="scope_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_scope_id}">
 		{BEGIN scope_id_label}{$label public_moh_indicator_data scope_id }{END scope_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$scope_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="scope_id">
+	<div class="r-edit-tooltip" data-helpfor="scope_id" {$tooltipAttr public_moh_indicator_data scope_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data scope_id }		</div>
 	</div>
@@ -484,15 +635,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_region_id}  r-vertical-field" 
-	data-signal-error-for="region_id{$id}" 
+	data-signal-error-for="region_id{$id}" {$required_attr_region_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_region_id}">
 		{BEGIN region_id_label}{$label public_moh_indicator_data region_id }{END region_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$region_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="region_id">
+	<div class="r-edit-tooltip" data-helpfor="region_id" {$tooltipAttr public_moh_indicator_data region_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data region_id }		</div>
 	</div>
@@ -523,15 +675,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_unit_id}  r-vertical-field" 
-	data-signal-error-for="unit_id{$id}" 
+	data-signal-error-for="unit_id{$id}" {$required_attr_unit_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="unit_id" data-fieldname="unit_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_unit_id}">
 		{BEGIN unit_id_label}{$label public_moh_indicator_data unit_id }{END unit_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$unit_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="unit_id">
+	<div class="r-edit-tooltip" data-helpfor="unit_id" {$tooltipAttr public_moh_indicator_data unit_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data unit_id }		</div>
 	</div>
@@ -562,15 +715,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_facility_type_id}  r-vertical-field" 
-	data-signal-error-for="facility_type_id{$id}" 
+	data-signal-error-for="facility_type_id{$id}" {$required_attr_facility_type_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="facility_type_id" data-fieldname="facility_type_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_facility_type_id}">
 		{BEGIN facility_type_id_label}{$label public_moh_indicator_data facility_type_id }{END facility_type_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$facility_type_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="facility_type_id">
+	<div class="r-edit-tooltip" data-helpfor="facility_type_id" {$tooltipAttr public_moh_indicator_data facility_type_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data facility_type_id }		</div>
 	</div>
@@ -604,15 +758,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_period_id}  r-vertical-field" 
-	data-signal-error-for="period_id{$id}" 
+	data-signal-error-for="period_id{$id}" {$required_attr_period_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="period_id" data-fieldname="period_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_period_id}">
 		{BEGIN period_id_label}{$label public_moh_indicator_data period_id }{END period_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$period_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="period_id">
+	<div class="r-edit-tooltip" data-helpfor="period_id" {$tooltipAttr public_moh_indicator_data period_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data period_id }		</div>
 	</div>
@@ -642,15 +797,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_year}  r-vertical-field" 
-	data-signal-error-for="year{$id}" 
+	data-signal-error-for="year{$id}" {$required_attr_year}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="year" data-fieldname="year" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_year}">
 		{BEGIN year_label}{$label public_moh_indicator_data year }{END year_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$year_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="year">
+	<div class="r-edit-tooltip" data-helpfor="year" {$tooltipAttr public_moh_indicator_data year } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data year }		</div>
 	</div>
@@ -663,15 +819,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_quarter_id}  r-vertical-field" 
-	data-signal-error-for="quarter_id{$id}" 
+	data-signal-error-for="quarter_id{$id}" {$required_attr_quarter_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="quarter_id" data-fieldname="quarter_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_quarter_id}">
 		{BEGIN quarter_id_label}{$label public_moh_indicator_data quarter_id }{END quarter_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$quarter_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="quarter_id">
+	<div class="r-edit-tooltip" data-helpfor="quarter_id" {$tooltipAttr public_moh_indicator_data quarter_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data quarter_id }		</div>
 	</div>
@@ -684,15 +841,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_month_id}  r-vertical-field" 
-	data-signal-error-for="month_id{$id}" 
+	data-signal-error-for="month_id{$id}" {$required_attr_month_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="month_id" data-fieldname="month_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_month_id}">
 		{BEGIN month_id_label}{$label public_moh_indicator_data month_id }{END month_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$month_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="month_id">
+	<div class="r-edit-tooltip" data-helpfor="month_id" {$tooltipAttr public_moh_indicator_data month_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data month_id }		</div>
 	</div>
@@ -723,15 +881,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_gender_sex}  r-vertical-field" 
-	data-signal-error-for="gender_sex{$id}" 
+	data-signal-error-for="gender_sex{$id}" {$required_attr_gender_sex}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="gender_sex" data-fieldname="gender_sex" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_gender_sex}">
 		{BEGIN gender_sex_label}{$label public_moh_indicator_data gender_sex }{END gender_sex_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$gender_sex_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="gender_sex">
+	<div class="r-edit-tooltip" data-helpfor="gender_sex" {$tooltipAttr public_moh_indicator_data gender_sex } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data gender_sex }		</div>
 	</div>
@@ -783,15 +942,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_value}  r-vertical-field" 
-	data-signal-error-for="value{$id}" 
+	data-signal-error-for="value{$id}" {$required_attr_value}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="value" data-fieldname="value" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_value}">
 		{BEGIN value_label}{$label public_moh_indicator_data value }{END value_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$value_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="value">
+	<div class="r-edit-tooltip" data-helpfor="value" {$tooltipAttr public_moh_indicator_data value } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data value }		</div>
 	</div>
@@ -822,15 +982,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_data_representation}  r-vertical-field" 
-	data-signal-error-for="data_representation{$id}" 
+	data-signal-error-for="data_representation{$id}" {$required_attr_data_representation}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="data_representation" data-fieldname="data_representation" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_data_representation}">
 		{BEGIN data_representation_label}{$label public_moh_indicator_data data_representation }{END data_representation_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$data_representation_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="data_representation">
+	<div class="r-edit-tooltip" data-helpfor="data_representation" {$tooltipAttr public_moh_indicator_data data_representation } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_data data_representation }		</div>
 	</div>

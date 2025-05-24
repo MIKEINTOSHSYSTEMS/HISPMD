@@ -127,8 +127,6 @@ class SearchPage extends RunnerPage
 			if( $lookupTable )
 				$this->settingsMap["globalSettings"]['shortTNames'][ $lookupTable ] = GetTableURL( $lookupTable );
 	
-			$this->fillFieldToolTips( $field );	
-	
 			$srchFields = $this->searchClauseObj->getSearchCtrlParams( $field );
 			$firstFieldParams = array();
 			if( count( $srchFields ) )

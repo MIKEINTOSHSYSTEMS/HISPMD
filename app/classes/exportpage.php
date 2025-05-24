@@ -66,6 +66,7 @@ class ExportPage extends RunnerPage
 			$this->eventsObject->BeforeProcessExport( $this );
 
 		if( $this->exportType ) {
+			RunnerContext::pushSearchContext( $this->searchClauseObj );
 			$this->exportByType();
 			exit();
 			return;
@@ -87,7 +88,7 @@ class ExportPage extends RunnerPage
 	{
 		parent::addCommonJs();
 
-		if( $this->pSet->checkExportFieldsSelection() && $this->isBootstrap() )
+		if( $this->pSet->checkExportFieldsSelection() )
 		{
 			$this->AddCSSFile("include/chosen/bootstrap-chosen.css");
 			$this->AddJSFile("include/chosen/chosen.jquery.js");
@@ -112,7 +113,7 @@ class ExportPage extends RunnerPage
 		$this->xt->assign("groupExcel", true);
 		$this->xt->assign("exportlink_attrs", 'id="saveButton'.$this->id.'"');
 
-		if( $this->pSet->checkExportFieldsSelection() && $this->isBootstrap() )
+		if( $this->pSet->checkExportFieldsSelection() )
 		{
 			$this->xt->assign("choosefields", true);
 			$this->xt->assign("exportFieldsCtrl", $this->getChooseFieldsCtrlMarkup() );

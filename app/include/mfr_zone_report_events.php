@@ -87,9 +87,10 @@ foreach ($data['model'] as $item) {
 
 //echo "Data successfully inserted into MFR_Zone table.";
 
-;
+;		
 } // function BeforeShowList
 
+		
 		
 		
 		

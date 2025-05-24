@@ -4,7 +4,12 @@ $topsdhis2_data_elements = array();
 		"subtype" => "rest",
 		"method" => "GET",
 		"request" => "/api/dataElements?fields=id%2CdisplayName~rename(name)%2CdimensionItemType&order=displayName:asc&paging=false",
-		"payload" => "[]"
+		"payload" => "[]",
+		"skipFilter" => "0",
+		"skipOrder" => "0",
+		"payloadFormat" => "0",
+		"payloadString" => "",
+		"rawPayload" => "0"
 	);
 	$tables_data["DHIS2_Data_Elements"][".operations"] = &$topsdhis2_data_elements;
 ?>

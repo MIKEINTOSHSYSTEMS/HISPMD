@@ -222,8 +222,7 @@ $tstrOrderBy = "ORDER BY \"Category\"";
 $tdatamain[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamain[".orderindexes"] = array();
-	$tdatamain[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "\"Category\"");
-
+			$tdatamain[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "\"Category\"");
 
 
 $tdatamain[".sqlHead"] = "select \"ArticleID\", \"ArticleID\" AS \"ArticleID2\", \"ArticleID\" AS \"ArticleIDedit\", \"Category\", \"DateCreated\", \"Problem\", \"Solution\", \"Title\", \"Views\", \"ArticleID\" AS \"helpfullblock\", \"likecount\", \"dislikecount\"";
@@ -292,6 +291,7 @@ $tdatamain[".hideMobileList"] = array();
 
 		$fdata["strField"] = "ArticleID";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
@@ -432,6 +432,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["strField"] = "ArticleID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
 
@@ -571,6 +572,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["strField"] = "ArticleID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
 
@@ -708,6 +710,7 @@ $tdatamain[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Category";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Category\"";
@@ -1096,6 +1099,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["strField"] = "DateCreated";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"DateCreated\"";
 
@@ -1232,6 +1236,7 @@ $tdatamain[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Problem";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Problem\"";
@@ -1371,6 +1376,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["strField"] = "Solution";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Solution\"";
 
@@ -1508,6 +1514,7 @@ $tdatamain[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Title";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Title\"";
@@ -1803,6 +1810,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["strField"] = "Views";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Views\"";
 
@@ -2096,6 +2104,7 @@ $tdatamain[".hideMobileList"] = array();
 		$fdata["strField"] = "ArticleID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
 
@@ -2235,6 +2244,7 @@ $tdatamain[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "likecount";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"likecount\"";
 
@@ -2373,6 +2383,7 @@ $tdatamain[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dislikecount";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"dislikecount\"";
 

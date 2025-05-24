@@ -199,6 +199,11 @@ class DiskFileSystem extends RunnerFileSystem {
 		$fs = new DiskFileSystem( $params );
 		return $fs->tryCreateUniqueFile( $filename, $path );
 	}
+
+	public function secureFilesystem() {
+		return false;
+	}
+
 }
 
 ?>

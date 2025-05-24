@@ -17,10 +17,24 @@ class API {
 		exit();
 	}
 
+	//	read one record from the result
+	public static function readRecord( $result, $pSet ) {
+		$data = $result->fetchAssoc();
+		if( !$data ) {
+			return null;
+		}
+		foreach( array_keys( $data ) as $f ) {
+			if( IsBinaryType( $pSet->getFieldType( $f ) ) && GetGlobalData("restReturnEncodedBinary") ) {
+				$data[ $f ] = base64_encode( $data[ $f ] );
+			}
+		}
+		return $data;
+	}
+
 	//	read result into array of records
-	public static function readResult( $result, $recordLimit = 0 ) {
+	public static function readResult( $result, $pSet, $recordLimit = 0 ) {
 		$ret = array();
-		while( ( $data = $result->fetchAssoc() ) && ( !$recordLimit || count( $ret ) < $recordLimit  )) {
+		while( ( !$recordLimit || count( $ret ) < $recordLimit  ) && ( $data = API::readRecord( $result, $pSet ) ) ) {
 			$ret[] = $data;
 		}
 		return $ret;
@@ -53,19 +67,17 @@ class API {
 			}
 			return Security::login( $username, $password, false, true );
 		}
-		
+
 		if ( $authType == REST_APIKEY ) {
 			$APIkey = "";
 			if( isset( $_SERVER["HTTP_X_AUTH_TOKEN"] ) )
 				$APIkey = $_SERVER["HTTP_X_AUTH_TOKEN"];
-			else if( isset( $_GET["apikey"] ) )
-				$APIkey = $_GET["apikey"];
-			else if( isset( $_POST["apikey"] ) )
-				$APIkey = $_POST["apikey"];
-			
+			else
+				$APIkey = postvalue("apikey");
+
 			if( !strlen( $APIkey ) )
 				return false;
-			
+
 			if( Security::hardcodedLogin() ) {
 				if( GetGlobalData("APIkey", "") == $APIkey ) {
 					Security::createHardcodedSession();
@@ -73,22 +85,22 @@ class API {
 				}
 				return false;
 			}
-			
+
 			$dataSource = getLoginDataSource();
-			
+
 			$dc = new DsCommand();
 			$dc->filter = DataCondition::FieldEquals( GetGlobalData("APIkeyField"), $APIkey );
 			$rs = $dataSource->getSingle( $dc );
 			if( !$rs )
 				return false;
-			
+
 			$loginSet = ProjectSettings::getForLogin();
 			$cipherer = RunnerCipherer::getForLogin( $loginSet );
 			$userData = $cipherer->DecryptFetchedArray( $rs->fetchAssoc() );
-			
+
 			return Security::login( $userData[ Security::usernameField() ], $userData[ Security::passwordField() ], true, true );
-		}		
-		
+		}
+
 		return false;
 	}
 
@@ -103,11 +115,34 @@ class API {
 	public static function valuesFromRequest( $pSet ) {
 		$values = array();
 		foreach( $pSet->getFieldsList() as $f ) {
-			if( isset( $_POST[ $f ] ) ) {
-				$values[ $f ] = $_POST[ $f ];
+			if( postvalue( $f ) || GetUploadedFileName( $f ) ) {
+				$values[ $f ] = API::processRequestValue( $f, postvalue( $f ), $pSet );
 			}
 		}
+		
 		return $values;
+	}
+
+	protected static function processRequestValue( $fieldName, $value, $pSet ) {
+		if( IsBinaryType( $pSet->getFieldType( $fieldName ) ) ) {
+			if( $value && GetGlobalData("restAcceptEncodedBinary") ) {
+				$decodedValue = base64_decode_binary( $value );
+
+				// invalid base64 value passed
+				if( !$decodedValue ) {
+					API::sendError( "Unable to decode " .  $fieldName . " value from base64" );
+				}
+
+				return $decodedValue;
+			}
+
+			// data passed as file
+			if( GetUploadedFileName( $fieldName ) ) {
+				return GetUploadedFileContents( $fieldName );
+			}
+		}
+
+		return $value;
 	}
 }
 ?>

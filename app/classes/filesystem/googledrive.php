@@ -242,6 +242,10 @@ class GoogleDriveFileSystem extends OAuthFileSystem {
 		return true;
 	}
 
+	public function createAuthRequest( ) {
+		$rest = $this->getConnection();
+		return $rest->createUserAuthRequest( array("access_type" => "offline" ) );
+	}
 
 }
 ?>

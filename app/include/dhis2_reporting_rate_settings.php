@@ -203,6 +203,9 @@ $tstrOrderBy = "";
 $tdatadhis2_reporting_rate[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_reporting_rate[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_reporting_rate[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_reporting_rate[".sqlHead"] = "";
@@ -269,6 +272,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 		$fdata["strField"] = "title";
 
+	
 	
 		$fdata["FullName"] = "title";
 
@@ -404,6 +408,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data/*/organisationUnit";
 
+	
 	
 		$fdata["FullName"] = "organisationUnit";
 
@@ -565,6 +570,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data/*/dataSet";
 
+	
 	
 		$fdata["FullName"] = "dataSet";
 
@@ -732,6 +738,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 		$fdata["strField"] = "data/*/reportPeriod";
 
 	
+	
 		$fdata["FullName"] = "reportPeriod";
 
 	
@@ -898,6 +905,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 		$fdata["strField"] = "data/*/ACTUAL_REPORTS";
 
 	
+	
 		$fdata["FullName"] = "ACTUAL_REPORTS";
 
 	
@@ -1036,6 +1044,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data/*/EXPECTED_REPORTS";
 
+	
 	
 		$fdata["FullName"] = "EXPECTED_REPORTS";
 
@@ -1176,6 +1185,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 		$fdata["strField"] = "data/*/REPORTING_RATE";
 
 	
+	
 		$fdata["FullName"] = "REPORTING_RATE";
 
 	
@@ -1315,6 +1325,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 		$fdata["strField"] = "data/*/ACTUAL_REPORTS_ON_TIME";
 
 	
+	
 		$fdata["FullName"] = "ACTUAL_REPORTS_ON_TIME";
 
 	
@@ -1453,6 +1464,7 @@ $tdatadhis2_reporting_rate[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data/*/REPORTING_RATE_ON_TIME";
 
+	
 	
 		$fdata["FullName"] = "REPORTING_RATE_ON_TIME";
 

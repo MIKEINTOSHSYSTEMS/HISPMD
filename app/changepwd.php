@@ -6,6 +6,7 @@ require_once("include/dbcommon.php");
 
 $token = postvalue("token");
 
+Security::processLogoutRequest();
 if( !$token && (!isLogged() || Security::isGuest() ) )
 { 
 	Security::saveRedirectURL();

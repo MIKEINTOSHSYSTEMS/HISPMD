@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
  
 
@@ -260,7 +403,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -269,7 +412,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -405,6 +548,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -742,9 +888,18 @@
 	 
 		{BEGIN dh_id_fieldheadercolumn}
 	{BEGIN dh_id_fieldheader}
-	<SPAN {$dh_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dh_id" data-fieldname="dh_id">
-	{$label public_digitalhealth dh_id }	{$arrow_icon_dh_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dh_id" data-fieldname="dh_id" 
+
+			{$dh_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth dh_id }</span>
+					{$arrow_icon_dh_id}
+			</span>
+	</span>
 	{END dh_id_fieldheader}
 {END dh_id_fieldheadercolumn}
 
@@ -767,9 +922,18 @@
 	 
 		{BEGIN site_type_fieldheadercolumn}
 	{BEGIN site_type_fieldheader}
-	<SPAN {$site_type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="site_type" data-fieldname="site_type">
-	{$label public_digitalhealth site_type }	{$arrow_icon_site_type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="site_type" data-fieldname="site_type" 
+
+			{$site_type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth site_type }</span>
+					{$arrow_icon_site_type}
+			</span>
+	</span>
 	{END site_type_fieldheader}
 {END site_type_fieldheadercolumn}
 
@@ -792,9 +956,18 @@
 	 
 		{BEGIN dhis2_functional_fieldheadercolumn}
 	{BEGIN dhis2_functional_fieldheader}
-	<SPAN {$dhis2_functional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dhis2_functional" data-fieldname="dhis2_functional">
-	{$label public_digitalhealth dhis2_functional }	{$arrow_icon_dhis2_functional}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dhis2_functional" data-fieldname="dhis2_functional" 
+
+			{$dhis2_functional_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth dhis2_functional }</span>
+					{$arrow_icon_dhis2_functional}
+			</span>
+	</span>
 	{END dhis2_functional_fieldheader}
 {END dhis2_functional_fieldheadercolumn}
 
@@ -817,9 +990,18 @@
 	 
 		{BEGIN dhis2_online_fieldheadercolumn}
 	{BEGIN dhis2_online_fieldheader}
-	<SPAN {$dhis2_online_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dhis2_online" data-fieldname="dhis2_online">
-	{$label public_digitalhealth dhis2_online }	{$arrow_icon_dhis2_online}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="dhis2_online" data-fieldname="dhis2_online" 
+
+			{$dhis2_online_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth dhis2_online }</span>
+					{$arrow_icon_dhis2_online}
+			</span>
+	</span>
 	{END dhis2_online_fieldheader}
 {END dhis2_online_fieldheadercolumn}
 
@@ -842,9 +1024,18 @@
 	 
 		{BEGIN mfr_updated_fieldheadercolumn}
 	{BEGIN mfr_updated_fieldheader}
-	<SPAN {$mfr_updated_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mfr_updated" data-fieldname="mfr_updated">
-	{$label public_digitalhealth mfr_updated }	{$arrow_icon_mfr_updated}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mfr_updated" data-fieldname="mfr_updated" 
+
+			{$mfr_updated_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth mfr_updated }</span>
+					{$arrow_icon_mfr_updated}
+			</span>
+	</span>
 	{END mfr_updated_fieldheader}
 {END mfr_updated_fieldheadercolumn}
 
@@ -867,9 +1058,18 @@
 	 
 		{BEGIN echis_implemented_fieldheadercolumn}
 	{BEGIN echis_implemented_fieldheader}
-	<SPAN {$echis_implemented_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="echis_implemented" data-fieldname="echis_implemented">
-	{$label public_digitalhealth echis_implemented }	{$arrow_icon_echis_implemented}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="echis_implemented" data-fieldname="echis_implemented" 
+
+			{$echis_implemented_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth echis_implemented }</span>
+					{$arrow_icon_echis_implemented}
+			</span>
+	</span>
 	{END echis_implemented_fieldheader}
 {END echis_implemented_fieldheadercolumn}
 
@@ -892,9 +1092,18 @@
 	 
 		{BEGIN emr_status_fieldheadercolumn}
 	{BEGIN emr_status_fieldheader}
-	<SPAN {$emr_status_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="emr_status" data-fieldname="emr_status">
-	{$label public_digitalhealth emr_status }	{$arrow_icon_emr_status}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="emr_status" data-fieldname="emr_status" 
+
+			{$emr_status_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth emr_status }</span>
+					{$arrow_icon_emr_status}
+			</span>
+	</span>
 	{END emr_status_fieldheader}
 {END emr_status_fieldheadercolumn}
 
@@ -917,9 +1126,18 @@
 	 
 		{BEGIN ihris_hra_implemented_fieldheadercolumn}
 	{BEGIN ihris_hra_implemented_fieldheader}
-	<SPAN {$ihris_hra_implemented_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ihris_hra_implemented" data-fieldname="ihris_hra_implemented">
-	{$label public_digitalhealth ihris_hra_implemented }	{$arrow_icon_ihris_hra_implemented}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ihris_hra_implemented" data-fieldname="ihris_hra_implemented" 
+
+			{$ihris_hra_implemented_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth ihris_hra_implemented }</span>
+					{$arrow_icon_ihris_hra_implemented}
+			</span>
+	</span>
 	{END ihris_hra_implemented_fieldheader}
 {END ihris_hra_implemented_fieldheadercolumn}
 
@@ -942,9 +1160,18 @@
 	 
 		{BEGIN hcmis_implemented_fieldheadercolumn}
 	{BEGIN hcmis_implemented_fieldheader}
-	<SPAN {$hcmis_implemented_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="hcmis_implemented" data-fieldname="hcmis_implemented">
-	{$label public_digitalhealth hcmis_implemented }	{$arrow_icon_hcmis_implemented}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="hcmis_implemented" data-fieldname="hcmis_implemented" 
+
+			{$hcmis_implemented_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_digitalhealth hcmis_implemented }</span>
+					{$arrow_icon_hcmis_implemented}
+			</span>
+	</span>
 	{END hcmis_implemented_fieldheader}
 {END hcmis_implemented_fieldheadercolumn}
 

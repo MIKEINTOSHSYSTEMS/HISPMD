@@ -1,9 +1,7 @@
 <?php
 
-function getMenuNodes_main($menuNodesObject)
-{
 	// create menu nodes arr
-	$menuNodesObject->menuNodes["main"] = array();
+	$menuNodes = array();
 
 	$menuNode = array();
 	$menuNode["id"] = "1";
@@ -30,7 +28,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "2";
 	$menuNode["name"] = "Reports Chats & Visualizations";
@@ -56,7 +54,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "3";
 	$menuNode["name"] = "Indicators Data Report";
@@ -82,7 +80,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "4";
 	$menuNode["name"] = "HIS Indicators Chart";
@@ -108,7 +106,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "5";
 	$menuNode["name"] = "Data Visualizer";
@@ -134,7 +132,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "6";
 	$menuNode["name"] = "Data Sets Attributes";
@@ -160,7 +158,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "7";
 	$menuNode["name"] = "MOH Indicator Data Entry";
@@ -186,7 +184,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "8";
 	$menuNode["name"] = "MOH Data Sets";
@@ -212,7 +210,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "9";
 	$menuNode["name"] = "MOH Indicators";
@@ -238,7 +236,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "10";
 	$menuNode["name"] = "MOH Indicators Target";
@@ -264,7 +262,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "11";
 	$menuNode["name"] = "MOH Indicator Groups";
@@ -290,7 +288,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "12";
 	$menuNode["name"] = "MOH Administration Units";
@@ -316,7 +314,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "13";
 	$menuNode["name"] = "MOH Assessments";
@@ -342,7 +340,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "14";
 	$menuNode["name"] = "MOH Data Sources";
@@ -368,7 +366,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "15";
 	$menuNode["name"] = "MOH Data Source Details";
@@ -394,7 +392,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "16";
 	$menuNode["name"] = "MOH Data Scope";
@@ -420,7 +418,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "17";
 	$menuNode["name"] = "MOH Facility Types";
@@ -446,7 +444,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "18";
 	$menuNode["name"] = "MOH Health Facilities";
@@ -472,7 +470,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "19";
 	$menuNode["name"] = "MOH Regions";
@@ -498,7 +496,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "20";
 	$menuNode["name"] = "MOH Periods";
@@ -524,7 +522,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "21";
 	$menuNode["name"] = "MoH Period Types";
@@ -550,7 +548,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "22";
 	$menuNode["name"] = "MoH Years";
@@ -576,7 +574,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "23";
 	$menuNode["name"] = "MoH Months";
@@ -602,7 +600,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "24";
 	$menuNode["name"] = "MoH Quarters";
@@ -628,7 +626,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "25";
 	$menuNode["name"] = "DHIS2";
@@ -654,7 +652,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "26";
 	$menuNode["name"] = "DHIS2 - EIDM";
@@ -680,7 +678,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "27";
 	$menuNode["name"] = "DHIS2 EIDM Data";
@@ -706,7 +704,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "28";
 	$menuNode["name"] = "DHIS2 Analytics & Reports";
@@ -732,7 +730,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "29";
 	$menuNode["name"] = "";
@@ -758,7 +756,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "30";
 	$menuNode["name"] = "DHIS2 Analytics Report";
@@ -784,7 +782,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "31";
 	$menuNode["name"] = "";
@@ -810,7 +808,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "32";
 	$menuNode["name"] = "DHIS2 Analytics Reports";
@@ -836,7 +834,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "33";
 	$menuNode["name"] = "DHIS2 Reporting Rate";
@@ -862,7 +860,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "34";
 	$menuNode["name"] = "DHIS2 Reporting-Rates Report";
@@ -888,7 +886,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "35";
 	$menuNode["name"] = "DHIS2 Reporting-Rates Table";
@@ -914,7 +912,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "36";
 	$menuNode["name"] = "DHIS2 Reporting Rates Chart";
@@ -940,7 +938,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "37";
 	$menuNode["name"] = "DHIS2 Reporting-Rate Chart";
@@ -966,7 +964,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "38";
 	$menuNode["name"] = "DHIS2 Reporting Rates Data";
@@ -992,7 +990,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "39";
 	$menuNode["name"] = "DHIS2 Reporting Rates Table";
@@ -1018,7 +1016,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "40";
 	$menuNode["name"] = "DHIS2 Reporting Rates Chart";
@@ -1044,7 +1042,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "41";
 	$menuNode["name"] = "";
@@ -1070,7 +1068,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "42";
 	$menuNode["name"] = "";
@@ -1096,7 +1094,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "43";
 	$menuNode["name"] = "";
@@ -1122,7 +1120,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "44";
 	$menuNode["name"] = "";
@@ -1148,7 +1146,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "45";
 	$menuNode["name"] = "";
@@ -1174,7 +1172,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "46";
 	$menuNode["name"] = "DHIS2 OrgUnits";
@@ -1200,7 +1198,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "47";
 	$menuNode["name"] = "";
@@ -1226,7 +1224,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "48";
 	$menuNode["name"] = "";
@@ -1252,7 +1250,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "49";
 	$menuNode["name"] = "";
@@ -1278,7 +1276,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "50";
 	$menuNode["name"] = "";
@@ -1304,7 +1302,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "51";
 	$menuNode["name"] = "";
@@ -1330,7 +1328,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "52";
 	$menuNode["name"] = "";
@@ -1356,7 +1354,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "53";
 	$menuNode["name"] = "";
@@ -1382,7 +1380,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "54";
 	$menuNode["name"] = "";
@@ -1408,7 +1406,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "55";
 	$menuNode["name"] = "";
@@ -1434,7 +1432,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "56";
 	$menuNode["name"] = "DHIS2 OrgUnit Attributes";
@@ -1460,7 +1458,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "57";
 	$menuNode["name"] = "";
@@ -1486,7 +1484,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "58";
 	$menuNode["name"] = "";
@@ -1512,7 +1510,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "59";
 	$menuNode["name"] = "";
@@ -1538,7 +1536,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "60";
 	$menuNode["name"] = "";
@@ -1564,7 +1562,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "61";
 	$menuNode["name"] = "";
@@ -1590,7 +1588,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "62";
 	$menuNode["name"] = "";
@@ -1616,7 +1614,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "63";
 	$menuNode["name"] = "";
@@ -1642,7 +1640,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "64";
 	$menuNode["name"] = "DHIS2 EIDM HC-API-TEST";
@@ -1668,7 +1666,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "65";
 	$menuNode["name"] = "PRISM";
@@ -1694,7 +1692,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "66";
 	$menuNode["name"] = "";
@@ -1720,7 +1718,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "67";
 	$menuNode["name"] = "National PRISM Woreda Level Diagnostic";
@@ -1746,7 +1744,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "68";
 	$menuNode["name"] = "Facility Level RHIS Performance Diagnostic";
@@ -1772,7 +1770,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "69";
 	$menuNode["name"] = "Healthpost Level RHIS Performance Diagnostic";
@@ -1798,7 +1796,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "70";
 	$menuNode["name"] = "Facility Office Checklist";
@@ -1824,7 +1822,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "71";
 	$menuNode["name"] = "Organizational and Behavioral Assessment";
@@ -1850,7 +1848,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "72";
 	$menuNode["name"] = "Additional Organizational and Behavioral Assessment";
@@ -1876,7 +1874,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "73";
 	$menuNode["name"] = "PRISM Printable Forms";
@@ -1902,7 +1900,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "74";
 	$menuNode["name"] = "PRISM Data Forms";
@@ -1928,7 +1926,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "75";
 	$menuNode["name"] = "MFR";
@@ -1954,7 +1952,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "76";
 	$menuNode["name"] = "";
@@ -1980,7 +1978,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "77";
 	$menuNode["name"] = "MFR Registery Dashboard";
@@ -2006,7 +2004,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "78";
 	$menuNode["name"] = "MFR Pivot Report";
@@ -2032,7 +2030,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "79";
 	$menuNode["name"] = "MFR Dashboard Reports";
@@ -2058,7 +2056,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "80";
 	$menuNode["name"] = "MFR Operational Status";
@@ -2084,7 +2082,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "81";
 	$menuNode["name"] = "MFR Facility";
@@ -2110,7 +2108,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "82";
 	$menuNode["name"] = "MFR Facilities Register";
@@ -2136,7 +2134,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "83";
 	$menuNode["name"] = "";
@@ -2162,7 +2160,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "84";
 	$menuNode["name"] = "";
@@ -2188,7 +2186,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "85";
 	$menuNode["name"] = "";
@@ -2214,7 +2212,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "86";
 	$menuNode["name"] = "";
@@ -2240,7 +2238,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "87";
 	$menuNode["name"] = "";
@@ -2266,7 +2264,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "88";
 	$menuNode["name"] = "";
@@ -2292,7 +2290,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "89";
 	$menuNode["name"] = "MFR Geolocation";
@@ -2318,7 +2316,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "90";
 	$menuNode["name"] = "";
@@ -2344,7 +2342,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "91";
 	$menuNode["name"] = "";
@@ -2370,7 +2368,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "92";
 	$menuNode["name"] = "";
@@ -2396,7 +2394,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "93";
 	$menuNode["name"] = "MFR Charts";
@@ -2422,7 +2420,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "94";
 	$menuNode["name"] = "MFR Facilities Register Chart";
@@ -2448,7 +2446,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "95";
 	$menuNode["name"] = "MFR Dashboard Reports Chart";
@@ -2474,7 +2472,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "96";
 	$menuNode["name"] = "MFR Operational Status Chart";
@@ -2500,7 +2498,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "97";
 	$menuNode["name"] = "MFR Region Chart";
@@ -2526,7 +2524,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "98";
 	$menuNode["name"] = "System Setting";
@@ -2552,7 +2550,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "99";
 	$menuNode["name"] = "Data Reports Update";
@@ -2578,7 +2576,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "100";
 	$menuNode["name"] = "DHIS2 Settings";
@@ -2604,7 +2602,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "101";
 	$menuNode["name"] = "DHIS2 EIDM Settings";
@@ -2630,7 +2628,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "102";
 	$menuNode["name"] = "DHIS2 Reporting Rate Settings";
@@ -2656,7 +2654,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "103";
 	$menuNode["name"] = "MFR Reports Update";
@@ -2682,7 +2680,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "104";
 	$menuNode["name"] = "";
@@ -2708,7 +2706,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "105";
 	$menuNode["name"] = "";
@@ -2734,7 +2732,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "106";
 	$menuNode["name"] = "";
@@ -2760,7 +2758,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "107";
 	$menuNode["name"] = "";
@@ -2786,7 +2784,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "108";
 	$menuNode["name"] = "";
@@ -2812,7 +2810,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "109";
 	$menuNode["name"] = "";
@@ -2838,7 +2836,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "110";
 	$menuNode["name"] = "";
@@ -2864,7 +2862,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "111";
 	$menuNode["name"] = "PRISM Data Update";
@@ -2890,7 +2888,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "112";
 	$menuNode["name"] = "PRISM Settings";
@@ -2916,7 +2914,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "113";
 	$menuNode["name"] = "Database Management";
@@ -2942,7 +2940,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "114";
 	$menuNode["name"] = "HISPMD Main Database";
@@ -2968,7 +2966,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "115";
 	$menuNode["name"] = "HISPMD MB Database";
@@ -2994,7 +2992,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "116";
 	$menuNode["name"] = "HISPMD Analytics Database";
@@ -3020,7 +3018,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "117";
 	$menuNode["name"] = "HISPMD SGB Database";
@@ -3046,7 +3044,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "118";
 	$menuNode["name"] = "Administration";
@@ -3072,7 +3070,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "119";
 	$menuNode["name"] = "HISPMD Organisations";
@@ -3098,7 +3096,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "120";
 	$menuNode["name"] = "";
@@ -3124,7 +3122,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "121";
 	$menuNode["name"] = "Users Audit Logs Dashboard";
@@ -3150,7 +3148,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "122";
 	$menuNode["name"] = "Users Tracker Dashboard";
@@ -3176,7 +3174,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "123";
 	$menuNode["name"] = "Visitors Analytics Dashboard";
@@ -3202,7 +3200,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "124";
 	$menuNode["name"] = "Activity Logs";
@@ -3228,7 +3226,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "125";
 	$menuNode["name"] = "Users Audit";
@@ -3254,7 +3252,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "126";
 	$menuNode["name"] = "";
@@ -3280,7 +3278,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "127";
 	$menuNode["name"] = "AI ChatBot History";
@@ -3306,7 +3304,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "128";
 	$menuNode["name"] = "System Settings";
@@ -3332,7 +3330,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "129";
 	$menuNode["name"] = "";
@@ -3358,7 +3356,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "130";
 	$menuNode["name"] = "Knowledge Base";
@@ -3384,7 +3382,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "131";
 	$menuNode["name"] = "Knowledge Base & Guides";
@@ -3410,7 +3408,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "132";
 	$menuNode["name"] = "";
@@ -3436,7 +3434,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "133";
 	$menuNode["name"] = "";
@@ -3462,7 +3460,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "134";
 	$menuNode["name"] = "";
@@ -3488,7 +3486,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "135";
 	$menuNode["name"] = "";
@@ -3514,7 +3512,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "136";
 	$menuNode["name"] = "Suggestion Box";
@@ -3540,7 +3538,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "137";
 	$menuNode["name"] = "Updates & Notifications";
@@ -3566,7 +3564,7 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "138";
 	$menuNode["name"] = "";
@@ -3592,6 +3590,6 @@ function getMenuNodes_main($menuNodesObject)
 
 
 
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-}
+	$menuNodes[] = $menuNode;
+	$menuNodesCache[ "main" ] = $menuNodes;
 ?>

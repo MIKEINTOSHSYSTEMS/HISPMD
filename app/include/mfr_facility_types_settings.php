@@ -196,6 +196,9 @@ $tstrOrderBy = "";
 $tdatamfr_facility_types[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamfr_facility_types[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatamfr_facility_types[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatamfr_facility_types[".sqlHead"] = "";
@@ -262,6 +265,7 @@ $tdatamfr_facility_types[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/name";
 
+	
 	
 		$fdata["FullName"] = "Parent Facility Type";
 
@@ -397,6 +401,7 @@ $tdatamfr_facility_types[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/id";
 
+	
 	
 		$fdata["FullName"] = "id";
 
@@ -536,6 +541,7 @@ $tdatamfr_facility_types[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/childFacilityTypes/*/parentFacilityTypeId";
 
 	
+	
 		$fdata["FullName"] = "parentFacilityTypeId";
 
 	
@@ -674,6 +680,7 @@ $tdatamfr_facility_types[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/childFacilityTypes/*/name";
 
 	
+	
 		$fdata["FullName"] = "Facility Type";
 
 	
@@ -809,6 +816,7 @@ $tdatamfr_facility_types[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/childFacilityTypes/*/code";
 
 	
+	
 		$fdata["FullName"] = "code";
 
 	
@@ -943,6 +951,7 @@ $tdatamfr_facility_types[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/childFacilityTypes/*/id";
 
+	
 	
 		$fdata["FullName"] = "facilityTypeId";
 

@@ -26,6 +26,7 @@ $params["rememberMachine"] = postvalue("remember_machine");
  
 $params["mode"] = LoginPage::readLoginModeFromRequest(); 
 $params["action"] = LoginPage::readActionFromRequest();
+$params["twoFactorMethod"] = LoginPage::readMethodFromRequest();
  
 //	$pageObj->message will accept HTML values, so no htmlspecialchars will be called before output
 $params["message"] = runner_htmlspecialchars( postvalue("message") ); 

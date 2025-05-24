@@ -79,7 +79,7 @@ exit();
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function AfterLogout
 
 		
@@ -101,34 +101,6 @@ exit();
 		
 		
 		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 
 		
@@ -159,7 +131,39 @@ exit();
 		
 		
 		
+		
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
 		
 		
 		
@@ -216,9 +220,10 @@ function BeforeShowMenu(&$xt, &$templatefile, $pageObject)
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function BeforeShowMenu
 
+		
 		
 		
 		
@@ -239,7 +244,7 @@ function BeforeShowMenu(&$xt, &$templatefile, $pageObject)
 		
 		
 				// Before registration
-function BeforeRegister(&$userdata, &$message, $pageObject)
+function BeforeRegister(&$userdata, &$sqlValues, &$message, $pageObject)
 {
 
 		
@@ -251,9 +256,10 @@ $_SESSION["apikey"] = $apikey;
 // Use "Add Action" button to add code snippets.
 
 return true;
-;
+;		
 } // function BeforeRegister
 
+		
 		
 		
 		
@@ -289,9 +295,10 @@ exit();
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function BeforeProcessMenu
 
+		
 		
 		
 		

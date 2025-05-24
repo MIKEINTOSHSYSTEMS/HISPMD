@@ -72,7 +72,7 @@ class DB
 		$dataSource = getDbTableDataSource( $table, DB::CurrentConnectionId() );
 		if( !$dataSource )
 			return false;
-		
+
 		$dc = new DsCommand();
 		$dc->filter = DB::_createFilterCondition( $userConditions );
 		$dc->order = array();
@@ -89,10 +89,10 @@ class DB
 						$orderClause["dir"] = "DESC";
 						break;
 				}
-			}	
+			}
 			else
 				$orderClause = array( "column" => $userOrder );
-			
+
 			$dc->order[] = $orderClause;
 		}
 		$queryResult = $dataSource->getList( $dc );
@@ -114,7 +114,7 @@ class DB
 		$dataSource = getDbTableDataSource( $table, DB::CurrentConnectionId() );
 		if( !$dataSource )
 			return false;
-		
+
 		$dc = new DsCommand();
 		$dc->filter = DB::_createFilterCondition( $userConditions );
 		$prep = $dataSource->prepareSQL( $dc );
@@ -349,7 +349,7 @@ class DB
 		global $dalTables;
 		if( !$conn )
 			$conn = DB::CurrentConnection();
-		if( $dalTables[ $conn->connId ] )
+		if( isset($dalTables[ $conn->connId ]) )
 			return;
 		$dalTables[ $conn->connId ] = array();
 		if( "hispmdathispmdmerqconsultancyo" == $conn->connId )
@@ -424,16 +424,16 @@ class DB
 		}
 	}
 
-	public static function PrepareConnectionSQL( $conn, $sql, 
+	public static function PrepareConnectionSQL( $conn, $sql,
 		$arg1 = null,
-		$arg2 = null, 
-		$arg3 = null, 
-		$arg4 = null, 
-		$arg5 = null, 
-		$arg6 = null, 
-		$arg7 = null, 
-		$arg8 = null, 
-		$arg9 = null, 
+		$arg2 = null,
+		$arg3 = null,
+		$arg4 = null,
+		$arg5 = null,
+		$arg6 = null,
+		$arg7 = null,
+		$arg8 = null,
+		$arg9 = null,
 		$arg10 = null ) {
 
 		$prevConn = DB::CurrentConnection();
@@ -465,15 +465,15 @@ class DB
 				"offset" => $offset,
 				"len" => strlen($match)
 			);
-			
+
 			$val = "";
 			if (is_numeric($token) && count( $args ) > $token) {
 				$val = $args[(int)$token];
 			} else {
 				$val = RunnerContext::getValue($token);
 			}
-			
-			
+
+
 			/**
 			 * Don't ever dare to alter this code!
 			 * Everything outside quotes must be converted to number to avoid SQL injection
@@ -497,7 +497,7 @@ class DB
 					$repl["insert"] = DB::prepareNumberValue( $val );
 				}
 			}
-			
+
 			$replacements[] = $repl;
 		}
 

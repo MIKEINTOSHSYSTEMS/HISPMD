@@ -1,0 +1,2146 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-menu"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form r-align-left navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-left navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-left navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="text1" {$item_text1} data-topcell-item-type="text" >
+				<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	<p><img src="./moh_white.png" alt="Health Information System Performance Monitoring Dashboard (HISPMD)" width="100%" height="25px" class="mCS_img_loaded" /></p></span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="text" {$item_text} data-topcell-item-type="text" >
+				<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="_global_menu" data-small > 
+	HISPMD</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notifications			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Admin Area		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+					{$header}
+					<div class="r-top">
+												</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="text" data-itemid="text8" {$item_text8} data-pageid="{$pageid}" data-small > 
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<!--
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+-->
+
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+	<!-- Main CSS File 
+   
+  
+  -->
+	<link href="assets/css/internalmain.css" rel="stylesheet">
+
+	<!-- =======================================================
+  * Template Name: MIKEINTOSH SYSTEMS
+  * Template URL: https://mikeintoshsys.com/bootslander-free-bootstrap-landing-page-template/
+  * Updated: Aug 01 2024 with Bootstrap v5.3.3
+  * Author: https://mikeintoshsys.com
+  * License: https://mikeintoshsts.com/license/
+  * Contact: michael@mikeintoshsys.com michaelktd@gmail.com mikeintoshsys@gmail.com
+* Call: +251913391985 +251938048182
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+	<!--
+
+
+-->
+	<header id="" class="">
+		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+
+			<nav id="navmenu" class="navmenu">
+				<ul>
+
+				</ul>
+				<!--
+				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+				-->
+				<i class="mobile-nav-toggle"></i>
+			</nav>
+
+		</div>
+	</header>
+<main class="main">
+
+  <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
+
+      <div align="right" class="container">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-4 order-lg-last hero-img aos-init aos-animate" data-aos="zoom-out" data-aos-delay="100">
+            <!--
+          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+            <img src="assets/img/mfr_hero.png" class="img-fluid animated" alt="">
+            -->
+            <div align="center">
+
+<img src="MOH_logo_text_white.png" width="100%" height="100%" class="img-fluid animated" alt="">
+</div>
+            
+            
+            <!--
+            <img src="MOH_logo_text.png" class="img-fluid animated" alt="">
+            <img src="assets/img/hispmd_landing_hero.png" class="img-fluid animated" alt="">
+            -->
+            
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-in">
+            <h1>Welcome to <span>HISPMD</span></h1>
+            <p>Health Information Systems Performance Monitoring Dashboard</p>
+            
+            <div class="d-flex">
+              
+            <!--
+            <a href="#" class="btn-get-started">Get Started By Selecting Menu Items from the Left</a>
+              <a href="#" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Login</span></a>  
+            -->
+            
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+
+        <g class="">
+          
+        </g>
+      </svg>
+
+    </section><!-- /Hero Section -->
+
+
+
+
+
+  </main>
+
+<!--
+		<footer id="footer" class="footer dark-background">
+
+		<div class="container footer-top">
+			<div class="row gy-4">
+				<div class="col-lg-4 col-md-6 footer-about">
+					<a href="index.html" class="logo d-flex align-items-center">
+
+-->
+
+
+						<!--
+          <span class="sitename">HISPMD </span>          
+          <p><b>Health Information Systems Performance Management Dashboard</b></p>
+          <p><b>HISPMD</b></p>
+-->
+
+						<br>
+
+
+					
+					<!--
+	<p><b>HISPMD</b></p>
+						<div _ngcontent-kyh-c0=""><a _ngcontent-kyh-c0="" class="navbar-brand">
+								<div _ngcontent-kyh-c0="">
+									<h4 _ngcontent-kyh-c0="">ጤና ሚኒስቴር - ኢትዮጵያ</h4>
+								</div>
+								<div _ngcontent-kyh-c0="">
+									<h5 _ngcontent-kyh-c0="">MINISTRY OF HEALTH - ETHIOPIA</h5>
+								</div>
+							</a></div>
+					</a>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="footer-contact pt-3">
+
+
+						<p class="mt-3"><strong>Street:</strong> <span>1234 Sudan Street</span></p>
+						<p class="mt-3"><strong>Address:</strong> <span>Addis Ababa, Ethiopia</span></p>
+						<p class="mt-3"><strong>Phone:</strong> <span>+251 115 517 011</span></p>
+						<p><strong>Email:</strong> <span>info@moh.gov.et</span></p>
+					</div>
+
+
+
+
+
+<div class="social-links d-flex mt-4">          
+-->
+
+<!--
+
+	<div>
+						<a href="#"><i class="bi bi-twitter-x"></i> | </a>
+						<a href="#"><i class="bi bi-facebook"></i> | </a>
+						<a href="#"><i class="bi bi-instagram"></i> | </a>
+						<a href="#"><i class="bi bi-linkedin"></i> </a>
+					</div>
+				</div>
+
+				<div class="col-lg-2 col-md-3 footer-links">
+					<h4>Useful Links</h4>
+					<ul>
+						<li><a href="start.php">Home</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Terms of service</a></li>
+						<li><a href="#">Privacy policy</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-2 col-md-3 footer-links">
+
+-->
+					<br>
+				
+					<!--
+                  <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+
+			</div>
+
+
+
+		</div>
+		</div>
+
+		<div class="container copyright text-center mt-4">
+			<p>© <span>Copyright</span> <strong class="px-1 sitename">Ministry of Health - Ethiopia</strong> <span>All
+					Rights Reserved</span></p>
+			<div class="credits">
+		  
+-->
+
+
+
+
+
+				<!-- All the links in the footer should remain intact. -->
+				<!-- You can delete the links only if you've purchased the pro version. -->
+				<!-- Licensing information: https://bootstrapmade.com/license/ -->
+				<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+				
+
+				<!--
+
+				Designed & Developed by <a href="https://merqconsultancy.org/">MERQ Consultancy</a>
+			</div>
+		</div>
+
+	</footer>
+        -->
+	<!-- Scroll Top -->
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Preloader -->
+	<!--
+  <div id="preloader"></div>
+-->
+
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+
+
+</html></span>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c5" data-pageid="{$pageid}"	{$cell_above-grid_c5}
+	class="r-align-center r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c7" data-pageid="{$pageid}"	{$cell_above-grid_c7}
+	class="r-align-center r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c9" data-pageid="{$pageid}"	{$cell_above-grid_c9}
+	class="r-align-center			col-md-12
+	
+">
+		 
+		<img src="{$file_url images/MOH_logo_text_250.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
+	 
+		<span data-itemtype="text" data-itemid="text10" {$item_text10} data-pageid="{$pageid}" data-small > 
+		<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-small > 
+	<br><br><h2><strong>MENU</strong></h2></span>
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+<table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_grid_0} >
+									<td 
+	
+			 
+	data-cellId="grid_c1" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+		
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="webreport.php"  > 
+							Web Reports					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Web Reports and Charts	</div>
+	</div>
+
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_1} >
+									<td 
+	
+			 
+	data-cellId="grid_c" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_2} >
+									<td 
+	
+			 
+	data-cellId="grid_c2" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group" {$item_welcome_group} data-pageid="{$pageid}">
+	<h2>
+					HISPMD Indicators		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item87" {$item_welcome_item87} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_moh_indicators_dashboard_dashboard.php"  > 
+							HISPMD MOH Indicators Dashboard					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item100" {$item_welcome_item100} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="indicators_dashboard_list.php"  > 
+							Indicators Dashboard					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item72" {$item_welcome_item72} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_data_sources_list.php"  > 
+							Moh Data Sources					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item71" {$item_welcome_item71} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_assessments_list.php"  > 
+							Moh Assessments					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item86" {$item_welcome_item86} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_data_scope_list.php"  > 
+							Moh Data Scope					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item77" {$item_welcome_item77} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_regions_list.php"  > 
+							Moh Regions					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item76" {$item_welcome_item76} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicators_list.php"  > 
+							Moh Indicators					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item78" {$item_welcome_item78} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicator_groups_list.php"  > 
+							Moh Indicator Groups					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item75" {$item_welcome_item75} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicator_data_list.php"  > 
+							Moh Indicator Data					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item88" {$item_welcome_item88} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicators_data_report_report.php"  > 
+							MOH Indicators Data Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item74" {$item_welcome_item74} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_health_facilities_list.php"  > 
+							Moh Health Facilities					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item73" {$item_welcome_item73} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_facility_types_list.php"  > 
+							Moh Facility Types					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item70" {$item_welcome_item70} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_administration_units_list.php"  > 
+							Moh Administration Units					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item101" {$item_welcome_item101} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_indicators_data_list.php"  > 
+							Hispmd Indicators Data					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item89" {$item_welcome_item89} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicators_data_chart_chart.php"  > 
+							MOH Indicators Data Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item99" {$item_welcome_item99} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicators_data_values_chart1_chart.php"  > 
+							MoH Indicators Data Values Chart					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_3} >
+									<td 
+	
+			 
+	data-cellId="grid_c12" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group1" {$item_welcome_group1} data-pageid="{$pageid}">
+	<h2>
+					Master Facility Registry: MFR		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item21" {$item_welcome_item21} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_facility_list.php"  > 
+							MFR Facility					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_aio_dashboard_dashboard.php"  > 
+							MFR AIO Dashboard					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item22" {$item_welcome_item22} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_regions_list.php"  > 
+							MFR Regions					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item23" {$item_welcome_item23} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_zones_list.php"  > 
+							MFR Zones					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item24" {$item_welcome_item24} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_woredas_list.php"  > 
+							MFR Woredas					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item25" {$item_welcome_item25} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_facility_types_list.php"  > 
+							MFR Facility Types					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item26" {$item_welcome_item26} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_operational_statuses_list.php"  > 
+							MFR Operational Statuses					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item27" {$item_welcome_item27} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_status_list.php"  > 
+							MFR Status					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item48" {$item_welcome_item48} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_operational_status_list.php"  > 
+							Mfr Operational Status					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item80" {$item_welcome_item80} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_facilities_register_list.php"  > 
+							Mfr Facilities Register					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item49" {$item_welcome_item49} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_region_list.php"  > 
+							Mfr Region					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item51" {$item_welcome_item51} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_zone_list.php"  > 
+							Mfr Zone					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item50" {$item_welcome_item50} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_woreda_list.php"  > 
+							Mfr Woreda					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_4} >
+									<td 
+	
+			 
+	data-cellId="grid_c3" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group2" {$item_welcome_group2} data-pageid="{$pageid}">
+	<h2>
+					Master Facility Registry: MFR CHARTS		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item57" {$item_welcome_item57} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_operational_status_chart_chart.php"  > 
+							Mfr Operational Status Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item47" {$item_welcome_item47} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_dashboard_reports_list.php"  > 
+							Mfr Dashboard Reports					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item58" {$item_welcome_item58} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_region_chart_chart.php"  > 
+							Mfr Region Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item56" {$item_welcome_item56} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_dashboard_reports_chart_chart.php"  > 
+							Mfr Dashboard Reports Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item85" {$item_welcome_item85} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="public_mfr_facilities_register_chart_chart.php"  > 
+							Mfr Facilities Register Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item83" {$item_welcome_item83} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="public_mfr_facilities_register_report_report.php"  > 
+							Mfr Facilities Register Report					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_5} >
+									<td 
+	
+			 
+	data-cellId="grid_c4" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_6} >
+									<td 
+	
+			 
+	data-cellId="grid_c5" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group4" {$item_welcome_group4} data-pageid="{$pageid}">
+	<h2>
+					DHIS2 Analytics		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_analytics1_list.php"  > 
+							DHIS2 Analytics					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_analytics_chart_chart.php"  > 
+							DHIS2 Analytics Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_analytics_report_report.php"  > 
+							DHIS2 Analytics Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_indicator_list.php"  > 
+							DHIS2 Indicator					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_organisation_unit_list.php"  > 
+							DHIS2 Organisation Unit					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_7} >
+									<td 
+	
+			 
+	data-cellId="grid_c6" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_8} >
+									<td 
+	
+			 
+	data-cellId="grid_c10" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group7" {$item_welcome_group7} data-pageid="{$pageid}">
+	<h2>
+					DHIS2 Org Unit Distribution and Reporting Rates		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item90" {$item_welcome_item90} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunits_distribution_list.php"  > 
+							DHIS2 OrgUnits Distribution					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item35" {$item_welcome_item35} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_distributions_list.php"  > 
+							DHIS2 OrgUnit Distributions					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rate_list.php"  > 
+							DHIS2 Reporting Rate					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rate_chart1_chart.php"  > 
+							DHIS2 Reporting Rate Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rates_chart_chart.php"  > 
+							DHIS2 Reporting Rates Chart					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rate_report1_report.php"  > 
+							DHIS2 Reporting Rate Report					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_9} >
+									<td 
+	
+			 
+	data-cellId="grid_c9" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group6" {$item_welcome_group6} data-pageid="{$pageid}">
+	<h2>
+					KnowledgeBase		
+			</h2>
+	 
+	</div>
+
+			
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item92" {$item_welcome_item92} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="16">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="main_list.php"  > 
+							<span class="glyphicon glyphicon-camera"></span>Main					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Main description	</div>
+	</div>
+
+			
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item93" {$item_welcome_item93} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="22">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="kbarticles_list.php"  > 
+							<span class="glyphicon glyphicon-headphones"></span>Articles					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Kbarticles description	</div>
+	</div>
+
+			
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item94" {$item_welcome_item94} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="24">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="kbcategories_list.php"  > 
+							<span class="glyphicon glyphicon-camera"></span>Categories					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Kbcategories description	</div>
+	</div>
+
+			
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item95" {$item_welcome_item95} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="19">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="kbusers_list.php"  > 
+							<span class="glyphicon glyphicon-fire"></span>Users					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Kbusers description	</div>
+	</div>
+
+			
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item96" {$item_welcome_item96} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="19">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="faicons_list.php"  > 
+							<span class="glyphicon glyphicon-shopping-cart"></span>Faicons					</a>
+	</div>
+
+			
+	<div class="bs-welcome-content">
+		Faicons description	</div>
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item97" {$item_welcome_item97} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="admin_comments_list.php"  > 
+							<span class="glyphicon glyphicon-camera"></span>Admin Comments					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_10} >
+									<td 
+	
+			 
+	data-cellId="grid_c7" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group8" {$item_welcome_group8} data-pageid="{$pageid}">
+	<h2>
+					DHIS2 Data Sets		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_datasets_list.php"  > 
+							DHIS2 Datasets					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reports_list.php"  > 
+							DHIS2 Reports					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item34" {$item_welcome_item34} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_aio_orgunit_list.php"  > 
+							DHIS2 AIO OrgUnit					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_organisation_units_list.php"  > 
+							DHIS2 Organisation Units					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item32" {$item_welcome_item32} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_groups_list.php"  > 
+							DHIS2 OrgUnit Groups					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item28" {$item_welcome_item28} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_country_list.php"  > 
+							DHIS2 OrgUnit Country					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item20" {$item_welcome_item20} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_indicators_list.php"  > 
+							DHIS2 Indicators					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item29" {$item_welcome_item29} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_regions_list.php"  > 
+							DHIS2 OrgUnit Regions					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item30" {$item_welcome_item30} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_zone_list.php"  > 
+							DHIS2 OrgUnit Zone					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item31" {$item_welcome_item31} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_woredas_list.php"  > 
+							DHIS2 OrgUnit Woredas					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item33" {$item_welcome_item33} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_orgunit_group_sets_list.php"  > 
+							DHIS2 OrgUnit Group Sets					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item39" {$item_welcome_item39} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_periods_list.php"  > 
+							DHIS2 Periods					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_11} >
+									<td 
+	
+			 
+	data-cellId="grid_c13" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group5" {$item_welcome_group5} data-pageid="{$pageid}">
+	<h2>
+					Additional		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item98" {$item_welcome_item98} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_noti_view_list.php"  > 
+							<span class="glyphicon glyphicon-bell"></span>HISPMD Notifications					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item36" {$item_welcome_item36} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ai_data_assistant_list.php"  > 
+							Ai Data Assistant					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item37" {$item_welcome_item37} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dataquality_list.php"  > 
+							Dataquality					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item38" {$item_welcome_item38} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="datause_list.php"  > 
+							Datause					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item40" {$item_welcome_item40} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="digitalhealth_list.php"  > 
+							Digitalhealth					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item41" {$item_welcome_item41} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="digitalhealthapps_list.php"  > 
+							Digitalhealthapps					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item42" {$item_welcome_item42} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="financialresources_list.php"  > 
+							Financialresources					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item43" {$item_welcome_item43} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="healthfacilities_list.php"  > 
+							Healthfacilities					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item44" {$item_welcome_item44} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="healthunits_list.php"  > 
+							Healthunits					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item45" {$item_welcome_item45} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hisgovernance_list.php"  > 
+							Hisgovernance					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item46" {$item_welcome_item46} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispartners_list.php"  > 
+							Hispartners					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item52" {$item_welcome_item52} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="publications_list.php"  > 
+							Publications					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item53" {$item_welcome_item53} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="regions_list.php"  > 
+							Regions					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item54" {$item_welcome_item54} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="research_list.php"  > 
+							Research					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item55" {$item_welcome_item55} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="workforce_list.php"  > 
+							Workforce					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item59" {$item_welcome_item59} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_additional_organizational_and_behavioral_assessment_list.php"  > 
+							Ethprism Additional Organizational And Behavioral Assessment					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item60" {$item_welcome_item60} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_facility_level_rhis_performance_diagnostic_list.php"  > 
+							Ethprism Facility Level Rhis Performance Diagnostic					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item61" {$item_welcome_item61} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_facility_office_checklist_list.php"  > 
+							Ethprism Facility Office Checklist					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item62" {$item_welcome_item62} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_healthpost_level_rhis_performance_diagnostic_list.php"  > 
+							Ethprism Healthpost Level Rhis Performance Diagnostic					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item63" {$item_welcome_item63} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_national_prism_woreda_level_diagnostic_list.php"  > 
+							Ethprism National Prism Woreda Level Diagnostic					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item64" {$item_welcome_item64} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="ethprism_organizational_and_behavioral_assessment_list.php"  > 
+							Ethprism Organizational And Behavioral Assessment					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item65" {$item_welcome_item65} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_prism_settings_list.php"  > 
+							Hispmd Prism Settings					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item66" {$item_welcome_item66} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="prism_dashboard_dashboard.php"  > 
+							PRISM Dashboard					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item67" {$item_welcome_item67} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_users_audit_list.php"  > 
+							Hispmd Users Audit					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item68" {$item_welcome_item68} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_system_settings_list.php"  > 
+							Hispmd System Settings					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item69" {$item_welcome_item69} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_prism_data_forms_list.php"  > 
+							Hispmd Prism Data Forms					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item79" {$item_welcome_item79} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="timetracker_list.php"  > 
+							Timetracker					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item81" {$item_welcome_item81} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="system_users_activity_dashboard_dashboard.php"  > 
+							System Users Activity Dashboard					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item82" {$item_welcome_item82} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_web_reports_and_charts_builder_dashboard.php"  > 
+							HISPMD Web Reports And Charts Builder					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item84" {$item_welcome_item84} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="hispmd_organisations_list.php"  > 
+							Hispmd Organisations					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item91" {$item_welcome_item91} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="chat_history_list.php"  > 
+							Chat History					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_12} >
+									<td 
+	
+			 
+	data-cellId="grid_c14" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_13} >
+									<td 
+	
+			 
+	data-cellId="grid_c8" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group3" {$item_welcome_group3} data-pageid="{$pageid}">
+	<h2>
+					MFR Data Update Setting		
+			</h2>
+	 
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_dashboard_report_list.php"  > 
+							MFR Dashboard Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_status_report_list.php"  > 
+							MFR Status Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_region_report_list.php"  > 
+							MFR Region Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_zone_report_list.php"  > 
+							MFR Zone Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_woreda_report_list.php"  > 
+							MFR Woreda Report					</a>
+	</div>
+
+	</div>
+
+	
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="mfr_facilities_list.php"  > 
+							MFR Facilities					</a>
+	</div>
+
+	</div>
+
+<div class="clearfix"></div>
+</div>
+</td>
+							</tr>
+											<tr {$row_grid_14} >
+									<td 
+	
+			 
+	data-cellId="grid_c11" data-pageid="{$pageid}">
+<div class="r-welcome-align">
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item102" {$item_welcome_item102} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_ir_datasource_list.php"  > 
+							Moh Ir Datasource					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item103" {$item_welcome_item103} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_years_list.php"  > 
+							Moh Years					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item104" {$item_welcome_item104} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_months_list.php"  > 
+							Moh Months					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item105" {$item_welcome_item105} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_quarters_list.php"  > 
+							Moh Quarters					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item106" {$item_welcome_item106} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_period_types_list.php"  > 
+							Moh Period Types					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item107" {$item_welcome_item107} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rate_details_list.php"  > 
+							DHIS2 Reporting Rate Details					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item108" {$item_welcome_item108} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rate_details_chart_chart.php"  > 
+							DHIS2 Reporting Rate Details Chart					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item109" {$item_welcome_item109} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rate_details_chart_chart.php"  > 
+							DHIS2 Reporting Rate Details Chart					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item110" {$item_welcome_item110} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reportingrate_list.php"  > 
+							DHIS2 ReportingRate					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item111" {$item_welcome_item111} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reports_dataset_list.php"  > 
+							DHIS2 Reports DataSet					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item112" {$item_welcome_item112} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reportingrate_chart_chart.php"  > 
+							DHIS2 ReportingRate Chart					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item113" {$item_welcome_item113} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reportingrates_list.php"  > 
+							DHIS2 ReportingRates					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item114" {$item_welcome_item114} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_analyticsreport_list.php"  > 
+							DHIS2 AnalyticsReport					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item115" {$item_welcome_item115} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="moh_indicators_target_list.php"  > 
+							Moh Indicators Target					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item116" {$item_welcome_item116} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rates_list.php"  > 
+							Dhis2 Reporting Rates					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item117" {$item_welcome_item117} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reportingrate_settings_list.php"  > 
+							Dhis2 Reportingrate Settings					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item118" {$item_welcome_item118} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_reporting_rates_report_report.php"  > 
+							DHIS2 Reporting Rates Report					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item119" {$item_welcome_item119} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_eidm_hc_list.php"  > 
+							DHIS2 EIDM HC					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item120" {$item_welcome_item120} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="eidm_hc_list.php"  > 
+							Eidm Hc					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item121" {$item_welcome_item121} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="eidm_settings_list.php"  > 
+							Eidm Settings					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item122" {$item_welcome_item122} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis2_data_elements_list.php"  > 
+							DHIS2 Data Elements					</a>
+	</div>
+
+	</div>
+
+ 
+
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item123" {$item_welcome_item123} data-pageid="{$pageid}" data-page="_global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dhis_2_reporting_rates_chart_chart.php"  > 
+							DHIS 2 Reporting Rates Chart					</a>
+	</div>
+
+	</div>
+
+</div>
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+			</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

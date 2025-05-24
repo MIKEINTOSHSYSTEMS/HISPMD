@@ -19,6 +19,13 @@ class ArrayResult extends DataResult
 	protected $dummy = null;
 
 	/**
+	 * Total records number calculated somewhere else
+	 * Overrides number returned by count()
+	 */
+	protected $totalRecords = -1;
+
+
+	/**
 	 * Current record index
 	 */
 	protected $recIdx = 0;
@@ -40,7 +47,7 @@ class ArrayResult extends DataResult
 	
 	protected function prepareRecord() 
 	{
-		if( $this->recIdx < count( $this->source ) ) {
+		if( $this->recIdx < $this->count() ) {
 			$this->data = &$this->source[ $this->recIdx ];
 			return true;
 		} else {
@@ -113,6 +120,9 @@ class ArrayResult extends DataResult
 	}
 
 	public function count() {
+		if( $this->totalRecords >= 0 ) {
+			return $this->totalRecords;
+		}
 		return count( $this->source );
 	}
 
@@ -135,6 +145,13 @@ class ArrayResult extends DataResult
 		return true;
 	}
 
+	function position() {
+		return $this->recIdx;
+	}
+
+	public function setTotalRecords( $n ) {
+		$this->totalRecords = $n;
+	}
 
 }
 ?>

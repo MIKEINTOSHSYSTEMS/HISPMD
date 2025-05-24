@@ -94,8 +94,6 @@ class PrintPage extends RunnerPage
 				$this->hideField( $this->pSet->getFieldByGoodFieldName($f) );
 			}
 		}
-		
-		$this->pageData['pdfFonts'] = getPdfFonts();
 	}
 
 	/**
@@ -214,7 +212,8 @@ class PrintPage extends RunnerPage
 		if( !$this->splitByRecords )
 		{
 			$this->fillGridPage();
-			$this->showTotals();
+			$this->assignTotals();
+
 			// display the 'Back to Master' link and master table info
 			$this->displayMasterTableInfo();
 			$this->addPage();
@@ -246,8 +245,10 @@ class PrintPage extends RunnerPage
 				++$this->pageNo;
 				$this->pageBody = array();
 			}
+			
 			//	add totals to the last page
-			$this->showTotals();
+			$this->assignTotals();
+			
 			$this->wrapPageBody();
 			$this->addPage();
 		}
@@ -267,6 +268,16 @@ class PrintPage extends RunnerPage
 		$this->addDetailsCss();
 
 		$this->displayPrintPage();
+	}
+
+	protected function calcAllDataTotals() {
+		$currentPageSize = $this->queryPageSize;
+		if ( !$this->allPagesMode && $this->pSet->getRecordsLimit() )
+			$currentPageSize = $this->pSet->getRecordsLimit() - ( $this->queryPageSize * ($this->queryPageNo - 1) );
+	
+		
+		return $this->pSet->calcTotalsFor() == TOTALS_ALL_DATA 
+			&& !$this->allPagesMode && $this->queryPageSize < $this->totalRowCount;
 	}
 
 	protected function hideEmptyFields()
@@ -319,17 +330,23 @@ class PrintPage extends RunnerPage
 	/**
 	 *
 	 */
-	protected function showTotals()
-	{
+	protected function assignTotals() {
 		if( !$this->totalsFields )
 			return;
-
+		
+		if( $this->calcAllDataTotals() )
+			$this->buildAllDataTotals();
+		else
+			$this->buildTotals( $this->totals );
+	}
+	
+	
+	function buildTotals( &$totals ) {		
 		$record = array();
 		$this->pageBody["totals_record"] = true;
-		foreach( $this->totalsFields as $tf )
-		{
+		foreach( $this->totalsFields as $tf ) {
 			$total = GetTotals( $tf["fName"],
-				$this->totals[ $tf["fName"] ],
+				$totals[ $tf["fName"] ],
 				$tf[ "totalsType" ],
 				$tf["numRows"],
 				$tf[ "viewFormat" ],
@@ -337,12 +354,13 @@ class PrintPage extends RunnerPage
 				$this->pSet,
 				false,
 				$this );
+
 			$this->pageBody[ GoodFieldName( $tf['fName'] ) . "_total" ] = $total;
 			$this->pageBody[ GoodFieldName( $tf['fName'] ) . "_showtotal"] = true;
 			$record[ GoodFieldName( $tf['fName'] ) . "_showtotal"] = true;
 		}
 
-		$this->pageBody[ "totals_row" ] = array("data" => array(0 => $record));
+		$this->pageBody[ "totals_row" ] = array("data" => array(0 => $record));		
 	}
 
 	/**
@@ -436,7 +454,8 @@ class PrintPage extends RunnerPage
 		$record["recordattrs"] = "data-record-id=\"".$this->recId."\"";
 		$record["recId"] = $this->recId;
 
-		$this->countTotals( $this->totals , $data );
+		if( !$this->calcAllDataTotals() )
+			$this->countTotals( $this->totals , $data );
 
 		$keyFields = $this->pSet->getTableKeys();
 		$keylink = "";
@@ -530,30 +549,17 @@ class PrintPage extends RunnerPage
 		$recordsPrinted = 0;
 
 		$row = array();
-		$col = 0;
 		while( $data = $this->readNextRecord() )
 		{
 			RunnerContext::pushRecordContext( $data, $this );
 
 			$row["details"] = array();
-			if( !$col )
-			{
-				//	create new row
-				$row = array();
-				$row["grid_record"] = array();
-				$row["grid_record"]["data"] = array();
-				$row["details_record"] = array();
-				$row["details_record"]["data"] = array();
-			}
-			else
-			{
-				//	update previous record in the row
-				$row["grid_record"]["data"][ $col - 1 ]["endrecord_block"] = true;
-				$row["details_record"]["data"][ $col - 1 ]["endrecord_block"] = true;
-				//	add two empty cells to the vertical layout grid
-				$row["grid_recordspace"]["data"][] = true;
-				$row["grid_recordspace"]["data"][] = true;
-			}
+			//	create new row
+			$row = array();
+			$row["grid_record"] = array();
+			$row["grid_record"]["data"] = array();
+			$row["details_record"] = array();
+			$row["details_record"]["data"] = array();
 
 			//	add the record to the row
 			if( $this->manyRecordsInRow() )
@@ -611,30 +617,12 @@ class PrintPage extends RunnerPage
 			$prevData = $data;
 
 			//	finalize row if needed
-			++$col;
 			++$recno;
-			if( $col >= $this->recsPerRowPrint )
-			{
-				$row["grid_recordspace"]["data"][] = true;
-				$row["grid_rowspace"] = true;
-				$this->pageBody["grid_row"]["data"][] = $row;
-				$col = 0;
-			}
+			$this->pageBody["grid_row"]["data"][] = $row;
 
 			if( $this->splitByRecords && $recno >= $this->splitByRecords )
 				break;
 		}
-
-		//	finalize grid
-		if( $col )
-		{
-			if( $builtDetails && ($this->printGridLayout == gltVERTICAL || $this->recsPerRowPrint != 1) )
-			{
-				$row["details_record"]["data"][0]["bs_clear_class"] = "bs-print-details-clear";
-			}
-			$this->pageBody["grid_row"]["data"][] = $row;
-		}
-
 		$this->showGridHeader( $this->recsPerRowPrint < $recno ? $this->recsPerRowPrint : $recno);
 		$this->pageBody["pageno"] = $this->pageNo;
 
@@ -683,6 +671,8 @@ class PrintPage extends RunnerPage
 				unset( $pdfBody["data"][$p]["end"] );
 			}
 			$this->xt->assignbyref('body', $pdfBody );
+			
+			$this->xt->assign( "pdfFonts", my_json_encode( getPdfFonts() ) );
 		} else
 			$this->xt->assignbyref('body', $this->body);
 
@@ -1119,7 +1109,6 @@ class PrintPage extends RunnerPage
 	}
 
 
-
 	function pdfJsonMode() {
 		return $this->mode == PRINT_PDFJSON;
 	}
@@ -1131,6 +1120,9 @@ class PrintPage extends RunnerPage
 	public function getSecurityCondition() {
 		return Security::SelectCondition( "P", $this->pSet );
 	}
-
+	
+	protected function getTotalDataCommand() {
+		return parent::getSubsetDataCommand();
+	}
 }
 ?>

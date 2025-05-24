@@ -99,6 +99,10 @@ class AddPage extends RunnerPage
 	public $hostPageName = "";
 	public $newRowId;
 	
+	public $listPage = "";
+	
+	protected $sqlValues = array();
+	
 	/**
 	 * @constructor
 	 */
@@ -109,22 +113,13 @@ class AddPage extends RunnerPage
 		$this->addFields = $this->getPageFields();
 		$this->auditObj = GetAuditObject($this->tName);
 
-		if( $this->getLayoutVersion() === PD_BS_LAYOUT )
-		{
-			$this->headerForms = array( "top" );
-			$this->footerForms = array( "below-grid" );
+		$this->headerForms = array( "top" );
+		$this->footerForms = array( "below-grid" );
 
-			if ( $this->isMultistepped() )
-				$this->bodyForms = array( "above-grid", "steps" );
-			else
-				$this->bodyForms = array( "above-grid", "grid" );
-		}
+		if ( $this->isMultistepped() )
+			$this->bodyForms = array( "above-grid", "steps" );
 		else
-		{
-			$this->formBricks["header"] = "addheader";
-			$this->formBricks["footer"] = "addbuttons";
-			$this->assignFormFooterAndHeaderBricks( true );
-		}
+			$this->bodyForms = array( "above-grid", "grid" );
 
 		$this->addPageSettings();
 	}
@@ -158,6 +153,10 @@ class AddPage extends RunnerPage
 
 		if ( $afterAddAction == AA_TO_DETAIL_LIST || $afterAddAction == AA_TO_DETAIL_ADD )
 			$this->jsSettings["tableSettings"][ $this->tName ]["afterAddActionDetTable"] = GetTableURL( $this->pSet->getAADetailTable() );
+		
+		if( $this->listPage && $afterAddAction == AA_TO_LIST ) {
+			$this->pageData["listPage"] = $this->listPage;
+		}
 	}
 
 	/**
@@ -237,10 +236,7 @@ class AddPage extends RunnerPage
 		{
 			if( $this->masterTable && !$this->inlineAddAvailable() && $this->masterPageType == PAGE_ADD )  // #12518
 			{
-				if( $this->isPD() )
-					return $this->pSet->getInlineAddFields();
-
-				return $this->pSet->getAddFields();
+				return $this->pSet->getInlineAddFields();
 			}
 
 			return $this->pSet->getInlineAddFields();
@@ -579,8 +575,9 @@ class AddPage extends RunnerPage
 		if( !$this->eventsObject->exists("BeforeAdd") )
 			return true;
 
+		$this->sqlValues = array();
 		$usermessage = "";
-		$ret = $this->eventsObject->BeforeAdd( $this->newRecordData, $usermessage, $this->mode == ADD_INLINE, $this );
+		$ret = $this->eventsObject->BeforeAdd( $this->newRecordData, $this->sqlValues, $usermessage, $this->mode == ADD_INLINE, $this );
 		if( $usermessage != "" )
 			$this->setMessage( $usermessage );
 
@@ -716,7 +713,7 @@ class AddPage extends RunnerPage
 		}
 		$keylink = implode("&", $keyParams);
 
-		if ( $this->isBootstrap() && count($keysArray) > 0 && $this->mode == ADD_SIMPLE )
+		if ( count($keysArray) > 0 && $this->mode == ADD_SIMPLE )
 		{
 			$_SESSION["successKeys"] = $keysArray;
 		}
@@ -856,32 +853,41 @@ class AddPage extends RunnerPage
 		if( !!$fieldsIconsData )
 			$returnJSON['fieldsMapIconsData'] = $fieldsIconsData;
 
+		//$isEditable = Security::userCan('E', $this->tName) || Security::userCan('D', $this->tName);
+		$isEditable = true;
+		if( $globalEvents->exists("IsRecordEditable", $this->tName) ) {
+			$isEditable = $globalEvents->IsRecordEditable( $data, $isEditable, $this->tName );
+		}
 		
-		if( $this->forSpreadsheetGrid && $haveData ) {
-			//  new added grid row id	
-			$newRowId = $this->newRowId ? $this->newRowId : $this->id;
-			$editPage = $this->getRelatedInlineEditPage( $this->hostPageName, $this->keys, $newRowId );
+		if( $this->forSpreadsheetGrid ) {
+			if( $haveData && $isEditable ) {
+				//  new added grid row id	
+				$newRowId = $this->newRowId ? $this->newRowId : $this->id;
+				$editPage = $this->getRelatedInlineEditPage( $this->hostPageName, $this->keys, $newRowId );
 
-			$returnJSON["editFields"] = $listPSet->getInlineEditFields();
-			
-			// use "htmlControls" key no to interfire with dash html data
-			$returnJSON["htmlControls"] = array();
-			foreach( $listPSet->getInlineEditFields() as $fName ) {
-				$controls = $editPage->getContolMapData( $fName, $newRowId, $data, $editPage->editFields );
-				// set edit page controlsMap
-				$editPage->fillControlsMap( $controls );
+				$returnJSON["editFields"] = $listPSet->getInlineEditFields();
 				
-				if( $editPage->getEditFormat( $fName ) == EDIT_FORMAT_READONLY )
-					$editPage->readOnlyFields[ $fName ] = $this->showDBValue( $fName, $data );
+				// use "htmlControls" key no to interfire with dash html data
+				$returnJSON["htmlControls"] = array();
+				foreach( $listPSet->getInlineEditFields() as $fName ) {
+					$controls = $editPage->getContolMapData( $fName, $newRowId, $data, $editPage->editFields );
+					// set edit page controlsMap
+					$editPage->fillControlsMap( $controls );
+					
+					if( $editPage->getEditFormat( $fName ) == EDIT_FORMAT_READONLY )
+						$editPage->readOnlyFields[ $fName ] = $this->showDBValue( $fName, $data );
+					
+					$returnJSON["htmlControls"][ $fName ] = $editPage->getSpreadsheetControlMarkup( $fName, $newRowId, $data );
+				}
 				
-				$returnJSON["htmlControls"][ $fName ] = $editPage->getSpreadsheetControlMarkup( $fName, $newRowId, $data );
+				$returnJSON["pageId"] = $newRowId;
+				
+				$editPage->fillSetCntrlMaps();
+				// contols map for spreadsheet inline edit controls
+				$returnJSON["spreadControlsMap"] = $editPage->controlsHTMLMap;
+			} else {
+				$returnJSON['nonEditable'] = true;			
 			}
-			
-			$returnJSON["pageId"] = $newRowId;
-			
-			$editPage->fillSetCntrlMaps();
-			// contols map for spreadsheet inline edit controls
-			$returnJSON["spreadControlsMap"] = $editPage->controlsHTMLMap;
 		}
 		
 		
@@ -897,9 +903,8 @@ class AddPage extends RunnerPage
 				$returnJSON['linkValue'] = $linkAndDispVals['linkValue'];
 				$returnJSON['displayValue'] = $linkAndDispVals['displayValue'];
 			}
-			if( $globalEvents->exists("IsRecordEditable", $this->tName) )
-			{
-				if( !$globalEvents->IsRecordEditable($showRawValues, true, $this->tName) )
+			if( $globalEvents->exists("IsRecordEditable", $this->tName) ) {
+				if( !$isEditable )
 					$returnJSON['nonEditable'] = true;
 			}
 
@@ -920,9 +925,8 @@ class AddPage extends RunnerPage
 				$returnJSON['rawVals'] = $showRawValues;
 				$returnJSON['hrefs'] = $this->buildDetailGridLinks( $returnJSON['detKeys'] );
 
-				if( $globalEvents->exists("IsRecordEditable", $this->tName) )
-				{
-					if( !$globalEvents->IsRecordEditable($showRawValues, true, $this->tName) )
+				if( $globalEvents->exists("IsRecordEditable", $this->tName) ) {
+					if( !$isEditable )
 						$returnJSON['nonEditable'] = true;
 				}
 			}
@@ -1024,10 +1028,12 @@ class AddPage extends RunnerPage
 				return true;
 
 			case AA_TO_LIST:
-				if( $this->pSet->hasListPage() )
-					HeaderRedirect( $this->shortTableName, PAGE_LIST, "a=return&".$this->getStateUrlParams() );
-				else
+				if( $this->pSet->hasListPage() ) {
+					HeaderRedirect( $this->shortTableName, PAGE_LIST, "a=return&"
+						.( $this->listPage ? "page=".$this->listPage."&" : "" ).$this->getStateUrlParams() );
+				} else {
 					HeaderRedirect("menu");
+				}
 				return true;
 
 			case AA_TO_VIEW:
@@ -1297,7 +1303,7 @@ class AddPage extends RunnerPage
 			}
 		}
 
-		if ( $this->isBootstrap() && isset($_SESSION["successKeys"]) )
+		if ( isset($_SESSION["successKeys"]) )
 		{
 			$keysArray = $_SESSION["successKeys"];
 			$dataKeysAttr = 'data-keys="'.runner_htmlspecialchars( my_json_encode($keysArray) ).'"';
@@ -1340,11 +1346,9 @@ class AddPage extends RunnerPage
 				$this->readOnlyFields[ $fName ] = $this->showDBValue( $fName, $this->defvalues );
 			}
 
-			if( $this->isBootstrap() ) {
-				$firstElementId = $this->getControl( $fName, $this->id )->getFirstElementId();
-				if( $firstElementId )
-					$this->xt->assign( "labelfor_" . GoodFieldName( $fName ), $firstElementId );
-			}
+			$firstElementId = $this->getControl( $fName, $this->id )->getFirstElementId();
+			if( $firstElementId )
+				$this->xt->assign( "labelfor_" . GoodFieldName( $fName ), $firstElementId );
 			
 			$parameters = $this->getEditContolParams( $fName, $this->id, $this->defvalues );
 			$this->xt->assign_function( GoodFieldName( $fName )."_editcontrol", "xt_buildeditcontrol", $parameters );
@@ -1354,8 +1358,6 @@ class AddPage extends RunnerPage
 				$controls["controls"]["isInvalid"] = true;
 			
 			$this->fillControlsMap( $controls );
-			
-			$this->fillFieldToolTips( $fName );
 			$this->fillControlFlags( $fName );
 
 			// fill special settings for a time picker
@@ -1465,11 +1467,7 @@ class AddPage extends RunnerPage
 			return;
 
 		$listPageObject = $this->getDetailsPageObject( $dpTableName, $dpId );
-
-		if ( $this->isBootstrap() && $this->isBootstrap() )
-		{
-			$listPageObject->assignButtonsOnMasterEdit( $this->xt );
-		}
+		$listPageObject->assignButtonsOnMasterEdit( $this->xt );
 	}
 
 	/**
@@ -1477,17 +1475,13 @@ class AddPage extends RunnerPage
 	 */
 	protected function doCommonAssignments()
 	{
-
-		if ( $this->isBootstrap() )
+		if ( $this->mode === ADD_SIMPLE )
 		{
-			if ( $this->mode === ADD_SIMPLE )
-			{
-				$this->headerCommonAssign();
-			}
-			else
-			{
-				$this->xt->assign("menu_chiddenattr", "data-hidden" );
-			}
+			$this->headerCommonAssign();
+		}
+		else
+		{
+			$this->xt->assign("menu_chiddenattr", "data-hidden" );
 		}
 
 		$this->setLangParams();
@@ -1496,16 +1490,8 @@ class AddPage extends RunnerPage
 
 		if( $this->isMessageSet() )
 		{
-			if( !$this->isBootstrap() )
-			{
-				$mesClass = $this->messageType == MESSAGE_ERROR ? "message rnr-error" : "message" ;
-				$this->xt->assign("message", "<div class='".$mesClass."' >" . $this->message . "</div>" );
-			}
-			else
-			{
-				$this->xt->assign("message", $this->message );
-				$this->xt->assign("message_class", $this->messageType == MESSAGE_ERROR ? "alert alert-danger" : "alert alert-success" );
-			}
+			$this->xt->assign("message", $this->message );
+			$this->xt->assign("message_class", $this->messageType == MESSAGE_ERROR ? "alert alert-danger" : "alert alert-success" );
 		}
 		else
 		{
@@ -1545,9 +1531,6 @@ class AddPage extends RunnerPage
 
 			$this->xt->assign($gfName."_fieldblock", true);
 			$this->xt->assign($gfName."_tabfieldblock", true);
-
-			if( $this->is508 && !$this->isBootstrap() )
-				$this->xt->assign_section($gfName."_label", "<label for=\"" . $this->getInputElementId( $fName ) . "\">", "</label>");
 		}
 	}
 
@@ -1865,6 +1848,11 @@ class AddPage extends RunnerPage
 	public function getInsertDataCommand() {
 		$dc = new DsCommand();
 		$dc->values = &$this->newRecordData;
+		
+		$dc->advValues = array();
+		foreach( $this->sqlValues as $field => $sqlValue ) {
+			$dc->advValues[ $field ] =  new DsOperand( dsotSQL, $sqlValue );
+		}		
 		return $dc;
 	}
 

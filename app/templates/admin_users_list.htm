@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_adminarea}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_adminarea}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -88,7 +231,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +240,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -241,6 +384,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -1041,9 +1187,18 @@
 	 
 		{BEGIN ID_fieldheadercolumn}
 	{BEGIN ID_fieldheader}
-	<SPAN {$ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ID" data-fieldname="ID">
-	{$label admin_users ID }	{$arrow_icon_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ID" data-fieldname="ID" 
+
+			{$ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users ID }</span>
+					{$arrow_icon_ID}
+			</span>
+	</span>
 	{END ID_fieldheader}
 {END ID_fieldheadercolumn}
 
@@ -1065,9 +1220,16 @@
 
 	 
 		{BEGIN userpic_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="userpic" data-fieldname="userpic">
-	{$label admin_users userpic }	</span>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="userpic" data-fieldname="userpic" 
+
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users userpic }</span>
+			</span>
+	</span>
 {END userpic_fieldheadercolumn}
 
 	
@@ -1089,9 +1251,18 @@
 	 
 		{BEGIN username_fieldheadercolumn}
 	{BEGIN username_fieldheader}
-	<SPAN {$username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
-	{$label admin_users username }	{$arrow_icon_username}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username" 
+
+			{$username_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users username }</span>
+					{$arrow_icon_username}
+			</span>
+	</span>
 	{END username_fieldheader}
 {END username_fieldheadercolumn}
 
@@ -1114,9 +1285,18 @@
 	 
 		{BEGIN email_fieldheadercolumn}
 	{BEGIN email_fieldheader}
-	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email">
-	{$label admin_users email }	{$arrow_icon_email}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email" 
+
+			{$email_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users email }</span>
+					{$arrow_icon_email}
+			</span>
+	</span>
 	{END email_fieldheader}
 {END email_fieldheadercolumn}
 
@@ -1139,9 +1319,18 @@
 	 
 		{BEGIN fullname_fieldheadercolumn}
 	{BEGIN fullname_fieldheader}
-	<SPAN {$fullname_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fullname" data-fieldname="fullname">
-	{$label admin_users fullname }	{$arrow_icon_fullname}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fullname" data-fieldname="fullname" 
+
+			{$fullname_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users fullname }</span>
+					{$arrow_icon_fullname}
+			</span>
+	</span>
 	{END fullname_fieldheader}
 {END fullname_fieldheadercolumn}
 
@@ -1164,9 +1353,18 @@
 	 
 		{BEGIN groupid_fieldheadercolumn}
 	{BEGIN groupid_fieldheader}
-	<SPAN {$groupid_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="groupid" data-fieldname="groupid">
-	{$label admin_users groupid }	{$arrow_icon_groupid}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="groupid" data-fieldname="groupid" 
+
+			{$groupid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users groupid }</span>
+					{$arrow_icon_groupid}
+			</span>
+	</span>
 	{END groupid_fieldheader}
 {END groupid_fieldheadercolumn}
 
@@ -1189,9 +1387,18 @@
 	 
 		{BEGIN active_fieldheadercolumn}
 	{BEGIN active_fieldheader}
-	<SPAN {$active_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="active" data-fieldname="active">
-	{$label admin_users active }	{$arrow_icon_active}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="active" data-fieldname="active" 
+
+			{$active_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users active }</span>
+					{$arrow_icon_active}
+			</span>
+	</span>
 	{END active_fieldheader}
 {END active_fieldheadercolumn}
 
@@ -1214,9 +1421,18 @@
 	 
 		{BEGIN ext_security_id_fieldheadercolumn}
 	{BEGIN ext_security_id_fieldheader}
-	<SPAN {$ext_security_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ext_security_id" data-fieldname="ext_security_id">
-	{$label admin_users ext_security_id }	{$arrow_icon_ext_security_id}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ext_security_id" data-fieldname="ext_security_id" 
+
+			{$ext_security_id_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users ext_security_id }</span>
+					{$arrow_icon_ext_security_id}
+			</span>
+	</span>
 	{END ext_security_id_fieldheader}
 {END ext_security_id_fieldheadercolumn}
 
@@ -1239,9 +1455,18 @@
 	 
 		{BEGIN phone_number_fieldheadercolumn}
 	{BEGIN phone_number_fieldheader}
-	<SPAN {$phone_number_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="phone_number" data-fieldname="phone_number">
-	{$label admin_users phone_number }	{$arrow_icon_phone_number}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="phone_number" data-fieldname="phone_number" 
+
+			{$phone_number_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users phone_number }</span>
+					{$arrow_icon_phone_number}
+			</span>
+	</span>
 	{END phone_number_fieldheader}
 {END phone_number_fieldheadercolumn}
 
@@ -1264,9 +1489,18 @@
 	 
 		{BEGIN first_name_fieldheadercolumn}
 	{BEGIN first_name_fieldheader}
-	<SPAN {$first_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="first_name" data-fieldname="first_name">
-	{$label admin_users first_name }	{$arrow_icon_first_name}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="first_name" data-fieldname="first_name" 
+
+			{$first_name_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users first_name }</span>
+					{$arrow_icon_first_name}
+			</span>
+	</span>
 	{END first_name_fieldheader}
 {END first_name_fieldheadercolumn}
 
@@ -1289,9 +1523,18 @@
 	 
 		{BEGIN middle_name_fieldheadercolumn}
 	{BEGIN middle_name_fieldheader}
-	<SPAN {$middle_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="middle_name" data-fieldname="middle_name">
-	{$label admin_users middle_name }	{$arrow_icon_middle_name}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="middle_name" data-fieldname="middle_name" 
+
+			{$middle_name_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users middle_name }</span>
+					{$arrow_icon_middle_name}
+			</span>
+	</span>
 	{END middle_name_fieldheader}
 {END middle_name_fieldheadercolumn}
 
@@ -1314,9 +1557,18 @@
 	 
 		{BEGIN last_name_fieldheadercolumn}
 	{BEGIN last_name_fieldheader}
-	<SPAN {$last_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="last_name" data-fieldname="last_name">
-	{$label admin_users last_name }	{$arrow_icon_last_name}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="last_name" data-fieldname="last_name" 
+
+			{$last_name_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users last_name }</span>
+					{$arrow_icon_last_name}
+			</span>
+	</span>
 	{END last_name_fieldheader}
 {END last_name_fieldheadercolumn}
 
@@ -1339,9 +1591,18 @@
 	 
 		{BEGIN designation_fieldheadercolumn}
 	{BEGIN designation_fieldheader}
-	<SPAN {$designation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="designation" data-fieldname="designation">
-	{$label admin_users designation }	{$arrow_icon_designation}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="designation" data-fieldname="designation" 
+
+			{$designation_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users designation }</span>
+					{$arrow_icon_designation}
+			</span>
+	</span>
 	{END designation_fieldheader}
 {END designation_fieldheadercolumn}
 
@@ -1364,9 +1625,18 @@
 	 
 		{BEGIN organisation_name_fieldheadercolumn}
 	{BEGIN organisation_name_fieldheader}
-	<SPAN {$organisation_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="organisation_name" data-fieldname="organisation_name">
-	{$label admin_users organisation_name }	{$arrow_icon_organisation_name}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="organisation_name" data-fieldname="organisation_name" 
+
+			{$organisation_name_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users organisation_name }</span>
+					{$arrow_icon_organisation_name}
+			</span>
+	</span>
 	{END organisation_name_fieldheader}
 {END organisation_name_fieldheadercolumn}
 
@@ -1389,9 +1659,18 @@
 	 
 		{BEGIN department_fieldheadercolumn}
 	{BEGIN department_fieldheader}
-	<SPAN {$department_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="department" data-fieldname="department">
-	{$label admin_users department }	{$arrow_icon_department}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="department" data-fieldname="department" 
+
+			{$department_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label admin_users department }</span>
+					{$arrow_icon_department}
+			</span>
+	</span>
 	{END department_fieldheader}
 {END department_fieldheadercolumn}
 

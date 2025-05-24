@@ -180,6 +180,9 @@ $tstrOrderBy = "";
 $tdatadhis2_datasets[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_datasets[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_datasets[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_datasets[".sqlHead"] = "";
@@ -246,6 +249,7 @@ $tdatadhis2_datasets[".hideMobileList"] = array();
 
 		$fdata["strField"] = "dataSets/*/displayName";
 
+	
 	
 		$fdata["FullName"] = "displayName";
 
@@ -381,6 +385,7 @@ $tdatadhis2_datasets[".hideMobileList"] = array();
 
 		$fdata["strField"] = "dataSets/*/id";
 
+	
 	
 		$fdata["FullName"] = "id";
 

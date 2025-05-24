@@ -541,11 +541,12 @@ class EditSelectedPage extends EditPage
 			.$gf.$this->id." data-field=\"".runner_htmlspecialchars( $field ) ."\">";
 		
 		$label = array();
-		$label["begin"] = $checkbox;
-		if( $required || $this->pSet->isRequired( $field ) ) 
-			$label['end'] = '&nbsp;<span class="icon-required"></span>';
-		
+		$label["begin"] = $checkbox;		
 		$this->xt->assign($gf."_label", $label );
+		
+		if( $this->pSet->isRequired( $field ) || $required ) {
+			$this->xt->assign( "required_attr_".GoodFieldName( $field  ), 'data-required="true"' );
+		}		
 	}
 	
 

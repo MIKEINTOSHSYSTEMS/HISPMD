@@ -309,8 +309,8 @@ $dec_val = 0;
 $linestyle_val=0;
 $gaugestyle_val=0;
 $cview_val = 0;
-$head_val = "New Chart ".CheckLastID('chart');
-$foot_val = "New Chart ".CheckLastID('chart');
+$head_val = "New Chart ".CheckLastID( WR_CHART );
+$foot_val = "New Chart ".CheckLastID( WR_CHART );
 
 $arr = $_SESSION['webcharts']['appearance'];
 if ( !empty( $arr ) ){

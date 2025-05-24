@@ -188,6 +188,9 @@ $tstrOrderBy = "";
 $tdatamfr_woreda_report[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamfr_woreda_report[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatamfr_woreda_report[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatamfr_woreda_report[".sqlHead"] = "";
@@ -254,6 +257,7 @@ $tdatamfr_woreda_report[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/name";
 
+	
 	
 		$fdata["FullName"] = "woreda";
 
@@ -389,6 +393,7 @@ $tdatamfr_woreda_report[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/lat";
 
+	
 	
 		$fdata["FullName"] = "lat";
 
@@ -529,6 +534,7 @@ $tdatamfr_woreda_report[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/lng";
 
 	
+	
 		$fdata["FullName"] = "lng";
 
 	
@@ -667,6 +673,7 @@ $tdatamfr_woreda_report[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/count";
 
+	
 	
 		$fdata["FullName"] = "count";
 

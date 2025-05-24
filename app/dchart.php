@@ -8,29 +8,21 @@ $strTableName="";
 
 include("include/reportfunctions.php");
 
-// #9875 It's expected that webreports, webreport_style tables belong to the same db connection
-$_connection = $cman->getForWebReports();
-
-if(@$_REQUEST["cname"])
-{	
-	$cname=@$_REQUEST["cname"];
-	$sql_query = "SELECT ".$_connection->addFieldWrappers("rpt_id")." FROM ".$_connection->addTableWrappers("webreports")
-		." WHERE ".$_connection->addFieldWrappers("rpt_name")."='".$cname."' and ".$_connection->addFieldWrappers("rpt_type")."='chart'";
-	
-	$data = $_connection->query( $sql_query )->fetchNumeric();
-	if( !$data )
-		header("location: ".GetTableLink("webreport"));
-	else
-		Reload_Chart(postvalue("cname"));
+$cname = postvalue("cname");
+if( !$cname ) {
+	return;
 }
 
-
-$chrt_array = getChartArray(postvalue("cname"));
+$chrt_array = wrGetEntityArray( $cname, WR_CHART );
+if( !$chrt_array )
+	header("location: ".GetTableLink("webreport"));
+else
+	Reload_Chart( $cname );
 
 if(is_wr_project())
 	include("include/" . $chrt_array['settings']['short_table_name'] . "_variables.php");
 
-$sessPrefix = "webchart".postvalue("cname");
+$sessPrefix = "webchart".$cname;
 
 	if( !Security::getUserName() )
 	{
@@ -45,7 +37,7 @@ $sessPrefix = "webchart".postvalue("cname");
 	if (count(GetUserGroups()) > 1)
 	{
 	    $arr_reports = array();
-	    $arr_reports = GetChartsList();
+	    $arr_reports = wrGetEntityList( WR_CHART );
 	    foreach ( $arr_reports as $rpt ) {
 		    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $chrt_array['settings']['name']==$rpt["name"])
 		      {

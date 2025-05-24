@@ -10,16 +10,16 @@ class DataSourceREST extends DataSource {
 		$this->connection = $connection;
 		$this->opDescriptors = $this->pSet->getDataSourceOps();
 	}
-	/**
-	 * returns recordset or array
-	 */
-	public function getList( $dc ) {
+
+	protected function getListImpl( $dc ) {
 		$result = $this->getListData( $dc );
 		if( !$result ) {
 			return $result;
 		}
 		//	apply $dc->startRecord & totals
-		$result->seekRecord( $dc->startRecord );
+		if( !$this->codeOp( "selectList" ) ) {
+			$result->seekRecord( $dc->startRecord );
+		}
 		return $result;
 	}
 
@@ -61,12 +61,18 @@ class DataSourceREST extends DataSource {
 		return $ret !== false;
 	}
 
-	public function getSingle( $dc ) {
+	protected function getSingleImpl( $dc ) {
 		$op = "selectOne";
 		if( $this->codeOp( $op ) ) {
-			return $this->callCodeOp( $op, $dc );
+			$result = $this->callCodeOp( $op, $dc );
+			if( $result === false ) {
+				trigger_error( $this->lastError(), E_USER_ERROR );
+				return false;
+			}
+			return $result;
 		}
-		if( $this->opDescriptors[ $op ] ) {
+		if( isset( $this->opDescriptors[ $op ] ) ) {
+			$opDesc = $this->opDescriptors[ $op ];
 			$result = $this->runRequest( $op, $dc );
 			if( $result !== false )
 				$result = $this->resultFromJson( $result, false );
@@ -74,7 +80,9 @@ class DataSourceREST extends DataSource {
 				trigger_error( $this->lastError(), E_USER_ERROR );
 				return false;
 			}
-			$result = $this->filterResult( $result, $dc->filter );
+			if( !$opDesc["skipFilter"] ) {
+				$result = $this->filterResult( $result, $dc->filter );
+			}
 
 		} else {
 			$result = $this->getListData( $dc );
@@ -84,16 +92,20 @@ class DataSourceREST extends DataSource {
 
 	protected function getListData( $dc, $listRequest = true ) {
 		if( $dc->_cache["listData"] ) {
-			$dc->_cache["listData"]->seekRecord(0);
+			$dc->_cache["listData"]->seekRecord( $dc->_cache["listDataPos"] );
 			return $dc->_cache["listData"];
 		}
 
 		if( $this->falseCondition( $dc->filter) ) {
 			$dc->_cache["listData"] = new ArrayResult( array() );
+			$dc->_cache["listDataPos"] = 0;
 			return $dc->_cache["listData"];
 		}
 
+		$dc->filter = $this->addKeysToFilter( $dc );
+
 		$op = "selectList";
+		$opDesc = @$this->opDescriptors[ $op ];
 		if( $this->codeOp( $op ) ) {
 			$res =  $this->callCodeOp( $op, $dc );
 		} else {
@@ -109,10 +121,15 @@ class DataSourceREST extends DataSource {
 			$res = $this->addExtraColumns( $res, $dc );
 		} else {
 			$res = $this->addExtraColumns( $res, $dc );
-			$res = $this->filterResult( $res, $dc->filter );
-			$this->reorderResult( $dc, $res );
+			if( !$opDesc["skipFilter"] ) {
+				$res = $this->filterResult( $res, $dc->filter );
+			}
+			if( !$opDesc["skipOrder"]) {
+				$this->reorderResult( $dc, $res );
+			}
 		}
 		$dc->_cache["listData"] = $res;
+		$dc->_cache["listDataPos"] = $res->position();
 		return $dc->_cache["listData"];
 	}
 
@@ -124,7 +141,6 @@ class DataSourceREST extends DataSource {
 		//	use List command
 		$ret = $this->getListData( $dc );
 		if( $ret ) {
-				//	apply totals
 			return $ret->count();
 		}
 		return 0;
@@ -136,7 +152,7 @@ class DataSourceREST extends DataSource {
 	 * "form"=> array( key => value )
 	 * "url"=> array( key => value )
 	 */
-	public function preparePayload( $payload ) {
+	public function preparePayload( $payload, $skipBody = false ) {
 		$payloadForm = array();
 		$payloadUrl = array();
 		$payloadHeaders = array();
@@ -148,7 +164,7 @@ class DataSourceREST extends DataSource {
 				$payloadUrl[ $p["name"] ] = $value;
 			} else if( $p["location"] == "header" ) {
 				$payloadHeaders[ $p["name"] ] = $value;
-			} else {
+			} else if( !$skipBody ) {
 				$payloadForm[ $p["name"] ] = $value;
 			}
 		}
@@ -163,18 +179,84 @@ class DataSourceREST extends DataSource {
 	 * @return parsed JSON or FALSE
 	 */
 	protected function runRequest( $op, $dc ) {
+		$desc = $this->opDescriptors[ $op ];
+		$conn = $this->getConnection();
 		RunnerContext::pushDataCommandContext( $dc );
-		$urlRequest = RunnerContext::PrepareRest( $this->opDescriptors[ $op ]["request"] );
-		$payload = $this->preparePayload( my_json_decode( $this->opDescriptors[ $op ]["payload"] ) );
-		RunnerContext::pop();
-		$method = $this->opDescriptors[ $op ]["method"];
-		$res = &$this->connection->requestJson( $urlRequest, $method, $payload["form"], $payload["header"], $payload["url"] );
-		if( $res === false ) {
-			$this->setError( $this->connection->lastError() );
-			return false;
+		$request = new HttpRequest( RunnerContext::PrepareRest( $conn->url . $desc["request"] ), $desc["method"] );
+		$payload = $this->preparePayload( my_json_decode( $this->opDescriptors[ $op ]["payload"] ), !!$this->opDescriptors[ $op ]["rawPayload"] );
+		$request->headers = $payload["header"];
+		$request->urlParams = $payload["url"];
+		if( $this->opDescriptors[ $op ]["rawPayload"] ) {
+			$request->body = RunnerContext::PrepareRest( $desc["payloadString"], false );
 		} else {
-			return  $res;
+			$request->postPayload = $payload["form"];
 		}
+		RunnerContext::pop();
+
+		if( $desc["payloadFormat"] == pfJSON ) {
+			$request->setHeader( "Content-Type", "application/json" );
+		}
+		
+		$conn->requestAddAuth( $request );
+
+		$response = $request->run();
+		if( $response["error"] ) {
+			$this->setError( $response["errorMessage"] );
+			return false;
+		}
+
+		$responseData = HttpRequest::parseResponseArray( $response );
+		if( $responseData === null ) {
+			$this->setError( "Unable to parse JSON result\n\n" . $response["content"] );
+			return false;
+		}
+
+		return $responseData;
+	}
+
+	public function getFieldDateFormats() {
+		$ret = array();
+		foreach( $this->pSet->getFieldsList() as $f ) {
+			$type = $this->pSet->getFieldType( $f );
+			if( !IsDateFieldType( $type ) )
+				continue;
+
+			$format = $this->pSet->getFieldDateFormat( $f );
+			if( !$format )
+				continue;
+
+			$ret[ $f ] = $format;
+		}
+		return $ret;
+	}
+
+	/**
+	 * @return array - copy of data with normalized date values (copy because C# doesn't allow modify collection in loop)
+	 */
+	public function normalizeDateValues(&$data)
+	{
+		$formats = $this->getFieldDateFormats();
+
+		if ( !$data || !$formats )
+			return $data;
+
+		$res = array();
+		foreach ( $data as &$row ) {
+			$resRow = array();
+			foreach ( $row as $field => $value ) {
+				$resRow[$field] = $value;
+
+				if ( !$formats[$field] )
+					continue;
+
+				$parsed = parseRestDate( $value, $formats[$field] );
+				if ( $parsed ) {
+					$resRow[$field] = $parsed;
+				}
+			}
+			$res[] = $resRow;
+		}
+		return $res;
 	}
 
 	/**
@@ -190,6 +272,7 @@ class DataSourceREST extends DataSource {
 			$this->setError( my_json_encode( $data ) );
 			return false;
 		}
+		$ret = $this->normalizeDateValues( $ret );
 		return new ArrayResult( $ret );
 	}
 
@@ -253,6 +336,10 @@ class DataSourceREST extends DataSource {
 		$ret = array();
 		foreach( $this->pSet->getFieldsList() as $f ) {
 			$source = $this->pSet->getFieldSource( $f, $listRequest );
+			if( !$source && !$listRequest ) {
+				//	use 'list' if 'single' is not filled in
+				$source = $this->pSet->getFieldSource( $f, true );
+			}
 			if( !$source ) {
 				continue;
 			}
@@ -276,6 +363,84 @@ class DataSourceREST extends DataSource {
 	public function getAuthorizationInfo() {
 		return $this->connection->getAuthorizationRequest();
 	}
+
+	/**
+	 * 
+	 */
+	public function runCustomRequest() {
+		$dataSource = $this;
+		$method = "GET";
+		$url = "xxx";
+		//	replace variables in the URL
+		$url = RunnerContext::PrepareRest( $url );
+
+		//	prepare HTTP request
+		$request = new HttpRequest( $url, $method );
+		
+		// URL parameters
+		//	name=value
+		$value = RunnerContext::PrepareRest( "value" );
+		if( $value != "" ) {
+			$request->urlParams[ "name" ] = $value;
+		}
+
+		//	name1=value1
+		$request->urlParams[ "name1" ] = RunnerContext::PrepareRest( "value1" );
+
+		// HTTP headers
+		$value = RunnerContext::PrepareRest( "value" );
+		if( $value != "" ) {
+			$request->headers[ "name" ] = $value;
+		}
+		$request->headers[ "name1" ] = RunnerContext::PrepareRest( "value1" );
+
+		//	Request body
+		// raw
+		$request->body = RunnerContext::PrepareRest( "aaa" );
+
+		//	variables
+		$value = RunnerContext::PrepareRest( "value" );
+		if( $value != "" ) {
+			$request->postPayload[ "name" ] = $value;
+		}
+		$request->postPayload[ "name1" ] = $value1;
+
+		//	run request with authorization data
+		$dsconn = $dataSource->getConnection();
+		$response = $dsconn->requestWithAuth();
+		if( $response["error"] ) {
+			$dataSource->setError( $response["errorMessage"] );
+			return false;
+		}
+		
+		// parse response
+		$responseHeaders = HttpRequest::parseHeaders( $response );
+		$responseBody = $response["content"];
+
+		$responseData = HttpRequest::parseResponseArray( $response );
+		if( $responseData === null ) {
+			$dataSource->setError( "Unable to parse JSON result\n\n" . $response["content"] );
+			return false;
+		}
+		
+		//	convert API response data into recordset
+		$rs = $dataSource->resultFromJson( $responseData, true );
+		if( !$rs ) {
+			return false;
+		}
+		
+		// apply search and filter parameters. Comment out this line if filtering is done by REST API provider
+		$rs = $dataSource->filterResult( $rs, $command->filter );
+		
+		// apply order parameters
+		$rs = $dataSource->reorderResult( $command, $rs );
+		
+		//	apply pagination
+		$rs->seekRecord( $command->startRecord );
+		return $rs;
+		
+	}
+
 }
 
 /**
@@ -452,6 +617,7 @@ class StarNode {
 		$this->currentSource = &$this->source[ $this->keys[ $this->currentIndex ] ];
 		return true;
 	}
+
 
 
 }

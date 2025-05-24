@@ -43,8 +43,6 @@ class DatabaseFileField extends EditControl
 					$src = GetTableLink( "file", "", "filename=file.jpg&table=".rawurlencode( $this->container->tName )
 						."&field=".rawurlencode( $this->field )
 						."&nodisp=1"
-//						."&pageType=".$this->container->pageType
-//						."&page=".$this->pageObject->pageName
 						.$this->keylink."&fileHash=".fileAttrHash( $this->keylink, strlen_bin( $value ) ) );
 
 					$imgWidth = $this->container->pSetEdit->getImageWidth( $this->field );

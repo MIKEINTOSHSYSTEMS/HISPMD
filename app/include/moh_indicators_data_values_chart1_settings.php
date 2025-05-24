@@ -229,8 +229,7 @@ $tstrOrderBy = "ORDER BY TO_DATE(ind.year::text, 'YYYY')";
 $tdatamoh_indicators_data_values_chart1[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamoh_indicators_data_values_chart1[".orderindexes"] = array();
-	$tdatamoh_indicators_data_values_chart1[".orderindexes"][] = array(9, (1 ? "ASC" : "DESC"), "TO_DATE(ind.year::text, 'YYYY')");
-
+			$tdatamoh_indicators_data_values_chart1[".orderindexes"][] = array(9, (1 ? "ASC" : "DESC"), "TO_DATE(ind.year::text, 'YYYY')");
 
 
 $tdatamoh_indicators_data_values_chart1[".sqlHead"] = "SELECT ig.indicator_group_name AS \"Indicator Group\",  mi.indicator_name AS \"Indicator Name\",  mi.baseline AS \"Baseline\",  mi.target AS \"Target\",  mf.facility_type_name AS \"Facility Type\",  ds.data_source_name AS \"Data Source\",  a.assessment_name AS \"Assessment\",  u.unit_name AS \"Administration Unit\",  TO_DATE(ind.year::text, 'YYYY') AS \"Year\",  s.scope_name AS \"Scope\",  r.region_name AS \"Region\",  ind.gender_sex AS \"Gender/Sex\",  ind.\"value\" AS \"Value\",  ind.data_representation AS \"Data Representation\"";
@@ -297,6 +296,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["strField"] = "indicator_group_name";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ig.indicator_group_name";
@@ -435,6 +435,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 		$fdata["strField"] = "indicator_name";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "mi.indicator_name";
 
@@ -571,6 +572,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["strField"] = "baseline";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "mi.baseline";
@@ -712,6 +714,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 		$fdata["strField"] = "target";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "mi.target";
 
@@ -852,6 +855,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 		$fdata["strField"] = "facility_type_name";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "mf.facility_type_name";
 
@@ -988,6 +992,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data_source_name";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ds.data_source_name";
@@ -1126,6 +1131,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 		$fdata["strField"] = "assessment_name";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "a.assessment_name";
 
@@ -1262,6 +1268,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["strField"] = "unit_name";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "u.unit_name";
@@ -1401,6 +1408,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "year";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "TO_DATE(ind.year::text, 'YYYY')";
 
@@ -1541,6 +1549,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 		$fdata["strField"] = "scope_name";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "s.scope_name";
 
@@ -1678,6 +1687,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 		$fdata["strField"] = "region_name";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "r.region_name";
 
@@ -1814,6 +1824,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["strField"] = "gender_sex";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ind.gender_sex";
@@ -1953,6 +1964,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "value";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ind.\"value\"";
 
@@ -2092,6 +2104,7 @@ $tdatamoh_indicators_data_values_chart1[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data_representation";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ind.data_representation";

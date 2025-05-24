@@ -49,7 +49,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -97,7 +97,7 @@ pdfDocument = {
 					colSpan: 2,
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -113,7 +113,8 @@ pdfDocument = {
 				cellId: 'c1',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 		
@@ -167,9 +168,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -195,9 +196,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"stack": [
 		
@@ -229,9 +230,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_c8},
 			{END colspan_grid_c8}
 		
-						
+		
 	
-	
+			
 	
 			"stack": [
 		
@@ -250,7 +251,8 @@ pdfDocument = {
 				cellId: 'c8',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_1}
@@ -286,7 +288,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -312,7 +314,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -333,5 +335,7 @@ pdfDocument = {
 }
 ,
 			]
-}
+};
+
+pdfFonts = {$pdfFonts};
   

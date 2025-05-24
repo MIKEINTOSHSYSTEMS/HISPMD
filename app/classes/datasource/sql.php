@@ -12,21 +12,20 @@ class DataSourceSQL extends DataSource {
 //		$this->cipherer = new RunnerCipherer( $this->name );
 		$this->opDescriptors = $this->pSet->getDataSourceOps();
 	}
-	/**
-	 * returns recordset or array
-	 */
-	public function getList( $dc ) {
+	
+	protected function getListImpl( $dc ) {
 		$result = $this->getListData( $dc, true );
 		if( !$result ) {
 			return $result;
 		}
 		//	apply $dc->startRecord & totals
-		$result->seekRecord( $dc->startRecord );
+		if( !$this->codeOp( "selectList" ) ) {
+			$result->seekRecord( $dc->startRecord );
+		}
 		return $result;
 	}
 
-	public function getSingle( $dc ) {
-
+	protected function getSingleImpl( $dc ) {
 		$op = "selectOne";
 		if( $this->codeOp( $op ) ) {
 			return $this->callCodeOp( $op, $dc );
@@ -37,7 +36,9 @@ class DataSourceSQL extends DataSource {
 		if( $sql ) {
 			$result = $this->connection->limitedQuery( $sql, 0, 1, true );
 			$result->setFieldSubstitutions( $this->getFieldSubs( false ) );
-			$result = $this->filterResult( $result, $dc->filter );
+			if( !$this->opDescriptors[ $op ]["skipFilter"] ) {
+				$result = $this->filterResult( $result, $dc->filter );
+			}
 		} else {
 			$result = $this->getListData( $dc, false );
 		}
@@ -52,10 +53,17 @@ class DataSourceSQL extends DataSource {
 	 */
 	protected function getListData( $dc, $listRequest = true ) {
 		if( $dc->_cache["listData"] ) {
-			$dc->_cache["listData"]->seekRecord(0);
+			$dc->_cache["listData"]->seekRecord( $dc->_cache["listDataPos"] );
 			return $dc->_cache["listData"];
 		}
+		if( $this->falseCondition( $dc->filter) ) {
+			$dc->_cache["listData"] = new ArrayResult( array() );
+			$dc->_cache["listDataPos"] = 0;
+			return $dc->_cache["listData"];
+		}
+
 		$op = "selectList";
+		$dc->filter = $this->addKeysToFilter( $dc );
 		if( $this->codeOp( $op ) ) {
 			$res = $this->callCodeOp( $op, $dc );
 			if( !$res ) {
@@ -66,15 +74,23 @@ class DataSourceSQL extends DataSource {
 			$sql = DB::PrepareSQL( $this->getSQL( 'selectList' ) );
 			RunnerContext::pop();
 			$res = $this->connection->query( $sql );
-			if( !$res )
+			if( !$res ) {
 				return $res;
+			}
 			$res->setFieldSubstitutions( $this->getFieldSubs( $listRequest ) );
 			$res = $this->addExtraColumns( $res, $dc );
-			$res = $this->filterResult( $res, $dc->filter );
-			$this->reorderResult( $dc, $res );
+
+			if( !$this->opDescriptors[ $op ]["skipFilter"] ) {
+				$res = $this->filterResult( $res, $dc->filter );
+			}
+
+			if( !$this->opDescriptors[ $op ]["skipFilter"] ) {
+				$this->reorderResult( $dc, $res );
+			}
 		}
 		if( $res->randomAccess() )
 			$dc->_cache["listData"] = $res;
+			$dc->_cache["listDataPos"] = $res->position();
 		return $res;
 	}
 
@@ -105,6 +121,7 @@ class DataSourceSQL extends DataSource {
 					//	convert recordset to ArrayResult, save in cache
 					$ret = ArrayResult::createFromResult( $ret );
 					$dc->_cache["listData"] = $ret;
+					$dc->_cache["listDataPos"] = 0;
 
 				}
 				//	apply totals

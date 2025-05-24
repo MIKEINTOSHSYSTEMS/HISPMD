@@ -20,24 +20,18 @@ if( !isLogged() )
 	redirectToLogin();
 }
 
+require_once( "include/reportfunctions.php" );
 $cname = postvalue("cname");
 $rname = postvalue("rname");
-
-$chrt_array = array();
-$rpt_array = array();
-require_once( "include/reportfunctions.php" );
-if( $rname )
-{
-	$rpt_array = getReportArray( $rname );
+if( $rname || $cname ) {
+	$rpt_array = wrGetEntityArray( 
+		$rname ? $rname : $cname, 
+		$rname ? WR_REPORT : WR_CHART
+	);
 	$accessGranted = @$rpt_array['status'] != "private" || @$rpt_array['owner'] != Security::getUserName();
+} else {
+	$accessGranted = CheckTablePermissions( $strTableName, "S" );
 }
-else if( $cname )
-{
-	$chrt_array = getChartArray( $cname );
-	$accessGranted = @$chrt_array['status'] != "private" || @$chrt_array['owner'] != Security::getUserName();
-}
-else	
-	$accessGranted = CheckTablePermissions($strTableName, "S");
 if(!$accessGranted)
 {
 	HeaderRedirect("menu");
@@ -77,6 +71,7 @@ if( $pageMode == SEARCH_DASHBOARD )
 {
 	$params["dashTName"] = postvalue("table");
 	$params["dashElementName"] = postvalue("dashelement");
+	$params["dashPage"] = postvalue("dashPage");
 }
 
 // e.g. crosstable params

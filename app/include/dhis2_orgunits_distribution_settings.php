@@ -188,6 +188,9 @@ $tstrOrderBy = "";
 $tdatadhis2_orgunits_distribution[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_orgunits_distribution[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_orgunits_distribution[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_orgunits_distribution[".sqlHead"] = "";
@@ -254,6 +257,7 @@ $tdatadhis2_orgunits_distribution[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/orgunit";
 
+	
 	
 		$fdata["FullName"] = "ou";
 
@@ -391,6 +395,7 @@ $tdatadhis2_orgunits_distribution[".hideMobileList"] = array();
 		$fdata["strField"] = "*/ougs";
 
 	
+	
 		$fdata["FullName"] = "ougs";
 
 	
@@ -527,6 +532,7 @@ $tdatadhis2_orgunits_distribution[".hideMobileList"] = array();
 		$fdata["strField"] = "*/group";
 
 	
+	
 		$fdata["FullName"] = "group";
 
 	
@@ -662,6 +668,7 @@ $tdatadhis2_orgunits_distribution[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/count";
 
+	
 	
 		$fdata["FullName"] = "count";
 

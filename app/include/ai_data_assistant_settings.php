@@ -251,6 +251,7 @@ $tdataai_data_assistant[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "id";
 
@@ -391,6 +392,7 @@ $tdataai_data_assistant[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "chatbot";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "chatbot";
 

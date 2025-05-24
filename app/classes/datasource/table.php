@@ -41,9 +41,6 @@ class DataSourceTable extends DataSource {
 		$dc->_cache["order"] = $orderby;
 	}
 
-	protected function getKeyFields() {
-		return array();
-	}
 
 	protected function getAutoincField() {
 		return null;
@@ -53,14 +50,7 @@ class DataSourceTable extends DataSource {
 		if( isset( $dc->_cache["where"] ) ) {
 			return;
 		}
-		$filter = $dc->filter;
-		//	when there are $dc->keys, just add them to the WHERE expression
-		if( $dc->keys ) {
-			$filter = DataCondition::_And( array(
-				$dc->filter,
-				DataCondition::FieldsEqual( $this->getKeyFields(), $dc->keys )
-			) );
-		}
+		$filter = $this->addKeysToFilter( $dc );
 		$filters = $this->splitFilterWhereHaving( $dc, $filter );
 		$context = new DsFilterBuildContext;
 		$dc->_cache["where"] = $this->conditionToSQL( $filters["where"], $context );
@@ -217,14 +207,6 @@ class DataSourceTable extends DataSource {
 			return $this->sqlExpressionFalse();
 		}
 		return "";
-	}
-
-	/**
-	 * This function must be overridden
-	 */
-	public function getFieldType( $field ) {
-		trigger_error("Unsupported datasource", E_USER_ERROR );
-		return 200;
 	}
 
 	/**
@@ -533,6 +515,9 @@ class DataSourceTable extends DataSource {
 	 * always returns string
 	 */
 	protected function prepareSQLValue( $type, $value ) {
+		if( $type === 11 && $this->connection->dbType === nDATABASE_PostgreSQL ) {
+			return $value ? 'true' : 'false';
+		}
 		if( !DataSourceTable::validateSQLValue( $type, $value ) ) {
 			return 'NULL';
 		}
@@ -642,7 +627,7 @@ class DataSourceTable extends DataSource {
 	/**
 	 * returns recordset or array
 	 */
-	public function getList( $dc ) {
+	protected function getListImpl( $dc ) {
 		$sql = $this->buildSQL( $dc, true );
 		return $this->connection->limitedQuery( $sql, $dc->startRecord, $dc->reccount, true );
 	}
@@ -992,7 +977,7 @@ class DataSourceTable extends DataSource {
 
 	}
 
-	public function getSingle( $dc ) {
+	protected function getSingleImpl($dc) {
 		$sql = $this->buildSQL( $dc, true );
 		return $this->connection->limitedQuery( $sql, 0, 1, true );
 	}
@@ -1342,8 +1327,9 @@ class DataSourceTable extends DataSource {
 	}
 
 	public function updateRowNumberAvailable( $dc ) {
+		global $projectLanguage;
 		return $this->connection->dbType == nDATABASE_MSSQLServer && $dc->order
-			|| $this->connection->dbType == nDATABASE_MySQL
+			|| $projectLanguage == "php" && $this->connection->dbType == nDATABASE_MySQL
 			|| $this->connection->dbType == nDATABASE_PostgreSQL
 			|| $this->connection->dbType == nDATABASE_Oracle && $dc->order ;
 	}

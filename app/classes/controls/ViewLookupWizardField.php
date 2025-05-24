@@ -149,9 +149,9 @@ class ViewLookupWizardField extends ViewControl
 				}
 			}
 			//	update unresolved values
-			$values = $unresolved;
+			$oldUnresolved = $unresolved;
 			$unresolved = array();
-			foreach( $values as $v ) {
+			foreach( $oldUnresolved as $v ) {
 				if( !$this->resolvedLookupValues[ $v ] ) {
 					$unresolved[] = $v;
 				}

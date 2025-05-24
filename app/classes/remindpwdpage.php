@@ -136,7 +136,7 @@ class RemindPasswordPage extends RunnerPage
 		} else if( GetGlobalData( "bEncryptPasswords" ) ) {
 			if( !$this->cipherer->isFieldEncrypted( Security::passwordField() ) ) {
 				$password = generatePassword(10);
-				$dbPassword = $this->getPasswordHash( $password );
+				$dbPassword = Security::hashPassword( $password );
 
 				$this->dataSource->updateSingle( $this->getUpdatePasswordCommand( $dbPassword ), false );
 			}
@@ -344,7 +344,7 @@ class RemindPasswordPage extends RunnerPage
 			</script>\r\n";
 
 		echo "<script language=\"JavaScript\" src=\""
-			.GetRootPathForResources("include/runnerJS/RunnerAll.js?39558")."\"></script>\r\n";
+			.GetRootPathForResources("include/runnerJS/RunnerAll.js?41974")."\"></script>\r\n";
 
 		echo "<script>".$this->PrepareJS()."</script>";
 	}

@@ -254,6 +254,7 @@ $tdataresearch[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "research_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "research_id";
 
@@ -392,6 +393,7 @@ $tdataresearch[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "title";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "title";
 
@@ -530,6 +532,7 @@ $tdataresearch[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "conducted";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "conducted";
 

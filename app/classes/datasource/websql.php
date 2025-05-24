@@ -51,10 +51,7 @@ class DataSourceWebSQL extends DataSource {
 
 	}
 
-	/**
-	 * returns recordset or array
-	 */
-	public function getList( $dc ) {
+	protected function getListImpl( $dc ) {
 		$sql = $this->buildSQL( $dc, true );
 		return $this->connection->limitedQuery( $sql, $dc->startRecord, $dc->reccount, true );
 	}

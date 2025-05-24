@@ -254,6 +254,7 @@ $tdatahisgovernance[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "governance_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "governance_id";
 
@@ -392,6 +393,7 @@ $tdatahisgovernance[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "level";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"level\"";
 
@@ -530,6 +532,7 @@ $tdatahisgovernance[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "is_functional";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "is_functional";
 

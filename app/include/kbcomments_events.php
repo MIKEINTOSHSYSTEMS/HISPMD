@@ -37,7 +37,7 @@
 		
 		
 				// Before record added
-function BeforeAdd(&$values, &$message, $inline, $pageObject)
+function BeforeAdd(&$values, &$sqlValues, &$message, $inline, $pageObject)
 {
 
 		
@@ -45,9 +45,10 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 $values["moderated"] = 0;
 
 return true;
-;
+;		
 } // function BeforeAdd
 
+		
 		
 		
 		
@@ -120,9 +121,10 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 
 		DB::Update("kbcomments",array("created_date" => runner_date_format("Y-m-d H:i:s")),$keys);
 
-;
+;		
 } // function AfterAdd
 
+		
 		
 		
 		
@@ -220,9 +222,10 @@ $xt->assign( "message_class", "alert-warning");
 $xt->assign("message_block",false);
 //$xt->assign("message_block",true);
 
-;
+;		
 } // function BeforeShowList
 
+		
 		
 		
 		

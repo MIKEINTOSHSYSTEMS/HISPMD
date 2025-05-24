@@ -251,6 +251,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"type\"";
 
@@ -414,6 +415,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -577,6 +579,7 @@ $tdatamfr_dashboard_reports_chart[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "count";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"count\"";
 

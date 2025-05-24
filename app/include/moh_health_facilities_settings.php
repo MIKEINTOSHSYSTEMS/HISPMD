@@ -255,6 +255,7 @@ $tdatamoh_health_facilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facility_id";
 
@@ -391,6 +392,7 @@ $tdatamoh_health_facilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facility_name";
 
@@ -559,6 +561,7 @@ $tdatamoh_health_facilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_type_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facility_type_id";
 

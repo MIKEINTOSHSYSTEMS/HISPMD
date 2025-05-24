@@ -255,6 +255,7 @@ $tdatamoh_data_sources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_source_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "data_source_id";
 
@@ -395,6 +396,7 @@ $tdatamoh_data_sources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_source_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "data_source_name";
 
@@ -535,6 +537,7 @@ $tdatamoh_data_sources[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_id";
 

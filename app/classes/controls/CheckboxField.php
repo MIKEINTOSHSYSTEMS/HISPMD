@@ -15,7 +15,7 @@ class CheckboxField extends EditControl
 			$checked = "";
 			
 			if( $this->connection->dbType == nDATABASE_PostgreSQL 
-				&& ($value === "t" || $value != "" && $value != 0 ) 
+				&& ($value === "t" || $value != "f" && $value != "" && $value != 0 ) 
 				|| $this->connection->dbType != nDATABASE_PostgreSQL && ($value != "" && $value != 0 )) {
 
 				$checked=" checked";
@@ -40,14 +40,14 @@ class CheckboxField extends EditControl
 			echo '<select id="'.$this->cfield.'" '.(($mode == MODE_INLINE_EDIT || $mode == MODE_INLINE_ADD) && $this->is508==true ? 'alt="'
 				.$this->strLabel.'" ' : '').'name="'.$this->cfield.'" class="form-control">';
 				
-			$val = array( "" => array(), "True" => array("on", "1"), "False" => array("off", "0") );		
-			$optval = array("", "on", "off");
-			$show = array("", "True", "False");
+			$options = array( "", "on", "off" );
+			$possibleOptions = array( "" => array(), "on" => array("on", "1"), "off" => array("off", "0") );		
+			$labels = array("", "True", "False");
 			
-			foreach($show as $key => $shownValue)
+			foreach( $options as $key => $optValue )
 			{	
-				$sel = in_array( $value, $val[ $shownValue] ) ? " selected" : "";
-				echo '<option value="'.$optval[$key].'"'.$sel.'>'.$shownValue.'</option>';
+				$selected = in_array( $value, $possibleOptions[ $optValue ] ) ? " selected" : "";
+				echo '<option value="' . $optValue . '"' . $selected.'>' . $labels[ $key ] . '</option>';
 			}
 			
 			echo "</select>";

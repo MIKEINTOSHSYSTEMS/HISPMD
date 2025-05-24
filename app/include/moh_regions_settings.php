@@ -207,8 +207,7 @@ $tstrOrderBy = "ORDER BY region_code";
 $tdatamoh_regions[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamoh_regions[".orderindexes"] = array();
-	$tdatamoh_regions[".orderindexes"][] = array(8, (1 ? "ASC" : "DESC"), "region_code");
-
+			$tdatamoh_regions[".orderindexes"][] = array(8, (1 ? "ASC" : "DESC"), "region_code");
 
 
 $tdatamoh_regions[".sqlHead"] = "SELECT region_id,  region_name,  region_alternate,  lat,  lng,  code,  \"map\",  region_code";
@@ -279,6 +278,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_id";
 
@@ -419,6 +419,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_name";
 
@@ -559,6 +560,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_alternate";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_alternate";
 
@@ -699,6 +701,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "lat";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "lat";
 
@@ -836,6 +839,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "lng";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "lng";
 
@@ -973,6 +977,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "code";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "code";
 
@@ -1110,6 +1115,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "map";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"map\"";
 
@@ -1257,6 +1263,7 @@ $tdatamoh_regions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_code";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_code";
 

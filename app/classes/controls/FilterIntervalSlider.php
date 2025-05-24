@@ -262,74 +262,9 @@ class FilterIntervalSlider extends FilterControl
 		$viewFomat = $this->viewControl->viewFormat;
 		$ctrlsMap['viewAsNumber'] = $viewFomat == FORMAT_NUMBER;
 		$ctrlsMap['viewAsCurrency'] = $viewFomat == FORMAT_CURRENCY;
-		
-		if( $viewFomat === FORMAT_CURRENCY )	
-			$ctrlsMap['formatSettings'] = $this->getCurrencySettings(); 
-		else if ($viewFomat == FORMAT_NUMBER) 
-			$ctrlsMap['formatSettings'] = $this->getNumberSettings();
-
-		if($viewFomat === FORMAT_CURRENCY || $viewFomat == FORMAT_NUMBER)	
-			$ctrlsMap['commonFormatSettings'] = $this->getCommonFormatSettings($viewFomat);
-			
+		$ctrlsMap['formatSettings'] = getFormatSettings( $viewFomat, $this->pSet, $this->fName );
+	
 		$pageObj->controlsMap["filters"]["controls"][] = $ctrlsMap;	
-	}
-	
-	/**
-	 * Get currency local settings
-	 * @return Array
-	 */
-	protected function getCurrencySettings()
-	{
-		global $locale_info;
-					
-		$currencySettings = array();
-		$currencySettings["LOCALE_ICURRENCY"] = $locale_info["LOCALE_ICURRENCY"];
-		$currencySettings["LOCALE_INEGCURR"] = $locale_info["LOCALE_INEGCURR"];
-		$currencySettings["LOCALE_SCURRENCY"] = $locale_info["LOCALE_SCURRENCY"];
-		
-		return $currencySettings;
-	}
-	
-	/**
-	 * Get number format local settings
-	 * @return Array
-	 */	
-	protected function getNumberSettings()
-	{
-		global $locale_info;
-		
-		$numberSettings = array();
-		$numberSettings['LOCALE_SPOSITIVESIGN'] = $locale_info["LOCALE_SPOSITIVESIGN"];
-		$numberSettings['LOCALE_INEGNUMBER'] = $locale_info["LOCALE_INEGNUMBER"];
-		
-		return $numberSettings;
-	}
-
-	/**
-	 * Get common format settings
-	 * @param Boolean viewFormat
-	 * @return Array
-	 */
-	protected function getCommonFormatSettings($viewFomat)
-	{
-		global $locale_info;
-		$formatSettings = array();
-		
-		if( $viewFomat === FORMAT_CURRENCY ) {
-			$formatSettings['decimalDigits'] = $locale_info["LOCALE_ICURRDIGITS"];
-			$formatSettings['grouping'] = explode(";", $locale_info['LOCALE_SMONGROUPING']);
-			$formatSettings['thousandSep'] = $locale_info["LOCALE_SMONTHOUSANDSEP"];
-			$formatSettings['decimalSep'] = $locale_info["LOCALE_SMONDECIMALSEP"];
-		}
-		
-		if( $viewFomat == FORMAT_NUMBER ) {		
-			$formatSettings['decimalDigits'] = $this->pSet->isDecimalDigits($this->fName);
-			$formatSettings['grouping'] = explode(";", $locale_info['LOCALE_SGROUPING']);
-			$formatSettings['thousandSep'] = $locale_info["LOCALE_STHOUSAND"];
-			$formatSettings['decimalSep'] = $locale_info["LOCALE_SDECIMAL"];
-		}
-		
-		return $formatSettings;
 	}
 
 	/**
@@ -383,7 +318,6 @@ class FilterIntervalSlider extends FilterControl
 	 */	
 	protected function addJS_CSSfiles($pageObject)
 	{
-		$pageObject->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
 	}
 
 	/**

@@ -673,7 +673,9 @@
 'recsPerRow' => 1,
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'print',
 'breadcrumb' => false,
 'listColumnsOrderOnPrint' => true ),
@@ -1058,9 +1060,10 @@ array( 'cell' => 'footcell_field19' ) ) ) ),
 'simple_grid_field39' => array( 'type' => 'grid_field_label',
 'field' => 'gen_info_DQ109' ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

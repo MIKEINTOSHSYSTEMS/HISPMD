@@ -90,6 +90,35 @@ class RunnerContextItem
 		return null;
 	}
 
+	public function getOrderValue( $key ) {
+		if( !$this->dc ) {
+			return null;
+		}
+		$idx = 0;
+		if( substr( $key, 0, 5) == "field" ) {
+			$param = "field";
+			$idx = (int)substr( $key, 5);
+		} else if( substr( $key, 0, 3 ) == "dir" ) {
+			$param = "dir";
+			$idx = (int)substr( $key, 3);
+		}
+		if( !$idx || $idx < 1 ) {
+			return null;
+		}
+		if( count( $this->dc->order ) <= $idx ) {
+			return null;
+		}
+		$order = $this->dc->order[ $idx - 1 ];
+		if( $param == "field") {
+			return $order["column"];
+		}
+		if( $param == "dir") {
+			return $order["dir"];
+		}
+		return null;
+	}
+
+
 	public function getFilterValue( $field ) {
 		if( $this->dc ) {
 			return $this->dc->findFieldFilterValue( $field );
@@ -163,6 +192,9 @@ class RunnerContextItem
 	public function getMasterFieldValue( $field )
 	{
 		$masterData = $this->getMasterValues();
+		if( !$masterData ) {
+			return "";
+		}
 		return getArrayElementNC( $masterData, $field );
 		
 	}
@@ -211,6 +243,10 @@ class RunnerContextItem
 
 		if( $scope == "keys" )
 			return $this->type == CONTEXT_COMMAND;
+
+		if( $scope == "order" )
+			return $this->type == CONTEXT_COMMAND;
+
 
 		if( $scope == "new" )
 			return $this->newData || $this->type == CONTEXT_PAGE || $this->type == CONTEXT_COMMAND;
@@ -261,6 +297,9 @@ class RunnerContextItem
 
 		if( $scope == "keys" )
 			return $this->getKeyValue( $key );
+
+		if( $scope == "order" )
+			return $this->getOrderValue( $key );
 
 		if( $scope == "new" )
 			return $this->getNewFieldValue( $key );

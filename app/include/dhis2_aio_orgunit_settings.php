@@ -185,6 +185,9 @@ $tstrOrderBy = "";
 $tdatadhis2_aio_orgunit[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_aio_orgunit[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_aio_orgunit[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_aio_orgunit[".sqlHead"] = "";
@@ -251,6 +254,7 @@ $tdatadhis2_aio_orgunit[".hideMobileList"] = array();
 
 		$fdata["strField"] = "headers/*/column";
 
+	
 	
 		$fdata["FullName"] = "column";
 
@@ -413,6 +417,7 @@ $tdatadhis2_aio_orgunit[".hideMobileList"] = array();
 		$fdata["strField"] = "headers/*/name";
 
 	
+	
 		$fdata["FullName"] = "name";
 
 	
@@ -573,6 +578,7 @@ $tdatadhis2_aio_orgunit[".hideMobileList"] = array();
 
 		$fdata["strField"] = "rows/*/*";
 
+	
 	
 		$fdata["FullName"] = "rows";
 

@@ -199,6 +199,9 @@ class XMLDSigVerifier {
 		$comments = null;
 		$C14TransformNode = null;
 		foreach($transforms->childNodes as $node) {
+			if( $node->nodeType != XML_ELEMENT_NODE  ) {
+				continue;
+			}
 			$algoURI = $node->getAttribute('Algorithm');
 			switch($algoURI) {
 				case SAMLUtils::ENVELOPED_SIGNATURE: 
@@ -233,7 +236,9 @@ class XMLDSigVerifier {
 		//XPATH Transform is recommended, not implemented here
 		//Should be somewhere HERE <--->
 
-		$incNamespacesNode = $C14TransformNode->getElementsByTagName('InclusiveNamespaces')->item(0);
+		if( $C14TransformNode ) {
+			$incNamespacesNode = $C14TransformNode->getElementsByTagName('InclusiveNamespaces')->item(0);
+		}
 
 		$nsPrefixList = null;
 
@@ -302,11 +307,13 @@ class SAMLResponse {
 
 	private function _buildNodes() {
 		foreach($this->root->childNodes as $node) {
-			if ($node->nodeName == 'ds:Signature') {
+			$nodeParts = explode( ':', $node->nodeName );
+			$nodeName = count($nodeParts) ? $nodeParts[ count($nodeParts) - 1 ] : '';
+			if ( $nodeName == 'Signature') {
 				$this->responseSignatureNode = $node;
-			} else if ($node->nodeName == 'saml2:Assertion') {
+			} else if ( $nodeName == 'Assertion'  ) {
 				$this->assertionNode = $node;
-			} else if ($node->nodeName == 'saml2:EncryptedAssertion') {
+			} else if ( $nodeName == 'EncryptedAssertion'  ) {
 				$this->isAssertionEncrypted = true;
 				$this->assertionEncryptedNode = $node;
 			}

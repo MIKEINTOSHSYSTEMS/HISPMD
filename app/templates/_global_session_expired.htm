@@ -1,0 +1,125 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-session_expired" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+			<div class="r-panel-page">
+										<div class="bs-pagepanel panel panel-primary">
+					<div class="panel-heading">
+												</div>
+					<div class="panel-body">
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="panel" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<img src="{$file_url images/MOH_logo_text_250.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	<br></span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="session_expired_message" data-itemid="session_expired_message" {$item_session_expired_message} data-pageid="{$pageid}" data-page="_global_session_expired" data-small >
+Do you want to continue your session?</span>
+	 
+		<span data-itemtype="session_expired_comment" data-itemid="session_expired_comment" {$item_session_expired_comment} data-pageid="{$pageid}" > 
+	For security reasons, your session will time out in %seconds% seconds unless you continue</span>
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+											{BEGIN grid_block}
+<table  class="r-edit-form r-panel-form" cellpadding="0" cellspacing="0" data-location="grid" id="form_grid_{$pageid}" data-makeup="panel" {$form_grid} data-pageid="{$pageid}" {$grid_hiddenattr} data-form-width="">
+<tbody>
+ 
+	<tr>
+	 
+				<td
+			class="r-align-center						"
+			
+			
+									data-cellId="grid_c1" data-pageid="{$pageid}"		>
+			<div edit-form-cell class="clearfix">
+								<span data-itemtype="expired_stay" data-itemid="expired_stay" {$item_expired_stay} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="stayLogged{$id}" >
+							Continue session			</a>
+</span>
+								<span data-itemtype="expired_logout" data-itemid="expired_logout" {$item_expired_logout} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="logout{$id}" >
+							Log out			</a>
+</span>
+					</div>
+		</td>
+			</tr>
+</tbody>
+</table>
+{END grid_block}
+														</div>
+				</div>
+						
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

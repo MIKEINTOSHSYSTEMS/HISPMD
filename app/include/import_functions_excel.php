@@ -1,5 +1,5 @@
 <?php
-require_once getabspath("plugins/PHPExcel/IOFactory.php");
+require_once getabspath("plugins/PHPExcel.php");
 
 /**
  * Open an Excel file
@@ -103,11 +103,19 @@ function ImportDataFromExcel( $fileHandle, $fieldsData, $importPageObject, $auto
 				$cell = $worksheet->getCellByColumnAndRow($col, $row);
 				$cellValue = $cell->getValue();
 				
-				if( PHPExcel_Shared_Date::isDateTime($cell) )
+				if( ExcelDateFormat($cell) )
 				{
+					try {
+						$cellValue = timestampToDbDate( PHPExcel_Shared_Date::ExcelToPHP( $cellValue ) );
+					} catch( Error $e ) {}
+
+				}
+				else if( ExcelTimeFormat( $cell ) ) {
+					//	import formatted string as is.
 					$cellDateFormat = $fileHandle->getCellXfByIndex( $cell->getXfIndex() )->getNumberFormat()->getFormatCode();
-					$cellTextValue = PHPExcel_Style_NumberFormat::ToFormattedString($cellValue, $cellDateFormat);
-					$cellValue = getDBDateValue( $cellTextValue, $cellDateFormat );				
+					try {
+						$cellValue = PHPExcel_Style_NumberFormat::ToFormattedString($cellValue, $cellDateFormat);
+					} catch( Error $e ) {}
 				}
 				else
 				{
@@ -185,19 +193,23 @@ function getPreviewDataFromExcel( $fileHandle, &$fieldsData )
 				if( $row > 1 )
 				{
 					$columnMatched = isset( $fieldsData[ $col ] );
-					if( PHPExcel_Shared_Date::isDateTime($cell) )
+					if( ExcelDateFormat($cell) )
 					{
-						$cellDateFormat = $fileHandle->getCellXfByIndex( $cell->getXfIndex() )->getNumberFormat()->getFormatCode();
-						$cellTextValue = PHPExcel_Style_NumberFormat::ToFormattedString($cellValue, $cellDateFormat);
-						
-						$refinedDateFormat = ImportPage::getRefinedDateFormat( $cellDateFormat );
-						$cellValue = strtotime( localdatetime2db( $cellTextValue, $refinedDateFormat ) );
-						
-						if( !$columnMatched )
-							$fieldsData[ $col ] = array();
+						try {
+							$cellValue = PHPExcel_Shared_Date::ExcelToPHP( $cellValue );
+							if( !$columnMatched )
+								$fieldsData[ $col ] = array();
 
-						$fieldsData[ $col ]["dateTimeType"] = true;
-						$fieldsData[ $col ]["requireFormatting"] = true;						
+							$fieldsData[ $col ]["dateTimeType"] = true;
+							$fieldsData[ $col ]["requireFormatting"] = true;						
+						} catch( Error $e ) {}
+
+					}
+					else if( ExcelTimeFormat( $cell ) ) {
+						$cellDateFormat = $fileHandle->getCellXfByIndex( $cell->getXfIndex() )->getNumberFormat()->getFormatCode();
+						try { 
+							$cellValue = PHPExcel_Style_NumberFormat::ToFormattedString($cellValue, $cellDateFormat);
+						} catch( Error $e ) {}
 					}
 					else if( $columnMatched && $fieldsData[ $col ]["dateTimeType"] && !strlen($dateFormat) )
 						$dateFormat = ImportPage::extractDateFormat( $cellValue );			
@@ -219,25 +231,70 @@ function getPreviewDataFromExcel( $fileHandle, &$fieldsData )
 }
 
 /**
- * Get db prepared dateTime value
- * @param String textValue
- * @param String dateFormat
- * @return String
+ * Return true if cell is Date or Datetime, but not Time
  */
-function getDBDateValue( $textValue, $dateFormat )
-{
-	if( !$textValue )
-		return NULL;
-		
-	// Get timestamp
-	$refinedDateFormat = ImportPage::getRefinedDateFormat( $dateFormat );
-	$timeStamp = strtotime( localdatetime2db( $textValue, $refinedDateFormat ) );
-	
-	if( $timeStamp === FALSE )
-		return NULL;
-		
-	$time = localtime($timeStamp, true);
-	return ($time["tm_year"] + 1900)."-".($time["tm_mon"] + 1)."-".$time["tm_mday"]." ".$time["tm_hour"].":".$time["tm_min"].":".$time["tm_sec"];
+function ExcelDateFormat( $cell ) {
+	if( !PHPExcel_Shared_Date::isDateTime( $cell ) ) {
+		return false;
+	}
+	$formatCode = $cell->getParent()->getStyle($cell->getCoordinate())->getNumberFormat()->getFormatCode();
+	return !ExcelTimeFormatCode( $formatCode );
 }
+
+function ExcelTimeFormat( $cell ) {
+	if( !PHPExcel_Shared_Date::isDateTime( $cell ) ) {
+		return false;
+	}
+	$formatCode = $cell->getParent()->getStyle($cell->getCoordinate())->getNumberFormat()->getFormatCode();
+	return ExcelTimeFormatCode( $formatCode );
+}
+
+function ExcelTimeFormatCode( $formatCode ) {
+	$timeFormats = array(
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME1,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME2,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME3,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME4,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME5,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME6,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME7,
+        PHPExcel_Style_NumberFormat::FORMAT_DATE_TIME8
+	);
+	foreach( $timeFormats as $f ) {
+		if( strpos( $formatCode, $f ) !== false ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * Structly Date or Datetime, not Time
+ */
+function ExcelDateFormatCode( $formatCode ) {
+	$dateFormats = array(
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_YYYYMMDD2,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_YYYYMMDD,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_DDMMYYYY,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_DMYSLASH,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_DMYMINUS,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_DMMINUS,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_MYMINUS,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_XLSX14,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_XLSX15,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_XLSX16,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_XLSX17,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_XLSX22,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_DATETIME,
+		PHPExcel_Style_NumberFormat::FORMAT_DATE_YYYYMMDDSLASH
+	);
+	foreach( $dateFormats as $f ) {
+		if( strpos( $formatCode, $f ) !== false ) {
+			return true;
+		}
+	}
+	return false;
+}
+
 
 ?>

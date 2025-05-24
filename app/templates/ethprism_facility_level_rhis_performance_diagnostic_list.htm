@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -88,7 +231,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +240,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -217,6 +360,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -1162,9 +1308,20 @@
 
 	 
 		{BEGIN CompletionDate_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompletionDate" data-fieldname="CompletionDate">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic CompletionDate }	</span>
+	{BEGIN CompletionDate_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompletionDate" data-fieldname="CompletionDate" 
+
+			{$CompletionDate_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic CompletionDate }</span>
+					{$arrow_icon_CompletionDate}
+			</span>
+	</span>
+	{END CompletionDate_fieldheader}
 {END CompletionDate_fieldheadercolumn}
 
 	
@@ -1185,9 +1342,20 @@
 
 	 
 		{BEGIN SubmissionDate_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SubmissionDate" data-fieldname="SubmissionDate">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic SubmissionDate }	</span>
+	{BEGIN SubmissionDate_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SubmissionDate" data-fieldname="SubmissionDate" 
+
+			{$SubmissionDate_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic SubmissionDate }</span>
+					{$arrow_icon_SubmissionDate}
+			</span>
+	</span>
+	{END SubmissionDate_fieldheader}
 {END SubmissionDate_fieldheadercolumn}
 
 	
@@ -1208,9 +1376,20 @@
 
 	 
 		{BEGIN starttime_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="starttime" data-fieldname="starttime">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic starttime }	</span>
+	{BEGIN starttime_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="starttime" data-fieldname="starttime" 
+
+			{$starttime_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic starttime }</span>
+					{$arrow_icon_starttime}
+			</span>
+	</span>
+	{END starttime_fieldheader}
 {END starttime_fieldheadercolumn}
 
 	
@@ -1231,9 +1410,20 @@
 
 	 
 		{BEGIN endtime_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endtime" data-fieldname="endtime">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic endtime }	</span>
+	{BEGIN endtime_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endtime" data-fieldname="endtime" 
+
+			{$endtime_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic endtime }</span>
+					{$arrow_icon_endtime}
+			</span>
+	</span>
+	{END endtime_fieldheader}
 {END endtime_fieldheadercolumn}
 
 	
@@ -1254,9 +1444,20 @@
 
 	 
 		{BEGIN deviceid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="deviceid" data-fieldname="deviceid">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic deviceid }	</span>
+	{BEGIN deviceid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="deviceid" data-fieldname="deviceid" 
+
+			{$deviceid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic deviceid }</span>
+					{$arrow_icon_deviceid}
+			</span>
+	</span>
+	{END deviceid_fieldheader}
 {END deviceid_fieldheadercolumn}
 
 	
@@ -1277,9 +1478,20 @@
 
 	 
 		{BEGIN subscriberid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="subscriberid" data-fieldname="subscriberid">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic subscriberid }	</span>
+	{BEGIN subscriberid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="subscriberid" data-fieldname="subscriberid" 
+
+			{$subscriberid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic subscriberid }</span>
+					{$arrow_icon_subscriberid}
+			</span>
+	</span>
+	{END subscriberid_fieldheader}
 {END subscriberid_fieldheadercolumn}
 
 	
@@ -1300,9 +1512,20 @@
 
 	 
 		{BEGIN simid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="simid" data-fieldname="simid">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic simid }	</span>
+	{BEGIN simid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="simid" data-fieldname="simid" 
+
+			{$simid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic simid }</span>
+					{$arrow_icon_simid}
+			</span>
+	</span>
+	{END simid_fieldheader}
 {END simid_fieldheadercolumn}
 
 	
@@ -1323,9 +1546,20 @@
 
 	 
 		{BEGIN devicephonenum_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="devicephonenum" data-fieldname="devicephonenum">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic devicephonenum }	</span>
+	{BEGIN devicephonenum_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="devicephonenum" data-fieldname="devicephonenum" 
+
+			{$devicephonenum_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic devicephonenum }</span>
+					{$arrow_icon_devicephonenum}
+			</span>
+	</span>
+	{END devicephonenum_fieldheader}
 {END devicephonenum_fieldheadercolumn}
 
 	
@@ -1346,9 +1580,20 @@
 
 	 
 		{BEGIN username_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic username }	</span>
+	{BEGIN username_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username" 
+
+			{$username_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic username }</span>
+					{$arrow_icon_username}
+			</span>
+	</span>
+	{END username_fieldheader}
 {END username_fieldheadercolumn}
 
 	
@@ -1369,9 +1614,20 @@
 
 	 
 		{BEGIN duration_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="duration" data-fieldname="duration">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic duration }	</span>
+	{BEGIN duration_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="duration" data-fieldname="duration" 
+
+			{$duration_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic duration }</span>
+					{$arrow_icon_duration}
+			</span>
+	</span>
+	{END duration_fieldheader}
 {END duration_fieldheadercolumn}
 
 	
@@ -1392,9 +1648,20 @@
 
 	 
 		{BEGIN caseid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caseid" data-fieldname="caseid">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic caseid }	</span>
+	{BEGIN caseid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caseid" data-fieldname="caseid" 
+
+			{$caseid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic caseid }</span>
+					{$arrow_icon_caseid}
+			</span>
+	</span>
+	{END caseid_fieldheader}
 {END caseid_fieldheadercolumn}
 
 	
@@ -1415,9 +1682,20 @@
 
 	 
 		{BEGIN FQ104_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ104" data-fieldname="FQ104">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ104 }	</span>
+	{BEGIN FQ104_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ104" data-fieldname="FQ104" 
+
+			{$FQ104_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ104 }</span>
+					{$arrow_icon_FQ104}
+			</span>
+	</span>
+	{END FQ104_fieldheader}
 {END FQ104_fieldheadercolumn}
 
 	
@@ -1438,9 +1716,20 @@
 
 	 
 		{BEGIN FQ101_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ101" data-fieldname="FQ101">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ101 }	</span>
+	{BEGIN FQ101_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ101" data-fieldname="FQ101" 
+
+			{$FQ101_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ101 }</span>
+					{$arrow_icon_FQ101}
+			</span>
+	</span>
+	{END FQ101_fieldheader}
 {END FQ101_fieldheadercolumn}
 
 	
@@ -1461,9 +1750,20 @@
 
 	 
 		{BEGIN FQ102_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ102" data-fieldname="FQ102">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ102 }	</span>
+	{BEGIN FQ102_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ102" data-fieldname="FQ102" 
+
+			{$FQ102_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ102 }</span>
+					{$arrow_icon_FQ102}
+			</span>
+	</span>
+	{END FQ102_fieldheader}
 {END FQ102_fieldheadercolumn}
 
 	
@@ -1484,9 +1784,20 @@
 
 	 
 		{BEGIN FQ103_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ103" data-fieldname="FQ103">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ103 }	</span>
+	{BEGIN FQ103_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ103" data-fieldname="FQ103" 
+
+			{$FQ103_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ103 }</span>
+					{$arrow_icon_FQ103}
+			</span>
+	</span>
+	{END FQ103_fieldheader}
 {END FQ103_fieldheadercolumn}
 
 	
@@ -1507,9 +1818,20 @@
 
 	 
 		{BEGIN FQ105_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ105" data-fieldname="FQ105">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ105 }	</span>
+	{BEGIN FQ105_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ105" data-fieldname="FQ105" 
+
+			{$FQ105_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ105 }</span>
+					{$arrow_icon_FQ105}
+			</span>
+	</span>
+	{END FQ105_fieldheader}
 {END FQ105_fieldheadercolumn}
 
 	
@@ -1530,9 +1852,20 @@
 
 	 
 		{BEGIN FQ106_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ106" data-fieldname="FQ106">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ106 }	</span>
+	{BEGIN FQ106_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ106" data-fieldname="FQ106" 
+
+			{$FQ106_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ106 }</span>
+					{$arrow_icon_FQ106}
+			</span>
+	</span>
+	{END FQ106_fieldheader}
 {END FQ106_fieldheadercolumn}
 
 	
@@ -1553,9 +1886,20 @@
 
 	 
 		{BEGIN FQ107_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ107" data-fieldname="FQ107">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ107 }	</span>
+	{BEGIN FQ107_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ107" data-fieldname="FQ107" 
+
+			{$FQ107_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ107 }</span>
+					{$arrow_icon_FQ107}
+			</span>
+	</span>
+	{END FQ107_fieldheader}
 {END FQ107_fieldheadercolumn}
 
 	
@@ -1576,9 +1920,20 @@
 
 	 
 		{BEGIN FQ108_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ108" data-fieldname="FQ108">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ108 }	</span>
+	{BEGIN FQ108_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ108" data-fieldname="FQ108" 
+
+			{$FQ108_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ108 }</span>
+					{$arrow_icon_FQ108}
+			</span>
+	</span>
+	{END FQ108_fieldheader}
 {END FQ108_fieldheadercolumn}
 
 	
@@ -1599,9 +1954,20 @@
 
 	 
 		{BEGIN siteid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="siteid" data-fieldname="siteid">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic siteid }	</span>
+	{BEGIN siteid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="siteid" data-fieldname="siteid" 
+
+			{$siteid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic siteid }</span>
+					{$arrow_icon_siteid}
+			</span>
+	</span>
+	{END siteid_fieldheader}
 {END siteid_fieldheadercolumn}
 
 	
@@ -1622,9 +1988,20 @@
 
 	 
 		{BEGIN FQ109_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ109" data-fieldname="FQ109">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ109 }	</span>
+	{BEGIN FQ109_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ109" data-fieldname="FQ109" 
+
+			{$FQ109_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ109 }</span>
+					{$arrow_icon_FQ109}
+			</span>
+	</span>
+	{END FQ109_fieldheader}
 {END FQ109_fieldheadercolumn}
 
 	
@@ -1645,9 +2022,20 @@
 
 	 
 		{BEGIN FQ110_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ110" data-fieldname="FQ110">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ110 }	</span>
+	{BEGIN FQ110_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ110" data-fieldname="FQ110" 
+
+			{$FQ110_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ110 }</span>
+					{$arrow_icon_FQ110}
+			</span>
+	</span>
+	{END FQ110_fieldheader}
 {END FQ110_fieldheadercolumn}
 
 	
@@ -1668,9 +2056,20 @@
 
 	 
 		{BEGIN FQ111_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ111" data-fieldname="FQ111">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ111 }	</span>
+	{BEGIN FQ111_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ111" data-fieldname="FQ111" 
+
+			{$FQ111_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ111 }</span>
+					{$arrow_icon_FQ111}
+			</span>
+	</span>
+	{END FQ111_fieldheader}
 {END FQ111_fieldheadercolumn}
 
 	
@@ -1691,9 +2090,20 @@
 
 	 
 		{BEGIN FQ112_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ112" data-fieldname="FQ112">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ112 }	</span>
+	{BEGIN FQ112_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ112" data-fieldname="FQ112" 
+
+			{$FQ112_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ112 }</span>
+					{$arrow_icon_FQ112}
+			</span>
+	</span>
+	{END FQ112_fieldheader}
 {END FQ112_fieldheadercolumn}
 
 	
@@ -1714,9 +2124,20 @@
 
 	 
 		{BEGIN FQ113_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field655" {$item_simple_grid_field655} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ113" data-fieldname="FQ113">
-	{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ113 }	</span>
+	{BEGIN FQ113_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field655" {$item_simple_grid_field655} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FQ113" data-fieldname="FQ113" 
+
+			{$FQ113_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_facility_level_rhis_performance_diagnostic FQ113 }</span>
+					{$arrow_icon_FQ113}
+			</span>
+	</span>
+	{END FQ113_fieldheader}
 {END FQ113_fieldheadercolumn}
 
 	

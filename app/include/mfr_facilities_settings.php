@@ -208,6 +208,9 @@ $tstrOrderBy = "";
 $tdatamfr_facilities[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamfr_facilities[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatamfr_facilities[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatamfr_facilities[".sqlHead"] = "";
@@ -274,6 +277,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/id";
 
+	
 	
 		$fdata["FullName"] = "id";
 
@@ -413,6 +417,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/name";
 
 	
+	
 		$fdata["FullName"] = "name";
 
 	
@@ -547,6 +552,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/status";
 
+	
 	
 		$fdata["FullName"] = "status";
 
@@ -683,6 +689,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/operationalStatus";
 
 	
+	
 		$fdata["FullName"] = "operationalStatus";
 
 	
@@ -817,6 +824,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/facilityType";
 
+	
 	
 		$fdata["FullName"] = "facilityType";
 
@@ -953,6 +961,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/parentFacilityType";
 
 	
+	
 		$fdata["FullName"] = "parentFacilityType";
 
 	
@@ -1087,6 +1096,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/region";
 
+	
 	
 		$fdata["FullName"] = "region";
 
@@ -1223,6 +1233,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/zone";
 
 	
+	
 		$fdata["FullName"] = "zone";
 
 	
@@ -1357,6 +1368,7 @@ $tdatamfr_facilities[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/woreda";
 
+	
 	
 		$fdata["FullName"] = "woreda";
 

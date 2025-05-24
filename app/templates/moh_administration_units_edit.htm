@@ -127,15 +127,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_unit_name}  r-vertical-field" 
-	data-signal-error-for="unit_name{$id}" 
+	data-signal-error-for="unit_name{$id}" {$required_attr_unit_name}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="unit_name" data-fieldname="unit_name" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_unit_name}">
 		{BEGIN unit_name_label}{$label public_moh_administration_units unit_name }{END unit_name_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$unit_name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="unit_name">
+	<div class="r-edit-tooltip" data-helpfor="unit_name" {$tooltipAttr public_moh_administration_units unit_name } >
 		<div class="text-muted" >
 		{$tooltip public_moh_administration_units unit_name }		</div>
 	</div>

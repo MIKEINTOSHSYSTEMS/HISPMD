@@ -64,7 +64,9 @@
 'details_found' => array(  ) ),
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'add',
 'breadcrumb' => false ),
 'events' => array( 'maps' => array(  ),
@@ -140,11 +142,12 @@
 'type' => 'integrated_edit_field',
 'orientation' => 0 ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'businessTemplate' => 'KnowledgeBase',
 'businessTemplatePageId' => 'add',
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

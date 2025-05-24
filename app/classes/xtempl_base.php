@@ -105,13 +105,12 @@ class XTempl_Base
 		$this->assign_method("event",$this, "xt_event", array());
 		$this->assign_function("label","xt_label",array());
 		$this->assign_function("tooltip","xt_tooltip",array());
+		$this->assign_function("tooltipAttr","xt_tooltipAttr",array());
 		$this->assign_method("custom", $this, "customLabel",array());
 		$this->assign_function("htmlcustom","xt_htmlcustom",array());
 		$this->assign_function("cl_length","xt_cl_length",array());
 		$this->assign_function("caption","xt_caption",array());
 		$this->assign_function("pagetitlelabel", "xt_pagetitlelabel", array());
-		$this->assign_method("mainmenu",$this,"xt_displaymainmenu",array());
-		$this->assign_method("menu",$this,"xt_displaymenu",array());
 		$this->assign_function("logo","printProjectLogo",array());
 		$this->assign_function("home_link","printHomeLink",array());
 		$this->assign_function("file_url","getFileUrl",array());
@@ -124,7 +123,7 @@ class XTempl_Base
 
 		$this->assign_method("map", $this, "xt_event_map", array());
 
-		$this->assign( "projectPath", projectPath() );
+		$this->assign( "projectPath", runner_htmlspecialchars( projectPath() ) );
 
 		//	message parameters
 		$this->assign_method("mlp_push", $this, "mlpPush", array());
@@ -548,45 +547,15 @@ $mlang_charsets["English"]="Windows-1252";;
 
 
 
-	/**
-	 * Display bricks with names listed in the arra passed as hidden
-	 * @param Array bricks
-	 */
-	function displayBricksHidden($bricks)
-	{
-		foreach($bricks as $name)
-		{
-			$this->hiddenBricks[$name] = true;
-		}
-	}
+
 
 	/**
-	 * Display brick hidden
-	 * @param {string} brick name
-	 * @intellisense
-	 */
-	function displayBrickHidden($name)
-	{
-		$this->hiddenBricks[$name] = true;
-	}
-
-	/**
+	 * DEPRECATED
 	 * Hide All bricks on the page
 	 * @param {array} of excepted bricks
 	 * @intellisense
 	 */
 	function hideAllBricksExcept($arrExceptBricks){
-		if($this->layout->version == PD_BS_LAYOUT)
-			return;
-		foreach($this->layout->containers as $cname=>$container)
-		{
-			foreach($container as $brick)
-			{
-				if (!in_array($brick["name"],$arrExceptBricks)){
-					$this->assign($brick["block"],false);
-				}
-			}
-		}
 	}
 
 	/**
@@ -686,141 +655,7 @@ $mlang_charsets["English"]="Windows-1252";;
 	{
 		if(!$this->layout)
 			return;
-
-		if( $this->layout->version == 4 ) {
-			$this->layout->prepareForms( $this, $this->hiddenItems, $this->hiddenRecordItems, $this->pageObject );
-			return;
-		}
-
-		$containerCss = array();
-		$pageStyle = $this->getPageStyle();
-
-		$classPrefix = "rnr-";
-		if($this->layout->version == 1)
-		{
-			$classPrefix = "runner-";
-		}
-		$this->assign("stylename",$pageStyle." page-".$this->layout->name);
-		$this->assign("pageStyleName",$pageStyle);
-		$displayed_containers = array();
-		$hidden_containers = array();
-
-		// run reverse loop for proper processing of nested containers
-		$containersNames = array_keys($this->layout->containers);
-		$containersNames = array_reverse($containersNames);
-		foreach($containersNames as $cname)
-		{
-			$container = $this->layout->containers[$cname];
-			if(isset($this->xt_vars["container_".$cname]) && $this->xt_vars["container_".$cname] === false)
-				continue;
-			$firstContainerSubstyle = "";
-			$lastContainerSubstyle = "";
-			$showContainer = false;
-			$hideContainer = true;
-			foreach($container as $brick)
-			{
-				if(!strlen($brick["block"]))
-				{
-					$showContainer = true;
-				}
-				elseif(!isset($this->xt_vars[$brick["block"]]))
-				{
-					continue;
-				}
-				elseif(!$this->xt_vars[$brick["block"]])
-				{
-					continue;
-				}
-				if(!$firstContainerSubstyle)
-				{
-					$firstContainerSubstyle = "runner-toprow style".$brick["substyle"];
-					if($brick["name"] == "vmenu")
-						$firstContainerSubstyle = "runner-toprow runner-vmenu";
-				}
-				$lastContainerSubstyle = "runner-bottomrow style".$brick["substyle"];
-				if($brick["name"] == "vmenu")
-					$lastContainerSubstyle = "runner-bottomrow runner-vmenu";
-				$showContainer = true;
-
-				if($this->hiddenBricks[$brick["name"]]
-					|| $brick["name"] == "wrapper"
-						&& (isset($hidden_containers[$brick["container"]]) || !isset($displayed_containers[$brick["container"]])))
-				{
-					$hideBrick = true;
-				}
-				else
-				{
-					$hideBrick = false;
-					$hideContainer = false;
-				}
-
-				if($this->layout->version < BOOTSTRAP_LAYOUT )
-				{
-					if( $hideBrick ){
-						$this->assign("brickclass_".$brick["name"], $classPrefix."hiddenbrick");
-					}else{
-						$this->unassign("brickclass_".$brick["name"] );
-					}
-				}
-				else
-				{
-					if( $hideBrick ){
-						$this->assign( $brick["name"] . "_hiddenattr", "data-hidden" );
-						//$containerCss[] = "[data-pageid=\"". $this->pageId ."\"][data-brick=".$brick["name"]."] { display:none; }";
-					}
-				}
-			}
-			if($showContainer)
-			{
-				if($hideContainer)
-				{
-					$hidden_containers[$cname] = true;
-				}
-
-				$this->setContainerDisplayed( $cname, !$hideContainer, $firstContainerSubstyle, $lastContainerSubstyle );
-
-				$displayed_containers[$cname] = true;
-				$this->unassign("wrapperclass_".$cname);
-			}
-			else
-			{
-				$this->unassign("container_".$cname);
-				$this->assign("wrapperclass_".$cname,$classPrefix."hiddencontainer");
-			}
-		}
-		//	display blocks
-		foreach($this->layout->blocks as $bname=>$block)
-		{
-			$showBlock = false;
-			$hideBlock = true;
-			foreach($block as $cname)
-			{
-				if( $displayed_containers[$cname] )
-				{
-					$showBlock = true;
-					if(!$hidden_containers[$cname])
-					{
-						$hideBlock = false;
-						break;
-					}
-				}
-			}
-			if( $this->layout->version < BOOTSTRAP_LAYOUT )
-			{
-				if(!$showBlock || $hideBlock)
-					$this->assign("blockclass_".$bname,$classPrefix."hiddenblock");
-			}
-			else
-			{
-				if(!$showBlock || $hideBlock)
-					$this->assign("blockattr_".$bname, "data-hidden" );
-			}
-
-		}
-		if( $this->layout->version >= BOOTSTRAP_LAYOUT )
-		{
-			$this->assign( "pageid", $this->pageId );
-		}
+		$this->layout->prepareForms( $this, $this->hiddenItems, $this->hiddenRecordItems, $this->pageObject );
 	}
 
 	function hideField($fieldName)
@@ -836,27 +671,6 @@ $mlang_charsets["English"]="Windows-1252";;
 		$this->assign("fielddispclass_".GoodFieldName($fieldName), "");
 	}
 
-
-	function xt_displaymenu($params)
-	{
-		$menuparams = array();
-		foreach($params as $p)
-		{
-			$menuparams[] = $p;
-		}
-		global $pageObject;
-		if( !isset( $pageObject ) )
-			return;
-
-		$pageObject->displayMenu( $menuparams[0],  $menuparams[1] );
-		return;
-	}
-
-	function xt_displaymainmenu($params)
-	{
-		array_unshift($params, "main");
-		return $this->xt_displaymenu($params);
-	}
 
 	function mobileTemplateMode() {
 		if($this->layout)

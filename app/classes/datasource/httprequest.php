@@ -87,7 +87,7 @@ class HttpRequest {
 		if( !$this->postPayload ) {
 			return "";
 		}
-		$contentType = $this->headers["Content-Type"];
+		$contentType = $this->getHeader("Content-Type");
 		$cTypeParts = explode( ";", $contentType );
 		$type = "";
 		if( count( $cTypeParts ) > 0 ) {
@@ -95,7 +95,7 @@ class HttpRequest {
 		}
 		if( !$type || $type == "application/x-www-form-urlencoded" ) {
 			if( !$type )
-				$this->headers["Content-Type"] = "application/x-www-form-urlencoded";
+				$this->setHeader("Content-Type", "application/x-www-form-urlencoded" );
 			return prepareUrlQuery( $this->postPayload );
 		}
 		if( $type == "application/json" || $type == "application/json-patch+json" ) {
@@ -104,7 +104,7 @@ class HttpRequest {
 		if( $type == "multipart/form-data" ) {
 			//	ignore specified boundary and generate a new one
 			$boundary = generatePassword( 40 );
-			$this->headers["Content-Type"] = $type . ";boundary=" . $boundary;
+			$this->setHeader("Content-Type", $type . ";boundary=" . $boundary );
 			$bodyParts = array();
 			foreach( $this->postPayload as $name => $value ) {
 				$bodyParts[] = "--" . $boundary . "\r\nContent-disposition: form-data; name=\"" . $name . "\"\r\n\r\n". $value . "\r\n";
@@ -135,6 +135,7 @@ class HttpRequest {
 		
 		global $dDebug;
 		if( $dDebug ) {
+			echo "<pre>";
 			echo "HTTP request:";
 			echo "\nurl:";
 			print_r( $this->url );
@@ -142,8 +143,11 @@ class HttpRequest {
 			print_r( $this->method );
 			echo "\nheaders:";
 			print_r( $this->headers );
+			echo "\nurl params:";
+			print_r( $this->urlParams );
 			echo "\nbody:";
 			print_r( $this->body );
+			echo "</pre>";
 		}
 		$ret = runner_http_request( $url, $body, $this->method, $this->headers );
 		if( $dDebug ) {
@@ -169,7 +173,7 @@ class HttpRequest {
 	/**
 	 * Parse "application/json" or "urlencoded"
 	 * @param Array HttpRequest::run result
-	 * @return Array
+	 * @return Array or null
 	 */
 	public static function parseResponseArray( $response ) {
 		$headers = explode( "\r\n", $response["header"] );
@@ -180,12 +184,17 @@ class HttpRequest {
 				break;
 			}
 		}
+		$content = $response["content"];
 		if( $urlencoded ) {
 			$result = array();
-			$result = parseQueryString( $response["content"] );
+			$result = parseQueryString( $content );
 			return $result;
 		}
-		return my_json_decode( $response["content"] );
+		$obj = runner_json_decode( $content );
+		if( is_array($obj) && count( $obj ) == 0 && trim( $content ) != "[]" ) {
+			return null;
+		}
+		return $obj;
 	}
 
 	/**	
@@ -203,6 +212,18 @@ class HttpRequest {
 			$ret[ strtolower( substr( $h, 0, $pos ) ) ] = trim( substr( $h, $pos + 1 ) );
 		}
 		return $ret;
+	}
+
+	public function getHeader( $name ) {
+		return getArrayElementNC( $this->headers, $name );
+	}
+
+	public function setHeader( $name, $value ) {
+		$header =  getArrayKeyNC( $this->headers, $name );
+		if( !$header ) {
+			$header = $name;
+		}
+		$this->headers[ $header ] = $value;
 	}
 }
 

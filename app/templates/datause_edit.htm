@@ -126,15 +126,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_use_id}  r-vertical-field" 
-	data-signal-error-for="use_id{$id}" 
+	data-signal-error-for="use_id{$id}" {$required_attr_use_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="use_id" data-fieldname="use_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_use_id}">
 		{BEGIN use_id_label}{$label public_datause use_id }{END use_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$use_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="use_id">
+	<div class="r-edit-tooltip" data-helpfor="use_id" {$tooltipAttr public_datause use_id } >
 		<div class="text-muted" >
 		{$tooltip public_datause use_id }		</div>
 	</div>
@@ -147,15 +148,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_institution_type}  r-vertical-field" 
-	data-signal-error-for="institution_type{$id}" 
+	data-signal-error-for="institution_type{$id}" {$required_attr_institution_type}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="institution_type" data-fieldname="institution_type" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_institution_type}">
 		{BEGIN institution_type_label}{$label public_datause institution_type }{END institution_type_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$institution_type_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="institution_type">
+	<div class="r-edit-tooltip" data-helpfor="institution_type" {$tooltipAttr public_datause institution_type } >
 		<div class="text-muted" >
 		{$tooltip public_datause institution_type }		</div>
 	</div>
@@ -168,15 +170,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_pmt_active}  r-vertical-field" 
-	data-signal-error-for="pmt_active{$id}" 
+	data-signal-error-for="pmt_active{$id}" {$required_attr_pmt_active}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="pmt_active" data-fieldname="pmt_active" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_pmt_active}">
 		{BEGIN pmt_active_label}{$label public_datause pmt_active }{END pmt_active_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$pmt_active_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="pmt_active">
+	<div class="r-edit-tooltip" data-helpfor="pmt_active" {$tooltipAttr public_datause pmt_active } >
 		<div class="text-muted" >
 		{$tooltip public_datause pmt_active }		</div>
 	</div>
@@ -189,15 +192,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_baseline_assessment}  r-vertical-field" 
-	data-signal-error-for="baseline_assessment{$id}" 
+	data-signal-error-for="baseline_assessment{$id}" {$required_attr_baseline_assessment}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="baseline_assessment" data-fieldname="baseline_assessment" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_baseline_assessment}">
 		{BEGIN baseline_assessment_label}{$label public_datause baseline_assessment }{END baseline_assessment_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$baseline_assessment_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="baseline_assessment">
+	<div class="r-edit-tooltip" data-helpfor="baseline_assessment" {$tooltipAttr public_datause baseline_assessment } >
 		<div class="text-muted" >
 		{$tooltip public_datause baseline_assessment }		</div>
 	</div>

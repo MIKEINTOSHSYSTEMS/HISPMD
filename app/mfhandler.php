@@ -75,7 +75,11 @@ if( $requestAction == "DELETE" || $requestAction == "POST" ) {
 switch ($requestAction) {
     case 'DELETE':
     	$fileHandler = new RunnerFileHandler( $field, $pSet, postvalue("formStamp") );
-		$success = $fileHandler->delete( postvalue("fileName") );
+		if( postvalue("resetUploadedFiles") ) {
+			$success = $fileHandler->resetUplodedFiles();
+		} else {
+			$success = $fileHandler->delete( postvalue("fileName") );
+		}
         header('Content-type: application/json');
         echo my_json_encode($success);
         break;

@@ -74,7 +74,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -87,7 +230,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +239,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -131,6 +274,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -306,7 +452,7 @@
 {BEGIN region_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_region_id}  r-vertical-field" data-fieldname="region_id" data-signal-error-for="region_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_region_id}  r-vertical-field" data-fieldname="region_id" data-signal-error-for="region_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="region_id" data-fieldname="region_id" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_region_id}">
@@ -325,7 +471,7 @@
 {BEGIN region_name_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_region_name}  r-vertical-field" data-fieldname="region_name" data-signal-error-for="region_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="region_name" data-fieldname="region_name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_region_name}  r-vertical-field" data-fieldname="region_name" data-signal-error-for="region_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="region_name" data-fieldname="region_name" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_region_name}">
@@ -344,7 +490,7 @@
 {BEGIN region_alternate_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_region_alternate}  r-vertical-field" data-fieldname="region_alternate" data-signal-error-for="region_alternate{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="region_alternate" data-fieldname="region_alternate" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_region_alternate}  r-vertical-field" data-fieldname="region_alternate" data-signal-error-for="region_alternate{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="region_alternate" data-fieldname="region_alternate" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_region_alternate}">
@@ -363,7 +509,7 @@
 {BEGIN lat_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_lat}  r-vertical-field" data-fieldname="lat" data-signal-error-for="lat{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="lat" data-fieldname="lat" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_lat}  r-vertical-field" data-fieldname="lat" data-signal-error-for="lat{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="lat" data-fieldname="lat" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_lat}">
@@ -382,7 +528,7 @@
 {BEGIN lng_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_lng}  r-vertical-field" data-fieldname="lng" data-signal-error-for="lng{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="lng" data-fieldname="lng" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_lng}  r-vertical-field" data-fieldname="lng" data-signal-error-for="lng{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="lng" data-fieldname="lng" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_lng}">
@@ -401,7 +547,7 @@
 {BEGIN code_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_code}  r-vertical-field" data-fieldname="code" data-signal-error-for="code{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="code" data-fieldname="code" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_code}  r-vertical-field" data-fieldname="code" data-signal-error-for="code{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="code" data-fieldname="code" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_code}">
@@ -420,7 +566,7 @@
 {BEGIN map_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_map}  r-vertical-field" data-fieldname="map" data-signal-error-for="map{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="map" data-fieldname="map" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_map}  r-vertical-field" data-fieldname="map" data-signal-error-for="map{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="map" data-fieldname="map" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_map}">
@@ -439,7 +585,7 @@
 {BEGIN region_code_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_region_code}  r-vertical-field" data-fieldname="region_code" data-signal-error-for="region_code{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="region_code" data-fieldname="region_code" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_region_code}  r-vertical-field" data-fieldname="region_code" data-signal-error-for="region_code{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="region_code" data-fieldname="region_code" data-compact >
 
 	
 	<label class="col-md-offset-3 col-md-6" for="{$labelfor_region_code}">

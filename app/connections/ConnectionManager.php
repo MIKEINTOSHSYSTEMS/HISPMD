@@ -146,7 +146,7 @@ class ConnectionManager extends ConnectionManager_Base
 		$data["connInfo"][4] = "hisp_md";
 		$data["connInfo"][5] = "https://hispmd.merqconsultancy.org/app/postgre.php"; //currently unused
 		$data["connInfo"][6] = "0"; //currently unused
-		$data["ODBCString"] = "Driver={PostgreSQL Unicode};Server=192.168.128.4;Database=hisp_md;Uid=hispmddb;Pwd=hispmddb;";
+		$data["ODBCString"] = "Driver={PostgreSQL ODBC Driver(ANSI)};Server=192.168.128.4;Database=hisp_md;Uid=hispmddb;Pwd=hispmddb";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;

@@ -184,6 +184,9 @@ $tstrOrderBy = "";
 $tdatamfr_zones[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamfr_zones[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatamfr_zones[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatamfr_zones[".sqlHead"] = "";
@@ -250,6 +253,7 @@ $tdatamfr_zones[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/regionId";
 
+	
 	
 		$fdata["FullName"] = "regionId";
 
@@ -389,6 +393,7 @@ $tdatamfr_zones[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/name";
 
 	
+	
 		$fdata["FullName"] = "name";
 
 	
@@ -523,6 +528,7 @@ $tdatamfr_zones[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/id";
 
+	
 	
 		$fdata["FullName"] = "id";
 

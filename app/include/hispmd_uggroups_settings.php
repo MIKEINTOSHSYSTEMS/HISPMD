@@ -259,6 +259,7 @@ $tdatahispmd_uggroups[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "GroupID";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"GroupID\"";
 
@@ -399,6 +400,7 @@ $tdatahispmd_uggroups[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Label";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Label\"";
 
@@ -536,6 +538,7 @@ $tdatahispmd_uggroups[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Provider";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Provider\"";
 
@@ -673,6 +676,7 @@ $tdatahispmd_uggroups[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Comment";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Comment\"";
 

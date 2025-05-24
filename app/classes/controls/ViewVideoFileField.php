@@ -9,7 +9,7 @@ class ViewVideoFileField extends ViewFileField
 	 */
 	public function addJSFiles()
 	{
-		$this->AddJSFile("include/video/projekktor.js");
+		$this->AddJSFile("include/videojs/video.min.js");
 		$this->getJSControl();
 	}
 
@@ -19,7 +19,8 @@ class ViewVideoFileField extends ViewFileField
 	 */ 
 	function addCSSFiles()
 	{
-		$this->AddCSSFile("include/video/theme/style.css");
+		$this->AddCSSFile("include/videojs/video-js.min.css");
+		$this->AddCSSFile("include/videojs/rnr-videojs-theme.css");
 	}
 	
 	public function showDBValue( &$data, $keylink, $html = true )
@@ -52,9 +53,27 @@ class ViewVideoFileField extends ViewFileField
 		$vWidth = $vWidth ? $vWidth : 300;
 		$vHeight = $vHeight ? $vHeight : 200;
 
-		return '<div style="width:'.$vWidth.'px; height:'.$vHeight.'px;">'.
-			'<video class="projekktor"  width="'.$vWidth.'" height="'.$vHeight.'" type="' . runner_htmlspecialchars( $urlData["type"] ).'" src="' . runner_htmlspecialchars( $urlData["url"] ) . '">'.
-			'</video></div>';
+		$srcURL = runner_htmlspecialchars( $urlData["url"] );
+		
+		// try to play some other types, if the found type is not supported
+		$types = array( $urlData["type"], "video/mp4", "video/webm", "video/ogg" );
+		$types = array_unique( $types );
+
+		$sources = "";		
+		foreach ( $types as $type ) {
+			$sources .= '<source type="' . runner_htmlspecialchars( $type ) . '" src="' . $srcURL . '" />';
+		}
+
+		return (
+			'<div style="width:'.$vWidth.'px; height:'.$vHeight.'px;">'.
+				'<video class="video-js rnr-videojs-theme" width="'.$vWidth.'" height="'.$vHeight.'">'.
+					$sources.
+					'<p class="vjs-no-js">'.
+						'To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video.'.						
+					'</p>'.					
+				'</video>'.
+			'</div>'
+		);
 	}
 
 	public function getPdfValue(&$data, $keylink = "")

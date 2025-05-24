@@ -4,7 +4,12 @@ $topsmfr_operational_statuses = array();
 		"subtype" => "rest",
 		"method" => "GET",
 		"request" => "/lookup?name=OperationalStatus",
-		"payload" => "[]"
+		"payload" => "[]",
+		"skipFilter" => "0",
+		"skipOrder" => "0",
+		"payloadFormat" => "0",
+		"payloadString" => "",
+		"rawPayload" => "0"
 	);
 	$tables_data["MFR_Operational_Statuses"][".operations"] = &$topsmfr_operational_statuses;
 ?>

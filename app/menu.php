@@ -16,7 +16,7 @@ if( Security::hasLogin() ) {
 
 	if( !isLogged() )
 	{
-		HeaderRedirect("login");
+		redirectToLogin();
 		return;
 	}
 

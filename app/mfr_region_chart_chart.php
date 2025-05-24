@@ -39,6 +39,7 @@ if( $pageMode = CHART_DASHBOARD )
 {
 	$params["dashElementName"] = postvalue("dashelement");
 	$params["dashTName"] = postvalue("table");
+	$params["dashPage"] = postvalue("dashPage");
 }
 
 $pageObject = new ChartPage( $params );

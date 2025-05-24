@@ -131,7 +131,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -177,9 +177,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -206,9 +206,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -235,9 +235,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -264,9 +264,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -293,9 +293,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -322,9 +322,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -360,9 +360,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -389,9 +389,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -418,9 +418,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -447,9 +447,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -476,9 +476,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -505,9 +505,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -542,9 +542,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -568,9 +568,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -594,9 +594,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -620,9 +620,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -646,9 +646,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -672,9 +672,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -701,4 +701,7 @@ pdfDocument = {
 								
 ''
 			],
-	}
+	};
+
+
+pdfFonts = {$pdfFonts};

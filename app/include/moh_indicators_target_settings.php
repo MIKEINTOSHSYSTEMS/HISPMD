@@ -272,6 +272,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ID";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ID\"";
 
@@ -412,6 +413,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_id";
 
@@ -578,6 +580,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_name";
 
@@ -715,6 +718,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_target";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_target";
 
@@ -853,6 +857,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_baseline";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_baseline";
 
@@ -991,6 +996,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_target_year";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_target_year";
 
@@ -1154,6 +1160,7 @@ $tdatamoh_indicators_target[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_baseline_year";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_baseline_year";
 

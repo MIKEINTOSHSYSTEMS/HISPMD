@@ -344,6 +344,12 @@ class DropboxFileSystem extends OAuthFileSystem {
         }
         return true;
     }
+
+	public function createAuthRequest( ) {
+		$rest = $this->getConnection();
+		return $rest->createUserAuthRequest( array("token_access_type" => "offline" ) );
+	}
+
 }
 
 ?>

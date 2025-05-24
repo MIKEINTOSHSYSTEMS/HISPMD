@@ -83,14 +83,24 @@ class ChangePasswordPage extends RunnerPage
 	 */
 	protected function setReferer()
 	{
-		$referer = @$_SERVER["HTTP_REFERER"] != ""
-				&& strpos($_SERVER["HTTP_REFERER"], GetTableLink("changepwd")) != strlen($_SERVER["HTTP_REFERER"]) - strlen(GetTableLink("changepwd"))
-				? $_SERVER["HTTP_REFERER"] : "";
+		$referer = @$_SERVER["HTTP_REFERER"] ? @$_SERVER["HTTP_REFERER"] : "";
 
-		if( !isset($_SESSION["changepwd_referer"]) )
-			$_SESSION["changepwd_referer"] = $referer != "" ? $referer : GetTableLink("menu");
-		else if( $referer != "" )
+		// ignore referer if from another site or if came from the same "change password" page
+		$home = strtoupper( projectUrl() );
+		$changePwdPage = strtoupper( projectUrl() . GetTableLink("changepwd") );
+		if( substr( strtoupper( $referer ), 0 , strlen( $home ) ) != $home ||
+			substr( strtoupper( $referer ), 0 , strlen( $changePwdPage ) ) == $changePwdPage ) {
+		
+			$referer = "";
+		}
+
+		if( $referer ) {
 			$_SESSION["changepwd_referer"] = $referer;
+		}
+		if( !$_SESSION["changepwd_referer"] ) {
+			$_SESSION["changepwd_referer"] = projectUrl();
+		}
+
 	}
 
 	/**
@@ -121,7 +131,7 @@ class ChangePasswordPage extends RunnerPage
 
 		if( GetGlobalData( "bEncryptPasswords" ) ) {
 			if( !$this->cipherer->isFieldEncrypted( $this->passwordField ) )
-				$newpass = $this->getPasswordHash( $newpass );
+				$newpass = Security::hashPassword( $newpass );
 		}
 
 		$values = array();

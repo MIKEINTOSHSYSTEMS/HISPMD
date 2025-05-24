@@ -79,7 +79,7 @@ function redirectToLogin()
 
 	$expired = "";
 	$url = "http://";
-if( $_SERVER["HTTPS"] && $_SERVER["HTTPS"] != "off")
+	if( $_SERVER["HTTPS"] && $_SERVER["HTTPS"] != "off")
 		$url = "https://";
 	$url .= $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 
@@ -2053,7 +2053,7 @@ function CheckImageExtension($filename)
 	if(strlen($filename)<4)
 		return false;
 	$ext=strtoupper(substr($filename,strlen($filename)-4));
-	if($ext==".GIF" || $ext==".JPG" || $ext=="JPEG" || $ext==".PNG" || $ext==".BMP")
+	if($ext==".GIF" || $ext==".JPG" || $ext=="JPEG" || $ext==".PNG" || $ext==".BMP" || $ext=="WEBP")
 		return $ext;
 	return false;
 }
@@ -4490,7 +4490,7 @@ function & getLayoutByFilename( $filename ) {
 		return $all_page_layouts[$filename];
 
 	$oldFileName = $filename;
-	if( substr($filename, 0, 8 ) == ".global_" )
+	if( substr($filename, 0, 8 ) == GLOBAL_PAGES_SHORT . "_" )
 		$oldFileName = substr( $filename, 8 );
 	return $page_layouts[$oldFileName];
 }
@@ -4700,6 +4700,7 @@ function & getMimeTypes() {
 	$mime["m4v"] = "video/mp4";
 	$mime["mpeg"] = "video/mpeg";
 	$mime["mpg"] = "video/mpeg";
+	$mime["mkv"] = "video/x-matroska";
 	$mime["mpkg"] = "application/vnd.apple.installer+xml";
 	$mime["odp"] = "application/vnd.oasis.opendocument.presentation";
 	$mime["ods"] = "application/vnd.oasis.opendocument.spreadsheet";
@@ -4778,6 +4779,8 @@ function getContentTypeByExtension($ext)
 		$ctype = "image/gif";
 	elseif($ext==".jpg" || $ext=="jpeg")
 		$ctype = "image/jpeg";
+	elseif($ext == ".webp")
+		$ctype = "image/webp";
 	elseif($ext==".wav")
 		$ctype = "audio/wav";
 	elseif($ext==".mp3")
@@ -5075,6 +5078,7 @@ function isImageType($type)
 		case "image/gif":
 		case "image/jpeg":
 		case "image/pjpeg":
+		case "image/webp":
 			return true;
 	}
 	return false;
@@ -5121,12 +5125,12 @@ function GetBaseScriptsForPage($isDisplayLoading, $additionalScripts = "", $cust
 {
 	global $projectBuildKey;
 	$result = "";
-	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/loadfirst.js?39558")."\"></script>";
+	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/loadfirst.js?41974")."\"></script>";
 
 	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/custom_functions.js?".$projectBuildKey)."\"></script>";
 
 	$result .= $additionalScripts;
-	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/lang/".getLangFileName(mlang_getcurrentlang()).".js?39558")."\"></script>";
+	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/lang/".getLangFileName(mlang_getcurrentlang()).".js?41974")."\"></script>";
 
 
 
@@ -5307,9 +5311,11 @@ function countTotals(&$totals, $totalsFields, $data)
 	}
 	for($i = 0; $i < count($totalsFields); $i ++)
 	{
-		if($totalsFields[$i]['totalsType'] == 'COUNT')
-			$totals[$totalsFields[$i]['fName']]["value"] += ($data[$totalsFields[$i]['fName']]!= "");
-		else if($totalsFields[$i]['viewFormat'] == "Time")
+		if($totalsFields[$i]['totalsType'] == 'COUNT') {
+			if( $data[$totalsFields[$i]['fName']]!= "" ) {
+				$totals[$totalsFields[$i]['fName']]["value"]++;
+			}
+		} else if($totalsFields[$i]['viewFormat'] == "Time")
 		{
 			$time = GetTotalsForTime($data[$totalsFields[$i]['fName']]);
 			$totals[$totalsFields[$i]['fName']]["value"] += $time[2]+$time[1]*60 + $time[0]*3600;
@@ -5414,7 +5420,7 @@ function getBingMapsLang()
 
 function getDefaultLanguage()
 {
-	if( strlen(@$_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
+	if( @strlen(@$_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
 	{
 		$arrWizardLang = array();
 		$arrWizardLang[] = "English";
@@ -5532,12 +5538,11 @@ function getHomePage()
 	if( $globalSettings["LandingPage"]=="" || $globalSettings["LandingPage"] == "login" || $globalSettings["LandingPage"] == "register" )
 		return GetLocalLink("menu");
 
-	if( strlen($globalSettings["LandingTable"]) )
+	if( @strlen($globalSettings["LandingTable"]) )
 	{
-		if( !strlen( $globalSettings["LandingPageId"] ) )
-			return GetLocalLink( GetTableURL($globalSettings["LandingTable"]), $globalSettings["LandingPage"] );
-
-		return GetLocalLink( GetTableURL($globalSettings["LandingTable"]), $globalSettings["LandingPage"], "page=".$globalSettings["LandingPageId"] );
+		if( @strlen( $globalSettings["LandingPageId"] ) )
+			return GetLocalLink( GetTableURL($globalSettings["LandingTable"]), $globalSettings["LandingPage"], "page=".$globalSettings["LandingPageId"] );
+		return GetLocalLink( GetTableURL($globalSettings["LandingTable"]), $globalSettings["LandingPage"] );
 	}
 
 	return GetLocalLink( $globalSettings["LandingPage"] );
@@ -5612,6 +5617,14 @@ function xt_tooltip($params)
 	echo GetFieldToolTip( $params["custom1"], $params["custom2"] );
 }
 
+function xt_tooltipAttr($params)
+{
+	if( !strlen( GetFieldToolTip( $params["custom1"], $params["custom2"] ) ) ) {
+		echo "data-hidden";
+	}
+}
+
+
 function xt_custom($params)
 {
 	echo GetCustomLabel($params["custom1"]);
@@ -5683,17 +5696,30 @@ function xt_buildeditcontrol(&$params)
 
 function getArrayElementNC( &$arr, $key )
 {
+	$akey = getArrayKeyNC( $arr, $key );
+	if( $akey === null ) {
+		return null;
+	}
+	return $arr[ $akey ];
+}
+
+function getArrayKeyNC( $arr /* can't put &$arr, ASP.NET conbersion issue */ , $key )
+{
+	if( !$arr ) {
+		return null;
+	}
 	if( isset( $arr[ $key ] ) )
-		return $arr[ $key ];
+		return $key;
 	$keys = array_keys( $arr );
 	$uKey = strtoupper( $key );
 	foreach( $keys as $k )
 	{
 		if( strtoupper($k) == $uKey )
-			return $arr[ $k ];
+			return $k;
 	}
 	return null;
 }
+
 
 /**
  * 	This function is needed for conversion to ASP & ASP.NET
@@ -5730,7 +5756,7 @@ function prepareLookupWhere( $field, $pSet ) {
 
 function verifyRecaptchaResponse( $response ) {
 
-	$verifyUrl = "https://www.google.com/recaptcha/api/siteverify?";
+	$verifyUrl = "https://www.recaptcha.net/recaptcha/api/siteverify?";
 
 	$errors = array();
 	$errors["missing-input-response"] = "Invalid security code.";
@@ -5847,7 +5873,7 @@ function isOldCustomFile( $filename ) {
 }
 
 function getOldTemplateFilename( $filename ) {
-	if( substr($filename, 0, 8 ) == ".global_" )
+	if( substr($filename, 0, 8 ) == GLOBAL_PAGES_SHORT . "_" )
 		return  substr( $filename, 8 );
 	return $filename;
 }
@@ -6622,11 +6648,10 @@ function sendEmailTemplate($toEmail, $templateFile, $data, $html = false)
 	}
 
 	$subject = "";
-	if ( $firstRowEndPos = strpos($body,"\r") )
-	{
-		$subject = substr($body, 0, $firstRowEndPos);
-		$body = substr($body, ($firstRowEndPos+1));
-	}
+
+	$templParts = splitFirstLine( $body );
+	$subject = $templParts[0];
+	$body = $templParts[1];
 
 	$params = array('to' => $toEmail, 'subject' => $subject, "charset" => $cCharset);
 	if($html)
@@ -6964,6 +6989,14 @@ function getStorageProvider( $pSet, $field ) {
 		$params["path"] = $pSet->dropboxPath( $field );
 		return new DropboxFileSystem( $params );
 	}
+	if( $providerType == stpWASABI ) {
+		$params["accessKey"] = $pSet->wasabiAccessKey( $field );
+		$params["secretKey"] = $pSet->wasabiSecretKey( $field );
+		$params["bucket"] = $pSet->wasabiBucket( $field );
+		$params["region"] = $pSet->wasabiRegion( $field );
+		$params["path"] = $pSet->wasabiPath( $field );
+		return new WasabiFileSystem( $params );
+	}
 }
 
 /**
@@ -6988,7 +7021,10 @@ function createNotification( &$params ) {
 	return $noti->create( $params );
 }
 
-function addNotification( $message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null ) {
+/**
+ * @param array|string $user notification permissions params or username string
+ */
+function addNotification( $message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $newWindow = false ) {
 	$params = array(
 		"message" => $message,
 		"title" => $title,
@@ -6996,8 +7032,10 @@ function addNotification( $message, $title = null, $icon = null, $url = null, $e
 	);
 	$params["url"] = $url;
 	$params["expire"] = $expire;
-	$params["user"] = $user;
-	$params["provider"] = $provider;
+	$params["permissions"] = is_string( $user )
+		? array( "user" => $user )
+		: $user;
+	$params["newWindow"] = $newWindow;
 	return createNotification( $params );
 }
 
@@ -7014,11 +7052,11 @@ function createPageLink( $params ) {
 
 	//	verify and try to fix table name
 	$table = $params["table"];
-	if( $table && !GetTableByShort( $table ) ) {
-		$table = GetTableUrl( $table );
-		if( !$table ) {
-			$table = $params["table"];
-		}
+	$shortTable = GetTableUrl( $table );
+	if( $table && !$shortTable ) {
+		//	probably short table name passed
+		$shortTable = $table;
+		$table = GetTableByShort( $shortTable );
 	}
 
 	$pageType = $params["pageType"];
@@ -7062,9 +7100,10 @@ function createPageLink( $params ) {
 	if( $params["query"] ) {
 		$queryParts[] = $params["query"];
 	}
-	$firstParam = $table;
-	$secondParam = $pageType;
-	if( !$table ) {
+	if( $shortTable ) {
+		$firstParam = $shortTable;
+		$secondParam = $pageType;
+	} else {
 		$firstParam = $pageType;
 		$secondParam = "";
 	}
@@ -7198,7 +7237,7 @@ function runner_basename( $path ) {
 	foreach( $delimiters as $d ) {
 		$parts = explode( $d, $path );
 		$idx = count( $parts ) - 1 ;
-		$path = $idx >= 0 
+		$path = $idx >= 0
 			? $parts[ $idx ]
 			: $path;
 	}
@@ -7208,11 +7247,11 @@ function runner_basename( $path ) {
 
 function getPdfFonts() {
 	global $globalSettings;
-	
+
 	if ( !$globalSettings['fonts'] ) {
 		importFontSettings();
 	}
-	
+
 	$fonts = array();
 	foreach( $globalSettings['fonts'] as $font ) {
 		if( $font['pdf'] && $font['type'] == 0 ) {
@@ -7220,6 +7259,110 @@ function getPdfFonts() {
 		}
 	}
 	return $fonts;
+}
+
+/**
+ * get first line of the string, windows or unix style
+ * @return Array( <first line>, <rest of the string> )
+ * when there are no line breaks, return
+ * Array( "", <str> )
+ */
+function splitFirstLine( $str ) {
+	$crPos = strpos( $str,"\n" );
+	$crlfPos = strpos( $str,"\r\n" );
+	if( $crlfPos !== false && $crlfPos <= $crPos ) {
+		return array(
+			substr( $str, 0, $crlfPos ),
+			substr( $str, $crlfPos + 2 )
+		);
+	}
+	if( $crPos !== false ) {
+		return array(
+			substr( $str, 0, $crPos ),
+			substr( $str, $crPos + 1 )
+		);
+	}
+
+	return array( "", $str );
+
+}
+
+/**
+ * parse REST API date and return it in 'database' format: YYYY-MM-DD hh:mm:ss
+ */
+function parseRestDate( $datestring,  $format ) {
+	if( !$datestring ) {
+		return null;
+	}
+	if (!$format) {
+		return $datestring;
+	}
+	$numbers = parsenumbers( $datestring );
+	if( !$numbers ) {
+		return $datestring;
+	}
+	$formatStrings = array( "YY", "MM", "DD", "hh", "mm", "ss" );
+	
+	$formatPositions = array();
+	foreach( $formatStrings as $f ) {
+		$pos = strpos( $format, $f );
+		if( $pos !== false ) {
+			$formatPositions[] = array( $f, $pos );
+		}
+	}
+	usort( $formatPositions, "sortDateFormatChunks" );
+	$dateParts = array( 0, 1, 1, 0, 0, 0 );
+	foreach( $numbers as $i => $n ) {
+		if( $i >= count( $formatPositions ) ) {
+			break;
+		}
+		$f = $formatPositions[ $i ];
+		$partIdx = array_search( $f[0], $formatStrings );
+		$dateParts[ $partIdx ] = $n;
+	}
+	if( !$dateParts[0] ) {
+		//	time only
+		return format_datetime_custom( $dateParts, "HH:mm:ss" );
+	} else {
+		return format_datetime_custom( $dateParts, "yyyy-MM-dd HH:mm:ss" );
+	}
+}
+
+/**
+ * @param Array v1,v2 [ <formatElement>, <position of the element in format string> ]
+ * 
+ */
+function sortDateFormatChunks( $v1, $v2 ) {
+	return $v1[1] - $v2[1];
+}
+
+
+function getFormatSettings( $viewFomat, &$pSet, $fName ) {
+	global $locale_info;
+	$formatSettings = array();
+	
+	if( $viewFomat === FORMAT_CURRENCY ) {
+		$formatSettings["decimalDigits"] = $locale_info["LOCALE_ICURRDIGITS"];
+		$formatSettings["grouping"] = explode(";", $locale_info["LOCALE_SMONGROUPING"]);
+		$formatSettings["thousandSep"] = $locale_info["LOCALE_SMONTHOUSANDSEP"];
+		$formatSettings["decimalSep"] = $locale_info["LOCALE_SMONDECIMALSEP"];
+		
+		$formatSettings["LOCALE_ICURRENCY"] = $locale_info["LOCALE_ICURRENCY"];
+		$formatSettings["LOCALE_INEGCURR"] = $locale_info["LOCALE_INEGCURR"];
+		$formatSettings["LOCALE_SCURRENCY"] = $locale_info["LOCALE_SCURRENCY"];
+	}
+
+	if( $viewFomat == FORMAT_NUMBER ) {
+		$formatSettings["decimalDigits"] = $pSet->isDecimalDigits( $fName );
+		$formatSettings["grouping"] = explode(";", $locale_info['LOCALE_SGROUPING']);
+		$formatSettings["thousandSep"] = $locale_info["LOCALE_STHOUSAND"];
+		$formatSettings["decimalSep"] = $locale_info["LOCALE_SDECIMAL"];
+		
+		$formatSettings["LOCALE_SPOSITIVESIGN"] = $locale_info["LOCALE_SPOSITIVESIGN"];
+		$formatSettings["LOCALE_INEGNUMBER"] = $locale_info["LOCALE_INEGNUMBER"];
+	}
+
+	return $formatSettings;
 }
 
 ?>

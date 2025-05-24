@@ -5,11 +5,6 @@
  */
 class ViewFileField extends ViewControl
 {
-	/**
-	 * Instanse of UploadHandler class
-	 * @var {object}
-	 */
-	var $upload_handler = null;
 	
 	public function getPdfValue(&$data, $keylink = "")
 	{
@@ -68,6 +63,7 @@ class ViewFileField extends ViewControl
 		if( !$fieldValue ) {
 			return array();
 		}
+		$pSet = $this->pSettings();
 		
 		if( $this->isUrl() ) {
 			$fileData = array();
@@ -82,7 +78,11 @@ class ViewFileField extends ViewControl
 			// filename in the field as is
 			$fileData = array();
 			$fileData["usrName"] = runner_basename( $fieldValue );
-			$fileData["name"] = DiskFileSystem::normalizePath( $this->pSettings()->getUploadFolder( $this->field ) ) .$fieldValue;
+			$fileData["name"] = DiskFileSystem::normalizePath( $pSet->getUploadFolder( $this->field ) ) .$fieldValue;
+			if( ( $pSet->getCreateThumbnail( $this->field ) || $pSet->showThumbnail( $this->field ) )
+				&& $pSet->getStrThumbnail( $this->field ) )
+				$fileData["thumbnail"] = DiskFileSystem::normalizePath( $pSet->getUploadFolder( $this->field ) ) .$pSet->getStrThumbnail( $this->field ) . $fieldValue;
+
 			return array( $fileData );
 		}
 		//	normal field value, multiupload

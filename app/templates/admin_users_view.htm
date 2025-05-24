@@ -74,7 +74,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_adminarea}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_adminarea}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -87,7 +230,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +239,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -131,6 +274,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -288,7 +434,7 @@
 {BEGIN userpic_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_userpic}  r-vertical-field" data-fieldname="userpic" data-signal-error-for="userpic{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="userpic" data-fieldname="userpic" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_userpic}  r-vertical-field" data-fieldname="userpic" data-signal-error-for="userpic{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="userpic" data-fieldname="userpic" data-compact >
 
 		<div class="col-md-12">
 	
@@ -366,7 +512,7 @@
 {BEGIN ID_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_ID}  r-vertical-field" data-fieldname="ID" data-signal-error-for="ID{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="ID" data-fieldname="ID" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ID}  r-vertical-field" data-fieldname="ID" data-signal-error-for="ID{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="ID" data-fieldname="ID" data-compact >
 
 		<div class="col-md-12">
 	
@@ -405,7 +551,7 @@
 {BEGIN username_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_username}  r-vertical-field" data-fieldname="username" data-signal-error-for="username{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="username" data-fieldname="username" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_username}  r-vertical-field" data-fieldname="username" data-signal-error-for="username{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="username" data-fieldname="username" data-compact >
 
 		<div class="col-md-12">
 	
@@ -444,7 +590,7 @@
 {BEGIN fullname_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_fullname}  r-vertical-field" data-fieldname="fullname" data-signal-error-for="fullname{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="fullname" data-fieldname="fullname" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fullname}  r-vertical-field" data-fieldname="fullname" data-signal-error-for="fullname{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="fullname" data-fieldname="fullname" data-compact >
 
 		<div class="col-md-12">
 	
@@ -486,7 +632,7 @@
 {BEGIN first_name_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_first_name}  r-vertical-field" data-fieldname="first_name" data-signal-error-for="first_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="first_name" data-fieldname="first_name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_first_name}  r-vertical-field" data-fieldname="first_name" data-signal-error-for="first_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="first_name" data-fieldname="first_name" data-compact >
 
 		<div class="col-md-12">
 	
@@ -525,7 +671,7 @@
 {BEGIN middle_name_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_middle_name}  r-vertical-field" data-fieldname="middle_name" data-signal-error-for="middle_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="middle_name" data-fieldname="middle_name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_middle_name}  r-vertical-field" data-fieldname="middle_name" data-signal-error-for="middle_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="middle_name" data-fieldname="middle_name" data-compact >
 
 		<div class="col-md-12">
 	
@@ -564,7 +710,7 @@
 {BEGIN last_name_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_last_name}  r-vertical-field" data-fieldname="last_name" data-signal-error-for="last_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="last_name" data-fieldname="last_name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_last_name}  r-vertical-field" data-fieldname="last_name" data-signal-error-for="last_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="last_name" data-fieldname="last_name" data-compact >
 
 		<div class="col-md-12">
 	
@@ -606,7 +752,7 @@
 {BEGIN email_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_email}  r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="email" data-fieldname="email" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_email}  r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="email" data-fieldname="email" data-compact >
 
 		<div class="col-md-12">
 	
@@ -645,7 +791,7 @@
 {BEGIN phone_number_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_phone_number}  r-vertical-field" data-fieldname="phone_number" data-signal-error-for="phone_number{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="phone_number" data-fieldname="phone_number" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_phone_number}  r-vertical-field" data-fieldname="phone_number" data-signal-error-for="phone_number{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="phone_number" data-fieldname="phone_number" data-compact >
 
 		<div class="col-md-12">
 	
@@ -684,7 +830,7 @@
 {BEGIN designation_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_designation}  r-vertical-field" data-fieldname="designation" data-signal-error-for="designation{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="designation" data-fieldname="designation" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_designation}  r-vertical-field" data-fieldname="designation" data-signal-error-for="designation{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="designation" data-fieldname="designation" data-compact >
 
 		<div class="col-md-12">
 	
@@ -726,7 +872,7 @@
 {BEGIN organisation_name_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_organisation_name}  r-vertical-field" data-fieldname="organisation_name" data-signal-error-for="organisation_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="organisation_name" data-fieldname="organisation_name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_organisation_name}  r-vertical-field" data-fieldname="organisation_name" data-signal-error-for="organisation_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="organisation_name" data-fieldname="organisation_name" data-compact >
 
 		<div class="col-md-12">
 	
@@ -765,7 +911,7 @@
 {BEGIN department_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_department}  r-vertical-field" data-fieldname="department" data-signal-error-for="department{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="department" data-fieldname="department" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_department}  r-vertical-field" data-fieldname="department" data-signal-error-for="department{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="department" data-fieldname="department" data-compact >
 
 		<div class="col-md-12">
 	
@@ -804,7 +950,7 @@
 {BEGIN groupid_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_groupid}  r-vertical-field" data-fieldname="groupid" data-signal-error-for="groupid{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="groupid" data-fieldname="groupid" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_groupid}  r-vertical-field" data-fieldname="groupid" data-signal-error-for="groupid{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="groupid" data-fieldname="groupid" data-compact >
 
 		<div class="col-md-12">
 	
@@ -864,7 +1010,7 @@
 {BEGIN active_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_active}  r-vertical-field" data-fieldname="active" data-signal-error-for="active{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="active" data-fieldname="active" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_active}  r-vertical-field" data-fieldname="active" data-signal-error-for="active{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="active" data-fieldname="active" data-compact >
 
 		<div class="col-md-12">
 	
@@ -903,7 +1049,7 @@
 {BEGIN ext_security_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_ext_security_id}  r-vertical-field" data-fieldname="ext_security_id" data-signal-error-for="ext_security_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="ext_security_id" data-fieldname="ext_security_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ext_security_id}  r-vertical-field" data-fieldname="ext_security_id" data-signal-error-for="ext_security_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="ext_security_id" data-fieldname="ext_security_id" data-compact >
 
 		<div class="col-md-12">
 	
@@ -981,7 +1127,7 @@
 {BEGIN password_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_password}  r-vertical-field" data-fieldname="password" data-signal-error-for="password{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="password" data-fieldname="password" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_password}  r-vertical-field" data-fieldname="password" data-signal-error-for="password{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="password" data-fieldname="password" data-compact >
 
 		<div class="col-md-12">
 	

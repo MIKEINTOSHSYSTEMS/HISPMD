@@ -167,7 +167,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -217,7 +217,7 @@ pdfDocument = {
 					colSpan: 2,
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -233,7 +233,8 @@ pdfDocument = {
 				cellId: 'c',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 						[
@@ -246,7 +247,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -267,7 +268,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -299,7 +300,7 @@ pdfDocument = {
 					colSpan: 2,
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -317,7 +318,8 @@ pdfDocument = {
 				cellId: 'c4',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 		
@@ -348,9 +350,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -377,9 +379,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -406,9 +408,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -435,9 +437,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -464,9 +466,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -493,9 +495,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -522,9 +524,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -551,9 +553,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -580,9 +582,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -609,9 +611,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -638,9 +640,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -667,9 +669,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -696,9 +698,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -725,9 +727,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -754,9 +756,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -791,9 +793,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -820,9 +822,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -849,9 +851,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -877,9 +879,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -905,9 +907,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -933,9 +935,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -961,9 +963,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -989,9 +991,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1017,9 +1019,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1045,9 +1047,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1073,9 +1075,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1101,9 +1103,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1129,9 +1131,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1157,9 +1159,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1185,9 +1187,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1222,9 +1224,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1251,9 +1253,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1283,9 +1285,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_group_summary2},
 			{END colspan_grid_cell_group_summary2}
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1319,73 +1321,85 @@ pdfDocument = {
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  3,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  4,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  5,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  6,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  7,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  8,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  9,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  10,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  11,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary2',
 				row:  0,
 				col:  12,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_2}
@@ -1407,9 +1421,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1439,9 +1453,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_group_summary1},
 			{END colspan_grid_cell_group_summary1}
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1475,79 +1489,92 @@ pdfDocument = {
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  3,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  4,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  5,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  6,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  7,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  8,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  9,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  10,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  11,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  12,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary1',
 				row:  0,
 				col:  13,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_3}
@@ -1572,9 +1599,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_group_summary},
 			{END colspan_grid_cell_group_summary}
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1608,85 +1635,99 @@ pdfDocument = {
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  3,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  4,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  5,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  6,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  7,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  8,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  9,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  10,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  11,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  12,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  13,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_group_summary',
 				row:  0,
 				col:  14,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_4}
@@ -1713,9 +1754,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_page_summary},
 			{END colspan_grid_cell_page_summary}
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1743,85 +1784,99 @@ pdfDocument = {
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  3,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  4,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  5,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  6,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  7,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  8,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  9,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  10,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  11,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  12,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  13,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_page_summary',
 				row:  0,
 				col:  14,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_5}
@@ -1846,9 +1901,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_global_summary},
 			{END colspan_grid_cell_global_summary}
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -1876,85 +1931,99 @@ pdfDocument = {
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  3,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  4,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  5,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  6,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  7,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  8,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  9,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  10,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  11,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  12,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  13,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_global_summary',
 				row:  0,
 				col:  14,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_6}
@@ -1994,7 +2063,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -2014,4 +2083,7 @@ pdfDocument = {
 	}
 }
 			],
-	}
+	};
+
+
+pdfFonts = {$pdfFonts};

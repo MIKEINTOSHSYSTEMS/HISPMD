@@ -84,6 +84,7 @@
 		
 		
 		
+		
 
 		
 		
@@ -122,9 +123,10 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 
 		$row["rowattrs"].=$row["rowattrs"]." icongrid";
 
-;
+;		
 } // function BeforeMoveNextList
 
+		
 		
 		
 		

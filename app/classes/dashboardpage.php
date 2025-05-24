@@ -13,6 +13,18 @@ class DashboardPage extends RunnerPage
 
 		if ( $params["mode"] == "dashsearch" ) {
 			$showShowAllButton = $this->searchClauseObj->searchStarted();
+			
+			// set the first page for elements with pages
+			foreach( $this->pSet->getDashboardElements() as $elem ) {
+				if( $elem['type'] == DASHBOARD_LIST || $elem['type'] == DASHBOARD_REPORT ) {
+					$elSessionPrefix = $elem['type'] == DASHBOARD_LIST 
+						? $this->tName."_".$elem["elementName"]
+						: $this->tName."_".$elem["table"] ;
+					
+					$_SESSION[ $elSessionPrefix."_pagenumber" ] = 1;
+				}
+			}
+			
 			$returnJSON = array("success" => true, 'show_all' => $showShowAllButton);
 			echo printJSON( $returnJSON );
 			exit();
@@ -282,8 +294,13 @@ class DashboardPage extends RunnerPage
 
 		foreach( $this->pSet->getDashboardElements() as $elem )
 		{
-			if( $elem['type'] != DASHBOARD_SEARCH )
-				$this->unsetAllPageSessionKeys( $this->tName."_".$elem["table"] );
+			if( $elem['type'] != DASHBOARD_SEARCH ) {
+				if( $elem['type'] == DASHBOARD_LIST ) {
+					$this->unsetAllPageSessionKeys( $this->tName."_".$elem["elementName"] );
+				} else {
+					$this->unsetAllPageSessionKeys( $this->tName."_".$elem["table"] );
+				}
+			}
 		}
 	}
 
@@ -302,11 +319,6 @@ class DashboardPage extends RunnerPage
 	 */
 	public function addDashElementsJSAndCSS()
 	{
-		if( $this->hasSingleRecordOrDetailsElement() )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
 	}
 
 	/**

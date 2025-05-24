@@ -137,7 +137,7 @@ pdfDocument = {
 					colSpan: 2,
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -155,7 +155,8 @@ pdfDocument = {
 				cellId: 'c',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 						[
@@ -169,7 +170,7 @@ pdfDocument = {
 					colSpan: 2,
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -187,7 +188,8 @@ pdfDocument = {
 				cellId: 'c4',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 						[
@@ -200,7 +202,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -229,7 +231,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -276,9 +278,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -302,9 +304,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -331,9 +333,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -360,9 +362,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -389,9 +391,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -430,9 +432,9 @@ pdfDocument = {
 			colSpan: {$colspan_grid_cell_icons1},
 			{END colspan_grid_cell_icons1}
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -451,25 +453,29 @@ pdfDocument = {
 				cellId: 'cell_icons1',
 				row:  0,
 				col:  1,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_icons1',
 				row:  0,
 				col:  2,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_icons1',
 				row:  0,
 				col:  3,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 														{ 
 				cellId: 'cell_icons1',
 				row:  0,
 				col:  4,
-				text: ''
+				text: '',
+				compensateColspan: true
 			},
 							],
 				{END row_grid_1}
@@ -486,9 +492,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -517,9 +523,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -546,9 +552,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -575,9 +581,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -604,9 +610,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -641,9 +647,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -667,9 +673,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -693,9 +699,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -719,9 +725,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -745,9 +751,9 @@ pdfDocument = {
 	//	dynamic colspan/rowspan
 
 		
-						
+		
 	
-	
+			
 	
 			"text": [
 		
@@ -796,7 +802,7 @@ pdfDocument = {
 	//	static colspan/rowspan
 		
 			
-	
+			
 	
 			"text": [
 		
@@ -816,4 +822,7 @@ pdfDocument = {
 	}
 }
 			],
-	}
+	};
+
+
+pdfFonts = {$pdfFonts};

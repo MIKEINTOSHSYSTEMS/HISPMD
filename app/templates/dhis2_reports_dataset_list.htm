@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -88,7 +231,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +240,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -209,6 +352,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -464,9 +610,18 @@
 	 
 		{BEGIN Clinics_by_Type_ID_fieldheadercolumn}
 	{BEGIN Clinics_by_Type_ID_fieldheader}
-	<SPAN {$Clinics_by_Type_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clinics_by_Type_ID" data-fieldname="Clinics by Type ID">
-	{$label DHIS2_Reports_DataSet Clinics_by_Type_ID }	{$arrow_icon_Clinics_by_Type_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clinics_by_Type_ID" data-fieldname="Clinics by Type ID" 
+
+			{$Clinics_by_Type_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Clinics_by_Type_ID }</span>
+					{$arrow_icon_Clinics_by_Type_ID}
+			</span>
+	</span>
 	{END Clinics_by_Type_ID_fieldheader}
 {END Clinics_by_Type_ID_fieldheadercolumn}
 
@@ -489,9 +644,18 @@
 	 
 		{BEGIN Clinics_by_Type_fieldheadercolumn}
 	{BEGIN Clinics_by_Type_fieldheader}
-	<SPAN {$Clinics_by_Type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clinics_by_Type" data-fieldname="Clinics by Type">
-	{$label DHIS2_Reports_DataSet Clinics_by_Type }	{$arrow_icon_Clinics_by_Type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clinics_by_Type" data-fieldname="Clinics by Type" 
+
+			{$Clinics_by_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Clinics_by_Type }</span>
+					{$arrow_icon_Clinics_by_Type}
+			</span>
+	</span>
 	{END Clinics_by_Type_fieldheader}
 {END Clinics_by_Type_fieldheadercolumn}
 
@@ -514,9 +678,18 @@
 	 
 		{BEGIN Facility_Type_ID_fieldheadercolumn}
 	{BEGIN Facility_Type_ID_fieldheader}
-	<SPAN {$Facility_Type_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type_ID" data-fieldname="Facility Type ID">
-	{$label DHIS2_Reports_DataSet Facility_Type_ID }	{$arrow_icon_Facility_Type_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type_ID" data-fieldname="Facility Type ID" 
+
+			{$Facility_Type_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Facility_Type_ID }</span>
+					{$arrow_icon_Facility_Type_ID}
+			</span>
+	</span>
 	{END Facility_Type_ID_fieldheader}
 {END Facility_Type_ID_fieldheadercolumn}
 
@@ -539,9 +712,18 @@
 	 
 		{BEGIN Facility_Type_fieldheadercolumn}
 	{BEGIN Facility_Type_fieldheader}
-	<SPAN {$Facility_Type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type">
-	{$label DHIS2_Reports_DataSet Facility_Type }	{$arrow_icon_Facility_Type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type" 
+
+			{$Facility_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Facility_Type }</span>
+					{$arrow_icon_Facility_Type}
+			</span>
+	</span>
 	{END Facility_Type_fieldheader}
 {END Facility_Type_fieldheadercolumn}
 
@@ -564,9 +746,18 @@
 	 
 		{BEGIN Health_Post_Type_ID_fieldheadercolumn}
 	{BEGIN Health_Post_Type_ID_fieldheader}
-	<SPAN {$Health_Post_Type_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Health_Post_Type_ID" data-fieldname="Health Post Type ID">
-	{$label DHIS2_Reports_DataSet Health_Post_Type_ID }	{$arrow_icon_Health_Post_Type_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Health_Post_Type_ID" data-fieldname="Health Post Type ID" 
+
+			{$Health_Post_Type_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Health_Post_Type_ID }</span>
+					{$arrow_icon_Health_Post_Type_ID}
+			</span>
+	</span>
 	{END Health_Post_Type_ID_fieldheader}
 {END Health_Post_Type_ID_fieldheadercolumn}
 
@@ -589,9 +780,18 @@
 	 
 		{BEGIN Health_Post_Type_fieldheadercolumn}
 	{BEGIN Health_Post_Type_fieldheader}
-	<SPAN {$Health_Post_Type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Health_Post_Type" data-fieldname="Health Post Type">
-	{$label DHIS2_Reports_DataSet Health_Post_Type }	{$arrow_icon_Health_Post_Type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Health_Post_Type" data-fieldname="Health Post Type" 
+
+			{$Health_Post_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Health_Post_Type }</span>
+					{$arrow_icon_Health_Post_Type}
+			</span>
+	</span>
 	{END Health_Post_Type_fieldheader}
 {END Health_Post_Type_fieldheadercolumn}
 
@@ -614,9 +814,18 @@
 	 
 		{BEGIN Hospital_by_ownership_ID_fieldheadercolumn}
 	{BEGIN Hospital_by_ownership_ID_fieldheader}
-	<SPAN {$Hospital_by_ownership_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_by_ownership_ID" data-fieldname="Hospital by ownership ID">
-	{$label DHIS2_Reports_DataSet Hospital_by_ownership_ID }	{$arrow_icon_Hospital_by_ownership_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_by_ownership_ID" data-fieldname="Hospital by ownership ID" 
+
+			{$Hospital_by_ownership_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Hospital_by_ownership_ID }</span>
+					{$arrow_icon_Hospital_by_ownership_ID}
+			</span>
+	</span>
 	{END Hospital_by_ownership_ID_fieldheader}
 {END Hospital_by_ownership_ID_fieldheadercolumn}
 
@@ -639,9 +848,18 @@
 	 
 		{BEGIN Hospital_by_ownership_fieldheadercolumn}
 	{BEGIN Hospital_by_ownership_fieldheader}
-	<SPAN {$Hospital_by_ownership_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_by_ownership" data-fieldname="Hospital by ownership">
-	{$label DHIS2_Reports_DataSet Hospital_by_ownership }	{$arrow_icon_Hospital_by_ownership}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_by_ownership" data-fieldname="Hospital by ownership" 
+
+			{$Hospital_by_ownership_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Hospital_by_ownership }</span>
+					{$arrow_icon_Hospital_by_ownership}
+			</span>
+	</span>
 	{END Hospital_by_ownership_fieldheader}
 {END Hospital_by_ownership_fieldheadercolumn}
 
@@ -664,9 +882,18 @@
 	 
 		{BEGIN Hospital_Type_ID_fieldheadercolumn}
 	{BEGIN Hospital_Type_ID_fieldheader}
-	<SPAN {$Hospital_Type_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_Type_ID" data-fieldname="Hospital Type ID">
-	{$label DHIS2_Reports_DataSet Hospital_Type_ID }	{$arrow_icon_Hospital_Type_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_Type_ID" data-fieldname="Hospital Type ID" 
+
+			{$Hospital_Type_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Hospital_Type_ID }</span>
+					{$arrow_icon_Hospital_Type_ID}
+			</span>
+	</span>
 	{END Hospital_Type_ID_fieldheader}
 {END Hospital_Type_ID_fieldheadercolumn}
 
@@ -689,9 +916,18 @@
 	 
 		{BEGIN Hospital_Type_fieldheadercolumn}
 	{BEGIN Hospital_Type_fieldheader}
-	<SPAN {$Hospital_Type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_Type" data-fieldname="Hospital Type">
-	{$label DHIS2_Reports_DataSet Hospital_Type }	{$arrow_icon_Hospital_Type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hospital_Type" data-fieldname="Hospital Type" 
+
+			{$Hospital_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Hospital_Type }</span>
+					{$arrow_icon_Hospital_Type}
+			</span>
+	</span>
 	{END Hospital_Type_fieldheader}
 {END Hospital_Type_fieldheadercolumn}
 
@@ -714,9 +950,18 @@
 	 
 		{BEGIN Rural_ID_fieldheadercolumn}
 	{BEGIN Rural_ID_fieldheader}
-	<SPAN {$Rural_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rural_ID" data-fieldname="Rural ID">
-	{$label DHIS2_Reports_DataSet Rural_ID }	{$arrow_icon_Rural_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rural_ID" data-fieldname="Rural ID" 
+
+			{$Rural_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Rural_ID }</span>
+					{$arrow_icon_Rural_ID}
+			</span>
+	</span>
 	{END Rural_ID_fieldheader}
 {END Rural_ID_fieldheadercolumn}
 
@@ -739,9 +984,18 @@
 	 
 		{BEGIN Rural_fieldheadercolumn}
 	{BEGIN Rural_fieldheader}
-	<SPAN {$Rural_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rural" data-fieldname="Rural">
-	{$label DHIS2_Reports_DataSet Rural }	{$arrow_icon_Rural}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rural" data-fieldname="Rural" 
+
+			{$Rural_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Rural }</span>
+					{$arrow_icon_Rural}
+			</span>
+	</span>
 	{END Rural_fieldheader}
 {END Rural_fieldheadercolumn}
 
@@ -764,9 +1018,18 @@
 	 
 		{BEGIN Ownership_ID_fieldheadercolumn}
 	{BEGIN Ownership_ID_fieldheader}
-	<SPAN {$Ownership_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ownership_ID" data-fieldname="Ownership ID">
-	{$label DHIS2_Reports_DataSet Ownership_ID }	{$arrow_icon_Ownership_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ownership_ID" data-fieldname="Ownership ID" 
+
+			{$Ownership_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Ownership_ID }</span>
+					{$arrow_icon_Ownership_ID}
+			</span>
+	</span>
 	{END Ownership_ID_fieldheader}
 {END Ownership_ID_fieldheadercolumn}
 
@@ -789,9 +1052,18 @@
 	 
 		{BEGIN Ownership_fieldheadercolumn}
 	{BEGIN Ownership_fieldheader}
-	<SPAN {$Ownership_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ownership" data-fieldname="Ownership">
-	{$label DHIS2_Reports_DataSet Ownership }	{$arrow_icon_Ownership}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ownership" data-fieldname="Ownership" 
+
+			{$Ownership_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Ownership }</span>
+					{$arrow_icon_Ownership}
+			</span>
+	</span>
 	{END Ownership_fieldheader}
 {END Ownership_fieldheadercolumn}
 
@@ -814,9 +1086,18 @@
 	 
 		{BEGIN Settlement_ID_fieldheadercolumn}
 	{BEGIN Settlement_ID_fieldheader}
-	<SPAN {$Settlement_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Settlement_ID" data-fieldname="Settlement ID">
-	{$label DHIS2_Reports_DataSet Settlement_ID }	{$arrow_icon_Settlement_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Settlement_ID" data-fieldname="Settlement ID" 
+
+			{$Settlement_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Settlement_ID }</span>
+					{$arrow_icon_Settlement_ID}
+			</span>
+	</span>
 	{END Settlement_ID_fieldheader}
 {END Settlement_ID_fieldheadercolumn}
 
@@ -839,9 +1120,18 @@
 	 
 		{BEGIN Settlement_fieldheadercolumn}
 	{BEGIN Settlement_fieldheader}
-	<SPAN {$Settlement_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Settlement" data-fieldname="Settlement">
-	{$label DHIS2_Reports_DataSet Settlement }	{$arrow_icon_Settlement}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Settlement" data-fieldname="Settlement" 
+
+			{$Settlement_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Settlement }</span>
+					{$arrow_icon_Settlement}
+			</span>
+	</span>
 	{END Settlement_fieldheader}
 {END Settlement_fieldheadercolumn}
 
@@ -864,9 +1154,18 @@
 	 
 		{BEGIN Woreda_Type_ID_fieldheadercolumn}
 	{BEGIN Woreda_Type_ID_fieldheader}
-	<SPAN {$Woreda_Type_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Woreda_Type_ID" data-fieldname="Woreda Type ID">
-	{$label DHIS2_Reports_DataSet Woreda_Type_ID }	{$arrow_icon_Woreda_Type_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Woreda_Type_ID" data-fieldname="Woreda Type ID" 
+
+			{$Woreda_Type_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Woreda_Type_ID }</span>
+					{$arrow_icon_Woreda_Type_ID}
+			</span>
+	</span>
 	{END Woreda_Type_ID_fieldheader}
 {END Woreda_Type_ID_fieldheadercolumn}
 
@@ -889,9 +1188,18 @@
 	 
 		{BEGIN Woreda_Type_fieldheadercolumn}
 	{BEGIN Woreda_Type_fieldheader}
-	<SPAN {$Woreda_Type_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Woreda_Type" data-fieldname="Woreda Type">
-	{$label DHIS2_Reports_DataSet Woreda_Type }	{$arrow_icon_Woreda_Type}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Woreda_Type" data-fieldname="Woreda Type" 
+
+			{$Woreda_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label DHIS2_Reports_DataSet Woreda_Type }</span>
+					{$arrow_icon_Woreda_Type}
+			</span>
+	</span>
 	{END Woreda_Type_fieldheader}
 {END Woreda_Type_fieldheadercolumn}
 

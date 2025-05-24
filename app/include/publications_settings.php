@@ -254,6 +254,7 @@ $tdatapublications[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "publication_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "publication_id";
 
@@ -394,6 +395,7 @@ $tdatapublications[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "title";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "title";
 
@@ -532,6 +534,7 @@ $tdatapublications[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "level";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"level\"";
 

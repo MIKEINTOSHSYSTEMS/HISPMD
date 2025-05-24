@@ -30,9 +30,16 @@ class OAuthFileSystem extends RunnerFileSystem {
 	protected function getAuthorizedRequest( $url, $httpMethod = "POST" ) {
         $request = new HttpRequest( $url, $httpMethod );
         $rest = $this->getConnection();
+		$oldToken = $rest->getOauthToken();
 		if( !$rest->requestAddAuth( $request ) ) {
 			$this->setLastError( $rest->lastError() );
 			storageSet( $this->sessionKey, gatINVALID );
+		} else {
+			//	if requestAddAuth refreshed the access token, save the new one oin the file
+			$newToken = $rest->getOauthToken();
+			if( !$oldToken || $newToken["access_token"] != $oldToken["access_token"] ) {
+				$this->saveOauthToken( $newToken );
+			}
 		}
         return $request;
     }
@@ -42,10 +49,10 @@ class OAuthFileSystem extends RunnerFileSystem {
 	}
 
 	protected function applyOauthToken() {
-		$dropboxAccessToken = loadPrivateData( $this->privateStorageKey );
-		if( $dropboxAccessToken ) {
+		$accessToken = loadPrivateData( $this->privateStorageKey );
+		if( $accessToken ) {
 			$rest = $this->_getConnection();
-			$rest->setOauthToken( $dropboxAccessToken );
+			$rest->setOauthToken( $accessToken );
 			return true;
 		}
 		return false;
@@ -78,7 +85,7 @@ class OAuthFileSystem extends RunnerFileSystem {
 		//	Redirect to login
 		Security::saveRedirectURL();
 		//	request refresh_token
-		$request = $rest->createUserAuthRequest( array("token_access_type" => "offline" ) );
+		$request = $this->createAuthRequest();
 		$rest->setAuthorizationRequest( $request );
 		storageSet( $this->sessionKey, gatNONE );
 		header( "Location: " . $request->getUrl() );
@@ -88,6 +95,11 @@ class OAuthFileSystem extends RunnerFileSystem {
 	public function saveOauthToken( $token ) {
 		savePrivateData( $this->privateStorageKey, $token);
 		return storageGet( $this->sessionKey ) == gatSAVED;
+	}
+
+	public function createAuthRequest( ) {
+		$rest = $this->getConnection();
+		return $rest->createUserAuthRequest();
 	}
 }
 

@@ -257,6 +257,7 @@ $tdatakbusers[".hideMobileList"] = array();
 		$fdata["strField"] = "email";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "email";
 
@@ -393,6 +394,7 @@ $tdatakbusers[".hideMobileList"] = array();
 
 		$fdata["strField"] = "fullname";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "fullname";
@@ -531,6 +533,7 @@ $tdatakbusers[".hideMobileList"] = array();
 		$fdata["strField"] = "password";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "password";
 
@@ -667,6 +670,7 @@ $tdatakbusers[".hideMobileList"] = array();
 
 		$fdata["strField"] = "username";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "username";

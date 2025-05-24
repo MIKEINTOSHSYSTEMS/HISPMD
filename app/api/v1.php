@@ -5,6 +5,8 @@ $restApiCall = true;
 require_once("../include/dbcommon.php");
 add_nocache_headers();
 
+storeJSONDataFromRequest();
+
 require_once(getabspath( "api/api.php"));
 
 if( !GetGlobalData("restCreate") ) {
@@ -42,11 +44,26 @@ if( $action === "list" ) {
 	$srchObj = SearchClause::getSearchObject( $table );
 
 	$dc = new DsCommand();
-	$dc->filter = DataCondition::_And( array( 
+	$dc->filter = DataCondition::_And( array(
 		Security::SelectCondition( "S", $pSet ),
 		$srchObj->getSearchDataCondition()
 	));
-	
+
+	$order = postvalue("orderby");
+	if( $order ) {
+		$orderFields = explode( ";", $order );
+		$projectFields = $pSet->getFieldsList();
+		$dc->order[] = array();
+
+		foreach( $orderFields as $f ) {
+			$dir = substr( $f, 0, 1 ) == "d" ? "desc": "asc";
+			$field = trim( substr( $f, 1 ) );
+			if( in_array( $field, $projectFields ) ) {
+				$dc->order[] = array("column" => $field, "dir" => $dir);
+			}
+		}
+	}
+
 	if( postvalue( "skip" ) ) {
 		$dc->startRecord = (int)postvalue( "skip" );
 	}
@@ -59,7 +76,7 @@ if( $action === "list" ) {
 	if( !$rs ) {
 		API::sendError( $dataSource->lastError() );
 	}
-	API::sendResponse( true, array("data" => API::readResult( $rs, $dc->reccount ) ) );
+	API::sendResponse( true, array("data" => API::readResult( $rs, $pSet, $dc->reccount ) ) );
 }
 
 if( $action === "view" ) {
@@ -77,7 +94,7 @@ if( $action === "view" ) {
 	if( !$rs ) {
 		API::sendError( $dataSource->lastError() );
 	}
-	API::sendResponse( true, array("data" => $rs->fetchAssoc() ) );
+	API::sendResponse( true, array("data" => API::readRecord( $rs, $pSet ) ) );
 }
 
 if( $action === "update" ) {
@@ -102,12 +119,14 @@ if( $action === "update" ) {
 		$oldRecordData = $cipherer->DecryptFetchedArray( $fetchedArray );
 	}
 
+	$sqlValues = array();
 	if( $eventsObject->exists("BeforeEdit") ) {
 		$usermessage = "";
 		$keyWhereClause = KeyWhere( $oldKeys, $table );
 		$pageObj = null;
 
 		$beforeEdit = $eventsObject->BeforeEdit( $newRecordData,
+			$sqlValues,
 			$keyWhereClause,
 			$oldRecordData,
 			$oldKeys,
@@ -124,6 +143,12 @@ if( $action === "update" ) {
 	$dc->keys = $oldKeys;
 	$dc->filter = Security::SelectCondition( "E", $pSet );
 	$dc->values = $newRecordData;
+	
+	$dc->advValues = array();
+	foreach( $sqlValues as $field => $sqlValue ) {
+		$dc->advValues[ $field ] =  new DsOperand( dsotSQL, $sqlValue );
+	}
+	
 	$ret = $dataSource->updateSingle( $dc );
 
 	if( $ret && $eventsObject->exists("AfterEdit") ) {
@@ -164,10 +189,12 @@ if( $action === "insert" ) {
 
 	$newRecordData = API::valuesFromRequest( $pSet );
 
+	$sqlValues = array();
 	if( $eventsObject->exists("BeforeAdd") ) {
 		$usermessage = "";
 		$pageObj = null;
-		if( !$eventsObject->BeforeAdd( $newRecordData, $usermessage, false, $pageObj ) ) {
+
+		if( !$eventsObject->BeforeAdd( $newRecordData, $sqlValues, $usermessage, false, $pageObj ) ) {
 			API::sendResponse( false, array( "success" => false, "error" => $usermessage ) );
 		}
 	}
@@ -175,6 +202,12 @@ if( $action === "insert" ) {
 	$dataSource = getDataSource( $table, $pSet );
 	$dc = new DsCommand();
 	$dc->values = $newRecordData;
+	
+	$dc->advValues = array();
+	foreach( $sqlValues as $field => $sqlValue ) {
+		$dc->advValues[ $field ] =  new DsOperand( dsotSQL, $sqlValue );
+	}	
+	
 	$ret = $dataSource->insertSingle( $dc );
 
 	if( $ret && $eventsObject->exists("AfterAdd") ) {

@@ -189,6 +189,9 @@ $tstrOrderBy = "";
 $tdatadhis2_analyticsreport[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_analyticsreport[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_analyticsreport[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_analyticsreport[".sqlHead"] = "";
@@ -255,6 +258,7 @@ $tdatadhis2_analyticsreport[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data/*/organisationUnit";
 
+	
 	
 		$fdata["FullName"] = "organisationUnit";
 
@@ -417,6 +421,7 @@ $tdatadhis2_analyticsreport[".hideMobileList"] = array();
 		$fdata["strField"] = "data/*/indicator";
 
 	
+	
 		$fdata["FullName"] = "indicator";
 
 	
@@ -578,6 +583,7 @@ $tdatadhis2_analyticsreport[".hideMobileList"] = array();
 		$fdata["strField"] = "data/*/period";
 
 	
+	
 		$fdata["FullName"] = "period";
 
 	
@@ -738,6 +744,7 @@ $tdatadhis2_analyticsreport[".hideMobileList"] = array();
 
 		$fdata["strField"] = "data/*/value";
 
+	
 	
 		$fdata["FullName"] = "value";
 

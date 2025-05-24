@@ -271,7 +271,7 @@ class EditControl
 				}
 
 				if ( $needHashPass )
-					$this->webValue = $this->pageObject->getPasswordHash( $this->webValue );	
+					$this->webValue = Security::hashPassword( $this->webValue );	
 			}
 			$avalues[ $this->field ] = $this->webValue;
 		}

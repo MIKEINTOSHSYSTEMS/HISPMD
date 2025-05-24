@@ -270,7 +270,7 @@ $arr_charts = array();
 $arrPrivateCharts = array();
 $arrSharedCharts = array();
 
-$arr_reports = GetReportsList();
+$arr_reports = wrGetEntityList( WR_REPORT );
 foreach ( $arr_reports as $rpt ) {
 	if ( (trim($rpt["owner"]) != Security::getUserName() || trim($rpt["owner"]) == "") && $rpt["status"]=="public") {
 		$arrSharedReports[] = $rpt;
@@ -279,7 +279,7 @@ foreach ( $arr_reports as $rpt ) {
 	}
 }
 
-$arr_charts = GetChartsList();
+$arr_charts = wrGetEntityList( WR_CHART );
 foreach ( $arr_charts as $chart ) {
 	if (( trim($chart["owner"]) != Security::getUserName() || trim($chart["owner"]) == "" ) && $chart["status"]=="public") {
 		$arrSharedCharts[] = $chart;

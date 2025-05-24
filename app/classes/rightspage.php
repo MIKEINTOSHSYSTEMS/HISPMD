@@ -110,6 +110,9 @@ class RightsPage extends ListPage
 		foreach( $pages as $table => $_tablePages ) {
 			$this->pages[ $table ] = array();
 			foreach( $pages[ $table ] as $pageType => $pageIds ) {
+				if( $table == GLOBAL_PAGES && $pageType != 'menu' ) {
+					continue;
+				}
 				foreach( $pageIds as $p ) {
 					$this->pages[ $table ][$p] = Security::pageType2permission( $pageType );
 				}
@@ -226,6 +229,20 @@ class RightsPage extends ListPage
 			if( $pages )
 				$this->pageRestrictions[ $table ][ $group ] = $pages;
 		}
+			
+		if( count( array_keys( $this->pages[ GLOBAL_PAGES ] ) ) > 1 ) {
+			if( !isset( $this->rights[ GLOBAL_PAGES ] ) ) {
+				// add data to check all menu pages
+				$this->rights[ GLOBAL_PAGES ] = array();
+				$this->pageRestrictions[ GLOBAL_PAGES ] = array();
+			}
+			
+			foreach( $this->groups as $groupId => $d ) {
+				if( !isset( $this->rights[ GLOBAL_PAGES ][ $groupId ] ) ) {
+					$this->rights[ GLOBAL_PAGES ][ $groupId ] = "S";
+				}
+			}
+		}
 	}
 
 	/**
@@ -311,7 +328,8 @@ class RightsPage extends ListPage
 
 		//	build $this->menuOrderedTables
 		$this->menuOrderedTables = array();
-		$menu = $this->getMenuNodes();
+		$menuObject = RunnerMenu::getMenuObject( "main" );
+		$menuNodes = $menuObject->collectNodes();
 		$addedTables = array();
 		$groupsMap = array();
 		$allTables = GetTablesListWithoutSecurity();
@@ -322,33 +340,38 @@ class RightsPage extends ListPage
 		$arr["collapsed"] = true;
 		$this->menuOrderedTables[] = $arr;
 
-		foreach($menu as $m)
-		{
-			$arr = array();
-			if ( $m["pageType"] == "webreports" || $m["type"] == "Separator" )
-				continue;
+		foreach( $menuNodes as $mNode ) {
+			$nodeType = $mNode->type;
+			$nodeId = $mNode->id;
+			$table = $mNode->table;
+			$title = $mNode->title;
+			$pageType = $mNode->pageType;
 
-			if( $m["table"] && !$addedTables[ $m["table"] ] && array_search( $m["table"], $allTables ) !== FALSE )
-			{
-				$addedTables[ $m["table"] ] = true;
-				$arr["table"] = $m["table"];
+			$parentNodeId = $mNode->parentItem ? $mNode->parentItem->id : 0;
+
+			$arr = array();
+			if( $pageType == "webreports" || $nodeType == "Separator" ) {
+				continue;
 			}
 
-			if( $m["parent"] )
-			{
-				$arr["parent"] = $groupsMap[ $m["parent"] ];
+			if( $table && !$addedTables[ $table ] 
+				&& array_search( $table, $allTables ) !== false ) {
+				$addedTables[ $table ] = true;
+				$arr["table"] = $table;
+			}
+			if( $parentNodeId ) {
+				$arr["parent"] = $groupsMap[ $parentNodeId ];
 				$this->menuOrderedTables[ $arr["parent"] ]["items"][] = count($this->menuOrderedTables);
 			}
 
-			if ( $m["type"] == "Group" ) {
+			if( $nodeType == "Group" ) {
 				$arr["groupId"] = count($this->menuOrderedTables);
 			}
 
-			if( true || $m["type"] == "Group" )
-			{
-				$groupsMap[ $m["id"] ] = count($this->menuOrderedTables);
+			if( $nodeType == "Group" ) {
+				$groupsMap[ $nodeId ] = count($this->menuOrderedTables);
 				//	add all groups
-				$arr["title"] = $m["title"];
+				$arr["title"] = $title;
 				$arr["items"] = array();
 				$arr["collapsed"] = true;
 			}
@@ -412,6 +435,10 @@ class RightsPage extends ListPage
 			$table = @$tbl["table"];
 			$parent = @$tbl["parent"];
 
+			if( $table == GLOBAL_PAGES && count( array_keys( $this->pages[$table] ) ) < 2 ) {
+				continue;
+			}
+			
 			// update menu structure
 			if(!isset($parent))
 			{
@@ -430,27 +457,37 @@ class RightsPage extends ListPage
 
 			if( strlen($table) )
 			{
-				$caption = $this->tables[$table][1];
+				$caption = $this->tables[$table][1];				
 				$shortTable = $this->tables[$table][0];
 				$row = array();
-				if($caption == $table)
-					$row["tablename"] = runner_htmlspecialchars($table);
+				
+				if( $caption == $table )
+					$tablename = runner_htmlspecialchars( $table );
+				else if( $table == GLOBAL_PAGES )
+					$tablename = mlang_message('MENU_PAGE');
 				else
-					$row["tablename"] = "<span dir='LTR'>".runner_htmlspecialchars($caption)."&nbsp;(".runner_htmlspecialchars($table).")</span>";
-
+					$tablename = "<span dir='LTR'>".runner_htmlspecialchars( $caption )
+						."&nbsp;(".runner_htmlspecialchars( $table ).")</span>";
+				
+				$row["tablename"] = $tablename;
+		
 				$row["table_row_attrs"] = " id=\"row_".$shortTable."\"";
 				$row["tablecheckbox_attrs"]= "id=\"rowbox".$shortTable."\" data-table=\"".$shortTable."\" data-checked=0";
 				$row["tbl_cell"] = " id=\"tblcell".$shortTable."\"";
 
-				// create permission controls
-				$mask = $this->pageMasks[$table];
-				foreach( $this->permissionNames as $perm => $x )
-				{
-					if( strpos($mask, $perm) === FALSE )
-						continue;
-					$row[$perm."_group"] = true;
-					$row[$perm."_checkbox"] = " id=\"box".$perm.$shortTable."\" data-checked=0";
-					$row[$perm."_cell"] = " id=\"cell".$perm.$shortTable."\"";
+				$row["tablecheckbox"] = $table != GLOBAL_PAGES;
+				if( $table != GLOBAL_PAGES ) {
+					// create permission controls
+					$mask = $this->pageMasks[$table];
+					foreach( $this->permissionNames as $perm => $x )
+					{
+						if( strpos($mask, $perm) === FALSE )
+							continue;
+						
+						$row[$perm."_group"] = true;
+						$row[$perm."_checkbox"] = " id=\"box".$perm.$shortTable."\" data-checked=0";
+						$row[$perm."_cell"] = " id=\"cell".$perm.$shortTable."\"";
+					}
 				}
 
 				$row["hide_pages_attrs"] .= 'data-hide-pages data-hidden data-table="'.$shortTable.'"';
@@ -694,22 +731,22 @@ class RightsPage extends ListPage
 			}
 			$mask = $correctedMask;
 
-			if( strlen($mask) )
-			{
+			if( strlen($mask) && !( $table == GLOBAL_PAGES && ( $strPages == "" || strpos( $mask, "S" ) === false ) ) ) {
 				//	update the table name as well to address table renaming ( uppercase/lowercase ) issues
 				$sql = "update ". $rightWTableName ." set ".
 					$accessMaskWFieldName ."='". $mask ."',".
 					$tableNameWFieldName."=".$this->connection->prepareString( $table ).
 					"," . $pageWFieldName . "=" . $this->connection->prepareString( $strPages ).
 					" where ". $groupWhere;
-			}
-			else
+			} else {
+				// an empty access mask or all menu pages are chosen
 				$sql = "delete from ". $rightWTableName	." where ". $groupWhere;
-
+			}
 		}
 		else
 		{
-			if( !strlen($mask) )
+			// an empty access mask or all menu pages are chosen
+			if( !strlen($mask) || ( $table == GLOBAL_PAGES && $strPages == "" ) )
 				return;
 
 			$sql = "insert into ". $rightWTableName .

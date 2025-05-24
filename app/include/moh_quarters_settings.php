@@ -253,6 +253,7 @@ $tdatamoh_quarters[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "quarter_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "quarter_id";
 
@@ -393,6 +394,7 @@ $tdatamoh_quarters[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "quarter";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "quarter";
 

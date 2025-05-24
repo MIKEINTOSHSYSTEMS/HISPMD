@@ -49,7 +49,9 @@
 'details_found' => array(  ) ),
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => true ),
+'hasNotifications' => true,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'dashboard',
 'breadcrumb' => true ),
 'events' => array( 'maps' => array(  ),
@@ -199,7 +201,7 @@ src="index.php"
 'mobileDisplay' => 'desktop' ),
 'loginform_login' => array( 'type' => 'loginform_login' ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'pageAlign' => 'center',
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
@@ -213,5 +215,6 @@ src="index.php"
             /* padding: 4px 10px; */
             /* box-shadow: 0 4px 2px -2px gray; */
             /* flex-wrap: wrap; */
-                }' );
+                }',
+'listTotals' => 1 );
 		?>

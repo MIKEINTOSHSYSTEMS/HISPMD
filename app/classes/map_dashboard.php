@@ -56,7 +56,7 @@ class MapPage_Dashboard extends ListPage_Dashboard
 		$this->googleMapCfg['mapsData'][ $mapId ]['showAllMarkers'] = ( $this->dashElementData['heatMap'] || $this->dashElementData['clustering'] );
 
 		$this->googleMapCfg['mapsData'][ $mapId ]['showCurrentLocation'] = !!$this->dashElementData['showCurrentLocation'];
-		$this->googleMapCfg['mapsData'][ $mapId ]['currentLocationIcon'] = $this->dashSet->getDashMapLocationIcon( $this->dashElementName, $this->dashElementData );
+		$this->googleMapCfg['mapsData'][ $mapId ]['currentLocationIcon'] = $this->dashSet->getDashMapLocationIcon( $this->dashElementName );
 
 		if( !$this->gridBased )
 			$this->googleMapCfg['mapsData'][ $mapId ]['zoom'] = "auto";
@@ -127,10 +127,12 @@ class MapPage_Dashboard extends ListPage_Dashboard
 	protected function getMapDiv()
 	{
 		$mapId = GoodFieldName($this->dashTName).'_'.$this->dashElementName.'_dashMap';
-		$width = $this->dashElementData['width'] ? $this->dashElementData['width'] : 600;
-		$height = $this->dashElementData['height'] ? $this->dashElementData['height'] : 400;
-		$style = "@media print, (min-width: 768px) { #".$mapId." { width: ".$width."px; } }";
-		return '<style>'.$style.'</style><div id="'.$mapId.'" style="height: '.$height.'px;"></div>';
+//		$width = $this->dashElementData['width'] ? $this->dashElementData['width'] : 600;
+//		$height = $this->dashElementData['height'] ? $this->dashElementData['height'] : 400;
+		$width = "100%";
+		$height = "100%";
+		$style = "@media print, (min-width: 768px) { #".$mapId." { width: ".$width."; } }";
+		return '<style>'.$style.'</style><div id="'.$mapId.'" style="height: '.$height.';"></div>';
 	}
 
 	/**

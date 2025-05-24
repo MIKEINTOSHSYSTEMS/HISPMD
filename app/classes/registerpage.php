@@ -13,7 +13,6 @@ class RegisterPage extends RunnerPage
 	protected $strPassword;
 	protected $strEmail;
 
-	protected $passwordFiled;
 	protected $usernameFiled;
 	protected $emailFiled;
 
@@ -27,7 +26,6 @@ class RegisterPage extends RunnerPage
 	{
 		parent::__construct($params);
 
-		$this->passwordFiled = Security::passwordField();
 		$this->usernameFiled = Security::usernameField();
 		$this->emailFiled = GetEmailField();
 
@@ -72,66 +70,53 @@ class RegisterPage extends RunnerPage
 		$this->cipherer = new RunnerCipherer( $this->tName );
 	}
 
+	protected function setDataSource() {
+		$this->dataSource = getLoginDataSource();
+	}	
+	
 	/**
 	 * Activate user by email link
 	 */
 	protected function activateNewUser()
 	{
-		$username = base64_decode(@$_GET["u"]);
+		$username = base64_decode( @$_GET["u"] );
 		$code = @$_GET["code"];
+		$usernameCondition = DataCondition::FieldEquals( 
+			Security::usernameField(), 
+			$username, 
+			0, 
+			Security::caseInsensitiveUsername() ? dsCASE_INSENSITIVE : dsCASE_STRICT 
+		);
 
 		$dc = new DsCommand();
-		$dc->filter = DataCondition::FieldEquals( Security::usernameField(), $username );
+		$dc->filter = $usernameCondition;
 
-		if( $this->cipherer->isFieldEncrypted(Security::usernameField()) )
-			$strUsername = $this->cipherer->MakeDBValue(Security::usernameField(), $username, "", true);
-		else
-			$strUsername = make_db_value(Security::usernameField(), $username);
-
-		$sql = "select ".$this->getFieldSQLDecrypt(Security::passwordField())
-			." from ". $this->connection->addTableWrappers( Security::loginTable() )
-			." where ".
-			$this->connection->comparisonSQL(
-				$this->getFieldSQLDecrypt(Security::usernameField()),
-				$strUsername,
-				Security::caseInsensitiveUsername()
-			);
-
-		$qResult = $this->connection->query( $sql );
-		if( !$qResult )
-		{
+		$rs = $this->dataSource->getSingle( $dc );		
+		if( !$rs ) {
 			echo "Invalid validation code.";
 			return;
 		}
-
-		$data = $qResult->fetchNumeric();
+		
+		$data = $this->dataSource->decryptRecord( $rs->fetchAssoc() );
+		
 		if( !$data )
 		{
 			echo "Invalid validation code.";
 			return;
 		}
 
-		$dbPassword = $this->cipherer->DecryptField( Security::passwordField(), $data[0] );
-		if( !$this->cipherer->isFieldEncrypted(Security::passwordField()) )
-			$usercode = $username.$dbPassword;// $dbPassword is already encrypted
-		else
-			$usercode = $username.md5( $dbPassword );
-
-
-		if( $code != md5( $usercode ) )
+		$dbPassword = $data[ Security::passwordField() ];
+		if( !Security::verifyActivationCode( $code, $username, $dbPassword ) )
 		{
 			echo "Invalid validation code.";
 			return;
 		}
 
-		$sql = "update ". $this->connection->addTableWrappers( Security::loginTable() )
-			." set ". $this->connection->addFieldWrappers( "active" )."=1 "
-			." where " .
-			$this->connection->comparisonSQL(
-				$this->getFieldSQLDecrypt(Security::usernameField()),
-				$strUsername,
-				Security::caseInsensitiveUsername()
-			);
+		$dcUpdate = new DsCommand();
+		$dcUpdate->values[ GetGlobalData("userActivationField") ] = 1;
+		$dcUpdate->filter = $usernameCondition;
+			
+		$this->dataSource->updateSingle( $dcUpdate, false );
 
 		$sessionLevel = Security::userSessionLevel();
 		if( $sessionLevel === LOGGED_ACTIVATION_PENDING ) {
@@ -148,7 +133,6 @@ class RegisterPage extends RunnerPage
 			$sessionLevel = Security::userSessionLevel();
 		}
 
-		$this->connection->exec( $sql );
 
 		$this->switchToSuccessPage();
 
@@ -382,35 +366,40 @@ class RegisterPage extends RunnerPage
 		}
 
 		$retval = $allow_registration;
+		$sqlValues = array();
 		if( $retval && $globalEvents->exists("BeforeRegister") )
-			$retval = $globalEvents->BeforeRegister($values, $this->message, $this);
+			$retval = $globalEvents->BeforeRegister($values, $sqlValues, $this->message, $this);
 
 		if( !$retval )
 			return false;
 
-		$passwordHash = md5( $values[Security::passwordField()] );
-		$originalpassword = $values[Security::passwordField()];
-		//	encrypt password
-		if( !$this->cipherer->isFieldEncrypted( $this->passwordFiled ) )
-		{
-			$passwordHash = $this->getPasswordHash( $values[Security::passwordField()] );
-			$values[Security::passwordField()] = $passwordHash;
+		$originalpassword = $values[ Security::passwordField() ];
+
+		//	hash password
+		if( GetGlobalData("bEncryptPasswords") && !$this->cipherer->isFieldEncrypted( Security::passwordField() ) ) {
+			$values[ Security::passwordField() ] = Security::hashPassword( $originalpassword );
 		}
 
 		$dc = new DsCommand();
 		$dc->values = &$values;
-		$dataSource = getLoginDataSource();
-		$retval = $dataSource->insertSingle( $dc );
+		$dc->advValues = array();
+		foreach( $sqlValues as $field => $sqlValue ) {
+			$dc->advValues[ $field ] = new DsOperand( dsotSQL, $sqlValue );
+		}			
+		
+		$retval = $this->dataSource->insertSingle( $dc );
 
-
-		//$retval = DoInsertRecord(Security::loginTable(), $values, $blobfields, $this);
 		if( GetGlobalData("userRequireActivation") ) {
-			$this->prepActivationCode = md5( $this->strUsername.$passwordHash );
+			$this->prepActivationCode = Security::getActivationCode(
+				$this->strUsername,
+				$values[ Security::passwordField() ]
+			);
 		}
+		
 		$values[Security::passwordField()] = $originalpassword;
 
 		if( !$retval ) {
-			$this->setDatabaseError( $dataSource->lastError() );
+			$this->setDatabaseError( $this->dataSource->lastError() );
 		} else {
 			$this->ProcessFiles();			
 		}
@@ -581,12 +570,12 @@ class RegisterPage extends RunnerPage
 			$parameters["field"] = $fName;
 			$parameters["value"] = $this->regValues[ $fName ];
 			$parameters["pageObj"] = $this;
-			$parameters["suggest"] = ($fName == $this->passwordFiled || $fName == $this->usernameFiled || $fName == $this->emailFiled);
+			$parameters["suggest"] = ($fName == Security::passwordField() || $fName == $this->usernameFiled || $fName == $this->emailFiled);
 
 			if( $this->pSet->getEditFormat($fName) == 'Time' )
 				$this->fillTimePickSettings( $fName, @$this->regValues[ $fName ] );
 
-			if( $fName == $this->passwordFiled )
+			if( $fName == Security::passwordField() )
 			{
 				$parameters["extraParams"] = array();
 				$parameters["extraParams"]["getConrirmFieldCtrl"] = true;
@@ -600,7 +589,7 @@ class RegisterPage extends RunnerPage
 				$this->jsSettings['tableSettings'][ $this->tName ]['emailFieldName'] = $fName;
 
 			// Add validation
-			if( $fName == $this->usernameFiled || $fName == $this->passwordFiled || $fName == $this->emailFiled )
+			if( $fName == $this->usernameFiled || $fName == Security::passwordField() || $fName == $this->emailFiled )
 				$parameters["validate"] = Array('basicValidate' => Array ( 'IsRequired' ));
 			else
 				$parameters["validate"] = $this->pSet->getValidation( $fName );
@@ -612,20 +601,12 @@ class RegisterPage extends RunnerPage
 			$controls["controls"]['suggest'] = $parameters["suggest"];
 			$controls["controls"]['fieldName'] = $fName;
 
-			if( $this->is508 && !$this->isBootstrap() )
-				$this->xt->assign_section($gfName."_label", "<label for=\"".$this->getInputElementId($fName)."\">", "</label>");
-
 			$this->xt->assign($gfName."_fieldblock", true);
 			$this->xt->assign($gfName."_tabfieldblock", true);
 
-			if ( $this->isBootstrap() )
-			{
-				$firstElementId = $this->getControl($fName, $this->id)->getFirstElementId();
-				if ( $firstElementId )
-				{
-					$this->xt->assign("labelfor_" . goodFieldName($fName), $firstElementId);
-				}
-			}
+			$firstElementId = $this->getControl($fName, $this->id)->getFirstElementId();
+			if ( $firstElementId )
+				$this->xt->assign("labelfor_" . goodFieldName($fName), $firstElementId);
 
 			$this->xt->assign_function($gfName."_editcontrol", "xt_buildeditcontrol", $parameters );
 
@@ -634,11 +615,10 @@ class RegisterPage extends RunnerPage
 				$controls["controls"]['preloadData'] = $preload;
 
 			$this->fillControlsMap( $controls );
-			$this->fillFieldToolTips( $fName );
-			$this->fillControlFlags( $fName, $fName == $this->usernameFiled || $fName == $this->passwordFiled || $fName == $this->emailFiled );
+			$this->fillControlFlags( $fName, $fName == $this->usernameFiled || $fName == Security::passwordField() || $fName == $this->emailFiled );
 
 			// Confirm field for re-enter password
-			if( $fName == $this->passwordFiled && $this->passwordFiled != $this->usernameFiled)
+			if( $fName == Security::passwordField() && Security::passwordField() != $this->usernameFiled)
 			{
 				$parameters = array();
 				$parameters["id"] = $this->id;
@@ -664,10 +644,7 @@ class RegisterPage extends RunnerPage
 				if( $this->is508 )
 					$this->xt->assign_section("confirm_label", "<label for=\"value_confirm_".$this->id."\">", "</label>");
 
-				if ( $this->isBootstrap() )
-				{
-					$this->xt->assign("labelfor_" . goodFieldName($fName) . "_confirm", "value_confirm_".$this->id);
-				}
+				$this->xt->assign("labelfor_" . goodFieldName($fName) . "_confirm", "value_confirm_".$this->id);
 
 				$this->xt->assign_function("confirm_editcontrol1", "xt_buildeditcontrol", $parameters );
 				$this->xt->assign("confirm_block", true);
@@ -726,27 +703,19 @@ class RegisterPage extends RunnerPage
 		$this->xt->assign("buttons_block", true);
 
 		$this->xt->assign("message_block", true);
-		if ( strlen($this->message) )
-		{
-			if ( $this->isBootstrap() )
+		if ( strlen($this->message) ) {
+			$messageClass = "alert-danger";
+			if ( $this->registerSuccess )
 			{
-				$messageClass = "alert-danger";
-				if ( $this->registerSuccess )
-				{
-					$messageClass = "alert-success";
-				}
+				$messageClass = "alert-success";
+			}
 
-				$this->xt->assign("message_class", $messageClass );
-				$this->xt->assign("message", $this->message);
-			}
-			else
-			{
-				$this->xt->assign("message", "<div class='message rnr-error'>" . $this->message . "</div>" );
-			}
-		}
-		else
+			$this->xt->assign("message_class", $messageClass );
+			$this->xt->assign("message", $this->message);
+		} else {
 			$this->hideElement("message");
-
+		}
+		
 		$addStyle = "";
 		if ( $this->isMultistepped() )
 			$addStyle = " style=\"display: none;\"";
@@ -831,7 +800,6 @@ class RegisterPage extends RunnerPage
 				$this->hideItemType("register_proceed");
 				$this->hideItemType("register_activated_message");
 			}
-
 		}
 
 		if( $globalEvents->exists("BeforeShowRegister") )

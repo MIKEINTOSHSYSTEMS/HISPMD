@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -88,7 +231,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +240,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -217,6 +360,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -1856,9 +2002,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN CompletionDate_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompletionDate" data-fieldname="CompletionDate">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment CompletionDate }	</span>
+	{BEGIN CompletionDate_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompletionDate" data-fieldname="CompletionDate" 
+
+			{$CompletionDate_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment CompletionDate }</span>
+					{$arrow_icon_CompletionDate}
+			</span>
+	</span>
+	{END CompletionDate_fieldheader}
 {END CompletionDate_fieldheadercolumn}
 
 	
@@ -1879,9 +2036,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN SubmissionDate_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SubmissionDate" data-fieldname="SubmissionDate">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment SubmissionDate }	</span>
+	{BEGIN SubmissionDate_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SubmissionDate" data-fieldname="SubmissionDate" 
+
+			{$SubmissionDate_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment SubmissionDate }</span>
+					{$arrow_icon_SubmissionDate}
+			</span>
+	</span>
+	{END SubmissionDate_fieldheader}
 {END SubmissionDate_fieldheadercolumn}
 
 	
@@ -1902,9 +2070,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN starttime_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="starttime" data-fieldname="starttime">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment starttime }	</span>
+	{BEGIN starttime_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="starttime" data-fieldname="starttime" 
+
+			{$starttime_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment starttime }</span>
+					{$arrow_icon_starttime}
+			</span>
+	</span>
+	{END starttime_fieldheader}
 {END starttime_fieldheadercolumn}
 
 	
@@ -1925,9 +2104,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN endtime_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endtime" data-fieldname="endtime">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment endtime }	</span>
+	{BEGIN endtime_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endtime" data-fieldname="endtime" 
+
+			{$endtime_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment endtime }</span>
+					{$arrow_icon_endtime}
+			</span>
+	</span>
+	{END endtime_fieldheader}
 {END endtime_fieldheadercolumn}
 
 	
@@ -1948,9 +2138,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN deviceid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="deviceid" data-fieldname="deviceid">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment deviceid }	</span>
+	{BEGIN deviceid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="deviceid" data-fieldname="deviceid" 
+
+			{$deviceid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment deviceid }</span>
+					{$arrow_icon_deviceid}
+			</span>
+	</span>
+	{END deviceid_fieldheader}
 {END deviceid_fieldheadercolumn}
 
 	
@@ -1971,9 +2172,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN subscriberid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="subscriberid" data-fieldname="subscriberid">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment subscriberid }	</span>
+	{BEGIN subscriberid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="subscriberid" data-fieldname="subscriberid" 
+
+			{$subscriberid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment subscriberid }</span>
+					{$arrow_icon_subscriberid}
+			</span>
+	</span>
+	{END subscriberid_fieldheader}
 {END subscriberid_fieldheadercolumn}
 
 	
@@ -1994,9 +2206,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN simid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="simid" data-fieldname="simid">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment simid }	</span>
+	{BEGIN simid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="simid" data-fieldname="simid" 
+
+			{$simid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment simid }</span>
+					{$arrow_icon_simid}
+			</span>
+	</span>
+	{END simid_fieldheader}
 {END simid_fieldheadercolumn}
 
 	
@@ -2017,9 +2240,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN devicephonenum_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="devicephonenum" data-fieldname="devicephonenum">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment devicephonenum }	</span>
+	{BEGIN devicephonenum_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="devicephonenum" data-fieldname="devicephonenum" 
+
+			{$devicephonenum_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment devicephonenum }</span>
+					{$arrow_icon_devicephonenum}
+			</span>
+	</span>
+	{END devicephonenum_fieldheader}
 {END devicephonenum_fieldheadercolumn}
 
 	
@@ -2040,9 +2274,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN username_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment username }	</span>
+	{BEGIN username_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username" 
+
+			{$username_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment username }</span>
+					{$arrow_icon_username}
+			</span>
+	</span>
+	{END username_fieldheader}
 {END username_fieldheadercolumn}
 
 	
@@ -2063,9 +2308,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN duration_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="duration" data-fieldname="duration">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment duration }	</span>
+	{BEGIN duration_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="duration" data-fieldname="duration" 
+
+			{$duration_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment duration }</span>
+					{$arrow_icon_duration}
+			</span>
+	</span>
+	{END duration_fieldheader}
 {END duration_fieldheadercolumn}
 
 	
@@ -2086,9 +2342,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN caseid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caseid" data-fieldname="caseid">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment caseid }	</span>
+	{BEGIN caseid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caseid" data-fieldname="caseid" 
+
+			{$caseid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment caseid }</span>
+					{$arrow_icon_caseid}
+			</span>
+	</span>
+	{END caseid_fieldheader}
 {END caseid_fieldheadercolumn}
 
 	
@@ -2109,9 +2376,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT101_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT101" data-fieldname="OBAT101">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT101 }	</span>
+	{BEGIN OBAT101_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT101" data-fieldname="OBAT101" 
+
+			{$OBAT101_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT101 }</span>
+					{$arrow_icon_OBAT101}
+			</span>
+	</span>
+	{END OBAT101_fieldheader}
 {END OBAT101_fieldheadercolumn}
 
 	
@@ -2132,9 +2410,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT102_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT102" data-fieldname="OBAT102">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT102 }	</span>
+	{BEGIN OBAT102_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT102" data-fieldname="OBAT102" 
+
+			{$OBAT102_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT102 }</span>
+					{$arrow_icon_OBAT102}
+			</span>
+	</span>
+	{END OBAT102_fieldheader}
 {END OBAT102_fieldheadercolumn}
 
 	
@@ -2155,9 +2444,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT103_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT103" data-fieldname="OBAT103">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT103 }	</span>
+	{BEGIN OBAT103_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT103" data-fieldname="OBAT103" 
+
+			{$OBAT103_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT103 }</span>
+					{$arrow_icon_OBAT103}
+			</span>
+	</span>
+	{END OBAT103_fieldheader}
 {END OBAT103_fieldheadercolumn}
 
 	
@@ -2178,9 +2478,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT104_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT104" data-fieldname="OBAT104">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT104 }	</span>
+	{BEGIN OBAT104_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT104" data-fieldname="OBAT104" 
+
+			{$OBAT104_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT104 }</span>
+					{$arrow_icon_OBAT104}
+			</span>
+	</span>
+	{END OBAT104_fieldheader}
 {END OBAT104_fieldheadercolumn}
 
 	
@@ -2201,9 +2512,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN admin_lvl_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="admin_lvl" data-fieldname="admin_lvl">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment admin_lvl }	</span>
+	{BEGIN admin_lvl_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="admin_lvl" data-fieldname="admin_lvl" 
+
+			{$admin_lvl_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment admin_lvl }</span>
+					{$arrow_icon_admin_lvl}
+			</span>
+	</span>
+	{END admin_lvl_fieldheader}
 {END admin_lvl_fieldheadercolumn}
 
 	
@@ -2224,9 +2546,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT105_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT105" data-fieldname="OBAT105">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT105 }	</span>
+	{BEGIN OBAT105_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT105" data-fieldname="OBAT105" 
+
+			{$OBAT105_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT105 }</span>
+					{$arrow_icon_OBAT105}
+			</span>
+	</span>
+	{END OBAT105_fieldheader}
 {END OBAT105_fieldheadercolumn}
 
 	
@@ -2247,9 +2580,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT106_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT106" data-fieldname="OBAT106">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT106 }	</span>
+	{BEGIN OBAT106_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT106" data-fieldname="OBAT106" 
+
+			{$OBAT106_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT106 }</span>
+					{$arrow_icon_OBAT106}
+			</span>
+	</span>
+	{END OBAT106_fieldheader}
 {END OBAT106_fieldheadercolumn}
 
 	
@@ -2270,9 +2614,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT107_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT107" data-fieldname="OBAT107">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT107 }	</span>
+	{BEGIN OBAT107_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT107" data-fieldname="OBAT107" 
+
+			{$OBAT107_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT107 }</span>
+					{$arrow_icon_OBAT107}
+			</span>
+	</span>
+	{END OBAT107_fieldheader}
 {END OBAT107_fieldheadercolumn}
 
 	
@@ -2293,9 +2648,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT108_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT108" data-fieldname="OBAT108">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT108 }	</span>
+	{BEGIN OBAT108_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT108" data-fieldname="OBAT108" 
+
+			{$OBAT108_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT108 }</span>
+					{$arrow_icon_OBAT108}
+			</span>
+	</span>
+	{END OBAT108_fieldheader}
 {END OBAT108_fieldheadercolumn}
 
 	
@@ -2316,9 +2682,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN siteid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="siteid" data-fieldname="siteid">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment siteid }	</span>
+	{BEGIN siteid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="siteid" data-fieldname="siteid" 
+
+			{$siteid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment siteid }</span>
+					{$arrow_icon_siteid}
+			</span>
+	</span>
+	{END siteid_fieldheader}
 {END siteid_fieldheadercolumn}
 
 	
@@ -2339,9 +2716,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT109f_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT109f" data-fieldname="OBAT109f">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT109f }	</span>
+	{BEGIN OBAT109f_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT109f" data-fieldname="OBAT109f" 
+
+			{$OBAT109f_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT109f }</span>
+					{$arrow_icon_OBAT109f}
+			</span>
+	</span>
+	{END OBAT109f_fieldheader}
 {END OBAT109f_fieldheadercolumn}
 
 	
@@ -2362,9 +2750,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT110f_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT110f" data-fieldname="OBAT110f">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT110f }	</span>
+	{BEGIN OBAT110f_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT110f" data-fieldname="OBAT110f" 
+
+			{$OBAT110f_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT110f }</span>
+					{$arrow_icon_OBAT110f}
+			</span>
+	</span>
+	{END OBAT110f_fieldheader}
 {END OBAT110f_fieldheadercolumn}
 
 	
@@ -2385,9 +2784,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT111_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT111" data-fieldname="OBAT111">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT111 }	</span>
+	{BEGIN OBAT111_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT111" data-fieldname="OBAT111" 
+
+			{$OBAT111_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT111 }</span>
+					{$arrow_icon_OBAT111}
+			</span>
+	</span>
+	{END OBAT111_fieldheader}
 {END OBAT111_fieldheadercolumn}
 
 	
@@ -2408,9 +2818,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN OBAT112_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT112" data-fieldname="OBAT112">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT112 }	</span>
+	{BEGIN OBAT112_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OBAT112" data-fieldname="OBAT112" 
+
+			{$OBAT112_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment OBAT112 }</span>
+					{$arrow_icon_OBAT112}
+			</span>
+	</span>
+	{END OBAT112_fieldheader}
 {END OBAT112_fieldheadercolumn}
 
 	
@@ -2431,9 +2852,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD1_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD1" data-fieldname="DD1">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD1 }	</span>
+	{BEGIN DD1_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD1" data-fieldname="DD1" 
+
+			{$DD1_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD1 }</span>
+					{$arrow_icon_DD1}
+			</span>
+	</span>
+	{END DD1_fieldheader}
 {END DD1_fieldheadercolumn}
 
 	
@@ -2454,9 +2886,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD2_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD2" data-fieldname="DD2">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD2 }	</span>
+	{BEGIN DD2_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD2" data-fieldname="DD2" 
+
+			{$DD2_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD2 }</span>
+					{$arrow_icon_DD2}
+			</span>
+	</span>
+	{END DD2_fieldheader}
 {END DD2_fieldheadercolumn}
 
 	
@@ -2477,9 +2920,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD3a_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field66" {$item_simple_grid_field66} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD3a" data-fieldname="DD3a">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD3a }	</span>
+	{BEGIN DD3a_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field66" {$item_simple_grid_field66} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD3a" data-fieldname="DD3a" 
+
+			{$DD3a_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD3a }</span>
+					{$arrow_icon_DD3a}
+			</span>
+	</span>
+	{END DD3a_fieldheader}
 {END DD3a_fieldheadercolumn}
 
 	
@@ -2500,9 +2954,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD3b_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field67" {$item_simple_grid_field67} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD3b" data-fieldname="DD3b">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD3b }	</span>
+	{BEGIN DD3b_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field67" {$item_simple_grid_field67} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD3b" data-fieldname="DD3b" 
+
+			{$DD3b_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD3b }</span>
+					{$arrow_icon_DD3b}
+			</span>
+	</span>
+	{END DD3b_fieldheader}
 {END DD3b_fieldheadercolumn}
 
 	
@@ -2523,9 +2988,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD4a_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field68" {$item_simple_grid_field68} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD4a" data-fieldname="DD4a">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD4a }	</span>
+	{BEGIN DD4a_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field68" {$item_simple_grid_field68} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD4a" data-fieldname="DD4a" 
+
+			{$DD4a_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD4a }</span>
+					{$arrow_icon_DD4a}
+			</span>
+	</span>
+	{END DD4a_fieldheader}
 {END DD4a_fieldheadercolumn}
 
 	
@@ -2546,9 +3022,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD4b_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field69" {$item_simple_grid_field69} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD4b" data-fieldname="DD4b">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD4b }	</span>
+	{BEGIN DD4b_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field69" {$item_simple_grid_field69} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD4b" data-fieldname="DD4b" 
+
+			{$DD4b_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD4b }</span>
+					{$arrow_icon_DD4b}
+			</span>
+	</span>
+	{END DD4b_fieldheader}
 {END DD4b_fieldheadercolumn}
 
 	
@@ -2569,9 +3056,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5a_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field70" {$item_simple_grid_field70} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5a" data-fieldname="DD5a">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5a }	</span>
+	{BEGIN DD5a_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field70" {$item_simple_grid_field70} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5a" data-fieldname="DD5a" 
+
+			{$DD5a_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5a }</span>
+					{$arrow_icon_DD5a}
+			</span>
+	</span>
+	{END DD5a_fieldheader}
 {END DD5a_fieldheadercolumn}
 
 	
@@ -2592,9 +3090,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5b_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field71" {$item_simple_grid_field71} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5b" data-fieldname="DD5b">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5b }	</span>
+	{BEGIN DD5b_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field71" {$item_simple_grid_field71} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5b" data-fieldname="DD5b" 
+
+			{$DD5b_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5b }</span>
+					{$arrow_icon_DD5b}
+			</span>
+	</span>
+	{END DD5b_fieldheader}
 {END DD5b_fieldheadercolumn}
 
 	
@@ -2615,9 +3124,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5c_1_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field72" {$item_simple_grid_field72} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_1" data-fieldname="DD5c_1">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_1 }	</span>
+	{BEGIN DD5c_1_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field72" {$item_simple_grid_field72} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_1" data-fieldname="DD5c_1" 
+
+			{$DD5c_1_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_1 }</span>
+					{$arrow_icon_DD5c_1}
+			</span>
+	</span>
+	{END DD5c_1_fieldheader}
 {END DD5c_1_fieldheadercolumn}
 
 	
@@ -2638,9 +3158,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5c_2_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field73" {$item_simple_grid_field73} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_2" data-fieldname="DD5c_2">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_2 }	</span>
+	{BEGIN DD5c_2_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field73" {$item_simple_grid_field73} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_2" data-fieldname="DD5c_2" 
+
+			{$DD5c_2_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_2 }</span>
+					{$arrow_icon_DD5c_2}
+			</span>
+	</span>
+	{END DD5c_2_fieldheader}
 {END DD5c_2_fieldheadercolumn}
 
 	
@@ -2661,9 +3192,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5c_3_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field74" {$item_simple_grid_field74} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_3" data-fieldname="DD5c_3">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_3 }	</span>
+	{BEGIN DD5c_3_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field74" {$item_simple_grid_field74} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_3" data-fieldname="DD5c_3" 
+
+			{$DD5c_3_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_3 }</span>
+					{$arrow_icon_DD5c_3}
+			</span>
+	</span>
+	{END DD5c_3_fieldheader}
 {END DD5c_3_fieldheadercolumn}
 
 	
@@ -2684,9 +3226,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5c_5_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field75" {$item_simple_grid_field75} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_5" data-fieldname="DD5c_5">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_5 }	</span>
+	{BEGIN DD5c_5_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field75" {$item_simple_grid_field75} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_5" data-fieldname="DD5c_5" 
+
+			{$DD5c_5_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_5 }</span>
+					{$arrow_icon_DD5c_5}
+			</span>
+	</span>
+	{END DD5c_5_fieldheader}
 {END DD5c_5_fieldheadercolumn}
 
 	
@@ -2707,9 +3260,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5c_96_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field76" {$item_simple_grid_field76} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_96" data-fieldname="DD5c_96">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_96 }	</span>
+	{BEGIN DD5c_96_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field76" {$item_simple_grid_field76} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5c_96" data-fieldname="DD5c_96" 
+
+			{$DD5c_96_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5c_96 }</span>
+					{$arrow_icon_DD5c_96}
+			</span>
+	</span>
+	{END DD5c_96_fieldheader}
 {END DD5c_96_fieldheadercolumn}
 
 	
@@ -2730,9 +3294,20 @@ Sort by&nbsp;{$sortByDropdown}
 
 	 
 		{BEGIN DD5co_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field77" {$item_simple_grid_field77} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5co" data-fieldname="DD5co">
-	{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5co }	</span>
+	{BEGIN DD5co_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field77" {$item_simple_grid_field77} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DD5co" data-fieldname="DD5co" 
+
+			{$DD5co_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_additional_organizational_and_behavioral_assessment DD5co }</span>
+					{$arrow_icon_DD5co}
+			</span>
+	</span>
+	{END DD5co_fieldheader}
 {END DD5co_fieldheadercolumn}
 
 	

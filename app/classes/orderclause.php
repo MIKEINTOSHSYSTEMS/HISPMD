@@ -209,16 +209,21 @@ class OrderClause
 		$ret = array();
 		foreach( $orderInfo as $o )
 		{
-			$field = $pSet->GetFieldByIndex( $o[0] );
-			$ret[] = array('column' => $field,
-						 'index' => $o[0],
-						 'expr' => $o[2],
-						   'dir' => $o[1]
-							);
+			if ( $o[0] == 0 ) {
+				$field = $o[2];				
+			} else {
+				$field = $pSet->GetFieldByIndex( $o[0] );
+			}
+			
+			$ret[] = array(
+				'column' => $field,
+				'index' => $o[0],
+				'expr' => $o[2],
+				'dir' => $o[1]
+			);
 			
 		}
 		return $ret;
-
 	}
 
 	public function getOrderUrlParams()
@@ -301,7 +306,7 @@ class OrderClause
 	protected function isFieldSortable( $fName ) 
 	{
 		$type = $this->pSet->getFieldType( $fName );
-		return !IsBinaryType( $type ) && ( $this->connection->dbType == nDATABASE_MySQL && $type != 203 || !IsTextType( $type ) );	
+		return !IsBinaryType( $type ) && ( $this->connection->dbType == nDATABASE_MySQL || $this->connection->dbType == nDATABASE_PostgreSQL || !IsTextType( $type ) );	
 	}
 	
 	/**

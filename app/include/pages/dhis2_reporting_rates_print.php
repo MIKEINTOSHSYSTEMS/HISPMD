@@ -269,7 +269,9 @@
 'recsPerRow' => 1,
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'print',
 'breadcrumb' => false ),
 'events' => array( 'maps' => array(  ),
@@ -432,9 +434,10 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'simple_grid_field5' => array( 'type' => 'grid_field_label',
 'field' => 'relative_period' ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

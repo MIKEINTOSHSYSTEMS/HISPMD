@@ -262,6 +262,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"indicator\"";
 
@@ -428,6 +429,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "organisation_unit";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "organisation_unit";
 
@@ -594,6 +596,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "period";
 
@@ -760,6 +763,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "value";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"value\"";
 
@@ -901,6 +905,7 @@ $tdataeidm_hc[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "relative_period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "relative_period";
 

@@ -198,7 +198,6 @@ class ViewPage extends RunnerPage
 
 		if ( $this->mode == VIEW_SIMPLE ) {
 			$this->preparePdfControls();
-			$this->pageData['pdfFonts'] = getPdfFonts();
 		}
 
 		$this->doCommonAssignments();
@@ -227,15 +226,8 @@ class ViewPage extends RunnerPage
 	/**
 	 * Add common javascript files and code
 	 */
-	function addCommonJs()
-	{
+	function addCommonJs() {
 		parent::addCommonJs();
-
-		if( $this->allDetailsTablesArr )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
 	}
 
 	/**
@@ -281,6 +273,9 @@ class ViewPage extends RunnerPage
 		$this->displayMasterTableInfo();
 
 		$this->xt->assign( "editlink", $this->getEditLink( $data ). '&' . $this->getStateUrlParams() );
+		
+		if( $this->pdfJsonMode() )
+			$this->xt->assign( "pdfFonts", my_json_encode( getPdfFonts() ) );		
 	}
 
 	/**
@@ -549,8 +544,12 @@ class ViewPage extends RunnerPage
 
 	function editAvailable() {
 
-		if( $this->dashElementData )
-			return parent::editAvailable() && $this->dashElementData["details"][$this->tName]["edit"];
+		if( $this->dashElementData ) {
+			$dashType = $this->dashElementData["type"];
+			return parent::editAvailable() && 
+				( $dashType == DASHBOARD_DETAILS && $this->dashElementData["details"][$this->tName]["edit"]
+				|| $dashType == DASHBOARD_LIST && $this->dashElementData["popupEdit"] );
+		}
 		return parent::editAvailable();
 	}
 

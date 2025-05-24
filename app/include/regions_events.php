@@ -48,9 +48,10 @@ GetTableLink( "regions", "view", "editid1=".$keys["region_id"]));
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function AfterAdd
 
+		
 		
 		
 		
@@ -138,9 +139,10 @@ GetTableLink( "regions", "view", "editid1=".$keys["region_id"]));
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function AfterEdit
 
+		
 		
 		
 		

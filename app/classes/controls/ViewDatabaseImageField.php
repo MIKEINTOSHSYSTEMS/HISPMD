@@ -11,21 +11,12 @@ class ViewDatabaseImageField extends ViewImageDownloadField
 		if( !$data[ $this->field ] )
 			return '""';
 
-		$width = $this->container->pSet->getImageWidth( $this->field );
-
-		if( !$width )
-		{
-			$width = 100;
-			if ( $this->container->pageType === PAGE_VIEW )
-				$width = 300;
-		}
-
 		$imageType = SupposeImageType( $data[ $this->field ] );
 		if( $imageType == "image/jpeg" || $imageType == "image/png" )
 		{
 			return '{
 				image: "' . jsreplace( 'data:'. $imageType . ';base64,' . base64_bin2str( $data[ $this->field ] ) ) . '",
-				width: ' . $width . ',
+				width: ' . $this->container->pSet->getImageWidth( $this->field ) . ',
 				height: ' .$this->container->pSet->getImageHeight( $this->field ) . '
 			}';
 		} else {
@@ -33,7 +24,7 @@ class ViewDatabaseImageField extends ViewImageDownloadField
 			if( $urls ) {
 				return '{
 					image: "' . jsreplace( $urls[0]["image"] ) . '",
-					width: ' . $width . ',
+					width: ' . $this->container->pSet->getImageWidth( $this->field ) . ',
 					height: ' .$this->container->pSet->getImageHeight( $this->field ) . '
 				}';
 			}

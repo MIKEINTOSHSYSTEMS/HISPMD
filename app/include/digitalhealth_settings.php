@@ -278,6 +278,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dh_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "dh_id";
 
@@ -416,6 +417,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "site_type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "site_type";
 
@@ -554,6 +556,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dhis2_functional";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "dhis2_functional";
 
@@ -692,6 +695,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dhis2_online";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "dhis2_online";
 
@@ -830,6 +834,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "mfr_updated";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "mfr_updated";
 
@@ -968,6 +973,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "echis_implemented";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "echis_implemented";
 
@@ -1106,6 +1112,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "emr_status";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "emr_status";
 
@@ -1244,6 +1251,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ihris_hra_implemented";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ihris_hra_implemented";
 
@@ -1382,6 +1390,7 @@ $tdatadigitalhealth[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "hcmis_implemented";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "hcmis_implemented";
 

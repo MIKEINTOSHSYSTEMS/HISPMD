@@ -36,7 +36,9 @@ class OracleConnection extends Connection
 		if( !getenv( "NLS_LANG" ) )
 			putenv( "NLS_LANG=AMERICAN_AMERICA.UTF8");
 ##endif##
-		$this->conn = @ociplogon($this->user, $this->pwd, $this->sid);
+		global $useUTF8;
+
+		$this->conn = @oci_pconnect($this->user, $this->pwd, $this->sid, $useUTF8 ? 'AL32UTF8' : '' );
 		if( !$this->conn ) {
 			$this->setError( ocierror() );
 			$this->triggerError($this->lastError());

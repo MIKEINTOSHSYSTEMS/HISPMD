@@ -252,6 +252,7 @@ $tdatahispmd_prism_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ID";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ID\"";
 
@@ -392,6 +393,7 @@ $tdatahispmd_prism_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "prism_data_update";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "prism_data_update";
 

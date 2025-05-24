@@ -20,13 +20,6 @@ class RunnerPage
 	public $pageName = "";
 
 	/**
-     * Use tool tips or not
-     * @var bool
-     * @intellisense
-     */
-	protected $isUseToolTips = false;
-
-	/**
 	 * If use Ajax Suggest js file or not
 	 * @var bool
 	 * @intellisense
@@ -512,8 +505,6 @@ class RunnerPage
 	 */
 	protected $mobile_css_rules = "";
 
-	protected $colsOnPage = 1;
-
 	/**
 	 * Array of field names that used for totals
 	 * @type array
@@ -689,6 +680,12 @@ class RunnerPage
 	public $dashTName = '';
 
 	/**
+	 * Dashboard page id
+	 * @type string
+	 */
+	public $dashPage = '';
+
+	/**
 	 * Element from dashboard
 	 * @type string
 	 */
@@ -760,8 +757,6 @@ class RunnerPage
 	 * errorFields
 	 */
 	public $errorFields = array();
-
-	protected $menuRoots = array();
 
 	protected $detailsTableObjects = array();
 
@@ -913,7 +908,7 @@ class RunnerPage
 
 		if( $this->dashTName )
 		{
-			$this->dashSet = new ProjectSettings( $this->dashTName );
+			$this->dashSet = new ProjectSettings( $this->dashTName, "dashboard", $this->dashPage );
 			if( $this->isDashboardElement() )
 				$this->dashElementData = $this->dashSet->getDashboardElementData( $this->dashElementName );
 		}
@@ -944,9 +939,7 @@ class RunnerPage
 		//set recaptcha configuration
 		$captchaSettings = GetGlobalData("CaptchaSettings", "");
 		$this->captchaPassesCount = $captchaSettings["captchaPassesCount"];
-		if ( $captchaSettings["type"] == RE_CAPTCHA )
-		{
-			$this->AddJSFile('include/runnerJS/ReCaptcha.js');
+		if ( $captchaSettings["type"] == RE_CAPTCHA ) {
 			$this->reCaptchaCfg = array('siteKey' => $captchaSettings["siteKey"],  'inputCaptchaId' => "");
 		}
 
@@ -989,7 +982,7 @@ class RunnerPage
 			$this->masterTable = "";
 		}
 
-		if ( $this->mode != LIST_MASTER )
+		if ( $this->mode != LIST_MASTER && $this->mode != PRINT_MASTER )
 			$this->setSessionVariables();
 
 		//	get locking object
@@ -1110,7 +1103,7 @@ class RunnerPage
 		$this->settingsMap["tableSettings"]["isUseVideo"] = array("default"=>false,"jsName"=>"isUseVideo");
 		$this->settingsMap['tableSettings']['listGridLayout'] = array("default"=> gltHORIZONTAL, "jsName"=>"listGridLayout");
 		$this->settingsMap["tableSettings"]["rowHighlite"] = array("default"=>false,"jsName"=>"isUseHighlite");
-		$this->settingsMap["tableSettings"]["isUseToolTips"] = array("default"=>false,"jsName"=>"isUseToolTips");
+
 		$this->settingsMap['tableSettings']['recsPerRowList'] = array("default"=>1,"jsName"=>"recsPerRowList");
 		$this->settingsMap["tableSettings"]["showAddInPopup"] = array("default"=>false, "jsName"=>"showAddInPopup");
 		$this->settingsMap["tableSettings"]["showEditInPopup"] = array("default"=>false,"jsName"=>"showEditInPopup");
@@ -1268,8 +1261,6 @@ class RunnerPage
 			}
 		}
 
-		$this->isUseToolTips = $this->isUseToolTips || $this->pSet->isUseToolTips();
-
 		$this->googleMapCfg["APIcode"] = GetGlobalData("apiGoogleMapsCode","");
 
 
@@ -1285,10 +1276,12 @@ class RunnerPage
 		$this->gridTabs = $this->pSet->getGridTabs();
 
 		$this->assignSearchLogger();
-		$this->AddJSFile( "include/sweetalert.min.js" );
+
 		$this->checkFSProviders();
 		$this->pageData["notifications"] = $this->getNotifications();
 		$this->pageData["mobileSub"] = $this->pSet->getMobileSub();
+
+		$this->assignMenus();
 	}
 
 	/**
@@ -1703,7 +1696,7 @@ class RunnerPage
 		$this->settingsMap["globalSettings"]["loginTName"] = Security::loginTable();
 
 		$this->xt->assign("security_block", true);
-		// The user might rewrite $_SESSION["UserName"] value with HTML code in an event, so no encoding will be performed while printing this value.
+		
 // Ensure you have a database connection
 
 if (Security::showUserPic()) {
@@ -1732,12 +1725,12 @@ if (Security::showUserPic()) {
             . $keylink
             . "&fileHash=" . fileAttrHash($keylink, strlen_bin($userName))
         );
-		//$this->xt->assign("username", $_SESSION["UserName"]); //uncomment if you want to display the users full name 
+    //$this->xt->assign("username", $_SESSION["UserName"]); //uncomment if you want to display the users full name 
         $this->xt->assign(
             "userbutton_image",
             '<span class="r-user-image"><img src="' . $src . '"></span>'
-			//'<span class="r-user-image"><img src="' . $src . rawurldecode( Security::getUserName() ) .'"></span>'
-			//'<span class="r-user-image"><img src="' . $src . '"></span>'
+      //'<span class="r-user-image"><img src="' . $src . rawurldecode( Security::getUserName() ) .'"></span>'
+      //'<span class="r-user-image"><img src="' . $src . '"></span>'
         );
     } else {
         // Handle cases where UserID is not found in user data
@@ -1748,15 +1741,28 @@ if (Security::showUserPic()) {
     $this->xt->assign("userbutton_icon", true);
 }
 //Replace from line 1707-1715-1749 for
-//		$this->xt->assign("username", $_SESSION["UserName"]);
-//		if( Security::showUserPic() ) {
-//			$this->xt->assign(
-//				"userbutton_image",
-//				'<span class="r-user-image"><img src="'.GetTableLink(' file', '', 'userpic='. rawurldecode( Security::getUserName() ) ).'"></span>'
-//			);
-//		} else {
-//			$this->xt->assign( "userbutton_icon", true );
-//		}
+//    $this->xt->assign("username", $_SESSION["UserName"]);
+//    if( Security::showUserPic() ) {
+//      $this->xt->assign(
+//        "userbutton_image",
+//        '<span class="r-user-image"><img src="'.GetTableLink(' file', '', 'userpic='. rawurldecode( Security::getUserName() ) ).'"></span>'
+//      );
+//    } else {
+//      $this->xt->assign( "userbutton_icon", true );
+//    }
+/*		
+		// The user might rewrite $_SESSION["UserName"] value with HTML code in an event, so no encoding will be performed while printing this value.
+		$this->xt->assign("username", $_SESSION["UserName"]);
+		if( Security::showUserPic() ) {
+			$this->xt->assign(
+				"userbutton_image",
+				'<span class="r-user-image"><img src="'.GetTableLink(' file', '', 'userpic='. rawurldecode( Security::getUserName() ) ).'"></span>'
+			);
+		} else {
+			$this->xt->assign( "userbutton_icon", true );
+		}
+
+*/
 		$this->xt->assign("logoutlink_attrs", 'id="logoutButton'.$this->id.'"');
 
 		$loggedAsGuest = Security::isGuest();
@@ -1817,14 +1823,6 @@ if (Security::showUserPic()) {
 		}
 	}
 
-	/**
-	 * @param String strPassword
-	 * @return String
-	 */
-	public function getPasswordHash( $strPassword )
-	{
-		return getPasswordHash( $strPassword );
-	}
 
 	/**
 	 * Makes assigns for admin
@@ -2249,12 +2247,6 @@ if (Security::showUserPic()) {
 			return;
 
 		$backButtonHref = GetTableLink( $masterTableData['mShortTable'], $masterTableData["type"], "a=return" );
-		if ( !$this->isBootstrap() )
-		{
-			$this->xt->assign("mastertable_block", true);
-			$this->xt->assign("backtomasterlink_attrs", "href=\"".$backButtonHref."\"");
-			$this->xt->assign("backtomasterlink_caption", GetTableCaption( GoodFieldName($masterTableData['mDataSourceTable']) ));
-		}
 
 		if( !$this->pSet->masterPreview($masterTableData['mDataSourceTable']) )
 			return;
@@ -2355,15 +2347,9 @@ if (Security::showUserPic()) {
 
 		$this->xt->assign("mastertable_block", true);
 		$backButtonHref = GetTableLink( $masterTableData['mShortTable'], $masterTableData["type"], "a=return" );
-		if ( $this->isBootstrap() ) {
-			$masterPage->xt->assign("backtomasterlink_attrs", "href=\"".$backButtonHref."\"");
-			$masterPage->xt->assign("backtomasterlink_caption", GetTableCaption( GoodFieldName($masterTableData['mDataSourceTable']) ));
-		}
-		else
-		{
-			$this->xt->assign("backtomasterlink_attrs", "href=\"".$backButtonHref."\"");
-			$this->xt->assign("backtomasterlink_caption", GetTableCaption( GoodFieldName($masterTableData['mDataSourceTable']) ));
-		}
+
+		$masterPage->xt->assign("backtomasterlink_attrs", "href=\"".$backButtonHref."\"");
+		$masterPage->xt->assign("backtomasterlink_caption", GetTableCaption( GoodFieldName($masterTableData['mDataSourceTable']) ));
 
 		if( $this->pageType == PAGE_VIEW || $this->pageType == PAGE_ADD || $this->pageType == PAGE_EDIT )
 			$masterPage->hideItemType("back_master");
@@ -2639,38 +2625,7 @@ if (Security::showUserPic()) {
 		}
 		$this->xt->set_template($this->templatefile);
 	}
-	/**
-	 * Get menu nodes if use menu on page
-	 * @intellisense
-	 */
-	function &getMenuNodes($name = 'main')
-	{
-		if( !$this->menuNodes[$name] )
-		{
-			global $menuNodesObject;
-			$menuNodesObject  = &$this;
-			require_once(getabspath("include/menunodes_".$name.".php"));
 
-			if($name == 'main')
-			{
-				getMenuNodes_main($menuNodesObject);
-				return $this->menuNodes[$name];
-			}
-			if( Security::dynamicPermissions() && $name == 'adminarea')
-			{
-				getMenuNodes_adminarea($menuNodesObject);
-				return $this->menuNodes[$name];
-			}
-
-			if($name == 'secondary')
-			{
-				getMenuNodes_secondary($menuNodesObject);
-				return $this->menuNodes[$name];
-			}
-
-		}
-		return $this->menuNodes[$name];
-	}
 	/**
 	 * Check is use menu on page
 	 * @intellisense
@@ -2711,17 +2666,26 @@ if (Security::showUserPic()) {
 	 */
 	function getAllowedMenuItems( $menuName = "main" )
 	{
-		$menuNodes = $this->getMenuNodes( $menuName );
+		$menuObject = RunnerMenu::getMenuObject( "main" );
+		$menuNodes = $menuObject->collectNodes();
+		if( !$menuNodes ) {
+			return 0;
+		}
 
 		$allowedMenuItems = 0;
-		for($i = 0; $i < count($menuNodes); $i++)
-		{
-			if( $menuNodes[$i]["linkType"] == "Internal" )
+		foreach( $menuNodes as $mNode ) {
+			$linkType = $mNode->linkType;
+			$table = $mNode->table;
+			$pageType = $mNode->pageType;
+			$pageId = $mNode->pageId;
+			$type = $mNode->type;
+
+			if( $linkType == "Internal" )
 			{
-				if( menuLinkAvailable($menuNodes[$i]["table"], $menuNodes[$i]["pageType"], $menuNodes[$i]["pageId"]) )
+				if( menuLinkAvailable( $table, $pageType, $pageId ) )
 					$allowedMenuItems++;
 			}
-			elseif( $menuNodes[$i]["linkType"] != "None" || $menuNodes[$i]["type"] != "Group" )
+			elseif( $linkType != "None" || $type != "Group" )
 				$allowedMenuItems++;
 		}
 
@@ -2980,7 +2944,7 @@ if (Security::showUserPic()) {
 					}
 				}
 
-				if( $key == "DateEditType" && $this->isBootstrap() ) {
+				if( $key == "DateEditType" ) {
 					//	search panel control
 					if( $pageType == PAGE_SEARCH && ( $this->pageType == PAGE_LIST || $this->pageType == PAGE_CHART || $this->pageType == PAGE_REPORT) ||
 						$this->pageType == PAGE_SEARCH && $this->mode == SEARCH_LOAD_CONTROL )
@@ -3582,21 +3546,6 @@ if (Security::showUserPic()) {
 	}
 
 	/**
-	 * Fill tool tips for current table fields
-	 * @param $fName - filed name
-	 * @intellisense
-	 */
-	function fillFieldToolTips($fName)
-	{
-		// don't fill tooltips in Bootstrap layout
-		if( $this->isBootstrap() )
-			return;
-		$toolTipText = GetFieldToolTip( GoodFieldname($this->tName), GoodFieldname($fName) );
-		if( strlen($toolTipText) )
-			$this->controlsMap['toolTips'][$fName] = $toolTipText;
-	}
-
-	/**
 	 * Fill controls map
 	 * For add, edit, search pages - controls
 	 *
@@ -3690,58 +3639,35 @@ if (Security::showUserPic()) {
 	 * Fill timepicker settings for current field
 	 * @intellisense
 	 */
-	function fillTimePickSettings($field,  $value = "", $pSet = null, $pageType = "")
+	function fillTimePickSettings( $field,  $value = "", $pSet = null, $pageType = "", $settFieldName = "" )
 	{
-		if(is_null($pSet))
+		if( is_null($pSet) )
 			$pSet = $this->pSet;
-		if($pageType == "")
+		
+		if( $pageType == "" )
 			$pageType = $this->pageType;
 
-		$timeAttrs = $pSet->getFormatTimeAttrs($field);
-		if( !!$timeAttrs && $timeAttrs["useTimePicker"])
-		{
-			$convention = $timeAttrs["hours"];
-			$locAmPm = getLacaleAmPmForTimePicker($convention, true);
-			$tpVal = getValForTimePicker($pSet->getFieldType($field),$value,$locAmPm['locale']);
+		if( !strlen( $settFieldName ) )
+			$settFieldName = $field;
 
-			$range = array();
-			if($convention==24)
-			{
-				for($h = 0;$h < $convention;$h ++)
-					$range[]= $h;
-			}
-			else
-			{
-				for($h = 1;$h <= $convention;$h ++)
-					$range[] = $h;
-			}
-
-			$minutes = array();
-			for($m = 0; $m < 60; $m += $timeAttrs["minutes"])
-				$minutes[] = $m;
-
+		$timeAttrs = $pSet->getFormatTimeAttrs( $field );
+		if( !!$timeAttrs && $timeAttrs["useTimePicker"] ) {
 			//settings
-			$timePickSet = array('convention'=>$convention,
-								 'range'=>$range,
-								 'apm'=>array($locAmPm['am'],$locAmPm['pm']),
-								 'rangeMin'=>$minutes,
-								 'locale'=>$locAmPm['locale'],
-								 'showSec'=>$timeAttrs["showSeconds"],
-								 'minutes'=>$timeAttrs["minutes"]);
+			$timePickSet = array(
+				'convention'=> $timeAttrs["hours"],
+				'showSec'=> $timeAttrs["showSeconds"],
+				'minutes'=> $timeAttrs["minutes"]
+			);
 
-			if( $tpVal['dbtime'] )
-				$timePickSet['hover'] = array('0'=>$tpVal['dbtime'][3],'1'=>$tpVal['dbtime'][4],'2'=>$tpVal['dbtime'][5]);
-
-			if(!array_key_exists($field,$this->jsSettings['tableSettings'][$this->tName]['fieldSettings']))
-			{
-				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$field] = array();
-				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$field][$pageType] = array();
-				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$field][$pageType]['timePick'] = $timePickSet;
+			if( !array_key_exists($settFieldName, $this->jsSettings['tableSettings'][$this->tName]['fieldSettings']) ) {
+				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$settFieldName] = array();
+				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$settFieldName][$pageType] = array();
+				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$settFieldName][$pageType]['timePick'] = $timePickSet;
 			}
-			elseif(!array_key_exists("timePick",$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$field][$pageType]))
-				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$field][$pageType]['timePick'] = $timePickSet;
 
-			$this->fillControlsMap(array('controls'=>array('open'=>($tpVal['val'] ? true : false))),true,$field);
+			if( !array_key_exists("timePick", $this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$settFieldName][$pageType]) ) {
+				$this->jsSettings['tableSettings'][$this->tName]['fieldSettings'][$settFieldName][$pageType]['timePick'] = $timePickSet;
+			}
 		}
 	}
 
@@ -3760,7 +3686,7 @@ if (Security::showUserPic()) {
 			Runner.applyPagesData( ".my_json_encode( $pagesData )." );
 			</script>\r\n";
 
-		echo "<script language=\"JavaScript\" src=\"".GetRootPathForResources("include/runnerJS/RunnerAll.js?39558")."\"></script>\r\n";
+		echo "<script language=\"JavaScript\" src=\"".GetRootPathForResources("include/runnerJS/RunnerAll.js?41974")."\"></script>\r\n";
 		echo "<script>".$this->PrepareJS()."</script>";
 	}
 
@@ -3953,12 +3879,6 @@ if (Security::showUserPic()) {
 	 */
 	function addCommonJs()
 	{
-		if( $this->isBootstrap() )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css"); // css?
-			$this->AddCSSFile("include/bootstrap/css/jquery.mCustomScrollbar.css"); // css?
-		}
-
 		if ($this->pSet->isAddPageEvents() && $this->pageType != PAGE_LOGIN && $this->shortTableName != "")
 		{
 			$this->AddJSFile("include/runnerJS/events/pageevents_".$this->shortTableName.".js");
@@ -3972,6 +3892,8 @@ if (Security::showUserPic()) {
 			$this->AddJSFile("plugins/ckeditor/ckeditor.js");
 
 		$this->addControlsJSAndCSS();
+
+		$this->AddCSSFile("styles/bundle.css");
 	}
 
 	function addControlsJSAndCSS()
@@ -4952,10 +4874,10 @@ if (Security::showUserPic()) {
 		if( $this->pSetSearch->noRecordsOnFirstPage() && !$isSearchRun )
 			return "Nothing to see. Run some search.";
 
-		if( !$this->rowsFound && !$isSearchRun )
+		if( !$this->recordsOnPage && !$isSearchRun )
 			return "No data yet.";
 
-		if( $isSearchRun && !$this->rowsFound )
+		if( $isSearchRun && !$this->recordsOnPage )
 			return "No results found.";
 	}
 
@@ -4968,6 +4890,24 @@ if (Security::showUserPic()) {
 		$this->xt->assign("message_block",true);
 	}
 
+	protected function assignPagingVariables() {
+		if($this->pageSize && $this->pageSize!=-1)
+			$this->maxPages = ceil($this->numRowsFromSQL / $this->pageSize);
+		if( $this->numRowsFromSQL == 0 && $this->pSet->hideNumberOfRecords() ) {
+			$this->maxPages = $this->myPage;
+		}
+		if( $this->maxPages < 1 ) {
+			$this->maxPages = 1;
+		}
+		if($this->myPage > $this->maxPages && !$this->pSet->hideNumberOfRecords() )
+			$this->myPage = $this->maxPages;
+		if($this->myPage < 1)
+			$this->myPage = 1;
+		$this->recordsOnPage = $this->numRowsFromSQL -($this->myPage - 1) * $this->pageSize;
+		if($this->recordsOnPage > $this->pageSize && $this->pageSize!=-1)
+			$this->recordsOnPage = $this->pageSize;
+	}
+
 	/**
 	 * Calcs pagination info
 	 *
@@ -4975,40 +4915,17 @@ if (Security::showUserPic()) {
 	 */
 	function buildPagination()
 	{
-		$separator = "&nbsp;";
-		$advSeparator = "&nbsp;:&nbsp;";
-		if( $this->isBootstrap() )
-		{
-			$separator = "";
-			$advSeparator = "";
+		$this->assignPagingVariables();
+		if( !$this->recordsOnPage ) {
+			$this->hideItemType("details_found");
+			$this->hideItemType("details_found_unknown");
 		}
-
-		//	hide colunm headers if needed
-		if($this->pageSize && $this->pageSize!=-1)
-			$this->maxPages = ceil($this->numRowsFromSQL / $this->pageSize);
-		if($this->myPage > $this->maxPages)
-			$this->myPage = $this->maxPages;
-		if($this->myPage < 1)
-			$this->myPage = 1;
-		$this->recordsOnPage = $this->numRowsFromSQL -($this->myPage - 1) * $this->pageSize;
-		if($this->recordsOnPage > $this->pageSize && $this->pageSize!=-1)
-			$this->recordsOnPage = $this->pageSize;
-
-		if( $this->isPD() ) {
-			$this->colsOnPage = 1;
-		} else {
-			$this->colsOnPage = $this->recsPerRowList;
-			if($this->colsOnPage > $this->recordsOnPage && $this->listGridLayout != gltVERTICAL)
-				$this->colsOnPage = $this->recordsOnPage;
-			if($this->colsOnPage < 1)
-				$this->colsOnPage = 1;
-		}
-
-		//	 Pagination:
-		if((!$this->numRowsFromSQL) && ($this->deleteMessage == ''))
+		if( !$this->numRowsFromSQL )
 		{
 			$this->rowsFound = false;
-			$this->showNoRecordsMessage();
+			if( !$this->fieldFilterEnabled() ) {
+				$this->showNoRecordsMessage();
+			}
 
 			if($this->listAjax || $this->mode == LIST_LOOKUP)
 			{
@@ -5017,7 +4934,6 @@ if (Security::showUserPic()) {
 				if( $this->listAjax )
 					$this->xt->assign("pagination", "  ");
 			}
-			$this->hideItemType("details_found");
 			$this->hideItemType("page_size");
 		}
 		else
@@ -5050,53 +4966,17 @@ if (Security::showUserPic()) {
 
 			$this->prepareRecordsIndicator( $firstDisplayed, $lastDisplayed, $this->numRowsFromSQL );
 
+			$this->xt->assign("pagesize", $this->pageSize);
 			$this->xt->assign("page", $this->myPage);
 			$this->xt->assign("maxpages", $this->maxPages);
 
 			$this->xt->assign("pagination_block", false);
 
-			$limit=10;
-			if ($this->mobileTemplateMode())
-				$limit=5;
 			//	write pagination
-			if($this->maxPages > 1)
+			if($this->maxPages > 1 || $this->myPage > 1 && $this->pSet->hideNumberOfRecords() )
 			{
 				$this->xt->assign("pagination_block", true);
-				$pagination = '';
-				$counterstart = $this->myPage - ($limit-1);
-				if($this->myPage % $limit != 0)
-					$counterstart = $this->myPage -($this->myPage % $limit) + 1;
-				$counterend = $counterstart + $limit-1;
-				if($counterend > $this->maxPages)
-					$counterend = $this->maxPages;
-				if($counterstart != 1)
-				{
-					$pagination.= $this->getPaginationLink(1,"First") . $advSeparator;
-					$pagination.= $this->getPaginationLink($counterstart - 1,"Previous").$separator;
-				}
-				$pageLinks = "";
-
-				for($counter = $counterstart; $counter <= $counterend; $counter ++)
-				{
-					$pageLinks .= $separator . $this->getPaginationLink($counter,$counter, $counter == $this->myPage );
-				}
-
-				if( !$this->isBootstrap() )
-				{
-					$pageLinks = "[" . $pageLinks . $separator . "]";
-				}
-				$pagination .= $pageLinks;
-				if($counterend != $this->maxPages)
-				{
-					$pagination.= $separator . $this->getPaginationLink($counterend + 1,"Next") . $advSeparator;
-					$pagination.= $this->getPaginationLink($this->maxPages,"Last");
-				}
-				if( $this->isBootstrap() )
-					$pagination = '<nav class="text-center"><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
-				else
-					$pagination = "<div data-function=\"pagination" . $this->id . "\">" . $pagination . "</div>";
-				$this->xt->assign("pagination", $pagination);
-
+				$pagination = $this->buildPaginationControl( $this->myPage, $this->maxPages, 10 );
 				$this->xt->assign("pagination", $pagination);
 			}
 			else
@@ -5109,8 +4989,55 @@ if (Security::showUserPic()) {
 						$this->xt->assign("pagination", "  ");
 				}
 			}
+			if( $this->pSet->hideNumberOfRecords() ) {
+				if( $this->pageSize >=0 && $this->recordsOnPage >= $this->pageSize && $this->recordsOnPage ) {
+					$this->xt->assign( "next_records", true );
+					$this->xt->assign( "next_page", $this->myPage + 1 );
+					$this->xt->assign( "next_page_link", $this->getPaginationUrl( $this->myPage + 1 ) );
+				}
+				if( $this->pageSize >=0 && $this->recordsOnPage < $this->pageSize && $this->listAjax ) {
+					$this->xt->assign( "next_records", true );
+					$this->hideItem( "next_page" );
+				}
+				if( $this->myPage > 1 ) {
+					$this->xt->assign( "prev_records", true );
+					$this->xt->assign( "prev_page", $this->myPage - 1 );
+					$this->xt->assign( "prev_page_link", $this->getPaginationUrl( $this->myPage - 1 ) );
+				}
+			}
 		}
 	}
+
+	/**
+	 * @return String - HTML code of the control
+	 */
+	function buildPaginationControl( $currentPage, $maxPages, $limit ) {
+		$pagination = '';
+		$counterstart = $currentPage - ($limit-1);
+		if($currentPage % $limit != 0)
+			$counterstart = $currentPage -($currentPage % $limit) + 1;
+		$counterend = $counterstart + $limit-1;
+		if($counterend > $maxPages)
+			$counterend = $maxPages;
+		if($counterstart != 1)
+		{
+			$pagination.= $this->getPaginationLink(1,"First");
+			$pagination.= $this->getPaginationLink($counterstart - 1,"Previous");
+		}
+
+		$pageLinks = "";
+		for( $counter = $counterstart; $counter <= $counterend; $counter ++ ) {
+			$pageLinks .= $this->getPaginationLink($counter,$counter, $counter == $currentPage );
+		}
+
+		$pagination .= $pageLinks;
+		if( $counterend != $maxPages ) {
+			$pagination.= $this->getPaginationLink($counterend + 1,"Next");
+			$pagination.= $this->getPaginationLink($maxPages,"Last");
+		}
+
+		return '<nav class="text-center"><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
+}
 
 	function prepareRecordsIndicator($firstDisplayed, $lastDisplayed, $totalDisplayed)
 	{
@@ -5119,20 +5046,10 @@ if (Security::showUserPic()) {
 		}
 		$this->xt->assign("first_shown", $firstDisplayed );
 		$this->xt->assign("last_shown", $lastDisplayed );
+		
+		//	assigned elsewhere
+		//$this->xt->assign("records_found", $this->numRowsFromSQL);
 
-		//	old methods, obsolete
-		$this->xt->assign("firstrecord", $firstDisplayed );
-		$this->xt->assign("lastrecord", $lastDisplayed );
-
-		$first = '<span class="bs-number">'.$firstDisplayed.'</span>';
-		$last = '<span class="bs-number">'.$lastDisplayed.'</span>';
-		$total = '<span class="bs-number">'.$totalDisplayed.'</span>';
-
-		foreach ( $this->pSet->detailsFoundLabelsData() as $itemId => $mLString )
-		{
-			$template = str_replace( array( '%first%', '%last%', '%total%'), array( $first, $last, $total), GetMLString( $mLString ) );
-			$this->xt->assign( "details_found_label".$itemId, $template );
-		}
 	}
 
 	/**
@@ -5143,15 +5060,20 @@ if (Security::showUserPic()) {
 	 */
 	function getPaginationLink($pageNum, $linkText, $active = false)
 	{
-		if( $this->isBootstrap() )
-		{
-			$href = GetTableLink( GetTableURL( $this->tName ), $this->pageType)."?goto=".$pageNum . $this->getStateUrlParams();
-			return '<li ' . (isRTL() ? 'dir="RTL"' : "") . ' class="' . ( $active ? "active" : "" ) . '"><a href="'.$href.'" pageNum="'.$pageNum.'" >'.$linkText.'</a></li>';
-		}
+		$href = $this->getPaginationUrl( $pageNum );
+		return '<li ' . (isRTL() ? 'dir="RTL"' : "") . ' class="' . ( $active ? "active" : "" ) . '"><a href="'.$href.'" pageNum="'.$pageNum.'" >'.$linkText.'</a></li>';
 
-		if( $active )
-			return "<b>" . $pageNum . "</b>";
-		return '<a href="#" pageNum="' . $pageNum.'" class="pag_n" style="TEXT-DECORATION: none;">'.$linkText.'</a>';
+	}
+
+	function getPaginationUrl( $pageNum ) {
+		$params = array(
+			"goto=".$pageNum,
+			$this->getStateUrlParams()
+		);
+		if( $this->pageName != $this->pSet->getDefaultPage( $this->pageType ) ) {
+			$params[] = "page=".$this->pageName;
+		}
+		return GetTableLink( GetTableURL( $this->tName ), $this->pageType)."?". implode( $params );
 	}
 
 	/**
@@ -5321,7 +5243,7 @@ if (Security::showUserPic()) {
 	 * @param String keylink (optional)
 	 * @return String
 	 */
-	function getExportValue($field, &$data, $keylink = "", $html )
+	function getExportValue($field, &$data, $keylink = "", $html = false )
 	{
 		return $this->getViewControl($field)->getExportValue($data, $keylink, $html );
 	}
@@ -6067,19 +5989,10 @@ if (Security::showUserPic()) {
 		$layout =& $page_layouts[$this->shortTableName.'_'.$this->pageType];
 		$pageSkinStyle = $layout->style.' page-'.$layout->name;
 
-		//set bricks, which	must be shown on details preview page
-		if( $this->pageType == PAGE_CHART )
-			$bricksExcept = array('chart', 'message');
-		else
-			$bricksExcept = array('grid', 'pagination', 'message');
-
-		$bricksExcept[] = "bsgrid_tabs";
 
 		// if we use details inline. We don't need show the header/footer.
 		$this->xt->assign("header", false);
 		$this->xt->assign("footer", false);
-
-		$this->xt->hideAllBricksExcept($bricksExcept);
 
 		$this->xt->prepare_template($this->templatefile);
 		$contents = $this->renderPageBody();
@@ -6542,7 +6455,7 @@ if (Security::showUserPic()) {
 	 */
 	protected function setDetailChartOnEditView( $chartTName, $chartId, &$data )
 	{
-		if(	$this->pdfMode )
+		if(	$this->pdfMode || $this->pdfJsonMode() )
 			return;
 
 		include_once( getabspath('classes/chartpage.php') );
@@ -6869,7 +6782,10 @@ if (Security::showUserPic()) {
 	 */
 	public function getPageTitle($page, $table = "", $record = null, $settings = null, $html = true)
 	{
-		if ($this->isDashboardElement()  && $this->dashElementData["item"]["customLabel"] && $this->dashElementData["item"]["dashLabel"]) {
+		if( $this->isDashboardElement()
+			&& GoodFieldName( $this->dashElementData["item"]["table"] ) == $table
+			&& $this->dashElementData["item"]["customLabel"]
+			&& $this->dashElementData["item"]["dashLabel"] ) {
 			return GetMLString($this->dashElementData["item"]["dashLabel"]);
 		}
 		return $this->_getPageTitle($page, $table, $record, $settings, $html);
@@ -7078,8 +6994,6 @@ if (Security::showUserPic()) {
 
 			if($this->totalsFields[$i]['totalsType'] == 'COUNT')
 			{
-
-
 				if ( $this->totalsFields[$i]['viewFormat'] == FORMAT_CHECKBOX && ( is_null($curTotalFieldValue) || !$curTotalFieldValue ) )
 				{
 					continue;
@@ -7103,6 +7017,61 @@ if (Security::showUserPic()) {
 			}
 		}
 	}
+
+
+	protected function getTotalDataCommand() {
+		return $this->getSubsetDataCommand();
+	}
+
+	function buildTotals( &$totals ) {
+	}
+
+	public function getTotalsFromDB() {
+		if( !$this->totalsFields )
+			return array();
+
+		$dc = $this->getTotalDataCommand();
+
+		if( $this->pSet->getRecordsLimit() )
+			$dc->reccount = $this->pSet->getRecordsLimit();
+
+		$totalTypes = array('TOTAL' => 'sum', 'AVERAGE' => 'avg', 'COUNT' => 'count');
+
+		$dc->totals = array();
+		foreach( $this->totalsFields as $tf ) {
+			$dc->totals[] = array(
+				"total" => $totalTypes[ $tf["totalsType"] ],
+				"alias" => $tf["totalsType"]."_".$tf["fName"],
+				"field" => $tf["fName"],
+				"timeToSec" => $tf['viewFormat'] == "Time"
+			);
+		}
+
+		$totals = array();
+		$rs = $this->dataSource->getTotals( $dc );
+		if( $rs ) {
+			$data = $rs->fetchAssoc();
+			if( $data ) {
+				foreach( $this->totalsFields as $idx => $tf ) {
+					$totals[ $tf["fName"] ] = $data[ $tf["totalsType"]."_".$tf["fName"] ];
+				}
+			}
+		}
+
+		return $totals;
+	}
+
+	public function buildAllDataTotals() {
+		$dbTotals = $this->getTotalsFromDB();
+
+		foreach( $this->totalsFields as $idx => $tf ) {
+			$this->totalsFields[ $idx ]["numRows"] = 1;
+		}
+
+		$this->buildTotals( $dbTotals );
+	}
+
+
 	function deleteAvailable() {
 		return $this->pSet->hasDelete() && $this->permis[$this->tName]["delete"];
 	}
@@ -7263,121 +7232,46 @@ if (Security::showUserPic()) {
 	 */
 	public function getSearchObject()
 	{
-		return SearchClause::getSearchObject( $this->tName, $this->dashTName, $this->sessionPrefix,
+		$sessionPrefix = $this->sessionPrefix;
+		// page's sessionPrefix is ok, odd 'if'?
+		if( $this->dashTName && $this->pSet->getEntityType() != titDASHBOARD ) {
+			$sessionPrefix = $this->dashTName . "_" . $this->tName;
+		}
+		return SearchClause::getSearchObject( $this->tName, $this->dashTName, $sessionPrefix,
 			$this->cipherer, $this->searchSavingEnabled, $this->pSet, $this->getLayoutVersion() === PD_BS_LAYOUT );
 	}
 
-	public function displayMenu($menuName, $menuType)
-	{
+	protected function assignMenus() {
+		foreach( $this->pSet->getPageMenus() as $menu ) {
+			$menuId = $menu["id"];
+			if( $this->isAdminTable() ) {
+				$menuId = "adminarea";
+			}
+
+			$this->assignMenu( $menuId, $menu["horizontal"] );
+		}
+	}
+
+	protected function assignMenu( $menuName, $horizontal ) {
 		global $projectMenus;
-		if ( $this->isPD() && !in_array($menuName, $projectMenus) )
-		{
+		if ( !in_array($menuName, $projectMenus) ) {
 			$menuName = "main";
 		}
-
 		if( $this->isAdminTable() )
 			$menuName = "adminarea";
 
-		$xt = new Xtempl();
-		$xt->assign("menuName", $menuName);
-		$xt->assign("menustyle", $menuStyle ? "second" : "main" );
-
-		if( $menuType == "quickjump" )
-			$menuMode = MENU_QUICKJUMP;
-		else if( $menuType == "horizontal" )
-			$menuMode = MENU_HORIZONTAL;
-		else
-			$menuMode = MENU_VERTICAL;
-
-		/* ??? */
-		if( !$this->isAdminTable() )
-		{
-			if( $menuMode != MENU_QUICKJUMP )
-			{
-				if( ProjectSettings::isMenuTreelike( $menuName ) )
-				{
-
-					if( MENU_VERTICAL == $menuMode )
-						$xt->assign("treeLikeTypeMenu",true);
-					else
-						$xt->assign("simpleTypeMenu",true);
-				}
-				else
-				{
-						$xt->assign("simpleTypeMenu",true);
-				}
-			}
-			if($this->pageType == PAGE_MENU && Security::isAdmin() )
-				$xt->assign("adminarea_link",true);
-		}
-		else
-		{
-			//Admin Area menu items
-			$xt->assign("adminAreaTypeMenu",true);
-		}
-
-		$menuRoot = $this->getMenuRoot( $menuName, $menuMode );
+		$menuObject = RunnerMenu::getMenuObject( $menuName );
+		$menuRoot = $menuObject->getRoot();
 
 		MenuItem::setMenuSession();
 
-		// call xtempl assign, set session params
-		$menuRoot->assignMenuAttrsToTempl($xt);
-		$menuRoot->setCurrMenuElem($xt);
+		$activeItem = $menuObject->findActiveItem( $_SESSION['menuItemId'], $this->tName, $this->getPageType() );
+		$activeId = $activeItem ? $activeItem->id : null;
+		$menuData = $menuRoot->getMenuXtData( $activeId, $horizontal ? MENU_HORIZONTAL : MENU_VERTICAL );
+		$this->xt->assign( "menuitems_".$menuName, array( "data" => array( 0 => &$menuData ) ) );
 
-		$xt->assign("mainmenu_block",true);
-
-		$mainmenu = array();
-		if(isEnableSection508())
-			$mainmenu["begin"]="<a name=\"skipmenu\"></a>";
-		$mainmenu["end"] = '';
-
-		$countLinks = 0;
-		$countGroups = 0;
-		$showMenuCollapseExpandAll = false;
-		foreach($menuRoot->children as $ind=>$val)
-		{
-			if($val->showAsLink)
-				$countLinks++;
-			if ($val->showAsGroup)
-			{
-				if (count($val->children))
-					$showMenuCollapseExpandAll = true;
-				$countGroups++;
-			}
-		}
-		$xt->assign("menu_collapse_expand_all", $showMenuCollapseExpandAll);
-		$xt->assignbyref("mainmenu_block",$mainmenu);
-
-		$menufile = "bs".$menuName;
-
-		if( MENU_HORIZONTAL == $menuMode )
-			$menufile .= "_"."mainmenu_horiz.htm";
-		else
-		{
-			//	vertical menu
-			$menufile .= "_"."mainmenu_vert.htm";
-				/*
-				if( ProjectSettings::isMenuTreelike( $menuName ) )
-					$menufile .= "_"."mainmenu_tree.htm";
-				else
-					$menufile .= "_"."mainmenu_horiz.htm";
-				*/
-		}
-
-		$xt->load_template( $menufile );
-
-		if( $peers )
-		{
-			$menuContent = array();
-			foreach( $peers as $p )
-			{
-				$menuContent[] = $xt->fetch_loaded("item".$p->id."_menulink");
-			}
-			$xt->assign("active_submenu", implode( "",  $menuContent ));
-		}
-
-		$xt->display_loaded();
 	}
+
 
 	/**
 	 * @param String mTName
@@ -7495,7 +7389,9 @@ if (Security::showUserPic()) {
 
 			$items[] = $itemData;
 
-			$currentMenuItem = $menuRoot->getItemByTypeAndTable( $mTName, $masterTableData["type"] );
+			$menuObject = RunnerMenu::getMenuObject( "main" );
+			if( $menuObject )
+				$currentMenuItem = $menuObject->findActiveItem( null, $mTName, $masterTableData["type"] );
 
 			$tName = $mTName;
 			$pType = $masterTableData["type"];
@@ -7545,8 +7441,6 @@ if (Security::showUserPic()) {
 		}
 
 		$menuId = $this->getBreadcrumbMenuId();
-		if( !$this->isBootstrap() )
-			return;
 
 		if( $this->isPD() && !$this->pSet->hasBreadcrumb() ) {
 			return;
@@ -7555,9 +7449,13 @@ if (Security::showUserPic()) {
 		//$detailItem = isset( $_SESSION[ $this->sessionPrefix."_mastertable" ] ); //  #14869
 		$detailItem = strlen( $this->masterTable ) > 0;
 
-		$menuRoot = $this->getMenuRoot( $menuId, MENU_HORIZONTAL );
+		$menuObject = RunnerMenu::getMenuObject( $menuId );
+		$menuRoot = $menuObject->getRoot();
 		MenuItem::setMenuSession();
-		$currentMenuItem = $menuRoot->getCurrentItem( $_SESSION["menuItemId"] );
+		if( !$menuObject ) {
+			return;
+		}
+		$currentMenuItem = $menuObject->findActiveItem( $_SESSION["menuItemId"], $this->tName, $this->getPageType() );
 		if( !$currentMenuItem && !$detailItem )
 			return;
 
@@ -7608,7 +7506,7 @@ if (Security::showUserPic()) {
 			if( $itemData["isMenuItem"] )
 			{
 				$item = $itemData["menuItem"];
-				$attrs = $item->getMenuItemAttributes();
+				$attrs = $item->getMenuItemAttributes( MENU_HORIZONTAL );
 				$href = $attrs["href"];
 			}
 			else
@@ -7664,16 +7562,16 @@ if (Security::showUserPic()) {
 
 					$attrs = array();
 
-					if( !$p->isShowAsLink() && $p->isShowAsGroup() )
+					if( !$p->showAsLink() && $p->showAsGroup() )
 					{
 						//	show link to the first child if group
 						$childWithLink = $p->getFirstChildWithLink();
 						if( $childWithLink )
-							$attrs = $childWithLink->getMenuItemAttributes();
+							$attrs = $childWithLink->getMenuItemAttributes( MENU_HORIZONTAL );
 					}
-					else if( $p->isShowAsLink() )
+					else if( $p->showAsLink() )
 					{
-						$attrs = $p->getMenuItemAttributes();
+						$attrs = $p->getMenuItemAttributes( MENU_HORIZONTAL );
 					}
 
 					if( count( $attrs ) )
@@ -7697,70 +7595,12 @@ if (Security::showUserPic()) {
 	/**
 	 *
 	 */
-	protected function prepareActiveMenuBranch( $menuRoot, $xt )
-	{
-		//	display only current element peers and their children
-		$parentItem = $menuRoot;
-		$currentMenuItem = $menuRoot->getCurrentItem( $_SESSION["menuItemId"] );
-		if( $currentMenuItem )
-		{
-			$parentItem = $currentMenuItem->parentItem;
+	public function fillControlFlags( $field, $required = false ) {
+		$this->xt->assign( GoodFieldName( $field  ) . "_label", true );
+
+		if( $this->pSet->isRequired( $field ) || $required ) {
+			$this->xt->assign( "required_attr_".GoodFieldName( $field  ), 'data-required="true"' );
 		}
-
-		$peers = array();
-		$parentItem->getItemDescendants( $peers, 1 );
-
-		$peerIds = array();
-		foreach( $peers as $p )
-			$peerIds[ $p->id ] = true;
-
-		$menuRoot->assignMenuAttrsToTempl( $xt, $peerIds );
-		if( $peers && $parentItem->id != $menuRoot->id )
-		{
-			//	return only 1st level siblings
-			$peers = array();
-			$parentItem->getItemDescendants( $peers, 0 );
-			return $peers;
-		}
-		else
-			return array();
-	}
-
-	/*
-	 *	Creates  MenuItem object tree and returns the root node
-	 * @param string $menuId
-	 * @param string $menuMode - either MENU_HORIZONTAL or MENU_VERTICAL
-	 */
-	public function getMenuRoot( $menuId, $menuMode )
-	{
-		if( !isset( $this->menuRoots[ $menuMode . '-' . $menuId ] ) )
-		{
-			$menuNodes = $this->getMenuNodes($menuId);
-
-			// need to predefine vars
-			$nullParent = NULL;
-			$rootInfoArr = array("id"=>0, "href"=>"");
-
-			/* $menuNodesIndex must be set to 0 for to operate properly */
-			global $menuNodesIndex;
-			$menuNodesIndex=0;
-
-			$menuMap = array();
-			$this->menuRoots[ $menuMode . '-' . $menuId ] = new MenuItem($rootInfoArr, $menuNodes, $nullParent, $menuMap, $this, $menuId, $menuMode );
-
-		}
-		return $this->menuRoots[ $menuMode . '-' . $menuId ];
-	}
-
-	/**
-	 *
-	 */
-	public function fillControlFlags( $field, $required = false )
-	{
-		if( $this->isBootstrap() && ( $required || $this->pSet->isRequired( $field ) ) )
-			$this->xt->assign( GoodFieldName( $field  ) . "_label", array( "end" => '&nbsp;<span class="icon-required"></span>' ) );
-		else
-			$this->xt->assign( GoodFieldName( $field  ) . "_label", true );
 	}
 
 	/**
@@ -8091,13 +7931,9 @@ if (Security::showUserPic()) {
 	}
 
 	function hideElement( $name ) {
-		if( $this->isPD()) {
-			$itemTypes = $this->element2Item( $name  );
-			foreach( $itemTypes as $it ) {
-				$this->hideItemType( $it );
-			}
-		} else {
-			$this->xt->displayBrickHidden( $this->element2Brick( $name ) );
+		$itemTypes = $this->element2Item( $name  );
+		foreach( $itemTypes as $it ) {
+			$this->hideItemType( $it );
 		}
 	}
 
@@ -8303,9 +8139,10 @@ if (Security::showUserPic()) {
 		$map = $this->dependsOnDashMap()
 			? $this->getMapCondition()
 			: null;
+		$fieldFilter = $this->getFieldFilterCondition();
 
 
-		return DataCondition::_And( array( $security, $master, $filter, $search, $tab, $map ) );
+		return DataCondition::_And( array( $security, $master, $filter, $search, $tab, $map, $fieldFilter ) );
 	}
 
 	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
@@ -8791,6 +8628,331 @@ if (Security::showUserPic()) {
 		return true;
 	}
 
+	protected function getFieldFilterFields() {
+		if ( $this->pageType == PAGE_PRINT || $this->pageType == PAGE_EXPORT ) {
+			$settings = $this->getFieldFilterSettings();
+			return array_keys( $settings );
+		}
+		return $this->pSet->getFieldFilterFields();
+	}
+
+	/**
+	 * @return array array( $fieldName? -> values[] )
+	 */
+	protected function getFieldFilterSettings() {
+		$settings = $_SESSION[ $this->sessionPrefix . "_fieldFilter" ];
+		return $settings ? $settings : array();
+	}
+
+	/**
+	 * @param array $settings ~ array( $fieldName -> values[] )
+	 */
+	protected function setFieldFilterSettings( $settings ) {
+		$_SESSION[ $this->sessionPrefix . "_fieldFilter" ] = $settings;
+	}
+
+	/**
+	 * Get FieldFilter settings for field
+	 * @return array array( $fieldName => array( "initialized" => bool, "values" => array ) )
+	 */
+	protected function getFieldFilterFieldSettings( $fieldName ) {
+		$settings = $this->getFieldFilterSettings();
+		$fieldSettings = $settings[ $fieldName ];
+
+		if( !$fieldSettings ) {
+			return array(
+				"values" => array(),
+				"initialized" => false,
+			);
+		}
+
+		return $settings[ $fieldName ];
+	}
+
+	/**
+	 * FieldFilter DISTINCT values of field
+	 */
+	protected function getFieldFilterDistinctValues( $fieldName ) {
+		global $fieldFilterMaxValuesCount,
+			$fieldFilterDefaultValue;
+
+		// dont' apply current field's fieldFilter
+		$fieldFilterSettings = $this->getFieldFilterSettings();
+		$newSettings = $fieldFilterSettings;
+		unset( $newSettings[ $fieldName ] );
+		$this->setFieldFilterSettings( $newSettings );
+
+		$dc = $this->getSubsetDataCommand();
+		// do not apply pagination
+		$dc->startRecord = 0;
+		$dc->reccount = -1;
+
+		$this->setFieldFilterSettings( $fieldFilterSettings );
+
+		$dc->totals[] = array(
+			"field" => $fieldName,
+			"total" => "distinct",
+			// merge empty string && null to null
+			"caseStatement" => DataCondition::CaseFieldOrNull(
+				DataCondition::_Not( DataCondition::FieldIs( $fieldName, dsopEMPTY, '' ) ),
+				$fieldName
+			),
+			// IMPORTANT! alias, caseStatement leads to nameless column in select statement
+			"alias" => "fieldfilter_" . $fieldName
+		);
+		$dc->reccount = $fieldFilterMaxValuesCount;
+
+		$dataSource = $this->getDataSource();
+		$result = $dataSource->getTotals( $dc );
+
+		$fieldValues = array();
+		while( $data = $result->fetchAssoc() ) {
+			$value = $data[ "fieldfilter_" . $fieldName ];
+			$fieldValues[] = $value;
+		}
+
+		if( $this->fieldFilterSortMethod( $fieldName ) == 0 ) {
+			sort( $fieldValues, SORT_REGULAR );
+		}
+
+
+		return $fieldValues;
+	}
+
+	/*
+		Returns result as:
+		[
+				{
+			  		value: <field value>,
+			  		display: <formatted field value, с учетом viewAs>,
+			  		search: [массив строк],
+			  		selected: boolean - если в поле есть фильтр, и это значение выбрано, то true
+				}
+		] for each field DISTINCT value
+	*/
+	protected function getFieldFilterState( $fieldName ) {
+		$distinctValues = $this->getFieldFilterDistinctValues( $fieldName );
+		$filterSettings = $this->getFieldFilterFieldSettings( $fieldName );
+		$filterValues = $filterSettings[ "values" ];
+		$filterInitialized = $filterSettings[ "initialized" ];
+
+		// "set" of values (array where keys are FieldFilter values)
+		// if filter not defined, all values allowed
+		$filterValuesSet = array();
+		$allowedValues = $filterInitialized ? $filterValues : $distinctValues;
+		foreach( $allowedValues as $value ) {
+			$filterValuesSet[ $value ] = true;
+		}
+
+		$stateEntries = array();
+		foreach( $distinctValues as $rawValue ) {
+			$stateEntries[] = $this->getFieldFilterStateEntry( $fieldName, $rawValue, $filterValuesSet );
+		}
+
+		if( $this->fieldFilterSortMethod( $fieldName ) == 1 ) {
+			usort( $stateEntries, array( $this, "fieldFilterSort") );
+		}
+		return $stateEntries;
+	}
+
+	function fieldFilterSort( $e1, $e2 ) {
+		if( $e1["display"] == $e2["display"] ) {
+			return 0;
+		}
+		return $e1["display"] > $e2["display"]
+			? 1
+			: -1;
+	}
+
+
+	/**
+	 * Depending on the field type or View as type either the raw values need to be sorted, or the formatted ones
+	 * @return  0 - sort raw values
+	 * 			1 - sort formatted values
+	 * Dates and numbers should be sorted as raw values
+	 * Lookup wizards should be sorted as formatted values
+	 * etc
+	 */
+
+	function fieldFilterSortMethod( $fieldName ) {
+		if( $this->pSet->lookupField( $fieldName ) ) {
+			return 1;
+		}
+		$viewFormat = $this->pSet->getViewFormat( $fieldName );
+		$type = $this->pSet->getFieldType( $fieldName );
+
+		if( IsNumberType( $type ) || IsTimeType( $type ) || IsDateFieldType( $type ) ) {
+			return 0;
+		}
+		return 1;
+	}
+
+	/**
+	 * @param string $fieldName field name
+	 * @param mixed $value raw value
+	 * @param array $selectedValuesSet KV array, where keys are selected FieldFilter values for specified field
+	 * @return array
+	 */
+	protected function getFieldFilterStateEntry( $fieldName, $value, $selectedValuesSet ) {
+		global $fieldFilterMaxDisplayValueLength,
+			$fieldFilterMaxSearchValueLength,
+			$fieldFilterDefaultValue,
+			$fieldFilterValueShrinkPostfix;
+
+		$returnValue = (string)$value !== "" ? $value : $fieldFilterDefaultValue;
+		$data = array( $fieldName => $returnValue );
+
+		$displayValue = (string)$this->getTextValue( $fieldName, $data );
+		$displayValue = $displayValue !== "" ? $displayValue : "(" . "Empty" . ")";
+
+		$returnDisplayValue = runner_strlen( $displayValue ) > $fieldFilterMaxDisplayValueLength
+			? runner_substr( $displayValue, 0, $fieldFilterMaxDisplayValueLength ) . $fieldFilterValueShrinkPostfix
+			: $displayValue;
+
+		$searchValues = array( runner_substr( $displayValue, 0, $fieldFilterMaxSearchValueLength ) );
+
+		// if field ViewFormat is Currency -> add value formatted as Number(with local delimiter) to search values
+		$viewControl = $this->getViewControl( $fieldName );
+		if( $viewControl->viewFormat == FORMAT_CURRENCY || $viewControl->viewFormat == FORMAT_NUMBER ) {
+			$numberDisplayValue = formatNumberForEdit( $returnValue );
+			$searchValues[] = runner_substr( $numberDisplayValue, 0, $fieldFilterMaxSearchValueLength ) ;
+		}
+
+		return array(
+			"value" => $returnValue,
+			"display" => $returnDisplayValue,
+			"search" => $returnValue ? $searchValues : array( (string)$returnValue ),
+			"selected" => isset( $selectedValuesSet[ $returnValue ] )
+		);
+	}
+
+	protected function getFieldFilterCondition() {
+		$pageFields = $this->getPageFields();
+		$fieldFilterFields = $this->getFieldFilterFields();
+		$filterFields = array_intersect( $pageFields, $fieldFilterFields );
+
+		$fieldsConditions = array();
+		foreach( $filterFields as $fieldName ) {
+			$filterSettings = $this->getFieldFilterFieldSettings( $fieldName );
+			$filterValues = $filterSettings[ "values" ];
+			$filterInitialized = $filterSettings[ "initialized" ];
+
+			// do not apply any condition if FieldFilter not initialized
+			if( !$filterInitialized ) {
+				continue;
+			}
+
+			// select empty row set
+			if( count( $filterValues ) == 0 ) {
+				$fieldsConditions[] = DataCondition::_False();
+				continue;
+			}
+
+			// TODO: Possible where clause -> WHERE (case when $fieldName IS NULL then "" else $fieldName end) IN (...values, "")
+			$valuesConditions = array();
+			foreach( $filterValues as $value ) {
+				if( $value === "" ) {
+					$valuesConditions[] = DataCondition::FieldIs( $fieldName, dsopEMPTY, "" );
+				}
+
+				$valuesConditions[] = DataCondition::FieldEquals( $fieldName, $value );
+			}
+
+			$fieldsConditions[] = DataCondition::_Or( $valuesConditions );
+		}
+
+		return DataCondition::_And( $fieldsConditions );
+	}
+
+	/**
+	 * Returns bool flag, pointing if processing routine finished:
+	 * 	true => Response sent, Stop further processing
+	 * 	false => No response, Continue processing if required
+	 * @return Boolean
+	 */
+	public function processFieldFilter() {
+
+		if( postvalue("fieldFilter") ) {
+			$fieldFilterParams = my_json_decode( postvalue("fieldFilter") );
+			$fieldName = $fieldFilterParams["field"];
+			$fieldFilterFields = $this->getFieldFilterFields();
+
+			if( $fieldFilterParams["clearFieldFilterValues"] ) {
+				$this->updateFieldFilterSettings( array() );
+				return false;
+			}
+
+			if( !in_array( $fieldName, $fieldFilterFields ) ) {
+				echo "Filter is not enabled for " . $fieldName . " field";
+				return true;
+			}
+
+			if( $fieldFilterParams["filterValues"] ) {
+				$response = array( "values" => $this->getFieldFilterState( $fieldName ) );
+				echo printJSON( $response );
+				return true;
+			}
+
+			if( $fieldFilterParams["clearFilter"] ) {
+				$this->updateFieldFilterFieldSettings( $fieldName, array() ) ;
+				return false;
+			}
+
+			if( $fieldFilterParams["updateFieldFilterValues"] ) {
+				$values = my_json_decode( $fieldFilterParams["values"] );
+				$addToExisting = my_json_decode( $fieldFilterParams["addToExisting"] );
+
+				$newValues = array();
+				if( $addToExisting ) {
+					$fieldSettings = $this->getFieldFilterFieldSettings( $fieldName );
+					$filterValues = $fieldSettings[ "values" ];
+					$newValues = array_unique( array_merge( $filterValues, $values ) );
+				} else {
+					$newValues = $values;
+				}
+
+				$newSettings = array(
+					"values" => $newValues,
+					"initialized" => true
+				);
+
+				$this->updateFieldFilterFieldSettings( $fieldName, $newSettings );
+				return false;
+			}
+
+			echo "Unrecognized FieldFilter request";
+			return true;
+		}
+
+		return false;
+	}
+
+	// records are filtered by FieldFilter feature
+	protected function fieldFilterEnabled() {
+		return false;
+	}
+
+	/**
+	 * Update FieldFilter settings for field, Reset Page
+	 */
+	protected function updateFieldFilterFieldSettings( $fieldName, $values ) {
+		$settings = $this->getFieldFilterSettings();
+		$settings[ $fieldName ] = $values;
+		$this->updateFieldFilterSettings( $settings );
+	}
+
+	/**
+	 * Update FieldFilter settings, Reset Page
+	 * 
+	 * @param array $settings ~ array( $fieldName -> values[] )
+	 */
+	protected function updateFieldFilterSettings( $settings ) {
+		$this->setFieldFilterSettings( $settings );
+
+		// Reset page
+		$_SESSION[ $this->sessionPrefix."_pagenumber" ] = 1;
+		$this->myPage = 1;
+	}
 }
 
 

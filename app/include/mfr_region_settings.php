@@ -254,6 +254,7 @@ $tdatamfr_region[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region";
 
@@ -417,6 +418,7 @@ $tdatamfr_region[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "lat";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "lat";
 
@@ -555,6 +557,7 @@ $tdatamfr_region[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "lng";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "lng";
 
@@ -693,6 +696,7 @@ $tdatamfr_region[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "count";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"count\"";
 

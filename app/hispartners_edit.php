@@ -73,6 +73,7 @@ if( $pageMode == EDIT_DASHBOARD )
 {
 	$params["dashElementName"] = postvalue("dashelement");
 	$params["dashTName"] = postvalue("table");
+	$params["dashPage"] = postvalue("dashPage");
 	
 	if(	postvalue("mapRefresh") )
 	{
@@ -85,10 +86,12 @@ if(( $pageMode == EDIT_POPUP || $pageMode == EDIT_INLINE ) && postvalue("dashTNa
 {
 	$params["dashTName"] = postvalue("dashTName");
 	$params["dashElementName"] = postvalue("dashelement");
+	$params["dashPage"] = postvalue("dashPage");
 }
 
 $params["forSpreadsheetGrid"] = postvalue("spreadsheetGrid");
 $params["hostPageName"] = postvalue("hostPageName");
+$params["listPage"] = postvalue("listPage");
 
 $pageObject = EditPage::EditPageFactory($params);
 

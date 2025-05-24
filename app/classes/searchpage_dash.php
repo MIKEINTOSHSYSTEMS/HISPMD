@@ -44,8 +44,6 @@ class SearchPageDash extends SearchPage
 			if( $lookupTable )
 				$this->settingsMap["globalSettings"]['shortTNames'][ $lookupTable ] = GetTableURL( $lookupTable );
 	
-			$this->fillFieldToolTips( $f );	
-	
 			$srchFields = $this->searchClauseObj->getSearchCtrlParams( $f );
 			$firstFieldParams = array();
 			if (count($srchFields))
@@ -212,7 +210,7 @@ class SearchPageDash extends SearchPage
 				$this->jsSettings['global']['shortTNames'][ $lookupTableName ] = GetTableURL($lookupTableName);
 				
 			if( $pSet->getEditFormat($tableFieldName) == 'Time' )
-				$this->fillTimePickSettings($tableFieldName, "", $pSet, $pageType);
+				$this->fillTimePickSettings( $tableFieldName, "", $pSet, $pageType, $fieldName );
 		}
 	}
 }

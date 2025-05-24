@@ -87,7 +87,9 @@
 		
 		
 		
+		
 
+		
 		
 		
 		
@@ -199,9 +201,10 @@ GetTableLink( "moh_indicator_data", "view", "editid1=".$keys["data_id"]));
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function AfterAdd
 
+		
 		
 		
 		
@@ -283,9 +286,10 @@ GetTableLink( "moh_indicator_data", "view", "editid1=".$keys["data_id"]));
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-;
+;		
 } // function AfterEdit
 
+		
 		
 		
 		

@@ -252,6 +252,9 @@ $tstrOrderBy = "";
 $tdataindicators_dashboard[".strOrderBy"] = $tstrOrderBy;
 
 $tdataindicators_dashboard[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdataindicators_dashboard[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdataindicators_dashboard[".sqlHead"] = "";
@@ -318,6 +321,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Indicator Group";
 
+	
 	
 		$fdata["FullName"] = "Indicator Group";
 
@@ -482,6 +486,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Indicator Name";
 
+	
 	
 		$fdata["FullName"] = "Indicator Name";
 
@@ -650,6 +655,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Facility Type";
 
 	
+	
 		$fdata["FullName"] = "Facility Type";
 
 	
@@ -784,6 +790,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Data Source";
 
+	
 	
 		$fdata["FullName"] = "Data Source";
 
@@ -950,6 +957,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Assessment";
 
 	
+	
 		$fdata["FullName"] = "Assessment";
 
 	
@@ -1111,6 +1119,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Administration Unit";
 
 	
+	
 		$fdata["FullName"] = "Administration Unit";
 
 	
@@ -1271,6 +1280,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Year";
 
+	
 	
 		$fdata["FullName"] = "Year";
 
@@ -1436,6 +1446,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Scope";
 
 	
+	
 		$fdata["FullName"] = "Scope";
 
 	
@@ -1596,6 +1607,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Region";
 
+	
 	
 		$fdata["FullName"] = "Region";
 
@@ -1758,6 +1770,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Gender/Sex";
 
 	
+	
 		$fdata["FullName"] = "Gender/Sex";
 
 	
@@ -1892,6 +1905,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Value";
 
+	
 	
 		$fdata["FullName"] = "Value";
 
@@ -2032,6 +2046,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Data Representation";
 
 	
+	
 		$fdata["FullName"] = "Data Representation";
 
 	
@@ -2166,6 +2181,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Period ID";
 
+	
 	
 		$fdata["FullName"] = "Period ID";
 
@@ -2330,6 +2346,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Quarter ID";
 
 	
+	
 		$fdata["FullName"] = "Quarter ID";
 
 	
@@ -2492,6 +2509,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Month ID";
 
+	
 	
 		$fdata["FullName"] = "Month ID";
 
@@ -2656,6 +2674,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Period";
 
 	
+	
 		$fdata["FullName"] = "Period";
 
 	
@@ -2819,6 +2838,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Target Value";
 
 	
+	
 		$fdata["FullName"] = "Target Value";
 
 	
@@ -2953,6 +2973,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Target Year";
 
+	
 	
 		$fdata["FullName"] = "Target Year";
 
@@ -3089,6 +3110,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 		$fdata["strField"] = "Baseline Value";
 
 	
+	
 		$fdata["FullName"] = "Baseline Value";
 
 	
@@ -3223,6 +3245,7 @@ $tdataindicators_dashboard[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Baseline Year";
 
+	
 	
 		$fdata["FullName"] = "Baseline Year";
 

@@ -256,6 +256,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "UserName";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"UserName\"";
 
@@ -393,6 +394,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "GroupID";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"GroupID\"";
 
@@ -533,6 +535,7 @@ $tdataadmin_members[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Provider";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Provider\"";
 

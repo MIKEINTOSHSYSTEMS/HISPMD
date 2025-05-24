@@ -60,6 +60,7 @@ class MSSQLSrvConnection extends Connection
 		$connectionInfo = array("Database" => $this->dbname, "PWD" => $this->pwd, "UID" => $this->user);
 		if( $this->options == "SSPI" )
 			$connectionInfo = array("Database" => $this->dbname );
+		$connectionInfo["TrustServerCertificate"] = true;
 		$this->conn = sqlsrv_connect($this->host, $connectionInfo);
 
 		if( !$this->conn )

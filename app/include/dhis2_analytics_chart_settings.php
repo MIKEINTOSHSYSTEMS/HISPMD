@@ -200,6 +200,9 @@ $tstrOrderBy = "";
 $tdatadhis2_analytics_chart[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_analytics_chart[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_analytics_chart[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_analytics_chart[".sqlHead"] = "";
@@ -266,6 +269,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 
 		$fdata["strField"] = "rows/*/Data";
 
+	
 	
 		$fdata["FullName"] = "Data";
 
@@ -428,6 +432,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 		$fdata["strField"] = "rows/*/Organisation unit";
 
 	
+	
 		$fdata["FullName"] = "Organisation unit";
 
 	
@@ -589,6 +594,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 		$fdata["strField"] = "rows/*/Period";
 
 	
+	
 		$fdata["FullName"] = "Period";
 
 	
@@ -732,6 +738,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 
 		$fdata["strField"] = "dimensions/dx/*";
 
+	
 	
 		$fdata["FullName"] = "dx";
 
@@ -897,6 +904,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 		$fdata["strField"] = "dimensions/ou/*";
 
 	
+	
 		$fdata["FullName"] = "ou";
 
 	
@@ -1061,6 +1069,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 		$fdata["strField"] = "dimensions/pe/*";
 
 	
+	
 		$fdata["FullName"] = "pe";
 
 	
@@ -1197,6 +1206,7 @@ $tdatadhis2_analytics_chart[".hideMobileList"] = array();
 
 		$fdata["strField"] = "rows/*/Value";
 
+	
 	
 		$fdata["FullName"] = "Value";
 

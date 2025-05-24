@@ -251,6 +251,7 @@ $tdatamoh_indicator_groups[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_group_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_group_id";
 
@@ -391,6 +392,7 @@ $tdatamoh_indicator_groups[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_group_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_group_name";
 

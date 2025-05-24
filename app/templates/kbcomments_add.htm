@@ -131,15 +131,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_name}  r-vertical-field" 
-	data-signal-error-for="name{$id}" 
+	data-signal-error-for="name{$id}" {$required_attr_name}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="name" data-fieldname="name" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_name}">
 		{BEGIN name_label}{$label kbcomments name }{END name_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="name">
+	<div class="r-edit-tooltip" data-helpfor="name" {$tooltipAttr kbcomments name } >
 		<div class="text-muted" >
 		{$tooltip kbcomments name }		</div>
 	</div>
@@ -152,15 +153,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_email}  r-vertical-field" 
-	data-signal-error-for="email{$id}" 
+	data-signal-error-for="email{$id}" {$required_attr_email}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="email" data-fieldname="email" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_email}">
 		{BEGIN email_label}{$label kbcomments email }{END email_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$email_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="email">
+	<div class="r-edit-tooltip" data-helpfor="email" {$tooltipAttr kbcomments email } >
 		<div class="text-muted" >
 		{$tooltip kbcomments email }		</div>
 	</div>
@@ -173,15 +175,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_comment}  r-vertical-field" 
-	data-signal-error-for="comment{$id}" 
+	data-signal-error-for="comment{$id}" {$required_attr_comment}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="comment" data-fieldname="comment" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_comment}">
 		{BEGIN comment_label}{$label kbcomments comment }{END comment_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$comment_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="comment">
+	<div class="r-edit-tooltip" data-helpfor="comment" {$tooltipAttr kbcomments comment } >
 		<div class="text-muted" >
 		{$tooltip kbcomments comment }		</div>
 	</div>

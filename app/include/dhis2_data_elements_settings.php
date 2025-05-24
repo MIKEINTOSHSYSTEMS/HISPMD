@@ -184,6 +184,9 @@ $tstrOrderBy = "";
 $tdatadhis2_data_elements[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_data_elements[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_data_elements[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_data_elements[".sqlHead"] = "";
@@ -250,6 +253,7 @@ $tdatadhis2_data_elements[".hideMobileList"] = array();
 
 		$fdata["strField"] = "dataElements/*/dimensionItemType";
 
+	
 	
 		$fdata["FullName"] = "dimensionItemType";
 
@@ -386,6 +390,7 @@ $tdatadhis2_data_elements[".hideMobileList"] = array();
 		$fdata["strField"] = "dataElements/*/id";
 
 	
+	
 		$fdata["FullName"] = "id";
 
 	
@@ -520,6 +525,7 @@ $tdatadhis2_data_elements[".hideMobileList"] = array();
 
 		$fdata["strField"] = "dataElements/*/name";
 
+	
 	
 		$fdata["FullName"] = "name";
 

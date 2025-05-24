@@ -244,7 +244,7 @@ class ListPage extends RunnerPage
 		if($this->searchClauseObj) //for asp & .net
 			$this->jsSettings['tableSettings'][$this->tName]['simpleSearchActive'] = $this->searchClauseObj->simpleSearchActive;
 
-		if( $this->pSet->reorderRows() ) {
+		if( $this->pSet->reorderRows() && Security::userCan('E', $this->tName) ) {
 			$this->jsSettings['tableSettings'][ $this->tName ]['reorderRows'] = true;
 		}
 		$this->jsSettings['tableSettings'][ $this->tName ]['addToBottom'] = $this->pSet->inlineAddBottom();
@@ -266,20 +266,15 @@ class ListPage extends RunnerPage
 
 		// fill span val indicator for totals
 		$this->jsSettings['tableSettings'][$this->tName]['totalFields'] = array();
-		foreach ($this->totalsFields as $tField)
-		{
+		foreach( $this->totalsFields as $tField ) {
 			$totalFieldData = array('type'=> $tField['totalsType'], 'fName'=> $tField['fName'], 'format'=> $tField['viewFormat']);
-			if( FORMAT_NUMBER == $tField['viewFormat'] )
-				$totalFieldData["numberOfDigits"] = $this->pSet->isDecimalDigits( $tField['fName'] );
+			$totalFieldData['formatSettings'] = getFormatSettings( $tField['viewFormat'], $this->pSet, $tField['fName'] );
 
 			$this->jsSettings['tableSettings'][ $this->tName ]['totalFields'][] = $totalFieldData;
 
-			if ($tField['totalsType'] == 'COUNT')
-			{
+			if ( $tField['totalsType'] == 'COUNT' ) {
 				$this->outputFieldValue($tField['fName'], 1);
-			}
-			else
-			{
+			} else {
 				$this->outputFieldValue($tField['fName'], 2);
 			}
 		}
@@ -488,11 +483,6 @@ class ListPage extends RunnerPage
 		// add button events if exist
 		$this->addButtonHandlers();
 
-		if( $this->allDetailsTablesArr )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
 		
 		if( $this->spreadsheetGridApplicable() ) {
 			$this->editPage->addControlsJSAndCSS();
@@ -508,7 +498,7 @@ class ListPage extends RunnerPage
 		if( $this->isResizeColumns )
 			$this->prepareForResizeColumns();
 
-		if( $this->reorderFieldsFeatureEnabled() && $this->isBootstrap() )
+		if( $this->reorderFieldsFeatureEnabled() )
 		{
 			$this->AddJSFile( 'include/jquery.dragtable.js' );
 		}
@@ -524,17 +514,7 @@ class ListPage extends RunnerPage
 	 */
 	function prepareForResizeColumns()
 	{
-		if( $this->isBootstrap() )
-		{
-			$this->AddJSFile( 'include/colresizable.js' );
-			return;
-		}
-
-		if( $this->mode != LIST_AJAX )
-		{
-			if( $this->debugJSMode === true )
-				$this->AddJSFile("include/runnerJS/RunnerResizeGrid.js");
-		}
+		$this->AddJSFile( 'include/colresizable.js' );
 	}
 
 	/**
@@ -865,10 +845,6 @@ class ListPage extends RunnerPage
 		{
 			$this->xt->assign("add_link", true);
 			$add_attrs = 'id="addButton'.$this->id.'"';
-			if( !$this->isPD() )
-			{
-				$add_attrs .= ' href="'.GetTableLink($this->shortTableName, "add") . '"';
-			}
 
 			$this->xt->assign("addlink_attrs", $add_attrs);
 
@@ -919,18 +895,17 @@ class ListPage extends RunnerPage
 	 */
 	function addAssignForGrid()
 	{
-		if( !$this->rowsFound && $this->listAjax ) {
+		if( !$this->recordsOnPage && $this->listAjax ) {
 			$this->deleteSelectedLink();
-			$this->hideItem("delete");
+			$this->hideItemType("delete");
 		}
-		
 		
 		if( !$this->isDispGrid() )
 			return;
 
 		if($this->is508)
 		{
-			if( $this->isBootstrap() && $this->listGridLayout == gltVERTICAL )
+			if( $this->listGridLayout == gltVERTICAL )
 				$this->xt->assign_section("grid_header", "<div style=\"display:none\">Table data</div>", "");
 			else
 				$this->xt->assign_section("grid_header", "<caption style=\"display:none\">Table data</caption>", "");
@@ -946,46 +921,20 @@ class ListPage extends RunnerPage
 			$this->xt->assign(GoodFieldName($this->listFields[$i]['fName'])."_fieldfootercolumn", true);
 		}
 
-		$colsonpage = $this->recsPerRowList;
 
 		$record_header = array("data" => array());
 		$record_footer = array("data" => array());
-		if ($colsonpage > $this->recordsOnPage && $this->recordsOnPage && $this->listGridLayout != gltVERTICAL){
-			$colsonpage = $this->recordsOnPage;
-		}
-		if( $this->isPD() ) {
-			$colsonpage = 1;
-		}
 
-		for($i = 0; $i < $colsonpage; $i ++)
-		{
-			$rheader = array();
-			$rfooter = array();
-			if($i < $colsonpage - 1)
-			{
-				$rheader["endrecordheader_block"] = true;
-				$rfooter["endrecordfooter_block"] = true;
-			}
-			$record_header["data"][] = $rheader;
-			$record_footer["data"][] = $rfooter;
-		}
+		$rheader = array();
+		$rfooter = array();
+		$record_header["data"][] = $rheader;
+		$record_footer["data"][] = $rfooter;
+
 		$this->xt->assignbyref("record_header", $record_header);
 		$this->xt->assignbyref("record_footer", $record_footer);
 		$this->xt->assign("grid_header", true);
 		$this->xt->assign("grid_footer", true);
 
-		// hiding header, if no rows
-		if(!$this->numRowsFromSQL){
-			$this->xt->assign("gridHeader_class", " ".$this->makeClassName("hiddenelem"));
-			$this->xt->assign("gridFooter_class", "r-grid-footer ".$this->makeClassName("hiddenelem"));
-		}
-
-
-		// moved from search panel
-		$gridTableStyle = "";
-		$gridTableStyle = 'style="';
-		$gridTableStyle .= $this->recordsOnPage>0 ? '"' : 'width: 50%;"';
-		$this->xt->assign('gridTable_attrs', $gridTableStyle);
 
 		//checkbox column
 		$this->checkboxColumnAttrs();
@@ -1037,14 +986,8 @@ class ListPage extends RunnerPage
 
 	}
 
-	function createMapDiv(&$params)
-	{
-		if( $this->isPD() )
-			$div = '<div id="'.$params['mapId'].'" style="width: 100%; height: 100%"></div>';
-		else
-			$div = '<div id="'.$params['mapId'].'" style="width: '.$params['width'].'px; height: '.$params['height'].'px;"></div>';
-
-		echo $div;
+	function createMapDiv( &$params ) {
+		echo '<div id="'.$params['mapId'].'" style="width: 100%; height: 100%"></div>';
 	}
 	/**
 	 * Show import link
@@ -1153,12 +1096,8 @@ class ListPage extends RunnerPage
 		$this->xt->assign("updateselectedlink_attrs", $this->getUpdateSelectedAttrs() . $this->buttonShowHideStyle() );
 	}
 
-	protected function getUpdateSelectedAttrs()
-	{
-		if( $this->isPD() )
-			return " name=\"update_selected".$this->id."\" id=\"update_selected".$this->id."\"";
-		
-		return "href='".GetTableLink($this->shortTableName, "edit")."' name=\"update_selected".$this->id."\" id=\"update_selected".$this->id."\"";
+	protected function getUpdateSelectedAttrs() {
+		return " name=\"update_selected".$this->id."\" id=\"update_selected".$this->id."\"";
 	}
 
 	/**
@@ -1382,21 +1321,11 @@ class ListPage extends RunnerPage
 			if( $this->pSet->detailsShowCount( $dDataSourceTable ) )
 			{
 				$record[ $dShortTable."_childnumber_attr" ] = " id='cntDet_".$dShortTable."_'";
-				if( $this->getLayoutVersion() < PD_BS_LAYOUT )
-					$record[ $dShortTable."_link_attrs" ] = " href=\"#\" id=\"details_add".$this->id."_".$dShortTable."\" ";
 				$record[ $dShortTable."_childcount" ] = true;
 			}
 
-			if ( $this->getLayoutVersion() >= PD_BS_LAYOUT )
-			{
-				$indXTtag = $dShortTable."_link_attrs";
-				$indIdAttr = "details_add".$this->id."_".$dShortTable;
-			}
-			else
-			{
-				$indXTtag = $dShortTable."_dtablelink_attrs";
-				$indIdAttr = $dShortTable."_preview".$this->id;
-			}
+			$indXTtag = $dShortTable."_link_attrs";
+			$indIdAttr = "details_add".$this->id."_".$dShortTable;
 
 			$htmlAttributes = array();
 			$record[$indXTtag] = "";
@@ -1421,12 +1350,7 @@ class ListPage extends RunnerPage
 		$record["dtables_link_attrs"] = " href=\"#\" id=\"details_add".$this->id."\" ";
 
 		if( $hideDPLink )
-		{
-			if ( $this->getLayoutVersion() >= PD_BS_LAYOUT )
-				$record["dtables_link_attrs"] .= " data-hidden";
-			else
-				$record["dtables_link_attrs"] .= " class=\"".$this->makeClassName("hiddenelem")."\"";
-		}
+			$record["dtables_link_attrs"] .= " data-hidden";
 
 		$this->addSpansForGridCells('add', $record);
 
@@ -1443,29 +1367,13 @@ class ListPage extends RunnerPage
 
 		}
 
-		if($this->colsOnPage > 1)
-			$record["endrecord_block"]= true;
 		$record["grid_recordheader"]= true;
 		$record["grid_vrecord"]= true;
 		$row["grid_record"]= array("data" => array());
 		//set the $row["grid_record"] value
 		$this->setRowsGridRecord($row, $record);
 
-		for($i = 1; $i < $this->colsOnPage; $i ++)
-		{
-			$rec = array();
-			if($i < $this->colsOnPage - 1)
-				$rec["endrecord_block"]= true;
-			if($row["grid_record"]["data"])
-			{
-				$row["grid_record"]["data"][]= $rec;
-			}
-		}
 
-		$row["grid_rowspace"]= true;
-		$row["grid_recordspace"]= array("data" => array());
-		for($i = 0; $i < $this->colsOnPage * 2 - 1; $i ++)
-			$row["grid_recordspace"]["data"][]= true;
 		$rowInfoArr["data"][]= $row;
 
 	}
@@ -1556,13 +1464,25 @@ class ListPage extends RunnerPage
 		$currentPageSize = $this->pageSize;
 		if ( $this->pSet->getRecordsLimit() && $this->maxPages == $this->myPage )
 		{
-			$currentPageSize = $this->pSet->getRecordsLimit() - ( ($this->myPage-1) * $this->pageSize);
+			$currentPageSize = min( $this->pageSize, $this->pSet->getRecordsLimit() - ( ($this->myPage - 1) * $this->pageSize ) );
 		}
 
 		$_notEmptyFieldColumns = array();
+		
+		if( $this->calcAllDataTotals() ) {
+			$this->pageData["allDataTotals"] = true;
+		}
 
+		$pageName = "";
+		$defaultPages = $this->pSet->getDefaultPages();
+		if( $defaultPages ) {
+			$pageName = ( $defaultPages[ $this->pageType ] !== $this->pageName ) ? "&listPage=".$this->pageName : "";
+ 		}
+
+		$displayRecCount = 0;
 		while($data && ($this->recNo <= $currentPageSize || $currentPageSize == -1 ) )
 		{
+			++$displayRecCount;
 			$row = array();
 			RunnerContext::pushRecordContext( $data, $this );
 
@@ -1570,271 +1490,235 @@ class ListPage extends RunnerPage
 			$row["grid_record"]["data"]= array();
 			$this->rowId ++;
 
-			for($col = 1; $data && ($this->recNo <= $currentPageSize || $currentPageSize == -1) && $col <= $this->colsOnPage; $col ++)
-			{
-				$this->countTotals($totals, $data);
-				$record = array();
-				$this->genId();
+			if( !$this->calcAllDataTotals() )
+				$this->countTotals( $totals, $data );
+			
+			$record = array();
+			$this->genId();
 
-				$row["rowattrs"] = " id=\"gridRow".$this->recId."\"";
-				$record["recId"] = $this->recId;
-				$gridRowInd = count($this->controlsMap['gridRows']);
-				$this->controlsMap['gridRows'][$gridRowInd] = array();
-				$currentRow = &$this->controlsMap['gridRows'][$gridRowInd];
-				$currentRow['id'] = $this->recId;
-				$currentRow['rowInd'] = $gridRowInd;
-				//Add the connection with containing row. It's important for vertical layout's multiple records per row mode
-				$currentRow['contextRowId'] = $this->recId + $this->colsOnPage - $col;
-				$isEditable = Security::userCan('E', $this->tName, $data[$this->mainTableOwnerID] )
-					|| Security::userCan('D', $this->tName, $data[$this->mainTableOwnerID] );
+			$row["rowattrs"] = " id=\"gridRow".$this->recId."\"";
+			$record["recId"] = $this->recId;
+			$gridRowInd = count($this->controlsMap['gridRows']);
+			$this->controlsMap['gridRows'][$gridRowInd] = array();
+			$currentRow = &$this->controlsMap['gridRows'][$gridRowInd];
+			$currentRow['id'] = $this->recId;
+			$currentRow['rowInd'] = $gridRowInd;
+			
+			//Add the connection with containing row. It's important for vertical layout's multiple records per row mode
+			//	deprecated??
+			$currentRow['contextRowId'] = $this->recId;
+			
+			$isEditable = Security::userCan('E', $this->tName, $data[$this->mainTableOwnerID] )
+				|| Security::userCan('D', $this->tName, $data[$this->mainTableOwnerID] );
 
-				if($globalEvents->exists("IsRecordEditable", $this->tName)) {
-					$isEditable = $globalEvents->IsRecordEditable($data, $isEditable, $this->tName);
-				}
+			if($globalEvents->exists("IsRecordEditable", $this->tName)) {
+				$isEditable = $globalEvents->IsRecordEditable($data, $isEditable, $this->tName);
+			}
 
-				//	for compatibility only, use canEditRecord, canDeleteRecord instead
-				$currentRow['isEditOwnRow'] = $isEditable;
+			//	for compatibility only, use canEditRecord, canDeleteRecord instead
+			$currentRow['isEditOwnRow'] = $isEditable;
+			
+			$currentRow['canEditRecord'] = $isEditable;
+			$currentRow['canDeleteRecord'] = $isEditable;
+			if( $this->tName == ADMIN_USERS && Security::dynamicPermissions() ) {
 				
-				$currentRow['canEditRecord'] = $isEditable;
-				$currentRow['canDeleteRecord'] = $isEditable;
-				if( $this->tName == ADMIN_USERS && Security::dynamicPermissions() ) {
-					
-					if( Security::currentUserRecord( $data ) ) {
-						$currentRow['canDeleteRecord'] = false;
-					}
+				if( Security::currentUserRecord( $data ) ) {
+					$currentRow['canDeleteRecord'] = false;
 				}
-				$currentRow['gridLayout'] = $this->listGridLayout;
-				$currentRow['keyFields'] = array();
-				$currentRow['keys'] = array();
-				for($i = 0; $i < count($tKeys); $i ++) {
-					$currentRow['keyFields'][$i] = $tKeys[$i];
-					$currentRow['keys'][$i] = $data[$tKeys[$i]];
-				}
-				if( $this->pSet->reorderRows() ) {
-					$currentRow['order'] = $data[ $this->pSet->reorderRowsField() ];
-				}
-				$record["edit_link"] = $isEditable;
-				$record["inlineedit_link"] = $isEditable;
-				$record["view_link"] = $this->permis[$this->tName]['search'];
-				$record["copy_link"] = $this->permis[$this->tName]['add'];
-
-
-				//get record id for locking record
-				if($this->lockingObj)
-				{
-					if($this->mode == LIST_SIMPLE && !$this->lockDelRec && isset($_SESSION[$this->sessionPrefix."_lockDelRec"]))
-					{
-						$this->lockDelRec = $_SESSION[$this->sessionPrefix."_lockDelRec"];
-						unset($_SESSION[$this->sessionPrefix."_lockDelRec"]);
-					}
-					for( $i=0; !!$this->lockDelRec && $i < count( $this->lockDelRec ); $i++)
-					{
-						$lockDelRec = true;
-						foreach($this->lockDelRec[$i] as $key => $val)
-						{
-							if($data[$key]!=$val)
-							{
-								$lockDelRec = false;
-								break;
-							}
-						}
-						if($lockDelRec)
-						{
-							$lockRecIds[] = $this->recId;
-							break;
-						}
-					}
-				}
-				//	detail tables
-				$this->proccessDetailGridInfo($record, $data, $gridRowInd);
-
-				//	key fields
-				$keyblock = "";
-				$editlink = "";
-				$copylink = "";
-				$keylink = "";
-				$keys = array(); //to open view pages in popup clicking on markers
-
-				for($i = 0; $i < count($tKeys); $i ++) {
-					if($i != 0) {
-						$keyblock.= "&";
-						$editlink.= "&";
-						$copylink.= "&";
-					}
-					$keyValue = rawurlencode($data[$tKeys[$i]]);
-					$keyValueHtml = runner_htmlspecialchars( $keyValue );
-					$keyblock.= $keyValue;
-					$editlink.= "editid".($i + 1)."=".$keyValueHtml;
-					$copylink.= "copyid".($i + 1)."=".$keyValueHtml;
-					$keylink.= "&key".($i + 1)."=".$keyValueHtml;
-					$keys[$i] = $data[$tKeys[$i]];
-
-				}
-
-				$this->recIds[] = $this->recId;
-
-				$record["recordattrs"] = "data-record-id=\"".$this->recId."\"";
-
-				$record["editlink_attrs"] = "id=\"editLink".$this->recId."\" name=\"editLink".$this->recId."\" data-gridlink";
-				$record["copylink_attrs"] = "id=\"copyLink".$this->recId."\" name=\"copyLink".$this->recId."\" data-gridlink";
-				$record["viewlink_attrs"] = "id=\"viewLink".$this->recId."\" name=\"viewLink".$this->recId."\" data-gridlink";
-
-				if( !$this->isPD() )
-				{
-					$record["editlink_attrs"] .= " href='".GetTableLink($this->shortTableName, "edit", $editlink)."'";
-					$record["copylink_attrs"] .= " href='".GetTableLink($this->shortTableName, "add", $copylink)."'";
-					$record["viewlink_attrs"] .= " href='".GetTableLink($this->shortTableName, "view", $editlink)."'";
-				}
-				else
-				{
-					$state = $this->getStateUrlParams();
-					$record["editlink"] = $editlink . '&' . $state;
-					$record["copylink"] = $copylink . '&' . $state;
-				}
-
-				$record["inlineeditlink_attrs"]= "id=\"iEditLink".$this->recId
-					."\" name=\"iEditLink".$this->recId."\" href='".GetTableLink($this->shortTableName, "edit", $editlink)."' data-gridlink";
-				$record["inlinesavelink_attrs"]= "id=\"saveLink".$this->recId."\" href=#";
-				$record["inlinerevertlink_attrs"]= "id=\"revertLink".$this->recId."\" href=#";
-
-				$record["ieditbuttonsholder_attrs"]= "id=\"ieditbuttonsholder".$this->recId."\" ";
-
-				if( $this->mobileTemplateMode() )
-				{
-					if( $this->displayViewLink() )
-						$record["recordattrs"] .= " data-viewlink='".GetTableLink($this->shortTableName, "view", $editlink)."'";
-					if( $this->editAvailable() && $isEditable )
-						$record["recordattrs"] .= " data-editlink='".GetTableLink($this->shortTableName, "edit", $editlink)."'";
-				}
-
-				$this->fillCheckAttr($record, $data, $keyblock);
-
-				if( $this->detailsInGridAvailable() )
-					$record["dtables_link"] = true;
-
-				if( $this->hasBigMap() )
-					$this->addBigGoogleMapMarkers($data, $keys, $editlink);
-
-				$fieldsToHideIfEmpty = $this->pSet->getFieldsToHideIfEmpty();
-
-				for($i = 0; $i < count($this->listFields); $i ++)
-				{
-					// call addGoogleMapData before call proccessRecordValue!!!
-					if( $this->checkFieldHasMapData($i) )
-						$this->addGoogleMapData( $this->listFields[$i]['fName'], $data, $keys, $editlink );
-
-					$record[$this->listFields[$i]['valueFieldName']] = $this->proccessRecordValue($data, $keylink, $this->listFields[$i]);
-
-					if(  in_array( $this->listFields[$i]['fName'], $fieldsToHideIfEmpty ) )
-					{
-						if( $this->listGridLayout != gltHORIZONTAL &&  $record[ $this->listFields[$i]['valueFieldName'] ] == "" )
-						{
-							$this->hideField( $this->listFields[$i]['fName'], $this->recId );
-						}
-						else if ( $this->listGridLayout == gltHORIZONTAL &&  $record[ $this->listFields[$i]['valueFieldName'] ] != "" )
-						{
-							$_notEmptyFieldColumns[ $this->listFields[$i]['fName'] ] = true;
-						}
-					}
-				}
-
-				$this->addSpansForGridCells('edit', $record, $data);
-
-				if($this->eventExists("BeforeMoveNextList"))
-				{
-					RunnerContext::pushRecordContext( $data, $this );
-					$this->eventsObject->BeforeMoveNextList($data, $row, $record, $record["recId"], $this);
-					RunnerContext::pop();
-				}
-
-				$this->spreadRowStyles($data, $row, $record);
-
-				$this->setRowCssRules($record);
-
-				for($i = 0; $i < count($this->listFields); $i ++)
-				{
-					$field = $this->listFields[$i]['fName'];
-					$this->setRowClassNames($record, $field);
-					$this->addHiddenColumnClasses($record, $field);
-				}
-
-				if($col < $this->colsOnPage)
-					$record["endrecord_block"]= true;
-				$record["grid_recordheader"]= true;
-				$record["grid_vrecord"]= true;
-				//set the $row["grid_record"] value
-				$this->setRowsGridRecord($row, $record);
-
-				// hide group fields
-				if ( $prewData )
-				{
-					$grFields = $this->pSet->getGroupFields();
-					foreach ( $grFields as $grF )
-					{
-						if ( $data[$grF] != $prewData[$grF] )
-							break;
-						foreach ( $this->pSet->getFieldItems( $grF ) as $fItemId)
-							$this->hideItem($fItemId, $this->recId);
-					}
-				}
-				$prewData = $data;
-
-				RunnerContext::pop();
-				$data = $this->beforeProccessRow();
-
-				$this->recNo ++;
 			}
-			if($col <= $this->colsOnPage)
+			$currentRow['gridLayout'] = $this->listGridLayout;
+			$currentRow['keyFields'] = array();
+			$currentRow['keys'] = array();
+			for($i = 0; $i < count($tKeys); $i ++) {
+				$currentRow['keyFields'][$i] = $tKeys[$i];
+				$currentRow['keys'][$i] = $data[$tKeys[$i]];
+			}
+			if( $this->pSet->reorderRows() ) {
+				$currentRow['order'] = $data[ $this->pSet->reorderRowsField() ];
+			}
+			$record["edit_link"] = $isEditable;
+			$record["inlineedit_link"] = $isEditable;
+			$record["view_link"] = $this->permis[$this->tName]['search'];
+			$record["copy_link"] = $this->permis[$this->tName]['add'];
+
+
+			//get record id for locking record
+			if($this->lockingObj)
 			{
-				for($gInd = 0; $gInd < $col - 1; $gInd++)
+				if($this->mode == LIST_SIMPLE && !$this->lockDelRec && isset($_SESSION[$this->sessionPrefix."_lockDelRec"]))
 				{
-					$this->controlsMap['gridRows'][$gridRowInd - $gInd]['contextRowId'] = $this->recId;
+					$this->lockDelRec = $_SESSION[$this->sessionPrefix."_lockDelRec"];
+					unset($_SESSION[$this->sessionPrefix."_lockDelRec"]);
 				}
-			}
-			if( !$this->isPD() ) {
-				//	old stuff
-				while($col <= $this->colsOnPage)
+				for( $i=0; !!$this->lockDelRec && $i < count( $this->lockDelRec ); $i++)
 				{
-					$record = array();
-					if($col < $this->colsOnPage)
-						$record["endrecord_block"]= true;
-					if($row["grid_record"]["data"])
+					$lockDelRec = true;
+					foreach($this->lockDelRec[$i] as $key => $val)
 					{
-						$row["grid_record"]["data"][]= $record;
+						if($data[$key]!=$val)
+						{
+							$lockDelRec = false;
+							break;
+						}
 					}
-					$col ++;
+					if($lockDelRec)
+					{
+						$lockRecIds[] = $this->recId;
+						break;
+					}
 				}
-				//	assign row spacings for vertical layout
-				$row["grid_rowspace"]= true;
-				$row["grid_recordspace"]= array("data" => array());
-				for($i = 0; $i < $this->colsOnPage * 2 - 1; $i ++)
-					$row["grid_recordspace"]["data"][]= true;
 			}
+			//	detail tables
+			$this->proccessDetailGridInfo($record, $data, $gridRowInd);
+
+			//	key fields
+			$keyblock = "";
+			$editlink = "";
+			$copylink = "";
+			$keylink = "";
+			$keys = array(); //to open view pages in popup clicking on markers
+
+			for($i = 0; $i < count($tKeys); $i ++) {
+				if($i != 0) {
+					$keyblock.= "&";
+					$editlink.= "&";
+					$copylink.= "&";
+				}
+				$keyValue = rawurlencode($data[$tKeys[$i]]);
+				$keyValueHtml = runner_htmlspecialchars( $keyValue );
+				$keyblock.= $keyValue;
+				$editlink.= "editid".($i + 1)."=".$keyValueHtml;
+				$copylink.= "copyid".($i + 1)."=".$keyValueHtml;
+				$keylink.= "&key".($i + 1)."=".$keyValueHtml;
+				$keys[$i] = $data[$tKeys[$i]];
+
+			}
+
+			$this->recIds[] = $this->recId;
+
+			$record["recordattrs"] = "data-record-id=\"".$this->recId."\"";
+
+			$record["editlink_attrs"] = "id=\"editLink".$this->recId."\" name=\"editLink".$this->recId."\" data-gridlink";
+			$record["copylink_attrs"] = "id=\"copyLink".$this->recId."\" name=\"copyLink".$this->recId."\" data-gridlink";
+			$record["viewlink_attrs"] = "id=\"viewLink".$this->recId."\" name=\"viewLink".$this->recId."\" data-gridlink";			
+
+			$state = $this->getStateUrlParams();
+			$record["editlink"] = $editlink . $pageName . ( $state ? '&' . $state : "" );
+			$record["copylink"] = $copylink . ( $state ? '&' . $state : "" );
+
+			$record["inlineeditlink_attrs"]= "id=\"iEditLink".$this->recId
+				."\" name=\"iEditLink".$this->recId."\" href='".GetTableLink($this->shortTableName, "edit", $editlink)."' data-gridlink";
+			$record["inlinesavelink_attrs"]= "id=\"saveLink".$this->recId."\" href=#";
+			$record["inlinerevertlink_attrs"]= "id=\"revertLink".$this->recId."\" href=#";
+
+			$record["ieditbuttonsholder_attrs"]= "id=\"ieditbuttonsholder".$this->recId."\" ";
+
+			if( $this->mobileTemplateMode() )
+			{
+				if( $this->displayViewLink() )
+					$record["recordattrs"] .= " data-viewlink='".GetTableLink($this->shortTableName, "view", $editlink)."'";
+				if( $this->editAvailable() && $isEditable )
+					$record["recordattrs"] .= " data-editlink='".GetTableLink($this->shortTableName, "edit", $editlink)."'";
+			}
+
+			$this->fillCheckAttr($record, $data, $keyblock);
+
+			if( $this->detailsInGridAvailable() )
+				$record["dtables_link"] = true;
+
+			if( $this->hasBigMap() )
+				$this->addBigGoogleMapMarkers($data, $keys, $editlink);
+
+			$fieldsToHideIfEmpty = $this->pSet->getFieldsToHideIfEmpty();
+
+			for($i = 0; $i < count($this->listFields); $i ++)
+			{
+				// call addGoogleMapData before call proccessRecordValue!!!
+				if( $this->checkFieldHasMapData($i) )
+					$this->addGoogleMapData( $this->listFields[$i]['fName'], $data, $keys, $editlink );
+
+				$record[$this->listFields[$i]['valueFieldName']] = $this->proccessRecordValue( $data, $keylink, $this->listFields[$i], $isEditable );
+
+				if(  in_array( $this->listFields[$i]['fName'], $fieldsToHideIfEmpty ) )
+				{
+					if( $this->listGridLayout != gltHORIZONTAL &&  $record[ $this->listFields[$i]['valueFieldName'] ] == "" )
+					{
+						$this->hideField( $this->listFields[$i]['fName'], $this->recId );
+					}
+					else if ( $this->listGridLayout == gltHORIZONTAL &&  $record[ $this->listFields[$i]['valueFieldName'] ] != "" )
+					{
+						$_notEmptyFieldColumns[ $this->listFields[$i]['fName'] ] = true;
+					}
+				}
+			}
+
+			$this->addSpansForGridCells('edit', $record, $data);
+
+			if($this->eventExists("BeforeMoveNextList"))
+			{
+				RunnerContext::pushRecordContext( $data, $this );
+				$this->eventsObject->BeforeMoveNextList($data, $row, $record, $record["recId"], $this);
+				RunnerContext::pop();
+			}
+
+			$this->spreadRowStyles($data, $row, $record);
+
+			$this->setRowCssRules($record);
+
+			for($i = 0; $i < count($this->listFields); $i ++)
+			{
+				$field = $this->listFields[$i]['fName'];
+				$this->setRowClassNames($record, $field);
+				$this->addHiddenColumnClasses($record, $field);
+			}
+
+			$record["grid_recordheader"]= true;
+			$record["grid_vrecord"]= true;
+			//set the $row["grid_record"] value
+			$this->setRowsGridRecord($row, $record);
+
+			// hide group fields
+			if ( $prewData )
+			{
+				$grFields = $this->pSet->getGroupFields();
+				foreach ( $grFields as $grF )
+				{
+					if ( $data[$grF] != $prewData[$grF] )
+						break;
+					foreach ( $this->pSet->getFieldItems( $grF ) as $fItemId)
+						$this->hideItem($fItemId, $this->recId);
+				}
+			}
+			$prewData = $data;
+
+			RunnerContext::pop();
+			$data = $this->beforeProccessRow();
+
+			$this->recNo ++;
 
 			$rowinfo["data"][]= $row;
-			if( $this->isPD() ) {
-				$this->recordsRenderData[ $record["recId"] ] = &$rowinfo["data"][ count( $rowinfo["data"] ) - 1 ];
+			$this->recordsRenderData[ $record["recId"] ] = &$rowinfo["data"][ count( $rowinfo["data"] ) - 1 ];
+		}
+		
+		if( $this->pSet->hideNumberOfRecords() ) {
+			$this->numRowsFromSQL = $displayRecCount;
+			if( $this->pageSize && $this->pageSize != -1 && $this->myPage > 1 ) {
+				$this->numRowsFromSQL += $this->pageSize * ($this->myPage - 1 );
 			}
 		}
-		if($this->lockingObj)
+		
+		if( $this->lockingObj )
 			$this->jsSettings['tableSettings'][$this->tName]['lockRecIds'] = $lockRecIds;
 
 		if(count($rowinfo["data"]))
 		{
-			$rowinfo["data"][count($rowinfo["data"]) - 1]["grid_rowspace"]= false;
-
-			if($this->listGridLayout == gltVERTICAL && $this->is508)
-			{
-				if( $this->isBootstrap() )
+			if( $this->listGridLayout == gltVERTICAL && $this->is508 )
 				$rowinfo["begin"] = "<div style=\"display:none\">Table data</div>";
-				else
-				$rowinfo["begin"] = "<caption style=\"display:none\">Table data</caption>";
-			}
 
 			$this->xt->assignbyref("grid_row", $rowinfo);
 		}
 
-		$this->buildTotals($totals);
+		$this->assignTotals( $totals );
 
 		if(  $this->listGridLayout == gltHORIZONTAL )
 		{
@@ -1948,6 +1832,34 @@ class ListPage extends RunnerPage
 		}
 	}
 
+	protected function calcAllDataTotals() {
+		if( $this->pSet->hideNumberOfRecords() ) {
+			return false;
+		}
+		$currentPageSize = $this->pageSize;
+		if ( $this->pSet->getRecordsLimit() && $this->maxPages == $this->myPage )
+			$currentPageSize = $this->pSet->getRecordsLimit() - ( ($this->myPage - 1 ) * $this->pageSize );
+		
+		return $this->pSet->calcTotalsFor() == TOTALS_ALL_DATA 
+			&& $currentPageSize != -1 && $currentPageSize < $this->numRowsFromSQL;		
+	}
+
+	protected function getTotalDataCommand() {
+		$dc = parent::getSubsetDataCommand();
+		
+		//	no records on first page
+		if( $this->mode != LIST_DETAILS && $this->noRecordsFirstPage && !$this->isSearchFunctionalityActivated() )
+			$dc->filter = DataCondition::_False();
+		
+		return $dc;
+	}
+
+	protected function assignTotals( &$totals ) {
+		if( $this->calcAllDataTotals() )
+			$this->buildAllDataTotals();
+		else
+			$this->buildTotals( $totals );		
+	}
 
 	/**
 	 * Build and shows totals info on page
@@ -1961,41 +1873,34 @@ class ListPage extends RunnerPage
 			//	process totals
 			$this->xt->assign("totals_row", true);
 			$totals_records = array("data" => array());
-			for($j = 0; $j < $this->colsOnPage; $j++)
+
+			$record = array();
+			for($i = 0; $i < count($this->totalsFields); $i ++)
 			{
-				$record = array();
-				if($j == 0)
-				{
-					for($i = 0; $i < count($this->totalsFields); $i ++)
-					{
-						$goodName = GoodFieldName( $this->totalsFields[$i]['fName'] );
-						//	show totals
-						$total = GetTotals( $this->totalsFields[$i]['fName'],
-							$totals[$this->totalsFields[$i]['fName']],
-							$this->totalsFields[$i]['totalsType'],
-							$this->totalsFields[$i]['numRows'],
-							$this->totalsFields[$i]['viewFormat'],
-							PAGE_LIST,
-							$this->pSet,
-							false,
-							$this );
+				$goodName = GoodFieldName( $this->totalsFields[$i]['fName'] );
+				//	show totals
+				$total = GetTotals( $this->totalsFields[$i]['fName'],
+					$totals[$this->totalsFields[$i]['fName']],
+					$this->totalsFields[$i]['totalsType'],
+					$this->totalsFields[$i]['numRows'],
+					$this->totalsFields[$i]['viewFormat'],
+					PAGE_LIST,
+					$this->pSet,
+					false,
+					$this );
 
-						if( !$this->pdfJsonMode() ) {
-							$total = "<span id=\"total".$this->id."_" . $goodName . "\">".$total."</span>";
-						}
-
-						$this->xt->assign( $goodName ."_total", $total);
-
-						$this->xt->assign( $goodName . "_showtotal", true);
-					}
+				if( !$this->pdfJsonMode() ) {
+					$total = "<span id=\"total".$this->id."_" . $goodName . "\">".$total."</span>";
 				}
-				if($j < $this->colsOnPage - 1){
-					$record["endrecordtotals_block"]= true;
-				}
-				$totals_records["data"][]= $record;
+
+				$this->xt->assign( $goodName ."_total", $total );
+				$this->xt->assign( $goodName . "_showtotal", true );
 			}
+			
+			$totals_records["data"][]= $record;
+
 			$this->xt->assignbyref("totals_record", $totals_records);
-			if(!$this->rowsFound)
+			if(!$this->recordsOnPage)
 				$this->xt->assign("totals_attr", "style='display:none;'");
 		}
 	}
@@ -2059,13 +1964,12 @@ class ListPage extends RunnerPage
 	 * @param array $data
 	 * @param string $keylink
 	 */
-	function proccessRecordValue( &$data, &$keylink, $listFieldInfo )
-	{
+	function proccessRecordValue( &$data, &$keylink, $listFieldInfo, $isEditable = true ) {
 		$fName = $listFieldInfo['fName'];
 		
-		if( $this->spreadsheetGridApplicable() ) {
+		if( $this->spreadsheetGridApplicable() && $isEditable ) {
 			if( in_array( $fName, $this->pSet->getInlineEditFields() ) ) {
-				return $this->getInlineEditControl( $fName, $this->recId, $data);
+				return $this->getInlineEditControl( $fName, $this->recId, $data );
 			}			
 		}
 
@@ -2122,12 +2026,17 @@ class ListPage extends RunnerPage
 	function isDispGrid()
 	{
 		//	can show data
-		if( $this->permis[$this->tName]['search'] && $this->rowsFound )
+		if( $this->permis[$this->tName]['search'] && $this->recordsOnPage )
 			return true;
 
 		//	can add data to grid
 		if ( $this->inlineAddAvailable() || $this->addAvailable() && $this->showAddInPopup )
 			return true;
+
+		// show grid if field filter enabled
+		if( $this->fieldFilterEnabled() ) {
+			return true;
+		}
 
 		return false;
 	}
@@ -2295,8 +2204,8 @@ class ListPage extends RunnerPage
 		//	call SQL events, calculate record count
 		$this->calculateRecordCount();
 
-		// build pagination block
-		$this->buildPagination();
+		$this->assignPagingVariables();		
+
 
 		$this->recSet = $this->getRecordset();
 		
@@ -2310,6 +2219,8 @@ class ListPage extends RunnerPage
 		$this->fillGridData();
 		$this->fillAdvancedMapData();
 
+		// build pagination block
+		$this->buildPagination();
 
 		$this->setGridUserParams();
 		$this->assignColumnHeaderClasses();
@@ -2369,16 +2280,8 @@ class ListPage extends RunnerPage
 			}
 
 			//	add icon
-			if( $this->isPD() )
-			{
-				$this->xt->assign( "arrow_icon_" . GoodFieldname( $of['column'] ),
-					"<span data-icon=\"".( $of["dir"] == "ASC" ? "sortasc" : "sortdesc")."\"></span>" );
-			}
-			else
-			{
-				$this->xt->assign_section( GoodFieldname( $of['column'] )."_fieldheader",
-					"", "<span data-icon=\"".( $of["dir"] == "ASC" ? "sortasc" : "sortdesc")."\"></span>" );
-			}
+			$this->xt->assign( "arrow_icon_" . GoodFieldname( $of['column'] ),
+				"<span data-icon=\"".( $of["dir"] == "ASC" ? "sortasc" : "sortdesc")."\"></span>" );		
 		}
 
 		foreach( $this->listFields as $f )
@@ -2414,7 +2317,36 @@ class ListPage extends RunnerPage
 			$attrs[] = 'class="rnr-orderlink"';
 
 			$this->xt->assign( $gf."_orderlinkattrs", implode( " ", $attrs ) );
+
+			//  assign field filter
+			if ($this->fieldFilterAllowed()) {
+				$this->xt->assign( $gf."_fieldFilter", true );
+				$fieldFilterAttrs = array();
+				$fieldFilterAttrs[] = 'data-fieldfilter-state="' . ( $this->fieldFilterFieldEnabled( $f['fName'] ) ? 'enabled' : 'disabled' ) . '"';
+				$fieldFilterAttrs[] = 'data-fieldfilter';
+				$this->xt->assign( $gf."_fieldfilterattrs", implode( " ", $fieldFilterAttrs ) );
+
+				$btnClass = $this->fieldFilterFieldEnabled( $f['fName'] )
+					? "btn-success"
+					: "btn-default";
+				$this->xt->assign( $gf."_fieldfilter_buttonclass", $btnClass );
+			}
+			
 		}
+	}
+
+	/**
+	 * Check if FieldFilter applied to field
+	 */
+	protected function fieldFilterFieldEnabled( $fieldName ) {
+		$fieldFilterFields = $this->getFieldFilterFields();
+
+		if( !in_array( $fieldName, $fieldFilterFields ) ) {
+			return false;
+		}
+
+		$settings = $this->getFieldFilterFieldSettings( $fieldName );
+		return $settings[ "initialized" ];
 	}
 
 	/**
@@ -2441,7 +2373,7 @@ class ListPage extends RunnerPage
 			return;
 
 		// no data
-		if( !$this->rowsFound )
+		if( !$this->recordsOnPage )
 		{
 			if( $this->listAjax )
 			{
@@ -2449,7 +2381,7 @@ class ListPage extends RunnerPage
 				$this->hideElement("reorder_records");
 			}
 			else
-				$this->hideItem("sort_dropdown");
+				$this->hideItemType("sort_dropdown");
 
 			return;
 		}
@@ -2577,15 +2509,6 @@ class ListPage extends RunnerPage
 	 */
 	protected function setRowsGridRecord(&$row, $record)
 	{
-		if( !$this->isPD() )
-		{
-			//	old stuff
-			if($this->listGridLayout == gltVERTICAL || $this->recsPerRowList != 1)
-			{
-				$row["grid_record"]["data"][]= $record;
-				return;
-			}
-		}
 		foreach($record as $index=>$value)
 		{
 			$row[$index] = $value;
@@ -2739,34 +2662,6 @@ class ListPage extends RunnerPage
 		return false;
 	}
 
-	/**
-	 * Hide the field on the page
-	 * @param String fieldName
-	 */
-	function hideField($fieldName, $recordId = "")
-	{
-		if( $this->isPD() ) {
-			return parent::hideField( $fieldName, $recordId );
-		}
-		$this->xt->assign(GoodFieldName($fieldName) ."_fieldheadercolumn", false);
-		$this->xt->assign(GoodFieldName($fieldName) . "_fieldcolumn", false);
-		$this->xt->assign(GoodFieldName($fieldName) . "_fieldfootercolumn", false);
-	}
-
-	/**
-	 * Show the field on the page
-	 * @param String fieldName
-	 */
-	function showField($fieldName)
-	{
-		if( $this->isPD() ) {
-			return parent::showField( $fieldName );
-		}
-		$this->xt->assign(GoodFieldName($fieldName) ."_fieldheadercolumn", true);
-		$this->xt->assign(GoodFieldName($fieldName) . "_fieldcolumn", true);
-		$this->xt->assign(GoodFieldName($fieldName) . "_fieldfootercolumn", true);
-	}
-
 	public function isPageSortable()
 	{
 		return true;
@@ -2900,10 +2795,13 @@ class ListPage extends RunnerPage
 		$prep = $this->dataSource->prepareSQL( $this->queryCommand );
 		$this->querySQL = $prep["sql"];
 		$this->callBeforeQueryEvent( $this->queryCommand );
-		$this->numRowsFromSQL = $this->dataSource->getCount( $this->queryCommand );
-		$recordLimit = $this->pSet->getRecordsLimit();
-		if( $recordLimit && $this->numRowsFromSQL > $recordLimit ) {
-			$this->numRowsFromSQL = $recordLimit;
+		if( !$this->pSet->hideNumberOfRecords() ) {
+		
+			$this->numRowsFromSQL = $this->dataSource->getCount( $this->queryCommand );
+			$recordLimit = $this->pSet->getRecordsLimit();
+			if( $recordLimit && $this->numRowsFromSQL > $recordLimit ) {
+				$this->numRowsFromSQL = $recordLimit;
+			}
 		}
 	 }
 
@@ -2975,9 +2873,10 @@ class ListPage extends RunnerPage
 	{
 		$action = postvalue( "a" );
 		$postData = postvalue( "data" );
-		if( !$this->pSet->reorderRows() ) {
+		if( !$this->pSet->reorderRows() || !Security::userCan('E', $this->tName) ) {
 			return false;
-		}	
+		}
+		
 		if( $action !== "saveRowOrder" ) {
 			return false;
 		}
@@ -2988,7 +2887,7 @@ class ListPage extends RunnerPage
 		$allRecordKeys = $updateData[ "allRecordKeys" ];
 		$recordId = $updateData[ "recordId" ];
 
-		if( !$newOrder || !$oldOrder ) {
+		if( $newOrder === null || $oldOrder === null ) {
 			echo "wrong parameters";
 			return true;
 		}
@@ -3086,5 +2985,52 @@ class ListPage extends RunnerPage
 		}
 		return parent::getEditFormat( $field, $pSet );
 	}	
+
+
+	protected function fieldFilterAllowed() {		
+		if( $this->mode == LIST_DETAILS && $this->masterPageType == PAGE_ADD ){
+			return false;
+		}
+		return true;
+	}
+
+	protected function fieldFilterEnabled() {
+		if(!$this->fieldFilterAllowed()) {
+			return false;
+		}
+
+		foreach( $this->listFields as $f ) {
+			if( $this->fieldFilterFieldEnabled( $f['fName'] ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
+	public function processTotals() {
+		if( postvalue("a") == "calctotals" ) {			
+			$dbTotals = $this->getTotalsFromDB();
+			
+			$totals = array();
+			foreach( $this->totalsFields as $idx => $tf ) {				
+				$totals[ $tf['fName'] ] = GetTotals( $tf['fName'],
+					$dbTotals[ $tf['fName'] ],
+					$tf['totalsType'],
+					1,
+					$tf['viewFormat'],
+					PAGE_LIST,
+					$this->pSet,
+					false,
+					$this );
+			}
+			
+			echo my_json_encode( $totals );
+			return true;
+		}
+		return false;
+
+	}
+
 }
 ?>

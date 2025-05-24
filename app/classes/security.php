@@ -117,6 +117,7 @@ class Security
 		$loginParams['xt'] = &$loginXt;
 		$loginParams["tName"]= GLOBAL_PAGES;
 		$loginParams['needSearchClauseObj'] = false;
+		$loginParams["providerCode"] = Security::currentProviderCode();
 		$loginPageObject = new LoginPage($loginParams);
 		$loginPageObject->init();
 		return $loginPageObject;
@@ -273,6 +274,8 @@ class Security
 		storageDelete( "securityOverrides" );
 		storageDelete( "runnerSession" );
 		storageDelete( "AutomaticLogin" );
+		storageDelete( "logout_token_hint" );
+		storageDelete( "rawUserData" );
 
 		$toClear = array();
 		foreach( $_SESSION as $k => $v )
@@ -282,7 +285,7 @@ class Security
 			if( substr($k, 0, 11) == "oauthToken_")
 				$toClear[] = $k;
 		}
-		foreach( $toClear as $k => $v )
+		foreach( $toClear as $k )
 		{
 			storageDelete( $k );
 		}
@@ -440,8 +443,12 @@ class Security
 	 */
 	public static function refreshDisplayName() {
 		$userData = Security::getUserData( Security::getUserName() );
-		$fullName = $userData[ Security::fullnameField() ];
-		Security::setDisplayName( $fullName );
+		$fullnameField = Security::fullnameField();
+		if( !$fullnameField ) {
+			return;
+		}
+		$fullName = $userData[ $fullnameField ];
+		Security::setDisplayName( runner_htmlspecialchars($fullName) );
 	}
 
 	/**
@@ -1027,59 +1034,74 @@ class Security
 		if( !$provider ) {
 			return null;
 		}
-		if( $code == 'fb') {
+		return Security::PluginFactory( $provider );
+	}
+
+	/**
+	 * @param object $params
+	 * @param integer $providerType stFACEBOOK, stGOOGLE, ...
+	 * @return SecurityPlugin|null
+	 */
+	protected static function PluginFactory( $providerParams ) {
+		require_once( getabspath('classes/security/securityplugin.php') );
+
+		$providerType = $providerParams[ "type" ];
+
+		if( $providerType == stFACEBOOK ) {
 			require_once( getabspath( 'classes/security/fb.php' ) );
-			return new SecurityPluginFB( $provider );
+			return new SecurityPluginFB( $providerParams );
 		}
-		if( $code == 'go') {
+
+		if( $providerType == stGOOGLE ) {
 			require_once( getabspath( 'classes/security/google.php' ) );
-			return new SecurityPluginGoogle( $provider );
+			return new SecurityPluginGoogle( $providerParams );
 		}
 
-		if( $provider["type"] == stOPENID ) {
+		if( $providerType == stOPENID ) {
 			require_once( getabspath( 'classes/security/openid.php' ) );
-			return new SecurityPluginOpenId( $provider );
+			return new SecurityPluginOpenId( $providerParams );
 		}
 
-		if( $provider["type"] == stSAML ) {
+		if( $providerType == stSAML ) {
 			require_once( getabspath( 'classes/security/samlPlugin.php' ) );
-			return new SecurityPluginSaml( $provider );
+			return new SecurityPluginSaml( $providerParams );
 		}
 
-		if( $provider["type"] == stOKTA ) {
+		if( $providerType == stOKTA ) {
 			require_once( getabspath( 'classes/security/okta.php' ) );
-			return new SecurityPluginOkta( $provider );
+			return new SecurityPluginOkta( $providerParams );
 		}
 
-		if( $provider["type"] == stAZURE ) {
+		if( $providerType == stAZURE ) {
 			require_once( getabspath( 'classes/security/azure.php' ) );
-			return new SecurityPluginAzure( $provider );
+			return new SecurityPluginAzure( $providerParams );
 		}
 
-		if( $provider["type"] == stAD ) {
+		if( $providerType == stAD ) {
 			require_once( getabspath( 'classes/security/ad.php' ) );
-			return new SecurityPluginAd( $provider );
+			return new SecurityPluginAd( $providerParams );
 		}
+
 		return null;
 	}
 
 
+	/**
+	 * @return Array( "providerKey" => SecurityPlugin )
+	 */
 	public static function GetPlugins() {
 		$plugins = array();
-		require_once( getabspath('classes/security/securityplugin.php') );
+		// provider type => provider code
+		$providersCfg = array(
+			stFACEBOOK => "fb",
+			stGOOGLE => "go"
+		);
 
-		$fbProviders = Security::providersByType( stFACEBOOK );
-		if( $fbProviders )
-		{
-			require_once( getabspath( 'classes/security/fb.php' ) );
-			$plugins["fb"] = new SecurityPluginFB( $fbProviders[0] );
-		}
-
-		$googleProviders = Security::providersByType( stGOOGLE );
-		if( $googleProviders )
-		{
-			require_once( getabspath( 'classes/security/google.php' ) );
-			$plugins["go"] = new SecurityPluginGoogle( $googleProviders[0] );
+		foreach( $providersCfg as $type => $code ) {
+			$providers = Security::providersByType( $type );
+			if( $plugins[ $code ] == null && count( $providers ) != 0 ) {
+				$plugins[ $code ] = Security::PluginFactory( $providers[0] );
+			}
 		}
 
 		return $plugins;
@@ -1233,6 +1255,9 @@ class Security
 	 * @return Array|false
 	 */
 	public static function openIdVerifyToken( $jwt, $jwk ) {
+		if( !$jwt || !$jwk ) {
+			return false;
+		}
 		return verifyOpenIdToken( $jwt, $jwk );
 	}
 
@@ -1247,7 +1272,7 @@ class Security
 			return false;
 
 		return array(
-			"header" => my_json_decode( base64_decode_url( $parts[0] ) ),
+		"header" => my_json_decode( base64_decode_url( $parts[0] ) ),
 			"payload" => my_json_decode( base64_decode_url( $parts[1] ) ),
 			"signature" => base64_decode_url_binary( $parts[2] )
 		);
@@ -1270,7 +1295,11 @@ class Security
 		if( !$db || !$ret ) {
 			return array();
 		}
-		$ret["emailField"] = $db["emailField"];
+		if( GetGlobalData("twoFactorEmail") ) {
+			$ret["emailField"] = GetGlobalData("twoFactorEmail");
+		} else {
+			$ret["emailField"] = $db["emailField"];
+		}
 		return $ret;
 	}
 
@@ -1286,22 +1315,122 @@ class Security
 		}
 		return "";
 	}
+
+	/**
+	 * @param Int $value - two factor field value
+	 * @param Int $method - one of TWOFACTOR_ constants
+	 * @return Boolean
+	 */
+	public static function twoFactorMethodEnabled( $value, $method ) {
+		if( !Security::twoFactorEnabled( $value ) ) {
+			return false;
+		}
+		$mask = 0;
+		$masks = Security::twoFactorMasks();
+		$mask = @$masks[ $method ];
+		if( !$mask ) {
+			return false;
+		}
+		return !!( (int)$value & $mask );
+	}
+
+	public static function twoFactorMethodAvailable( $method ) {
+		$twofSettings =& Security::twoFactorSettings();
+		if( !$twofSettings['available'] ) {
+			return false;
+		}
+
+		if( $method == TWOFACTOR_EMAIL ) {
+			$name = 'email';
+		} else if( $method == TWOFACTOR_PHONE ) {
+			$name = 'phone';
+		} else if( $method == TWOFACTOR_APP ) {
+			$name = 'totp';
+		} else {
+			return false;
+		}
+		return !!$twofSettings['types'][ $name ];
+	}
+
+	/**
+	 * Returns basic array of methods
+	 */
+	public static function twoFactorAllMethods() {
+		return array( TWOFACTOR_EMAIL, TWOFACTOR_PHONE, TWOFACTOR_APP );
+	}
+
+	public static function twoFactorMasks() {
+		return array( TWOFACTOR_EMAIL => 2, TWOFACTOR_PHONE => 4, TWOFACTOR_APP => 8 );
+	}
+
+	/**
+	 * Returns basic array of methods
+	 */
+	public static function twoFactorAvailableMethods() {
+		$ret = array();
+		foreach( Security::twoFactorAllMethods() as $m ) {
+			if( Security::twoFactorMethodAvailable( $m )) {
+				$ret[] = $m;
+			}
+		}
+		return $ret;
+		
+	}
+
+	/**
+	 * @return Array - associative array( $method => true )
+	 */
+	public static function twoFactorEnabledMethods( $value ) {
+		$methods = Security::twoFactorAvailableMethods();
+		$ret = array();
+		foreach( $methods as $m ) {
+			if( Security::twoFactorMethodEnabled( $value, $m) ) {
+				$ret[ $m ] = true;
+			}
+		}
+		return $ret;
+	}
+
+
+	/**
+	 * @return Int one of TWOFACTOR constants
+	 */
+	public static function twoFactorPreferredMethod( $value ) {
+		$method = ( (int)$value & 48 ) / 16;
+		if( Security::twoFactorMethodEnabled( $value, $method ) ) {
+			return $method;
+		}
+		$methods = Security::twoFactorAvailableMethods();
+		foreach( $methods as $m ) {
+			if( Security::twoFactorMethodEnabled( $value, $m ) ) {
+				return $m;
+			}
+		}
+		return 0;
+	}
+
+
 	public static function twoFactorEnabled( $value ) {
 		return $value & 1;
 	}
 
-	public static function getTwoFactorValue( $enable, $method ) {
 
-		$enableValue = $enable ? 1 : 0;
-		if( $method === "email" ) {
-			return 	2 + $enableValue;
-		} else if( $method === "phone" ) {
-			return 	4 + $enableValue;
-		} else if( $method === "totp" ) {
-			return 	8 + $enableValue;
+	public static function getTwoFactorValue( $methods, $preferred ) {
+
+		$value = 0;
+		$masks = Security::twoFactorMasks();
+		foreach( Security::twoFactorAvailableMethods() as $m ) {
+			if( $methods[ $m ] ) {
+				$value = $value | $masks[ $m ];
+			}
 		}
-		return 0;
+		if( $value ) {
+			$value = $value | 1;
+		}
+		$value = $value | ( (int)$preferred * 16 ) & 48; 
+		return $value;
 	}
+
 
 	public static function prepareTwoFactorMessage( $code ) {
 		$smsText = myfile_get_contents( getabspath("email/".mlang_getcurrentlang()."/twofactorauth.txt"), "r");
@@ -1763,13 +1892,13 @@ class Security
 			? Security::usernameField()
 			: Security::extIdField();
 
+		if( $provider["type"] == stAD ) {
+			$username = $provider["code"] . $username;
+		}
 		$conditions = array(
 			DataCondition::FieldEquals( $fieldName, $username, 0, Security::caseInsensitiveUsername() ? dsCASE_INSENSITIVE : dsCASE_STRICT )
 		);
 
-		if( $provider["type"] == stAD ) {
-			$username = $provider["code"] . $username;
-		}
 		if( !$ignoreActivation && GetGlobalData( "userRequireActivation" ) ) {
 			$conditions[] = DataCondition::FieldEquals( GetGlobalData( "userActivationField" ), 1 );
 		}
@@ -1849,12 +1978,18 @@ class Security
 	 * }
 	 */
 	public static function sendTwoFactorCode( $method, $address, $code ) {
-		if( $method === "email" ) {
+		global $debug2Factor;
+		if( $method == TWOFACTOR_EMAIL ) {
 			$html = isEmailTemplateUseHTML("twofactoremail");
 			return RunnerPage::sendEmailByTemplate( $address, "twofactoremail", array( "code" => $code ), $html );
-		} else if( $method === "phone" ) {
+		} else if( $method == TWOFACTOR_PHONE ) {
 			$message = Security::prepareTwoFactorMessage( $code );
-			return runner_sms( $address, $message );
+			if( $debug2Factor ) {
+				return array( "success" => true );
+			}
+			$ret = runner_sms( $address, $message );
+			$ret["message"] = $ret["error"];
+			return $ret;
 		}
 
 		return array( "success" => false, "message" => "Unknown two factor authentication method" );
@@ -1882,25 +2017,27 @@ class Security
 
 	/**
 	 * @return Array {
-	 * method => string, method used
+	 * method => number, method used
 	 * address => address used
 	 * } or null if nothing to send
 	 */
-	public static function twoFactorDeliveryInfo( &$userData ) {
+	public static function twoFactorDeliveryInfo( &$userData, $method ) {
 		$twofSettings =& Security::twoFactorSettings();
 		$twoFactorValue = $userData[ $twofSettings[ "twoFactorField" ] ];
 		if( !Security::twoFactorEnabled( $twoFactorValue ) ) {
 			return null;
 		}
-		$twofMethod = Security::twoFactorMethod( $twoFactorValue );
+		if( !Security::twoFactorMethodEnabled( $twoFactorValue, $method ) ) {
+			return null;
+		}
 		$ret = array(
-			"method" => $twofMethod
+			"method" => $method
 		);
-		if( $twofMethod == "email"  ) {
+		if( $method == TWOFACTOR_EMAIL  ) {
 			$ret["address"] = $userData[ $twofSettings["emailField"] ];
-		} else if( $twofMethod == "phone" ) {
+		} else if( $method == TWOFACTOR_PHONE ) {
 			$ret["address"] = $userData[ $twofSettings["phoneField"] ];
-		} else if( $twofMethod == "totp" ) {
+		} else if( $method == TWOFACTOR_APP ) {
 			$ret["address"] = $twofSettings["projectName"];
 		}
 		return $ret;
@@ -1919,25 +2056,31 @@ class Security
 	 * address => address used
 	 * } or null if nothing to send
 	 */
-	public static function generateAndSendTwoFactorCode() {
+	public static function generateAndSendTwoFactorCode( $method ) {
+		global $debug2Factor;
 		if( Security::userSessionLevel() !== LOGGED_2F_PENDING ) {
 			return null;
 		}
 		$userData =& Security::provisionalUserData();
 		$twofSettings =& Security::twoFactorSettings();
 
-		$destination = Security::twoFactorDeliveryInfo( $userData );
+		$destination = Security::twoFactorDeliveryInfo( $userData, $method );
 
 		if( !$destination ) {
 			return null;
 		}
-		if( $destination["method"] === "totp" ) {
+		if( $destination["method"] == TWOFACTOR_APP ) {
 			$destination["success"] = true;
+			storageSet( "twoFactorCode", array( "method" => $method ) );
 			return $destination;
 		}
 		//	generate 2f code
 		$code = generateUserCode( GetGlobalData("smsCodeLength", 6) );
-		storageSet( "twoFactorCode", $code );
+		
+		if( $debug2Factor ) {
+			$code = "333";
+		}
+		storageSet( "twoFactorCode", array( "method" => $method, "code" => $code ) );
 
 		$ret = Security::sendTwoFactorCode( $destination["method"], $destination["address"], $code );
 		$ret[ "address" ] = $destination["address"];
@@ -1957,23 +2100,31 @@ class Security
 		}
 		$userData =& Security::provisionalUserData();
 		$twofSettings =& Security::twoFactorSettings();
-
 		$twoFactorValue = $userData[ $twofSettings[ "twoFactorField" ] ];
-		if( !Security::twoFactorEnabled( $twoFactorValue ) ) {
-			return true;
-		}
-		$twofMethod = Security::twoFactorMethod( $twoFactorValue );
-		if( $twofMethod == "email" || $twofMethod == "phone" ) {
-			$savedCode = storageGet( "twoFactorCode" );
-			return $code != "" && $savedCode == $code;
-		}
 
-		if( $twofMethod == "totp" ) {
-			return $code == calculateTotpCode( $userData[ $twofSettings["codeField"] ] );
+		$savedCodeData = storageGet( "twoFactorCode" );
+		$method = $savedCodeData["method"];
+
+		if( !Security::twoFactorMethodEnabled( $twoFactorValue, $method ) ) {
+			return false;
 		}
-		return false;
+		$result = false;
+		if( $method == TWOFACTOR_EMAIL || $method == TWOFACTOR_PHONE ) {
+			$result = $code != "" && $savedCodeData["code"] == $code;
+		} else if( $method == TWOFACTOR_APP ) {
+			$result = $code == calculateTotpCode( $userData[ $twofSettings["codeField"] ] );
+		}
+		
+		if( $result ) {
+			//	update user preferred two factor method in userinfo
+			$userData[ $twofSettings[ "twoFactorField" ] ] = Security::getTwoFactorValue(
+				Security::twoFactorEnabledMethods( $twoFactorValue ),
+				$method
+			);
+			storageSet( "UserData", $userData );			
+		}
+		return $result;
 	}
-
 
 	/**
 	 * Verify two factor settigns to make sure it is enabled and can be used
@@ -1986,11 +2137,11 @@ class Security
 			return false;
 		}
 		$twoFactorValue = $userData[ $twofSettings[ "twoFactorField" ] ];
-		if( !Security::twoFactorEnabled( $twoFactorValue ) ) {
-			//	2FA turned off for this user
-			return false;
-		}
-		$twofMethod = Security::twoFactorMethod( $twoFactorValue );
+		$methods = Security::twoFactorEnabledMethods( $twoFactorValue );
+		return count( $methods ) > 0;
+		
+		// verify user data??
+/*
 
 		if( $twofMethod === "totp" ) {
 			return validateTotpSecret( $userData[ $twofSettings[ "codeField" ] ] );
@@ -2003,6 +2154,7 @@ class Security
 
 		//	unknown or un-selected 2FA method
 		return false;
+*/		
 	}
 
 	/**
@@ -2241,15 +2393,19 @@ class Security
 	/**
 	 *
 	 */
-	public static function getActivationCode( $username, $password, $cipherer ) {
+	public static function getActivationCode( $username, $dbPassword ) {
+		$passwordHash = md5( $dbPassword );
+		return getPasswordHash( $username . $passwordHash );
+	}
 
-		$passwordHash = md5( $password );
-		if( GetGlobalData( "bEncryptPasswords" ) ) {
-			if( !$cipherer->isFieldEncrypted( Security::passwordField() ) )
-				$passwordHash = Security::hashPassword( $password );
-		}
+	/**
+	 *
+	 */
+	public static function verifyActivationCode( $code, $username, $dbPassword ) {
 
-		return md5( $username.$passwordHash );
+		$passwordHash = md5( $dbPassword );
+		$usercode = $username . $passwordHash;
+		return passwordVerify( $usercode, $code );
 	}
 
 	/**
@@ -2830,6 +2986,14 @@ class Security
 	static function isAdminTable( $table )
 	{
 		return $table === 'admin_rights' || $table === 'admin_members' || $table === 'admin_users';
+	}
+
+	/**
+	 * Return user data provided by SecurityPlugin in login routine
+	 * @return Array
+	 */
+	public static function & rawUserData() {
+		return storageGet("rawUserData");
 	}
 }
 

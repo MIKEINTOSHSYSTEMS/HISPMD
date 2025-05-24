@@ -136,6 +136,10 @@ class ProjectSettings
 	}
 
 	function setPage($page) {
+		if( $page != $this->_page ) {
+			$dummy = null;
+			$this->_pageOptions = &$dummy;
+		}
 		$this->_page = $page;
 		//	there is no such page!
 		if( array_search( $page, $this->getPageIds() ) === FALSE ) {
@@ -343,7 +347,7 @@ class ProjectSettings
 	 */
 	function getPageOptionAsArray($key1, $key2 = FALSE, $key3 = FALSE, $key4 = FALSE, $key5 = FALSE ) {
 		$ret =& $this->getPageOption( $key1, $key2, $key3, $key4, $key5);
-		if( !is_array( $ret ) ) {
+		if( !$ret || !is_array( $ret ) ) {
 			return array();
 		}
 		return $ret;
@@ -741,6 +745,11 @@ class ProjectSettings
 		return $this->getFieldData($field, "FieldType");
 	}
 
+	function getFieldDateFormat($field)
+	{
+		return $this->getFieldData($field, "dateFormat");
+	}
+
 	function isAutoincField($field)
 	{
 		return $this->getFieldData($field, "AutoInc");
@@ -877,7 +886,6 @@ class ProjectSettings
 	*/
 	function multiSelectLookupEdit( $field )
 	{
-		$hasLookup = false;
 		foreach( $this->_tableData[$field][FORMAT_EDIT] as $pageType => $editFormat ) {
 			if( $pageType != "edit" && $pageType != "add" )
 				continue;
@@ -888,6 +896,21 @@ class ProjectSettings
 		}
 		return false;
 	}
+
+	/**
+	 * Check whether the field is a lookup wizard with Link Field != Display field.
+	*/
+	function lookupField( $field )
+	{
+		foreach( $this->_tableData[$field][FORMAT_EDIT] as $pageType => $editFormat ) {
+			if( $editFormat["EditFormat"] != EDIT_FORMAT_LOOKUP_WIZARD )
+				continue;
+			if( $editFormat["LinkField"] != $editFormat["DisplayField"] )
+				return true;
+		}
+		return false;
+	}
+
 
 	// Lookup wizard select size
 	function selectSize($field)
@@ -1349,19 +1372,21 @@ class ProjectSettings
 	function getSearchableFields()
 	{
 		if( $this->getEntityType() == titDASHBOARD ) {
-			return $this->getPageOption( 'dashSearch', 'allSearchFields');
+			return $this->getPageOptionAsArray( 'dashSearch', 'allSearchFields');
 		}
 		return $this->getTableData(".searchableFields");
 	}
 
 	function getAllSearchFields()
 	{
-		return $this->getEntityType() == titDASHBOARD ? $this->getTableData('.allSearchFields') : $this->getPageOption("fields", "searchPanelFields");
+		return $this->getEntityType() == titDASHBOARD
+			? $this->getPageOptionAsArray("dashSearch", "allSearchFields")
+			: $this->getPageOptionAsArray("fields", "searchPanelFields");
 	}
 
 	function getAdvSearchFields()
 	{
-		return $this->getEntityType() == titDASHBOARD ? $this->getAllSearchFields() : $this->getPageOption("fields", "gridFields");;
+		return $this->getPageOptionAsArray("fields", "gridFields");
 	}
 
 	function isUseTimeForSearch()
@@ -1369,6 +1394,9 @@ class ProjectSettings
 		return $this->getTableData(".isUseTimeForSearch");
 	}
 
+	/**
+	 * @deprecated
+	 */
 	function isUseToolTips()
 	{
 		return $this->getTableData(".isUseToolTips");
@@ -1455,56 +1483,66 @@ class ProjectSettings
 	{
 		if( $this->getEntityType() == titDASHBOARD )
 		{
-			return $this->getPageOption( 'dashSearch', 'googleLikeFields');
+			return $this->getPageOptionAsArray( 'dashSearch', 'googleLikeFields');
 		}
 		return $this->getTableData(".googleLikeFields");
-		
+
 	}
 
 	function getInlineEditFields()
 	{
-		return $this->getPageOption("fields", "inlineEditFields");
+		return $this->getPageOptionAsArray("fields", "inlineEditFields");
 	}
 
 	function getUpdateSelectedFields()
 	{
-		return $this->getPageOption("fields", "updateOnEditFields");
-		//return $this->getTableData(".updateSelectedFields");
+		return $this->getPageOptionAsArray("fields", "updateOnEditFields");
 	}
 
 	function getExportFields()
 	{
-		return $this->getPageOption("fields", "exportFields");
+		return $this->getPageOptionAsArray("fields", "exportFields");
 	}
 
 	function getImportFields()
 	{
-		return $this->getPageOption("fields", "gridFields");
+		return $this->getPageOptionAsArray("fields", "gridFields");
 	}
 
 	function getEditFields()
 	{
-		return $this->getPageOption("fields", "gridFields" );
+		return $this->getPageOptionAsArray("fields", "gridFields" );
 	}
 
 	function getInlineAddFields()
 	{
-		return $this->getPageOption("fields", "inlineAddFields");
+		return $this->getPageOptionAsArray("fields", "inlineAddFields");
 	}
 
 	function getAddFields()
 	{
-		return $this->getPageOption("fields", "gridFields" );
+		return $this->getPageOptionAsArray("fields", "gridFields" );
 	}
 
 	function getMasterListFields()
 	{
-		return $this->getPageOption("fields", "gridFields" );
+		return $this->getPageOptionAsArray("fields", "gridFields" );
 	}
 
 	function getViewFields()
 	{
-		return $this->getPageOption("fields", "gridFields" );
+		return $this->getPageOptionAsArray("fields", "gridFields" );
+	}
+
+	function getFieldFilterFields()
+	{
+		$ret = array();
+		foreach( $this->getPageOptionAsArray("fields", "fieldFilterFields" ) as $f ) {
+			if( !IsBinaryType( $this->getFieldType( $f ) ) ) {
+				$ret[] = $f;
+			}
+		}
+		return $ret;
 	}
 
 	function getPrinterFields()
@@ -1514,7 +1552,7 @@ class ProjectSettings
 
 	function getListFields()
 	{
-		$fields = $this->getPageOption("fields", "gridFields" );
+		$fields = $this->getPageOptionAsArray("fields", "gridFields" );
 		if( isReport( $this->getEntityType() ) ) {
 			return array_merge( $fields, $this->getReportGroupFields() );
 		}
@@ -1538,7 +1576,7 @@ class ProjectSettings
 
 	function customButtons()
 	{
-		return $this->getPageOption("page", "customButtons");
+		return $this->getPageOptionAsArray("page", "customButtons");
 	}
 
 	function isUseFieldsMaps()
@@ -1951,7 +1989,6 @@ class ProjectSettings
 
 	function updateSelectedButtons()
 	{
-		//return $this->getPageOption("edit", "updateSelectedButtons");
 		$data = $this->labeledButtons();
 		return $data['update_records'];
 	}
@@ -1966,7 +2003,7 @@ class ProjectSettings
 
 	function labeledButtons()
 	{
-		return $this->getPageOption("page", "labeledButtons");
+		return $this->getPageOptionAsArray("page", "labeledButtons");
 	}
 
 	function printPagesLabelsData()
@@ -1974,13 +2011,6 @@ class ProjectSettings
 		$data = $this->labeledButtons();
 		return $data['print_pages'];
 	}
-
-	function detailsFoundLabelsData()
-	{
-		$data = $this->labeledButtons();
-		return $data['details_found'];
-	}
-
 
 	function hasSortByDropdown()
 	{
@@ -2020,7 +2050,7 @@ class ProjectSettings
 	function getTotalsFields()
 	{
 		$ret = array();
-		foreach( $this->getPageOption('totals') as $field => $totals ) {
+		foreach( $this->getPageOptionAsArray('totals') as $field => $totals ) {
 			if( $totals /* ?? */ && $totals["totalsType"] ) {
 				$ret[] = array(
 					"fName" => $field,
@@ -2032,6 +2062,10 @@ class ProjectSettings
 			}
 		}
 		return $ret;
+	}
+
+	function calcTotalsFor() {
+		return $this->getPageOption("page", "calcTotalsFor");
 	}
 
 	function getExportTxtFormattingType()
@@ -2098,7 +2132,7 @@ class ProjectSettings
 	function getReportGroupFields()
 	{
 		$ret = array();
-		foreach( $this->getPageOption("newreport", "reportInfo", "groupFields" ) as $g ) {
+		foreach( $this->getPageOptionAsArray("newreport", "reportInfo", "groupFields" ) as $g ) {
 			$ret[] = $g["field"];
 		}
 		return $ret;
@@ -2107,7 +2141,7 @@ class ProjectSettings
 	function getReportGroupFieldsData()
 	{
 		$ret = array();
-		foreach( $this->getPageOption("newreport", "reportInfo", "groupFields" ) as $idx => $g ) {
+		foreach( $this->getPageOptionAsArray("newreport", "reportInfo", "groupFields" ) as $idx => $g ) {
 			$gdata = array();
 			$gdata["strGroupField"] = $g["field"];
 			$gdata["groupInterval"] = $g["interval"];
@@ -2162,7 +2196,7 @@ class ProjectSettings
 
 	function isGroupSummaryCountShown()
 	{
-		foreach( $this->getPageOption("newreport", "reportInfo", "groupFields" ) as $g ) {
+		foreach( $this->getPageOptionAsArray("newreport", "reportInfo", "groupFields" ) as $g ) {
 			if( $g["summary"] ) {
 				return true;
 			}
@@ -2177,7 +2211,7 @@ class ProjectSettings
 
 	function reportTotalFieldsExist()
 	{
-		foreach( $this->getPageOption("newreport", "reportInfo", "fields" ) as $f ) {
+		foreach( $this->getPageOptionAsArray("newreport", "reportInfo", "fields" ) as $f ) {
 			if( $f["sum"] || $f["min"] || $f["max"] || $f["avg"] ) {
 				return true;
 			}
@@ -2190,7 +2224,7 @@ class ProjectSettings
 	 * True if the field has 'max' total in report
 	 */
 	function reportFieldInfo( $field ) {
-		foreach( $this->getPageOption("newreport", "reportInfo", "fields" ) as $f ) {
+		foreach( $this->getPageOptionAsArray("newreport", "reportInfo", "fields" ) as $f ) {
 			if( $f["field"] === $field ) {
 				return $f;
 			}
@@ -2592,12 +2626,11 @@ class ProjectSettings
 
 	function getSearchRequiredFields()
 	{
-		return $this->getPageOption("fields", "searchRequiredFields");
+		return $this->getPageOptionAsArray("fields", "searchRequiredFields");
 	}
 
 	function showSimpleSearchOptions()
 	{
-//		return $this->getTableData(".showSimpleSearchOptions");
 		return $this->getPageOption("listSearch", "simpleSearchOptions");
 	}
 
@@ -2608,10 +2641,7 @@ class ProjectSettings
 
 	function getFilterFields()
 	{
-		$ret = $this->getPageOption("fields", "filterFields");
-		if( !$ret )
-			return array();
-		return $ret;
+		return  $this->getPageOptionAsArray("fields", "filterFields");
 	}
 
 	function getFilterFieldFormat($field)
@@ -2982,7 +3012,7 @@ class ProjectSettings
 	 */
 	function getDashboardSearchFields()
 	{
-		return $this->getPageOption( 'dashSearch', 'searchFields');
+		return $this->getPageOptionAsArray( 'dashSearch', 'searchFields');
 	}
 	/**
 	 * Returns the list of the dashboard elements
@@ -3081,11 +3111,13 @@ class ProjectSettings
 	{
 		$dashElementData = $this->getDashboardElementData( $dashElementName );
 
-		if( $dashElementData["isMarkerIconCustom"] )
-			return getDashMapCustomIcon( $this->_table, $dashElementName, $data );
-
+		if( $dashElementData["isMarkerIconCustom"] ) {
+			$eventObj = getEventObject( $this->table() );
+			$funcName = "event_" . $dashElementData["iconF"];
+			return getDashMapCustomIcon( $eventObj, $funcName, $data );
+		}
 		if( $dashElementData["iconF"] )
-			return $dashElementData["iconF"];
+			return "images/menuicons/" . $dashElementData["iconF"];
 
 		return "";
 	}
@@ -3095,14 +3127,17 @@ class ProjectSettings
 	 * @param Array data
 	 * @return String
 	 */
-	function getDashMapLocationIcon( $dashElementName, $data )
+	function getDashMapLocationIcon( $dashElementName )
 	{
 		$dashElementData = $this->getDashboardElementData( $dashElementName );
-		if( $dashElementData["isLocationMarkerIconCustom"] )
-			return getDashMapCustomLocationIcon( $this->_table, $dashElementName, $data );
+		if( $dashElementData["isLocationMarkerIconCustom"] ) {
+			$eventObj = getEventObject( $this->table() );
+			$funcName = "event_" . $dashElementData["currentLocationIcon"];
+			return getDashMapCustomIcon( $eventObj, $funcName, array() );
+		}
 
 		if( $dashElementData["currentLocationIcon"] )
-			return $dashElementData["currentLocationIcon"];
+			return "images/menuicons/" . $dashElementData["currentLocationIcon"];
 
 		return "";
 	}
@@ -3115,6 +3150,13 @@ class ProjectSettings
 
 	function getDetailsBadgeColor( $dTable ) {
 		return $this->getPageOption( "details", $dTable, "badgeColor" );
+	}
+
+	/**
+	 * returns array of array( "id" => menuId, "horizontal" => boolean )
+	 */
+	function getPageMenus() {
+		return $this->getPageOptionAsArray( "page", "menus" );
 	}
 
 	function getDefaultBadgeColor() {
@@ -3443,7 +3485,6 @@ class ProjectSettings
 		return $this->getPageOption("page", "hasNotifications");
 	}
 
-
 	function amazonSecretKey( $field ) {
 		return GetGlobalData( "S3SecretKey" );
 	}
@@ -3462,6 +3503,27 @@ class ProjectSettings
 
 	function amazonRegion( $field ) {
 		return GetGlobalData( "S3Region" );
+	}
+
+
+	function wasabiSecretKey( $field ) {
+		return GetGlobalData( "WasabiSecretKey" );
+	}
+
+	function wasabiAccessKey( $field ) {
+		return GetGlobalData( "WasabiAccessKey" );
+	}
+
+	function wasabiPath( $field ) {
+		return $this->getFieldData( $field, "wasabiPath" );
+	}
+
+	function wasabiBucket( $field ) {
+		return GetGlobalData( "WasabiBucket" );
+	}
+
+	function wasabiRegion( $field ) {
+		return GetGlobalData( "WasabiRegion" );
 	}
 
 	function oneDrivePath( $field ) {
@@ -3501,6 +3563,12 @@ class ProjectSettings
 	function getChartCount() {
 		return $this->getPageOption("chart", "chartCount");
 	}
+
+	function hideNumberOfRecords()
+	{
+		return $this->getPageOption("list", "hideNumberOfRecords");
+	}
+
 
 }
 

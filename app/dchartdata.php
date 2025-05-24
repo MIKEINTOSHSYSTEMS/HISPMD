@@ -38,7 +38,7 @@ if( Security::hasLogin() ) {
 	if( !$chrt_strXML )
 	{
 		$sessPrefix = "webchart".postvalue('cname');
-		$chrt_strXML = LoadSelectedChart(postvalue('cname'));
+		$chrt_strXML = wrLoadSelectedEntity( postvalue('cname'), WR_CHART );
 		$webchart = true;
 		$chrt_array = $xml->xml_to_array( $chrt_strXML );
 		if( is_wr_project() )
@@ -60,6 +60,7 @@ if( Security::hasLogin() ) {
 	{
 		$param["dashTName"] = postvalue('dashTName');
 		$param["dashElementName"] = postvalue('dashElName');
+		$params["dashPage"] = postvalue("dashPage");
 	}
 	
 	if( $webchart )

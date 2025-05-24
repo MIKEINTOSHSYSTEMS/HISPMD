@@ -250,6 +250,7 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "period_id";
 
@@ -388,6 +389,7 @@ $tdatadhis2_periods[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "period_name";
 

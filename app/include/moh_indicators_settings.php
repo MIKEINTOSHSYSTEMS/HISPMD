@@ -271,6 +271,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_id";
 
@@ -411,6 +412,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_name";
 
@@ -551,6 +553,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "baseline";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "baseline";
 
@@ -690,6 +693,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "target";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "target";
 
@@ -829,6 +833,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_group_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_group_id";
 
@@ -992,6 +997,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_shortname";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_shortname";
 
@@ -1132,6 +1138,7 @@ $tdatamoh_indicators[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_desc";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_desc";
 

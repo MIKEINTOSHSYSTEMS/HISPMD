@@ -66,8 +66,6 @@ class ReportPage extends RunnerPage
 
 		$this->controlsMap["pdfSettings"] = array();
 		$this->controlsMap["pdfSettings"]["allPagesMode"] = 0;
-		
-		$this->pageData['pdfFonts'] = getPdfFonts();
 	}
 
 	/**
@@ -726,8 +724,8 @@ class ReportPage extends RunnerPage
 
 		if( $this->noRecordsFound )
 		{
-			$this->hideItem("details_found");
-			$this->hideItem("page_size");
+			$this->hideItemType("details_found");
+			$this->hideItemType("page_size");
 		}
 
 		$this->xt->assign("details_block", $this->arrReport['countRows'] != 0);
@@ -884,13 +882,6 @@ class ReportPage extends RunnerPage
 	{
 		$this->addButtonHandlers();
 		$this->commonAssign();
-
-		if( $this->allDetailsTablesArr )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
-
 
 		$this->setReportData( $this->getExtraReportParams() );
 		$this->xt->assign("cross_controls", false);
@@ -1058,6 +1049,8 @@ class ReportPage extends RunnerPage
 			$this->xt->assign( $gf . "_align", $this->fieldAlign( $f ));
 		}
 
+		if( $this->pdfJsonMode() )
+			$this->xt->assign( "pdfFonts", my_json_encode( getPdfFonts() ) );
 	}
 
 	/**
@@ -1066,12 +1059,6 @@ class ReportPage extends RunnerPage
 	function addCommonJs()
 	{
 		parent::addCommonJs();
-
-		if( $this->allDetailsTablesArr )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
 	}
 
 	/**
@@ -1121,9 +1108,6 @@ class ReportPage extends RunnerPage
 
 		if( $this->mode == REPORT_DASHBOARD )
 		{
-			$bricksExcept = array("grid", "pagination", "details_found", "message");
-			$this->xt->hideAllBricksExcept($bricksExcept);
-
 			$this->xt->prepare_template( $this->templatefile );
 
 			$this->addControlsJSAndCSS();
@@ -1155,7 +1139,8 @@ class ReportPage extends RunnerPage
 			$this->assignFormFooterAndHeaderBricks(false);
 			$this->xt->prepareContainers();
 
-			$returnJSON["html"] = $this->xt->fetch_loaded("message_block").$this->xt->fetch_loaded("grid_block");
+			$returnJSON["html"] = $this->fetchBlocksList( array( "above-grid_block", "grid_tabs", "grid_block" ) );
+			//$returnJSON["html"] = $this->xt->fetch_loaded("message_block").$this->xt->fetch_loaded("grid_block");
 
 			$returnJSON['idStartFrom'] = $this->flyId;
 			$returnJSON['success'] = true;
@@ -1177,11 +1162,9 @@ class ReportPage extends RunnerPage
 
 		if( $this->mode && $this->mode == "listdetailspopup" ) //a currently unused option
 		{
-			$bricksExcept = array("grid", "pagination");
 			$this->xt->assign("container_master", false);
 
 			$this->xt->assign("cross_controls", false);
-			$this->xt->hideAllBricksExcept($bricksExcept);
 			$this->xt->prepare_template($this->templatefile);
 			$respArr = array();
 			$respArr['success'] = true;
@@ -1227,15 +1210,6 @@ class ReportPage extends RunnerPage
 
 		$this->hideElement("printpanel");
 
-		$bricksExcept = array("grid", "pagination", "message" );
-		if( $this->mode != REPORT_DETAILS )
-		{
-			$bricksExcept[] = "details_found";
-		}
-
-		$bricksExcept[] = "bsgrid_tabs";
-
-		$this->xt->hideAllBricksExcept($bricksExcept);
 
 		$this->xt->prepare_template( $this->templatefile );
 
@@ -1390,8 +1364,10 @@ class ReportPage extends RunnerPage
 
 	function displayTabsInPage()
 	{
-		return $this->simpleMode() || ( $this->mode == REPORT_DETAILS && ($this->masterPageType == PAGE_VIEW || $this->masterPageType == PAGE_EDIT));
-	}
+		return $this->simpleMode() 
+			|| ( $this->mode == REPORT_DETAILS && ($this->masterPageType == PAGE_VIEW || $this->masterPageType == PAGE_EDIT))
+			|| $this->mode == REPORT_DASHBOARD && $this->dashElementData["tabLocation"] == "body";;
+	}		
 
 	function renderPageBody()
 	{

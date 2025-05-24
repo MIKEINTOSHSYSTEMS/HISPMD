@@ -119,6 +119,7 @@ if( $mode != LIST_LOOKUP )
 {
 	$options["dashElementName"] = postvalue("dashelement");
 	$options["dashTName"] = postvalue("table");
+	$options["dashPage"] = postvalue("dashPage");
 } 
 
 if(	postvalue("mapRefresh") )
@@ -139,7 +140,11 @@ if( $pageObject->processSaveSearch() )
 if( $pageObject->updateRowOrder() )
 	exit();
 
+if ( $pageObject->processFieldFilter() )
+	exit();
 
+if( $pageObject->processTotals() ) 
+	exit();
 
 if( $mode != LIST_DETAILS && $mode != MAP_DASHBOARD && $mode != LIST_DASHBOARD ) 
 { 

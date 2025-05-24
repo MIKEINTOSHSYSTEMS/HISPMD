@@ -29,12 +29,6 @@ class SecurityPluginAd extends SecurityPlugin {
 	public $useAdGroups = false;
 	public $useDbGroups = false;
 
-
-	public $configUrl = "";
-	public $scope = null;
-	public $clientId = "";
-	public $clientSecret = "";
-
 	/**
 	 * @constructor
 	 */
@@ -76,23 +70,23 @@ class SecurityPluginAd extends SecurityPlugin {
 	}
 
 	/**
-	 *
+	 * 
 	 * @return Array
 	 */
 	protected function getDefaultUserNames()
-	{
+	{	
 		$usernames = array();
 		$usernames[] = "%u@%d"; // Active Directory string
 		$usernames[] = "%d\\%u"; // old format Active Directory string
-		$usernames[] = "%u";
-		$usernames[] = "uid=%u,%e"; // OpenLDAP string
-		$usernames[] = "cname=%u,cname=Users,%e"; // AD string
-		$usernames[] = "cn=%u,%e"; // AD string
+		$usernames[] = "%u"; 
+		$usernames[] = "uid=%u,%e"; // OpenLDAP string	
+		$usernames[] = "cname=%u,cname=Users,%e"; // AD string	
+		$usernames[] = "cn=%u,%e"; // AD string	
 		return $usernames;
 	}
 
 	/**
-	 *
+	 * 
 	 * @return Array
 	 */
 	protected function getDefaultMemberAttrMap()
@@ -105,7 +99,7 @@ class SecurityPluginAd extends SecurityPlugin {
 		);
 	}
 
-	public function getProcessedSearchPattern( $pattern, $value )
+	public function getProcessedSearchPattern( $pattern, $value ) 
 	{
 		$queryStr = str_replace( array( "%s" ), array( $value ), $pattern );
 
@@ -129,7 +123,7 @@ class SecurityPluginAd extends SecurityPlugin {
 	 * $dn = Users
 	 * return Users
 	 */
-	protected function ldap_getCN($dn)
+	protected function ldap_getCN($dn) 
 	{
 		$rdnList = explode( ",", $dn );
 		$firstRdn = $rdnList[0];
@@ -141,7 +135,7 @@ class SecurityPluginAd extends SecurityPlugin {
 
 		return $firstRdn;
 	}
-
+		
 	/**
 	 * This function searchs in LDAP tree ($ad -LDAP link identifier)
  	 * entry specified by samaccountname and returns its DN or epmty
@@ -150,7 +144,7 @@ class SecurityPluginAd extends SecurityPlugin {
 	 * $basedn = DC=test,DC=xlinesoft,DC=com
 	 * return CN=Users,CN=Builtin,DC=test,DC=xlinesoft,DC=com
 	 */
-	protected function ldap_getDN( $samaccountname )
+	protected function ldap_getDN( $samaccountname ) 
 	{
 		$attributes = array('dn');
 		return $this->ldapObj->runner_ldap_getData("(samaccountname={$samaccountname})", $this->ldapBaseDN, $attributes);
@@ -163,12 +157,12 @@ class SecurityPluginAd extends SecurityPlugin {
 	 */
 	protected function getUserNames( $aUsername )
 	{
-		$usernames = array();
-		foreach( $this->ldapUsernames as $usernamePattern )
+		$usernames = array();		
+		foreach( $this->ldapUsernames as $usernamePattern ) 
 		{
 			$usernames[] = $this->getProcessedPattern( $usernamePattern, $aUsername );
-		}
-
+		}	
+		
 		return $usernames;
 	}
 
@@ -178,7 +172,7 @@ class SecurityPluginAd extends SecurityPlugin {
 	 * @return String
 	 */
 	protected function getLoginFilter( $username )
-	{
+	{	
 		return $this->getProcessedPattern( $this->ldapLoginFilter, $username);
 	}
 
@@ -206,7 +200,7 @@ class SecurityPluginAd extends SecurityPlugin {
 		}
 
 		storageSet( "ldapPassword", $password );
-
+		
 		if( !$loginUsername ) {
 			$loginUsername = $username;
 		}
@@ -220,7 +214,7 @@ class SecurityPluginAd extends SecurityPlugin {
 		$rawData =& $entries[0];
 		$displayName = $this->getAttrValue( $rawData, $this->ldapMemberAttrMap["displayname"] );
 		$userId = $this->getAttrValue( $rawData, $this->ldapMemberAttrMap["name"] );
-
+		
 		//	use the server-provided username, not the user-provided
 		if( $userId )  {
 			$loginUsername = $userId;
@@ -257,6 +251,8 @@ class SecurityPluginAd extends SecurityPlugin {
 				$this->addGroupsFromAD( $userGroups, $rawData['distinguishedname'] );
 			}
 		}
+
+		storageSet( "rawUserData", $rawData );
 
 		return array(
 			"userdata" => $userData,
@@ -328,82 +324,6 @@ class SecurityPluginAd extends SecurityPlugin {
 		return $result;
 	}
 
-	/**
-	 * Verify token and return parsed paylod
-	 * @param String token
-	 * @return Array|false
-	 */
-	public function verifyIdToken( $token ) {
-		$config = $this->getConfig();
-
-		$jwk = Security::getOpenIdJWK( $token, $config );
-		if( !$jwk )
-			return false;
-
-		$verifiedTokenData = Security::openIdVerifyToken( $token, $jwk );
-		if( !$verifiedTokenData )
-			return false;
-
-		return $verifiedTokenData["payload"];
-	}
-
-	public function getConfig() {
-		$wellKnown =& storageFindOrCreate( "openIdConfig" );
-		if( !$wellKnown[ $this->code ] ) {
-			$wellKnown[ $this->code ] = Security::getOpenIdConfiguration( $this->configUrl );
-		}
-		return $wellKnown[ $this->code ];
-	}
-
-	/**
-	 * Redirect to the external login page
-	 */
-	public function redirectToLogin() {
-		//	create and save the state parameter
-		$openIdStateMap =& storageFindOrCreate( "openIdStateMap" );
-		$state = generatePassword(10);
-		$openIdStateMap[ $state ] = $this->code;
-
-		//	create the URL
-		$config = $this->getConfig();
-		$request = new HttpRequest( $config["authorization_endpoint"], "GET", array(
-			"response_type" => "code",
-			"scope" => $this->scope,
-			"client_id" => $this->clientId,
-			"state" => $state,
-			"redirect_uri" => projectURL() . GetTableLink("openidcallback")
-		));
-
-		header( "Location: " . $request->getUrl() );
-	}
-
-	public function getIdToken( $code ) {
-		$config = $this->getConfig();
-		$request = new HttpRequest( $config["token_endpoint"], "POST" );
-		$request->postPayload = array(
-			'grant_type'	=> 'authorization_code',
-			'code'			=> $code,
-			'redirect_uri' 	=> projectURL() . GetTableLink("openidcallback")
-		);
-		$request->addBasicAuthorization( $this->clientId, $this->clientSecret );
-		$request->headers["Content-Type"] = 'application/x-www-form-urlencoded';
-
-		$response = $request->run();
-		if( $response["error"] ) {
-			$this->error = "Unable to obtain authorization token.";
-			$this->error .= $response["header"] . $response["content"];
-			return false;
-		}
-		$result = HttpRequest::parseResponseArray( $response );
-
-		if( !$result || !$result["id_token"] ) {
-			$this->error = "Unable to parse autorization token.";
-			$this->error .= $response["header"] . $response["content"];
-			return false;
-		}
-		return $result["id_token"];
-	}
-
 	protected function addGroupsFromAD( &$userGroups, $distinguishedName )
 	{
 		global $adNestedPermissions;
@@ -422,7 +342,7 @@ class SecurityPluginAd extends SecurityPlugin {
 		}
 
 		$filter = "(member:1.2.840.113556.1.4.1941:=". $distinguishedName .")";
-		$entries_dn = $this->ldapObj->runner_ldap_getData($filter, array("cn"));
+		$entries_dn = $this->ldapObj->runner_ldap_getData($filter, $this->ldapBaseDN, array("cn"));
 		if( !$entries_dn )
 			return;
 
@@ -496,7 +416,7 @@ class SecurityPluginAd extends SecurityPlugin {
 			Security::createProvisionalSession( $this->provider, $nextSessionLevel, $username, $displayName, $data );
 			return true;
 		}
-
+		
 		Security::createUserSession( $this->provider, $username, $displayName, $data, $adGroups, $autoLogin );
 		return true;
 
@@ -506,7 +426,7 @@ class SecurityPluginAd extends SecurityPlugin {
 	 * Returns list of groups and users from AD where name contains the search string
 	 * @param search
 	 * @param Boolean hideUntilSearch
-	 * @return Array of array(
+	 * @return Array of array( 
 	 * 		"name" =>
 	 * 		"displayName" =>
 	 * 		"category" =>
@@ -519,18 +439,18 @@ class SecurityPluginAd extends SecurityPlugin {
 		if( !$ldapconn ) {
 			return array();
 		}
-
+		
 		if( !strlen( $search ) && $hideUntilSearch ) {
 			// hide data until search
 			return array();
 		}
-
+		
 		$filter = $this->getMembersFilter( $search );
 		$attributes = array();
 		$attrMapNames = array( "name", "displayname", "category", "email" );
 		foreach( $attrMapNames as $an ) {
 			$attr = $this->ldapMemberAttrMap[ $an ];
-			if( !$attr ) {
+			if( !$attr ) {	
 				continue;
 			}
 			if( is_array( $attr ) ) {
@@ -556,10 +476,18 @@ class SecurityPluginAd extends SecurityPlugin {
 	}
 
 	protected function ldapUsername() {
+		if( $this->username ) {
+			//	use the one from Security screen settings
+			return $this->username;
+		}
 		return Security::getUserName();
 	}
 
 	protected function ldapPassword() {
+		if( $this->username ) {
+			//	use the one from Security screen settings
+			return $this->password;
+		}
 		return storageGet( "ldapPassword" );
 	}
 
@@ -576,7 +504,7 @@ class SecurityPluginAd extends SecurityPlugin {
 	{
 		if( !is_array($attValue) )
 			return $attValue;
-
+		
 		foreach( $attValue as $value )
 		{
 			return $value;

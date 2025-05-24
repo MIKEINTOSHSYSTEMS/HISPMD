@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -88,7 +231,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -97,7 +240,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -217,6 +360,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -1456,9 +1602,20 @@
 
 	 
 		{BEGIN SubmissionDate_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SubmissionDate" data-fieldname="SubmissionDate">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic SubmissionDate }	</span>
+	{BEGIN SubmissionDate_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SubmissionDate" data-fieldname="SubmissionDate" 
+
+			{$SubmissionDate_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic SubmissionDate }</span>
+					{$arrow_icon_SubmissionDate}
+			</span>
+	</span>
+	{END SubmissionDate_fieldheader}
 {END SubmissionDate_fieldheadercolumn}
 
 	
@@ -1479,9 +1636,20 @@
 
 	 
 		{BEGIN starttime_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="starttime" data-fieldname="starttime">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic starttime }	</span>
+	{BEGIN starttime_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="starttime" data-fieldname="starttime" 
+
+			{$starttime_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic starttime }</span>
+					{$arrow_icon_starttime}
+			</span>
+	</span>
+	{END starttime_fieldheader}
 {END starttime_fieldheadercolumn}
 
 	
@@ -1502,9 +1670,20 @@
 
 	 
 		{BEGIN endtime_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endtime" data-fieldname="endtime">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic endtime }	</span>
+	{BEGIN endtime_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endtime" data-fieldname="endtime" 
+
+			{$endtime_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic endtime }</span>
+					{$arrow_icon_endtime}
+			</span>
+	</span>
+	{END endtime_fieldheader}
 {END endtime_fieldheadercolumn}
 
 	
@@ -1525,9 +1704,20 @@
 
 	 
 		{BEGIN deviceid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="deviceid" data-fieldname="deviceid">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic deviceid }	</span>
+	{BEGIN deviceid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="deviceid" data-fieldname="deviceid" 
+
+			{$deviceid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic deviceid }</span>
+					{$arrow_icon_deviceid}
+			</span>
+	</span>
+	{END deviceid_fieldheader}
 {END deviceid_fieldheadercolumn}
 
 	
@@ -1548,9 +1738,20 @@
 
 	 
 		{BEGIN subscriberid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="subscriberid" data-fieldname="subscriberid">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic subscriberid }	</span>
+	{BEGIN subscriberid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="subscriberid" data-fieldname="subscriberid" 
+
+			{$subscriberid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic subscriberid }</span>
+					{$arrow_icon_subscriberid}
+			</span>
+	</span>
+	{END subscriberid_fieldheader}
 {END subscriberid_fieldheadercolumn}
 
 	
@@ -1571,9 +1772,20 @@
 
 	 
 		{BEGIN simid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="simid" data-fieldname="simid">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic simid }	</span>
+	{BEGIN simid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="simid" data-fieldname="simid" 
+
+			{$simid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic simid }</span>
+					{$arrow_icon_simid}
+			</span>
+	</span>
+	{END simid_fieldheader}
 {END simid_fieldheadercolumn}
 
 	
@@ -1594,9 +1806,20 @@
 
 	 
 		{BEGIN devicephonenum_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="devicephonenum" data-fieldname="devicephonenum">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic devicephonenum }	</span>
+	{BEGIN devicephonenum_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="devicephonenum" data-fieldname="devicephonenum" 
+
+			{$devicephonenum_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic devicephonenum }</span>
+					{$arrow_icon_devicephonenum}
+			</span>
+	</span>
+	{END devicephonenum_fieldheader}
 {END devicephonenum_fieldheadercolumn}
 
 	
@@ -1617,9 +1840,20 @@
 
 	 
 		{BEGIN username_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic username }	</span>
+	{BEGIN username_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username" 
+
+			{$username_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic username }</span>
+					{$arrow_icon_username}
+			</span>
+	</span>
+	{END username_fieldheader}
 {END username_fieldheadercolumn}
 
 	
@@ -1640,9 +1874,20 @@
 
 	 
 		{BEGIN duration_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="duration" data-fieldname="duration">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic duration }	</span>
+	{BEGIN duration_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="duration" data-fieldname="duration" 
+
+			{$duration_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic duration }</span>
+					{$arrow_icon_duration}
+			</span>
+	</span>
+	{END duration_fieldheader}
 {END duration_fieldheadercolumn}
 
 	
@@ -1663,9 +1908,20 @@
 
 	 
 		{BEGIN caseid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caseid" data-fieldname="caseid">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic caseid }	</span>
+	{BEGIN caseid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caseid" data-fieldname="caseid" 
+
+			{$caseid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic caseid }</span>
+					{$arrow_icon_caseid}
+			</span>
+	</span>
+	{END caseid_fieldheader}
 {END caseid_fieldheadercolumn}
 
 	
@@ -1686,9 +1942,20 @@
 
 	 
 		{BEGIN DQ104_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DQ104" data-fieldname="DQ104">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic DQ104 }	</span>
+	{BEGIN DQ104_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DQ104" data-fieldname="DQ104" 
+
+			{$DQ104_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic DQ104 }</span>
+					{$arrow_icon_DQ104}
+			</span>
+	</span>
+	{END DQ104_fieldheader}
 {END DQ104_fieldheadercolumn}
 
 	
@@ -1709,9 +1976,20 @@
 
 	 
 		{BEGIN intvwr_vst_DQ101_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="intvwr_vst_DQ101" data-fieldname="intvwr_vst_DQ101">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic intvwr_vst_DQ101 }	</span>
+	{BEGIN intvwr_vst_DQ101_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="intvwr_vst_DQ101" data-fieldname="intvwr_vst_DQ101" 
+
+			{$intvwr_vst_DQ101_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic intvwr_vst_DQ101 }</span>
+					{$arrow_icon_intvwr_vst_DQ101}
+			</span>
+	</span>
+	{END intvwr_vst_DQ101_fieldheader}
 {END intvwr_vst_DQ101_fieldheadercolumn}
 
 	
@@ -1732,9 +2010,20 @@
 
 	 
 		{BEGIN intvwr_vst_DQ102_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="intvwr_vst_DQ102" data-fieldname="intvwr_vst_DQ102">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic intvwr_vst_DQ102 }	</span>
+	{BEGIN intvwr_vst_DQ102_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="intvwr_vst_DQ102" data-fieldname="intvwr_vst_DQ102" 
+
+			{$intvwr_vst_DQ102_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic intvwr_vst_DQ102 }</span>
+					{$arrow_icon_intvwr_vst_DQ102}
+			</span>
+	</span>
+	{END intvwr_vst_DQ102_fieldheader}
 {END intvwr_vst_DQ102_fieldheadercolumn}
 
 	
@@ -1755,9 +2044,20 @@
 
 	 
 		{BEGIN intvwr_vst_DQ102_Other_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="intvwr_vst_DQ102_Other" data-fieldname="intvwr_vst_DQ102_Other">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic intvwr_vst_DQ102_Other }	</span>
+	{BEGIN intvwr_vst_DQ102_Other_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="intvwr_vst_DQ102_Other" data-fieldname="intvwr_vst_DQ102_Other" 
+
+			{$intvwr_vst_DQ102_Other_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic intvwr_vst_DQ102_Other }</span>
+					{$arrow_icon_intvwr_vst_DQ102_Other}
+			</span>
+	</span>
+	{END intvwr_vst_DQ102_Other_fieldheader}
 {END intvwr_vst_DQ102_Other_fieldheadercolumn}
 
 	
@@ -1778,9 +2078,20 @@
 
 	 
 		{BEGIN distr_unit_id_DQ105_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ105" data-fieldname="distr_unit_id_DQ105">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ105 }	</span>
+	{BEGIN distr_unit_id_DQ105_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ105" data-fieldname="distr_unit_id_DQ105" 
+
+			{$distr_unit_id_DQ105_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ105 }</span>
+					{$arrow_icon_distr_unit_id_DQ105}
+			</span>
+	</span>
+	{END distr_unit_id_DQ105_fieldheader}
 {END distr_unit_id_DQ105_fieldheadercolumn}
 
 	
@@ -1801,9 +2112,20 @@
 
 	 
 		{BEGIN distr_unit_id_DQ106_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ106" data-fieldname="distr_unit_id_DQ106">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ106 }	</span>
+	{BEGIN distr_unit_id_DQ106_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ106" data-fieldname="distr_unit_id_DQ106" 
+
+			{$distr_unit_id_DQ106_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ106 }</span>
+					{$arrow_icon_distr_unit_id_DQ106}
+			</span>
+	</span>
+	{END distr_unit_id_DQ106_fieldheader}
 {END distr_unit_id_DQ106_fieldheadercolumn}
 
 	
@@ -1824,9 +2146,20 @@
 
 	 
 		{BEGIN distr_unit_id_DQ106_Other_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ106_Other" data-fieldname="distr_unit_id_DQ106_Other">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ106_Other }	</span>
+	{BEGIN distr_unit_id_DQ106_Other_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ106_Other" data-fieldname="distr_unit_id_DQ106_Other" 
+
+			{$distr_unit_id_DQ106_Other_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ106_Other }</span>
+					{$arrow_icon_distr_unit_id_DQ106_Other}
+			</span>
+	</span>
+	{END distr_unit_id_DQ106_Other_fieldheader}
 {END distr_unit_id_DQ106_Other_fieldheadercolumn}
 
 	
@@ -1847,9 +2180,20 @@
 
 	 
 		{BEGIN distr_unit_id_DQ108_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ108" data-fieldname="distr_unit_id_DQ108">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ108 }	</span>
+	{BEGIN distr_unit_id_DQ108_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="distr_unit_id_DQ108" data-fieldname="distr_unit_id_DQ108" 
+
+			{$distr_unit_id_DQ108_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic distr_unit_id_DQ108 }</span>
+					{$arrow_icon_distr_unit_id_DQ108}
+			</span>
+	</span>
+	{END distr_unit_id_DQ108_fieldheader}
 {END distr_unit_id_DQ108_fieldheadercolumn}
 
 	
@@ -1870,9 +2214,20 @@
 
 	 
 		{BEGIN siteid_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="siteid" data-fieldname="siteid">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic siteid }	</span>
+	{BEGIN siteid_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="siteid" data-fieldname="siteid" 
+
+			{$siteid_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic siteid }</span>
+					{$arrow_icon_siteid}
+			</span>
+	</span>
+	{END siteid_fieldheader}
 {END siteid_fieldheadercolumn}
 
 	
@@ -1893,9 +2248,20 @@
 
 	 
 		{BEGIN gen_info_DQ109_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gen_info_DQ109" data-fieldname="gen_info_DQ109">
-	{$label public_ethprism_national_prism_woreda_level_diagnostic gen_info_DQ109 }	</span>
+	{BEGIN gen_info_DQ109_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="gen_info_DQ109" data-fieldname="gen_info_DQ109" 
+
+			{$gen_info_DQ109_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label public_ethprism_national_prism_woreda_level_diagnostic gen_info_DQ109 }</span>
+					{$arrow_icon_gen_info_DQ109}
+			</span>
+	</span>
+	{END gen_info_DQ109_fieldheader}
 {END gen_info_DQ109_fieldheadercolumn}
 
 	

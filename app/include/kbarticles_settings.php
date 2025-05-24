@@ -279,6 +279,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 		$fdata["strField"] = "ArticleID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
 
@@ -417,6 +418,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 		$fdata["strField"] = "ArticleID";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
@@ -557,6 +559,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 		$fdata["strField"] = "ArticleID";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"ArticleID\"";
 
@@ -694,6 +697,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Category";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Category\"";
@@ -858,6 +862,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 		$fdata["strField"] = "DateCreated";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"DateCreated\"";
 
@@ -994,6 +999,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Problem";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Problem\"";
@@ -1134,6 +1140,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 		$fdata["strField"] = "Solution";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Solution\"";
 
@@ -1272,6 +1279,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Title";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Title\"";
@@ -1586,6 +1594,7 @@ $tdatakbarticles[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Views";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Views\"";

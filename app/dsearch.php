@@ -16,7 +16,7 @@ $sessPrefix = "";
 
 if (postvalue("rname")) 
 {
-	$xml_array = getReportArray(postvalue("rname"));
+	$xml_array = wrGetEntityArray( postvalue("rname"), WR_REPORT );
 	if(!is_wr_project())
 	{
 		$sessPrefix = "webreport".postvalue("rname");
@@ -24,7 +24,7 @@ if (postvalue("rname"))
 } 
 elseif (postvalue("cname")) 
 {
-	$xml_array = getChartArray(postvalue("cname"));
+	$xml_array = wrGetEntityArray( postvalue("cname"), WR_CHART );
 	$sessPrefix = "webchart".postvalue("cname");
 }
 

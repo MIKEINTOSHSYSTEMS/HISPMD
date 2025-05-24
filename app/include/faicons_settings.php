@@ -251,6 +251,7 @@ $tdatafaicons[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "id";
 
@@ -390,6 +391,7 @@ $tdatafaicons[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "icon";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "icon";
 

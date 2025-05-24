@@ -23,16 +23,8 @@ class DataSourceProjectTable extends DataSourceTable {
 		return null;
 	}
 
-	protected function getKeyFields() {
-		return $this->pSet->getTableKeys();
-	}
-
 	protected function getGroupByFieldList() {
 		return $this->pSet->getListOfFieldsByExprType( true );
-	}
-
-	public function getFieldType( $field ) {
-		return $this->pSet->getFieldType( $field );
 	}
 
 	protected function getSQLComponents() {
@@ -109,7 +101,7 @@ class DataSourceProjectTable extends DataSourceTable {
 		if ($execResult) {
 			$data = $dc->values;
 			if ($autoincField != null && !array_key_exists($autoincField, $data)) {
-				$data[$autoincField] = $this->connection->getInsertedId($autoincField, $table);
+				$data[$autoincField] = $this->connection->getInsertedId();
 			}
 			return $data;
 		}
@@ -199,9 +191,8 @@ class DataSourceProjectTable extends DataSourceTable {
 
 
 	public function lastAutoincValue( $field ) {
-		$table = $this->dbTableName();
 		if( $this->pSet->isAutoincField( $field ) ) {
-			return $this->connection->getInsertedId( $field, $table );
+			return $this->connection->getInsertedId();
 		}
 		return "";
 	}

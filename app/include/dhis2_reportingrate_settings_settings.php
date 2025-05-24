@@ -279,6 +279,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "id";
 
@@ -419,6 +420,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_set";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "data_set";
 
@@ -583,6 +585,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "report_period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "report_period";
 
@@ -747,6 +750,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "org_unit";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "org_unit";
 
@@ -911,6 +915,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "created_at";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "created_at";
 
@@ -1049,6 +1054,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "updated_at";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "updated_at";
 
@@ -1188,6 +1194,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_types";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facility_types";
 
@@ -1342,6 +1349,7 @@ $tdatadhis2_reportingrate_settings[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ownership_types";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ownership_types";
 

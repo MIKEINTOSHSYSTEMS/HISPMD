@@ -13,6 +13,11 @@ class SecurityPluginOpenId extends SecurityPlugin {
 	public $emailClaim = "";
 	public $pictureUrlClaim = "";
 
+	// sign out from provider on application logout
+	public $logOut = false;
+
+	public $access_token = "";
+
 	/**
 	 * @constructor
 	 */
@@ -26,11 +31,11 @@ class SecurityPluginOpenId extends SecurityPlugin {
 		$this->nameClaim = $params[ "nameClaim" ];
 		$this->emailClaim = $params[ "emailClaim" ];
 		$this->pictureUrlClaim = $params[ "pictureUrlClaim" ];
+		$this->logOut = $params[ "logOut" ];
 	}
 
 	public function getUserInfo( $id_token )
 	{
-
 		global $cCharset;
 		$payload = $this->verifyIdToken( $id_token );
 
@@ -57,10 +62,34 @@ class SecurityPluginOpenId extends SecurityPlugin {
 				$ret["picture"] = $picResult["content"];
 		}
 
+		// #16845: try request userinfo, if name or email required, but it is empty
+		if ( $this->nameClaim && !$ret["name"] || $this->emailClaim && !$ret["email"] ) {
+			$claimData = $this->getClaimData();
+
+			if ( $claimData && !$claimData["error"] ) {
+				$ret[ "raw" ] = array_merge($ret[ "raw" ], $claimData);
+				if ($this->nameClaim && !$ret["name"]) {
+					$ret["name"] = runner_convert_encoding( $claimData[$this->nameClaim], $cCharset, 'UTF-8' );
+				}
+				if ($this->emailClaim && !$ret["email"]) {
+					$ret["email"] = $claimData[$this->emailClaim];
+				}
+			}
+		}
+
 		return $ret;
 	}
 
-
+	public function getClaimData()
+	{
+		$config = $this->getConfig();
+		$headers = array("Authorization" => "Bearer " . $this->access_token);
+		$response = runner_http_request($config["userinfo_endpoint"], "", "GET", $headers, false);
+		if ($response["error"]) {
+			return array("error" => "OpenID security plugin: " . $response["header"] . $response["content"]);
+		}
+		return HttpRequest::parseResponseArray($response);
+	}
 
 	/**
 	 * Returns allowed domains from appsettings as array
@@ -85,13 +114,11 @@ class SecurityPluginOpenId extends SecurityPlugin {
 	 * @return Array|false
 	 */
 	public function verifyIdToken( $token ) {
+
 		$config = $this->getConfig();
-
 		$jwk = Security::getOpenIdJWK( $token, $config );
-		if( !$jwk )
-			return false;
-
 		$verifiedTokenData = Security::openIdVerifyToken( $token, $jwk );
+
 		if( !$verifiedTokenData )
 			return false;
 
@@ -152,7 +179,31 @@ class SecurityPluginOpenId extends SecurityPlugin {
 			$this->error .= $response["header"] . $response["content"];
 			return false;
 		}
+		$this->access_token = $result["access_token"];
 		return $result["id_token"];
 	}
+
+	public function hasExternalLogout() {
+		$config = $this->getConfig();
+		return $config[ "end_session_endpoint" ] != null && $this->logOut;
+	}
+
+	public function redirectToLogout( $token, $redirectUri ) {
+		header( "Location: " . $this->externalLogoutUrl( $token, $redirectUri ) );
+		exit();
+	}
+
+	protected function externalLogoutUrl( $token, $redirectUri ) {
+		$config = $this->getConfig();
+		$endpoint = $config[ "end_session_endpoint" ];
+
+		$request = new HttpRequest( $endpoint, "GET", array(
+			"id_token_hint" => $token,
+			"post_logout_redirect_uri" => $redirectUri
+		));
+
+		return $request->getUrl();
+	}
+
 }
 ?>

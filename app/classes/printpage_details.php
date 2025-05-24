@@ -40,7 +40,7 @@ class PrintPage_Details extends PrintPage
 		$this->fillGridPage();
 		$this->fillRenderedData( $this->pageBody["grid_row"]["data"] );
 		
-		$this->showTotals();
+		$this->assignTotals();
 
 		$this->hideEmptyFields();
 		
@@ -70,8 +70,6 @@ class PrintPage_Details extends PrintPage
 			return;
 		}
 			
-		$this->xt->hideAllBricksExcept( array( "grid" ) );
-
 		$this->xt->assign("grid_block", true);
 		//	show table name only when several details are printed
 		$this->xt->assign( "printheader", $this->multipleDetails );

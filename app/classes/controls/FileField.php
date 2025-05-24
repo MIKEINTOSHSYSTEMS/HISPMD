@@ -4,12 +4,6 @@ require_once getabspath('classes/filehandler.php');
 class FileField extends EditControl
 {
 	/**
-	 * Instanse of UploadHandler class
-	 * @var {object}
-	 */
-//	var $upload_handler = null;
-
-	/**
 	 * Field random identifier for sessions values
 	 * @var {string}
 	 */
@@ -54,7 +48,7 @@ class FileField extends EditControl
 
 		$keylink = "";
 		if($this->pageObject->pageType == PAGE_EDIT) {
-			if(count($this->pageObject->keys) > 0)
+			if( $this->pageObject->keys )
 			{
 				$i = 1;
 				foreach($this->pageObject->keys as $keyName => $keyValue)

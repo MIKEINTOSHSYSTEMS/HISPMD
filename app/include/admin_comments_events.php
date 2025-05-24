@@ -35,7 +35,7 @@
 		
 		
 				// Before record added
-function BeforeAdd(&$values, &$message, $inline, $pageObject)
+function BeforeAdd(&$values, &$sqlValues, &$message, $inline, $pageObject)
 {
 
 		
@@ -43,9 +43,10 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 $values["moderated"] = 0;
 
 return true;
-;
+;		
 } // function BeforeAdd
 
+		
 		
 		
 		
@@ -118,9 +119,10 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 
 		DB::Update("kbcomments",array("created_date" => runner_date_format("Y-m-d H:i:s")),$keys);
 
-;
+;		
 } // function AfterAdd
 
+		
 		
 		
 		

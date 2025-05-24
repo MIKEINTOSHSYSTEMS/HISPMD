@@ -275,7 +275,9 @@
 'gridType' => 0,
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'misc' => array( 'type' => 'masterlist',
 'breadcrumb' => false ),
 'events' => array( 'maps' => array(  ),
@@ -453,9 +455,10 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'simple_grid_field15' => array( 'type' => 'grid_field_label',
 'field' => 'organisation_website' ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

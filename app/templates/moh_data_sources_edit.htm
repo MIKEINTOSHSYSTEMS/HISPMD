@@ -126,15 +126,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_data_source_name}  r-vertical-field" 
-	data-signal-error-for="data_source_name{$id}" 
+	data-signal-error-for="data_source_name{$id}" {$required_attr_data_source_name}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="data_source_name" data-fieldname="data_source_name" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_data_source_name}">
 		{BEGIN data_source_name_label}{$label public_moh_data_sources data_source_name }{END data_source_name_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$data_source_name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="data_source_name">
+	<div class="r-edit-tooltip" data-helpfor="data_source_name" {$tooltipAttr public_moh_data_sources data_source_name } >
 		<div class="text-muted" >
 		{$tooltip public_moh_data_sources data_source_name }		</div>
 	</div>
@@ -147,15 +148,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_id}  r-vertical-field" 
-	data-signal-error-for="indicator_id{$id}" 
+	data-signal-error-for="indicator_id{$id}" {$required_attr_indicator_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="indicator_id" data-fieldname="indicator_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_indicator_id}">
 		{BEGIN indicator_id_label}{$label public_moh_data_sources indicator_id }{END indicator_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$indicator_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="indicator_id">
+	<div class="r-edit-tooltip" data-helpfor="indicator_id" {$tooltipAttr public_moh_data_sources indicator_id } >
 		<div class="text-muted" >
 		{$tooltip public_moh_data_sources indicator_id }		</div>
 	</div>

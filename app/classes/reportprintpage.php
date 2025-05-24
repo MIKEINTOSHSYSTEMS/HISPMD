@@ -240,7 +240,9 @@ class ReportPrintPage extends ReportPage
 			$this->xt->assign( $gf . "_class", $this->fieldClass( $f ));
 			$this->xt->assign( $gf . "_align", $this->fieldAlign( $f ));
 		}
-
+		if( $this->pdfJsonMode() ) {
+			$this->xt->assign( "pdfFonts", my_json_encode( getPdfFonts() ) );
+		}
 	}
 
 	protected function setRecordsId() {
@@ -584,7 +586,6 @@ class ReportPrintPage extends ReportPage
 			return;
 		}		
 		
-		$this->xt->hideAllBricksExcept( array( "grid" ) );
 		$this->xt->assign( "grid_block", true );
 
 		$this->xt->load_template( $this->templatefile );

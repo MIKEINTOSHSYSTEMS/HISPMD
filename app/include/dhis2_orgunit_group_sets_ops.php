@@ -4,7 +4,12 @@ $topsdhis2_orgunit_group_sets = array();
 		"subtype" => "rest",
 		"method" => "GET",
 		"request" => "/api/organisationUnitGroupSets",
-		"payload" => "[]"
+		"payload" => "[]",
+		"skipFilter" => "0",
+		"skipOrder" => "0",
+		"payloadFormat" => "0",
+		"payloadString" => "",
+		"rawPayload" => "0"
 	);
 	$tables_data["DHIS2_OrgUnit_Group_Sets"][".operations"] = &$topsdhis2_orgunit_group_sets;
 ?>

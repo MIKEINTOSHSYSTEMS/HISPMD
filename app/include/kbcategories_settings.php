@@ -257,6 +257,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 		$fdata["strField"] = "Category";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Category\"";
 
@@ -394,6 +395,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 
 		$fdata["strField"] = "CategoryID";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"CategoryID\"";
@@ -535,6 +537,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Description";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Description\"";
 
@@ -675,6 +678,7 @@ $tdatakbcategories[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "faicon";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"faicon\"";
 

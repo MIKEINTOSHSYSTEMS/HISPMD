@@ -55,7 +55,7 @@ class PDLayout
 
 		$files[] = "styles/pages/".$this->table."_".$this->page["id"].$suffix.".css";
 		
-		$files[] = "styles/fonts.css";
+		$files[] = "fonts/fonts.css";
 
 		return $files;
 	}
@@ -308,10 +308,12 @@ class PDLayout
 
 		//	make array of items hidden by application or media type
 		$invisibleItems = $itemsToHide;
+		$mediaHidenItems = array();
 		$mediaType = $pageObject->pdfJsonMode() ? MEDIA_DESKTOP : getMediaType();
 		foreach( $helper["itemVisiblity"] as $itemId => $visibility ) {
 			if( !$this->visibleOnMedia( $mediaType, $visibility )) {
 				$invisibleItems[ $itemId ] = true;
+				$mediaHidenItems[ $itemId ] = true;
 			}
 		}
 
@@ -335,10 +337,14 @@ class PDLayout
 		//	hide items
 		if( !$pageObject->pdfJsonMode() ) {
 			foreach( array_keys($invisibleItems) as $item ) {
-				if( $itemsToHide[ $item ] )
-					$xt->assign( "item_" . $item, 'data-hidden' );
-				else
-					$xt->assign( "item_" . $item, 'data-media-hidden' );
+				$hideAttrs = array();
+				if( $mediaHidenItems[ $item ] ) {
+					$hideAttrs[] = "data-media-hidden";
+				}
+				if( $itemsToHide[ $item ] ) {
+					$hideAttrs[] = "data-hidden";
+				}
+				$xt->assign( "item_" . $item, implode( ' ', $hideAttrs ) );
 			}
 		} else {
 			foreach( array_keys($invisibleItems) as $item ) {

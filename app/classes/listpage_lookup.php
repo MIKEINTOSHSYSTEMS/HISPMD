@@ -355,11 +355,10 @@ class ListPage_Lookup extends ListPage_Embed
 	/**
 	 *
 	 */
-	function proccessRecordValue(&$data, &$keylink, $listFieldInfo)
-	{
-		$value = parent::proccessRecordValue($data, $keylink, $listFieldInfo);
+	function proccessRecordValue( &$data, &$keylink, $listFieldInfo, $isEditable = true ) {
+		$value = parent::proccessRecordValue( $data, $keylink, $listFieldInfo, $isEditable );
 
-		if ($this->lookupSelectField == $listFieldInfo['fName'])
+		if ( $this->lookupSelectField == $listFieldInfo['fName'] )
 			$value = '<a href="#" data-ind="'.count( $this->lookupValuesArr ).'" type="lookupSelect'.$this->id.'">'.$value."</a>";
 
 		return $value;
@@ -424,8 +423,7 @@ class ListPage_Lookup extends ListPage_Embed
 			
 			$bodyHtml = $this->xt->fetch_loaded("body");
 		} else {
-			$bodyHtml = $this->xt->fetch_loaded("above-grid_block") 
-					. $this->xt->fetch_loaded("grid_block");
+			$bodyHtml = $this->fetchBlocksList( array( "above-grid_block", "grid_tabs", "grid_block" ) );
 		}
 		
 		

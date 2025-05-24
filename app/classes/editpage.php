@@ -4,6 +4,7 @@ class EditPage extends RunnerPage
 	protected $cachedRecord = null;
 
 	public $oldKeys = array();
+	public $newKeys = array();
 	protected $keysChanged = false;
 
 	public $jsKeys = array();
@@ -69,6 +70,10 @@ class EditPage extends RunnerPage
 	public $hostPageName = "";
 
 
+	protected $sqlValues = array();
+	
+	public $listPage = "";
+
 	/**
 	 * @constructor
 	 */
@@ -82,21 +87,12 @@ class EditPage extends RunnerPage
 
 		$this->editFields = $this->getPageFields();
 
-		if( $this->getLayoutVersion() === PD_BS_LAYOUT )
-		{
-			$this->headerForms = array( "top" );
-			$this->footerForms = array( "below-grid" );
-			if ( $this->isMultistepped() )
-				$this->bodyForms = array( "above-grid", "steps" );
-			else
-				$this->bodyForms = array( "above-grid", "grid" );
-		}
+		$this->headerForms = array( "top" );
+		$this->footerForms = array( "below-grid" );
+		if ( $this->isMultistepped() )
+			$this->bodyForms = array( "above-grid", "steps" );
 		else
-		{
-			$this->formBricks["header"] = "editheader";
-			$this->formBricks["footer"] = array( "editbuttons", "righteditbuttons");
-			$this->assignFormFooterAndHeaderBricks( true );
-		}
+			$this->bodyForms = array( "above-grid", "grid" );
 
 		$this->addPageSettings();
 	}
@@ -130,6 +126,10 @@ class EditPage extends RunnerPage
 
 			if ( $afterEditAction == AE_TO_PREV_EDIT )
 				$this->jsSettings["tableSettings"][ $this->tName ]["prevKeys"] = $this->getPrevKeys();
+		}
+		
+		if( $this->listPage && $afterEditAction == AE_TO_LIST ) {
+			$this->pageData["listPage"] = $this->listPage;
 		}
 	}
 
@@ -320,7 +320,6 @@ class EditPage extends RunnerPage
 		if( !$this->lockRecord() )
 			return;
 
-		$this->prepareReadonlyFields();
 
 		$this->doCommonAssignments();
 		$this->prepareBreadcrumbs();
@@ -328,6 +327,7 @@ class EditPage extends RunnerPage
 		$this->prepareButtons();
 		$this->prepareSteps();
 		$this->prepareEditControls();
+		$this->prepareReadonlyFields();
 
 		$this->prepareJsSettings();
 
@@ -347,12 +347,6 @@ class EditPage extends RunnerPage
 	function addCommonJs()
 	{
 		parent::addCommonJs();
-
-		if( $this->allDetailsTablesArr )
-		{
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.min.css");
-			$this->AddCSSFile("include/jquery-ui/smoothness/jquery-ui.theme.min.css");
-		}
 	}
 
 	/**
@@ -551,11 +545,7 @@ class EditPage extends RunnerPage
 			return;
 
 		$listPageObject = $this->getDetailsPageObject( $dpTableName, $dpId );
-
-		if ( $this->isBootstrap() && $listPageObject->isBootstrap() )
-		{
-			$listPageObject->assignButtonsOnMasterEdit( $this->xt );
-		}
+		$listPageObject->assignButtonsOnMasterEdit( $this->xt );
 	}
 
 	/**
@@ -576,7 +566,6 @@ class EditPage extends RunnerPage
 
 		$this->xt->assign("save_button", true);
 
-		// PD
 		if ( $this->mode !== EDIT_SELECTED_SIMPLE && $this->mode !== EDIT_SELECTED_POPUP ) {
 			$this->xt->assign("save_edit", true);
 		} else {
@@ -664,7 +653,7 @@ class EditPage extends RunnerPage
 	protected function prepareReadonlyFields()
 	{
 		$fields = $this->pSet->getFieldsList();
-		$data = $this->getCurrentRecordInternal();
+		$data = $this->getFieldControlValues();
 
 		//	prepare field values
 		//	keys
@@ -864,10 +853,12 @@ class EditPage extends RunnerPage
 				return $this->prgRedirect();
 
 			case AE_TO_LIST:
-				if( $this->pSet->hasListPage() )
-					HeaderRedirect($this->shortTableName, PAGE_LIST, "a=return&" . $stateParams);
-				else
+				if( $this->pSet->hasListPage() ) {
+					HeaderRedirect($this->shortTableName, PAGE_LIST, "a=return&" 
+						.( $this->listPage ? "page=".$this->listPage."&" : "" ). $stateParams );
+				} else {
 					HeaderRedirect("menu");
+				}
 				return true;
 
 			case AE_TO_VIEW:
@@ -1140,7 +1131,6 @@ class EditPage extends RunnerPage
 
 		$this->fillControlsMap( $controls );
 
-		$this->fillFieldToolTips( $fName );
 		$this->fillControlFlags( $fName );
 
 		// fill special settings for timepicker
@@ -1268,10 +1258,10 @@ class EditPage extends RunnerPage
 		$blobfields = array();
 		$keys = $this->keys;
 
-		foreach($this->editFields as $f)
+		foreach( $this->editFields as $f )
 		{
 			$control = $this->getControl( $f, $this->id );
-			$control->readWebValue($evalues, $blobfields, NULL, NULL, $efilename_values);
+			$control->readWebValue( $evalues, $blobfields, NULL, NULL, $efilename_values );
 			if( isset($keys[ $f ]) && isset( $evalues[ $f ] ) )
 			{
 				//	ASP conversion requires this separate "if".
@@ -1282,8 +1272,9 @@ class EditPage extends RunnerPage
 				}
 			}
 		}
-		if( $this->keysChanged )
-			$this->setKeys( $keys );
+		if( $this->keysChanged ) {
+			$this->newKeys = $keys; 
+		}
 
 		foreach($efilename_values as $ekey => $value)
 		{
@@ -1321,8 +1312,9 @@ class EditPage extends RunnerPage
 		if( !$this->isRecordEditable( true ) )
 			return $this->SecurityRedirect();
 
-		if( !$this->callBeforeEditEvent() )
+		if( !$this->callBeforeEditEvent() ) {
 			return false;
+		}
 
 		$this->setUpdatedLatLng( $this->getNewRecordData(), $this->getOldRecordData() );
 
@@ -1335,7 +1327,6 @@ class EditPage extends RunnerPage
 		//	do save the record
 		if( $this->callCustomEditEvent() )
 		{
-
 			$updateResult = $this->dataSource->updateSingle( $this->getUpdateDataCommand() );
 			$this->updatedSuccessfully = $updateResult;
 			if( !$this->updatedSuccessfully ) {
@@ -1343,12 +1334,14 @@ class EditPage extends RunnerPage
 			}
 		}
 
-		$this->unlockNewRecord();
 
 		if( !$this->updatedSuccessfully )
 		{
-			$this->setKeys( $this->oldKeys );
+			$this->unlockNewRecord();
 			return false;
+		}
+		if( $this->keysChanged ) {
+			$this->setKeys( $this->newKeys );
 		}
 		//	after save steps
 
@@ -1383,7 +1376,7 @@ class EditPage extends RunnerPage
 		if( $this->isMessageSet() )
 			return;
 
-		if( $this->isBootstrap() && $this->isSimpleMode() )
+		if( $this->isSimpleMode() )
 		{
 			$_SESSION["successfulEdit"] = $this->updatedSuccessfully;
 		}
@@ -1459,8 +1452,8 @@ class EditPage extends RunnerPage
 	 */
 	protected function unlockNewRecord()
 	{
-		if( $this->lockingObj )
-			$this->lockingObj->UnlockRecord($this->tName, $this->keys , "");
+		if( $this->lockingObj && $this->keysChanged )
+			$this->lockingObj->UnlockRecord($this->tName, $this->newKeys , "");
 	}
 
 	/**
@@ -1481,9 +1474,11 @@ class EditPage extends RunnerPage
 	{
 		if( !$this->eventsObject->exists("BeforeEdit") )
 			return true;
-
+		
+		$this->sqlValues = array();
 		$usermessage = "";
 		$ret = $this->eventsObject->BeforeEdit( $this->newRecordData,
+			$this->sqlValues,
 			$this->getKeysWhereClause( true ),
 			$this->getOldRecordData(),
 			$this->oldKeys,
@@ -1577,7 +1572,7 @@ class EditPage extends RunnerPage
 			//	confirm and acquire locks on both old and new sets of keys
 			$lockConfirmed = $this->lockingObj->ConfirmLock($this->tName, $this->oldKeys, $lockmessage);
 			if( $lockConfirmed )
-				$lockConfirmed = $this->lockingObj->LockRecord($this->tName, $this->keys);
+				$lockConfirmed = $this->lockingObj->LockRecord($this->tName, $this->newKeys);
 		}
 		else
 		{
@@ -1664,6 +1659,11 @@ class EditPage extends RunnerPage
 		$dc->filter = $this->getSecurityCondition();
 		$dc->keys = $this->oldKeys;
 		$dc->values = &$this->newRecordData;
+		
+		$dc->advValues = array();
+		foreach( $this->sqlValues as $field => $sqlValue ) {
+			$dc->advValues[ $field ] =  new DsOperand( dsotSQL, $sqlValue );
+		}
 		return $dc;
 	}
 
@@ -1727,8 +1727,12 @@ class EditPage extends RunnerPage
 	function viewAvailable()
 	{
 
-		if( $this->dashElementData )
-			return parent::viewAvailable() && $this->dashElementData["details"][$this->tName]["view"];
+		if( $this->dashElementData ) {
+			$dashType = $this->dashElementData["type"];
+			return parent::viewAvailable() && 
+				( $dashType == DASHBOARD_DETAILS && $this->dashElementData["details"][$this->tName]["view"]
+				|| $dashType == DASHBOARD_LIST && $this->dashElementData["popupView"] );
+		}
 		return parent::viewAvailable();
 	}
 

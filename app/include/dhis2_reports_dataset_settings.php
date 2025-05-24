@@ -245,6 +245,9 @@ $tstrOrderBy = "";
 $tdatadhis2_reports_dataset[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_reports_dataset[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_reports_dataset[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_reports_dataset[".sqlHead"] = "";
@@ -311,6 +314,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Clinics by Type ID/*";
 
+	
 	
 		$fdata["FullName"] = "Clinics by Type ID";
 
@@ -447,6 +451,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Clinics by Type/*";
 
 	
+	
 		$fdata["FullName"] = "Clinics by Type";
 
 	
@@ -582,6 +587,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Facility Type ID/*";
 
 	
+	
 		$fdata["FullName"] = "Facility Type ID";
 
 	
@@ -716,6 +722,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Facility Type/*";
 
+	
 	
 		$fdata["FullName"] = "Facility Type";
 
@@ -869,6 +876,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Health Post Type ID/*";
 
 	
+	
 		$fdata["FullName"] = "Health Post Type ID";
 
 	
@@ -1003,6 +1011,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Health Post Type/*";
 
+	
 	
 		$fdata["FullName"] = "Health Post Type";
 
@@ -1139,6 +1148,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Hospital by ownership ID/*";
 
 	
+	
 		$fdata["FullName"] = "Hospital by ownership ID";
 
 	
@@ -1273,6 +1283,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Hospital by ownership/*";
 
+	
 	
 		$fdata["FullName"] = "Hospital by ownership";
 
@@ -1409,6 +1420,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Hospital Type ID/*";
 
 	
+	
 		$fdata["FullName"] = "Hospital Type ID";
 
 	
@@ -1543,6 +1555,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Hospital Type/*";
 
+	
 	
 		$fdata["FullName"] = "Hospital Type";
 
@@ -1679,6 +1692,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Location Urban/Rural ID/*";
 
 	
+	
 		$fdata["FullName"] = "Rural ID";
 
 	
@@ -1813,6 +1827,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Location Urban/Rural/*";
 
+	
 	
 		$fdata["FullName"] = "Rural";
 
@@ -1949,6 +1964,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Ownership ID/*";
 
 	
+	
 		$fdata["FullName"] = "Ownership ID";
 
 	
@@ -2083,6 +2099,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Ownership/*";
 
+	
 	
 		$fdata["FullName"] = "Ownership";
 
@@ -2219,6 +2236,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Settlement ID/*";
 
 	
+	
 		$fdata["FullName"] = "Settlement ID";
 
 	
@@ -2353,6 +2371,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Settlement/*";
 
+	
 	
 		$fdata["FullName"] = "Settlement";
 
@@ -2489,6 +2508,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 		$fdata["strField"] = "Woreda Type ID/*";
 
 	
+	
 		$fdata["FullName"] = "Woreda Type ID";
 
 	
@@ -2623,6 +2643,7 @@ $tdatadhis2_reports_dataset[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Woreda Type/*";
 
+	
 	
 		$fdata["FullName"] = "Woreda Type";
 

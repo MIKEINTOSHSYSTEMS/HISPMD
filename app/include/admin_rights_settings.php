@@ -259,6 +259,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "TableName";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"TableName\"";
 
@@ -396,6 +397,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "GroupID";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"GroupID\"";
 
@@ -536,6 +538,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "AccessMask";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"AccessMask\"";
 
@@ -673,6 +676,7 @@ $tdataadmin_rights[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Page";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"Page\"";
 

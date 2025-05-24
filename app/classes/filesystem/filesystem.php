@@ -121,7 +121,7 @@ class RunnerFileSystem {
 	public function autoThumbnails() {
 		return $this->directUpload();
 	}
-	
+
 	/**
 	 * Return false when fail
 	 */
@@ -133,16 +133,21 @@ class RunnerFileSystem {
 		return false;
 	}
 
-	public static function generateFilename( $filename ) {
+	public function generateFilename( $filename, $obfuscate ) {
 		$dotPos = strrpos( $filename, '.' );
 		if( $dotPos !== false ) {
 			$name = substr( $filename, 0, $dotPos );
 			$extension = substr( $filename, $dotPos );
 		} else {
 			$name = $filename;
+			$extension = '';
 		}
-
-		return $name."_".generatePassword(8).$extension;
+		if( !$this->secureFilesystem() && strtolower( $extension ) == ".php" ) {
+			$extension = ".phpfile";
+		}
+		return $obfuscate
+			? $name . '_' . generatePassword(8) . $extension
+			: $name . $extension;
 	}
 
 	/**
@@ -150,17 +155,28 @@ class RunnerFileSystem {
 	 */
 	public function tryCreateUniqueFile( $filename, $path ) {
 		$attempt = 0;
-		do { 
-			//	physical file name always differs from the original one for security reason.
-			//	possible exploit - upload x.php file to /files and then open site.com/files/x.php
-			$filename = RunnerFileSystem::generateFilename( $filename );
+		do {
+			//	on insecure filesystems physical file name always differs from the original one for security reason.
+			//	possible exploits:
+			//	upload x.php file to /files and then open site.com/files/x.php
+			//	guess the filename, download site.com/files/document.pdf
+			$filename = $this->generateFilename( $filename, $attempt > 0 || !$this->secureFilesystem() );
 
 			$filepath = $path . $filename;
 			if( $this->tryCreateFile( $filepath ) )
 				return $filename;
-		} while( ++$attempt < $this->uniqueFileAttempts ); 
+		} while( ++$attempt < $this->uniqueFileAttempts );
 
 		return false;
+	}
+
+	/**
+	 * Secure filesystems don't need to obfuscate and sanitize filenames
+	 * All clouds are secure
+	 * Disk is insecure
+	 */
+	public function secureFilesystem() {
+		return true;
 	}
 }
 
@@ -188,4 +204,5 @@ require_once( getabspath("classes/filesystem/googledrive.php") );
 require_once( getabspath("classes/filesystem/s3.php") );
 require_once( getabspath("classes/filesystem/onedrive.php") );
 require_once( getabspath("classes/filesystem/dropbox.php") );
+require_once( getabspath("classes/filesystem/wasabi.php") );
 ?>

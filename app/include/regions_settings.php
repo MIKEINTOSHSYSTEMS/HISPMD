@@ -254,6 +254,7 @@ $tdataregions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_id";
 
@@ -392,6 +393,7 @@ $tdataregions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -530,6 +532,7 @@ $tdataregions[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "his_strategic_plan";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "his_strategic_plan";
 

@@ -1,0 +1,66 @@
+[data-cellid="above-grid_c6"][data-page="_global_userinfo"][data-cellid="above-grid_c6"][data-page="_global_userinfo"][data-cellid="above-grid_c6"][data-page="_global_userinfo"] {
+  width: 50%;
+}
+[data-cellid="above-grid_c3"][data-page="_global_userinfo"][data-cellid="above-grid_c3"][data-page="_global_userinfo"][data-cellid="above-grid_c3"][data-page="_global_userinfo"] {
+  font-weight: bold;
+}
+[data-cellid="grid_buttons"][data-page="_global_userinfo"][data-cellid="grid_buttons"][data-page="_global_userinfo"][data-cellid="grid_buttons"][data-page="_global_userinfo"] {
+  padding: 15px;
+}
+[data-cellid="grid_fields_message3"][data-page="_global_userinfo"][data-cellid="grid_fields_message3"][data-page="_global_userinfo"][data-cellid="grid_fields_message3"][data-page="_global_userinfo"] {
+  color: #00293c;
+  font-weight: bold;
+}
+[data-cellid="grid_2factor_label1"][data-page="_global_userinfo"][data-cellid="grid_2factor_label1"][data-page="_global_userinfo"][data-cellid="grid_2factor_label1"][data-page="_global_userinfo"] {
+  font-weight: bold;
+}
+[data-cellid="grid_2factor_label2"][data-page="_global_userinfo"][data-cellid="grid_2factor_label2"][data-page="_global_userinfo"][data-cellid="grid_2factor_label2"][data-page="_global_userinfo"] {
+  color: #00293c;
+}
+[data-cellid="grid_2factor_label3"][data-page="_global_userinfo"][data-cellid="grid_2factor_label3"][data-page="_global_userinfo"][data-cellid="grid_2factor_label3"][data-page="_global_userinfo"] {
+  color: #00293c;
+  font-weight: bold;
+}
+[data-cellid="grid_2factor_label4"][data-page="_global_userinfo"][data-cellid="grid_2factor_label4"][data-page="_global_userinfo"][data-cellid="grid_2factor_label4"][data-page="_global_userinfo"] {
+  font-weight: bold;
+}
+[data-page="_global_userinfo"][data-itemid="user_fields_title"] {
+  font-size: 24px;
+}
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field3"][data-page="_global_userinfo"][data-itemid="integrated_edit_field3"][data-page="_global_userinfo"][data-itemid="integrated_edit_field3"][data-page="_global_userinfo"][data-itemid="integrated_edit_field3"] {
+  width: 25%;
+}
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"] > * > label,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > input,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > textarea,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > select,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > .r-readonly-control,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"][data-page="_global_userinfo"][data-itemid="integrated_edit_field11"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"] > * > label,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > input,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > textarea,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > select,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > .r-readonly-control,
+[data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"][data-page="_global_userinfo"][data-itemid="integrated_edit_field12"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page="_global_userinfo"][data-itemid="text2"] {
+  color: #00293c;
+  font-weight: bold;
+  font-size: 21px;
+}
+[data-page="_global_userinfo"][data-itemid="twofactor_label"] {
+  font-size: 24px;
+}
+[data-page="_global_userinfo"][data-itemid="text4"] {
+  color: #00293c;
+  font-weight: bold;
+  font-size: 21px;
+}
+[data-page="_global_userinfo"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+

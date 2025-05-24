@@ -224,10 +224,10 @@ if (count(GetUserGroups()) > 1){
 
 $chart_name = ( isset( $_SESSION['webcharts']['settings']['name'] ) ) ?
 	$_SESSION['webcharts']['settings']['name'] :
-	GoodFieldName(@$_SESSION['webcharts']['tables'][0]).'_'.CheckLastID('chart');
+	GoodFieldName(@$_SESSION['webcharts']['tables'][0]).'_'.CheckLastID( WR_CHART );
 $chart_title = ( isset( $_SESSION['webcharts']['settings']['title'] ) ) ?
 	$_SESSION['webcharts']['settings']['title'] :
-	@$_SESSION['webcharts']['tables'][0].' Chart '.CheckLastID('chart');
+	@$_SESSION['webcharts']['tables'][0].' Chart '.CheckLastID( WR_CHART );
 
 
 	$show_status = 'style="display:line;"';

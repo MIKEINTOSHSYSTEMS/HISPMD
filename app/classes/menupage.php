@@ -108,29 +108,33 @@ class MenuPage extends RunnerPage
 			return '';
 
 		$redirect = '';
-		$menuNodes = $this->getMenuNodes();
-		for($i=0;$i<count($menuNodes);$i++)
-		{
-			if($menuNodes[$i]["linkType"] == "Internal")
-			{
-				if($this->isUserHaveTablePerm($menuNodes[$i]["table"], $menuNodes[$i]["pageType"]))
-				{
-					$type = $this->getPermisType($menuNodes[$i]['pageType']);
+		$menuObject = RunnerMenu::getMenuObject( "main" );
+		$menuNodes = $menuObject->collectNodes();
+
+		foreach( $menuNodes as $mNode ) {
+			$table = $mNode->table;
+			$pageType = $mNode->pageType;
+
+			if( $mNode->linkType == "Internal" ) {
+				if( $this->isUserHaveTablePerm( $table, $pageType ) ) {
+					$type = $this->getPermisType( $pageType );
+
 					if($type == "A")
 						$redirect = "add";
 					if($type == "E")
 						$redirect = "edit";
-					elseif($menuNodes[$i]["pageType"] == "list" && $type == "S")
+					elseif($pageType == "list" && $type == "S")
 						$redirect = "list";
-					elseif($menuNodes[$i]["pageType"] == "report" && $type == "S")
+					elseif($pageType == "report" && $type == "S")
 						$redirect = "report";
-					elseif($menuNodes[$i]["pageType"] == "chart" && $type == "S")
+					elseif($pageType == "chart" && $type == "S")
 						$redirect = "chart";
-					elseif($menuNodes[$i]["pageType"] == "view" && $type == "S")
+					elseif($pageType == "view" && $type == "S")
 						$redirect = "view";
-					elseif($menuNodes[$i]["pageType"] == "dashboard" && $type == "S")
+					elseif($pageType == "dashboard" && $type == "S")
 						$redirect = "dashboard";
-					$redirect = GetTableLink(GetTableURL($menuNodes[$i]["table"]), $redirect);
+
+					$redirect = GetTableLink( GetTableURL( $table ), $redirect );
 				}
 			}
 		}

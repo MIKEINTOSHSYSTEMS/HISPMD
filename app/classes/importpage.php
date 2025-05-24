@@ -877,6 +877,8 @@ class ImportPage extends RunnerPage
 		$dc = new DsCommand();
 		$dc->identiyInsertOff = $identiyInsertOff;
 		$dc->keys = $_keys;
+		$dc->filter = Security::SelectCondition( "E", $this->pSet );
+
 		$updateValues = array();
 		foreach( $values as $f => $v ) {
 			if( !isset( $_keys[ $f ] ) ) {
@@ -1148,9 +1150,6 @@ class ImportPage extends RunnerPage
 
 		if( $this->eventsObject->exists("BeforeShowImport") )
 			$this->eventsObject->BeforeShowImport($this->xt, $templatefile, $this);
-
-		$hiddenBricks = array( "import_rawtext_control", "import_preview", "import_process", "import_results", "error_message" );
-		$this->xt->displayBricksHidden( $hiddenBricks );
 
 		$this->display( $templatefile );
 	}

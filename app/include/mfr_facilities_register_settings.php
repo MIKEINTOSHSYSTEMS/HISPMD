@@ -278,6 +278,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "id";
 
@@ -418,6 +419,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -558,6 +560,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "status";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "status";
 
@@ -716,6 +719,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "operationalstatus";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "operationalstatus";
 
@@ -874,6 +878,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facilitytype";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facilitytype";
 
@@ -1043,6 +1048,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "parentfacilitytype";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "parentfacilitytype";
 
@@ -1212,6 +1218,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region";
 
@@ -1383,6 +1390,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "zone";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"zone\"";
 
@@ -1557,6 +1565,7 @@ $tdatamfr_facilities_register[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "woreda";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "woreda";
 

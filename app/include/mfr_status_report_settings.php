@@ -184,6 +184,9 @@ $tstrOrderBy = "";
 $tdatamfr_status_report[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamfr_status_report[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatamfr_status_report[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatamfr_status_report[".sqlHead"] = "";
@@ -250,6 +253,7 @@ $tdatamfr_status_report[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/operationalStatus";
 
+	
 	
 		$fdata["FullName"] = "operationalStatus";
 
@@ -386,6 +390,7 @@ $tdatamfr_status_report[".hideMobileList"] = array();
 		$fdata["strField"] = "model/*/status";
 
 	
+	
 		$fdata["FullName"] = "status";
 
 	
@@ -520,6 +525,7 @@ $tdatamfr_status_report[".hideMobileList"] = array();
 
 		$fdata["strField"] = "model/*/count";
 
+	
 	
 		$fdata["FullName"] = "count";
 

@@ -329,7 +329,150 @@
          
 
 			<div data-cellId="left_c" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -342,7 +485,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -351,7 +494,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -493,6 +636,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -1465,9 +1611,20 @@
 
 	 
 		{BEGIN Indicator_Group_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Group" data-fieldname="Indicator Group">
-	{$label Indicators_Dashboard Indicator_Group }	</span>
+	{BEGIN Indicator_Group_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Group" data-fieldname="Indicator Group" 
+
+			{$Indicator_Group_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Indicator_Group }</span>
+					{$arrow_icon_Indicator_Group}
+			</span>
+	</span>
+	{END Indicator_Group_fieldheader}
 {END Indicator_Group_fieldheadercolumn}
 
 	
@@ -1488,9 +1645,20 @@
 
 	 
 		{BEGIN Indicator_Name_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name">
-	{$label Indicators_Dashboard Indicator_Name }	</span>
+	{BEGIN Indicator_Name_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Indicator_Name" data-fieldname="Indicator Name" 
+
+			{$Indicator_Name_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Indicator_Name }</span>
+					{$arrow_icon_Indicator_Name}
+			</span>
+	</span>
+	{END Indicator_Name_fieldheader}
 {END Indicator_Name_fieldheadercolumn}
 
 	
@@ -1511,9 +1679,20 @@
 
 	 
 		{BEGIN Data_Source_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Source" data-fieldname="Data Source">
-	{$label Indicators_Dashboard Data_Source }	</span>
+	{BEGIN Data_Source_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Source" data-fieldname="Data Source" 
+
+			{$Data_Source_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Data_Source }</span>
+					{$arrow_icon_Data_Source}
+			</span>
+	</span>
+	{END Data_Source_fieldheader}
 {END Data_Source_fieldheadercolumn}
 
 	
@@ -1534,9 +1713,20 @@
 
 	 
 		{BEGIN Scope_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Scope" data-fieldname="Scope">
-	{$label Indicators_Dashboard Scope }	</span>
+	{BEGIN Scope_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Scope" data-fieldname="Scope" 
+
+			{$Scope_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Scope }</span>
+					{$arrow_icon_Scope}
+			</span>
+	</span>
+	{END Scope_fieldheader}
 {END Scope_fieldheadercolumn}
 
 	
@@ -1557,9 +1747,20 @@
 
 	 
 		{BEGIN Region_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Region" data-fieldname="Region">
-	{$label Indicators_Dashboard Region }	</span>
+	{BEGIN Region_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Region" data-fieldname="Region" 
+
+			{$Region_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Region }</span>
+					{$arrow_icon_Region}
+			</span>
+	</span>
+	{END Region_fieldheader}
 {END Region_fieldheadercolumn}
 
 	
@@ -1580,9 +1781,20 @@
 
 	 
 		{BEGIN Administration_Unit_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Administration_Unit" data-fieldname="Administration Unit">
-	{$label Indicators_Dashboard Administration_Unit }	</span>
+	{BEGIN Administration_Unit_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Administration_Unit" data-fieldname="Administration Unit" 
+
+			{$Administration_Unit_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Administration_Unit }</span>
+					{$arrow_icon_Administration_Unit}
+			</span>
+	</span>
+	{END Administration_Unit_fieldheader}
 {END Administration_Unit_fieldheadercolumn}
 
 	
@@ -1603,9 +1815,20 @@
 
 	 
 		{BEGIN Facility_Type_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type">
-	{$label Indicators_Dashboard Facility_Type }	</span>
+	{BEGIN Facility_Type_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Facility_Type" data-fieldname="Facility Type" 
+
+			{$Facility_Type_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Facility_Type }</span>
+					{$arrow_icon_Facility_Type}
+			</span>
+	</span>
+	{END Facility_Type_fieldheader}
 {END Facility_Type_fieldheadercolumn}
 
 	
@@ -1627,9 +1850,18 @@
 	 
 		{BEGIN Gender_Sex_fieldheadercolumn}
 	{BEGIN Gender_Sex_fieldheader}
-	<SPAN {$Gender_Sex_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Gender_Sex" data-fieldname="Gender/Sex">
-	{$label Indicators_Dashboard Gender_Sex }	{$arrow_icon_Gender_Sex}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Gender_Sex" data-fieldname="Gender/Sex" 
+
+			{$Gender_Sex_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Gender_Sex }</span>
+					{$arrow_icon_Gender_Sex}
+			</span>
+	</span>
 	{END Gender_Sex_fieldheader}
 {END Gender_Sex_fieldheadercolumn}
 
@@ -1652,9 +1884,18 @@
 	 
 		{BEGIN Value_fieldheadercolumn}
 	{BEGIN Value_fieldheader}
-	<SPAN {$Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value">
-	{$label Indicators_Dashboard Value }	{$arrow_icon_Value}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Value" data-fieldname="Value" 
+
+			{$Value_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Value }</span>
+					{$arrow_icon_Value}
+			</span>
+	</span>
 	{END Value_fieldheader}
 {END Value_fieldheadercolumn}
 
@@ -1677,9 +1918,18 @@
 	 
 		{BEGIN Target_Value_fieldheadercolumn}
 	{BEGIN Target_Value_fieldheader}
-	<SPAN {$Target_Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Value" data-fieldname="Target Value">
-	{$label Indicators_Dashboard Target_Value }	{$arrow_icon_Target_Value}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Value" data-fieldname="Target Value" 
+
+			{$Target_Value_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Target_Value }</span>
+					{$arrow_icon_Target_Value}
+			</span>
+	</span>
 	{END Target_Value_fieldheader}
 {END Target_Value_fieldheadercolumn}
 
@@ -1702,9 +1952,18 @@
 	 
 		{BEGIN Baseline_Value_fieldheadercolumn}
 	{BEGIN Baseline_Value_fieldheader}
-	<SPAN {$Baseline_Value_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Value" data-fieldname="Baseline Value">
-	{$label Indicators_Dashboard Baseline_Value }	{$arrow_icon_Baseline_Value}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Value" data-fieldname="Baseline Value" 
+
+			{$Baseline_Value_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Baseline_Value }</span>
+					{$arrow_icon_Baseline_Value}
+			</span>
+	</span>
 	{END Baseline_Value_fieldheader}
 {END Baseline_Value_fieldheadercolumn}
 
@@ -1727,9 +1986,18 @@
 	 
 		{BEGIN Data_Representation_fieldheadercolumn}
 	{BEGIN Data_Representation_fieldheader}
-	<SPAN {$Data_Representation_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Representation" data-fieldname="Data Representation">
-	{$label Indicators_Dashboard Data_Representation }	{$arrow_icon_Data_Representation}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Representation" data-fieldname="Data Representation" 
+
+			{$Data_Representation_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Data_Representation }</span>
+					{$arrow_icon_Data_Representation}
+			</span>
+	</span>
 	{END Data_Representation_fieldheader}
 {END Data_Representation_fieldheadercolumn}
 
@@ -1752,9 +2020,18 @@
 	 
 		{BEGIN Target_Year_fieldheadercolumn}
 	{BEGIN Target_Year_fieldheader}
-	<SPAN {$Target_Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Year" data-fieldname="Target Year">
-	{$label Indicators_Dashboard Target_Year }	{$arrow_icon_Target_Year}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Target_Year" data-fieldname="Target Year" 
+
+			{$Target_Year_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Target_Year }</span>
+					{$arrow_icon_Target_Year}
+			</span>
+	</span>
 	{END Target_Year_fieldheader}
 {END Target_Year_fieldheadercolumn}
 
@@ -1777,9 +2054,18 @@
 	 
 		{BEGIN Baseline_Year_fieldheadercolumn}
 	{BEGIN Baseline_Year_fieldheader}
-	<SPAN {$Baseline_Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Year" data-fieldname="Baseline Year">
-	{$label Indicators_Dashboard Baseline_Year }	{$arrow_icon_Baseline_Year}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Baseline_Year" data-fieldname="Baseline Year" 
+
+			{$Baseline_Year_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Baseline_Year }</span>
+					{$arrow_icon_Baseline_Year}
+			</span>
+	</span>
 	{END Baseline_Year_fieldheader}
 {END Baseline_Year_fieldheadercolumn}
 
@@ -1802,9 +2088,18 @@
 	 
 		{BEGIN Period_ID_fieldheadercolumn}
 	{BEGIN Period_ID_fieldheader}
-	<SPAN {$Period_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period ID">
-	{$label Indicators_Dashboard Period_ID }	{$arrow_icon_Period_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period_ID" data-fieldname="Period ID" 
+
+			{$Period_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Period_ID }</span>
+					{$arrow_icon_Period_ID}
+			</span>
+	</span>
 	{END Period_ID_fieldheader}
 {END Period_ID_fieldheadercolumn}
 
@@ -1827,9 +2122,18 @@
 	 
 		{BEGIN Year_fieldheadercolumn}
 	{BEGIN Year_fieldheader}
-	<SPAN {$Year_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Year" data-fieldname="Year">
-	{$label Indicators_Dashboard Year }	{$arrow_icon_Year}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Year" data-fieldname="Year" 
+
+			{$Year_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Year }</span>
+					{$arrow_icon_Year}
+			</span>
+	</span>
 	{END Year_fieldheader}
 {END Year_fieldheadercolumn}
 
@@ -1852,9 +2156,18 @@
 	 
 		{BEGIN Quarter_ID_fieldheadercolumn}
 	{BEGIN Quarter_ID_fieldheader}
-	<SPAN {$Quarter_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quarter_ID" data-fieldname="Quarter ID">
-	{$label Indicators_Dashboard Quarter_ID }	{$arrow_icon_Quarter_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quarter_ID" data-fieldname="Quarter ID" 
+
+			{$Quarter_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Quarter_ID }</span>
+					{$arrow_icon_Quarter_ID}
+			</span>
+	</span>
 	{END Quarter_ID_fieldheader}
 {END Quarter_ID_fieldheadercolumn}
 
@@ -1877,9 +2190,18 @@
 	 
 		{BEGIN Month_ID_fieldheadercolumn}
 	{BEGIN Month_ID_fieldheader}
-	<SPAN {$Month_ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Month_ID" data-fieldname="Month ID">
-	{$label Indicators_Dashboard Month_ID }	{$arrow_icon_Month_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Month_ID" data-fieldname="Month ID" 
+
+			{$Month_ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Month_ID }</span>
+					{$arrow_icon_Month_ID}
+			</span>
+	</span>
 	{END Month_ID_fieldheader}
 {END Month_ID_fieldheadercolumn}
 
@@ -1901,9 +2223,20 @@
 
 	 
 		{BEGIN Period_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period" data-fieldname="Period">
-	{$label Indicators_Dashboard Period }	</span>
+	{BEGIN Period_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Period" data-fieldname="Period" 
+
+			{$Period_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label Indicators_Dashboard Period }</span>
+					{$arrow_icon_Period}
+			</span>
+	</span>
+	{END Period_fieldheader}
 {END Period_fieldheadercolumn}
 
 	

@@ -48,13 +48,25 @@ class UserInfoPage extends EditPage {
 		if( $globalEvents->exists("BeforeProcessUserinfo") )
 			$globalEvents->BeforeProcessUserinfo( $this );
 
-		if( $this->action == "save2f" ) {
-			$this->process2f();
+		if( $this->action == "enable2f" ) {
+			$this->enable2f( postvalue("method"), postvalue("value") );
+			return;
+		}
+		if( $this->action == "disable2f" ) {
+			$this->disable2f( postvalue( "method" ));
+			return;
+		}
+		if( $this->action == "skip2f" ) {
+			$this->skip2f();
+			return;
+		}
+		if( $this->action == "prefer2f" ) {
+			$this->prefer2f( postvalue( "method" ));
 			return;
 		}
 
 		if( $this->action == "confirm2f" ) {
-			$this->confirm2f();
+			$this->confirm2f( postvalue( "method" ), postvalue( "code" ) );
 			return;
 		}
 
@@ -92,12 +104,25 @@ class UserInfoPage extends EditPage {
 
 		$this->addCommonJs();
 
+		$this->prepareTwoFactorData();
+
 		$templateFile = $this->templatefile;
 		if( $globalEvents->exists("BeforeShowUserinfo") )
 			$globalEvents->BeforeShowUserinfo( $this->xt, $templateFile, $this->getCurrentrecordInternal(), $this );
 
 		$this->display( $this->templatefile );
 	}
+
+	protected function prepareTwoFactorData() {
+		$twofData = $this->loadTwofData();
+		$this->pageData["twoFactorData"] = $twofData->serialize();
+		$this->pageData["twoFactorSettings"] = Security::twoFactorSettings();
+
+		$this->pageData["redirectUrl"] = $_SESSION["MyURL"]
+			? $_SESSION["MyURL"]
+			: GetTableLink("menu");
+	}
+
 
 	protected function regenerateTotp() {
 
@@ -408,51 +433,36 @@ class UserInfoPage extends EditPage {
 		$this->xt->assign( "twof_email_value", $data[ $twofSettings["emailField"] ] );
 
 		$userOption = $data[ $twofSettings["twoFactorField"] ] + 0;
-		$this->xt->assign( "twof_". Security::twoFactorMethod( $userOption )."_attrs", "checked" );
+		$settings =& Security::twoFactorSettings();
+		$enabledMethods = Security::twoFactorEnabledMethods( $userOption );
+		$preferred = Security::twoFactorPreferredMethod( $userOption );
 
-		if( Security::twoFactorEnabled( $userOption ) ) {
-			$this->xt->assign("twof_enable_attrs", "checked");
-		}
-
-		if( $this->mode == USERINFO_SIMPLE ) {
-			$this->xt->assign( "twof_save_attrs", "disabled" );
-		}
-
-		if( Security::userSessionLevel() !== LOGGED_2FSETUP_PENDING ) {
-			$this->pageData["saved2fEnable"] = Security::twoFactorEnabled( $userOption );
-			$this->pageData["saved2fMethod"] = Security::twoFactorMethod( $userOption );
-			if( $this->pageData["saved2fMethod"] == "email" ) {
-				$this->pageData["saved2fEmail"] = Security::twoFactorMethod( $data[ $twofSettings["emailField"] ] );
+		foreach( Security::twoFactorAllMethods() as $m ) {
+			
+			if( Security::twoFactorMethodEnabled( $userOption, $m ) ) {
+				$this->xt->assign( "twof_enabled".$m, true );
+				if( $settings["required"] && count($enabledMethods) == 1 ) {
+					$this->xt->assign( "twof_required".$m, true );
+				}
 			}
-			if( $this->pageData["saved2fMethod"] == "phone" ) {
-				$this->pageData["saved2fPhone"] = Security::twoFactorMethod( $data[ $twofSettings["phoneField"] ] );
+			if( $m == $preferred ) {
+				$this->xt->assign( "twof_preferred".$m, true );
 			}
-		} else {
-			$this->xt->assign("twof_enable_attrs", "checked");
+
 		}
 
-	}
+		if( Security::userSessionLevel() == LOGGED_2FSETUP_PENDING ) {
+			$this->xt->assign( "twofactor_continue", true );
+			if( !$twofSettings["required"] ) {
+				$this->xt->assign( "twofactor_skip", true );
+			}
+			if( count( $enabledMethods ) ) {
+				$this->hideItemType("twofactor_skip");
+			} else {
+				$this->hideItemType("twofactor_continue");
+			}
+		} 
 
-	protected static function get2fDataFromRequest() {
-		$enable = postvalue("enable");
-		$method = postvalue("method");
-		$email = postvalue("email");
-		$phone = postvalue("phone");
-
-		//	prepare 2FA data and save it to the session
-		$twofData = new TwoFactorData;
-		$twofData->enable = $enable;
-
-		$twofData->method = $method;
-		if( $method === "email" ) {
-			$twofData->email = $email;
-		} else if( $method === "phone" ) {
-			$twofData->phone = $phone;
-		} else if( $method !== "totp"  ) {
-			//	unknown method, clear settings
-			$twofData->enable = false;
-		}
-		return $twofData;
 	}
 
 
@@ -472,55 +482,16 @@ class UserInfoPage extends EditPage {
 
 		$userOption = $data[ $twofSettings["twoFactorField"] ] + 0;
 
-		$twofData->enable = Security::twoFactorEnabled( $userOption );
-		$twofData->method = Security::twoFactorMethod( $userOption );
+		$twofData->methods = Security::twoFactorEnabledMethods( $userOption );
+		$twofData->preferred = Security::twoFactorPreferredMethod( $userOption );
 		$twofData->secret = $data[ $twofSettings["codeField"] ];
 		$twofData->email = $data[ $twofSettings["emailField"] ];
 		$twofData->phone = $data[ $twofSettings["phoneField"] ];
+		$twofData->required = $twofSettings["required"];
 		return $twofData;
 
 	}
 
-	/**
-	 * compare 2FA data values with those stored in the database and make adjustments
-	 * fill in missing settings and set "confirmNeeded" flag
-	 */
-	protected function update2fAuthData( $twofData ) {
-
-		//	turning off, no action needed
-		if( !$twofData->enable ) {
-			return;
-		}
-		$data = $this->getCurrentrecordInternal();
-		$twofSettings =& Security::twoFactorSettings();
-
-		$userOption = $data[ $twofSettings["twoFactorField"] ] + 0;
-		if( !Security::twoFactorEnabled( $userOption ) ) {
-			//	2FA was turned off, now being enabled.
-			$twofData->confirmNeeded = true;
-		}
-
-		if( $twofData->method === "totp" ) {
-			$twofData->secret = $data[ $twofSettings["codeField"] ];
-			if( !validateTotpSecret( $twofData->secret ) ) {
-				//	generate new TOTP secret if there was none
-				$twofData->secret = generateTotpSecret();
-				$twofData->confirmNeeded = true;
-			}
-		} else if( $twofData->method === "email" ) {
-			$email = $data[ $twofSettings["emailField"] ];
-			if( $email == "" || $twofData->email !== $email ) {
-				//	email was changed, confirmation needed
-				$twofData->confirmNeeded = true;
-			}
-		} else if( $twofData->method === "phone" ) {
-			$phone = $data[ $twofSettings["phoneField"] ];
-			if( $phone == "" || $twofData->phone !== $phone ) {
-				//	phone number was changed, confirmation needed
-				$twofData->confirmNeeded = true;
-			}
-		}
-	}
 
 	/**
 	 * Verify if user input conflicts with project 2FA settings
@@ -543,42 +514,92 @@ class UserInfoPage extends EditPage {
 	/**
 	 * 	read 2FA data from the request and save it to the session
 	 */
-	protected function process2f() {
+	protected function enable2f( $method, $data ) {
 
 		//	CSRF protection
 		if( !isPostRequest() )
 			return;
 
-		$twofData = UserInfoPage::get2fDataFromRequest();
-		if( !$this->verify2fSettings( $twofData ) ) {
-			return;
+		if( !Security::twoFactorMethodAvailable($method) ) {
+			echo "unknown two factor authentication method";
+			exit();
 		}
-		$this->update2fAuthData( $twofData );
-
-		if( !$twofData->confirmNeeded ) {
-
-			//	save data to the database
-			$this->save2fData( $twofData );
-			if( Security::userSessionLevel() != LOGGED_FULL ) {
-				Security::elevateSession();
-				Security::auditLoginSuccess();
-				Security::callAfterLogin();
-			}
-			$this->send2fSuccess( $twofData );
-			return;
+		if( $method != TWOFACTOR_APP && !$data ) {
+			echo "no phone number or email provided";
+			exit();
 		}
 
-		//	save data to session, send code to the user
+
+		$twofData = $this->loadTwofData();
+
+		if( $method == TWOFACTOR_APP ) {
+			$twofData->secret = generateTotpSecret();
+		} else if( $method == TWOFACTOR_EMAIL ) {
+			$twofData->email = $data;
+		} else if( $method == TWOFACTOR_PHONE ) {
+			$twofData->phone = $data;
+		}
+
+		$twofData->methods[ $method ] = true;
 		$twofData->code = generateUserCode( GetGlobalData("smsCodeLength", 6) );
-
+		global $debug2Factor;
+		if( $debug2Factor ) {
+			$twofData->code = 333;
+		}
+		//	save data to session, send code to the user
 		storageSet( "2factor_update", $twofData->serialize() );
 
 		//	send verification code to the user
-		$this->send2fCode( $twofData );
+		$this->send2fCode( $method, $data, $twofData->code );
 
 		//	return data to browser
-		$this->send2fConfirmRequest( $twofData );
+		$this->send2fConfirmRequest( $method, $twofData );
 	}
+
+
+	protected function skip2f() {
+
+		//	CSRF protection
+		if( !isPostRequest() )
+			return;
+		
+		$twofSettings =& Security::twoFactorSettings();
+		if( !$twofSettings["required"] && Security::userSessionLevel() == LOGGED_2FSETUP_PENDING ) {
+			$twofData = $this->loadTwofData();
+			Security::elevateSession();
+			Security::auditLoginSuccess();
+			Security::callAfterLogin();
+			$this->send2fSuccess( $twofData );
+		} else {
+			$this->send2fError("Two factor authentication is required");
+		}
+	}
+
+	protected function disable2f( $method ) {
+
+		//	CSRF protection
+		if( !isPostRequest() )
+			return;
+
+		$twofData = $this->loadTwofData();
+		unset( $twofData->methods[ $method ] );
+		$this->save2fData( $twofData );
+		$this->send2fSuccess( $twofData );
+	}
+
+	protected function prefer2f( $method ) {
+		//	CSRF protection
+		if( !isPostRequest() )
+			return;
+		$twofData = $this->loadTwofData();
+		$twofData->preferred = Security::twoFactorPreferredMethod( 
+			Security::getTwoFactorValue( $twofData->methods, $method )
+		);
+		$this->save2fData( $twofData );
+		$this->send2fSuccess( $twofData );
+	}
+
+
 
 	protected function send2fError( $message, $status = 'error' ) {
 		echo my_json_encode( array(
@@ -591,16 +612,14 @@ class UserInfoPage extends EditPage {
 	/**
 	 * send email or txt message with the code
 	 */
-	protected function send2fCode( $twofData ) {
+	protected function send2fCode( $method, $data, $code ) {
 
-		if( $twofData->method != "email" && $twofData->method != "phone" )
+		if( $method != TWOFACTOR_EMAIL && $method != TWOFACTOR_PHONE )
 			return;
 		$ret = Security::sendTwoFactorCode(
-			$twofData->method,
-			$twofData->method === "email"
-				? $twofData->email
-				: $twofData->phone,
-			$twofData->code
+			$method,
+			$data,
+			$code
 		);
 		if( !$ret["success"] ) {
 			$this->send2fError( "Error sending message. " . $ret["message"] );
@@ -610,18 +629,18 @@ class UserInfoPage extends EditPage {
 	/**
 	 * send response data to client, order it display confirm prompt
 	 */
-	protected function send2fConfirmRequest( $twofData ) {
+	protected function send2fConfirmRequest( $method, $twofData ) {
 		$response = array(
 			"status" => "confirm",
-			"method" => $twofData->method
+			"method" => $method
 		);
-		if( $twofData->method === 'totp' ) {
+		if( $method == TWOFACTOR_APP  ) {
 			//	otpauth://totp/Project1:username?secret=...&issuer=Project1
 			$response["secret"] = $twofData->secret;
 			$response["totpUrl"] = $this->getTotpUrl( $twofData->secret );
-		} else if( $twofData->method === 'email' ) {
+		} else if( $method == TWOFACTOR_EMAIL ) {
 			$response["email"] = $twofData->email;
-		} else if( $twofData->method === 'phone' ) {
+		} else if( $method == TWOFACTOR_PHONE ) {
 			$response["phone"] = $twofData->phone;
 		}
 		echo my_json_encode( $response );
@@ -632,24 +651,13 @@ class UserInfoPage extends EditPage {
 	 * inform user on successful 2FA settings update
 	 */
 	protected function send2fSuccess( $twofData ) {
-		$response = array(
-			"enable" => $twofData->enable,
-			"status" => "saved",
-			"method" => $twofData->method,
+		$twofData->preferred = Security::twoFactorPreferredMethod( 
+			Security::getTwoFactorValue( $twofData->methods, $twofData->preferred )
 		);
-		if( $twofData->method == "email" ) {
-			$response["email"] = $twofData->email;
-		}
-		if( $twofData->method == "phone" ) {
-			$response["phone"] = $twofData->phone;
-		}
-		if( $this->mode === USERINFO_2FACTOR ) {
-			if( $_SESSION["MyURL"] ) {
-				$response["redirect"] = $_SESSION["MyURL"];
-			} else {
-				$response["redirect"] = GetTableLink("menu");
-			}
-		}
+		$response = array(
+			"status" => "saved",
+			"twoFactorData" => $twofData->serialize()
+		);
 		echo my_json_encode( $response );
 		exit();
 	}
@@ -666,13 +674,12 @@ class UserInfoPage extends EditPage {
 	 * Check user-entered code against the one saved in session.
 	 * Save new values in the database
 	 */
-	protected function confirm2f() {
-		$code = postvalue( "code" );
+	protected function confirm2f( $method, $code ) {
 		$twofData = TwoFactorData::deserialize( storageGet("2factor_update") );
 		if( !$twofData ) {
 			$this->send2fError( "Session is lost. Refresh the page and try again." );
 		}
-		if( !$this->verify2fCode( $twofData, $code ) ) {
+		if( !$this->verify2fCode( $method, $twofData, $code ) ) {
 			//	just wrong code, ask to reype
 			$this->send2fError( "Wrong code", 'wrong' );
 		}
@@ -687,11 +694,11 @@ class UserInfoPage extends EditPage {
 		$this->send2fSuccess( $twofData );
 	}
 
-	protected function verify2fCode( $twofData, $code ) {
-		if( $twofData->method === "email" || $twofData->method === "phone" )  {
+	protected function verify2fCode( $method, $twofData, $code ) {
+		if( $method == TWOFACTOR_EMAIL || $method == TWOFACTOR_PHONE )  {
 			return $twofData->code == $code;
 		}
-		if( $twofData->method === "totp" ) {
+		if( $method == TWOFACTOR_APP ) {
 			return $code == calculateTotpCode( $twofData->secret );
 		}
 	}
@@ -700,27 +707,19 @@ class UserInfoPage extends EditPage {
 		$twofSettings =& Security::twoFactorSettings();
 
 		$dc = $this->getSubsetDataCommand();
-		if( !$twofData->enable ) {
-			//	read current value to keep method as is
-			$data = $this->getCurrentRecordInternal();
-			$method = Security::twoFactorMethod( $data[ $twofSettings["twoFactorField"] ] );
-		} else {
-			$method = $twofData->method;
+
+		$dc->values[ $twofSettings["twoFactorField"] ] = Security::getTwoFactorValue( $twofData->methods, $twofData->preferred );
+
+		if( $twofData->methods[ TWOFACTOR_EMAIL] ) {
+			$dc->values[ $twofSettings["emailField"] ] = $twofData->email;
 		}
-		$data = $this->getCurrentRecordInternal();
-
-		$dc->values[ $twofSettings["twoFactorField"] ] = Security::getTwoFactorValue( $twofData->enable, $method );
-
-		if( $twofData->enable ) {
-			if( $twofData->method === "email" ) {
-				$dc->values[ $twofSettings["emailField"] ] = $twofData->email;
-			} else if( $twofData->method === "phone" ) {
-				$dc->values[ $twofSettings["phoneField"] ] = $twofData->phone;
-			} else if( $twofData->method === "totp" ) {
-				$dc->values[ $twofSettings["codeField"] ] = $twofData->secret;
-			}
+		if( $twofData->methods[ TWOFACTOR_PHONE ] ) {
+			$dc->values[ $twofSettings["phoneField"] ] = $twofData->phone;
 		}
-
+		if( $twofData->methods[ TWOFACTOR_APP] ) {
+			$dc->values[ $twofSettings["codeField"] ] = $twofData->secret;
+		}
+		
 		if( !$this->dataSource->updateSingle( $dc, false ) ) {
 			$this->send2fError( $this->dataSource->lastError() );
 		}
@@ -804,35 +803,30 @@ class UserInfoPage extends EditPage {
 
 class TwoFactorData {
 	/**
-	 * whether enable or disable 2FA
-	 * @var boolean
-	 */
-	public $enable;
-
-	/**
 	 * code to be sent to the user
 	 * @var string
 	 */
 	public $code;
 
 
-	public $method;
+	public $methods;
+	public $preferred;
 
 	public $secret;
 	public $email;
 	public $phone;
+	public $required;
 
-	public $confirmNeeded;
 
 	public function serialize() {
 		$ret = array();
-		$ret["enable"] = $this->enable;
 		$ret["code"] = $this->code;
-		$ret["method"] = $this->method;
+		$ret["methods"] = $this->methods;
+		$ret["preferred"] = $this->preferred;
 		$ret["secret"] = $this->secret;
 		$ret["email"] = $this->email;
 		$ret["phone"] = $this->phone;
-		$ret["confirmNeeded"] = $this->confirmNeeded;
+		$ret["required"] = $this->required;
 		return $ret;
 	}
 

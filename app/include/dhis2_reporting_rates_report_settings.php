@@ -316,6 +316,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "organisationunit_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "organisationunit_id";
 
@@ -454,6 +455,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "organisationunit";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "organisationunit";
 
@@ -619,6 +621,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "organisationunit_code";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "organisationunit_code";
 
@@ -757,6 +760,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "actual_reports";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "actual_reports";
 
@@ -895,6 +899,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "expected_reports";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "expected_reports";
 
@@ -1033,6 +1038,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "reporting_rate";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "reporting_rate";
 
@@ -1172,6 +1178,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "actual_reports_on_time";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "actual_reports_on_time";
 
@@ -1310,6 +1317,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "reporting_rate_on_time";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "reporting_rate_on_time";
 
@@ -1449,6 +1457,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dataset_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "dataset_id";
 
@@ -1587,6 +1596,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dataset_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "dataset_name";
 
@@ -1752,6 +1762,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facility_type";
 
@@ -1917,6 +1928,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "report_period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "report_period";
 
@@ -2083,6 +2095,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ownership_type_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ownership_type_id";
 
@@ -2221,6 +2234,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "ownership_type_label";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "ownership_type_label";
 
@@ -2387,6 +2401,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_id";
 
@@ -2525,6 +2540,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "indicator_name";
 
@@ -2690,6 +2706,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "organisationunit_description";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "organisationunit_description";
 
@@ -2828,6 +2845,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "value";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"value\"";
 
@@ -2968,6 +2986,7 @@ $tdatadhis2_reporting_rates_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "relative_period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "relative_period";
 

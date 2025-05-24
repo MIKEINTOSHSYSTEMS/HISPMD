@@ -189,6 +189,9 @@ $tstrOrderBy = "";
 $tdatadhis2_eidm_hc[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadhis2_eidm_hc[".orderindexes"] = array();
+	foreach ( my_json_decode("") as $orderItem ) {
+		$tdatadhis2_eidm_hc[".orderindexes"][] = array(0, ($orderItem["dir"] == "a" ? "ASC" : "DESC"), $orderItem["field"]);
+	}
 
 
 $tdatadhis2_eidm_hc[".sqlHead"] = "";
@@ -255,6 +258,7 @@ $tdatadhis2_eidm_hc[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/dx";
 
+	
 	
 		$fdata["FullName"] = "dx";
 
@@ -392,6 +396,7 @@ $tdatadhis2_eidm_hc[".hideMobileList"] = array();
 		$fdata["strField"] = "*/ou";
 
 	
+	
 		$fdata["FullName"] = "ou";
 
 	
@@ -528,6 +533,7 @@ $tdatadhis2_eidm_hc[".hideMobileList"] = array();
 		$fdata["strField"] = "*/period";
 
 	
+	
 		$fdata["FullName"] = "period";
 
 	
@@ -663,6 +669,7 @@ $tdatadhis2_eidm_hc[".hideMobileList"] = array();
 
 		$fdata["strField"] = "*/value";
 
+	
 	
 		$fdata["FullName"] = "value";
 

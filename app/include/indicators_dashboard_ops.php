@@ -64,7 +64,10 @@ GROUP BY
         ELSE ind.\"year\"::TEXT
     END
 ORDER BY ind.\"year\";
-"
+",
+		"skipFilter" => "0",
+		"skipOrder" => "0"
+
 	);
 		$tables_data["Indicators_Dashboard"][".operations"] = &$topsindicators_dashboard;
 ?>

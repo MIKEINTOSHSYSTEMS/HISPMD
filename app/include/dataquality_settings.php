@@ -258,6 +258,7 @@ $tdatadataquality[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "dq_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "dq_id";
 
@@ -398,6 +399,7 @@ $tdatadataquality[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "report_type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "report_type";
 
@@ -536,6 +538,7 @@ $tdatadataquality[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "timeliness_percentage";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "timeliness_percentage";
 
@@ -675,6 +678,7 @@ $tdatadataquality[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "completeness_percentage";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "completeness_percentage";
 

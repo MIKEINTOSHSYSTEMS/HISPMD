@@ -77,6 +77,7 @@
 		
 		
 		
+		
 				// List
 function selectList($dataSource, $command)
 {
@@ -319,7 +320,7 @@ $rs = $dataSource->reorderResult($command, $rs);
 $rs->seekRecord($command->startRecord);
 return $rs;
 
-;
+;		
 } // function selectList
 
 		

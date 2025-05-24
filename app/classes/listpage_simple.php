@@ -49,10 +49,9 @@ class ListPage_Simple extends ListPage
 		if( $this->printAvailable() )
 		{
 			// new print panel
-			if ( !$this->rowsFound )
+			if ( !$this->recordsOnPage )
 			{
-				$this->hideItem("print_panel");
-				$this->xt->displayBrickHidden("printpanel");
+				$this->hideItemType("print_panel");
 			}
 			
 			$this->xt->assign("print_friendly", true);
@@ -86,7 +85,6 @@ class ListPage_Simple extends ListPage
 		{
 			$this->xt->assign('morelinkmobile_block', true);
 			$this->xt->assign('tableinfomobile_block', true);
-			$this->xt->displayBrickHidden("vmsearch2");
 		}
 		
 		//$this->setupBreadcrumbs();
@@ -107,38 +105,19 @@ class ListPage_Simple extends ListPage
 			$hideColumns = $this->getColumnsToHide();
 			$this->jsSettings['tableSettings'][ $this->tName ]['hideColumns'] = $hideColumns;
 
-			if( $this->isPD() ) {
-				if( !$this->rowsFound )
-					$this->hideItemType("columns_control");
-				
-				$fieldsClasses = array();
+			if( !$this->recordsOnPage )
+				$this->hideItemType("columns_control");
+			
+			$fieldsClasses = array();
 
-				foreach( $hideColumns as $d => $fields)
-				{
-					$dm = RunnerPage::deviceClassToMacro( $d );
-					if( getMediaType() == 0 && $dm == 0 ||
-						( getMediaType() == 2 || getMediaType() == 1 ) &&  $dm == 2  ) {
-						foreach( $fields as $f )
-						{
-							$this->hideField( $f );
-						}
-					}
-				}
-			} else {
-				if( !$this->rowsFound )
-					$this->xt->displayBrickHidden("bsfieldhidepanel");
-				
-				$fieldsClasses = array();
-
-				foreach( $hideColumns as $d => $fields)
-				{
+			foreach( $hideColumns as $d => $fields)
+			{
+				$dm = RunnerPage::deviceClassToMacro( $d );
+				if( getMediaType() == 0 && $dm == 0 ||
+					( getMediaType() == 2 || getMediaType() == 1 ) &&  $dm == 2  ) {
 					foreach( $fields as $f )
 					{
-						$fieldsClasses[$f] .= " bs-hidden-column".$d;
-					}
-					foreach( $fieldsClasses as $f => $c )
-					{
-						$this->hiddenColumnClasses[$f] = $c;
+						$this->hideField( $f );
 					}
 				}
 			}
@@ -178,23 +157,19 @@ class ListPage_Simple extends ListPage
 		{
 			// print links and attrs
 			$this->xt->assign("prints_block", true );
-			$this->xt->assign("print_link", $this->rowsFound );
-			$this->xt->assign("printlink_attrs", "id='print_".$this->id."' name='print_".$this->id."'".(!$this->rowsFound && $needShowLinkForAdd ? " style='display:none;'" : ""));
+			$this->xt->assign("print_link", $this->recordsOnPage );
+			$this->xt->assign("printlink_attrs", "id='print_".$this->id."' name='print_".$this->id."'".(!$this->recordsOnPage && $needShowLinkForAdd ? " style='display:none;'" : ""));
 			//print all link and attr
 			$this->xt->assign("printall_link", true );
-			$this->xt->assign("printalllink_attrs","id='printAll_".$this->id."' name='printAll_".$this->id."'". (!$this->rowsFound ? " style='display:none;'" : ""));
-			if( !$this->rowsFound )
-				$this->xt->displayBrickHidden("toplinks_print");
+			$this->xt->assign("printalllink_attrs","id='printAll_".$this->id."' name='printAll_".$this->id."'". (!$this->recordsOnPage ? " style='display:none;'" : ""));
 		}
 		
 		if( $this->exportAvailable() )
 		{
 			//export link and attr
 			$this->xt->assign("export_link", true );
-			$this->xt->assign("exportlink_attrs", "id='export_".$this->id."'".(!$this->rowsFound ? " style='display:none;'" : ""));
+			$this->xt->assign("exportlink_attrs", "id='export_".$this->id."'".(!$this->recordsOnPage ? " style='display:none;'" : ""));
 							 
-			if( !$this->rowsFound )
-				$this->xt->displayBrickHidden("toplinks_export");
 		}
 	}
 	
@@ -205,33 +180,18 @@ class ListPage_Simple extends ListPage
 	function addAssignPageDetails() 
 	{
 		$searchPermis = $this->permis[ $this->tName ]['search'];
-		if( !$this->rowsFound && !$this->inlineAddAvailable() && !$this->showAddInPopup )
+		if( !$this->recordsOnPage && !$this->inlineAddAvailable() && !$this->showAddInPopup )
 			return;
 		
 		$this->xt->assign("details_block", $searchPermis );
-		if( !$this->rowsFound )
-		{
-			$this->xt->displayBrickHidden("details_found");
-			$this->xt->displayBrickHidden("vdetails_found");
-		}
 		
 		$this->xt->assign("pages_block", $searchPermis);
-		if( !$this->rowsFound )
-		{
-			$this->xt->displayBrickHidden("page_of");
-			$this->xt->displayBrickHidden("vpage_of");
-		}
 		$this->xt->assign("pages_attrs","id=\"pageOf".$this->id."\" name=\"pageOf".$this->id."\"");
 		
 		if( $searchPermis && count($this->arrRecsPerPage) )
 		{
 			$this->xt->assign("recordspp_block", true);
 			$this->createPerPage();
-			if( !$this->rowsFound )
-			{
-				$this->xt->displayBrickHidden("recsperpage");
-				$this->xt->displayBrickHidden("vrecsperpage");
-			}
 		}
 	}
 	

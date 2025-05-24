@@ -74,7 +74,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
     {END left_block}
 </div>				</div>
@@ -87,7 +230,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -96,7 +239,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -131,6 +274,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -308,15 +454,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_use_id}  r-vertical-field" 
-	data-signal-error-for="use_id{$id}" 
+	data-signal-error-for="use_id{$id}" {$required_attr_use_id}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="use_id" data-fieldname="use_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_use_id}">
 		{BEGIN use_id_label}{$label public_datause use_id }{END use_id_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$use_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="use_id">
+	<div class="r-edit-tooltip" data-helpfor="use_id" {$tooltipAttr public_datause use_id } >
 		<div class="text-muted" >
 		{$tooltip public_datause use_id }		</div>
 	</div>
@@ -329,15 +476,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_institution_type}  r-vertical-field" 
-	data-signal-error-for="institution_type{$id}" 
+	data-signal-error-for="institution_type{$id}" {$required_attr_institution_type}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="institution_type" data-fieldname="institution_type" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_institution_type}">
 		{BEGIN institution_type_label}{$label public_datause institution_type }{END institution_type_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$institution_type_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="institution_type">
+	<div class="r-edit-tooltip" data-helpfor="institution_type" {$tooltipAttr public_datause institution_type } >
 		<div class="text-muted" >
 		{$tooltip public_datause institution_type }		</div>
 	</div>
@@ -350,15 +498,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_pmt_active}  r-vertical-field" 
-	data-signal-error-for="pmt_active{$id}" 
+	data-signal-error-for="pmt_active{$id}" {$required_attr_pmt_active}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="pmt_active" data-fieldname="pmt_active" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_pmt_active}">
 		{BEGIN pmt_active_label}{$label public_datause pmt_active }{END pmt_active_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$pmt_active_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="pmt_active">
+	<div class="r-edit-tooltip" data-helpfor="pmt_active" {$tooltipAttr public_datause pmt_active } >
 		<div class="text-muted" >
 		{$tooltip public_datause pmt_active }		</div>
 	</div>
@@ -371,15 +520,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_baseline_assessment}  r-vertical-field" 
-	data-signal-error-for="baseline_assessment{$id}" 
+	data-signal-error-for="baseline_assessment{$id}" {$required_attr_baseline_assessment}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="baseline_assessment" data-fieldname="baseline_assessment" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_baseline_assessment}">
 		{BEGIN baseline_assessment_label}{$label public_datause baseline_assessment }{END baseline_assessment_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$baseline_assessment_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="baseline_assessment">
+	<div class="r-edit-tooltip" data-helpfor="baseline_assessment" {$tooltipAttr public_datause baseline_assessment } >
 		<div class="text-muted" >
 		{$tooltip public_datause baseline_assessment }		</div>
 	</div>

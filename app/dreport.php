@@ -7,29 +7,21 @@ add_nocache_headers();
 
 include("include/reportfunctions.php");
 
-// #9875 It's expected that webreports, webreport_style tables belong to the same db connection
-
-$defConnection = $cman->getForWebReports();
-
-if(@$_REQUEST["rname"] || $_SESSION["webreports"]["settings"]["name"])
+if( postvalue( "rname" ) || $_SESSION["webreports"]["settings"]["name"] )
 {
-	if(@$_REQUEST["rname"])
-		$rname = @$_REQUEST["rname"];
-	elseif(@$_SESSION["webreports"]["settings"]["name"] && @$_REQUEST["edit"]=="style")
+	$rname = postvalue( "rname" );
+	if( !$rname && @$_SESSION["webreports"]["settings"]["name"] && @$_REQUEST["edit"] == "style" )
 		$rname = @$_SESSION["webreports"]["settings"]["name"];
 
-	$sql_query = "SELECT ".$defConnection->addFieldWrappers("rpt_id")." FROM ".$defConnection->addTableWrappers("webreports")
-		." WHERE ".$defConnection->addFieldWrappers("rpt_name")."='".$rname."' and ".$defConnection->addFieldWrappers("rpt_type")."='report'";
-
-	$data = $defConnection->query( $sql_query )->fetchNumeric();
+	$data = wrGetEntityRecord( $rname, WR_REPORT );
 	if( !$data )
-		header("location: ".GetTableLink("webreport"));
+		header( "location: ".GetTableLink("webreport") );
 	else
-		Reload_Report(postvalue("rname"));
+		Reload_Report( postvalue("rname") );
 }
 
 $includes="";
-$includes.="<script language=\"JavaScript\" src=\"include/loadfirst.js?39558\"></script>\r\n";
+$includes.="<script language=\"JavaScript\" src=\"include/loadfirst.js?41974\"></script>\r\n";
 $includes.="<script type=\"text/javascript\" src=\"include/lang/".getLangFileName(mlang_getcurrentlang()).".js\"></script>";
 
 $cross_table="false";
@@ -129,7 +121,7 @@ $editmode=(@$_REQUEST["edit"]=="style");
 if(!$editmode)
 {
 // Load xml report data into array
-	$rpt_array = getReportArray(postvalue("rname"));
+	$rpt_array = wrGetEntityArray(postvalue("rname"), WR_REPORT );
 }
 else
 	$rpt_array = $_SESSION["webreports"];
@@ -188,7 +180,7 @@ else
 	}
 	if (pre8count(GetUserGroups()) > 1) {
 		$arr_reports = array();
-		$arr_reports = GetReportsList();
+		$arr_reports = wrGetEntityList( WR_REPORT );
 		foreach ( $arr_reports as $rpt ) {
 			if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $rpt_array['settings']['name']==$rpt["name"])
 			{
@@ -227,27 +219,27 @@ foreach ($arr_xml_fields as $xml_field) {
 
 $rpt_array['miscellaneous']['print_friendly'] = ($rpt_array['miscellaneous']['print_friendly'] == "true") ? true : false;
 
-// Load and assign styles
-$sql_query = "SELECT ".$defConnection->addFieldWrappers("report_style_id").",".$defConnection->addFieldWrappers("type").",".$defConnection->addFieldWrappers("field")
-	.",".$defConnection->addFieldWrappers("group").",".$defConnection->addFieldWrappers("style_str").",".$defConnection->addFieldWrappers("uniq")."
-	, ".$defConnection->addFieldWrappers("repname").", ".$defConnection->addFieldWrappers("styletype")
-	." FROM ".$defConnection->addTableWrappers("webreport_style")." WHERE ".$defConnection->addFieldWrappers("repname")."=".$defConnection->prepareString(postvalue('rname'))
-	." ORDER BY ".$defConnection->addFieldWrappers("report_style_id")." ASC";
-
+$reoportQResult = wrGetStyleRS( $rname );
 $styleStr = '';
-$reoportQResult = $defConnection->query( $sql_query );
-while( $data = $reoportQResult->fetchNumeric() ) {
+while( $data = $reoportQResult->fetchAssoc() ) {
 
-	if ($data[1] == 'table')
-		$styleStr .= "#legend td{".$data[4]."}\n";
-	else if (($data[2] == 0) && ($data[3] != 0))
-		$styleStr .= "#legend td.class".$data[3]."g"."{".$data[4]."}\n";
-	else if (($data[2] != 0) && ($data[3] == 0))
-		$styleStr .= "#legend td.class".$data[2]."f"."{".$data[4]."}\n";
-	else if ($data[5] == 0 && $data[2] != 0 && $data[3] != 0)
-		$styleStr .= "#legend td.class".$data[3]."g".$data[2]."f0u{".$data[4]."}\n";
-	else
-		$styleStr .= "#legend td.class".$data[3]."g".$data[2]."f".$data[5]."u"."{".$data[4]."}\n";
+	$type = $data[ "type" ];
+	$style = $data[ "style_str" ];
+	$field = $data[ "field" ];
+	$group = $data[ "group" ];
+	$uniq = $data[ "uniq" ];
+	if ( $type == 'table') {
+		$selector = "#legend td";
+	} else if ( !$field && $group ) {
+		$selector = "#legend td.class".$group."g";
+	} else if ( $field && !$group ) {
+		$selector = "#legend td.class" . $field . "f";
+	} else if ( !$uniq && $field && $group ) {
+		$selector = "#legend td.class".$group."g".$field."f0u";
+	} else {
+		$selector = "#legend td.class" . $group . "g" . $field . "f" . $uniq . "u";
+	}
+	$styleStr .= $selector . " { " . $style . " }\r\n";
 }
 
 $xt->assign("styleStr", $styleStr);

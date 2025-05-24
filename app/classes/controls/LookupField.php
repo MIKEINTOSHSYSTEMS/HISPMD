@@ -38,7 +38,6 @@ class LookupField extends EditControl
 	public $alt = "";
 
 	public $clookupfield = "";
-	public $openlookup = "";
 
 	public $bUseCategory = false;
 	public $horizontalLookup = false;
@@ -152,10 +151,7 @@ class LookupField extends EditControl
 	{
 		if( $this->multiselect && ( $this->LCType == LCT_DROPDOWN && $this->lookupSize == 1 || $this->LCType == LCT_AJAX || $this->LCType == LCT_LIST ) )
 		{
-			if ( $this->pageObject->isBootstrap() )
-				$this->pageObject->AddCSSFile("include/chosen/bootstrap-chosen.css");
-			else
-				$this->pageObject->AddCSSFile("include/chosen/chosen.css");
+			$this->pageObject->AddCSSFile("include/chosen/bootstrap-chosen.css");
 		}
 	}
 
@@ -179,7 +175,6 @@ class LookupField extends EditControl
 
 		$suffix = "_".GoodFieldName($this->field)."_".$this->id;
 		$this->clookupfield = "display_value".($fieldNum ? $fieldNum : '').$suffix;
-		$this->openlookup = "open_lookup".$suffix;
 
 		$this->cfield = "value".$suffix;
 		$this->ctype = "type".$suffix;
@@ -638,14 +633,14 @@ class LookupField extends EditControl
 
 				case LCT_DROPDOWN:
 					$dataAttr = '';
-					$selectClass = $this->pageObject->isBootstrap() ? 'form-control' : '';
-					$simpleBoxClass = $this->pageObject->isBootstrap() ? 'form-control' : '';
+					$selectClass = 'form-control';
+					$simpleBoxClass = 'form-control';
 					if( $dropDownHasSimpleBox )
 					{
 						$dataAttr = ' data-usesuggests="true"';
 						$selectClass .= $optionContains ? ' rnr-hiddenControlSubelem' : '';
 						$simpleBoxClass .= $optionContains ? '' : ' rnr-hiddenControlSubelem';
-						$simpleBoxStyle = $this->pageObject->isBootstrap() ? '' : $this->getWidthStyleForAdditionalControl();
+						$simpleBoxStyle = '';
 						echo '<input id="'.$this->cfield.'_simpleSearchBox" type="text" value="'.runner_htmlspecialchars($value).'" autocomplete="off" class="'.$simpleBoxClass.'" '.$simpleBoxStyle.'>';
 					}
 
@@ -670,15 +665,15 @@ class LookupField extends EditControl
 		if($this->LCType == LCT_DROPDOWN)
 		{
 			$dataAttr = '';
-			$selectClass = $this->pageObject->isBootstrap() ? 'form-control' : '';
-			$simpleBoxClass = $this->pageObject->isBootstrap() ? 'form-control' : '';
+			$selectClass = 'form-control';
+			$simpleBoxClass = 'form-control';
 
 			if( $dropDownHasSimpleBox )
 			{
 				$dataAttr = ' data-usesuggests="true"';
 				$selectClass .= $optionContains ? ' rnr-hiddenControlSubelem' : '';
 				$simpleBoxClass .= $optionContains ? '' : ' rnr-hiddenControlSubelem';
-				$simpleBoxStyle = $this->pageObject->isBootstrap() ? '' : $this->getWidthStyleForAdditionalControl();
+				$simpleBoxStyle = '';
 				echo '<input id="'.$this->cfield.'_simpleSearchBox" type="text" value="'.runner_htmlspecialchars($value).'" autocomplete="off" class="'.$simpleBoxClass.'" '.$simpleBoxStyle.'>';
 			}
 
@@ -1327,10 +1322,7 @@ class LookupField extends EditControl
 
 	function getInputStyle( $mode )
 	{
-		if ($this->pageObject->isBootstrap())
-			return "class='form-control'";
-		else
-			return parent::getInputStyle($mode);
+		return "class='form-control'";
 	}
 
 	/**
@@ -1345,21 +1337,29 @@ class LookupField extends EditControl
 		if( $this->LCType == LCT_LIST )
 		{
 			$visibility = $hiddenSelect ? ' style="visibility: hidden;"' : '';
-			$links[] = '<a href="#" id="'.$this->openlookup.'"'.$visibility.'>'."Select".'</a>';
+			$openId = "open_lookup_".GoodFieldName( $this->field )."_".$this->id;
+			$links[] = '<a href="#" id="'.$openId.'" '.$visibility.'>'."Select".'</a>';
+			
+			if( $this->multiselect ) {
+				$clearId = "clearLookup_".GoodFieldName( $this->field )."_".$this->id;
+				$links[] = '<a href="#" id="'.$clearId.'" style="visibility: hidden;">'."Clear".'</a>';
+			}
 		}
 
 		if( $this->addNewItem )
 			$links[] = '<a href="#" id="addnew_'.$this->cfield.'">'."Add new".'</a>';
+		
 
 		if( !count($links) )
 			return "";
 
-		if( $this->pageObject->isBootstrap() )
-			return '<div class="bs-lookup-links">'.implode("", $links).'</div>';
-
-		return '&nbsp;'.implode('&nbsp;', $links);
+		return '<div class="bs-lookup-links">'.implode("", $links).'</div>';
 	}
+	
 	public function getBasicFieldCondition( $searchFor, $strSearchOption, $searchFor2 = "", $etype = "" ) {
+		if( $strSearchOption == EMPTY_SEARCH ) {
+			return parent::getBasicFieldCondition( $searchFor, $strSearchOption, $searchFor2 );
+		}
 		if( !$this->multiselect ) 
 			return $this->singleValueCondition( $searchFor, $strSearchOption, $searchFor2 );
 		else 

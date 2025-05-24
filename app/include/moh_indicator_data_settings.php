@@ -332,6 +332,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.data_id";
 
@@ -472,6 +473,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.indicator_id";
 
@@ -641,6 +643,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_source_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.data_source_id";
 
@@ -810,6 +813,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "assessment_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.assessment_id";
 
@@ -976,6 +980,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.region_id";
 
@@ -1142,6 +1147,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "unit_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.unit_id";
 
@@ -1306,6 +1312,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facility_type_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.facility_type_id";
 
@@ -1470,6 +1477,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "value";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.\"value\"";
 
@@ -1611,6 +1619,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "year";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.\"year\"";
 
@@ -1777,6 +1786,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "scope_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.scope_id";
 
@@ -1943,6 +1953,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "gender_sex";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.gender_sex";
 
@@ -2095,6 +2106,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_representation";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.data_representation";
 
@@ -2249,6 +2261,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "indicator_group_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.indicator_group_id";
 
@@ -2418,6 +2431,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "data_source_detail";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.data_source_detail";
 
@@ -2585,6 +2599,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.period_id";
 
@@ -2749,6 +2764,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "month_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.month_id";
 
@@ -2913,6 +2929,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "quarter_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicator_data.quarter_id";
 
@@ -3077,6 +3094,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "period";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "CASE           WHEN moh_indicator_data.quarter_id IS NOT NULL THEN CONCAT('Q', moh_indicator_data.quarter_id::TEXT, '-', moh_indicator_data.\"year\"::TEXT)          WHEN moh_indicator_data.month_id IS NOT NULL THEN CONCAT('M', moh_indicator_data.month_id::TEXT, '-', moh_indicator_data.\"year\"::TEXT)          ELSE moh_indicator_data.\"year\"::TEXT      END";
 
@@ -3244,6 +3262,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 		$fdata["strField"] = "indicator_target";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicators_target.indicator_target";
 
@@ -3379,6 +3398,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "indicator_target_year";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicators_target.indicator_target_year";
@@ -3516,6 +3536,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 		$fdata["strField"] = "indicator_baseline";
 
 	
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicators_target.indicator_baseline";
 
@@ -3651,6 +3672,7 @@ $tdatamoh_indicator_data[".hideMobileList"] = array();
 
 		$fdata["strField"] = "indicator_baseline_year";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"public\".moh_indicators_target.indicator_baseline_year";

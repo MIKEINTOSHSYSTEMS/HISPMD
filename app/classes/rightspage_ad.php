@@ -42,7 +42,7 @@ class RightsPage_AD extends RightsPage
 		
 		$this->xt->assign("menu_block",false);
 		// hide Rename button
-		$this->hideItem("rights_rename_group");
+		$this->hideItemType("rights_rename_group");
 	}
 }
 ?>

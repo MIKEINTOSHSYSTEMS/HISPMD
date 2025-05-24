@@ -209,14 +209,6 @@ class MembersPage extends ListPage_Simple
 			$row["recNo"] = $this->recNo; 
 			$this->recNo++;
 			
-			//	assign row spacings for vertical layout
-			$row["grid_rowspace"] = true;
-			$row["grid_recordspace"] = array( "data" => array() );
-			
-			for( $i = 0; $i < $this->colsOnPage * 2 - 1; $i++ ) {
-				$row["grid_recordspace"]["data"][] = true;
-			}
-			
 			if( $this->eventExists("BeforeMoveNextList") )
 				$this->eventsObject->BeforeMoveNextList( $data, $row, $record, $record["recId"], $this );
 			

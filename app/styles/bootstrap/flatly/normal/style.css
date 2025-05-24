@@ -256,7 +256,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../../fonts/glyphicons-halflings-regular.eot');
-  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -4564,8 +4564,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #00274ce9;
-    /* #001f3f;*/
+  background-color: #2c3e50;
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
@@ -7216,7 +7215,7 @@ table.indenttables > * > .rightsindent5 > td.rightscell.rightscell.rightscell.ri
 .rnr-dbelemtable {
 	background: #2b3e50;
 }*/
-.rnr-dbselectedrow.rnr-dbselectedrow {
+.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow.rnr-dbselectedrow {
   background-color: lightyellow;
   color: #2C3E50;
 }
@@ -7288,13 +7287,28 @@ table.indenttables > * > .rightsindent5 > td.rightscell.rightscell.rightscell.ri
   outline-color: -webkit-focus-ring-color;
 }
 /* grid coloring */
-td::before {
-  content: legacy !important;
+/* columns grid */
+@media print, (min-width: 768px) {
+  table[data-location="grid"].bs-fieldsgrid > tbody > tr:nth-child( 2n + 2) {
+    background: #f9f9f9;
+    color: inherit;
+  }
+  table[data-location="grid"].bs-fieldsgrid > tbody > tr:nth-child( 2n + 1) {
+    background: transparent;
+    color: inherit;
+  }
 }
-/*xxd*/
-td::before {
-  content: #f9f9f9 !important;
+@media screen and (max-width: 767px) {
+  table:not(.r-flexgrid)[data-location="grid"].bs-fieldsgrid > tbody > tr:nth-child( 2n + 2) {
+    background: #f9f9f9;
+    color: inherit;
+  }
+  table:not(.r-flexgrid)[data-location="grid"].bs-fieldsgrid > tbody > tr:nth-child( 2n + 1) {
+    background: transparent;
+    color: inherit;
+  }
 }
+/**/
 @media print, (min-width: 768px) and print, (min-width: 768px) {
   table[data-location="grid"].table-striped[data-body-height="1"] > tbody > tr:nth-child( 2n + 2) {
     background: #f9f9f9;
@@ -7830,6 +7844,9 @@ td::before {
   .r-vbar-page .r-content-col .r-body > * {
     max-width: calc(100vw - 300px - 20px - (30px * 0.75) - 10px);
   }
+  .r-vbar-page .r-content-col .r-body > *.r-grid {
+    max-width: none;
+  }
   .r-vbar-page .r-content-col .r-body[data-body-width="full"] > * > .r-grid-vertical[data-vcolumns="1"] {
     display: flex;
   }
@@ -7896,10 +7913,11 @@ td::before {
   .r-leftbar-top-page .navbar-toggle {
     display: none;
   }
-  .r-vbar-page .r-body,
-  .r-leftbar-top-page .r-body {
-    padding-right: 15px;
-    padding-left: 15px;
+  .r-vbar-page .r-body.r-body,
+  .r-leftbar-top-page .r-body.r-body {
+    padding-top: 0;
+    padding-right: 8px;
+    padding-left: 7px;
   }
 }
 .sidebar-contents.mCustomScrollBox {
@@ -8142,6 +8160,9 @@ td::before {
   .r-leftbar-top-page > .r-under .r-content-col .r-body > * {
     max-width: calc(100vw - 300px - 20px - (30px * 0.75) - 10px);
   }
+  .r-leftbar-top-page > .r-under .r-content-col .r-body > *.r-grid {
+    max-width: none;
+  }
   .r-leftbar-top-page > .r-under .r-content-col .r-body[data-body-width="full"] > * > .r-grid-vertical[data-vcolumns="1"] {
     display: flex;
   }
@@ -8261,6 +8282,9 @@ td::before {
 }
 .modal-footer > [data-itemtype="pagination"] {
   width: 100%;
+}
+[data-itemtype="pagination"] {
+  margin: 0 10px;
 }
 [data-itemtype="pagination"] .pagination {
   margin: 10.5px 0;
@@ -8429,6 +8453,124 @@ td::before {
   [data-itemtype="notifications"].dropdown.open > .dropdown-menu {
     background-color: #fff;
   }
+}
+/* single element in the cell */
+[data-location] .r-ori-vert > [data-itemid]:not([data-hidden]):not([data-media-hidden])[data-itemtype="grid_field_label"] {
+  display: flex;
+  align-items: end;
+}
+[data-location] .r-ori-vert > [data-itemid]:not([data-hidden]):not([data-media-hidden])[data-itemtype="grid_field_label"] > .text-label {
+  flex: 1 1 auto;
+}
+[data-location] .r-ori-vert > [data-itemid]:not([data-hidden]):not([data-media-hidden])[data-itemtype="grid_field_label"] > .dropdown {
+  flex: 0 0  auto;
+}
+/* general appearance */
+[data-itemtype="grid_field_label"] > .dropdown > button {
+  margin-left: 5px;
+}
+[data-itemtype="grid_field_label"] > .dropdown .search.search {
+  text-align: left;
+}
+[data-itemtype="grid_field_label"] > .dropdown .value {
+  cursor: pointer;
+}
+[data-itemtype="grid_field_label"] .dropdown-toggle {
+  min-width: 2em;
+}
+[data-itemtype="grid_field_label"] > .dropdown > .dropdown-menu {
+  font-weight: normal;
+}
+[data-itemtype="grid_field_label"] > .dropdown > .dropdown-menu label {
+  font-weight: normal;
+}
+[data-itemtype="grid_field_label"] > .dropdown > .dropdown-menu .rnr-filter-menu-footer {
+  display: flex;
+  gap: 5px;
+  overflow-y: auto;
+}
+[data-itemtype="grid_field_label"] > .dropdown > .dropdown-menu .rnr-filter-menu-footer > button {
+  flex: 0 0 70px;
+}
+[data-itemtype="grid_field_label"] > .dropdown > .dropdown-menu .rnr-filter-menu-footer > .r-spacer {
+  flex: 1 1 auto;
+}
+[data-itemtype="grid_field_label"] > .dropdown > .dropdown-menu .r-ff-options {
+  display: flex;
+}
+[data-fieldfilter] .dropdown {
+  display: inline-block;
+}
+[data-fieldfilter] .menu.menu {
+  /*min-width: 250px;*/
+  padding: 0;
+}
+[data-fieldfilter] .r-filter-dialog {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 6px;
+  padding-bottom: 20px;
+}
+[data-fieldfilter] .r-filter-dialog > div {
+  flex: 0 0 auto;
+}
+[data-fieldfilter] .r-filter-dialog > div.select-area {
+  flex: 1 1 auto;
+}
+[data-fieldfilter] .r-filter-dialog > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+[data-fieldfilter] .resizable {
+  min-width: 300px;
+  min-height: 150px;
+}
+[data-fieldfilter] .resizable .ui-resizable-handle {
+  margin: 2px;
+}
+[data-fieldfilter] .resizable .ui-resizable-sw {
+  left: 1px;
+  bottom: 1px;
+  transform: scaleX(-1);
+}
+[data-fieldfilter] .r-filter-options > label {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+[data-fieldfilter] .select-wrapper .select-results {
+  display: none;
+}
+[data-fieldfilter].search-active .select-wrapper .select-all {
+  display: none;
+}
+[data-fieldfilter].search-active .select-wrapper .select-results {
+  display: inline-block;
+}
+[data-fieldfilter] .select-area {
+  overflow-y: auto;
+  height: 200px;
+  padding: 6px;
+  border: 1px solid #dce4ec;
+}
+[data-fieldfilter] .values-list .value {
+  display: block;
+}
+[data-fieldfilter] .values-list .value .value span {
+  padding-left: 4px;
+}
+[data-fieldfilter] .dropdown-toggle i {
+  display: none;
+}
+[data-fieldfilter][data-fieldfilter-state=enabled]:not( .loading ) .dropdown-toggle i.enabled {
+  display: inline-block;
+}
+[data-fieldfilter][data-fieldfilter-state=disabled]:not( .loading ) .dropdown-toggle i.disabled {
+  display: inline-block;
+}
+[data-fieldfilter].loading .dropdown-toggle i.loading {
+  display: inline-block;
 }
 @media print, (min-width: 768px) {
   .r-small-page[data-body-align="left"] {
@@ -8965,6 +9107,81 @@ td::before {
 @media print, (min-width: 768px) and (min-width: 1200px) {
   .r-grid-vertical[data-vcolumns="10"] > .r-record-body {
     width: 10%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 768px) {
+  .r-grid-vertical[data-vcolumns="11"] > .r-record-body {
+    width: 12.5%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 992px) {
+  .r-grid-vertical[data-vcolumns="11"] > .r-record-body {
+    width: 10%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 1200px) {
+  .r-grid-vertical[data-vcolumns="11"] > .r-record-body {
+    width: 9.09090909%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 768px) {
+  .r-grid-vertical[data-vcolumns="12"] > .r-record-body {
+    width: 12.5%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 992px) {
+  .r-grid-vertical[data-vcolumns="12"] > .r-record-body {
+    width: 10%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 1200px) {
+  .r-grid-vertical[data-vcolumns="12"] > .r-record-body {
+    width: 8.33333333%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 768px) {
+  .r-grid-vertical[data-vcolumns="13"] > .r-record-body {
+    width: 11.11111111%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 992px) {
+  .r-grid-vertical[data-vcolumns="13"] > .r-record-body {
+    width: 9.09090909%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 1200px) {
+  .r-grid-vertical[data-vcolumns="13"] > .r-record-body {
+    width: 7.69230769%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 768px) {
+  .r-grid-vertical[data-vcolumns="14"] > .r-record-body {
+    width: 11.11111111%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 992px) {
+  .r-grid-vertical[data-vcolumns="14"] > .r-record-body {
+    width: 8.33333333%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 1200px) {
+  .r-grid-vertical[data-vcolumns="14"] > .r-record-body {
+    width: 7.14285714%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 768px) {
+  .r-grid-vertical[data-vcolumns="15"] > .r-record-body {
+    width: 10%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 992px) {
+  .r-grid-vertical[data-vcolumns="15"] > .r-record-body {
+    width: 7.69230769%;
+  }
+}
+@media print, (min-width: 768px) and (min-width: 1200px) {
+  .r-grid-vertical[data-vcolumns="15"] > .r-record-body {
+    width: 6.66666667%;
   }
 }
 @media print, (min-width: 768px) and (min-width: 1200px) {
@@ -10151,8 +10368,8 @@ td.bs-details-opened.bs-details-opened.bs-details-opened {
 .r-edit-form > * > tr > [data-cellid] > [edit-form-cell] > .r-search-field,
 .r-edit-form > * > tr > [data-cellid] > [edit-form-cell] > .r-search-label,
 .r-edit-form > * > tr > [data-cellid] > [edit-form-cell] > .r-search-option {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .r-edit-form > * > tr > [data-cellid]:not(.r-ori-vert):not([data-single]) > [edit-form-cell] > .r-search-label,
 .r-edit-form > * > tr > [data-cellid][data-single] > [edit-form-cell] > .r-search-label,
@@ -10178,103 +10395,105 @@ td.bs-details-opened.bs-details-opened.bs-details-opened {
 }
 @media print, (min-width: 768px) {
   .r-integrated-field > * {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .r-horizontal-field {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   .r-horizontal-field .r-edit-label {
     text-align: right;
+    padding-top: 0;
   }
   [data-single] > * > .r-edit-tooltip {
     padding-top: 10px;
   }
   /* fields */
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > [data-itemid],
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > [data-itemid],
   [data-fullwidth].r-ori-vert > * > [data-itemid] {
     margin-left: calc(25% + 30px/2);
   }
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-view-label,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-view-label,
   [data-fullwidth].r-ori-vert > * > .r-view-label,
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-view-field,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-view-field,
   [data-fullwidth].r-ori-vert > * > .r-view-field,
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-edit-label,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-edit-label,
   [data-fullwidth].r-ori-vert > * > .r-edit-label,
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-edit-field,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-edit-field,
   [data-fullwidth].r-ori-vert > * > .r-edit-field,
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-edit-tooltip,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-edit-tooltip,
   [data-fullwidth].r-ori-vert > * > .r-edit-tooltip {
     width: 50%;
     margin-left: 25%;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-search-label,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-search-label,
   [data-fullwidth].r-ori-vert > * > .r-search-label,
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-search-field,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-search-field,
   [data-fullwidth].r-ori-vert > * > .r-search-field,
-  [data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-search-option,
+  [data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-search-option,
   [data-fullwidth].r-ori-vert > * > .r-search-option {
     width: calc(50% - 30px);
     margin-left: 16.66666667%;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-edit-label,
+  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-edit-label,
   [data-fullwidth]:not( .r-ori-vert ) > * > .r-edit-label {
     width: 25%;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-edit-field,
+  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-edit-field,
   [data-fullwidth]:not( .r-ori-vert ) > * > .r-edit-field {
     width: 50%;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-edit-tooltip,
+  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-edit-tooltip,
   [data-fullwidth]:not( .r-ori-vert ) > * > .r-edit-tooltip {
     width: 25%;
     padding-top: 10px;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-search-label,
+  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-search-label,
   [data-fullwidth]:not( .r-ori-vert ) > * > .r-search-label {
     width: 16.66666667%;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-search-field,
+  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-search-field,
   [data-fullwidth]:not( .r-ori-vert ) > * > .r-search-field {
     width: 33.33333333%;
   }
-  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-search-option,
+  [data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-search-option,
   [data-fullwidth]:not( .r-ori-vert ) > * > .r-search-option {
     width: 16.66666667%;
   }
-  :not([data-fullwidth]) > * > .r-integrated-field.r-horizontal-field {
+  :not([data-fullwidth]) > * > .r-integrated-field:not([data-compact]).r-horizontal-field {
     flex-wrap: wrap;
   }
-  :not([data-fullwidth]) > * > .r-integrated-field.r-horizontal-field .r-edit-label {
+  :not([data-fullwidth]) > * > .r-integrated-field:not([data-compact]).r-horizontal-field .r-edit-label {
     width: 33.33333333%;
   }
-  :not([data-fullwidth]) > * > .r-integrated-field.r-horizontal-field .r-edit-field {
+  :not([data-fullwidth]) > * > .r-integrated-field:not([data-compact]).r-horizontal-field .r-edit-field {
     width: 66%;
   }
-  :not([data-fullwidth]) > * > .r-integrated-field.r-horizontal-field .r-edit-tooltip {
+  :not([data-fullwidth]) > * > .r-integrated-field:not([data-compact]).r-horizontal-field .r-edit-tooltip {
     width: 66.66666667%;
     margin-left: 33.33333333%;
   }
   /* left align */
-  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-edit-label,
+  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-edit-label,
   .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth].r-ori-vert > * > .r-edit-label,
-  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-edit-field,
+  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-edit-field,
   .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth].r-ori-vert > * > .r-edit-field,
-  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-vertical-field > .r-edit-tooltip,
+  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-vertical-field:not([data-compact]) > .r-edit-tooltip,
   .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth].r-ori-vert > * > .r-edit-tooltip {
     width: 50%;
     margin-left: 0;
   }
-  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-edit-label,
+  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-edit-label,
   .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth]:not( .r-ori-vert ) > * > .r-edit-label {
     width: 15%;
   }
-  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-edit-field,
+  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-edit-field,
   .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth]:not( .r-ori-vert ) > * > .r-edit-field {
     width: 50%;
   }
-  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-horizontal-field > .r-edit-tooltip,
+  .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth] > * > .r-integrated-field.r-horizontal-field:not([data-compact]) > .r-edit-tooltip,
   .r-edit-form[data-body-align="left"] > * > tr > [data-cellid][data-fullwidth]:not( .r-ori-vert ) > * > .r-edit-tooltip {
     width: 25%;
   }
@@ -10304,11 +10523,11 @@ td.bs-details-opened.bs-details-opened.bs-details-opened {
 }
 body.function-dashboard,
 body[data-panel-bg] {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
 }
 body.function-dashboard table[data-location="grid"][data-dashboard],
 body[data-panel-bg] table[data-location="grid"][data-dashboard] {
-  background: transparent;
+  background-color: transparent;
 }
 [data-dashboard][data-dashboard] {
   table-layout: fixed;
@@ -10480,14 +10699,26 @@ a.r-box-left > .r-box-icon > [data-icontype="text"]:focus {
 .r-box-text > .r-box-body {
   font-size: 110%;
 }
-[data-row-width="2"] > td {
-  width: 50%;
+/* default dashboard width */
+@media print, (min-width: 768px) {
+  [data-row-width="2"] > td {
+    width: 50%;
+  }
+  [data-row-width="3"] > td {
+    width: 33%;
+  }
+  [data-row-width="4"] > td {
+    width: 25%;
+  }
+  [data-row-width="5"] > td {
+    width: 20%;
+  }
 }
-[data-row-width="3"] > td {
-  width: 33%;
-}
-[data-row-width="4"] > td {
-  width: 25%;
+/* ignore cell width on mobiles */
+@media screen and (max-width: 767px) {
+  .function-dashboard [data-pageid="1"][data-location="grid"][data-location="grid"][data-location="grid"][data-location="grid"][data-location="grid"] > * > tr > td {
+    width: auto;
+  }
 }
 /* Old styles below, obsolete. Review and remove */
 /*
@@ -10694,7 +10925,24 @@ a.r-box-left > .r-box-icon > [data-icontype="text"]:focus {
   flex: 1 1 100%;
   height: 100%;
 }
+[data-dashtype]:not( [data-fullheight] ) .rnr-pagewrapper[data-single-chart] [data-location="grid"] td {
+  height: 100%;
+}
 [data-dashtype]:not( [data-fullheight] ) .rnr-pagewrapper[data-single-chart] [data-itemtype="chart"] {
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  [data-dashtype]:not( [data-fullheight] ) [data-location="grid"],
+  [data-dashtype]:not( [data-fullheight] ) [data-location="grid"] > *,
+  [data-dashtype]:not( [data-fullheight] ) [data-location="grid"] > * > tr,
+  [data-dashtype]:not( [data-fullheight] ) [data-location="grid"] > * > tr > td {
+    height: 100%;
+  }
+}
+[data-dashtype="6"][data-fullheight] {
+  height: 500px;
+}
+[data-dashtype="6"] .rnr-pagewrapper {
   height: 100%;
 }
 @media print, (min-width: 768px) {
@@ -11000,6 +11248,16 @@ However there might have been the case where dropdown showed up where it shouldn
   max-width: 500px;
   max-height: 300px;
 }
+[data-itemtype="integrated_edit_field"]:not([data-required]) .icon-required,
+[data-itemtype="edit_field_label"]:not([data-required]) .icon-required {
+  display: none;
+}
+.bs-lookup-links a {
+  padding-right: 5px;
+}
+.mobile-multiselection option {
+  color: #555;
+}
 /* Vertical grid Reordering */
 .ui-sortable-handle {
   overflow: auto;
@@ -11088,7 +11346,6 @@ However there might have been the case where dropdown showed up where it shouldn
 }
 [data-itemtype="search_panel"] .panel-heading > .r-sp-options {
   flex: 0 0 auto;
-  text-transform: lowercase;
 }
 [data-itemtype="search_panel"] .srchPanelRow {
   display: flex;
@@ -11903,30 +12160,14 @@ However there might have been the case where dropdown showed up where it shouldn
   padding-top: 12px;
   padding-bottom: 12px;
 }
+.r-menu [data-separator][data-separator][data-separator] {
+  background: transparent;
+}
 .function-userinfo .r-2fa-method {
-  margin-left: 30px;
   margin-top: 6px;
-}
-.function-userinfo .r-2fa-method .radio {
-  margin-right: 10px;
-}
-.function-userinfo .r-2fa-method input[type="text"] {
-  width: 400px;
-}
-.function-userinfo .r-2fa-method:not(.active) [data-2fsettings] {
-  visibility: hidden;
 }
 .function-userinfo .r-2fa-method [data-2fsettings] {
   display: inline-block;
-}
-.function-userinfo .r-2fa-method [data-2fsettings="totp"] {
-  padding: 3px;
-}
-.function-userinfo .r-2fa-save {
-  margin-top: 20px;
-}
-.function-userinfo .r-2fa-enable {
-  font-size: 120%;
 }
 .function-userinfo [data-itemtype="twofactor_label"][data-itemtype="twofactor_label"][data-itemtype="twofactor_label"][data-itemtype="twofactor_label"][data-itemtype="twofactor_label"][data-itemtype="twofactor_label"] {
   padding-bottom: 0;
@@ -11950,10 +12191,52 @@ However there might have been the case where dropdown showed up where it shouldn
   font-size: 150%;
   text-align: center;
 }
+.function-userinfo .r-2fa-name {
+  opacity: 70%;
+}
+.function-userinfo [data-enabled] .r-2fa-name {
+  font-weight: bold;
+  opacity: 1;
+}
+.function-userinfo .r-2fa-method > * > span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 @media print, (min-width: 768px) {
   .function-userinfo [data-itemtype="user_picture"] img {
     max-width: 400px;
   }
+}
+.function-userinfo .r-2fa-method:not([data-enabled]) .r-2fa-name {
+  opacity: 0.7;
+}
+.function-userinfo .r-2fa-method:not([data-enabled]) [data-action="twof_disable"] {
+  display: none;
+}
+.function-userinfo .r-2fa-method:not([data-enabled]) .r-2fa-settings {
+  display: none;
+}
+.function-userinfo .r-2fa-method:not([data-enabled]) .r-2fa-preferred {
+  display: none;
+}
+.function-userinfo .r-2fa-method:not([data-enabled]) [data-action="twof_makepref"] {
+  display: none;
+}
+.function-userinfo .r-2fa-method[data-enabled] .r-2fa-name {
+  opacity: 1;
+  font-weight: bold;
+}
+.function-userinfo .r-2fa-method[data-enabled] [data-action="twof_enable"] {
+  display: none;
+}
+.function-userinfo .r-2fa-method[data-enabled][data-required] [data-action="twof_disable"] {
+  display: none;
+}
+.function-userinfo .r-2fa-method[data-enabled][data-preferred] [data-action="twof_makepref"] {
+  display: none;
+}
+.function-userinfo .r-2fa-method[data-enabled]:not([data-preferred]) .r-2fa-preferred {
+  display: none;
 }
 .function-login .alert {
   margin-bottom: 0;
@@ -12108,36 +12391,36 @@ However there might have been the case where dropdown showed up where it shouldn
   background-color: #fff;
 }
 @media print, (min-width: 768px) {
-  .r-grid > .panel {
+  .r-grid > .panel:not(.form-section) {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.2);
     display: table;
     width: 100%;
   }
-  .r-grid > .panel > .panel-heading {
+  .r-grid > .panel:not(.form-section) > .panel-heading {
     background-color: #fff;
     color: inherit;
   }
-  .r-grid > .panel > .panel-heading:before {
+  .r-grid > .panel:not(.form-section) > .panel-heading:before {
     content: #fff;
   }
-  .r-grid > .panel > .panel-footer {
+  .r-grid > .panel:not(.form-section) > .panel-footer {
     background-color: #fff;
   }
 }
 @media screen and (max-width: 767px) {
-  .r-grid:not([data-responsive]) > .panel {
+  .r-grid:not([data-responsive]) > .panel.panel:not(.form-section) {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.2);
     display: table;
     width: 100%;
   }
-  .r-grid:not([data-responsive]) > .panel > .panel-heading {
+  .r-grid:not([data-responsive]) > .panel.panel:not(.form-section) > .panel-heading {
     background-color: #fff;
     color: inherit;
   }
-  .r-grid:not([data-responsive]) > .panel > .panel-heading:before {
+  .r-grid:not([data-responsive]) > .panel.panel:not(.form-section) > .panel-heading:before {
     content: #fff;
   }
-  .r-grid:not([data-responsive]) > .panel > .panel-footer {
+  .r-grid:not([data-responsive]) > .panel.panel:not(.form-section) > .panel-footer {
     background-color: #fff;
   }
 }
@@ -12734,4 +13017,9 @@ thead.r-fixedhead {
   border: 1px solid #ecf0f1;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.panel-heading:after {
+  clear: both;
+  content: ' ';
+  display: block;
 }

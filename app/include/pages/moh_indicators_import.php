@@ -46,7 +46,9 @@
 'details_found' => array(  ) ),
 'hasCustomButtons' => false,
 'customButtons' => array(  ),
-'hasNotifications' => false ),
+'hasNotifications' => false,
+'menus' => array(  ),
+'calcTotalsFor' => 1 ),
 'events' => array( 'maps' => array(  ),
 'mapsData' => array(  ),
 'buttons' => array(  ) ) );
@@ -92,9 +94,10 @@
 'import_field3' => array( 'field' => 'indicator_desc',
 'type' => 'import_field' ) ),
 'dbProps' => array(  ),
-'version' => 11,
+'version' => 14,
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'listTotals' => 1 );
 		?>

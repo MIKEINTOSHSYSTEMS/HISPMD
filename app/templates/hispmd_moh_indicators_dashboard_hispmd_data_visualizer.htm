@@ -101,6 +101,9 @@
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
 		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
+		{% } %}
 		>
 		<span class="r-noti-img">
 			{% if (o.iconType == 'fa') { %}

@@ -173,6 +173,8 @@ class DsCommand {
 
 	/**
 	 * See OrderClause::getOrderFields return value specification
+	 * dir - required
+	 * column, index, expr - at least one of them must be specified
 	 */
 	public $order = array();
 

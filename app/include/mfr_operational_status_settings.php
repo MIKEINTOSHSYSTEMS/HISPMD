@@ -252,6 +252,7 @@ $tdatamfr_operational_status[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "operationalstatus";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "operationalstatus";
 
@@ -415,6 +416,7 @@ $tdatamfr_operational_status[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "status";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "status";
 
@@ -578,6 +580,7 @@ $tdatamfr_operational_status[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "count";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"count\"";
 

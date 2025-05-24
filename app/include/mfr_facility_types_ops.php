@@ -4,7 +4,12 @@ $topsmfr_facility_types = array();
 		"subtype" => "rest",
 		"method" => "GET",
 		"request" => "/lookup/GetFacilityType",
-		"payload" => "[]"
+		"payload" => "[]",
+		"skipFilter" => "0",
+		"skipOrder" => "0",
+		"payloadFormat" => "0",
+		"payloadString" => "",
+		"rawPayload" => "0"
 	);
 	$tables_data["MFR_Facility_Types"][".operations"] = &$topsmfr_facility_types;
 ?>

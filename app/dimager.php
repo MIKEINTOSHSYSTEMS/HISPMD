@@ -17,7 +17,7 @@ include("include/reportfunctions.php");
 if(!postvalue("rname"))
 	return;
 
-$rpt_array = getReportArray(postvalue("rname"));
+$rpt_array = wrGetEntityArray(postvalue("rname"), WR_REPORT );
 
 // if old
 if (is_wr_project()) 
@@ -28,7 +28,7 @@ if (is_wr_project())
 	}
 	if (pre8count(GetUserGroups()) > 1) {
 		$arr_reports = array();
-		$arr_reports = GetReportsList();
+		$arr_reports = wrGetEntityList( WR_REPORT );
 		foreach ( $arr_reports as $rpt ) {
 			if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $rpt_array['settings']['name']==$rpt["name"])
 			{

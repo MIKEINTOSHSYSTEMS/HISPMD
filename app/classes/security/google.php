@@ -1,66 +1,36 @@
 <?php
 
-include_once(getabspath("classes/security.php"));
+require_once(getabspath("classes/security.php"));
+require_once(getabspath("classes/security/openid.php"));
 
-class SecurityPluginGoogle extends SecurityPlugin {
+class SecurityPluginGoogle extends SecurityPluginOpenId
+{
+	/**
+	 * limit Google logins to members of specific Google Cloud organizations, e.g. "example.com, sample.com"
+	 */
+	public $domain = "";
 
-	protected $appId = "";
-	protected $domain = "";
 	/**
 	 * @constructor
 	 */
-	function __construct( $params )
+	function __construct($params)
 	{
-		parent::__construct( $params );
-		// client id
-		$this->appId = $params["clientId"];
+		parent::__construct($params);
 		$this->domain = $params["domain"];
-	}
-
-	public function getUserInfo( $id_token )
-	{
-		global $cCharset;
-
-
-		$payload = $this->verifyIdToken( $id_token );
-
-		if( $payload["error"] )
-			$this->error = "Google security plugin: "
-				.$payload["error"]." ".$payload["error_description"];
-
-		if( !$payload || $payload["error"] )
-			return array();
-
-		//	save token in cookies
-		setProjectCookie( 'google_token', $id_token, time() + 30 * 1440 * 60, true );
-
-		$ret = array(
-				"id" => "go".$payload["sub"],
-				"name" => runner_convert_encoding( $payload["name"], $cCharset, 'UTF-8' ),
-				"email" => $payload["email"],
-				"raw" => $payload
-			);
-
-		if( $payload["picture"] ) {
-			$picResult = runner_http_request( $payload["picture"], "", "GET", array(), false );
-			if( $picResult["content"] )
-				$ret["picture"] = $picResult["content"];
-		}
-
-		return $ret;
+		$this->configUrl = 'https://accounts.google.com/.well-known/openid-configuration';
 	}
 
 	/**
 	 * Returns allowed domains from appsettings as array
 	 * @return Array
 	 */
-	private function getDomainList() {
-		$rawDomain = $this->domain;
-		$domainList = explode(',', $rawDomain);
+	private function getDomainList()
+	{
+		$domainList = explode(',', $this->domain);
 		$result = array();
-		foreach($domainList as $domain) {
+		foreach ($domainList as $domain) {
 			$trimDomain = trim($domain);
-			if ( $trimDomain ) {
+			if ($trimDomain) {
 				$result[] = $trimDomain;
 			}
 		}
@@ -68,53 +38,58 @@ class SecurityPluginGoogle extends SecurityPlugin {
 	}
 
 	/**
-	 * Verify token and get parsed paylod
+	 * Verify token and return parsed paylod
 	 * @param String token
 	 * @return Array|false
 	 */
-	public function verifyIdToken( $token ) {
-		//	OpenId standard verification routine
-		$wellKnown = Security::getOpenIdConfiguration( "https://accounts.google.com/.well-known/openid-configuration" );
+	public function verifyIdToken($token)
+	{
+		$payload = parent::verifyIdToken($token);
 
-		$jwk = Security::getOpenIdJWK( $token, $wellKnown );
-		if( !$jwk )
+		if (!$payload || $payload["error"])
+			return $payload;
+
+		// verify that the value of the iss claim in the ID token is equal to https://accounts.google.com or accounts.google.com.
+		if ($payload["iss"] != "https://accounts.google.com" && $payload["iss"] != "accounts.google.com")
 			return false;
 
-		$verifiedTokenData = Security::openIdVerifyToken( $token, $jwk );
-		if( !$verifiedTokenData )
+		// verify that the value of the aud claim in the ID token is equal to your app's client ID.
+		if ($payload["aud"] != $this->clientId)
 			return false;
 
-		$payload = $verifiedTokenData["payload"];
-
-		$domainList = $this->getDomainList();
-
-		if( $domainList ) {
-			if( !in_array($payload["hd"], $domainList) ) {
-				$domains = implode(", ", $domainList);
-				$this->error = str_replace( "%s", $domains, mlang_message( 'GOOGLE_DOMAIN' ));
-				return false;
-			}
+		// verify that the ID token has a hd claim that matches an accepted domain associated with a Google Cloud organization.
+		$allowedDomains = $this->getDomainList();
+		if (count($allowedDomains) > 0 && !in_array($payload["hd"], $allowedDomains)) {
+			$domains = implode(", ", $allowedDomains);
+			$this->error = str_replace( "%s", $domains, mlang_message( 'GOOGLE_DOMAIN' ));
+			return false;
 		}
 
 		return $payload;
 	}
 
-	public function getJSSettings()
-	{
-		return array(
-			"isGoogleSignIn" => true,
-			"GoogleClientId" => $this->appId
+	public function hasExternalLogout() {
+		$config = $this->getConfig();
+		return $config[ "revocation_endpoint" ] != null && $this->logOut;
+	}
+
+	public function redirectToLogout( $token, $redirectUri ) {
+		$config = $this->getConfig();
+		$endpoint = $config[ "revocation_endpoint" ];
+
+		// try revoke access token
+		$request = new HttpRequest(
+			$endpoint, "POST", array(), array( "token" => $token ),
+			array( "Cache-Control" => "no-store", "Content-Type" => "application/x-www-form-urlencoded" )
 		);
+		$request->run();
+
+		// redirect to login
+		header( "Location: " . $redirectUri );
+		exit();
 	}
 
-	public function onLogout()
-	{
-		setProjectCookie( 'google_token', "", time() - 1, true );
-	}
-
-	public function savedToken()
-	{
-		return $_COOKIE[ 'google_token' ];
+	public function saveStorageData() {
+		storageSet( "logout_token_hint", $this->access_token );
 	}
 }
-?>

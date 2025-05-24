@@ -126,15 +126,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_region_name}  r-vertical-field" 
-	data-signal-error-for="region_name{$id}" 
+	data-signal-error-for="region_name{$id}" {$required_attr_region_name}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="region_name" data-fieldname="region_name" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_region_name}">
 		{BEGIN region_name_label}{$label public_moh_regions region_name }{END region_name_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$region_name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="region_name">
+	<div class="r-edit-tooltip" data-helpfor="region_name" {$tooltipAttr public_moh_regions region_name } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions region_name }		</div>
 	</div>
@@ -147,15 +148,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_region_alternate}  r-vertical-field" 
-	data-signal-error-for="region_alternate{$id}" 
+	data-signal-error-for="region_alternate{$id}" {$required_attr_region_alternate}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="region_alternate" data-fieldname="region_alternate" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_region_alternate}">
 		{BEGIN region_alternate_label}{$label public_moh_regions region_alternate }{END region_alternate_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$region_alternate_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="region_alternate">
+	<div class="r-edit-tooltip" data-helpfor="region_alternate" {$tooltipAttr public_moh_regions region_alternate } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions region_alternate }		</div>
 	</div>
@@ -168,15 +170,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_lat}  r-vertical-field" 
-	data-signal-error-for="lat{$id}" 
+	data-signal-error-for="lat{$id}" {$required_attr_lat}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="lat" data-fieldname="lat" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_lat}">
 		{BEGIN lat_label}{$label public_moh_regions lat }{END lat_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$lat_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="lat">
+	<div class="r-edit-tooltip" data-helpfor="lat" {$tooltipAttr public_moh_regions lat } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions lat }		</div>
 	</div>
@@ -189,15 +192,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_lng}  r-vertical-field" 
-	data-signal-error-for="lng{$id}" 
+	data-signal-error-for="lng{$id}" {$required_attr_lng}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="lng" data-fieldname="lng" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_lng}">
 		{BEGIN lng_label}{$label public_moh_regions lng }{END lng_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$lng_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="lng">
+	<div class="r-edit-tooltip" data-helpfor="lng" {$tooltipAttr public_moh_regions lng } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions lng }		</div>
 	</div>
@@ -210,15 +214,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_code}  r-vertical-field" 
-	data-signal-error-for="code{$id}" 
+	data-signal-error-for="code{$id}" {$required_attr_code}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="code" data-fieldname="code" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_code}">
 		{BEGIN code_label}{$label public_moh_regions code }{END code_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$code_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="code">
+	<div class="r-edit-tooltip" data-helpfor="code" {$tooltipAttr public_moh_regions code } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions code }		</div>
 	</div>
@@ -231,15 +236,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_map}  r-vertical-field" 
-	data-signal-error-for="map{$id}" 
+	data-signal-error-for="map{$id}" {$required_attr_map}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="map" data-fieldname="map" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_map}">
 		{BEGIN map_label}{$label public_moh_regions map }{END map_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$map_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="map">
+	<div class="r-edit-tooltip" data-helpfor="map" {$tooltipAttr public_moh_regions map } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions map }		</div>
 	</div>
@@ -252,15 +258,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_region_code}  r-vertical-field" 
-	data-signal-error-for="region_code{$id}" 
+	data-signal-error-for="region_code{$id}" {$required_attr_region_code}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="region_code" data-fieldname="region_code" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_region_code}">
 		{BEGIN region_code_label}{$label public_moh_regions region_code }{END region_code_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$region_code_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="region_code">
+	<div class="r-edit-tooltip" data-helpfor="region_code" {$tooltipAttr public_moh_regions region_code } >
 		<div class="text-muted" >
 		{$tooltip public_moh_regions region_code }		</div>
 	</div>

@@ -258,6 +258,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "hf_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "hf_id";
 
@@ -396,6 +397,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "name";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "name";
 
@@ -534,6 +536,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "type";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"type\"";
 
@@ -672,6 +675,7 @@ $tdatahealthfacilities[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "his_audit_started";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "his_audit_started";
 

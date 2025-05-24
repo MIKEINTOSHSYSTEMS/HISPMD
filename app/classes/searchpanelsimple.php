@@ -145,7 +145,6 @@ class SearchPanelSimple {
 	
 		// build search controls for each field, first we need to build used controls, because cached must have last index	
 		foreach( $this->allSearchFields as $searchField ) {
-			$this->pageObj->fillFieldToolTips($searchField);
 			$srchFields = $this->searchClauseObj->getSearchCtrlParams($searchField);
 			$isSrchPanelField = in_array($searchField, $this->panelSearchFields);
 

@@ -122,14 +122,14 @@ if ( isset( $_POST['str_xml'] ) && isset( $_POST['web'] ) && !isset( $_POST['sav
 				comlete_report_session_default_values();
 				save_sql("webreports");
 				$str_xml = $xml->array_to_xml( $root );
-				SaveReport( $root['settings']['name'],$root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, false);
+				wrSaveEntity( WR_REPORT, $root['settings']['name'],$root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, false);
 			}
 			elseif ( $_POST['web'] == "webcharts" )
 			{
 				comlete_chart_session_default_values();
 				save_sql("webcharts");
 				$str_xml = $xml->array_to_xml( $root );
-				SaveChart( $root['settings']['name'],$root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, false );
+				wrSaveEntity( WR_CHART, $root['settings']['name'],$root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, false );
 			}
 		}
 		elseif ($root['tables'][0] != $rt || $root['table_type']!=$ttype)
@@ -216,7 +216,7 @@ elseif ( isset( $_POST['str_xml'] ) && isset( $_POST['web'] ) && isset( $_POST['
 		save_sql("webreports");
 
         $str_xml = $xml->array_to_xml( $root );
-        SaveReport( $save_name, $root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, $saveas );
+        wrSaveEntity( WR_REPORT, $save_name, $root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, $saveas );
     }
 	elseif ( $_POST['web'] == "webcharts" )
 	{
@@ -233,44 +233,30 @@ elseif ( isset( $_POST['str_xml'] ) && isset( $_POST['web'] ) && isset( $_POST['
 		save_sql("webcharts");
 
         $str_xml = $xml->array_to_xml( $root );
-        SaveChart( $save_name, $root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, $saveas );
+        wrSaveEntity( WR_CHART, $save_name, $root['settings']['name'], $root['settings']['title'], $root['settings']['status'], $str_xml, $saveas );
     }
 
     echo "OK";
 }
 elseif ( isset( $_POST['del'] ))
 {
-	    if (pre8count(GetUserGroups()) > 1)
-	    {
-        	$arr_reports = array();
-	        if ( $_POST['web'] == "webreports" ){
-        	    $arr_reports = GetReportsList();
-	            $s="report";
-        	    $g=$root['settings']['name'];
-	        }
-        	else {
-	            $arr_reports = GetChartsList();
-        	    $s="chart";
-	            $g=$root['settings']['name'];
-        	}
-
-	        foreach ( $arr_reports as $rpt ) {
-        	    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $g==$rpt["name"])
-	            {
-					if($s=="report")
-						echo "<p>"."You don't have permissions to delete this report"."</p>";
-					else
-						echo "<p>"."You don't have permissions to delete this chart"."</p>";
-                	exit();
-	            }
-        	}
-	    }
-    if ( $_POST['web'] == "webreports" ) {
-        $opStatus = DeleteReport(postvalue('name'));
-    } else {
-        $opStatus = DeleteChart(postvalue('name'));
-    }
-    echo "OK";
+	$ename = postvalue('name');
+	if( pre8count( GetUserGroups() ) > 1 ) {
+		$rpt = wrGetEntityRecord( $ename, $_POST['web'] == "webreports" ? WR_REPORT : WR_CHART );
+		
+		$entity = wrGetContent( $rpt["rpt_content"] );
+		$permissions = wrGetEntityPermissions( $entity );
+		
+		if ( $rpt["rpt_owner"] != Security::getUserName() || $rpt["rpt_owner"] == ""  || $permissions["view"] == 0 ) {
+			if ( $_POST['web'] == "webreports" )
+				echo "<p>"."You don't have permissions to delete this report"."</p>";
+			else
+				echo "<p>"."You don't have permissions to delete this chart"."</p>";
+			exit();
+		}
+	}
+	wrDeleteEntity( $ename, $_POST['web'] == "webreports" ? WR_REPORT : WR_CHART );
+	echo "OK";
 }
 
 function comlete_report_session_default_values($isedit="") {
@@ -353,11 +339,11 @@ function comlete_report_session_default_values($isedit="") {
 		);
 		
 		$root['settings'] = array(
-			"name" => GoodFieldName($root['tables'][0]).'_'.CheckLastID('report'),
-			"title" => $root['tables'][0].' Report '.CheckLastID('report'),
+			"name" => GoodFieldName($root['tables'][0]).'_'.CheckLastID( WR_REPORT ),
+			"title" => $root['tables'][0].' Report '.CheckLastID( WR_REPORT ),
 			"status" => "private"
 		);
-		$_SESSION["webobject"]["name"]= GoodFieldName($root['tables'][0]).'_'.CheckLastID('report');
+		$_SESSION["webobject"]["name"]= GoodFieldName($root['tables'][0]).'_'.CheckLastID( WR_REPORT );
 		$root['owner'] = Security::getUserName();
 		$_SESSION['webreports']['tmp_active'] = "x";
 	}
@@ -457,8 +443,8 @@ function comlete_chart_session_default_values($isedit="") {
 		$root['appearance']["saxes"] = "false";
 		$root['appearance']["slog"] = "false";
 		$root['appearance']["dec"] = "2";
-		$root['appearance']["head"] = $root['tables'][0].' Chart '.CheckLastID('chart');
-		$root['appearance']["foot"] = $root['tables'][0].' Chart '.CheckLastID('chart');
+		$root['appearance']["head"] = $root['tables'][0].' Chart '.CheckLastID( WR_CHART );
+		$root['appearance']["foot"] = $root['tables'][0].' Chart '.CheckLastID( WR_CHART );
 		$root['appearance']["aqua"] = "0";
 		$root['appearance']["cview"] = "0";
 		$root['appearance']["is3d"] = "false";
@@ -475,14 +461,14 @@ function comlete_chart_session_default_values($isedit="") {
 	if(!$isedit)
 	{
 		$root['settings'] = array(
-			"name" => GoodFieldName($root['tables'][0]).'_'.CheckLastID('chart'),
-			"title" => $root['tables'][0].' Chart '.CheckLastID('chart'),
+			"name" => GoodFieldName($root['tables'][0]).'_'.CheckLastID( WR_CHART ),
+			"title" => $root['tables'][0].' Chart '.CheckLastID( WR_CHART ),
 			"status" => "private",
 			"owner" => Security::getUserName(),
 			"table_name" => $root['tables'][0],
 			"short_table_name" => GetTableURL($root['tables'][0])
 		);
-		$_SESSION["webobject"]["name"]= GoodFieldName($root['tables'][0]).'_'.CheckLastID('chart');
+		$_SESSION["webobject"]["name"]= GoodFieldName($root['tables'][0]).'_'.CheckLastID( WR_CHART );
 		$root['owner'] = Security::getUserName();
 		$_SESSION['webcharts']['tmp_active'] = "x";
 	}
@@ -1025,7 +1011,7 @@ function update_report_group_fields()
 //	ensure all group fields are listed in the tables	
 	$root=&$_SESSION["webreports"];
 //	ensure all fields in reports are listed in the tables	
-	$tables=getReportTablesList();
+	$tables = getReportTablesList();
 	$changed=false;
 	$arr_unset = Array();
 	foreach($root["group_fields"] as $idx=>$fld)

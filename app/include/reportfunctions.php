@@ -4,62 +4,39 @@ require_once(getabspath("classes/cipherer.php"));
 require_once(getabspath("classes/searchclause.php"));
 
 
-function getReportArray($name)
-{
-	$arr = array();
-	$xml = new xml();
-	$rpt_strXML = LoadSelectedReport($name);
-	$arr=$xml->xml_to_array($rpt_strXML);
-	if(count($arr))
-	{
-		$_SESSION["webobject"]["table_type"]=$arr["table_type"];
-		$_SESSION["object_sql"]=$arr["sql"];
-		if($arr["table_type"]=="custom")
-		{
-			$connection = getWebreportConnection();	// #9875
 
-			$tables_query = $arr["tables"][0];
-
-			$strSQL = "SELECT ". $connection->addFieldWrappers("sqlcontent")." FROM ". $connection->addTableWrappers("webreport_sql")
-				." WHERE ". $connection->addFieldWrappers("sqlname")."='".$tables_query."'";
-
-			$row = $connection->query( $strSQL )->fetchNumeric();
-			if( $row )
-				$_SESSION["object_sql"] = $row[0];
-		}
+/**
+ * @param String name - entity name
+ * @param int $report - WR_REPORT or WR_CHART
+ */
+function wrGetEntityArray( $name, $type ) {
+	$strXml = wrLoadSelectedEntity( $name, $type );
+	if( !$strXml ) {
+		return array();
 	}
-	return $arr;
+	$xml = new xml();
+	$entArray = $xml->xml_to_array( $strXml );
+	if( !$entArray ) {
+		return array();
+	}
+	$_SESSION["webobject"]["table_type"] = $entArray["table_type"];
+	$_SESSION["object_sql"] = $entArray["sql"];
+	if( $entArray["table_type"] == "custom" ) {
+		$_SESSION["object_sql"] = wrGetCustomSQL( $entArray["tables"][0] );
+	}
+	return $entArray;
 }
 
 function getChartArray($name)
 {
-	$arr = array();
 	$xml = new xml();
-	$chrt_strXML = LoadSelectedChart($name);
-	$arr=$xml->xml_to_array($chrt_strXML);
-	if(count($arr))
-	{
-		$_SESSION["webobject"]["table_type"]=$arr["table_type"];
-		$_SESSION["object_sql"]=$arr["sql"];
-		if($arr["table_type"]=="custom")
-		{
-			$connection = getWebreportConnection();	// #9875
-
-			$tables_query = $arr["tables"][0];
-
-			$strSQL = "SELECT ".$connection->addFieldWrappers("sqlcontent")." FROM ".$connection->addTableWrappers("webreport_sql")
-				." WHERE ".$connection->addFieldWrappers("sqlname")."='".$tables_query."'";
-
-			$row = $connection->query( $strSQL )->fetchNumeric();
-			if( $row )
-				$_SESSION["object_sql"]=$row[0];
-		}
-	}
+	$chrt_strXML = wrLoadSelectedEntity( $name, WR_CHART );
+	$arr = $xml->xml_to_array($chrt_strXML);
 	return $arr;
 }
 
 function GetUserGroups() {
-	global $wr_is_standalone, $cman;
+	global $cman;
 	if( !Security::permissionsAvailable() ) {
 		return array();
 	}
@@ -82,37 +59,20 @@ function GetUserGroups() {
 		$dc->order[] = array( "column" => $groupLabelField, "dir" => "ASC" );
 		$qResult = $dataSource->getList($dc );
 
-		while( $data = $qResult->fetchNumeric() )
+		while( $data = $qResult->fetchAssoc() )
 		{
 			$arr[] = array($data[ $groupIdField ], $data[ $groupLabelField ] );
 		}
 	} else {
 		//	static permissions
 		$arr = array();
-		if(!$wr_is_standalone)
-		{
-			$arr[]=array("Default","<Default>");
-		}
-		else
-		{
-			$connection = getWebreportConnection(); // #9875
-
-			$qResult = $connection->query( "select ".$connection->addFieldWrappers("username")
-				." from ".$connection->addTableWrappers("webreport_users")." order by ".$connection->addFieldWrappers("username") );
-
-			$arr[] = array("Guest", "<Guest>");
-			while( $data = $qResult->fetchNumeric() )
-			{
-				$arr[] = array($data[0], $data[0]);
-			}
-		}
+		$arr[]=array("Default","<Default>");
 	}
 	return $arr;
 }
 
 function GetUserGroup()
 {
-	global $wr_is_standalone;
 	if( !Security::permissionsAvailable() ) {
 		return array();
 	}
@@ -130,57 +90,41 @@ function GetUserGroup()
 	}
 	else
 	{
-		if(!$wr_is_standalone)
+		if( !Security::isGuest() )
 		{
-			if( !Security::isGuest() )
-			{
-				return array("Default");
-			}
-			else
-			{
-				return array("Guest");
-			}
+			return array("Default");
 		}
 		else
 		{
-			if( !Security::isGuest() )
-			{
-				$connection = getWebreportConnection();	// #9875
-
-				$qResult = $connection->query("select ".$connection->addFieldWrappers("username")." from ".$connection->addTableWrappers("webreport_users")
-					." order by ".$connection->addFieldWrappers("username"));
-				while( $data = $qResult->fetchNumeric() )
-				{
-					if ( $data[0] == @$_SESSION["GroupID"] )
-						return array($data[0]);
-				}
-				return array("Guest");
-			}
-			else
-			{
-				return array("Guest");
-			}
+			return array("Guest");
 		}
 	}
 }
 
-function CheckLastID($type)
-{
-	$connection = getWebreportConnection(); // #9875
+/**
+ * @param Int  type - WR_CHART or WR_REPORT
+ */
+function CheckLastID( $type ) {
+	// select max(id) from webreports where rpt_type=<type>
 
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_id")." FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_type")." = '".$type."'";
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::FieldEquals( "rpt_type", wrSqlType( $type ) );
+	$dc->totals[] = array(
+		"field" => "rpt_id",
+		"alias" => "id",
+		"total" => "max"
+	);
 
-	$qResult = $connection->query( $strSQL );
+	$dataSource = wrMainDataSource();
 
-	$maxID = 0;
-	while( $row = $qResult->fetchNumeric() )
-	{
-		if ( $maxID < $row[0] )
-			$maxID = $row[0];
+	$rs = $dataSource->getTotals( $dc );
+	if( $rs ) {
+		$data = $rs->fetchAssoc();
+		if( $data ) {
+			return $data["id"] + 1;
+		}
 	}
-
-	return ++$maxID;
+	return 1;
 }
 
 function GetNumberFieldsList($table) {
@@ -213,225 +157,162 @@ function WRGetNBFieldsList($table) {
 	return $arr;
 }
 
-function GetChartsList()
-{
+/**
+ * @param Int type - WR_CHART or WR_REPORT
+ * @return String 'chart' or 'report'
+ */
+function wrSqlType( $type ) {
+	return $type == WR_REPORT ? 'report' : 'chart';
+}
+
+/**
+ * return list of reports or charts
+ * @param Int type - WR_REPORT or WR_CHART
+ */
+function wrGetEntityList( $type ) {
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::FieldEquals( "rpt_type", wrSqlType( $type ) );
+	$dc->order[] = array( 
+		"dir" => "ASC",
+		"column" => "rpt_title"
+	);
+
+	$dataSource = wrMainDataSource();
+
+	$rs = $dataSource->getList( $dc );
+	if( !$rs ) {
+		return array();
+	}
+
+	$userGroups = Security::getUserGroupIds();
+	
+	$ret = array();
 	$xml = new xml();
-	$arr = array();
+	while( $row = $rs->fetchAssoc() ) {	
+		$entArr = $xml->xml_to_array( escapeEntities( $row["rpt_content"] ) );
+		$permissions = wrGetEntityPermissions( $entArr, $userGroups );
 
-	$arrUserGroup = GetUserGroup();
-	$connection = getWebreportConnection();// #9875
-
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_name").", ".$connection->addFieldWrappers("rpt_title").", ".$connection->addFieldWrappers("rpt_owner")
-		.", ".$connection->addFieldWrappers("rpt_status").", ".$connection->addFieldWrappers("rpt_content")
-		." FROM ".$connection->addTableWrappers("webreports")." WHERE ".$connection->addFieldWrappers("rpt_type")." = 'chart'"
-		." order by ".$connection->addFieldWrappers("rpt_title");
-
-	$qResult = $connection->query( $strSQL );
-	while( $row = $qResult->fetchNumeric() )
-	{
-		$chart_arr = $xml->xml_to_array( escapeEntities($row[4]) );
-        $view = 0;
-		$edit = 0;
-
-		if ( isset($chart_arr['permissions']) ) {
-			foreach ( $chart_arr['permissions'] as $arr_prm ) {
-				if (in_array($arr_prm['id'], $arrUserGroup)) {
-					$view = ( $arr_prm['view'] == "true" ) ? 1 : 0;
-					$edit = ( $arr_prm['edit'] == "true" ) ? 1 : 0;
-				}
-			}
-		}
-		else
+		if( !$entArr["tmp_active"] )
 		{
-			$view=1;
-		}
-		if(!$chart_arr["tmp_active"])
-		{
-			$arr[] = array(
-				"name"		=> $row[0],
-				"title"		=> $row[1],
-				"owner"		=> $row[2],
-				"status"	=> $row[3],
-				"view"		=> $view,
-				"edit"		=> $edit
+			$ret[] = array(
+				"name"		=> $row[ "rpt_name" ],
+				"title"		=> $row[ "rpt_title" ],
+				"owner"		=> $row[ "rpt_owner" ],
+				"status"	=> $row[ "rpt_status" ],
+				"view"		=> $permissions["view"],
+				"edit"		=> $permissions["edit"]
 			);
 		}
 	}
-
-	return $arr;
+	return $ret;
 }
 
-function LoadSelectedChart($report)
-{
-	$connection = getWebreportConnection();// #9875
-
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_content")." FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($report)." and ".$connection->addFieldWrappers("rpt_type")."='chart'";
-
-	$rptContent = $connection->query( $strSQL )->fetchNumeric();
-	return escapeEntities( $rptContent[0] );
-}
-
-function SaveChart($reportname, $report, $rtitle, $rstatus, $strXML, $saveas)
-{
-	$connection = getWebreportConnection();// #9875
-
-	// ?????
-	// if( !Security::getUserName() )
-	// 	$_SESSION["UserID"] = " ";
-
-
-	$reportname = GoodFieldName($reportname);
-	$report = GoodFieldName($report);
-
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_id")." FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($reportname)." and ".$connection->addFieldWrappers("rpt_type")."='chart'";
-
-	$data =  $connection->query( $strSQL )->fetchAssoc();
-	if ( $data && (!$saveas || $reportname == $report) )
-	{
-		$strSQL = "UPDATE ".$connection->addTableWrappers("webreports")." SET ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($report)
-			.",".$connection->addFieldWrappers("rpt_title")."=".$connection->prepareString($rtitle)
-			.", ".$connection->addFieldWrappers("rpt_content")."=".$connection->prepareString($strXML)
-			.", ".$connection->addFieldWrappers("rpt_status")."=".$connection->prepareString($rstatus).", ".$connection->addFieldWrappers("rpt_mdate")."=".$connection->addDateQuotes( now() )
-			." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($reportname)." and ".$connection->addFieldWrappers("rpt_type")."='chart'";
-
-		$connection->exec( $strSQL );
+function wrGetContent( $rpt_content ) {
+	if( !$rpt_content ) {
+		return array();
 	}
-	else
-	{
-		$strSQL = "INSERT INTO ".$connection->addTableWrappers("webreports")." ( ".$connection->addFieldWrappers("rpt_name")
-			.", ".$connection->addFieldWrappers("rpt_title").", ".$connection->addFieldWrappers("rpt_cdate").", ".$connection->addFieldWrappers("rpt_mdate")
-			.", ".$connection->addFieldWrappers("rpt_content").", ".$connection->addFieldWrappers("rpt_owner").", ".$connection->addFieldWrappers("rpt_status")
-			.", ".$connection->addFieldWrappers("rpt_type")." )";
-
-		$strSQL .= " VALUES(".$connection->prepareString($report).", ".$connection->prepareString($rtitle).", ".$connection->addDateQuotes( now() ).", ".$connection->addDateQuotes( now() )
-			.", ".$connection->prepareString($strXML).", ".$connection->prepareString( Security::getUserName() ).", ".$connection->prepareString($rstatus).", 'chart')";
-
-		$connection->exec( $strSQL );
-	}
-}
-
-function DeleteChart($report)
-{
-	$connection = getWebreportConnection(); // #9875
-
-	$strSQL = "DELETE FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($report)." and ".$connection->addFieldWrappers("rpt_type")."='chart'";
-	$connection->exec( $strSQL );
-}
-
-function GetReportsList()
-{
-	$connection = getWebreportConnection();// #9875
-
 	$xml = new xml();
-	$arr = array();
-	$arrUserGroup = GetUserGroup();
+	$entity = $xml->xml_to_array( escapeEntities( $rpt_content ) );
+	if( !$entity ) {
+		return array();
+	}
+}
 
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_name").", ".$connection->addFieldWrappers("rpt_title").", ".$connection->addFieldWrappers("rpt_owner")
-		.", ".$connection->addFieldWrappers("rpt_status").", ".$connection->addFieldWrappers("rpt_content")." FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_type")." = 'report' order by ".$connection->addFieldWrappers("rpt_title");
+function wrGetEntityPermissions( &$entity, $userGroups = NULL ) {
+	if( !$userGroups )
+		$userGroups = Security::getUserGroupIds();
+	
+	$permissions = array( "view" => 0, "edit" => 0 );
 
-	$qResult = $connection->query( $strSQL );
-	while( $row = $qResult->fetchNumeric() )
-	{
-		$report_arr = $xml->xml_to_array( escapeEntities($row[4]) );
-        $view = 0;
-		$edit = 0;
-
-		if ( isset($report_arr['permissions']) ) {
-			foreach ( $report_arr['permissions'] as $arr_prm ) {
-				if (in_array($arr_prm['id'], $arrUserGroup)) {
-					$view = ( $arr_prm['view'] == "true" ) ? 1 : 0;
-					$edit = ( $arr_prm['edit'] == "true" ) ? 1 : 0;
-				}
+	if ( isset( $entity['permissions'] ) ) {
+		foreach ( $entity['permissions'] as $prm ) {
+			if ( $userGroups[ $prm['id'] ] ) {
+				$permissions['view'] = ( $prm['view'] == "true" ) ? 1 : 0;
+				$permissions['edit'] = ( $prm['edit'] == "true" ) ? 1 : 0;
 			}
 		}
-		else
-		{
-			$view=1;
+	} else {
+		$permissions['view'] = 1;
+	}
+	return $permissions;
+}
+
+
+/**
+ * returns XML-string or null
+ * @param String name - entity name
+ * @param int $type - WR_REPORT or WR_CHART
+ */
+function wrLoadSelectedEntity( $name, $type)
+{
+	$reportData = wrGetEntityRecord( $name, $type );
+	if( $reportData ) {
+		return escapeEntities( $reportData["rpt_content"] );
+	}
+	return null;
+}
+
+function wrDeleteEntity( $name, $type )
+{
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::_And( array( 
+		DataCondition::FieldEquals( "rpt_name", $name ),
+		DataCondition::FieldEquals( "rpt_type", wrSqlType( $type ) )
+	) );
+
+	$dataSource = wrMainDataSource();
+	$dataSource->deleteSingle( $dc, false );
+}
+
+
+/**
+ * @param Int $type WR_REPORT or WR_CHART
+ * 
+ * @param Boolean $saveas
+ */
+function wrSaveEntity( $type, $oldName, $newName, $title, $status, $strXML, $saveas )
+{
+	$oldName = GoodFieldName( $oldName );
+	$newName = GoodFieldName( $newName );
+	
+	$data = wrGetEntityRecord( $oldName, $type );
+
+	$dataSource = wrMainDataSource();
+
+	$dc = new DsCommand();
+	$dc->values[ "rpt_name" ] = $newName;
+	$dc->values[ "rpt_title" ] = $title;
+	$dc->values[ "rpt_content" ] = $strXML;
+	$dc->values[ "rpt_status" ] = $status;
+	$dc->values[ "rpt_mdate" ] = now();
+	
+	if ( $data && ( !$saveas || $oldName == $newName ) ) {
+		$dc->filter = DataCondition::_And( array( 
+			DataCondition::FieldEquals( "rpt_name", $oldName ),
+			DataCondition::FieldEquals( "rpt_type", wrSqlType( $type ) )
+		) );
+		$dataSource->updateSingle( $dc, false );
+	} else {
+		$dc->values[ "rpt_cdate" ] = now();
+		$dc->values[ "rpt_owner" ] = Security::getUserName();
+		if( !$dc->values[ "rpt_owner" ] ) { 
+			//	.NET fix
+			$dc->values[ "rpt_owner" ] = "";
 		}
-
-		if(!$report_arr["tmp_active"])
-		{
-			$arr[] = array(
-				"name"		=> $row[0],
-				"title"		=> $row[1],
-				"owner"		=> $row[2],
-				"status"	=> $row[3],
-				"view"		=> $view,
-				"edit"		=> $edit
-			);
-		}
+		$dc->values[ "rpt_type" ] = wrSqlType( $type );
+		$dataSource->insertSingle( $dc );
 	}
 
-	return $arr;
-}
-
-function LoadSelectedReport($report)
-{
-	$connection = getWebreportConnection();// #9875
-
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_content")." FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($report)." and ".$connection->addFieldWrappers("rpt_type")."='report'";
-
-	$rptContent = $connection->query( $strSQL )->fetchNumeric();
-	return escapeEntities($rptContent[0]);
-}
-
-function SaveReport($reportname, $report, $rtitle, $rstatus, $strXML, $saveas)
-{
-	$reportname = GoodFieldName($reportname);
-	$report = GoodFieldName($report);
-
-	// ?????
-	// if( !Security::getUserName() )
-	// 	$_SESSION["UserID"] = " ";
-
-	// #9875 It's expected that webreports, webreport_style tables belong to the same db connection
-	$connection = getWebreportConnection();
-
-	$strSQL = "SELECT ".$connection->addFieldWrappers("rpt_id")." FROM ".$connection->addTableWrappers("webreports")
-		." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($reportname)." and ".$connection->addFieldWrappers("rpt_type")."='report'";
-
-	$data = $connection->query( $strSQL )->fetchAssoc();
-	if ( $data && (!$saveas || $reportname == $report) )
-	{
-		$strSQL = "UPDATE ".$connection->addTableWrappers("webreports")." SET ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($report)
-			.", ".$connection->addFieldWrappers("rpt_title")."=".$connection->prepareString($rtitle)
-			.", ".$connection->addFieldWrappers("rpt_content")."=".PrepareString4DB($strXML, $connection)
-			.", ".$connection->addFieldWrappers("rpt_status")."=".$connection->prepareString($rstatus)
-			.", ".$connection->addFieldWrappers("rpt_mdate")."='".now()."' WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($reportname)
-			." and ".$connection->addFieldWrappers("rpt_type")."='report'";
-
-		$connection->exec( $strSQL );
+	if( $type == WR_REPORT && !$saveas && $oldName && $oldName != $newName ) {
+		//	renamed report, update style
+		$dc = new DsCommand();
+		$dc->filter = DataCondition::FieldEquals( "repname", $oldName );
+		$dc->values["repname"] = $newName;
+		$styleDs = wrStyleDataSource();
+		$styleDs->updateSingle( $dc, false );
 	}
-	else
-	{
-		$strSQL = "INSERT INTO ".$connection->addTableWrappers("webreports")." ( ".$connection->addFieldWrappers("rpt_name")
-			.", ".$connection->addFieldWrappers("rpt_title").", ".$connection->addFieldWrappers("rpt_cdate").", ".$connection->addFieldWrappers("rpt_mdate")
-			.", ".$connection->addFieldWrappers("rpt_content").", ".$connection->addFieldWrappers("rpt_owner").", ".$connection->addFieldWrappers("rpt_status")
-			.", ".$connection->addFieldWrappers("rpt_type")." )";
-		$strSQL .= " VALUES(".$connection->prepareString($report).", ".$connection->prepareString($rtitle).", ".$connection->addDateQuotes( now() ).", ".$connection->addDateQuotes( now() ).", ".PrepareString4DB($strXML, $connection)
-			.", ".$connection->prepareString( Security::getUserName() ).", ".$connection->prepareString($rstatus).", 'report')";
-
-		$connection->exec( $strSQL );
-	}
-
-	$strSQL = "UPDATE ".$connection->addTableWrappers("webreport_style")." set ".$connection->addFieldWrappers("repname")."=".$connection->prepareString($report)
-		." where ".$connection->addFieldWrappers("repname")."='".$_SESSION['webreports_oldname']."'";
-	$connection->exec( $strSQL );
 }
 
-function DeleteReport($report)
-{
-	$connection = getWebreportConnection();// #9875
-
-	$strSQL = "DELETE FROM ".$connection->addTableWrappers("webreports")." WHERE ".$connection->addFieldWrappers("rpt_name")."=".$connection->prepareString($report)
-		." and ".$connection->addFieldWrappers("rpt_type")."='report'";
-	$connection->exec( $strSQL );
-}
 
 function testAdvSearch($table)
 {
@@ -1068,13 +949,9 @@ function WRGetFieldsList($table)
 
 	if(is_wr_db())
 	{
-		global $wr_is_standalone;
-		if(!$wr_is_standalone)
-		{
-			global $dal;
-			if($dal->Table($table))
-				return $dal->GetFieldsList($table);
-		}
+		global $dal;
+		if($dal->Table($table))
+			return $dal->GetFieldsList($table);
 		return dbinfoFieldsList($table);
 	}
 
@@ -1126,13 +1003,9 @@ function WRCustomGetFieldType($table,$field)
 	}
 	if(is_wr_db())
 	{
-		global $wr_is_standalone;
-		if(!$wr_is_standalone)
-		{
-			global $dal;
-			if($dal->Table($table))
-				return $dal->GetFieldType($table,$field);
-		}
+		global $dal;
+		if($dal->Table($table))
+			return $dal->GetFieldType($table,$field);
 		return dbinfoFieldsType($table,$field);
 	}
 
@@ -2239,15 +2112,10 @@ return	"$(\"#alert\").dialog({
 
 function DBGetTableKeys($table)
 {
-	global $dal,$wr_is_standalone;
-	if(!$wr_is_standalone)
-	{
-		if($dal->Table($table))
-			return $dal->GetDBTableKeys($table);
-		return array();
-	}
-	else
-		return array();
+	global $dal;
+	if($dal->Table($table))
+		return $dal->GetDBTableKeys($table);
+	return array();
 }
 
 function colorPickerMouse()
@@ -2571,18 +2439,24 @@ function DBGetTablesList()
 	return $ret;
 }
 
-function WRGetTableListAdmin($db_type)
+function WRGetTableListAdmin( $db_type )
 {
-	$connection = getWebreportConnection();// #9875
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::FieldEquals( "db_type", $db_type );
 
+	$dataSource = wrAdminDataSource();
+
+	$rs = $dataSource->getList( $dc );
+	if( !$rs ) {
+		return array();
+	}
 	$ret = array();
-	$sql = "select ".$connection->addFieldWrappers("tablename").",".$connection->addFieldWrappers("group_name")
-		." from ".$connection->addTableWrappers("webreport_admin")." where ".$connection->addFieldWrappers("db_type")."='".$db_type."'" ;
-
-	$qResult = $connection->query( $sql );
-	while( $data = $qResult->fetchNumeric() )
+	while( $data = $rs->fetchAssoc() )
 	{
-		$ret[] = array("tablename" => $data[0], "group" => $data[1]);
+		$ret[] = array( 
+			"tablename" => $data[ "tablename" ], 
+			"group" => $data[ "group_name" ]
+		);
 	}
 	return $ret;
 }
@@ -3607,25 +3481,20 @@ function WRgetCurrentCustomSQL($id)
 	if( !$id )
 		return array(0, "", "");
 
-	$connection = getWebreportConnection();	// #9875
-
-	$sql = "select * from ".$connection->addTableWrappers("webreport_sql")." where ".$connection->addFieldWrappers("id")."=".$id;
-	$data = $connection->query( $sql )->fetchAssoc();
-	if( count($data) )
+	$data = wrGetCustomSQLRecordById( $id );
+	if( $data )
 		return array($data["id"], $data["sqlname"], $data["sqlcontent"]);
-
 	return "";
 }
 
-function getCustomSQLbyName($sqlname)
+/**
+ * ???
+ */
+function getCustomSQLbyName( $name )
 {
-	$connection = getWebreportConnection();// #9875
-
-	$sql = "select * from ".$connection->addTableWrappers("webreport_sql")." where ".$connection->addFieldWrappers("sqlname")."='".$sqlname."'";
-	$data = $connection->query( $sql )->fetchAssoc();
-	if( count($data) )
-		return array($data["id"], $data["sqlname"], $data["sqlcontent"]);
-
+	$data = wrGetCustomSQLRecordByName( $name );
+	if( $data )
+		return array( $data["id"], $data["sqlname"], $data["sqlcontent"] );
 	return "";
 }
 
@@ -3726,7 +3595,7 @@ function Reload_Report($name)
 	}
 	if(postvalue("edit")=="style" && isset($_SESSION['webreports']))
 		return true;
-	$arr=getReportArray($name);
+	$arr = wrGetEntityArray( $name, WR_REPORT );
 	if(!$arr)
 		HeaderRedirect("webreport");
 	if(!$arr["table_type"])
@@ -3748,7 +3617,7 @@ function Reload_Chart($name)
 		else
 			HeaderRedirect("webreport");
 	}
-	$arr=getChartArray($name);
+	$arr = wrGetEntityArray( $name, WR_CHART );
 	if(!$arr)
 		HeaderRedirect("webreport");
 	if(!$arr["table_type"])
@@ -3838,4 +3707,103 @@ function getProjectWRSubsetDataCommand( $tName, &$sortFields, $pSet, $editmode =
 
 	return $subsetDataCommand;
 }
+
+/**
+ * return report record from the database, null or false when record doesn't exist
+ * @param String name - entity name
+ * @param int $report - WR_REPORT or WR_CHART
+ */
+function wrGetEntityRecord( $name, $type ) {
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::_And( array( 
+		DataCondition::FieldEquals( "rpt_name", $name ),
+		DataCondition::FieldEquals( "rpt_type", wrSqlType( $type ) )
+	) );
+
+	$dataSource = wrMainDataSource();
+
+	$rs = $dataSource->getSingle( $dc );
+	if( $rs ) {
+		return $rs->fetchAssoc();
+	}
+	return null;
+}
+
+/**
+ * @return String - custom SQL from webreport_sql table or null
+ */
+function wrGetCustomSQLRecordByName( $name ) {
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::FieldEquals( "sqlname", $name );
+
+	$dataSource = wrSqlDataSource();
+
+	$rs = $dataSource->getSingle( $dc );
+	if( $rs ) {
+		return $rs->fetchAssoc();
+	}
+	return null;
+}
+
+function wrGetCustomSQLRecordById( $id ) {
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::FieldEquals( "id", $id );
+
+	$dataSource = wrSqlDataSource();
+
+	$rs = $dataSource->getSingle( $dc );
+	if( $rs ) {
+		return $rs->fetchAssoc();
+	}
+	return null;
+}
+
+
+function wrGetCustomSQL( $name ) {
+	$data = wrGetCustomSQLRecordByName( $name );
+	if( $data ) {
+		return $data[ "sqlcontent" ];
+	}
+	return "";
+}
+
+
+/**
+ * @param String $name - report name
+ * @return DataResult - all style records belong to the report
+ */
+function wrGetStyleRS( $name ) {
+	$dc = new DsCommand();
+	$dc->filter = DataCondition::FieldEquals( "repname", $name );
+	$dc->order[] = array(
+		"column" => "report_style_id",
+		"dir" => "ASC"
+	);
+	$dataSource = wrStyleDataSource();
+	return $dataSource->getList( $dc );
+
+}
+
+function wrMainDataSource() {
+	global $cman;
+	return getDbTableDataSource( "webreports", $cman->getSavedSearchesConnId() );
+}
+
+function wrSqlDataSource() {
+	global $cman;
+	return getDbTableDataSource( "webreport_sql", $cman->getSavedSearchesConnId() );
+}
+
+function wrAdminDataSource() {
+	global $cman;
+	return getDbTableDataSource( "webreport_admin", $cman->getSavedSearchesConnId() );
+}
+
+function wrStyleDataSource() {
+	global $cman;
+	return getDbTableDataSource( "webreport_style", $cman->getSavedSearchesConnId() );
+}
+
+
+
 ?>

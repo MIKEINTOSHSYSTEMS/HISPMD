@@ -236,24 +236,17 @@ class ChartPage extends RunnerPage
 			$this->body["end"] = "";
 			$this->xt->assign("body", $this->body);	
 
-			$bricksExcept = array("chart", "message");
-			if( $this->displayTabsInPage() )
-				$bricksExcept[] = "bsgrid_tabs";
-			$this->xt->hideAllBricksExcept($bricksExcept);
-			
 			$this->displayAJAX($this->templatefile, $this->id + 1);
 			exit();
 		}
 
 		if( $this->mode == CHART_POPUPDETAILS ) //currently unused
 		{
-			$bricksExcept = array("grid","pagination");
 			$this->xt->assign("header", false);
 			$this->xt->assign("footer", false);
 			$this->body["begin"] = '';
 			$this->body["end"] = '';
 			
-			$this->xt->hideAllBricksExcept($bricksExcept);
 			$this->xt->prepare_template($this->templatefile);
 			$respArr = array();
 			$respArr['success'] = true;	
@@ -285,8 +278,18 @@ class ChartPage extends RunnerPage
 	
 	function displayTabsInPage() 
 	{
-		return $this->simpleMode() || ( $this->mode == CHART_DETAILS && ($this->masterPageType == PAGE_VIEW || $this->masterPageType == PAGE_EDIT));
+		return $this->simpleMode() 
+			|| ( $this->mode == CHART_DETAILS && ($this->masterPageType == PAGE_VIEW || $this->masterPageType == PAGE_EDIT))
+			|| $this->mode == CHART_DASHBOARD && $this->dashElementData["tabLocation"] == "body";
 	}
+	
+	protected function getBodyMarkup( $templatefile )
+	{
+		if( $this->mode == CHART_DASHBOARD && $this->dashElementData["tabLocation"] == "body" )
+			return $this->fetchBlocksList( array( "above-grid_block", "grid_tabs", "grid_block" ) );
+		
+		return parent::getBodyMarkup( $templatefile );
+	}	
 	
 	function element2Item( $name ) {
 		if( $name == "message" ) {
@@ -347,6 +350,7 @@ class ChartPage extends RunnerPage
 			$chartXtParams["dash"] = true;
 			$chartXtParams["dashTName"] = $this->dashTName;
 			$chartXtParams["dashElementName"] = $this->dashElementName;
+			$chartXtParams["dashPage"] = $this->dashPage;
 		}
 		
 		$this->xt->assign_function("chart", "xt_showpdchart", $chartXtParams);

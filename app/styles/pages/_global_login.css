@@ -1,0 +1,46 @@
+[data-cellid="grid_c11"][data-page="_global_login"][data-cellid="grid_c11"][data-page="_global_login"][data-cellid="grid_c11"][data-page="_global_login"] {
+  padding-top: 5px;
+}
+[data-page="_global_login"][data-itemid="username_label"] {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="password_label"] {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="login_message"] {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="guest_login"] > .btn {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="remember_password"] {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="login-logo"] {
+  font-size: 24px;
+}
+[data-page="_global_login"][data-itemid="login_welcome"] {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="text"] {
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="text1"] {
+  color: #3a89db;
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="text3"] {
+  color: #ff0000;
+  font-weight: bold;
+}
+[data-page="_global_login"][data-itemid="page_image_ash8f23hr"] {
+  background-color: #00274c;
+  width: 400px;
+}
+
+
+/* Put  your custom CSS code here */
+.r-pretty-login-page[data-image-shadow]:not([data-image-fullsize])>.r-sideimage>.r-image img
+{
+    box-shadow: 0 0 7px 17px #00274c;
+}

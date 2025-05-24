@@ -26,9 +26,14 @@ class RestManager
 		$connectionsIds["DHIS2_Analytics"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Indicator"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Organisation_Unit"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Analytics Chart"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Analytics Report"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reports"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Datasets"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rate_Chart"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rate_Report"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rates_Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["MFR_Facility"] = "hispmdathispmdmerqconsultanmfr";
 		$connectionsIds["MFR_Regions"] = "hispmdathispmdmerqconsultancyo";
 		$connectionsIds["MFR_Zones"] = "hispmdathispmdmerqconsultancyo";
@@ -46,8 +51,10 @@ class RestManager
 		$connectionsIds["DHIS2_OrgUnit_Distributions"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_OrgUnits_Distribution"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reporting_Rate_Details"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_Reporting_Rate_Details_Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_ReportingRate"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_Reports_DataSet"] = "devdhis2hispmdathispmdmerqcons";
+		$connectionsIds["DHIS2_ReportingRate_Chart"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_ReportingRates"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_AnalyticsReport"] = "devdhis2hispmdathispmdmerqcons";
 		$connectionsIds["DHIS2_EIDM_HC"] = "devdhis2hispmdathispmdmerqcons";
@@ -71,7 +78,7 @@ class RestManager
 		$data["url"] = "https://mfr-be.k8s.sandboxaddis.com/api";
 		$data["authType"] = "none";
 				
-	$connectionsData["hispmdathispmdmerqconsultancyo"] = $data;
+		$connectionsData["hispmdathispmdmerqconsultancyo"] = $data;
 		$data = array();
 		$data["connId"] = "hispmdathispmdmerqconsultanmfr";
 		$data["connName"] = "CUSTMFR_Report_Dash_API_Const";
@@ -81,7 +88,7 @@ class RestManager
 		$data["url"] = "https://hispmd.merqconsultancy.org/api/mfr";
 		$data["authType"] = "none";
 				
-	$connectionsData["hispmdathispmdmerqconsultanmfr"] = $data;
+		$connectionsData["hispmdathispmdmerqconsultanmfr"] = $data;
 		$data = array();
 		$data["connId"] = "xhispmdathispmdmerqconsultancy";
 		$data["connName"] = "MOH_DHIS2_Report_Dash_API_Const";
@@ -93,7 +100,7 @@ class RestManager
 			$data["username"] = "michaelk";
 		$data["password"] = "Dhis2_12345";
 			
-	$connectionsData["xhispmdathispmdmerqconsultancy"] = $data;
+		$connectionsData["xhispmdathispmdmerqconsultancy"] = $data;
 		$data = array();
 		$data["connId"] = "hispmdathispmdmerqconsultdhis2";
 		$data["connName"] = "MOH_DHIS2_Report_OrgU_API_Const";
@@ -105,7 +112,7 @@ class RestManager
 			$data["username"] = "michaelk";
 		$data["password"] = "Dhis2_12345";
 			
-	$connectionsData["hispmdathispmdmerqconsultdhis2"] = $data;
+		$connectionsData["hispmdathispmdmerqconsultdhis2"] = $data;
 		$data = array();
 		$data["connId"] = "devdhis2hispmdathispmdmerqcons";
 		$data["connName"] = "MOH_DHIS2_Analytics_Report_API";
@@ -117,7 +124,7 @@ class RestManager
 			$data["username"] = "michaelk";
 		$data["password"] = "Dhis2_12345";
 			
-	$connectionsData["devdhis2hispmdathispmdmerqcons"] = $data;
+		$connectionsData["devdhis2hispmdathispmdmerqcons"] = $data;
 		$data = array();
 		$data["connId"] = "surveyctohispmdathispmdmerqcon";
 		$data["connName"] = "SURVEYCTO_ETHIOPIA_PRISM_API";
@@ -129,7 +136,7 @@ class RestManager
 			$data["username"] = "fasil.merqconsultancy.org";
 		$data["password"] = "merq123";
 			
-	$connectionsData["surveyctohispmdathispmdmerqcon"] = $data;
+		$connectionsData["surveyctohispmdathispmdmerqcon"] = $data;
 		$this->_connectionsData = &$connectionsData;
 	}
 
@@ -155,7 +162,7 @@ class RestManager
 				return $id;
 			}
 		}
-		
+
 		//	return first available
 		foreach( $this->_connectionsData as $id => $data ) {
 			return $id;

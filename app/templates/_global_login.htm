@@ -1,0 +1,383 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+    <LINK rel="shortcut icon" type="image/png" href="./assets/img/mohfavicon.png" />  
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//hispmd.merqconsultancy.org/analytics/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-login" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+				.r-pretty-login-page > .r-controls {
+					background: white;
+				}
+				.r-pretty-login-page > .r-sideimage {
+					background: #f7fbff;
+				}
+		</style>
+
+		<div class="r-pretty-login-page"
+						 data-image-shadow 					>
+			<div class="r-controls">
+				<div class="r-mainform">
+													{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="pretty-login" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="login-logo" data-itemid="login-logo" {$item_login-logo} data-pageid="{$pageid}" data-page="_global_login" data-small >
+	{$logo}
+</span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-page="_global_login" data-small > 
+	Welcome To Health Information Systems Performance Monitoring Dashboard (HISPMD)</span>
+		</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="pretty-login" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<div class="alert alert-success" data-itemtype="twofactor_message" data-itemid="twofactor_message" {$item_twofactor_message} data-pageid="{$pageid}" > 
+	{$twofactor_message}
+</div>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN message_block}
+<div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" data-page="_global_login" class="alert {$message_class}" role="alert">
+{$message}
+		{BEGIN resend_activation_button}
+	<br>
+	<button class="btn btn-sm btn-default" {$resend_activation_button_attrs} id="resendActivation{$id}">Resend email</button>
+	{END resend_activation_button}
+</div>
+{END message_block}		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-page="_global_login" data-small >
+Login into your account</span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+<table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="pretty-login" {$form_grid} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_grid_0} >
+									<td 
+	class=" r-ori-vert			"
+	colspan="2"		 
+	data-cellId="grid_c1" data-pageid="{$pageid}">
+ 
+<label data-itemtype="username_label" data-itemid="username_label" {$item_username_label} data-pageid="{$pageid}" data-page="_global_login" data-small class="r-edit-label control-label" for="username">
+	{BEGIN username_label}Username{END username_label}
+</label> 
+<div class="r-edit-field" data-itemtype="username" data-itemid="username" {$item_username} data-pageid="{$pageid}" >
+	<input type="text" class="form-control" name="username" {$username_attrs} id="username">
+</div></td>
+							</tr>
+											<tr {$row_grid_1} >
+									<td 
+	class=" r-ori-vert			"
+	colspan="2"		 
+	data-cellId="grid_c2" data-pageid="{$pageid}">
+ 
+<label data-itemtype="password_label" data-itemid="password_label" {$item_password_label} data-pageid="{$pageid}" data-page="_global_login" data-small class="r-edit-label control-label" for="password">
+	{BEGIN password_label}Password{END password_label}
+</label> 
+<div class="r-edit-field" data-itemtype="password" data-itemid="password" {$item_password} data-pageid="{$pageid}" >
+	<input type="password" class="form-control" name="password" {$password_attrs} id="password">
+</div></td>
+							</tr>
+											<tr {$row_grid_2} >
+									<td 
+	class=" r-ori-vert			"
+	colspan="2"		 
+	data-cellId="grid_c3" data-pageid="{$pageid}">
+ 
+
+<div class="r-captcha-container form-group clearfix" data-fieldname="{$captcha_field_name}" data-signal-error-for="{$captcha_field_name}{$id}" >
+	<div class="col-md-offset-3 col-md-6" >
+		{$captcha}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="{$captcha_field_name}">
+		<div class="text-muted" >
+		</div>
+	</div>	
+</div> 
+{BEGIN twofactor_code_message}
+<span data-itemtype="auth_code_message" data-itemid="auth_code_message" {$item_auth_code_message} data-pageid="{$pageid}" data-small >
+Security Code</span>
+{END twofactor_code_message}
+ 
+<div class="r-edit-field" data-itemtype="auth_code" data-itemid="auth_code" {$item_auth_code} data-pageid="{$pageid}" id="userCodeField{$id}" >
+	<input class="form-control" id="userCode{$id}" type="text">
+</div>
+	</td>
+							</tr>
+											<tr {$row_grid_3} >
+									<td 
+	class="r-align-right			"
+	colspan="2"		 
+	data-cellId="grid_c11" data-pageid="{$pageid}" data-page="_global_login">
+ 
+{BEGIN twofactor_altemail}
+<span data-itemtype="auth_altemail" data-itemid="auth_altemail" {$item_auth_altemail} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" data-action="change2f" data-method=0 >
+					<span class="fa fa-envelope-o"></span>
+							Email			</a>
+</span>
+{END twofactor_altemail}
+ 
+{BEGIN twofactor_altphone}
+<span data-itemtype="auth_altphone" data-itemid="auth_altphone" {$item_auth_altphone} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" data-action="change2f" data-method=1 >
+					<span class="fa fa-phone"></span>
+							Text message			</a>
+</span>
+{END twofactor_altphone}
+ 
+{BEGIN twofactor_altapp}
+<span data-itemtype="auth_altapp" data-itemid="auth_altapp" {$item_auth_altapp} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" data-action="change2f" data-method=2 >
+					<span class="fa fa-mobile-phone"></span>
+							Authenticator app			</a>
+</span>
+{END twofactor_altapp}
+</td>
+							</tr>
+											<tr {$row_grid_4} >
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c4" data-pageid="{$pageid}">
+ 
+<div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" data-page="_global_login" >
+	<label>
+		<input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}> Remember me	</label>
+</div> 
+<div class="checkbox r-edit-field" data-itemtype="remember_machine" data-itemid="remember_machine" {$item_remember_machine} data-pageid="{$pageid}" >
+	<label>
+		<input type="checkbox" id="remember_machine{$id}" name="remember_machine" value="1" {$remembermachine_attrs}> Remember this machine	</label>
+</div></td>
+									<td 
+	class="r-align-right r-ori-vert			"
+			 
+	data-cellId="grid_c6" data-pageid="{$pageid}">
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END grid_block}
+									{BEGIN footer_block}
+<table class="r-fluid r-form" data-location="footer" id="form_footer_{$pageid}" data-makeup="pretty-login" {$form_footer} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_footer_0} >
+									<td 
+	class="			"
+			 
+	data-cellId="footer_c1" data-pageid="{$pageid}">
+ 
+{BEGIN signin_button}
+<span data-itemtype="login_button" data-itemid="login_button" {$item_login_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary  btn-lg 
+	" {$loginlink_attrs} >
+							Sign in			</a>
+</span>
+{END signin_button}
+ 
+{BEGIN continue_button}
+<span data-itemtype="continue_login_button" data-itemid="continue_login_button" {$item_continue_login_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$continuebutton_attrs} >
+							Continue			</a>
+</span>
+{END continue_button}
+ 
+<span data-itemtype="verify_button" data-itemid="verify_button" {$item_verify_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="verifyCode{$id}" {$verifyButtonClass} >
+							Verify			</a>
+</span>
+ 
+<span data-itemtype="resend_button" data-itemid="resend_button" {$item_resend_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resendCode{$id}" {$resendButtonClass} >
+							Resend code			</a>
+</span>
+</td>
+									<td 
+	class="r-align-left			"
+			 
+	data-cellId="footer_c2" data-pageid="{$pageid}">
+ 
+<span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-success  btn-lg 
+	" {$registerlink_attrs} href="register.php" >
+							Sign Up			</a>
+</span>
+ 
+<span data-itemtype="login_remind" data-itemid="login_remind" {$item_login_remind} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" {$forgotpasswordlink_attrs} href="remind.php" >
+							Forgot password?			</a>
+</span>
+</td>
+							</tr>
+											<tr {$row_footer_1} >
+									<td 
+	class="r-align-center r-ori-vert			"
+			 
+	data-cellId="footer_c" data-pageid="{$pageid}">
+ 
+<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="_global_login" data-small > 
+	<br><a href="../../" target="" rel=""><strong>Go Back to Home Page</strong></a><br></span>
+</td>
+									<td 
+	class="r-align-center r-ori-vert			"
+			 
+	data-cellId="footer_c3" data-pageid="{$pageid}">
+</td>
+							</tr>
+											<tr {$row_footer_2} >
+									<td 
+	class="r-align-left r-ori-vert			"
+	colspan="2"		 
+	data-cellId="footer_c6" data-pageid="{$pageid}">
+ 
+<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-small > 
+	<p><br></p><p><br></p><p><strong style="color: rgb(255, 153, 0);"><em>NOTE:</em></strong> To Login as a System Tester with all Functionalities Enabled!</p><p><br></p><p><strong>Credentials For Testing</strong></p><p><strong>Username</strong>: <strong style="color: rgb(0, 102, 204);">demo</strong></p><p><strong>Password</strong>: <strong style="color: rgb(0, 102, 204);">demo@merq7</strong></p><p><br></p><p>Each Testing Session is <strong>15 Minutes</strong>!</p></span>
+</td>
+							</tr>
+											<tr {$row_footer_3} >
+									<td 
+	class="r-align-left r-ori-vert			"
+	colspan="2"		 
+	data-cellId="footer_c4" data-pageid="{$pageid}">
+ 
+<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-page="_global_login" data-small > 
+	<br>This Application is for Internal Use only! 
+It can only be accessed by an <u><b>AUTHORIZED<b><u> personel!<br></span>
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END footer_block}
+									{BEGIN superbottom_block}
+<table class="r-fluid r-form" data-location="superbottom" id="form_superbottom_{$pageid}" data-makeup="pretty-login" {$form_superbottom} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_superbottom_0} >
+									<td 
+	class="r-align-center r-ori-vert			"
+			 
+	data-cellId="superbottom_c1" data-pageid="{$pageid}">
+ 
+{BEGIN guestlink_block}
+<span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-page="_global_login" data-small data-button-item>
+	<a type="button" title="" class="btn btn-info   
+	" {$guestlink_attrs} >
+							Login as Guest			</a>
+</span>
+{END guestlink_block}
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END superbottom_block}
+					</div>
+			</div>
+			<div class="r-sideimage">
+							<div class="r-image"  >
+					<img data-itemtype="page_image" data-itemid="page_image_ash8f23hr" {$item_page_image_ash8f23hr} data-pageid="{$pageid}" data-page="_global_login" src="images/MOH_logo_text_white.png" />
+				</div>
+						</div>
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

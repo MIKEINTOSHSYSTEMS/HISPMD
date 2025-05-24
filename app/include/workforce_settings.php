@@ -258,6 +258,7 @@ $tdataworkforce[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "workforce_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "workforce_id";
 
@@ -396,6 +397,7 @@ $tdataworkforce[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region_id";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region_id";
 
@@ -534,6 +536,7 @@ $tdataworkforce[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "adequate_staff";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "adequate_staff";
 
@@ -672,6 +675,7 @@ $tdataworkforce[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "competency_index";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "competency_index";
 

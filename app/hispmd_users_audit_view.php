@@ -43,6 +43,7 @@ if( $pageMode == VIEW_DASHBOARD )
 {
 	$params["dashElementName"] = postvalue("dashelement");
 	$params["dashTName"] = postvalue("table");
+	$params["dashPage"] = postvalue("dashPage");
 	if(	postvalue("mapRefresh") )
 	{
 		$params["mapRefresh"] = true;
@@ -53,6 +54,7 @@ if( $pageMode == VIEW_POPUP )
 {
 	$params["dashElementName"] = postvalue("dashelement");
 	$params["dashTName"] = postvalue("dashTName");
+	$params["dashPage"] = postvalue("dashPage");
 }
 
 $params["pdfBackgroundImage"] = postvalue("pdfBackgroundImage");

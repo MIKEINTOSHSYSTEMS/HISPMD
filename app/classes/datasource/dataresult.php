@@ -9,6 +9,7 @@ class DataResult
 	protected $upperMap = array();
 	protected $fieldMap = array();
 
+
 	/**
 	 * Field substitutions
 	 * @var Array of "source field name" => "output field name"
@@ -97,14 +98,16 @@ class DataResult
 	 * @return Array
 	 */
 	function substituteFields( &$data ) {
-		if( !$this->fieldSubs )
+		if ( !$this->fieldSubs )
 			return;
+		if( !$data ) {
+			return $data;
+		}
+
 		$ret = array();
-		foreach( $data as $field => $val ) {
-			if( $this->fieldSubs[ $field ] ) {
-				$ret[ $this->fieldSubs[ $field ] ] = $val;
-			} else {
-				$ret[ $field ] = $val;
+		foreach ( $this->fieldSubs as $srcField => $outField ) {
+			if ( array_key_exists( $srcField, $data ) ) {
+				$ret[ $outField ] = $data[ $srcField ];
 			}
 		}
 		return $ret;
@@ -115,6 +118,10 @@ class DataResult
 		return false;
 	}
 
+	function position() {
+		return 0;
+	}
+
 	public function reorder( $callback ) {
 		return $this;
 	}
@@ -123,6 +130,7 @@ class DataResult
 		$this->fillColumnNames();
 		return array_key_exists( $fieldName, $this->fieldMap );
 	}
+
 
 }
 ?>

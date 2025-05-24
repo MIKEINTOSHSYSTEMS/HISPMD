@@ -19,13 +19,19 @@ class TextField extends TextControl
 		if( $this->pageObject->isBootstrap() )
 			$classString = " class=\"form-control\"";
 			
-		$autocomplete = true;
-		if( $mode == MODE_SEARCH ||
-			$this->pageObject->pageType == 'register' && ( $this->field == Security::usernameField() || $this->field == Security::passwordField() ))
-			$autocomplete = false;
+		$autocompleteAttr = '';
+		if( $mode == MODE_SEARCH ) {
+			$autocompleteAttr = 'autocomplete="off"';
+		}
+
+		if( $this->pageObject->pageType == 'register' && $this->field == Security::usernameField() ) {
+			$autocompleteAttr = 'autocomplete="username"';
+		}
+		
 		
 		echo '<input id="'.$this->cfield.'" '. $classString . $this->inputStyle.' type="'.$inputType.'" '
-			.(!$autocomplete ? 'autocomplete="off" ' : '').$altAttr
+			.$autocompleteAttr . ' '
+			.$altAttr
 			.'name="'.$this->cfield.'" '.$this->pageObject->pSetEdit->getEditParams( $this->field )
 			. $this->getPlaceholderAttr()
 			.' value="'.runner_htmlspecialchars($value).'">';

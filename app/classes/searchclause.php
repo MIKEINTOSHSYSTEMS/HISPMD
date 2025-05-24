@@ -995,6 +995,7 @@ class SearchClause extends SearchClauseBase
 	 * @param Boolean
 	 */
 	protected function doHighlightMatch( $searchWord, $fieldValue, $searchOpt ) {
+		global $useUTF8;
 		$flags = $useUTF8 ? "iu" : "i";
 		
 		$pattern = '/'.preg_quote($searchWord,"/").'/'.$flags;

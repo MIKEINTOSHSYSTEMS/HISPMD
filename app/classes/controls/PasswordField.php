@@ -12,10 +12,12 @@ class PasswordField extends TextControl
 	{
 		parent::buildControl($value, $mode, $fieldNum, $validate, $additionalCtrlParams, $data);
 
-		if( $this->pageObject->isBootstrap() )
-			$classString = " class=\"form-control\"";	
+		$classString = " class=\"form-control\"";	
 			
-		echo '<input '.$this->inputStyle.' '.$this->getPlaceholderAttr().' id="'.$this->cfield.'" '.$classString.' type="Password" '
+		$autocompleteAttr = $this->container->pageType == 'register' 
+			? 'autocomplete="new-password"'
+			: '';
+		echo '<input '.$this->inputStyle.' '.$autocompleteAttr.' '.$this->getPlaceholderAttr().' id="'.$this->cfield.'" '.$classString.' type="Password" '
 			.(($mode==MODE_INLINE_EDIT || $mode==MODE_INLINE_ADD) && $this->is508==true ? 'alt="'.$this->strLabel.'" ' : '').'name="'
 			.$this->cfield.'" '.$this->pageObject->pSetEdit->getEditParams($this->field).' value="'.runner_htmlspecialchars($value).'">';
 			

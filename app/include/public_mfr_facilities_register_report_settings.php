@@ -211,20 +211,13 @@ $tstrOrderBy = "ORDER BY status, operationalstatus, facilitytype, parentfacility
 $tdatapublic_mfr_facilities_register_report[".strOrderBy"] = $tstrOrderBy;
 
 $tdatapublic_mfr_facilities_register_report[".orderindexes"] = array();
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(1, (1 ? "ASC" : "DESC"), "status");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "operationalstatus");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "facilitytype");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "parentfacilitytype");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(5, (1 ? "ASC" : "DESC"), "region");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(6, (1 ? "ASC" : "DESC"), "\"zone\"");
-
-	$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(7, (1 ? "ASC" : "DESC"), "woreda");
-
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(1, (1 ? "ASC" : "DESC"), "status");
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "operationalstatus");
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "facilitytype");
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(4, (1 ? "ASC" : "DESC"), "parentfacilitytype");
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(5, (1 ? "ASC" : "DESC"), "region");
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(6, (1 ? "ASC" : "DESC"), "\"zone\"");
+			$tdatapublic_mfr_facilities_register_report[".orderindexes"][] = array(7, (1 ? "ASC" : "DESC"), "woreda");
 
 
 $tdatapublic_mfr_facilities_register_report[".sqlHead"] = "SELECT status AS status,  operationalstatus AS operationalstatus,  facilitytype AS facilitytype,  parentfacilitytype AS parentfacilitytype,  region AS region,  \"zone\" AS \"zone\",  woreda AS woreda,  COUNT(*)";
@@ -293,6 +286,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "status";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "status";
 
@@ -433,6 +427,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "operationalstatus";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "operationalstatus";
 
@@ -573,6 +568,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "facilitytype";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "facilitytype";
 
@@ -713,6 +709,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "parentfacilitytype";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "parentfacilitytype";
 
@@ -853,6 +850,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "region";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "region";
 
@@ -993,6 +991,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "zone";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "\"zone\"";
 
@@ -1133,6 +1132,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "woreda";
 
+	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "woreda";
 
@@ -1271,6 +1271,7 @@ $tdatapublic_mfr_facilities_register_report[".hideMobileList"] = array();
 
 		$fdata["strField"] = "count";
 
+	
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "COUNT(*)";

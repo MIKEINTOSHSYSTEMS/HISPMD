@@ -11,26 +11,19 @@ include("include/reportfunctions.php");
 
 $strTableName="";
 
-if(@$_REQUEST["cname"])
-{
-	// #9875 It's expected that webreports table belongs to the same db connection
-	$_connection = $cman->getForWebReports();	
-	$cname = @$_REQUEST["cname"];
-	
-	$sql_query = "SELECT ".$_connection->addFieldWrappers("rpt_id")." FROM ".$_connection->addTableWrappers("webreports")
-		." WHERE ".$_connection->addFieldWrappers("rpt_name")."='".$cname."' and ".$_connection->addFieldWrappers("rpt_type")."='chart'";
-		
-	$data = $_connection->query( $sql_query )->fetchNumeric();	
+$cname = postvalue("cname");
+$chrt_array = wrGetEntityArray( postvalue("cname"), WR_CHART );
 
-	if( !pre8count($data) )
-		header("location: ".GetTableLink("webreport"));
-	else
-		Reload_Chart(postvalue("cname"));
+if( !$chrt_array ) {
+	header("location: ".GetTableLink("webreport"));
+	exit();
+} else {
+	Reload_Chart(postvalue("cname"));
 }
+
 include('include/xtempl.php');
 $xt = new Xtempl();
 
-$chrt_array = getChartArray(postvalue("cname"));
 
 if(is_wr_project())
 	include("include/" . $chrt_array['settings']['short_table_name'] . "_variables.php");
@@ -48,7 +41,7 @@ if(is_wr_project())
 	if (pre8count(GetUserGroups()) > 1)
 	{
 	    $arr_reports = array();
-	    $arr_reports = GetChartsList();
+	    $arr_reports = wrGetEntityList( WR_CHART );
 	    foreach ( $arr_reports as $rpt ) {
 		    if (( $rpt["owner"] != Security::getUserName() || $rpt["owner"] == "") && $rpt["view"]==0 && $chrt_array['settings']['name']==$rpt["name"])
 		      {

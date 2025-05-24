@@ -127,15 +127,16 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_indicator_group_name}  r-vertical-field" 
-	data-signal-error-for="indicator_group_name{$id}" 
+	data-signal-error-for="indicator_group_name{$id}" {$required_attr_indicator_group_name}
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="indicator_group_name" data-fieldname="indicator_group_name" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_indicator_group_name}">
 		{BEGIN indicator_group_name_label}{$label public_moh_indicator_groups indicator_group_name }{END indicator_group_name_label}
+		<span class="icon-required"></span>
 	</label>
 	<div class="r-edit-field">
 		{$indicator_group_name_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="indicator_group_name">
+	<div class="r-edit-tooltip" data-helpfor="indicator_group_name" {$tooltipAttr public_moh_indicator_groups indicator_group_name } >
 		<div class="text-muted" >
 		{$tooltip public_moh_indicator_groups indicator_group_name }		</div>
 	</div>

@@ -24,7 +24,7 @@ function ExportExcelInit($arrdata,$arrwidth)
 	return $objPHPExcel;
 }
 
-function ExportExcelRecord($arrdata, $datatype, $numberRow, $objPHPExcel,$pageObj)
+function ExportExcelRecord( $arrdata, $datatype, $numberRow, $objPHPExcel, $pageObj )
 {
 	global $cCharset, $locale_info;
 	$col = -1;
@@ -41,34 +41,35 @@ function ExportExcelRecord($arrdata, $datatype, $numberRow, $objPHPExcel,$pageOb
 		{
 			if(!$data)
 				continue;
-			if(!function_exists("imagecreatefromstring"))
+			
+			$error_handler = set_error_handler("empty_error_handler");
+			
+			$gdImage = ImageFromBytes($data);
+
+			if($error_handler) set_error_handler($error_handler);
+			
+			if(!$gdImage)
 			{
 				$objASIndex->setCellValueByColumnAndRow($col,$numberRow+1,"LONG BINARY DATA - CANNOT BE DISPLAYED");
 				continue;
-			}
-			$error_handler = set_error_handler("empty_error_handler");
-			$gdImage = imagecreatefromstring($data);
-			if($error_handler)
-				set_error_handler($error_handler);
-			if($gdImage)
-			{
-				$objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
-				$objDrawing->setImageResource($gdImage);
-				$objDrawing->setCoordinates($colLetter.($row+1));
-				$objDrawing->setWorksheet($objASheet);
-				
-				$width = $objDrawing->getWidth()*0.143;
-				$height = $objDrawing->getHeight()*0.75;
-				
-				if($rowDim->getRowHeight() < $height)
-					$rowDim->setRowHeight($height);
-				
-				$colDimSh = $objASheet->getColumnDimension($colLetter);
-				$colDimSh->setAutoSize(false);
-				
-				if($colDim->getWidth() < $width)
-					$colDim->setWidth($width);
-			}
+			}			
+			
+			$objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
+			$objDrawing->setImageResource($gdImage);
+			$objDrawing->setCoordinates($colLetter.($row+1));
+			$objDrawing->setWorksheet($objASheet);
+			
+			$width = $objDrawing->getWidth()*0.143;
+			$height = $objDrawing->getHeight()*0.75;
+			
+			if($rowDim->getRowHeight() < $height)
+				$rowDim->setRowHeight($height);
+			
+			$colDimSh = $objASheet->getColumnDimension($colLetter);
+			$colDimSh->setAutoSize(false);
+			
+			if($colDim->getWidth() < $width)
+				$colDim->setWidth($width);			
 		}
 		elseif($datatype[$field] == "file")
 		{
@@ -76,21 +77,19 @@ function ExportExcelRecord($arrdata, $datatype, $numberRow, $objPHPExcel,$pageOb
 			if(count($arr) == 0)
 			{
 				$data = PHPExcel_Shared_String::ConvertEncoding($data, 'UTF-8', $cCharset);
-				if($data == "<img src=\"images/no_image.gif\" />")
-					$arr[]=array("name"=>"images/no_image.gif");
-				else
-				{
-					if(substr($data,0,1) == '=')
-						$data = '="' . str_replace('"','""',$data) . '"';
-					$objASIndex->setCellValueByColumnAndRow($col,$numberRow+1,$data);
+				if ($data == "<img src=\"images/no_image.gif\" />") {
+					$arr[] = array("name" => "images/no_image.gif");
+				} else {
+					if (substr($data, 0, 1) == '=')
+						$data = '="' . str_replace('"', '""', $data) . '"';
+					$objASIndex->setCellValueByColumnAndRow($col, $numberRow + 1, $data);
 					continue;
 				}
 			}
 			$offsetY = 0;
 			$height = 0;
 			foreach($arr as $img)
-			{
-				
+			{				
 				if(!file_exists($img["name"]) || !$img["name"])
 				{
 					$data = PHPExcel_Shared_String::ConvertEncoding($data, 'UTF-8', $cCharset);
@@ -119,19 +118,24 @@ function ExportExcelRecord($arrdata, $datatype, $numberRow, $objPHPExcel,$pageOb
 				if($colDim->getWidth() < $width)
 					$colDim->setWidth($width);
 			}
-		}
-		else
-		{
+		} else {
 			$data = PHPExcel_Shared_String::ConvertEncoding($data, 'UTF-8', $cCharset);
-			if(substr($data,0,1) == '=')
-				$data = '="' . str_replace('"','""',$data) . '"';
-			$objASIndex->setCellValueByColumnAndRow($col,$numberRow+1,$data);
-			if($datatype[$field] == "date")
-			{
-				$objStyle = $objASIndex->getStyle($colLetter.($numberRow+1));
+			if( substr($data, 0, 1) == '=' )
+				$data = '="' . str_replace('"', '""', $data) . '"';
+			
+			$objASIndex->setCellValueByColumnAndRow( $col, $numberRow + 1, $data );
+			
+			if( $datatype[$field] == "date" ) {
+				$objStyle = $objASIndex->getStyle( $colLetter.($numberRow + 1) );
 				$objNumFrm = $objStyle->getNumberFormat();
-				$objNumFrm->setFormatCode($locale_info["LOCALE_SSHORTDATE"]." hh:mm:ss");
-			}
+				$objNumFrm->setFormatCode( $locale_info["LOCALE_SSHORTDATE"]." hh:mm:ss" );
+			} else if( $datatype[ $field ] == "number" ) {
+				$formatCode = excelNumberFormat( $pageObj->pSet->isDecimalDigits( $field ) );
+				$objASIndex->getStyle( $colLetter.($numberRow + 1) )->getNumberFormat()->setFormatCode( $formatCode );
+			} else if( $datatype[ $field ] == "currency" ) {
+				$formatCode = excelCurrencyFormat();
+				$objASIndex->getStyle( $colLetter.($numberRow + 1) )->getNumberFormat()->setFormatCode( $formatCode );
+			}			
 		}
 	}
 }

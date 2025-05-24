@@ -75,7 +75,150 @@
          
 
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
+				{BEGIN menuitems_main}
+<ul data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}"	class="r-menu nav menu-treelike" 
+	data-menulevel="1"
+>
+
+{BEGIN item_children1}
+<li class="
+	{$item_current}">
+<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline data-menu-top >
+	{$item_separator}
+	<span class="r-menu-link r-menu-expanded "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+		<span class="r-menu-collapsed">{$item_collicon}{$item_firstcap}</span>
+	</a>
+{BEGIN item_showchildren2}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="2">
+	{BEGIN item_children2}
+		{BEGIN item_menulink2}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren2}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren2}
+	</span>
+	</a>
+			{BEGIN item_showchildren3}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="3">
+	{BEGIN item_children3}
+		{BEGIN item_menulink3}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren3}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren3}
+	</span>
+	</a>
+			{BEGIN item_showchildren4}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="4">
+	{BEGIN item_children4}
+		{BEGIN item_menulink4}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren4}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren4}
+	</span>
+	</a>
+			{BEGIN item_showchildren5}
+<ul class="
+			nav collapse 
+			{$submenu_class}" 
+		id="submenu{$item_id}" data-menulevel="5">
+	{BEGIN item_children5}
+		{BEGIN item_menulink5}
+		<li class="
+						{$item_current}"
+		>
+			<a {$item_attrs} title="{$item_tooltip}" data-menu-link data-menu-v data-menu-inline >
+	{$item_separator}
+	<span class="r-menu-link  "> 
+		<span class="r-menu-title">
+		{$item_icon} {$item_title}
+		</span>
+		{BEGIN item_haschildren5}
+		{BEGIN item_expand_icon}
+		<span class="r-menu-expand-icon fa fa-angle-left"></span>
+		<span class="r-menu-mobile-expand-icon fa fa-angle-left"></span>
+		{END item_expand_icon}
+		{END item_haschildren5}
+	</span>
+	</a>
+					</li>
+		{END item_menulink5}
+	{END item_children5}
+</ul>
+{END item_showchildren5}
+		</li>
+		{END item_menulink4}
+	{END item_children4}
+</ul>
+{END item_showchildren4}
+		</li>
+		{END item_menulink3}
+	{END item_children3}
+</ul>
+{END item_showchildren3}
+		</li>
+		{END item_menulink2}
+	{END item_children2}
+</ul>
+{END item_showchildren2}
+</li>
+{END item_children1}
+</ul>
+{END menuitems_main}
+			</div>
 		
  
 
@@ -234,7 +377,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="Show menu" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -243,7 +386,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="Collapse" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -371,6 +514,9 @@
 	<a draggable="false" class="r-noti-message" 
 		{% if (o.url ) { %} 
 			href="{%=o.url%}" 
+		{% } %}
+		{% if (o.newWindow ) { %} 
+			target="_blank"
 		{% } %}
 		>
 		<span class="r-noti-img">
@@ -686,9 +832,18 @@
 	 
 		{BEGIN ID_fieldheadercolumn}
 	{BEGIN ID_fieldheader}
-	<SPAN {$ID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ID" data-fieldname="ID">
-	{$label hispmd_system_settings ID }	{$arrow_icon_ID}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ID" data-fieldname="ID" 
+
+			{$ID_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings ID }</span>
+					{$arrow_icon_ID}
+			</span>
+	</span>
 	{END ID_fieldheader}
 {END ID_fieldheadercolumn}
 
@@ -711,9 +866,18 @@
 	 
 		{BEGIN TYPE_fieldheadercolumn}
 	{BEGIN TYPE_fieldheader}
-	<SPAN {$TYPE_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TYPE" data-fieldname="TYPE">
-	{$label hispmd_system_settings TYPE }	{$arrow_icon_TYPE}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TYPE" data-fieldname="TYPE" 
+
+			{$TYPE_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings TYPE }</span>
+					{$arrow_icon_TYPE}
+			</span>
+	</span>
 	{END TYPE_fieldheader}
 {END TYPE_fieldheadercolumn}
 
@@ -735,9 +899,20 @@
 
 	 
 		{BEGIN NAME_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NAME" data-fieldname="NAME">
-	{$label hispmd_system_settings NAME }	</span>
+	{BEGIN NAME_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NAME" data-fieldname="NAME" 
+
+			{$NAME_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings NAME }</span>
+					{$arrow_icon_NAME}
+			</span>
+	</span>
+	{END NAME_fieldheader}
 {END NAME_fieldheadercolumn}
 
 	
@@ -758,9 +933,20 @@
 
 	 
 		{BEGIN USERNAME_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="USERNAME" data-fieldname="USERNAME">
-	{$label hispmd_system_settings USERNAME }	</span>
+	{BEGIN USERNAME_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="USERNAME" data-fieldname="USERNAME" 
+
+			{$USERNAME_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings USERNAME }</span>
+					{$arrow_icon_USERNAME}
+			</span>
+	</span>
+	{END USERNAME_fieldheader}
 {END USERNAME_fieldheadercolumn}
 
 	
@@ -782,9 +968,18 @@
 	 
 		{BEGIN COOKIE_fieldheadercolumn}
 	{BEGIN COOKIE_fieldheader}
-	<SPAN {$COOKIE_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COOKIE" data-fieldname="COOKIE">
-	{$label hispmd_system_settings COOKIE }	{$arrow_icon_COOKIE}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COOKIE" data-fieldname="COOKIE" 
+
+			{$COOKIE_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings COOKIE }</span>
+					{$arrow_icon_COOKIE}
+			</span>
+	</span>
 	{END COOKIE_fieldheader}
 {END COOKIE_fieldheadercolumn}
 
@@ -806,9 +1001,20 @@
 
 	 
 		{BEGIN SEARCH_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SEARCH" data-fieldname="SEARCH">
-	{$label hispmd_system_settings SEARCH }	</span>
+	{BEGIN SEARCH_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SEARCH" data-fieldname="SEARCH" 
+
+			{$SEARCH_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings SEARCH }</span>
+					{$arrow_icon_SEARCH}
+			</span>
+	</span>
+	{END SEARCH_fieldheader}
 {END SEARCH_fieldheadercolumn}
 
 	
@@ -830,9 +1036,18 @@
 	 
 		{BEGIN TABLENAME_fieldheadercolumn}
 	{BEGIN TABLENAME_fieldheader}
-	<SPAN {$TABLENAME_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TABLENAME" data-fieldname="TABLENAME">
-	{$label hispmd_system_settings TABLENAME }	{$arrow_icon_TABLENAME}
-	</SPAN>
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TABLENAME" data-fieldname="TABLENAME" 
+
+			{$TABLENAME_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label hispmd_system_settings TABLENAME }</span>
+					{$arrow_icon_TABLENAME}
+			</span>
+	</span>
 	{END TABLENAME_fieldheader}
 {END TABLENAME_fieldheadercolumn}
 

@@ -24,6 +24,8 @@ class ListPage_Dashboard extends ListPage_Embed
 
 		if( $this->mapRefresh )
 			$this->pageSize = -1;
+
+		$this->listAjax = false;
 	}
 
 	/**
@@ -31,7 +33,7 @@ class ListPage_Dashboard extends ListPage_Embed
 	 */
 	protected function assignSessionPrefix()
 	{
-		$this->sessionPrefix = $this->dashTName."_".$this->tName;
+		$this->sessionPrefix = $this->dashTName."_".$this->dashElementName;
 	}
 
 	/**
@@ -81,8 +83,6 @@ class ListPage_Dashboard extends ListPage_Embed
 	function prepareForResizeColumns()
 	{
 		parent::prepareForResizeColumns();
-		if( !$this->isBootstrap() )
-			return;
 
 		include_once getabspath("classes/paramsLogger.php");
 		$logger = new paramsLogger( $this->dashTName."_".$this->dashElementName, CRESIZE_PARAMS_TYPE );
@@ -123,12 +123,6 @@ class ListPage_Dashboard extends ListPage_Embed
 
 		$this->prepareGridTabs();
 
-		if( $this->mobileTemplateMode() )
-			$bricksExcept = array("grid_mobile", "pagination", "details_found");
-		else
-			$bricksExcept = array("grid", "pagination", "message", "add", "recordcontrols_new", "recordcontrol", "details_found", "reorder_records");
-
-		$this->xt->hideAllBricksExcept( $bricksExcept );
 		$this->xt->prepare_template($this->templatefile);
 		$this->showPageAjax();
 	}
@@ -154,9 +148,20 @@ class ListPage_Dashboard extends ListPage_Embed
 
 		$this->hideForm("above-grid");
 		$returnJSON["html"] = $this->fetchBlocksList( array( "above-grid_block", "grid_tabs", "grid_block" ) );
-		$returnJSON['headerCont'] = '<span class="rnr-dbebrick">'
-		. $this->getPageTitle( $this->pageName, GoodFieldName($this->tName) )
-		. "</span>";
+		
+		if ( $this->mode == LIST_DASHDETAILS 
+			&& $this->dashElementData["item"]["customLabel"]
+			&& $this->dashElementData["item"]["dashLabel"] ) {
+				
+			$returnJSON['headerCont'] = '<span class="rnr-dbebrick">'
+				. GetMLString( $this->dashElementData["item"]["dashLabel"] )
+				. "</span>";			
+		} else {
+			$returnJSON['headerCont'] = '<span class="rnr-dbebrick">'
+				. $this->getPageTitle( $this->pageName, GoodFieldName($this->tName) )
+				. "</span>";			
+		}
+	
 		$returnJSON["footerCont"] = $this->fetchForms( array( "below-grid" ) );
 		$icon = getIconHTML( $this->dashElementData["item"]["icon"] );
 		if( $icon )
