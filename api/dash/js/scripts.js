@@ -791,7 +791,6 @@ function renderAllCharts() {
 }
 
 // Render a specific chart
-// Render a specific chart
 function renderChart(chartConfig) {
     const chartContainer = document.getElementById(`chart-${chartConfig.id}`);
     if (!chartContainer) return;
