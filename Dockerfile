@@ -12,51 +12,57 @@ LABEL image.tag="latest"
 # Set the working directory in the container for PHP application
 WORKDIR /var/www/html
 
-# Copy all application source code and directories to the container
-COPY . /var/www/html/
+# Install basic dependencies first
+RUN apt-get update && apt-get install -y \
+    apt-transport-https \
+    lsb-release \
+    ca-certificates \
+    gnupg2 \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy custom nginx configurations
-COPY config/nginx.conf /etc/nginx/conf.d/default.conf
+# Add Nginx repository
+RUN echo "deb http://nginx.org/packages/debian/ $(lsb_release -cs) nginx" > /etc/apt/sources.list.d/nginx.list \
+    && curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add -
 
-# Copy custom php.ini configuration
-COPY config/php.ini /usr/local/etc/php/php.ini
-
-# Install system dependencies and PHP extensions
-RUN apt-get update && \
-    apt-get install -y \
+# Install system dependencies in separate steps
+RUN apt-get update && apt-get install -y \
     libpng-dev \
-    libmagickwand-dev \
-    libcurl4-openssl-dev \
-    libonig-dev \
-    supervisor \
-    libldap2-dev \
-    libicu-dev \
-    libzip-dev \
-    libfreetype6-dev \
     libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    libzip-dev \
+    libicu-dev \
+    libonig-dev \
     libxml2-dev \
     libpq-dev \
     libsqlite3-dev \
-    libgmp-dev \
+    libcurl4-openssl-dev \
     libssl-dev \
+    libldap2-dev \
+    libgmp-dev \
     libsodium-dev \
     zip \
     unzip \
     git \
     curl \
-    nginx \
-    --no-install-recommends && \
-    # Install PHP extensions
-    docker-php-ext-configure gd --with-freetype --with-jpeg && \
-    docker-php-ext-install -j$(nproc) \
+    supervisor \
+    --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Nginx separately
+RUN apt-get update && apt-get install -y nginx --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configure and install PHP extensions
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) \
     gd \
     mysqli \
-    ldap \
-    intl \
     pdo_mysql \
     pdo_pgsql \
     pgsql \
     pdo_sqlite \
+    ldap \
+    intl \
     soap \
     zip \
     curl \
@@ -65,29 +71,26 @@ RUN apt-get update && \
     bcmath \
     gmp \
     sodium \
-    # imap \
     xml \
-    gettext \
-    && \
-    # Enable additional PHP modules as needed
-    docker-php-ext-enable \
+    gettext
+
+# Enable PHP extensions
+RUN docker-php-ext-enable \
     opcache \
     bcmath \
     gmp \
     sodium \
-    # imap \
     xml \
-    gettext \
-    # Set permissions after copying files
-    && chmod 644 /etc/nginx/conf.d/default.conf \
-    && \
-    # Clean up unnecessary packages and files
-    apt-get autoremove -y \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    gettext
 
-# Set permissions for specific folders
-RUN chown -R www-data:www-data /var/www/html/app/templates_c
+# Copy application files
+COPY . /var/www/html/
+COPY config/nginx.conf /etc/nginx/conf.d/default.conf
+COPY config/php.ini /usr/local/etc/php/php.ini
+
+# Set permissions
+RUN chmod 644 /etc/nginx/conf.d/default.conf \
+    && chown -R www-data:www-data /var/www/html/app/templates_c
 
 # Expose the port PHP-FPM listens on
 EXPOSE 9000

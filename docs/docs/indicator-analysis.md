@@ -177,6 +177,11 @@ The Ministry of Health (MOH) Indicator Data Entry form enables users to enter pe
    - After saving, a confirmation message will be displayed.
    - You can review, edit, or delete the record if needed before finalizing it.
 
+<br></br>
+<img src="assets/pictures/adding_new_indicator_data.jpeg" alt="Adding New Indicator Data" width="700"/>
+
+Figure 5.1: Adding New Indicator Data
+
 ### 5.10.2 Data Entry Fields and Attributes
 
 Each data entry field plays a crucial role in ensuring data accuracy and proper categorization. Below are the required fields, their descriptions, and the selection process.
@@ -248,6 +253,8 @@ Each data entry field plays a crucial role in ensuring data accuracy and proper 
     - 🛠️ **Selection Type:** Dropdown
     Select how the data should be represented:
       - Number (Absolute Value) or Percent (Proportion)
+
+
 
 ### 5.10.3 Data Quality Assurance
 

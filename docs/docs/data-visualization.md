@@ -1,220 +1,391 @@
 # 4. Data Visualization
 
-The **Health Information Systems Performance Monitoring Dashboard (HISPMD)** is designed to transform raw health data into actionable insights through interactive and dynamic visualizations. This section provides a comprehensive guide on how to interpret, interact with, and customize various charts, graphs, and tables available in HISPMD.
+The **Health Information Systems Performance Monitoring Dashboard (HISPMD)** offers two powerful approaches to data visualization: the **Advanced Dashboard Builder** for creating custom interactive dashboards, and **pre-built visualizations** for quick analysis. This section provides comprehensive guides for both approaches.
 
 ---
 
-## 4.1 Overview of Data Visualization in HISPMD
+## 4.1 Advanced Dashboard Builder
 
-Data visualization in HISPMD provides users with clear and meaningful representations of health performance indicators. It helps users:
+The **Advanced Dashboard Builder** is an interactive tool that enables users to design, customize, and save personalized dashboards with multiple visualization components. This feature transforms complex health data into actionable insights through a flexible, user-friendly interface.
+
+<img src="assets/pictures/advanced_dashboard_builder_full.jpeg" alt="Dashboard Builder Interface" width="700"/>
+
+Figure 4.0: Advanced Dashboard Builder
+
+### To access the advanced dashboard builder
+Go to The left side navigation menu under **-> Reports Chats & Visualizations -> Advanced Dashboard Builder** as Displayed on the image below.
+
+<img src="assets/pictures/accessing_advanced_dashboard_menu_location.jpeg" alt="Dashboard Builder Interface" width="350"/>
+
+Figure 4.1: Accessing Advanced Dashboard Builder
+
+### 4.1.1 Key Features and Benefits
+
+- **Complete customization** - Build dashboards tailored to specific monitoring needs
+- **Multi-chart layouts** - Combine various visualization types in one view
+- **Interactive elements** - Drill down, filter, and explore data dynamically
+- **Save/load functionality** - Preserve dashboard configurations for future use
+- **Responsive design** - Works on desktop and mobile devices
+- **Export capabilities** - Share insights with stakeholders
+
+### 4.1.2 Interface Overview
+
+<img src="assets/pictures/dashboard_builder_interface.jpeg" alt="Dashboard Builder Interface" width="700"/>
+
+Figure 4.2: Dashboard Builder Interface Components
+
+The interface consists of three main areas:
+
+1. **Navigation Sidebar (Left)**
+   - Chart creation controls
+   - Comprehensive filtering options
+   - Dashboard management tools
+
+2. **Dashboard Canvas (Center)**
+   - Interactive workspace for charts
+   - Drag-and-drop functionality
+   - Real-time preview of visualizations
+
+3. **Chart Configuration Panel**
+   - Appears when adding/editing charts
+   - Contains all customization options
+   - Live preview of changes
+
+### 4.1.3 Creating a New Dashboard
+
+#### Step 1: Add Your First Chart
+
+1. Click the **"New Chart"** button in the sidebar
+2. The Add Chart modal will appear with configuration options
+
+#### Step 2: Configure Chart Properties
+
+In the Add Chart modal:
+
+**Basic Settings:**
+
+- **Chart Title:** Enter a descriptive name
+- **Chart Type:** Select from 15+ visualization types
+- **X-Axis:** Choose primary dimension (Year, Region, Indicator etc.)
+- **Y-Axis:** Select measurement value (Value, Target Value, etc.)
+
+**Advanced Filters:**
+
+- Apply filters to focus on specific data subsets:
+  - Indicator Groups
+  - Individual Indicators
+  - Data Sources
+  - Geographic Regions
+  - Time Periods
+  - Facility Types
+
+**Display Options:**
+
+- Toggle legend visibility
+- Enable/disable data labels
+- Configure tooltip details
+- Set custom sizes of the chart box
+
+<img src="assets/pictures/new_chart_creation_on_advanced_dashboard_builder.jpeg" alt="Dashboard Builder Interface" width="500"/>
+
+Figure 4.3: Creating New Charts to the Dashboard Builder
+
+#### Step 3: Position and Resize Charts
+
+- **Drag** charts to position them on the canvas
+- Use the **resize handles** to adjust dimensions
+- Charts automatically snap to grid for alignment
+
+### 4.1.4 Managing Dashboards
+
+#### Saving Dashboards
+
+1. Click **"Save Dashboard"** in the sidebar
+2. Enter a descriptive name (e.g., "Yearly Performance Overview")
+3. Click Save - configuration is stored for future sessions
+
+#### Loading Dashboards
+
+1. Click **"Load Dashboard"** in the sidebar
+2. Select from your saved dashboards
+3. The system will load all charts and filters from the previously saved parameters and settings.
+
+<img src="assets/pictures/loading_saved_dashboard.jpeg" alt="Dashboard Builder Interface" width="500"/>
+
+Figure 4.4: Loading Previously Saved Dashboard
+
+#### Dashboard Actions
+
+- **Reset:** Clear all charts and start fresh
+- **Export:** Save dashboard charts as Image, XLSX or PDF
+- **Print:** Generate printer-friendly version
+- **View Raw Data:** Display Chart Data as a data table
+
+### 4.1.5 Chart Types Available
+
+The Dashboard Builder supports these visualization types:
+
+| Chart Type | Best For | Example Use Case |
+|------------|----------|------------------|
+| Column | Comparisons | Facility performance by region |
+| Line | Trends | Reporting rates over time |
+| Pie | Proportions | Data source distribution |
+| Area | Cumulative data | Service coverage growth |
+| Stacked Column | Part-to-whole | Indicator breakdowns |
+| Gauge | Target progress | KPI achievement |
+| Geo Map | Spatial analysis | Regional performance |
+| Radar | Multi-dimensional | Facility capability assessment |
+
+### 4.1.6 Advanced Features
+
+**Interactive Filtering:**
+
+- Click on chart elements to filter other visualizations
+- Use CTRL+Click to select multiple items
+- Right-click to clear selections
+
+**Data Export:**
+
+- Export chart data to Excel/CSV
+- Save images (PNG/JPEG) for reports
+- Generate PDF summaries
+
+**Mobile Optimization:**
+
+- Responsive layout adapts to screen size
+- Touch-friendly controls
+- Simplified mobile menu
+
+---
+
+## 4.2 Overview of Pre-built Data Visualizations
+
+For users who prefer ready-made visualizations, HISPMD provides pre-built charts and graphs that transform raw health data into actionable insights. These help users:
 
 - 📊 Identify trends and patterns over time.
 - 📍 Compare performance across regions, facility types, and demographic groups.
 - ⚠️ Detect anomalies or unexpected variations in health indicators.
 - 📑 Generate reports for decision-making and policy recommendations.
 
-Each visualization type is optimized for a specific kind of analysis, ensuring that users can effectively interpret the presented data.
+### 4.2.1 Accessing the Data Visualizer
 
-### Accessing the Data Visualizer
+<img src="assets/pictures/data_visualizer_menu_item.jpeg" alt="Accessing Data Visualizer Menu Item" width="300"/>
 
-<img src="assets/pictures/data_visualizer_menu_item.jpeg" alt="Accessing Data Visualizer Menu Item"  width="300"/>
+Figure 4.5: Accessing Data Visualizer Menu Item
 
-Figure 4.1: Accessing Data Visualizer Menu Item
+1. Navigate to the **left sidebar** under the `Reports Charts & Visualization` menu
+2. Click on `Data Visualizer`
+3. The visualization interface will load with default charts
 
-<br>
+<img src="assets/pictures/advanced_live_data_visualizer.jpeg" alt="Advanced Live Data Visualizer Options" width="200"/>
 
-1. Navigate to the **left sidebar** under the `Reports Charts & Visualization` menu.
-2. Click on `Data Visualizer`.
-3. A new **sidebar and navigation menu** will appear.
-4. Refer to the screenshot above: Figure 4.1
-
-
-<img src="assets/pictures/advanced_live_data_visualizer.jpeg" alt="Advanced Live Data Visualizer Options"  width="200"/>
-
-Figure 4.2: Advanced Live Data Visualizer Options
-
-<br>
+Figure 4.6: Advanced Live Data Visualizer Options
 
 ---
 
-## 4.2 Types of Visualizations
+## 4.3 Types of Visualizations
 
 HISPMD provides several types of data visualizations, each serving a specific analytical purpose.
 
-<img src="assets/pictures/advanced_data_visualizer_chart_types.jpeg" alt="Data Visualizer Chart Types"  width="200"/>
+<img src="assets/pictures/advanced_data_visualizer_chart_types.jpeg" alt="Data Visualizer Chart Types" width="200"/>
 
-Figure 4.3: Data Visualizer Chart Types
+Figure 4.7: Data Visualizer Chart Types
 
-<br>
+### 4.3.1 Line Charts (Trend Analysis)
 
-### 1️⃣ Line Charts (Trend Analysis)
+📈 **Best For:** Analyzing changes in indicators over time
+🔍 **Example:** Tracking reporting rates over multiple years
 
-📈 **Best For:** Analyzing changes in indicators over time.
-🔍 **Example:** Tracking reporting rates over the years.
+#### How to Use
 
-#### How to Use:
-- Hover over the data points to see exact values.
-- Click on legend items to show/hide specific data series.
-- Zoom in to focus on a specific time period.
+- Hover over data points to see exact values
+- Click legend items to show/hide specific series
+- Drag to zoom into specific time periods
+- Double-click to reset zoom
 
-<img src="assets/pictures/advanced_data_visualizer_line_chart.png" alt="Example of Advanced Data Visualizer Line Chart"  width="700"/>
+<img src="assets/pictures/advanced_data_visualizer_line_chart.png" alt="Example Line Chart" width="700"/>
 
-Figure 4.4: Example of Advanced Data Visualizer Line Chart
+Figure 4.8: Example of Trend Analysis Using Line Chart
 
-<br>
----
+### 4.3.2 Bar/Column Charts (Comparative Analysis)
 
-### 2️⃣ Bar / Column Charts (Comparative Analysis)
+📊 **Best For:** Comparing categories within an indicator
+🔍 **Example:** Facility performance by type
 
-📊 **Best For:** Comparing different categories within an indicator.
-🔍 **Example:** Comparing the proportion of health institutions with active functional PMT across years.
+#### How to Use
 
-#### How to Use:
-- Hover over each bar segment to view specific values.
-- Click on a region or category to see more detailed breakdowns.
-- Switch between **horizontal and vertical** bar charts for better readability by changing the chart type.
+- Hover over bars for detailed values
+- Click to drill down into sub-categories
+- Use stacked view for part-to-whole analysis
 
-<img src="assets/pictures/advanced_data_visualizer_column_charts.jpeg" alt="Example of Advanced Data Visualizer Column Chart"  width="700"/>
+### 4.3.3 Pie Charts (Proportional Analysis)
 
-Figure 4.5: Example of Advanced Data Visualizer Column Chart
+🟢 **Best For:** Showing distribution percentages
+🔍 **Example:** Data source composition
 
-<br>
+#### How to Use
 
+- Hover for percentage values
+- Click slices to isolate categories
+- Combine with filters for dynamic views
 
----
+<img src="assets/pictures/data_drilldown_advanced_data_visualization_piechart.jpeg" alt="Example Pie Chart" width="700"/>
 
-### 3️⃣ Pie Charts (Proportional Analysis)
+Figure 4.9: Proportional Analysis Using Pie Chart
 
-🟢 **Best For:** Showing proportions or distributions within a dataset.
-🔍 **Example:** Breakdown of **Proportion of Woredas** grouped by IR Status based on their data source details in a given year.
+### 4.3.4 Heat Maps (Geospatial Analysis)
 
-#### How to Use:
-- Hover over each pie segment to see percentage values.
-- Click on a slice to filter data related to that category.
-- Use the legend to toggle segments on and off.
+🌍 **Best For:** Geographic performance patterns
+🔍 **Example:** Regional coverage rates
 
-<img src="assets/pictures/data_drilldown_advanced_data_visualization_piechart.jpeg" alt="Example of Advanced Data Visualizer pie Chart"  width="700"/>
+#### How to Use
 
-Figure 4.5: Example of Advanced Data Visualizer Pie Chart
+- Click regions to view detailed data
+- Use legend to interpret color scales
+- Zoom for higher granularity
 
-<br>
+### 4.3.5 Data Tables (Detailed Records)
 
----
+📑 **Best For:** Precise value comparison
+🔍 **Example:** Facility-level performance metrics
 
-### 4️⃣ Heat Maps (Geographical Analysis) [Represented on MFR on The AIO Dashboard]
+#### How to Use
 
-🌍 **Best For:** Displaying regional health data on a geographic map.
-🔍 **Example:** Mapping **Regional Scope Indicators** across different provinces such as Regions, Zones & Woredas.
-
-#### How to Use:
-- Click on a region to drill down into specific district data.
-- Use the color scale to interpret intensity (e.g., darker shades indicate higher values).
-- Zoom in for detailed regional analysis.
-
+- Sort columns by clicking headers
+- Use search to filter records
+- Export for further analysis
 
 ---
 
-### 5️⃣ Tables (Raw Data Representation) [Available at the bottom of the Home Dashboard]
+## 4.4 Interacting with Visualizations
 
-📑 **Best For:** Viewing detailed, structured health data records.
-🔍 **Example:** Listing all **DHIS2 Reporting-Rates**.
+### 4.4.1 Common Interactive Features
 
-#### How to Use:
-- **Sort columns** by clicking on headers (e.g., sort by highest value).
-- **Use the search bar** to filter specific records.
-- **Export the table** as Excel, CSV, PDF, or Word using the **⚙️ gear icon** in the top navigation bar.
+| Feature | Description | How to Use |
+|---------|-------------|------------|
+| Tooltips | Detailed data values | Hover over elements |
+| Legend Toggle | Show/hide data series | Click legend items |
+| Zoom | Focus on specific ranges | Drag to select area |
+| Drill-down | View sub-categories | Click chart elements |
+| Cross-filter | Link multiple charts | Select items while holding CTRL |
 
+### 4.4.2 Advanced Navigation
 
+**Keyboard Shortcuts:**
 
----
+- **Arrow keys:** Pan zoomed charts
+- **ESC:** Reset all filters
+- **CTRL+Z:** Undo last action
 
-## 4.3 Interacting with Visualizations
+**Touch Gestures (Mobile):**
 
-HISPMD’s charts and graphs are **dynamic and interactive**, allowing users to customize views for better insights.
-
-### 🔍 Key Interactive Features
-
-| Feature       | Functionality                        | How to Use                         |
-|--------------|-----------------------------------|---------------------------------|
-| **Hover Actions** | Displays detailed values and tooltips. | Move your cursor over any data point. |
-| **Legend Toggle** | Hide or show specific data series. | Click on any legend item. |
-| **Zoom & Pan** | Focus on specific time periods or categories. | Drag across the chart to zoom; use scroll wheel to pan. |
-| **Drill-Downs** | View more granular data. | Click on a category (e.g., region) to explore subcategories (e.g., districts). |
-| **Data Export** | Download the current view for offline use. | Click the Export button and choose a format. |
+- Pinch to zoom
+- Swipe to pan
+- Tap to select
 
 ---
 
-## 4.4 Customizing Visualizations
+## 4.5 Customizing Visualizations
 
-HISPMD allows users to customize charts and graphs to suit specific reporting needs.
+### 4.5.1 Dashboard Builder Customization
 
-### Customization Options
+As described in section 4.1, the Dashboard Builder offers complete control over:
 
-| Customization | Description |
-|--------------|--------------------------------------|
-| **Chart Type** | Switch between line, bar, or pie charts for different views. |
-| **Periods** | Adjust the date range to analyze trends over custom periods. |
-| **Filter by Indicators, Regions, & Data Sources** | Select specific **indicators, regions, scope, administration unit data source details, or facility types**. |
-| **Change Color Themes** [TBD] | Adjust visualization colors for better contrast. |
-| **Group Data** | Aggregate data by **year, region, gender, or facility type**. |
+- Chart types and combinations
+- Color schemes and styling
+- Layout and organization
+- Filter presets
 
-#### How to Customize a Chart
-1. Navigate to the **left-side visualization panel**.
-2. Choose customization options from the available settings.
-3. Apply changes and view the updated chart.
+### 4.5.2 Pre-built Visualization Customization
 
-[TBD]
-
----
-
-## 4.5 Exporting and Sharing Visualizations
-
-HISPMD allows users to export and share visualizations for presentations, reports, and further analysis.
-
-### Supported Export Formats
-
-| Format | Use Case |
-|--------|---------------------------------|
-| **PNG / JPEG** | For inserting into reports or presentations. |
-| **PDF** | For sharing formatted reports with stakeholders. |
-| **Excel (XLSX)** | For further data analysis. |
-| **CSV** | For integration with other data processing tools. |
-
-#### How to Export a Chart
-1. Right-click the **Export (📤) button** on the chart.
-2. Select the desired format.
-3. Click **Download**.
-
-
+| Option | Description | Access Method |
+|--------|-------------|---------------|
+| Time Range | Adjust date period | Timeline selector |
+| Indicators | Select metrics | Dropdown filter |
+| Regions | Geographic focus | Map or dropdown |
+| Chart Type | Switch visualization | Chart type selector |
+| Color Theme | Change palette | Settings cog |
 
 ---
 
-## 4.6 Using Dashboards for Decision-Making
+## 4.6 Exporting and Sharing
 
-Data visualization in HISPMD is **not just about displaying information**; it is a powerful tool for **decision-making**.
+### 4.6.1 Export Formats
 
-📌 **How to Use Data for Actionable Insights:**
-- 🏥 **Identify High-Risk Areas** – Use heat maps to detect **disease outbreak hotspots**.
-- 📊 **Measure Progress** – Track **improvements in health indicators** over time using line charts.
-- 📍 **Compare Performance** – Use bar charts to **benchmark health facility performance**.
-- 📑 **Generate Reports** – Export data to share with **policymakers and stakeholders**.
+| Format | Best For | How to Export |
+|--------|----------|---------------|
+| PNG/JPEG | Reports, presentations | Right-click → "Save Image" |
+| PDF | Printable documents | Export button → PDF |
+| Excel | Further analysis | Export button → XLSX |
+| CSV | Data processing | Export button → CSV |
+
+### 4.6.2 Sharing Options
+
+1. **Direct Link Sharing:**
+   - Generate shareable URLs
+   - Set expiration dates
+   - Control access levels
+
+2. **Embed Codes:**
+   - HTML snippets for websites
+   - Responsive iframes
+   - Auto-updating data
 
 ---
 
-## 4.7 Summary of Data Visualization Best Practices
+## 4.7 Using Visualizations for Decision-Making
 
-| Best Practice | Why It Matters |
-|--------------|----------------------------|
-| **Choose the Right Chart Type** | Ensures data is presented in the most meaningful way. |
-| **Use Filters Wisely** | Helps focus on relevant data subsets. |
-| **Check for Data Completeness** | Prevents misinterpretation of incomplete datasets. |
-| **Compare Trends Over Time** | Identifies progress or areas needing intervention. |
-| **Export & Share Insights** | Supports data-driven decision-making. |
+### 4.7.1 Practical Applications
 
-🚀 **Next Section:** Learn how to generate detailed reports in **Report Generation & Exporting on the Indicator Analysis section**.
+**For Program Managers:**
+
+- Identify low-performing facilities
+- Track intervention effectiveness
+- Allocate resources strategically
+
+**For Health Officials:**
+
+- Monitor system-wide performance
+- Detect emerging trends
+- Benchmark regional performance
+
+**For Partners:**
+
+- Verify program impact
+- Demonstrate accountability
+- Support funding requests
+
+### 4.7.2 Best Practices
+
+1. **Start with Key Questions:**
+   - What problem needs solving?
+   - What data answers this?
+   - Which visualization shows it best?
+
+2. **Use Appropriate Chart Types:**
+   - Time trends → Line charts
+   - Comparisons → Bar charts
+   - Distributions → Pie charts
+
+3. **Apply Smart Filtering:**
+   - Focus on relevant time periods
+   - Compare similar facilities
+   - Isolate priority indicators
 
 ---
 
-<br></br>
+## 4.8 Summary of Key Features
 
-> 📌 **NOTE:** Some sections which say are for future implementation which have **[TBD]** to be determined | developed on top of the existing **HISPMD**. 📌
+| Feature | Dashboard Builder | Pre-built Visualizations |
+|---------|-------------------|--------------------------|
+| Customization | Full control | Limited options |
+| Chart Combinations | Multiple per dashboard | Single views |
+| Saving | Save full configurations | Save individual charts |
+| Learning Curve | Moderate | Easy |
+| Best For | Ongoing monitoring | Quick analysis |
+
+🚀 **Next Section:** Learn how to generate detailed reports in **Section 5: Report Generation & Exporting**
+
+---
+
+> 📌 **Pro Tip:** Combine both approaches - use pre-built visualizations for quick insights, then build custom dashboards for ongoing monitoring of key metrics.
