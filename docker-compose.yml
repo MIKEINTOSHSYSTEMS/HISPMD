@@ -14,7 +14,7 @@ services:
       - --api.insecure=true
       - --providers.docker=true
       - --entrypoints.web.address=:8808
-      - --entrypoints.websecure.address=:9443
+      - --entrypoints.websecure.address=:10443
       - --api.dashboard=true
       - --entrypoints.websecure.http.tls=true
       - --entrypoints.websecure.http.tls.certResolver=myresolver
@@ -38,7 +38,7 @@ services:
 
     ports:
       - "8808:8080"
-      - "9443:8443"
+      - "10443:8443"
       - "8087:8080"
     volumes:
       - ./letsencrypt:/letsencrypt
